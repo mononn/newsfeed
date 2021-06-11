@@ -48,15 +48,6 @@
           "publishedOn": "2021-06-04T06:15:50.000Z",
           "wordCount": 4878,
           "title": "Why We Need Build Systems"
-        },
-        {
-          "id": "https://blog.feabhas.com/2021/05/modern-embedded-c-deprecation-of-volatile/",
-          "author": null,
-          "description": "Compiling the following, straightforward code: volatile int x; int main() {   x += 10; } https://godbolt.org/z/jq83vdvj5 Using g++ with the directive -std=c++17 builds without any warnings or errors. However, change the directive to -std=c++20, and the result is: source>: In function 'int main()': :5:5: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]   5 |  x += 10;    |  ~~^~~~~ Compiler returned: 0 The new C++ standard, C++20, has deprecated volatile! So, what [...]",
-          "link": "https://blog.feabhas.com/2021/05/modern-embedded-c-deprecation-of-volatile/",
-          "publishedOn": "2021-05-12T09:46:39.000Z",
-          "wordCount": 1303,
-          "title": "Modern Embedded C++ &#8211; Deprecation of volatile"
         }
       ]
     },
@@ -465,15 +456,6 @@
           "publishedOn": "2021-05-13T13:11:21.000Z",
           "wordCount": 1623,
           "title": "Siemens IC verification adds Fractal Technologies and OneSpin Solutions"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4469907",
-          "author": "Nitin Dahad",
-          "description": "The benefits of adding vision to everyday products have attracted the attention of many industries and sectors. But how do you actually get data from...\nThe post Tools Move up the Value Chain to Take the Mystery Out of Vision AI appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/tools-move-up-the-value-chain-to-take-the-mystery-out-of-vision-ai/",
-          "publishedOn": "2021-05-12T19:25:20.000Z",
-          "wordCount": 3229,
-          "title": "Tools Move up the Value Chain to Take the Mystery Out of Vision AI"
         }
       ]
     },
@@ -683,6 +665,15 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0835/",
+          "author": null,
+          "description": "This note will answer the question - why PVS-Studio considers parameters of public methods potential sources of tainted data. The analyzer can issue warnings if such parameters haven't been checked before use.",
+          "link": "http://feedproxy.google.com/~r/viva64-blog-en/~3/f_zuV3CiWSc/",
+          "publishedOn": "2021-06-10T21:00:00.000Z",
+          "wordCount": 1895,
+          "title": "Why You Should Check Values of Public Methods' Parameters"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0834/",
           "author": null,
           "description": "While PVS-Studio analyses a Unity project, one may stumble upon such an error: Error was encountered while trying to open solution file '...': The solution file has two projects named \"UnityEngine.UI\". This note discusses the reasons for this error and how to eliminate it.",
@@ -844,6 +835,33 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/859192/rss",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (libwebp), Fedora (firefox, lasso, mod_auth_openidc, nginx, redis, and squid), Oracle (.NET 5.0, container-tools:2.0, dhcp, gupnp, hivex, kernel, krb5, libwebp, nginx:1.16, postgresql:10, and postgresql:9.6), SUSE (containerd, docker, runc, csync2, and salt), and Ubuntu (libimage-exiftool-perl, libwebp, and rpcbind).",
+          "link": "https://lwn.net/Articles/859192/rss",
+          "publishedOn": "2021-06-11T14:02:52.000Z",
+          "wordCount": 116,
+          "title": "Security updates for Friday"
+        },
+        {
+          "id": "https://lwn.net/Articles/857215/rss",
+          "author": "corbet",
+          "description": "Extended BPF (eBPF), the general-purpose\nexecution \nengine inside of the Linux kernel, has proved helpful for tracing and\nmonitoring the system, for processing network packets, or generally for\nextending the behavior of the kernel. So helpful, in fact, that developers\nworking on other operating systems have been watching it. Dave Thaler and\nPoorna Gaddehosur, on behalf of Microsoft, recently\npublished an implementation of eBPF for Windows. A Linux feature making\nits way to Windows, in itself, deserves attention. Even more so when that\nfeature has brought new degrees of programmability to the Linux kernel over\nthe last few years. This makes it especially interesting to look at what the\nnew project can do, and to ponder how the current ecosystem might evolve as\neBPF begins its journey toward Windows.",
+          "link": "https://lwn.net/Articles/857215/rss",
+          "publishedOn": "2021-06-10T22:19:11.000Z",
+          "wordCount": null,
+          "title": "[$] Implementing eBPF for Windows"
+        },
+        {
+          "id": "https://lwn.net/Articles/859064/rss",
+          "author": "jake",
+          "description": "On the GitHub blog, Kevin Backhouse writes\nabout a privilege escalation vulnerability in polkit, which\n\"enables an unprivileged local user to get a root shell on the\nsystem\"  CVE-2021-3560\n\"is triggered by starting a dbus-send command but killing it while\npolkit is still in the middle of processing the request. [...] Why does\nkilling the dbus-send command cause an authentication bypass? The\nvulnerability is in step four of the sequence of events listed above. What\nhappens if polkit asks dbus-daemon for the UID of connection :1.96, but\nconnection :1.96 no longer exists? dbus-daemon handles that situation\ncorrectly and returns an error. But it turns out that polkit does not\nhandle that error correctly. In fact, polkit mishandles the error in a\nparticularly unfortunate way: rather than rejecting the request, it treats\nthe request as though it came from a process with UID 0. In other words, it\nimmediately authorizes the request because it thinks the request has come\nfrom a root process.\"",
+          "link": "https://lwn.net/Articles/859064/rss",
+          "publishedOn": "2021-06-10T22:01:51.000Z",
+          "wordCount": 276,
+          "title": "Privilege escalation with polkit: How to get root on Linux with a seven-year-old bug (GitHub blog)"
+        },
         {
           "id": "https://lwn.net/Articles/859020/rss",
           "author": "jake",
@@ -1482,51 +1500,6 @@
           "publishedOn": "2021-05-13T13:45:13.000Z",
           "wordCount": 103,
           "title": "Security updates for Thursday"
-        },
-        {
-          "id": "https://lwn.net/Articles/855621/rss",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for May 13, 2021 is available.",
-          "link": "https://lwn.net/Articles/855621/rss",
-          "publishedOn": "2021-05-13T00:41:54.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for May 13, 2021"
-        },
-        {
-          "id": "https://lwn.net/Articles/856044/rss",
-          "author": "jake",
-          "description": "The discoverer of the KRACK attacks\nagainst WPA2 encryption in WiFi is back with a new set of flaws in the\nwireless-networking protocols. FragAttacks is a sizable group of\nWiFi vulnerabilities that (ab)use the fragmentation and aggregation (thus\n\"Frag\") features of the standard.  The fixes have been coordinated over a\nnine-month period, which has allowed security researcher Mathy Vanhoef time\nto create multiple papers, some slide decks, a demo video, patches, and, of course, a web\nsite and logo for the vuln…",
-          "link": "https://lwn.net/Articles/856044/rss",
-          "publishedOn": "2021-05-12T22:49:51.000Z",
-          "wordCount": null,
-          "title": "[$] Holes in the WiFi"
-        },
-        {
-          "id": "https://lwn.net/Articles/856091/rss",
-          "author": "ris",
-          "description": "GNU Guix, the transactional package manager and distribution, has released\nversion 1.3.0. This released adds new features, refines the user\nexperience, and improves performance. Support for the POWER9 platform is\nnow offered as technological preview.",
-          "link": "https://lwn.net/Articles/856091/rss",
-          "publishedOn": "2021-05-12T15:48:36.000Z",
-          "wordCount": 118,
-          "title": "GNU Guix 1.3.0 released"
-        },
-        {
-          "id": "https://lwn.net/Articles/856087/rss",
-          "author": "ris",
-          "description": "Stable kernels 5.12.3 and 5.11.20 have been released with important\nfixes throughout the tree. Users should upgrade.",
-          "link": "https://lwn.net/Articles/856087/rss",
-          "publishedOn": "2021-05-12T15:25:21.000Z",
-          "wordCount": 92,
-          "title": "New stable kernels"
-        },
-        {
-          "id": "https://lwn.net/Articles/856086/rss",
-          "author": "ris",
-          "description": "Security updates have been issued by Debian (composer, hivex, lz4, and rails), Fedora (chromium, community-mysql, djvulibre, dom4j, firefox, php, php-phpmailer6, python-django, and redis), Mageia (mariadb, nagios, and pngcheck), openSUSE (opera, syncthing, and vlc), SUSE (kernel, openvpn, openvpn-openssl1, shim, and xen), and Ubuntu (flatpak, linux, linux-aws, linux-aws-5.4, linux-azure, linux-azure-5.4, linux-gcp, linux-gcp-5.4, linux-gke, linux-gke-5.4, linux-gkeop, linux-gkeop-5.4, linux-hwe-5.4, linux-k…",
-          "link": "https://lwn.net/Articles/856086/rss",
-          "publishedOn": "2021-05-12T15:10:57.000Z",
-          "wordCount": 165,
-          "title": "Security updates for Wednesday"
         }
       ]
     },
@@ -1823,6 +1796,15 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=8463",
+          "author": "Stacey Higginbotham",
+          "description": "Bosch opened a fully connected chip-making plant: Bosch, an industrial giant that also makes specialty sensors and chips for automotive and industrial use cases, has opened a new 300 millimeter chip-making plant in Dresden, Germany. Bosch made a big deal of it being a 300 mm wafer plant, which means the chips are made on top of […]\nThe post IoT news of the week for June 11, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-for-june-11-2021/",
+          "publishedOn": "2021-06-11T16:03:36.000Z",
+          "wordCount": 1265,
+          "title": "IoT news of the week for June 11, 2021"
+        },
+        {
           "id": "https://staceyoniot.com/?p=8453",
           "author": "Stacey Higginbotham",
           "description": "We start this week’s show with a quick update on Amazon’s Sidewalk and then focused on the smart home news from Apple’s WWDC event earlier this week. We’re excited about third-party devices getting Siri support. We then cover the EU’s thoughts on anticompetitive behavior by IoT device companies, as well as the launch of a […]\nThe post Podcast: HomeKit and Home Assistant embrace Matter appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2028,15 +2010,6 @@
           "publishedOn": "2021-05-13T13:00:20.000Z",
           "wordCount": 600,
           "title": "Episode 320: Chip becomes Matter and hacked pipelines"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=8289",
-          "author": "Kevin C. Tofel",
-          "description": "It hasn’t been 24 hours since Project CHIP became Matter, and the Zigbee Alliance became the Connectivity Standards Alliance, and the full spec won’t be available until fall, but there’s already plenty of information about the new protocol if you know where to look. By looking at the project’s GitHub code repository, I learned quite […]\nThe post You can learn much about Matter from the Project CHIP GitHub repo appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/you-can-learn-much-about-matter-from-the-project-chip-github-repo/",
-          "publishedOn": "2021-05-12T14:59:43.000Z",
-          "wordCount": 1504,
-          "title": "You can learn much about Matter from the Project CHIP GitHub repo"
         }
       ]
     },
@@ -2081,6 +2054,15 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=80976",
+          "author": "언론인권센터",
+          "description": "우연히 프랑스의 프리랜서 기자, 소피 유스타쉬(Sophie Eustache)의 최근 저서, [기사 베끼기, 어떻게 돈이 저널리즘을 파괴하는가] (원제: Batonner, comment l’argent detruit le journalisme)라는 책을 접했다. 유스타쉬는 이 책에서 언론이 ‘덜’ 벌기 위해 ‘더’ 많은 기사를 쓰고 있다고 주장한다. 언론의 ‘우라까이’(베껴 쓰기), 즉 타 언론사의 기사 일부를 대충 바꾸거나 조합해 마치 새로운 기사처럼 표절하는 행위는 우리만의 문제는 […]",
+          "link": "http://feedproxy.google.com/~r/slownews/~3/eY8D8-K0CzQ/80976",
+          "publishedOn": "2021-06-11T01:00:00.000Z",
+          "wordCount": 1059,
+          "title": "클릭 저널리즘 vs. 진짜 저널리즘"
+        },
         {
           "id": "https://slownews.kr/?p=80962",
           "author": "슬로우뉴스",
@@ -2269,15 +2251,6 @@
           "publishedOn": "2021-05-14T04:50:15.000Z",
           "wordCount": 1743,
           "title": "엔비디아의 미래 비전 (ft. GTC 2021)"
-        },
-        {
-          "id": "https://slownews.kr/?p=80685",
-          "author": "민주언론시민연합",
-          "description": "한국경제는 5월 12일 1면 머리기사로 [삼성바이오, 화이자 백신 만든다] (5월 12일 박신영 기자)를 실었습니다. 삼성바이오로직스가 화이자 백신을 위탁생산한다는 내용과 함께 8월부터 본격적인 생산이 시작된다는 보도입니다. 이어 3면에는 삼성바이오로직스의 화이자 백신 생산을 기정사실화한 채 성사 배경 등을 조명한 기사도 실었습니다. 그러나 삼성바이오로직스는 5월 12일 오전 한국경제 보도가 “사실이 아니다”라고 공시했습니다. 신문이 발행된 지 반나절도 지나지 않아 […]",
-          "link": "http://feedproxy.google.com/~r/slownews/~3/8lJEJIp3GNc/80685",
-          "publishedOn": "2021-05-12T19:30:03.000Z",
-          "wordCount": 1476,
-          "title": "이재용 띄우려다 주가만 널뛰기: 한경 오보의 전말"
         }
       ]
     },
@@ -2286,6 +2259,24 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=581044",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/581044/%ec%a0%84%ea%b8%b0%ec%b0%a8-%ed%8c%90%eb%a7%a4-%ec%a6%9d%ea%b0%80",
+          "publishedOn": "2021-06-11T11:32:38.000Z",
+          "wordCount": 1245,
+          "title": "전기차 판매 증가, 전기차 소음과 안전 이슈가 부각되다, 전기차 시대의 법과 제도의 정비"
+        },
+        {
+          "id": "https://happist.com/?p=581030",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/581030/%ec%98%a4%ed%94%84%eb%9d%bc%ec%9d%b8-%eb%a7%a4%ec%9e%a5-%ec%83%9d%ec%a1%b4-%eb%b0%a9%eb%b2%95",
+          "publishedOn": "2021-06-10T18:29:14.000Z",
+          "wordCount": 1271,
+          "title": "온라인쇼핑에 맞선 오프라인 매장 생존 방법 4가지 by BCG"
+        },
         {
           "id": "https://happist.com/?p=581012",
           "author": "happist",
@@ -2608,6 +2599,15 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=72875",
+          "author": "ingppoo",
+          "description": "미국에서 미식축구 선수들은 NFL에 프로 선수로 등록하려면 최소 3년을 대학교에서 아마추어 선수로 뛰어야 합니다. 선수들은 대학교 팀에서 뛰는 동안 아마추어 규정에 따라 급여를 받을 수 없습니다. 선수들은 대신에 제대로 된 교육이라도 받을 수 있도록 지원해달라며 NCAA를 상대로 소송을 냈고, 대법원이 곧 이에 대한 최종 판결을 내립니다. NPR 플래닛 머니에서 다룬 방송을 요약했습니다.",
+          "link": "https://newspeppermint.com/2021/06/10/ncaavalston/?utm_source=rss&utm_medium=rss&utm_campaign=ncaavalston",
+          "publishedOn": "2021-06-10T22:59:24.000Z",
+          "wordCount": 2294,
+          "title": "NCAA에서 뛰는 ‘아마추어’ 대학생 스포츠 선수들의 처우가 달린 대법원 판결"
+        },
         {
           "id": "https://newspeppermint.com/?p=72863",
           "author": "veritaholic",
