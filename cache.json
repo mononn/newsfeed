@@ -4,7 +4,26 @@
       "title": "Alex Edwards",
       "feedUrl": "https://www.alexedwards.net/static/feed.rss",
       "siteUrl": "https://www.alexedwards.net/blog",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://www.alexedwards.net/blog/basic-authentication-in-go",
+          "author": null,
+          "description": "When searching for examples of HTTP basic authentication with Go, every result I could find unfortunately contained code which is either out-of-date (i.e. doesn't use the r.BasicAuth() functionality that was introduced in Go 1.4) or is vulnerable to timing attacks.\nSo in this post I'd like to quickly discuss how to implement basic authentication correctly in your Go applications.\nWe'll start with a bit of background information, but if you're not interested in that you can skip straight to the code.\nWhat is basic authentication? When should I use it?\nAs a developer, you're probably already familiar with the prompt that web browsers show when you visit a URL that's protected by basic authentication.\n\nWhen you input a username and password into this prompt, the web browser will send a HTTP r…",
+          "link": "https://www.alexedwards.net/blog/basic-authentication-in-go",
+          "publishedOn": "2021-06-21T16:00:00.000Z",
+          "wordCount": 1744,
+          "title": "How to correctly use Basic Authentication in Go"
+        },
+        {
+          "id": "https://www.alexedwards.net/blog/custom-command-line-flags",
+          "author": null,
+          "description": "One of my favorite things about the recent Go 1.16 release is a small — but very welcome — addition to the flag package: the flag.Func() function. This makes it much easier to define and use custom command-line flags in your application.\nFor example, if you want to parse a flag like --pause=10s directly into a time.Duration type,  or parse --urls=\"http://example.com http://example.org\" directly into a []string slice, then previously you had two options. You could either create a custom type to implement the flag.Value interface, or use a third-party package like pflag.\nBut now the flag.Func() function gives you a simple and lightweight alternative. In this short post we're going to take a look at a few examples of how you can use it in your own code.\nParsing custom flag types\nTo demonstrat…",
+          "link": "https://www.alexedwards.net/blog/custom-command-line-flags",
+          "publishedOn": "2021-06-21T16:00:00.000Z",
+          "wordCount": 1199,
+          "title": "Custom command-line flags with flag.Func"
+        }
+      ]
     },
     {
       "title": "Beningo Embedded Group",
@@ -92,6 +111,15 @@
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com/ko",
       "articles": [
+        {
+          "id": "https://edykim.com/ko/post/lenovo-thinkpad-x1-6gen-display-replacement/",
+          "author": null,
+          "description": "2018년 중순에 구입한 싱크패드를 계속 사용하고 있었다. 구입할 당시에 가장 고민했던 부분이 바로 디스플레이였는데 Costco에서 판매하는 모델은 밝기가 상당히 낮은 디스플레이를 탑재하고 있었다. 들고 다니는 용도라서 FHD…",
+          "link": "https://edykim.com/ko/post/lenovo-thinkpad-x1-6gen-display-replacement/",
+          "publishedOn": "2021-06-18T13:02:23.000Z",
+          "wordCount": 414,
+          "title": "Lenovo ThinkPad X1 Carbon 6세대 디스플레이 교체기"
+        },
         {
           "id": "https://edykim.com/post/lenovo-thinkpad-x1-6gen-display-replacement/",
           "author": null,
@@ -420,6 +448,15 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0837/",
+          "author": null,
+          "description": "We don't often get the chance to write something on parallel programming issues. This time we \"got lucky\". The TraceEvent standard method has some implementation peculiarities. They resulted in an error with multiple threads blocking. So we'd like to warn users about this nuance and cover this interesting case from our users support practice. Why was our support involved? Keep reading to find out. Enjoy the reading!",
+          "link": "http://feedproxy.google.com/~r/viva64-blog-en/~3/2k0dfxs4dRU/",
+          "publishedOn": "2021-06-20T21:00:00.000Z",
+          "wordCount": 4023,
+          "title": "How WCF Shoots Itself in the Foot With TraceSource"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0836/",
           "author": null,
           "description": "We know many ways to detect performance problems, such as extremely low speed and high memory consumption. Usually tests, developers, or testers detect such applications' drawbacks. In the worst case, users find weaknesses and report back. Alas, detecting defects is only the first step. Next, we should localize the problem. Otherwise, we won't solve it. Here comes a question - how to find weak points that lead to excessive memory consumption and slow down in a large project? Are there such at all? Maybe it's not about the application? So now you're reading a story how PVS-Studio C# developers encountered a similar problem and managed to solve it.",
@@ -679,6 +716,33 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/860420/rss",
+          "author": "ris",
+          "description": "Rocky Linux is a community enterprise\noperating system, created by Gregory Kurtzer, founder of the CentOS\nproject. Rocky Linux 8.4 has been\nreleased for x86-64 and aarch64. \"Sufficient testing has been performed such that we have confidence in its stability for production systems.\"",
+          "link": "https://lwn.net/Articles/860420/rss",
+          "publishedOn": "2021-06-21T17:12:21.000Z",
+          "wordCount": 118,
+          "title": "Rocky Linux 8.4"
+        },
+        {
+          "id": "https://lwn.net/Articles/860262/rss",
+          "author": "corbet",
+          "description": "The kernel-development community has long had a tense relationship with\ncompanies that create and ship proprietary loadable kernel modules.  In the\nview of many developers, such modules are a violation of the GPL and should\nsimply be disallowed.  That has never happened, though; instead, the\ncommunity has pursued a policy of legal ambiguity and technical\ninconvenience to discourage proprietary modules.  A\n\"technical-inconvenience\" patch that was merged nearly one year ago has\nbegun to show up in stable kernel releases, leading at least one\ndeveloper to complain that things have gone a little too far.",
+          "link": "https://lwn.net/Articles/860262/rss",
+          "publishedOn": "2021-06-21T16:24:03.000Z",
+          "wordCount": null,
+          "title": "[$] A stable bug fix bites proprietary modules"
+        },
+        {
+          "id": "https://lwn.net/Articles/860418/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Arch Linux (connman, go, and grub), Debian (nettle, prosody, and tor), Fedora (iaito, mingw-ilmbase, mingw-openexr, mingw-python-urllib3, mosquitto, nettle, polkit, and radare2), Mageia (puddletag, python-babel, python-eventlet, and python-pikepdf), openSUSE (htmldoc), SUSE (go1.15, go1.16, gupnp, and libgcrypt), and Ubuntu (apache2 and dovecot).",
+          "link": "https://lwn.net/Articles/860418/rss",
+          "publishedOn": "2021-06-21T15:10:54.000Z",
+          "wordCount": 119,
+          "title": "Security updates for Monday"
+        },
+        {
           "id": "https://lwn.net/Articles/860358/rss",
           "author": "corbet",
           "description": "The 5.13-rc7 kernel prepatch is out for\ntesting.  \"So there's not a huge number of patches in here, and most of the\npatches are pretty small too. A fair number of one-liners and\n'few-liners'.\n\nWhich is just how I like it.\"",
@@ -931,15 +995,6 @@
           "publishedOn": "2021-05-23T14:51:58.000Z",
           "wordCount": 450,
           "title": "Pentecost 2021"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=32464",
-          "author": "Erich Styger",
-          "description": "One major concern of embedded system development is performance. Microcontroller have more MHz than in the past, but embedded applications are all about timing and real-time aspects. The challenge is: how to get data off the target in realtime? SWO … Continue reading →",
-          "link": "https://mcuoneclipse.com/2021/05/22/swo-with-arm-cortex-m33/",
-          "publishedOn": "2021-05-22T18:42:11.000Z",
-          "wordCount": 2446,
-          "title": "SWO with ARM Cortex-M33"
         }
       ]
     },
@@ -1059,6 +1114,15 @@
       "siteUrl": "https://www.segger.com/",
       "articles": [
         {
+          "id": "https://www.segger.com/news/segger-and-codasip-announce-cooperation-on-risc-v/",
+          "author": null,
+          "description": "SEGGER and Codasip announce that SEGGER’s J-Link debug probes and its Embedded Studio IDE fully support Codasip’s RISC-V processors, right out-of-the-box.",
+          "link": "https://www.segger.com/news/segger-and-codasip-announce-cooperation-on-risc-v/",
+          "publishedOn": "2021-06-21T07:45:41.000Z",
+          "wordCount": 449,
+          "title": "SEGGER and Codasip Announce Cooperation on RISC-V"
+        },
+        {
           "id": "https://casestudies.segger.com/size-matters-using-emcompress-to-accelerate-firmware-updates-via-can-bus/",
           "author": null,
           "description": "With the increasing complexity of today’s embedded devices, customers may expect multiple firmware updates over the life of an embedded device. SEGGER’s compression software emCompress is an ideal solution for reducing the update time dramatically.",
@@ -1089,6 +1153,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=8508",
+          "author": "Stacey Higginbotham",
+          "description": "Last week, two entrepreneurs in Atlanta launched Barnacle, a package-tracking business built on the Helium Low-Power Wide-Area Network (LPWAN). I was excited to hear this because I’m always on the lookout for use cases for LPWANs and because I host a Helium hotspot and want to provide an essential (or at least useful) service. The […]\nThe post How Barnacle found the right network for its tracking biz appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-barnacle-found-the-right-network-for-its-tracking-biz/",
+          "publishedOn": "2021-06-21T13:00:09.000Z",
+          "wordCount": 1382,
+          "title": "How Barnacle found the right network for its tracking biz"
+        },
         {
           "id": "https://staceyoniot.com/?p=8498",
           "author": "Kevin C. Tofel",
@@ -1269,6 +1342,15 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=81083",
+          "author": "청년유니온",
+          "description": "“초단기 근로계약은 법의 허점을 교묘히 악용하는 행위다. 현행 기간제보호법에 따른 정규직 전환 의무 조항이 주당 15시간 이상 근로에만 적용된다는 점을 역으로 이용해 서류상 15시간 미만의 고용계약을 유지하고 있는 것이다. 이런 계약을 받아들인 노동자는 급여가 형편없이 적은 것은 물론이고, 고용보험과 직장 국민연금 가입 자격이 없어 해고되면 생계조차 막막해진다.” – 한겨레, 사설: 교육현자의 참담한 ‘초단기 노동자’ (2015. […]",
+          "link": "http://feedproxy.google.com/~r/slownews/~3/DtM09e1jcMM/81083",
+          "publishedOn": "2021-06-21T05:29:03.000Z",
+          "wordCount": 921,
+          "title": "좋은 이미지, 나쁜 일터: 이케아코리아 ‘단시간 노동’ 사례"
+        },
         {
           "id": "https://slownews.kr/?p=81062",
           "author": "민주언론시민연합",
@@ -1665,15 +1747,6 @@
           "publishedOn": "2021-05-31T12:08:29.000Z",
           "wordCount": 8,
           "title": "언어활동에 의해 짜여진 욕망의 주체인 그것 1"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222361806543",
-          "author": "sellars",
-          "description": "이기론, 혹은 리기론이 진짜 중요한 철학적 의미를 갖고 있는 것인가? 개인적으로 나는 리기론의 주장을 수용하지 않는다. <태극도설>에 있는 주장은 웅장하지만, 거의 거짓말이라고 생각한다. 그 이유는 그것을 주장하는 근거가 분명하지 않기 때문이다. 그저 골방에 앉아서 우주에 대해서 자기 주관적 생각을 표현한 것이라고 여긴다. 따라서 그에게는 매우 중요하겠지만, 나에게는 별로 중요치 않다. 리기론에 대한 몇몇 논문들은 주자, 즉 주희의 리기론에 대한 소개가 거의 전부이다. 주자의 저술로부터 리와 기에 대한 구절을 인용하면서 리가 무엇이고, 기가 무엇이며, 그들의 관계가 어떤 것인지 해설해 주고 있다. 이것도 중요하.......",
-          "link": "https://blog.naver.com/sellars/222361806543",
-          "publishedOn": "2021-05-22T12:47:03.000Z",
-          "wordCount": 8,
-          "title": "리기론, 실체, 속성"
         }
       ]
     }
