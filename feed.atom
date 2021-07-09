@@ -2,10 +2,154 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2021-07-08T20:07:29.184Z</updated>
+    <updated>2021-07-09T20:06:44.508Z</updated>
     <generator>osmosfeed 1.11.0</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[IoT News of the Week for July 9, 2021]]></title>
+        <id>https://staceyoniot.com/?p=8618</id>
+        <link href="https://staceyoniot.com/iot-news-of-the-week-for-july-9-2021/"/>
+        <updated>2021-07-09T18:17:28.000Z</updated>
+        <summary type="html"><![CDATA[Solid-state lighting moves a bit further: Amber, a startup building solid-state silicon to control lighting, has signed a deal with Infineon to commercialize its next-generation lighting controller, Amber (which I profiled last year). Amber’s technology results in a smaller form factor for electrical infrastructure such as circuit breakers or switch boxes. But it’s pretty novel, which […]
+The post IoT News of the Week for July 9, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing Arti, a pure-Rust Tor implementation (Tor blog)]]></title>
+        <id>https://lwn.net/Articles/862329/rss</id>
+        <link href="https://lwn.net/Articles/862329/rss"/>
+        <updated>2021-07-09T18:05:12.000Z</updated>
+        <summary type="html"><![CDATA[The Tor project, which provides tools for  internet privacy and anonymity, has announced a rewrite of the Tor protocols in Rust, called Arti.  It is not ready for prime time, yet, but based on a grant from Zcash Open Major Grants (ZOMG), significant work is ongoing; the plan is "to try bring Arti to a production-quality client implementation over the next year and a half".  The C implementation is not going away anytime soon, but the idea is that Arti will eventually supplant it.  The project sees a number of benefits from using Rust, including:
+
+
+For years now, we've wanted to split Tor's relay cryptography across multiple CPU cores, but we've run into trouble. C's support for thread-safety is quite fragile, and it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, then your whole program can exhibit some truly confusing and bizarre bugs.
+
+But in Rust, this kind of bug is easy to avoid: the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns. Because of that, Arti's circuit cryptography has been multicore from day 1, at very little additional programming effort.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Google Calendar API has changed how we manage API usage]]></title>
+        <id>http://feedproxy.google.com/~r/GDBcode/~3/fuV_ral0RcY/the-google-calendar-api-has-changed-how-we-manage-API-usage.html</id>
+        <link href="http://feedproxy.google.com/~r/GDBcode/~3/fuV_ral0RcY/the-google-calendar-api-has-changed-how-we-manage-API-usage.html"/>
+        <updated>2021-07-09T17:01:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Charles Maxson, Developer Advocate 
+ The Google Calendar API has changed how it manages API usage. Previously, queries were monitored and limited on a daily basis. As of May 2021, queries started to be monitored and limited on a per-minute basis. This introduces better behavior when your quota is exceeded, as requests are rate-limited until quota is available rather than failing all requests for the rest of the day. This also helps developers recognize issues around quota enforcements faster and shouldn't affect the performance of existing projects.  
+To view your usage and quota limits, have a look in the Google API console. 
+ 
+ To help you manage your quotas, we’ve put together a few helpful tips: 
+ 
+Use push notifications instead of polling.  
+If you cannot avoid polling, make sure you only poll when necessary (for example poll very seldomly at night).   
+Make sure to use randomized timing so that requests from your users spread out evenly instead of creating bursts.  
+Use incremental synchronization with sync tokens for all collections instead of repeatedly retrieving all the entries.  
+Increase page size to retrieve more data at once by using the maxResults parameter.  
+Update events when they change, avoid recreating all the events on every sync.  
+Use exponential backoff for error retries to make rate-limiting work properly. 
+
+For further details into managing quotas please review the manage quotas documentation. You can also find more details on error handling on the resolve errors documentation.  
+To stay on top of news and updates around Google Workspace APIs and developer platform please sign up to our developer newsletter.]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Syncing all the things]]></title>
+        <id>https://lwn.net/Articles/861978/rss</id>
+        <link href="https://lwn.net/Articles/861978/rss"/>
+        <updated>2021-07-09T13:53:14.000Z</updated>
+        <summary type="html"><![CDATA[Computing devices are wonderful; they surely must be, since so many
+of us have so many of them.  The proliferation of computers leads directly
+to a familiar problem, though: the files we want are always on the wrong
+machine.  One solution is synchronization services that keep a set of files
+up to date across a multitude of machines; a number of companies have
+created successful commercial offerings based on such services.  Some of
+us, though, are stubbornly resistant to the idea of placing our data in the
+hands of corporations and their proprietary systems.  For those of us who
+would rather stay in control of our data, systems like Syncthing offer a possible solution.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Friday]]></title>
+        <id>https://lwn.net/Articles/862299/rss</id>
+        <link href="https://lwn.net/Articles/862299/rss"/>
+        <updated>2021-07-09T13:28:27.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (apache2 and scilab), Fedora (chromium and perl-Mojolicious), Gentoo (inspircd, redis, and wireshark), and Mageia (fluidsynth, glib2.0, gnome-shell, grub2, gupnp, hivex, libupnp, redis, and zstd).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[‘데이터 클라우드’란 무엇인가 (ft. 스노우플레이크, 구글)]]></title>
+        <id>https://slownews.kr/?p=81312</id>
+        <link href="http://feedproxy.google.com/~r/slownews/~3/o57PlI8P7vo/81312"/>
+        <updated>2021-07-09T05:20:02.000Z</updated>
+        <summary type="html"><![CDATA[데이터 클라우드는 데이터셋이 전 세계에 사일로(Silo) 방식으로 쌓여 있고 클라우드 데이터 스토리지나 온프레미스 데이터 센터에 고립되어 있는 상황을 벗어나도록 사일로를 제거하고 이를 통합, 분석, 공유, 그리고 수익 창출을 하게 만들기 위한 것이다. ‘데이터 클라우드’란 무엇인가  데이터가 아무리 중요한 자산이라고 해도 실제 기업에서 겪는 문제는, 데이터가 대부분 조각나서 저장되어 있다는 조각화 문제인데 대부분 데이터가 제대로 목록으로 […]]]></summary>
+        <author>
+            <name>한상기</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[반(反)신뢰 언론 시스템]]></title>
+        <id>https://slownews.kr/?p=81305</id>
+        <link href="http://feedproxy.google.com/~r/slownews/~3/99NXM5WooJ8/81305"/>
+        <updated>2021-07-09T03:10:39.000Z</updated>
+        <summary type="html"><![CDATA[한국언론진흥재단, 로이터저널리즘연구소 등에서 매년 발표하는 언론신뢰 지표는 대다수 시민이 ‘국내 언론을 신뢰하지 않는다’고 명백히 표명하고 있음을 보여준다. 신문 산업의 경우 구독률과 언론사 홈페이지 방문율은 이미 유의미하지 않은 수준이다. 여러 지표에서도 드러나듯 신뢰의 가치 차원과 물적 차원에서 모두, 언론은 시민으로부터 외면받는 상황이다. 하지만 신문사 매출액은 2017년 3조 7천억, 2018년 3조 8천억, 2019년 3조 9천억 원으로 상대적으로 안정적이다. […]]]></summary>
+        <author>
+            <name>민주언론시민연합</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Migrating from App Engine webapp2 to Flask]]></title>
+        <id>http://feedproxy.google.com/~r/GDBcode/~3/r26LVyJohVo/migrating-from-app-engine-webapp2-to-flask.html</id>
+        <link href="http://feedproxy.google.com/~r/GDBcode/~3/r26LVyJohVo/migrating-from-app-engine-webapp2-to-flask.html"/>
+        <updated>2021-07-08T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Wesley Chun (@wescpy), Developer Advocate, Google Cloud 
+
+ Migrating web framework
+  
+The Google Cloud team recently introduced a series of codelabs (free, self-paced, hands-on tutorials) and corresponding videos designed to help users on one of our serverless compute platforms modernize their apps, with an initial focus on our earliest users running their apps on Google App Engine. We kick off this content by showing users how to migrate from App Engine's webapp2 web framework to Flask, a popular framework in the Python community.  
+While users have always been able to use other frameworks with App Engine, webapp2 comes bundled with App Engine, making it the default choice for many developers. One new requirement in App Engine's next generation platform (which launched in 2018) …]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[폴 그레이엄 – 최선을 다한다는 것(2/2)]]></title>
+        <id>https://newspeppermint.com/?p=72956</id>
+        <link href="https://newspeppermint.com/2021/07/08/workhard2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=workhard2"/>
+        <updated>2021-07-08T22:55:00.000Z</updated>
+        <summary type="html"><![CDATA[(Paul Graham) 원문 보기 한계를 알기 위해서는 그 한계를 넘어서보는 수 밖에 없습니다. 지금 당신이 하는 일의 결과에 대한 감을 길러야 하며, 그 감은 언제 당신의 노력이 더 이상 효과가 없는지를 알게 해 줍니다. 여기서도 정직은 가장 중요한 가치입니다. 당신이 지금 게으름을 피고 있는지, 혹은 불필요하게 과한 노력을 하고 있는지를 판단해야 합니다. 혹시 당신이 과도한 노력에 대한 어떤 로망을 가지고 있다면, 그 로망은 버려야 합니다. 그 로망은 당신의 결과를 해칠 → 더 보기]]></summary>
+        <author>
+            <name>veritaholic</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[폴 그레이엄 – 최선을 다한다는 것(1/2)]]></title>
+        <id>https://newspeppermint.com/?p=72955</id>
+        <link href="https://newspeppermint.com/2021/07/08/workhard1/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=workhard1"/>
+        <updated>2021-07-08T22:54:11.000Z</updated>
+        <summary type="html"><![CDATA[(Paul Graham) 원문 보기 최선을 다한다는 것이 무슨 뜻인지는 누구나 아는 것처럼 보입니다. 학교를 다녀본 이들은 비록 자신들은 그렇게 열심히 하지 않았다 하더라도 그게 어떤 것인지를 대략은 알고 있습니다. 하지만, 내게 학생 때보다 그 의미를 이제 더 잘 알고 있냐고 묻는다면 당연히 그렇다고 답할겁니다. 일단, 당신이 무언가 위대한 일을 하고 싶다면, 당신은 최선을 다 해야 합니다. 어릴때는 나도 그 점을 확신하지 못했습니다. 학교에서 주어지는 일은 매우 다양하며, 어떤 일들은 최선을 → 더 보기]]></summary>
+        <author>
+            <name>veritaholic</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[뒤쳐진 유럽에서 부는 퀵커머스 열풍, 10분 배송을 향한한 유럽 퀵커머스 스타트업들]]></title>
+        <id>https://happist.com/?p=581718</id>
+        <link href="https://happist.com/581718/%ec%9c%a0%eb%9f%bd-%ed%80%b5%ec%bb%a4%eb%a8%b8%ec%8a%a4-%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85"/>
+        <updated>2021-07-08T20:33:40.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] Another misstep for Audacity]]></title>
         <id>https://lwn.net/Articles/862073/rss</id>
@@ -24,6 +168,16 @@ but it is a lesson on what can happen when a project loses the trust of its
 user community.]]></summary>
         <author>
             <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PC는 작동하는데 PC 모니터 화면이 안나올 때 대처 방법]]></title>
+        <id>https://happist.com/?p=581733</id>
+        <link href="https://happist.com/581733/pc-%eb%aa%a8%eb%8b%88%ed%84%b0-%ed%99%94%eb%a9%b4%ec%9d%b4-%ec%95%88%eb%82%98%ec%98%ac-%eb%95%8c-%ed%95%b4%ea%b2%b0-%eb%b0%a9%eb%b2%95"/>
+        <updated>2021-07-08T17:51:59.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
         </author>
     </entry>
     <entry>
@@ -3263,86 +3417,6 @@ The post Silicon Labs SoCs add Wirepas for IoT asset tracking appeared first on 
 The post Podcast: HomeKit and Home Assistant embrace Matter appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
         <author>
             <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[제4회 페미니즘 연극제: 다른 곳, 누군가]]></title>
-        <id>https://slownews.kr/?p=80962</id>
-        <link href="http://feedproxy.google.com/~r/slownews/~3/JDOuCmHypxc/80962"/>
-        <updated>2021-06-10T04:29:53.000Z</updated>
-        <summary type="html"><![CDATA[제4회 페미니즘 연극제가 7월 1일부터 8월 1일까지 연극실험실 혜화동 1번지에서 열립니다. 연극제는 총 7편의 공연과 2개의 부대 프로그램을 마련했습니다. 듣지 못한 이야기들 ‘연극계에 돋아난 페미니즘의 싹을 쑥쑥 키우기 위해’ 2018년 첫 발을 내디딘 페미니즘 연극제가 올해로 4회를 맞았습니다. 대학로 한 가운데서 페미니즘을 외친 제1회 연극제, 서로를 위한 연대의 손길을 내민 제2회 연극제, 페미니스트로서의 삶을 이야기한 […]]]></summary>
-        <author>
-            <name>슬로우뉴스</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[REST Servers in Go: Part 7 - GraphQL]]></title>
-        <id>https://eli.thegreenplace.net/2021/rest-servers-in-go-part-7-graphql/</id>
-        <link href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-7-graphql/"/>
-        <updated>2021-06-10T02:35:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>This is the seventh post in a series about writing REST servers in Go. Here is
-a list of posts in the series:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-1-standard-library/">Part 1 - standard library</a></li>
-<li><a class="reference external" href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-2-using-a-router-package/">Part 2 - using a router package</a></li>
-<li><a class="reference external" href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-3-using-a-web-framework/">Part 3 - using a web framework</a></li>
-<li><a class="reference external" href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-4-using-openapi-and-swagger/">Part 4 - using OpenAPI and Swagger</a></li>
-<li><a class="reference external" href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-5-middleware/">Part 5 - middleware</a></li>
-<li><a class="reference external" href="https://eli.thegreenplace.net/2021/rest-servers-in-go-part-6-authentication/">Part 6 …</a></li></ul>]]></summary>
-        <author>
-            <name>Eli Bendersky's website</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[왜 사람들은 자신을 피해자라 생각할까]]></title>
-        <id>https://newspeppermint.com/?p=72863</id>
-        <link href="https://newspeppermint.com/2021/06/09/victimhood/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=victimhood"/>
-        <updated>2021-06-09T22:54:36.000Z</updated>
-        <summary type="html"><![CDATA[(마크 맥나마라, Nautilus) 원문 보기 양극화된 세상에서 피해자 행세(victimhood)는 명예 훈장과 같습니다. 이를 통해 사람들은 권력을 얻습니다. “오늘날 미국 정치에서 피해자는 가장 중요한 정체성이 되었다.” UC 샌디에고의 언론정보학 교수인 로버트 B.호르위츠의 말입니다. 호르위츠는 2018년 “피해자 행세의 정치, 정치에서의 피해자 행세”라는 제목의 논문을 발표했습니다. 그는 미국 정치에서 피해자 행세가 가장 중요해지도록 만든 사회적 흐름에 주목했으며, 그 기원이 “1960년대의 시민운동 등으로 인해 불안했던 정치상황”에 있다고 말했습니다. 그럼 심리학적으로는 피해자 행세가 어떤 의미가 → 더 보기]]></summary>
-        <author>
-            <name>veritaholic</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Arduino for ESP32-S2 and ESP32-C3 is coming!]]></title>
-        <id>https://medium.com/p/f36d79967eb8</id>
-        <link href="https://medium.com/the-esp-journal/arduino-for-esp32-s2-and-esp32-c3-is-coming-f36d79967eb8?source=rss----d5414d5dee73---4"/>
-        <updated>2021-06-09T12:54:31.000Z</updated>
-        <summary type="html"><![CDATA[This tutorial was created based on the Arduino for ESP32 version 2.0.0-alpha1 (preview version) on April 30th, 2021.]]></summary>
-        <author>
-            <name>Pedro Minatel</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ESP-IDF Development Tools Guide — Part I]]></title>
-        <id>https://medium.com/p/89af441585b</id>
-        <link href="https://medium.com/the-esp-journal/esp-idf-development-tools-guide-part-i-89af441585b?source=rss----d5414d5dee73---4"/>
-        <updated>2021-06-09T12:54:20.000Z</updated>
-        <summary type="html"><![CDATA[This guide will introduce some tools that are not commonly used and could help you on specific tasks.]]></summary>
-        <author>
-            <name>Pedro Minatel</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Six innovations driving improvements in cryptographic hardware performance]]></title>
-        <id>https://www.embedded.com/?p=4470149</id>
-        <link href="https://www.embedded.com/six-innovations-driving-improvements-in-cryptographic-hardware-performance/"/>
-        <updated>2021-06-09T12:53:00.000Z</updated>
-        <summary type="html"><![CDATA[To accelerate the inception of tomorrow’s cryptography, the industry will need to develop inventive hardware improvements and optimized software solutions that work together to shrink...
-The post Six innovations driving improvements in cryptographic hardware performance appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Wajdi Feghali</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How acquisition memory affects digitizing instrument performance]]></title>
-        <id>https://www.embedded.com/?p=4470145</id>
-        <link href="https://www.embedded.com/how-acquisition-memory-affects-digitizing-instrument-performance/"/>
-        <updated>2021-06-09T12:35:00.000Z</updated>
-        <summary type="html"><![CDATA[Acquisition memory length is an important specification that can affect a digitizing instrument’s sampling rate and bandwidth. The most important specifications for digitizers and oscilloscopes...
-The post How acquisition memory affects digitizing instrument performance appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Arthur Pini</name>
         </author>
     </entry>
 </feed>
