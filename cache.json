@@ -417,15 +417,6 @@
           "publishedOn": "2021-07-10T13:40:00.000Z",
           "wordCount": 2406,
           "title": "Solid-state LiDAR offers simpler automotive sensing solution"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4470401",
-          "author": "Gary Hilson",
-          "description": "5G is driving a great deal of the memory requirements in smartphones and advances in processors have been a big driver for higher bandwidth. Smartphone...\nThe post Video, multitasking push smartphone memory requirements appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/video-multitasking-push-smartphone-memory-requirements/",
-          "publishedOn": "2021-07-09T13:32:00.000Z",
-          "wordCount": 2129,
-          "title": "Video, multitasking push smartphone memory requirements"
         }
       ]
     },
@@ -547,15 +538,6 @@
           "publishedOn": "2021-07-14T18:16:00.001Z",
           "wordCount": 2995,
           "title": "How students built a web app with the potential to help frontline workers"
-        },
-        {
-          "id": "http://feedproxy.google.com/~r/GDBcode/~3/fuV_ral0RcY/the-google-calendar-api-has-changed-how-we-manage-API-usage.html",
-          "author": null,
-          "description": "Posted by Charles Maxson, Developer Advocate \n The Google Calendar API has changed how it manages API usage. Previously, queries were monitored and limited on a daily basis. As of May 2021, queries started to be monitored and limited on a per-minute basis. This introduces better behavior when your quota is exceeded, as requests are rate-limited until quota is available rather than failing all requests for the rest of the day. This also helps developers recognize issues around quota enforcements faster and shouldn't affect the performance of existing projects.  \nTo view your usage and quota limits, have a look in the Google API console. \n \n To help you manage your quotas, we’ve put together a few helpful tips: \n \nUse push notifications instead of polling.  \nIf you cannot avoid polling, make sure you only poll when necessary (for example poll very seldomly at night).   \nMake sure to use randomized timing so that requests from your users spread out evenly instead of creating bursts.  \nUse incremental synchronization with sync tokens for all collections instead of repeatedly retrieving all the entries.  \nIncrease page size to retrieve more data at once by using the maxResults parameter.  \nUpdate events when they change, avoid recreating all the events on every sync.  \nUse exponential backoff for error retries to make rate-limiting work properly. \n\nFor further details into managing quotas please review the manage quotas documentation. You can also find more details on error handling on the resolve errors documentation.  \nTo stay on top of news and updates around Google Workspace APIs and developer platform please sign up to our developer newsletter.",
-          "link": "http://feedproxy.google.com/~r/GDBcode/~3/fuV_ral0RcY/the-google-calendar-api-has-changed-how-we-manage-API-usage.html",
-          "publishedOn": "2021-07-09T17:01:00.000Z",
-          "wordCount": 2569,
-          "title": "The Google Calendar API has changed how we manage API usage"
         }
       ]
     },
@@ -748,6 +730,15 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/865625/rss",
+          "author": "corbet",
+          "description": "The\n5.13.9,\n5.10.57,\n5.4.139,\n4.19.202,\n4.14.243,\n4.9.279, and\n4.4.279\nstable kernel updates have been released.  Each contains a small set of\nimportant fixes.  Users of 4.4 should note that 4.4.280\nis already in the review process; it is due on August 10.",
+          "link": "https://lwn.net/Articles/865625/rss",
+          "publishedOn": "2021-08-08T18:59:34.000Z",
+          "wordCount": 120,
+          "title": "Seven Sunday stable kernels"
+        },
         {
           "id": "https://lwn.net/Articles/865256/rss",
           "author": "corbet",
@@ -1386,33 +1377,6 @@
           "publishedOn": "2021-07-10T23:58:13.000Z",
           "wordCount": 155,
           "title": "Security updates for Saturday"
-        },
-        {
-          "id": "https://lwn.net/Articles/862329/rss",
-          "author": "jake",
-          "description": "The Tor project, which provides tools for  internet privacy and anonymity, has announced a rewrite of the Tor protocols in Rust, called Arti.  It is not ready for prime time, yet, but based on a grant from Zcash Open Major Grants (ZOMG), significant work is ongoing; the plan is \"to try bring Arti to a production-quality client implementation over the next year and a half\".  The C implementation is not going away anytime soon, but the idea is that Arti will eventually supplant it.  The project sees a number of benefits from using Rust, including:\n\n\nFor years now, we've wanted to split Tor's relay cryptography across multiple CPU cores, but we've run into trouble. C's support for thread-safety is quite fragile, and it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, then your whole program can exhibit some truly confusing and bizarre bugs.\n\nBut in Rust, this kind of bug is easy to avoid: the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns. Because of that, Arti's circuit cryptography has been multicore from day 1, at very little additional programming effort.",
-          "link": "https://lwn.net/Articles/862329/rss",
-          "publishedOn": "2021-07-09T18:05:12.000Z",
-          "wordCount": 314,
-          "title": "Announcing Arti, a pure-Rust Tor implementation (Tor blog)"
-        },
-        {
-          "id": "https://lwn.net/Articles/861978/rss",
-          "author": "corbet",
-          "description": "Computing devices are wonderful; they surely must be, since so many\nof us have so many of them.  The proliferation of computers leads directly\nto a familiar problem, though: the files we want are always on the wrong\nmachine.  One solution is synchronization services that keep a set of files\nup to date across a multitude of machines; a number of companies have\ncreated successful commercial offerings based on such services.  Some of\nus, though, are stubbornly resistant to the idea of placing our data in the\nhands of corporations and their proprietary systems.  For those of us who\nwould rather stay in control of our data, systems like Syncthing offer a possible solution.",
-          "link": "https://lwn.net/Articles/861978/rss",
-          "publishedOn": "2021-07-09T13:53:14.000Z",
-          "wordCount": null,
-          "title": "[$] Syncing all the things"
-        },
-        {
-          "id": "https://lwn.net/Articles/862299/rss",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (apache2 and scilab), Fedora (chromium and perl-Mojolicious), Gentoo (inspircd, redis, and wireshark), and Mageia (fluidsynth, glib2.0, gnome-shell, grub2, gupnp, hivex, libupnp, redis, and zstd).",
-          "link": "https://lwn.net/Articles/862299/rss",
-          "publishedOn": "2021-07-09T13:28:27.000Z",
-          "wordCount": 104,
-          "title": "Security updates for Friday"
         }
       ]
     },
@@ -1870,15 +1834,6 @@
           "publishedOn": "2021-07-10T17:47:28.000Z",
           "wordCount": 812,
           "title": "Can you make your own devices that work with Amazon Sidewalk?"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=8618",
-          "author": "Stacey Higginbotham",
-          "description": "Solid-state lighting moves a bit further: Amber, a startup building solid-state silicon to control lighting, has signed a deal with Infineon to commercialize its next-generation lighting controller, Amber (which I profiled last year). Amber’s technology results in a smaller form factor for electrical infrastructure such as circuit breakers or switch boxes. But it’s pretty novel, which […]\nThe post IoT News of the Week for July 9, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/iot-news-of-the-week-for-july-9-2021/",
-          "publishedOn": "2021-07-09T18:17:28.000Z",
-          "wordCount": 1122,
-          "title": "IoT News of the Week for July 9, 2021"
         }
       ]
     },
@@ -2166,6 +2121,24 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=582786",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/582786/%eb%b2%84%ec%b6%94%ec%96%bc-%ec%9d%b8%ed%94%8c%eb%9f%ac%ec%96%b8%ec%84%9c-%ec%82%ac%eb%a1%80",
+          "publishedOn": "2021-08-08T15:56:42.000Z",
+          "wordCount": 933,
+          "title": "버추얼 인플러언서 로지가 등장한 신한라이프 광고와 버추얼 인플러언서 사례들"
+        },
+        {
+          "id": "https://happist.com/?p=582793",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/582793/%ec%a7%80%ea%b7%b8%ec%9e%ac%ea%b7%b8-%ec%a0%84%eb%9e%b5%ea%b3%bc-%ec%a0%84%eb%9e%b5%ec%a0%81-%ec%b0%bd%ec%9d%98%ec%84%b1",
+          "publishedOn": "2021-08-08T09:56:49.000Z",
+          "wordCount": 1761,
+          "title": "혁신을 넘어 시장을 뒤흔들 지그재그 전략과 전략적 창의성"
+        },
         {
           "id": "https://happist.com/?p=582774",
           "author": "happist",
@@ -2750,15 +2723,6 @@
           "publishedOn": "2021-07-10T10:00:09.000Z",
           "wordCount": 1525,
           "title": "21년 연령별 인구통계에서 읽는 시대 변화 트렌드 3가지"
-        },
-        {
-          "id": "https://happist.com/?p=581757",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/581757/%ec%9c%88%eb%8f%84%ec%9a%b0-10-%ea%b8%b0%eb%b3%b8%ec%95%b1-%ec%82%ad%ec%a0%9c-%eb%b0%a9%eb%b2%95",
-          "publishedOn": "2021-07-10T06:25:35.000Z",
-          "wordCount": 1865,
-          "title": "불필요한 윈도우 10 기본앱 삭제 방법, 가벼운 윈도우 10 만들기 프로젝트"
         }
       ]
     },
@@ -2898,6 +2862,15 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222461602422",
+          "author": "sellars",
+          "description": "<형이상학적 연역에서 선험적인 범주들 일반의 근원이 사고의 일반 논리적 기능들과 완전한 일치에 의거해 밝혀졌고, 반면에 초월적 연역에서는 이 범주들이 직관 일반의 대상에 대한 선험적 인식으로서 가능함이 해명되었다.> (B159) <형이상학적 연역>이라는 개념은 여기에 한 번 나온다. 선험적 범주들의 근원을 우리 사고의 논리적 기능으로부터 해명하는 것이 바로 형이상학적 연역이다. 백종현 번역판의 각주는 다음처럼 말하고 있다. <A76-A81, 즉 B102-B107에서 수행한 판단표를 실마리로 한 ‘범주들의 발견작업’>이라고 말하고 있다. 우리가 하는 판단들의 논리적 기능으로부터 범주를 추론해 내는 것이 칸트가 말.......",
+          "link": "https://blog.naver.com/sellars/222461602422",
+          "publishedOn": "2021-08-08T03:35:52.000Z",
+          "wordCount": 8,
+          "title": "칸트의 형이상학적 연역"
+        },
         {
           "id": "https://blog.naver.com/sellars/222460385660",
           "author": "sellars",
