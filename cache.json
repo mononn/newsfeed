@@ -41,6 +41,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/no-unique-address/",
+          "author": null,
+          "description": "C++20 added a couple of new attributes in the form of [[attrib_name]]. One of them - [[no_unique_address]] - can have surprising effects on the code! In this blog post, you’ll learn how to optimize your classes' layout and make some data members “disappear”. In most cases, it will be just one line of C++20 code.\nLet’s go.\nA motivating example\nunique_ptr is one of the most useful smart pointers and is also easy to use. It’s very flexible as you can even control the way the deleter works.\nI wrote an article on that topic some time ago:\nCustom Deleters for C++ Smart Pointers - unique_ptr\nTo recall the knowledge, let’s have a look at an example. There’s a legacy type LegacyList, and the users are obligated to call ReleaseElements before the list is deleted:\nstruct LegacyList {\n     void Releas…",
+          "link": "https://www.cppstories.com/2021/no-unique-address/",
+          "publishedOn": "2021-08-23T03:20:00.000Z",
+          "wordCount": 1680,
+          "title": "Empty Base Class Optimisation, no_unique_address and unique_ptr"
+        },
+        {
           "id": "https://www.cppstories.com/2021/evaluation-order-cpp17/",
           "author": null,
           "description": "C++ has many dark corners and many caveats that can cause you to scratch your head in confusion. One of the issues we had until C++17 was the evaluation order of expressions.\nIn this blog post, I’ll show you the new rules that we got in C++17 that made this complicated term much simpler and practical.\nHere are the main points for today:\nWhat’s the case with make_unique vs unique_ptr<T>(new T) in a function call.\nWhat are the new rules for C++17?\nAre all bugs fixed and now well defined?\nLet’s go.\n@Leanpub, or the print version @Amazon. And join almost 3000 readers!\nAnniversary Promo at the end of the article :)\n\n\n\nStricter Expression Evaluation Order\nUntil C++17, the language hasn’t specified any evaluation order for function parameters. Period.\nFor example, that’s why in C++14 make_unique …",
@@ -502,6 +511,15 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://feedproxy.google.com/~r/GDBcode/~3/7AXLCOv7X8c/google-developer-groups-spotlight-kose-notes.html",
+          "author": null,
+          "description": "Posted by Aniedi Udo-Obong, Sub-Saharan Africa Regional Lead, Google Developer Groups\n       \nThe Google Developer Groups Spotlight series interviews inspiring leaders of community meetup groups around the world. Our goal is to learn more about what developers are working on, how they’ve grown their skills with the Google Developer Group community, and what tips they might have for us all. \nWe recently spoke with Kose, community lead for Google Developer Groups Juba in South Sudan. Check out our conversation with Kose about building a GDG chapter, the future of GDG Juba, and the importance of growing the tech community in South Sudan. \nTell us a little about yourself?\nI’m a village-grown software developer and community lead of GDG Juba. I work with JavaScript stack with a focus on the bac…",
+          "link": "http://feedproxy.google.com/~r/GDBcode/~3/7AXLCOv7X8c/google-developer-groups-spotlight-kose-notes.html",
+          "publishedOn": "2021-08-23T16:57:00.003Z",
+          "wordCount": 3580,
+          "title": "Google Developer Group Spotlight: A conversation with GDG Juba Lead, Kose"
+        },
+        {
           "id": "http://feedproxy.google.com/~r/GDBcode/~3/ReUnlKTpMjs/video-touch-multi-user-remote-robot-control-in-google-meet.html",
           "author": null,
           "description": "A guest post by the Engineering team at Video-Touch\n Please note that the information, uses, and applications expressed in the below post are solely those of our guest author, Video-Touch. \n A guest post by Video-Touch\n You may have watched some science fiction movies where people could control robots with the movements of their bodies. Modern computer vision and robotics approaches allow us to make such an experience real, but no less exciting and incredible. \nInspired by the idea to make remote control and teleoperation practical and accessible during such a hard period of coronavirus, we came up with a VideoTouch project. \nVideo-Touch is the first robot-human interaction system that allows multi-user control via video calls application (e.g. Google Meet, Zoom, Skype) from anywhere in th…",
@@ -879,6 +897,24 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/866709/rss",
+          "author": "corbet",
+          "description": "The first installment in this two-part\nseries looked at the difficulties that arise when Btrfs filesystems\ncontaining subvolumes are exported via NFS.  Btrfs has a couple of quirks\nthat complicate life in this situation: the use of separate device numbers\nfor subvolumes and the lack of unique inode numbers across the filesystem\nas a whole.  Recently, Neil Brown set off on an effort to try\nto solve these problems, only to discover that the situation was even\nmore difficult than expected and that many attempts would be required.",
+          "link": "https://lwn.net/Articles/866709/rss",
+          "publishedOn": "2021-08-23T15:01:50.000Z",
+          "wordCount": null,
+          "title": "[$] The Btrfs inode-number epic (part 2: solutions)"
+        },
+        {
+          "id": "https://lwn.net/Articles/867149/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (ffmpeg, ircii, and scrollz), Fedora (kernel, krb5, libX11, and rust-actix-http), Mageia (kernel and kernel-linus), openSUSE (aspell, chromium, dbus-1, isync, java-1_8_0-openjdk, krb5, libass, libhts, libvirt, prosody, systemd, and tor), SUSE (cpio, dbus-1, libvirt, php7, qemu, and systemd), and Ubuntu (inetutils).",
+          "link": "https://lwn.net/Articles/867149/rss",
+          "publishedOn": "2021-08-23T14:45:39.000Z",
+          "wordCount": 119,
+          "title": "Security updates for Monday"
+        },
         {
           "id": "https://lwn.net/Articles/867054/rss",
           "author": "corbet",
@@ -1580,15 +1616,6 @@
           "publishedOn": "2021-07-25T20:01:49.000Z",
           "wordCount": 95,
           "title": "Some weekend stable kernels"
-        },
-        {
-          "id": "https://lwn.net/Articles/864225/rss",
-          "author": "corbet",
-          "description": "After a long pause, the K-9 Android mail client project has released version\n5.800.  \"The user interface has been redesigned. Some of you will\nlove it, some will hate it. You’re welcome and sorry.\"  There are\nalso a number of improvements to make background operation work better on\ncurrent Android systems.",
-          "link": "https://lwn.net/Articles/864225/rss",
-          "publishedOn": "2021-07-24T17:53:34.000Z",
-          "wordCount": 126,
-          "title": "K-9 5.800 released"
         }
       ]
     },
@@ -1742,6 +1769,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=8842",
+          "author": "Stacey Higginbotham",
+          "description": "Earlier this month, Andreessen Horowitz announced it was part of a $111 million investment in Helium. But the facts of the deal were a bit murky. The money from Andreessen was an investment in Helium Network Tokens (HNTs), not an investment in the company. However, Helium did wrap a small, undisclosed bit of outside funding from […]\nThe post Helium’s investment and 5G plans explained appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/heliums-investment-and-5g-plans-explained/",
+          "publishedOn": "2021-08-23T16:31:35.000Z",
+          "wordCount": 1217,
+          "title": "Helium’s investment and 5G plans explained"
+        },
         {
           "id": "https://staceyoniot.com/?p=8838",
           "author": "Stacey Higginbotham",
@@ -2021,6 +2057,15 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=81707",
+          "author": "언론인권센터",
+          "description": "지난 8월 15일(현지시간) 탈레반이 아프가니스탄의 수도 카불을 점령했다. 그와 동시에 아프가니스탄은 혼돈에 빠졌다. 탈레반을 피해 아프가니스탄을 탈출하려는 사람들이 몰리면서 공항은 마비되었고 여성들은 다시 부르카(눈과 발밑을 제외하고 신체 전부를 가린 여성의 복장)를 입었으며 거리는 한산해졌다. 이에 세계 각국의 언론들은 경쟁하듯 관련 보도를 쏟아냈다. 한국 언론 역시 예외는 아니었다. 물론 언론의 보도 덕분에 우리는 TV 앞에 편히 […]",
+          "link": "http://feedproxy.google.com/~r/slownews/~3/y-r46DQe8JU/81707",
+          "publishedOn": "2021-08-23T05:21:57.000Z",
+          "wordCount": 1062,
+          "title": "줍줍? 똑똑? 탈레반과 아프간의 비극을 오락화하는 언론"
+        },
+        {
           "id": "https://slownews.kr/?p=81696",
           "author": "진민정",
           "description": "과거, 뉴스 기사는 쉽게 사라지는 상품이었다. 신문은 한 번 읽고 나면 생선을 포장하거나 야채나 과일 껍질을 한데 모으거나 창문을 청소하는 데 사용되곤 했다. 정보는 잊히기 쉬운 상품이었고, 대중의 망각 능력은 신문 산업의 가장 기본적인 전제였다. 오보가 있더라도 정정 보도를 내는 일은 흔치 않았다. 양파 껍질과 더불어 기사의 오류 역시 쓰레기통으로 사라지곤 했기 때문이다. 이처럼 문제가 […]",
@@ -2234,6 +2279,24 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=583189",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/583189/21%eb%85%84-2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81",
+          "publishedOn": "2021-08-23T09:15:26.000Z",
+          "wordCount": 1537,
+          "title": "성장세 유지속 놀라운 수익성의 2분기 엔비디아 실적과 향후 전망"
+        },
+        {
+          "id": "https://happist.com/?p=583176",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/583176/%ed%95%9c%ea%b5%ad-%ed%88%ac%ec%9e%90%ec%9e%90-%ec%84%a0%ed%98%b8-%eb%af%b8%ea%b5%ad-%ec%a3%bc%ec%8b%9d",
+          "publishedOn": "2021-08-23T05:05:00.000Z",
+          "wordCount": 955,
+          "title": "한국 투자자 선호 미국 주식 Top 50(21년 8월 업뎃)"
+        },
         {
           "id": "https://happist.com/?p=583156",
           "author": "happist",
