@@ -40,6 +40,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/constexpr-vecstr-cpp20/",
+          "author": null,
+          "description": "constexpr started small in C++11 but then, with each Standard revision, improved considerably. In C++20, we can say that there’s a culmination point as you can even use std::vector and std::string in constant expressions!\nLet’s look at use cases, required features to make it work, and finally, one significant limitation that we might want to solve in the future.\nSidenote: is my code run at constexpr?\nBefore we dive into fun stuff with vectors, it would be good to set some background.\nIn short: even if your function is marked with constexpr, it doesn’t mean it will always be executed at compile-time.\nconstexpr function can be both executed at compile-time and runtime.\nFor example:\nconstexpr int sum(unsigned int n) {\n    return (n*(n+1))/2;\n}\n\nint main(int argc, const char**argv) {    \n    i…",
+          "link": "https://www.cppstories.com/2021/constexpr-vecstr-cpp20/",
+          "publishedOn": "2021-08-30T05:55:00.000Z",
+          "wordCount": 1661,
+          "title": "constexpr vector and string in C++20 and One Big Limitation"
+        },
+        {
           "id": "https://www.cppstories.com/2021/no-unique-address/",
           "author": null,
           "description": "C++20 added a couple of new attributes in the form of [[attrib_name]]. One of them - [[no_unique_address]] - can have surprising effects on the code! In this blog post, you’ll learn how to optimize your classes' layout and make some data members “disappear”. In most cases, it will be just one line of C++20 code.\nLet’s go.\nA motivating example\nunique_ptr is one of the most useful smart pointers and is also easy to use. It’s very flexible as you can even control the way the deleter works.\nI wrote an article on that topic some time ago:\nCustom Deleters for C++ Smart Pointers - unique_ptr\nTo recall the knowledge, let’s have a look at an example. There’s a legacy type LegacyList, and the users are obligated to call ReleaseElements before the list is deleted:\nstruct LegacyList {\n     void Releas…",
@@ -682,6 +691,15 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0860/",
+          "author": null,
+          "description": "Although C# 9 came out over half a year ago, the community is still processing its immense list of changes and has yet to discover best practices for the new features. It's a great excuse to go over C# 9 features one more time.",
+          "link": "http://feedproxy.google.com/~r/viva64-blog-en/~3/V_EtDcRfo8I/",
+          "publishedOn": "2021-08-29T21:00:00.000Z",
+          "wordCount": 4684,
+          "title": "What's new in C# 9: overview"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/0859/",
           "author": null,
           "description": "Episode 285 CppCast was recorded on February 3rd, 2020. Hosts Rob Irving and Jason Turner are joined by Victor Ciura. They first talk about different ways to filter a C++ container and a blog post on the Visual C++ blog from the Diablo 4 development team. They then talk to Victor about the Clang Power Tools plugin for Visual Studio which has recently been made free for both open source and commercial use. They also talk about C++ myths.",
@@ -847,6 +865,15 @@
           "publishedOn": "2021-08-04T09:06:00.000Z",
           "wordCount": 1014,
           "title": "Router and IoT Vulnerabilities: Insecure by Design"
+        },
+        {
+          "id": "https://www.iotsecurityfoundation.org/?p=21239",
+          "author": "John",
+          "description": "August 2nd 2021 The IoT Security Foundation announced today that Sarb Sembhi, CTO of Virtually Informed, has joined its Executive Steering Board (ESB). Sarb has been a cybersecurity professional for over 20 years and an active member of IoTSF since 2018 where he has successfully helped establish and co-chair the Smart Built Environment Working",
+          "link": "https://www.iotsecurityfoundation.org/iotsf-announces-sarb-sembhi-joins-executive-steering-board/",
+          "publishedOn": "2021-08-02T08:30:17.000Z",
+          "wordCount": 837,
+          "title": "IoTSF Announces Sarb Sembhi Joins Executive Steering Board"
         }
       ]
     },
@@ -923,6 +950,33 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/867540/rss",
+          "author": "corbet",
+          "description": "The 5.14 kernel was released on August 29\nafter a nine-week \ndevelopment period.  This cycle was not as active as its predecessor, which\nset a record for the number of developers involved, but there was still a\nlot going on and a number of long-awaited features were merged.  Now that\nthe release is out, the time has come for our \ntraditional look at where the code in 5.14 came from and how it got there.",
+          "link": "https://lwn.net/Articles/867540/rss",
+          "publishedOn": "2021-08-30T19:39:41.000Z",
+          "wordCount": null,
+          "title": "[$] Some 5.14 development statistics"
+        },
+        {
+          "id": "https://lwn.net/Articles/867791/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (exiv2, grilo, gthumb, and redis), Fedora (krb5, nbdkit, and rubygem-addressable), Mageia (libass and opencontainers-runc), openSUSE (cacti, cacti-spine, go1.15, opera, qemu, and spectre-meltdown-checker), Red Hat (java-1.7.1-ibm, java-1.8.0-ibm, libsndfile, and libX11), SUSE (389-ds, qemu, and spectre-meltdown-checker), and Ubuntu (grilo).",
+          "link": "https://lwn.net/Articles/867791/rss",
+          "publishedOn": "2021-08-30T14:54:26.000Z",
+          "wordCount": 117,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/867706/rss",
+          "author": "corbet",
+          "description": "Linus has released the 5.14 kernel.\n\n\n\tSo I realize you must all still be busy with all the galas and\n\tfancy balls and all the other 30th anniversary events, but at some\n\tpoint you must be getting tired of the constant glitz, the\n\tfireworks, and the champagne. That ball gown or tailcoat isn't the\n\tmost comfortable thing, either. The celebrations will go on for a\n\tfew more weeks yet, but you all may just need a breather from them.\n\n\tAnd when that happens, I have just the thing for you - a new kernel\n\trelease to test and enjoy.\n\n\nHeadline features in 5.14 include:\ncore scheduling (at last),\nthe burstable CFS bandwidth controller,\nsome initial infrastructure for BPF program\nloaders,\nthe rq_qos\nI/O priority policy,\nsome improvements to the\nSO_REUSEPORT networking option,\nthe control-group \"kill\" button,\nthe memfd_secret() system call,\nthe quotactl_fd() system call,\nand much more.  See the LWN merge-window summaries (part 1, part 2) for more details.",
+          "link": "https://lwn.net/Articles/867706/rss",
+          "publishedOn": "2021-08-29T22:33:39.000Z",
+          "wordCount": 243,
+          "title": "The 5.14 kernel has been released"
+        },
         {
           "id": "https://lwn.net/Articles/867185/rss",
           "author": "corbet",
@@ -1760,6 +1814,24 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=8897",
+          "author": "Kevin C. Tofel",
+          "description": "On our most recent IoT Podcast episode, Brent called in with a question to make life a little easier in his smart home. He has a reading lamp in his bedroom that he can control with either a switch or a digital assistant. But he’s looking for a solution to quietly control it while he’s […]\nThe post Here’s the perfect situation for a smart button in your home appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/heres-the-perfect-situation-for-a-smart-button-in-your-home/",
+          "publishedOn": "2021-08-30T17:00:11.000Z",
+          "wordCount": 756,
+          "title": "Here’s the perfect situation for a smart button in your home"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=8841",
+          "author": "Stacey Higginbotham",
+          "description": "Look, we all know that algorithms are biased. What matters is how they are biased. What data helped train the algorithm? Is that data representative? What weights and preferences did the data scientist ascribe to different features when designing the algorithm? As an end user, it’s often impossible to know. But when we blame the […]\nThe post How should governments hold AI accountable? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-should-governments-hold-ai-accountable/",
+          "publishedOn": "2021-08-30T14:12:30.000Z",
+          "wordCount": 1916,
+          "title": "How should governments hold AI accountable?"
+        },
+        {
           "id": "https://staceyoniot.com/?p=8887",
           "author": "Stacey Higginbotham",
           "description": "Foghorn gets a big win with Saudi Arabia’s Aramco: Foghorn, a startup providing data processing and analytics at the edge for industrial IoT clients, has signed a deal with Aramco, the oil and gas giant. Aramco will use Foghorn’s software for analyzing camera input in its plants and on its rigs. Specifically, Aramco will use it […]\nThe post IoT news of the week for August 27, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -1974,15 +2046,6 @@
           "publishedOn": "2021-08-02T13:00:59.000Z",
           "wordCount": 1582,
           "title": "The IoT needs a huge helping of trust if it wants to work"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=8733",
-          "author": "Kevin C. Tofel",
-          "description": "On our most recent IoT Podcast, Brian asked an interesting question for our voicemail hotline about the just-announced Firewalla Purple. We actually shared the news about this new addition to the Firewalla product lineup, so Brian’s question is perfectly timed. He wants to know if he can run Home Assistant in a Docker container on […]\nThe post Can you run Home Assistant in a Docker container on the Firewalla Purple? appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/can-you-run-home-assistant-in-a-docker-container-on-the-firewalla-purple/",
-          "publishedOn": "2021-07-31T13:00:58.000Z",
-          "wordCount": 753,
-          "title": "Can you run Home Assistant in a Docker container on the Firewalla Purple?"
         }
       ]
     },
@@ -2037,6 +2100,15 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=81754",
+          "author": "민주언론시민연합",
+          "description": "[강철부대]는 대한민국 최정예 특수부대 출신 예비역들이 팀을 이뤄 각 부대의 명예를 걸고 경쟁하는 ‘밀리터리 서바이벌 예능’으로 채널A와 SKY채널이 공동 제작해 2021년 3월 23일부터 6월 22일까지 매주 화요일마다 방영했습니다. [강철부대]는 제707대테러특수임무단(707), 군사경찰특임대(SDT), 육군특수전사령부(특전사), 해군특수전전단(UDT), 해군해난구조전대(SSU), 해병대특수수색대(해병대) 등 모두 6개 특수부대 출신 예비역들이 참여해 대한민국 최고 특수부대를 가려내는 콘셉트 프로그램입니다. 기존 군대식 예능과 달리 각 부대 출신 […]",
+          "link": "http://feedproxy.google.com/~r/slownews/~3/0LJ8D71GOsA/81754",
+          "publishedOn": "2021-08-30T03:33:49.000Z",
+          "wordCount": 3023,
+          "title": "‘강철부대’ 시즌2를 기다리며: 시즌1의 네 가지 아쉬움"
+        },
         {
           "id": "https://slownews.kr/?p=81750",
           "author": "오픈넷",
@@ -2242,6 +2314,15 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=583316",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/583316/%eb%b9%84%eb%a9%94%ec%98%a4-%ed%98%81%ec%8b%a0-%ec%82%ac%eb%a1%80",
+          "publishedOn": "2021-08-30T16:15:49.000Z",
+          "wordCount": 2662,
+          "title": "동영상 플랫폼 비메오 혁신 사례, 비메오 CEO 안잘리 수드가 말하는 비메오 전략"
+        },
         {
           "id": "https://happist.com/?p=583294",
           "author": "happist",
@@ -2655,51 +2736,6 @@
           "publishedOn": "2021-08-01T10:41:51.000Z",
           "wordCount": 2266,
           "title": "누구에게나 통용되는 오마하 현인 워렌 버핏 삶의 지혜 21가지"
-        },
-        {
-          "id": "https://happist.com/?p=582577",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/582577/%ec%9b%8c%eb%a0%8c-%eb%b2%84%ed%95%8f%ec%9d%98-%ea%b2%80%ec%86%8c%ed%95%9c-%ec%8a%b5%ea%b4%80-9%ea%b0%80%ec%a7%80",
-          "publishedOn": "2021-08-01T06:02:42.000Z",
-          "wordCount": 1447,
-          "title": "돈을 모으는 워렌 버핏의 검소한 습관 9가지"
-        },
-        {
-          "id": "https://happist.com/?p=582570",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/582570/21%eb%85%84-2%eb%b6%84%ea%b8%b0-%ed%83%9c%eb%b8%94%eb%a6%bf-%ec%a0%90%ec%9c%a0%ec%9c%a8",
-          "publishedOn": "2021-07-31T22:48:18.000Z",
-          "wordCount": 729,
-          "title": "21년 2분기 태블릿 수요 및 태블릿 점유율 분석"
-        },
-        {
-          "id": "https://happist.com/?p=582557",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/582557/21%eb%85%84-2%eb%b6%84%ea%b8%b0-%ec%8a%a4%eb%a7%88%ed%8a%b8%ed%8f%b0-%ec%a0%90%ec%9c%a0%ec%9c%a8",
-          "publishedOn": "2021-07-31T20:46:12.000Z",
-          "wordCount": 824,
-          "title": "21년 2분기 스마트폰 점유율, 삼성 리드속 샤오미가 무섭게 추격하다"
-        },
-        {
-          "id": "https://happist.com/?p=582555",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/582555/%ec%8b%a0%eb%a2%b0%ed%95%98%eb%8a%94-%ea%b8%b0%ec%97%85-%ec%95%84%eb%a7%88%ec%a1%b4",
-          "publishedOn": "2021-07-31T18:43:28.000Z",
-          "wordCount": 623,
-          "title": "미국 소비자들이 가장 신뢰하는 기업으로 아마존을 뽑다"
-        },
-        {
-          "id": "https://happist.com/?p=582534",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/582534/%ed%8c%ac%eb%8d%b0%eb%af%b9-%ec%9d%b4%ed%9b%84-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%8b%9c%ec%9e%a5",
-          "publishedOn": "2021-07-31T17:32:24.000Z",
-          "wordCount": 1582,
-          "title": "팬데믹 이후 클라우드 시장이 커지다, AWS vs 애저 vs 구글 클라우드 실적 비교"
         }
       ]
     },
@@ -2708,6 +2744,15 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=73293",
+          "author": "veritaholic",
+          "description": "(가디언, David Robson) 원문 보기   편한 자세로 앉아 눈을 감고 심장이 뛰는 것을 느껴봅시다. 손으로 맥을 짚지 않고도 심장의 움직임이 느껴지나요? 아니면 아무것도 느껴지지 않나요? 이 간단한 테스트는 뇌가 내부 장기의 신호로부터 신체 상태를 파악하는 능력을 말하는 “내수용 감각(interoception)” 능력을 확인하는 테스트입니다. 내수용 감각은 시각, 청각, 미각, 촉각, 후각과 같은 “외향적” 감각에 비해 잘 알려지지 않지만, 한 사람의 기분에 매우 큰 영향을 미치는 감각입니다. 과학자들은 내수용 감각이 우리의 우울증이나 → 더 보기",
+          "link": "https://newspeppermint.com/2021/08/29/m-interoception/?utm_source=rss&utm_medium=rss&utm_campaign=m-interoception",
+          "publishedOn": "2021-08-29T22:54:08.000Z",
+          "wordCount": 1391,
+          "title": "내수용 감각(interoception): 행복감을 주는 숨겨진 감각"
+        },
         {
           "id": "https://newspeppermint.com/?p=73254",
           "author": "ingppoo",
