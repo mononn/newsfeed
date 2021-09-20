@@ -40,6 +40,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/sphero-cpp-return/",
+          "author": null,
+          "description": "What should happen when the data returned from a function is not valid? It might be an error or just how the system operates (embedded environment, a timeout). In this article, you’ll see a practical example from the robotics area where the vocabulary types from C++17 play important roles.\nThis is a guest post written by Rud Merriam:\nRud is a retired software engineer with interest in C++, embedded / robotic systems, and general hacking. He’s written about C++ for embedded systems for Hackaday and is currently working to catch up on C++20 capabilities and write about them. Reach him on Twitter at @r_merriam.\nThis text was initially published @Medium - see here.\nExploring C++ STL for Function Return Status\nSphero released the RVR robot above in 2019. Before its release, I worked to build a …",
+          "link": "https://www.cppstories.com/2021/sphero-cpp-return/",
+          "publishedOn": "2021-09-20T05:20:00.000Z",
+          "wordCount": 3270,
+          "title": "C++ Return: std::any, std::optional, or std::variant?"
+        },
+        {
           "id": "https://www.cppstories.com/2021/constexpr-virtual/",
           "author": null,
           "description": "Two keywords, constexpr and virtual - can those two work together? Virtual implies runtime polymorphism, while constexpr suggests constant expression evaluation. It looks like we have a contradiction, does it?\nRead on and see why those conflicting terms might help us get simpler code.\nA basic example\nImagine that you work with some product list, and you want to check if a product fits in a given box size:\n#include <cassert>\n\nstruct Box {\n  double width{0.0};\n  double height{0.0};\n  double length{0.0};\n};\n\nstruct Product {\n  virtual ~Product() = default;\n\n  virtual Box getBox() const noexcept = 0;\n};\n\nstruct Notebook : public Product {\n  Box getBox() const noexcept override {\n    return {.width = 30.0, .height = 2.0, .length = 30.0};\n  }\n};\n\nstruct Flower : public Product {\n  Box getBox() c…",
@@ -172,6 +181,15 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4471010",
+          "author": "Nitin Dahad",
+          "description": "Sony said its new IMX459 is the industry’s first stacked SPAD depth sensor for automotive lidar applications that includes SPAD pixels and distance measuring processing circuit on a single chip. \nThe post Sony stacks SPAD sensor and logic in single chip for automotive lidar appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/sony-stacks-spad-sensor-and-logic-in-single-chip-for-automotive-lidar/",
+          "publishedOn": "2021-09-20T13:48:11.000Z",
+          "wordCount": 1763,
+          "title": "Sony stacks SPAD sensor and logic in single chip for automotive lidar"
+        },
         {
           "id": "https://www.embedded.com/?p=4471005",
           "author": "Nitin Dahad",
@@ -450,15 +468,6 @@
           "publishedOn": "2021-08-23T21:52:39.000Z",
           "wordCount": 3549,
           "title": "Time of flight system design: System overview"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4470814",
-          "author": "Majeed Ahmad",
-          "description": "Besides bring a full set of tools for building machine-learning models, NXP has taken the extra step of offering tools for data preparation and model...\nThe post Machine-learning development suite aids data prep, training appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/machine-learning-development-suite-aids-data-prep-training/",
-          "publishedOn": "2021-08-21T16:38:00.000Z",
-          "wordCount": 1733,
-          "title": "Machine-learning development suite aids data prep, training"
         }
       ]
     },
@@ -473,6 +482,15 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://feedproxy.google.com/~r/GDBcode/~3/ft4i4rBon40/mentoring-future-women-experts.html",
+          "author": null,
+          "description": "Posted by Justyna Politanska-Pyszko\n Google Developers Experts is a global community of developers, engineers and thought leaders who passionately share their technical knowledge with others.  \nBecoming a Google Developers Expert is no easy task. First, you need to have strong skills in one of the technical areas - Android, Kotlin, Google Cloud, Machine Learning, Web Technologies, Angular, Firebase, Google Workspace, Flutter or other. You also need to have a track record of sharing your knowledge - be it via conference talks, your personal blog, youtube videos or in some other form. Finally, you need one more thing. The courage to approach an existing Expert or a Google employee and ask them to support your application. \nIt’s not easy, but it’s worth it. Joining the Experts community comes…",
+          "link": "http://feedproxy.google.com/~r/GDBcode/~3/ft4i4rBon40/mentoring-future-women-experts.html",
+          "publishedOn": "2021-09-20T17:00:00.002Z",
+          "wordCount": 2888,
+          "title": "Mentoring future women Experts"
+        },
         {
           "id": "http://feedproxy.google.com/~r/GDBcode/~3/U9xrEpogvM4/drone-control-via-gestures-using-mediapipe-hands.html",
           "author": null,
@@ -668,6 +686,15 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.a16z.com",
       "articles": [
+        {
+          "id": "https://future.a16z.com/?post_type=podcast&p=1918",
+          "author": "Sonal Chokshi",
+          "description": "There’s no question technology played a huge role in the recent/current pandemic, including especially in the plug-and-play engineering and incredibly fast development behind the mRNA vaccines… But is there an even bigger role for the private sector, not just government, to play (and partner) when it comes to key infrastructure for future such emergencies, and... Read More\nThe post Uncontrolled Spread: Science, Policy, Institutions, Infrastructure appeared first on Future.",
+          "link": "https://future.a16z.com/podcasts/uncontrolled-spread-gottlieb-book-science-policy-institutions-technology-infrastructure-public-private-pandemic-emergency-beyond/",
+          "publishedOn": "2021-09-19T23:45:58.000Z",
+          "wordCount": 564,
+          "title": "Uncontrolled Spread: Science, Policy, Institutions, Infrastructure"
+        },
         {
           "id": "https://future.a16z.com/?p=1543",
           "author": "Lauren Murrow",
@@ -889,23 +916,40 @@
       "title": "Lucky Resistor",
       "feedUrl": "https://luckyresistor.me/feed/",
       "siteUrl": "https://luckyresistor.me",
-      "articles": [
-        {
-          "id": "https://luckyresistor.me/?p=11113",
-          "author": "Lucky Resistor",
-          "description": "I made a simple 3d printed enclosure for Adafruit’s PowerBoost 1000C and a 1200mAh or smaller LiPo battery. This post contains all the files you need for the print, a list of components, and assembly instructions. My design uses three simple parts with tight tolerances. They are held together with two M3 screws and two...",
-          "link": "https://luckyresistor.me/2021/08/21/adafruit-powerboost-1000c-enclosure-lr2165/",
-          "publishedOn": "2021-08-21T09:27:59.000Z",
-          "wordCount": 1438,
-          "title": "Adafruit PowerBoost 1000C Enclosure (LR2165)"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "LWN.net",
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/869428/rss",
+          "author": "corbet",
+          "description": "The first day of the Kangrejos (Rust for Linux) conference\nintroduced the project and what it was trying to accomplish; day 2 covered a number of core Rust\nconcepts and their relevance to the kernel.  On the third and final day of\nthe conference, Wedson Almeida Filho delved deeper into how Rust can be\nmade to work in the Linux kernel, covered some of the lessons that have been\nlearned so far, and discussed next steps with a number of kernel\ndevelopers.",
+          "link": "https://lwn.net/Articles/869428/rss",
+          "publishedOn": "2021-09-20T16:27:05.000Z",
+          "wordCount": null,
+          "title": "[$] More Rust concepts for the kernel"
+        },
+        {
+          "id": "https://lwn.net/Articles/869863/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (gnutls28, nettle, nextcloud-desktop, and openssl1.0), Fedora (dovecot-fts-xapian, drupal7, ghostscript, haproxy, libtpms, lynx, wordpress, and xen), openSUSE (xen), Red Hat (rh-ruby27-ruby), and SUSE (openssl, openssl1, and xen).",
+          "link": "https://lwn.net/Articles/869863/rss",
+          "publishedOn": "2021-09-20T15:26:49.000Z",
+          "wordCount": 106,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/869838/rss",
+          "author": "corbet",
+          "description": "The 5.15-rc2 kernel prepatch is out for\ntesting.\n\n\nSo I've spent a fair amount of this week trying to sort out all the\nodd warnings, and I want to particularly thank Guenter Roeck for his\nwork on tracking where the build failures due to -Werror come from.\n\nIs it done? No. But on the whole I'm feeling fairly good about this\nall, even if it has meant that I've been looking at some really odd\nand grotty code. Who knew I'd still worry about some odd EISA driver\non alpha, after all these years? A slight change of pace ;)",
+          "link": "https://lwn.net/Articles/869838/rss",
+          "publishedOn": "2021-09-20T13:17:26.000Z",
+          "wordCount": 175,
+          "title": "Kernel prepatch 5.15-rc2"
+        },
         {
           "id": "https://lwn.net/Articles/869746/rss",
           "author": "corbet",
@@ -1677,15 +1721,6 @@
           "publishedOn": "2021-09-14T21:06:59.000Z",
           "wordCount": 1732,
           "title": "Billions of Code Name Permutations in 32 bits"
-        },
-        {
-          "id": "https://nullprogram.com/blog/2021/08/21/",
-          "author": null,
-          "description": "I like to test my software across different environments, on strange\nplatforms, and with alternative implementations. Each has its\nown quirks and oddities that can shake bugs out earlier. C is particularly\ngood at this since it has such a wide selection of compilers and runs on\neverything. For instance I count at least 7 distinct C compilers in Debian\nalone. One advantage of writing portable software is access to a\nbroader testing environment, and it’s one reason I prefer to target\nstandards rather than specific platforms.\nHowever, I’ve long struggled with architecture diversity. My work and\ntesting has been almost entirely on x86, with ARM as a distant second\n(Raspberry Pi and friends). Big endian hosts are particularly rare.\nHowever, I recently learned a trick for quickly and convenientl…",
-          "link": "https://nullprogram.com/blog/2021/08/21/",
-          "publishedOn": "2021-08-21T23:59:33.000Z",
-          "wordCount": 1122,
-          "title": "Test cross-architecture without leaving home"
         }
       ]
     },
@@ -1734,6 +1769,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=8996",
+          "author": "Stacey Higginbotham",
+          "description": "This week, Silicon Labs held its annual Works With event, covering all aspects of the IoT. While many of the sessions were aimed at engineers trying to learn specific skills for product development, the event held a few panels with a larger focus that included elements worth noting. Silicon Labs also made three big news announcements […]\nThe post 6 takeaways from this week’s Works With event appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/6-takeaways-from-this-weeks-works-with-event/",
+          "publishedOn": "2021-09-20T13:00:14.000Z",
+          "wordCount": 1243,
+          "title": "6 takeaways from this week’s Works With event"
+        },
         {
           "id": "https://staceyoniot.com/?p=8954",
           "author": "Stacey Higginbotham",
@@ -2237,6 +2281,15 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=583622",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/583622/%ec%9b%8c%eb%93%9c%ed%94%84%eb%a0%88%ec%8a%a4-%ed%85%8c%ec%9d%b4%eb%b8%94-%ed%94%8c%eb%9f%ac%ea%b7%b8%ec%9d%b8-wpdatatables-test",
+          "publishedOn": "2021-09-20T08:41:36.000Z",
+          "wordCount": 1867,
+          "title": "워드프레스 테이블 플러그인 wpDataTables test"
+        },
+        {
           "id": "https://happist.com/?p=583589",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -2451,15 +2504,6 @@
           "publishedOn": "2021-08-22T23:29:42.000Z",
           "wordCount": 1179,
           "title": "핸드메이드 이커머스 엣시 실적 둔화, 2분기 실적 분석과 주가 전망"
-        },
-        {
-          "id": "https://happist.com/?p=583136",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583136/21%eb%85%84-1%eb%b6%84%ea%b8%b0-%ec%bd%94%ec%8a%a4%ed%8a%b8%ec%bd%94-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2021-08-22T01:41:36.000Z",
-          "wordCount": 1247,
-          "title": "경제 리오프닝으로 날개를 단 21년 3분기 코스트코 실적과 향후 전망"
         }
       ]
     },
@@ -2555,17 +2599,7 @@
       "title": "WALLFLOWER",
       "feedUrl": "http://rss.egloos.com/blog/wallflower",
       "siteUrl": "http://wallflower.egloos.com",
-      "articles": [
-        {
-          "id": "http://wallflower.egloos.com/4200776",
-          "author": "이택광",
-          "description": "이 블로그에 이런 저런 주제로 자유롭게 글을 쓸 때가 좋았던 시절이었다. 그렇게 여기를 혐오했으면서도, 사실상 그때만큼 내가 이곳을 사랑했던 때는 없었던 것 같다. 그때는 그래도 어린 시절 내가 품었던 이상에 대한 열정도 있었고, 여럿과 함께 간다는 신뢰도 있었다.... 글 전체보기",
-          "link": "http://wallflower.egloos.com/4200776",
-          "publishedOn": "2021-08-21T23:36:33.000Z",
-          "wordCount": 322,
-          "title": "여름이 가는 중"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "내 마음의 풍경",
@@ -2589,15 +2623,6 @@
           "publishedOn": "2021-09-17T10:26:07.000Z",
           "wordCount": 8,
           "title": "중국철학의 합법성"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222479866503",
-          "author": "sellars",
-          "description": "비트겐슈타인과 마르크스, 비트겐슈타인과 알튀세르의 유사성을 주장하는 글들이 진리를 진리 효과로 이해하고 있고, 이것이 이들 철학자의 사유에 공통적으로 나타난다는 것이다. 그렇지만 나는 이 주장이 틀렸다고 생각한다. 메디나와 우드는 진리에 대한 비트겐슈타인의 생각을 세 가지로 정리하고 있다. 첫째, 진리는 복수적이다. 혹은 다원적이다. 둘째, 진리 맥락주의이다. 셋째, 진리는 수행적, 실행적, 실천적 차원을 갖는다. 후기 비트겐슈타인 철학이 강조하는 가족 유사성, 혹은 유사성과 차이성을 바라보아야 한다는 것이 진리에도 적용된다고 생각한다. 논리적 진리가 있다. 수학적 진리가 있다. 이러한 진리를 대응설을 설명하는 것.......",
-          "link": "https://blog.naver.com/sellars/222479866503",
-          "publishedOn": "2021-08-22T00:19:24.000Z",
-          "wordCount": 8,
-          "title": "비트겐슈타인의 진리"
         }
       ]
     }
