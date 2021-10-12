@@ -86,15 +86,6 @@
           "publishedOn": "2021-09-20T05:20:00.000Z",
           "wordCount": 3270,
           "title": "C++ Return: std::any, std::optional, or std::variant?"
-        },
-        {
-          "id": "https://www.cppstories.com/2021/constexpr-virtual/",
-          "author": null,
-          "description": "Two keywords, constexpr and virtual - can those two work together? Virtual implies runtime polymorphism, while constexpr suggests constant expression evaluation. It looks like we have a contradiction, does it?\nRead on and see why those conflicting terms might help us get simpler code.\nA basic example\nImagine that you work with some product list, and you want to check if a product fits in a given box size:\n#include <cassert>\n\nstruct Box {\n  double width{0.0};\n  double height{0.0};\n  double length{0.0};\n};\n\nstruct Product {\n  virtual ~Product() = default;\n\n  virtual Box getBox() const noexcept = 0;\n};\n\nstruct Notebook : public Product {\n  Box getBox() const noexcept override {\n    return {.width = 30.0, .height = 2.0, .length = 30.0};\n  }\n};\n\nstruct Flower : public Product {\n  Box getBox() c…",
-          "link": "https://www.cppstories.com/2021/constexpr-virtual/",
-          "publishedOn": "2021-09-13T05:55:00.000Z",
-          "wordCount": 1398,
-          "title": "C++20 Oxymoron: constexpr virtual"
         }
       ]
     },
@@ -320,6 +311,24 @@
           "publishedOn": "2021-10-06T12:31:07.000Z",
           "wordCount": 3761,
           "title": "Evaluating a Yocto-based Linux system using visual trace diagnostics"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4471269",
+          "author": "Egil Juliussen",
+          "description": "A startup developing a software platform focused on autonomous trucks is providing what looks like a path to driverless systems. Special purpose acquisition companies, or...\nThe post Startup champions driverless trucks appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/startup-champions-driverless-trucks/",
+          "publishedOn": "2021-10-05T16:18:00.000Z",
+          "wordCount": 3032,
+          "title": "Startup champions driverless trucks"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4471265",
+          "author": "Majeed Ahmad",
+          "description": "In a bid to bring machine learning to MCUs, Renesas is integrating MicroAI’s AtomML algorithm in its RA family of MCUs. After NXP and STMicroelectronics...\nThe post Renesas MCUs get MicroAI models appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/renesas-mcus-get-microai-models/",
+          "publishedOn": "2021-10-05T15:58:00.000Z",
+          "wordCount": 1481,
+          "title": "Renesas MCUs get MicroAI models"
         },
         {
           "id": "https://www.embedded.com/?p=4471231",
@@ -587,6 +596,15 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://feedproxy.google.com/~r/GDBcode/~3/ekr77vIqd6c/announcing-google-forms-api_01768004272.html",
+          "author": null,
+          "description": "Posted by Christian Schalk, Developer Advocate\n   \n    Announcing the Google Forms API \n    Google is proud to announce the Google Forms API! The Forms API is     currently available in Restricted Beta, with Open Beta expected to follow     in Q4. \n\n    Launched in 2008, Google Forms enables easy creation and distribution of     forms, surveys, and quizzes. Forms is used for a wide variety of use cases     across business operations, customer management, event planning and     logistics, education, and more. \n    Bringing Automation to Google Forms \n  \n    The new Google Forms API provides programmatic access for managing forms     and acting on responses, empowering developers to build powerful     integrations on top of Forms. The API supports two key use cases: \n\n    \n        \n         …",
+          "link": "http://feedproxy.google.com/~r/GDBcode/~3/ekr77vIqd6c/announcing-google-forms-api_01768004272.html",
+          "publishedOn": "2021-10-12T19:33:00.000Z",
+          "wordCount": 3490,
+          "title": "Announcing the Google Forms API"
+        },
+        {
           "id": "http://feedproxy.google.com/~r/GDBcode/~3/x0yMKXME5vY/granular-google-account-update.html",
           "author": null,
           "description": "Posted by Vikrant Rana, Product Manager, and Badi Azad, Group Product Manager\n   \nSummary\n  \nGoogle Identity strives to be the best stewards for Google Account users who entrust us to protect their data. At the same time, we want to help our developer community build apps that give users amazing experiences. Together, Google and developers can provide users three important ways to manage sharing their data: \n \nGive users control in deciding who has access to their account data  \nMake it easier and safer for users to share their Google Account data with your app when they choose to do so  \nMake it clear to users the specific data they are sharing with apps\n\n\nWhat we are doing today\n\nIn service of that stewardship, today we are announcing an OAuth consent experience that simplifies how users…",
@@ -748,6 +766,15 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0873/",
+          "author": null,
+          "description": "Modern applications have lots of code. And the C++ language doesn't get easier. Nowadays, code reviews are not enough to fully analyze program code. Here's where static code analysis comes in.",
+          "link": "http://feedproxy.google.com/~r/viva64-blog-en/~3/Xgk3xjidb8E/",
+          "publishedOn": "2021-10-11T21:00:00.000Z",
+          "wordCount": 4313,
+          "title": "C++ tools evolution: static code analyzers"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/0872/",
           "author": null,
           "description": "We are actively developing the PVS-Studio static analysis tool towards detecting Safety and Security-related errors. To be more precise, we've expanded the coverage of the MISRA C:2012 and OWASP ASVS standards. We have supported the MISRA Compliance 2020 standard. One of the more extraordinary innovations is the Best Warnings display mode. This mode displays the most significant (meaningful) warnings and can be useful when you are just starting out with the analyzer.",
@@ -817,6 +844,15 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.a16z.com",
       "articles": [
+        {
+          "id": "https://future.a16z.com/?p=2193",
+          "author": "Parag Khanna",
+          "description": "Excerpted from MOVE: The Forces Uprooting Us, by Parag Khanna. Copyright © 2021 by Parag Khanna. Excerpted with permission by Scribner, a division of Simon & Schuster Inc., for Future by a16z.  The Great Lockdown of 2020 was also a Great Reset. Thousands of entrepreneurs chose to become digital nomads, ditching San Francisco for Costa... Read More\nThe post The World Needs a New Protocol for Global Travel appeared first on Future.",
+          "link": "https://future.a16z.com/the-world-needs-a-new-protocol-for-global-travel/",
+          "publishedOn": "2021-10-12T16:07:14.000Z",
+          "wordCount": 2351,
+          "title": "The World Needs a New Protocol for Global Travel"
+        },
         {
           "id": "https://future.a16z.com/?p=2148",
           "author": "Molly Mielke",
@@ -994,6 +1030,15 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/september-2021-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nSeptember.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/september-2021-roundup",
+          "publishedOn": "2021-10-12T00:00:00.000Z",
+          "wordCount": 948,
+          "title": "What we've been reading in September"
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/cmsis-packs",
           "author": null,
           "description": "In this article, we’ll take a look at what CMSIS-Packs are, and how they can be\nuseful!\nContinue reading…",
@@ -1065,6 +1110,33 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/872321/rss",
+          "author": "jake",
+          "description": "There are many barriers to producing software that is reliable and\nmaintainable over the long term.  One of those is software complexity.  At\nthe recently concluded 2021 KVM\nForum, Paolo Bonzini\nexplored\nthis topic, using QEMU, the open source emulator\nand virtualizer, as a case study.  Drawing on his experience as\na maintainer of several QEMU subsystems, he made some concrete\nsuggestions on how to defend against undesirable complexity.  Bonzini\nused QEMU as a running example throughout the talk, hoping to make it\neasier for future contributors to modify QEMU.  However, the\nlessons he shared are equally applicable to many other projects.",
+          "link": "https://lwn.net/Articles/872321/rss",
+          "publishedOn": "2021-10-12T18:34:10.000Z",
+          "wordCount": null,
+          "title": "[$] A QEMU case study in grappling with software complexity"
+        },
+        {
+          "id": "https://lwn.net/Articles/872696/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (firefox-esr, hiredis, and icu), Fedora (kernel), Mageia (libreoffice), openSUSE (chromium, firefox, git, go1.16, kernel, mbedtls, mupdf, and nodejs8), Oracle (firefox and kernel), Red Hat (firefox, grafana, kernel, kpatch-patch, and rh-mysql80-mysql), and SUSE (apache2, containerd, docker, runc, curl, firefox, kernel, libqt5-qtsvg, and squid).",
+          "link": "https://lwn.net/Articles/872696/rss",
+          "publishedOn": "2021-10-12T15:21:13.000Z",
+          "wordCount": 122,
+          "title": "Security updates for Tuesday"
+        },
+        {
+          "id": "https://lwn.net/Articles/872639/rss",
+          "author": "corbet",
+          "description": "A group of researchers at Trinity College in Dublin has released the\nresults of a study into the data collected by a number of Android\nvariants.  There are few surprises here, but the picture is still\ndiscouraging.\n\n\n\tWe find that the Samsung, Xiaomi, Huawei and Realme Android\n\tvariants all transmit a substantial volume of data to the OS\n\tdeveloper (i.e. Samsung etc) and to third-party parties that have\n\tpre-installed system apps (including Google, Microsoft, Heytap,\n\tLinkedIn, Facebook). LineageOS sends similar volumes of data to\n\tGoogle as these proprietary Android variants, but we do not observe\n\tthe LineageOS developers themselves collecting data nor\n\tpre-installed system apps other than those of Google. Notably,\n\t/e/OS sends no information to Google or other third parties and\n\tsends essentially no information to the /e/OS developers.",
+          "link": "https://lwn.net/Articles/872639/rss",
+          "publishedOn": "2021-10-12T14:00:14.000Z",
+          "wordCount": 220,
+          "title": "A study of data collection by Android devices"
+        },
         {
           "id": "https://lwn.net/Articles/872209/rss",
           "author": "corbet",
@@ -1829,24 +1901,6 @@
           "publishedOn": "2021-09-13T13:32:25.000Z",
           "wordCount": 103,
           "title": "GDB 11.1 released"
-        },
-        {
-          "id": "https://lwn.net/Articles/869031/rss",
-          "author": "corbet",
-          "description": "Linus has released 5.15-rc1 and closed the\nmerge window for this development cycle.\n\n\n\tSo 5.15 isn't shaping up to be a particularly large release, at\n\tleast in number of commits. At only just over 10k non-merge\n\tcommits, this is in fact the smallest rc1 we have had in the 5.x\n\tseries. We're usually hovering in the 12-14k commit range.\n\n\tThat said, counting commits isn't necessarily the best measure, and\n\tthat might be particularly true this time around. We have a few new\n\tsubsystems, with NTFSv3 and ksmbd standing out.",
-          "link": "https://lwn.net/Articles/869031/rss",
-          "publishedOn": "2021-09-13T02:53:45.000Z",
-          "wordCount": 164,
-          "title": "Kernel prepatch 5.15-rc1"
-        },
-        {
-          "id": "https://lwn.net/Articles/869006/rss",
-          "author": "corbet",
-          "description": "The\n5.14.3,\n5.13.16,\n5.10.64, and\n5.4.145\nstable kernel updates have been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/869006/rss",
-          "publishedOn": "2021-09-12T20:30:01.000Z",
-          "wordCount": 97,
-          "title": "Stable kernels for Sunday"
         }
       ]
     },
@@ -1877,6 +1931,15 @@
       "feedUrl": "https://mcuoneclipse.com/feed/",
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
+        {
+          "id": "http://mcuoneclipse.com/?p=33592",
+          "author": "Erich Styger",
+          "description": "It is interesting to see that some aspects (mostly unintended) can stimulate lots of good and fruitful discussions. So this happened with “Spilling the Beans: Endless Loops” (recommended to read 🙂 where using (or not using) volatile for inline assembly created … Continue reading →",
+          "link": "https://mcuoneclipse.com/2021/10/12/spilling-the-beans-volatile-qualifier/",
+          "publishedOn": "2021-10-12T05:35:47.000Z",
+          "wordCount": 1765,
+          "title": "Spilling the Beans: volatile Qualifier"
+        },
         {
           "id": "http://mcuoneclipse.com/?p=33568",
           "author": "Erich Styger",
@@ -2018,6 +2081,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9112",
+          "author": "Stacey Higginbotham",
+          "description": "Most IoT platform businesses focus on providing the connectivity and data pipeline to a cloud service. Generally, they focus on features such as device management, device provisioning, basic security, data transfer, and maybe a container strategy. Some provide hardware in the form of pre-built boards full of silicon, while others start with a software development […]\nThe post Mason will build IoT hardware so businesses don’t have to appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/mason-will-build-iot-hardware-so-businesses-dont-have-to/",
+          "publishedOn": "2021-10-12T13:00:55.000Z",
+          "wordCount": 982,
+          "title": "Mason will build IoT hardware so businesses don’t have to"
+        },
         {
           "id": "https://staceyoniot.com/?p=9116",
           "author": "Kevin C. Tofel",
@@ -2334,6 +2406,15 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=82212",
+          "author": "언론인권센터",
+          "description": "여야 8인 협의체 협상결렬 후에도 오는 12. 31.까지 언론미디어제도개선특별위원회에서 논의키로 합의한 뒤 철회된 국회의안번호 ‘2112222’호’ 언론중재및피해구제등에관한법률일부개정법률안(대안)는 다양한 별칭을 갖고 있다. 관점의 차이: 징벌이냐, 구제냐 이렇게 긴 이름을 가진 법률은 보통 ‘언론중재법'(앞부분) 또는 ‘언론피해구제법'(뒷부분)과 같이 약칭으로 부른다. 그런데 의안2112222호는 법률 명칭을 줄인 ‘언론중재법개정안’, ‘언론피해구제법개정안’이라는 이름 대신 ‘언론징벌법’, ‘언론재갈법’, ‘언론겁박법’ 등의 이름으로 변주되어 사용됐다. 체감하기로는 언론징벌법이라는 명칭이 […]",
+          "link": "http://feedproxy.google.com/~r/slownews/~3/pM2Fv2EOca8/82212",
+          "publishedOn": "2021-10-12T05:40:36.000Z",
+          "wordCount": 1108,
+          "title": "징벌 vs. 피해구제: 또 다시 멈춘 언론중재법"
+        },
+        {
           "id": "https://slownews.kr/?p=82175",
           "author": "씨앗(CEART)",
           "description": "데이터를 다룬다는 일은 양날의 칼과 같다. 한쪽에서는 새로운 비즈니스 모델을 촉진하고 기업의 조직, 운영, 인재 관리 및 가치 창출 방식을 혁신시킨다. 또 다른 면에서는 데이터 보안, 개인 정보 보호 문제 및 윤리적 경계에 대한 어려운 불확실성을 다루어야 한다. 정부나 기업에서 그 중요한 데이터를 다루는 리더에게 고급 분석을 통한 정보의 잠재력을 이해하는 동시에 위험 요소를 피할 […]",
@@ -2503,15 +2584,6 @@
           "publishedOn": "2021-09-14T05:08:23.000Z",
           "wordCount": 894,
           "title": "복수의결권 주식, 누구를 위한 ‘계획’입니까?"
-        },
-        {
-          "id": "https://slownews.kr/?p=81909",
-          "author": "민주언론시민연합",
-          "description": "인터넷매체 뉴스버스 [단독/윤석열 검찰, 총선 코앞 유시민·최강욱·황희석 등 국민의힘에 고발 사주] (전혁수 기자)는 9월 2일 지난해 4.15 총선을 앞둔 시점에 검찰이 미래통합당(현 ‘국민의힘’) 측에 범여권 정치인과 언론인 등 11명에 대한 형사 고발을 사주했다고 보도했습니다. 뉴스버스는 당시 손준성 대검 수사정보정책관이 검사 출신 미래통합당 국회의원 후보 김웅 의원(현 국민의힘)에게 두 차례 고발장을 작성해 전달했으며, 이는 미래통합당 […]",
-          "link": "http://feedproxy.google.com/~r/slownews/~3/G_S-C6Ss2bY/81909",
-          "publishedOn": "2021-09-13T06:18:36.000Z",
-          "wordCount": 3350,
-          "title": "‘검찰 고발 사주 의혹’ 보도, 보수·경제지는 소극적이거나 논점 일탈"
         }
       ]
     },
@@ -2768,6 +2840,15 @@
       "feedUrl": "http://rss.egloos.com/blog/wallflower",
       "siteUrl": "http://wallflower.egloos.com",
       "articles": [
+        {
+          "id": "http://wallflower.egloos.com/4202164",
+          "author": "이택광",
+          "description": "신고",
+          "link": "http://wallflower.egloos.com/4202164",
+          "publishedOn": "2021-10-12T01:03:26.000Z",
+          "wordCount": 218,
+          "title": "팬데믹과 기계 감시"
+        },
         {
           "id": "http://wallflower.egloos.com/4202132",
           "author": "이택광",
