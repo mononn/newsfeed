@@ -61,6 +61,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/refactor-into-uniqueptr/",
+          "author": null,
+          "description": "In legacy code, you can often spot explicit new and delete lurking in various places and waiting to produce pointer-related issues. This blog post shows six patterns to improve that erroneous style and rely on modern techniques, especially unique_ptr and other helper standard types.\nunique_ptr.\n\nBasic assumptions\nThe code presented here will usually contain explicit new and delete, and we’d like to reduce their use and wrap resources (usually for pointers to heap-allocated objects) into RAII.\nMost importantly, we’ll try to follow the rule: R.11: Avoid calling new and delete explicitly from the Core C++ Guidelines:\nThe pointer returned by new should belong to a resource handle (that can call delete). If the pointer returned by new is assigned to a plain/naked pointer, the object can be leak…",
+          "link": "https://www.cppstories.com/2021/refactor-into-uniqueptr/",
+          "publishedOn": "2021-10-18T05:55:00.000Z",
+          "wordCount": 2426,
+          "title": "6 Ways to Refactor new/delete into unique ptr"
+        },
+        {
           "id": "https://www.cppstories.com/2013/02/smart-pointers-gotchas/",
           "author": null,
           "description": "While learning how to use the new C++ Standard, I encountered several intriguing cases with smart pointers. Casting? Array handling? Passing to functions?\nLet’s review some common concerns so that we don’t shoot yourself in the foot :)\nSome predefines\nLet us take a simple Test class with one member field to present further concepts:\nstruct Test {\n   Test() { std::cout << \"Test::Test\\n\"; }\n   ~Test() { std::cout << \"Test::~Test destructor\\n\"; }\n\n   int val_ { 0 };\n};\n\n\nWith the above declaration, we’ll be able to see when it was constructed and destructed.\nIf we need some more advanced reporting, including move semantics, we could also implement move and copy constructors and assignment operators, but it will be good for now. See more in: Moved or Not Moved - That Is the Question! - C++ Sto…",
@@ -157,6 +166,15 @@
       "siteUrl": "https://danluu.com/atom/index.xml",
       "articles": [
         {
+          "id": "https://danluu.com/learn-what/",
+          "author": null,
+          "description": "It's common to see people advocate for learning skills that they have or using processes that they use. For example, Steve Yegge has a set of blog posts where he recommends reading compiler books and learning about compilers. His reasoning is basically that, if you understand compilers, you'll see compiler problems everywhere and will recognize all of the cases where people are solving a compiler problem without using compiler knowledge. Instead of hacking together some half-baked solution that will never work, you can apply a bit of computer science knowledge to solve the problem in a better way with less effort. That's not untrue, but it's also not a reason to study compilers in particular because you can say that about many different areas of computer science and math. Queuing theory, c…",
+          "link": "https://danluu.com/learn-what/",
+          "publishedOn": "2021-10-18T00:00:00.000Z",
+          "wordCount": 4116,
+          "title": "What to learn"
+        },
+        {
           "id": "https://danluu.com/productivity-velocity/",
           "author": null,
           "description": "A common topic of discussion among my close friends is where the bottlenecks are in our productivity and how we can execute more quickly. This is very different from what I see in my extended social circles, where people commonly say that velocity doesn't matter. In online discussions about this, I frequently see people go a step further and assign moral valence to this, saying that it is actually bad to try to increase velocity or be more productive or work hard (see appendix for more examples).\nThe top reasons I see people say that productivity doesn't matter (or is actually bad) fall into one of three buckets:\nWorking on the right thing is more important than working quickly\nSpeed at X doesn't matter because you don't spend much time doing X\nThinking about productivity is bad and you sh…",
@@ -225,6 +243,15 @@
       "siteUrl": "https://embeddedartistry.com",
       "articles": [
         {
+          "id": "https://embeddedartistry.com/?p=16436",
+          "author": "Phillip Johnston",
+          "description": "18 October 2021 by Phillip JohnstonOne of the tragedies that we see in the world is the sheer amount of perfectly good hardware that is essentially bricked because it is no longer supported with software updates and cannot engage in the contemporary world. As quoted from an article in IEEE Spectrum: I recently did some … \nContinue reading \"Bricked for Want of Support\"\nThe post Bricked for Want of Support appeared first on Embedded Artistry.",
+          "link": "https://embeddedartistry.com/blog/2021/10/18/bricked-for-want-of-support/",
+          "publishedOn": "2021-10-18T16:00:00.000Z",
+          "wordCount": 1602,
+          "title": "Bricked for Want of Support"
+        },
+        {
           "id": "https://embeddedartistry.com/?p=16258",
           "author": "Matthias Schulte",
           "description": "11 October 2021 by Matthias SchulteToday we have a guest post from Mathias Schulte. Mathias is a member of the development team at YAKINDU. He likes trying out different tools and languages in order to improve his engineering skills. Implementing an IoT solution can easily become a complex task. IoT applications usually consist of three … \nContinue reading \"How to Get an IoT Project Quickly Off the Ground\"\nThe post How to Get an IoT Project Quickly Off the Ground appeared first on Embedded Artistry.",
@@ -240,6 +267,33 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4471341",
+          "author": "Haydn Povey",
+          "description": "With applications rapidly transitioning from traditional embedded devices to cloud orientated edge compute nodes, this article looks at a growing need to integrate cloud connectivity into both the development and manufacturing processes, and to create a seamless secure supply chain for the IoT.\nThe post Embedded development must change to simplify IoT onboarding to cloud appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/embedded-development-must-change-to-simplify-iot-onboarding-to-cloud/",
+          "publishedOn": "2021-10-18T19:19:44.000Z",
+          "wordCount": 2441,
+          "title": "Embedded development must change to simplify IoT onboarding to cloud"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4471336",
+          "author": "Nitin Dahad",
+          "description": "Crypto coprocessor IP core provides authenticated encryption between highly networked applications, for example in IoT or cloud computing, using Chacha20 stream cipher combined with the Poly1305 message authentication code (MAC).\nThe post Silex Insight achieves 100Gbps in FPGA for ChaCha20-Poly1305 IP core appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/silex-insight-achieves-100gbps-in-fpga-for-chacha20-poly1305-ip-core/",
+          "publishedOn": "2021-10-18T18:02:31.000Z",
+          "wordCount": 1387,
+          "title": "Silex Insight achieves 100Gbps in FPGA for ChaCha20-Poly1305 IP core"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4471331",
+          "author": "Nitin Dahad",
+          "description": "Enables device manufacturers to reduce the time, cost and complexity of developing and deploying critical software for automotive, military, IoT and industrial solutions based on RISC-V processor architecture.\nThe post Green Hills Software adds RISC-V support to INTEGRITY RTOS appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/green-hills-software-adds-risc-v-support-to-integrity-rtos/",
+          "publishedOn": "2021-10-18T16:27:22.000Z",
+          "wordCount": 1715,
+          "title": "Green Hills Software adds RISC-V support to INTEGRITY RTOS"
+        },
         {
           "id": "https://www.embedded.com/?p=4471325",
           "author": "Nitin Dahad",
@@ -604,6 +658,15 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://feedproxy.google.com/~r/GDBcode/~3/7cP8ojeOP2g/Bowling-automatic-disapproved-ads-remover.html",
+          "author": null,
+          "description": "Posted by Elad Ben-David, Nir Kalush, Dvir Kalev, Chen Yogev, Tzahi Zilberstein, Eliran Drucker\n          \nTagline:\nIn light of the new policy that might cause accounts suspension, Bowling is a mitigation tool allowing clients to act and remove disapproved ads before risking account suspension.\nThe tool audits (and offers the option to delete) disapproved ads that may lead eventually to account suspension in perpetuity. The tool audits (and offers the option to delete) disapproved ads that may lead eventually to account suspension in perpetuity. \nBusiness Challenge:\nStarting Oct 2021 Google is introducing a new strike-based system to enforce against advertisers who repeatedly violate Google Ads policies (read more about the change here). \nAn advertiser’s first policy violation will result …",
+          "link": "http://feedproxy.google.com/~r/GDBcode/~3/7cP8ojeOP2g/Bowling-automatic-disapproved-ads-remover.html",
+          "publishedOn": "2021-10-18T18:00:00.001Z",
+          "wordCount": 2800,
+          "title": "“Bowling” automatic disapproved ads remover"
+        },
         {
           "id": "http://feedproxy.google.com/~r/GDBcode/~3/28gnKuS9ZLA/learn-flutter-for-free-with-flutter-apprentice.html",
           "author": null,
@@ -1065,17 +1128,7 @@
       "title": "Jay Carlson",
       "feedUrl": "https://jaycarlson.net/feed",
       "siteUrl": "https://jaycarlson.net",
-      "articles": [
-        {
-          "id": "https://jaycarlson.net/?p=1914",
-          "author": "Jay Carlson",
-          "description": "My workspace has gone through a ton of changes over the years, but this year, I started making a concerted...\nThe post Here’s how I juggle embedded projects (home office/workspace tour) appeared first on Jay Carlson.",
-          "link": "https://jaycarlson.net/2021/09/18/juggle-embedded-projects-home-office-workspace-tour/",
-          "publishedOn": "2021-09-19T04:16:35.000Z",
-          "wordCount": 6375,
-          "title": "Here’s how I juggle embedded projects (home office/workspace tour)"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Kwang Yul Seo",
@@ -1100,6 +1153,42 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/873066/rss",
+          "author": "corbet",
+          "description": "Differences of opinion over which kernel symbols should be exported to\nloadable modules have been anything but uncommon over the years.  Often,\nthese disagreements relate to which kernel capabilities should be available\nto proprietary modules.  Sometimes, though, it hinges on the disagreements\nover the best way to solve a problem.  The recent discussion around the\nremoval of an export for a core kernel function is a case in point.",
+          "link": "https://lwn.net/Articles/873066/rss",
+          "publishedOn": "2021-10-18T14:45:42.000Z",
+          "wordCount": null,
+          "title": "[$] A disagreement over get_mm_exe_file()"
+        },
+        {
+          "id": "https://lwn.net/Articles/873210/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (amd64-microcode, libreoffice, linux-4.19, and nghttp2), Fedora (chromium, libopenmpt, vim, and xen), openSUSE (firefox, kernel, krb5, libaom, and opera), Oracle (thunderbird), SUSE (firefox, firefox, rust-cbindgen, iproute2, javapackages-tools, javassist, mysql-connector-java, protobuf, python-python-gflags, and krb5), and Ubuntu (nginx).",
+          "link": "https://lwn.net/Articles/873210/rss",
+          "publishedOn": "2021-10-18T14:26:30.000Z",
+          "wordCount": 115,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/873176/rss",
+          "author": "corbet",
+          "description": "The 5.15-rc6 kernel prepatch is out.\n\"I'd love to say that it's all looking average, but rc6 is actually\nbigger than rc5 was, and larger than normal for this time in the\nrelease cycle.\n\nIt's not _enormously_ larger than normal, and it's not the largest rc6\nwe've had, but it's still slightly worrisome.\"",
+          "link": "https://lwn.net/Articles/873176/rss",
+          "publishedOn": "2021-10-18T13:46:18.000Z",
+          "wordCount": 128,
+          "title": "Kernel prepatch 5.15-rc6"
+        },
+        {
+          "id": "https://lwn.net/Articles/873150/rss",
+          "author": "corbet",
+          "description": "Greg Kroah-Hartman has released the\n5.14.13,\n5.10.74,\n5.4.154,\n4.19.212,\n4.14.251,\n4.9.287, and\n4.4.289\nstable kernel updates.  Each contains another set of important fixes.",
+          "link": "https://lwn.net/Articles/873150/rss",
+          "publishedOn": "2021-10-18T01:09:20.000Z",
+          "wordCount": 104,
+          "title": "A set of stable kernels"
+        },
         {
           "id": "https://lwn.net/Articles/872710/rss",
           "author": "corbet",
@@ -1828,15 +1917,6 @@
           "publishedOn": "2021-09-20T13:17:26.000Z",
           "wordCount": 175,
           "title": "Kernel prepatch 5.15-rc2"
-        },
-        {
-          "id": "https://lwn.net/Articles/869746/rss",
-          "author": "corbet",
-          "description": "The relatively large\n5.14.6,\n5.13.19, and\n5.10.67\nstable kernel updates have been released; each contains another set of\nimportant fixes.  Note that this is the final update for the 5.13.x\nseries.",
-          "link": "https://lwn.net/Articles/869746/rss",
-          "publishedOn": "2021-09-18T15:39:12.000Z",
-          "wordCount": 112,
-          "title": "A few weekend stable kernels"
         }
       ]
     },
@@ -1945,7 +2025,17 @@
       "title": "The ESP Journal - Medium",
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://medium.com/p/92beee7951b3",
+          "author": "Scott Mabin",
+          "description": "Now I am working at Espressif I plan on publishing updates roughly every quarter just to keep the community in the loop around the esp…",
+          "link": "https://blog.espressif.com/rust-on-espressif-chips-18-10-2021-92beee7951b3?source=rss----d5414d5dee73---4",
+          "publishedOn": "2021-10-18T10:18:27.000Z",
+          "wordCount": 1117,
+          "title": "Rust on Espressif chips — 18–10–2021"
+        }
+      ]
     },
     {
       "title": "/* the devil is in the detail */",
@@ -2006,6 +2096,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9154",
+          "author": "Stacey Higginbotham",
+          "description": "Arm, the company behind the semiconductor design for much of the IoT (and all of the worlds’ smartphones) has announced three projects to help make developing for the internet of things faster, easier, and potentially more secure. It’s announcing all three under the grand name of Arm Total Solutions for IoT. First, Arm will provide a […]\nThe post ARM tries to solve the IoT’s fragmentation problem … again appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/arm-tries-to-solve-the-iots-fragmentation-problem-again/",
+          "publishedOn": "2021-10-18T15:00:18.000Z",
+          "wordCount": 1219,
+          "title": "ARM tries to solve the IoT’s fragmentation problem … again"
+        },
         {
           "id": "https://staceyoniot.com/?p=9147",
           "author": "Stacey Higginbotham",
@@ -2235,15 +2334,6 @@
           "publishedOn": "2021-09-19T13:00:05.000Z",
           "wordCount": 934,
           "title": "Quext uses LoRa radios to connect smart appartments"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=8988",
-          "author": "Kevin C. Tofel",
-          "description": "On our most recent IoT Podcast episode, Paul called in with a question about his smart home. He currently uses indoor Nest Cams pointing outside, along with Ubiquiti UniFi routers and they work fine, as expected. However, he’s thinking about replacing his Nest Cams with different devices so that he can keep his video files […]\nThe post What local alternatives are there to cloud-based Nest Cams? appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/what-local-alternatives-are-there-to-cloud-based-nest-cams/",
-          "publishedOn": "2021-09-18T13:00:50.000Z",
-          "wordCount": 773,
-          "title": "What local alternatives are there to cloud-based Nest Cams?"
         }
       ]
     },
@@ -2307,6 +2397,15 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=82285",
+          "author": "민주언론시민연합",
+          "description": "전남 여수의 한 선착장에서 10월 6일 현장 실습을 하던 특성화고 3학년 홍정운 군이 숨졌습니다. 여수해경 등에 따르면, 홍 군은 7톤 요트 바닥에 붙은 따개비 등을 제거하는 수중 작업 중 사망했습니다. 홍 군은 잠수 작업을 하다가 장비를 정비하기 위해 잠시 수면 위로 올라왔고, 산소통과 오리발을 잇따라 벗어 업주에 건넸습니다. 그러나 기초교육 없이 잠수 작업에 내몰렸던 홍 […]",
+          "link": "http://feedproxy.google.com/~r/slownews/~3/FnWJrDYJv98/82285",
+          "publishedOn": "2021-10-18T05:28:21.000Z",
+          "wordCount": 1548,
+          "title": "요트 따개비 따다 숨진 고3 실습생 홍정운 (ft. 매경, 한경, SBS, 채널A 무보도)"
+        },
         {
           "id": "https://slownews.kr/?p=82275",
           "author": "민주언론시민연합",
@@ -2485,6 +2584,24 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=583990",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/583990/%ec%9b%94%ea%b0%80-ib-tsmc-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-tsmc-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2021-10-18T00:46:24.000Z",
+          "wordCount": 2373,
+          "title": "삼성 파운드리가 TSMC를 앞설 수 있을까? TSMC 투자의견을 살펴보다"
+        },
+        {
+          "id": "https://happist.com/?p=583983",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/583983/2030%eb%85%84-gm-%eb%aa%a9%ed%91%9c-%eb%b0%8f-gm-%ec%a0%84%eb%9e%b5",
+          "publishedOn": "2021-10-17T11:32:40.000Z",
+          "wordCount": 2727,
+          "title": "[월가 리포트] Tigress, 2030년 목표 달성 가능성이 높은 GM 전략 평가"
+        },
         {
           "id": "https://happist.com/?p=583983",
           "author": "happist",
@@ -2709,24 +2826,6 @@
           "publishedOn": "2021-09-20T08:41:36.000Z",
           "wordCount": 1867,
           "title": "워드프레스 테이블 플러그인 wpDataTables test"
-        },
-        {
-          "id": "https://happist.com/?p=583589",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583589/%ed%8c%94%eb%9e%80%ed%8b%b0%ec%96%b4-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%eb%aa%a8%eb%8d%b8",
-          "publishedOn": "2021-09-19T07:42:24.000Z",
-          "wordCount": 2071,
-          "title": "독보적 데이타 분석기업, 팔란티어 비즈니스 모델과 투자 포인트"
-        },
-        {
-          "id": "https://happist.com/?p=583463",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583463/%ec%8a%a4%eb%85%b8%ec%9a%b0%ed%94%8c%eb%a0%88%ec%9d%b4%ed%81%ac-%eb%b9%84%ec%a0%84%ea%b3%bc-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%eb%aa%a8%eb%8d%b8",
-          "publishedOn": "2021-09-18T16:01:46.000Z",
-          "wordCount": 1345,
-          "title": "시총 100조 기업을 만든 스노우플레이크 비전과 스노우플레이크 비즈니스 모델"
         }
       ]
     },
@@ -2982,15 +3081,6 @@
           "publishedOn": "2021-09-22T05:33:26.000Z",
           "wordCount": 8,
           "title": "오구라 기조"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222510733096",
-          "author": "sellars",
-          "description": "중국철학이나 동양철학에 대해서 외경심을 갖고 연구하라. 아마 서양 철학자들이 중국에 철학이 없다. 기껏해야 공자에서 볼 수 있듯이 삶의 지혜처럼 보이는 동네 늙은이의 인생에 대한 언명들이 있을 뿐이라는 혹독한 비판에 대한 대응이 이것일 것이다. 존경하라. 중국의 철학이란 그런 시시한 것이 아니다. 존경하고 공감하고 동정(同情)하면 어떤 보석을 발견할 것이다. 그러나 이러한 요구는 그렇게 바람직하지 못하다고 생각한다. 외경과 공감을 요구하기 전에, 외경하고 공감할 수밖에 없는 것을 보여주면 된다. 따라서 그것을 보고 존경하고 공감할 수밖에 없게 만들면 된다. 풍우란에 대한 한 글이 풍우란의 독창적 철학, 신리학(新理.......",
-          "link": "https://blog.naver.com/sellars/222510733096",
-          "publishedOn": "2021-09-19T06:55:28.000Z",
-          "wordCount": 8,
-          "title": "중국철학에 대한 외경심"
         }
       ]
     }
