@@ -16,8 +16,215 @@
 <body>
 <!-- %after-body-begin.html% -->
   <section class="daily-content">
+    <h2 class="daily-heading"><time datatime="2021-11-12">2021-11-12</time></h2>
+    <ul class="sources card">
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://cpuu.postype.com">CPUU의 Daydreamin&amp;#039;</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">Aarch64 Linux Kernel Debug</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://cpuu.postype.com/post/11156632">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(2 min)</span>
+                    <span>미루고 미루던 리눅스 커널 취약점 연구를 올해가 가기 전에 최소한 &#x27;시작&#x27;은 해보려고 한다. 
+아직 초보인데, Defenit팀의 김현우(V4bel)님께서 인프런에서 진행하시는 강좌가 정말 큰 도움이 되었다.
+https://www.inflearn.com/course/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90-%ED%95%B4%ED%82%B9/
+해당 강좌는 Intel x86_64 환경을 기준으로 되어있는데, 이를 Aarch64 리눅스로 하여 열심히 삽질 중이다. 변환했을 때 똑같이 적용되는 것도 있고, 안 되는 것도 많다..
+
+
+우선 Aarch64 환경에서 커널 빌드 및 디버깅을 하기 위한 절차를 기록해둔다. 대부분의 내용은 위에서 언급한 강좌에서 김현우님께서 가이드해주신 방법을 참고했으며, Aarch64 로 변환할 때 필요한 수정사항들을 내가 작성했다(이 게시물은 강사님의 허락을 받고 기록해두는 것이다.)
+ 
+(참고로 1~3번 과정을 생략하고, 내가 올려둔 파일을 다운로드 하셔도 됨)
+1. 리눅스 커널 빌드
+우선 리눅스 커널을 직접 빌드할 수 있는 환경이 마련되어야 한다. 강의에서는 인텔 리눅스 상에서 인텔 리눅스를 빌드하는 방식으로 진행되었다. 그러나 Aarch64 아키텍처용 리눅스를 빌드하려면 방법이 달라진다. 대략 두가지 방법이 있다.
+1) Intel 리눅스상에서 cross-compiler 를 사용해서 Aarch64 리눅스 이미지를 빌드하는 방법.
+2) Aarch64 리눅스 상에서 Aarch64 리눅스를 빌드하는 방법.
+그동안은 대부분 1의 방법이 선호되었다. 왜냐…</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://slownews.kr">슬로우뉴스</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">글쓰기가 어려운 이유 (ft. 생각, 말, 글)</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/82593">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(3 min)</span>
+                    <span>흔히 우리는 ‘명료한 사고에서 명료한 글이 나온다’고 생각한다. 하지만 자신이 무슨 말을 하려고 하는지 분명히 알고 있다고 해도, 자신이 쓴 글이 명료하지 않다는 것을 깨닫는 경우가 많다. 열심히 글을 썼는데 상대방이 그것을 읽고 무슨 말이냐고 묻는 상황은 참으로 난감하다. 물론 사적인 메모나 편지를 쓸 때는 글 쓰는 것이 어렵지 않다. 하지만 공적인 보고서나 논문 같은 […]</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://lwn.net">LWN.net</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">ClusterFuzzLite: Continuous fuzzing for all (Google Security blog)</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875945/rss">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(1 min)</span>
+                    <span>Over on the Google Security blog, Jonathan Metzman announced the release of ClusterFuzzLite, which is &quot;a continuous fuzzing solution that runs as part of CI/CD workflows to find vulnerabilities faster than ever before&quot;.   ClusterFuzzLite is a descendant of OSS-Fuzz, which we looked at in 2017.
+
+Large projects including systemd and curl are already using ClusterFuzzLite during code review, with positive results. According to Daniel Stenberg, author of curl, “When the human reviewers nod and have approved the code and your static code analyzers and linters can&#x27;t detect any more issues, fuzzing is what takes you to the next level of code maturity and robustness. OSS-Fuzz and ClusterFuzzLite help us maintain curl as a quality project, around the clock, every day and every commit.”
+
+[...] To learn more, check out the ClusterFuzzLite documentation. ClusterFuzzLite currently supports GitHub Actions, Google Cloud Build and Prow. We built this with CI system extensibility in mind, and adding support for other CI systems is straightforward. Please contact us if you’re interested in contributing support, or have any questions, feedback or feature requests.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">[$] Some upcoming memory-management patches</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875587/rss">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(0 min)</span>
+                    <span>The memory-management subsystem remains one of the most complex parts of
+the kernel, with an ongoing reliance on various heuristics for
+performance.  It is thus not surprising that developers continue to try to
+improve its functionality.  A number of memory-management patches are
+currently in circulation; read on for a look at the freeing of page-table
+pages, kvmalloc() flags, memory clearing, and NUMA &quot;home nodes&quot;.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">Eight new stable kernels</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875932/rss">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(0 min)</span>
+                    <span>Greg Kroah-Hartman has announced the release of eight stable kernels: 5.15.2, 5.14.18, 5.10.79, 5.4.159, 4.19.217, 4.14.255, 4.9.290, and 4.4.292.  They contain a relatively small set
+of important fixes, but, as usual, users should upgrade.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">Security updates for Friday</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875931/rss">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(0 min)</span>
+                    <span>Security updates have been issued by Debian (node-tar, postgresql-11, postgresql-13, and postgresql-9.6), Fedora (autotrace, botan2, chafa, converseen, digikam, dmtx-utils, dvdauthor, eom, kxstitch, pfstools, php-pecl-imagick, psiconv, q, R-magick, radeontop, rss-glx, rubygem-rmagick, synfig, synfigstudio, vdr-scraper2vdr, vdr-skinelchihd, vdr-skinnopacity, vdr-tvguide, and WindowMaker), Mageia (kernel, kernel-linus, and openafs), openSUSE (kernel), Red Hat (freerdp), SUSE (bind and kernel), and Ubuntu (openexr, postgresql-10, postgresql-12, postgresql-13, and samba).</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://www.embedded.com">Embedded.com</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">embedded news week: Nvidia GTC &amp; metaverse, wireless &amp; sustainability</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/embedded-news-week-nvidia-gtc-metaverse-wireless-sustainability/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(8 min)</span>
+                    <span>A roundup of this week’s embedded news includes coverage from Nvidia GTC, CW (Cambridge Wireless), plus embedded news, products, funding and events.
+The post embedded news week: Nvidia GTC &amp; metaverse, wireless &amp; sustainability appeared first on Embedded.com.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">Groups optimize smart metering IoT with OMS over LoRaWAN</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/groups-optimize-smart-metering-iot-with-oms-over-lorawan/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(5 min)</span>
+                    <span>LoRa Alliance and OMS-Group to standardize smart metering IoT applications, with a standard use of the Open Metering System language over LoRaWAN, reducing complexity and cost of integration for utilities.
+The post Groups optimize smart metering IoT with OMS over LoRaWAN appeared first on Embedded.com.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">u-blox MQTT Flex lets you bring your own SIM to IoT sensor networks</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/u-blox-mqtt-flex-lets-you-bring-your-own-sim-to-iot-sensor-networks/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(5 min)</span>
+                    <span>Bring your own SIM strategy enables users to take advantage of MQTT communication without the operational, logistical, or cost impact of changing their mobile network operator.
+The post u-blox MQTT Flex lets you bring your own SIM to IoT sensor networks appeared first on Embedded.com.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">New Samsung H-Cube 2.5D technology integrates 6 HBMs for HPC applications</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/new-samsung-h-cube-2-5d-technology-integrates-6-hbms-for-hpc-applications/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(5 min)</span>
+                    <span>H-Cube applies advanced 2.5D silicon interposer technology and hybrid-substrate structure, allowing efficient integration of 6 HBMs, and lowering barriers to entry in the HPC/AI market.
+The post New Samsung H-Cube 2.5D technology integrates 6 HBMs for HPC applications appeared first on Embedded.com.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">Nvidia GTC: New Jetson module offers 200 TOPS for embedded edge AI</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/nvidia-gtc-new-jetson-module-offers-200-tops-for-embedded-edge-ai/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(6 min)</span>
+                    <span>New Jetson AGX Orin module built on Nvidia Ampere architecture claims to be smallest and most powerful AI supercomputer for embedded edge computing.
+The post Nvidia GTC: New Jetson module offers 200 TOPS for embedded edge AI appeared first on Embedded.com.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">Nvidia GTC: New 400 Gbps InfiniBand networking platform</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/nvidia-gtc-new-400-gbps-infiniband-networking-platform/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(6 min)</span>
+                    <span>New at Nvidia GTC is a 400Gbps InfiniBand switch and networking platform which features secure, cloud-native, multi-tenant, bare-metal performance for AI, data analytics, and HPC applications
+The post Nvidia GTC: New 400 Gbps InfiniBand networking platform appeared first on Embedded.com.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="daily-content">
     <h2 class="daily-heading"><time datatime="2021-11-11">2021-11-11</time></h2>
     <ul class="sources card">
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://pvs-studio.com">from www.viva64.com</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">All hail bug reports: how we reduced the analysis time of the user&#x27;s project from 80 to 4 hours</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/csharp/0885/">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(11 min)</span>
+                    <span>People often see work in support as something negative. Today we&#x27;ll look at it from a different perspective. This article is about a real communication of 100+ messages, exceptions, the analysis that didn&#x27;t complete in three days... Actually, bug reports are great If a bug report is adequately handled from both sides, it means that both the user and the software developer are interested in solving the problem. If both sides achieve the desired result, it&#x27;s a win-win situation. Before we proceed to the story, here&#x27;s a little introduction. We are the PVS-Studio team. We develop the analyzer that searches for errors and potential vulnerabilities in C, C++, C#, and Java code. Yours truly is the team lead of the C# analyzer development team, the author of articles and posts.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
       <li class="source">
         <section>
           <h3 class="source-name"><a class="source-name__link" href="https://slownews.kr">슬로우뉴스</a></h3>
@@ -4912,23 +5119,6 @@ The post Cambridge Quantum toolkit converts natural language to quantum circuits
     <ul class="sources card">
       <li class="source">
         <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://slownews.kr">슬로우뉴스</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">클라우드 PC, 하이브리드 클라우드컴퓨팅 시대를 열다</summary>
-                <a class="article-summary-link article-summary-box-outer" href="http://feedproxy.google.com/~r/slownews/~3/1gzmQHkv330/82206">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(8 min)</span>
-                    <span>오늘날 IT 인프라스트럭처(infrastructure: 기반시설)와 아키텍처(architecture: 서비스 설계)는 베어 메탈(Bare Metal: 어떤 소프트웨어도 설치돼 있지 않은 하드웨어 상태)에서 가상화를 거쳐 최근에는 컨테이너 기술로 발전하고 있다. 가상화 기술이 출현하기 전에는 하나의 물리적 서버에서 다양한 애플리케이션을 올려 사용하는 획일화된 모놀리식(Monolithic) 시대였다. 장기간 코로나 전염병 대유행의 발병은 기업에 큰 영향을 미치고 혁신과 수익성을 억제하며 현금 흐름과 회사 재정을 고갈시켰다. […]</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
           <h3 class="source-name"><a class="source-name__link" href="https://happist.com">꿈꾸는섬</a></h3>
           <section class="articles-per-source">
             <article>
@@ -5061,17 +5251,6 @@ changelog.</span>
                 </a>
               </details>
             </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">[$] LWN.net Weekly Edition for October 14, 2021</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/872157/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>The LWN.net Weekly Edition for October 14, 2021 is available.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
         </section>
       </li>
       <li class="source">
@@ -5169,216 +5348,9 @@ The post Podcast: Explaining the IoT’s latest $11B deal appeared first on Stac
       </li>
     </ul>
   </section>
-  <section class="daily-content">
-    <h2 class="daily-heading"><time datatime="2021-10-13">2021-10-13</time></h2>
-    <ul class="sources card">
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://pvs-studio.com">from www.viva64.com</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">How to check code for compliance with OWASP ASVS using PVS-Studio</summary>
-                <a class="article-summary-link article-summary-box-outer" href="http://feedproxy.google.com/~r/viva64-blog-en/~3/85OySUVvKno/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(11 min)</span>
-                    <span>The PVS-Studio static analyzer allows you to automatically find various problems in the source code. It can also detect code fragments that do not comply with the OWASP Application Security Verification Standard. By default, this feature is disabled due to the specificity of some diagnostic rules. However, you can easily enable it and check your code. This note describes various ways of checking the code for compliance with OWASP ASVS using PVS-Studio.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="http://developers.googleblog.com/">Google Developers Blog</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">App pricing, update details, and Editor’s choice now available on Google Workspace Marketplace.</summary>
-                <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2021/10/app-pricing-update-details-and-editors.html">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(10 min)</span>
-                    <span>Posted by Mike Rhemtulla, Product Manager
-      
-Google Workspace Marketplace is proud to announce the availability for developers to display pricing for their applications published in the Google Workspace Marketplace, and the date their application listing was last updated. 
-Launched over 11 years ago, Google Workspace Marketplace has been helping developers connect with the more than 3 billion people who use Google Workspace—with a stunning 4.8 billion apps installed to date. That incredible demand is fueling innovation in the ecosystem, and we now have more than 5300 public apps available in the Google Workspace Marketplace, plus thousands more private apps that customers have built for themselves.   
-App Pricing 
-  
-For developers, you can now specify the app pricing choosing from Fre…</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">App pricing, update details, and Editor’s choice now available on Google Workspace Marketplace.</summary>
-                <a class="article-summary-link article-summary-box-outer" href="http://feedproxy.google.com/~r/GDBcode/~3/9E8vUFjPOcI/app-pricing-update-details-and-editors.html">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(10 min)</span>
-                    <span>Posted by Mike Rhemtulla, Product Manager
-      
-Google Workspace Marketplace is proud to announce the availability for developers to display pricing for their applications published in the Google Workspace Marketplace, and the date their application listing was last updated. 
-Launched over 11 years ago, Google Workspace Marketplace has been helping developers connect with the more than 3 billion people who use Google Workspace—with a stunning 4.8 billion apps installed to date. That incredible demand is fueling innovation in the ecosystem, and we now have more than 5300 public apps available in the Google Workspace Marketplace, plus thousands more private apps that customers have built for themselves.   
-App Pricing 
-  
-For developers, you can now specify the app pricing choosing from Fre…</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://future.a16z.com">Future</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Tokens are a New Digital Primitive, Analogous to the Website</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://future.a16z.com/tokens-are-a-new-digital-primitive-analogous-to-the-website/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(4 min)</span>
-                    <span>Major computing waves generally have two eras: the skeuomorphic era and the native era. In the skeuomorphic era, the design thinking is largely adapted from older domains. For example, the early web was mostly digital adaptations of pre-internet activities like letter writing and mail-order shopping. Websites back then were mostly read-only. It took about a... Read More
-The post Tokens are a New Digital Primitive, Analogous to the Website appeared first on Future.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://lwn.net">LWN.net</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">[$] Scrutinizing bugs found by syzbot</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/872649/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>The syzbot
-kernel-fuzzing system finds an enormous number of bugs, but, since many 
-of them may seem to be of a relatively low severity, they have a lower priority
-when contending for the attention of developers.  A talk
-at the recent Linux 
-Security Summit North America reported on some research that
-dug further into the bugs that syzbot has
-found; the results are rather worrisome.  Rather than a pile of
-difficult- or impossible-to-exploit bugs, there are numerous, more serious
-problems lurking within.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Four stable kernels</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/872845/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>Stable kernels 5.14.12, 5.10.73, 5.4.153, and 4.19.211 have been released with important
-fixes. Users of those series should upgrade.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">[$] Digging into Julia&#x27;s package system</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/871490/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>We recently looked at
-some of the changes and new features arriving with the upcoming
-version 1.7 release of the Julia programming language.
-The package system provided by the language makes it easier to
-explore new language versions, while still preserving 
-multiple versions of various parts of the ecosystem.  This flexible system
-takes care of dependency management, both 
-for writing exploratory code in the REPL and for
-developing projects or libraries.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Security updates for Wednesday</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/872843/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>Security updates have been issued by Debian (flatpak and ruby2.3), Fedora (flatpak, httpd, mediawiki, redis, and xstream), openSUSE (kernel, libaom, libqt5-qtsvg, systemd, and webkit2gtk3), Red Hat (.NET 5.0, 389-ds-base, httpd:2.4, kernel, kernel-rt, libxml2, openssl, and thunderbird), Scientific Linux (389-ds-base, kernel, libxml2, and openssl), SUSE (apache2-mod_auth_openidc, curl, glibc, kernel, libaom, libqt5-qtsvg, systemd, and webkit2gtk3), and Ubuntu (squashfs-tools).</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://newspeppermint.com">NewsPeppermint</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">육아를 사회와 정부가 책임지는 나라 VS 개인과 시장에 맡기는 나라</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2021/10/13/uschildcare/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;uschildcare">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(4 min)</span>
-                    <span>뉴욕타임스 참고기사 뉴욕타임스 관련 팟캐스트   조 바이든 미국 대통령은 요즘 행정부가 추진 중인 인프라 지원 법안을 의회와 국민에게 설득하고 홍보하고 다니느라 바쁩니다. 법안은 크게 두 부분으로 나뉘는데, 하나는 우리가 아는, 전통적인 인프라를 확충하고 이를 통해 일자리도 창출하는 법안입니다. 다른 하나는 미국이 특히 유럽을 비롯한 다른 주요 선진국과 비교했을 때 턱없이 부족하다고 여겨지는 사회보장제도를 대폭 확대하는 법안입니다. 야당인 공화당이 정부 지출이 늘어나는 일이라면 대개 덮어놓고 반대하는 성향인데다 정치적 양극화 추세가 → 더 보기</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://www.embedded.com">Embedded.com</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">New Renesas MCUs for IoT endpoints like wearables and medical devices</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/new-renesas-mcus-for-iot-endpoints-like-wearables-and-medical-devices/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(5 min)</span>
-                    <span>New RA2E2 MCUs, based on Arm Cortex-M23 core, offer a combination of low power consumption, a set of peripherals targeted at IoT endpoint applications, and space-saving packaging options.
-The post New Renesas MCUs for IoT endpoints like wearables and medical devices appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Best practices for debugging Zephyr-based IoT applications</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/best-practices-for-debugging-zephyr-based-iot-applications/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(11 min)</span>
-                    <span>The Linux Foundation Zephyr Open Source Project has grown into the backbone of many IoT projects. Zephyr offers a best-in-class small, scalable, real-time operating system...
-The post Best practices for debugging Zephyr-based IoT applications appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Evaluating the performance of a Yocto-based Linux system – part 2</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/evaluating-the-performance-of-a-yocto-based-linux-system-part-2/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(9 min)</span>
-                    <span>Continuing a two-part-series looking at how a visual trace diagnostics tool such as Percepio Tracealyzer can help in evaluating an embedded Linux system, from analyzing the driver and interrupt handler to examining the userspace applications and compiler options.
-The post Evaluating the performance of a Yocto-based Linux system – part 2 appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-    </ul>
-  </section>
 
   <footer>
-    <time id="build-timestamp" datetime="2021-11-11T20:18:46.509Z">2021-11-11T20:18:46.509Z</time>
+    <time id="build-timestamp" datetime="2021-11-12T20:18:19.905Z">2021-11-12T20:18:19.905Z</time>
     <span><a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.11.3</a></span>
   </footer>
   <script src="index.js"></script>
