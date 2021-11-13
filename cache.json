@@ -36,16 +36,6 @@
           "wordCount": null,
           "title": "Embedded Development using Visual Studio Code",
           "itunes": {}
-        },
-        {
-          "id": "https://www.beningo.com/?p=13674",
-          "author": "Jacob Beningo",
-          "description": "How do you know that your software is working the way that it is supposed to? You test it! The real question, though, is “How do you test it?”. In the old days, developers used to just manually test their software. Unfortunately, manual testing is not a great way to test software. The sheer number … Continue reading 3 Tips for Unit Testing Embedded Software\n3 Tips for Unit Testing Embedded Software first appeared on Beningo Embedded Group.",
-          "link": "https://www.beningo.com/3-tips-for-unit-testing-embedded-software/",
-          "publishedOn": "2021-10-14T14:35:46.000Z",
-          "wordCount": null,
-          "title": "3 Tips for Unit Testing Embedded Software",
-          "itunes": {}
         }
       ]
     },
@@ -199,15 +189,6 @@
           "publishedOn": "2021-10-18T00:00:00.000Z",
           "wordCount": 4116,
           "title": "What to learn"
-        },
-        {
-          "id": "https://danluu.com/productivity-velocity/",
-          "author": null,
-          "description": "A common topic of discussion among my close friends is where the bottlenecks are in our productivity and how we can execute more quickly. This is very different from what I see in my extended social circles, where people commonly say that velocity doesn't matter. In online discussions about this, I frequently see people go a step further and assign moral valence to this, saying that it is actually bad to try to increase velocity or be more productive or work hard (see appendix for more examples).\nThe top reasons I see people say that productivity doesn't matter (or is actually bad) fall into one of three buckets:\nWorking on the right thing is more important than working quickly\nSpeed at X doesn't matter because you don't spend much time doing X\nThinking about productivity is bad and you sh…",
-          "link": "https://danluu.com/productivity-velocity/",
-          "publishedOn": "2021-10-15T00:00:00.000Z",
-          "wordCount": 5001,
-          "title": "Some reasons to work on productivity and velocity"
         }
       ]
     },
@@ -262,6 +243,24 @@
       "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml",
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
+        {
+          "id": "https://eli.thegreenplace.net/2021/rust-data-structures-with-circular-references/",
+          "author": null,
+          "description": "<p>To implement its safety guarantees, the Rust compiler keeps careful track\nof ownership and references throughout a program. This makes writing certain\nkinds of data structures challenging; in particular, data structures that have\ncircular references.</p>\n<p>Let's start with a simple binary tree:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"k\">struct</span> <span class=\"nc\">Tree</span><span class=\"w\"> </span><span class=\"p\">{</span><span class=\"w\"></span>\n<span class=\"w\">    </span><span class=\"n\">root</span>: <span class=\"nb\">Option</span><span class=\"o\">&lt;</span><span class=\"n\">Node</span><span class=\"o\">&gt;</span><span class=\"p\">,</span><span class=\"w\"></span>\n<span class=\"p\">}</span><span class=\"w\"></span>\n\n<span class=\"k\">struct</span> <span class=\"nc\">Node</span><span class=\"w\"> </span><span class=\"p\">{</span><span class=\"w\"></span>\n<span class=\"w\">    </span><span class=\"n\">data …</span></pre></div>",
+          "link": "https://eli.thegreenplace.net/2021/rust-data-structures-with-circular-references/",
+          "publishedOn": "2021-11-13T04:30:00.000Z",
+          "wordCount": 3332,
+          "title": "Rust data structures with circular references"
+        },
+        {
+          "id": "https://eli.thegreenplace.net/2021/testing-multiple-implementations-of-a-trait-in-rust/",
+          "author": null,
+          "description": "<p>I've been hacking on a small practice project in Rust where I implement the same\ndata structure in several different ways. When testing this project, I want to\nrun exactly the same set of tests on several types that implement the same\ntrait.</p>\n<p>As a demonstrative example, let's take the …</p>",
+          "link": "https://eli.thegreenplace.net/2021/testing-multiple-implementations-of-a-trait-in-rust/",
+          "publishedOn": "2021-11-06T12:32:00.000Z",
+          "wordCount": 1121,
+          "title": "Testing multiple implementations of a trait in Rust"
+        },
         {
           "id": "https://eli.thegreenplace.net/2021/a-comprehensive-guide-to-go-generate/",
           "author": null,
@@ -1785,51 +1784,6 @@
           "publishedOn": "2021-10-15T14:14:27.000Z",
           "wordCount": 105,
           "title": "Security updates for Friday"
-        },
-        {
-          "id": "https://lwn.net/Articles/872970/rss",
-          "author": "jake",
-          "description": "The latest release of the Ubuntu Linux distribution is out: Ubuntu 21.10, code named \"Impish Indri\".  The release notes fills in all of the details for the new features in this version, but the announcement lists some as well:\n\n\nUbuntu Desktop 21.10 makes wayland sessions available while using the \nNvidia proprietary driver. PulseAudio 15 introduces support for Bluetooth\nLDAC and AptX codecs, as well as HFP Bluetooth profiles providing better\naudio quality. The recovery key feature at installation time has been\nimproved, with the recovery key now optional, stronger and editable.\nUbuntu Desktop 21.10 includes GNOME version 40, with a new and\nimproved Activities Overview design. Workspaces are now arranged\nhorizontally, and the overview and app grid are accessed vertically.\nEach direction has accompanying keyboard shortcuts, touchpad gestures\nand mouse actions.\n\nUbuntu Server 21.10 integrates recent innovations from key open\ninfrastructure projects like OpenStack Xena, QEMU 6.0, PHP8, libvirt 7.6,\nKubernetes, and Ceph with advanced life-cycle management tools for\nmulti-cloud and on-prem operations from bare metal, VMWare and\nOpenStack, to every major public cloud.",
-          "link": "https://lwn.net/Articles/872970/rss",
-          "publishedOn": "2021-10-14T17:32:52.000Z",
-          "wordCount": 250,
-          "title": "Ubuntu 21.10 (Impish Indri) released"
-        },
-        {
-          "id": "https://lwn.net/Articles/872963/rss",
-          "author": "corbet",
-          "description": "Version 4.0 of the Devuan distribution has been released; it is code-named\nChimaera.  This release is based on Debian Bullseye, has improved desktop\nsupport, and benefits from more accessibility work.  See the\nrelease notes for details.",
-          "link": "https://lwn.net/Articles/872963/rss",
-          "publishedOn": "2021-10-14T16:20:49.000Z",
-          "wordCount": 109,
-          "title": "Devuan 4.0 (Chimaera) released"
-        },
-        {
-          "id": "https://lwn.net/Articles/872869/rss",
-          "author": "corbet",
-          "description": "Concerns over the performance of programs written in Python are often\noverstated — for some use cases, at least.  But there is no getting around\nthe problem imposed by the infamous global interpreter lock (GIL), which\nseverely limits the concurrency of multi-threaded Python code.  Various\nefforts to remove the GIL have been made\nover the years, but none have come anywhere near the point where they would\nbe considered for inclusion into the CPython interpreter.  Now, though, Sam\nGross has entered\nthe arena with a proof-of-concept implementation that may solve the\nproblem for real.",
-          "link": "https://lwn.net/Articles/872869/rss",
-          "publishedOn": "2021-10-14T14:31:12.000Z",
-          "wordCount": null,
-          "title": "[$] A viable solution for Python concurrency"
-        },
-        {
-          "id": "https://lwn.net/Articles/872952/rss",
-          "author": "corbet",
-          "description": "The KDE project is celebrating its 25th anniversary with a special release\nof the Plasma desktop.\n\n\n\tThis time around, Plasma renews its looks and, not only do you get\n\ta new wallpaper, but also a gust of fresh air from an updated\n\ttheme: Breeze - Blue Ocean. The new Breeze theme makes KDE apps and\n\ttools not only more attractive, but also easier to use both on the\n\tdesktop and your phone and tablet.\n\n\tOf course, looks are not the only you can expect from Plasma 25AE:\n\textra speed, increased reliability and new features have also found\n\ttheir way into the app launcher, the software manager, the Wayland\n\timplementation, and most other Plasma tools and utilities.\n\n\nLots of details can be found in the\nchangelog.",
-          "link": "https://lwn.net/Articles/872952/rss",
-          "publishedOn": "2021-10-14T14:03:38.000Z",
-          "wordCount": 206,
-          "title": "Plasma 25th Anniversary Edition released"
-        },
-        {
-          "id": "https://lwn.net/Articles/872945/rss",
-          "author": "jake",
-          "description": "Security updates have been issued by Mageia (golang, grilo, mediawiki, plib, python-flask-restx, python-mpmath, thunderbird, and xstream/xmlpull/mxparser), Oracle (389-ds-base, grafana, httpd:2.4, kernel, libxml2, and openssl), Red Hat (httpd), and SUSE (kernel).",
-          "link": "https://lwn.net/Articles/872945/rss",
-          "publishedOn": "2021-10-14T13:48:18.000Z",
-          "wordCount": 103,
-          "title": "Security updates for Thursday"
         }
       ]
     },
@@ -1879,15 +1833,6 @@
           "publishedOn": "2021-10-26T14:24:00.000Z",
           "wordCount": 624,
           "title": "Foreword to \"The Art of Agile Development\""
-        },
-        {
-          "id": "https://martinfowler.com/photos/127.html",
-          "author": null,
-          "description": "Bromley Mtn, VT (2021)",
-          "link": "https://martinfowler.com/photos/127.html",
-          "publishedOn": "2021-10-14T18:29:00.000Z",
-          "wordCount": 24,
-          "title": "photostream 127"
         }
       ]
     },
@@ -2046,6 +1991,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9307",
+          "author": "Kevin C. Tofel",
+          "description": "Last week on the IoT Podcast, we discussed the news of Facebook ceasing the use of facial recognition across the photos its users upload. From our perspective, this was a big win for the Facebook user community. Why? Users had no control over whether Facebook would scan photos uploaded by others and then tag all […]\nThe post There actually is a compelling reason for Facebook to continue using facial recognition appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/there-actually-is-a-compelling-reason-for-facebook-to-continue-using-facial-recognition/",
+          "publishedOn": "2021-11-13T14:00:52.000Z",
+          "wordCount": 696,
+          "title": "There actually is a compelling reason for Facebook to continue using facial recognition"
+        },
         {
           "id": "https://staceyoniot.com/?p=9303",
           "author": "Stacey Higginbotham",
@@ -2234,29 +2188,6 @@
           "publishedOn": "2021-10-15T20:58:23.000Z",
           "wordCount": 1494,
           "title": "IoT news of the week for Oct. 15, 2021"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=9131",
-          "author": "Kevin C. Tofel",
-          "description": "Nanoleaf introduced its latest smart lighting product on Thursday with a slightly different departure from its existing products. The new Nanoleaf Lines are light bars that attach to each other at various angles, leaving wall space between the lights. A starter kit with 9 Lines will cost $199.99, while expansion packs that add 3 Lines […]\nThe post Nanoleaf Lines review: The first Nanoleafs my wife actually wants to buy appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/nanoleaf-lines-review-the-first-nanoleafs-my-wife-actually-wants-to-buy/",
-          "publishedOn": "2021-10-14T17:00:42.000Z",
-          "wordCount": 1402,
-          "title": "Nanoleaf Lines review: The first Nanoleafs my wife actually wants to buy",
-          "enclosure": {
-            "url": "https://staceyoniot.com/wp-content/uploads/2021/10/IMG_0727.mp4",
-            "length": "4614391",
-            "type": "video/mp4"
-          }
-        },
-        {
-          "id": "https://staceyoniot.com/?p=9127",
-          "author": "Stacey Higginbotham",
-          "description": "The industrial automation world got a jolt of news with Emerson combining some of its industrial IoT software businesses with AspenTech in an $11 billion transaction. We explain why the deal matters and what it means, before hopping over to discuss Best Buy’s acquisition of Current Health. Then we review large funding rounds for Plume […]\nThe post Podcast: Explaining the IoT’s latest $11B deal appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/podcast-explaining-the-iots-latest-11b-deal/",
-          "publishedOn": "2021-10-14T13:00:08.000Z",
-          "wordCount": 746,
-          "title": "Podcast: Explaining the IoT’s latest $11B deal"
         }
       ]
     },
@@ -2689,24 +2620,6 @@
           "publishedOn": "2021-10-18T05:28:21.000Z",
           "wordCount": 1548,
           "title": "요트 따개비 따다 숨진 고3 실습생 홍정운 (ft. 매경, 한경, SBS, 채널A 무보도)"
-        },
-        {
-          "id": "https://slownews.kr/?p=82275",
-          "author": "민주언론시민연합",
-          "description": "이재용 삼성전자 부회장이 10월 12일 향정신성 마취제 프로포폴을 불법 투약한 혐의로 가석방된 지 두 달 만에 법정에 섰습니다. 이 부회장은 2015년 1월 31일부터 2020년 5월 10일까지 서울 강남의 한 성형외과에서 의사 등 직원과 공모해 피부미용 시술을 빙자하거나 허위로 41회에 걸쳐 프로포폴을 상습 투약한 혐의를 받고 있습니다. 민주언론시민연합은 이 부회장의 마약류관리법 위반 혐의 사건에 대한 첫 […]",
-          "link": "http://feedproxy.google.com/~r/slownews/~3/TPdwpMQVF64/82275",
-          "publishedOn": "2021-10-15T08:04:30.000Z",
-          "wordCount": 1428,
-          "title": "삼성 앞에선 작아지는 언론: ‘이재용 프로포폴’ 관련 보도 분석"
-        },
-        {
-          "id": "https://slownews.kr/?p=82262",
-          "author": "참여연대 사법감시센터",
-          "description": "2017년 3월 압구정 현대아파트 경비노동자들이 이 아파트 입주자대표회의를 상대로 휴게시간에 제대로 쉬지 못하고 일한 것에 대하여 이는 근로시간에 해당하므로 임금을 지급해야 한다면서 제기한 임금체불 진정(서울고용노동부 강남지청) 사건을 시작한 지 4년여만인 2021년 8월, 대법원은 원고 경비노동자들의 청구를 대부분 인정하는 판결을 내렸고, 이로써 당사자 간의 법적 공방은 종결되었다. 1심 서울중앙지방법원 2019. 09.19. 선고 2018가합512483 2심 서울고등법원 2021. […]",
-          "link": "http://feedproxy.google.com/~r/slownews/~3/3IqpXQF_sZ8/82262",
-          "publishedOn": "2021-10-15T06:45:29.000Z",
-          "wordCount": 1718,
-          "title": "압구정 현대아파트의 경비원 착취법 (ft. 휴게시간 노동)"
         }
       ]
     },
@@ -2957,51 +2870,6 @@
           "publishedOn": "2021-10-16T15:06:10.000Z",
           "wordCount": 5855,
           "title": "[애플 리포트] 골드만 삭스, 아이폰 13 대기시간 증가는 공급 부족 탓, 팬데믹 이후 애플 매출 감소 가능성"
-        },
-        {
-          "id": "https://happist.com/?p=583929",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583929/tsmc-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2021-10-15T06:14:44.000Z",
-          "wordCount": 2726,
-          "title": "TSMC 실적 분석과 월가의 TSMC 주가 평가(21년 3분기 업뎃)"
-        },
-        {
-          "id": "https://happist.com/?p=583923",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583923/21%eb%85%84-3%eb%b6%84%ea%b8%b0-tsmc-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2021-10-15T04:41:02.000Z",
-          "wordCount": 1436,
-          "title": "성장과 비전을 확인한 3분기 TSMC 실적과 향후 전망"
-        },
-        {
-          "id": "https://happist.com/?p=583919",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583919/%ea%b7%bc%ec%9b%90-%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98-vs-%ed%97%a4%eb%93%9c%eb%9d%bc%ec%9d%b8-%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98",
-          "publishedOn": "2021-10-15T00:51:35.000Z",
-          "wordCount": 380,
-          "title": "[경제용어] 근원 인플레이션(근원물가진수) vs 헤드라인 인플레이션"
-        },
-        {
-          "id": "https://happist.com/?p=583906",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583906/%ea%b5%ad%ec%a0%9c%ed%86%b5%ed%99%94%ea%b8%b0%ea%b8%88-imf-%ec%a3%bc%ec%8b%9d%ec%8b%9c%ec%9e%a5-%eb%b0%8f-%ec%a3%bc%ed%83%9d%ec%8b%9c%ec%9e%a5-%ed%8f%ad%eb%9d%bd-%ea%b0%80%eb%8a%a5%ec%84%b1%ec%9d%84",
-          "publishedOn": "2021-10-14T19:43:27.000Z",
-          "wordCount": 501,
-          "title": "국제통화기금, IMF  주식시장 및 주택시장 폭락 가능성을 경고하다"
-        },
-        {
-          "id": "https://happist.com/?p=583908",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583908/imf-2021%eb%85%84-%ec%84%b8%ea%b3%84-%ea%b2%bd%ec%a0%9c%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2021-10-14T12:34:55.000Z",
-          "wordCount": 1193,
-          "title": "21년 10월, IMF 2021년 세계 경제전망 보고서를 읽는 시사점"
         }
       ]
     },
@@ -3115,6 +2983,24 @@
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
         {
+          "id": "https://blog.naver.com/sellars/222567488653",
+          "author": "sellars",
+          "description": "주장이 있다. 그러나 그 논거가 없다. 논거가 없다는 것은 그 주장을 참으로 받아들일 단서가 주어지지 않았다는 것이다. 김광수의 <논리와 비판적 사고>에서 이것이 ‘독단주의의 역리’에 부딪치게 된다고 말한다. <독단(dogmatism)은 자적 사생아의 숨겨진 아버지이다. 독단에 빠진 사람은 자신의 주장이 옳다고 하면서도, 그 근거를 제시하지 않을 뿐만 아니라, 근거의 검토를 허용하지 않는다. 자신의 주장에 대한 근거를 검토하려는 것을 자신에 대한 도전으로 여긴다. 그 도전은 어리석고, 헛되고, 기분 나쁘고, 이단적인 것으로 여긴다. 만일 그가 친절하다면, 자명한 진리를 의심하는 꿈에서 깨어나라고 진지하게 조언하기도 하.......",
+          "link": "https://blog.naver.com/sellars/222567488653",
+          "publishedOn": "2021-11-13T19:51:35.000Z",
+          "wordCount": 8,
+          "title": "독단주의자의 역리"
+        },
+        {
+          "id": "https://blog.naver.com/sellars/222566749395",
+          "author": "sellars",
+          "description": "<우리는 앞에서 공간과 시간 개념에 대해서, 이것들이 선험적인 인식으로서 그럼에도 어떻게 대상들과 관계를 맺어야만 하는가, 그리고 어떻게 모든 경험에 독립해서 대상에 대한 종합적인 인식을 가능하게 하는가를 가벼운 수고만으로도 이해할 수 있었다. 감성의 그러한 순수한 형식들에 의해서만 하나의 대상은 현상할 수, 다시 말해 경험적 직관의 객관일 수 있기 때문에, 공간과 시간은 현상으로서의 대상을 가능하게 하는 선험적인 조건을 함유하는 순수 직관이고, 이 아래에서 종합은 객관적 타당성을 가지는 것이니 말이다.> 공간과 시간 개념은 선험적 인식이다. 그럼에도 그것은 대상과 관계 맺는다. 따라서 그것은 선험적 종합.......",
+          "link": "https://blog.naver.com/sellars/222566749395",
+          "publishedOn": "2021-11-12T20:52:02.000Z",
+          "wordCount": 8,
+          "title": "3 순수 지성개념과 초월적 연역"
+        },
+        {
           "id": "https://blog.naver.com/sellars/222565350570",
           "author": "sellars",
           "description": "레비나스의 <시간과 타자> ‘서문’을 아주 쪼금 읽다가 생각한다. 시간에 대해서 나는 어떤 생각을 갖고 있는가? 나는 시간에 대해 철학적으로 중요하다고 생각하는 것인가? 도대체 시간에 대한 철학적 문제들이란 무엇인가? 기껏해야 내가 시간에 대해 갖고 있는 생각은 칸트의 그것, 즉 시간과 공간 형식이 경험의 구성 조건이라는 것이다. 시간에 대해서 레비나스가 다음처럼 주장한다. (1) 시간은 무한성과 자족성을 존재자에게 보장해 줄 수 없는 관계이다. (2) 시간은 사회성을 뜻하는 관계이다. (3) 시간은 존재자의 존재라는 존재의 지평이 아니라, 존재 저편의 방식으로, 즉 타자에 대한 사유 관계이다. (4) 시간은 타인의 얼굴.......",
@@ -3185,24 +3071,6 @@
           "publishedOn": "2021-10-31T09:03:48.000Z",
           "wordCount": 8,
           "title": "유영모의 노자"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222537401095",
-          "author": "sellars",
-          "description": "https://www.youtube.com/watch?v=Fd-FW3GeKk4 인간적 존재와 인간의 탈을 쓴 존재, 이것이 내가 멍청이 30%들, 혹은 <친애하는> 서울, 부산, 대구 시민들을 인간으로 간주하지 않는 이유이다. + 그런데 대구 시장, 이 작자는 왜 백신 사기 맞은 것에 대해서 여전히 책임을 지지 않는가? 곧 백신을 도입할 수 있다고 잘난 척 하면서 기자회견 하던 꼬라지가 아주 생생하다. 인간이 되라. 혹은 품격을 지닌 인간 존재가 되라. 그러나 아마 그대에게는 불가능한 사건일 것이다. ++ 그가 다시 서울시장에 당선되었을 때, <친애하는 서울 시민들>에게 다음 사진을 보여주고 싶었다.",
-          "link": "https://blog.naver.com/sellars/222537401095",
-          "publishedOn": "2021-10-14T21:04:41.000Z",
-          "wordCount": 8,
-          "title": "사과와 성찰"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222537002282",
-          "author": "sellars",
-          "description": "<그러나 이 개념들에 대해서도 (즉 공간과 시간의 개념, 지성 개념인 범주에 대해서) 여느 인식에 대해서와 마찬가지로, 그 개념들의 가능성의 원리가 아니라면, 그것들을 산출하는 기회원인들이라도 경험에서 찾아낼 수 있다. 경험에서 감각 인상은 그 개념들과 관련해서 전 인식능력이 발동하고, 그 경험이 성립하도록 하는 최초의 계기를 제공한다.> 이러한 개념을 산출하는 원인, 즉 발생적 원인을 경험에서 찾아낼 수 있다. 경험론자들이 주장한 것처럼 이런 인과적 차원에서, 즉 발생적 차원에서 감각 인상이 경험이 성립할 수 있는 최초의 계기를 준다. 사실 경험론자의 철학적 작업은 이런 감각 인상으로부터 우리의 지식이 어떻게.......",
-          "link": "https://blog.naver.com/sellars/222537002282",
-          "publishedOn": "2021-10-14T09:59:31.000Z",
-          "wordCount": 8,
-          "title": "2 발생적 설명과 초월적 연역"
         }
       ]
     }
