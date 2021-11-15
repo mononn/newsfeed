@@ -61,6 +61,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/heterogeneous-access-cpp20/",
+          "author": null,
+          "description": "Would you like to gain 20…35 or even 50% speed improvements when searching in associative containers? In this blog post, we’ll explore a technique called “heterogenous access” that offers such impressive speedups. We’ll explore ordered containers, and the support for unordered collections added recently in C++20.\nRecap on heterogeneous lookup in ordered containers\nLet’s bring the example and have a look at how this feature works for ordered containers.\nIf you have the following code:\nstd::map<std::string, int> intMap { \n    { \"Hello Super Long String\", 1 }, \n    { \"Another Longish String\", 2 }, \n    { \"This cannot fall into SSO buffer\", 3 }\n};\n\nstd::cout << \"Lookup in intMap with by const char*:\\n\";\nstd::cout << intMap.contains(\"Hello Super Long String\") << '\\n';\n\n\nIn the above code, altho…",
+          "link": "https://www.cppstories.com/2021/heterogeneous-access-cpp20/",
+          "publishedOn": "2021-11-15T06:55:00.000Z",
+          "wordCount": 1689,
+          "title": "C++20: Heterogeneous Lookup in (Un)ordered Containers"
+        },
+        {
           "id": "https://www.cppstories.com/2021/more-refactor-into-uniqueptr/",
           "author": null,
           "description": "In the first part of our refactoring series, we covered (smart) pointers inside a function body; today, I’d like to show you cases for return types, data members, and a few others.\nLet’s jump in and replace some new() and delete!\nSee the first part\nThis article is the second in the series about refactoring with unique_ptr. You can read the first part here:\n6 Ways to Refactor new/delete into unique ptr - C++ Stories\nBasic assumptions\nThe code presented here will usually contain explicit new and delete, and we’d like to reduce their use and wrap resources (pointers) into RAII.\nWe’ll try to follow the rule: R.11: Avoid calling new and delete explicitly from the Core C++ Guidelines:\nThe pointer returned by new should belong to a resource handle (that can call delete). If the pointer returned b…",
@@ -138,6 +147,15 @@
       "feedUrl": "https://cpuu.postype.com/rss",
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
+        {
+          "id": "https://cpuu.postype.com/post/9075747",
+          "author": "CPUU",
+          "description": "개요\nhttps://github.com/google/syzkaller/\nsyzkaller 는 QEMU 기반으로 운영체제를 부팅한 후 Host 와 Guest 사이에 ssh 연결을 수립하고 system call fuzzing 을 수행하는 도구다. 일반적으로 syzkaller 는 x86 리눅스 위에서 테스트 대상 x86 리눅스를 QEMU로 테스트하는 방식으로 많이 사용된다. 그러나 이 글에서는 Aarch64 리눅스를 테스트하고자 한다.\n전체적인 과정은 공식 메뉴얼을 따랐지만, 설명이 친절한 편이 아니어서 직접 삽질을 하면서 다시 정리해보았다.\n\n\n1. Kernel Build (with KASAN)\n테스트 하고자 하는 리눅스 커널을 빌드한다. 앞선 글에서 설명했으나, 그때는 별다른 보안 옵션을 설정하지 않았다. 지금은 KASAN, KCOV 등의 새니타이징 기능을 켜고 퍼즈 테스트 성능을 측정할 수 있도록 하는 부분이 다르다. \n일단 x86에서 진행하는 것이라면 크로스 컴파일을 통해 Aarch64 리눅스 커널을 빌드할 필요성이 있다. 크로스 컴파일을 위한 툴 체인을 받아야 한다. \nLinaro toolchain \nhttps://releases.linaro.org/components/toolchain/binaries/latest/aarch64-linux-gnu/\n$ wget http://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.x…",
+          "link": "https://cpuu.postype.com/post/9075747",
+          "publishedOn": "2021-11-15T13:04:33.000Z",
+          "wordCount": 628,
+          "title": "Aarch64 Linux kernel fuzzing - syzkaller"
+        },
         {
           "id": "https://cpuu.postype.com/post/11156632",
           "author": "CPUU",
@@ -568,6 +586,15 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2021/11/upload-massive-lists-of-products-to-merchant-center-using-Centimani.html",
+          "author": null,
+          "description": "Posted by Hector Parra, Jaime Martínez, Miguel Fernandes, Julia Hernández\n     Merchant Center lets merchants manage how their in-store and online product     inventory appears on Google. It allows them to reach hundreds of millions     of people looking to buy products like yours each day. \n\n    To upload their products, merchants can make use of feeds, that is, files     with a list of products in a specific format. These can be shared with     Merchant Center in different ways: using Google Sheets, SFTP or FTP shares,     Google Cloud Storage or manually through the user interface. These methods     work great for the majority of cases. But, if a merchant's product list     grows over time, they might reach the usage limits of the feeds. Depending     on the case, quota extensions could…",
+          "link": "http://developers.googleblog.com/2021/11/upload-massive-lists-of-products-to-merchant-center-using-Centimani.html",
+          "publishedOn": "2021-11-15T17:21:00.036Z",
+          "wordCount": 3149,
+          "title": "Upload massive lists of products to Merchant Center using Centimani"
+        },
+        {
           "id": "http://developers.googleblog.com/2021/11/taking-leap-to-pursue-passion-in.html",
           "author": null,
           "description": "Welcome to #IamaGDE - a series of spotlights presenting Google Developer Experts (GDEs) from across the globe. Discover their stories, passions, and highlights of their community work.\nLeigh Johnson turned her childhood love of Geocities and Neopets into a web development career, and then trained her focus on Machine Learning. Now, she’s a staff software engineer at Slack, a Google Developer Expert in Web and Machine Learning, and founder of Print Nanny, an automated failure detection system and monitoring system for 3D printers. \nMeet Leigh Johnson, Google Developer Expert in Web and Machine Learning.\n   \nGDE Leigh Johnson\n The early days\nLeigh Johnson grew up in the Bronx, NY, and got an early start in web development when she became captivated by Geocities and Neopets in elementary scho…",
@@ -846,6 +873,15 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0886/",
+          "author": null,
+          "description": "RPCS3 is an interesting project that emulates the PS3 console. It is actively evolving. Recently we heard the news that the emulator learned how run all the games from the console's catalog. That's a good excuse to analyze the project. We'll see which errors remained after new fixes were added to the project. The project is quite hefty. It contains about 300 thousand lines of C++ code and relies upon many external dependencies that include the following: For the GUI part, the project uses Qt - however, that is taken from the system library. The screenshot below demonstrates the full list of dependencies:",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0886/",
+          "publishedOn": "2021-11-14T21:00:00.000Z",
+          "wordCount": 3523,
+          "title": "PVS-Studio to check the RPCS3 emulator"
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0885/",
           "author": null,
@@ -1236,6 +1272,42 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/876154/rss",
+          "author": "corbet",
+          "description": "Version 2.34.0 of the Git source-code management system is out.\n\"It is comprised of 834 non-merge commits since\nv2.33.0, contributed by 109 people, 29 of which are new faces\".  See\nthis\nGitHub blog post for a look at some of the more significant changes in\nthis release:\n\n\n\tort does just that: it’s a full-blown rewrite of the merge strategy\n\tthat aims to emulate the same concepts behind recursive while\n\tavoiding many of its long-standing performance and correctness\n\tproblems. In a merge containing many renames, ort outperforms\n\trecursive by 500x. For a series of similar merges (like in a rebase\n\toperation), the speedup is over 9000x since ort can cache and reuse\n\tresults from previous merges.",
+          "link": "https://lwn.net/Articles/876154/rss",
+          "publishedOn": "2021-11-15T20:06:51.000Z",
+          "wordCount": 185,
+          "title": "Git 2.34.0 released"
+        },
+        {
+          "id": "https://lwn.net/Articles/875135/rss",
+          "author": "corbet",
+          "description": "Linus Torvalds released\n5.16-rc1 and ended the 5.16 merge window on November 14, as\nexpected.  At that point, 12,321 non-merge changesets had been pulled into\nthe mainline; about 5,500 since our summary of\nthe first half of the merge window was written.  As is usually the case,\nthe patch mix in the latter part of the merge window tended more toward\nfixes, but there were a number other changes as well.",
+          "link": "https://lwn.net/Articles/875135/rss",
+          "publishedOn": "2021-11-15T16:21:18.000Z",
+          "wordCount": null,
+          "title": "[$] 5.16 Merge window, part 2"
+        },
+        {
+          "id": "https://lwn.net/Articles/876135/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (ffmpeg and tomcat9), Fedora (et and kernel), openSUSE (binutils, rubygem-activerecord-5_1, samba, and tinyxml), Oracle (freerdp and httpd:2.4), Red Hat (devtoolset-11-gcc, gcc-toolset-10-binutils, kernel, kernel-rt, and kpatch-patch), and Scientific Linux (freerdp).",
+          "link": "https://lwn.net/Articles/876135/rss",
+          "publishedOn": "2021-11-15T15:27:52.000Z",
+          "wordCount": 109,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/876072/rss",
+          "author": "corbet",
+          "description": "The 5.16-rc1 kernel prepatch is out and the\nmerge window is closed for this cycle.\n\n\n\tAnyway, it's not a huge release, although it's also not a\n\tremarkably small one like 5.15 was (ok, \"remarkably small\" is\n\trelative, when even such small releases have 10k+\n\tcommits).. There's a bit of everything in here, and you can look to\n\tthe appended mergelog for some kind of flavor, but I guess the\n\tfolio work is worth mentioning, since it's an unusually core thing\n\tthat we don't tend to see most releases.",
+          "link": "https://lwn.net/Articles/876072/rss",
+          "publishedOn": "2021-11-15T07:15:50.000Z",
+          "wordCount": 163,
+          "title": "Kernel prepatch 5.16-rc1"
+        },
         {
           "id": "https://lwn.net/Articles/875945/rss",
           "author": "jake",
@@ -1911,6 +1983,24 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=9243",
+          "author": "Kevin C. Tofel",
+          "description": "While looking for new research on robotics last week, I caught the news from Facebook — I mean, Meta — about its new flexible sensor. It unveiled what it calls ReSkin technology for tactile sensing, created in conjunction with Carnegie Mellon University researchers. I think this technology could have a lot of potential in the smart […]\nThe post Meta’s flexible ReSkin sensor has untapped potential in the smart home appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/metas-flexible-reskin-sensor-has-untapped-potential-in-the-smart-home/",
+          "publishedOn": "2021-11-15T15:00:21.000Z",
+          "wordCount": 1400,
+          "title": "Meta’s flexible ReSkin sensor has untapped potential in the smart home"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=9321",
+          "author": "Stacey Higginbotham",
+          "description": "It’s time for IoT platform vendors to shine! Enterprise IoT is moving out of its custom-built phase, and now customers are fine with off-the-shelf solutions with connectivity built in, according to a survey released last week from Oracle. Oracle surveyed 800 executives who have already deployed some IoT project about their thoughts, finding that how […]\nThe post IoT news for the week ending Nov. 5, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-for-the-week-ending-nov-5-2021/",
+          "publishedOn": "2021-11-15T14:47:37.000Z",
+          "wordCount": 1498,
+          "title": "IoT news for the week ending Nov. 5, 2021"
+        },
+        {
           "id": "https://staceyoniot.com/?p=9307",
           "author": "Kevin C. Tofel",
           "description": "Last week on the IoT Podcast, we discussed the news of Facebook ceasing the use of facial recognition across the photos its users upload. From our perspective, this was a big win for the Facebook user community. Why? Users had no control over whether Facebook would scan photos uploaded by others and then tag all […]\nThe post There actually is a compelling reason for Facebook to continue using facial recognition appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2162,6 +2252,15 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=82602",
+          "author": "민주언론시민연합",
+          "description": "OECD(경제협력개발기구)는 11월 8일 [장기게임: 2060년까지 재정전망 구조개혁 필요성 강조] (The Long Game: Fiscal Outlooks to 2060 Underline Need for Structural Reform) 보고서를 발표했습니다. 2000년부터 2060년까지 장기 재정전망을 담은 보고서로 1인당 잠재 실질 GDP(국내총생산)와 잠재 실질 GDP 성장률, 고용동향 등을 담고 있습니다. 대부분 언론이 이를 주요하게 다루는 동시에 한 달 전 발표된 IMF(국제통화기금) [재정 점검 보고서: […]",
+          "link": "https://slownews.kr/82602",
+          "publishedOn": "2021-11-15T09:31:28.000Z",
+          "wordCount": 2308,
+          "title": "경제 공포 마케팅: OECD·IMF 보고서 왜곡하는 언론 (ft. 결론은 규제 완화)"
+        },
         {
           "id": "https://slownews.kr/?p=82593",
           "author": "윤영삼",
@@ -2753,33 +2852,6 @@
           "publishedOn": "2021-10-17T11:32:40.000Z",
           "wordCount": 2727,
           "title": "[월가 리포트] Tigress, 2030년 목표 달성 가능성이 높은 GM 전략 평가"
-        },
-        {
-          "id": "https://happist.com/?p=583965",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583965/21%eb%85%84-3%eb%b6%84%ea%b8%b0-%eb%8f%84%eb%af%b8%eb%85%b8%ed%94%bc%ec%9e%90-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2021-10-16T20:13:00.000Z",
-          "wordCount": 1420,
-          "title": "기대 이하 매출과 기대 이상의 이익, 3분기 도미노피자 실적 및 도미노피자 전망"
-        },
-        {
-          "id": "https://happist.com/?p=583950",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583950/%ec%95%a0%ed%94%8c-%ea%b4%91%ea%b3%a0-%ec%82%ac%ec%97%85-%ec%a7%84%ec%b6%9c-%ea%b0%80%eb%8a%a5%ec%84%b1",
-          "publishedOn": "2021-10-16T15:25:44.000Z",
-          "wordCount": 5746,
-          "title": "[애플 리포트] 에버코어, 막대한 아이폰 사용자 기반 애플 광고 사업 진출 가능성 증대"
-        },
-        {
-          "id": "https://happist.com/?p=583948",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/583948/%ec%95%a0%ed%94%8c-%eb%a6%ac%ed%8f%ac%ed%8a%b8-%ec%95%84%ec%9d%b4%ed%8f%b0-13-%eb%8c%80%ea%b8%b0%ec%8b%9c%ea%b0%84-%ec%a6%9d%ea%b0%80-%ec%9d%b4%ec%9c%a0",
-          "publishedOn": "2021-10-16T15:06:10.000Z",
-          "wordCount": 5855,
-          "title": "[애플 리포트] 골드만 삭스, 아이폰 13 대기시간 증가는 공급 부족 탓, 팬데믹 이후 애플 매출 감소 가능성"
         }
       ]
     },
@@ -2901,6 +2973,15 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222568352620",
+          "author": "sellars",
+          "description": "어떤 주장이 있다. 그 주장을 듣고 공감하면서 감명을 받는다. 그 공감과 감명의 정체가 무엇인지 스스로 생각해 보아야 한다. 가령 공자의 <논어> 첫 머리가 다음처럼 시작한다. 배우고 때맞춰 익히면 또한 기쁘지 않겠는가. 그렇다. 배우고 때에 맞게 익히고 연습하는 것이다. 그렇게 하면 기쁘다. 그런데 왜 기쁘단 말인가? 왜 배우고 때에 맞게 익히고 연습하는 것이 중요하단 말인가? 이런 질문을 하지 않은 채, 공자의 구절을 그대로 암송하거나 수동적으로 수용할 수 있다. 그러나 이렇게 해서 그 구절을 자기의 것으로 <소화>한다고 할 수 있는가? 나는 아니라고 생각한다. 박이문은 노장 사상뿐만 아니라, 공자의 <논어.......",
+          "link": "https://blog.naver.com/sellars/222568352620",
+          "publishedOn": "2021-11-14T21:50:55.000Z",
+          "wordCount": 8,
+          "title": "공감과 감명에 대한 논증적 정당화"
+        },
         {
           "id": "https://blog.naver.com/sellars/222567488653",
           "author": "sellars",
