@@ -51,6 +51,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/designated-init-cpp20/",
+          "author": null,
+          "description": "New Standard, new ways to initialize objects!\nWith C++20, we get a handy way of initializing data members. The new feature is called designated initializers and might be familiar to C programmers.\nLet’s have a look at this small feature:\nThe basics\nDesignated Initialization is a form of Aggregate Initialization.\nAs of C++20, an Aggregate type::\nis an array type or,\nis a class type that:\n\nhas no private or protected direct non-static data members\nhas no user-declared or inherited constructors\nhas no virtual, private, or protected base classes\nhas no virtual member functions\nIn a basic form in C++20, you can write:\nType obj = { .designator = val, .designator = val2, ... };\n// or\nType obj = { .designator { val }, .designator { val2 }, ... };\n\n\nFor example:\nstruct Point { \n    double x { 0.0 }…",
+          "link": "https://www.cppstories.com/2021/designated-init-cpp20/",
+          "publishedOn": "2021-11-22T06:55:00.000Z",
+          "wordCount": 1162,
+          "title": "Designated Initializers in C++20"
+        },
+        {
           "id": "https://www.cppstories.com/2021/heterogeneous-access-cpp20/",
           "author": null,
           "description": "Would you like to gain 20…35 or even 50% speed improvements when searching in associative containers? In this blog post, we’ll explore a technique called “heterogenous access” that offers such impressive speedups. We’ll explore ordered containers, and the support for unordered collections added recently in C++20.\nRecap on heterogeneous lookup in ordered containers\nLet’s bring the example and have a look at how this feature works for ordered containers.\nIf you have the following code:\nstd::map<std::string, int> intMap { \n    { \"Hello Super Long String\", 1 }, \n    { \"Another Longish String\", 2 }, \n    { \"This cannot fall into SSO buffer\", 3 }\n};\n\nstd::cout << \"Lookup in intMap with by const char*:\\n\";\nstd::cout << intMap.contains(\"Hello Super Long String\") << '\\n';\n\n\nIn the above code, altho…",
@@ -208,6 +217,15 @@
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com",
       "articles": [
+        {
+          "id": "https://edykim.com/ko/post/live-immediately/",
+          "author": null,
+          "description": "THE WHOLE FUTURE LIES IN UNCERTAINTY: LIVE IMMEDIATELY. @subliming.jpg",
+          "link": "https://edykim.com/ko/post/live-immediately/",
+          "publishedOn": "2021-11-21T23:52:50.000Z",
+          "wordCount": 52,
+          "title": "No title"
+        },
         {
           "id": "https://edykim.com/ko/post/debugging-behind-the-iron-curtain/",
           "author": null,
@@ -567,6 +585,15 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2021/11/gdsc-lead-joao-in-brazil.html",
+          "author": null,
+          "description": "Posted by Rodrigo Hirooka, Regional Lead for Brazil Developer Communities\n           \nPerceiving that one is not like everyone else can be painful. Yet, the experience can also be illuminating. As a child in Brazil, João Victor Ipirajá, lead of the Google Student Developer Club (GDSC) at the Federal Institute of Science and Technology of Ceará (IFCE), knew he was different. He often felt overwhelmed by physical sensations and missed social cues. When he was eventually diagnosed as being on the autistic spectrum, he was actually relieved. Far from being a limitation, the realization gave him a new perspective on his intellectual strengths—such as his ability to perceive mathematical concepts in a highly visual way and his capacity for logical thinking and computer programming. “I was reborn…",
+          "link": "http://developers.googleblog.com/2021/11/gdsc-lead-joao-in-brazil.html",
+          "publishedOn": "2021-11-22T18:17:00.002Z",
+          "wordCount": 3355,
+          "title": "How a Student Leader Promotes Neurodiversity Awareness in Brazil and Beyond"
+        },
+        {
           "id": "http://developers.googleblog.com/2021/11/build-ai-powered-customer-conversations.html",
           "author": null,
           "description": "Posted by Sean Falconer, Staff Developer Relations Engineer Sean Falconer \n Google’s Business Messages let customers message a business directly from Google Search, Google Maps, and any brand-managed property. Developers of Business Messages can leverage tools like Dialogflow to create AI-powered conversational experiences, where customers can chat with lifelike virtual agents that understand, interact, and talk in natural ways. Meanwhile the business can leverage real life agents when needed. \nIn this article, I’ll give a brief overview of Business Messages, how to get started developing with the platform, and then walkthrough how to set up an AI-powered conversion using the Bot-in-a-Box feature.  \nLet’s get started! \nWhat is Google's Business Messages?\n  \nBusiness Messages is a mobile co…",
@@ -790,6 +817,15 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0889/",
+          "author": null,
+          "description": "It's cool when enthusiastic developers create a working clone of a famous game. It's even cooler when people are ready to continue the development of such projects! In this article, we check TheXTech with PVS-Studio. TheXTech is an open implementation of the game from the Super Mario universe. TheXTech is the SMBX 1.3. game engine rewritten on C++. The original SMBX (Super Mario Bros. X) was written on Visual Basic 6 by Andrew Spinks in 2009. It allows to create levels from the elements of the Nintendo's Super Mario Bros games. TheXTech accurately reproduces the original game's behavior. It also includes optional bug fixes. It runs not only on Windows, but also on macOS, and Linux systems with x86, ARM or PowerPC processors. Some developers also ported it on 3DS and PS Vista The TheXTech developer — Vitaliy Novichkov (Wohlstand) — described the development process in detail on Habr. He also described the techniques he used to smooth out the differences when porting the project from VB6 to C++. There's a disclaimer on the GitHub page that explains why the source code is not in the best condition. It's because the original code is unstructured something fierce. Its fragments you'll see below.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0889/",
+          "publishedOn": "2021-11-21T21:00:00.000Z",
+          "wordCount": 4126,
+          "title": "Thanks, Mario, but the code needs fixing — checking TheXTech"
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/0888/",
           "author": null,
@@ -1175,7 +1211,17 @@
       "title": "LimitedResults",
       "feedUrl": "https://limitedresults.com/feed/",
       "siteUrl": "https://limitedresults.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://limitedresults.com/?p=1364",
+          "author": "LimitedResults",
+          "description": "20 November 2021, Bergamo The event Webpage here. My talk Conclusion Solid and high technical program, perfect organisation, fun people all around. Premium. Grazie a tutti!\nThe post NoHat 21 appeared first on LimitedResults.",
+          "link": "https://limitedresults.com/2021/11/nohat-21/",
+          "publishedOn": "2021-11-22T08:05:28.000Z",
+          "wordCount": 390,
+          "title": "NoHat 21"
+        }
+      ]
     },
     {
       "title": "Lucky Resistor",
@@ -1207,6 +1253,33 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/876661/rss",
+          "author": "corbet",
+          "description": "The second 5.16 kernel prepatch is out for\ntesting.  \"Nothing especially noteworthy stands out for the last\nweek, it all felt pretty normal for a rc2 week\".",
+          "link": "https://lwn.net/Articles/876661/rss",
+          "publishedOn": "2021-11-22T18:44:07.000Z",
+          "wordCount": 102,
+          "title": "Kernel prepatch 5.16-rc2"
+        },
+        {
+          "id": "https://lwn.net/Articles/876655/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (firebird3.0, libmodbus, and salt), Fedora (js-jquery-ui and wordpress), Mageia (arpwatch, chromium-browser-stable, php, rust, and wireshark), openSUSE (barrier, firefox, hylafax+, opera, postgresql12, postgresql13, postgresql14, and tomcat), SUSE (ardana-ansible, ardana-monasca, crowbar-openstack, influxdb, kibana, openstack-cinder, openstack-ec2-api, openstack-heat-gbp, openstack-heat-templates, openstack-horizon-plugin-gbp-ui, openstack-keystone, openstack-neutron-gbp, openstack-nova, python-eventlet, rubygem-redcarpet, rubygem-puma, ardana-ansible, ardana-monasca, documentation-suse-openstack-cloud, openstack-ec2-api, openstack-heat-templates, python-Django, python-monasca-common, rubygem-redcarpet, rubygem-puma, firefox, kernel, postgresql, postgresql13, postgresql14, postgresql10, postgresql12, postgresql13, postgresql14, postgresql96, and samba), and Ubuntu (libreoffice).",
+          "link": "https://lwn.net/Articles/876655/rss",
+          "publishedOn": "2021-11-22T16:42:39.000Z",
+          "wordCount": 146,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/876610/rss",
+          "author": "corbet",
+          "description": "The\n5.15.4,\n5.14.21,\n5.10.81, and\n5.4.161 stable kernels have been released.\nEach contains another set of important updates, but it's worth\nnoting that 5.4.161\nhasn't been through the usual review process due to an amusing bit of\nscripting confusion.",
+          "link": "https://lwn.net/Articles/876610/rss",
+          "publishedOn": "2021-11-22T16:04:47.000Z",
+          "wordCount": 117,
+          "title": "More stable kernel updates"
+        },
         {
           "id": "https://lwn.net/Articles/876288/rss",
           "author": "corbet",
@@ -1712,15 +1785,6 @@
           "publishedOn": "2021-11-02T19:55:00.000Z",
           "wordCount": 984,
           "title": "CNC Elm Wood Boxes with V-Carving and Inlays"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=33727",
-          "author": "Erich Styger",
-          "description": "The Microsoft Visual Studio Code is a great IDE, but does not (yet?) implement features for true embedded usage. Or things are there to some level, but hard to use. One of these things is how to step in the … Continue reading →",
-          "link": "https://mcuoneclipse.com/2021/10/23/visual-studio-code-for-c-c-with-arm-cortex-m-part-10-assembly-stepping/",
-          "publishedOn": "2021-10-23T09:33:55.000Z",
-          "wordCount": 1072,
-          "title": "Visual Studio Code for C/C++ with ARM Cortex-M: Part 10 – Assembly Stepping"
         }
       ]
     },
@@ -1818,6 +1882,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9352",
+          "author": "Stacey Higginbotham",
+          "description": "This week, I saw the first instance of IoT being used in insurance outside of the auto industry. Nationwide Insurance and Kinetic, a seven-year-old maker of a wearable device that tracks worker movements, have launched a policy for workers’ compensation. Companies will buy the policy from Kinetic and deploy its wearable among their workforces. The goal […]\nThe post Kinetic offers IoT-enabled workers’ comp insurance appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/kinetic-offers-iot-enabled-workers-comp-insurance/",
+          "publishedOn": "2021-11-22T14:00:51.000Z",
+          "wordCount": 1095,
+          "title": "Kinetic offers IoT-enabled workers’ comp insurance"
+        },
         {
           "id": "https://staceyoniot.com/?p=9350",
           "author": "Stacey Higginbotham",
@@ -2088,6 +2161,24 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=82728",
+          "author": "진보넷",
+          "description": "‘노동감시 대응 가이드’ 홈페이지에서 보기 (클릭!) PDF 다운하기 (클릭!) 노동감시 대응 사업단은 일터에서 진행되는 노동감시를 유형별로 분류하고 이에 대한 대응 방법을 소개하는 [노동감시 대응 가이드]를 발간 했습니다. 이번 가이드는 지난 2021년 8월 2일 발간한 [디지털 노동감시 실태조사 및 법제도 개선방안] 보고서를 바탕으로 노동감시와 관련된 여러 법제를 살펴보고 개별 노동자들이 각자의 현장에서 어떻게 대응할 수 있을지에 관한 […]",
+          "link": "https://slownews.kr/82728",
+          "publishedOn": "2021-11-22T08:54:53.000Z",
+          "wordCount": 794,
+          "title": "노동감시 대응 가이드: 일하면서 감시받고 있다고 느낄 때"
+        },
+        {
+          "id": "https://slownews.kr/?p=82720",
+          "author": "언론인권센터",
+          "description": "민법은 ‘명예훼손의 경우의 특칙'(제764조)으로 ‘타인의 명예를 훼손한 자에 대하여는 법원은 피해자의 청구에 의하여 손해배상에 갈음하거나 손해배상과 함께 명예회복에 적당한 처분을 명할 수 있다’고 규정한다. 언론중재 및 피해구제 등에 관한 법률은 정정보도, 반론보도, 사후보도 청구의 근거를 둔다. 또한, 판례는 인격권 침해를 이유로 한 방해배제청구권으로서 기사삭제청구권을 인정하고 있다. 즉, 피해자의 명예 회복을 위해 가해자(언론)가 할 수 있는 […]",
+          "link": "https://slownews.kr/82720",
+          "publishedOn": "2021-11-22T07:15:34.000Z",
+          "wordCount": 1017,
+          "title": "명예훼손, 네 가지 구제 방법과 그 한계"
+        },
         {
           "id": "https://slownews.kr/?p=82712",
           "author": "민주언론시민연합",
