@@ -76,15 +76,6 @@
           "publishedOn": "2021-11-08T06:55:00.000Z",
           "wordCount": 2189,
           "title": "6 More Ways to Refactor new/delete into unique ptr"
-        },
-        {
-          "id": "https://www.cppstories.com/2021/smartptr-array/",
-          "author": null,
-          "description": "Smart pointers are very versatile and can hold pointers not only to single instances but also to arrays. Is that only a theoretical use case? or maybe they might be handy in some cases? Let’s have a look.\nSmart pointers for T[]\nAt C++ Stories, you can find lots of information about smart pointers - see this separate tag for this area. For completeness, I’d like to mention an interesting issue on smart pointers and arrays.\nIf you want to create a unique_ptr, you can write:\nclass Object { };\n\n// unique_ptr\nauto ptr = std::make_unique<Object>();\nauto intPtr = std::make_unique<int>();\n\n// or shared_ptr\nauto shared = std::make_shared<Object>();\nauto intShared = std::make_shared<int>();\n\n\nIn the example, you see pointers to a single instance of Object or an integer.\nSimilarly, if you want to hav…",
-          "link": "https://www.cppstories.com/2021/smartptr-array/",
-          "publishedOn": "2021-10-25T05:55:00.000Z",
-          "wordCount": 1601,
-          "title": "C++ Smart Pointers and Arrays"
         }
       ]
     },
@@ -180,6 +171,15 @@
       "feedUrl": "https://danluu.com/atom.xml",
       "siteUrl": "https://danluu.com/atom/index.xml",
       "articles": [
+        {
+          "id": "https://danluu.com/corrections/",
+          "author": null,
+          "description": "Here's a list of errors on this blog that I think were fairly serious. While what I think of as serious is, of course, subjective, I don't think there's any reasonable way to avoid that because, e.g., I make a huge number of typos, so many that the majority of acknowledgements on many posts are for people who e-mailed or DM'ed me typo fixes.\nA list that included everything, including typos would both be uninteresting for other people to read as well as high overhead for me, which is why I've drawn the line somewhere. An example of an error I don't think of as serious is, in this post on how I learned to program, I originally had the dates wrong on when the competition programmers from my high school made money (it was a couple years after I thought it was). In that case, and many others, I…",
+          "link": "https://danluu.com/corrections/",
+          "publishedOn": "2021-11-22T00:00:00.000Z",
+          "wordCount": 1041,
+          "title": "Major errors on this blog (and their corrections)"
+        },
         {
           "id": "https://danluu.com/people-matter/",
           "author": null,
@@ -310,6 +310,24 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4471647",
+          "author": "Nitin Dahad",
+          "description": "Weaver Labs has created a software solution to enable sharing and monetization of telecom network infrastructure assets in a secure, open and interconnected network using blockchain technology in an internal cryptocurrency system.\nThe post Using blockchain to share and monetize telecoms assets appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/using-blockchain-to-share-and-monetize-telecoms-assets/",
+          "publishedOn": "2021-11-23T17:08:55.000Z",
+          "wordCount": 2407,
+          "title": "Using blockchain to share and monetize telecoms assets"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4471641",
+          "author": "Nitin Dahad",
+          "description": "Wireless battery management system (BMS) from Dukosi puts chip and embedded software on each battery cell to enable ‘edge intelligence’ for safer and better performance batteries.\nThe post Wireless BMS eliminates wires, adds intelligence to each battery cell appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/wireless-bms-eliminates-wires-adds-intelligence-to-each-battery-cell/",
+          "publishedOn": "2021-11-23T15:29:39.000Z",
+          "wordCount": 2693,
+          "title": "Wireless BMS eliminates wires, adds intelligence to each battery cell"
+        },
         {
           "id": "https://www.embedded.com/?p=4471629",
           "author": "Nitin Dahad",
@@ -584,6 +602,15 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2021/11/improve-your-development-workflow-with-interactive-canvas-devtools.html",
+          "author": null,
+          "description": "Posted by Nick Felker, Developer Relations Engineer\n    Interactive Canvas helps developers build multimodal apps for games, storytelling, and educational experiences on smart displays like the Nest Hub and Nest Hub Max. Setting up an Interactive Canvas app involves building a web app, a conversational model, and a server-based fulfillment to respond to voice commands. All three of these components need to be built out to test your apps using the simulator in the Actions Console. This works for teams who are able to build all three at once… but it means that everything has to be hooked up, even if you just want to test out the web portion of your app. In many cases, the web app provides the bulk of the functionality of an Interactive Canvas app. We recently published Interactive Canvas Dev…",
+          "link": "http://developers.googleblog.com/2021/11/improve-your-development-workflow-with-interactive-canvas-devtools.html",
+          "publishedOn": "2021-11-23T17:59:00.000Z",
+          "wordCount": 3218,
+          "title": "Improve your development workflow with Interactive Canvas DevTools"
+        },
         {
           "id": "http://developers.googleblog.com/2021/11/gdsc-lead-joao-in-brazil.html",
           "author": null,
@@ -987,24 +1014,6 @@
           "publishedOn": "2021-10-26T21:00:00.000Z",
           "wordCount": 2270,
           "title": "Generic Math: C# super feature available in .NET 6 Preview 7"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/0877/",
-          "author": null,
-          "description": "On the stackoverflow.com website, we frequently see questions about how to look for bugs of a certain type. We know that PVS-Studio can solve the problem. Unfortunately, we have to keep silent. Otherwise, StackOverflow moderators may consider it as an obvious attempt to promote our product. This article describes a particular case of such a situation that makes us suffer deeply. The following question: \"Scan-Build for clang-13 not showing errors\" asked by kratos from India, made me write this article. This person asks how to look for patterns of the following type: Here's the code cited as an example:",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/0877/",
-          "publishedOn": "2021-10-24T21:00:00.000Z",
-          "wordCount": 1755,
-          "title": "How we sympathize with a question on StackOverflow but keep silent"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/0877/",
-          "author": null,
-          "description": "On the stackoverflow.com website, we frequently see questions about how to look for bugs of a certain type. We know that PVS-Studio can solve the problem. Unfortunately, we have to keep silent. Otherwise, StackOverflow moderators may consider it as an obvious attempt to promote our product. This article describes a particular case of such a situation that makes us suffer deeply. The following question: \"Scan-Build for clang-13 not showing errors\" asked by kratos from India, made me write this article. This person asks how to look for patterns of the following type: Here's the code cited as an example:",
-          "link": "http://feedproxy.google.com/~r/viva64-blog-en/~3/2tQM9cNHJgo/",
-          "publishedOn": "2021-10-24T21:00:00.000Z",
-          "wordCount": 1758,
-          "title": "How we sympathize with a question on StackOverflow but keep silent"
         }
       ]
     },
@@ -1013,6 +1022,15 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.a16z.com",
       "articles": [
+        {
+          "id": "https://future.a16z.com/?p=2573",
+          "author": "Andrew Chen",
+          "description": "The following is an excerpt from the book The Cold Start Problem: How to Start and Scale Network Effects by Andrew Chen. Copyright © 2021 by Andrew Chen. Published on Future/ a16z, with permission from Harper Collins, an imprint of HarperCollins Publishers. A core pillar in the study of network effects is Metcalfe’s Law, where... Read More\nThe post Beyond Metcalfe’s Law for Network Effects, and Towards a Better Model appeared first on Future.",
+          "link": "https://future.a16z.com/metcalfes-law-network-effects-better-model-cold-start-problem/",
+          "publishedOn": "2021-11-22T21:40:28.000Z",
+          "wordCount": 2073,
+          "title": "Beyond Metcalfe’s Law for Network Effects, and Towards a Better Model"
+        },
         {
           "id": "https://future.a16z.com/?p=2532",
           "author": "Sonal Chokshi, Zoran Basich and Guy Wuollet",
@@ -1253,6 +1271,24 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/876723/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (mbedtls), Red Hat (kernel and rpm), and Ubuntu (freerdp2).",
+          "link": "https://lwn.net/Articles/876723/rss",
+          "publishedOn": "2021-11-23T16:55:13.000Z",
+          "wordCount": 89,
+          "title": "Security updates for Tuesday"
+        },
+        {
+          "id": "https://lwn.net/Articles/876696/rss",
+          "author": "corbet",
+          "description": "Amazon has announced\na preview release of its upcoming AL2022 distribution.  The company plans\nto support AL2022 for five years after its release.\n\n\n\tAL2022 uses the Fedora project as its upstream to provide customers\n\twith a wide variety of the latest software, such as updated\n\tlanguage runtimes, as part of quarterly releases. In addition,\n\tAL2022 has SELinux enabled and enforced by default.",
+          "link": "https://lwn.net/Articles/876696/rss",
+          "publishedOn": "2021-11-23T13:51:49.000Z",
+          "wordCount": 146,
+          "title": "A preview of Amazon's AL2022 distribution"
+        },
         {
           "id": "https://lwn.net/Articles/876661/rss",
           "author": "corbet",
@@ -1794,6 +1830,15 @@
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
       "articles": [
         {
+          "id": "https://medium.com/p/56852737e229",
+          "author": "Amey Inamdar",
+          "description": "Espressif Systems has recently released an AI voice development kit dubbed ESP32-S3-BOX, based on ESP32-S3 Wi-Fi + Bluetooth 5 (LE) SoC. It…",
+          "link": "https://blog.espressif.com/presenting-the-advantages-of-esp32-s3-box-espressifs-ai-voice-development-kit-56852737e229?source=rss----d5414d5dee73---4",
+          "publishedOn": "2021-11-23T14:01:58.000Z",
+          "wordCount": 1400,
+          "title": "Presenting the Advantages of ESP32-S3-BOX, Espressif’s AI Voice Development Kit"
+        },
+        {
           "id": "https://medium.com/p/1ebb97d9e53b",
           "author": "ESP BOT",
           "description": "Hi everyone,",
@@ -1882,6 +1927,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9356",
+          "author": "Stacey Higginbotham",
+          "description": "As we head into another gifting season and more and more connected devices make their way onto gift guides, I want to offer a cautionary note. The smart home is like a cat — mostly self-sufficient and nice to have, but also possessing a mind of its own that can lead to frustration and confusion […]\nThe post The unbearable fussiness of the smart home appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/the-unbearable-fussiness-of-the-smart-home/",
+          "publishedOn": "2021-11-23T14:00:24.000Z",
+          "wordCount": 2249,
+          "title": "The unbearable fussiness of the smart home"
+        },
         {
           "id": "https://staceyoniot.com/?p=9352",
           "author": "Stacey Higginbotham",
@@ -2161,6 +2215,24 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=82744",
+          "author": "민주언론시민연합",
+          "description": "종합부동산세(종부세) 고지서가 발부되자 올해도 어김없이 대다수 언론이 ‘세금폭탄’ 프레임을 쏟아내고 있다. 종부세가 생긴 지 15년이 지났건만 언론의 ‘세금폭탄’ 타령은 그칠 줄을 모른다. 하지만 과거에도, 지금도 종부세는 ‘세금폭탄’이 아니다.  언론은 15년째 ‘폭탄타령’ 정부 발표에 따르면 2021년 주택분 종부세 고지 인원은 94.7만 명이고, 세액은 5.7조 원이다. 국민의 98%는 종부세 과세대상이 아닌 것이다. 2%에 해당하는 종부세 과세대상 중에서도 […]",
+          "link": "https://slownews.kr/82744",
+          "publishedOn": "2021-11-23T10:00:14.000Z",
+          "wordCount": 1015,
+          "title": "종부세 폭탄론이 새빨간 거짓말인 이유"
+        },
+        {
+          "id": "https://slownews.kr/?p=82735",
+          "author": "참여연대 사법감시센터",
+          "description": "판사 출신이 8명, 그 중에서도 고법부장이나 법원장급의 경력자가 6명이나 자리하고 있는 헌법재판소가 마찬가지로 그 경력 사다리를 따라가고 있는 엘리트 법관을 파면시킬 수 있을까? 법원은 유달리 선례와 관행에 집착한다. 법원의 현재는 법원의 과거이자 동시에 법원의 미래다. 고법부장 승진을 목전에 둔 수석부장판사가 ‘휘하의’ 법관이 작성한 판결문에 ‘빨간펜’ 첨삭지도를 하였다면 그것은 선배 수석부장판사로부터 배운 것이자 후임의 수석부장판사가 따라 […]",
+          "link": "https://slownews.kr/82735",
+          "publishedOn": "2021-11-23T09:37:14.000Z",
+          "wordCount": 2764,
+          "title": "헌재의 안으로 굽은 팔: 법관 임성근 탄핵심판 사건 (2021)"
+        },
         {
           "id": "https://slownews.kr/?p=82728",
           "author": "진보넷",
@@ -2538,24 +2610,6 @@
           "publishedOn": "2021-10-26T07:27:44.000Z",
           "wordCount": 1434,
           "title": "늦게 도착한 정의: 고(故) 변희수 하사 전역처분 취소 판결"
-        },
-        {
-          "id": "https://slownews.kr/?p=82344",
-          "author": "언론인권센터",
-          "description": "바쁜 독자를 위한 요약:  미국 연방대법원은 명예훼손 소송의 원고가 누구인가(국가, 공무원 등 ‘공인’인가, 아니면 그냥 개인, 즉 ‘사인’인가)에 따라 명예훼손의 입증책임을 달리 부과합니다. 즉, 국가기관이나 공인이 명예훼손 소송을 제기한 경우에 그 원고가 “현실적 악의”를 입증할 책임을 집니다. (대표 사례: 뉴욕타임스 vs. 설리번 사건, 1964) 하지만 반대로 개인, ‘사인’이 명예훼손 소송을 제기한 경우에는 명예훼손의 “현실적 악의”를 […]",
-          "link": "https://slownews.kr/82344",
-          "publishedOn": "2021-10-25T08:13:37.000Z",
-          "wordCount": 1371,
-          "title": "미국 명예훼손 소송의 입증책임: ‘공인’이면 YES, ‘사인’이면 NO"
-        },
-        {
-          "id": "https://slownews.kr/?p=82344",
-          "author": "언론인권센터",
-          "description": "바쁜 독자를 위한 요약:  미국 연방대법원은 명예훼손 소송의 원고가 누구인가(국가, 공무원 등 ‘공인’인가, 아니면 그냥 개인, 즉 ‘사인’인가)에 따라 명예훼손의 입증책임을 달리 부과합니다. 즉, 국가기관이나 공인이 명예훼손 소송을 제기한 경우에 그 원고가 “현실적 악의”를 입증할 책임을 집니다. (대표 사례: 뉴욕타임스 vs. 설리번 사건, 1964) 하지만 반대로 개인, ‘사인’이 명예훼손 소송을 제기한 경우에는 명예훼손의 “현실적 악의”를 […]",
-          "link": "http://feedproxy.google.com/~r/slownews/~3/vCp3UBjZbAQ/82344",
-          "publishedOn": "2021-10-25T08:13:37.000Z",
-          "wordCount": 1402,
-          "title": "미국 명예훼손 소송의 입증책임: ‘공인’이면 YES, ‘사인’이면 NO"
         }
       ]
     },
