@@ -4,7 +4,17 @@
       "title": "Alex Edwards",
       "feedUrl": "https://www.alexedwards.net/static/feed.rss",
       "siteUrl": "https://www.alexedwards.net/blog",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://www.alexedwards.net/blog/change-url-query-params-in-go",
+          "author": null,
+          "description": "In this short post we're going to discuss how to add, modify or delete URL query string parameters in Go. To illustrate, we'll look at how to change this URL:\n\n\n\nTo this:\n\n\n\nIf you want to change the URL query string in place:\n\n  \n\nRunning this will print out:\n\n\n\nIf you want to create a clone of the URL but with a different query string, while leaving the original URL unchanged, you need to create a copy of the original url.URL struct first. \nThere are a couple of ways to do this. You can either re-parse the URL, or you can dereference the original url.URL and make a copy, like so:\n\n\n\nWhen you do this, you create a new newURL variable of type url.URL which is initialized to the (dereferenced) value of *originalURL. This means that newURL has a different address in memory to originalURL.\nPutting this together, the pattern for creating a new URL with different parameters is:\n\n\n\nRunning this will print out:\n\n\n\nAs a side note, you can use this technique any time you want to 'clone' a URL and make changes to it. For example to create a clone of a URL with a different path, you can do this:",
+          "link": "https://www.alexedwards.net/blog/change-url-query-params-in-go",
+          "publishedOn": "2021-11-28T10:00:00.000Z",
+          "wordCount": 611,
+          "title": "Quick tip: Change URL query params in Go"
+        }
+      ]
     },
     {
       "title": "Arjun Sreedharan",
@@ -143,15 +153,6 @@
           "publishedOn": "2021-11-12T08:34:38.000Z",
           "wordCount": 534,
           "title": "Aarch64 Linux Kernel Debug"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/11085234",
-          "author": "CPUU",
-          "description": "Mach-O 는 macOS에서 사용하는 바이너리 형식 포맷이다. 기존에는 애플도 인텔 칩셋을 사용했기 때문에 바이너리도 인텔용 바이너리로 사용되었다.\n그러나 2020년 M1칩을 발표하면서부터 macOS는 ARM64로 전환되었고, 이에 따라 바이너리 형식 역시 ARM64를 따르게 되었다. 물론 원래부터 iOS를 구동하는 아이폰 및 아이패드가 ARM 디바이스였으므로 완전히 새로운 내용은 아니다. 다만 성능 차원에서 훨씬 뛰어난데다가 컴퓨터용 운영체제인 macOS가 ARM64를 지원하게 되었고, 2021년 계속해서 M1 Max 등 새로운 칩셋들을 계속 ARM64로 고수하고 있으므로 향후에는 결국 ARM64 기반의 Mach-O가 완전히 자리잡을 것으로 보인다.\n한편 M1 칩셋 환경을 대상으로 하는 M1 악성코드가 출현하고 있다(참고 : GoSearch22). 그러므로 M1 환경에서 악성코드 분석이라던지 취약점 분석을 하기 위해서는 M1용 바이너리를 역공학(reverse engineering) 하는 방법을 필수적으로 숙지해야 할 것이다.\n물론 리버싱 실무에서 사실상의 표준 도구로 사용되는 IDA Pro 같은 경우 이미 ARM64 macOS 에 대한 지원 업데이트를 출시했다. .. 역시 자본주의 사회에서는 돈이 .. 최고다..  이 글에서는 IDA를 사용하지 않고, 순수하게 디스어셈블 도구를 사용하여 어셈블리 언어 수준의 분석을 수행해보는 것으로 한다.\n\n\n1. C 언어로 Hello World 예제 작성하기\n2014년 애플은 swift 프로그래밍 언어를 발표했다. 원래 iOS 앱이나 macOS 앱은 Objective-C…",
-          "link": "https://cpuu.postype.com/post/11085234",
-          "publishedOn": "2021-11-01T05:16:20.000Z",
-          "wordCount": 492,
-          "title": "M1 Mach-O 바이너리 리버싱"
         }
       ]
     },
@@ -223,15 +224,6 @@
           "publishedOn": "2021-11-04T16:15:55.000Z",
           "wordCount": 505,
           "title": "개발자 동무, 철의 장막 뒤에서 디버깅 하기"
-        },
-        {
-          "id": "https://edykim.com/ko/post/defragment-sep-2021-to-oct/",
-          "author": null,
-          "description": "이제 앞으로 더 바빠질 예정이라서 9월, 1…",
-          "link": "https://edykim.com/ko/post/defragment-sep-2021-to-oct/",
-          "publishedOn": "2021-11-01T07:32:26.000Z",
-          "wordCount": 307,
-          "title": "조각모음: 2021년 9월, 10월"
         }
       ]
     },
@@ -592,6 +584,24 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2021/11/personalize-user-journeys-by-pushing-dynamic-shortcuts.html",
+          "author": null,
+          "description": "Posted by Jessica Dene Earley-Cha, Developer Relations Engineer\n Like many other people who use their smartphone to make their lives easier, I’m way more likely to use an app that adapts to my behavior and is customized to fit me. Android apps already can support some personalization like the ability to long touch an app and a list of common user journeys are listed. When I long press my Audible app (an online audiobook and podcast service), it gives me a shortcut to the book I’m currently listening to; right now that is Daring Greatly by Brené Brown.  \nNow, imagine if these shortcuts could also be triggered by a voice command –    and, when relevant to the user, show up in Google Assistant for easy use. \n Wouldn't that be lovely? \n  \nDynamic shortcuts on a mobile device\n Well, now you can…",
+          "link": "http://developers.googleblog.com/2021/11/personalize-user-journeys-by-pushing-dynamic-shortcuts.html",
+          "publishedOn": "2021-11-30T17:57:00.006Z",
+          "wordCount": 3300,
+          "title": "Personalize user journeys by Pushing Dynamic Shortcuts to Assistant"
+        },
+        {
+          "id": "http://developers.googleblog.com/2021/11/Iamagde-krupal-modi.html",
+          "author": null,
+          "description": "Welcome to #IamaGDE - a series of spotlights presenting Google Developer Experts (GDEs) from across the globe. Discover their stories, passions, and highlights of their community work.\nIn college, Krupal Modi programmed a robot to catch a ball based on the ball’s color, and he enjoyed it enough that he became a developer. Now, he leads machine learning initiatives at Haptik, a conversational AI platform. He is a Google Developer Expert in Machine Learning and recently built the MyGov Corona Helpdesk module for the Indian government, to help Indians around the country schedule COVID-19 vaccinations. He lives in Gujarat, India. \nMeet Krupal Modi, Google Developer Expert in Machine Learning.\n   \nGDE Krupal Modi\n    \nThe early days\nKrupal Modi didn’t set out to become a developer, but when he …",
+          "link": "http://developers.googleblog.com/2021/11/Iamagde-krupal-modi.html",
+          "publishedOn": "2021-11-30T17:03:00.004Z",
+          "wordCount": 3320,
+          "title": "Using Machine Learning for COVID-19 helpline with Krupal Modi #IamaGDE"
+        },
+        {
           "id": "http://developers.googleblog.com/2021/11/gdg-ai-fest-spain.html",
           "author": null,
           "description": "Posted by Alessandro Palmieri, Regional Lead for Spain Developer Communities\n Google Developer Groups (GDGs) around the world are in a unique position to organize events on technology topics that community members are passionate about.  That’s what happened in Spain in July 2021, where two GDG chapters decided to put on an event called AI Fest after noticing a lack of conferences dedicated exclusively to artificial intelligence. “Artificial intelligence is everywhere, although many people do not know it,” says Irene Ruiz Pozo, the organizer of GDG Murcia and GDG Cartagena. While AI has the potential to transform industries from retail to real estate with products like Dialogflow and Lending DocAI, “there are still companies falling behind,” she notes. \n   \n  \nIrene and her GDG team members…",
@@ -913,24 +923,6 @@
           "publishedOn": "2021-11-02T21:00:00.000Z",
           "wordCount": 2781,
           "title": "PVS-Studio searches for bugs in the DuckStation project"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/0880/",
-          "author": null,
-          "description": "The PVS-Studio developers often check open-source projects and write articles about that. Sometimes, when writing an article, we come across interesting situations or epic errors. Of course, we want to write a small note about it. This is one of those cases. At the moment I'm writing an article about checking the DuckStation project. This is an emulator of the Sony PlayStation console. The project is quite interesting and actively developing. I found some interesting bugs and want to share a story about one with you. This article demonstrates: PVS-Studio has issued a warning: V726 An attempt to free memory containing the 'wbuf' array by using the 'free' function. This is incorrect as 'wbuf' was created on stack. log.cpp 216",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/0880/",
-          "publishedOn": "2021-10-31T21:00:00.000Z",
-          "wordCount": 1963,
-          "title": "How a PVS-Studio developer defended a bug in a checked project"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/0880/",
-          "author": null,
-          "description": "The PVS-Studio developers often check open-source projects and write articles about that. Sometimes, when writing an article, we come across interesting situations or epic errors. Of course, we want to write a small note about it. This is one of those cases. At the moment I'm writing an article about checking the DuckStation project. This is an emulator of the Sony PlayStation console. The project is quite interesting and actively developing. I found some interesting bugs and want to share a story about one with you. This article demonstrates: PVS-Studio has issued a warning: V726 An attempt to free memory containing the 'wbuf' array by using the 'free' function. This is incorrect as 'wbuf' was created on stack. log.cpp 216",
-          "link": "http://feedproxy.google.com/~r/viva64-blog-en/~3/wHV5QmHUnyk/",
-          "publishedOn": "2021-10-31T21:00:00.000Z",
-          "wordCount": 1956,
-          "title": "How a PVS-Studio developer defended a bug in a checked project"
         }
       ]
     },
@@ -1170,6 +1162,24 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/877186/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Debian (samba), Fedora (kernel), openSUSE (netcdf and tor), SUSE (netcdf and python-Pygments), and Ubuntu (imagemagick).",
+          "link": "https://lwn.net/Articles/877186/rss",
+          "publishedOn": "2021-11-30T16:12:48.000Z",
+          "wordCount": 94,
+          "title": "Security updates for Tuesday"
+        },
+        {
+          "id": "https://lwn.net/Articles/877062/rss",
+          "author": "corbet",
+          "description": "One of the key features of the extended BPF virtual machine is the verifier\nbuilt into the kernel that ensures that all BPF programs are safe to run.\nBPF developers often see the verifier as a bit of a mixed blessing, though;\nwhile it can catch a lot of problems before they happen, it can also be\nhard to please.  Comparisons with a well-meaning but rule-bound and picky\nbureaucracy would not be entirely misplaced.  The bpf_loop()\nproposal from Joanne Koong is an attempt to make pleasing the BPF\nbureaucrats a bit easier for one type of loop construct.",
+          "link": "https://lwn.net/Articles/877062/rss",
+          "publishedOn": "2021-11-29T22:02:41.000Z",
+          "wordCount": null,
+          "title": "[$] A different approach to BPF loops"
+        },
         {
           "id": "https://lwn.net/Articles/877105/rss",
           "author": "ris",
@@ -1724,6 +1734,24 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/articles/cant-buy-integration.html",
+          "author": null,
+          "description": "“Build versus buy” decisions are everywhere today, and rightly so.\n      Building software is risky and expensive, and software product companies\n      can spread that risk and expense across multiple customers. But my\n      colleague Brandon Byars argues that the kinds\n      of tools that are available to buy for systems integration are not\n      products that directly solve a business problem. \nmore…",
+          "link": "https://martinfowler.com/articles/cant-buy-integration.html",
+          "publishedOn": "2021-11-30T14:45:00.000Z",
+          "wordCount": 1493,
+          "title": "You Can't Buy Integration"
+        },
+        {
+          "id": "https://martinfowler.com/articles/scaling-architecture-conversationally.html",
+          "author": null,
+          "description": "Like many modern software architects, Andrew Harmel-Law struggles with\n      the need to scale architectural thinking to larger organizations while\n      allowing teams to be as autonomous as possible. The approach he's\n      currently using is the \"Advice Process\", that encourages and supports\n      these teams to be engaged in broader architectural decision making. In\n      this first installment, Andrew describes this advice process, later\n      installments will dig into four supporting elements that help make it work.\nmore…",
+          "link": "https://martinfowler.com/articles/scaling-architecture-conversationally.html",
+          "publishedOn": "2021-11-30T14:43:00.000Z",
+          "wordCount": 2217,
+          "title": "Scaling the Practice of Architecture, Conversationally"
+        },
+        {
           "id": "https://martinfowler.com/articles/strong-weak-arch.html",
           "author": null,
           "description": "Good technical design decisions are very dependent on context. Teams that\n    regularly work together on common goals are able to communicate regularly\n    and negotiate changes quickly. These teams exhibit a strong force of\n    alignment, and can make technology and design decisions that harness that\n    strong force. As we zoom out in a larger organisation an increasingly\n    weak force exists between teams and divisions that work independently\n    and have less frequent collaboration. Recognising the differences in these\n    strong and weak forces allows us to make better decisions and give better\n    guidance for each level, allowing for more empowered teams that can move\n    faster.\nmore…",
@@ -1898,6 +1926,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9399",
+          "author": "Kevin C. Tofel",
+          "description": "On our most recent IoT Podcast episode, Brian called into our voicemail hotline with a question about the Build Back Better legislation recently passed in the U.S. House of Representatives. There’s a provision in the current bill that requires new vehicles to prevent drunken driving. Specifically, Brian wants to know how this might be implemented. […]\nThe post How will the IoT be used to prevent drunken driving? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-will-the-iot-be-used-to-prevent-drunken-driving/",
+          "publishedOn": "2021-11-30T15:07:13.000Z",
+          "wordCount": 969,
+          "title": "How will the IoT be used to prevent drunken driving?"
+        },
         {
           "id": "https://staceyoniot.com/?p=9393",
           "author": "Stacey Higginbotham",
@@ -2136,17 +2173,7 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": [
-        {
-          "id": "http://subokim.wordpress.com/?p=10999",
-          "author": "subokim",
-          "description": "(그림)”유선 통신망은 보안망이라 인터넷에 공개된 무선망 구성도만 추가해봅니다.” 이 글은 이제 갓 입문한 초보개발자들이 읽었으면 해서 정리해 보았습니다. 2021.10.25일.큰 장애가 있었습니다.KT 에서 네트워크 작업을 하다 오류가 났죠.모바일인터넷, 유선인터넷이 모두 안되었습니다. 피해범위는 전국 규모였습니다.인터넷 결제가 되지 않으니 음식점이 난리 났구요.인터넷이 되지 않으니, 카톡도 쓸 수 없었습니다. 다행히 은행은 동작했습니다.은행은 이런 경우를 대비해서 이중화된 회선을 운영합니다.대금결제가 안되면 […]",
-          "link": "https://subokim.wordpress.com/2021/10/31/core_point_for_kt_fail_over/",
-          "publishedOn": "2021-10-31T12:10:43.000Z",
-          "wordCount": 912,
-          "title": "KT 장애, 개발자가 읽어야 할 포인트"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Vivonomicon's Blog",
@@ -2193,6 +2220,15 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=82834",
+          "author": "민주언론시민연합",
+          "description": "지금까지 한국 대선 보도에서 찾아볼 수 없었지만 이번 선거부터라도 새로운 판세 조사를 할 수는 없을까? 선거 때만 되면 늘 봐오던 지지율 조사와 보도가 올해도 여전히 정당이나 후보자 중심으로 이뤄지고 있다. 지지하는 후보와 선호하는 정당 조사는 물론이고 후보 간 대결구도를 가상으로 설정해서 누구를 지지하는지를 묻고 있다. 심지어는 누가 될 것 같은지도 질문하여 결과를 발표하고 있다. 언론은 […]",
+          "link": "https://slownews.kr/82834",
+          "publishedOn": "2021-11-30T07:37:37.000Z",
+          "wordCount": 1155,
+          "title": "경마 중계식 ‘대선 지지율’ 보도, 이제 좀 작작 해라"
+        },
         {
           "id": "https://slownews.kr/?p=82775",
           "author": "청년유니온",
@@ -2604,15 +2640,6 @@
           "publishedOn": "2021-11-01T09:45:56.000Z",
           "wordCount": 1134,
           "title": "같은 실적인데 GM 주가보다 포드 주가가 더 오르는 이유"
-        },
-        {
-          "id": "https://happist.com/?p=584393",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/584393/%ed%85%8c%ec%8a%ac%eb%9d%bc-%ea%b2%bd%ec%9f%81%eb%a0%a5%ea%b3%bc-%ed%85%8c%ec%8a%ac%eb%9d%bc-%eb%aa%a9%ed%91%9c%ec%a3%bc%ea%b0%80-%ec%83%81%ed%96%a5",
-          "publishedOn": "2021-10-31T13:15:37.000Z",
-          "wordCount": 933,
-          "title": "기존 업체외 질적으로 다른 테슬라 경쟁력 세가지, Piper Sandler의 테슬라 목표주가 상향 이유"
         }
       ]
     },
@@ -2621,6 +2648,15 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=73847",
+          "author": "malecon",
+          "description": "자율주행차, 메타버스, NFT 등 최근 유튜브를 달구는 영상들을 보고 있자면 현기증 나는 속도로 변하는 세상의 흐름에 멀미가 날 정도입니다. 불과 10년 전과 비교해도 우리가 사는 세상이 얼마나 변했는지 깜짝 놀랄 때가 많습니다. 기술과 산업이 발전하는 속도와 급변하는 세상을 다루는 책 3권을 소개합니다. 기하급수적으로 성장하는 기술이 사회와 경제를 뒤흔들고 있으며, 격변기의 승리자들은 엄청난 과실을 누리고 있습니다. 과연 인류는 엄청난 속도로 발전하는 기술을 발판으로 벽을 깰 수 있을까요? 답을 찾아봅시다.",
+          "link": "https://newspeppermint.com/2021/11/29/two-new-books-explore-the-impact-of-accelerating-technology/?utm_source=rss&utm_medium=rss&utm_campaign=two-new-books-explore-the-impact-of-accelerating-technology",
+          "publishedOn": "2021-11-29T22:59:51.000Z",
+          "wordCount": 1067,
+          "title": "[ 책 소개 ] 기하급수적인 기술 발전과 급변하는 세상을 다루는 두 권의 책"
+        },
         {
           "id": "https://newspeppermint.com/?p=73734",
           "author": "ingppoo",
@@ -2680,6 +2716,15 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222582453332",
+          "author": "sellars",
+          "description": "(A) 우리는 자기 자신을 격려하고, 명령하고, 복종하고, 비난하고, 자기 자신을 벌줄 수 있다. 그는 자기에게 질문을 던지고 그것에 대답할 수 있다. 우리는 오직 독백으로 이야기하는 인간을 상상할 수 있다. 그는 그의 활동에 혼잣말을 덧붙인다. - 이런 사람을 보고 그들이 말하는 것을 듣는 관찰자는 그들의 언어를 자기 언어로 번역할 수 있을 것이다. (따라서 그는 그렇게 독백으로 말하는 사람의 행동을 올바르게 예측할 수 있다. 그는 그들이 결단하고 결심하는 것도 들을 수 있다.) 그러나 우리는 마찬가지로 그의 사적 사용을 위해 그의 내적 경험에, 즉 그의 감정, 기분 등에 언어적 표현을 주는 그런 언어를 상상할 수 있는가? - 우.......",
+          "link": "https://blog.naver.com/sellars/222582453332",
+          "publishedOn": "2021-11-29T21:07:40.000Z",
+          "wordCount": 8,
+          "title": "비트겐슈타인의 사적 언어"
+        },
         {
           "id": "https://blog.naver.com/sellars/222580676689",
           "author": "sellars",
@@ -2832,15 +2877,6 @@
           "publishedOn": "2021-11-01T10:10:05.000Z",
           "wordCount": 8,
           "title": "서(恕) 혹은 배려"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222554309798",
-          "author": "sellars",
-          "description": "유사성보다는 차이성에 주목하는 것이 철학적으로 더 생산적이라고 지적했다. https://blog.naver.com/sellars/222533344369 차이성을 무시할 때, 우리 근대철학에서 볼 수 있듯이 모든 것이 하나가 되는 현상을 목도할 수 있다. 이렇게 지적할 때, 그냥 떠오른 인물이 유영모와 함석헌이었다. 진짜 그들이 그런 주장을 하는지 그들 저술을 차분하게 읽어보아야 하지만, 사실 읽어보고 싶은 마음은 거의 없다. 노자에 대한 논문 하나를 읽다가 다음과 같은 구절을 발견한다. <20세기 한국의 현실에서 노자는 분명 하나의 전통이자 상식이 되었다. 그 출발은 오히려 대학의 ‘철학’이 아닌 다른 공간에서 싹터 나왔다. 1958년 최초의 한글 노.......",
-          "link": "https://blog.naver.com/sellars/222554309798",
-          "publishedOn": "2021-10-31T09:03:48.000Z",
-          "wordCount": 8,
-          "title": "유영모의 노자"
         }
       ]
     }
