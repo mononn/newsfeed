@@ -2,10 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2021-12-03T20:19:03.985Z</updated>
+    <updated>2021-12-04T20:19:01.092Z</updated>
     <generator>osmosfeed 1.11.3</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Fast CSV processing with SIMD]]></title>
+        <id>https://nullprogram.com/blog/2021/12/04/</id>
+        <link href="https://nullprogram.com/blog/2021/12/04/"/>
+        <updated>2021-12-04T01:13:33.000Z</updated>
+        <summary type="html"><![CDATA[This article was discussed on Hacker News.
+I recently learned of csvquote, a tool that encodes troublesome
+CSV characters such that unix tools can correctly process them. It
+reverses the encoding at the end of the pipeline, recovering the original
+input. The original implementation handles CSV quotes using the
+straightforward, naive method. However, there’s a better approach that is
+not only simpler, but around 3x faster on modern hardware. Even more,
+there’s yet another approach using SIMD intrinsics, plus some bit
+twiddling tricks, which increases the processing speed by an order of
+magnitude. My csvquote implementation includes both
+approaches.
+Background
+Records in CSV data are separated by line feeds, and fields are separated
+by commas. Fields may be quoted.
+
+aaa,bbb,ccc
+xxx,"yyy",zzz…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[16 Minutes: Inside the GameStop Drama; U.S. Constitution, Auctioned]]></title>
+        <id>https://future.a16z.com/?post_type=podcast&amp;p=2662</id>
+        <link href="https://future.a16z.com/podcasts/16-minutes-inside-the-gamestop-drama-u-s-constitution-auctioned/"/>
+        <updated>2021-12-03T20:21:40.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to 16 Minutes, our show on the a16z podcast network where we talk about tech trends that are dominating news headlines, industry buzz, and where we are on the long arc of innovation.  Today’s episode actually features a look back at the GameStop saga — the stock market drama that some headlines described as... Read More
+The post 16 Minutes: Inside the GameStop Drama; U.S. Constitution, Auctioned appeared first on Future.]]></summary>
+        <author>
+            <name>Marc Andreessen and Ken Griffin</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IoT news of the week for Dec. 3, 2021]]></title>
         <id>https://staceyoniot.com/?p=9418</id>
@@ -3124,212 +3161,6 @@ The post ADLINK launches rugged AI-enabled video analytics platform for railway 
         <summary type="html"><![CDATA[북한과 관계가 악화하던 2015년 5월, 세계 여성·평화 운동가들은 걸어서 비무장지대(DMZ)를 통과하는 ‘위민클로스DMZ(WomenCrossDMZ)’를 기획했습니다. 당시 퍼포먼스엔 반세기 넘게 미국 여성운동을 이끌어 온 클로리아 스타이넘, 노벨평화상 수상자 메어리드 코리건 매과이어(1976년 수상), 리마 보위(2011년 수상)뿐만 12개국 30명의 여성·평화운동가가 참여했습니다. 평화운동가를 ‘종북’으로 낙인찍다  일부 정치세력이 자신과 반대되는 의견을 가진 집단을 매도하고 고립시키기 위해 사용한 말이 있습니다. 2010년대 유행한 말은 […]]]></summary>
         <author>
             <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GitLab servers are being exploited in DDoS attacks (The Record)]]></title>
-        <id>https://lwn.net/Articles/875154/rss</id>
-        <link href="https://lwn.net/Articles/875154/rss"/>
-        <updated>2021-11-05T02:27:27.000Z</updated>
-        <summary type="html"><![CDATA[The Record is reporting
-on massive exploitation of an oldish vulnerability in GitLab instances.
-
-
-	While the purpose of these attacks remained unclear for HN
-	Security, yesterday, Google’s Menscher said the hacked servers were
-	part of a botnet comprising of “thousands of compromised GitLab
-	instances” that was launching large-scale DDoS attacks.
-
-
-The vulnerability was fixed
-in April, but evidently a lot of sites have not updated.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[반도체 부족 사태가 불러온 자동차 기업과 테크 기업 간 협업]]></title>
-        <id>https://newspeppermint.com/?p=73694</id>
-        <link href="https://newspeppermint.com/2021/11/04/semiconductorcartech/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=semiconductorcartech"/>
-        <updated>2021-11-04T22:59:21.000Z</updated>
-        <summary type="html"><![CDATA[자동차가 점점 디지털 기기로 바뀌면서 두 산업이 협력했을 때 얻을 수 있는 과실이 커지고 있습니다. “테크 기업은 자동차 기업이, 자동차 기업은 테크 기업이 필요합니다.” 전문가들은 반도체 산업과 자동차 산업이 서로 의존하는 관계를 넘어 경계가 모호해지고 있다고 평가합니다. 포드자동차는 애플과 테슬라 출신의 임원을 영입하고, 인텔과 퀄컴은 자동차 산업에 진출하고 있습니다. 과연 두 산업의 미래는 어떻게 될까요? 월스트리트저널의 기사를 소개합니다.]]></summary>
-        <author>
-            <name>malecon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Protocol Buffers, a brutal protocol from Google, vs. PVS-Studio, a static code analyzer]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/cpp/0882/</id>
-        <link href="https://pvs-studio.com/en/blog/posts/cpp/0882/"/>
-        <updated>2021-11-04T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Protocol Buffers is a very popular, cool, and high-quality product that is mostly developed by Google. This is a good challenge for the PVS-Studio static code analyzer. Finding at least something is already an achievement. Let's give it a shot. I am writing about Protocol Buffers (protobuf) as part of a long-term series of articles about checking open-source projects. The library implements a protocol for structured data serialization. This is an effective binary alternative to the XML text format. The project seemed like an intriguing challenge for the PVS-Studio analyzer, because Google takes a very serious approach to the quality of the C++ code it produces. Take, for example, the "Safer Usage of C++" document that has been actively discussed recently. Additionally, many developers use protobuf in their projects - which means the protobuf product is well-tested. Finding at least a couple of mistakes in this project is a challenge that we have taken upon us. So what are we waiting for? Time to find out what PVS-Studio can do!]]></summary>
-        <author>
-            <name>from www.viva64.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Protocol Buffers, a brutal protocol from Google, vs. PVS-Studio, a static code analyzer]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/cpp/0882/</id>
-        <link href="http://feedproxy.google.com/~r/viva64-blog-en/~3/5M9qvLkHmTo/"/>
-        <updated>2021-11-04T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Protocol Buffers is a very popular, cool, and high-quality product that is mostly developed by Google. This is a good challenge for the PVS-Studio static code analyzer. Finding at least something is already an achievement. Let's give it a shot. I am writing about Protocol Buffers (protobuf) as part of a long-term series of articles about checking open-source projects. The library implements a protocol for structured data serialization. This is an effective binary alternative to the XML text format. The project seemed like an intriguing challenge for the PVS-Studio analyzer, because Google takes a very serious approach to the quality of the C++ code it produces. Take, for example, the "Safer Usage of C++" document that has been actively discussed recently. Additionally, many developers use protobuf in their projects - which means the protobuf product is well-tested. Finding at least a couple of mistakes in this project is a challenge that we have taken upon us. So what are we waiting for? Time to find out what PVS-Studio can do!]]></summary>
-        <author>
-            <name>from www.viva64.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ksmbd: a new in-kernel SMB server (SAMBA+ blog)]]></title>
-        <id>https://lwn.net/Articles/875132/rss</id>
-        <link href="https://lwn.net/Articles/875132/rss"/>
-        <updated>2021-11-04T17:59:12.000Z</updated>
-        <summary type="html"><![CDATA[Over at the SAMBA+ blog, the performance of the new ksmbd kernel SMB server and Samba in user space are compared:
-
-ksmbd claims performance improvements on a wide range of benchmarks: the graphs on this page show a doubling of performance on some tests. There was also the notion that an in-kernel server is likely an easier place to support SMB Direct, which uses RDMA to transfer data between systems.
-
-Clearly, those number are impressive, but at the same time recent improvements in Samba's IO performance put this into perspective: by leveraging the new "io_uring" Linux API Samba is able to provide roughly 10x the throughput compared to ksmbd.
-
-Time will tell whether it's better to reside in kernel-space like ksmbd or in user-space like Samba in order to squeeze the last bit of performance out of the available hardware.
-
-
-There are two graphs that show some impressive results for Samba.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[개발자 동무, 철의 장막 뒤에서 디버깅 하기]]></title>
-        <id>https://edykim.com/ko/post/debugging-behind-the-iron-curtain/</id>
-        <link href="https://edykim.com/ko/post/debugging-behind-the-iron-curtain/"/>
-        <updated>2021-11-04T16:15:55.000Z</updated>
-        <summary type="html"><![CDATA[Jake Poznanski의 글 Debugging Behind the Iron Curtain…]]></summary>
-        <author>
-            <name>edykim.com 블로그 RSS 피드</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[#IamaGDE: Katerina Skroumpelou (Athens, Greece)]]></title>
-        <id>http://developers.googleblog.com/2021/11/iamagde-katerina-skroumpelou-athens.html</id>
-        <link href="http://developers.googleblog.com/2021/11/iamagde-katerina-skroumpelou-athens.html"/>
-        <updated>2021-11-04T16:08:00.006Z</updated>
-        <summary type="html"><![CDATA[The Google Developers Experts program is a global network of highly experienced technology experts, influencers, and thought leaders who actively support developers, companies, and tech communities by speaking at events and publishing content.
-  
-Katerina Skroumpelou, who is based in Athens, Greece, is a Senior Software Engineer at Narwhal Technologies, a consulting firm whose product Nx lets developers build multiple full-stack applications and share code among them in the same workspace. She is a Google Developer Expert in Maps and Angular.  
-   
- Becoming a Google Maps Platform developer
-Skroumpelou has always had a deep love of maps. 
-“My father used to have old maps books, and I’ve always been obsessed with knowing where I am and having an understanding of my surroundings, so I’ve alw…]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[#IamaGDE: Katerina Skroumpelou (Athens, Greece)]]></title>
-        <id>http://feedproxy.google.com/~r/GDBcode/~3/Nop4lSh5mzA/iamagde-katerina-skroumpelou-athens.html</id>
-        <link href="http://feedproxy.google.com/~r/GDBcode/~3/Nop4lSh5mzA/iamagde-katerina-skroumpelou-athens.html"/>
-        <updated>2021-11-04T16:08:00.006Z</updated>
-        <summary type="html"><![CDATA[The Google Developers Experts program is a global network of highly experienced technology experts, influencers, and thought leaders who actively support developers, companies, and tech communities by speaking at events and publishing content.
-  
-Katerina Skroumpelou, who is based in Athens, Greece, is a Senior Software Engineer at Narwhal Technologies, a consulting firm whose product Nx lets developers build multiple full-stack applications and share code among them in the same workspace. She is a Google Developer Expert in Maps and Angular.  
-   
- Becoming a Google Maps Platform developer
-Skroumpelou has always had a deep love of maps. 
-“My father used to have old maps books, and I’ve always been obsessed with knowing where I am and having an understanding of my surroundings, so I’ve alw…]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Future of Kidtech: A Web Browser for the Under-10 Set]]></title>
-        <id>https://future.a16z.com/?p=2385</id>
-        <link href="https://future.a16z.com/web-browser-for-kids/"/>
-        <updated>2021-11-04T15:00:39.000Z</updated>
-        <summary type="html"><![CDATA[Ninety-eight percent of American kids under the age of 10 have access to a smartphone or tablet in their home; 45 percent even have their own device. Over the past decade, modern touchscreen devices have become both intuitive and affordable enough that they’ve gone mainstream among children around the world. But despite this high usage... Read More
-The post The Future of Kidtech: A Web Browser for the Under-10 Set appeared first on Future.]]></summary>
-        <author>
-            <name>Keith Schacht</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Horgan: Linux x86 Program Start Up]]></title>
-        <id>https://lwn.net/Articles/875108/rss</id>
-        <link href="https://lwn.net/Articles/875108/rss"/>
-        <updated>2021-11-04T14:51:04.000Z</updated>
-        <summary type="html"><![CDATA[Patrick Horgan explains
-the process of starting a program on Linux in great detail.
-
-
-
-	Well, __libc_start_main calls __libc_init_first,
-	who immediately uses secret inside information to find the
-	environment variables just after the terminating null of the
-	argument vector and then sets a global variable __environ
-	which __libc_start_main uses thereafter whenever it needs
-	it including when it calls main. After the envp
-	is established, then __libc_start_main uses the same trick
-	and surprise! Just past the terminating null at the end of the
-	envp array, there's another vector, the ELF auxiliary
-	vector the loader uses to pass some information to the process. An
-	easy way to see what's in there is to set the environment variable
-	LD_SHOW_AUXV=1 before running the program.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] 5.16 Merge window, part 1]]></title>
-        <id>https://lwn.net/Articles/874683/rss</id>
-        <link href="https://lwn.net/Articles/874683/rss"/>
-        <updated>2021-11-04T14:43:11.000Z</updated>
-        <summary type="html"><![CDATA[As of this writing, Linus Torvalds has pulled exactly 6,800 non-merge
-changesets into the mainline repository for the 5.16 kernel release.  That
-is probably a little over half of what will arrive during this merge
-window, so this is a good time to catch up on what has been pulled so far.
-There are many significant changes and some large-scale restructuring of
-internal kernel code, but relatively few ground-breaking new
-features.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Thursday]]></title>
-        <id>https://lwn.net/Articles/875106/rss</id>
-        <link href="https://lwn.net/Articles/875106/rss"/>
-        <updated>2021-11-04T14:17:47.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Fedora (ansible, chromium, kernel, mupdf, python-PyMuPDF, rust, and zathura-pdf-mupdf), openSUSE (qemu and webkit2gtk3), Red Hat (firefox and kpatch-patch), Scientific Linux (firefox), SUSE (qemu, tomcat, and webkit2gtk3), and Ubuntu (firefox and thunderbird).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Podcast: Ecobee’s big deal and climate-friendly chips]]></title>
-        <id>https://staceyoniot.com/?p=9258</id>
-        <link href="https://staceyoniot.com/podcast-ecobees-big-deal-and-climate-friendly-chips/"/>
-        <updated>2021-11-04T13:00:27.000Z</updated>
-        <summary type="html"><![CDATA[The big news in IoT this week was the announced acquisition of Ecobee by Generac, so Kevin and I share our thoughts on the deal and what it means for the smart home. After that, we were excited to see Amazon launching a smart air quality monitoring device for $70 as well as publically state […]
-The post Podcast: Ecobee’s big deal and climate-friendly chips appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Shortlist Announced for the IoT Security Champion Award 2021]]></title>
-        <id>https://www.iotsecurityfoundation.org/?p=21363</id>
-        <link href="https://www.iotsecurityfoundation.org/shortlist-announced-for-the-iot-security-champion-award-2021/"/>
-        <updated>2021-11-04T09:05:09.000Z</updated>
-        <summary type="html"><![CDATA[We are delighted to announce the finalists for the 3rd IoT Security Foundation Champion Award. This award seeks to celebrate organisations which demonstrate stewardship when it comes to IoT security. In alphabetical order, they are: Angoka CENSIS Crypto Quantique EXPLIoT We would also like to thank all other organisations which]]></summary>
-        <author>
-            <name>-</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Consumer IoT sector – basic cybersecurity hygiene practice still not happening]]></title>
-        <id>https://www.iotsecurityfoundation.org/?p=21344</id>
-        <link href="https://www.iotsecurityfoundation.org/consumer-iot-sector-basic-hygiene-practice-still-not-happening/"/>
-        <updated>2021-11-04T09:00:45.000Z</updated>
-        <summary type="html"><![CDATA[November 4th, 2021: New Report on Industry Adoption of Vulnerability Disclosure Practice Published. The IoT Security Foundation has published its 4th report which examines the practice of vulnerability disclosure in Consumer IoT - with an extension into enterprise and the B2B model. The report is seen as a cybersecurity progress barometer of the sector]]></summary>
-        <author>
-            <name>John</name>
         </author>
     </entry>
 </feed>
