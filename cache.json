@@ -6,6 +6,15 @@
       "siteUrl": "https://www.alexedwards.net/blog",
       "articles": [
         {
+          "id": "https://www.alexedwards.net/blog/ci-with-go-and-github-actions",
+          "author": null,
+          "description": "In this post we're going to walk through how to use GitHub Actions to create a continuous integration (CI) pipeline that automatically tests, vets and lints your Go code.\nFor solo projects I usually create a pre-commit Git hook to carry out these kinds of checks, but for team projects or open-source work — where you don't have control over everyone's development environment — using a CI workflow is a great way to flag up potential problems and help catch bugs before they make it into production or a versioned release.\nAnd if you're already using GitHub to host your repository, it's nice and easy to use their built-in functionality to do this without any need for additional third-party tools or services.\nTo demonstrate how it works, let's run through a step-by-step example.\nIf you'd like to…",
+          "link": "https://www.alexedwards.net/blog/ci-with-go-and-github-actions",
+          "publishedOn": "2021-12-06T09:25:00.000Z",
+          "wordCount": 1382,
+          "title": "Continuous integration with Go and GitHub Actions"
+        },
+        {
           "id": "https://www.alexedwards.net/blog/change-url-query-params-in-go",
           "author": null,
           "description": "In this short post we're going to discuss how to add, modify or delete URL query string parameters in Go. To illustrate, we'll look at how to change this URL:\n\n\n\nTo this:\n\n\n\nIf you want to change the URL query string in place:\n\n  \n\nRunning this will print out:\n\n\n\nIf you want to create a clone of the URL but with a different query string, while leaving the original URL unchanged, you need to create a copy of the original url.URL struct first. \nThere are a couple of ways to do this. You can either re-parse the URL, or you can dereference the original url.URL and make a copy, like so:\n\n\n\nWhen you do this, you create a new newURL variable of type url.URL which is initialized to the (dereferenced) value of *originalURL. This means that newURL has a different address in memory to originalURL.\nPutting this together, the pattern for creating a new URL with different parameters is:\n\n\n\nRunning this will print out:\n\n\n\nAs a side note, you can use this technique any time you want to 'clone' a URL and make changes to it. For example to create a clone of a URL with a different path, you can do this:",
@@ -36,6 +45,16 @@
           "wordCount": null,
           "title": "5 Tips for Optimizing GUIs in Industrial Applications",
           "itunes": {}
+        },
+        {
+          "id": "https://www.beningo.com/?p=13741",
+          "author": "Jacob Beningo",
+          "description": "The tools and techniques developers use to design and build their systems can make the difference between success and failure. Tools and techniques are constantly evolving and to stay relevant and beat out the competition, it’s critical to be up to date on the latest and greatest. In this course, we will explore a wide … Continue reading CEC- Embedded Software Development Tools and Techniques\nCEC- Embedded Software Development Tools and Techniques first appeared on Beningo Embedded Group.",
+          "link": "https://www.beningo.com/cec-embedded-software-development-tools-and-techniques/",
+          "publishedOn": "2021-11-25T17:00:26.000Z",
+          "wordCount": null,
+          "title": "CEC- Embedded Software Development Tools and Techniques",
+          "itunes": {}
         }
       ]
     },
@@ -60,6 +79,15 @@
       "feedUrl": "https://www.cppstories.com/index.xml",
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
+        {
+          "id": "https://www.cppstories.com/2021/cplinksdec/",
+          "author": null,
+          "description": "Welcome to the 6th episode of C++ Links available for C++ Stories subscribers.\nSee the best C++ stories from the past month.\nHere’s the plan for today:\nC++23 progress\nParsing Command Line Arguments\n3 New articles at C++stories in November\n+ 8 Hot C++ News\nHow to write a custom iterator in C++20\nRead till the end to see an additional bonus :)\nLet’s start!\n🚧 C++23 ISO Progress\nAt the end of October, there was a cool episode at C++ Cast with Bryce Adelstein Lelbach about the progress of C++23.\nNotes:\nEverything is moving to Clang - is that good? It’s now lagging with the latest C++ features, probably because of its growth. In GCC, they started using  C++ for the compiler, so it looks like it speeds up things.\nNetworking has no consensus - TS is probably not worth putting into the Standard  w…",
+          "link": "https://www.cppstories.com/2021/cplinksdec/",
+          "publishedOn": "2021-12-06T06:55:00.000Z",
+          "wordCount": 1573,
+          "title": "C++ Links #6: C++23 Progress, Command Line, Containers, and more!"
+        },
         {
           "id": "https://www.cppstories.com/2021/designated-init-cpp20/",
           "author": null,
@@ -115,17 +143,7 @@
       "title": "Embedded in Academia",
       "feedUrl": "https://blog.regehr.org/feed",
       "siteUrl": "https://blog.regehr.org",
-      "articles": [
-        {
-          "id": "https://blog.regehr.org/?p=2173",
-          "author": "regehr",
-          "description": "The spinlock is the most basic mutual exclusion primitive provided by a multiprocessor operating system. Spinlocks need to protect against preemption on the current CPU (typically by disabling interrupts, but we’ll ignore that aspect in this post) and also against attempts by other cores to concurrently access the critical section (by using atomic memory operations).… Continue reading A Close Look at a Spinlock",
-          "link": "https://blog.regehr.org/archives/2173",
-          "publishedOn": "2021-11-06T19:57:06.000Z",
-          "wordCount": 2057,
-          "title": "A Close Look at a Spinlock"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Siemens Blogs",
@@ -163,6 +181,15 @@
       "feedUrl": "https://danluu.com/atom.xml",
       "siteUrl": "https://danluu.com/atom/index.xml",
       "articles": [
+        {
+          "id": "https://danluu.com/latency-pitfalls/",
+          "author": null,
+          "description": "This is a pseudo-transcript (actual words modified to be more readable than a 100% faithful transcription) of a short lightning talk I did at Twitter a year or two ago, on pitfalls of how we use latency metrics (with the actual service names anonymized per a comms request). Since this presentation, significant progress has been made on this on the infra side, so the situation is much improved over what was presented, but I think this is still relevant since, from talking to folks at peer companies, many folks are facing similar issues.\nWe frequently use tail latency metrics here at Twitter. Most frequently, service owners want to get cluster-wide or Twitter-wide latency numbers for their services. Unfortunately, the numbers that service owners tend to use differ from what we'd like to meas…",
+          "link": "https://danluu.com/latency-pitfalls/",
+          "publishedOn": "2021-12-06T00:00:00.000Z",
+          "wordCount": 3096,
+          "title": "Some latency measurement pitfalls"
+        },
         {
           "id": "https://danluu.com/corrections/",
           "author": null,
@@ -233,15 +260,6 @@
           "publishedOn": "2021-11-13T04:30:00.000Z",
           "wordCount": 3332,
           "title": "Rust data structures with circular references"
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2021/testing-multiple-implementations-of-a-trait-in-rust/",
-          "author": null,
-          "description": "<p>I've been hacking on a small practice project in Rust where I implement the same\ndata structure in several different ways. When testing this project, I want to\nrun exactly the same set of tests on several types that implement the same\ntrait.</p>\n<p>As a demonstrative example, let's take the …</p>",
-          "link": "https://eli.thegreenplace.net/2021/testing-multiple-implementations-of-a-trait-in-rust/",
-          "publishedOn": "2021-11-06T12:32:00.000Z",
-          "wordCount": 1121,
-          "title": "Testing multiple implementations of a trait in Rust"
         }
       ]
     },
@@ -266,6 +284,24 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4471756",
+          "author": "Jun Hong",
+          "description": "A look at DevSecOps best practice and use of static application security testing (SAST) as part of the software development lifecycle at Iris ID, who provide iris recognition for state-of-the-art access control and sensitive biometric authentication applications. \nThe post How a DevSecOps approach improved security in iris recognition systems appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/how-a-devsecops-approach-improved-security-in-iris-recognition-systems/",
+          "publishedOn": "2021-12-06T14:23:16.000Z",
+          "wordCount": 1931,
+          "title": "How a DevSecOps approach improved security in iris recognition systems"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4471746",
+          "author": "Mark Patrick",
+          "description": "A look at the trends in embedded systems design, including greater system integration , connected devices, and the 'virtual' revolution.\nThe post Trends in embedded development: a Mouser perspective appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/trends-in-embedded-development-a-mouser-perspective/",
+          "publishedOn": "2021-12-06T13:18:42.000Z",
+          "wordCount": 2392,
+          "title": "Trends in embedded development: a Mouser perspective"
+        },
         {
           "id": "https://www.embedded.com/?p=4471731",
           "author": "Till Adam",
@@ -994,6 +1030,33 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/877603/rss",
+          "author": "corbet",
+          "description": "Reference counts are a commonly used mechanism for tracking the life cycle\nof objects in a computing system.  As long as every user of an object\ncorrectly maintains its references by incrementing and decrementing the\nreference count, that object will persist for as long as it\nis needed\nand will be properly destroyed once the last user is done.  The \"correctly\"\nin that sentence is important, though; things do not work\nas well in the presence of reference-counting errors.  Networking\ndeveloper Eric Dumazet is working on a\nreference-count tracking system that could prove useful for finding\nthese errors in the networking subsystem and, someday, throughout the kernel.",
+          "link": "https://lwn.net/Articles/877603/rss",
+          "publishedOn": "2021-12-06T18:28:11.000Z",
+          "wordCount": null,
+          "title": "[$] A reference-count tracking infrastructure"
+        },
+        {
+          "id": "https://lwn.net/Articles/877821/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Arch Linux (isync, lib32-nss, nss, opera, and vivaldi), Debian (gerbv and xen), Fedora (autotrace, chafa, converseen, digikam, dmtx-utils, dvdauthor, eom, kxstitch, libsndfile, nss, pfstools, php-pecl-imagick, psiconv, q, R-magick, rss-glx, rubygem-rmagick, seamonkey, skopeo, synfig, synfigstudio, vdr-scraper2vdr, vdr-skinelchihd, vdr-skinnopacity, vdr-tvguide, vim, vips, and WindowMaker), Mageia (golang, kernel, kernel-linus, mariadb, and vim), openSUSE (aaa_base, python-Pygments, singularity, and tor), Red Hat (nss), Slackware (mozilla), SUSE (aaa_base, kernel, openssh, php74, and xen), and Ubuntu (libmodbus, lrzip, samba, and uriparser).",
+          "link": "https://lwn.net/Articles/877821/rss",
+          "publishedOn": "2021-12-06T16:06:35.000Z",
+          "wordCount": 153,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/877724/rss",
+          "author": "corbet",
+          "description": "The fourth 5.16 kernel prepatch is out for\ntesting.  \"Nothing looks all that scary, although I certainly hope\nthe kvm side will calm down\".",
+          "link": "https://lwn.net/Articles/877724/rss",
+          "publishedOn": "2021-12-05T23:59:03.000Z",
+          "wordCount": 99,
+          "title": "Kernel prepatch 5.16-rc4"
+        },
+        {
           "id": "https://lwn.net/Articles/877599/rss",
           "author": "jake",
           "description": "The CentOS blog has announced the release of CentOS Stream 9:\n\nCentOS Stream is a continuous-delivery distribution providing each point-release of Red Hat Enterprise Linux (RHEL). Before a package is formally introduced to CentOS Stream, it undergoes a battery of tests and checks—both automated and manual—to ensure it meets the stringent standards for inclusion in RHEL. Updates posted to Stream are identical to those posted to the unreleased minor version of RHEL. The aim? For CentOS Stream to be as fundamentally stable as RHEL itself.\n\nTo achieve this stability, each major release of Stream starts from a stable release of Fedora Linux—In CentOS Stream 9, this begins with Fedora 34, which is the same code base from which RHEL 9 is built. As updated packages pass testing and meet standards for stability, they are pushed into CentOS Stream as well as the nightly build of RHEL.",
@@ -1532,15 +1595,6 @@
           "publishedOn": "2021-11-08T13:58:05.000Z",
           "wordCount": 104,
           "title": "Security updates for Monday"
-        },
-        {
-          "id": "https://lwn.net/Articles/875297/rss",
-          "author": "corbet",
-          "description": "The\n5.15.1,\n5.14.17,\n5.10.78,\n5.4.158, and\n4.19.216\nstable kernel updates have all been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/875297/rss",
-          "publishedOn": "2021-11-06T20:30:58.000Z",
-          "wordCount": 102,
-          "title": "Some weekend stable kernel updates"
         }
       ]
     },
@@ -1785,6 +1839,15 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=9428",
+          "author": "Stacey Higginbotham",
+          "description": "I initially thought that my overview of the AWS re:Invent conference would focus on the details of a bunch of new features and services. But on Thursday morning, Amazon CTO Werner Vogels took the stage and proceeded to outline a future of computing that’s utterly distributed and tailor-made for the internet of things, yet still […]\nThe post Amazon tries to sell distributed-not-decentralized computing appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/amazon-tries-to-sell-distributed-not-decentralized-computing/",
+          "publishedOn": "2021-12-06T14:56:24.000Z",
+          "wordCount": 1101,
+          "title": "Amazon tries to sell distributed-not-decentralized computing"
+        },
+        {
           "id": "https://staceyoniot.com/?p=9418",
           "author": "Stacey Higginbotham",
           "description": "Some things I just learned about Matter: During a recent pre-CES chat with the folks from Eve, I learned that the company is planning to upgrade most of its devices either via firmware or, in the case of Eve’s light switch and motion sensor, through new devices to Matter. But because a firmware update is so complicated, once […]\nThe post IoT news of the week for Dec. 3, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -1981,15 +2044,6 @@
           "publishedOn": "2021-11-07T14:00:24.000Z",
           "wordCount": 1058,
           "title": "What’s in my smart home: November 2021"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=9266",
-          "author": "Kevin C. Tofel",
-          "description": "On our most recent IoT Podcast, Sean called in to the voicemail hotline with a HomeKit question. He appreciates the ability to add HomeKit devices to his smart home directly through Apple’s Home app. He wants to know if the device maker’s applications are required to upgrade the firmware on those devices. Unfortunately, the answer […]\nThe post Do you need third-party apps to update HomeKit device firmware? appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/do-you-need-third-party-apps-to-update-homekit-device-firmware/",
-          "publishedOn": "2021-11-06T16:25:13.000Z",
-          "wordCount": 626,
-          "title": "Do you need third-party apps to update HomeKit device firmware?"
         }
       ]
     },
@@ -2050,6 +2104,24 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=82917",
+          "author": "참여연대 의정감시센터",
+          "description": "2022년 대통령선거를 앞둔 현재 상황은 여러 측면에서 예외적인 모습을 띤다. 치열하게 각축하고 있는 양대 정당의 후보들은 중앙정치 경험이 없고, 당직 경험이 없는 ‘아웃사이더’로서 정당 내부보다는 외부의 지지에 힘입어 소속 정당의 경선을 통과했다.(1) 또한, 양대 정당 이외의 제3의 후보들이 존재하지만, 과거와 달리 그 영향력은 미미하다.(2) 더불어 자신에 대한 낮은 호감도가 자신이 유권자에게 그다지 매력적인 대안으로 […]",
+          "link": "https://slownews.kr/82917",
+          "publishedOn": "2021-12-06T09:23:40.000Z",
+          "wordCount": 1730,
+          "title": "필터 버블과 팬덤 정치: 대선 후를 더 우려하는 이유"
+        },
+        {
+          "id": "https://slownews.kr/?p=82896",
+          "author": "크레센도",
+          "description": "AP 특파원은 전투 결과를 정확하게 전달하기 위해 현장에 직접 들어가 시체를 하나씩 센다. 아마도 AP 특파원이 수행하는 가장 기본적이면서도 위험한 임무일 것이다. 정부가 발표하는 정보에는 왜곡이 많기 때문에 기자는 직접 현장에 가서 사실을 확인하고 기사의 신빙성을 높여야 한다. 물론 이러한 경험은 상당한 트라우마를 남긴다. 1980년 광주, 테리 앤더슨   테리 앤더슨(Terry Anderson)은 이런 일을 두 […]",
+          "link": "https://slownews.kr/82896",
+          "publishedOn": "2021-12-05T23:20:13.000Z",
+          "wordCount": 1789,
+          "title": "AP 특파원의 ‘소름 끼치는 임무’"
+        },
         {
           "id": "https://slownews.kr/?p=82884",
           "author": "참여연대 사법감시센터",
@@ -2366,17 +2438,7 @@
       "title": "WALLFLOWER",
       "feedUrl": "http://rss.egloos.com/blog/wallflower",
       "siteUrl": "http://wallflower.egloos.com",
-      "articles": [
-        {
-          "id": "http://wallflower.egloos.com/4202872",
-          "author": "이택광",
-          "description": "<오징어 게임>을 본 미국의 지인은 고도로 발전한 자본주의를 영위하는 한국에서 이런 자본주의 비판 드라마가 제작된다는 것이 아이러니하다고 전했다. 나에게 취재를 요청한 미국 방송의 기자는 드라마에서 그려지는 게임이 얼마나 실제의 한국과 닮아 있는지 물었다. .... 글 전체보기",
-          "link": "http://wallflower.egloos.com/4202872",
-          "publishedOn": "2021-11-06T19:13:37.000Z",
-          "wordCount": 761,
-          "title": "드라마와 현실"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "내 마음의 풍경",
