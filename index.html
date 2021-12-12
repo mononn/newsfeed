@@ -16,6 +16,65 @@
 <body>
 <!-- %after-body-begin.html% -->
   <section class="daily-content">
+    <h2 class="daily-heading"><time datatime="2021-12-12">2021-12-12</time></h2>
+    <ul class="sources card">
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://lwn.net">LWN.net</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">The Log4j mess</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/878390/rss">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(1 min)</span>
+                    <span>For those who have not yet seen it, this
+advisory from Apache describes a nasty vulnerability in the widely used
+Log4j package.
+
+
+	Apache Log4j2 &lt;&#x3D;2.14.1 JNDI features used in configuration, log
+	messages, and parameters do not protect against attacker controlled
+	LDAP and other JNDI related endpoints. An attacker who can control
+	log messages or log message parameters can execute arbitrary code
+	loaded from LDAP servers when message lookup substitution is
+	enabled. From log4j 2.15.0, this behavior has been disabled by
+	default.
+
+
+Updating this package is, of course, necessary, but that will only help so
+much; it is bundled into a lot of other deployed products.
+For more information see
+this
+Ars Technica article or, for desperate cases,
+the Logout4Shell
+utility.</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
+      <li class="source">
+        <section>
+          <h3 class="source-name"><a class="source-name__link" href="https://blog.naver.com/sellars">내 마음의 풍경</a></h3>
+          <section class="articles-per-source">
+            <article>
+              <details class="article-expander">
+                <summary class="article-expander__title">비트겐슈타인과 하이데거의 유사성</summary>
+                <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222593614037">
+                  <div class="article-summary-box-inner">
+                    <span class="article-reading-time">(0 min)</span>
+                    <span>찰스 기농(구글은 ‘기논’이라고 부르고 있다)은 이라는 논문에서 비트겐슈타인과 하이데거의 유사성에 대해서 이야기하고 있다. 기농은 예전에 칸트 없이 철학을 할 수 없었더라면, 마찬가지로 이제 비트겐슈타인과 하이데거 없이 철학을 할 수 없을 것이라는 로티의 말을 빌려 비트겐슈타인과 하이데거의 중요성에 대해서 암시하고 있다. 비트겐슈타인과 하이데거의 차이에도 불구하고 그들은 다음과 같은 유사성을 보여준다. 첫째, 그들은 모두 실천적, 실행적 삶을 강조한다. 이것은 이성이나 세계에 대한 탈시간적 진리를 강조하는 것에 반대된다. 둘째, 그들은 세계에 대한 표상주의적 혹은 재.......</span>
+                  </div>
+                </a>
+              </details>
+            </article>
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="daily-content">
     <h2 class="daily-heading"><time datatime="2021-12-11">2021-12-11</time></h2>
     <ul class="sources card">
       <li class="source">
@@ -4359,33 +4418,6 @@ The post Advanced verification: unlocking the door to a new era of AI chips appe
     <ul class="sources card">
       <li class="source">
         <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://eli.thegreenplace.net/">Eli Bendersky&#x27;s website</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Rust data structures with circular references</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://eli.thegreenplace.net/2021/rust-data-structures-with-circular-references/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(11 min)</span>
-                    <span>To implement its safety guarantees, the Rust compiler keeps careful track
-of ownership and references throughout a program. This makes writing certain
-kinds of data structures challenging; in particular, data structures that have
-circular references.
-Let&#x27;s start with a simple binary tree:
-struct Tree {
-    root: Option&lt;Node&gt;,
-}
-
-struct Node {
-    data …</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
           <h3 class="source-name"><a class="source-name__link" href="https://newspeppermint.com">NewsPeppermint</a></h3>
           <section class="articles-per-source">
             <article>
@@ -4438,199 +4470,9 @@ The post There actually is a compelling reason for Facebook to continue using fa
       </li>
     </ul>
   </section>
-  <section class="daily-content">
-    <h2 class="daily-heading"><time datatime="2021-11-12">2021-11-12</time></h2>
-    <ul class="sources card">
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://cpuu.postype.com">CPUU의 Daydreamin&amp;#039;</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Aarch64 Linux Kernel Debug</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://cpuu.postype.com/post/11156632">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(2 min)</span>
-                    <span>미루고 미루던 리눅스 커널 취약점 연구를 올해가 가기 전에 최소한 &#x27;시작&#x27;은 해보려고 한다. 
-아직 초보인데, Defenit팀의 김현우(V4bel)님께서 인프런에서 진행하시는 강좌가 정말 큰 도움이 되었다.
-https://www.inflearn.com/course/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90-%ED%95%B4%ED%82%B9/
-해당 강좌는 Intel x86_64 환경을 기준으로 되어있는데, 이를 Aarch64 리눅스로 하여 열심히 삽질 중이다. 변환했을 때 똑같이 적용되는 것도 있고, 안 되는 것도 많다..
-
-
-우선 Aarch64 환경에서 커널 빌드 및 디버깅을 하기 위한 절차를 기록해둔다. 대부분의 내용은 위에서 언급한 강좌에서 김현우님께서 가이드해주신 방법을 참고했으며, Aarch64 로 변환할 때 필요한 수정사항들을 내가 작성했다(이 게시물은 강사님의 허락을 받고 기록해두는 것이다.)
- 
-(참고로 1~3번 과정을 생략하고, 내가 올려둔 파일을 다운로드 하셔도 됨)
-1. 리눅스 커널 빌드
-우선 리눅스 커널을 직접 빌드할 수 있는 환경이 마련되어야 한다. 강의에서는 인텔 리눅스 상에서 인텔 리눅스를 빌드하는 방식으로 진행되었다. 그러나 Aarch64 아키텍처용 리눅스를 빌드하려면 방법이 달라진다. 대략 두가지 방법이 있다.
-1) Intel 리눅스상에서 cross-compiler 를 사용해서 Aarch64 리눅스 이미지를 빌드하는 방법.
-2) Aarch64 리눅스 상에서 Aarch64 리눅스를 빌드하는 방법.
-그동안은 대부분 1의 방법이 선호되었다. 왜냐…</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://lwn.net">LWN.net</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">ClusterFuzzLite: Continuous fuzzing for all (Google Security blog)</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875945/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(1 min)</span>
-                    <span>Over on the Google Security blog, Jonathan Metzman announced the release of ClusterFuzzLite, which is &quot;a continuous fuzzing solution that runs as part of CI/CD workflows to find vulnerabilities faster than ever before&quot;.   ClusterFuzzLite is a descendant of OSS-Fuzz, which we looked at in 2017.
-
-Large projects including systemd and curl are already using ClusterFuzzLite during code review, with positive results. According to Daniel Stenberg, author of curl, “When the human reviewers nod and have approved the code and your static code analyzers and linters can&#x27;t detect any more issues, fuzzing is what takes you to the next level of code maturity and robustness. OSS-Fuzz and ClusterFuzzLite help us maintain curl as a quality project, around the clock, every day and every commit.”
-
-[...] To learn more, check out the ClusterFuzzLite documentation. ClusterFuzzLite currently supports GitHub Actions, Google Cloud Build and Prow. We built this with CI system extensibility in mind, and adding support for other CI systems is straightforward. Please contact us if you’re interested in contributing support, or have any questions, feedback or feature requests.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">[$] Some upcoming memory-management patches</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875587/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>The memory-management subsystem remains one of the most complex parts of
-the kernel, with an ongoing reliance on various heuristics for
-performance.  It is thus not surprising that developers continue to try to
-improve its functionality.  A number of memory-management patches are
-currently in circulation; read on for a look at the freeing of page-table
-pages, kvmalloc() flags, memory clearing, and NUMA &quot;home nodes&quot;.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Eight new stable kernels</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875932/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>Greg Kroah-Hartman has announced the release of eight stable kernels: 5.15.2, 5.14.18, 5.10.79, 5.4.159, 4.19.217, 4.14.255, 4.9.290, and 4.4.292.  They contain a relatively small set
-of important fixes, but, as usual, users should upgrade.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Security updates for Friday</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/875931/rss">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>Security updates have been issued by Debian (node-tar, postgresql-11, postgresql-13, and postgresql-9.6), Fedora (autotrace, botan2, chafa, converseen, digikam, dmtx-utils, dvdauthor, eom, kxstitch, pfstools, php-pecl-imagick, psiconv, q, R-magick, radeontop, rss-glx, rubygem-rmagick, synfig, synfigstudio, vdr-scraper2vdr, vdr-skinelchihd, vdr-skinnopacity, vdr-tvguide, and WindowMaker), Mageia (kernel, kernel-linus, and openafs), openSUSE (kernel), Red Hat (freerdp), SUSE (bind and kernel), and Ubuntu (openexr, postgresql-10, postgresql-12, postgresql-13, and samba).</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://blog.naver.com/sellars">내 마음의 풍경</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">3 순수 지성개념과 초월적 연역</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222566749395">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(0 min)</span>
-                    <span>공간과 시간 개념은 선험적 인식이다. 그럼에도 그것은 대상과 관계 맺는다. 따라서 그것은 선험적 종합.......</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-      <li class="source">
-        <section>
-          <h3 class="source-name"><a class="source-name__link" href="https://www.embedded.com">Embedded.com</a></h3>
-          <section class="articles-per-source">
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">embedded news week: Nvidia GTC &amp; metaverse, wireless &amp; sustainability</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/embedded-news-week-nvidia-gtc-metaverse-wireless-sustainability/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(8 min)</span>
-                    <span>A roundup of this week’s embedded news includes coverage from Nvidia GTC, CW (Cambridge Wireless), plus embedded news, products, funding and events.
-The post embedded news week: Nvidia GTC &amp; metaverse, wireless &amp; sustainability appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Groups optimize smart metering IoT with OMS over LoRaWAN</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/groups-optimize-smart-metering-iot-with-oms-over-lorawan/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(5 min)</span>
-                    <span>LoRa Alliance and OMS-Group to standardize smart metering IoT applications, with a standard use of the Open Metering System language over LoRaWAN, reducing complexity and cost of integration for utilities.
-The post Groups optimize smart metering IoT with OMS over LoRaWAN appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">u-blox MQTT Flex lets you bring your own SIM to IoT sensor networks</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/u-blox-mqtt-flex-lets-you-bring-your-own-sim-to-iot-sensor-networks/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(5 min)</span>
-                    <span>Bring your own SIM strategy enables users to take advantage of MQTT communication without the operational, logistical, or cost impact of changing their mobile network operator.
-The post u-blox MQTT Flex lets you bring your own SIM to IoT sensor networks appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">New Samsung H-Cube 2.5D technology integrates 6 HBMs for HPC applications</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/new-samsung-h-cube-2-5d-technology-integrates-6-hbms-for-hpc-applications/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(5 min)</span>
-                    <span>H-Cube applies advanced 2.5D silicon interposer technology and hybrid-substrate structure, allowing efficient integration of 6 HBMs, and lowering barriers to entry in the HPC/AI market.
-The post New Samsung H-Cube 2.5D technology integrates 6 HBMs for HPC applications appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Nvidia GTC: New Jetson module offers 200 TOPS for embedded edge AI</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/nvidia-gtc-new-jetson-module-offers-200-tops-for-embedded-edge-ai/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(6 min)</span>
-                    <span>New Jetson AGX Orin module built on Nvidia Ampere architecture claims to be smallest and most powerful AI supercomputer for embedded edge computing.
-The post Nvidia GTC: New Jetson module offers 200 TOPS for embedded edge AI appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-            <article>
-              <details class="article-expander">
-                <summary class="article-expander__title">Nvidia GTC: New 400 Gbps InfiniBand networking platform</summary>
-                <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/nvidia-gtc-new-400-gbps-infiniband-networking-platform/">
-                  <div class="article-summary-box-inner">
-                    <span class="article-reading-time">(6 min)</span>
-                    <span>New at Nvidia GTC is a 400Gbps InfiniBand switch and networking platform which features secure, cloud-native, multi-tenant, bare-metal performance for AI, data analytics, and HPC applications
-The post Nvidia GTC: New 400 Gbps InfiniBand networking platform appeared first on Embedded.com.</span>
-                  </div>
-                </a>
-              </details>
-            </article>
-        </section>
-      </li>
-    </ul>
-  </section>
 
   <footer>
-    <time id="build-timestamp" datetime="2021-12-11T20:18:19.855Z">2021-12-11T20:18:19.855Z</time>
+    <time id="build-timestamp" datetime="2021-12-12T20:18:37.740Z">2021-12-12T20:18:37.740Z</time>
     <span><a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.11.3</a></span>
   </footer>
   <script src="index.js"></script>

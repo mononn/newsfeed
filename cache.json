@@ -164,15 +164,6 @@
           "publishedOn": "2021-11-15T13:04:33.000Z",
           "wordCount": 628,
           "title": "Aarch64 Linux kernel fuzzing - syzkaller"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/11156632",
-          "author": "CPUU",
-          "description": "미루고 미루던 리눅스 커널 취약점 연구를 올해가 가기 전에 최소한 '시작'은 해보려고 한다. \n아직 초보인데, Defenit팀의 김현우(V4bel)님께서 인프런에서 진행하시는 강좌가 정말 큰 도움이 되었다.\nhttps://www.inflearn.com/course/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90-%ED%95%B4%ED%82%B9/\n해당 강좌는 Intel x86_64 환경을 기준으로 되어있는데, 이를 Aarch64 리눅스로 하여 열심히 삽질 중이다. 변환했을 때 똑같이 적용되는 것도 있고, 안 되는 것도 많다..\n\n\n우선 Aarch64 환경에서 커널 빌드 및 디버깅을 하기 위한 절차를 기록해둔다. 대부분의 내용은 위에서 언급한 강좌에서 김현우님께서 가이드해주신 방법을 참고했으며, Aarch64 로 변환할 때 필요한 수정사항들을 내가 작성했다(이 게시물은 강사님의 허락을 받고 기록해두는 것이다.)\n \n(참고로 1~3번 과정을 생략하고, 내가 올려둔 파일을 다운로드 하셔도 됨)\n1. 리눅스 커널 빌드\n우선 리눅스 커널을 직접 빌드할 수 있는 환경이 마련되어야 한다. 강의에서는 인텔 리눅스 상에서 인텔 리눅스를 빌드하는 방식으로 진행되었다. 그러나 Aarch64 아키텍처용 리눅스를 빌드하려면 방법이 달라진다. 대략 두가지 방법이 있다.\n1) Intel 리눅스상에서 cross-compiler 를 사용해서 Aarch64 리눅스 이미지를 빌드하는 방법.\n2) Aarch64 리눅스 상에서 Aarch64 리눅스를 빌드하는 방법.\n그동안은 대부분 1의 방법이 선호되었다. 왜냐…",
-          "link": "https://cpuu.postype.com/post/11156632",
-          "publishedOn": "2021-11-12T08:34:38.000Z",
-          "wordCount": 534,
-          "title": "Aarch64 Linux Kernel Debug"
         }
       ]
     },
@@ -242,17 +233,7 @@
       "title": "Eli Bendersky's website",
       "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml",
       "siteUrl": "https://eli.thegreenplace.net/",
-      "articles": [
-        {
-          "id": "https://eli.thegreenplace.net/2021/rust-data-structures-with-circular-references/",
-          "author": null,
-          "description": "<p>To implement its safety guarantees, the Rust compiler keeps careful track\nof ownership and references throughout a program. This makes writing certain\nkinds of data structures challenging; in particular, data structures that have\ncircular references.</p>\n<p>Let's start with a simple binary tree:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"k\">struct</span> <span class=\"nc\">Tree</span><span class=\"w\"> </span><span class=\"p\">{</span><span class=\"w\"></span>\n<span class=\"w\">    </span><span class=\"n\">root</span>: <span class=\"nb\">Option</span><span class=\"o\">&lt;</span><span class=\"n\">Node</span><span class=\"o\">&gt;</span><span class=\"p\">,</span><span class=\"w\"></span>\n<span class=\"p\">}</span><span class=\"w\"></span>\n\n<span class=\"k\">struct</span> <span class=\"nc\">Node</span><span class=\"w\"> </span><span class=\"p\">{</span><span class=\"w\"></span>\n<span class=\"w\">    </span><span class=\"n\">data …</span></pre></div>",
-          "link": "https://eli.thegreenplace.net/2021/rust-data-structures-with-circular-references/",
-          "publishedOn": "2021-11-13T04:30:00.000Z",
-          "wordCount": 3332,
-          "title": "Rust data structures with circular references"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Embedded Artistry",
@@ -553,60 +534,6 @@
           "publishedOn": "2021-11-15T10:38:00.000Z",
           "wordCount": 2536,
           "title": "Advanced verification: unlocking the door to a new era of AI chips"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4471552",
-          "author": "Nitin Dahad",
-          "description": "A roundup of this week’s embedded news includes coverage from Nvidia GTC, CW (Cambridge Wireless), plus embedded news, products, funding and events.\nThe post embedded news week: Nvidia GTC & metaverse, wireless & sustainability appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/embedded-news-week-nvidia-gtc-metaverse-wireless-sustainability/",
-          "publishedOn": "2021-11-12T20:08:11.000Z",
-          "wordCount": 2413,
-          "title": "embedded news week: Nvidia GTC & metaverse, wireless & sustainability"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4471548",
-          "author": "Nitin Dahad",
-          "description": "LoRa Alliance and OMS-Group to standardize smart metering IoT applications, with a standard use of the Open Metering System language over LoRaWAN, reducing complexity and cost of integration for utilities.\nThe post Groups optimize smart metering IoT with OMS over LoRaWAN appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/groups-optimize-smart-metering-iot-with-oms-over-lorawan/",
-          "publishedOn": "2021-11-12T18:55:09.000Z",
-          "wordCount": 1600,
-          "title": "Groups optimize smart metering IoT with OMS over LoRaWAN"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4471544",
-          "author": "Nitin Dahad",
-          "description": "Bring your own SIM strategy enables users to take advantage of MQTT communication without the operational, logistical, or cost impact of changing their mobile network operator.\nThe post u-blox MQTT Flex lets you bring your own SIM to IoT sensor networks appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/u-blox-mqtt-flex-lets-you-bring-your-own-sim-to-iot-sensor-networks/",
-          "publishedOn": "2021-11-12T18:25:08.000Z",
-          "wordCount": 1479,
-          "title": "u-blox MQTT Flex lets you bring your own SIM to IoT sensor networks"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4471539",
-          "author": "Nitin Dahad",
-          "description": "H-Cube applies advanced 2.5D silicon interposer technology and hybrid-substrate structure, allowing efficient integration of 6 HBMs, and lowering barriers to entry in the HPC/AI market.\nThe post New Samsung H-Cube 2.5D technology integrates 6 HBMs for HPC applications appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/new-samsung-h-cube-2-5d-technology-integrates-6-hbms-for-hpc-applications/",
-          "publishedOn": "2021-11-12T17:57:11.000Z",
-          "wordCount": 1556,
-          "title": "New Samsung H-Cube 2.5D technology integrates 6 HBMs for HPC applications"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4471535",
-          "author": "Nvidia Jetson",
-          "description": "New Jetson AGX Orin module built on Nvidia Ampere architecture claims to be smallest and most powerful AI supercomputer for embedded edge computing.\nThe post Nvidia GTC: New Jetson module offers 200 TOPS for embedded edge AI appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/nvidia-gtc-new-jetson-module-offers-200-tops-for-embedded-edge-ai/",
-          "publishedOn": "2021-11-12T13:11:33.000Z",
-          "wordCount": 1858,
-          "title": "Nvidia GTC: New Jetson module offers 200 TOPS for embedded edge AI"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4471530",
-          "author": "Nitin Dahad",
-          "description": "New at Nvidia GTC is a 400Gbps InfiniBand switch and networking platform which features secure, cloud-native, multi-tenant, bare-metal performance for AI, data analytics, and HPC applications\nThe post Nvidia GTC: New 400 Gbps InfiniBand networking platform appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/nvidia-gtc-new-400-gbps-infiniband-networking-platform/",
-          "publishedOn": "2021-11-12T11:49:09.000Z",
-          "wordCount": 1727,
-          "title": "Nvidia GTC: New 400 Gbps InfiniBand networking platform"
         }
       ]
     },
@@ -1082,6 +1009,15 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/878390/rss",
+          "author": "corbet",
+          "description": "For those who have not yet seen it, this\nadvisory from Apache describes a nasty vulnerability in the widely used\nLog4j package.\n\n\n\tApache Log4j2 <=2.14.1 JNDI features used in configuration, log\n\tmessages, and parameters do not protect against attacker controlled\n\tLDAP and other JNDI related endpoints. An attacker who can control\n\tlog messages or log message parameters can execute arbitrary code\n\tloaded from LDAP servers when message lookup substitution is\n\tenabled. From log4j 2.15.0, this behavior has been disabled by\n\tdefault.\n\n\nUpdating this package is, of course, necessary, but that will only help so\nmuch; it is bundled into a lot of other deployed products.\nFor more information see\nthis\nArs Technica article or, for desperate cases,\nthe Logout4Shell\nutility.",
+          "link": "https://lwn.net/Articles/878390/rss",
+          "publishedOn": "2021-12-12T16:29:53.000Z",
+          "wordCount": 195,
+          "title": "The Log4j mess"
+        },
         {
           "id": "https://lwn.net/Articles/878325/rss",
           "author": "corbet",
@@ -1639,42 +1575,6 @@
           "publishedOn": "2021-11-15T07:15:50.000Z",
           "wordCount": 163,
           "title": "Kernel prepatch 5.16-rc1"
-        },
-        {
-          "id": "https://lwn.net/Articles/875945/rss",
-          "author": "jake",
-          "description": "Over on the Google Security blog, Jonathan Metzman announced the release of ClusterFuzzLite, which is \"a continuous fuzzing solution that runs as part of CI/CD workflows to find vulnerabilities faster than ever before\".   ClusterFuzzLite is a descendant of OSS-Fuzz, which we looked at in 2017.\n\nLarge projects including systemd and curl are already using ClusterFuzzLite during code review, with positive results. According to Daniel Stenberg, author of curl, “When the human reviewers nod and have approved the code and your static code analyzers and linters can't detect any more issues, fuzzing is what takes you to the next level of code maturity and robustness. OSS-Fuzz and ClusterFuzzLite help us maintain curl as a quality project, around the clock, every day and every commit.”\n\n[...] To learn more, check out the ClusterFuzzLite documentation. ClusterFuzzLite currently supports GitHub Actions, Google Cloud Build and Prow. We built this with CI system extensibility in mind, and adding support for other CI systems is straightforward. Please contact us if you’re interested in contributing support, or have any questions, feedback or feature requests.",
-          "link": "https://lwn.net/Articles/875945/rss",
-          "publishedOn": "2021-11-12T17:49:13.000Z",
-          "wordCount": 267,
-          "title": "ClusterFuzzLite: Continuous fuzzing for all (Google Security blog)"
-        },
-        {
-          "id": "https://lwn.net/Articles/875587/rss",
-          "author": "corbet",
-          "description": "The memory-management subsystem remains one of the most complex parts of\nthe kernel, with an ongoing reliance on various heuristics for\nperformance.  It is thus not surprising that developers continue to try to\nimprove its functionality.  A number of memory-management patches are\ncurrently in circulation; read on for a look at the freeing of page-table\npages, kvmalloc() flags, memory clearing, and NUMA \"home nodes\".",
-          "link": "https://lwn.net/Articles/875587/rss",
-          "publishedOn": "2021-11-12T15:23:22.000Z",
-          "wordCount": null,
-          "title": "[$] Some upcoming memory-management patches"
-        },
-        {
-          "id": "https://lwn.net/Articles/875932/rss",
-          "author": "jake",
-          "description": "Greg Kroah-Hartman has announced the release of eight stable kernels: 5.15.2, 5.14.18, 5.10.79, 5.4.159, 4.19.217, 4.14.255, 4.9.290, and 4.4.292.  They contain a relatively small set\nof important fixes, but, as usual, users should upgrade.",
-          "link": "https://lwn.net/Articles/875932/rss",
-          "publishedOn": "2021-11-12T15:08:02.000Z",
-          "wordCount": 112,
-          "title": "Eight new stable kernels"
-        },
-        {
-          "id": "https://lwn.net/Articles/875931/rss",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (node-tar, postgresql-11, postgresql-13, and postgresql-9.6), Fedora (autotrace, botan2, chafa, converseen, digikam, dmtx-utils, dvdauthor, eom, kxstitch, pfstools, php-pecl-imagick, psiconv, q, R-magick, radeontop, rss-glx, rubygem-rmagick, synfig, synfigstudio, vdr-scraper2vdr, vdr-skinelchihd, vdr-skinnopacity, vdr-tvguide, and WindowMaker), Mageia (kernel, kernel-linus, and openafs), openSUSE (kernel), Red Hat (freerdp), SUSE (bind and kernel), and Ubuntu (openexr, postgresql-10, postgresql-12, postgresql-13, and samba).",
-          "link": "https://lwn.net/Articles/875931/rss",
-          "publishedOn": "2021-11-12T14:39:53.000Z",
-          "wordCount": 133,
-          "title": "Security updates for Friday"
         }
       ]
     },
@@ -2509,6 +2409,15 @@
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
         {
+          "id": "https://blog.naver.com/sellars/222593614037",
+          "author": "sellars",
+          "description": "찰스 기농(구글은 ‘기논’이라고 부르고 있다)은 <비트겐슈타인과 하이데거 이후의 철학>이라는 논문에서 비트겐슈타인과 하이데거의 유사성에 대해서 이야기하고 있다. 기농은 예전에 칸트 없이 철학을 할 수 없었더라면, 마찬가지로 이제 비트겐슈타인과 하이데거 없이 철학을 할 수 없을 것이라는 로티의 말을 빌려 비트겐슈타인과 하이데거의 중요성에 대해서 암시하고 있다. 비트겐슈타인과 하이데거의 차이에도 불구하고 그들은 다음과 같은 유사성을 보여준다. 첫째, 그들은 모두 실천적, 실행적 삶을 강조한다. 이것은 이성이나 세계에 대한 탈시간적 진리를 강조하는 것에 반대된다. 둘째, 그들은 세계에 대한 표상주의적 혹은 재.......",
+          "link": "https://blog.naver.com/sellars/222593614037",
+          "publishedOn": "2021-12-12T10:35:32.000Z",
+          "wordCount": 8,
+          "title": "비트겐슈타인과 하이데거의 유사성"
+        },
+        {
           "id": "https://blog.naver.com/sellars/222592608038",
           "author": "sellars",
           "description": "통각이 대상을 구성하는가, 아니면 표상을 구성하는가? 이것에 답변이 되는 칸트의 말이 금방 눈에 띠지 않는다. <지성은 인식의 능력이다. 인식들은 주어진 표상들이 한 객관, 즉 대상들과 일정하게 관계 맺는데에서 성립한다. 그러나 객관, 즉 대상이란 주어지는 직관의 잡다가 그 개념 안에 통합되어 있는 바로 그것이다. 그런데 표상들의 모든 결합은 표상들의 종합에서 의식의 통일성을 필요로 한다. 따라서 의식의 통일은 표상들이 한 대상과 관계 맺음을, 그러니까 표상들의 객관적 타당성을, 따라서 표상들이 인식이 되는 것을 결정하는 바로 그것이며, 그 위에 따라서 지성의 가능성조차 의거한다.> (B 137) 인식 자체가 표상과 대.......",
@@ -2642,15 +2551,6 @@
           "publishedOn": "2021-11-13T19:51:35.000Z",
           "wordCount": 8,
           "title": "독단주의자의 역리"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222566749395",
-          "author": "sellars",
-          "description": "<우리는 앞에서 공간과 시간 개념에 대해서, 이것들이 선험적인 인식으로서 그럼에도 어떻게 대상들과 관계를 맺어야만 하는가, 그리고 어떻게 모든 경험에 독립해서 대상에 대한 종합적인 인식을 가능하게 하는가를 가벼운 수고만으로도 이해할 수 있었다. 감성의 그러한 순수한 형식들에 의해서만 하나의 대상은 현상할 수, 다시 말해 경험적 직관의 객관일 수 있기 때문에, 공간과 시간은 현상으로서의 대상을 가능하게 하는 선험적인 조건을 함유하는 순수 직관이고, 이 아래에서 종합은 객관적 타당성을 가지는 것이니 말이다.> 공간과 시간 개념은 선험적 인식이다. 그럼에도 그것은 대상과 관계 맺는다. 따라서 그것은 선험적 종합.......",
-          "link": "https://blog.naver.com/sellars/222566749395",
-          "publishedOn": "2021-11-12T20:52:02.000Z",
-          "wordCount": 8,
-          "title": "3 순수 지성개념과 초월적 연역"
         }
       ]
     }
