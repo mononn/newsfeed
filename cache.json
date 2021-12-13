@@ -80,6 +80,15 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2021/handy-map-functions/",
+          "author": null,
+          "description": "In this blog post, I’d like to show you examples of several handy “map” functions from Modern C++. Associative containers like std::map, std::set, and their “unordered” counterparts are essential for many algorithms and techniques. With this new functionality, you can save the creation of temporary objects, write smaller and, what’s more, safer code.\nBackground code\nTo illustrate all the mechanics of a map, especially in terms of what happens with our objects, I have the following helper custom class:\nstruct User {\n    std::string name {\"default\"};\n    \n    User() {\n        std::cout << \"User::User() \" << name << '\\n';\n    }\n\n    explicit User(std::string str) : name(std::move(str)) {\n        std::cout << \"User::User(std::string str) \" << name << '\\n';\n    }\n\n    ~User() {\n        std::cou…",
+          "link": "https://www.cppstories.com/2021/handy-map-functions/",
+          "publishedOn": "2021-12-13T06:55:00.000Z",
+          "wordCount": 2263,
+          "title": "Examples of 7 Handy Functions for Associative Containers in Modern C++"
+        },
+        {
           "id": "https://www.cppstories.com/2021/cpplinksdec/",
           "author": null,
           "description": "Welcome to the 6th episode of C++ Links available for C++ Stories subscribers.\nSee the best C++ stories from the past month.\nHere’s the plan for today:\nC++23 progress\nParsing Command Line Arguments\n3 New articles at C++stories in November\n+ 8 Hot C++ News\nHow to write a custom iterator in C++20\nRead till the end to see an additional bonus :)\nLet’s start!\n🚧 C++23 ISO Progress\nAt the end of October, there was a cool episode at C++ Cast with Bryce Adelstein Lelbach about the progress of C++23.\nNotes:\nEverything is moving to Clang - is that good? It’s now lagging with the latest C++ features, probably because of its growth. In GCC, they started using  C++ for the compiler, so it looks like it speeds up things.\nNetworking has no consensus - TS is probably not worth putting into the Standard  w…",
@@ -173,6 +182,15 @@
       "siteUrl": "https://danluu.com/atom/index.xml",
       "articles": [
         {
+          "id": "https://danluu.com/writing-non-advice/",
+          "author": null,
+          "description": "I see a lot of essays framed as writing advice which are actually thinly veiled descriptions of how someone writes that basically say \"you should write how I write\", e.g., people who write short posts say that you should write short posts. As with technical topics, I think a lot of different things can work and what's really important is that you find a style that's suitable to you and the context you operate in. Copying what's worked for someone else is unlikely to work for you, making \"write how I write\" bad advice.\nWe'll start by looking at how much variety there's been in what's worked1 for people, come back to what makes it so hard to copy someone else's style, and then discuss what I try to do in my writing.\nIf I look at the most read programming blogs in my extended social circles2 …",
+          "link": "https://danluu.com/writing-non-advice/",
+          "publishedOn": "2021-12-13T00:00:00.000Z",
+          "wordCount": 8179,
+          "title": "How I think about writing"
+        },
+        {
           "id": "https://danluu.com/latency-pitfalls/",
           "author": null,
           "description": "This is a pseudo-transcript (actual words modified to be more readable than a 100% faithful transcription) of a short lightning talk I did at Twitter a year or two ago, on pitfalls of how we use latency metrics (with the actual service names anonymized per a comms request). Since this presentation, significant progress has been made on this on the infra side, so the situation is much improved over what was presented, but I think this is still relevant since, from talking to folks at peer companies, many folks are facing similar issues.\nWe frequently use tail latency metrics here at Twitter. Most frequently, service owners want to get cluster-wide or Twitter-wide latency numbers for their services. Unfortunately, the numbers that service owners tend to use differ from what we'd like to meas…",
@@ -256,6 +274,15 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4471812",
+          "author": "Nitin Dahad",
+          "description": "New service from MIKROE claims to be embedded industry’s first hardware-as-a-service offer that enables remote embedded hardware design from $4 a day.\nThe post Develop boards remotely, in real time with new hardware-as-a-service appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/develop-boards-remotely-in-real-time-with-new-hardware-as-a-service/",
+          "publishedOn": "2021-12-13T10:44:59.000Z",
+          "wordCount": 2049,
+          "title": "Develop boards remotely, in real time with new hardware-as-a-service"
+        },
         {
           "id": "https://www.embedded.com/?p=4471808",
           "author": "Ravi Kiran",
@@ -1010,6 +1037,42 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/878205/rss",
+          "author": "corbet",
+          "description": "Email is often seen as a technology with a dim future; it is slow, easily\nfaked, and buried in spam.  Kids These Days want nothing to do with it, and\nemail has lost its charm with many others as well.\nBut many development projects are still dependent on it, and even\nnon-developers still cope with large volumes of mail.  While development\nforges show one possible path away from email, they are not the only one.\nWhat if new structures could be built on top of email to address some of\nits worst problems while keeping the good parts that many projects depend\non?  The \"lei\" system recently launched by Konstantin Ryabitsev is a hint\nof how such a future might look.",
+          "link": "https://lwn.net/Articles/878205/rss",
+          "publishedOn": "2021-12-13T18:25:11.000Z",
+          "wordCount": null,
+          "title": "[$] Digging into the community's lore with lei"
+        },
+        {
+          "id": "https://lwn.net/Articles/878520/rss",
+          "author": "ris",
+          "description": "Security updates have been issued by Arch Linux (chromium, firefox, gitlab, grafana, grafana-agent, thunderbird, and vivaldi), Debian (apache-log4j2, privoxy, and wireshark), Fedora (firefox, grub2, mariadb, mod_auth_openidc, rust-drg, rust-tiny_http, and rust-tiny_http0.6), Mageia (chromium-browser-stable, curaengine, fetchmail, firefox, libvirt, log4j, opencontainers-runc, python-django, speex, and thunderbird), openSUSE (clamav, firefox, glib-networking, glibc, gmp, ImageMagick, log4j, nodejs12, nodejs14, php7, python-Babel, python-pip, webkit2gtk3, and wireshark), Red Hat (mailman:2.1 and samba), and SUSE (bcm43xx-firmware, firefox, glib-networking, ImageMagick, kernel-rt, and python-pip).",
+          "link": "https://lwn.net/Articles/878520/rss",
+          "publishedOn": "2021-12-13T15:54:17.000Z",
+          "wordCount": 145,
+          "title": "Security updates for Monday"
+        },
+        {
+          "id": "https://lwn.net/Articles/878454/rss",
+          "author": "corbet",
+          "description": "The Electronic Frontier Foundation warns\nagainst Manifest V3, a set of changes coming to a Chrome browser near\nyou.\n\n\n\tManifest V3, or Mv3 for short, is outright harmful to privacy\n\tefforts. It will restrict the capabilities of web\n\textensions—especially those that are designed to monitor, modify,\n\tand compute alongside the conversation your browser has with the\n\twebsites you visit. Under the new specifications, extensions like\n\tthese– like some privacy-protective tracker blockers– will have\n\tgreatly reduced capabilities.",
+          "link": "https://lwn.net/Articles/878454/rss",
+          "publishedOn": "2021-12-13T15:32:59.000Z",
+          "wordCount": 172,
+          "title": "EFF: Chrome Users Beware: Manifest V3 is Deceitful and Threatening"
+        },
+        {
+          "id": "https://lwn.net/Articles/878418/rss",
+          "author": "corbet",
+          "description": "The 5.16-rc5 kernel prepatch is out for\ntesting.\n\n\nDo give it a good testing - with the holidays coming up, things are\nprobably going to slow down both on the development and testing front,\nand as a result I expect that I will also extend the rc series by\nanother week not because it's necessarily needed (too early to tell,\nbut doesn't feel that way), but simply because nobody will want to\nopen the next merge window immediately in the new year.\n\n\nOne small change of note in this -rc is that the default limit for the\nnumber of pages that can be locked into memory by an unprivileged process\nhas been raised to\n8MB; see this article for a summary of the\ndiscussions leading up to this change.",
+          "link": "https://lwn.net/Articles/878418/rss",
+          "publishedOn": "2021-12-13T00:10:59.000Z",
+          "wordCount": 204,
+          "title": "Kernel prepatch  5.16-rc5"
+        },
+        {
           "id": "https://lwn.net/Articles/878390/rss",
           "author": "corbet",
           "description": "For those who have not yet seen it, this\nadvisory from Apache describes a nasty vulnerability in the widely used\nLog4j package.\n\n\n\tApache Log4j2 <=2.14.1 JNDI features used in configuration, log\n\tmessages, and parameters do not protect against attacker controlled\n\tLDAP and other JNDI related endpoints. An attacker who can control\n\tlog messages or log message parameters can execute arbitrary code\n\tloaded from LDAP servers when message lookup substitution is\n\tenabled. From log4j 2.15.0, this behavior has been disabled by\n\tdefault.\n\n\nUpdating this package is, of course, necessary, but that will only help so\nmuch; it is bundled into a lot of other deployed products.\nFor more information see\nthis\nArs Technica article or, for desperate cases,\nthe Logout4Shell\nutility.",
@@ -1590,6 +1653,15 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/articles/scaling-architecture-conversationally.html#4.ATechLandscapeAndCurrentClimateSensingTool-YourOwnTechRadar",
+          "author": null,
+          "description": "Andrew's fourth supporting element for the Advice Process is using a\n      tech radar to capture and map out your local version of the technology\n      trends you see across your organization. \nmore…",
+          "link": "https://martinfowler.com/articles/scaling-architecture-conversationally.html#4.ATechLandscapeAndCurrentClimateSensingTool-YourOwnTechRadar",
+          "publishedOn": "2021-12-13T15:05:00.000Z",
+          "wordCount": 5056,
+          "title": "A tech landscape and current climate sensing tool - Your own Tech Radar"
+        },
+        {
           "id": "https://martinfowler.com/articles/scaling-architecture-conversationally.html#3.ALightToIlluminateAUnifiedGoalTeam-sourcedArchitecturalPrinciples",
           "author": null,
           "description": "Having architectural principles is not new, but in a world of\n      highly-autonomous-teams they become essential because they are the means\n      by which an aligned delivery direction is achieved without the need for\n      control. In the latest installment, Andrew talks about what makes a good\n      principle, and how they work with the Advice Process.\nmore…",
@@ -1810,6 +1882,24 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=9458",
+          "author": "Kevin C. Tofel",
+          "description": "We’re finally approaching the end of 2021! I don’t know about you, but perhaps the biggest change I made to my smart home this past year was transitioning to Apple HomeKit. When I started out on my digital assistant journey a few years back, it was with the Amazon Alexa platform. Then once Google got into the market, I moved over to […]\nThe post Sharing a smart home with multiple digital assistants isn’t bad appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/sharing-a-smart-home-with-multiple-digital-assistants-isnt-bad/",
+          "publishedOn": "2021-12-13T14:01:39.000Z",
+          "wordCount": 1873,
+          "title": "Sharing a smart home with multiple digital assistants isn’t bad"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=9456",
+          "author": "Stacey Higginbotham",
+          "description": "A different perspective on the Matter standard: I don’t spend a lot of time thinking about TVs in part because I don’t spend much time watching one. This isn’t a snob thing, just a function of my family spending more time watching shows on an iPad and not spending much time with TV in general. But for […]\nThe post IoT News of the week for Dec. 10, 2021 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-for-dec-10-2021/",
+          "publishedOn": "2021-12-13T05:00:33.000Z",
+          "wordCount": 1220,
+          "title": "IoT News of the week for Dec. 10, 2021"
+        },
+        {
           "id": "https://staceyoniot.com/?p=9444",
           "author": "Stacey Higginbotham",
           "description": "Amazon has asked the FCC to approve an outdoor Sidewalk-capable device called the Amazon Sidewalk Ring Bridge Pro, which is designed for professional installation as opposed to being a consumer-oriented technology. This signals that Amazon is planning to take its Sidewalk network to the next level by either providing more robust coverage in areas where […]\nThe post Amazon’s latest FCC filing hints at Sidewalk expansion plans appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2006,15 +2096,6 @@
           "publishedOn": "2021-11-15T14:47:37.000Z",
           "wordCount": 1498,
           "title": "IoT news for the week ending Nov. 5, 2021"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=9307",
-          "author": "Kevin C. Tofel",
-          "description": "Last week on the IoT Podcast, we discussed the news of Facebook ceasing the use of facial recognition across the photos its users upload. From our perspective, this was a big win for the Facebook user community. Why? Users had no control over whether Facebook would scan photos uploaded by others and then tag all […]\nThe post There actually is a compelling reason for Facebook to continue using facial recognition appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/there-actually-is-a-compelling-reason-for-facebook-to-continue-using-facial-recognition/",
-          "publishedOn": "2021-11-13T14:00:52.000Z",
-          "wordCount": 696,
-          "title": "There actually is a compelling reason for Facebook to continue using facial recognition"
         }
       ]
     },
@@ -2075,6 +2156,24 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=83050",
+          "author": "참여연대 의정감시센터",
+          "description": "왜 20대 대통령선거를 90여 일 앞두고 정치권은 여야 구분 없이 2030 청년 세대를 호명하는가? 지금까지 그래왔듯이 이러한 호명은 대선을 코앞에 둔 각 정당과 대선 후보자들의 표몰이에 그칠 것인가? 이용·소비·동원되는 2030, 선거 핵심 캐스팅 보터 얼마 전 이재명 더불어민주당 대선 후보는 18세 고등학생을 광주 공동선대위원장에 임명하고, 과학 분야 2030세대 전문가 4명을 선대위원으로 영입했다. 윤석열 국민의힘 대선 […]",
+          "link": "https://slownews.kr/83050",
+          "publishedOn": "2021-12-13T09:29:04.000Z",
+          "wordCount": 1549,
+          "title": "2022 대선은 2030이 결정한다 (ft. 2030 공약 비교)"
+        },
+        {
+          "id": "https://slownews.kr/?p=82892",
+          "author": "크레센도",
+          "description": "폴 쉠은 북아프리카 특파원으로 모로코의 수도 라바트에서 근무했다. ‘아랍의 봄’(2010년 12월 튀니지 혁명로 촉발된 아랍권의 민주화 시위. 튀니지, 이집트, 예멘의 정권이 교체되었고, 2011년에 절정, 그 후 소강 상태다.)이 터지기 직전 그의 사무실 벽에는 카다피 포스터가 걸려있었고, 거리는 시위로 늘 시끄러웠다. ‘낙타’ 이야기보다 독자의 관심받지 못한 ‘아랍의 봄’  그는 매일 기사를 써서 보냈지만, 아무도 관심을 갖지 […]",
+          "link": "https://slownews.kr/82892",
+          "publishedOn": "2021-12-12T23:43:43.000Z",
+          "wordCount": 1959,
+          "title": "‘아랍의 봄’ 그 자리에 남은 절망: 27살 아델 케드리가 분신한 이유"
+        },
         {
           "id": "https://slownews.kr/?p=83010",
           "author": "청년유니온",
@@ -2385,15 +2484,6 @@
           "publishedOn": "2021-11-29T22:59:51.000Z",
           "wordCount": 1067,
           "title": "[ 책 소개 ] 기하급수적인 기술 발전과 급변하는 세상을 다루는 두 권의 책"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=73734",
-          "author": "ingppoo",
-          "description": "유럽연합 규제 당국이 구글을 상대로 법원에서 승소했습니다. 법원의 이번 판결에 힘입어 유럽연합은 앞으로 구글을 비롯한 빅테크 기업을 상대로 반독점 규제를 강화할 것으로 보입니다.",
-          "link": "https://newspeppermint.com/2021/11/13/eucompetitiongoogle/?utm_source=rss&utm_medium=rss&utm_campaign=eucompetitiongoogle",
-          "publishedOn": "2021-11-13T23:30:37.000Z",
-          "wordCount": 836,
-          "title": "유럽 법원 “구글에 물린 반독점 벌금 옳았다”"
         }
       ]
     },
@@ -2542,15 +2632,6 @@
           "publishedOn": "2021-11-14T21:50:55.000Z",
           "wordCount": 8,
           "title": "공감과 감명에 대한 논증적 정당화"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222567488653",
-          "author": "sellars",
-          "description": "주장이 있다. 그러나 그 논거가 없다. 논거가 없다는 것은 그 주장을 참으로 받아들일 단서가 주어지지 않았다는 것이다. 김광수의 <논리와 비판적 사고>에서 이것이 ‘독단주의의 역리’에 부딪치게 된다고 말한다. <독단(dogmatism)은 자적 사생아의 숨겨진 아버지이다. 독단에 빠진 사람은 자신의 주장이 옳다고 하면서도, 그 근거를 제시하지 않을 뿐만 아니라, 근거의 검토를 허용하지 않는다. 자신의 주장에 대한 근거를 검토하려는 것을 자신에 대한 도전으로 여긴다. 그 도전은 어리석고, 헛되고, 기분 나쁘고, 이단적인 것으로 여긴다. 만일 그가 친절하다면, 자명한 진리를 의심하는 꿈에서 깨어나라고 진지하게 조언하기도 하.......",
-          "link": "https://blog.naver.com/sellars/222567488653",
-          "publishedOn": "2021-11-13T19:51:35.000Z",
-          "wordCount": 8,
-          "title": "독단주의자의 역리"
         }
       ]
     }
