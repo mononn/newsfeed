@@ -2,10 +2,235 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-01-09T20:19:28.719Z</updated>
-    <generator>osmosfeed 1.11.3</generator>
+    <updated>2022-01-10T20:17:23.443Z</updated>
+    <generator>osmosfeed 1.12.0</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Some 5.16 kernel development statistics]]></title>
+        <id>https://lwn.net/Articles/880699/rss</id>
+        <link href="https://lwn.net/Articles/880699/rss"/>
+        <updated>2022-01-10T19:08:39.000Z</updated>
+        <summary type="html"><![CDATA[The 5.16 kernel was released
+on January 9, as expected.  This development cycle incorporated 14,190
+changesets from 1,988 developers; it was thus quite a bit busier than its 
+predecessor, and fairly typical for recent kernel releases in general.  A
+new release means that the time has come to have a look at where those
+changes came from.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[“Disapproved Ads Auditor” tool]]></title>
+        <id>http://developers.googleblog.com/2022/01/disapproved-ads-auditor-tool.html</id>
+        <link href="http://developers.googleblog.com/2022/01/disapproved-ads-auditor-tool.html"/>
+        <updated>2022-01-10T18:01:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Nir Kalush, Dvir Kalev, Chen Yoveg, Elad Ben-David
+  
+Ads Review Tool
+   
+This tool flags (and optionally deletes) policy violating ads across your accounts. Advertisers can learn from the output to ensure their ads are compliant with Google Ads Policies at all times. 
+Business Challenge:
+Advertisers operating at scale need a solution to holistically review policy violating ads across their accounts so they can ensure compliance with Google’s Ad Policies. As Google introduces more policies and enforcement mechanisms, advertisers need to continue checking their accounts to ensure they comply with Google’s Ads Policies.
+Solution Overview:  
+“Disapproved Ads Auditor” is a tool  that enables advertisers to review at scale all disapproved ads across their  Google Ads accounts. This view  allows advertisers to proactively audit their accounts , analyze the ad disapprovals holistically and identify  learnings to minimize and  reduce submission of potentially policy violating ads. 
+The tool is based on a Python script, which can be run in either of the following modes: 
+ 
+“Audit Mode”- export an output of disapproved ads across your accounts 
+“Remove Mode” - delete currently disapproved ads and log details.
+ 
+There are a few output files (see here) which are saved locally under the “output” folder and there is an optional feature to export on BigQuery for further data analysis (“Disapproved Ads Auditor” dataset). 
+Skills Required:   
+ 
+ Python 3.9+ 
+ BigQuery API 
+ Google Ads API 
+ OAuth 2.0
+ 
+Google Products Used:
+ 
+Google Ads  
+BigQuery
+ 
+Estimated time to implement the solution: ~2h 
+Implementation instructions: View on github
+Impact:
+“Disapproved Ads Auditor” tool automates auditing ads across your accounts to provide you insights into non compliant ads. You can take the learnings from the output to ensure ads are compliant with Google Ads Policies and avoid creating non compliant ads. Moreover, you can optionally remove disapproved ads.]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Remember to lock around all std::condition_variable “variables”]]></title>
+        <id>https://embeddedartistry.com/?p=18563</id>
+        <link href="https://embeddedartistry.com/blog/2022/01/10/remember-to-lock-around-all-stdcondition_variable-variables/"/>
+        <updated>2022-01-10T17:19:00.000Z</updated>
+        <summary type="html"><![CDATA[10 January 2022 by Phillip JohnstonI recently received a question regarding our dispatch queue implementation: I had a question concerning the locking of the mutex in the destructor to set the boolean quit_ variable. The way I see it, the mutex protects the queue access and does not really refer to the quit_ variable. When … 
+Continue reading "Remember to lock around all std::condition_variable “variables”"
+The post Remember to lock around all std::condition_variable “variables” appeared first on Embedded Artistry.]]></summary>
+        <author>
+            <name>Phillip Johnston</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What NPM Should Do Today To Stop A New Colors Attack Tomorrow]]></title>
+        <id>http://research.swtch.com/npm-colors</id>
+        <link href="http://research.swtch.com/npm-colors"/>
+        <updated>2022-01-10T16:45:00.000Z</updated>
+        <summary type="html"><![CDATA[Stop blindly installing the latest version of all transitive dependencies.]]></summary>
+        <author>
+            <name>research!rsc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Address digital baseband to unlock THz communications for 6G]]></title>
+        <id>https://www.embedded.com/?p=4472112</id>
+        <link href="https://www.embedded.com/address-digital-baseband-to-unlock-thz-communications-for-6g/"/>
+        <updated>2022-01-10T16:18:46.000Z</updated>
+        <summary type="html"><![CDATA[To unlock the ultra-high data rates and high-frequency radio communications integral to future 6G technologies, we need ultra-fast encoding and decoding for the baseband chipset, also known as channel coding, or forward-error-correction.
+The post Address digital baseband to unlock THz communications for 6G appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Looking back at 2021, looking forward at 2022 (Libre Arts)]]></title>
+        <id>https://lwn.net/Articles/880811/rss</id>
+        <link href="https://lwn.net/Articles/880811/rss"/>
+        <updated>2022-01-10T15:34:25.000Z</updated>
+        <summary type="html"><![CDATA[Here is a
+comprehensive look on the Libre Arts site at the current state of free
+software for creative 
+artists.
+
+
+	The other reason is that, with a project like GIMP, it’s hard to do
+	just one thing. The team is constantly bombarded with requests that
+	are mostly doable once you have a team of 10 to 20 full-time
+	developers, which is light years away from where GIMP is now. Which
+	results in a lot of running around between under-the-hood work, UX
+	fixes, featurettes, better file formats support etc. So you give
+	everyone a little of what they want but you end up delaying an
+	actual release because the big stuff still needs to happen.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dev corrupts NPM libs 'colors' and 'faker' breaking thousands of apps
+(Bleeping Computer)]]></title>
+        <id>https://lwn.net/Articles/880809/rss</id>
+        <link href="https://lwn.net/Articles/880809/rss"/>
+        <updated>2022-01-10T15:20:31.000Z</updated>
+        <summary type="html"><![CDATA[Bleeping Computer reports
+on the latest NPM mess: the developer of the "faker" module deleted the
+code and it's development history from GitHub (with a force push), replaced
+it with a malicious alternative, and broke dependencies for numerous
+applications. 
+
+
+	The reason behind this mischief on the developer's part appears to
+	be retaliation—against mega-corporations and commercial consumers
+	of open-source projects who extensively rely on cost-free and
+	community-powered software but do not, according to the developer,
+	give back to the community.
+
+
+GitHub has evidently called this action a violation of its terms of
+service and disabled the owner's account; NPM has restored a previous
+version of the code.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/880807/rss</id>
+        <link href="https://lwn.net/Articles/880807/rss"/>
+        <updated>2022-01-10T14:37:02.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (ghostscript and roundcube), Fedora (gegl04, mbedtls, and mediawiki), openSUSE (kubevirt, virt-api-container, virt-controller-container, virt-handler-container, virt-launcher-container, virt-operator-container), SUSE (kubevirt, virt-api-container, virt-controller-container, virt-handler-container, virt-launcher-container, virt-operator-container and libvirt), and Ubuntu (apache2).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[멕시코 마약 전쟁: 마크 스티븐슨의 기록]]></title>
+        <id>https://slownews.kr/?p=83520</id>
+        <link href="https://slownews.kr/83520"/>
+        <updated>2022-01-10T10:06:18.000Z</updated>
+        <summary type="html"><![CDATA[9·11 이후 미국이 해상과 공중의 경계를 강화하면서, 콜롬비아 등 남아메리카에서 생산되는 마약을 미국으로 밀수하는 해상·공중 통로가 모두 막히고 말았다. 이로써 남미에서 생산되는 마약은 모두 멕시코를 통해서만 들어가게 되었는데, 이로써 미국과 접경 지역을 중심으로 마약 밀수를 전문적으로 하는 갱단이 곳곳에서 생겨나기 시작한다. 마약 밀수를 통해 벌어들인 엄청난 돈으로 이들 갱은 조직을 키우고, 값비싼 무기로 무장하며, […]]]></summary>
+        <author>
+            <name>크레센도</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20 Smaller yet Handy C++20 Features]]></title>
+        <id>https://www.cppstories.com/2022/20-smaller-cpp20-features/</id>
+        <link href="https://www.cppstories.com/2022/20-smaller-cpp20-features/"/>
+        <updated>2022-01-10T08:05:00.000Z</updated>
+        <summary type="html"><![CDATA[C++20 is huge and filled with lots of large features. Just to mention a few: Modules, Coroutines, Concepts, Ranges, Calendar & Timezone, Formatting library.
+But, as you know, that’s not all.
+Depending on how we count, C++20 brought around 80 Library features and 70 language changes, so there’s a lot to cover :)
+In this article, I’ll show you 20 smaller C++20 things that are very handy and good to know. Ten language elements, and ten more for the Standard Library. Most of them with a cool example.
+Let’s jump right into the text!
+
+
+
+     
+    
+
+
+You can find the whole C++20 draft here:
+https://timsong-cpp.github.io/cppwp/n4861/ (post Prague 2020 draft)
+And here’s a great summary page with the compiler support at C++ Reference:
+https://en.cppreference.com/w/cpp/compiler_support#cpp20
+Here’s a…]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[비호감 대선: 선거제 개혁이 필요한 이유]]></title>
+        <id>https://slownews.kr/?p=83505</id>
+        <link href="https://slownews.kr/83505"/>
+        <updated>2022-01-10T03:43:49.000Z</updated>
+        <summary type="html"><![CDATA[대통령 선거가 이제 두 달 앞으로 다가왔다. 주요 후보들은 지지율을 끌어올리기 위해 선거 운동에 한창이지만, 정작 유권자들은 ‘비호감 대선’이란 오명까지 붙은 이번 대선에서 마음 줄 곳을 쉽사리 찾지 못한 채 스트레스를 받고 있다. 과거 여느 대통령 선거처럼 거대 양당의 두 후보가 여론 지지율에서 양강 구도를 형성하고 있지만, 아이러니하게도 두 후보의 비호감도 또한 1, 2 위를 […]]]></summary>
+        <author>
+            <name>참여연대 의정감시센터</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[박근혜 사면 관련 보도 정리: ’17년 3월 31일 구속 ~ ’21년 12월 31일 석방까지]]></title>
+        <id>https://slownews.kr/?p=83474</id>
+        <link href="https://slownews.kr/83474"/>
+        <updated>2022-01-10T02:24:49.000Z</updated>
+        <summary type="html"><![CDATA[초지일관 동아와 조선, 한겨레의 ‘따로 또 같이’   국정농단 사건 등으로 구속된 지 4년 9개월 만에 박근혜 씨가 석방됐습니다. 언론은 이번 사면에 큰 공로를 세웠다고 할 수 있을 만큼 꾸준히 박근혜 씨 구속 동정 보도와 함께 사면 주장을 이어왔는데요. 민주언론시민연합은 박근혜 대통령이 수감된 2017년 3월 31일 이후에 언론의 박근혜 씨 사면 보도를 정리했습니다. ‘박근혜 사면’ […]]]></summary>
+        <author>
+            <name>민주언론시민연합</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The 5.16 kernel has been released]]></title>
+        <id>https://lwn.net/Articles/880775/rss</id>
+        <link href="https://lwn.net/Articles/880775/rss"/>
+        <updated>2022-01-09T23:34:50.000Z</updated>
+        <summary type="html"><![CDATA[Linus Torvalds has released the 5.16
+kernel, as expected.  Significant changes in 5.16 include
+the futex_waitv() system call,
+cluster-aware CPU scheduling,
+some internal memcpy() hardening,
+memory folios,
+the DAMON operating schemes
+user-space memory-management mechanism,
+and much more.  See the LWN merge-window summaries
+(part 1,
+part 2) and the KernelNewbies 5.16 page for
+details.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[DIY Split-Flap Display]]></title>
         <id>http://mcuoneclipse.com/?p=33198</id>
@@ -738,6 +963,21 @@ final release next weekend".]]></summary>
         <summary type="html"><![CDATA[In Spilling the Beans: C/C++ Header Files, I touched on interfaces and the difference between external and internal linkage. This article has a focus on internal linkage with using the static keyword in C. So this might be a programming language … Continue reading →]]></summary>
         <author>
             <name>Erich Styger</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Summary of reading: October - December 2021]]></title>
+        <id>https://eli.thegreenplace.net/2021/summary-of-reading-october-december-2021/</id>
+        <link href="https://eli.thegreenplace.net/2021/summary-of-reading-october-december-2021/"/>
+        <updated>2022-01-01T05:21:00.000Z</updated>
+        <summary type="html"><![CDATA[<ul class="simple">
+<li>&quot;Chasing New Horizons: Inside the Epic First Mission to Pluto&quot; by Alan Stern
+and David Grinspoon - a fascinating account of the New Horizons mission, told
+by its principal investigator. Lots of interesting scientific and engineering
+details about the mission. A good portion of the book is spent on NASA
+politics …</li></ul>]]></summary>
+        <author>
+            <name>Eli Bendersky's website</name>
         </author>
     </entry>
     <entry>
