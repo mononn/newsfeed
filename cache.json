@@ -18,6 +18,16 @@
       "siteUrl": "https://www.beningo.com",
       "articles": [
         {
+          "id": "https://www.beningo.com/?p=13857",
+          "author": "Jacob Beningo",
+          "description": "Raspberry Pi’s have become a very popular application processor in industrial applications. However, they can be more horsepower and use more energy than needed for an application. In this course, we will explore the Raspberry Pi Pico, which is a multicore microcontroller-based Raspberry Pi board and how it can be used in embedded applications. Registration … Continue reading CEC – Getting Started with the Raspberry Pi Pico\nCEC – Getting Started with the Raspberry Pi Pico first appeared on Beningo Embedded Group.",
+          "link": "https://www.beningo.com/cec-getting-started-with-the-raspberry-pi-pico/",
+          "publishedOn": "2022-01-11T14:32:31.000Z",
+          "wordCount": null,
+          "title": "CEC – Getting Started with the Raspberry Pi Pico",
+          "itunes": {}
+        },
+        {
           "id": "https://www.beningo.com/?p=13828",
           "author": "Jacob Beningo",
           "description": "Happy New Year! I always enjoy the start of a new year. The opportunity to reflect on what went well and didn’t last year and continue making improvements is fun. Every year, I take some time to examine different embedded technologies, mainly related to microcontroller-based systems. The purpose of reviewing these technologies is to provide … Continue reading 5 Embedded Technologies to Master in 2022\n5 Embedded Technologies to Master in 2022 first appeared on Beningo Embedded Group.",
@@ -66,15 +76,6 @@
           "publishedOn": "2021-12-31T07:15:00.000Z",
           "wordCount": 5832,
           "title": "C++ at the end of 2021"
-        },
-        {
-          "id": "https://www.cppstories.com/2021/cpp21-survey/",
-          "author": null,
-          "description": "It’s almost the end of the year! As usual, I started writing my “year” summary that I will publish on the 31st of December.\nYet, this article won’t be possible without your input!\nI have a survey with just nine questions about C++ and your experience in 2021.\nQuestions:\nC++ Standard used\nYour experience with C++17, C++20\nCompiler used\nIDE and tools\nBest thing that happened\nIt should take no more than 5 minutes :)\nPlease note that this survey is not an official ISO C++ survey. It’s solely for the blog.\nGiveaway\nThere’s also a giveaway for those of you who take part in the survey! I have 5x Amazon.com gift cards, 10$ Each, selected randomly. See at the end of the survey how to enter and get a chance to win.\nThe Survey\nHere’s the link to Google Forms: C++ in 2021 Survey.\nOr click below:\n\nIt’s valid till 28th December (I need a couple of days to process it and publish the final blog post).\nThank you!",
-          "link": "https://www.cppstories.com/2021/cpp21-survey/",
-          "publishedOn": "2021-12-20T08:05:00.000Z",
-          "wordCount": 390,
-          "title": "C++ in 2021 - Survey"
         }
       ]
     },
@@ -89,6 +90,15 @@
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2022-01-12-trojan-source/",
+          "author": null,
+          "description": "Trojan Source\nThe original Trojan Source paper encompasses afamily of attacks that rely on Unicode properties to make code look differentfrom how a compiler processes it. For instance the following code taken fromthe paper:\n\n#include <stdio.h>#include <stdbool.h>int main() { bool isAdmin = false; /*‮ } ⁦if (isAdmin)⁩ ⁦begin admins only */ printf(\"You are an admin.\\n\"); /* end admins only ‮ { ⁦*/ return 0;}\n\nlooks like there is a guard on isAdmin while the compiler actually reads thefollowing byte stream\n/* <U+0x202E> } <U+0x2066> if (isAdmin) <U+0x2069> <U+0x2066> begin admins only */\nThis issue got submitted before the official release to the LLVM Security group,and while we agreed this was more of a display issue than an actualcompiler-related issue, we also agreed having a clang-tidy ch…",
+          "link": "https://blog.llvm.org/posts/2022-01-12-trojan-source/",
+          "publishedOn": "2022-01-12T00:00:00.000Z",
+          "wordCount": 516,
+          "title": "New passes in clang-tidy to detect (some) Trojan Source"
+        },
         {
           "id": "https://blog.llvm.org/posts/2022-01-07-moving-to-discourse/",
           "author": null,
@@ -235,6 +245,15 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4472287",
+          "author": "Nitin Dahad",
+          "description": "Samsung Electronics’ new Exynos 2200 mobile processor offers hardware-accelerated ray tracing and also incorporates latest Armv9 CPU core.\nThe post New Exynos ray tracing mobile processor uses AMD based GPU appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/new-exynos-ray-tracing-mobile-processor-uses-amd-based-gpu/",
+          "publishedOn": "2022-01-18T17:42:16.000Z",
+          "wordCount": 2462,
+          "title": "New Exynos ray tracing mobile processor uses AMD based GPU"
+        },
         {
           "id": "https://www.embedded.com/?p=4472279",
           "author": "Nitin Dahad",
@@ -689,6 +708,15 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0910/",
+          "author": null,
+          "description": "When developers do make mistakes, it's often accidental or because the developers are in a hurry. These errors often make their way into small edits to the code. Let's review one of these cases: a developer fixes an error and introduces a new one simultaneously.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0910/",
+          "publishedOn": "2022-01-17T21:00:00.000Z",
+          "wordCount": 1565,
+          "title": "How PVS-Studio prevents rash code changes, example N2"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/0909/",
           "author": null,
           "description": "constexpr is one of the magic keywords in modern C++. You can use it to create code, that is then executed before the compilation process ends. This is the absolute upper limit for software performance.",
@@ -906,6 +934,24 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/881673/rss",
+          "author": "corbet",
+          "description": "The Open Invention Network has announced\nan expansion of its \"Linux System Definition\", which is the set of software\ncovered by its patent-protection umbrella.\n\n\n\tSoftware packages, or components, being added to the Linux System\n\tinclude .Net, ONNX, tvm, Prometheus, Helm, Notary, Istio, Nix,\n\tOpenEmbedded, CoreOS, uClibc-ng, mbed-tls, musl, SPDX, AGL\n\tServices, OVN, FuseSoc, Verilator, Flutter, Jasmine, Weex, NodeRED,\n\tEclipse Paho, Californium, Cyclone and Wakaama, among others. The\n\texpansion includes 337 new software components, bringing the total\n\tnumber of protected packages to 3,730.",
+          "link": "https://lwn.net/Articles/881673/rss",
+          "publishedOn": "2022-01-18T17:59:04.000Z",
+          "wordCount": 163,
+          "title": "Open Invention Network expands coverage"
+        },
+        {
+          "id": "https://lwn.net/Articles/881648/rss",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (slurm-llnl), openSUSE (apache2, ghostscript, and watchman), Red Hat (kernel and telnet), SUSE (apache2, ghostscript, and kernel), and Ubuntu (clamav).",
+          "link": "https://lwn.net/Articles/881648/rss",
+          "publishedOn": "2022-01-18T14:19:21.000Z",
+          "wordCount": 99,
+          "title": "Security updates for Tuesday"
+        },
         {
           "id": "https://lwn.net/Articles/881431/rss",
           "author": "corbet",
@@ -1535,15 +1581,6 @@
           "publishedOn": "2021-12-20T14:00:26.000Z",
           "wordCount": 137,
           "title": "Security updates for Monday"
-        },
-        {
-          "id": "https://lwn.net/Articles/879158/rss",
-          "author": "corbet",
-          "description": "The 5.16-rc6 kernel prepatch is out for\ntesting.\n\n\n\tRegardless of what happens, I will be making an rc8 - not because\n\tthis release looks particularly problematic, but simply due to the\n\tseasonal holidays. There's no point in releasing a final 5.16 and\n\topening the merge window when people are still on holiday or just\n\tcoming back. So we'll have at least one extra week of rc this\n\trelease, even if no nasty issues appear.",
-          "link": "https://lwn.net/Articles/879158/rss",
-          "publishedOn": "2021-12-19T23:49:17.000Z",
-          "wordCount": 149,
-          "title": "Kernel prepatch 5.16-rc6"
         }
       ]
     },
@@ -1558,6 +1595,15 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/patterns-of-distributed-systems/two-phase-commit.html",
+          "author": null,
+          "description": "Continuing his exploration of important patterns to maintain consistency\n      across a cluster, Unmesh Joshi now looks at Two Phase\n      Commit. It's broadly the most familiar approach, but comes with lots of\n      complexities to make it work in practice over unreliable networks.\nmore…",
+          "link": "https://martinfowler.com/articles/patterns-of-distributed-systems/two-phase-commit.html",
+          "publishedOn": "2022-01-18T17:42:00.000Z",
+          "wordCount": 6067,
+          "title": "Two Phase Commit"
+        },
         {
           "id": "https://martinfowler.com/articles/patterns-legacy-displacement/legacy-mimic.html",
           "author": null,
@@ -1645,15 +1691,6 @@
           "publishedOn": "2021-12-20T19:40:00.000Z",
           "wordCount": 1607,
           "title": "Doubling the performance of NXP LPC845 with improved Flash Access Time"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=34100",
-          "author": "Erich Styger",
-          "description": "Many embedded systems application need to store some kind of data in a persistent way: calibration values, settings or log information. For a smaller amount of data, using an external memory or file system is an overkill. In many system … Continue reading →",
-          "link": "https://mcuoneclipse.com/2021/12/19/key-value-pairs-in-flash-memory-file-system-less-minini/",
-          "publishedOn": "2021-12-19T11:45:48.000Z",
-          "wordCount": 1590,
-          "title": "Key-Value pairs in FLASH Memory: file-system-less minINI"
         }
       ]
     },
@@ -1798,6 +1835,15 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9586",
+          "author": "Stacey Higginbotham",
+          "description": "The past two years have seen a raft of M&A for companies that help secure operational technology (OT) networks. OT networks comprise industrial controls, building management systems, fire and safety systems, and any sort of networked device that monitors and controls physical equipment. The drive for IoT and digital transformations has pushed many OT networks […]\nThe post What’s next for OT security in 2022? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/whats-next-for-ot-security-in-2022/",
+          "publishedOn": "2022-01-18T14:00:25.000Z",
+          "wordCount": 898,
+          "title": "What’s next for OT security in 2022?"
+        },
         {
           "id": "https://staceyoniot.com/?p=9583",
           "author": "Stacey Higginbotham",
@@ -2038,6 +2084,24 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=83676",
+          "author": "민주언론시민연합",
+          "description": "카카오페이 경영진이 900억 원에 달하는 자사 주식을 매각했다는 소식이 전해지자 경영진의 도덕적 해이를 비난하는 여론이 확산됐습니다. 상장 한 달여 만에 경영진 8명이 동시다발로 주식을 매각한 사례는 전례 없던 일입니다. 스톡옵션(주식매수선택권) 매도가 위법은 아니지만, 경영진의 자사주 매각은 시장이 고점으로 받아들여 매도에 나서기 때문에 소액주주들의 피해와 회사 가치하락과 이어지는데요. 민주언론시민연합은 그 영향력에 비해 한참 뒤떨어진 한 기업(플랫폼기업 […]",
+          "link": "https://slownews.kr/83676",
+          "publishedOn": "2022-01-18T08:24:21.000Z",
+          "wordCount": 1180,
+          "title": "먹튀와 모르쇠: 카카오페이와 언론"
+        },
+        {
+          "id": "https://slownews.kr/?p=83657",
+          "author": "조대현",
+          "description": "1월 초부터 시작된 대규모 반정부 집회로 카자흐스탄의 상황이 혼란스럽습니다. 유혈 사태로 번진 시위 사망자는 지난 15일(현지시각) 기준 225명으로 늘었습니다(출처: 카자흐스탄 검찰 발표). 국내 언론 기사를 읽어보니 다음과 같은 내용이 주를 이루고 있습니다. LPG 상한제 폐지로 대규모 반정부 집회 촉발 격화하는 카자흐스탄 내 반정부 집회 상황 집단안보조약기구(CSTO)의 평화유지군 투입 러시아의 영향력 확대 가능성 급박한 진행 상황을 […]",
+          "link": "https://slownews.kr/83657",
+          "publishedOn": "2022-01-18T07:27:02.000Z",
+          "wordCount": 2085,
+          "title": "카자흐스탄 사람들은 왜 거리로 나섰나"
+        },
         {
           "id": "https://slownews.kr/?p=83648",
           "author": "민주언론시민연합",
@@ -2316,15 +2380,6 @@
           "publishedOn": "2021-12-21T11:31:31.000Z",
           "wordCount": 2142,
           "title": "냉소적인 방관자 ‘독자’ 설득하기: 실용 논증과 개념 논증"
-        },
-        {
-          "id": "https://slownews.kr/?p=83151",
-          "author": "크레센도",
-          "description": "많은 기자들이 취재 능력은 ‘취재원’에 의해 결정된다고 말한다. 좋은 취재원을 확보할 수 있는 힘은 바로 ‘근성’이라고 AP 특파원 캐시 개넌(Cathy Ganon)은 말한다. 정부의 최고지도자에서 부족 마을에 사는 아이들까지, 로마 교황청에서, 탈레반까지, 세계 곳곳에 개넌의 취재원이 있다. “나는 집요하게 물고 늘어져요. 늘 현장에 있죠. 사람들을 만나 상황이 어떤지, 어떻게 생각하는지 물어보죠. 별다른 취재거리가 없을 때도 그래요. […]",
-          "link": "https://slownews.kr/83151",
-          "publishedOn": "2021-12-20T01:00:42.000Z",
-          "wordCount": 2126,
-          "title": "취재원의 여섯 가지 유형"
         }
       ]
     },
@@ -2356,15 +2411,6 @@
           "publishedOn": "2022-01-03T22:59:45.000Z",
           "wordCount": 949,
           "title": "성큼 다가온 큰 정부 시대"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=73949",
-          "author": "ingppoo",
-          "description": "코로나19 백신 이전에도 현대 의학과 공중보건에서 백신은 수많은 목숨을 구했습니다. 대표적인 것이 매년 추워지기 전에 맞는 독감(influenza) 백신이죠.",
-          "link": "https://newspeppermint.com/2021/12/19/npc_fluvaccine/?utm_source=rss&utm_medium=rss&utm_campaign=npc_fluvaccine",
-          "publishedOn": "2021-12-19T20:00:45.000Z",
-          "wordCount": 134,
-          "title": "매년 안 맞아도 되는 독감 백신 만들 수 있을까?"
         }
       ]
     },
