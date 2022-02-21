@@ -64,6 +64,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2017/03/on-toggle-parameters/",
+          "author": null,
+          "description": "Boolean parameters in a function might be misleading and decrease its readability. If you have a poorly named function like:\nDoImportantStuff(true, false, true, false);\n\n\nAs you can imagine, it’s not clear what all those parameters mean? What’s the first true? What does the last false mean? Can we improve code in such cases?\nLet’s have a look at possible improvements.\n\n\n\n     \n    \n\n\nThis article was motivated by a similar text that appeared on Andrzej Krzemienski’s Blog: Toggles in functions.\nAs Andrzej wrote, the whole point is to improve the code around functions like:\nRenderGlyphs(glyphs, true, false, true, false);\n\n\nWhat if you mix two parameters and change their order? The compiler won’t help you much!\nLet’s think about improving the code: make it safer and more readable.\nWe could ad…",
+          "link": "https://www.cppstories.com/2017/03/on-toggle-parameters/",
+          "publishedOn": "2022-02-21T00:00:00.000Z",
+          "wordCount": 2216,
+          "title": "Ways to Refactor Toggle/Boolean Parameters in C++",
+          "imageUrl": "https://www.cppstories.com/2017/images/2017-03-06-on-toggle-parameters-toggleFunc.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/tuple-iteration-apply/",
           "author": null,
           "description": "In the previous article on the tuple iteration, we covered the basics. As a result, we implemented a function template that took a tuple and could nicely print it to the output. There was also a version with operator <<.\nToday we can go further and see some other techniques. The first one is with std::apply from C++17, a helper function for tuples. Today’s article will also cover some strategies to make the iteration more generic and handle custom callable objects, not just printing.\nhere where we discuss the basics.\n\n\nstd:apply approach \n  \n\n\n\n\n     \n    \n\n\nA handy helper for std::tuple is the std::apply function template that came in C++17. It takes a tuple and a callable object and then invokes this callable with parameters fetched from the tuple.\nHere’s an example:\n#include <iostream>\n…",
@@ -226,15 +236,6 @@
           "wordCount": 1318,
           "title": "Rust extension traits, greppability and IDEs",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2022/asimov-programming-and-the-meta-ladder/",
-          "author": null,
-          "description": "<p>One of my favorite stories by Isaac Asimov is <a class=\"reference external\" href=\"https://en.wikipedia.org/wiki/Profession_(novella)\">Profession</a>. The following is a\nspoiler, so please read the story before proceeding if you don't like spoilers.</p>\n<p>In the futuristic society of year 6000-something, people no longer need to learn\ntheir profession from books, lectures or hands-on experience. Each person …</p>",
-          "link": "https://eli.thegreenplace.net/2022/asimov-programming-and-the-meta-ladder/",
-          "publishedOn": "2022-01-23T01:02:00.000Z",
-          "wordCount": 433,
-          "title": "Asimov, programming and the meta ladder"
         }
       ]
     },
@@ -516,6 +517,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0925/",
+          "author": null,
+          "description": "This is the second part in a series of articles checking the MuditaOS operating system. In this article, we cover the bottlenecks of the project that are worth refactoring. The PVS-Studio static analyzer and its optimization warnings will help us with this.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0925/",
+          "publishedOn": "2022-02-20T21:00:00.000Z",
+          "wordCount": 4872,
+          "title": "MuditaOS: Will your alarm clock go off? Part II",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0925_MuditaOS_2/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0923/",
           "author": null,
           "description": "You decided to make an app that works with SVG. Encouraged by the enthusiasm, you collected libraries and successfully made the application. But suddenly you find that the app is sending strange network requests. And data is leaking from the host-machine. How so?",
@@ -729,15 +740,6 @@
           "publishedOn": "2022-01-25T17:44:48.000Z",
           "wordCount": 4698,
           "title": "Anatomy of a Biotech Business Development Deal"
-        },
-        {
-          "id": "https://future.a16z.com/?p=2942",
-          "author": "Steven Sinofsky",
-          "description": "This is an edited excerpt from Hardcore Software: Inside the Rise and Fall of the PC Revolution, a Substack “memoir” from Steven Sinofsky about his time at Microsoft during rise of the PC. This post includes parts from entries 55-57, shedding light on the transition of Microsoft Office from an end user–focused product to an... Read More\nThe post Hardcore Software: When Microsoft Office Went Enterprise appeared first on Future.",
-          "link": "https://future.a16z.com/hardcore-software-when-microsoft-office-went-enterprise/",
-          "publishedOn": "2022-01-22T16:00:02.000Z",
-          "wordCount": 3365,
-          "title": "Hardcore Software: When Microsoft Office Went Enterprise"
         }
       ]
     },
@@ -778,6 +780,16 @@
       "feedUrl": "https://www.iotsecurityfoundation.org/blog/feed",
       "siteUrl": "https://www.iotsecurityfoundation.org",
       "articles": [
+        {
+          "id": "https://www.iotsecurityfoundation.org/?p=21466",
+          "author": "-",
+          "description": "The Internet of Things Security Foundation (IoTSF) ManySecured Special Interest Group (SIG) is working to outline high level solutions to a design flaw/problem that affects millions of IoT devices and standard Internet routers. We are also encouraging the development of working prototypes of potential solutions that can be tested for scale and usability. February",
+          "link": "https://www.iotsecurityfoundation.org/router-and-iot-device-vulnerabilities-solutions-to-a-design-flaw/",
+          "publishedOn": "2022-02-21T16:44:09.000Z",
+          "wordCount": 1148,
+          "title": "Router and IoT Device Vulnerabilities: Solutions to a Design Flaw",
+          "imageUrl": null
+        },
         {
           "id": "https://www.iotsecurityfoundation.org/?p=21462",
           "author": "John",
@@ -825,6 +837,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/885220/",
+          "author": "corbet",
+          "description": "The call stack is a favorite target for attackers attempting to compromise\na running process; if an attacker finds a way to overwrite a return address\non the stack, they can redirect control to code of their choosing, leading\nto a situation best described as \"game over\".  As a result, a great deal of\neffort has gone into protecting the stack.  One technique that offers\npromise is a shadow stack; support for shadow stacks is thus duly showing up in\nvarious processors.  Support for protecting user-space applications with\nshadow stacks is taking a bit longer; it is currently under discussion\nwithin the kernel community, but adding this feature is trickier than one\nmight think.  Among other things, these patches have been around for long\nenough that they have developed some backward-compatibility problems of\ntheir own.",
+          "link": "https://lwn.net/Articles/885220/",
+          "publishedOn": "2022-02-21T15:15:48.000Z",
+          "wordCount": null,
+          "title": "[$] Shadow stacks for user space",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/885668/",
+          "author": "jake",
+          "description": "Longtime FOSS contributor and advocate Sven Guckes has died at 55.  A Twitter posting and news article (both in German) describe the Berlin-based Guckes as someone who was always ready to help users get the most out of their systems on Usenet and IRC.  His home page and a Hacker News posting have more information as well.  RIP.\n(Thanks to Martin Michlmayr.)",
+          "link": "https://lwn.net/Articles/885668/",
+          "publishedOn": "2022-02-21T14:34:13.000Z",
+          "wordCount": 126,
+          "title": "Sven Guckes RIP",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/885663/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (php7.4, redis, snapd, twisted, webkit2gtk, and wpewebkit), Fedora (cyrus-imapd, nodejs, phpMyAdmin, polkit, snapd, webkit2gtk3, and xen), Gentoo (chromium), openSUSE (jaw, kubevirt, virt-api-container,, opera, polkit, and sphinx), Red Hat (ruby:2.6), Slackware (expat), and SUSE (kubevirt, virt-api-container, virt-controller-container, virt-handler-container, virt-launcher-container, virt-libguestfs-tools-container, virt-operator-container and polkit).",
+          "link": "https://lwn.net/Articles/885663/",
+          "publishedOn": "2022-02-21T14:03:30.000Z",
+          "wordCount": 216,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/885581/",
+          "author": "corbet",
+          "description": "Google's Project Zero blog looks\nat how quickly the vulnerabilities it has \nreported over the last three years have been fixed.\n\n\n\tFrom this, we can see a few things: first of all, the overall time\n\tto fix has consistently been decreasing, but most significantly\n\tbetween 2019 and 2020. Microsoft, Apple, and Linux overall have\n\treduced their time to fix during the period, whereas Google sped up\n\tin 2020 before slowing down again in 2021. Perhaps most\n\timpressively, the others not represented on the chart have\n\tcollectively cut their time to fix in more than half, though it's\n\tpossible this represents a change in research targets rather than a\n\tchange in practices for any particular vendor.\n\n\nThe report also says that Linux vulnerabilities were fixed more quickly\nthan any other.",
+          "link": "https://lwn.net/Articles/885581/",
+          "publishedOn": "2022-02-20T21:51:33.000Z",
+          "wordCount": 199,
+          "title": "A walk through Project Zero metrics",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/885580/",
+          "author": "corbet",
+          "description": "The 5.17-rc5 kernel prepatch is out for\ntesting.  \"Things continue to look pretty much normal. There are\nfixes all over the place, but no more than usual for this time of the\nrelease\".",
+          "link": "https://lwn.net/Articles/885580/",
+          "publishedOn": "2022-02-20T21:42:42.000Z",
+          "wordCount": 97,
+          "title": "Kernel prepatch 5.17-rc5",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/884876/",
           "author": "corbet",
@@ -1247,6 +1309,16 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=9782",
+          "author": "Stacey Higginbotham",
+          "description": "Lately, it’s hard to go a week without a new satellite announcement aimed at the IoT. There are already plenty of companies using satellite connectivity to connect to LoRaWAN gateways on the ground, or to satellites themselves to send data directly from a device to the web. And with OQ Technology there’s a company trying to use […]\nThe post OQ is trying to combine cellular and satellite for the IoT appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/oq-is-trying-to-combine-cellular-and-satellite-for-the-iot/",
+          "publishedOn": "2022-02-21T14:00:26.000Z",
+          "wordCount": 1076,
+          "title": "OQ is trying to combine cellular and satellite for the IoT",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/02/OQ-Tiger-2-1-1024x768.png"
+        },
+        {
           "id": "https://staceyoniot.com/?p=9734",
           "author": "Kevin C. Tofel",
           "description": "On our most recent IoT podcast, Eddie called in with an industrial IoT, or IIoT, question. He’s wondering if the new Matter protocol that will make many smart homes devices from different ecosystems work together is coming to the IIoT? The short answer is no, or at least not any time soon if ever. The […]\nThe post Is the Matter protocol coming to the IIoT? appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -1459,6 +1531,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=84292",
+          "author": "크레센도",
+          "description": "쐐기문자 기반의 메소포타미아 문명과 상형문자 기반의 이집트 문명 사이에 끼어 있는 지중해 해안 길목은 오랜 세월 서로 다른 두 문명이 교류하는 요충지가 되었다. 서로 다른 두 세계관이 이따금씩 충돌하기도 하고 결합하기도 하는 이곳에서 놀라운 문명, 아니 놀라운 사람들이 탄생한다. 그들은 바로 기원전 1,500년 경 모습을 드러낸 페니키아(Phoenicia)다. ‘페니키아’라는 말은 그리스인들이 붙인 이름이다. 포이노스(phoinós)는 그리스어로 ‘진홍빛’이라는 […]",
+          "link": "https://slownews.kr/84292",
+          "publishedOn": "2022-02-21T11:33:05.000Z",
+          "wordCount": 2248,
+          "title": "페니키아와 알파벳 그리고 카드모스 신화",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/02/display-image-php_79_orig.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=84275",
           "author": "씨앗(CEART)",
@@ -1694,6 +1776,26 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=584691",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/584691/21%eb%85%84-4%eb%b6%84%ea%b8%b0-%eb%8f%84%ec%96%b4%eb%8c%80%ec%8b%9c-%ec%8b%a4%ec%a0%81",
+          "publishedOn": "2022-02-21T01:34:06.000Z",
+          "wordCount": 803,
+          "title": "4분기 도어대시 실적, 사용자 증가로 주가가 폭등하다",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/11/오토바이를-타고-음식-배달-중인-도어대시-배달원Dashier-Bokeh-DoorDash.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=584688",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/584688/%eb%87%8c%ec%a1%b8%ec%a6%9d-%ed%9b%84-%ec%88%98%eb%a9%b4%ec%9e%a5%ec%95%a0",
+          "publishedOn": "2022-02-20T12:17:43.000Z",
+          "wordCount": 1044,
+          "title": "뇌졸증 後 수면장애에 대해서",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/06/하늘의-별을-보면-이-우주에서-우리가-얼마나-작은지를-생각할-수-있다-Featured-Photo-by-Yukai-Du.jpg"
+        },
+        {
           "id": "https://happist.com/?p=584679",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -1810,6 +1912,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=73326",
+          "author": "ingppoo",
+          "description": "트럼프 대통령이 2020년 에이미 코니 배럿 대법관을 임명하면서 미국 대법원은 보수 6 대 진보 3의 구도로 재편됐습니다. 보수가 절대 다수를 차지하는 대법원이 올해 뒤집을 것으로 예상되는 판결 중 하나가 여성이 임신을 중절할 권리를 인정한 로 대 웨이드 판결입니다. 그에 관해서 프리미엄 콘텐츠에도 글을 여러 편 썼는데, 가장 먼저 쓴 글은 지난해 9월 6일에 쓴 텍사스주가 제정한 낙태금지법 이야기입니다.   태아의 심장 박동이 감지되기 시작하는 임신 6주 이후의 낙태를 사실상 전면 → 더 보기",
+          "link": "https://newspeppermint.com/2022/02/20/npc_texasabortion/?utm_source=rss&utm_medium=rss&utm_campaign=npc_texasabortion",
+          "publishedOn": "2022-02-20T22:59:00.000Z",
+          "wordCount": 1381,
+          "title": "[필진 칼럼] 텍사스 낙태금지법, 악마는 디테일에 숨어있다",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=73315",
           "author": "veritaholic",
@@ -2119,15 +2231,6 @@
           "publishedOn": "2022-01-24T03:28:54.000Z",
           "wordCount": 8,
           "title": "지향적 대상"
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222628904819",
-          "author": "sellars",
-          "description": "* (가)를 통해 (나)를 평가해 보라. (가) 에피큐로스는 다음처럼 말한다. “내가 존재하는 한, 죽음은 나에게 올 수 없고, 죽음이 나에게 왔을 때는 이미 내가 존재하지 않는 때이다. 따라서 나에게는 죽음의 공포가 문제시 될 수 없다.” 호랑이를 무서워하는 사람이 깊은 산길을 갈 때는 호랑이를 만나게 될까봐 공포에 떨게 된다. 만일 호랑이와 자기가 대면할 가능성이 전혀 없다고 한다면, 호랑이를 무서워할 리가 없다. 마찬가지로 나의 죽음과 내 자신이 동일한 시점에서 서로 대면할 가능성이 없다는 것이 분명하다면, 내가 내 죽음을 무서워해야 할 이유가 어디 있는가. 그러나 에피큐로스의 설득에도 불구하고 여전히 죽음에 대한 공포.......",
-          "link": "https://blog.naver.com/sellars/222628904819",
-          "publishedOn": "2022-01-22T18:44:10.000Z",
-          "wordCount": 8,
-          "title": "8 논증적으로 생각하기"
         }
       ]
     }
