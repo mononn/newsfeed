@@ -2,10 +2,245 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-03-06T20:16:02.496Z</updated>
+    <updated>2022-03-07T20:16:04.696Z</updated>
     <generator>osmosfeed 1.14.4</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Python 3.11.0a6 is available]]></title>
+        <id>https://pythoninsider.blogspot.com/2022/03/python-3110a6-is-available.html</id>
+        <link href="https://pythoninsider.blogspot.com/2022/03/python-3110a6-is-available.html"/>
+        <updated>2022-03-07T18:33:00.004Z</updated>
+        <summary type="html"><![CDATA[There are no easy releases these days! :sweat: After a week of delay due to several release blockers, buildbot problems and pandemic-related difficulties here is 3.11.0a6 for you to test.
+https://www.python.org/downloads/release/python-3110a6/
+
+Major new features of the 3.11 series, compared to 3.10
+Among the new major new features and changes so far:
+
+
+PEP 657 – Include Fine-Grained Error Locations in Tracebacks
+PEP 654 –  Exception Groups and except*
+PEP 673 –   Self Type
+PEP 646 –  Variadic Generics
+The Faster Cpython Project is already yielding some exciting results: this version of CPython 3.11 is ~19% faster on the geometric mean of the performance benchmarks, compared to 3.10.0.
+(Hey, fellow core developer, if a feature you find important is missing from this list, let Pablo know.)
+…]]></summary>
+        <author>
+            <name>Python Insider</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AlphaFold, GPT-3 and How to Augment Intelligence with AI]]></title>
+        <id>https://future.a16z.com/?p=4641</id>
+        <link href="https://future.a16z.com/alphafold-gpt-3-and-how-to-augment-intelligence-with-ai/"/>
+        <updated>2022-03-07T16:45:42.000Z</updated>
+        <summary type="html"><![CDATA[Around the same time that Alan Turing was shaping his theories of machine intelligence in Manchester, another future giant of the computing world, Douglas Engelbart, was developing an alternative computing paradigm over 5,000 miles away in the Bay Area.  Engelbart believed that computers, with their ability to synthesize and manipulate vast quantities of information, should... Read More
+The post AlphaFold, GPT-3 and How to Augment Intelligence with AI appeared first on Future.]]></summary>
+        <author>
+            <name>Niko Grupen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] When and why to deprecate filesystems]]></title>
+        <id>https://lwn.net/Articles/886708/</id>
+        <link href="https://lwn.net/Articles/886708/"/>
+        <updated>2022-03-07T15:48:36.000Z</updated>
+        <summary type="html"><![CDATA[It is a good bet that a significant amount of code in the kernel is
+entirely unused.  Even so, that code must still be maintained and shipped,
+posing an ongoing cost to the development community.  What should be done
+with code that is unmaintained and, possibly, unused?  Answering that
+question requires understanding which users still exist, if any, and taking
+a hard look at what the future support requirements for that code will be.
+The kernel community has recently discussed this problem in the context of
+filesystems, and the Reiserfs filesystem in particular, with a focus on the approaching 2038 deadline.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel prepatch 5.17-rc7]]></title>
+        <id>https://lwn.net/Articles/887061/</id>
+        <link href="https://lwn.net/Articles/887061/"/>
+        <updated>2022-03-07T15:24:53.000Z</updated>
+        <summary type="html"><![CDATA[Linus has released 5.17-rc7, which is
+hopefully the final prepatch in this development series: "as things
+stand, I expect that final 5.17 will be next weekend unless something
+surprising comes up".]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The "dirty pipe" vulnerability]]></title>
+        <id>https://lwn.net/Articles/887056/</id>
+        <link href="https://lwn.net/Articles/887056/"/>
+        <updated>2022-03-07T14:41:16.000Z</updated>
+        <summary type="html"><![CDATA[Max Kellermann has disclosed a disconcerting kernel vulnerability:
+
+
+Two weeks ago, I found a vulnerability in the Linux kernel since
+version 5.8 commit f6dd975583bd ("pipe: merge anon_pipe_buf*_ops") due
+to uninitialized variables.  It enables anybody to write arbitrary
+data to arbitrary files, even if the file is O_RDONLY, immutable or on
+a MS_RDONLY filesystem.  It can be used to inject code into arbitrary
+processes.
+
+
+This vulnerability has been named "dirty pipe"; Kellermann has put up a web page describing it in
+detail.  Updates from distributors are already being released.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/887055/</id>
+        <link href="https://lwn.net/Articles/887055/"/>
+        <updated>2022-03-07T14:08:19.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium, containerd, cyrus-sasl2, expat, firefox-esr, freecad, kernel, and tiff), Fedora (seamonkey, swtpm, and webkit2gtk3), Mageia (docker-containerd, firefox, flac, libtiff, libxml2, and mc), openSUSE (containerd, expat, flatpak, gnutls, go1.16, go1.17, libeconf, shadow and util-linux, mariadb, nodejs14, perl-App-cpanminus, vim, wireshark, wpa_supplicant, and zsh), SUSE (containerd, expat, flatpak, gnutls, go1.16, go1.17, java-11-openjdk, kernel-firmware, libeconf, shadow and util-linux, libxml2, mariadb, nodejs14, python-Twisted, vim, wireshark, wpa_supplicant, and zsh), and Ubuntu (firefox, openjdk-lts, openjdk-17, and php8.0).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Living with a smart oven and smarter pans]]></title>
+        <id>https://staceyoniot.com/?p=9859</id>
+        <link href="https://staceyoniot.com/living-with-a-smart-oven-and-smarter-pans/"/>
+        <updated>2022-03-07T14:00:13.000Z</updated>
+        <summary type="html"><![CDATA[For the last six weeks, my family has cooked with a connected GE induction oven and a set of connected pans from Hestan Cue. So far I haven’t regretted my purchase of the smart oven (or connecting it to my Wi-Fi network), although I think I could do without the smart pans. Back in January, […]
+The post Living with a smart oven and smarter pans appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[촛불의 자리를 차지한 ‘비토크라시’]]></title>
+        <id>https://slownews.kr/?p=84617</id>
+        <link href="https://slownews.kr/84617"/>
+        <updated>2022-03-07T13:17:04.000Z</updated>
+        <summary type="html"><![CDATA[제20대 대선이 코앞으로 다가왔다. 이번 대선은 우리나라가 1987년 6월 항쟁으로 민주화를 시작한 후 여덟 번째 치러지는 대선이다. 민주화 이후 우리나라는 1997년 제15대 대선, 2007년 제17대 대선, 2017년 제19대 대선을 통해서 세 번의 정권교체를 큰 탈 없이 평화적으로 이루어냈다. 또한, 1997년 외환위기로 대표되는 외부로부터의 경제위기와 노무현 대통령 탄핵 시도와 박근혜 대통령 탄핵으로 대표되는 내부의 정치적 위기를 […]
+The post 촛불의 자리를 차지한 ‘비토크라시’ first appeared on 슬로우뉴스.]]></summary>
+        <author>
+            <name>참여연대 의정감시센터</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Software-defined processors for edge AI get two new compilers]]></title>
+        <id>https://www.embedded.com/?p=4473792</id>
+        <link href="https://www.embedded.com/software-defined-processors-for-edge-ai-get-two-new-compilers/"/>
+        <updated>2022-03-07T10:44:05.000Z</updated>
+        <summary type="html"><![CDATA[For its software-defined AI processors, Ambient Scientific releases vertical compilers for fast development of AI applications, and a generic compiler to enable more programming flexibility.
+The post Software-defined processors for edge AI get two new compilers appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[그리스 문명의 이면: 여성혐오, 강간, 동성애]]></title>
+        <id>https://slownews.kr/?p=84583</id>
+        <link href="https://slownews.kr/84583"/>
+        <updated>2022-03-07T09:54:59.000Z</updated>
+        <summary type="html"><![CDATA[농경이 도래한 뒤 5,000년 동안 우리 인류는 봄마다 대지에 새로운 생명이 솟아나는 것을 위대한 어머니 여신이 사랑하는 아들·연인·남매를 부활시키는 것에 비유해 왔다. 이난나와 두무지, 이시스와 오시리스, 이슈타르와 탐무즈, 아프로디테와 아도니스 이야기가 모두 이와 연관된 신화들이다. 히에로스 가모스(ἱερὸς γάμος; 신성결혼)라는 고대의 가장 성스러운 의식에서도 남자는 인간인 반면, 여자는 여신이었다. 하지만 그리스인들은 부활의 힘을 모두 남신에게 부여한다. […]
+The post 그리스 문명의 이면: 여성혐오, 강간, 동성애 first appeared on 슬로우뉴스.]]></summary>
+        <author>
+            <name>크레센도</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[로티의 반표상주의]]></title>
+        <id>https://blog.naver.com/sellars/222666349981</id>
+        <link href="https://blog.naver.com/sellars/222666349981"/>
+        <updated>2022-03-07T09:42:05.000Z</updated>
+        <summary type="html"><![CDATA[로티는 표상주의를 비판하면서 반표상주의를 주장한다. 반표상주의의 주장이 무엇인가? 표상주의처럼 지식을 실재에 대한 올바른 표상으로 보지 않는다. 실재에 대한 지식과 실재에 대한 표상에 대한 거부는 바로 로티의 <철학과 자연의 거울>(1979)이 주장하는 핵심 주장 중의 하나이다. 지식은 실재에 대한 올바른 표상, 정확한 표상이 아니다. 오히려 지식은 실재에 대처하기 위해 우리가 습득해야 하는 행동의 습관의 문제이다. 그런데 로티가 표상주의를 비판하면서 반표상주의를 주장하는 논거가 무엇인가? 왜 지식이 실재에 대한 올바른 표상이라고 주장할 수 없는가? 그것은 우리 마음이나 언어가 자연에 대한 거울이 아니기 때문.......]]></summary>
+        <author>
+            <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Renesas expands options with Andes-based RISC-V MPU]]></title>
+        <id>https://www.embedded.com/?p=4473785</id>
+        <link href="https://www.embedded.com/renesas-expands-options-with-andes-based-risc-v-mpu/"/>
+        <updated>2022-03-07T09:36:20.000Z</updated>
+        <summary type="html"><![CDATA[RZ/Five general-purpose MPUs allow developers to choose from RISC-V and Arm based core options.
+The post Renesas expands options with Andes-based RISC-V MPU appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Manage Python security with Thoth's cloud-based dependency resolver]]></title>
+        <id>ebf965f8-c22d-4a15-81db-4afda04fd40b</id>
+        <link href="https://developers.redhat.com/articles/2022/03/07/manage-python-security-thoths-cloud-based-dependency-resolver"/>
+        <updated>2022-03-07T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Developers and data scientists who want to build healthy and high-performance Python applications often face challenges related to dependency management, including security risks introduced by the installation of dependencies. This article presents a quick introduction to managing Python dependencies with Project Thoth. The included video tutorial shows you how Thoth's cloud-based resolver finds problems in your Python dependencies and execution environment. Thoth's resolver is a drop-in replacement for other Python resolvers such as pip, Pipenv, or Poetry. Thoth's resolution process can also be used in containerized environments.
+Thoth security for Python applications
+Containerized environments offer a way to deploy applications to cluster orchestrators such as Kubernetes and Red Hat Open…]]></summary>
+        <author>
+            <name>Fridolin Pokorny, Maya Costantini</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[말이 되는 왓챠 2.0, 하지만 그것만으로 될까]]></title>
+        <id>http://ebadak.news/?p=3363</id>
+        <link href="https://ebadak.news/2022/03/07/why-watcha2_0-why/"/>
+        <updated>2022-03-07T03:26:04.000Z</updated>
+        <summary type="html"><![CDATA[진짠가봅니다. 왓챠가 지난 2월 24일, 여의도 콘래드호텔에 미디어를 모아두고 대대적인 선언을 했어요. 종합 엔터테인먼트 서비스, 글로벌, 모든 콘텐츠의 개인화. '왓챠 2.0'이라는 개념어를 대대적으로 쓰면서 말이죠.]]></summary>
+        <author>
+            <name>Rick Kim</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Compressing and embedding a Wordle word list]]></title>
+        <id>https://nullprogram.com/blog/2022/03/07/</id>
+        <link href="https://nullprogram.com/blog/2022/03/07/"/>
+        <updated>2022-03-07T03:22:41.000Z</updated>
+        <summary type="html"><![CDATA[Wordle is all the rage, resulting in an explosion of hobbyist clones,
+with new ones appearing every day. At the current rate I estimate by the
+end of 2022 that 99% of all new software releases will be Wordle clones.
+That’s no surprise since the rules are simple, it’s more fun to implement
+and study than to actually play, and the hard part is building a decent
+user interface. Such implementations go back at least 30 years.
+Implementers get to decide on a platform, language, and the particular
+subject of this article: how to handle the word list. Is it a separate
+file/database or embedded in the program? If embedded, is it
+worth compressing? In this article I’ll present a simple, tailored Wordle
+list compression strategy that beats general purpose compressors.
+Last week one particular QuickB…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[필진 칼럼] 뉴욕시 배달 노동자 보호법안 통과]]></title>
+        <id>https://newspeppermint.com/?p=73440</id>
+        <link href="https://newspeppermint.com/2022/03/06/npc_nycdeliveryworkers/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_nycdeliveryworkers"/>
+        <updated>2022-03-06T22:59:12.000Z</updated>
+        <summary type="html"><![CDATA[코로나19 팬데믹으로 가장 큰 타격을 입은 건 원래 사회적 안전망의 보호를 받지 못하던 취약 계층 노동자들이었습니다. 그 가운데서도 미국에선 플랫폼 노동으로 생계를 이어가는 배달 노동자들은 기존의 저임금, 열악한 노동 조건에 바이러스에 감염될 위험까지 떠안은 채 밀려드는 주문을 처리해야 했죠. 지난해 뉴욕시 의회는 미국에서 처음으로 배달 노동자 보호법안을 통과시켰습니다. 9월 29일에 네이버 프리미엄 콘텐츠에 쓴 글입니다.   지난해 4월 뉴욕시는 미국 내에서 코로나19 바이러스의 타격을 가장 크게 입은 도시였습니다. 전 세계로 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ST adds automotive door-zone system chip]]></title>
+        <id>https://www.embedded.com/?p=4473780</id>
+        <link href="https://www.embedded.com/st-adds-automotive-door-zone-system-chip/"/>
+        <updated>2022-03-06T21:03:55.000Z</updated>
+        <summary type="html"><![CDATA[Automotive door-zone and rear-window controller adds power-trunk/tailgate capability.
+The post ST adds automotive door-zone system chip appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>From the News Wires</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[우크라이나 젤렌스키대통령에게서 배우는 최고의 리더쉽 교훈]]></title>
+        <id>https://happist.com/?p=584942</id>
+        <link href="https://happist.com/584942/%ec%9a%b0%ed%81%ac%eb%9d%bc%ec%9d%b4%eb%82%98-%ec%a0%a4%eb%a0%8c%ec%8a%a4%ed%82%a4-%eb%a6%ac%eb%8d%94%ec%89%bd"/>
+        <updated>2022-03-06T15:42:13.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[넷플릭스 성공을 이끄는 7가지 태도, 매일 당신의 기술을 날카롭게 벼려라.]]></title>
         <id>https://happist.com/?p=584938</id>
@@ -1029,6 +1264,17 @@ is also disabled by default in this release to work around a known bug.]]></summ
         <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
         <author>
             <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[5 Tips for Selecting the Right Embedded Programming Language]]></title>
+        <id>https://www.beningo.com/?p=13975</id>
+        <link href="https://www.beningo.com/5-tips-for-selecting-the-right-embedded-programming-language/"/>
+        <updated>2022-02-24T16:26:09.000Z</updated>
+        <summary type="html"><![CDATA[Over the past few years, the number of programming languages used for embedded development has started to balloon. Developers have available to them languages such as Assembly, C, C++, Python, MicroPython, Java, and Rust. (There are even tools available that can be used to model applications and generate the code for developers). For new projects, … Continue reading 5 Tips for Selecting the Right Embedded Programming Language
+5 Tips for Selecting the Right Embedded Programming Language first appeared on Beningo Embedded Group.]]></summary>
+        <author>
+            <name>Jacob Beningo</name>
         </author>
     </entry>
     <entry>
@@ -3130,29 +3376,6 @@ more…]]></summary>
         <summary type="html"><![CDATA[In various discussions, we have already commented on how the PVS-Studio C and C++ module works with memory. Now it's time to make a small article from this comment.]]></summary>
         <author>
             <name>from www.viva64.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Embedded.fm Podcast “Oil and Water” with Miro Samek]]></title>
-        <id>https://www.state-machine.com/?p=13805</id>
-        <link href="https://www.state-machine.com/embedded-fm-podcast-oil-and-water-with-miro-samek"/>
-        <updated>2022-02-05T23:41:57.000Z</updated>
-        <summary type="html"><![CDATA[What are the main programming paradigms in embedded software? Which of them can be mixed together and which are like “oil and water”? NOTE: Embedded.fm is a weekly audio show created and hosted by Elecia White and Christopher White. The guests include makers, entrepreneurs, educators, and normal, traditional engineers. The show is a product of […]]]></summary>
-        <author>
-            <name>Quantum Leaps</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Building binary trees from inorder-depth lists]]></title>
-        <id>https://eli.thegreenplace.net/2022/building-binary-trees-from-inorder-depth-lists/</id>
-        <link href="https://eli.thegreenplace.net/2022/building-binary-trees-from-inorder-depth-lists/"/>
-        <updated>2022-02-05T14:33:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>I ran into an interesting algorithm while hacking on <a class="reference external" href="https://adventofcode.com/">Advent of Code</a> a while ago. This post is a summary of what I've
-learned.</p>
-<p>Consider a binary tree that represents nested pairs, where each pair consists
-of two kinds of elements: a number, or another pair. For example, the nested …</p>]]></summary>
-        <author>
-            <name>Eli Bendersky's website</name>
         </author>
     </entry>
 </feed>
