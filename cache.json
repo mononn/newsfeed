@@ -64,6 +64,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2022/ranges-composition/",
+          "author": null,
+          "description": "Conceptually a Range is a simple concept: it’s just a pair of two iterators - to the beginning and to the end of a sequence (or a sentinel in some cases). Yet, such an abstraction can radically change the way you write algorithms. In this blog post, I’ll show you a key change that you get with C++20 Ranges.\nBy having this one layer of abstraction on iterators, we can express more ideas and have different computation models.\n\n\n\n     \n    \n\n\nLet’s look at a simple example in “regular” STL C++.\nIt starts from a list of numbers, selects even numbers, skips the first one and then prints them in the reverse order:\n#include <algorithm>\n#include <vector>\n#include <iostream>\n\nint main() {\n    const std::vector numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n\n    auto even = [](int i) { return 0 == i % 2…",
+          "link": "https://www.cppstories.com/2022/ranges-composition/",
+          "publishedOn": "2022-03-28T00:00:00.000Z",
+          "wordCount": 1794,
+          "title": "C++20 Ranges The Key Advantage - Algorithm Composition",
+          "imageUrl": "https://www.cppstories.com/2022/images/ranges_composition.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/sfinea-immediate-context/",
           "author": null,
           "description": "In this blog post, I’ll show and explain a strange-looking error about tuple_size_v and instantiation for \\n character. You’ll see some tricky parts of SFINAE and how the compiler builds the overload resolution set.\nLet’s go.\n\n\n\n     \n    \n\n\nWhen doing experiments with tuple iteration (see part one and part two) I got this strange-looking compiler error:\nerror: incomplete type 'std::tuple_size<char>' used in nested name specifier\n\n\nSomething for a char??\nThis comes from the second line of the following snippet:\nstd::tuple tp { 10, 20, \"hello\"};\nstd::cout << tp << '\\n';\t\t  // << err ??\n\n\nAnd it points to the custom operator<< for tuples:\ntemplate <typename TupleT, std::size_t TupSize = std::tuple_size_v<TupleT>>\nstd::ostream& operator <<(std::ostream& os, const TupleT& tp) {\n    return prin…",
@@ -130,7 +140,18 @@
       "title": "Architectures and Processors blog",
       "feedUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/rss",
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
-      "articles": []
+      "articles": [
+        {
+          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:7c86a3c0-fb82-479c-a024-fda795d1fd9c",
+          "author": "Philippe Bressy",
+          "description": "This blog introduces the different Arm Total Compute solutions for wearable devices in the XR market, like VR headsets and AR smartglasses.(read more)",
+          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/total-compute-solutions-for-xr-wearable-devices",
+          "publishedOn": "2022-03-28T09:00:00.000Z",
+          "wordCount": 1866,
+          "title": "Total Compute solutions for the XR market",
+          "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-42/Total-Compute-_2D00_-VR-post-image_2800_1_2900_.jpg"
+        }
+      ]
     },
     {
       "title": "CPUU의 Daydreamin&#039;",
@@ -183,6 +204,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "a19dbd9f-c966-494c-ac11-fea08cfb8087",
+          "author": "Daniel Oh",
+          "description": "Are you looking for the shortest path or cheatsheet to bring your Java application into a serverless platform based on Kubernetes? Perhaps you don't have enough time to stand up relevant infrastructure and configure settings for both the application and the platform. This article is a guide to developing Java serverless functions using a Quarkus quick start in the Developer Sandbox for Red Hat OpenShift. As you'll see, using quick starts in the Developer Sandbox lets you focus on the application development without needing to configure Knative.\nThe Developer Sandbox provides a shared, multi-tenant Red Hat OpenShift 4 cluster with a cloud IDE tool called Red Hat CodeReady Workspaces. All you need is a free account on Red Hat to get access for a limited time to a sandbox. Following the four …",
+          "link": "https://developers.redhat.com/articles/2022/03/28/build-your-first-java-serverless-function-using-quarkus-quick-start",
+          "publishedOn": "2022-03-28T07:00:00.000Z",
+          "wordCount": 1313,
+          "title": "Build your first Java serverless function using a Quarkus quick start",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/java%2Bquarkus_2x_0.png?itok=B3UUE_SF"
+        },
+        {
+          "id": "f045aeec-19ed-4a10-a365-a0fcbfed01d6",
+          "author": "Michael Dawson",
+          "description": "PostgreSQL is an advanced open source relational database that is commonly used by applications to store structured data. Before accessing a database, the application must connect and provide security credentials. As a Node.js developer, how can you safely share and provide those credentials in JavaScript code without a lot of work? This article introduces service bindings and the kube-service-bindings package, along with a convenient graphical interface in Red Hat OpenShift.\nWhen using a database, the four basic operations are create, read, update, and delete (CRUD, for short). Our team maintains an example CRUD application on GitHub that shows how to connect to a PostgreSQL database and execute the four basic operations. We use that example to illustrate the security model in this articl…",
+          "link": "https://developers.redhat.com/articles/2022/03/28/simplify-secure-connections-postgresql-databases-nodejs",
+          "publishedOn": "2022-03-28T07:00:00.000Z",
+          "wordCount": 1970,
+          "title": "Simplify secure connections to PostgreSQL databases with Node.js",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/03/CP-nodejskubernetes_2x-e1615240548598.png?itok=gL94SY3d"
+        },
         {
           "id": "6a2bad30-cb7f-432d-9c3a-88c8e666c6b7",
           "author": "Red Hat Developer Editorial Team",
@@ -501,6 +542,16 @@
       "siteUrl": "https://www.embedded.com",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4474123",
+          "author": "Anas Ajaj",
+          "description": "The circuit is designed without an MCU, using instead the GreenPAK SLG46620 chip, two Tower Pro SG90 servo motors, and an analog joystick. Robot arms...\nThe post Implementing a two-axis robot arm controller without an MCU appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/implementing-a-two-axis-robot-arm-controller-without-an-mcu/",
+          "publishedOn": "2022-03-27T22:00:31.000Z",
+          "wordCount": 2997,
+          "title": "Implementing a two-axis robot arm controller without an MCU",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/03/03renesas_f5-5.png"
+        },
+        {
           "id": "https://www.embedded.com/?p=4474105",
           "author": "Kaue Morcelles and Brendon McHugh",
           "description": "SDRs and SDNs provide fundamental tools to enable unique 5G features, such as network slicing and DSS. The world of wireless communication is about to...\nThe post Understanding software-defined-radios and -networks in 5G architectures appeared first on Embedded.com.",
@@ -759,6 +810,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2022/03/how-android-developer-in-guatemala.html",
+          "author": null,
+          "description": "Posted by Rodrigo Akira Hirooka, Regional Lead, Latin America\n \n  \nGetting acquainted with Android career options \n  \nCecilia Castillo loves mobile development. She’s confident that she’d be happy focusing on it for the rest of her career. Cecilia’s career in mobile development began when her friend Adrian Catalan (Director of the Innovation Lab at Galileo University), launched a Google Developer Groups (GDG) chapter in Guatemala and began to teach Android courses.  \nUp until that point, Cecilia had used technologies like ASPX and Ruby on Rails – and was no stranger to technical concepts, having studied computer science at Galileo University in Guatemala and earned a Master’s degree in information technology, but she was also itching to learn something new in a supportive environment. That…",
+          "link": "http://developers.googleblog.com/2022/03/how-android-developer-in-guatemala.html",
+          "publishedOn": "2022-03-28T17:03:00.001Z",
+          "wordCount": 816,
+          "title": "How an Android developer in Guatemala advocates for women through the Google Developer Groups community",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXfCXn9TYrhdL4NqnpRDHmIL9pfNnrc1CRAst9dWoy71QMg1FW6jF7ATtfUUijFImgn1mHyNxrySRoE25-IgOtJDym6d1biboJfM1eKmW5BzIPEy_-EBnfzHlcak5D5hlh4hCIIQbe-jVsK3S3E9xLPEKSgMHGmKWroM_88avYRxC0-wKhsF9NY8Jr/w1200-h630-p-k-no-nu/image2.jpg"
+        },
         {
           "id": "http://developers.googleblog.com/2022/03/android-gde-zarah-dominguez-believes-in.html",
           "author": null,
@@ -1142,6 +1203,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/888914/",
+          "author": "corbet",
+          "description": "Pointers are a fact of life for developers working in numerous languages.\nIt is often convenient to be able to associate a small \namount — a few bits at most — of ancillary information with a pointer.\nThis can often be done within the pointer value itself with some careful\nmasking and shifting.  CPU manufacturers have been adding ways to support\nthe addition of this sort of \"tag\" to pointers; the most recent may be\nAMD's \"upper address ignore\" (UAI) feature, support for which was\nrecently posted\nby Bharata B Rao.  This feature has an uncertain future in Linux, though,\nas the result of a fundamental design decision.",
+          "link": "https://lwn.net/Articles/888914/",
+          "publishedOn": "2022-03-28T16:06:06.000Z",
+          "wordCount": null,
+          "title": "[$] Pointer tagging for x86 systems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/889444/",
+          "author": "corbet",
+          "description": "The Debian project has been voting on a general\nresolution that would allow secret voting on future issues.  The results have\nbeen posted in unofficial form, and the winner was \"proposal B\": \"Hide identities of\nDevelopers casting a particular vote and allow verification\".  One might\nthink that closes the discussion, but Debian project leader candidate Felix\nLechner is questioning\nthe election and calling for it to be redone — something that the\nDebian constitution lacks provisions for.",
+          "link": "https://lwn.net/Articles/889444/",
+          "publishedOn": "2022-03-28T15:02:12.000Z",
+          "wordCount": 441,
+          "title": "Debian decides to allow secret votes",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/889435/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of new stable kernels: 5.17.1, 5.16.18, 5.15.32, 5.10.109, 5.4.188, 4.19.237, 4.14.274, and 4.9.309.  They contain a relatively small set\nof important fixes throughout the three; users of those series should upgrade.",
+          "link": "https://lwn.net/Articles/889435/",
+          "publishedOn": "2022-03-28T14:52:45.000Z",
+          "wordCount": 103,
+          "title": "Eight new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/889423/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium and faad2), Fedora (dotnet3.1, libass, linux-firmware, python-paramiko, seamonkey, and xen), openSUSE (perl-DBD-SQLite and wavpack), Slackware (seamonkey), SUSE (perl-DBD-SQLite and wavpack), and Ubuntu (binutils, python2.7, python3.4, python3.5, python3.6, python3.8, and smarty3).",
+          "link": "https://lwn.net/Articles/889423/",
+          "publishedOn": "2022-03-28T14:22:55.000Z",
+          "wordCount": 166,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/888736/",
           "author": "corbet",
@@ -1716,6 +1817,16 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/articles/patterns-legacy-displacement/transitional-architecture.html",
+          "author": null,
+          "description": "The core to a successful legacy displacement is the gradual\n        replacement of legacy with new software, as this allows benefits to\n        delivered early and circumvents the risks of a Big Bang. During\n        displacement the legacy and new system will have to operate\n        simultaneously allowing behavior to be split between old and new.\n        \nIan Cartwright, Rob Horn, and James Lewis explain\n        how to build and\n        evolve a Transitional Architecture that supports this collaboration as it\n        changes over time. For this to work, intermediate configurations may require integrations\n        that have no place in the target architecture of the new system.\nOr to put this more directly - you will have to invest in work that\n        will be thrown away. \nmore…",
+          "link": "https://martinfowler.com/articles/patterns-legacy-displacement/transitional-architecture.html",
+          "publishedOn": "2022-03-28T18:49:00.000Z",
+          "wordCount": 2092,
+          "title": "Transitional Architecture",
+          "imageUrl": "https://martinfowler.com/articles/patterns-legacy-displacement/card.png"
+        },
+        {
           "id": "https://martinfowler.com/articles/bottlenecks-of-scaleups/02-talent.html#InvestInTheHiringProcess",
           "author": null,
           "description": "Tim Cochran and\n      Roni Smith complete their article by looking at how\n      scaleups need to invest in the hiring process to overcome the talent\n      bottleneck. They add a case study from our experiences with talent\n      acquisition at Thoughtworks.\nmore…",
@@ -1942,6 +2053,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=9983",
+          "author": "Stacey Higginbotham",
+          "description": "Fans of this newsletter know I’m a major chip nerd. I started my tech career as a semiconductor reporter, and for the last seven or eight years I’ve been closely watching RISC-V, an open source chip architecture. The RISC-V architecture, which was developed a decade ago at UC Berkeley, competes with both that of Arm […]\nThe post RISC-V is coming to the internet of things appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/risc-v-is-coming-to-the-internet-of-things/",
+          "publishedOn": "2022-03-28T15:31:26.000Z",
+          "wordCount": 1117,
+          "title": "RISC-V is coming to the internet of things",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2020/07/bigstock-Macro-Detail-Of-Wireless-Wifi-368155438.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=9969",
           "author": "Kevin C. Tofel",
@@ -2260,6 +2381,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=84929",
+          "author": "크레센도",
+          "description": "BC 1,000년 예루살렘, 솔로몬왕은 야훼에게 제사를 지내는 ‘솔로몬의 성전’을 건설한다. (지난 글 참조) 솔로몬 성전의 파괴  그런데 BC 597년 바빌로니아의 네부카드네자르 2세(나부쿠두리우추르; 느브갓네살)가 메소포타미아를 통일한 뒤 레반트 지역까지 밀고 들어와 유대 왕국도 멸망시킨다. 그 당시 이집트 제국의 영향력 아래 명맥을 유지하고 있던 유대 왕국은 바빌로니아에 맞서 끝까지 항전하다가 패배하고 만다. 그들이 소중히 여기던 솔로몬의 […]\nThe post 솔로몬 성전의 파괴와 복구와 파괴: 메시아 사상의 탄생 과정 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/84929",
+          "publishedOn": "2022-03-28T09:29:43.000Z",
+          "wordCount": 2398,
+          "title": "솔로몬 성전의 파괴와 복구와 파괴: 메시아 사상의 탄생 과정",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/03/pjimage-5-1.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=84916",
           "author": "민주언론시민연합",
@@ -2676,16 +2807,6 @@
           "wordCount": 3326,
           "title": "팬데믹 시대 투자란? 버핏 주주서한 2022를 번역 소개하다",
           "imageUrl": "https://happist.com/wp-content/uploads/2019/03/웨렌-버핏-warren-buffett-Image-Source-Wallstreetplaybook.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=584805",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/584805/21%eb%85%84-4%eb%b6%84%ea%b8%b0-asml-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2022-02-26T09:00:49.000Z",
-          "wordCount": 1402,
-          "title": "기대에 못미친 전망으로 실망스러운 4분기 ASML 실적과 향후 ASML전망",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/ASML에서-제작한-EUV-장비를-대한항공-항공기에-싣고-있는-모습-Image-from-ASML.jpg"
         }
       ]
     },
@@ -2694,6 +2815,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=73668",
+          "author": "veritaholic",
+          "description": "할로윈 데이가 지난 뒤 11월 초에 네이버 프리미엄 콘텐츠에 썼던 글입니다.   세상의 많은 일은 여러가지 요인이 복합적으로 작용한 결과이며, 따라서 어떤 현상의 원인을 딱 하나만 꼽기는 쉽지 않습니다. 우리 마음과 관련된 현상이라면 더 그럴 것입니다. 그리고 그 마음이 조금 이상한 상태라면 더욱더 그렇겠지요. 사람들은 귀신을 봅니다. 아마 인류의 조상이 언어를 사용하고 자연 현상의 이유를 생각하기 시작한 이래 사람들은 우리가 알 수 없는 현상을 설명할 수 있는 좋은 해답으로 귀신을 → 더 보기",
+          "link": "https://newspeppermint.com/2022/03/27/npc_ghosts/?utm_source=rss&utm_medium=rss&utm_campaign=npc_ghosts",
+          "publishedOn": "2022-03-27T22:59:21.000Z",
+          "wordCount": 708,
+          "title": "[필진 칼럼] 귀신을 보게 되는 이유",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=73662",
           "author": "eyesopen1",
@@ -2907,6 +3038,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222684755974",
+          "author": "sellars",
+          "description": "<그것이 말한다>에 대한 라캉의 주장은 불교에서 말하는 업감연기설의 주장과 유사하다. 즉 인간이란 존재는 이기적 존재이며, 소유적 욕망의 존재라는 것이다. 이 엄연한 사실을 무시하는 것이 바로 당위의 철학, 즉 마르크스주의, 주자학, 토미즘과 같은 철학적 경향이다. 이런 철학은 겉보기에는 이기적 철학이 아닌 것처럼 보여도 사실은 다 이기심과 소유심에 뿌리박고 있는 철학이다. 우리가 이기적 존재이며 소유적 존재라는 엄연한 사실을 무시하기 때문에, 이러한 철학은 모두 낭만적이며 헛된 철학에 지나지 않는다. 오히려 진정한 철학은 우리의 자연적 본능이 아니라 자연적 본성에 주목해야만 한다. 이런 김형효의 주장에 대.......",
+          "link": "https://blog.naver.com/sellars/222684755974",
+          "publishedOn": "2022-03-27T23:01:56.000Z",
+          "wordCount": 8,
+          "title": "이기심과 업감연기설(業感緣起說)",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222683995627",
           "author": "sellars",
