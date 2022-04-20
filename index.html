@@ -22,11 +22,462 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-04-19 datetime="2022-04-19T16:34:48.000Z">2022-04-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-04-19 datetime="2022-04-19T16:34:48.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-04-20 datetime="2022-04-20T19:38:33.000Z">2022-04-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-04-20 datetime="2022-04-20T19:38:33.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/892074/"
+                        open
+                      >
+                        <summary class="article-expander__title">Tromey: Faster GDB Startup</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/892074/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>On his blog, Tom Tromey writes about speeding up the startup of the GDB debugger.  He sees 7x improvements in startup time (e.g. 2.2 to 0.3 seconds) for C++ code.
+
+GDB, essentially, had two DWARF readers. They actually shared a surprisingly small amount of code (which was an occasional source of bugs). For example, while abbrev lookup and name generation (more on that later) was shared, the actual DIE [debugging information entry] data structures were not.
+
+The first DWARF reader created “partial symbols”, which held a name and some associated, easy-to-compute data, like the kind of symbol (variable, function, struct tag, etc). The second DWARF reader (which is still there now) is called when more information was needed about a particular symbol — say, its type. This reader reads all the DIEs in a DWARF compilation unit and expands them into gdb’s symbol table, block, and type data structures.
+
+Both of these scans were slow, but for the time being I’ve only rewritten the first scan, as it was the one that was first encountered and most obviously painful. (I’ve got a plan to fix up the CU expansion as well, but that’s a lengthy project of its own.)</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/892047/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Wednesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/892047/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (condor), Red Hat (389-ds:1.4, container-tools:2.0, kernel, kernel-rt, and kpatch-patch), SUSE (chrony, containerd, expat, git, icedtea-web, jsoup, jsr-305, kernel, libeconf, shadow and util-linux, protobuf, python-libxml2-python, python3, slirp4netns, sssd, vim, and wpa_supplicant), and Ubuntu (bash).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/891996/"
+                        open
+                      >
+                        <summary class="article-expander__title">A pile of stable kernel updates</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/891996/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The
+5.17.4,
+5.15.35,
+5.10.112,
+5.4.190,
+4.19.239,
+4.14.276,
+and 4.9.311 stable kernel updates have all been
+released; each contains another relatively large set of important fixes.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/891959/"
+                        open
+                      >
+                        <summary class="article-expander__title">The More You Know, The More You Know You Don’t Know (Project Zero)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/891959/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The Google Project Zero blog is carrying a
+report on zero-day vulnerabilities found to be exploited during 2021.
+
+
+	5 of the 7 [Android] 0-days from 2021 targeted GPU drivers. This is
+	actually 
+	not that surprising when we consider the evolution of the Android
+	ecosystem as well as recent public security research into
+	Android. The Android ecosystem is quite fragmented: many different
+	kernel versions, different manufacturer customizations, etc. If an
+	attacker wants a capability against &quot;Android devices&quot;, they
+	generally need to maintain many different exploits to have a decent
+	percentage of the Android ecosystem covered. However, if the
+	attacker chooses to target the GPU kernel driver instead of another
+	component, they will only need to have two exploits since most
+	Android devices use 1 of 2 GPUs: either the Qualcomm Adreno GPU or
+	the ARM Mali GPU.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded.com</button>
+                  <a class="source-heading__link" href="https://www.embedded.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4474380"
+                        open
+                      >
+                        <summary class="article-expander__title">AMD-Xilinx upgrades Versal ACAP for extreme signal processing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/amd-xilinx-upgrades-versal-acap-for-extreme-signal-processing/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embedded.com/wp-content/uploads/2022/04/Xilinx-Versal-Premium-with-AI-Engines.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>New Versal Premium with AI Engines essentially takes the AI engines block from the Versal AI Core ACAP and drops it into the Versal Premium to provide a combined adaptable hardware platform with a significant increase in signal processing capacity.
+The post AMD-Xilinx upgrades Versal ACAP for extreme signal processing appeared first on Embedded.com.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Stacey on IoT | Internet of Things news and analysis</button>
+                  <a class="source-heading__link" href="https://staceyoniot.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;10144"
+                        open
+                      >
+                        <summary class="article-expander__title">With Insteon down, possibly for good, what options do you have for your devices?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/with-insteon-down-possibly-for-good-what-options-do-you-have-for-your-devices/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://staceyoniot.com/wp-content/uploads/2022/04/Insteon-Logo-1.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This hasn’t been a good week for the smart home as yet another connected device service seems to have disappeared. It appears anyone using Insteon products has faced a dead-end as the company’s cloud service has gone silent. So too has the company up to this point. What are Insteon device owners and service users […]
+The post With Insteon down, possibly for good, what options do you have for your devices? appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;85375"
+                        open
+                      >
+                        <summary class="article-expander__title">조선일보의 검수완박 막장론: ‘문 대통령 지키기’라는 근거 없는 틀짓기</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/85375">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2022/04/noun-mask-165943.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>검찰 수사권을 폐지해 수사·기소를 분리하는 이른바 더불어민주당의 ‘검수완박’(검찰 수사권 완전 박탈) 추진을 전하는 언론 보도는 차이가 있습니다. 같은 상황을 서로 다르게 보도하기도 하고, 특정 정보를 빼고 더하며 언론별로 다르게 해석하기도 하는데요. 민주언론시민연합은 검찰 수사권 폐지 추진에 관한 언론보도를 살펴봤습니다. KBS ‘검찰 남은 카드 여론전 뿐’…MBC·한겨레 검찰 여론전 비판 KBS [‘검찰 수사권 폐지’ 충돌 격화…파장은?] (4월 […]
+The post 조선일보의 검수완박 막장론: ‘문 대통령 지키기’라는 근거 없는 틀짓기 first appeared on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="54a1b5af-4138-4e11-b34f-297b8db1c6a7"
+                        open
+                      >
+                        <summary class="article-expander__title">Create and manage local persistent volumes with CodeReady Containers</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/04/20/create-and-manage-local-persistent-volumes-codeready-containers">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/prov_0.png?itok&#x3D;R4Kr0Gen" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>A persistent volume (PV) is a common way to preserve data in case a container is accidentally lost in Kubernetes or Red Hat OpenShift. This article shows you how to manage persistent volumes with the NFS Provisioner Operator that I developed.
+Difficulties with PVs
+In the early days of container-based development, each user had to ask an administrator to create a PV for that user&#x27;s containers. Usually the administrator created 100 PVs in advance when the cluster was installed. The administrator also had to clean up the used PVs when they were released. Obviously, this process was inefficient and really burdensome.
+Dynamic provisioning using StorageClass was developed to solve this problem. With StorageClass, you no longer have to manually manage your PVs—a provisioner manages them for you. …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7f17be01-c88d-45b6-be02-71b1f3b07f0b"
+                        open
+                      >
+                        <summary class="article-expander__title">Deploy Keycloak single sign-on with Ansible</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/04/20/deploy-keycloak-single-sign-ansible">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2020_Authentication_Author_Keycloak_Featured_Article__B%20copy%202.png?itok&#x3D;ppA8kEF8" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This article is the fourth installment in our series on Ansible for middleware. In this article, you&#x27;ll use Ansible to simplify and automate the installation of Keycloak, a popular open source tool to implement single sign-on for Web applications. The previous articles in this series are:
+Automate Red Hat JBoss Web Server deployments with Ansible
+Automate and deploy a JBoss EAP cluster with Ansible
+Deploy Infinispan automatically with Ansible
+The tutorial in this article builds on an Ansible Collection named middleware_automation.keycloak, which has been specifically designed for this endeavor.
+Prerequisites
+To make use of this tutorial, you need a Red Hat Enterprise Linux or Fedora system, along with version 2.9 or higher of Ansible (preferably the latest version).
+Install the collection
+…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-04-19 datetime="2022-04-19T23:16:59.000Z">2022-04-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-04-19 datetime="2022-04-19T23:16:59.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >내 마음의 풍경</button>
+                  <a class="source-heading__link" href="https://blog.naver.com/sellars">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://blog.naver.com/sellars/222705910386"
+                        open
+                      >
+                        <summary class="article-expander__title">차연(差延)의 이중긍정</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222705910386">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>동이(同異)가 동거한다. 이것을 하이데거가 차연(差延)이라고 한다. 유(有)/무(無), 나타남/숨음, 진리/비진리, 현시/은적, 생(生)/사(死), 이 모든 것이 동거적이며, 차연적이다. 하이데거의 표현으로 이다. 차연은 양가성과 이중성을 이야기하고 있다. 이다. 는 것은 바로 이것이다. 이것을  이런 주장은 불교에서 말하는 색즉시공(色卽是空), 공즉시색(空卽是色)이다. 모든 것이 무상하고 허무하다. 적어도 이 점에서 소유론적 사유는 해체된다. 그러나 하이데거나 불교의 주장은 단지 소유론적 사유의 해체만을 의미하지 않는다. 공(空)이 모.......</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://blog.naver.com/sellars/222705041930"
+                        open
+                      >
+                        <summary class="article-expander__title">16 장자(莊子)의</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222705041930">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>* 다음 글을 논증으로 표현하고, 논평해 보라. 북녘 바다에 물고기가 있다. 그 이름이 곤(鯤)이다. 곤의 크기는 몇 천리가 되는지 알 수 없다. 이 물고기가 변해서 새가 된다. 그 새의 이름은 붕(鵬)이다. 붕의 등 넓이는 몇 천리가 되는지 알 수 없다. 힘차게 날아 오르면 그 날개는 하늘을 드리운 구름과도 같다. 이 새는 바다 기운이 움직여 큰 바람이 일면 그 바람을 타고 남쪽으로 날아가려고 한다. 남쪽 바다는 바로 천지(天地)이다. 재해(齋諧)는 괴이한 일을 아는 사람이다. 그의 말에 의하면, 큰 새 붕이 남쪽 바다로 날아갈 때, 삼천리의 파도를 일으키고, 회오리 바람을 타고 구만리의 하늘을 오르고, 그 큰 바람을 타고 남쪽으로 날.......</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;73908"
+                        open
+                      >
+                        <summary class="article-expander__title">[필진 칼럼] 기술의 미래를 예측하기</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2022/04/19/npc_predictingtech/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npc_predictingtech">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>세상을 뒤바꿀 기술, 혁신적인 제품이 매일 쏟아지고 있습니다. 어쩌면 새로운 제품과 기술이 끊임없이 등장하고 있다는 말은 21세기를 나타내는 가장 적절한 묘사 중 하나일 것입니다. 그리고 그런 제품 중 어떤 것이 진짜 세계를 바꿀 것인지 미리 알아볼 수 있는 혜안이 있다면, 그건 정말 대단한 능력일 겁니다. 애플을, 아마존을, 테슬라를 미리 알아보았을 테고, 분명 살림살이도 크게 나아졌을 것입니다. 지난 11월 30일, 미디엄의 기술 블로그 원제로(OneZero)에는 바로 이 질문에 대한 글이 올라왔습니다. 원제로의 필자 → 더 보기</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Martin Fowler</button>
+                  <a class="source-heading__link" href="https://martinfowler.com/feed.atom">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://martinfowler.com/photos/128.html"
+                        open
+                      >
+                        <summary class="article-expander__title">photostream 128</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://martinfowler.com/photos/128.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://martinfowler.com/photos/128.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Heian-jingu Shrine
+Kyoto, Japan (2004)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >from www.viva64.com</button>
+                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pvs-studio.com/en/blog/posts/cpp/0938/"
+                        open
+                      >
+                        <summary class="article-expander__title">Four reasons to check what the malloc function returned</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/cpp/0938/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://cdn.pvs-studio.com/media/docx/blog/0938_malloc_check/image1_thm_intoblank_1200x630.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Some developers may be dismissive of checks: they deliberately do not check whether the malloc function allocated memory or not. Their reasoning is simple — they think that there will be enough memory. And if there is not enough memory to complete operations, let the program crash. Seems like a bad approach, doesn&#x27;t it? For a variety of reasons.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -487,37 +938,6 @@ Teams using Java need to pay special attention to some aspects of container-base
 OpenJDK&#x27;s container awareness detection uses Linux&#x27;s control group (cgroup) filesystem to detect enforced resource quotas. As of this writing, Java 17 is the only long-term support release that supports both cgroups v1 and cgroups v2 configurations. Note, however, that there is currently work ongoing to backport cgroups v2 sup…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
                                   min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >내 마음의 풍경</button>
-                  <a class="source-heading__link" href="https://blog.naver.com/sellars">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://blog.naver.com/sellars/222705041930"
-                        open
-                      >
-                        <summary class="article-expander__title">16 장자(莊子)의</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222705041930">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>* 다음 글을 논증으로 표현하고, 논평해 보라. 북녘 바다에 물고기가 있다. 그 이름이 곤(鯤)이다. 곤의 크기는 몇 천리가 되는지 알 수 없다. 이 물고기가 변해서 새가 된다. 그 새의 이름은 붕(鵬)이다. 붕의 등 넓이는 몇 천리가 되는지 알 수 없다. 힘차게 날아 오르면 그 날개는 하늘을 드리운 구름과도 같다. 이 새는 바다 기운이 움직여 큰 바람이 일면 그 바람을 타고 남쪽으로 날아가려고 한다. 남쪽 바다는 바로 천지(天地)이다. 재해(齋諧)는 괴이한 일을 아는 사람이다. 그의 말에 의하면, 큰 새 붕이 남쪽 바다로 날아갈 때, 삼천리의 파도를 일으키고, 회오리 바람을 타고 구만리의 하늘을 오르고, 그 큰 바람을 타고 남쪽으로 날.......</span>
                             </span>
                           </div>
                         </a>
@@ -9377,36 +9797,6 @@ In 4.10, we now default to secure routes in our Import from Git and Deploy Image
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="a5f72d15-f7dc-4129-a9dd-fbc46277c218"
-                        open
-                      >
-                        <summary class="article-expander__title">Write Kubernetes in Java with the Java Operator SDK, Part 2</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/03/22/write-kubernetes-java-java-operator-sdk-part-2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_Java_Kubernetes-01.png?itok&#x3D;dVFNh1_V" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Java Operator SDK, or JOSDK, is an open source project that aims to
-simplify the task of creating Kubernetes Operators using Java. The
-project was started by Container Solutions, and Red Hat is now a major contributor.
-Part 1 in this series
-introduced JOSDK and explained why it could be interesting to create Operators in Java. In this article and its sequels,
-you will take a deeper look at JOSDK&#x27;s concepts and learn how it simplifies Operator development. Along the way, you&#x27;ll
-build a simple example using JOSDK and its quarkus-operator-sdk
-extension for Quarkus, a Kubernetes-native Java stack.
-Use case
-Deploying an application on Kubernetes requires creating multiple resources: you need to create a Deployment and an
-associated Service at the very least. If you intend to access your applica…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9480,335 +9870,12 @@ The post 인수위 이대로 좋은가: 론스타, 국정농단, 삼바 회계, 
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >내 마음의 풍경</button>
-                  <a class="source-heading__link" href="https://blog.naver.com/sellars">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://blog.naver.com/sellars/222679662701"
-                        open
-                      >
-                        <summary class="article-expander__title">존재자 없는 존재 혹은 익명적 존재</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222679662701">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>지금 내가 보는 존재자들이 진짜 다 사라진다면 아무 것도 없을 것이다. 레비나스는 말하고 있지 않지만, 시간과 공간도 다 사라진다고 해보자. 나아가 빛도 사라진다. 일체의 모든 것들이 다 사라진다. 따라서 남아 있는 것은 진짜 아무 것도 없.......</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-03-21 datetime="2022-03-21T22:59:38.000Z">2022-03-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-03-21 datetime="2022-03-21T22:59:38.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;73560"
-                        open
-                      >
-                        <summary class="article-expander__title">[필진 칼럼] 첩첩산중 바이든 정부 기후변화 법안</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2022/03/21/npc_joemanchin/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npc_joemanchin">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>전쟁을 일으킨 러시아를 향한 경제 제재로 미국과 유럽 각국이 러시아산 원유와 천연가스 수입을 중단하면서 전 세계적으로 기후변화에 효과적으로 대응하는 능력은 오히려 떨어질 수 있다는 우려가 나왔습니다. 그러나 그 전부터 바이든 행정부는 미국 안에서 기후변화 관련 법안을 쉽사리 통과시키지 못했습니다. 어떻게 대통령과 같은 민주당 소속 상원의원 한 명을 설득 못해서 진전을 이뤄내지 못한 건지, 조 맨신은 누구인지에 관해 지난 10월 25일 네이버 프리미엄 콘텐츠에 올린 글입니다. 당시 쓴 글의 제목은 “바이든 → 더 보기</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >from www.viva64.com</button>
-                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://pvs-studio.com/en/blog/posts/csharp/0928/"
-                        open
-                      >
-                        <summary class="article-expander__title">Suspicious sortings in Unity, ASP.NET Core, and more</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/csharp/0928/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.pvs-studio.com/media/docx/blog/0928_OrderBy_Errors/image1_thm_intoblank_1200x630.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Some believe that experienced developers do not make silly errors. Comparison errors? Dereferencing null references? Bet you think: &quot;No, it&#x27;s definitely not about me...&quot; ;) By the way, what about errors with sorting? As the title suggests, there are some nuances.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded.com</button>
-                  <a class="source-heading__link" href="https://www.embedded.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4474088"
-                        open
-                      >
-                        <summary class="article-expander__title">Has PCB design run out of steam?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/has-pcb-design-run-out-of-steam/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2022/03/PCB-design-thumb-.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>The multiple conflicting demands and mandates on PC boards may soon result in there being no acceptable design solution. Every system and circuit design is...
-The post Has PCB design run out of steam? appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4474081"
-                        open
-                      >
-                        <summary class="article-expander__title">How mmWave bolsters real-world 5G networks</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/how-mmwave-bolsters-real-world-5g-networks/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>mmWave technology can help address of the limitations of sub 6 GHz 5G networks, but there are still challenges ahead. Expectations from 5G are huge....
-The post How mmWave bolsters real-world 5G networks appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4474074"
-                        open
-                      >
-                        <summary class="article-expander__title">Navigating the complexities of software-defined vehicles</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/navigating-the-complexities-of-software-defined-vehicles/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2022/03/SDV-abstract-.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>As we enter the software-defined vehicle era, OEMs must develop, purchase and manage large amounts of software to remain leaders in this software-centric generation. The...
-The post Navigating the complexities of software-defined vehicles appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Google Developers Blog</button>
-                  <a class="source-heading__link" href="http://developers.googleblog.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://developers.googleblog.com/2022/03/How-Jira-for-Google-Chat-uses-the-latest-platform-features-for-app-and-bot-building.html"
-                        open
-                      >
-                        <summary class="article-expander__title">How Jira for Google Chat uses the latest platform features for app and bot building</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2022/03/How-Jira-for-Google-Chat-uses-the-latest-platform-features-for-app-and-bot-building.html">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJ2vY3UnymUZgyNejSi9HnISn5YQOrtGnMAYe73gFAOzkwlMc2Tc2aYOh1-9lwsVDhbTaz_8-YI3Yd8XwZjlIDNjSuyzYj8iyT_QeAUKCc9Smvu86FTASq_YTPYZLEsBDcG9tG-HHqoJ9mknqCEHCV24eM-uoakS3V0e1hth8yd5JSwWqeA4t5EWGc/w1200-h630-p-k-no-nu/Google-Dev-JiraForGChat-00.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Posted by By Kyle Zhao, Software Engineer and Charles Maxson, Developer Advocate
- 
-
-
-
-
-
-      
-Nothing breaks the flow of getting work done like having to stop what you’re doing in one application and switch over to another to look up information, log an event, create a ticket or check on the status of a project task. For Google Workspace users who also rely on Atlassian’s Jira Software for their issue tracking and project management needs, Jira for Chat helps bridge the gap between having conversations with your team in Google Chat and seamlessly staying on top of issues and tasks from Jira while keeping everyone in the loop.  
-Recently, there have been a number of enhancements to the Google Chat framework for developers that allows them to make connections between applications like Jira …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Stacey on IoT | Internet of Things news and analysis</button>
-                  <a class="source-heading__link" href="https://staceyoniot.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://staceyoniot.com/?p&#x3D;9943"
-                        open
-                      >
-                        <summary class="article-expander__title">Why the Matter standard is taking so long</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/why-the-matter-standard-is-taking-so-long/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://staceyoniot.com/wp-content/uploads/2020/06/Three.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>The news that the Matter smart home interoperability standard is going to be delayed by a few more months has a lot of folks wondering why. There are plenty of people who never believed that Google, Amazon, Apple, Samsung and other industry players would really work together to create a viable standard, and think the […]
-The post Why the Matter standard is taking so long appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;84853"
-                        open
-                      >
-                        <summary class="article-expander__title">두 얼굴의 부동산 보도: 문 ‘폭등·분노’ vs. 윤 ‘호재·기대’</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/84853">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2022/03/dbfdb0a.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>윤석열 국민의힘 후보가 당선되자 부동산 가격이 들썩이고 있습니다. 이번 선거 결과를 두고 문재인 정부에서 폭등한 집값으로 성난 부동산 민심이 반영된 결과라는 해석이 언론에 다수 등장했는데요. 같은 시각에서 바라보면 윤석열 후보 당선 이후 부동산 시장이 들썩이는 것 역시 같은 잣대로 비판해야 하지만 언론은 무슨 이유에서인지 이를 ‘긍정적’으로 포장하고 있습니다. 민주언론시민연합은 집값 상승을 부추길 윤 당선자의 부동산정책과 […]
-The post 두 얼굴의 부동산 보도: 문 ‘폭등·분노’ vs. 윤 ‘호재·기대’ first appeared on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;84820"
-                        open
-                      >
-                        <summary class="article-expander__title">노자의 후예들, 노자를 죽이고 도교만 살리다</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/84820">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2022/03/Zhang_Lu-Laozi_Riding_an_Ox-1.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>비옥한 초승달 문화가 서쪽으로는 유럽, 동쪽으로는 인도까지 퍼져나갔으나, 그 너머 중국에는 미치지 못했다. 인도 북동부를 가로막고 있는 거대한 히말라야 산맥을 넘어 대규모 인구가 이동하는 것은 불가능했기 때문이다. 덕분에 히말라야 서쪽과 동쪽의 문화적 풍경은 완전히 달랐다. 한자 문화권의 기본적인 사상을 가장 단적으로 보여주는 상징은 바로 태극이다. 음양의 조화, 남자와 여자의 평등과 상보성을 상징한다. 두 개의 물방울이 […]
-The post 노자의 후예들, 노자를 죽이고 도교만 살리다 first appeared on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/2191959707">
-        <time id="build-timestamp" datetime="2022-04-19T20:18:07.740Z">2022-04-19T20:18:07.740Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/2198087765">
+        <time id="build-timestamp" datetime="2022-04-20T20:18:28.540Z">2022-04-20T20:18:28.540Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.14.4</a>
     </footer>
