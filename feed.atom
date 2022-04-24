@@ -2,10 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-04-23T20:16:44.596Z</updated>
+    <updated>2022-04-24T20:17:10.661Z</updated>
     <generator>osmosfeed 1.14.4</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[KISA 파이썬 시큐어 코딩 가이드]]></title>
+        <id>https://cpuu.postype.com/post/12272847</id>
+        <link href="https://cpuu.postype.com/post/12272847"/>
+        <updated>2022-04-24T14:44:41.000Z</updated>
+        <summary type="html"><![CDATA[KISA에서는 [소프트웨어 개발 보안 가이드] 를 발간하고 있다. 이 가이드는 예전에 시큐어 코딩 가이드를 보다 소프트웨어공학 개발 프로세스 전체에 맞추어 확장한 것으로, 분석/설계 단계 보안강화 활동과 구현단계 시큐어코딩 가이드를 결합한 형태다.
+또한, [소프트웨어 보안약점 진단가이드] 라는 문서도 있는데, 이는 위의 개발 보안 가이드의 내용에 추가적으로 실제 어떤 문제점이 존재하는지 여부를 찾는 관점에서 여러가지 추가 내용(잘못된 코드 사례, 잘못된 탐지, 바른 탐지 등)을 포함하고 있다. 
+위 두 가이드는 [SW 보안약점 진단원] 이라는 자격증 시험을 대비할 때 필수적으로 숙지해야 할 문서이다. 
+
+
+이와 별개로, 2022년 2월 25일, KISA에서 [Python 시큐어코딩 가이드]라는 문서를 처음 공개했다. 기존의 시큐어코딩 가이드는 주로 C/C++ 이나 JAVA 관련 프레임워크를 다루었는데, 파이썬 언어가 추가된 것이다.
+실제로 문서내의 설명에 따르면, 파이썬 언어는 프로그래밍 언어의 순위를 공표하는 TIOBE 에서 1위를 차지하는 등 그 사용도가 매우 높기 때문에 파이썬 언어를 사용하는 서비스들도 보안 검증이 고려되어야 한다는 목적에서 추가한 것이라고 한다. 이 가이드는 Python 3.X 버전을 기준으로 한다.
+
+
+그리고 원래 기존의 구현단계 보안약점 제거 기준은 총 49개인데, 그중 파이썬에 포함하기 극히 어려운 항목은 제외하여 42개 항목에 대해서만 가이드를 구성한 것 같다.
+
+
+한가지 궁금한 점이, 기존의 보안약점 가이드는 대부분 웹 서비스를 염두하여 SQL 삽입이라던지 크로스사이트 스크립트(XSS)를 다루는 경우가 많은데 과연 파이썬 프로그래밍에서 이를 어떻게 적용할까? 생각을 했다.
+가이드를 잘 살펴보니, 우선 파이썬도 맞고 웹 서비르를 염두한 것도 맞다. 즉, Django나 Flask 같은 파이썬용 웹 프레임웍? 패키지? 를 사용하는 것으로 가정하고 여기에서 안전하지 않은 코드와 안전한 코드를 구분하여 설명하는 방식으로 서술하고 있다.
+그리고 암호화 관련된 내용에 대해서도 파이썬에 알맞은 PyCrypto 사용예를 들어 설명하고 있다. 특히 중요한 언급은 Python2 에서는 PyCrypto 기반이었지만, Python3부터는 PyCrypto를 개선한 PyCryptodomes를 사용해야 한다고 명시하고 있다. 실제로 어떤식으로 AES 암호화를 해야하는지 등의 예시도 보여주고 있다. 뿐만 아니라 난수 발생기 역시 os.urandom()이나, 그보다 좋은 secrets 등을 사용하여 강력한 난수를 생성하라고 권고하고 있다. 
+
+
+전체적으로 보았을 때 그동안 파이썬 관련 보안 개발 표준이 거의 전무했는데, 최소한 국내에서 개발을 할 때에는 제시하면 좋을만한 KISA 가이드가 출시되서 좋은 것 같다. 실제로 내용도 최신 파이썬 버전이 잘 고려된 것 같다. 이 문서는 비록 다른 C/C++에 비해(최소 10년은 된듯??) 출범한지 얼마되지 않았으므로 아직 내용이나 분량이 앞으로 더 많이 늘어날 것으로 기대가 된다.
+한편 올해 9월정도에 있을 것으로 예상되는 KISA SW보안약점 진단원 시험에서 파이썬 관련 내용도 다룰지는 아직 모르겠다..]]></summary>
+        <author>
+            <name>CPUU</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[칸트와 자살 1]]></title>
         <id>https://blog.naver.com/sellars/222709182983</id>
@@ -3454,62 +3482,6 @@ The post Understanding software-defined-radios and -networks in 5G architectures
 The post Do Level locks or the Level Keypad work with Apple Home Key? appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
         <author>
             <name>Kevin C. Tofel</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[8-2 칸트 사유는 주관주의인가?]]></title>
-        <id>https://blog.naver.com/sellars/222683459528</id>
-        <link href="https://blog.naver.com/sellars/222683459528"/>
-        <updated>2022-03-26T04:53:24.000Z</updated>
-        <summary type="html"><![CDATA[이미 말한 것처럼 8장과 9장에서 모종삼은 우리 지식을 해명하는 칸트의 철학이 주관주의인지, 아닌지 문제 삼고 있다. 그에 의하면, 이 문제는 매우 중요하고, 또한 이해하기 어려운 문제이다. 이렇기 때문에 그런지, 주관주의가 아니라고 명확하게 이야기하지 않고 있다. <하나의 현상이 시간과 공간 내에 펼쳐져 있으면 바로 객관성과 실재성을 갖는다. 시간, 공간은 주관적 형식이고, 그들은 주관적 표상으로 하여금 초보적으로 객관화하게 한다. 두 번째 단계에서는 범주에 의지하여 결정하는데, 이것이 바로 두 번째 단계의 객관화이다. 여기에 이르러서 충분한 객관화가 완성되는 것이다. 칸트의 사고 흐름은 대체로 이와 같다. 외재세.......]]></summary>
-        <author>
-            <name>sellars</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Making the case for intelligent displays and edge visualization]]></title>
-        <id>https://www.embedded.com/?p=4474065</id>
-        <link href="https://www.embedded.com/making-the-case-for-intelligent-displays-and-edge-visualization/"/>
-        <updated>2022-03-25T18:54:32.000Z</updated>
-        <summary type="html"><![CDATA[Human machine interfaces, or HMIs, increasingly have to present a visualization of data and decisions made by edge artificial intelligence devices and products. The solution is more intelligent displays, according to ADLINK Technology and AUO.
-The post Making the case for intelligent displays and edge visualization appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[IoT news of the week for March 25, 2022]]></title>
-        <id>https://staceyoniot.com/?p=9979</id>
-        <link href="https://staceyoniot.com/iot-news-of-the-week-for-march-25-2022/"/>
-        <updated>2022-03-25T18:02:56.000Z</updated>
-        <summary type="html"><![CDATA[Why isn’t 5G happening in factories yet? This week on the podcast, Kevin asked why we have seen so much hype but so few deployments around 5G for manufacturing. I blamed it on the fact that Release 17 of the 3GPP standard was just finalized, so we can finally get network equipment and end devices to the market […]
-The post IoT news of the week for March 25, 2022 appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] 5.18 Merge window, part 1]]></title>
-        <id>https://lwn.net/Articles/888736/</id>
-        <link href="https://lwn.net/Articles/888736/"/>
-        <updated>2022-03-25T14:51:49.000Z</updated>
-        <summary type="html"><![CDATA[As of this writing, 4,127 non-merge changesets have found their way into
-the mainline repository for the 5.18 development cycle.  That may seem like
-a relatively slow start to the merge window, but there are a lot of changes
-packed into those commits.  Read on for a summary of the most
-significant changes to land in the first half of the 5.18 merge window.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/889265/</id>
-        <link href="https://lwn.net/Articles/889265/"/>
-        <updated>2022-03-25T14:42:28.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (tiff), Fedora (nicotine+ and openvpn), openSUSE (bind, libarchive, python3, and slirp4netns), Oracle (cyrus-sasl, httpd, httpd:2.4, and openssl), Red Hat (httpd and httpd:2.4), Scientific Linux (httpd), SUSE (bind, libarchive, python3, and slirp4netns), and Ubuntu (firefox).]]></summary>
-        <author>
-            <name>jake</name>
         </author>
     </entry>
 </feed>
