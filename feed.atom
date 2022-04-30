@@ -2,10 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-04-29T20:17:52.157Z</updated>
+    <updated>2022-04-30T20:16:37.051Z</updated>
     <generator>osmosfeed 1.14.4</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Luhn algorithm using SWAR and SIMD]]></title>
+        <id>https://nullprogram.com/blog/2022/04/30/</id>
+        <link href="https://nullprogram.com/blog/2022/04/30/"/>
+        <updated>2022-04-30T17:53:05.000Z</updated>
+        <summary type="html"><![CDATA[Ever been so successful that credit card processing was your bottleneck?
+Perhaps you’ve wondered, “If only I could compute check digits three times
+faster using the same hardware!” Me neither. But if that ever happens
+someday, then this article is for you. I will show how to compute the
+Luhn algorithm in parallel using SIMD within a register, or
+SWAR.
+If you want to skip ahead, here’s the full source, tests, and benchmark:
+luhn.c
+The Luhn algorithm isn’t just for credit card numbers, but they do make a
+nice target for a SWAR approach. The major payment processors use 16
+digit numbers — i.e. 16 ASCII bytes — and typical machines today have
+8-byte registers, so the input fits into two machine registers. In this
+context, the algorithm works like so:
+Consider the digits number as an array, and…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IoT news of the week for April 29, 2022]]></title>
         <id>https://staceyoniot.com/?p=10214</id>
@@ -142,6 +165,30 @@ The post 장애인 비하 발언도 국회의원 면책특권인가 first appear
         <summary type="html"><![CDATA[[Web3 일반] Transition to web3: a guide for non-technical roles - Li Jin Non-tech Web3 입문자를 위한 아주 친절한! 가이드 The New Creator Economy: A guide on Web3 creator platforms | Antler Web3 Onramps for the Next 1 Billion People - Creator Economy by Peter Yang Web3 업계의 다음 미션은 10억 사용자를 on-board 시키는 것.]]></summary>
         <author>
             <name>Jin Ho Hur</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bringing up a new piece of hardware -- what can go wrong?]]></title>
+        <id>https://zipcpu.com/blog/2022/04/29/proto-bringup.html</id>
+        <link href="https://zipcpu.com/blog/2022/04/29/proto-bringup.html"/>
+        <updated>2022-04-29T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[For those who wonder what a “day in the life of” a digital design engineer
+might be like, let me offer the following account of “bringup week.”
+This is the week the team assembled, with all of their various parts and
+pieces, to put a hardware design together for the first time.
+I’m getting ahead of myself, though, so let me back up a bit.
+As background, I’ve had the wonderful fortune and opportunity to help build a
+SONAR
+system.  Since I’m just a one-man shop, I’m only working on a portion of this
+system.  My portion is simply the FPGA portion with some demonstration software
+thrown in for good effect.  Others had developed and assembled the circuit
+boards, someone else had developed the actual
+SONAR circuitry, and another team had
+designed and built the
+transducers
+which would go in the w…]]></summary>
+        <author>
+            <name>The ZipCPU by Gisselquist Technology</name>
         </author>
     </entry>
     <entry>
@@ -3609,140 +3656,6 @@ The post embedded news: EDA, vision processing, SOMs and memory appeared first o
 The post 비문명적 불법시위? 이준석의 장애인 혐오와 받아쓰기 언론 first appeared on 슬로우뉴스.]]></summary>
         <author>
             <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[영업은 사람이 하고, 마케팅은 시스템이 한다]]></title>
-        <id>https://slownews.kr/?p=85006</id>
-        <link href="https://slownews.kr/85006"/>
-        <updated>2022-04-01T08:12:07.000Z</updated>
-        <summary type="html"><![CDATA[코칭을 하다 보면 영업과 마케팅의 차이에 대한 얘기가 자주 나옵니다. 영업과 마케팅은 여러 가지가 다른 점이 있겠지만, 가장 근본적인 차이점은 취업과 창업의 차이와 같습니다. 취업은 시간을 팔아 돈을 버는 것이고, 창업은 상품을 팔아 돈을 버는 것입니다. 영업이 시간으로 고객을 만드는 행위라면, 마케팅은 상품으로 고객이 생기는 과정입니다. 영업이 영업자의 행동이라면, 마케팅은 시스템의 운영입니다. 영업 — 사람 […]
-The post 영업은 사람이 하고, 마케팅은 시스템이 한다 first appeared on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이상훈</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Summary of reading: January - March 2022]]></title>
-        <id>https://eli.thegreenplace.net/2022/summary-of-reading-january-march-2022/</id>
-        <link href="https://eli.thegreenplace.net/2022/summary-of-reading-january-march-2022/"/>
-        <updated>2022-04-01T02:55:00.000Z</updated>
-        <summary type="html"><![CDATA[<ul class="simple">
-<li>&quot;How We Got to Now&quot; by Steven Johnson - a short book discussing some of the
-most important scientific innovations of the last 3 centuries, adapted for
-young readers. The writing is very good and the illustrations are pretty
-and relevant.</li>
-<li>&quot;Distributed Services with Go&quot; by Travis Jeffery - describes how to …</li></ul>]]></summary>
-        <author>
-            <name>Eli Bendersky's website</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[필진 칼럼] 달리기를 잘하는 비결: 딴 생각]]></title>
-        <id>https://newspeppermint.com/?p=73723</id>
-        <link href="https://newspeppermint.com/2022/03/31/npc_running/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_running"/>
-        <updated>2022-03-31T22:59:25.000Z</updated>
-        <summary type="html"><![CDATA[우리는 자신의 몸에 얼마나 많은 권한을 가지고 있을까요? 이 질문에서 권한을 내 의지로 그 부위를 움직일 수 있는가로 정의하면, 우리는 우리 몸에 그리 많은 권한을 가지고 있지 않습니다. 의지와 무관하게 무릎이 올라가는 무릎 반사 같은 잘 알려진 동작 외에도 심장의 박동이나 소화기관의 운동 역시 우리의 권한 밖에 있는 신체의 움직임입니다. 추울 때 몸을 떨고 더울 때 땀을 흘리는 것도 마찬가지입니다. 그럼 우리가 스포츠를 즐기는 중에 나오는 행동들은 어떨까요? 날아오는 공을 → 더 보기]]></summary>
-        <author>
-            <name>veritaholic</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TOPS vs. real world performance: Benchmarking performance for AI accelerators]]></title>
-        <id>https://www.embedded.com/?p=4474140</id>
-        <link href="https://www.embedded.com/tops-vs-real-world-performance-benchmarking-performance-for-ai-accelerators/"/>
-        <updated>2022-03-31T19:59:00.000Z</updated>
-        <summary type="html"><![CDATA[As AI workloads and their supporting computing architectures evolve, ensuring their predictability through accurate performance measurements has a significant impact. Burgeoning machine learning and AI...
-The post TOPS vs. real world performance: Benchmarking performance for AI accelerators appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Rehan Hameed</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3 tools to take your PCB design online]]></title>
-        <id>https://www.embedded.com/?p=4474133</id>
-        <link href="https://www.embedded.com/3-tools-to-take-your-pcb-design-online/"/>
-        <updated>2022-03-31T17:04:00.000Z</updated>
-        <summary type="html"><![CDATA[Online PCB design tools can help streamline your design process and make collaboration easier. Printed circuit board (PCB) design is a complex endeavor, but it’s...
-The post 3 tools to take your PCB design online appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Emily Newton</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FORCEDENTRY: Sandbox Escape]]></title>
-        <id>https://googleprojectzero.blogspot.com/2022/03/forcedentry-sandbox-escape.html</id>
-        <link href="https://googleprojectzero.blogspot.com/2022/03/forcedentry-sandbox-escape.html"/>
-        <updated>2022-03-31T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[ol{margin:0;padding:0}table td,table th{padding:0}.c16{padding-top:16pt;padding-bottom:4pt;line-height:1.5;page-break-after:avoid;orphans:2;widows:2;text-align:left}.c11{padding-top:18pt;padding-bottom:6pt;line-height:1.5;page-break-after:avoid;orphans:2;widows:2;text-align:left}.c7{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:italic}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Courier New";font-style:normal}.c5{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Arial";font-style:normal}.c4{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font…]]></summary>
-        <author>
-            <name>Project Zero</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Indirect branch tracking for Intel CPUs]]></title>
-        <id>https://lwn.net/Articles/889475/</id>
-        <link href="https://lwn.net/Articles/889475/"/>
-        <updated>2022-03-31T14:59:05.000Z</updated>
-        <summary type="html"><![CDATA["Control-flow integrity" (CFI) is a set of technologies intended to prevent
-an attacker from redirecting a program's control flow and taking it over.
-One of the
-approaches taken by CFI is called "indirect branch tracking" (IBT); its
-purpose is to prevent an attacker from causing an indirect branch (a
-function call via a pointer variable, for example) to go to an unintended
-place.  IBT for Intel processors has been under development for some time;
-after an abrupt turn, support for protecting the kernel with IBT has been
-merged for the upcoming 5.18 release.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Thursday]]></title>
-        <id>https://lwn.net/Articles/889852/</id>
-        <link href="https://lwn.net/Articles/889852/"/>
-        <updated>2022-03-31T14:30:27.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (libgc and pjproject), Fedora (cobbler, mingw-openjpeg2, and openjpeg2), Mageia (openvpn), openSUSE (abcm2ps, fish3, icingaweb2, kernel-firmware, nextcloud, openSUSE-build-key, python2-numpy, salt, and zlib), Slackware (vim), SUSE (kernel-firmware, opensc, python2-numpy, python3, salt, and zlib), and Ubuntu (dosbox, linux, linux-aws, linux-azure, linux-gcp, linux-hwe-5.13, linux-hwe-5.4, linux-kvm, linux-oracle, linux-oracle-5.4, linux, linux-aws, linux-azure-4.15, linux-dell300x, linux-hwe, linux-kvm, linux-snapdragon, rsync, twisted, and zlib).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[5 Tips for Rapid Prototyping with the Raspberry Pi Pico]]></title>
-        <id>https://www.beningo.com/?p=14072</id>
-        <link href="https://www.beningo.com/5-tips-for-rapid-prototyping-with-the-raspberry-pi-pico/"/>
-        <updated>2022-03-31T14:05:05.000Z</updated>
-        <summary type="html"><![CDATA[Over the last several years, Raspberry Pi’s have proliferated into all sorts of applications. As a microcontroller-focused embedded software consultant, I’ve always found them fun and interesting, but not exactly my cup of tea. However, in January 2021, the Raspberry Pi Pico was released which at its heart has an RP2040 dual-core microcontroller based on … Continue reading 5 Tips for Rapid Prototyping with the Raspberry Pi Pico
-5 Tips for Rapid Prototyping with the Raspberry Pi Pico first appeared on Beningo Embedded Group.]]></summary>
-        <author>
-            <name>Jacob Beningo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Podcast: Helium gets a new name and $200 million]]></title>
-        <id>https://staceyoniot.com/?p=10012</id>
-        <link href="https://staceyoniot.com/podcast-helium-gets-a-new-name-and-200-million/"/>
-        <updated>2022-03-31T13:00:58.000Z</updated>
-        <summary type="html"><![CDATA[This week’s show was recorded on the road, but we still cover all of the big news starting with LoRaWAN network Helium changing its name to Nova Labs and raising $200 million. We then discuss research from MIT that offers privacy for people captured on video and several options for connecting beehives. I then get […]
-The post Podcast: Helium gets a new name and $200 million appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Android GDE Maryam Alhuthayfi shares her passion for mobile development with fledgling developers]]></title>
-        <id>http://developers.googleblog.com/2022/03/android-gde-maryam-alhuthayfi-shares.html</id>
-        <link href="http://developers.googleblog.com/2022/03/android-gde-maryam-alhuthayfi-shares.html"/>
-        <updated>2022-03-31T13:00:00.001Z</updated>
-        <summary type="html"><![CDATA[Posted by Janelle Kuhlman, Developer Relations Program Manager
-      
-
-For Women’s History Month, we’re celebrating a few of our Google Developer Experts. Meet Maryam Alhutayfi, Android GDE. The GDE program team encourages qualified candidates that identify as women or non-binary to express interest in joining the community by completing this form.
-Android GDE Maryam Alhuthayfi has loved programming since high school, when she learned programming in Visual Studio and basic website development.  
-“We didn't get much beyond that because there weren’t many Arabic resources,” she says. “That experience got me excited to dig deeper into technology. I wanted to know how the web functions, how software is made, and more about programming languages.” 
-Maryam studied computer science at university …]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
         </author>
     </entry>
 </feed>
