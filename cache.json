@@ -82,16 +82,6 @@
           "wordCount": 1862,
           "title": "Speeding up Pattern Searches with Boyer-Moore Algorithm from C++17",
           "imageUrl": "https://www.cppstories.com/2018/images/2018-08-20-speeding-up-pattern-searches-with-boyer-moore-algorithm-from-c-17-stdsearchers.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2022/ranges-alg-part-one/",
-          "author": null,
-          "description": "C++20’s Ranges offer alternatives for most of <algorithm>'s'. This time I’d like to show you ten non-modifying operations. We’ll compare them with the “old” standard version and see their benefits and limitations.\nLet’s go.\n\n\n\n     \n    \n\n\nKey observations for std::ranges algorithms:\nRanges algorithms are defined in the <algorithm> header, while the ranges infrastructure and core types are defined in the <ranges> header.\nUsually, there are at least two overloads for range algorithms: with a pair of iterators and an overload with a single range argument.\nThe version that returns a subrange or an iterator and takes a range returns a borrowed range or a borrowed iterator. This helps detect iterators to temporary ranges.\nThe range versions take “projections,” which sometimes allows more flexib…",
-          "link": "https://www.cppstories.com/2022/ranges-alg-part-one/",
-          "publishedOn": "2022-04-25T00:00:00.000Z",
-          "wordCount": 2686,
-          "title": "C++20 Ranges Algorithms - 7 Non-modifying Operations",
-          "imageUrl": "https://www.cppstories.com/2022/images/ranges_alg1.png"
         }
       ]
     },
@@ -208,16 +198,6 @@
           "wordCount": 703,
           "title": "[북리뷰] 모두의 딥러닝(개정 3판)",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2022/05/11/12/06/ad8548351d29ab2a5553b170aa1ba3a0.png?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/12272847",
-          "author": "CPUU",
-          "description": "KISA에서는 [소프트웨어 개발 보안 가이드] 를 발간하고 있다. 이 가이드는 예전에 시큐어 코딩 가이드를 보다 소프트웨어공학 개발 프로세스 전체에 맞추어 확장한 것으로, 분석/설계 단계 보안강화 활동과 구현단계 시큐어코딩 가이드를 결합한 형태다.\n또한, [소프트웨어 보안약점 진단가이드] 라는 문서도 있는데, 이는 위의 개발 보안 가이드의 내용에 추가적으로 실제 어떤 문제점이 존재하는지 여부를 찾는 관점에서 여러가지 추가 내용(잘못된 코드 사례, 잘못된 탐지, 바른 탐지 등)을 포함하고 있다. \n위 두 가이드는 [SW 보안약점 진단원] 이라는 자격증 시험을 대비할 때 필수적으로 숙지해야 할 문서이다. \n\n\n이와 별개로, 2022년 2월 25일, KISA에서 [Python 시큐어코딩 가이드]라는 문서를 처음 공개했다. 기존의 시큐어코딩 가이드는 주로 C/C++ 이나 JAVA 관련 프레임워크를 다루었는데, 파이썬 언어가 추가된 것이다.\n실제로 문서내의 설명에 따르면, 파이썬 언어는 프로그래밍 언어의 순위를 공표하는 TIOBE 에서 1위를 차지하는 등 그 사용도가 매우 높기 때문에 파이썬 언어를 사용하는 서비스들도 보안 검증이 고려되어야 한다는 목적에서 추가한 것이라고 한다. 이 가이드는 Python 3.X 버전을 기준으로 한다.\n\n\n그리고 원래 기존의 구현단계 보안약점 제거 기준은 총 49개인데, 그중 파이썬에 포함하기 극히 어려운 항목은 제외하여 42개 항목에 대해서만 가이드를 구성한 것 같다.\n\n\n한가지 궁금한 점이, 기존의 보안약점 가이드는 대부분 웹 서비스를 염두하여 SQL 삽입이라던지 크로스사이트 스크립트(XSS)를 다루는 경우가 많은데 과연 파이썬 프로그래밍에서 이를 어떻게 적용할까? 생각을 했다.\n가이드를 잘 살펴보니, 우선 파이썬도 맞고 웹 서비르를 염두한 것도 맞다. 즉, Django나 Flask 같은 파이썬용 웹 프레임웍? 패키지? 를 사용하는 것으로 가정하고 여기에서 안전하지 않은 코드와 안전한 코드를 구분하여 설명하는 방식으로 서술하고 있다.\n그리고 암호화 관련된 내용에 대해서도 파이썬에 알맞은 PyCrypto 사용예를 들어 설명하고 있다. 특히 중요한 언급은 Python2 에서는 PyCrypto 기반이었지만, Python3부터는 PyCrypto를 개선한 PyCryptodomes를 사용해야 한다고 명시하고 있다. 실제로 어떤식으로 AES 암호화를 해야하는지 등의 예시도 보여주고 있다. 뿐만 아니라 난수 발생기 역시 os.urandom()이나, 그보다 좋은 secrets 등을 사용하여 강력한 난수를 생성하라고 권고하고 있다. \n\n\n전체적으로 보았을 때 그동안 파이썬 관련 보안 개발 표준이 거의 전무했는데, 최소한 국내에서 개발을 할 때에는 제시하면 좋을만한 KISA 가이드가 출시되서 좋은 것 같다. 실제로 내용도 최신 파이썬 버전이 잘 고려된 것 같다. 이 문서는 비록 다른 C/C++에 비해(최소 10년은 된듯??) 출범한지 얼마되지 않았으므로 아직 내용이나 분량이 앞으로 더 많이 늘어날 것으로 기대가 된다.\n한편 올해 9월정도에 있을 것으로 예상되는 KISA SW보안약점 진단원 시험에서 파이썬 관련 내용도 다룰지는 아직 모르겠다..",
-          "link": "https://cpuu.postype.com/post/12272847",
-          "publishedOn": "2022-04-24T14:44:41.000Z",
-          "wordCount": 656,
-          "title": "KISA 파이썬 시큐어 코딩 가이드",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2022/04/24/23/29/250eabdbdc184c03aacabd481d9c754b.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -244,6 +224,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "2172d186-5d3b-4f49-9cb7-007eb675a49b",
+          "author": "Bilgin Ibryam",
+          "description": "This article is the second in a two-part series describing the many ways to run Apache Kafka and the benefits of each. The first article covered distributions for local development and self-managed Kafka. This article talks about Kafka as a Service and \"serverless-like\" Kafka. We'll conclude with guidance on when you should use each type of distribution.\nKafka as a Service\nThe popularity of Kafka has made it an attractive service for third-party cloud vendors. Each vendor is different, but some of the common criteria for production Kafka clusters include deployment on multiple availability zones, on-demand scaling, compliance and certification assurance, a predictable cost model, and an open platform for third-party tools and services integrations.\nToday, Kafka is over a decade old and the…",
+          "link": "https://developers.redhat.com/articles/2022/05/24/managed-kafka-services-which-right-you",
+          "publishedOn": "2022-05-24T07:00:00.000Z",
+          "wordCount": 1732,
+          "title": "Managed Kafka services: Which is right for you?",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/kafka-event-driven_1x%20%284%29.png?itok=s3HC0Lad"
+        },
+        {
+          "id": "84712ec4-b124-4b9b-b487-0980fff2511d",
+          "author": "August Simonelli",
+          "description": "This is the second and final article in a series about simplifying management of services offered for Kubernetes by Amazon Web Services (AWS). The first article, How to use Operators with AWS Controllers for Kubernetes, introduced Amazon's AWS Controllers for Kubernetes (ACK) and the related Operators in Red Hat's OperatorHub. This article gets services up and running. We install Operators for EC2 and S3 into a Red Hat OpenShift cluster, then create a bucket in S3 to show how to do AWS work with the Operators.\nThe ideas behind these articles, and a demo showing their steps, appear in my video Using AWS Controllers for Kubernetes (ACK) with Red Hat OpenShift.\nHow to get Operators to use AWS Controllers for Kubernetes\nIn the first article in this series, you set up your AWS environment and f…",
+          "link": "https://developers.redhat.com/articles/2022/05/24/create-aws-resources-kubernetes-and-operators",
+          "publishedOn": "2022-05-24T07:00:00.000Z",
+          "wordCount": 2479,
+          "title": "Create AWS resources with Kubernetes and Operators",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/OpenShift-Public-Cloud.png?itok=yLZspT0e"
+        },
         {
           "id": "108e8ca0-e460-4986-8692-3a7db326631e",
           "author": "Long Xin",
@@ -593,16 +593,6 @@
           "wordCount": 1296,
           "title": "Red Hat Developer roundup: Best of April 2022",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/RDH_Developer_Roundup.png?itok=kLwx8u_0"
-        },
-        {
-          "id": "7bf98d00-e2bb-4cf0-922e-dddc68d2807b",
-          "author": "Marek Polacek",
-          "description": "Version 12.1 of the GNU Compiler Collection (GCC) is expected to be released in April 2022. Like every major GCC release, this version will bring many additions, improvements, bug fixes, and new features. GCC 12 is already the system compiler in Fedora 36. GCC 12 will also be available on Red Hat Enterprise Linux in the Red Hat Developer Toolset (version 7) or the Red Hat GCC Toolset (version 8 and 9).\nLike the article I wrote about GCC 10, this article describes only new features affecting C++.\nWe implemented several C++23 proposals in GCC 12. The default dialect in GCC 12 is -std=gnu++17; to enable C++23 features, use the -std=c++23 or -std=gnu++23 command-line options. (The latter option allows GNU extensions.)\nNote that C++20 and C++23 features are still experimental in GCC 12.\nC++23 f…",
-          "link": "https://developers.redhat.com/articles/2022/04/25/new-c-features-gcc-12",
-          "publishedOn": "2022-04-25T07:00:00.000Z",
-          "wordCount": 3528,
-          "title": "New C++ features in GCC 12",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/gcc_1x.png?itok=6l1b8Lo9"
         }
       ]
     },
@@ -610,18 +600,7 @@
       "title": "edykim.com 블로그 RSS 피드",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com",
-      "articles": [
-        {
-          "id": "https://edykim.com/ko/post/landscaping-backyard-in-california/",
-          "author": null,
-          "description": "…",
-          "link": "https://edykim.com/ko/post/landscaping-backyard-in-california/",
-          "publishedOn": "2022-04-24T19:06:04.000Z",
-          "wordCount": 937,
-          "title": "뒷마당 조경 과정 정리",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Eli Bendersky's website",
@@ -672,6 +651,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4474830",
+          "author": "Jacob Beningo",
+          "description": "While many of us who work at the cutting-edge wonder why the 8-bit microcontroller won’t die, the truth is that 8-bit microcontrollers probably dominate our...\nThe post Why Won’t the 8-bit Microcontroller Die? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/why-wont-the-8-bit-microcontroller-die/",
+          "publishedOn": "2022-05-24T13:50:45.000Z",
+          "wordCount": 2059,
+          "title": "Why Won’t the 8-bit Microcontroller Die?",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/pcb-photo-abstract-.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4474825",
+          "author": "Ori Leibovich",
+          "description": "A hybrid DSP architecture that offers both DSP-oriented features and controller-oriented features is finding rapid adoption for IoT and other embedded devices. Some technologies get...\nThe post Why advanced DSPs running RTOSs are an ideal match for the IoT appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/why-advanced-dsps-running-rtoss-are-an-ideal-match-for-the-iot/",
+          "publishedOn": "2022-05-24T13:42:16.000Z",
+          "wordCount": 3000,
+          "title": "Why advanced DSPs running RTOSs are an ideal match for the IoT",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/iot_abstract-.jpeg"
+        },
         {
           "id": "https://www.embedded.com/?p=4474809",
           "author": "Nitin Dahad",
@@ -983,6 +982,16 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2022/05/the-google-cloud-startup-summit-is-coming-on-june-2-2022.html",
+          "author": null,
+          "description": "Posted by Chris Curtis, Startup Marketing Manager at Google Cloud\n \n   \nWe’re excited to announce our annual Google Cloud Startup Summit will be taking place on June 2nd, 2022. \nWe hope you will join us as we bring together our startup & VC communities. Join us to dive into topics relevant to startups and enjoy sessions such as:  \nThe future of web3\n \nHear from Google Cloud CEO, Thomas Kurian and Dapper Labs Co-founder and CEO, Roham Gharegozlou, as they discuss web3 and how startups can prepare for the paradigm changes it brings.\n \nVC AMA: Startup Summit Edition\n \nJoin us for a very special edition of the VC AMA series where we’ll have a discussion with Derek Zanutto from CapitalG, Alison Lange Engel from Greycroft and  Matt Turck from FirstMark to discuss investment trends and advice for founders around cloud, data, and the future of disruption in legacy industries.\n \nWhat’s new for the Google for Startups Cloud Program \n \nExciting announcements from Ryan Kiskis, Director of the Startup Ecosystem at Google Cloud, on how Google Cloud is investing in the startup ecosystem with tailored programs and offers.\n \nTechnical leaders & business sessions\n \nGrowth insights from top startups Discord, Swit, and Streak on how their tech stack helped propel their growth.\n \nAdditionally, startups will have an opportunity to join ‘Ask me Anything’ live sessions after the event to interact with Google Cloud startup experts and technical teams to discuss questions that may come up throughout the event.  \nYou can see the full agenda here to get more details on the sessions. \n We can’t wait to see you at the Google Cloud Startup Summit. Register to secure your spot today.",
+          "link": "http://developers.googleblog.com/2022/05/the-google-cloud-startup-summit-is-coming-on-june-2-2022.html",
+          "publishedOn": "2022-05-24T17:01:00.001Z",
+          "wordCount": 414,
+          "title": "The Google Cloud Startup Summit is coming on June 2, 2022",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm4qvTvmQiVBzXyyFxkPib_XAuYZbeOiKEH8u0GyvlwslaN2gvt6z_cb9KzVjzKccell0vDFHpf_JfuCYm3XgIsEN3g8m7695GYLMUkV5PAgEQFEChD2MMbLYh398CH1iy6u7Lft1fZsr4-SCoXKsw-NhoFDvYUdg7ySSCocNwMTQ3coPBSFYefw_k/w1200-h630-p-k-no-nu/Tile%20Card.png"
+        },
+        {
           "id": "http://developers.googleblog.com/2022/05/finding-courage-and-inspiration-in.html",
           "author": null,
           "description": "Posted by Monika Janota\n \n \nHow do we empower women in tech and equip them with the skills to help them become true leaders? One way is learning from others' successes and failures. Web GDEs—Debbie O'Brien, Julia Miocene, and Glafira Zhur—discuss the value of one to one mentoring and the impact it has made on their own professional and personal development. \nA 2019 study showed that only 25% of keynote speakers at tech events are women, meanwhile 70% of female speakers mentioned being the only woman on a conference panel. One way of changing that is by running programs and workshops with the aim of empowering women and providing them with the relevant soft skills training, including public speaking, content creation, and leadership. Among such programs are the Women Developer Academy (WDA)…",
@@ -1189,6 +1198,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/0948/",
+          "author": null,
+          "description": "The number of bugs in our bug list has exceeded 15000. This is exactly the number of bugs found by the PVS-Studio team in various open-source projects. Most excitingly, our bug collection is just a by-product of writing articles.",
+          "link": "https://pvs-studio.com/en/blog/posts/0948/",
+          "publishedOn": "2022-05-23T21:00:00.000Z",
+          "wordCount": 1390,
+          "title": "15000 bugs in open-source projects",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0948_15000_errors/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0947/",
           "author": null,
           "description": "Bitwarden is an open-source password management service. The software helps generate and manage unique passwords. Will PVS-Studio find errors in such a project?",
@@ -1257,16 +1276,6 @@
           "wordCount": 2926,
           "title": "Unreal baselining: PVS-Studio's enhancements for Unreal Engine projects",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0941_UnrealEngineBaseLining/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/0940/",
-          "author": null,
-          "description": "\"Use static analysis regularly, not just before releases... The earlier you find errors, the cheaper they are to fix...\" You probably heard this a hundred times. Today we'll answer the \"Why?\" question once again. An error from the Akka.NET project will assist us.",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/0940/",
-          "publishedOn": "2022-04-24T21:00:00.000Z",
-          "wordCount": 1371,
-          "title": "Why use static analysis? Exploring an error from Akka.NET",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0940_AkkaNET_Error/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1275,6 +1284,16 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.a16z.com",
       "articles": [
+        {
+          "id": "https://future.a16z.com/?p=6029",
+          "author": "Jeff Stump",
+          "description": "Establishing trustworthiness early is a fundamental part of the interview process. Nothing else matters if you don’t think you can trust someone. Hopefully, you’ll build trust by way of multiple interviews, references, working sessions, etc. — but how can you get comfortable with someone you are meeting for the first time in the interview process,... Read More\nThe post Building Trust and Assessing Integrity as You Interview appeared first on Future.",
+          "link": "https://future.a16z.com/building-trust-and-assessing-integrity-as-you-interview/",
+          "publishedOn": "2022-05-24T14:00:33.000Z",
+          "wordCount": 2131,
+          "title": "Building Trust and Assessing Integrity as You Interview",
+          "imageUrl": "https://future.a16z.com/wp-content/uploads/2022/05/Hiring-for-Trust-FB-FINAL.jpg"
+        },
         {
           "id": "https://future.a16z.com/?p=6003",
           "author": "Melissa Daimler",
@@ -1515,6 +1534,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/895907/",
+          "author": "jake",
+          "description": "On the second day of the\n2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM), Goldwyn Rodrigues\nled a \ncombined filesystem and memory-management session on saving memory when\nreading files that share extents.  That kind of sharing can occur with\ncopy-on-write (COW) filesystems, reflinks, snapshots, and other features\nof that sort.  When reading those files, memory is wasted because multiple\ncopies of the same data is stored in the page cache, so he wanted to\nexplore adding a cache\nspecifically to handle that.",
+          "link": "https://lwn.net/Articles/895907/",
+          "publishedOn": "2022-05-24T17:19:44.000Z",
+          "wordCount": null,
+          "title": "[$] Sharing memory for shared file extents",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896131/",
+          "author": "corbet",
+          "description": "This\nGoogle blog entry looks at some zero-day Android exploits that were\ndetected and makes it clear what the stakes are.\n\n\n\tWe assess with high confidence that these exploits were packaged by\n\ta single commercial surveillance company, Cytrox, and sold to\n\tdifferent government-backed actors who used them in at least the\n\tthree campaigns discussed below. Consistent with findings from\n\tCitizenLab, we assess likely government-backed actors purchasing\n\tthese exploits are operating (at least) in Egypt, Armenia, Greece,\n\tMadagascar, Côte d’Ivoire, Serbia, Spain and Indonesia.",
+          "link": "https://lwn.net/Articles/896131/",
+          "publishedOn": "2022-05-24T15:51:32.000Z",
+          "wordCount": 155,
+          "title": "Google: Protecting Android users from 0-Day attacks",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/895587/",
+          "author": "jake",
+          "description": "In a fast-paced talk at PyCon 2022 in Salt Lake City,\nUtah, Pablo Galindo Salgado described some changes he and others have made\nto the error reporting for CPython 3.10.  He painted a picture of a\nrather baffling set of syntax errors reported by earlier interpreter\nversions and how they have improved.  This work is not done by any means,\nhe said, and encouraged attendees to get involved in making error reporting\neven better in future Python versions.",
+          "link": "https://lwn.net/Articles/895587/",
+          "publishedOn": "2022-05-24T15:38:10.000Z",
+          "wordCount": null,
+          "title": "[$] Improved error reporting for CPython 3.10—and beyond",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896114/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (firefox-esr and openldap), Fedora (curl), Oracle (kernel and kernel-container), Red Hat (maven:3.5), SUSE (cacti, cacti-spine, firefox, go1.18, openldap2, python-requests, rsyslog, and slurm_20_11), and Ubuntu (firefox, htmldoc, libpng, libxfixes, libxrender, thunderbird, and vim).",
+          "link": "https://lwn.net/Articles/896114/",
+          "publishedOn": "2022-05-24T13:36:42.000Z",
+          "wordCount": 220,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896060/",
+          "author": "corbet",
+          "description": "Version\n3.16.0 of the Alpine Linux distribution has been released.  Significant\nchanges include a switch to tmpfs for the /tmp directory, the\nsplitting out of a number of NetworkManager plugins into separate packages,\nthe removal of Python 2, and a lot of updated packages; see the\nrelease notes for more information.",
+          "link": "https://lwn.net/Articles/896060/",
+          "publishedOn": "2022-05-23T22:39:56.000Z",
+          "wordCount": 117,
+          "title": "Alpine Linux 3.16.0 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/895800/",
           "author": "corbet",
@@ -2494,16 +2563,6 @@
           "wordCount": 227,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/892481/",
-          "author": "corbet",
-          "description": "The 5.18-rc4 kernel prepatch is out for\ntesting.  \"Fairly slow and calm week - which makes me just suspect\nthat the other shoe will drop at some point.  But maybe things are just\ngoing really well this release. It's bound to happen _occasionally_, after\nall.\"",
-          "link": "https://lwn.net/Articles/892481/",
-          "publishedOn": "2022-04-25T02:49:04.000Z",
-          "wordCount": 109,
-          "title": "Kernel prepatch 5.18-rc4",
-          "imageUrl": null
         }
       ]
     },
@@ -2745,6 +2804,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10331",
+          "author": "andrew",
+          "description": "This article is by Andrew Allemann. Those who live and breathe the Internet of Things can get a little too close to it. We lose sight of what it’s like for the typical person to live with connected technologies. So I asked my husband to think about which smart home devices around our home he […]\nThe post My husband’s favorite smart home devices appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/my-husbands-favorite-smart-home-devices/",
+          "publishedOn": "2022-05-24T13:00:13.000Z",
+          "wordCount": 1296,
+          "title": "My husband’s favorite smart home devices",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2021/08/flic-button.png?fit=1024%2C576&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=10326",
           "author": "Stacey Higginbotham",
@@ -3097,6 +3166,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=85888",
+          "author": "경실련",
+          "description": "우리나라 사람들처럼 건강에 대한 관심이 많은 나라가 있을까? 우리나라 사람처럼 비타민과 건강식품을 많이 먹는 나라가 있을까? 우리나라 사람들처럼 일 년에 병의원 방문이 많은 나라가 있을까? 내가 알기로 한두 나라에 불과하다. 우리나라가 1등 하는 것이 많지만, 이런 1등은 그리 바람직하지 않다. 건강은 행복의 필수조건이므로 잘 챙기는 것은 중요하다. 하지만 과연 적절한 방법으로, 근거 있는 건강법으로 챙기는 […]\nThe post 잘못 알려진 8가지 건강 상식: 간헐적 단식과 영양제 등 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/85888",
+          "publishedOn": "2022-05-24T08:40:34.000Z",
+          "wordCount": 1855,
+          "title": "잘못 알려진 8가지 건강 상식: 간헐적 단식과 영양제 등",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/05/noun-cold-4175254-1.png"
+        },
+        {
           "id": "https://slownews.kr/?p=85842",
           "author": "크레센도",
           "description": "은 학구적이고 문명화된 가톨릭 사회를 유지했다. 피레네 산맥으로 유럽 대륙과 분리되어있는 덕분에 다른 나라의 영향은 적게 받았으며, 기후 역시 따듯해 경제적으로 상당한 혜택을 누렸다. 르네상스 시대 스페인의 해군은 유럽에서 최강 전력을 자랑했으며, 육군 역시 막강하여 유럽 각지에서 벌어지는 사건에 끊임없이 개입하며 영향력을 발휘했다. 중세 스페인의 풍경  아프리카와 지리적으로 인접해있던 탓에 스페인에는 근면한 무슬림이 많이 이주하여 […]\nThe post 종교재판의 고문 기술자들과 아메리카에 도착한 백인 악마들 first appeared on 슬로우뉴스.",
@@ -3345,16 +3424,6 @@
           "wordCount": 2635,
           "title": "교황은 왜 사제 결혼을 금지하였나 (ft. 교회 여성 혐오의 기원)",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/Giotto_-_Legend_of_St_Francis_-_-15-_-_Sermon_to_the_Birds.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=85418",
-          "author": "경실련",
-          "description": "윤석열 국민의힘 후보가 20대 대통령 선거에서 대통령 ‘당선자’가 되었다. 그런데 언론에서는 자꾸 ‘당선인’이라고 한다. 언론이 이런 표현을 사용하는 관행은 2007년 12월 이명박 대통령직 인수위가 ‘당선인’으로 불러 달라고 요청하면서 시작되었다. 당선인 vs. 당선자, 어느 쪽이 옳은가?  주장을 관철시키기 위해 당시 인수위 측은 중앙선거관리위원회에 ‘당선자’ 명칭에 대한 유권해석을 의뢰했고, 선관위에서‘당선인’이 맞다는 해석을 내렸는데, 이는 공직선거법과 국회법, […]\nThe post ‘당선인’이 틀리고 ‘당선자’가 옳은 이유 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85418",
-          "publishedOn": "2022-04-25T07:03:27.000Z",
-          "wordCount": 1343,
-          "title": "‘당선인’이 틀리고 ‘당선자’가 옳은 이유",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/14_compressed-1.jpg"
         }
       ]
     },
@@ -3821,6 +3890,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=74163",
+          "author": "ingppoo",
+          "description": "올해 11월 미국 중간선거의 중요한 키워드 중 하나는 제리맨더링(gerrymandering)이 될 겁니다. 제리맨더링의 기원과 영향력에 관해 지난 2월 7일 네이버 프리미엄 콘텐츠에 쓴 글입니다. 제리맨더링의 기원을 찾아보면, 오래된 옛 신문에 등장한 아래 지도/삽화가 나옵니다. 제리맨더링이 무엇인지, 왜 지금 언론의 주목을 받으며 민주당과 공화당이 제리맨더링 문제를 놓고 치열하게 싸우고 있는지, 선거와 민주주의에 어떤 영향을 미칠지에 관해 정리했습니다. 뉴욕타임스가 지난해 11월 정리한 인터랙티브 기사를 뼈대로 삼았습니다. 뉴욕타임스는 업샷에 “제리맨더링, 직접 해보실래요?”란 제목으로 흥미로운 게임을 올렸습니다. 글로 읽으면 도무지 개념이 와닿지 않지만, 직접 → 더 보기",
+          "link": "https://newspeppermint.com/2022/05/23/npc_gerrymandering/?utm_source=rss&utm_medium=rss&utm_campaign=npc_gerrymandering",
+          "publishedOn": "2022-05-23T22:59:05.000Z",
+          "wordCount": 1415,
+          "title": "[필진 칼럼] 제리맨더링과 미국 민주주의",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=74144",
           "author": "veritaholic",
           "description": "지난해 말 발사된 제임스 웹 우주 망원경은 100억 달러 이상이 든 인류 최대의 과학 프로젝트였습니다. 이 망원경은 지구와 달의 거리보다 4배 더 먼 곳에 머물며 10년 이상 우주를 관측할 계획입니다. 이를 통해 우주 최초의 별과 은하를 관측하고, 은하와 별과 행성계가 어떻게 형성되는지 파악하며, 생명의 기원에 대한 정보도 얻을 수 있을 것으로 기대되고 있습니다. 문제는 미국 항공우주국 나사(NASA)의 국장이며 책임자인 빌 넬슨이 이를 축하하는 공식 영상에서 시편 19편의 첫 구절을 읽었다는 → 더 보기",
@@ -4019,16 +4098,6 @@
           "wordCount": 595,
           "title": "[필진 칼럼] 트랜스젠더 운동 선수의 경우",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=73949",
-          "author": "ingppoo",
-          "description": "코로나19 백신 이전에도 백신은 수많은 사람의 목숨을 구했습니다. 대표적인 것이 매년 추워질 때쯤 맞는 독감(influenza) 백신이죠. 다만 매년 인플루엔자 바이러스가 변이를 일으켜 조금씩 다르고, 백신 접종으로 생긴 항체의 지속 기간도 반년 정도에 불과해 독감 백신은 매년 맞아야 한다는 중대한 단점이 있습니다. 저도 올해 코로나19 백신만 신경 쓰고, 독감 백신에 관해선 아무런 생각도 안 하고 있다가 다른 일로 병원에 갔을 때 의사의 말을 듣고 바로 백신을 맞았습니다. 그때 의사 선생님께 이렇게 → 더 보기",
-          "link": "https://newspeppermint.com/2022/04/24/npc_fluvaccine/?utm_source=rss&utm_medium=rss&utm_campaign=npc_fluvaccine",
-          "publishedOn": "2022-04-24T22:59:45.000Z",
-          "wordCount": 1203,
-          "title": "[필진 칼럼] 매년 맞을 필요 없는 독감 백신은 언제 나올까?",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -4054,6 +4123,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222744073364",
+          "author": "sellars",
+          "description": "* 왜 경제학의 판단은 부분적인가? 다음 글을 통해 답변해 보라. 경제학은 경제적인 것과 비경제적인 것의 기준을 제공하며, 큰 영향력을 행사하고 있다. 따라서 근대 세계가 갖고 있는 역경을 극복하고, 평화와 영속성을 제공하는 경제적 기반을 확보하는데 경제학의 자문과 도움을 받아야 한다고 생각할 수 있다. 경제학이 옥스퍼드 대학에서 개설되었을 때, 그렇게 환영을 받지 못했다. 그것은 경제학이 다른 분야를 침해할 가능성이 너무 높은 과목으로 이해되었기 때문이다. 최초의 경제학 교수인 시니어는 경제학이 도덕과학 중 으뜸으로 평가받게 될 것이라고 연설했다. 부의 추구야말로 도덕적 향상의 위대한 원천이기 때문이다. 그러나.......",
+          "link": "https://blog.naver.com/sellars/222744073364",
+          "publishedOn": "2022-05-24T01:11:08.000Z",
+          "wordCount": 8,
+          "title": "19. 부분적 사유",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222742837803",
           "author": "sellars",
@@ -4282,16 +4361,6 @@
           "publishedOn": "2022-04-26T01:28:17.000Z",
           "wordCount": 8,
           "title": "도덕교육 인성교육",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222710482115",
-          "author": "sellars",
-          "description": "(가) 세계에 대한 우리의 경험은 시간과 공간이라는 직관 형식, 그리고 범주라는 지성 형식 때문에 가능하다. 아니다. 메를로 퐁티는 다음처럼 이야기한다. <오랫동안 그리고 최근 저술에 이르기까지 환원은 선험적(transcendental) 의식의 회귀라고 설명되어 왔다. 그 앞에 세계가 활짝 전개되고, 투명하게 되며, 일련의 통각들, 그러한 통각의 결과를 기초해서 재구성하는 것이 철학자의 과제가 되고 있는 그러한 통각을 통해 철저히 활성화되는 그러한 의식에의 회귀로 제시되고 있다.> (<지각의 현상학>의 번역도 있고, 또 <현상학과 예술>에 <지각의 현상학> 서문에 대한 번역이 있다. 어떤 구절은 <현상학과 예.......",
-          "link": "https://blog.naver.com/sellars/222710482115",
-          "publishedOn": "2022-04-24T22:23:07.000Z",
-          "wordCount": 8,
-          "title": "<지각의 현상학> 서문 2 - 선험적 환원",
           "imageUrl": null
         }
       ]
