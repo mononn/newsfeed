@@ -6,6 +6,16 @@
       "siteUrl": "https://www.alexedwards.net/blog",
       "articles": [
         {
+          "id": "https://www.alexedwards.net/blog/introducing-flow",
+          "author": null,
+          "description": "Last year I wrote a new HTTP router for Go called Flow. I've been using it in production on this site and in a couple of other projects since, and I'm pretty happy with how it's working out so decided to share it a bit more widely.\nMy aim with Flow was to bring together my favourite features from other popular routers that I frequently used. It has:\nA very small and readable codebase (approx. 160 LOC) with pattern-matching logic similar to matryer/way.\nMiddleware management like chi — including the ability to create route 'groups' which use different middleware.\nOptional regexp support for tighter pattern matching, similar to chi and gorilla/mux.\nAutomatic handling of OPTIONS requests, like julienschmidt/httprouter.\nAutomatic handling of HEAD requests, like bmizerany/pat.\nAn Allow header is automatically set on all OPTIONS and 405 Method Not Allowed responses, like julienschmidt/httprouter.\nAbility to map multiple HTTP methods to the same handler in one declaration, like gorilla/mux.\nAdditionally:\nIt has a very small API (see the Go docs) so there's not much to learn. \nIt's designed to work nicely with http.Handler, http.HandlerFunc, and the standard Go middleware pattern.\nThe handlers for 404 Not Found and 405 Method Not Allowed responses are customizable.\nConflicting routes are permitted (e.g. /posts/:id and posts/new), with routes matched in the order that they are declared.\nIt has zero dependencies.\nBelow is a quick example of the syntax, and if you like the look of it you can check out the full README on GitHub.\n\n  \n\nA note on performance\nI haven't done any benchmarking against other routers, so I can't speak about the relative performance of Flow. What I can say it has been plenty fast enough for all of my use-cases so far and not a hot spot when profiling my applications under load.",
+          "link": "https://www.alexedwards.net/blog/introducing-flow",
+          "publishedOn": "2022-05-25T08:00:00.000Z",
+          "wordCount": 598,
+          "title": "Flow: A delightfully tiny but powerful HTTP router for Go",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.alexedwards.net/blog/using-go-run-to-manage-tool-dependencies",
           "author": null,
           "description": "When you're working on a project it's common for there to be some developer tooling dependencies. These aren't code dependencies, but rather tools that you run on as part of the development, testing, build or deployment processes.\nFor example, you might use  golang.org/x/text/cmd/gotext in conjunction with go:generate to generate message catalogs for translation, or honnef.co/go/tools/cmd/staticcheck to perform static analysis on your code before committing a change.\nThis raises a couple of interesting questions — especially in a team environment. How do you make sure that everyone has the necessary tools installed on their machines? And that the tools they are using are all the same version?\nUntil Go 1.17, the convention for managing this was to create a tools.go file in your project cont…",
@@ -224,6 +234,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "c9f79049-e6f4-4f3a-a696-47181f128a16",
+          "author": "Hareet Dhillon",
+          "description": "Cryostat is a tool for managing JDK Flight Recorder data on Kubernetes. This article explains how new download APIs based on JSON Web Tokens (JWTs) help facilitate a more responsive and efficient download workflow in the Cryostat 2.1 web client.\nThe Cryostat web client download workflow\nPreviously, the web client download flow for resources such as recordings, reports, and templates consisted of the application firing an HTTP GET request with the appropriate authorization header(s) to the back-end, downloading the returned file into browser memory, creating a local object URL for the blob, and then assigning the URL to an anchor element prompting user response. The file size determined the download speed and when the \"Save File\" prompt would appear. Once this process was completed, the use…",
+          "link": "https://developers.redhat.com/articles/2022/05/25/access-jfr-data-faster-cryostat-21s-new-download-apis",
+          "publishedOn": "2022-05-25T07:00:00.000Z",
+          "wordCount": 1219,
+          "title": "Access JFR data faster with Cryostat 2.1's new download APIs",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Java_ContainerJFR_Featured_Article__A-01.png?itok=N_594VC9"
+        },
+        {
+          "id": "cc5fce0c-3643-49d1-bd26-b35b0b1e3bd5",
+          "author": "Hareet Dhillon",
+          "description": "Cryostat is a tool for managing JDK Flight Recorder data on Kubernetes. Version 2.1 of Cryostat introduces the option of using a sidecar reports container to generate automated analysis reports for JDK flight recordings. Previously, the main Cryostat container handled the report generation. Report generation is a resource-intensive operation, and as a result, users may find themselves overprovisioning the Cryostat container to meet peak resource demands. Those resources may in turn end up unused if you're not generating reports.\nWith this new option to delegate report generation to a sidecar container, users will find it easier to provision resources more efficiently. When report generation is not a concern, the main Cryostat container, including its web server and various lightweight oper…",
+          "link": "https://developers.redhat.com/articles/2022/05/25/eat-fewer-resources-cryostat-21-sidecar-reports",
+          "publishedOn": "2022-05-25T07:00:00.000Z",
+          "wordCount": 1433,
+          "title": "Eat up fewer resources in Cryostat 2.1 with sidecar reports",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Java_ContainerJFR_Featured_Article__A-01.png?itok=N_594VC9"
+        },
         {
           "id": "2172d186-5d3b-4f49-9cb7-007eb675a49b",
           "author": "Bilgin Ibryam",
@@ -583,16 +613,6 @@
           "wordCount": 3191,
           "title": "Orchestrate offloaded network functions on DPUs with Red Hat OpenShift",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
-        },
-        {
-          "id": "8264f386-94d5-4766-9207-39e82b323299",
-          "author": "Red Hat Developer Editorial Team",
-          "description": "Welcome to our monthly recap of the articles we published in April! We had some important product and event announcements this month that deserve your attention:\nRed Hat CodeReady Studio reached its end of life;\nCodeReady Workspaces has scaled up and, is now Red Hat OpenShift Dev Spaces;\nRed Hat Summit 2022 is fast approaching—find out which sessions are of most interest to developers.\nAnd of course, we rolled out a panoply of articles to help you write code on the platforms you trust. Here are the April highlights.\nNote: See the end of this article for the full lineup published in April 2022.\nWhat's new in GCC 12?\nThe upcoming release of version 12 of the GCC compiler is naturally causing quite a stir for C developers working on Red Hat Enterprise Linux and other platforms. In one of our …",
-          "link": "https://developers.redhat.com/articles/2022/04/26/red-hat-developer-roundup-best-april-2022",
-          "publishedOn": "2022-04-26T07:00:00.000Z",
-          "wordCount": 1296,
-          "title": "Red Hat Developer roundup: Best of April 2022",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/RDH_Developer_Roundup.png?itok=kLwx8u_0"
         }
       ]
     },
@@ -652,6 +672,16 @@
       "siteUrl": "https://www.embedded.com",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4474860",
+          "author": "Nitin Dahad",
+          "description": "With new options for maximum frequencies of 56 GHz and 67 GHz, Rohde & Schwarz said this dramatically raises the limits for generating wide bandwidth digitally modulated signals of high quality.\nThe post Vector signal generator enables digitally modulated signals to 67 GHz appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/vector-signal-generator-for-67-ghz-and-beyond/",
+          "publishedOn": "2022-05-25T17:37:06.000Z",
+          "wordCount": 1970,
+          "title": "Vector signal generator enables digitally modulated signals to 67 GHz",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/Rohde-and-Schwarz-SMW200A-with-56-and-67-GHz-options.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4474830",
           "author": "Jacob Beningo",
           "description": "While many of us who work at the cutting-edge wonder why the 8-bit microcontroller won’t die, the truth is that 8-bit microcontrollers probably dominate our...\nThe post Why Won’t the 8-bit Microcontroller Die? appeared first on Embedded.com.",
@@ -670,6 +700,16 @@
           "wordCount": 3000,
           "title": "Why advanced DSPs running RTOSs are an ideal match for the IoT",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/iot_abstract-.jpeg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4474833",
+          "author": "Anne-Françoise Pelé",
+          "description": "A collaboration looks to analyze the applicability of quantum computational algorithms to metal forming applications modeling. Car manufacturer BMW and quantum computing technology developer Pasqal...\nThe post Quantum computing takes on automotive design and manufacturing appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/quantum-computing-takes-on-automotive-design-and-manufacturing/",
+          "publishedOn": "2022-05-22T21:54:00.000Z",
+          "wordCount": 2343,
+          "title": "Quantum computing takes on automotive design and manufacturing",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/img20220524054918BMW-Pasqal-Apply-Quantum-Comput_0_w1000_h587.jpg"
         },
         {
           "id": "https://www.embedded.com/?p=4474809",
@@ -710,6 +750,26 @@
           "wordCount": 3266,
           "title": "How a clinical-grade vital-signs AFE enhances disease detection",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/healthcare-.jpeg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4474843",
+          "author": "Sally Ward-Foxton",
+          "description": "The company’s tests revealed 39.3 TOPS of AI compute with an efficiency of 14.1 TOPS/W at INT8 precision when operating at 800 MHz. AI chip...\nThe post AI test chip offers proof of concept for digital in-memory compute design appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/ai-test-chip-offers-proof-of-concept-for-digital-in-memory-compute-design/",
+          "publishedOn": "2022-05-17T22:01:00.000Z",
+          "wordCount": 2144,
+          "title": "AI test chip offers proof of concept for digital in-memory compute design",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/img20220524053903Axelera-Demos-AI-Test-Chip-After_0_w924_h708.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4474848",
+          "author": "Egil Juliussen",
+          "description": "The EU’s ADS compliance assessment specifies how an autonomous vehicle will be evaluated, audited, and tested before it will get type–approval. The European Union (EU)...\nThe post A closer look at compliance assessment in EU’s draft ADS legislation appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/a-closer-look-at-compliance-assessment-in-eus-draft-ads-legislation/",
+          "publishedOn": "2022-05-16T22:03:00.000Z",
+          "wordCount": 4007,
+          "title": "A closer look at compliance assessment in EU’s draft ADS legislation",
+          "imageUrl": null
         },
         {
           "id": "https://www.embedded.com/?p=4474782",
@@ -920,36 +980,6 @@
           "wordCount": 3775,
           "title": "Implementing accelerated machine-learning applications with an advanced MCU",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/04/04SiLabs_f4.png"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4474447",
-          "author": "Nitin Dahad",
-          "description": "The lightweight gesture algorithm can run on a low-power microcontroller and demands minimal system resources, so is easily integrated in an existing application.\nThe post ST offers touchless gesture control with new software for ToF sensor appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/st-offers-touchless-gesture-control-with-new-software-for-tof-sensor/",
-          "publishedOn": "2022-04-25T14:50:17.000Z",
-          "wordCount": 2179,
-          "title": "ST offers touchless gesture control with new software for ToF sensor",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/04/STMicrolecetronics-gesture-control.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4474439",
-          "author": "Nitin Dahad",
-          "description": "Lynx Software Technologies announced that its MOSA.ic platform now supports deployment of Google Anthos bare metal at the mission critical edge, enabling secure delivery of containerized software services from the cloud, such as Google Cloud Visual Inspection AI service, providing a validated solution for secure, video-based quality inspection.\nThe post Lynx’ Google Anthos bare metal support secures Kubernetes to cloud appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/lynx-google-anthos-bare-metal-support-secures-kubernetes-to-cloud/",
-          "publishedOn": "2022-04-25T13:35:41.000Z",
-          "wordCount": 2216,
-          "title": "Lynx’ Google Anthos bare metal support secures Kubernetes to cloud",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/04/LYNX-MOSA.ic-Google-Anthos-Bare-Metal.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4474437",
-          "author": "Sagar Khare",
-          "description": "Standalone PD controllers integrate most blocks into one IC and some even eliminate the need for an external MCU and customized firmware.  The USB Power...\nThe post How standalone power delivery controllers simplify USB-C PD design appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/how-standalone-power-delivery-controllers-simplify-usb-c-pd-design/",
-          "publishedOn": "2022-04-25T11:50:45.000Z",
-          "wordCount": 3554,
-          "title": "How standalone power delivery controllers simplify USB-C PD design",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/04/04MaximInt_f1.png"
         }
       ]
     },
@@ -981,6 +1011,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2022/05/expertsanyoneanywhere.html",
+          "author": null,
+          "description": "Posted by Janelle Kuhlman, Developer Relations Program Manager \n \n  \nClick above to meet our community of Experts\n  \nThe Google Developer Experts program is a global network of highly experienced technology experts, developers and thought leaders. GDEs share their expertise with other developers and tech communities through a variety of ways such as speaking engagements, mentorship and content writing. The community has access to an exclusive network of experts that span across different Google technologies including Android, Cloud, Machine Learning and more. \nGet to know our diverse community and subscribe to the Google Developers YouTube Channel to stay informed on the latest updates across our products and platforms!",
+          "link": "http://developers.googleblog.com/2022/05/expertsanyoneanywhere.html",
+          "publishedOn": "2022-05-25T17:00:00.001Z",
+          "wordCount": 235,
+          "title": "Experts.Anyone.Anywhere",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7ZjxF7p_RWarFzVMSHn3cuWCPA4v_KUP37jhdUZBR0pJZXL2Lg3HACSTxCt7gd16kclIB6AhCL_A4hLo4gyVQLQ74uvRilkqNRGI74lHUSNSiiXH7sptqJfc5unMlsXdn08uv9hCNZy5JW5DRKSHM54ZQ6AdhNEj05Y7gzqh-JURIP9ePySzDuLVC/w1200-h630-p-k-no-nu/image1.jpg%20"
+        },
         {
           "id": "http://developers.googleblog.com/2022/05/the-google-cloud-startup-summit-is-coming-on-june-2-2022.html",
           "author": null,
@@ -1266,16 +1306,6 @@
           "wordCount": 6141,
           "title": "PVS-Studio evolution: data flow analysis for related variables",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0942_PVS_evolution_Data-Flow_analysis_related_variables/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/0941/",
-          "author": null,
-          "description": "The PVS-Studio static analyzer is constantly evolving. We enhance various mechanisms, integrate the analyzer with game engines, IDEs, CI/CD instruments, and other systems and services. A few years ago, PVS-Studio learned to analyze Unreal Engine projects. However, one of the important mechanisms — suppression of analyzer messages (baselining, disabling warnings for existing code) — didn't work with Unreal Engine projects. This article is about why we didn't implement it immediately and how we finally did it.",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/0941/",
-          "publishedOn": "2022-04-25T21:00:00.000Z",
-          "wordCount": 2926,
-          "title": "Unreal baselining: PVS-Studio's enhancements for Unreal Engine projects",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0941_UnrealEngineBaseLining/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1482,6 +1512,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/choosing-an-mcu",
+          "author": null,
+          "description": "Selecting the best chip can be tedious work but the best chip can save you a lot\nof time and money, and might even be faster! So should you spend time finding\nthe best? I have some words on the topic.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/choosing-an-mcu",
+          "publishedOn": "2022-05-24T00:00:00.000Z",
+          "wordCount": 1999,
+          "title": "Selecting Your Next Project's MCU",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/april-2022-roundup",
           "author": null,
           "description": "Here are the articles, videos, and tools that we’ve been excited about this\nApril\nContinue reading…",
@@ -1534,6 +1574,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/896153/",
+          "author": "jake",
+          "description": "Right on the heels of his previous filesystem\nsession at the\n2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM), Steve French led\na session on temporary files and their interaction with network\nfilesystems.\nThe problem is that creating temporary files is not always atomic, so he was\nproposing changing that, which would eliminate a possible race condition\nand be more efficient for network filesystems.\nSince the temporary-file discussion did not fill the 30-minute slot, however, French took\nthe opportunity to discuss some attributes he would like to see get added for the\nstatx()\nsystem call.",
+          "link": "https://lwn.net/Articles/896153/",
+          "publishedOn": "2022-05-25T18:56:36.000Z",
+          "wordCount": null,
+          "title": "[$] Making O_TMPFILE atomic (and statx() additions)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896055/",
+          "author": "jake",
+          "description": "Steve French led a discussion on change notifications for network\nfilesystems in a session at the\n2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM).  He is part of\nthe Samba team and noted that both Windows and macOS clients get notified\nof new and changed files in \na shared directory immediately, while on Linux that does not happen.  He\nwanted to explore what it would take to add that functionality.",
+          "link": "https://lwn.net/Articles/896055/",
+          "publishedOn": "2022-05-25T16:23:25.000Z",
+          "wordCount": null,
+          "title": "[$] Change notifications for network filesystems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896244/",
+          "author": "corbet",
+          "description": "The Linux Foundation has posted an \"Open Source\nSoftware Security Mobilization Plan\" that aims to address a number of\nperceived security problems with the expenditure of nearly\n$140 million over two years.\n\n\n\tWhile there are considerable ongoing efforts to secure the OSS\n\tsupply chain, to achieve acceptable levels of resilience and risk,\n\ta more comprehensive series of investments to shift security from a\n\tlargely reactive exercise to a proactive approach is required. Our\n\tobjective is to evolve the systems and processes used to ensure a\n\thigher degree of security assurance and trust in the OSS supply\n\tchain.\n\n\tThis paper suggests a comprehensive portfolio of 10 initiatives\n\twhich can start immediately to address three fundamental goals for\n\thardening the software supply chain. Vulnerabilities and weaknesses\n\tin widely deployed software present systemic threats to the\n\tsecurity and stability of modern society as government services,\n\tinfrastructure providers, nonprofits and the vast majority of\n\tprivate businesses rely on software in order to function.",
+          "link": "https://lwn.net/Articles/896244/",
+          "publishedOn": "2022-05-25T15:54:16.000Z",
+          "wordCount": 581,
+          "title": "The Linux Foundation's \"security mobilization plan\"",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896240/",
+          "author": "corbet",
+          "description": "Here's an\nupdate from F-Droid regarding upcoming changes to its build and\ndistribution infrastructure.\n\n\n\tIf you have an app on f-droid.org, you might have noticed that all\n\tbuilds happen on a 5 year old Debian release: stretch. We are in\n\tthe midst of a big effort to upgrade to the latest bullseye release\n\tright now. This is not just a simple apt-get upgrade, we\n\tare also \n\ttaking this opportunity to overhaul the build process so that app\n\tbuilds work with a relatively plain Debian install as the base\n\tOS. We have to provide a platform to build thousands of apps, so we\n\tcannot just upgrade the base image as often as we like.",
+          "link": "https://lwn.net/Articles/896240/",
+          "publishedOn": "2022-05-25T14:50:04.000Z",
+          "wordCount": 189,
+          "title": "F-Droid: Our build and release infrastructure, and upcoming updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896220/",
+          "author": "corbet",
+          "description": "The\n5.17.10,\n5.15.42,\n5.10.118,\n5.4.196,\n4.19.245,\n4.14.281, and\n4.9.316\nstable kernel updates have all been released; each contains another set of\nimportant fixes.\n\nUpdate: the 5.17.11 and 5.15.43 updates followed immediately\nthereafter with a single MPTCP networking fix.",
+          "link": "https://lwn.net/Articles/896220/",
+          "publishedOn": "2022-05-25T14:13:59.000Z",
+          "wordCount": 108,
+          "title": "Another set of stable kernel updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896216/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (lrzip and puma), Fedora (plantuml and plib), Oracle (kernel and kernel-container), Red Hat (firefox, kernel, kpatch-patch, subversion:1.14, and thunderbird), Scientific Linux (firefox and thunderbird), SUSE (kernel-firmware, libxml2, pcre2, and postgresql13), and Ubuntu (accountsservice, postgresql-10, postgresql-12, postgresql-13, postgresql-14, and rsyslog).",
+          "link": "https://lwn.net/Articles/896216/",
+          "publishedOn": "2022-05-25T13:42:46.000Z",
+          "wordCount": 236,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/895907/",
           "author": "jake",
@@ -2533,36 +2633,6 @@
           "wordCount": 209,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/892216/",
-          "author": "corbet",
-          "description": "The kernel gained support for the TLS\nprotocol in the 4.13 release, which came out in September 2017.  That\nsupport is incomplete, though, in that it does not provide the kernel with\na way to initiate a TLS connection on its own.  Instead, user space creates\na socket and performs the TLS handshake before handing the socket to the\nkernel, which can then transfer data using TLS.  The situation may be about\nto change as a result of this\npatch series from Chuck Lever — though user space will still need to\nremain in the picture.",
-          "link": "https://lwn.net/Articles/892216/",
-          "publishedOn": "2022-04-25T14:41:47.000Z",
-          "wordCount": null,
-          "title": "[$] Extending in-kernel TLS support",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/892556/",
-          "author": "corbet",
-          "description": "Dave Täht has put together a summary of the\nstate of fair queuing and the fight against bufferbloat in general.\n\n\n\tOn a very positive note, while it might seem the negatives are\n\toverwhelming in the list above, I’m confident that there are\n\tbillions of devices for which fq_codel is doing a good job. I’m\n\tconfident there is a rising tide of clued system administrators and\n\tusers applying smart queue management in the right places at the\n\tright times. There’s more than enough products on the market\n\talready that have the right stuff in them to make better networks a\n\tmatter of merely recognising the problem and applying the fix.",
-          "link": "https://lwn.net/Articles/892556/",
-          "publishedOn": "2022-04-25T13:53:05.000Z",
-          "wordCount": 347,
-          "title": "Täht: The state of fq_codel and sch_cake worldwide",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/892536/",
-          "author": "jake",
-          "description": "Security updates have been issued by Fedora (kernel, kernel-headers, kernel-tools, libinput, podman-tui, and vim), Mageia (git, gzip/xz, libdxfrw, libinput, librecad, and openscad), and SUSE (dnsmasq, git, libinput, libslirp, libxml2, netty, podofo, SDL, SDL2, and tomcat).",
-          "link": "https://lwn.net/Articles/892536/",
-          "publishedOn": "2022-04-25T12:01:38.000Z",
-          "wordCount": 227,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2719,16 +2789,6 @@
           "wordCount": 3383,
           "title": "Implementing Nordic nRF52 OTA DFU over Bluetooth LE – Part 4",
           "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/05/nRF-OTA-DFU-Part-4-1.png"
-        },
-        {
-          "id": "https://www.novelbits.io/?p=19080",
-          "author": "Mohammad Afaneh",
-          "description": "Last Updated on April 25, 2022 by Mohammad Afaneh In a couple of previous posts (here and here), we covered the basics of Bluetooth Low Energy (BLE) advertising and advertisement packets. In this post, we’ll go into more depth on Bluetooth advertisements and specifically the advertising packet payload and the maximum amount of data you…\nThe post What’s the Maximum Data Size you can send in a Bluetooth Advertising Packet? appeared first on Novel Bits.",
-          "link": "https://www.novelbits.io/maximum-data-bluetooth-advertising-packet-ble/",
-          "publishedOn": "2022-04-25T08:46:55.000Z",
-          "wordCount": 2242,
-          "title": "What’s the Maximum Data Size you can send in a Bluetooth Advertising Packet?",
-          "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/04/Featured-Image-5.png"
         }
       ]
     },
@@ -2804,6 +2864,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10335",
+          "author": "Kevin C. Tofel",
+          "description": "On our latest IoT Podcast episode, we take a question that Steve left on our IoT Voicemail Hotline. Steve is transitioning his smart home platform from using Amazon Alexa to Apple HomeKit. However, his family likes the fingerprint sensor door lock in his garage and it works with Alexa. The HomeKit garage door opener Steve […]\nThe post How to use a HomeKit garage door opener with an Alexa smart lock appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-to-use-a-homekit-garage-door-opener-with-an-alexa-smart-lock/",
+          "publishedOn": "2022-05-25T14:05:51.000Z",
+          "wordCount": 1391,
+          "title": "How to use a HomeKit garage door opener with an Alexa smart lock",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2021/09/IMG_0817-scaled.jpeg"
+        },
         {
           "id": "https://staceyoniot.com/?p=10331",
           "author": "andrew",
@@ -3023,16 +3093,6 @@
           "wordCount": 1474,
           "title": "Airthings Wave Pollution review: Good for monitoring but not that smart",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/04/IMG_1486-scaled.jpeg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10176",
-          "author": "Stacey Higginbotham",
-          "description": "LoRaWAN network provider Senet said this week that it has expanded its relationship with the Helium network, a distributed peer-to-peer LoRaWAN network. Senet had started letting its customers roam onto the Helium network in September of last year, but with this move Senet has expanded the deal to include Helium’s global hotspots. And that means Senet customers can roam […]\nThe post Senet’s embrace of Helium shows its confidence in LoRaWAN appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/senets-embrace-of-helium-shows-its-confidence-in-lorawan/",
-          "publishedOn": "2022-04-25T13:00:51.000Z",
-          "wordCount": 1090,
-          "title": "Senet’s embrace of Helium shows its confidence in LoRaWAN",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/04/bigstock-Blue-Digital-Water-Meter-Dirt-439790228.jpg?fit=900%2C505&ssl=1"
         }
       ]
     },
@@ -3165,6 +3225,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=85921",
+          "author": "경실련",
+          "description": "경실련 유권자운동본부는 6.1 지방선거에서 17개 광역단체장에 출마한 후보자들의 3대 핵심공약 평가 결과를 발표한다. 이는 후보자들의 정책을 검증하고 유권자들에게 알려 시민들이 정책평가에 기반한 투표권을 행사할 수 있도록 기여하기 위해서다.   1. 김동연 더불어민주당 후보 집 걱정 없는 경기도, 출퇴근 시간 하루 1시간의 여유, 100만개의 일자리 창출 민생 제일, 혁신 경기, 잘사는 경제수도 경기도를 만듭니다 맞춤형 복지·안전망으로 […]\nThe post 6.1 지방선거 경기지사 후보자 공약 평가: 김동연, 김은혜, 황순식 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/85921",
+          "publishedOn": "2022-05-25T09:46:29.000Z",
+          "wordCount": 1127,
+          "title": "6.1 지방선거 경기지사 후보자 공약 평가: 김동연, 김은혜, 황순식",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/05/pic_12.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=85912",
+          "author": "경실련",
+          "description": "경실련 유권자운동본부는 6.1 지방선거에서 유권자의 올바른 투표권 행사를 위해 후보자의 공천 검증, 정책 검증, 후보자 정보 분석 등의 다양한 활동을 진행하고 있다. 이번에는 17개 광역단체장 후보자들의 3대 핵심 공약 평가해 발표한다. 1. 송영길 더불어민주당 후보 3대 핵심 공약은 다음과 같다. 서울시민이면 ‘누구나집’으로 내 집 마련 꿈 실현! 강북 누구나 역세권! UN아시아본부 유치, 글로벌 서울 완성! […]\nThe post 6.1 지방선거 서울시장 후보자 공약 평가: 송영길, 오세훈, 권수정 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/85912",
+          "publishedOn": "2022-05-25T08:43:10.000Z",
+          "wordCount": 1309,
+          "title": "6.1 지방선거 서울시장 후보자 공약 평가: 송영길, 오세훈, 권수정",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/05/pic_5.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=85888",
           "author": "경실련",
@@ -3394,36 +3474,6 @@
           "wordCount": 1833,
           "title": "제로 트러스트 기반 보안 실현을 위한 6×2 아키텍처",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/network-gd173f017c_640.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=85472",
-          "author": "민주언론시민연합",
-          "description": "4월 16일은 세월호 참사가 일어난 지 8년 된 날입니다. 2014년 사고발생 후부터 진상규명을 위해 8차례 조사 및 수사가 진행됐고, 9월 10일 활동 종료를 앞두고 있는 사회적참사특별조사위원회도 조사를 진행하고 있습니다. 하지만 세월호 침몰 원인에 대한 여러 의견이 제기됐을 뿐 공인된 결과는 아직 발표되지 못했습니다. 안전의 중요성을 되새기자는 의미로 2015년 국가기념일인 ‘국민 안전의 날’로 지정된 4월 […]\nThe post 세월호 8주기 보도 양극 체험: 채널A ‘김건희 스카프’ vs. 뉴스타파 ‘과학적 접근’ first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85472",
-          "publishedOn": "2022-04-26T08:13:49.000Z",
-          "wordCount": 1514,
-          "title": "세월호 8주기 보도 양극 체험: 채널A ‘김건희 스카프’ vs. 뉴스타파 ‘과학적 접근’",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/pic_008-2.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=85467",
-          "author": "언론인권센터",
-          "description": "언론인권센터는 최근 양궁 국가대표 안산 선수를 대상으로 ‘페미 논란’, ‘전장연 논란’ 등의 표제를 뽑아내면서, ‘논란’이라는 단어를 남발하고 있는 일부 언론에 대하여 깊은 유감을 표한다. 아시안게임 출전 기자회견에서 안산 선수는 전국장애인차별철폐연대(이하 ‘전장연’)에 대한 지지를 표명하는 글을 트위터에 올린 이유에 대해 질문받았다. 안산 선수는 이에 대해 자신은 초등특수교육과를 다니고 있으며, 이 자리는 국가대표 선수로서 나온 것이므로 해당 […]\nThe post 양궁 선수가 장애인 단체 후원하면 그게 ‘논란’입니까? first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85467",
-          "publishedOn": "2022-04-26T07:04:58.000Z",
-          "wordCount": 893,
-          "title": "양궁 선수가 장애인 단체 후원하면 그게 ‘논란’입니까?",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/noun-archer-1974831.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=85425",
-          "author": "크레센도",
-          "description": "십자군 전쟁(1095년-1291년)을 통해 예기치 않게 자신들의 뿌리를 찾은 유럽에는, 급속도로 문자가 확산되기 시작하면서 새로운 문명이 태동한다. 암흑시대를 지배하던 구술 문화·여성적 가치가 새롭게 개화된 문자 문화·남성적 가치가 비교적 균형을 이루며 황금기가 펼쳐진다. 바로 이 시기(1000-1300년)를 유럽 역사에서 중세 성기(中世 盛期; High Middle Age)라고 한다. 암흑에서 깨어난 유럽 풍경: 여성의 활발한 사회 참여   중세 성기 유럽은 전반적으로 […]\nThe post 교황은 왜 사제 결혼을 금지하였나 (ft. 교회 여성 혐오의 기원) first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85425",
-          "publishedOn": "2022-04-26T06:10:01.000Z",
-          "wordCount": 2635,
-          "title": "교황은 왜 사제 결혼을 금지하였나 (ft. 교회 여성 혐오의 기원)",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/Giotto_-_Legend_of_St_Francis_-_-15-_-_Sermon_to_the_Birds.jpg"
         }
       ]
     },
@@ -3432,6 +3482,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=585640",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585640/%ec%9d%b8%ed%94%8c%eb%a0%88-%ec%8b%9c%eb%8c%80-%ed%88%ac%ec%9e%90",
+          "publishedOn": "2022-05-25T12:18:05.000Z",
+          "wordCount": 661,
+          "title": "레이 달리오 인플레 시대 투자, 주식은 쓰레기 실물자산 투자를 추천",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/05/Ray-Dalio-레이-달리오.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=585626",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585626/%ec%97%90%eb%b2%84%ec%bd%94%ec%96%b4-sp-500-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-05-25T09:35:49.000Z",
+          "wordCount": 708,
+          "title": "연말 S&P 500 전망은 4,800까지 상승할 것 by Evercore",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/05/황소와-곰이-사우는-주식-시장-stock-exchange.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=585629",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585629/22%eb%85%84-1%eb%b6%84%ea%b8%b0-%ec%8a%a4%eb%83%85-%ec%8b%a4%ec%a0%81%ec%99%80-%ec%8a%a4%eb%83%85-%ec%a3%bc%ea%b0%80",
+          "publishedOn": "2022-05-25T07:52:34.000Z",
+          "wordCount": 1123,
+          "title": "스냅 주가 폭락에서 뒤돌아보는 1분기 스냅 실적과 스냅주가 전망",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/스냅-카메라를-든-여인이-촬영중-Image-from-CNBC.jpg"
+        },
         {
           "id": "https://happist.com/?p=585603",
           "author": "happist",
@@ -3890,6 +3970,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=74198",
+          "author": "eyesopen1",
+          "description": "지난 2월 열린 제94회 아카데미상은 배우 윌 스미스가 코미디언 크리스 락을 생방송 중에 폭행한 사건에 다른 모든 이슈가 덮여버린 해로 기억될 겁니다. 그래서 어쩌면 아카데미를 둘러싼 다양한 논의들을 되돌아보는 일이 소중할지도 모르겠습니다. 이 글은 2월 9일 네이버 프리미엄 콘텐츠에 쓴 글입니다.   미국 현지 시각으로 오늘(8일) 아침, 제94회 아카데미상 후보 명단이 발표되었습니다. 작품상을 비롯해 총 12개 부문 후보에 오른 “파워 오브 도그”의 감독 제인 캠피언 감독은 1994년에 이어 생애 두 → 더 보기",
+          "link": "https://newspeppermint.com/2022/05/24/npc_oscargender/?utm_source=rss&utm_medium=rss&utm_campaign=npc_oscargender",
+          "publishedOn": "2022-05-24T22:59:45.000Z",
+          "wordCount": 644,
+          "title": "[필진 칼럼] 아카데미상과 성별격차",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=74163",
           "author": "ingppoo",
           "description": "올해 11월 미국 중간선거의 중요한 키워드 중 하나는 제리맨더링(gerrymandering)이 될 겁니다. 제리맨더링의 기원과 영향력에 관해 지난 2월 7일 네이버 프리미엄 콘텐츠에 쓴 글입니다. 제리맨더링의 기원을 찾아보면, 오래된 옛 신문에 등장한 아래 지도/삽화가 나옵니다. 제리맨더링이 무엇인지, 왜 지금 언론의 주목을 받으며 민주당과 공화당이 제리맨더링 문제를 놓고 치열하게 싸우고 있는지, 선거와 민주주의에 어떤 영향을 미칠지에 관해 정리했습니다. 뉴욕타임스가 지난해 11월 정리한 인터랙티브 기사를 뼈대로 삼았습니다. 뉴욕타임스는 업샷에 “제리맨더링, 직접 해보실래요?”란 제목으로 흥미로운 게임을 올렸습니다. 글로 읽으면 도무지 개념이 와닿지 않지만, 직접 → 더 보기",
@@ -4088,16 +4178,6 @@
           "wordCount": 1447,
           "title": "[필진 칼럼] 좋은 의도에서 비롯된 정책이 좋지 않은 결과를 낳을 때",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=74722",
-          "author": "veritaholic",
-          "description": "생물학적인 성(sex)과 사회적 성(gender) 사이의 간극은 쉬운 문제가 아닙니다. 그리고 그 중 가장 첨예한 갈등은 생물학적 성의 차이가 분명한 스포츠 영역에서 일어납니다. 곧, 우리는 남자와 여자의 육체적 차이를 인정하며, 따라서 대부분 종목에서 남자와 여자를 구분할 뿐 아니라 기록도 따로 관리합니다. 그러나 원래 남자였다가 성전환수술을 받아 여자가 된 트랜스젠더 선수들이 있습니다. 지난 12월 10일, 마이클 셔머는 최근 미국에서 다시 이 문제로 공정성 논란을 일어나게 만든 펜실베니아 대학 소속 수영선수 리아 토마스의 이야기를 → 더 보기",
-          "link": "https://newspeppermint.com/2022/04/25/npc_transgenderathletes/?utm_source=rss&utm_medium=rss&utm_campaign=npc_transgenderathletes",
-          "publishedOn": "2022-04-25T22:59:12.000Z",
-          "wordCount": 595,
-          "title": "[필진 칼럼] 트랜스젠더 운동 선수의 경우",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -4123,6 +4203,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222745453932",
+          "author": "sellars",
+          "description": "8장 <유위적 이성의 철학과 당위적 의지의 철학>과 9장 <현실주의와 이상주의의 사유와 진리>는 모두 서양 이성주의의 역사적, 철학적 전개에 대해서 보여주고 있다. 서로 중첩되는 내용이 반복되지만, 이성주의라는 관점에서 본 작은 철학사와 같다. 8장은 간간히 비판을 하고 있지만, 이성주의의 역사적 전개에 충실하다. 플라톤으로부터 시작하여 아리스토텔레스, 토마스 아퀴나스, 칸트, 듀이, 그리고 마르크스에 이르는 이성주의의 전개에 대해서 서술하고 설명하고 있다. 플라톤, 아리스토텔레스, 토마스에 이르는 고전적 이성주의, 즉 실재론적 이성을 비판하면서, 그것을 관념적 이성, 혹은 인간중심적 이성으로 만들어 놓은.......",
+          "link": "https://blog.naver.com/sellars/222745453932",
+          "publishedOn": "2022-05-24T23:00:17.000Z",
+          "wordCount": 8,
+          "title": "인간중심적 휴머니즘과 자의식의 철학",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222744073364",
           "author": "sellars",
@@ -4351,16 +4441,6 @@
           "publishedOn": "2022-04-27T02:08:24.000Z",
           "wordCount": 8,
           "title": "의미 구성",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222711791463",
-          "author": "sellars",
-          "description": "고등학생들이 배우는 <생활과 윤리>에 대한 단행본 책을 보면서 <도덕이나 윤리학을 공부함으로써 진짜 우리는 윤리적이며 도덕적 인간이 되는가?>라는 의문이 생겨난다. 이런 교과나 그 평가 시험이 도덕이나 윤리의 문제를 단지 암기의 문제로 변모시키고 있는 것은 아닌가? 실용 윤리학, 혹은 실천 윤리학이라고 할 수 있는 이런 교과에서 가르치는 문제들은 사실 매우 어려운 문제들이다. 가령 안락사나 낙태의 문제를 어떻게 바라보아야 하는가? 나는 잘 모르겠다. 물론 이런 주제에 대한 내 생각이 있지만, 과연 내 생각이 도덕적으로 옳은지 자신할 수 없다. 철학적 주제들에 대해 관심을 갖고 있고, 그런 주제에 대해서 자신.......",
-          "link": "https://blog.naver.com/sellars/222711791463",
-          "publishedOn": "2022-04-26T01:28:17.000Z",
-          "wordCount": 8,
-          "title": "도덕교육 인성교육",
           "imageUrl": null
         }
       ]

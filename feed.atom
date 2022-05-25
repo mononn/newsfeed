@@ -2,10 +2,297 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-05-24T20:19:23.704Z</updated>
+    <updated>2022-05-25T20:17:55.120Z</updated>
     <generator>osmosfeed 1.14.4</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Making O_TMPFILE atomic (and statx() additions)]]></title>
+        <id>https://lwn.net/Articles/896153/</id>
+        <link href="https://lwn.net/Articles/896153/"/>
+        <updated>2022-05-25T18:56:36.000Z</updated>
+        <summary type="html"><![CDATA[Right on the heels of his previous filesystem
+session at the
+2022 Linux Storage,
+Filesystem, Memory-management and BPF Summit (LSFMM), Steve French led
+a session on temporary files and their interaction with network
+filesystems.
+The problem is that creating temporary files is not always atomic, so he was
+proposing changing that, which would eliminate a possible race condition
+and be more efficient for network filesystems.
+Since the temporary-file discussion did not fill the 30-minute slot, however, French took
+the opportunity to discuss some attributes he would like to see get added for the
+statx()
+system call.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vector signal generator enables digitally modulated signals to 67 GHz]]></title>
+        <id>https://www.embedded.com/?p=4474860</id>
+        <link href="https://www.embedded.com/vector-signal-generator-for-67-ghz-and-beyond/"/>
+        <updated>2022-05-25T17:37:06.000Z</updated>
+        <summary type="html"><![CDATA[With new options for maximum frequencies of 56 GHz and 67 GHz, Rohde & Schwarz said this dramatically raises the limits for generating wide bandwidth digitally modulated signals of high quality.
+The post Vector signal generator enables digitally modulated signals to 67 GHz appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Experts.Anyone.Anywhere]]></title>
+        <id>http://developers.googleblog.com/2022/05/expertsanyoneanywhere.html</id>
+        <link href="http://developers.googleblog.com/2022/05/expertsanyoneanywhere.html"/>
+        <updated>2022-05-25T17:00:00.001Z</updated>
+        <summary type="html"><![CDATA[Posted by Janelle Kuhlman, Developer Relations Program Manager 
+ 
+  
+Click above to meet our community of Experts
+  
+The Google Developer Experts program is a global network of highly experienced technology experts, developers and thought leaders. GDEs share their expertise with other developers and tech communities through a variety of ways such as speaking engagements, mentorship and content writing. The community has access to an exclusive network of experts that span across different Google technologies including Android, Cloud, Machine Learning and more. 
+Get to know our diverse community and subscribe to the Google Developers YouTube Channel to stay informed on the latest updates across our products and platforms!]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Change notifications for network filesystems]]></title>
+        <id>https://lwn.net/Articles/896055/</id>
+        <link href="https://lwn.net/Articles/896055/"/>
+        <updated>2022-05-25T16:23:25.000Z</updated>
+        <summary type="html"><![CDATA[Steve French led a discussion on change notifications for network
+filesystems in a session at the
+2022 Linux Storage,
+Filesystem, Memory-management and BPF Summit (LSFMM).  He is part of
+the Samba team and noted that both Windows and macOS clients get notified
+of new and changed files in 
+a shared directory immediately, while on Linux that does not happen.  He
+wanted to explore what it would take to add that functionality.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Linux Foundation's "security mobilization plan"]]></title>
+        <id>https://lwn.net/Articles/896244/</id>
+        <link href="https://lwn.net/Articles/896244/"/>
+        <updated>2022-05-25T15:54:16.000Z</updated>
+        <summary type="html"><![CDATA[The Linux Foundation has posted an "Open Source
+Software Security Mobilization Plan" that aims to address a number of
+perceived security problems with the expenditure of nearly
+$140 million over two years.
+
+
+	While there are considerable ongoing efforts to secure the OSS
+	supply chain, to achieve acceptable levels of resilience and risk,
+	a more comprehensive series of investments to shift security from a
+	largely reactive exercise to a proactive approach is required. Our
+	objective is to evolve the systems and processes used to ensure a
+	higher degree of security assurance and trust in the OSS supply
+	chain.
+
+	This paper suggests a comprehensive portfolio of 10 initiatives
+	which can start immediately to address three fundamental goals for
+	hardening the software supply chain. Vulnerabilities and weaknesses
+	in widely deployed software present systemic threats to the
+	security and stability of modern society as government services,
+	infrastructure providers, nonprofits and the vast majority of
+	private businesses rely on software in order to function.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[F-Droid: Our build and release infrastructure, and upcoming updates]]></title>
+        <id>https://lwn.net/Articles/896240/</id>
+        <link href="https://lwn.net/Articles/896240/"/>
+        <updated>2022-05-25T14:50:04.000Z</updated>
+        <summary type="html"><![CDATA[Here's an
+update from F-Droid regarding upcoming changes to its build and
+distribution infrastructure.
+
+
+	If you have an app on f-droid.org, you might have noticed that all
+	builds happen on a 5 year old Debian release: stretch. We are in
+	the midst of a big effort to upgrade to the latest bullseye release
+	right now. This is not just a simple apt-get upgrade, we
+	are also 
+	taking this opportunity to overhaul the build process so that app
+	builds work with a relatively plain Debian install as the base
+	OS. We have to provide a platform to build thousands of apps, so we
+	cannot just upgrade the base image as often as we like.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Another set of stable kernel updates]]></title>
+        <id>https://lwn.net/Articles/896220/</id>
+        <link href="https://lwn.net/Articles/896220/"/>
+        <updated>2022-05-25T14:13:59.000Z</updated>
+        <summary type="html"><![CDATA[The
+5.17.10,
+5.15.42,
+5.10.118,
+5.4.196,
+4.19.245,
+4.14.281, and
+4.9.316
+stable kernel updates have all been released; each contains another set of
+important fixes.
+
+Update: the 5.17.11 and 5.15.43 updates followed immediately
+thereafter with a single MPTCP networking fix.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to use a HomeKit garage door opener with an Alexa smart lock]]></title>
+        <id>https://staceyoniot.com/?p=10335</id>
+        <link href="https://staceyoniot.com/how-to-use-a-homekit-garage-door-opener-with-an-alexa-smart-lock/"/>
+        <updated>2022-05-25T14:05:51.000Z</updated>
+        <summary type="html"><![CDATA[On our latest IoT Podcast episode, we take a question that Steve left on our IoT Voicemail Hotline. Steve is transitioning his smart home platform from using Amazon Alexa to Apple HomeKit. However, his family likes the fingerprint sensor door lock in his garage and it works with Alexa. The HomeKit garage door opener Steve […]
+The post How to use a HomeKit garage door opener with an Alexa smart lock appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Kevin C. Tofel</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/896216/</id>
+        <link href="https://lwn.net/Articles/896216/"/>
+        <updated>2022-05-25T13:42:46.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (lrzip and puma), Fedora (plantuml and plib), Oracle (kernel and kernel-container), Red Hat (firefox, kernel, kpatch-patch, subversion:1.14, and thunderbird), Scientific Linux (firefox and thunderbird), SUSE (kernel-firmware, libxml2, pcre2, and postgresql13), and Ubuntu (accountsservice, postgresql-10, postgresql-12, postgresql-13, postgresql-14, and rsyslog).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[레이 달리오 인플레 시대 투자, 주식은 쓰레기 실물자산 투자를 추천]]></title>
+        <id>https://happist.com/?p=585640</id>
+        <link href="https://happist.com/585640/%ec%9d%b8%ed%94%8c%eb%a0%88-%ec%8b%9c%eb%8c%80-%ed%88%ac%ec%9e%90"/>
+        <updated>2022-05-25T12:18:05.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[6.1 지방선거 경기지사 후보자 공약 평가: 김동연, 김은혜, 황순식]]></title>
+        <id>https://slownews.kr/?p=85921</id>
+        <link href="https://slownews.kr/85921"/>
+        <updated>2022-05-25T09:46:29.000Z</updated>
+        <summary type="html"><![CDATA[경실련 유권자운동본부는 6.1 지방선거에서 17개 광역단체장에 출마한 후보자들의 3대 핵심공약 평가 결과를 발표한다. 이는 후보자들의 정책을 검증하고 유권자들에게 알려 시민들이 정책평가에 기반한 투표권을 행사할 수 있도록 기여하기 위해서다.   1. 김동연 더불어민주당 후보 집 걱정 없는 경기도, 출퇴근 시간 하루 1시간의 여유, 100만개의 일자리 창출 민생 제일, 혁신 경기, 잘사는 경제수도 경기도를 만듭니다 맞춤형 복지·안전망으로 […]
+The post 6.1 지방선거 경기지사 후보자 공약 평가: 김동연, 김은혜, 황순식 first appeared on 슬로우뉴스.]]></summary>
+        <author>
+            <name>경실련</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[연말 S&P 500 전망은 4,800까지 상승할 것 by Evercore]]></title>
+        <id>https://happist.com/?p=585626</id>
+        <link href="https://happist.com/585626/%ec%97%90%eb%b2%84%ec%bd%94%ec%96%b4-sp-500-%ec%a0%84%eb%a7%9d"/>
+        <updated>2022-05-25T09:35:49.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[6.1 지방선거 서울시장 후보자 공약 평가: 송영길, 오세훈, 권수정]]></title>
+        <id>https://slownews.kr/?p=85912</id>
+        <link href="https://slownews.kr/85912"/>
+        <updated>2022-05-25T08:43:10.000Z</updated>
+        <summary type="html"><![CDATA[경실련 유권자운동본부는 6.1 지방선거에서 유권자의 올바른 투표권 행사를 위해 후보자의 공천 검증, 정책 검증, 후보자 정보 분석 등의 다양한 활동을 진행하고 있다. 이번에는 17개 광역단체장 후보자들의 3대 핵심 공약 평가해 발표한다. 1. 송영길 더불어민주당 후보 3대 핵심 공약은 다음과 같다. 서울시민이면 ‘누구나집’으로 내 집 마련 꿈 실현! 강북 누구나 역세권! UN아시아본부 유치, 글로벌 서울 완성! […]
+The post 6.1 지방선거 서울시장 후보자 공약 평가: 송영길, 오세훈, 권수정 first appeared on 슬로우뉴스.]]></summary>
+        <author>
+            <name>경실련</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flow: A delightfully tiny but powerful HTTP router for Go]]></title>
+        <id>https://www.alexedwards.net/blog/introducing-flow</id>
+        <link href="https://www.alexedwards.net/blog/introducing-flow"/>
+        <updated>2022-05-25T08:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Last year I wrote a new HTTP router for Go called Flow. I've been using it in production on this site and in a couple of other projects since, and I'm pretty happy with how it's working out so decided to share it a bit more widely.
+My aim with Flow was to bring together my favourite features from other popular routers that I frequently used. It has:
+A very small and readable codebase (approx. 160 LOC) with pattern-matching logic similar to matryer/way.
+Middleware management like chi — including the ability to create route 'groups' which use different middleware.
+Optional regexp support for tighter pattern matching, similar to chi and gorilla/mux.
+Automatic handling of OPTIONS requests, like julienschmidt/httprouter.
+Automatic handling of HEAD requests, like bmizerany/pat.
+An Allow header is automatically set on all OPTIONS and 405 Method Not Allowed responses, like julienschmidt/httprouter.
+Ability to map multiple HTTP methods to the same handler in one declaration, like gorilla/mux.
+Additionally:
+It has a very small API (see the Go docs) so there's not much to learn. 
+It's designed to work nicely with http.Handler, http.HandlerFunc, and the standard Go middleware pattern.
+The handlers for 404 Not Found and 405 Method Not Allowed responses are customizable.
+Conflicting routes are permitted (e.g. /posts/:id and posts/new), with routes matched in the order that they are declared.
+It has zero dependencies.
+Below is a quick example of the syntax, and if you like the look of it you can check out the full README on GitHub.
+
+  
+
+A note on performance
+I haven't done any benchmarking against other routers, so I can't speak about the relative performance of Flow. What I can say it has been plenty fast enough for all of my use-cases so far and not a hot spot when profiling my applications under load.]]></summary>
+        <author>
+            <name>Alex Edwards</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[스냅 주가 폭락에서 뒤돌아보는 1분기 스냅 실적과 스냅주가 전망]]></title>
+        <id>https://happist.com/?p=585629</id>
+        <link href="https://happist.com/585629/22%eb%85%84-1%eb%b6%84%ea%b8%b0-%ec%8a%a4%eb%83%85-%ec%8b%a4%ec%a0%81%ec%99%80-%ec%8a%a4%eb%83%85-%ec%a3%bc%ea%b0%80"/>
+        <updated>2022-05-25T07:52:34.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Access JFR data faster with Cryostat 2.1's new download APIs]]></title>
+        <id>c9f79049-e6f4-4f3a-a696-47181f128a16</id>
+        <link href="https://developers.redhat.com/articles/2022/05/25/access-jfr-data-faster-cryostat-21s-new-download-apis"/>
+        <updated>2022-05-25T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cryostat is a tool for managing JDK Flight Recorder data on Kubernetes. This article explains how new download APIs based on JSON Web Tokens (JWTs) help facilitate a more responsive and efficient download workflow in the Cryostat 2.1 web client.
+The Cryostat web client download workflow
+Previously, the web client download flow for resources such as recordings, reports, and templates consisted of the application firing an HTTP GET request with the appropriate authorization header(s) to the back-end, downloading the returned file into browser memory, creating a local object URL for the blob, and then assigning the URL to an anchor element prompting user response. The file size determined the download speed and when the "Save File" prompt would appear. Once this process was completed, the use…]]></summary>
+        <author>
+            <name>Hareet Dhillon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Eat up fewer resources in Cryostat 2.1 with sidecar reports]]></title>
+        <id>cc5fce0c-3643-49d1-bd26-b35b0b1e3bd5</id>
+        <link href="https://developers.redhat.com/articles/2022/05/25/eat-fewer-resources-cryostat-21-sidecar-reports"/>
+        <updated>2022-05-25T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cryostat is a tool for managing JDK Flight Recorder data on Kubernetes. Version 2.1 of Cryostat introduces the option of using a sidecar reports container to generate automated analysis reports for JDK flight recordings. Previously, the main Cryostat container handled the report generation. Report generation is a resource-intensive operation, and as a result, users may find themselves overprovisioning the Cryostat container to meet peak resource demands. Those resources may in turn end up unused if you're not generating reports.
+With this new option to delegate report generation to a sidecar container, users will find it easier to provision resources more efficiently. When report generation is not a concern, the main Cryostat container, including its web server and various lightweight oper…]]></summary>
+        <author>
+            <name>Hareet Dhillon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[인간중심적 휴머니즘과 자의식의 철학]]></title>
+        <id>https://blog.naver.com/sellars/222745453932</id>
+        <link href="https://blog.naver.com/sellars/222745453932"/>
+        <updated>2022-05-24T23:00:17.000Z</updated>
+        <summary type="html"><![CDATA[8장 <유위적 이성의 철학과 당위적 의지의 철학>과 9장 <현실주의와 이상주의의 사유와 진리>는 모두 서양 이성주의의 역사적, 철학적 전개에 대해서 보여주고 있다. 서로 중첩되는 내용이 반복되지만, 이성주의라는 관점에서 본 작은 철학사와 같다. 8장은 간간히 비판을 하고 있지만, 이성주의의 역사적 전개에 충실하다. 플라톤으로부터 시작하여 아리스토텔레스, 토마스 아퀴나스, 칸트, 듀이, 그리고 마르크스에 이르는 이성주의의 전개에 대해서 서술하고 설명하고 있다. 플라톤, 아리스토텔레스, 토마스에 이르는 고전적 이성주의, 즉 실재론적 이성을 비판하면서, 그것을 관념적 이성, 혹은 인간중심적 이성으로 만들어 놓은.......]]></summary>
+        <author>
+            <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[필진 칼럼] 아카데미상과 성별격차]]></title>
+        <id>https://newspeppermint.com/?p=74198</id>
+        <link href="https://newspeppermint.com/2022/05/24/npc_oscargender/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_oscargender"/>
+        <updated>2022-05-24T22:59:45.000Z</updated>
+        <summary type="html"><![CDATA[지난 2월 열린 제94회 아카데미상은 배우 윌 스미스가 코미디언 크리스 락을 생방송 중에 폭행한 사건에 다른 모든 이슈가 덮여버린 해로 기억될 겁니다. 그래서 어쩌면 아카데미를 둘러싼 다양한 논의들을 되돌아보는 일이 소중할지도 모르겠습니다. 이 글은 2월 9일 네이버 프리미엄 콘텐츠에 쓴 글입니다.   미국 현지 시각으로 오늘(8일) 아침, 제94회 아카데미상 후보 명단이 발표되었습니다. 작품상을 비롯해 총 12개 부문 후보에 오른 “파워 오브 도그”의 감독 제인 캠피언 감독은 1994년에 이어 생애 두 → 더 보기]]></summary>
+        <author>
+            <name>eyesopen1</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] Sharing memory for shared file extents]]></title>
         <id>https://lwn.net/Articles/895907/</id>
@@ -195,6 +482,19 @@ In the first article in this series, you set up your AWS environment and f…]]>
         <summary type="html"><![CDATA[* 왜 경제학의 판단은 부분적인가? 다음 글을 통해 답변해 보라. 경제학은 경제적인 것과 비경제적인 것의 기준을 제공하며, 큰 영향력을 행사하고 있다. 따라서 근대 세계가 갖고 있는 역경을 극복하고, 평화와 영속성을 제공하는 경제적 기반을 확보하는데 경제학의 자문과 도움을 받아야 한다고 생각할 수 있다. 경제학이 옥스퍼드 대학에서 개설되었을 때, 그렇게 환영을 받지 못했다. 그것은 경제학이 다른 분야를 침해할 가능성이 너무 높은 과목으로 이해되었기 때문이다. 최초의 경제학 교수인 시니어는 경제학이 도덕과학 중 으뜸으로 평가받게 될 것이라고 연설했다. 부의 추구야말로 도덕적 향상의 위대한 원천이기 때문이다. 그러나.......]]></summary>
         <author>
             <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Selecting Your Next Project's MCU]]></title>
+        <id>https://interrupt.memfault.com/blog/choosing-an-mcu</id>
+        <link href="https://interrupt.memfault.com/blog/choosing-an-mcu"/>
+        <updated>2022-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Selecting the best chip can be tedious work but the best chip can save you a lot
+of time and money, and might even be faster! So should you spend time finding
+the best? I have some words on the topic.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
         </author>
     </entry>
     <entry>
@@ -406,6 +706,17 @@ See the LWN merge-window summaries (part 1, part 2) and the KernelNewbies 5.18
 for more details.]]></summary>
         <author>
             <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Quantum computing takes on automotive design and manufacturing]]></title>
+        <id>https://www.embedded.com/?p=4474833</id>
+        <link href="https://www.embedded.com/quantum-computing-takes-on-automotive-design-and-manufacturing/"/>
+        <updated>2022-05-22T21:54:00.000Z</updated>
+        <summary type="html"><![CDATA[A collaboration looks to analyze the applicability of quantum computational algorithms to metal forming applications modeling. Car manufacturer BMW and quantum computing technology developer Pasqal...
+The post Quantum computing takes on automotive design and manufacturing appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Anne-Françoise Pelé</name>
         </author>
     </entry>
     <entry>
@@ -1131,6 +1442,17 @@ As we publish articles in this series, we will update this article and provide t
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[AI test chip offers proof of concept for digital in-memory compute design]]></title>
+        <id>https://www.embedded.com/?p=4474843</id>
+        <link href="https://www.embedded.com/ai-test-chip-offers-proof-of-concept-for-digital-in-memory-compute-design/"/>
+        <updated>2022-05-17T22:01:00.000Z</updated>
+        <summary type="html"><![CDATA[The company’s tests revealed 39.3 TOPS of AI compute with an efficiency of 14.1 TOPS/W at INT8 precision when operating at 800 MHz. AI chip...
+The post AI test chip offers proof of concept for digital in-memory compute design appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Sally Ward-Foxton</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Python 3.9.13 is now available]]></title>
         <id>https://pythoninsider.blogspot.com/2022/05/python-3913-is-now-available.html</id>
         <link href="https://pythoninsider.blogspot.com/2022/05/python-3913-is-now-available.html"/>
@@ -1305,6 +1627,17 @@ Previous versions of Cryostat exposed flight recordings with a simple HTTP REST 
         <summary type="html"><![CDATA[* 팟캐스트 아메리카노 시즌3 세 번째 에피소드의 오프닝에서 언급한 칼럼을 소개한 글입니다.   개인적으로 “역사의 물줄기를 바꾼 사건”, “지금의 OO를 만든 OO날 밤” 같은 표현을 썩 좋아하지 않습니다. 하룻밤 새, 혹은 어느 시점에 일어난 일 하나가 이후의 진로를 결정했다는 피상적인 분석에 기대면 종종 그 일이 일어나게 된 훨씬 더 복잡하고 다층적인 맥락을 간과할 수 있다고 생각하기 때문입니다. 그래서 워싱턴포스트에 실린 “1973년 1월 22일, 미국을 바꿔버린 날(Jan. 22, 1973: The day → 더 보기]]></summary>
         <author>
             <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A closer look at compliance assessment in EU’s draft ADS legislation]]></title>
+        <id>https://www.embedded.com/?p=4474848</id>
+        <link href="https://www.embedded.com/a-closer-look-at-compliance-assessment-in-eus-draft-ads-legislation/"/>
+        <updated>2022-05-16T22:03:00.000Z</updated>
+        <summary type="html"><![CDATA[The EU’s ADS compliance assessment specifies how an autonomous vehicle will be evaluated, audited, and tested before it will get type–approval. The European Union (EU)...
+The post A closer look at compliance assessment in EU’s draft ADS legislation appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Egil Juliussen</name>
         </author>
     </entry>
     <entry>
@@ -4919,190 +5252,6 @@ or newer kernel to be able to run LineageOS 19.]]></summary>
 One of the most prominent examples of this new architecture is the data processing unit (DPU). DPUs offer a complete compute system with an independent software stack, network identity, and provisioning capabilities. The DPU can host its own applications using either embedded or orchestrated deployment model…]]></summary>
         <author>
             <name>Erwan Gallen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[세월호 8주기 보도 양극 체험: 채널A ‘김건희 스카프’ vs. 뉴스타파 ‘과학적 접근’]]></title>
-        <id>https://slownews.kr/?p=85472</id>
-        <link href="https://slownews.kr/85472"/>
-        <updated>2022-04-26T08:13:49.000Z</updated>
-        <summary type="html"><![CDATA[4월 16일은 세월호 참사가 일어난 지 8년 된 날입니다. 2014년 사고발생 후부터 진상규명을 위해 8차례 조사 및 수사가 진행됐고, 9월 10일 활동 종료를 앞두고 있는 사회적참사특별조사위원회도 조사를 진행하고 있습니다. 하지만 세월호 침몰 원인에 대한 여러 의견이 제기됐을 뿐 공인된 결과는 아직 발표되지 못했습니다. 안전의 중요성을 되새기자는 의미로 2015년 국가기념일인 ‘국민 안전의 날’로 지정된 4월 […]
-The post 세월호 8주기 보도 양극 체험: 채널A ‘김건희 스카프’ vs. 뉴스타파 ‘과학적 접근’ first appeared on 슬로우뉴스.]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[양궁 선수가 장애인 단체 후원하면 그게 ‘논란’입니까?]]></title>
-        <id>https://slownews.kr/?p=85467</id>
-        <link href="https://slownews.kr/85467"/>
-        <updated>2022-04-26T07:04:58.000Z</updated>
-        <summary type="html"><![CDATA[언론인권센터는 최근 양궁 국가대표 안산 선수를 대상으로 ‘페미 논란’, ‘전장연 논란’ 등의 표제를 뽑아내면서, ‘논란’이라는 단어를 남발하고 있는 일부 언론에 대하여 깊은 유감을 표한다. 아시안게임 출전 기자회견에서 안산 선수는 전국장애인차별철폐연대(이하 ‘전장연’)에 대한 지지를 표명하는 글을 트위터에 올린 이유에 대해 질문받았다. 안산 선수는 이에 대해 자신은 초등특수교육과를 다니고 있으며, 이 자리는 국가대표 선수로서 나온 것이므로 해당 […]
-The post 양궁 선수가 장애인 단체 후원하면 그게 ‘논란’입니까? first appeared on 슬로우뉴스.]]></summary>
-        <author>
-            <name>언론인권센터</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Red Hat Developer roundup: Best of April 2022]]></title>
-        <id>8264f386-94d5-4766-9207-39e82b323299</id>
-        <link href="https://developers.redhat.com/articles/2022/04/26/red-hat-developer-roundup-best-april-2022"/>
-        <updated>2022-04-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to our monthly recap of the articles we published in April! We had some important product and event announcements this month that deserve your attention:
-Red Hat CodeReady Studio reached its end of life;
-CodeReady Workspaces has scaled up and, is now Red Hat OpenShift Dev Spaces;
-Red Hat Summit 2022 is fast approaching—find out which sessions are of most interest to developers.
-And of course, we rolled out a panoply of articles to help you write code on the platforms you trust. Here are the April highlights.
-Note: See the end of this article for the full lineup published in April 2022.
-What's new in GCC 12?
-The upcoming release of version 12 of the GCC compiler is naturally causing quite a stir for C developers working on Red Hat Enterprise Linux and other platforms. In one of our …]]></summary>
-        <author>
-            <name>Red Hat Developer Editorial Team</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[교황은 왜 사제 결혼을 금지하였나 (ft. 교회 여성 혐오의 기원)]]></title>
-        <id>https://slownews.kr/?p=85425</id>
-        <link href="https://slownews.kr/85425"/>
-        <updated>2022-04-26T06:10:01.000Z</updated>
-        <summary type="html"><![CDATA[십자군 전쟁(1095년-1291년)을 통해 예기치 않게 자신들의 뿌리를 찾은 유럽에는, 급속도로 문자가 확산되기 시작하면서 새로운 문명이 태동한다. 암흑시대를 지배하던 구술 문화·여성적 가치가 새롭게 개화된 문자 문화·남성적 가치가 비교적 균형을 이루며 황금기가 펼쳐진다. 바로 이 시기(1000-1300년)를 유럽 역사에서 중세 성기(中世 盛期; High Middle Age)라고 한다. 암흑에서 깨어난 유럽 풍경: 여성의 활발한 사회 참여   중세 성기 유럽은 전반적으로 […]
-The post 교황은 왜 사제 결혼을 금지하였나 (ft. 교회 여성 혐오의 기원) first appeared on 슬로우뉴스.]]></summary>
-        <author>
-            <name>크레센도</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[도덕교육 인성교육]]></title>
-        <id>https://blog.naver.com/sellars/222711791463</id>
-        <link href="https://blog.naver.com/sellars/222711791463"/>
-        <updated>2022-04-26T01:28:17.000Z</updated>
-        <summary type="html"><![CDATA[고등학생들이 배우는 <생활과 윤리>에 대한 단행본 책을 보면서 <도덕이나 윤리학을 공부함으로써 진짜 우리는 윤리적이며 도덕적 인간이 되는가?>라는 의문이 생겨난다. 이런 교과나 그 평가 시험이 도덕이나 윤리의 문제를 단지 암기의 문제로 변모시키고 있는 것은 아닌가? 실용 윤리학, 혹은 실천 윤리학이라고 할 수 있는 이런 교과에서 가르치는 문제들은 사실 매우 어려운 문제들이다. 가령 안락사나 낙태의 문제를 어떻게 바라보아야 하는가? 나는 잘 모르겠다. 물론 이런 주제에 대한 내 생각이 있지만, 과연 내 생각이 도덕적으로 옳은지 자신할 수 없다. 철학적 주제들에 대해 관심을 갖고 있고, 그런 주제에 대해서 자신.......]]></summary>
-        <author>
-            <name>sellars</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[필진 칼럼] 트랜스젠더 운동 선수의 경우]]></title>
-        <id>https://newspeppermint.com/?p=74722</id>
-        <link href="https://newspeppermint.com/2022/04/25/npc_transgenderathletes/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_transgenderathletes"/>
-        <updated>2022-04-25T22:59:12.000Z</updated>
-        <summary type="html"><![CDATA[생물학적인 성(sex)과 사회적 성(gender) 사이의 간극은 쉬운 문제가 아닙니다. 그리고 그 중 가장 첨예한 갈등은 생물학적 성의 차이가 분명한 스포츠 영역에서 일어납니다. 곧, 우리는 남자와 여자의 육체적 차이를 인정하며, 따라서 대부분 종목에서 남자와 여자를 구분할 뿐 아니라 기록도 따로 관리합니다. 그러나 원래 남자였다가 성전환수술을 받아 여자가 된 트랜스젠더 선수들이 있습니다. 지난 12월 10일, 마이클 셔머는 최근 미국에서 다시 이 문제로 공정성 논란을 일어나게 만든 펜실베니아 대학 소속 수영선수 리아 토마스의 이야기를 → 더 보기]]></summary>
-        <author>
-            <name>veritaholic</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Unreal baselining: PVS-Studio's enhancements for Unreal Engine projects]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/cpp/0941/</id>
-        <link href="https://pvs-studio.com/en/blog/posts/cpp/0941/"/>
-        <updated>2022-04-25T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The PVS-Studio static analyzer is constantly evolving. We enhance various mechanisms, integrate the analyzer with game engines, IDEs, CI/CD instruments, and other systems and services. A few years ago, PVS-Studio learned to analyze Unreal Engine projects. However, one of the important mechanisms — suppression of analyzer messages (baselining, disabling warnings for existing code) — didn't work with Unreal Engine projects. This article is about why we didn't implement it immediately and how we finally did it.]]></summary>
-        <author>
-            <name>from www.viva64.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ST offers touchless gesture control with new software for ToF sensor]]></title>
-        <id>https://www.embedded.com/?p=4474447</id>
-        <link href="https://www.embedded.com/st-offers-touchless-gesture-control-with-new-software-for-tof-sensor/"/>
-        <updated>2022-04-25T14:50:17.000Z</updated>
-        <summary type="html"><![CDATA[The lightweight gesture algorithm can run on a low-power microcontroller and demands minimal system resources, so is easily integrated in an existing application.
-The post ST offers touchless gesture control with new software for ToF sensor appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Extending in-kernel TLS support]]></title>
-        <id>https://lwn.net/Articles/892216/</id>
-        <link href="https://lwn.net/Articles/892216/"/>
-        <updated>2022-04-25T14:41:47.000Z</updated>
-        <summary type="html"><![CDATA[The kernel gained support for the TLS
-protocol in the 4.13 release, which came out in September 2017.  That
-support is incomplete, though, in that it does not provide the kernel with
-a way to initiate a TLS connection on its own.  Instead, user space creates
-a socket and performs the TLS handshake before handing the socket to the
-kernel, which can then transfer data using TLS.  The situation may be about
-to change as a result of this
-patch series from Chuck Lever — though user space will still need to
-remain in the picture.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Täht: The state of fq_codel and sch_cake worldwide]]></title>
-        <id>https://lwn.net/Articles/892556/</id>
-        <link href="https://lwn.net/Articles/892556/"/>
-        <updated>2022-04-25T13:53:05.000Z</updated>
-        <summary type="html"><![CDATA[Dave Täht has put together a summary of the
-state of fair queuing and the fight against bufferbloat in general.
-
-
-	On a very positive note, while it might seem the negatives are
-	overwhelming in the list above, I’m confident that there are
-	billions of devices for which fq_codel is doing a good job. I’m
-	confident there is a rising tide of clued system administrators and
-	users applying smart queue management in the right places at the
-	right times. There’s more than enough products on the market
-	already that have the right stuff in them to make better networks a
-	matter of merely recognising the problem and applying the fix.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lynx’ Google Anthos bare metal support secures Kubernetes to cloud]]></title>
-        <id>https://www.embedded.com/?p=4474439</id>
-        <link href="https://www.embedded.com/lynx-google-anthos-bare-metal-support-secures-kubernetes-to-cloud/"/>
-        <updated>2022-04-25T13:35:41.000Z</updated>
-        <summary type="html"><![CDATA[Lynx Software Technologies announced that its MOSA.ic platform now supports deployment of Google Anthos bare metal at the mission critical edge, enabling secure delivery of containerized software services from the cloud, such as Google Cloud Visual Inspection AI service, providing a validated solution for secure, video-based quality inspection.
-The post Lynx’ Google Anthos bare metal support secures Kubernetes to cloud appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Senet’s embrace of Helium shows its confidence in LoRaWAN]]></title>
-        <id>https://staceyoniot.com/?p=10176</id>
-        <link href="https://staceyoniot.com/senets-embrace-of-helium-shows-its-confidence-in-lorawan/"/>
-        <updated>2022-04-25T13:00:51.000Z</updated>
-        <summary type="html"><![CDATA[LoRaWAN network provider Senet said this week that it has expanded its relationship with the Helium network, a distributed peer-to-peer LoRaWAN network. Senet had started letting its customers roam onto the Helium network in September of last year, but with this move Senet has expanded the deal to include Helium’s global hotspots. And that means Senet customers can roam […]
-The post Senet’s embrace of Helium shows its confidence in LoRaWAN appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/892536/</id>
-        <link href="https://lwn.net/Articles/892536/"/>
-        <updated>2022-04-25T12:01:38.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Fedora (kernel, kernel-headers, kernel-tools, libinput, podman-tui, and vim), Mageia (git, gzip/xz, libdxfrw, libinput, librecad, and openscad), and SUSE (dnsmasq, git, libinput, libslirp, libxml2, netty, podofo, SDL, SDL2, and tomcat).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How standalone power delivery controllers simplify USB-C PD design]]></title>
-        <id>https://www.embedded.com/?p=4474437</id>
-        <link href="https://www.embedded.com/how-standalone-power-delivery-controllers-simplify-usb-c-pd-design/"/>
-        <updated>2022-04-25T11:50:45.000Z</updated>
-        <summary type="html"><![CDATA[Standalone PD controllers integrate most blocks into one IC and some even eliminate the need for an external MCU and customized firmware.  The USB Power...
-The post How standalone power delivery controllers simplify USB-C PD design appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Sagar Khare</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What’s the Maximum Data Size you can send in a Bluetooth Advertising Packet?]]></title>
-        <id>https://www.novelbits.io/?p=19080</id>
-        <link href="https://www.novelbits.io/maximum-data-bluetooth-advertising-packet-ble/"/>
-        <updated>2022-04-25T08:46:55.000Z</updated>
-        <summary type="html"><![CDATA[Last Updated on April 25, 2022 by Mohammad Afaneh In a couple of previous posts (here and here), we covered the basics of Bluetooth Low Energy (BLE) advertising and advertisement packets. In this post, we’ll go into more depth on Bluetooth advertisements and specifically the advertising packet payload and the maximum amount of data you…
-The post What’s the Maximum Data Size you can send in a Bluetooth Advertising Packet? appeared first on Novel Bits.]]></summary>
-        <author>
-            <name>Mohammad Afaneh</name>
         </author>
     </entry>
 </feed>
