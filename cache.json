@@ -14,16 +14,6 @@
           "wordCount": 598,
           "title": "Flow: A delightfully tiny but powerful HTTP router for Go",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.alexedwards.net/blog/using-go-run-to-manage-tool-dependencies",
-          "author": null,
-          "description": "When you're working on a project it's common for there to be some developer tooling dependencies. These aren't code dependencies, but rather tools that you run on as part of the development, testing, build or deployment processes.\nFor example, you might use  golang.org/x/text/cmd/gotext in conjunction with go:generate to generate message catalogs for translation, or honnef.co/go/tools/cmd/staticcheck to perform static analysis on your code before committing a change.\nThis raises a couple of interesting questions — especially in a team environment. How do you make sure that everyone has the necessary tools installed on their machines? And that the tools they are using are all the same version?\nUntil Go 1.17, the convention for managing this was to create a tools.go file in your project cont…",
-          "link": "https://www.alexedwards.net/blog/using-go-run-to-manage-tool-dependencies",
-          "publishedOn": "2022-05-10T12:25:00.000Z",
-          "wordCount": 1159,
-          "title": "How to use go run to manage tool dependencies",
-          "imageUrl": "https://www.alexedwards.net/static/img/og-image-gopher.png"
         }
       ]
     },
@@ -234,6 +224,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "063945e9-6a30-43ef-8a28-d6f112c9bfec",
+          "author": "Bernard Tison",
+          "description": "Red Hat OpenShift Connectors is a new cloud service offering from Red Hat. They are pre-built connectors for quick and reliable connectivity across data, services, and systems. Connectors are delivered as a fully managed service, tightly integrated with Red Hat OpenShift Streams for Apache Kafka, Red Hat's managed cloud service for Apache Kafka.\nRed Hat OpenShift Connectors is in the Service Preview phase at the moment. As part of the Service Preview program, you can deploy up to four connectors free of charge. The connectors are deleted after 48 hours.\nWe make a distinction between source and sink connectors. A source connector allows you to send data from an external system to OpenShift Streams for Apache Kafka. A sink connector allows you to send data from OpenShift Streams for Apache K…",
+          "link": "https://developers.redhat.com/articles/2022/06/09/get-started-red-hat-openshift-connectors",
+          "publishedOn": "2022-06-09T10:45:00.000Z",
+          "wordCount": 2249,
+          "title": "Get started with Red Hat OpenShift Connectors",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/OpenShift-Public-Cloud.png?itok=yLZspT0e"
+        },
+        {
+          "id": "29f395a8-179b-4628-8ea9-4e837ac160f1",
+          "author": "Serhei Makarov",
+          "description": "Many open source projects have test suites that include nondeterministic test cases with unpredictable behavior. Tests might be nondeterministic because they launch several parallel processes or threads that interact in an unpredictable manner, or because they depend on some activity in the operating system that has nondeterministic behavior. The presence of these tests can interfere with automated regression checking in CI/CD pipelines. This article shows how to automate the discovery of nondeterministic test cases using a short Python script based on the  Bunsen test suite analysis toolkit.\nThe problem: Finding nondeterministic (\"flaky\") test cases\nTest cases in an open source project's test suite can have nondeterministic behavior and produce different outcomes when run repeatedly. Such…",
+          "link": "https://developers.redhat.com/articles/2022/06/09/detecting-nondeterministic-test-cases-bunsen",
+          "publishedOn": "2022-06-09T07:00:00.000Z",
+          "wordCount": 2711,
+          "title": "Detecting nondeterministic test cases with Bunsen",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2020/09/dotnet-pipelines_2x.png?itok=kderl4WS"
+        },
         {
           "id": "dff658f4-2e0a-4aa9-b182-52d14e807c3b",
           "author": "Syed Shaaf",
@@ -553,36 +563,6 @@
           "wordCount": 954,
           "title": "RHEL 8.6: What's new and how to upgrade",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_RHEL_9_Featured_Article_image_A.png?itok=1SKGrlIV"
-        },
-        {
-          "id": "ab6ad892-9bbe-4106-b3f4-70a4e385785e",
-          "author": "Andrew Azores",
-          "description": "Cryostat is a tool for managing JDK Flight Recorder data on Kubernetes. Cryostat 2.1, the most recent version of the software, has a brand-new user interface for the automated rules that were previously introduced as an API feature in Cryostat 2.0. It is now much easier to manage JDK Flight Recording (JFR) on a large scale for many Java applications.\nThe power of automated rules\nAutomated rules trigger JFRs against target JVMs, offering powerful and flexible match expressions to determine which applications each rule applies to. These match expressions can refer to various properties of the target applications, such as the pod name (which can be compared using direct string equality or regular expressions), JMX port number, and any OpenShift or Kubernetes labels and annotations present on …",
-          "link": "https://developers.redhat.com/articles/2022/05/11/how-build-automated-jfr-rules-cryostat-21s-new-ui",
-          "publishedOn": "2022-05-11T07:00:00.000Z",
-          "wordCount": 1431,
-          "title": "How to build automated JFR rules with Cryostat 2.1's new UI",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Java_ContainerJFR_Featured_Article__A-01.png?itok=N_594VC9"
-        },
-        {
-          "id": "a57251d9-5020-48f2-b0f4-69282d90303a",
-          "author": "Stevan Le Meur",
-          "description": "Today we are announcing our new Red Hat OpenShift extension for Docker Desktop, which helps developers with all of the different steps required to get an application running on Kubernetes. The extension aims to provide a bridge from your local environment to the environments where you run your applications.\nGet started easily with deploying and testing your application on Kubernetes.\nEnsure your applications are secure and follow best practices.\nBuild your application with the target runtime environment in mind, knowing all the various prerequisites will be handled.\nThe Red Hat OpenShift extension for Docker Desktop\nThe Red Hat OpenShift extension for Docker Desktop lets developers working with OpenShift deploy and test their applications with ease.\nSimply choose your target environment an…",
-          "link": "https://developers.redhat.com/articles/2022/05/10/introducing-red-hat-openshift-extension-docker-desktop",
-          "publishedOn": "2022-05-10T15:10:00.000Z",
-          "wordCount": 1158,
-          "title": "Introducing Red Hat OpenShift extension for Docker Desktop",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
-        },
-        {
-          "id": "ae941d00-4055-4a65-988a-badfc02e3c7f",
-          "author": "Brian Gollaher, Alex Krikos",
-          "description": "Organizations that use CentOS Linux for their developers and run a Red Hat offering in their enterprise now have a Red Hat Enterprise Linux (RHEL) offering that can replace CentOS Linux with a RHEL subscription and all the benefits of the Red Hat Developer Program. The zero-cost Developer subscription for Teams provides customers access to RHEL for all their development work. This includes access to enough physical or virtual entitlements for all development needs and includes all the benefits of Red Hat Enterprise Linux, including rapid security updates, access to all the RHEL certifications, RHEL management tools, including Red Hat Satellite and Red Hat Insights, and access to RHEL extended lifecycle offerings. Developer support is available for customers through paid add-ons to the Developer for Teams subscription.\nCustomers can use Developer for Teams for:\nDeveloping applications for RHEL and all its add-ons to run on all Red Hat products\nProviding in-house development teams with all the RHEL they need for building and testing their applications \nApplication development, test, and continuous integration\nMulti-user development, build, test, and integration scenarios\nOrganizations that want to choose a combination of paid and self-support options\nAdditional benefits of the subscription include:\nAccess to Red Hat Developer Program content\nAccess to the Red Hat Customer Portal and Red Hat Knowledgebase\nGetting started guides, documentation, and a rich catalog of certified applications\nInterested in learning more? Click here or talk to a Red Hatter to learn more about the Developer subscription for Teams. \nAccess RHEL with a Developer for Teams subscription appeared first on Red Hat Developer.",
-          "link": "https://developers.redhat.com/articles/2022/05/10/access-rhel-developer-teams-subscription",
-          "publishedOn": "2022-05-10T13:41:02.000Z",
-          "wordCount": 821,
-          "title": "Access RHEL with a Developer for Teams subscription",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL2-2x%20%281%29.png?itok=Cc5q7Npe"
         }
       ]
     },
@@ -630,6 +610,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4474977",
+          "author": "Nitin Dahad",
+          "description": "Latest version of IICF expands connectivity guidance to include lightweight, resource-constrained M2M devices. It defines an IIoT communications stack and a connectivity assessment template and provides guidance on selecting the right connectivity standard.\nThe post Industrial IoT connectivity framework adds edge M2M guidance appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/industrial-iot-connectivity-framework-adds-edge-m2m-guidance/",
+          "publishedOn": "2022-06-09T13:22:42.000Z",
+          "wordCount": 2320,
+          "title": "Industrial IoT connectivity framework adds edge M2M guidance",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/06/IIoT-Connectivity-Framework.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4474972",
           "author": "Nitin Dahad",
@@ -939,16 +929,6 @@
           "wordCount": 3515,
           "title": "9 tips for better code coverage measurement",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/software_test_abstract-.png"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4474655",
-          "author": "Bich Pham",
-          "description": "A resistor-less sensing approach makes it possible to design a 4-decade current sensing architecture with extended operating range up to 36V. Measuring current in a...\nThe post Enhancing current measurement range with a resistor-less sensing solution appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/enhancing-current-measurement-range-with-a-resistor-less-sensing-solution/",
-          "publishedOn": "2022-05-10T12:28:39.000Z",
-          "wordCount": 2966,
-          "title": "Enhancing current measurement range with a resistor-less sensing solution",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/05/05maxint_current_fig2.jpeg"
         }
       ]
     },
@@ -1217,6 +1197,26 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0953/",
+          "author": null,
+          "description": "Whichever C++ article you read, it provides serious information, requires thoughtful reading — preferably with a cup of coffee. And what if you want to have fun? That's why I decided to write this humorous article with terrible coding tips. The main thing is not to confuse these tips with helpful ones!",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0953/",
+          "publishedOn": "2022-06-08T21:00:00.000Z",
+          "wordCount": 2329,
+          "title": "50 terrible coding tips for a C++ developer",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0953_50_terrible_tips/image1_thm_intoblank_1200x630.png"
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/0952/",
+          "author": null,
+          "description": "A long time ago, I performed technical interviews on a regular basis — I was recruiting candidates for the position of a programmer in a company. I had a simple, clear, and smart recruitment plan (I did not invent it though). First, folks had a long interview where they answered a bunch of questions. Then they did some programming tasks. They were coding on a piece of paper — just like we did it at the university.",
+          "link": "https://pvs-studio.com/en/blog/posts/0952/",
+          "publishedOn": "2022-06-06T21:00:00.000Z",
+          "wordCount": 2404,
+          "title": "&quot;Google&quot; programmers. How one idiot hired a couple more idiots",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0952_hire-google-skills/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0952/",
           "author": null,
           "description": "A long time ago, I performed technical interviews on a regular basis — I was recruiting candidates for the position of a programmer in a company. I had a simple, clear, and smart recruitment plan (I did not invent it though). First, folks had a long interview where they answered a bunch of questions. Then they did some programming tasks. They were coding on a piece of paper — just like we did it at the university.",
@@ -1285,16 +1285,6 @@
           "wordCount": 1804,
           "title": "How to spot C and C++ developers by their code",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0946_C_Cpp_developers_difference/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/0945/",
-          "author": null,
-          "description": "The cost of making a video game has increased over the years. Game development is becoming increasingly complex, the code base is getting larger as well. It's getting harder for developers to track bugs. And a game full of bugs entails financial losses and reputational damage. How can static analysis help?",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/0945/",
-          "publishedOn": "2022-05-10T21:00:00.000Z",
-          "wordCount": 3061,
-          "title": "Why should Unity game developers use static analysis?",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0945_Why_should_Unity_game_developers_use_static_analysis/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1303,6 +1293,16 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.com",
       "articles": [
+        {
+          "id": "https://future.com/?p=6252",
+          "author": "Kim Lewandowski and Derrick Harris",
+          "description": "Kim Lewandowski is co-founder and head of product at security startup Chainguard. Prior to Chainguard, she worked as a product manager at Google, most recently with a focus on securing the company’s development pipeline and the open source tools it used.  In this interview, she discusses the concept of a secure software supply chain and... Read More\nThe post Why the Software Supply Chain Needs More Security appeared first on Future.",
+          "link": "https://future.com/securing-the-software-supply-chain/",
+          "publishedOn": "2022-06-09T16:30:27.000Z",
+          "wordCount": 3762,
+          "title": "Why the Software Supply Chain Needs More Security",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/06/744-Social-Share-Card-KimQA-Facebook.jpg"
+        },
         {
           "id": "https://future.com/?p=6216",
           "author": "Michelle Kennedy",
@@ -1507,26 +1507,6 @@
           "wordCount": 2041,
           "title": "How to Make Talent Scouts Work for You",
           "imageUrl": "https://future.a16z.com/wp-content/uploads/2022/05/TalentBookExcerpt-LinkedIn.png"
-        },
-        {
-          "id": "https://future.com/?p=5845",
-          "author": "Mark Porter and Derrick Harris",
-          "description": "MongoDB CTO Mark Porter has been on all sides of the technology industry. He was most recently CTO of core technology and transport at Grab, a super-app serving Southeast Asia, and prior to that held leadership roles at Amazon Web Services and Oracle, among other places. In this interview, he shares his views on the... Read More\nThe post MongoDB CTO: Why On-Prem Software Is Still Big Business appeared first on Future.",
-          "link": "https://future.com/mongodb-cto-cloud-providers-southeast-asia/",
-          "publishedOn": "2022-05-10T14:00:55.000Z",
-          "wordCount": 4008,
-          "title": "MongoDB CTO: Why On-Prem Software Is Still Big Business",
-          "imageUrl": "https://future.com/wp-content/uploads/2022/05/Future-Mark-Porter-QA-LINKEDIN.jpeg"
-        },
-        {
-          "id": "https://future.a16z.com/?p=5845",
-          "author": "Mark Porter and Derrick Harris",
-          "description": "MongoDB CTO Mark Porter has been on all sides of the technology industry. He was most recently CTO of core technology and transport at Grab, a super-app serving Southeast Asia, and prior to that held leadership roles at Amazon Web Services and Oracle, among other places. In this interview, he shares his views on the... Read More\nThe post MongoDB CTO On Working with Cloud Providers and Working in Southeast Asia appeared first on Future.",
-          "link": "https://future.a16z.com/mongodb-cto-cloud-providers-southeast-asia/",
-          "publishedOn": "2022-05-10T14:00:55.000Z",
-          "wordCount": 3999,
-          "title": "MongoDB CTO On Working with Cloud Providers and Working in Southeast Asia",
-          "imageUrl": "https://future.a16z.com/wp-content/uploads/2022/05/Future-Mark-Porter-QA-LINKEDIN.jpeg"
         }
       ]
     },
@@ -1534,18 +1514,7 @@
       "title": "Project Zero",
       "feedUrl": "https://googleprojectzero.blogspot.com/feeds/posts/default",
       "siteUrl": "https://googleprojectzero.blogspot.com/",
-      "articles": [
-        {
-          "id": "https://googleprojectzero.blogspot.com/2022/05/release-of-technical-report-into-amd.html",
-          "author": null,
-          "description": "ol{margin:0;padding:0}table td,table th{padding:0}.RmvCPDuePa-c3{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:left;height:11pt}.RmvCPDuePa-c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:\"Arial\";font-style:normal}.RmvCPDuePa-c7{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:left}.RmvCPDuePa-c2{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.RmvCPDuePa-c6{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;text-decoration:underline}.RmvCPDuePa-c4{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.RmvCPDuePa-c1{color:inherit;text-decoration:inherit}.RmvCPDuePa-c5{border:1px solid black;margin:5px}.title…",
-          "link": "https://googleprojectzero.blogspot.com/2022/05/release-of-technical-report-into-amd.html",
-          "publishedOn": "2022-05-10T19:00:00.000Z",
-          "wordCount": 698,
-          "title": "Release of Technical Report into the AMD Security Processor",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Two Cents",
@@ -1631,6 +1600,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/897374/",
+          "author": "jake",
+          "description": "Stable kernels 5.18.3, 5.17.14, 5.15.46, and 5.10.121 have been released.\nTypically, the stable kernels released right after the merge window closes \ncontain a large number of changes and these updates certainly fit the\nbill.",
+          "link": "https://lwn.net/Articles/897374/",
+          "publishedOn": "2022-06-09T13:33:50.000Z",
+          "wordCount": 106,
+          "title": "Stable kernels 5.18.3, 5.17.14, 5.15.46, and 5.10.121",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897198/",
+          "author": "corbet",
+          "description": "Linux distributors are famously averse to shipping packages with bundled\nlibraries; they would rather ship a single version of each library to be\nshared by all packages that need it.  Many upstream projects, instead, are\nfond of bundling (or \"vendoring\") libraries; this leads to tension that has\nbeen covered here numerous times in the past (examples:\n1,\n2\n3,\n4,\n5, ...).  The recent Fedora discussion on\nbundling libraries with its Java implementation would look like just\nanother in a long series, but it also shines a light on the unique\nchallenges of shipping Java in a fast-moving community distribution.",
+          "link": "https://lwn.net/Articles/897198/",
+          "publishedOn": "2022-06-09T13:23:51.000Z",
+          "wordCount": null,
+          "title": "[$] Rethinking Fedora's Java packaging",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897372/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (mailman and python-bottle), Red Hat (java-1.7.1-ibm, java-1.8.0-ibm, subversion:1.14, and xz), Scientific Linux (python-twisted-web), Slackware (httpd), and Ubuntu (ca-certificates, ffmpeg, ghostscript, and varnish).",
+          "link": "https://lwn.net/Articles/897372/",
+          "publishedOn": "2022-06-09T12:53:04.000Z",
+          "wordCount": 137,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/896897/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for June 9, 2022 is available.",
+          "link": "https://lwn.net/Articles/896897/",
+          "publishedOn": "2022-06-09T04:23:29.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for June 9, 2022",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/897202/",
           "author": "jake",
@@ -2620,66 +2629,6 @@
           "wordCount": 565,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/894390/",
-          "author": "corbet",
-          "description": "It would have been surprising indeed if the 2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM) did not include a\nsession working toward solutions to the longstanding problems with\nget_user_pages(), an internal function that locks user-space pages\nin memory for access by the kernel.  The issue has, after all, come up numerous times\nover the years.  This year's event duly contained a session in the joint\nfilesystem and memory-management track, led by John Hubbard, with a focus\non page pinning and how it interacts with filesystems.",
-          "link": "https://lwn.net/Articles/894390/",
-          "publishedOn": "2022-05-10T23:13:44.000Z",
-          "wordCount": null,
-          "title": "[$] Page pinning and filesystems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/894379/",
-          "author": "jake",
-          "description": "In a combined filesystem and memory-management session at the 2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM), Paul McKenney\ngave an update on\nthe changes to the read-copy-update (RCU) subsystem that had been made over\nthe last several years.   He started with a quick overview of what RCU is\nand why it exists at all. He did not go into any\nreal depth, though, since many of the topics could take a 90-minute session of their\nown, he said, but he did provide some descriptions of the work that has gone into\nRCU recently.",
-          "link": "https://lwn.net/Articles/894379/",
-          "publishedOn": "2022-05-10T20:39:19.000Z",
-          "wordCount": null,
-          "title": "[$] Recent RCU changes",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/894378/",
-          "author": "corbet",
-          "description": "The 2022 Linux\nStorage, Filesystem, Memory-management and BPF Summit (LSFMM) was the\nfirst chance for Linux memory-management developers to gather in three\nyears.  In a session at the end of the first day led by maintainer Andrew\nMorton, those developers discussed the memory-management development\nprocess.  While the overall governance will remain the same, there are\nnonetheless some significant changes in store for this subsystem.",
-          "link": "https://lwn.net/Articles/894378/",
-          "publishedOn": "2022-05-10T16:44:23.000Z",
-          "wordCount": null,
-          "title": "[$] The state of memory-management development",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/894544/",
-          "author": "corbet",
-          "description": "The Fedora 36\nrelease is now available.  Improvements include GNOME 42, Wayland\nsupport by default on systems with NVIDIA graphics, Podman 4.0,\nAnsible 5, the removal of support for legacy ifcfg\nconfiguration files, GCC 12, and more; see the\nrelease notes for details.",
-          "link": "https://lwn.net/Articles/894544/",
-          "publishedOn": "2022-05-10T14:31:58.000Z",
-          "wordCount": 128,
-          "title": "Fedora 36 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/894374/",
-          "author": "corbet",
-          "description": "Like much of the kernel, the memory-management subsystem is under-documented,\nand much of the documentation that does exist is less than fully current.\nAt the 2022 Linux\nStorage, Filesystem, Memory-management and BPF Summit (LSFMM), Mike\nRapoport ran a session on memory-management documentation and what can be\ndone to improve it.  The result was a reinvigorated interest in\ndocumentation, but only time will tell what actual improvements will come\nfrom that interest.",
-          "link": "https://lwn.net/Articles/894374/",
-          "publishedOn": "2022-05-10T13:01:51.000Z",
-          "wordCount": null,
-          "title": "[$] Improving memory-management documentation",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/894499/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (kicad and qemu), Fedora (thunderbird), Oracle (expat), Red Hat (samba), Slackware (kernel), and SUSE (firefox, ldb, and rsyslog).",
-          "link": "https://lwn.net/Articles/894499/",
-          "publishedOn": "2022-05-10T12:33:13.000Z",
-          "wordCount": 132,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2785,26 +2734,6 @@
           "wordCount": 2376,
           "title": "Native vs. Cross-Platform Bluetooth Low Energy Mobile App Platforms",
           "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/05/Native-vs.-3rd-party-BLE-mobile-app-development.png"
-        },
-        {
-          "id": "https://www.novelbits.io/?p=19321",
-          "author": "Mohammad Afaneh",
-          "description": "Last Updated on May 16, 2022 by Mohammad Afaneh This article/video is sponsored by InPlay, Inc. However, the opinions expressed by the author are his own and were not influenced by the sponsor. Introduction In some cases, you may want to build a very simple Bluetooth Low Energy device that sends out sensor data like…\nThe post The World’s First Programming-Free Bluetooth Beacon Platform appeared first on Novel Bits.",
-          "link": "https://www.novelbits.io/inplay-nanobeacon-in100-programming-free-bluetooth-beacon/",
-          "publishedOn": "2022-05-11T02:13:01.000Z",
-          "wordCount": 1446,
-          "title": "The World’s First Programming-Free Bluetooth Beacon Platform",
-          "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/05/YouTube-Thumbnail-1.png"
-        },
-        {
-          "id": "https://www.novelbits.io/?p=19311",
-          "author": "Mohammad Afaneh",
-          "description": "Last Updated on May 10, 2022 by Mohammad Afaneh Introduction In this week’s post/video, we cover the newest development kit from Nordic Semiconductor: the nRF5340 LE Audio development kit, which was released today (May 10, 2022). You can learn more about the development kit here. LE Audio represents the next generation of Bluetooth audio! It…\nThe post Introducing the Nordic nRF5340 LE Audio Development Kit appeared first on Novel Bits.",
-          "link": "https://www.novelbits.io/nordic-nrf5340-le-audio-development-kit/",
-          "publishedOn": "2022-05-10T13:23:39.000Z",
-          "wordCount": 796,
-          "title": "Introducing the Nordic nRF5340 LE Audio Development Kit",
-          "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/05/YouTube-Thumbnail.png"
         }
       ]
     },
@@ -2870,6 +2799,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10457",
+          "author": "Stacey Higginbotham",
+          "description": "This week’s show is an exercise in controlled chaos, as I am once again quarantined in a hotel room (this time with my teen). Kevin and I discuss Apple’s Worldwide Developers Conference and Apple’s claim that HomeKit is the foundation of the upcoming Matter smart home protocol. Insteon users got a shock this week when […]\nThe post Podcast: Arduino gets $32 million for enterprise IoT appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-arduino-gets-32-million-for-enterprise-iot/",
+          "publishedOn": "2022-06-09T13:00:50.000Z",
+          "wordCount": 768,
+          "title": "Podcast: Arduino gets $32 million for enterprise IoT",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/06/Fabio-Violante-headshot-1.jpeg?fit=541%2C509&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=10415",
           "author": "Stacey Higginbotham",
@@ -3099,16 +3038,6 @@
           "wordCount": 1657,
           "title": "Maybe we should be talking to our connected devices instead of our smart homes",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2020/05/C-by-GE-Bluetooth-bulb-WiFi-plug-scaled.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10254",
-          "author": "Stacey Higginbotham",
-          "description": "After several years of using COVID-19 to sell their digital transformation efforts, hardware and software companies focused on the industrial IoT are now pitching supply chain intelligence (with a dash of sustainability thrown in). I’m seeing many more pitches related to managing a supply chain in a post-pandemic world and using technology as a way […]\nThe post Move over, remote monitoring; supply chains are the new black appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/move-over-remote-monitoring-supply-chains-are-the-new-black/",
-          "publishedOn": "2022-05-10T13:00:09.000Z",
-          "wordCount": 1266,
-          "title": "Move over, remote monitoring; supply chains are the new black",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/05/bigstock-Smart-Warehouse-Management-Sys-403936994.jpg?fit=900%2C675&ssl=1"
         }
       ]
     },
@@ -3116,18 +3045,7 @@
       "title": "Blog – Modern Embedded Software | Quantum Leaps",
       "feedUrl": "https://www.state-machine.com/category/blog/feed",
       "siteUrl": "https://www.state-machine.com",
-      "articles": [
-        {
-          "id": "https://www.state-machine.com/?p=14898",
-          "author": "Quantum Leaps",
-          "description": "New QP 7.0.0 milestone release has just been made available for download. The QP-bundle contains the following software: QP/C 7.0.0 QP/C++ 7.0.0 QTools 7.0.0 QM 5.1.4 Functional Safety Support The major focus of this release is the adaptation of the QP code and documentation to better support functional safety certification of QP-based applications (see QP […]",
-          "link": "https://www.state-machine.com/qp-7-0-0-milestone-release",
-          "publishedOn": "2022-05-10T13:36:33.000Z",
-          "wordCount": 650,
-          "title": "QP 7.0.0 Milestone Release",
-          "imageUrl": "https://www.state-machine.com/wp-content/uploads/qp_700.jpg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "IT의 중심에서",
@@ -3231,6 +3149,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86176",
+          "author": "언론인권센터",
+          "description": "40대 가장 무차별 폭행한 만취女, 뒤늦게 사과 문자…“자괴감 느껴” (조선일보, 2021.9.25.) “지하철서 침뱉고 아버지뻘 남성 폭행한 20대 여성… 피해자 측 “꼭 처벌해달라”(머니S, 2022.3.19) 사회적 의미에 대해 언론 스스로 설명할 수 없는, 일탈적 사건사고에 대한 언론의 주목은 새로운 일은 아니다. 다만 지난해와 올해 다수 언론이 주목한 폭행 사건을 보면 몇 가지 공통점이 발견된다. 공통점 중 하나는 […]\nThe post ’40대 가장’과 ‘아버지뻘 남성’을 폭행한 여성들 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86176",
+          "publishedOn": "2022-06-09T09:05:55.000Z",
+          "wordCount": 874,
+          "title": "’40대 가장’과 ‘아버지뻘 남성’을 폭행한 여성들",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/06/noun-violence-1576024.png"
+        },
         {
           "id": "https://slownews.kr/?p=86169",
           "author": "윤대균",
@@ -3530,36 +3458,6 @@
           "wordCount": 6466,
           "title": "포털 기사 3주 모니터링: 18개 언론사 ‘기사형 광고’ 약 1,800개",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/05/pic_006.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=85675",
-          "author": "민주언론시민연합",
-          "description": "윤석열 정부가 출범했다. 많은 시민이 윤석열 정부에서 어떤 일이 벌어질지 궁금해 하고 있다. 그중에서도 부동산 시장의 방향성에 대한 관심은 압도적이다. 윤석열 정부에서 부동산 시장은 상승할 것인가 하강할 것인가. 대세 상승·하락을 반복하는 부동산 시장 먼저 부동산 시장이 대세 상승과 대세 하락을 반복하는 사이클 성격의 시장이라는 점을 이해해야 한다. 부동산 시장은 바다처럼 밀물과 썰물이 주기적으로 교대한다. 금리 […]\nThe post 윤석열 정부의 부동산 시장은 ‘간조기’: 지금은 가을 초입, 겨울 아직 멀었다 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85675",
-          "publishedOn": "2022-05-11T08:17:20.000Z",
-          "wordCount": 1116,
-          "title": "윤석열 정부의 부동산 시장은 ‘간조기’: 지금은 가을 초입, 겨울 아직 멀었다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/05/b90485c1282b05de1709ff1eb3cdfd27.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=85667",
-          "author": "민주언론시민연합",
-          "description": "대통령으로 당선된 이에 대한 호칭을 놓고 ‘당선자’냐 ‘당선인’이냐는 논쟁이 있었다. 아니 정확히 말하자면, 대통령직인수위원회 요구를 대부분 언론이 그대로 따랐으니 논쟁은 없었다. 논쟁이 붙어야 할 사안에서 논쟁이 없었던 것이다. 극히 일부 매체를 제외하고는 거의 모든 신문과 방송에서 일제히 ‘당선자’를 버리고 ‘당선인’으로 불렀다. 어느 쪽이든 선택할 수 있는 것이라고 본다. 그러나 최소한 곧 대통령이 될 분에게 ‘놈 […]\nThe post 당선자 놈? 당선인 님? 언론에 의한 언어 오염과 타락 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85667",
-          "publishedOn": "2022-05-10T09:27:39.000Z",
-          "wordCount": 1142,
-          "title": "당선자 놈? 당선인 님? 언론에 의한 언어 오염과 타락",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/04/noun-archer-1974831.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=85656",
-          "author": "경실련",
-          "description": "제20대 대통령 취임을 맞아 새롭게 출범하는 정부에게 바람직한 국토·도시정책 방향을 제시하고자 경실련 도시개혁센터는 지난 4월 12일부터 도시안전, 도시재생, 도시교통 3대 과제를 중심으로 관련 학회·기관과 함께 세 차례의 토론회를 개최했다. 토론회 내용을 토대로 새 정부에 바라는 도시안전, 도시재생, 도시교통 정책의 핵심을 요약해 제안하고자 한다. 1. 도시안전: 중대재해처벌법의 개정 방향 2022년 1월 27일 ｢중대재해 처벌 등에 관한 […]\nThe post 새 정부에 바란다: 도시안전, 도시재생, 도시교통 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/85656",
-          "publishedOn": "2022-05-10T08:29:05.000Z",
-          "wordCount": 2013,
-          "title": "새 정부에 바란다: 도시안전, 도시재생, 도시교통",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/05/noun-earthquake-1260316-1.png"
         }
       ]
     },
@@ -3568,6 +3466,46 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=585869",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585869/%ec%97%90%eb%b2%84%ec%bd%94%ec%96%b4-sp-500-%ec%a0%84%eb%a7%9d-2",
+          "publishedOn": "2022-06-09T13:53:30.000Z",
+          "wordCount": 722,
+          "title": "에버코어 S&P 500 전망, 경기침체 시 S&P 500 30% 추가 하락 경고",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/에버코어-ISI-SP-500-시나리오.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=585862",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585862/%ec%a4%91%ea%b5%ad-%ec%88%98%ec%b6%9c-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-06-09T06:02:01.000Z",
+          "wordCount": 1521,
+          "title": "인플레, 코로나 제로 정책은 중국 수출 호황을 끝내다 by Economist",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/06/중국-상해-야경-China-featured_i-yang-138248-unsplash.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=585859",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585859/%ea%b3%a8%eb%93%9c%eb%a7%8c%ec%82%ad%ec%8a%a4-%ec%84%9d%ec%9c%a0-%ea%b0%80%ea%b2%a9-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-06-09T04:12:56.000Z",
+          "wordCount": 678,
+          "title": "골드만삭스 석유 가격 전망, 올 여름 140불을 넘을 것, 23년 4분기 110불 수준",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/07/미국-주유소-서비스-선택-Full-service-or-Self-service.png"
+        },
+        {
+          "id": "https://happist.com/?p=585851",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585851/oecd-%ec%84%b8%ea%b3%84%ea%b2%bd%ec%a0%9c-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-06-08T23:08:00.000Z",
+          "wordCount": 778,
+          "title": "OECD 세계경제 전망, ’22년 3% 및 ’23년 2.8%로 크게 하향 조정",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/OECD-세계경제-전망-수정-한국-물가지수-및-수출-추이.png"
+        },
         {
           "id": "https://happist.com/?p=585847",
           "author": "happist",
@@ -4117,36 +4055,6 @@
           "wordCount": 4223,
           "title": "매출과 손익 모두 기대 이상, 1분기 마이크로소프트 실적과 향후 전망",
           "imageUrl": "https://happist.com/wp-content/uploads/2017/01/마이크로소프트-빌딩-1.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585397",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585397/%ed%95%98%eb%9d%bd%ed%95%9c-%ec%95%84%eb%a7%88%ec%a1%b4-%ec%a3%bc%ea%b0%80-%ec%95%84%eb%a7%88%ec%a1%b4-%ec%a3%bc%ec%8b%9d-%eb%a7%a4%ec%88%98%ed%83%80%ec%9d%b4%eb%b0%8d",
-          "publishedOn": "2022-05-11T06:16:53.000Z",
-          "wordCount": 6439,
-          "title": "이커머스 패닉으로 52주 신저가로 하락한 아마존 주식, 매수할 때인가?",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/07/아마존-웹-서비스-추진에-대한-2006년-당시-언론-평가-Business-week-Amazons-Risky-Bet.png"
-        },
-        {
-          "id": "https://happist.com/?p=585390",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585390/22%eb%85%84-1%eb%b6%84%ea%b8%b0-%ec%95%84%eb%a7%88%ec%a1%b4-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2022-05-11T03:28:30.000Z",
-          "wordCount": 6549,
-          "title": "강점이 모두 사라진 22년 1분기 아마존 실적, 아마존 주가 폭락을 부르다",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/04/뉴욕-타임스퀘어의-아마존-택배-배달원-An-Amazon-delivery-person-walks-in-Times-Square-on-March-17-Photo-by-REUTERS-CARLO-ALLEGRI.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585387",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585387/%ed%8b%b1%ed%86%a1-%ec%82%ac%ec%9a%a9%ec%8b%9c%ea%b0%84",
-          "publishedOn": "2022-05-10T14:10:09.000Z",
-          "wordCount": 805,
-          "title": "’22년 올해 틱톡 사용시간은 유튜브 사용시간을 능가할 것 by eMarketer",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/01/틱톡.jpg"
         }
       ]
     },
@@ -4155,6 +4063,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=74385",
+          "author": "veritaholic",
+          "description": "내면의 소리에 어떻게 반응할 것인가는 인간이 평생을 고민해야 할 근본적인 질문 중 하나일 것입니다. 시시각각 변하는 느낌, 충동, 판단, 선택 등을 행동으로 옮길 때 우리는 가능한 한 이를 합리적으로 결정하려 하지만 대부분 우리는 그저 자동인형처럼 무의식적으로 이를 따릅니다. 때로는 이를 감정과 이성으로 구분하고 자신이 왜 그런 감정을 느꼈고 왜 그런 판단을 내렸는지 회고할 때도 있지만 그런 일은 아주 드뭅니다. 언젠가 몇 편의 영화를 연출한 감독님 한 분과 만나 그분이 쓰고 → 더 보기",
+          "link": "https://newspeppermint.com/2022/06/08/npc_uncomfortable/?utm_source=rss&utm_medium=rss&utm_campaign=npc_uncomfortable",
+          "publishedOn": "2022-06-08T22:59:24.000Z",
+          "wordCount": 691,
+          "title": "[필진 칼럼] 불편함이 당신을 성장시킨다",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=74374",
           "author": "ingppoo",
@@ -4354,16 +4272,6 @@
           "wordCount": 696,
           "title": "[필진 칼럼] 고기로 태어나서",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=73972",
-          "author": "ingppoo",
-          "description": "‘현대의 다윈’이라고 불리던 진화생물학자 E.O. 윌슨이 지난 12월 26일 92세를 일기로 타계했습니다. 국내 언론에서도 부고 기사를 찾아볼 수 있었지만, 오늘은 윌슨 교수와 지난해 11월 진행한 인터뷰 내용을 추려 다시 올린 복스의 기사를 요약해 소개합니다. 뉴욕타임스 과학 칼럼니스트 칼 짐머가 쓴 부고 기사도 참고했습니다. 고 윌슨 교수는 실로 많은 업적을 남겼지만, 그 가운데 ‘종 다양성(biodiversity)’이란 말을 고안해 주창한 것으로 가장 유명할 겁니다. 인간 외의 다른 생물을 관찰하고 연구하는 것이 그저 돈 → 더 보기",
-          "link": "https://newspeppermint.com/2022/05/10/npc_eowilson/?utm_source=rss&utm_medium=rss&utm_campaign=npc_eowilson",
-          "publishedOn": "2022-05-10T22:59:33.000Z",
-          "wordCount": 971,
-          "title": "[필진 칼럼] 진화생물학자 E.O. 윌슨 타계",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -4399,6 +4307,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222765594561",
+          "author": "sellars",
+          "description": "두 가지 이상주의가 있다. 하나가 주자학이라는 도학적(道學的) 이상주의이다. 다른 하나가 다른 의미에서 도학적 이상주의라고 할 수 있는 마르크스주의이다. 김형효는 이 두 가지 이상주의가 실현 불가능한 것이라고 주장한다. 이것들은 모두 ‘공상적 낭만주의의 허상’을 갖고 있다. <주자학적 도학의 이상주의는 내면적 도덕 수행을 통해 외면적이고 정치사회적인 요순적 이상사회를 구현을 도모하려는 내성외왕주의(內聖外王主義)인데, 마르크시즘의 이상주의는 인간의 내면적 정신의 도덕화를 실천성이 없는 관념론의 공상적 이데올로기라고 비판하면서 사회경제적인 혁명을 통해 인류의 존재론적 공동체의 이상적 미래를 건설할 수 있.......",
+          "link": "https://blog.naver.com/sellars/222765594561",
+          "publishedOn": "2022-06-08T23:15:00.000Z",
+          "wordCount": 8,
+          "title": "두 가지 이상주의의 허상",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222762586964",
           "author": "sellars",
@@ -4617,16 +4535,6 @@
           "publishedOn": "2022-05-12T05:18:53.000Z",
           "wordCount": 8,
           "title": "이성주의와 휴머니즘",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222728660957",
-          "author": "sellars",
-          "description": "<순수이성비판>은 여기부터 주관적 연역이고, 여기부터 객관적 연역이라는 방식으로 서술되어 있지 않다. <주관적 연역>이라는 명칭도 딱 한 군데 나온다. 초판 서문에 나오는 칸트의 말을 축약하면 다음과 같다. <지성의 능력의 근원을 밝히고, 지성 사용의 규칙과 한계를 규정하는 것이 가장 중요하다. 이것은 <순수 지성 개념의 연역>이라는 제목 아래에서 수행한 것이다. 이 고찰은 두 가지 측면을 가지고 있다. 첫째, 순수 지성의 대상과 관련해서 순수 지성 개념의 선험적 타당성을 입증하고 이해시키는 것이다. 이 작업은 내 목적에 본질적으로 속하는 것이다. 둘째, 순수 지성 자체의 가능성과 그 인식 능력을 순수.......",
-          "link": "https://blog.naver.com/sellars/222728660957",
-          "publishedOn": "2022-05-11T06:32:12.000Z",
-          "wordCount": 8,
-          "title": "스크러턴 - 객관적 연역 1",
           "imageUrl": null
         }
       ]
