@@ -53,6 +53,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2022/ranges-alg-part-three/",
+          "author": null,
+          "description": "This article is the third and the last one in the mini-series about ranges algorithms. We’ll look at some sorting, searching, and remaining algorithms. We’ll also have a glimpse of cool C++23 improvements in this area.\nLet’s go.\n\n\n\n     \n    \n\n\nKey observations for std::ranges algorithms:\nRanges algorithms are defined in the <algorithm> header, while the ranges infrastructure and core types are defined in the <ranges> header.\nUsually, there are at least two overloads for range algorithms: with a pair of iterators and an overload with a single range argument.\nThe version that returns a subrange or an iterator and takes a range returns a borrowed range or a borrowed iterator. This helps detect iterators to temporary ranges.\nThe range versions take projections which allow more flexibility; fo…",
+          "link": "https://www.cppstories.com/2022/ranges-alg-part-three/",
+          "publishedOn": "2022-06-13T00:00:00.000Z",
+          "wordCount": 2173,
+          "title": "C++20 Ranges Algorithms - sorting, sets, other and C++23 updates",
+          "imageUrl": "https://www.cppstories.com/2022/images/ranges_alg3.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/embracing-modern-cpp-book/",
           "author": null,
           "description": "C++11 has been around for around 11 years and C++14 for 8. From my experience, I see that even today, many companies struggle to use those standards in production in the most efficient way. As always, with new stuff came benefits, risks, and increased learning effort. Fortunately, with a new book written by top C++ Experts, we have a solid guide on what is safe and what might be problematic in Modern C++.\nThe book is called “Embracing Modern C++ Safely”.\nLet’s see what’s inside.\nDisclaimer: I got a free copy from the publisher.\n\n\n\n     \n    \n\n\nHere are the main links and info about the book:\nEmbracing Modern C++ Safely\n\nThe book on Amazon:\nEmbracing Modern C++ Safely 1st Edition @Amazon (released December 23, 2021)).\nThe book page at InformIT:\nEmbracing Modern C++ Safely | InformIT\nHere’s …",
@@ -192,6 +202,36 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "2dc726d3-1f06-4051-b51f-115f84829bcf",
+          "author": "Sean Pryor",
+          "description": "Speech to text is one of the most common use cases for artificial intelligence. It's used all over to allow easier human interaction. Phone tree automation is a common use case.\nThis article will walk you through a speech-to-text example using OpenVINO, an open-source toolkit for optimizing and deploying AI inference. This example is a variant of the OpenVINO speech-to-text demo notebook which can be found in OpenVINO's GitHub repository.\nWhat is QuartzNet?\nQuartzNet is a variant of a Jasper network that performs speech-to-text translation.\nThe inputs to the network are a series of units called mel spectrograms. These are a way of representing audio data that involves several steps of processing.\nFirst, the raw audio signal is divided into overlapping sections, and then a Fourier transform…",
+          "link": "https://developers.redhat.com/articles/2022/06/13/use-openvino-convert-speech-text",
+          "publishedOn": "2022-06-13T17:48:00.000Z",
+          "wordCount": 2510,
+          "title": "Use OpenVINO to convert speech to text",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Machine_Learning_Featured_Article_B.png?itok=hNcCpoyg"
+        },
+        {
+          "id": "55e547d6-a096-4690-80a2-dae609cde0f0",
+          "author": "Ajmal Kohgadai, Andy Oram",
+          "description": "In a recent Red Hat survey of more than 300 production-level Kubernetes users, 93% of respondents admitted to experiencing at least one security incident in their Kubernetes environments during the previous year—and 31% of respondents say they experienced revenue or customer loss during that year as a consequence.\nOur industry can do better. This article summarizes findings from the survey, reported in our 2022 State of Kubernetes security report, and highlights the weak points of Kubernetes security today along with a path forward involving DevSecOps.\nNote: Most of the material in this article comes from the Red Hat report, 2022 State of Kubernetes security.\nSecurity is one of the top concerns with container strategies\nWith security incidents in these environments being a nearly universal…",
+          "link": "https://developers.redhat.com/articles/2022/06/13/kubernetes-security-risks-keep-developers-night",
+          "publishedOn": "2022-06-13T07:00:00.000Z",
+          "wordCount": 1555,
+          "title": "Kubernetes security risks that keep developers up at night",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC-security_1x.png?itok=puGidoF7"
+        },
+        {
+          "id": "6f155b24-4a0a-4743-a319-ad07b799c29e",
+          "author": "Noah Sanci",
+          "description": "Recently, I have been working on enabling cooperation between SystemTap (a kernel profiling tool) and gprof (a tool that makes graphs from program profiles). This exercise has given me insight into meaningful topics only briefly touched upon at my university, such as kernel space, user space, and virtual memory. But these concepts are fundamental to the proper and safe execution of programs on any modern operating system. The trade off is some address translation when viewing memory from kernel space versus user space. In this article, you'll see how that translation can be handled.\nA quick dive into user and kernel address spaces\nUser space and kernel space are kept separate in all modern OSes. This separation is an essential layer of security between information essential to the operatio…",
+          "link": "https://developers.redhat.com/articles/2022/06/13/quick-way-translate-physical-addresses-virtual-ones",
+          "publishedOn": "2022-06-13T07:00:00.000Z",
+          "wordCount": 1318,
+          "title": "A quick way to translate physical addresses into virtual ones",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Serving.png?itok=VF9y2VBp"
+        },
         {
           "id": "063945e9-6a30-43ef-8a28-d6f112c9bfec",
           "author": "Bernard Tison",
@@ -854,18 +894,7 @@
       "title": "EmbeddedRelated.com Blogs",
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
-      "articles": [
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1451.php",
-          "author": null,
-          "description": "Several years ago, I once attended an “Object-Oriented Analysis and Design” training. As most such courses go, the instructor began with brushing up on the fundamental OO concepts. When explaining inheritance, the instructor spontaneously compared inheriting from a class to passing traits from parents to the offspring in a family. At first, this “family tree” metaphor seemed to make a...",
-          "link": "https://www.embeddedrelated.com/showarticle/1451.php",
-          "publishedOn": "2022-05-14T19:16:18.000Z",
-          "wordCount": 3913,
-          "title": "Patterns of Thinking: Metaphors in Programming",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Better Embedded System SW",
@@ -878,6 +907,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2022/06/Helping-Developers-Create-Meaningful-Voice-Interactions-with-Android.html",
+          "author": null,
+          "description": "Posted by Rebecca Nathenson, Director, Product Management\n \n\n  \nAs we recently announced at I/O, we’re investing in new ways to make Google Assistant your go-to conversational helper for everyday tasks. And we couldn’t do that without a rich community of developers. While Conversational Actions were an excellent way to experiment with voice, the ecosystem has evolved significantly over the last 5 years and we’ve heard some important feedback: users want to engage with their favorite apps using voice, and developers want to build upon their existing investments in Android.  \nIn response to that feedback, we’ve decided to focus our efforts on making App Actions with Android the best way for developers to create deeper, more meaningful voice-forward experiences. As a result, we will turn down…",
+          "link": "http://developers.googleblog.com/2022/06/Helping-Developers-Create-Meaningful-Voice-Interactions-with-Android.html",
+          "publishedOn": "2022-06-13T16:20:00.000Z",
+          "wordCount": null,
+          "title": "Helping Developers Create Meaningful Voice Interactions with Android",
+          "imageUrl": null
+        },
         {
           "id": "http://developers.googleblog.com/2022/06/coding-practice-with-kick-start.html",
           "author": null,
@@ -1308,7 +1347,24 @@
       "title": "Two Cents",
       "feedUrl": "https://hur.substack.com/feed",
       "siteUrl": "https://hur.substack.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://hur.substack.com/p/web3-thesis",
+          "author": "Jin Ho Hur",
+          "description": "향후 5년간 Web3 투자 기회에 대한 생각",
+          "link": "https://hur.substack.com/p/web3-thesis",
+          "publishedOn": "2022-06-13T01:00:17.000Z",
+          "wordCount": null,
+          "title": "[Two Cents #53] Web3 투자 Thesis",
+          "itunes": {},
+          "enclosure": {
+            "url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6d34c489-fd70-41ce-938f-0034893ab1fc_256x256.png",
+            "length": "0",
+            "type": "image/jpeg"
+          },
+          "imageUrl": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6d34c489-fd70-41ce-938f-0034893ab1fc_256x256.png"
+        }
+      ]
     },
     {
       "title": "Interrupt",
@@ -1378,6 +1434,86 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/897766/",
+          "author": "corbet",
+          "description": "From Sage Sharp comes the sad news that Marina Zhurakhinsakaya, the founder\nof the Outreach Program for Women (now known as Outreachy), has passed away.\n\"Marina died on Saturday after winning her struggle with cancer for three years. We would like\nto elevate Marina's message to encourage people to test themselves for\ngenetic markers for breast cancer\".",
+          "link": "https://lwn.net/Articles/897766/",
+          "publishedOn": "2022-06-13T18:26:12.000Z",
+          "wordCount": null,
+          "title": "Mourning Marina Zhurakhinsakaya",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897420/",
+          "author": "jake",
+          "description": "At the \n2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM), Amir Goldstein\nand Miklos Szeredi led a discussion on a new interface for extracting\ninformation from kernel objects using the filesystem extended-attributes\n(xattr) interface.  Since Szeredi was not present in Palm Springs, he co-led\nthe session virtually over Zoom audio, which was the only\nfilesystem session with a virtual leader at LSFMM this year.  Szeredi's proposal\nfor an interface of that sort had been posted just the day before the session.",
+          "link": "https://lwn.net/Articles/897420/",
+          "publishedOn": "2022-06-13T17:20:50.000Z",
+          "wordCount": null,
+          "title": "[$] Retrieving kernel attributes",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897754/",
+          "author": "corbet",
+          "description": "The 2022 sambaXP conference was held\nonline at the beginning of June.  Videos\nof the talks given at that event have now been posted on YouTube.\nTopics covered include Samba in containers, certificate auto-enrollment,\nsymlink races, and more.",
+          "link": "https://lwn.net/Articles/897754/",
+          "publishedOn": "2022-06-13T15:54:56.000Z",
+          "wordCount": null,
+          "title": "SambaXP talk videos posted",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897750/",
+          "author": "corbet",
+          "description": "For those who would like to know more about how GCC works, David Malcolm\nhas enhanced his GCC\nfor new contributors guide with a\nsection on GCC internals.  It includes a good overview of the various\nGCC passes and the internal representations used to describe a program at\nvarious stages.",
+          "link": "https://lwn.net/Articles/897750/",
+          "publishedOn": "2022-06-13T15:39:28.000Z",
+          "wordCount": null,
+          "title": "Diving into GCC internals",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897260/",
+          "author": "corbet",
+          "description": "The userfaultfd()\nsystem call allows one thread to handle page faults for another in user\nspace.  It has a number of interesting use cases, including the live\nmigration of virtual machines.  There are also some less appealing use\ncases, though, most of which are appreciated by attackers trying to take\ncontrol of a machine.  Attempts have been made over the years to make\nuserfaultfd() less useful as an exploit tool, but this\npatch set from Axel Rasmussen takes a different approach by\ncircumventing the system call entirely.",
+          "link": "https://lwn.net/Articles/897260/",
+          "publishedOn": "2022-06-13T15:03:42.000Z",
+          "wordCount": null,
+          "title": "[$] /dev/userfaultfd",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897712/",
+          "author": "corbet",
+          "description": "The Thunderbird project's announcement\nof its plans for an Android client contain a bit of a surprise:\n\n\n\tTo that end, we’re thrilled to announce that today, K-9 Mail\n\tofficially joins the Thunderbird family. And [K9 maintainer\n\tChristian Ketterer] has already\n\tjoined the full-time Thunderbird staff, bringing along his valuable\n\texpertise and experience with mobile platforms.\n\n\tUltimately, K-9 Mail will transform into Thunderbird on Android.\n\n\tThat means the name itself will change and adopt Thunderbird\n\tbranding. Before that happens, we need to reach certain development\n\tmilestones that will bring K-9 Mail into alignment with\n\tThunderbird’s feature set and visual appearance.",
+          "link": "https://lwn.net/Articles/897712/",
+          "publishedOn": "2022-06-13T14:01:34.000Z",
+          "wordCount": null,
+          "title": "K9 mail to become Thunderbird on Android",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897711/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium, containerd, kernel, ntfs-3g, and vlc), Fedora (buildah and logrotate), Red Hat (xz), and SUSE (google-gson, netty3, rubygem-sinatra, and u-boot).",
+          "link": "https://lwn.net/Articles/897711/",
+          "publishedOn": "2022-06-13T13:47:00.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/897663/",
+          "author": "corbet",
+          "description": "The second 5.19 kernel prepatch is out for\ntesting.\n\n\n\n\tAnd yes, because I expected the rc2 week to be fairly quiet, I did\n\ta system update on my workstation, and as a result I spent a day or\n\ttwo then sorting out most of the fallout from the resulting\n\tcompiler upgrade to gcc-12. Some of it ended up being a bit\n\theavy-handed, and we'll be tweaking things further. And some of it\n\tends up being an actual compiler misfeature.",
+          "link": "https://lwn.net/Articles/897663/",
+          "publishedOn": "2022-06-13T13:21:19.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 5.19-rc2",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/897435/",
           "author": "corbet",
@@ -2418,6 +2554,16 @@
       "siteUrl": "https://staceyoniot.com",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=10471",
+          "author": "Stacey Higginbotham",
+          "description": "I swear at some point I will stop writing about COVID-19, but in the meantime, it keeps affecting my life. I spent this past week holed up in a hotel room in Puerto Rico while taking care of my teenager, who caught COVID on a class trip. And since this is my second forced quarantine […]\nThe post Wasting away again in Margaritaville appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/wasting-away-again-in-margaritaville/",
+          "publishedOn": "2022-06-13T13:00:39.000Z",
+          "wordCount": null,
+          "title": "Wasting away again in Margaritaville",
+          "imageUrl": null
+        },
+        {
           "id": "https://staceyoniot.com/?p=10467",
           "author": "Kevin C. Tofel",
           "description": "On our latest IoT Podcast episode, we take a question that Joel left on our IoT Voicemail Hotline. Joel is moving and he’s leaving behind his smart thermostat, a video doorbell, some sensors, and a water controller. He wants to know the best way to leave the devices, as well as instructions for them, to […]\nThe post Moving away from your smart home? Here’s what you should do appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2779,6 +2925,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=86191",
+          "author": "민주언론시민연합",
+          "description": "민주노총 전국공공운수사회서비스노동조합 화물연대본부(화물연대)가 6월 7일부터 안전운임제 일몰제 폐지, 노동 여건 개선 등을 요구하며 총파업을 이어가고 있습니다. 핵심 쟁점인 ‘안전운임제’는 화물기사의 최저임금 같은 제도로 안전을 보장하기 위해 받아야 할 최소한의 운임을 공표하는 제도입니다. 안전운임제 도입 전, 운임이 지나치게 낮아 수입을 보전하기 위한 과로‧과적‧과속 운행이 계속되자 도입되었습니다. 2018년 관련법 개정 과정에서 운송사업자 반발이 커 2020년부터 3년간 한시적으로 […]\nThe post 화물연대 파업의 본질: 안전 vs. 운송 거부 (ft. 통계를 보라) first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86191",
+          "publishedOn": "2022-06-13T02:04:32.000Z",
+          "wordCount": null,
+          "title": "화물연대 파업의 본질: 안전 vs. 운송 거부 (ft. 통계를 보라)",
+          "imageUrl": null
+        },
+        {
           "id": "https://slownews.kr/?p=86184",
           "author": "경실련",
           "description": "공직자 이해충돌방지법은 공직자가 직무 관련 정보를 활용해 사익 추구를 하지 못하도록 규정한다. 이 법에 따르면 모든 공직자는 직무관련자가 사적 이해관계자임을 알게 되면 서면신고 및 회피신청을 해야 한다. 사적 이해관계자의 범위는 법 조문에 구체적으로 명시되어 있으며, 공공기관별 업무 특성을 반영하여 그 범위를 더욱 구체화하도록 한다. 검찰의 경우 ‘검찰청 공직자의 이해충돌 방지제도 운영지침‘ (이하 ‘운영지침’)을 통해 사적 […]\nThe post 검찰, 전관예우 방지 조항 ‘겨우 11일’ 만에 삭제 first appeared on 슬로우뉴스.",
@@ -3075,6 +3231,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=585955",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585955/sp-500-%ec%95%bd%ec%84%b8%ec%9e%a5-2",
+          "publishedOn": "2022-06-13T14:57:22.000Z",
+          "wordCount": 857,
+          "title": "골드만삭스, S&P 500 약세장 진입에도 미국 주식은 싸보이지 않는다,",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/깜짝놀라는-표정의-여인-featured.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=585949",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585949/%eb%af%b8%ea%b5%ad-%ea%b3%a0%ec%9a%a9%ec%8b%9c%ec%9e%a5",
+          "publishedOn": "2022-06-13T14:30:12.000Z",
+          "wordCount": 728,
+          "title": "골드만삭스, 미국 고용시장이 냉각되고 있다고 경고하다,",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/중요-역사적-이정표-당시-일자리-증가-추이-비교-Graph-by-Yahoo.png"
+        },
+        {
+          "id": "https://happist.com/?p=585945",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/585945/%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98-%ec%84%b9%ed%84%b0",
+          "publishedOn": "2022-06-12T23:44:08.000Z",
+          "wordCount": 289,
+          "title": "[트렌드 차트]  인플레이션 섹터, 인플레이션 발생 섹터는 어디인가",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/인플레이션-섹터-어느-섹터에서-인플레이션이-발생하고-있는가.jpg"
+        },
         {
           "id": "https://happist.com/?p=585941",
           "author": "happist",
@@ -3614,16 +3800,6 @@
           "wordCount": 800,
           "title": "영업이익 138%, 매출 83% 증가한 1분기 인텍플러스 실적 메모",
           "imageUrl": "https://happist.com/wp-content/uploads/2021/03/반도체-검사장비주-인텍플러스-공장-전경.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585471",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585471/%eb%af%b8%ea%b5%ad-%ec%86%8c%eb%a7%a4%ed%8c%90%eb%a7%a4-%ed%95%b4%ec%84%9d",
-          "publishedOn": "2022-05-14T08:46:17.000Z",
-          "wordCount": 735,
-          "title": "[주식 지표] 미국 소매판매 읽고 해석하는 법",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/09/미국-유통업체-달러-제너널Dollar-General-매장-계산대-및-매장-내부-Image-Coupons-in-the-News.jpg"
         }
       ]
     },
@@ -3632,6 +3808,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=74403",
+          "author": "ingppoo",
+          "description": "러시아가 우크라이나를 침공한 지 2주가 지난 시점에 쓴 또 다른 전쟁 관련 분석입니다. 전쟁 초기, 국내 언론에 자주 이름이 등장한 존 미어샤이머 시카고대학교 교수 같은 소위 ‘안보 전문가’들의 논의는 지나치게 강대국의 관점에서만 이번 갈등을 바라본 나머지 우크라이나 시민들이 겪는 고통이나 강대국이 일방적으로 일으킨 전쟁으로 인한 참상을 어쩔 수 없는 것으로 치부하는 경향이 보일 때가 있습니다. 거대한 체스판에서 국력이 쇠퇴하는 러시아가 손에 쥔 핵무기를 이용해 뭐라도 하려고 하는 한 언젠가 일어날 일이었다는 → 더 보기",
+          "link": "https://newspeppermint.com/2022/06/12/npc_russiaworldorder/?utm_source=rss&utm_medium=rss&utm_campaign=npc_russiaworldorder",
+          "publishedOn": "2022-06-12T22:59:09.000Z",
+          "wordCount": 1250,
+          "title": "[필진 칼럼] 러시아가 일으킨 전쟁은 ‘세계 질서’를 바꿀까?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=74416",
           "author": "eyesopen1",
@@ -3866,6 +4052,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222770763934",
+          "author": "sellars",
+          "description": "모종삼이 칸트의 현상과 본체의 이분법을 통해 중국철학이 가능할 수 있는 공간을 마련했다면, 이명휘의 <유교와 칸트>는 본체의 영역 혹은 실천이성의 영역에서 유교와 칸트의 동이(同異)를 논하면서, 모종삼이 주장하는 유교, 혹은 유학의 <도덕적 형이상학>을 옹호하고 있다. 적어도 도덕의 영역에서 칸트와 유교는 동일한 주장을 하고 있으며, 칸트의 문제점을 유학의 관점에서 극복할 수 있다. 그렇지만 나는 모종삼이 주장하는 ‘도덕 형이상학’에 대해서 호의적이지 않다. 그것은 모종삼의 도덕 형이상학이 기꺼해야 사변적 형이상학에 지나지 않는다고 생각하기 때문이다. 물론 이명휘는 절대로 그렇게 생각하지 않는다. &l.......",
+          "link": "https://blog.naver.com/sellars/222770763934",
+          "publishedOn": "2022-06-12T23:14:11.000Z",
+          "wordCount": 8,
+          "title": "1. 유교의 도덕 형이상학",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222768388301",
           "author": "sellars",
