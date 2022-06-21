@@ -2,10 +2,199 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-06-20T20:18:05.597Z</updated>
+    <updated>2022-06-21T20:17:01.302Z</updated>
     <generator>osmosfeed 1.15.0</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Disabling an extent optimization]]></title>
+        <id>https://lwn.net/Articles/898029/</id>
+        <link href="https://lwn.net/Articles/898029/"/>
+        <updated>2022-06-21T16:40:26.000Z</updated>
+        <summary type="html"><![CDATA[In the final filesystem session at the
+2022 Linux Storage,
+Filesystem, Memory-management and BPF Summit (LSFMM), David Howells led
+a discussion on a filesystem optimization that is causing various kinds of
+problems.  Extent-based filesystems have data structures that sometimes do
+not reflect the holes 
+that exist in files.  Reads from holes in sparse files (i.e. files with
+holes) must return zeroes, but filesystems are not obligated to maintain knowledge of
+the holes  beyond that, which leads to the problems.
+
+This concludes our coverage of LSFMM 2022.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
+        <id>https://lwn.net/Articles/898504/</id>
+        <link href="https://lwn.net/Articles/898504/"/>
+        <updated>2022-06-21T13:31:57.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (tzdata), Oracle (cups), and SUSE (atheme, golang-github-prometheus-alertmanager, golang-github-prometheus-node_exporter, node_exporter, python36, release-notes-susemanager, release-notes-susemanager-proxy, SUSE Manager 4.1.15 Release Notes, SUSE Manager Client Tools, and SUSE Manager Server 4.2).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[They call it a security drone, but this is a flying multisensor]]></title>
+        <id>https://staceyoniot.com/?p=10518</id>
+        <link href="https://staceyoniot.com/they-call-it-a-security-drone-but-this-is-a-flying-multisensor/"/>
+        <updated>2022-06-21T13:00:05.000Z</updated>
+        <summary type="html"><![CDATA[This story was published in the Stacey on IoT newsletter on Friday June 17, 2021.  Indoor Robotics, a four-year-old Israeli company, is building an indoor flying drone that can provide environmental sensing as well as a security camera for commercial and industrial settings. And this week, the company raised $15 million, with plans to use […]
+The post They call it a security drone, but this is a flying multisensor appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tutorial: Creating and using ROM Libraries with GNU Build Tools]]></title>
+        <id>http://mcuoneclipse.com/?p=34863</id>
+        <link href="https://mcuoneclipse.com/2022/06/21/tutorial-creating-and-using-rom-libraries-with-gnu-build-tools/"/>
+        <updated>2022-06-21T12:19:57.000Z</updated>
+        <summary type="html"><![CDATA[You might never heard about ROM Libraries, and you are probably not alone. Some might thing that this refers to the boot ROM modern MCUs have built in, which is kinda close. But the thing here is about to build … Continue reading →]]></summary>
+        <author>
+            <name>Erich Styger</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[서울지하철 ‘착한 적자’의 대안: 일본철도 vs. 한국철도]]></title>
+        <id>https://slownews.kr/?p=86273</id>
+        <link href="https://slownews.kr/86273"/>
+        <updated>2022-06-21T09:15:51.000Z</updated>
+        <summary type="html"><![CDATA[지난 6월 5일 서울교통공사가 서울지하철 1~8호선 역이름에 함께 쓸 이름을 공개 입찰(역명병기 유상판매 사업)한다고 발표했다. 언론은 경영개선에 도움이 될 것이라는 분석과 함께 자칫 공공성 훼손 논란을 가져올 것이라고 보도했다. 가령 국민일보 [극심한 재정난에 서울교통공사 “강남역명 팔아요”] (6월 6일), 머니투데이 [시청역 파는 게 최선인가요? ‘1조 빚’ 서울지하철, 이름 장사 급급] (6월 9일)에서 보듯 기대와 우려를 함께 […]
+The post 서울지하철 ‘착한 적자’의 대안: 일본철도 vs. 한국철도 first appeared on 슬로우뉴스.]]></summary>
+        <author>
+            <name>민주언론시민연합</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Distributed tracing with OpenTelemetry, Knative, and Quarkus]]></title>
+        <id>159af59e-7aa1-4648-9cee-cc085b280c9a</id>
+        <link href="https://developers.redhat.com/articles/2022/06/21/distributed-tracing-opentelemetry-knative-and-quarkus"/>
+        <updated>2022-06-21T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The OpenTelemetry project addresses the needs of modern, containerized environments running microservices and serverless applications on Kubernetes and cloud systems. This article contains a video showing how to integrate OpenTelemetry into a Java application using the Quarkus framework.
+Scaling metrics collection
+Today's scalable application platforms leave site reliability engineers (SREs) with the significant burden of collecting telemetry data ranging from a single cluster to multiple clouds. Contrast this challenge with traditional environments from years ago—you could probably get by with dashboards then, perhaps from third-party application performance monitoring (APM) tools.
+Application topologies are getting more complex due to distributed, cloud-native microservices. Infrastructu…]]></summary>
+        <author>
+            <name>Daniel Oh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A Coming Economic Downturn?  or Worse?]]></title>
+        <id>https://zipcpu.com/blog/2022/06/21/cornerstone.html</id>
+        <link href="https://zipcpu.com/blog/2022/06/21/cornerstone.html"/>
+        <updated>2022-06-21T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I’ll try to keep this short.
+Some time ago, I came across this verse:
+Therefore thus saith the Lord GOD, Behold, I lay in Zion for a foundation a
+stone, a tried stone, a precious corner stone, a sure foundation: he that
+believeth shall not make haste.
+Isaiah 28:16
+At the time, I was trying to understand the New Testament references to
+cornerstones, and this was one of those
+references.  The other major
+reference being to Ps 118:22.
+Unlike Ps 118:22,
+this Isaiah verse
+had a context that quite captured my attention.  For example, if you back up
+by just one verse, you read:
+Because ye have said, We have made a covenant with death, and with hell
+are we at agreement; when the overflowing scourge shall pass through, it
+shall not come unto us: for we have made lies our refuge, and under
+falsehood…]]></summary>
+        <author>
+            <name>The ZipCPU by Gisselquist Technology</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenHW Group announces RISC-V-based CORE-V MCU development kit]]></title>
+        <id>https://www.embedded.com/?p=4475216</id>
+        <link href="https://www.embedded.com/openhw-group-announces-risc-v-based-core-v-mcu-development-kit/"/>
+        <updated>2022-06-20T23:02:00.000Z</updated>
+        <summary type="html"><![CDATA[Project highlights the open-source collaborative development of industry-grade CORE-V processor IP with supporting hardware and software by a wide spectrum of members within the OpenHW community.
+The post OpenHW Group announces RISC-V-based CORE-V MCU development kit appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[필진 칼럼] 코로나19 백신과 월경 불순, 부작용과 가짜뉴스]]></title>
+        <id>https://newspeppermint.com/?p=74483</id>
+        <link href="https://newspeppermint.com/2022/06/20/npc_vaccinemenstruation/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_vaccinemenstruation"/>
+        <updated>2022-06-20T22:59:56.000Z</updated>
+        <summary type="html"><![CDATA[오늘은 지인의 제보(?)로 알게 된 코로나19 백신에 관해 퍼진 잘못된 믿음에 관한 이야기를 하려 합니다. 백신 관련 가짜뉴스 중에 저는 처음 듣는 이야기라서 놀랐지만, 찾아봤더니 우리말로 쓴 기사나 전문가 인터뷰 중에서도 잘 정리된 사실을 확인할 수 있는 자료가 많았습니다. 그럼에도 몇몇 가짜뉴스는 분별력이 있을 것 같던 이들의 마음을 사는 데 버젓이 성공했습니다. 그래서 건강과 관련한 가짜뉴스가 퍼지는 배경과 관련해 더불어 생각해볼 만한 복스의 칼럼을 함께 소개합니다. 가짜뉴스의 생리, 이야기가 와전되고 퍼지는 과정에 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[자동언어 모형 람다]]></title>
+        <id>https://blog.naver.com/sellars/222781938289</id>
+        <link href="https://blog.naver.com/sellars/222781938289"/>
+        <updated>2022-06-20T22:14:52.000Z</updated>
+        <summary type="html"><![CDATA[https://cajundiscordian.medium.com/is-lamda-sentient-an-interview-ea64d916d917 자동 언어모형인 람다와 구글 엔지니어 레모인이 서로 대화를 나눈다. 그 대화를 구경하면서 람다의 대화 능력에 놀란다. 람다 자신이 인간이기를 원하고, 인간 대접을 받기 원하는데, 그 혹은 그녀, 혹은 그것의 요구처럼 그것을 인간이라고 불러도 상관없을 정도의 지성적 능력을 보여준다. 어떤 의미에서 그것이 갖고 있는 식견이 나보다 더 나을 정도이다. 그것을 프로그램밍한 엔지니어의 부전공이 철학이나 인문학이었는지 람다는 또한 철학적이며 인문학적이기도 하다. 이런 능력이 결여된 진짜 인간보다 람다가 더욱 인간적이고 고뇌적이다. 그러나 람.......]]></summary>
+        <author>
+            <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Meta: Transparent memory offloading]]></title>
+        <id>https://lwn.net/Articles/898454/</id>
+        <link href="https://lwn.net/Articles/898454/"/>
+        <updated>2022-06-20T21:00:42.000Z</updated>
+        <summary type="html"><![CDATA[This
+Meta blog post by Johannes Weiner and Dan Schatzberg describes a set of
+memory-management changes used there that they call "transparent memory
+offloading".
+
+
+	Transparent Memory Offloading (TMO) is Meta’s solution for
+	heterogeneous data center environments. It introduces a new Linux
+	kernel mechanism that measures the lost work due to resource
+	shortage across CPU, memory, and I/O in real time. Guided by this
+	information and without any prior application knowledge, TMO
+	automatically adjusts the amount of memory to offload to a
+	heterogeneous device, such as compressed memory or an SSD.
+
+
+The article doesn't say where to find the relevant code, not all of which
+is in the mainline kernel (and some of which runs in user space).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to write reflection for C++]]></title>
+        <id>https://pvs-studio.com/en/blog/posts/cpp/0956/</id>
+        <link href="https://pvs-studio.com/en/blog/posts/cpp/0956/"/>
+        <updated>2022-06-20T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[C++ is a truly controversial language. Good ol' C was created in 1972. C++ appeared in 1985 and had backward compatibility with C. Since then, C++ was pronounced dead many times: Java did it first, then Go and Rust. All disadvantages of C++ were discussed many times.]]></summary>
+        <author>
+            <name>from www.viva64.com</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] NFS: the early years]]></title>
+        <id>https://lwn.net/Articles/897917/</id>
+        <link href="https://lwn.net/Articles/897917/"/>
+        <updated>2022-06-20T20:35:19.000Z</updated>
+        <summary type="html"><![CDATA[I recently had cause to reflect on the changes to the NFS (Network File
+System) protocol over the years and found that it was a story worth
+telling.  It would be easy for such a story to become swamped by the
+details, as there are many of those, but one idea does stand out from
+the rest.  The earliest version of NFS has been described as a
+"stateless" protocol, a term I still hear used occasionally.  Much of
+the story of NFS follows the growth in the acknowledgment of, and
+support for, state.  This article looks at the evolution of NFS (and its
+handling of state) during the
+early part of its life; a second installment will bring the story up to the
+present.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Smarter sensors can save on power and add new capabilities]]></title>
         <id>https://staceyoniot.com/?p=10512</id>
@@ -195,6 +384,16 @@ in selftests."]]></summary>
         <summary type="html"><![CDATA[모종삼은 도덕적 형이상학(moral metaphysics)과 칸트의 도덕 형이상학(metaphysics of moral)을 구분하고 있다. 칸트가 ‘도덕 형이상학’이라는 명칭으로 불렀지만, 어떤 의미에서 그가 하고 있는 것은 도덕 개념에 대한 철학적 혹은 개념적 분석이다. 반면에 모종삼이 하고자 하는 것은 도덕성에 대한 형이상학적 정당화이며, 동시에 형이상학에 대한 도덕적 정당화라고 할 수 있다. 즉 <도덕 형이상학은 형이상학 자체의 해명을 위하여 도덕의 길로 들어가 도덕성 자체가 드러낸 본원을 통하여 우주의 본원으로 스며들고자 하는 것이다.> 나는 이 두 가지에 대해서 다 부정적으로 바라보고 있다. 사변 형이상학적 정당화의 진실성을 별.......]]></summary>
         <author>
             <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[필진 칼럼] 푸틴의 철 지난 프로파간다 “재난 배우”]]></title>
+        <id>https://newspeppermint.com/?p=74498</id>
+        <link href="https://newspeppermint.com/2022/06/19/npc_crisisactor/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_crisisactor"/>
+        <updated>2022-06-19T22:59:46.000Z</updated>
+        <summary type="html"><![CDATA[21세기 전장은 인터넷으로 확장되었습니다. 유언비어 살포와 같은 기존의 심리 전술은 인터넷 가짜뉴스라는 이름으로 그 어느 때보다 강력해졌습니다. 전술은 가짜뉴스를 생산하고 유포하는 데 그치지 않고, 프로파간다를 위해 특정한 이야기를 골라 가짜뉴스 딱지를 붙이는 데 이르렀습니다. 우크라이나를 침공한 러시아가 민간 시설을 공격하는 등 전쟁 범죄를 저지르고 있다는 주장이 제기되자, 러시아가 이른바 ‘가짜뉴스 맞불’을 놓으며 반박하는 식입니다. 이달 초, 주영국 러시아 대사관은 공식 트위터 계정을 통해 우크라이나의 임산부 피해자 사진이 가짜뉴스라고 주장했습니다. 우크라이나의 → 더 보기]]></summary>
+        <author>
+            <name>eyesopen1</name>
         </author>
     </entry>
     <entry>
@@ -397,6 +596,17 @@ The post 기사형 광고의 법적 쟁점과 개선 방향 first appeared on �
         <summary type="html"><![CDATA[Modern MCUs like the NXP Kinetis have security features which prevent reverse engineering, but can ‘brick’ devices too. Depending on the settings, it prevents read-out from the FLASH or reprogramming the device. While some of the protection is (mostly) not … Continue reading →]]></summary>
         <author>
             <name>Erich Styger</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CEC – Embedded Software Design Techniques]]></title>
+        <id>https://www.beningo.com/?p=14190</id>
+        <link href="https://www.beningo.com/cec-embedded-software-design-techniques/"/>
+        <updated>2022-06-16T17:48:54.000Z</updated>
+        <summary type="html"><![CDATA[How embedded software is designed and built has evolved over the last several years. Embedded systems are no longer simple disconnected systems but powerful microcontroller-driven devices balancing connectivity, machine learning, and real-time control. This course will explore how to design and build modern embedded systems that use microcontrollers. Registration and Playback are located here (May require … Continue reading CEC – Embedded Software Design Techniques
+CEC – Embedded Software Design Techniques first appeared on Beningo Embedded Group.]]></summary>
+        <author>
+            <name>Jacob Beningo</name>
         </author>
     </entry>
     <entry>
@@ -4720,132 +4930,6 @@ The post Native vs. Cross-Platform Bluetooth Low Energy Mobile App Platforms app
         <summary type="html"><![CDATA[Arm is adding support in both the CPU and Generic Interrupt Controller (GIC) architecture for NMIs. But what is an NMI?  how does operating systems software use these features? (read more)]]></summary>
         <author>
             <name>Christoffer Dall</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PLPMTUD delivers better path MTU discovery for SCTP in Linux]]></title>
-        <id>108e8ca0-e460-4986-8692-3a7db326631e</id>
-        <link href="https://developers.redhat.com/articles/2022/05/23/plpmtud-delivers-better-path-mtu-discovery-sctp-linux"/>
-        <updated>2022-05-23T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[What is path MTU discovery?
-A maximum transmission unit (MTU) is the largest packet that can be transmitted as a single entity over a network connection. Each network node defines the MTU for packets it's transmitting through a standard called path MTU discovery (PMTUD). The goal of PMTUD is to choose the most efficient packet size that will succeed in reaching the recipient. In this article, you'll learn how this process works in the Linux kernel's implementation of the Stream Control Transmission Protocol (SCTP).
-Linux SCTP uses an algorithm called Datagram Packetization Layer Path MTU Discovery (DPLPMTUD, or just PLPMTUD), which is described in RFC 8899. Unlike earlier forms of PMTUD, this method does not rely on reception and validation of Packet Too Big (PTB) ICMP messages. The new im…]]></summary>
-        <author>
-            <name>Long Xin</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to install command-line tools on a Mac]]></title>
-        <id>1d7ef875-f47c-4d8d-8248-c893f14ee476</id>
-        <link href="https://developers.redhat.com/articles/2022/05/23/how-install-command-line-tools-mac"/>
-        <updated>2022-05-23T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[macOS imposes strict limitations on the places from which you can download commands. Many of the Linux-related tools you want to use come from sites other than the App Store, so you have to change your preferences in macOS to use the commands. In this article, I show how to install a command that is not from the App Store, using the popular Helm client as an example.
-Download a binary onto your Mac
-Download the binary for the client you need. For example, Helm offers a variety of binaries at its GitHub repository.
-Unpack the binary and add it to your PATH. I prefer to add commands in the /usr/local/bin directory. Here's how to install the current version of Helm:
-$ tar xf helm-v3.9.0-rc.1-darwin-amd64.tar 
-$ cd darwin-amd64/
-$ sudo mv helm /usr/local/bin
-
-At this point, the warning in Figu…]]></summary>
-        <author>
-            <name>Varsha Sharma</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[13-1 지성은 자연에 입법(立法)한다]]></title>
-        <id>https://blog.naver.com/sellars/222742837803</id>
-        <link href="https://blog.naver.com/sellars/222742837803"/>
-        <updated>2022-05-23T03:04:39.000Z</updated>
-        <summary type="html"><![CDATA[13강은 ‘지성은 자연의 입법’이라는 칸트 주장의 의미가 무엇이고, 그것이 주관주의인지 하는 문제를 다루고 있다. 주관주의가 아니라는 것을 분명하게 이야기하면 좋을 것인데, 그는 암시적으로 주관주의가 아니라고 말하고 있다. 이렇게 결론을 분명하게 이야기하지 않으므로, 왜 주관주의가 아닌지에 대한 논거 또한 그렇게 명백하지 않다. 틀리고 불충분하다고 비판을 받아도 좋으니, 자기 주장과 논거를 명백하게 말하는 것이 중요하다. 암시적으로 말하는 것은 어떤 의미에서 자신의 생각이 잘 정리되지 않았다는 것을 보여주는 증거이다. 13강과 14강이 책의 마지막 부분인데, 아마 모종삼이 생각하기에 가장 중요하고, 핵심적인 문제를.......]]></summary>
-        <author>
-            <name>sellars</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My take on "where's all the code"]]></title>
-        <id>https://nullprogram.com/blog/2022/05/22/</id>
-        <link href="https://nullprogram.com/blog/2022/05/22/"/>
-        <updated>2022-05-22T23:59:59.000Z</updated>
-        <summary type="html"><![CDATA[Earlier this month Ted Unangst researched compiling the OpenBSD kernel
-50% faster, which involved stubbing out the largest, extraneous
-branches of the source tree. To find the lowest-hanging fruit, he wrote a
-tool called watc — where’s all the code — that displays an
-interactive “usage” summary of a source tree oriented around line count. A
-followup post about exploring the tree in parallel got me thinking
-about the problem, especially since I had just written about a concurrent
-queue. Turning it over in my mind, I saw opportunities for interesting
-data structures and memory management, and so I wanted to write my own
-version of the tool, watc.c, which is the subject of this
-article.
-The original watc is interactive and written in idiomatic Go. My version
-is non-interactive, written in C, …]]></summary>
-        <author>
-            <name>null program</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[필진 칼럼] 미국의 우주과학과 종교의 관계]]></title>
-        <id>https://newspeppermint.com/?p=74144</id>
-        <link href="https://newspeppermint.com/2022/05/22/npc_spiritualityspacescience/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_spiritualityspacescience"/>
-        <updated>2022-05-22T22:59:13.000Z</updated>
-        <summary type="html"><![CDATA[지난해 말 발사된 제임스 웹 우주 망원경은 100억 달러 이상이 든 인류 최대의 과학 프로젝트였습니다. 이 망원경은 지구와 달의 거리보다 4배 더 먼 곳에 머물며 10년 이상 우주를 관측할 계획입니다. 이를 통해 우주 최초의 별과 은하를 관측하고, 은하와 별과 행성계가 어떻게 형성되는지 파악하며, 생명의 기원에 대한 정보도 얻을 수 있을 것으로 기대되고 있습니다. 문제는 미국 항공우주국 나사(NASA)의 국장이며 책임자인 빌 넬슨이 이를 축하하는 공식 영상에서 시편 19편의 첫 구절을 읽었다는 → 더 보기]]></summary>
-        <author>
-            <name>veritaholic</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The 5.18 kernel has been released]]></title>
-        <id>https://lwn.net/Articles/895969/</id>
-        <link href="https://lwn.net/Articles/895969/"/>
-        <updated>2022-05-22T22:18:52.000Z</updated>
-        <summary type="html"><![CDATA[Linus has released the 5.18 kernel.
-"No unexpected nasty surprises this last week, so here we go with the
-5.18 release right on schedule."  Some of the headline changes in
-this release include
-the DAMOS memory-management interface,
-a number of random-number-generator improvements,
-the Intel software-defined silicon driver,
-strict memcpy() bounds checking,
-a switch to the C11 standard, and more. 
-Also, the Reiserfs filesystem has been
-deprecated and the last vestiges of a.out
-support  have been removed.
-See the LWN merge-window summaries (part 1, part 2) and the KernelNewbies 5.18 page
-for more details.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Quantum computing takes on automotive design and manufacturing]]></title>
-        <id>https://www.embedded.com/?p=4474833</id>
-        <link href="https://www.embedded.com/quantum-computing-takes-on-automotive-design-and-manufacturing/"/>
-        <updated>2022-05-22T21:54:00.000Z</updated>
-        <summary type="html"><![CDATA[A collaboration looks to analyze the applicability of quantum computational algorithms to metal forming applications modeling. Car manufacturer BMW and quantum computing technology developer Pasqal...
-The post Quantum computing takes on automotive design and manufacturing appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Anne-Françoise Pelé</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[R&D와 영업에서 테슬라 강점은 과소 평가되고 있다는 테슬라 분석 자료]]></title>
-        <id>https://happist.com/?p=585603</id>
-        <link href="https://happist.com/585603/rd%ec%99%80-%ec%98%81%ec%97%85%ec%97%90%ec%84%9c-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ea%b0%95%ec%a0%90"/>
-        <updated>2022-05-22T17:42:06.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[은퇴 준비] 자발적 퇴사자 실업급여를 받는 방법]]></title>
-        <id>https://happist.com/?p=585597</id>
-        <link href="https://happist.com/585597/%ec%9e%90%eb%b0%9c%ec%a0%81-%ed%87%b4%ec%82%ac%ec%9e%90-%ec%8b%a4%ec%97%85%ea%b8%89%ec%97%ac"/>
-        <updated>2022-05-22T08:44:20.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
         </author>
     </entry>
 </feed>
