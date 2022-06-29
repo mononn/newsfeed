@@ -172,6 +172,36 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "2c02fc97-0cf3-45eb-a771-b0ae7fa2d218",
+          "author": "Michael Dawson",
+          "description": "The Source-to-Image (S2I) toolkit allows you to easily build application container images for OpenShift deployment. Red Hat provides S2I images for a number of languages including Node.js. For example, this is the image for Node.js 16.x. To learn more about using the Red Hat images versus other Node.js images, check out the Building good containers section of the Node.js reference architecture.\nIf you have an application with a package.json that includes an npm start command, deploying that application using nodeshift (which supports S2I) can be as easy as running nodeshift in the directory with the package.json. It will package your application and deploy to your current OpenShift project.\nSuper easy, right? Well, most of the time. It might get a bit more complicated if your application u…",
+          "link": "https://developers.redhat.com/articles/2022/06/29/how-add-libraries-nodejs-container-s2i",
+          "publishedOn": "2022-06-29T07:00:00.000Z",
+          "wordCount": 2369,
+          "title": "How to add libraries to a Node.js container with S2I",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Nodejs_topic_page__A%20copy.png?itok=_GJ-KNgc"
+        },
+        {
+          "id": "af4274f5-76c8-4ea9-9b15-4149731024ce",
+          "author": "dtidwell",
+          "description": "Resources to help you make the most of Red Hat Openshift Dev Spaces.",
+          "link": "https://developers.redhat.com/crw-fmi",
+          "publishedOn": "2022-06-29T01:49:57.000Z",
+          "wordCount": 2303,
+          "title": "Sharing your Container Development Environment with Red Hat Openshift Dev Spaces (formerly CodeReady Workspaces)",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/OpenShiftDev%20Spaces.png?itok=jhv3QyBD"
+        },
+        {
+          "id": "fa238d90-bc15-45f4-9d0a-386dd4082a59",
+          "author": "dtidwell",
+          "description": "About This Page\nThis page has two parts:\nInstall OpenShift Dev Spaces (Dev Spaces).\nGet a \"Hello World\" example application open in OpenShift Dev Spaces.\nInstall via Operator Hub\nThere is a recommended method for creating an OpenShift Dev Spaces instance in your OpenShift cluster. You can find the complete instructions here.\nInstall via command line\nImportant note: Creating the OpenShift Dev Spaces instance using the command line is supported for versions of OpenShift 4.10 or higher. It is recommended that you use the OpenShift Dev Spaces Operator, located in the Operator Hub, to install Dev Spaces.\n1. Download and install the command line tool, dsc\n3 minutes\nNavigate to https://developers.redhat.com/products/openshift-dev-spaces/download.\nDownload the OpenShift Dev Spaces CLI management tool archive for version 3.0.\nExtract the archive.\nPlace the extracted binary in your $PATH.\n2. Use dsc to create an OpenShift Dev Spaces instance in your cluster\n10 minutes\nLog into your OpenShift cluster with cluster-admin rights.\nFrom your command line, run the command: \n\t\ndsc server:start\nThis will create an OpenShift Dev Spaces instance in the OpenShift project \"workspaces\" (which will be created if it does not exist). When it is finished, the Dev Spaces URL will be returned.\nRun Hello World\nAfter logging in to your Dev Spaces instance, select any sample stack and click the \"Create and Open\" button.\nHello World for Red Hat OpenShift Dev Spaces (formerly CodeReady Workspaces) appeared first on Red Hat Developer.",
+          "link": "https://developers.redhat.com/crw-hw",
+          "publishedOn": "2022-06-29T01:49:40.000Z",
+          "wordCount": 1936,
+          "title": "Hello World for Red Hat OpenShift Dev Spaces (formerly CodeReady Workspaces)",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/OpenShiftDev%20Spaces.png?itok=jhv3QyBD"
+        },
+        {
           "id": "ce361d82-7976-4221-8939-abdc16e1a282",
           "author": "Sandipan Roy",
           "description": "Have you ever encountered a pop-up when visiting a web page or browsing a particular item on a site? Imagine if these pop-ups were carriers that delivered malicious payloads to your devices or captured confidential information. This is a type of cyber attack called cross-site scripting, or XSS. Cross-site scripting is one of the most common attacks in 2022, and it made the OWASP top 10 web application security risks. Let's take a tour of cross-site scripting and learn how an attacker executes malicious JavaScript code on input parameters, creates pop-ups to deface web applications, and can hijack an active user session.\nHow JavaScript is used in XSS attacks\nA dynamic web application is set up with three key features:\nHTML specifies the complete structure.\nCSS configures the overall look an…",
@@ -460,26 +490,6 @@
           "wordCount": 1386,
           "title": "Open source edge detection with OpenCV and Pachyderm",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Machine_Learning_Featured_Article_B.png?itok=hNcCpoyg"
-        },
-        {
-          "id": "34f13f47-1141-4739-b60e-a6c4321d8297",
-          "author": "Antonio Cardace",
-          "description": "Red Hat Enterprise Linux (RHEL) ships with several Federal Information Processing Standards (FIPS)-validated cryptography libraries, including OpenSSL. This allows applications that use these libraries to operate in FIPS mode, which means that the cryptographic techniques they use can are in compliance with the FIPS-140-2 standard. Any organization that works with the U.S. Federal government must comply with this standard.\nBy default, applications written in Go use cryptographic functions from the Go standard library, which is not FIPS-validated. However, the version of Go shipped in RHEL is based on upstream Go's dev.boringcrypto branch, which is modified to use BoringSSL for crypto primitives. Modifications made in the RHEL version replace BoringSSL with OpenSSL. These modifications allo…",
-          "link": "https://developers.redhat.com/articles/2022/05/31/your-go-application-fips-compliant",
-          "publishedOn": "2022-05-31T07:40:00.000Z",
-          "wordCount": null,
-          "title": "Is your Go application FIPS compliant?",
-          "imageUrl": null
-        },
-        {
-          "id": "fd568e80-1fd7-4d83-be98-53ee6d73e237",
-          "author": "Alexander Barbosa Ayala",
-          "description": "Red Hat Data Grid is a middleware solution that has been developed for application cache data storage. It makes it possible to access and process in-memory data, improving the end-user experience.\nThis article offers guidance for Spring Boot and Red Hat Data Grid integration on version 4.9 of the Red Hat OpenShift Container Platform. You will set up a Red Hat Data Grid 8.2 cluster and deploy a Spring Boot application with separate namespaces to use Hot Rod communication between them.\nSetting up the environment\nThe integration described in this article was made using the following technologies:\nRed Hat Data Grid 8.2\nOpenShift 4.9\nSpring Boot 2.5\nJava 11\nDeploy the Data Grid cluster\nRefer to the Data Grid Operator Guide for step-by-step instructions on deploying Red Hat Data Grid. For this i…",
-          "link": "https://developers.redhat.com/articles/2022/05/31/integrate-spring-boot-application-red-hat-data-grid",
-          "publishedOn": "2022-05-31T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Integrate a Spring Boot application with Red Hat Data Grid",
-          "imageUrl": null
         }
       ]
     },
@@ -543,16 +553,6 @@
           "publishedOn": "2022-06-07T03:32:00.000Z",
           "wordCount": 1517,
           "title": "Performance of coroutine-style lexers in Go",
-          "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2022/rewriting-the-lexer-benchmark-in-rust/",
-          "author": null,
-          "description": "<p>I've reimplemented my lexical analyzer (lexer) for the the <a class=\"reference external\" href=\"https://llvm.org/docs/TableGen/\">TableGen language</a> in Python, JS and Go so far. The <a class=\"reference external\" href=\"https://eli.thegreenplace.net/2022/a-faster-lexer-in-go/\">latest\npost in the series</a>\ndiscussed how several years of new Go versions improved my lexer's performance\nby roughly 2x, and how several additional optimizations won another 37%; the\nfinal result …</p>",
-          "link": "https://eli.thegreenplace.net/2022/rewriting-the-lexer-benchmark-in-rust/",
-          "publishedOn": "2022-05-30T12:53:00.000Z",
-          "wordCount": 1924,
-          "title": "Rewriting the lexer benchmark in Rust",
           "imageUrl": null
         }
       ]
@@ -939,6 +939,16 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2022/06/MLinAction2022.html",
+          "author": null,
+          "description": "Posted by Hee Jung, Developer Relations Community Manager / Soonson Kwon, Developer Relations Program Manager\n \n\n   \nML in Action is a virtual event to collect and share cool and useful machine learning (ML) use cases that leverage multiple Google ML products. This is the first run of an ML use case campaign by the ML Developer Programs team. \nLet us announce the winners right now, right here. They have showcased practical uses of ML, and how ML was adapted to real life situations. We hope these projects can spark new applied ML project ideas and provide opportunities for ML community leaders to discuss ML use cases.  \n4 Winners of \"ML in Action\" are: \n  \nDetecting Food Quality with Raspberry Pi and TensorFlow\n\nBy George Soloupis, ML Google Developer Expert (Greece)\n\n \n\nThis project helps …",
+          "link": "http://developers.googleblog.com/2022/06/MLinAction2022.html",
+          "publishedOn": "2022-06-29T17:00:00.010Z",
+          "wordCount": 2848,
+          "title": "ML in Action: Campaign to Collect and Share Machine Learning Use Cases",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmfFsBlHN0quKT47Q6uxnUBMLRe6y9DffTl0eQFcuKSuYTXpuiI9x7KSYZ2RTQHj3Ai5OGyAhp8T-QU-E1RNOZEFe7n_3JTS1aYMiwsmzriieXTTHDTcwXrElWbR5CXIpITyXPG2e4zU9sQ464m9AScnnlDNxslSNU2pc2i4bs3yUfJ1cEEeKx7SV1/w1200-h630-p-k-no-nu/GoogleDev-ML-in-action-01.png"
+        },
+        {
           "id": "http://developers.googleblog.com/2022/06/gdg-jennifer-bailey.html",
           "author": null,
           "description": "Posted by Kübra Zengin, North America Regional Lead, Google Developers\n \n\n \n  \nA Path to Programming\n\n“I was hooked from the start,” says Jennifer Bailey about programming. Always interested in the way systems work, Jennifer, now an educator in Colorado, found her path to programming in an unconventional way. She first earned a General Educational Development degree, otherwise known as a “GED” in the United States, from Aims Community College, when she was only 15 years old.  \nEver a quick learner with the ambition to excel, she then secured an associate’s degree, bachelor’s, and master’s degree in Applied Science. With degrees in hand, she taught herself C Sharp while working at a local firm as a software developer building desktop applications. \nWhen one of her mentors from Aims Communit…",
@@ -1095,6 +1105,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0960/",
+          "author": null,
+          "description": "PVS-Studio developers made an entertaining quiz for you. Try to quickly find a bug in a code fragment. If you spot an error - click on it.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0960/",
+          "publishedOn": "2022-06-28T21:00:00.000Z",
+          "wordCount": 4277,
+          "title": "Challenge: can you spot an error in C++ code?",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0960_Game_Cpp/image1-1cdd2df12957765f9ee9277d4d8b9c2a_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/0959/",
           "author": null,
           "description": "Stack Overflow is full of questions from people learning to write code. Here's a tip: you can get answers to most of these questions if you run a static code analyzer against your code. That's so much faster!",
@@ -1211,6 +1231,16 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.com",
       "articles": [
+        {
+          "id": "https://future.com/?p=6471",
+          "author": "Future Editorial",
+          "description": "By the time you think you’ve got crypto figured out, something new emerges — or an old innovation comes back to the fore. Since the last Crypto Winter thawed, we’ve experienced a DeFi Summer, scaled the ramparts of an NFT revolution, and then logged onto Discord for a DAO resurgence. As enthusiasm over prices gives... Read More\nThe post Crypto/Web3 So Far in 2022 appeared first on Future.",
+          "link": "https://future.com/crypto-web3-so-far-in-2022/",
+          "publishedOn": "2022-06-29T15:00:50.000Z",
+          "wordCount": 1446,
+          "title": "Crypto/Web3 So Far in 2022",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/04/V7_GenericTopic_Crypto.jpg"
+        },
         {
           "id": "https://future.com/?p=6396",
           "author": "Jennifer Doudna and Vijay Pande",
@@ -1447,6 +1477,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/899404/",
+          "author": "corbet",
+          "description": "CODE\n22.05 has been released; this is the \"developer edition\" of the\nCollabora Online offering formerly known as LibreOffice Online.\n\n\n\tCODE 22.05 is preceding the next major release of our long-term\n\tsupported business suite Collabora Online. This free developer\n\tversion includes all features and enhancements that will be\n\tavailable in our enterprise version, expected later in July. The\n\tCODE releases allow every interested user to learn and test new\n\tfeatures on an early stage.\n\n\nNew features include support for external grammar checkers, the ability to\nhave 16,000 columns in a spreadsheet (which is evidently useful to\nsomebody), sparkline plots, support for WebP graphics, and more.",
+          "link": "https://lwn.net/Articles/899404/",
+          "publishedOn": "2022-06-29T18:44:03.000Z",
+          "wordCount": 224,
+          "title": "Collabora Online developer edition 22.05 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899385/",
+          "author": "corbet",
+          "description": "Philip Herron has posted an update on the status of the GCC front-end\ncompiler for the Rust language.\n\n\n\tFor some context, my current project plan brings us to November\n\t2022 where we (unexpected events permitting) should be able to\n\tsupport valid Rust code targeting Rustc version ~1.40 and reuse\n\tlibcore, liballoc and libstd. This date does not account for the\n\tborrow checker feature and the proc macro crate, which we have a\n\tplan to implement, but this will be a further six-month project.",
+          "link": "https://lwn.net/Articles/899385/",
+          "publishedOn": "2022-06-29T14:17:11.000Z",
+          "wordCount": 777,
+          "title": "A Rust-in-GCC update",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899368/",
+          "author": "corbet",
+          "description": "The\n5.18.8,\n5.15.51,\n5.10.127, and\n5.4.202\nstable kernel updates have been released; each contains another set of\nimportant fixes.",
+          "link": "https://lwn.net/Articles/899368/",
+          "publishedOn": "2022-06-29T13:34:58.000Z",
+          "wordCount": 136,
+          "title": "Four more stable kernel updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899365/",
+          "author": "corbet",
+          "description": "Version\n102 of the Thunderbird email client has been released.\n\n\n\tIt features refreshed icons, color folders, and quality-of-life\n\tupgrades like the redesigned message header. It ushers in a brand\n\tnew Address Book to bring you closer than ever to the people you\n\tcommunicate with. Plus useful new tools to help you manage your\n\tdata, navigate the app faster, and boost your productivity. We’re\n\teven bringing Matrix to the party.",
+          "link": "https://lwn.net/Articles/899365/",
+          "publishedOn": "2022-06-29T13:09:39.000Z",
+          "wordCount": 182,
+          "title": "Thunderbird 102 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899364/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (blender, libsndfile, and maven-shared-utils), Fedora (openssl), Red Hat (389-ds-base, kernel, kernel-rt, kpatch-patch, and python-virtualenv), Scientific Linux (389-ds-base, kernel, python, and python-virtualenv), and Slackware (curl, mozilla, and openssl).",
+          "link": "https://lwn.net/Articles/899364/",
+          "publishedOn": "2022-06-29T13:05:18.000Z",
+          "wordCount": 212,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899302/",
+          "author": "corbet",
+          "description": "Version 9.0 of the Vim text\neditor has been released.  The biggest change would appear to be the\naddition of the \"Vim9 Script\" language for editor customization:\n\n\n\n\tThe main goal of Vim9 script is to drastically improve\n\tperformance. This is accomplished by compiling commands into\n\tinstructions that can be efficiently executed. An increase in\n\texecution speed of 10 to 100 times can be expected.\n\t\n\tA secondary goal is to avoid Vim-specific constructs and get closer\n\tto commonly used programming languages, such as JavaScript,\n\tTypeScript and Java.",
+          "link": "https://lwn.net/Articles/899302/",
+          "publishedOn": "2022-06-28T21:06:40.000Z",
+          "wordCount": 1240,
+          "title": "Vim 9.0 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/899182/",
           "author": "jake",
@@ -2296,56 +2386,6 @@
           "wordCount": null,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/896255/",
-          "author": "jake",
-          "description": "The ID-mapped mounts feature was added to\nLinux in 5.12, but the general idea behind it goes back a fair bit\nfurther.  There are a number of different situations where the user and\ngroup IDs for files on disk do not match the current human (or process) user of those\nfiles, so ID-mapped mounts provide a way to resolve that problem—without\nchanging the files on disk.  The developer of the feature, Christian\nBrauner, led a discussion at the \n2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM) on ID-mapped mounts.",
-          "link": "https://lwn.net/Articles/896255/",
-          "publishedOn": "2022-05-30T16:45:51.000Z",
-          "wordCount": null,
-          "title": "[$] ID-mapped mounts",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/893048/",
-          "author": "corbet",
-          "description": "Our introduction to Linux audio and MIDI\nplugin APIs ended with a mention of\nthe Clever Audio Plugin\n(CLAP) but did not get into the details.  CLAP is an MIT-licensed API for\ndeveloping audio and MIDI plugins that, its developers feel, has the\npotential to improve the audio-software situation on Linux.  The time has\nnow come to get to those details and look at the state of CLAP and where it\nis headed.",
-          "link": "https://lwn.net/Articles/893048/",
-          "publishedOn": "2022-05-30T14:57:58.000Z",
-          "wordCount": null,
-          "title": "[$] The Clever Audio Plugin",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/896643/",
-          "author": "jake",
-          "description": "The 5.18.1, 5.17.12, 5.15.44, and 5.10.119 stable kernels have been released.\nAs usual, they contain important fixes; users of those series should upgrade.",
-          "link": "https://lwn.net/Articles/896643/",
-          "publishedOn": "2022-05-30T13:53:56.000Z",
-          "wordCount": null,
-          "title": "Four stable kernel releases",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/896644/",
-          "author": "corbet",
-          "description": "Version 5.36.0 of the Perl language is out.  \"Perl 5.36.0 represents\napproximately a year of development since Perl 5.34.0 and contains\napproximately 250,000 lines of changes across 2,000 files from 82\nauthors.\"  Changes include the enabling of function signatures,\nUnicode 14.0 support, experimental iteration over multiple values, and a\nlot more; see the\nrelease notes for the full list.",
-          "link": "https://lwn.net/Articles/896644/",
-          "publishedOn": "2022-05-30T13:48:15.000Z",
-          "wordCount": null,
-          "title": "Perl 5.36.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/896640/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (modsecurity-apache, pngcheck, rsyslog, and smarty3), Fedora (firefox, golang-github-opencontainers-runc, gron, kernel, kernel-headers, kernel-tools, logrotate, mingw-pcre2, and rubygem-git), Mageia (admesh, chromium-browser-stable, golang, kernel, kernel-linus, and pidgin), Red Hat (firefox, openvswitch2.13, openvswitch2.15, openvswitch2.16, rsyslog, and thunderbird), SUSE (bind, curl, opera, pcp, postgresql12, and postgresql14), and Ubuntu (gnupg2 and ntfs-3g).",
-          "link": "https://lwn.net/Articles/896640/",
-          "publishedOn": "2022-05-30T13:41:12.000Z",
-          "wordCount": null,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2443,16 +2483,6 @@
           "wordCount": 3552,
           "title": "Introducing ESP Privilege Separation",
           "imageUrl": "https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png"
-        },
-        {
-          "id": "https://medium.com/p/1306e2a10000",
-          "author": "ESP BOT",
-          "description": "",
-          "link": "https://blog.espressif.com/may-2022-1306e2a10000?source=rss----d5414d5dee73---4",
-          "publishedOn": "2022-05-31T04:00:59.000Z",
-          "wordCount": null,
-          "title": "May 2022",
-          "imageUrl": null
         }
       ]
     },
@@ -2502,16 +2532,6 @@
           "wordCount": 1607,
           "title": "How a Group of Researchers Hacked Tesla’s Passive Keyless Entry System",
           "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/06/Tesla-Keyless-Entry-System-Hacked-Featured-Image.png"
-        },
-        {
-          "id": "https://www.novelbits.io/?p=19424",
-          "author": "Nthatisi Hlapisi",
-          "description": "Last Updated on May 30, 2022 by Mohammad Afaneh There are several ways to secure BLE device communications. One way is to randomize the MAC address of the device. This is an effective way to thwart passive tracking and device spoofing attacks. If you are developing a BLE device, make sure to implement MAC address…\nThe post How to Protect the Privacy of Your Bluetooth Low Energy Device appeared first on Novel Bits.",
-          "link": "https://www.novelbits.io/how-to-protect-the-privacy-of-your-bluetooth-low-energy-device/",
-          "publishedOn": "2022-05-30T12:20:57.000Z",
-          "wordCount": 1402,
-          "title": "How to Protect the Privacy of Your Bluetooth Low Energy Device",
-          "imageUrl": "https://www.novelbits.io/wp-content/uploads/2022/05/Protect-Privacy-Bluetooth-Low-Energy.png"
         }
       ]
     },
@@ -2567,6 +2587,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10542",
+          "author": "Kevin C. Tofel",
+          "description": "On our latest IoT Podcast episode, we take a question that Gregg left on our IoT Voicemail Hotline. Gregg uses Apple HomeKit and is looking for occupancy sensors, which he correctly says are not the same as motion sensors. Unfortunately, we’re right on the cusp of having a range of accurate occupancy sensors in the smart […]\nThe post When will our smart homes have true occupancy sensors? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/when-will-our-smart-homes-have-true-occupancy-sensors/",
+          "publishedOn": "2022-06-29T15:20:37.000Z",
+          "wordCount": 1966,
+          "title": "When will our smart homes have true occupancy sensors?",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/06/IMG_0042-scaled.jpeg"
+        },
         {
           "id": "https://staceyoniot.com/?p=10526",
           "author": "Kevin C. Tofel",
@@ -2890,6 +2920,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=86330",
+          "author": "씨앗(CEART)",
+          "description": "​매년 5월 열리는 마이크로소프트의 개발자 행사인 빌드(Build)는 현재의 기술력과 향후 기술 로드맵을 확인할 수 있는 행사이다. 올해도 지난해에 이어 온라인 디지털 행사로 진행되었으며, 클라우드 네이티브 및 애플리케이션 현대화, 협업 앱 및 로우코드를 통한 혁신, 데브옵스 및 클라우드 개발자 환경 등 다섯 가지 테마를 중심으로 500여 개의 세션을 소개했다. 특히 올해 다른 점은 지금까지 주로 프로 […]\nThe post 빌드 2022를 통해 본 MS의 파워 플랫폼 전략 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86330",
+          "publishedOn": "2022-06-29T03:11:53.000Z",
+          "wordCount": 3075,
+          "title": "빌드 2022를 통해 본 MS의 파워 플랫폼 전략",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/06/build-2022.png"
+        },
+        {
           "id": "https://slownews.kr/?p=86317",
           "author": "한상기",
           "description": "은 지역 내에서 압도적인 시장 점유율을 차지하는 미국의 클라우드 기업과 강하게 성장하는 중국 클라우드 기업에 대해 몇 년 전부터 위기를 느껴 왔다. 특히 데이터 주권의 문제가 불거지면서 비유럽 서비스 기업이 유럽 법률을 준수하게 만드는 것과 유럽 데이터가 어떻게 유럽 시민을 위해서 활용되게 할 것인가는 미래 유럽 디지털 산업을 위해서도 매우 중요한 이슈가 되었다. 2020년부터 가이아-X(GAIA-X)라는 […]\nThe post 유럽 연합의 클라우드 얼라이언스 (ft. 가이아-X) first appeared on 슬로우뉴스.",
@@ -3078,36 +3118,6 @@
           "wordCount": 1006,
           "title": "기사형 광고를 통해 본 소비자 문제",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2021/10/i_011.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86107",
-          "author": "민주언론시민연합",
-          "description": "6·1 지방선거 평균 경쟁률이 1.8대1로 역대 최저를 기록했습니다. 후보 등록 저조로 ‘투표 없이 당선’된 사람도 5월 27일 기준 509명으로 2000년대 이래 역대 최다입니다. 정치, 특히 지방 정치에 대한 견제 시스템이 무너지고, 거대 양당 체제는 더욱 견고해질 수 있다는 우려가 나옵니다. 5월 3주 차에는 유권자에게 실질적으로 도움이 되는 공약 보도를 하고 있는지 살펴보기 위해 공약 검증 […]\nThe post 지방선거 보도, 검증 없는 정책 기사 87% (5월 3주 차) first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86107",
-          "publishedOn": "2022-05-31T07:07:55.000Z",
-          "wordCount": null,
-          "title": "지방선거 보도, 검증 없는 정책 기사 87% (5월 3주 차)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=86096",
-          "author": "씨앗(CEART)",
-          "description": "​는 디지털 트랜스포메이션의 혁신과 경쟁 우위를 위한 연료다. 분석을 주도하고 비즈니스 동향과 기회를 이해하기 위한 핵심 요소다. 새로운 방식으로 데이터의 가치를 실현하면 기업이나 조직의 디지털 전환 계획을 가속화하는 것이 가능하다. 데이터 및 분석팀이 더욱 다양하고 복잡하며 미션 크리티컬한 비즈니스 프로세스를 지원하는 것이 중요하다는 것을 잘 알고 있음에도 불구하고, 기업이나 조직 내의 그 데이터를 소비하는 […]\nThe post 데이터옵스, 더 나은 비즈니스 결정을 이끈다 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86096",
-          "publishedOn": "2022-05-31T03:39:36.000Z",
-          "wordCount": null,
-          "title": "데이터옵스, 더 나은 비즈니스 결정을 이끈다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=86052",
-          "author": "크레센도",
-          "description": "헨리 8세(1491-1547, 재위: 1509-1547)가 영국의 왕이 되었다. 18살 어린 나이였지만,  훌륭한 왕이 될 수 있는 자질을 보여주었다. 신앙심도 깊었고, 잘생겼고, 기개 있고, 음악과 학문에 조예가 깊었다. 신하들은 그를 경애했다. 그의 친구이자 조언자였던 토마스 모어(Sir Thomas More) 역시 그가 뛰어난 군주가 될 것이라고 공언했다. 헨리는 자신보다 6살이 많은 아라곤의 캐서린과 결혼했다. 캐서린은 몇 번 유산을 하고난 […]\nThe post 잉글랜드, 종교적 살육의 연대기: 헨리 8세~찰스 1세 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86052",
-          "publishedOn": "2022-05-30T09:24:06.000Z",
-          "wordCount": null,
-          "title": "잉글랜드, 종교적 살육의 연대기: 헨리 8세~찰스 1세",
-          "imageUrl": null
         }
       ]
     },
@@ -3735,16 +3745,6 @@
           "wordCount": 896,
           "title": "모건스탠리 미국 주식 전망, 이번 미국 주식 반등은 제한적이라고 주장",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/05/폭락하는-주식-Phoot-by-maxim-hopman.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585657",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/585657/%ec%82%ac%ec%97%85%ec%9e%90%eb%93%b1%eb%a1%9d-%eb%b0%a9%eb%b2%95",
-          "publishedOn": "2022-05-30T15:17:30.000Z",
-          "wordCount": null,
-          "title": "[은퇴준비] 자기 사업 독립을 위한 사업자등록 방법",
-          "imageUrl": null
         }
       ]
     },
@@ -3753,6 +3753,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=75188",
+          "author": "veritaholic",
+          "description": "1970년대 심리학자 다니엘 카네만은 아모스 트버스키와 같이 인간의 행동을 연구합니다. 카네만은 이 연구로 2002년 심리학자로는 최초로 노벨 경제학상을 받습니다. 연구를 경제학에 적용한 행동경제학은 학문의 현실적 적용이란 점에서 21세기의 가장 성공적인 사례일 것입니다. 그리고 팔꿈치로 쿡 찌르는 행동을 뜻하는 넛지(nudge)는 그 결정판입니다. 경제학자 리처드 세일러와 법학자 캐스 선스타인은 2008년 전 세계적 베스트셀러가된 “넛지”를 출판했고 선스타인은 2009년 백악관의 부름을 받아 미국 정부에서 일하게 되었습니다. 6년 후 당시 대통령이었던 바락 오바마는 정부 정책에 → 더 보기",
+          "link": "https://newspeppermint.com/2022/06/28/npc_nudgecovid/?utm_source=rss&utm_medium=rss&utm_campaign=npc_nudgecovid",
+          "publishedOn": "2022-06-28T22:59:07.000Z",
+          "wordCount": 2039,
+          "title": "[필진 칼럼] 코로나 시대 넛지의 한계",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=74596",
           "author": "eyesopen1",
@@ -3952,16 +3962,6 @@
           "wordCount": 594,
           "title": "[필진 칼럼] 캐나다까지 번진 코로나 백신 반대 시위",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=74272",
-          "author": "veritaholic",
-          "description": "연말이 지난 일들을 정리하는 시기라면 연초는 새로운 계획을 세우기에 적당한 시기입니다. 그리고 이 두 가지와 모두 연관된 매우 중요한 일이 있습니다. 바로, 자신의 인생을 반드시 정리해야만 하는 시점을 위해 계획을 세우는 일입니다. 곧 자신의 죽음을 대비하는 일입니다. 지난 1월 2일, IT 매거진 매셔블(Mashable)에는 구글의 이메일인 지메일(Gmail) 사용자들에게 그들이 죽은 뒤 이메일 계정을 삭제하게 해두는 법을 소개한 글이 올라왔습니다. 사실 어려운 방법은 아닙니다. 구글이 제공하는 휴면계정 관리자 정보(Inactive Account Manager)에 들어가 → 더 보기",
-          "link": "https://newspeppermint.com/2022/05/30/npc_accountinactivation/?utm_source=rss&utm_medium=rss&utm_campaign=npc_accountinactivation",
-          "publishedOn": "2022-05-30T22:59:19.000Z",
-          "wordCount": null,
-          "title": "[필진 칼럼] 클라우드 컴퓨팅과 메타버스 시대의 ‘잊힐 권리’",
-          "imageUrl": null
         }
       ]
     },
@@ -4175,16 +4175,6 @@
           "publishedOn": "2022-06-01T01:37:48.000Z",
           "wordCount": 8,
           "title": "해커 - 후기 비트겐슈타인의 인종학적, 인류학적 고찰 2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222753206084",
-          "author": "sellars",
-          "description": "비트겐슈타인은 1940년에 다음처럼 말한다. <우리가 인종학적(ethnological) 고찰 방식을 사용한다면, 철학이 인종학(ethnology)이라고 말하는 것이 되는가? 아니다. 사물을 보다 객관적으로 바라보기 위해 우리 관점을 바깥쪽에 취한다는 것을 의미할 뿐이다.> 철학은 인종학이나 인류학이 아니다. 그럼에도 인종학적, 혹은 인류학적(anthropological) 현상에 대해서 철학을 주목해야 한다. 왜 그래야 하는가? 비트겐슈타인에 의하면 그것은 사물을 보다 객관적으로 보기 위해서 그렇다. 해커는 이러한 인종학적 고찰에 논리적, 선험적(a priori) 관점을 대립시키고 있다. 논리적, 선험적 관점이란 바로 전기 비트겐슈타인이 주장했던 논.......",
-          "link": "https://blog.naver.com/sellars/222753206084",
-          "publishedOn": "2022-05-31T00:08:13.000Z",
-          "wordCount": 8,
-          "title": "해커 - 후기 비트겐슈타인의 인종학적, 인류학적 고찰 1",
           "imageUrl": null
         }
       ]
