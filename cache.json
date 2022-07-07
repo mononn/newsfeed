@@ -140,6 +140,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "290f5459-e17a-43b6-ae71-20d8acf9484e",
+          "author": "Vittorio Rigamonti",
+          "description": "The open source Infinispan data store is popular for in-memory operations. A .NET Core application can now easily integrate Infinispan as a caching service or session provider. This article provides basic information on how to do that in C# on Linux.\nWhat you need:\n.NET 6.0+ installed on your system\nAccess to get packages from NuGet\nAccess to an Infinispan server\nOn the Infinispan server, create a cache named default listening on the loopback host and port 127.0.0.1:11222, without authentication.\nCreate the application\nYou are going to work on an ASP.NET Core application, so run the following command to generate a new application scaffold:\ndotnet new webapp -lang 'C#' -n Infinispan.Example.Caching -f net6.0\nThis command creates a new folder with an empty but working ASP.NET Core applicatio…",
+          "link": "https://developers.redhat.com/articles/2022/07/07/add-infinispan-cache-your-aspnet-application",
+          "publishedOn": "2022-07-07T07:00:00.000Z",
+          "wordCount": 2429,
+          "title": "Add an Infinispan cache to your ASP.NET application",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-dotNET_2x_0.png?itok=G3zE7bDd"
+        },
+        {
           "id": "d5400cdb-20b3-4261-9065-f2ac4751c92b",
           "author": "Philip Hayes",
           "description": "Many Red Hat customers run Red Hat JBoss Enterprise Application Platform (JBoss EAP) workloads on Red Hat OpenShift. To satisfy different customers' preferences, we have a range of options for cloud providers, payment types (such as by subscription or based on consumption), and management models (such as self-managed versus provider-managed). One popular option deploys JBoss EAP workloads on Microsoft Azure Red Hat OpenShift. This article summarizes the benefits of that platform for these Java applications.\nRed Hat OpenShift as a host for JBoss EAP\nBenefits to running JBoss EAP on OpenShift include:\nLower operational costs through increased application density, using Kubernetes bin packing\nReduced resource usage, memory footprint, and attack surface with the use of WildFly Galleon layers\nI…",
@@ -408,26 +418,6 @@
           "wordCount": 2711,
           "title": "Detecting nondeterministic test cases with Bunsen",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2020/09/dotnet-pipelines_2x.png?itok=kderl4WS"
-        },
-        {
-          "id": "dff658f4-2e0a-4aa9-b182-52d14e807c3b",
-          "author": "Syed Shaaf",
-          "description": "You probably have used Java Flight Recorder, an excellent tool for analyzing and understanding Java workloads. It comes in handy during development or while workloads run in production. Cryostat takes that further by bringing the same functionality to containers and Kubernetes. Now users can record applications for the entire cluster to understand how the applications behave. Users can also utilize various APIs and get the analysis data in different formats.\nRBAC and OAuth support\nCryostat 2.1 enables OAuth authentication using the built-in OAuth server in the Red Hat OpenShift Container Platform. This means that users no longer need to paste authorization tokens manually. Also, if more than one user manages JDK flight recordings with Cryostat in a single namespace, you can give each of th…",
-          "link": "https://developers.redhat.com/articles/2022/06/08/9-awesome-updates-cryostat-21",
-          "publishedOn": "2022-06-08T07:00:00.000Z",
-          "wordCount": 1596,
-          "title": "9 awesome updates in Cryostat 2.1",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Java_ContainerJFR_Featured_Article__A-01.png?itok=N_594VC9"
-        },
-        {
-          "id": "97afecef-2ffb-499a-80dc-28374c1a1891",
-          "author": "Rupesh Patel",
-          "description": "Do your clients complain about interruptions during software upgrades? Do you observe connection failures or timeouts during those upgrades? In this article, you'll learn how you can minimize the impacts on your client visiting your services hosted on the Red Hat OpenShift Container Platform during software updates.\nA rolling update creates new pods running the new software and terminates old ones. The deployment controller performs this rollout incrementally, ensuring that a certain number of new pods are ready before the controller deletes the old pods that the new pods are replacing. For details, see Rolling strategy in the Red Hat OpenShift Container Platform documentation.\nFigure 1 shows a typical sequence of events during an update. The important point, for the purposes of this artic…",
-          "link": "https://developers.redhat.com/articles/2022/06/08/eliminate-downtime-during-openshift-rolling-updates",
-          "publishedOn": "2022-06-08T07:00:00.000Z",
-          "wordCount": 1393,
-          "title": "Eliminate downtime during OpenShift rolling updates",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
         }
       ]
     },
@@ -454,6 +444,16 @@
           "publishedOn": "2022-06-26T18:32:09.000Z",
           "wordCount": 7938,
           "title": "PHP 변경점 정리: 5.6부터 8.1까지",
+          "imageUrl": null
+        },
+        {
+          "id": "https://edykim.com/ko/post/2022-06-11/",
+          "author": null,
+          "description": "그 사이 여러 일이 있었다. 텍사스를 다녀왔다. 조카 E…",
+          "link": "https://edykim.com/ko/post/2022-06-11/",
+          "publishedOn": "2022-06-11T18:16:21.000Z",
+          "wordCount": 906,
+          "title": "No title",
           "imageUrl": null
         }
       ]
@@ -856,26 +856,6 @@
           "wordCount": 2560,
           "title": "DesignDash aims to optimize SoCs by analyzing untapped EDA data",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/06/Synopsys-DesignDash.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4474950",
-          "author": "Erol Simsek",
-          "description": "Hardware debugging: an embedded software developer’s daily business, exploring the evolution of debugging. While development environments and debugger software have become more powerful, hardware smaller with increasing performance, the basic use cases of debugging are still the same today.\nThe post Debugging stories: from printf, just Flash and beyond appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/debugging-stories-from-printf-just-flash-and-beyond/",
-          "publishedOn": "2022-06-07T15:10:33.000Z",
-          "wordCount": 3668,
-          "title": "Debugging stories: from printf, just Flash and beyond",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/06/Figure-2-standard-debugging-iSYSTEM.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4474956",
-          "author": "Richard McCullagh",
-          "description": "To more effectively mitigate continuing supply chain shocks, companies are adjusting the way they design their products, further stretching scarce engineering resources. It has been...\nThe post How the chip shortage deepens the engineering skills crisis appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/how-the-chip-shortage-deepens-the-engineering-skills-crisis/",
-          "publishedOn": "2022-06-07T15:09:00.000Z",
-          "wordCount": 2391,
-          "title": "How the chip shortage deepens the engineering skills crisis",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/06/supply-shortage-2.png"
         }
       ]
     },
@@ -1150,6 +1130,16 @@
       "siteUrl": "https://future.com",
       "articles": [
         {
+          "id": "https://future.com/?p=6410",
+          "author": "Peter Donnelly, Vineeta Agarwala and Lauren Richardson",
+          "description": "Peter Donnelly is a professor of statistical science at the University of Oxford and the CEO of Genomics PLC, which uses large-scale human genetic data to inform healthcare and drug discovery. In this interview he, Lauren Richardson, and a16z general partner Vineeta Agarwala discuss the concept of polygenic risk scores with and how this lets... Read More\nThe post Quantifying Disease Risk Using Genomics: the New Paradigm appeared first on Future.",
+          "link": "https://future.com/polygenic-risk-score-disease-genomics/",
+          "publishedOn": "2022-07-07T15:00:17.000Z",
+          "wordCount": 6258,
+          "title": "Quantifying Disease Risk Using Genomics: the New Paradigm",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/07/781-PeterDonnellyQA-SocialShare-FaceBook.png"
+        },
+        {
           "id": "https://future.com/?p=6435",
           "author": "Nitin Natarajan and Joel de la Garza",
           "description": "Nitin Natarajan is the deputy director of CISA (Cybersecurity and Infrastructure Security Agency), and has extensive experience in the cybersecurity space, including overseeing critical infrastructure for the U.S. National Security Council and the U.S. Department of Health and Human Services.  In this discussion with a16z general partner Joel de la Garza (who was previously chief... Read More\nThe post Ransomware, Cyber-Savviness, and the Public-Private Security Connection appeared first on Future.",
@@ -1389,6 +1379,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/900319/",
+          "author": "jake",
+          "description": "The 5.18.10, 5.15.53, 5.10.129, 5.4.204, 4.19.251, 4.14.287, and 4.9.322 stable kernels have been released.  As\nusual, they contain important fixes throughout the tree.",
+          "link": "https://lwn.net/Articles/900319/",
+          "publishedOn": "2022-07-07T16:37:16.000Z",
+          "wordCount": 140,
+          "title": "Another crop of stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899543/",
+          "author": "corbet",
+          "description": "At the 2022 sambaXP conference,\nJeremy Allison gave a talk titled \"The UNIX Filesystem API is\nprofoundly broken: What to do about it?\". LWN regulars may recall hints of\nthese talks in a recent comment\nthread.  He started his talk with the problems that symbolic links\n(\"symlinks\")\ncause for application developers, then discussed how the solutions to\nthe problems posed by symlinks led to substantial increases in the\ncomplexity of the APIs involved in working with pathnames.",
+          "link": "https://lwn.net/Articles/899543/",
+          "publishedOn": "2022-07-07T13:59:56.000Z",
+          "wordCount": null,
+          "title": "[$] The trouble with symbolic links",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/900286/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (intel-microcode), Fedora (dotnet3.1 and gnupg2), Oracle (grub2, kernel, php:7.4, php:8.0, and qemu-kvm), SUSE (389-ds, apache2, crash, curl, expat, firefox, fwupd, fwupdate, ImageMagick, ldb, samba, liblouis, librttopo, openssl, openssl-1_0_0, openssl-1_1, openssl-3, oracleasm, php7, php8, python-Twisted, python310, rsyslog, s390-tools, salt, thunderbird, and xen), and Ubuntu (linux-lts-xenial, linux-kvm and openssl).",
+          "link": "https://lwn.net/Articles/900286/",
+          "publishedOn": "2022-07-07T13:29:48.000Z",
+          "wordCount": 397,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899484/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for July 7, 2022 is available.",
+          "link": "https://lwn.net/Articles/899484/",
+          "publishedOn": "2022-07-07T01:46:11.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for July 7, 2022",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/899742/",
+          "author": "jake",
+          "description": "A regular feature of the Embedded\nLinux Conference (ELC) has been an update on the state of embedded Linux from\nconference organizer Tim Bird. It has been quite a few years since I had\nthe opportunity to sit in on one, so I took one at the\n2022 Open\nSource Summit North America (OSSNA) in Austin, Texas.  OSSNA is an\numbrella conference that contains ELC and a whole lot more these days.\nBird gave a look at recent kernel features from an embedded perspective,\ntalked a bit about some different technology areas and their impact on\nembedded Linux, and\nalso tried to answer a question that Andrew Morton posed in a keynote at ELC in 2008.",
+          "link": "https://lwn.net/Articles/899742/",
+          "publishedOn": "2022-07-06T22:30:06.000Z",
+          "wordCount": null,
+          "title": "[$] The 2022 embedded Linux update",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/900172/",
           "author": "corbet",
@@ -2238,36 +2278,6 @@
           "wordCount": 273,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/897061/",
-          "author": "jake",
-          "description": "As a followup to a session on testing\nchallenges earlier in the day, Josef Bacik led a discussion on best\npractices for testing in a combined storage and filesystem session at the\n2022 Linux Storage,\nFilesystem, Memory-management and BPF Summit (LSFMM).   There are a\nnumber of ways that developers can collaborate on improving the testing\nlandscape using fstests and blktests, starting with gathering and sharing\ninformation about which tests are expected to pass and fail.  That\ninformation depends on a lot of different factors, including kernel version\nand configuration, fstest options, and more.",
-          "link": "https://lwn.net/Articles/897061/",
-          "publishedOn": "2022-06-07T14:53:18.000Z",
-          "wordCount": null,
-          "title": "[$] Best practices for fstests",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/897247/",
-          "author": "corbet",
-          "description": "The Fedora 34 distribution release has gone out of the supported mode:\n\"No further updates, including security updates, will be available for\nFedora 34\".  Users should update to the Fedora 35 or 36\nrelease.",
-          "link": "https://lwn.net/Articles/897247/",
-          "publishedOn": "2022-06-07T14:49:54.000Z",
-          "wordCount": 265,
-          "title": "Fedora 34 is EOL",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/897226/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (glib2.0, librecad, and php-horde-mime-viewer), Fedora (vim), and Ubuntu (freerdp2, ruby2.3, ruby2.5, ruby2.7, ruby3.0, and vim).",
-          "link": "https://lwn.net/Articles/897226/",
-          "publishedOn": "2022-06-07T13:38:13.000Z",
-          "wordCount": 113,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2282,6 +2292,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/patterns-legacy-displacement/revert-to-source.html",
+          "author": null,
+          "description": "Legacy systems often act as integration hubs, ingesting source data to\n      pass on to downstream systems. A new downstream system can decouple itself\n      from legacy by finding the source of data to the legacy and integrating\n      directly to that instead. Ian Cartwright, Rob Horn, and James\n      Lewis describe this Revert to Source pattern,\n      explaining that this part of legacy displacement often also allows a new\n      system to take advantage of upgrades to source data that the legacy had neglected.\nmore…",
+          "link": "https://martinfowler.com/articles/patterns-legacy-displacement/revert-to-source.html",
+          "publishedOn": "2022-07-07T14:07:00.000Z",
+          "wordCount": 1947,
+          "title": "Legacy Displacement: Revert to Source",
+          "imageUrl": "https://martinfowler.com/articles/patterns-legacy-displacement/card.png"
+        },
         {
           "id": "https://martinfowler.com/articles/product-backlog-building-canvas.html",
           "author": null,
@@ -2469,6 +2489,26 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10608",
+          "author": "Stacey Higginbotham",
+          "description": "This week we continue discussing privacy and data protection with a focus on the smart home. I’d like to see a feature that lets us turn on privacy as needed on our devices, but Kevin doesn’t think that’s likely. For those who want concrete steps they can take today, the Electronic Frontier Foundation has some […]\nThe post Podcast: Lock down your smart home’s data appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-lock-down-your-smart-homes-data/",
+          "publishedOn": "2022-07-07T13:00:28.000Z",
+          "wordCount": 1725,
+          "title": "Podcast: Lock down your smart home’s data",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2021/09/home-assistant-amber-render-2-3-full_jpg_project-body.jpeg?fit=748%2C586&ssl=1"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=10592",
+          "author": "Stacey Higginbotham",
+          "description": "This week, the Wireless Broadband Alliance issued a report detailing how to make Wi-Fi better for use in the industrial IoT. The report focuses on bringing the characteristics of Time Sensitive Networking to wireless networks using Wi-Fi 6 and Wi-Fi 6E. Longtime readers of this newsletter might recall my obsession a few years back with Time Sensitive Networking, […]\nThe post Wi-Fi gets ready for an industrial makeover with new features appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/wi-fi-gets-ready-for-an-industrial-makeover-with-new-features/",
+          "publishedOn": "2022-07-07T03:52:34.000Z",
+          "wordCount": 2032,
+          "title": "Wi-Fi gets ready for an industrial makeover with new features",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/07/bigstock-robotic-machine-tool-in-indust-260626228.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=10595",
           "author": "Kevin C. Tofel",
@@ -2678,36 +2718,6 @@
           "wordCount": 888,
           "title": "Security companies are tackling the people problem",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/06/Screen-Shot-2022-06-02-at-10.13.00-AM.png?fit=502%2C327&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10447",
-          "author": "Stacey Higginbotham",
-          "description": "Insteon’s smart home hub is back online. Users have contacted me about their hubs working again while the Insteon Reddit thread indicates that sometime Tuesday afternoon Insteon’s servers came back online and various cloud integrations such as Alexa have started to work. So what has happened to bring the once-popular smart home system back online? […]\nThe post Users report Insteon’s servers are back online appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/users-report-insteons-servers-are-back-online/",
-          "publishedOn": "2022-06-08T00:42:52.000Z",
-          "wordCount": 1661,
-          "title": "Users report Insteon’s servers are back online",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/04/Insteon-hub.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10408",
-          "author": "Kevin C. Tofel",
-          "description": "On our latest IoT Podcast episode, we take a question that Ron left on our IoT Voicemail Hotline. Ron has used various smart home technologies for 30 years; the latest platform in his home is Insteon. With Insteon effectively shutting down its cloud operations, Ron is switching his phone from Android to iOS and is […]\nThe post A transition plan from Insteon to HomeKit (and Matter!) appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/a-transition-plan-from-insteon-to-homekit-and-matter/",
-          "publishedOn": "2022-06-07T22:56:26.000Z",
-          "wordCount": 1024,
-          "title": "A transition plan from Insteon to HomeKit (and Matter!)",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2021/06/apple-home-overview-copy-2000x1125-1.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10426",
-          "author": "Kevin C. Tofel",
-          "description": "This might surprise you but I think the new Matter smart home standard is the best thing that’s happened with Apple HomeKit yet. And just because I like sharing multiple surprises, you might not know how much HomeKit has influenced that standard. That may be the best thing for smart home consumers. Both of these […]\nThe post WWDC 2022: Why Apple’s influence on Matter is a win for all smart homes appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/wwdc-2022-why-apples-influence-on-matter-is-a-win-for-all-smart-homes/",
-          "publishedOn": "2022-06-07T17:28:47.000Z",
-          "wordCount": 1527,
-          "title": "WWDC 2022: Why Apple’s influence on Matter is a win for all smart homes",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/06/WWDC-2022-Home-app.jpg"
         }
       ]
     },
@@ -2811,6 +2821,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86430",
+          "author": "슬로우뉴스",
+          "description": "우리 단체들은 2022년 5월 26일과 6월16일, AI면접 등 공공기관의 채용 과정에 도입된 인공지능 시스템에 대하여 제기했던 정보공개 거부처분 취소소송에서 일부 승소하였다. 우리 단체들은 이번 소송에서 인공지능 채용 도구를 무분별하게 도입해 온 공공기관들이 법적으로 요구되는 자료들조차 구비하지 않는 등 심각한 책무성 부족을 확인하였다. 법원, AI 면접 정보공개청구 정당성 직접 언급  우리 단체들은 지난 2020년, 공공기관에서 사용하는 […]\nThe post 공공기관의 AI 면접, 무엇이 문제인가 (KOICA, 한전KDN 사례) first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86430",
+          "publishedOn": "2022-07-07T09:05:35.000Z",
+          "wordCount": 2948,
+          "title": "공공기관의 AI 면접, 무엇이 문제인가 (KOICA, 한전KDN 사례)",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/07/i_001-4.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=86417",
           "author": "윤대균",
@@ -3030,16 +3050,6 @@
           "wordCount": 1364,
           "title": "데브섹옵스와 제로 트러스트",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/06/pic_002-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86143",
-          "author": "크레센도",
-          "description": "인쇄 기술의 보급과 함께 프로테스탄트(가톨릭에 대비해 ‘(개)신교’, 당연히 가톨릭은 ‘구교’)는 유럽 전역으로 퍼져나갔다. 문맹이 절대다수였기 때문에 초기 프로테스탄트의 영향을 받은 사람들은 대개 지식인일 수밖에 없었다. 반면 농부들은 여전히 가톨릭을 고수했다. 온통 하얀색 페인트를 칠한 무표정하고 휑한 교회와 칼뱅의 엄격한 예정설은, 화려한 미사와 축제로 기쁨과 위안을 안겨주는 기존의 신앙을 포기할 만큼 매력적이지 않았다. 프랑스의 종교전쟁 […]\nThe post 종교전쟁 혹은 대학살: 프랑스, 이탈리아, 플랜더스 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86143",
-          "publishedOn": "2022-06-07T10:02:20.000Z",
-          "wordCount": 2299,
-          "title": "종교전쟁 혹은 대학살: 프랑스, 이탈리아, 플랜더스",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/06/Bemberg_Fondation_Toulouse_-_Portrait_de_Charles_IX_-_Francois_Clouet_-_Inv.1012-2.jpg"
         }
       ]
     },
@@ -3048,6 +3058,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=586399",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/586399/%ec%9b%90%ec%9c%a0-%ea%b0%80%ea%b2%a9-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-07-07T09:53:54.000Z",
+          "wordCount": 5581,
+          "title": "골드만삭스, 원유 매도가 과도하다며 현재 원유 가격 약세는 일시적이라고 주장",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/갤론당-6달러가-넘은-미국-캘리포니아-주유소-풍경-Photo-by-ALICIA-A.-CALDWELL-THE-WALL-STREET-JOURNAL.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=586392",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/586392/%ea%b8%b0%eb%8c%80-%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98-%eb%91%90%eb%a0%a4%ec%9b%80",
+          "publishedOn": "2022-07-06T17:08:13.000Z",
+          "wordCount": 6735,
+          "title": "기대 인플레이션 두려움은 연준의 경기침체조차 감수하려는 이유라고 WSJ 분석",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/소비자-기대2.png"
+        },
         {
           "id": "https://happist.com/?p=586388",
           "author": "happist",
@@ -3767,46 +3797,6 @@
           "wordCount": 1052,
           "title": "스티브잡스 3원칙으로 살펴보는 효율적인 회의법",
           "imageUrl": "https://happist.com/wp-content/uploads/2016/07/스티브-잡스-화이트보드를-쓰는-resize-1.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585844",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585844/%ec%84%b8%ea%b3%84%ec%9d%80%ed%96%89-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2022-06-07T16:17:22.000Z",
-          "wordCount": 673,
-          "title": "스태그플레이션 위험이 높아져 경기침체는 ‘피하기 어렵다.’고 세계은행 전망에서 경고",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/03/새로운-코로나-경제.-Image-from-washingtonpost.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585838",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585838/%ed%83%80%ea%b2%9f-%ec%8b%a4%ec%a0%81-%ec%a0%84%eb%a7%9d-%ed%95%98%ed%96%a5",
-          "publishedOn": "2022-06-07T15:11:23.000Z",
-          "wordCount": 701,
-          "title": "할인점 타겟은 인플레로 수요 감소에 대응, 할인률을 높이고 타겟 실적 전망을 하향합니다.",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/05/미국-조지아주-아네테-소재-소형-타겟-매장-Target-small-format-store-Image-from-QZ.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585832",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585832/22%eb%85%84-4%ec%9b%94-%ec%98%a8%eb%9d%bc%ec%9d%b8%ec%87%bc%ed%95%91-%eb%8f%99%ed%96%a5",
-          "publishedOn": "2022-06-07T13:49:54.000Z",
-          "wordCount": 918,
-          "title": "차트로 읽는 4월 온라인쇼핑 동향, 11.9% 증가 & 비중 36.1%로 비중 감소",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/11/샤넬-명품을-온라인쇼핑으로-구입-Photo-by-Laura-Chouette.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=585821",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/585821/%ed%8c%8c%eb%9d%bc%eb%a7%88%ec%9a%b4%ed%8a%b8",
-          "publishedOn": "2022-06-07T12:35:59.000Z",
-          "wordCount": 600,
-          "title": "스트리밍 전쟁에서 파라마운트+ 생존 가능성은?",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/Paramount-파라마운트-스트리밍-서비스.jpg"
         }
       ]
     },
@@ -3815,6 +3805,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=74707",
+          "author": "eyesopen1",
+          "description": "영화, 텔레비전 프로그램 등 영상물의 시청이 허용된 연령을 규정하는 영상물 등급 제도는 우리나라를 포함하여 세계 여러 나라에서 도입하고 있는 제도입니다. 우리나라에서는 영상물등급위원회와 방송통신심의위원회가 영상물의 주제, 폭력성, 선정성, 언어, 공포, 약물, 모방 위험 등의 기준을 적용해 영상물의 등급을 정하고 있습니다. 물론 아무리 일정한 기준에 따라 판단을 한다 해도 시대의 변화에 따라 기준 자체도 조금씩 바뀔 수밖에 없습니다. 최근 이코노미스트는 영국의 영화 등급 제도의 변화에 대한 기사를 실었습니다. 4월 13일 자 해당 → 더 보기",
+          "link": "https://newspeppermint.com/2022/07/06/npc_contentsrating/?utm_source=rss&utm_medium=rss&utm_campaign=npc_contentsrating",
+          "publishedOn": "2022-07-06T22:59:06.000Z",
+          "wordCount": 1756,
+          "title": "[필진 칼럼] 시대상을 반영하는 영상물 등급제도",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=74693",
           "author": "ingppoo",
@@ -4014,16 +4014,6 @@
           "wordCount": 691,
           "title": "[필진 칼럼] 불편함이 당신을 성장시킨다",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=74374",
-          "author": "ingppoo",
-          "description": "러시아가 우크라이나를 침공한 뒤 쓴 전쟁 관련 세 번째 글입니다. 3월 3일에 올렸던 글입니다.   지난해 노벨 평화상은 “표현의 자유를 수호해 온” 언론인 두 명이 받았습니다. 한 명은 필리핀계 미국인 마리아 레사(Maria Ressa)였고, 다른 한 명은 러시아에 남은 몇 안 되는 독립언론 노바야 가제타(Novaya gazeta)의 드미트리 무라토프(Dmitry Muratov) 편집장이었습니다. 노벨상 위원회는 수상자의 업적을 다음과 같이 평가했습니다. 민주주의와 표현의 자유라는 이상이 그 어느 때보다 위협받는 세상에서 용기 있는 언론인들은 소중한 가치를 → 더 보기",
-          "link": "https://newspeppermint.com/2022/06/07/npc_novayagazeta/?utm_source=rss&utm_medium=rss&utm_campaign=npc_novayagazeta",
-          "publishedOn": "2022-06-07T22:59:47.000Z",
-          "wordCount": 1270,
-          "title": "[필진 칼럼] “전쟁을 전쟁이라고 부르지 달리 뭐라고 부르나?”",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -4038,6 +4028,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222803084539",
+          "author": "sellars",
+          "description": "<내가 너에게 말을 할 때, 나는 마음을 가진 부류에 우리를 집어넣는다. 이것은 우주 안에 다른 모든 존재와 구별되는 배타적 내부 집단 내지는 혜택을 받는 집단을 인정한다는 뜻이다. ... 우리가 있다면 나는 나 혼자가 아니다. 따라서 유아론은 틀렸다. 동반자가 존재한다.> <어떤 존재가 마음을 가진 집단에 들어간다는 것은 중요한 뜻이 있다. 그래야만 특정한 윤리적 태도가 가능하다. 마음을 가진 존재만이 관심을 기울일 수 있다. 마음을 가진 존재만이 주변 상황에 신경을 쓸 수 있다. 내가 누군가에 그가 원하지 않는 어떤 일을 하는 것은 윤리적으로 중요한 문제이다. ... 꽃이 마음이 있다면, 우리가 꽃에게 하는 일은 꽃에.......",
+          "link": "https://blog.naver.com/sellars/222803084539",
+          "publishedOn": "2022-07-06T23:36:16.000Z",
+          "wordCount": 101,
+          "title": "데닛, <마음의 진화(Kinds of Minds)>",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222802188022",
           "author": "sellars",
