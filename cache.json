@@ -42,6 +42,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2022/custom-stdformat-cpp20/",
+          "author": null,
+          "description": "std::format is a large and powerful addition in C++20 that allows us to format text into strings efficiently. It adds Python-style formatting with safety and ease of use.\nThis article will show you how to implement custom formatters that fit into this new std::format architecture.\nstd::format \n  \n\n\n\n\n     \n    \n\n\nHere’s the Hello World example:\n#include <format>\n#include <iostream>\n#include <chrono>\n\nint main() {\n    auto ym = std::chrono::year { 2022 } / std::chrono::July;\n    std::string msg = std::format(\"{:*^10}\\n{:*>10}\\nin{}!\", \"hello\", \"world\", ym);\n    std::cout << msg;\n}\n\n\nPlay at Compiler Explorer.\nThe output:\n**hello***\n*****world\nin2022/Jul!\n\n\nAs you can see, we have argument placeholders that are expanded and formatted into a std::string object. What’s more, we have various sp…",
+          "link": "https://www.cppstories.com/2022/custom-stdformat-cpp20/",
+          "publishedOn": "2022-07-25T00:00:00.000Z",
+          "wordCount": 2177,
+          "title": "Custom types and std::format from C++20",
+          "imageUrl": "https://www.cppstories.com/2022/images/format_custom.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/five-topics-data-members-cpp20/",
           "author": null,
           "description": "Working with data members and class design is essential to almost any project in C++. In this article, I gathered five topics that I hope will get you curious about the internals of C++.\n\n\n\n     \n    \n\n\nIntuitively a simple class type, or an array should be treated as “aggregate” type. This means that we can initialize it with braces {}:\n#include <iostream>\n#include <array>\n#include <type_traits>\n#include <utility>\n#include <tuple>\n\nstruct Point {\n    double x {0.0};\n    double y {0.0};\n};\n\nint main() {\n    std::array<int, 4> numbers { 1, 2, 3, 4 };    \n    std::array statuses { \"error\", \"warning\", \"ok\" };  // CTAD\n    Point pt { 100.0, 100.0 };\n    std::pair vals { \"hello\", 10.5f };\n    std::tuple pack { 10, true, \"important\" };\n\n    static_assert(std::is_aggregate_v<decltype(numbers)>);\n…",
@@ -346,6 +356,16 @@
       "siteUrl": "https://edykim.com",
       "articles": [
         {
+          "id": "https://edykim.com/ko/post/code-coverage-best-practices/",
+          "author": null,
+          "description": "Carlos Arguelles, Marko Ivanković, and Adam Bender의 Code Coverage Best Practices…",
+          "link": "https://edykim.com/ko/post/code-coverage-best-practices/",
+          "publishedOn": "2022-07-24T18:48:48.000Z",
+          "wordCount": 1789,
+          "title": "코드 커버리지 모범 사례",
+          "imageUrl": null
+        },
+        {
           "id": "https://edykim.com/ko/post/subtyping/",
           "author": null,
           "description": "Oleg Kiselyov의 글, Subtyping, Subclassing, and Trouble with OOP를 번역했습니다. OOP…",
@@ -527,6 +547,16 @@
       "siteUrl": "https://www.embedded.com",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4475636",
+          "author": "Jellenie Rodriguez and Mary McCarthy",
+          "description": "The history and design challenges for a thermistor-based temperature measurement system and how it compares with a resistance temperature detector (RTD)-based temperature measurement system. This...\nThe post Optimizing thermistor-based temperature sensing systems: Challenges appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/optimizing-thermistor-based-temperature-sensing-systems-challenges/",
+          "publishedOn": "2022-07-25T11:19:33.000Z",
+          "wordCount": 9097,
+          "title": "Optimizing thermistor-based temperature sensing systems: Challenges",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/2207adi-temp1_fig-02t.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4475595",
           "author": "Jacob Beningo",
           "description": "At first glance, open-source software seems like a good idea, but in the end, there are several properties of open-source software that just might make...\nThe post Is open-source software evil? appeared first on Embedded.com.",
@@ -547,6 +577,16 @@
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/Edge-AI-.jpg"
         },
         {
+          "id": "https://www.embedded.com/?p=4475607",
+          "author": "Giovanni Di Maria",
+          "description": "A good power circuit is not only composed of static devices. The gate driver precedes the electronic switches and ensures them the correct energy to...\nThe post Understanding the critical role of the gate driver appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/understanding-the-critical-role-of-the-gate-driver/",
+          "publishedOn": "2022-07-20T10:21:00.000Z",
+          "wordCount": 7453,
+          "title": "Understanding the critical role of the gate driver",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/img20220724064735The-Importance-of-the-Gate-Drive_0_w1000_h668.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4475598",
           "author": "Sally Ward-Foxton",
           "description": "Prophesee’s approach to commercializing its retina-inspired event-based sensors, and where the technology will go from here. What does “neuromorphic” mean today? “You will get 10...\nThe post Neuromorphic sensing tech builds on pragmatic approach appeared first on Embedded.com.",
@@ -565,6 +605,16 @@
           "wordCount": 8375,
           "title": "Designing a portable system for in situ failure prediction in fuel cells",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/07ADI_imaging_f01.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4475617",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "E-CAP integrates multiple capacitors into a single solid-state device, offering the flexibility and efficiency of silicon. Power system designers are constantly under pressure to attain...\nThe post Multilayer ceramic capacitors support high power density designs appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/multilayer-ceramic-capacitors-support-high-power-density-designs/",
+          "publishedOn": "2022-07-18T01:29:00.000Z",
+          "wordCount": 7086,
+          "title": "Multilayer ceramic capacitors support high power density designs",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/ecap.jpg"
         },
         {
           "id": "https://www.embedded.com/?p=4475493",
@@ -847,6 +897,16 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2022/07/MLCommunities2022Q2.html",
+          "author": null,
+          "description": "Posted by Nari Yoon, Hee Jung, DevRel Community Manager / Soonson Kwon, DevRel Program Manager\n \n\nLet’s explore highlights and accomplishments of vast Google Machine Learning communities over the second quarter of the year! We are enthusiastic and grateful about all the activities by the global network of ML communities. Here are the highlights! \nTensorFlow/Keras\nTFUG Agadir hosted #MLReady phase as a part of #30DaysOfML. #MLReady aimed to prepare the attendees with the knowledge required to understand the different types of problems which deep learning can solve, and helped attendees be prepared for the TensorFlow Certificate.  \n\nTFUG Taipei hosted the basic Python and TensorFlow courses named From Python to TensorFlow. The aim of these events is to help everyone learn about the basics of…",
+          "link": "http://developers.googleblog.com/2022/07/MLCommunities2022Q2.html",
+          "publishedOn": "2022-07-25T17:01:00.001Z",
+          "wordCount": 2850,
+          "title": "Machine Learning Communities: Q2 ‘22 highlights and achievements",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTVCn1OVWsesgadanPa36EVRQXoGvkljgZzccGLInMPNK-BFG8_h93JJkuzPQX45rXkus6q6dSgNnejjhZs9sWrHItchFfuoVVVvfqF2woLkU27zYriQ2FluIm5E1BAt7ZwmN_IquERL1rJXFRPPXYnMvyQ224UWUTwuwo7VpdiyC60L0pqdDG0egJ/w1200-h630-p-k-no-nu/GoogleDev_MachineLearningQ2-22Highlights_1234x802.png"
+        },
+        {
           "id": "http://developers.googleblog.com/2022/07/weareplay-meet-melissa-from-bringfido.html",
           "author": null,
           "description": "Posted by Leticia Lago, Developer Marketing  \n \n\n  \nWe’re back with more #WeArePlay stories to celebrate you: the global community of people behind apps and games businesses.  \nFollowing last week’s “virtual roadtrip” of all of the US, today we’re kicking off with Melissa from Greenville, South Carolina. She’s on a mission to make the world a more pet-friendly place. Her app, BringFido, helps people find somewhere to stay, eat or visit with their furry friends. In this film you will meet her, her dogs Ace and Roxy, and hear how she went from idea, to website, to growing app and thriving business.  \n \n This week we are also introducing you to game founders from other parts of the world:  \n\n Arnaud, an AI-enthusiast from Chartres in France, who founded Elokence. This 12-people team created Akinator, which has been downloaded over 260 million times on Google Play.\n\nDaigo, a creative indie from Japan, founder of Odencat, whose games have won multiple accolades.\n\nKeerti and Kashyap, a cricket-loving couple from Hyderabad in India, who used their life savings to start Hitwicket Cricket Games. Millions of fans worldwide enjoy their games.\n\n    \n\n    \n\n  \nCheck out all the stories now at g.co/play/weareplay and stay tuned for even more coming soon.  \n  \n How useful did you find this blog post?  \n★ ★ ★ ★ ★",
@@ -922,6 +982,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/0972/",
+          "author": null,
+          "description": "What benefits does SAST have? What's the difference between SAST and DAST? What's IAST? What do all these words mean?! Let's talk about this and more in the overview of the main types of Application Security Testing (AST).",
+          "link": "https://pvs-studio.com/en/blog/posts/0972/",
+          "publishedOn": "2022-07-24T21:00:00.000Z",
+          "wordCount": 6381,
+          "title": "Application Security Testing. How not to get confused between SAST, DAST, and IAST",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0972_types_of_ast/image1_thm_intoblank_1200x630.png"
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/0971/",
           "author": null,
@@ -1057,7 +1127,7 @@
     {
       "title": "Future",
       "feedUrl": "https://future.a16z.com/feed/",
-      "siteUrl": "https://future.com/",
+      "siteUrl": "https://future.com",
       "articles": [
         {
           "id": "https://future.com/?p=6537",
@@ -1273,6 +1343,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/902410/",
+          "author": "corbet",
+          "description": "The Creative\nCommons CC0 license is essentially a public-domain declaration (or as\nclose as is possible in jurisdictions that lack a public domain).  The\nFedora project has allowed the distribution of code under this license,\nbut, as announced\nby Richard Fontana, that policy is changing and CC0 will no longer be\nallowed for code:\n\n\n\tThe reason for the change: Over a long period of time a consensus\n\thas been building in FOSS that licenses that preclude any form of\n\tpatent licensing or patent forbearance cannot be considered\n\tFOSS. CC0 has a clause that says: \"No trademark or patent rights\n\theld by Affirmer are waived, abandoned, surrendered, licensed or\n\totherwise affected by this document.\"\n\n\nExisting CC0-licensed packages may be grandfathered in, but that evidently\nhas not yet been decided.",
+          "link": "https://lwn.net/Articles/902410/",
+          "publishedOn": "2022-07-25T14:36:03.000Z",
+          "wordCount": 1964,
+          "title": "Fedora to disallow CC0-licensed code",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/902094/",
+          "author": "corbet",
+          "description": "A 64-bit pointer can address a lot of memory — far more than just about any\napplication could ever need.  As a result, there are bits within that pointer that\nare not really needed to address memory, and which might be put to other\nneeds.  Storing a few bits of metadata within a pointer is a common enough\nuse case that multiple architectures are adding support for it at the\nhardware level.  Intel is no exception; support for its \"Linear Address\nMasking\" (LAM) feature has been slowly making its way toward the mainline\nkernel.",
+          "link": "https://lwn.net/Articles/902094/",
+          "publishedOn": "2022-07-25T14:23:39.000Z",
+          "wordCount": null,
+          "title": "[$] Support for Intel's Linear Address Masking",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/902400/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium, djangorestframework, gsasl, and openjdk-11), Fedora (giflib, openssl, python-ujson, and xen), Mageia (virtualbox), SUSE (git, gpg2, java-1_7_1-ibm, java-1_8_0-ibm, java-1_8_0-openjdk, mozilla-nspr, mozilla-nss, mozilla-nss, python-M2Crypto, and s390-tools), and Ubuntu (php8.1).",
+          "link": "https://lwn.net/Articles/902400/",
+          "publishedOn": "2022-07-25T14:06:33.000Z",
+          "wordCount": 263,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/902373/",
+          "author": "corbet",
+          "description": "The Debian project, Debian.ch, and Software in the Public Interest recently\nfiled a WIPO action to take control of the \"debian.community\" domain name,\nwhich has been used by Daniel Pocock to attack\nthe Debian project and its members.  Red Hat had made a similar attempt to take control of\nWeMakeFedora.org earlier this year, but that attempt failed.  The Debian\naction succeeded, though; on July 19, WIPO decided\nin favor of the action and ordered the domain name transferred.\nThat domain name can no longer be used, but the attacks seem certain to\ncontinue.",
+          "link": "https://lwn.net/Articles/902373/",
+          "publishedOn": "2022-07-25T14:01:06.000Z",
+          "wordCount": 785,
+          "title": "Debian.community domain name seized",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/902349/",
+          "author": "corbet",
+          "description": "The 5.19-rc8 kernel prepatch is out for\ntesting.  \"There's nothing really surprising in here - a few smaller fixups for\nthe retbleed mess as expected, and the usual random one-liners\nelsewhere.\"",
+          "link": "https://lwn.net/Articles/902349/",
+          "publishedOn": "2022-07-24T21:29:39.000Z",
+          "wordCount": 144,
+          "title": "Kernel prepatch 5.19-rc8",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/902316/",
           "author": "corbet",
@@ -2182,16 +2302,6 @@
           "wordCount": 3696,
           "title": "Creating custom Expansion Board and Header for the MCUXpresso Pins Tool",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2022/07/expansion-header-connections.jpg?w=1200"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=34936",
-          "author": "Erich Styger",
-          "description": "In many cases I prefer wood as material: it has a warm feeling and with its texture it makes things unique and special. For some time I was thinking about creating a wooden case for eyeglasses as a gift. And … Continue reading →",
-          "link": "https://mcuoneclipse.com/2022/06/25/eyeglasses-case-created-with-cnc-and-laser-cutter/",
-          "publishedOn": "2022-06-25T16:42:37.000Z",
-          "wordCount": 3425,
-          "title": "Eyeglasses Case created with CNC and Laser Cutter",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2022/06/oak-case-1.jpg?w=1200"
         }
       ]
     },
@@ -2363,6 +2473,26 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10701",
+          "author": "Stacey Higginbotham",
+          "description": "Infineon is showing off a new chip designed to provide lock/unlock abilities to a lock without requiring a battery. The key to the tech is near-field communication, or NFC, which can transmit small bits of power along with the credentials that unlock the lock. For a user, the experience is similar to using a phone […]\nThe post Infineon has created a battery-free NFC lock appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/infineon-has-created-a-battery-free-nfc-lock/",
+          "publishedOn": "2022-07-25T17:33:44.000Z",
+          "wordCount": 1832,
+          "title": "Infineon has created a battery-free NFC lock",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/07/Infineon-NAC1080-Lock-Phone-and-App.jpg"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=10707",
+          "author": "Kevin C. Tofel",
+          "description": "This week’s news was compiled and written by Kevin C. Tofel Better night vision for smart homes? Although the latest connected cameras offer improved night vision output, there’s still room for improvement. That’s why I’m calling attention to this article, which brings AI into the mix. Researchers at the University of California, Irvine are combining AI with […]\nThe post IoT news of the week July 22, 2022 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-july-22-2022/",
+          "publishedOn": "2022-07-22T17:51:14.000Z",
+          "wordCount": 2180,
+          "title": "IoT news of the week July 22, 2022",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=10687",
           "author": "Stacey Higginbotham",
@@ -2715,6 +2845,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86556",
+          "author": "청년유니온",
+          "description": "“높은 자리도 아니고 행정요원 9급으로 들어갔는데 뭘 그걸 갖고 무슨” “최저임금보다 조금 더 받는데 내가 미안하더라” “최저임금 받고 서울에서 어떻게 사나”  – 권성동 국민의힘 대표 직무대행, 2022년 7월 15일, 대통령실 사회수석실 9급 행정요원에 권성동 국민의힘 대표 직무대행의 추천 인사가 임명된 데 대한 해명답변 중에서 윤석열 정부의 핵심, 소위 윤핵관으로 불리는 권성동 국민의힘 대표 직무대행 겸 […]\nThe post 공무원 시험은 권성동! 채용비리특별법이 필요한 이유 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86556",
+          "publishedOn": "2022-07-25T07:00:45.000Z",
+          "wordCount": 2531,
+          "title": "공무원 시험은 권성동! 채용비리특별법이 필요한 이유",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/07/pic_001-5.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=86540",
           "author": "민주언론시민연합",
@@ -3620,6 +3760,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=74914",
+          "author": "eyesopen1",
+          "description": "사회운동이 소기의 목적을 달성하고 나면 어떻게 되는 것일까요? 대법원 판결문 초안 유출로 인해 임신중단권 합헌 판결이 뒤집힐 가능성이 대두되면서 수십 년간 오로지 “로 대 웨이드”를 뒤집겠다는 일념으로 투쟁해 온 임신중단권 반대 운동의 미래와 향후 과제를 짚는 기사와 칼럼들을 모아봤습니다. 뉴욕타임스의 5월 7일자 기사가 도입부에서 소개하고 있는 것처럼 임신중단권 반대 진영은 지난 50년 동안 다양한 활동을 활발히 펼쳐 왔습니다. 매년 “로 대 웨이드” 판결이 내려진 날에 워싱턴에 모여 집회를 열고, 자금을 모으고, → 더 보기",
+          "link": "https://newspeppermint.com/2022/07/24/npc_afterroevwade/?utm_source=rss&utm_medium=rss&utm_campaign=npc_afterroevwade",
+          "publishedOn": "2022-07-24T22:59:27.000Z",
+          "wordCount": 1896,
+          "title": "[필진 칼럼] 로 대 웨이드가 사라진 세상, 프로 라이프 운동의 미래는?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=74899",
           "author": "ingppoo",
           "description": "올해는 유럽연합(EU)을 창설한 마스트리흐트 조약이 체결된 지 30주년입니다. 대부분 유럽 국가들이 단일 화폐 유로화를 쓰고, 솅겐 협약에 가입한 국가들 사이에선 국경의 개념도 희미해졌으며, 대부분 나토(NATO) 회원국인 유럽 국가들은 러시아의 우크라이나 침공을 일제히 규탄하며 연대를 다지고 있습니다. 유럽 각국의 면면을 살펴보면 비슷하면서도 서로 많이 다릅니다. 그런데 이 많은 나라가 매년 함께 치르는, 진정 유럽의 행사라고 할 수 있는 대표적인 행사가 하나 있습니다. 바로 유럽 최대 가요제인 유로비전(Eurovision)입니다. 유럽 친구들에게 유로비전에 관해 → 더 보기",
@@ -3832,6 +3982,26 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222828279392",
+          "author": "sellars",
+          "description": "<비트겐슈타인은 칸트주의자로 간주할 때, 비트겐슈타인이 어떤 종류의 관념론자이거나 반실재론자라는 것을 암시하는 인상을 받기 쉽다. 그러나 비트겐슈타인에 대한 그러한 견해는 그렇게 적절치 않다. <논고> 앞부분에서 전개되는 존재론적 논제와 그것과 그림이론의 관계는 실재론자라는 형이상학적 견해를 보여주기 때문이다. 실재론의 가장 중요한 특성이 진술은 이가성을 가진다는 논제이다. 즉 실재에 대한 진술은 우리가 그것에 대해서 생각하는 것과 독립적으로 참이거나 거짓이라는 것이다. 이 이가성의 논제가 바로 비트겐슈타인에게 가장 전형적인 특성이다. 비트겐슈타인에 의하면, 모든 유의미한 진술은 참이거나 거짓이.......",
+          "link": "https://blog.naver.com/sellars/222828279392",
+          "publishedOn": "2022-07-25T09:24:12.000Z",
+          "wordCount": 101,
+          "title": "선험론적 관점과 형이상학적 실재론",
+          "imageUrl": null
+        },
+        {
+          "id": "https://blog.naver.com/sellars/222827665073",
+          "author": "sellars",
+          "description": "구글에서 ‘Wittgenstein Kant’로 검색하면 나오는 Tim Klaassen의 <Wittgenstein as a Kantian Philosopher>는 정식으로 발표된 논문이 아닌 것 같다. 그는 전기 비트겐슈타인을 칸트주의 철학자로, 또는 선험론적(transcendental) 철학자라고 논증하고 있다. 이런 주장은 전기 비트겐슈타인을 칸트와의 연관에서 고찰했던 시도에 비해서 그렇게 새로운 것이 없다. 그는 다음 세 가지 점에서 전기 비트겐슈타인과 칸트의 유사성을 지적하고 있다. 첫째, 논리에 대한 비트겐슈타인의 선험론적 고찰은 인간 인지에 대한 칸트의 선험론적 이론과 유사하다. 비트겐슈타인은 프레게와 러셀에 의해 개진된 논리이론의 가능성을 부정한다. 그것.......",
+          "link": "https://blog.naver.com/sellars/222827665073",
+          "publishedOn": "2022-07-25T00:22:36.000Z",
+          "wordCount": 101,
+          "title": "칸트주의 철학자로서 비트겐슈타인",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222826657416",
           "author": "sellars",
