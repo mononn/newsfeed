@@ -22,11 +22,520 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-08-03 datetime="2022-08-03T18:10:00.002Z">2022-08-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-08-03 datetime="2022-08-03T18:10:00.002Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-08-04 datetime="2022-08-04T15:00:19.000Z">2022-08-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-08-04 datetime="2022-08-04T15:00:19.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Future</button>
+                  <a class="source-heading__link" href="https://future.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://future.com/?p&#x3D;6704"
+                        open
+                      >
+                        <summary class="article-expander__title">AI is Modeling the Brain to Help Us See, Hear, and Create</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://future.com/applications-ai-models-of-the-brain-aka-neuroai/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://future.com/wp-content/uploads/2022/08/WhatAICanDo-Facebook.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This is an edited version of a post that originally ran here. Neuroscience and AI have a long, intertwined history. Artificial intelligence pioneers looked to the principles of the organization of the brain as inspiration to make intelligent machines. In a surprising reversal, AI is now helping us understand its very source of inspiration: the... Read More
+The post AI is Modeling the Brain to Help Us See, Hear, and Create appeared first on Future.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903580/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] A security-module hook for user-namespace creation</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903580/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The Linux Security Module (LSM) subsystem works by way of an extensive set
+of hooks placed strategically throughout the kernel.  Any specific security
+module can attach to the hooks for the behavior it intends to govern and be
+consulted whenever a decision needs to be made.  The placement of LSM hooks
+often comes with a bit of controversy; developers have been known to object
+to the 
+performance cost of hooks in hot code paths, and sometimes there are misunderstandings over how integration with
+LSMs should be handled.  The disagreement over a security hook for the
+creation of user namespaces, though, is based on a different sort of
+concern.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903822/"
+                        open
+                      >
+                        <summary class="article-expander__title">Mena Quintero: Paying technical debt in our accessibility infrastructure</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903822/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>On his blog, Federico Mena Quintero posted a transcript of his recent talk at GUADEC 2022 on the technical debt in the GNOME accessibility infrastructure—and what he has been doing to help pay that down.  He began the talk by describing the infrastructure and how it came about:
+
+Gnome-shell implements its own toolkit, St, which stands for &quot;shell toolkit&quot;. It is made accessible by implementing the GObject interfaces in atk. To make a toolkit accessible means adding a way to extract information from it in a standard way; you don&#x27;t want screen readers to have separate implementations for GTK, Qt, St, Firefox, etc. For every window, regardless of toolkit, you want to have a &quot;list children&quot; method. For every widget you want &quot;get accessible name&quot;, so for a button it may tell you &quot;OK button&quot;, and for an image it may tell you &quot;thumbnail of file.jpg&quot;. For widgets that you can interact with, you want &quot;list actions&quot; and &quot;run action X&quot;, so a button may present an &quot;activate&quot; action, and a check button may present a &quot;toggle&quot; action.
+
+However, ATK is just abstract interfaces for the benefit of toolkits. We need a way to ship the information extracted from toolkits to assistive tech like screen readers. The atspi protocol is a set of DBus interfaces that an application must implement; atk-adaptor is an implementation of those DBus interfaces that works by calling atk&#x27;s slightly different interfaces, which in turn are implemented by toolkits. Atk-adaptor also caches some things that it already asked to the toolkit, so it doesn&#x27;t have to ask again unless the toolkit notifies about a change.
+
+Does this seem like too much translation going on? It is! We will see the reasons behind that when we talk about how accessibility was implemented many years ago in GNOME.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903816/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Thursday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903816/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Fedora (lua), Oracle (kernel), Red Hat (389-ds:1.4, django, firefox, go-toolset and golang, go-toolset-1.17 and go-toolset-1.17-golang, go-toolset:rhel8, java-1.8.0-ibm, java-17-openjdk, kernel, kernel-rt, kpatch-patch, mariadb:10.5, openssl, pcre2, php, rh-mariadb105-galera and rh-mariadb105-mariadb, ruby:2.5, thunderbird, vim, and virt:rhel and virt-devel:rhel), Scientific Linux (firefox and thunderbird), SUSE (drbd, java-17-openjdk, java-1_8_0-ibm, keylime, ldb, samba, mokutil, oracleasm, pcre2, permissions, postgresql-jdbc, python-numpy, samba, tiff, u-boot, and xscreensaver), and Ubuntu (nvidia-graphics-drivers-390, nvidia-graphics-drivers-450-server, nvidia-graphics-drivers-470, nvidia-graphics-drivers-470-server, nvidia-graphics-drivers-510, nvidia-graphics-drivers-510-server, nvidia-graphics-drivers-515, nvidia-graphics-drivers-515-server).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/902796/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] LWN.net Weekly Edition for August 4, 2022</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/902796/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The LWN.net Weekly Edition for August 4, 2022 is available.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Stacey on IoT | Internet of Things news and analysis</button>
+                  <a class="source-heading__link" href="https://staceyoniot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;10755"
+                        open
+                      >
+                        <summary class="article-expander__title">Podcast: Meet Insteon’s new CEO</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/podcast-meet-insteons-new-ceo/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/Dronedek_smart_mailbox.jpeg?fit&#x3D;1920%2C1080&amp;ssl&#x3D;1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Last week, we kicked off the podcast with a discussion on the Helium peer-to-peer IoT network, and this week we did the same thing. This time we dug into the disclosures that Helium didn’t actually have Lime or Salesforce.com as current customers, despite having listed them prominently on its web site. Nova Labs CEO Amir […]
+The post Podcast: Meet Insteon’s new CEO appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;10747"
+                        open
+                      >
+                        <summary class="article-expander__title">Insteon’s new boss is ready for business</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/insteons-new-boss-is-ready-for-business/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/2Year-Access-HubHero.png?fit&#x3D;1500%2C891&amp;ssl&#x3D;1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>For Ken Fairbanks, CEO of Insteon Technologies Inc.,  the last 60 days have been a rush to find office equipment, reestablish supplier relationships and figure out who his customers are. The former Insteon employee turned business consultant purchased the assets of SmartLab Inc. through a unique process that has left him and his investors scrambling […]
+The post Insteon’s new boss is ready for business appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;86639"
+                        open
+                      >
+                        <summary class="article-expander__title">메타의 약탈 동의 요청: 필수 동의 강제가 무효인 이유</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/86639">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2022/08/aaaa.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>2018 상원 청문회에서 해치(Hatch) 상원의원은 마크 주커버그에게 이렇게 물었다. “사용자가 당신의 서비스에 대가를 내지 않는 비즈니스 모델을 어떻게 유지할 수 있지요?” 주커버그는 이렇게 답했다. “상원의원님, 우리는 광고를 운영합니다.(Senator, we run ads.)” 기본적으로 페이스북 이용자는 맞춤형 광고를 위한 원천 데이터 생성자이자 그 소비자다. 세상에 ‘공짜’는 없다. 2020년 기준 메타(페이스북) 수익의 98%는 광고 수익이다. 메타의 수익에서 광고가 […]
+The post 메타의 약탈 동의 요청: 필수 동의 강제가 무효인 이유 first appeared on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded.com</button>
+                  <a class="source-heading__link" href="https://www.embedded.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4475756"
+                        open
+                      >
+                        <summary class="article-expander__title">Nvidia Orin 32GB module now available through partner network</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/nvidia-orin-32gb-module-now-available-through-partner-network/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embedded.com/wp-content/uploads/2022/08/NVIDIA-Jetson-AGX-Orin-32GB-Module.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>The Nvidia Jetson AGX Orin 32GB production module is available now from over 30 technology providers in the Nvidia partner network. 
+The post Nvidia Orin 32GB module now available through partner network appeared first on Embedded.com.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="ae636826-4a5e-45e0-b295-7d5e23be0d04"
+                        open
+                      >
+                        <summary class="article-expander__title">Kafka Monthly Digest: July 2022</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/08/04/kafka-monthly-digest-july-2022">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_Kafka%20monthly%20digest.png?itok&#x3D;-w7zH9ms" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This 54th edition of the Kafka Monthly Digest covers what happened in the Apache Kafka community in July 2022.
+For last month’s digest, see Kafka Monthly Digest: June 2022.
+Releases
+There is currently one release in progress, 3.3.0. A new bugfix release, 3.2.1, is available.
+3.3.0
+The release process for 3.3.0 continued. Feature freeze happened on July 6, followed by code freeze on July 20. We are now in the stabilization period, which typically lasts a couple of weeks. The first release candidate is expected in early August. You can find the release plan on the Kafka wiki.
+3.2.1
+On July 13, David Arthur volunteered to run this bugfix release. He published the first release candidate on July 22, and since no issues were found, he released Kafka 3.2.1 on August 2. In particular, this releas…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="8670ef6f-6839-425e-a05f-4c14456842b2"
+                        open
+                      >
+                        <summary class="article-expander__title">Quick Java application setup using Kafka messaging</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/08/04/quick-java-application-setup-using-kafka-messaging">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/kafka-event-driven_2x.png?itok&#x3D;lizTGq2t" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Apache Kafka is an open source project that supports industrial-strength data streaming in real-time. Kafka can process more than one hundred thousand messages per second. Some companies report the ability to process millions of messages per second.
+Kafka is well suited for applications that coordinate rideshare activity, stream videos, and provide real-time fintech. If your application requires a continuous stream of time-sensitive data, Kafka will meet your needs and then some.
+As it is with any complex technology, there is a learning curve. This technology requires a general knowledge about building containers and configuring Kafka. In addition, it is essential to learn programming language specifics because you can use Kafka with a variety of languages.
+The focus of this article is on …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="df4f91c8-d72f-4582-921c-629707f65389"
+                        open
+                      >
+                        <summary class="article-expander__title">Display dynamic content from GDB in a custom window</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/08/04/display-dynamic-content-gdb-custom-window">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2021_GNU_GDB-Developer_tutorial_Featured_Article__A-1.png?itok&#x3D;uV-N2sMd" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This is the second article in a two-part series about displaying information from the GNU Debugger (GDB) in a custom window while you are debugging a C or C++ program. The first article introduced GDB&#x27;s Text User Interface (TUI) and showed how to create a window using the Python API. This second part finishes the example program by displaying values from GDB&#x27;s history list.
+Loading history values
+To get started, add an extra line in the __init__ method you created in the previous article:
+        self._next_history_index &#x3D; 1
+The _next_history_index variable will be used to fetch values from GDB&#x27;s history list. The value starts at 1 because the first value in GDB&#x27;s value history is numbered 1. At each iteration of a loop you&#x27;ll write, the _next_history_index variable will represent the next…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Two Cents</button>
+                  <a class="source-heading__link" href="https://hur.substack.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://hur.substack.com/p/two-cents-54-l1-l2-de-fi-nft-dao"
+                        open
+                      >
+                        <summary class="article-expander__title">[Two Cents #54] 블록체인 L1 L2; De-Fi, NFT, 게임 메타버스, DAO, dApp; 인프라, 제도 규제, 생각할 꺼리들</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://hur.substack.com/p/two-cents-54-l1-l2-de-fi-nft-dao">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://substackcdn.com/image/fetch/h_600,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F74ef26c0-a902-4363-aefd-ee383f6050d8_673x324.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>[블록체인 L1 L2 Cross-chain] Anatoly Yakovenko on Solana as an Ethereum rollup | by Polynya | Medium (’21.8) Solana의 end game을 Eth L2 rollup이 되는 것이라는, 상당히 논란이 될 수 있는, 하지만 충분히 타하당다고 생각하는 글 The argument for why Solana will eventually become a rollup on Ethereum — Thread by @sanjaypshah — Thread Reader App</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-08-03 datetime="2022-08-03T20:29:38.000Z">2022-08-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-08-03 datetime="2022-08-03T20:29:38.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903597/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Oaxaca, Endless OS, and indigenous languages</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903597/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>A rural Mexican state was the setting for an initiative to use
+ the GNOME-based Endless OS to
+improve
+education in indigenous
+communities.  Over the last several
+years, the Endless OS Foundation
+has teamed up with the Fundación Alfredo Harp
+Helú Oaxaca (FAHHO) to deliver offline-first computers to those
+communities, but also to assist these communities in preserving their native
+languages.  In a talk at GUADEC 2022, Rob McQueen
+provided a look at the project and what it has accomplished.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903686/"
+                        open
+                      >
+                        <summary class="article-expander__title">Four more stable kernel updates</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903686/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The 5.18.16,
+5.15.59,
+5.10.135, and
+5.4.209
+stable kernel updates have been released; each contains another set of
+important fixes.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903681/"
+                        open
+                      >
+                        <summary class="article-expander__title">Vetter: Locking engineering hierarchy</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903681/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Daniel Vetter continues his
+series on locking in the kernel.
+
+
+
+	This part goes through a pile of locking pattern and designs, from
+	most favourable and easiest to adjust and hence resulting in a long
+	term maintainable code base, to the least favourable since hardest
+	to ensure it works correctly and stays that way while the code
+	evolves. For convenience even color coded, with the dangerous
+	levels getting progressively more crispy red indicating how close
+	to the burning fire you are! Think of it as Dante’s Inferno, but
+	for locking.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/903676/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Wednesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903676/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by CentOS (389-ds-base, firefox, java-1.8.0-openjdk, java-11-openjdk, kernel, postgresql, python, python-twisted-web, python-virtualenv, squid, thunderbird, and xz), Fedora (ceph, firefox, java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, java-latest-openjdk, and kubernetes), Oracle (firefox, go-toolset and golang, libvirt libvirt-python, openssl, pcre2, qemu, and thunderbird), SUSE (connman, drbd, kernel, python-jupyterlab, samba, and seamonkey), and Ubuntu (linux-oem-5.14, linux-oem-5.17 and ntfs-3g).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -203,92 +712,6 @@ The post Efinix offers 3x better logic density FPGA for embedded computing appea
                             <span class="media-object__text">
                               <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;32
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/903686/"
-                        open
-                      >
-                        <summary class="article-expander__title">Four more stable kernel updates</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903686/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The 5.18.16,
-5.15.59,
-5.10.135, and
-5.4.209
-stable kernel updates have been released; each contains another set of
-important fixes.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/903681/"
-                        open
-                      >
-                        <summary class="article-expander__title">Vetter: Locking engineering hierarchy</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903681/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Daniel Vetter continues his
-series on locking in the kernel.
-
-
-
-	This part goes through a pile of locking pattern and designs, from
-	most favourable and easiest to adjust and hence resulting in a long
-	term maintainable code base, to the least favourable since hardest
-	to ensure it works correctly and stays that way while the code
-	evolves. For convenience even color coded, with the dangerous
-	levels getting progressively more crispy red indicating how close
-	to the burning fire you are! Think of it as Dante’s Inferno, but
-	for locking.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/903676/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Wednesday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/903676/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by CentOS (389-ds-base, firefox, java-1.8.0-openjdk, java-11-openjdk, kernel, postgresql, python, python-twisted-web, python-virtualenv, squid, thunderbird, and xz), Fedora (ceph, firefox, java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, java-latest-openjdk, and kubernetes), Oracle (firefox, go-toolset and golang, libvirt libvirt-python, openssl, pcre2, qemu, and thunderbird), SUSE (connman, drbd, kernel, python-jupyterlab, samba, and seamonkey), and Ubuntu (linux-oem-5.14, linux-oem-5.17 and ntfs-3g).</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -2545,7 +2968,7 @@ The post 3 reasons to monitor cyclomatic complexity appeared first on Embedded.c
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
                   >Embedded Software Insights | Latest Embedded Technology News</button>
-                  <a class="source-heading__link" href="https://www.bluefruit.co.uk">Open</a>
+                  <a class="source-heading__link" href="https://www.bluefruit.co.uk/blog/">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
@@ -3638,7 +4061,7 @@ The post Forget sleep and wake; it’s time to embrace ambient mode appeared fir
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
                   >Embedded Software Insights | Latest Embedded Technology News</button>
-                  <a class="source-heading__link" href="https://www.bluefruit.co.uk">Open</a>
+                  <a class="source-heading__link" href="https://www.bluefruit.co.uk/blog/">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
@@ -11503,23 +11926,6 @@ This command creates a new folder with an empty but working ASP.NET Core applica
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://blog.naver.com/sellars/222802188022"
-                        open
-                      >
-                        <summary class="article-expander__title">셀라스의 사유이론</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222802188022">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>&lt;우리는 다음과 같은 사유 이론을 원한다. (1) 심적 활동의 존재를 인식하고, (2) 거기에 지향성의 속성을 부여하고, (3) 개인이 자신의 심적 활동에 대해서 갖는 특권적 접근을 설명하고, (4) 우리가 타인의 심적 활동에 대해 어떻게 알 수 있는지를 만족스럽게 설명하고, (5) 이원론적 존재론을 인정하지 않는 그런 이론을 원한다. 우리는 셀라스의 사유이론을 (1)에서 (5)를 만족시키는 개념적 현상의 이론으로 요약할 수 있다. 셀라스의 이론의 중심 주제는 내적 개념적 에피소드의 틀이 외적 인간 행동을 설명하는 이론적 틀과 같은 것으로 생각할 수 있다는 것이다. 이러한 해명이 (1)에서 (5)까지 명시된 규준을 만족시킨다고 셀라스가.......</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -11904,546 +12310,12 @@ The post 한국의 클라우드 보안인증제(CSAP) vs. 미국의 페드램프
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="d5400cdb-20b3-4261-9065-f2ac4751c92b"
-                        open
-                      >
-                        <summary class="article-expander__title">Deploy JBoss EAP on Microsoft Azure Red Hat OpenShift</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/07/06/deploy-jboss-eap-microsoft-azure-red-hat-openshift">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok&#x3D;WLLeSXKn" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Many Red Hat customers run Red Hat JBoss Enterprise Application Platform (JBoss EAP) workloads on Red Hat OpenShift. To satisfy different customers&#x27; preferences, we have a range of options for cloud providers, payment types (such as by subscription or based on consumption), and management models (such as self-managed versus provider-managed). One popular option deploys JBoss EAP workloads on Microsoft Azure Red Hat OpenShift. This article summarizes the benefits of that platform for these Java applications.
-Red Hat OpenShift as a host for JBoss EAP
-Benefits to running JBoss EAP on OpenShift include:
-Lower operational costs through increased application density, using Kubernetes bin packing
-Reduced resource usage, memory footprint, and attack surface with the use of WildFly Galleon layers
-I…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="d60e8bf3-bc55-40a1-9b6c-cb96c30b3df5"
-                        open
-                      >
-                        <summary class="article-expander__title">What qualifies for Red Hat Developer Subscription for Teams?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/07/06/what-qualifies-red-hat-developer-subscription-teams">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL1_2x.png?itok&#x3D;sH2E700S" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Recently, Red Hat relaunched the Developer Subscription for Teams, enabling organizations already running other Red Hat technologies to access Red Hat Enterprise Linux for their development activities without friction. In this article, we clarify what Red Hat defines as development activities and highlight some exciting use cases for the Developer Subscription for Teams.
-What activities are considered development use?
-Figure 1 calls out the delimitation between development and production activities according to Appendix 1 of the Red Hat license agreement. To begin breaking this down, let’s start at the far left end, where systems would leverage the Developer Subscription for Teams.
-
-
-
-
-          
-Figure 1: How activities are categorized for development and production according to the Red H…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >zserge&#x27;s blog</button>
-                  <a class="source-heading__link" href="https://zserge.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zserge.com/posts/transpilers/"
-                        open
-                      >
-                        <summary class="article-expander__title">On Transpilers</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zserge.com/posts/transpilers/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://zserge.com/logo.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Transpilers, or source-to-source compilers, is a type of a translator app that converts source code from one programming language to the other. You might argue that compiler does the same thing, translating it into assembly or machine code. Transpilers are different in a sense that they operate at the similar abstraction levels: they convert high-level languages into high-level languages, keeping the semantics and using equivalent code constructs where possible.
-There are plenty of transpilers that offer new syntax for existing languages (Google Closure Compiler, CoffeeScript, Dart, Haxe or TypeScript and many others).</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-07-05 datetime="2022-07-05T22:59:06.000Z">2022-07-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-07-05 datetime="2022-07-05T22:59:06.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;74693"
-                        open
-                      >
-                        <summary class="article-expander__title">[필진 칼럼] 푸틴이 찾는 폭스뉴스, 젤렌스키 찾아간 애틀란틱</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2022/07/05/npc_foxatlantic/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npc_foxatlantic">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>러시아가 우크라이나를 침공한 지 두 달이 다 돼 갑니다. 푸틴 대통령과 러시아는 전 세계의 비난을 받으면서도 잇단 군사작전과 민간인 학살을 계속하고 있습니다. 철저한 언론 통제와 검열로 러시아 내부에선 전쟁을 비판하는 목소리를 찾아보기 어려워졌습니다. 이 세상에 하나부터 열까지 죄다 거짓말인 가짜뉴스는 드뭅니다. 대신 하나부터 아홉까지는 사실이거나 사실로 추정할 만한 이야기를 하다가 열 번째에 슬쩍 거짓말이나 허위 정보를 끼워 넣고서는 뉴스 행세를 하는 가짜뉴스가 대부분이죠. “전쟁범죄는 오히려 우크라이나가 짓고 있다”는 가짜뉴스를 되풀이하고 → 더 보기</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >from pvs-studio.com</button>
-                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://pvs-studio.com/en/blog/posts/cpp/0962/"
-                        open
-                      >
-                        <summary class="article-expander__title">PVS-Studio to help with schoolwork-like tasks in C and C++</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/cpp/0962/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://cdn.pvs-studio.com/media/docx/blog/0962_PVS_education_2/image1-ae4d9d25dc08ed6bece4792eb5f12f32_thm_intoblank_1200x630.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Today I&#x27;ll talk some more about questions posted on Stack Overflow — in particular, about another discussion started by someone learning the C++ language. I&#x27;d like to note that, if you are just learning to code, PVS-Studio can be of great help. It&#x27;ll answer many of your questions — and you won&#x27;t need to wait for others to answer you on Stack Overflow!</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/899420/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] An Ubuntu kernel bug causes container crashes</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/899420/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Some system administrators running Ubuntu 20.04 had a rough time on
-June 8, when Ubuntu published kernel packages containing a particularly
-nasty bug that was caused by an Ubuntu-specific
-patch to the kernel.  The bug led to a kernel panic whenever a Docker container
-was started. Fixed packages were made available on June 10, but there
-are questions about what went wrong
-with handling the patch; in particular, it is surprising that kernel 5.13,
-which has been beyond its end-of-life
-for months, made it onto machines running Ubuntu 20.04, which is supposed
-to be a long-term support release.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/900064/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Tuesday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/900064/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by Debian (blender and thunderbird), SUSE (ImageMagick, qemu, and sysstat), and Ubuntu (php7.0).</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/900045/"
-                        open
-                      >
-                        <summary class="article-expander__title">Amazon&#x27;s CodeWhisperer</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/900045/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>There has been a fair amount of concern recently about Microsoft&#x27;s Copilot
-system, which many see as possibly putting its users in violation of free-software
-licenses.  But, naturally, Copilot is not the only offering of this type;
-Amazon has put out a preview version of &quot;CodeWhisperer&quot;, which is
-also a machine-learning-based coding tool that was trained on (unspecified)
-open-source code.  From the FAQ:
-
-
-	CodeWhisperer’s reference tracker detects whether a code
-	recommendation may be similar to particular CodeWhisperer training
-	data, and can provide those references to you. This allows you to
-	easily find and review that reference code and how it is used in
-	the context of another project.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded Artistry</button>
-                  <a class="source-heading__link" href="https://embeddedartistry.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://embeddedartistry.com/?p&#x3D;21415"
-                        open
-                      >
-                        <summary class="article-expander__title">Publicly Available Field Atlas and Glossary Entries</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://embeddedartistry.com/blog/2022/07/05/publicly-available-field-atlas-and-glossary-entries/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>5 July 2022 by Phillip JohnstonWhile the Embedded Systems Field Atlas and Glossary publications are normally reserved for our members, we do have a number of publicly available entries in each category. You can also identify these items when browsing our archives by looking for the “Public Entry” tag. This page is automatically updated whenever … 
-Continue reading &quot;Publicly Available Field Atlas and Glossary Entries&quot;
-The post Publicly Available Field Atlas and Glossary Entries appeared first on Embedded Artistry.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;22
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586347"
-                        open
-                      >
-                        <summary class="article-expander__title">출근길, 신대저수지 도로변 능소화를 담다</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586347/%eb%8f%84%eb%a1%9c%eb%b3%80-%eb%8a%a5%ec%86%8c%ed%99%94">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/07/출근길-신대저수지-능소화-07041.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;17
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586342"
-                        open
-                      >
-                        <summary class="article-expander__title">노무라, 한국 내년에 경기침체에 빠질 것으로 전망</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586342/%ed%95%9c%ea%b5%ad-%ea%b2%bd%ea%b8%b0%ec%b9%a8%ec%b2%b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/07/노무라증권-빌딩.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;20
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586340"
-                        open
-                      >
-                        <summary class="article-expander__title">모건스탠리, 미국 경기침체가 예상보다 심각하다고 우려</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586340/%eb%aa%a8%ea%b1%b4%ec%8a%a4%ed%83%a0%eb%a6%ac-%eb%af%b8%ea%b5%ad-%ea%b2%bd%ea%b8%b0%ec%b9%a8%ec%b2%b4-%ec%9a%b0%eb%a0%a4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/06/미-연준의-75bp-기준금리-인상을-보도는-뉴스-모니터Photo-by-SETH-WENIG-ASSOCIATED-PRESS.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;20
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586334"
-                        open
-                      >
-                        <summary class="article-expander__title">[기록용] 트위터에서 노룩 악수가 유행한다는 비즈니스 인사이더 기사</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586334/%eb%85%b8%eb%a3%a9-%ec%95%85%ec%88%98">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/07/바이든-윤통-놀국-악수-유행한다는-비즈니스-인사이더-기사.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;17
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586328"
-                        open
-                      >
-                        <summary class="article-expander__title">[참고] 다우존스 지수 추이와 다우존스 역사</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586328/%eb%8b%a4%ec%9a%b0%ec%a1%b4%ec%8a%a4-%ec%97%ad%ec%82%ac">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/07/다우존스-지수-역사-그래프.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586324"
-                        open
-                      >
-                        <summary class="article-expander__title">러시아 제재로 러시아 원유감산 시 원유가격 380달러까지 상승</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586324/%ec%9b%90%ec%9c%a0%ea%b0%80%ea%b2%a9-%ec%a0%84%eb%a7%9d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/07/석유-시추선-에너지-Photo-by-Maria-lupan.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;586319"
-                        open
-                      >
-                        <summary class="article-expander__title">미국이 경기침체에 빠진다면, 그것은 매우 이상한 것입니다.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/586319/%eb%af%b8%ea%b5%ad-%ea%b2%bd%ea%b8%b0%ec%b9%a8%ec%b2%b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/06/북극곰-polar-bear.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;23
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded.com</button>
-                  <a class="source-heading__link" href="https://www.embedded.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4475322"
-                        open
-                      >
-                        <summary class="article-expander__title">How to quickly deploy TinyML on MCUs</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/how-to-quickly-deploy-tinyml-on-mcus/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2022/07/07itemis_f5_t.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>This example provides you with all you need to do your own TinyML project, from start to end. You’re curious about artificial intelligence (AI) and...
-The post How to quickly deploy TinyML on MCUs appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;86393"
-                        open
-                      >
-                        <summary class="article-expander__title">문 원전 정책 &quot;5년 바보짓&quot;이라는 윤석열 (ft. 38:1 원전 보도)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/86393">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2022/07/noun-nuclear-2661725.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>윤석열 대통령은 6월 22일 두산에너빌리티 원자력공장에서 열린 원전산업 협력업체 간담회에서 “지난 5년 동안 바보 같은 짓을 안 하고 원전 생태계를 더욱 탄탄히 구축했더라면 지금 아마 경쟁자가 전혀 없었을 것”, “더 키워나가야 할 원전산업이 수년간 어려움에 직면해 있어서 매우 안타깝고, 지금이라도 바로잡아야 할 것”이라고 말했습니다. 사실상 문재인 정부의 탈원전 정책을 비난하며, 윤 대통령이 후보 시절 공약한 […]
-The post 문 원전 정책 &quot;5년 바보짓&quot;이라는 윤석열 (ft. 38:1 원전 보도) first appeared on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/2792202454">
-        <time id="build-timestamp" datetime="2022-08-03T20:17:41.826Z">2022-08-03T20:17:41.826Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/2799365519">
+        <time id="build-timestamp" datetime="2022-08-04T20:18:04.609Z">2022-08-04T20:18:04.609Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
