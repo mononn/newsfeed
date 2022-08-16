@@ -81,16 +81,6 @@
           "wordCount": 2177,
           "title": "Custom types and std::format from C++20",
           "imageUrl": "https://www.cppstories.com/2022/images/format_custom.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2022/five-topics-data-members-cpp20/",
-          "author": null,
-          "description": "Working with data members and class design is essential to almost any project in C++. In this article, I gathered five topics that I hope will get you curious about the internals of C++.\n\n\n\n     \n    \n\n\nIntuitively a simple class type, or an array should be treated as “aggregate” type. This means that we can initialize it with braces {}:\n#include <iostream>\n#include <array>\n#include <type_traits>\n#include <utility>\n#include <tuple>\n\nstruct Point {\n    double x {0.0};\n    double y {0.0};\n};\n\nint main() {\n    std::array<int, 4> numbers { 1, 2, 3, 4 };    \n    std::array statuses { \"error\", \"warning\", \"ok\" };  // CTAD\n    Point pt { 100.0, 100.0 };\n    std::pair vals { \"hello\", 10.5f };\n    std::tuple pack { 10, true, \"important\" };\n\n    static_assert(std::is_aggregate_v<decltype(numbers)>);\n…",
-          "link": "https://www.cppstories.com/2022/five-topics-data-members-cpp20/",
-          "publishedOn": "2022-07-18T00:00:00.000Z",
-          "wordCount": 2064,
-          "title": "Five tricky topics for data members in C++20",
-          "imageUrl": "https://www.cppstories.com/2022/images/five_topics_members.png"
         }
       ]
     },
@@ -185,6 +175,36 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "75fcba18-2deb-4b89-b6c2-c6e2fc0932a6",
+          "author": "Costas Papastathis, Michael Dawson",
+          "description": "This is the third and final article in a three-part series introducing kube-service-bindings for Node.js developers on Kubernetes. Together with the Service Binding Operator (SBO), kube-service-bindings makes it easier to share credentials for services with your applications.\nThe first article of this series offered background on the tools we're using, and the second set up some basic elements such as hosting on the Developer Sandbox for Red Hat OpenShift and a MongoDB database. Now we're going to use all these tools to create a binding between our Node.js application and the database.\nDeploy MongoDB as a cloud-hosted database\nThe previous article set up access between MongoDB Atlas and your OpenShift cluster. If you went through those steps successfully, you are ready to deploy a cloud-ho…",
+          "link": "https://developers.redhat.com/articles/2022/08/16/connect-mongodb-nodejs-application-kube-service-bindings",
+          "publishedOn": "2022-08-16T07:00:01.000Z",
+          "wordCount": 3012,
+          "title": "Connect MongoDB to a Node.js application with kube-service-bindings",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/CP-nodejs%2Bkubernetes_1x.png?itok=2CjL1Hz6"
+        },
+        {
+          "id": "3043fa12-1097-4bf5-86dc-b32acdc81bf8",
+          "author": "Costas Papastathis, Michael Dawson",
+          "description": "This is the second part of a three-part series explaining how to bind easily to databases and other backing services from Node.js applications running in Kubernetes. The first article in the series, Connect to services on Kubernetes easily with kube-service-bindings, introduced the tools we use for this simplified integration: kube-service-bindings and the Service Binding Operator (SBO).\nIn this article and the next, we'll set up a cluster with access to a MongoDB database. For our Kubernetes cluster, we use the Developer Sandbox for Red Hat OpenShift, a free service for developers to experiment and learn about open source tools.\nThe articles use a MongoDB example hosted in GitHub to show you kube-service-bindings in action. This example will illustrate the process of deploying a Node.js a…",
+          "link": "https://developers.redhat.com/articles/2022/08/16/enable-backing-services-kubernetes-kube-service-bindings",
+          "publishedOn": "2022-08-16T07:00:00.000Z",
+          "wordCount": 3059,
+          "title": "Enable backing services in Kubernetes with kube-service-bindings",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/CP-nodejskubernetes_2x-e1615240548598.png?itok=-tne5COr"
+        },
+        {
+          "id": "e727f048-6620-4039-9cca-83550b9309cc",
+          "author": "Laura Barcziova",
+          "description": "If you use open source projects from GitHub or GitLab in your infrastructure, you have probably established workflows to create project builds that you can install. You might create builds regularly and execute them in a similar manner across projects. Let's say you want to build the code changes in Fedora Linux or CentOS Stream for each commit, release, or pull request in these projects. Packit can automate this policy, fold into a CI/CD pipeline, and do even more.\nPackit is an open source project that tests and builds RPM packages on Fedora Linux, CentOS Stream, and other distributions to ease the integration of upstream projects with the distributions.\nThis article focuses on Packit Service, which operates on GitHub and GitLab. You can also install a command line interface (CLI) locally…",
+          "link": "https://developers.redhat.com/articles/2022/08/16/how-set-packit-simplify-upstream-project-integration",
+          "publishedOn": "2022-08-16T07:00:00.000Z",
+          "wordCount": 2665,
+          "title": "How to set up Packit to simplify upstream project integration",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_GitOps_Kubernetes_Featured_ArticleB_0.png?itok=jYUcuOPP"
+        },
         {
           "id": "8a532101-1b3e-4c4f-a8f4-e08ff8c689fe",
           "author": "Daniel Oh, Simon Seagrave",
@@ -374,16 +394,6 @@
           "wordCount": 2949,
           "title": "Secure Kubernetes certificates with cert-manager and Dekorate",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/02/2021_RH_SSO_User_Certificate_X509_Featured_image_A.png?itok=t1NKmCAF"
-        },
-        {
-          "id": "18f84491-1c55-4d59-b93b-acd4ebc36a4a",
-          "author": "Ramakrishna Pattnaik, John Byrne",
-          "description": "The latest release of rhoas, the command-line interface (CLI) for Red Hat OpenShift application services, adds a powerful and flexible feature called service contexts that makes it easier than ever to connect clients to your instances of OpenShift application services. This article illustrates this new feature and shows how it can accelerate your development workflows for stream-based applications.\nService contexts facilitate client connections\nRed Hat OpenShift application services, such as Red Hat OpenShift Streams for Apache Kafka and Red Hat OpenShift Service Registry, are managed cloud services that provide a streamlined developer experience for building, deploying, and scaling real-time applications in hybrid-cloud environments.\nThe OpenShift application services CLI is a rich comman…",
-          "link": "https://developers.redhat.com/articles/2022/07/18/simplify-client-connection-configurations-service-contexts",
-          "publishedOn": "2022-07-18T07:00:00.000Z",
-          "wordCount": 3435,
-          "title": "Simplify client connection configurations with service contexts",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
         }
       ]
     },
@@ -430,26 +440,6 @@
           "publishedOn": "2022-07-23T20:52:54.000Z",
           "wordCount": 881,
           "title": "No title",
-          "imageUrl": null
-        },
-        {
-          "id": "https://edykim.com/ko/post/enumerations-in-php/",
-          "author": null,
-          "description": "PHP 8.1에 열거형이 추가되었습니다. 그동안 클래스와 클래스 상수를 사용해서 열거형처럼 사용했었는데 용도에 맞게 사용할 수 있는 타입이 생겼습니다. Enumerations - php를 중점으로 번역했습니다. 열거형, \"Enums…",
-          "link": "https://edykim.com/ko/post/enumerations-in-php/",
-          "publishedOn": "2022-07-17T18:34:05.000Z",
-          "wordCount": 1598,
-          "title": "PHP 열거형(enumerations) 정리",
-          "imageUrl": null
-        },
-        {
-          "id": "https://edykim.com/ko/post/ports-and-adapters-architecture-in-php/",
-          "author": null,
-          "description": "포트와 어뎁터 아키텍처(ports and adapters architecture)는 육각형 아키텍처(hexagonal architecture)로도 불린다. (육각형 아키텍처를 통해) UI…",
-          "link": "https://edykim.com/ko/post/ports-and-adapters-architecture-in-php/",
-          "publishedOn": "2022-07-17T15:08:49.000Z",
-          "wordCount": 944,
-          "title": "포트와 어댑터 아키텍처: PHP 예제",
           "imageUrl": null
         }
       ]
@@ -762,26 +752,6 @@
           "wordCount": 7516,
           "title": "Neuromorphic sensing tech builds on pragmatic approach",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/img20220724121656Neuromorphic-Sensing-Coming-Soo_0_w1067_h934.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4475484",
-          "author": "Paul Perrault, Micheál Lambe, Sasha Dass, and Greg Afonso",
-          "description": "As PEM fuel cells get used in more transport vehicles like buses, cars, and light rail vehicles, it becomes increasingly important to predict failures using...\nThe post Designing a portable system for in situ failure prediction in fuel cells appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/designing-a-portable-system-for-in-situ-failure-prediction-in-fuel-cells/",
-          "publishedOn": "2022-07-18T04:09:00.000Z",
-          "wordCount": 8375,
-          "title": "Designing a portable system for in situ failure prediction in fuel cells",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/07ADI_imaging_f01.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4475617",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "E-CAP integrates multiple capacitors into a single solid-state device, offering the flexibility and efficiency of silicon. Power system designers are constantly under pressure to attain...\nThe post Multilayer ceramic capacitors support high power density designs appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/multilayer-ceramic-capacitors-support-high-power-density-designs/",
-          "publishedOn": "2022-07-18T01:29:00.000Z",
-          "wordCount": 7086,
-          "title": "Multilayer ceramic capacitors support high power density designs",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/07/ecap.jpg"
         }
       ]
     },
@@ -970,6 +940,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/0979/",
+          "author": null,
+          "description": "That's right, now you can keep up with the latest news from PVS-Studio! Our developers noticed — they prefer to get news about other products by email, but PVS-Studio doesn't have this option. So, one of our development teams got together and made the newsletter the way they wanted it to be. Basically, the team was reinventing a wheel for a year, but they were enthusiastic about it! If interested, you're welcome to read.",
+          "link": "https://pvs-studio.com/en/blog/posts/0979/",
+          "publishedOn": "2022-08-15T21:00:00.000Z",
+          "wordCount": 5218,
+          "title": "Automated newsletters: by developers, for developers",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0979_Mailling/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/0978/",
           "author": null,
           "description": "As the saying goes, the first step is always the hardest. That's exactly what happened in our case – after delaying it for so long, we have finally split the V512 diagnostic rule. You can read more about the causes and consequences in this little note.",
@@ -1078,16 +1058,6 @@
           "wordCount": 4911,
           "title": "How warnings simplify your code",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0968_simplify/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/0967/",
-          "author": null,
-          "description": "On our way there, we'll walk along the Cross Compilers Street, sit in the Build System Square, and have a drink at the Dependency Management Bar. We'll also visit those who use Qt in embedded Linux.",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/0967/",
-          "publishedOn": "2022-07-17T21:00:00.000Z",
-          "wordCount": 7595,
-          "title": "Relocation: QMake -&gt; CMake",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0967_starting_up_a_tractor/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1337,6 +1307,16 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/904842/",
+          "author": "corbet",
+          "description": "Security updates have been issued by CentOS (kernel), Debian (kernel), Fedora (webkit2gtk3), Oracle (.NET 6.0, .NET Core 3.1, kernel, and kernel-container), Slackware (rsync), and SUSE (canna, ceph, chromium, curl, kernel, opera, python-Twisted, and seamonkey).",
+          "link": "https://lwn.net/Articles/904842/",
+          "publishedOn": "2022-08-16T13:43:37.000Z",
+          "wordCount": 232,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/904771/",
           "author": "corbet",
@@ -2056,16 +2036,6 @@
           "wordCount": 753,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/901581/",
-          "author": "corbet",
-          "description": "The 5.19-rc7 kernel prepatch is out for\ntesting.\n\n\n\n\tWe obviously had that whole \"Retbleed\" thing, and it does show up\n\tin both the diffstat and the shortlog, and rc7 is definitely bigger\n\tthan usual.  And also as usual, when we've had one of those\n\tembargoed hw issues pending, the patches didn't get the open\n\tdevelopment, and then as a result missed all the usual sanity\n\tchecking by all the automation build and test infrastructure we\n\thave. So no surprise - there's been various small fixup patches\n\tafterwards too for some corner cases.\n\n\tThat said, last week there were two other development trees that\n\tindependently also asked for an extension, so 5.19 will be one of\n\tthose releases that have an additional rc8 next weekend before the\n\tfinal release.",
-          "link": "https://lwn.net/Articles/901581/",
-          "publishedOn": "2022-07-17T23:19:05.000Z",
-          "wordCount": 241,
-          "title": "Kernel prepatch 5.19-rc7",
-          "imageUrl": null
         }
       ]
     },
@@ -2316,16 +2286,6 @@
           "wordCount": 1812,
           "title": "Evolution of the DORA metrics",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=6991",
-          "author": "Derek Jones",
-          "description": "A month or so ago, I found a graph showing a percentage of PCs having a given range of memory installed, between March 2000 and April 2020, on a TechTalk page of PC Matic; it had the form of a stacked density plot. This kind of installed memory data is rare, how could I get […]",
-          "link": "https://shape-of-code.com/2022/07/17/extracting-numbers-from-a-stacked-density-plot/",
-          "publishedOn": "2022-07-17T22:20:54.000Z",
-          "wordCount": 1494,
-          "title": "Extracting numbers from a stacked density plot",
-          "imageUrl": null
         }
       ]
     },
@@ -2334,6 +2294,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10826",
+          "author": "Stacey Higginbotham",
+          "description": "This post originally ran on Friday, August 12 in my weekly newsletter.  After reading the Tesla stories this week that prompted Kevin’s story above, I tried to talk to my child about our upcoming trip to visit some colleges. In preparation for their junior year, my husband and I read “The Price You Pay for College”, a […]\nThe post Can the FTC restore our faith in technology? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/can-the-ftc-restore-our-faith-in-technology/",
+          "publishedOn": "2022-08-16T15:56:47.000Z",
+          "wordCount": 2359,
+          "title": "Can the FTC restore our faith in technology?",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-11-at-1.13.23-PM.png"
+        },
         {
           "id": "https://staceyoniot.com/?p=10794",
           "author": "Kevin C. Tofel",
@@ -2689,16 +2659,6 @@
           "wordCount": 2727,
           "title": "저물어가는 소셜 네트워크의 시대 (번역)",
           "imageUrl": "https://ebadak.files.wordpress.com/2022/08/1658704032263.webp?w=1200"
-        },
-        {
-          "id": "http://ebadak.news/?p=3603",
-          "author": "Rick Kim",
-          "description": "DALL-E는 사람의 상상력과 똑똑한 시스템이 결합하여 새로운 걸 만들고 우리의 창조적 잠재력을 확장할 수 있는지 보여줍니다.",
-          "link": "https://ebadak.news/2022/07/18/dall-e-the-metaverse-and-zero-marginal-content/",
-          "publishedOn": "2022-07-18T07:19:09.000Z",
-          "wordCount": 3827,
-          "title": "DALL-E, 메타버스, 그리고 한계비용 제로 콘텐츠 (번역)￼",
-          "imageUrl": "https://ebadak.files.wordpress.com/2022/07/dall-e-3.webp"
         }
       ]
     },
@@ -2744,6 +2704,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86758",
+          "author": "슬로우뉴스",
+          "description": "1. 군대 폭력과 불처벌 – 자살, 고문, 지연된 배상 2017년 이래 대한민국은 19~20세 남성 83%가 현역 복무 의무를 부과받고 있다. ‘병역판정검사현황’에 따르면 신체검사에서 현역 판정을 받는 비율은 2015년 87%(304,500명), 2019년 815(263,300), 2020년 81%(282,200)를 기록했다(통계청, 2022). 이렇게 현역 판정 받은 남성 약 22만 명이 해 마다 입대하는데, 그  수는 2015년 249,477명, 2019년 224,062명, 2020년 236,146명이었다. 이들은 […]\nThe post 인권의 눈으로 돌아본 군대: 폭력, 젠더, 평등 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86758",
+          "publishedOn": "2022-08-16T09:28:39.000Z",
+          "wordCount": 2896,
+          "title": "인권의 눈으로 돌아본 군대: 폭력, 젠더, 평등",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2021/08/kwon_os_han_mg.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=86748",
           "author": "참여연대",
@@ -2961,6 +2931,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=587516",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587516/22%eb%85%84-2%eb%b6%84%ea%b8%b0-%ec%9d%b8%ed%85%8d%ed%94%8c%eb%9f%ac%ec%8a%a4-%ec%8b%a4%ec%a0%81",
+          "publishedOn": "2022-08-16T09:26:00.000Z",
+          "wordCount": 6379,
+          "title": "2분기 인텍플러스 실적, 부진한 매출과 영업이익률 22%, 수주잔고 673억(55% 증가)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/03/반도체-검사장비주-인텍플러스-공장-전경.jpg"
+        },
         {
           "id": "https://happist.com/?p=587512",
           "author": "happist",
@@ -3592,16 +3572,6 @@
           "wordCount": 1861,
           "title": "[필진 칼럼] 로 대 웨이드(Roe v. Wade) 파기 임박, 중간선거 뒤흔들까?",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=74847",
-          "author": "veritaholic",
-          "description": "우리의 생각이 뇌 속 화학물질의 영향을 받는다는 것은 이제 상식이 됐습니다. 이는 세로토닌, 멜라토닌, 도파민 등 뇌 내 호르몬을 조절함으로써 우울한 기분을 없애주는, 곧 우울증 증상을 완화해주는 항우울제의 인기와도 관련이 있습니다. 미국의 경우 18세 이상 성인 8명 중 한 명이 우울증 약을 처방받은 적이 있다고 할 정도로 항우울제는 많이 처방됩니다. 하지만 대부분 약들은 8~12주 정도의 투약 기간을 기준으로 임상시험이 이루어지며, 따라서 이 약을 몇 달에서 몇 년씩 투약할 때 어떤 → 더 보기",
-          "link": "https://newspeppermint.com/2022/07/17/npc_antidepressants/?utm_source=rss&utm_medium=rss&utm_campaign=npc_antidepressants",
-          "publishedOn": "2022-07-17T22:59:17.000Z",
-          "wordCount": 1810,
-          "title": "[필진 칼럼] 항우울제의 장기적 효과에 대한 의문",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3854,16 +3824,6 @@
           "publishedOn": "2022-07-19T03:29:04.000Z",
           "wordCount": 101,
           "title": "6 이성",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222816959841",
-          "author": "sellars",
-          "description": "‘철학적 인간학’을 ‘철학적 인류학’이라고 번역하지 않는다. 마찬가지로 과학으로서 인류학을 인간학이라고 번역하지 않는다. 그렇지만 이러한 호칭의 문제보다 더 중요한 것이 그런 이름이 의미하는 것이라고 생각한다. 호세 메디나는 비트겐슈타인의 인간학주의를 콰인의 과학주의와 대비하여 적절하게 해명하고 있다. 호세 메디나는 비트겐슈타인 인간학주의의 원천으로 데일 자케트(Dale Jacquette)의 논문, <논리, 철학, 사회과학에서 비트겐슈타인의 인간학주의>를 들고 있다. 자케트의 글은 비트겐슈타인의 <논고>, <철학적 탐구>, 철학적 심리학이나 사회과학에 대한 언명에서 인간학주의를 추적하면서, 그것을 과.......",
-          "link": "https://blog.naver.com/sellars/222816959841",
-          "publishedOn": "2022-07-18T03:10:51.000Z",
-          "wordCount": 101,
-          "title": "데일 자케트의 비트겐슈타인 인간학주의",
           "imageUrl": null
         }
       ]
