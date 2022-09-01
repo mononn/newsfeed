@@ -220,6 +220,36 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "8055d5b0-1333-4669-9324-58cf32128e69",
+          "author": "Don Schenck",
+          "description": "In this article, I will present options for building containers that will run in Kubernetes and Red Hat OpenShift. There are many reasons against development in the environment that will ultimately run the container, such as cost, speed, tooling, and so on. Creating a container that works on your PC requires a local development environment that gives you the complete experience of coding, building, debugging, and running—and then pushes all pieces of the container to a host or cloud service. The best way to describe this process is tantamount to encapsulating your entire software building experience into one file and then sending it off to a server.\nContainer development offers a new way of thinking about software development. It is an application development model in which you decide whic…",
+          "link": "https://developers.redhat.com/articles/2022/09/01/my-advice-why-you-should-build-containers-your-pc",
+          "publishedOn": "2022-09-01T07:00:00.000Z",
+          "wordCount": 3352,
+          "title": "My advice on why you should build containers on your PC",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-containers_2x.png?itok=zN0DnK8F"
+        },
+        {
+          "id": "692bc784-5a5d-453e-9b61-ed3ba64a597a",
+          "author": "Gris Ge",
+          "description": "Rust is a good choice for writing a Linux\nsystem library due to guarantees on memory and thread safety, a revolutionary approach to memory ownership, and a polished Foreign Function Interface. In spite of a slightly steep learning curve, you will come to love Rust and especially its compiler.\nThis article is the first in a series focusing on Rust for Linux. Check out the other three articles:\nPart 2: How to create C binding for a Rust library\n\n\nPart 3: How to create Python binding for a Rust library\n\n\nPart 4: Build trust in continuous integration for your Rust library\n\n\n\nI have created a demo Git repository with simple code to help explain the points in this article. The repository contains:\nAn echo server listening on the Unix socket /tmp/librabc\nA Rust crate that connects to the socket a…",
+          "link": "https://developers.redhat.com/articles/2022/09/01/3-essentials-writing-linux-system-library-rust",
+          "publishedOn": "2022-09-01T07:00:00.000Z",
+          "wordCount": 3696,
+          "title": "3 essentials for writing a Linux system library in Rust",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/How_Rust_makes_Rayon_magical-01.png?itok=8FImZDMa"
+        },
+        {
+          "id": "a298d43f-64d8-4efb-bc3e-f9911f17f297",
+          "author": "Heiker Medina",
+          "description": "Join us at Red Hat's annual Summit: Connect on September 15, 2022. The event is free and open to the public, and will be held at the New York Marriott at the Brooklyn Bridge and hosted by Red Hat employees and leaders. This year, we're offering several sessions, including Red Hat Enterprise Linux 9 discussions. Learn how to create your apps the cloud-native way with Red Hat OpenShift developer tools, and how to use Red Hat's cloud services to rapidly deliver cloud-native applications—all for free!\nThe conference is for those who are interested in open source technologies, as well as people interested in learning more about what Red Hat does every day. You can attend the speaking sessions and see demos of some of Red Hat's latest tools and technologies.\nFrom the morning through the evening,…",
+          "link": "https://developers.redhat.com/articles/2022/08/31/red-hat-summit-connect-2022-brooklyn",
+          "publishedOn": "2022-08-31T07:00:00.000Z",
+          "wordCount": 2609,
+          "title": "Red Hat Summit: Connect 2022 in Brooklyn: Learn about RHEL, cloud, and more",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Summit2022-card-image.png?itok=mf9c8rYb"
+        },
+        {
           "id": "26eb2c94-6713-408a-8cf8-1846479a9d30",
           "author": "Don Schenck",
           "description": "Once you've written your first container-based application and have it running in Docker or Podman, you're ready to move to the next level. That means multiple applications—microservices—running within a managed environment. Kubernetes, an open source container orchestration platform, is just such an environment, and by far the most popular one at that. Let's consider it from a developer's perspective.\nRun multiple containers on Kubernetes\nRunning a container with Docker or Podman is great, but it's only a start. To implement an entire system, you need several services (or microservices, if you will). Kubernetes can orchestrate the entire system in a namespace, giving you both isolation from other namespaces and a shared environment within a namespace. You can just plop your applications i…",
@@ -468,16 +498,6 @@
           "wordCount": 3224,
           "title": "Display dynamic content from GDB in a custom window",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2021_GNU_GDB-Developer_tutorial_Featured_Article__A-1.png?itok=uV-N2sMd"
-        },
-        {
-          "id": "f804e90d-3490-46e4-8d4e-cf8aafedd6c8",
-          "author": "Andrew Burgess",
-          "description": "The GNU Debugger (GDB), a popular free and open source tool for C and C++ programmers, offers a Text User Interface (TUI) to split the console into multiple windows and display different content in each window. One window will always be a command window, in which you enter the usual GDB commands, but you might also have a source code window, a register contents window, or a disassembly window. Since GDB 11, you can use a Python API to add new window types. This API can be incredibly useful, allowing you to customize GDB to visualize your application's data in new ways.\nNote: The Python API for adding TUI windows was actually added to GDB 10. Unfortunately, prior to GDB 11, the gdb.TuiWindow.write call had some bugs that were not resolved until GDB 11.\nIn this article, the first in a two-pa…",
-          "link": "https://developers.redhat.com/articles/2022/08/03/add-custom-windows-gdb-programming-tui-python",
-          "publishedOn": "2022-08-03T07:00:00.000Z",
-          "wordCount": 3616,
-          "title": "Add custom windows to GDB: Programming the TUI in Python",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2021_GNU_GDB-Developer_tutorial_Featured_Article__A-1.png?itok=uV-N2sMd"
         }
       ]
     },
@@ -557,6 +577,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4476097",
+          "author": "Nitin Dahad",
+          "description": "New Intel Pathfinder for RISC-V platform enables developers to create their own products using RISC-V cores and IP from the partner ecosystem, instantiate on FPGA and simulator platforms, and run operating systems and tool chains within a unified IDE. \nThe post Intel puts more weight behind RISC-V with Pathfinder platform appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/intel-puts-more-weight-behind-risc-v-with-pathfinder-platform-and-ecosystem/",
+          "publishedOn": "2022-08-31T19:02:09.000Z",
+          "wordCount": 4216,
+          "title": "Intel puts more weight behind RISC-V with Pathfinder platform",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Intel-Pathfinder-image_c.jpeg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4476093",
+          "author": "Jacob Beningo",
+          "description": "Software architecture is a critical design element that guides developers in building an embedded application successfully. Here are five pitfalls that can get in the...\nThe post 5 embedded software architecture pitfalls appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/5-embedded-software-architecture-pitfalls/",
+          "publishedOn": "2022-08-31T16:53:17.000Z",
+          "wordCount": 4189,
+          "title": "5 embedded software architecture pitfalls",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Caryatids-Greece.jpeg"
+        },
         {
           "id": "https://www.embedded.com/?p=4476068",
           "author": "Brandon Hurst",
@@ -776,26 +816,6 @@
           "wordCount": 4967,
           "title": "Efinix offers 3x better logic density FPGA for embedded computing",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Efinix-Titanium.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4475746",
-          "author": "Jacob Beningo",
-          "description": "when it comes to one’s career, you need to be proactive. It may take time, patience, and a lot of networking, but if you don’t...\nThe post 5 tips for landing your dream engineering job appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/5-tips-for-landing-your-dream-engineering-job/",
-          "publishedOn": "2022-08-02T15:42:52.000Z",
-          "wordCount": 6569,
-          "title": "5 tips for landing your dream engineering job",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/dream-job-.jpeg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4475743",
-          "author": "Naoto Horiguchi, Julien Ryckaert",
-          "description": "The complementary field-effect transistor (CFET) is an attractive device architecture for scaling beyond 1nm logic technology nodes. This article evaluates two integration schemes, with proposed process flows for sequential CFET.\nThe post Integrating CFET into the logic technology roadmap beyond 1 nm appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/integrating-cfet-into-the-logic-technology-roadmap-beyond-1-nm/",
-          "publishedOn": "2022-08-01T12:54:25.000Z",
-          "wordCount": 6911,
-          "title": "Integrating CFET into the logic technology roadmap beyond 1 nm",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/imec-forksheet-CFET.jpg"
         }
       ]
     },
@@ -936,16 +956,6 @@
           "wordCount": 1575,
           "title": "Firebase Stories: Celebrating our developer community",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdRvkddsiFELuU5a7BzqgfCbUQRIhNzJoQiIGXMbl7MMNp3tGfTvE_7eqSQXEE_O1oH2pAHINxlis5_p4ZPzTOedvXRXd4HgKZG2tQ_Y_-u9eoyInMqYvQBOEIiqzBV8ZFo0eu4t93NyqQqcxEv9VVvN0jOdzbcQ2g7pheJoxhCfftwES6AFH3U1lQ/w1200-h630-p-k-no-nu/FB%20Social.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2022/07/google-play-indie-games-festival-finalists-revealed.html",
-          "author": null,
-          "description": "Posted by Patricia Correa, Director, Global Developer Marketing\n \n\n \nThe Indie Games Festival shines a spotlight on some of the best games on Google Play, and celebrates the passion and creativity that small games studios bring to gamers worldwide. This year we are hosting Festival in South Korea, Japan and Europe, for local developers and gamers from all over the world.  \nEarlier this summer, we opened submissions, and today we’re revealing the finalists. Scroll down to see the shortlisted games! \nJoin the finals\nSeptember 3rd will be a jam packed day for indie games fans. Everyone is invited to attend the finals for the three Festivals, starting with South Korea at 2pm KST, followed shortly after by Japan at 3pm JST, and wrapping up with Europe at 11am CET.\nThe finals will be held in a c…",
-          "link": "http://developers.googleblog.com/2022/07/google-play-indie-games-festival-finalists-revealed.html",
-          "publishedOn": "2022-08-02T13:59:00.000Z",
-          "wordCount": 1998,
-          "title": "Google Play Indie Games Festival: Finalists revealed",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjR7PUYerxBy62bEiG4nlAsaKPgMyVBoj42SpALxEE19xo3pvbOUhzsI88aEAaFg6s9GJFrTJGUF6m5PkfHeM4XkdEhuOQCAlNTmN8eyWStjOlaRUTNoduyigIb26utwRVtGt-kvCsdNTpKyuBOXNfcLvYm9VsUUArarTebKQ_pf7XGsGuMt8IItYhG/w1200-h630-p-k-no-nu/IGF_FinalistsAnnouncement_AndroidDevsBlog_Header_FINAL_NewLockUp.jpg"
         }
       ]
     },
@@ -975,16 +985,6 @@
           "wordCount": 2024,
           "title": "Python 3.11.0rc1 is now available",
           "imageUrl": null
-        },
-        {
-          "id": "https://pythoninsider.blogspot.com/2022/08/python-3106-is-available.html",
-          "author": null,
-          "description": "Here you have a nice package of 200 commits of bugfixes and documentation improvements freshly made for Python 3.10. Go and download it when is still hot:\n\nhttps://www.python.org/downloads/release/python-3106/\n\nThis is the sixth maintenance release of Python 3.10\nPython 3.10.6 is the newest major release of the Python programming language, and it contains many new features and optimizations.\nMajor new features of the 3.10 series, compared to 3.9\nAmong the new major new features and changes so far:\n\n\nPEP 623 – Deprecate and prepare for the removal of the wstr member in PyUnicodeObject.\n\nPEP 604 – Allow writing union types as X | Y\n\nPEP 612 – Parameter Specification Variables\n\nPEP 626 – Precise line numbers for debugging and other tools.\n\nPEP 618 – Add Optional Length-Checking To zip.\n\nbpo-1…",
-          "link": "https://pythoninsider.blogspot.com/2022/08/python-3106-is-available.html",
-          "publishedOn": "2022-08-02T10:14:00.004Z",
-          "wordCount": 1823,
-          "title": "Python 3.10.6 is available",
-          "imageUrl": null
         }
       ]
     },
@@ -993,6 +993,46 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0986/",
+          "author": null,
+          "description": "MSBuild is a popular open-source build platform created by Microsoft. Developers all over the world use MSBuild. In 2016, we checked it for the first time and found several suspicious places. Can we find anything this time? Let's see!",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/0986/",
+          "publishedOn": "2022-08-31T21:00:00.000Z",
+          "wordCount": 6150,
+          "title": "Build to order? Checking MSBuild for the second time",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0986_MSBuild/image1_thm_intoblank_1200x630.png"
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0985/",
+          "author": null,
+          "description": "Earlier we wrote about our quiz for C++ developers. Since the quiz launch, we have been carefully collecting your feedback. Some of the comments were related to the quiz errors, that we obviously sought to fix.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0985/",
+          "publishedOn": "2022-08-30T21:00:00.000Z",
+          "wordCount": 4712,
+          "title": "The feedback for our C++ quiz and why it matters",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0985_fix_the_quiz/image1_thm_intoblank_1200x630.png"
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0983/",
+          "author": null,
+          "description": "We have several smart pointers in C++ – 'std::unique_ptr', 'std::shared_ptr', 'std::weak_ptr'.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0983/",
+          "publishedOn": "2022-08-29T21:00:00.000Z",
+          "wordCount": 6183,
+          "title": "The concept of smart pointer static_ptr&lt;T&gt; in C++",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0983_smartpointer/image1_thm_intoblank_1200x630.png"
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/0984/",
+          "author": null,
+          "description": "Let us guess: you're reading this article right now because you saw our unicorn illustrations and liked it. Anyway, we are pleased to see you here. In this article, we're going to tell you why we draw these unicorns, what they mean and what we do in general.",
+          "link": "https://pvs-studio.com/en/blog/posts/0984/",
+          "publishedOn": "2022-08-29T21:00:00.000Z",
+          "wordCount": 4517,
+          "title": "The unicorns of PVS-Studio",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0984_PVS-Studio_Unicorns/image1_thm_intoblank_1200x630.png"
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0982/",
           "author": null,
@@ -1034,6 +1074,16 @@
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0979_Mailling/image1_thm_intoblank_1200x630.png"
         },
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0978/",
+          "author": null,
+          "description": "As the saying goes, the first step is always the hardest. That's exactly what happened in our case – after delaying it for so long, we have finally split the V512 diagnostic rule. You can read more about the causes and consequences in this little note.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0978/",
+          "publishedOn": "2022-08-11T21:00:00.000Z",
+          "wordCount": 4539,
+          "title": "&quot;Our legacy of the past&quot; or why we divided the V512",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0978_V512_V1086_split/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/0978/",
           "author": null,
           "description": "As the saying goes, the first step is always the hardest. That's exactly what happened in our case – after delaying it for so long, we have finally split the V512 diagnostic rule. You can read more about the causes and consequences in this little note.",
@@ -1062,16 +1112,6 @@
           "wordCount": 6725,
           "title": "PVS-Studio's data flow analysis untangles more and more related variables",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0976_Related_variables_upgrade/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/0975/",
-          "author": null,
-          "description": "You decided to integrate PVS-Studio into your project. But suddenly it turns out that the manager is against it, because... because why, actually? Let's try to figure out what to do with potential objections.",
-          "link": "https://pvs-studio.com/en/blog/posts/0975/",
-          "publishedOn": "2022-08-01T21:00:00.000Z",
-          "wordCount": 6027,
-          "title": "I want to use PVS-Studio in my project. The manager is against it. How to convince them?",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0975_Objection_Handling/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1080,6 +1120,26 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.com",
       "articles": [
+        {
+          "id": "https://future.com/?p=7011",
+          "author": "Ryan Glasgow",
+          "description": "Far too many products still fail because there’s simply no demand for them. How does that happen? Or, how do so many startups launch entire businesses without realizing users didn’t need their products?  By overlooking user research.  Every tech company has to build and ship new products to continue growing. And, whether there are 10... Read More\nThe post Research Twice, Build Once: How to Know Your Users as You Grow appeared first on Future.",
+          "link": "https://future.com/user-research-as-you-grow/",
+          "publishedOn": "2022-09-01T14:00:09.000Z",
+          "wordCount": 3802,
+          "title": "Research Twice, Build Once: How to Know Your Users as You Grow",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/08/SocialShareCard-UserResearch-Facebook.png"
+        },
+        {
+          "id": "https://future.com/?p=7009",
+          "author": "Michael Mignano",
+          "description": "This post originally ran here. Most great teams would agree, there’s nothing more powerful for executing on big ambitions than a clearly defined and well-communicated goal. But sometimes the stakes are much higher than usual. In these instances, a goal requires even more focus, execution, and clarity. All of these can be achieved through a... Read More\nThe post Grow or Die: A Framework for Turning Your Company Around Fast appeared first on Future.",
+          "link": "https://future.com/grow-or-die-supergoals/",
+          "publishedOn": "2022-08-31T18:22:46.000Z",
+          "wordCount": 4948,
+          "title": "Grow or Die: A Framework for Turning Your Company Around Fast",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/08/Existential_Cliff_Facebook-1.jpg"
+        },
         {
           "id": "https://future.com/?p=6979",
           "author": "Magda Zernicka-Goetz and Nicole Neuman",
@@ -1199,16 +1259,6 @@
           "wordCount": 2456,
           "title": "How AI Copywriters Are Changing SEO",
           "imageUrl": "https://future.com/wp-content/uploads/2022/08/How-AI-Copywriters-are-Affecting-SEO-final-FB-1.png"
-        },
-        {
-          "id": "https://future.com/?p=6658",
-          "author": "Sam Lambert and Derrick Harris",
-          "description": "Sam Lambert is CEO of PlanetScale, a MySQL-compatiable serverless database provider. Prior to joining PlanetScale (then as chief product officer), he was VP of engineering at GitHub. In this interview, Lambert discusses a number of topics related to cloud native software-delivery models, including what good serverless looks like, who should run Kubernetes, and the emergence... Read More\nThe post PlanetScale CEO on Cloud-Prem and Climbing the Engineering Ladder appeared first on Future.",
-          "link": "https://future.com/planetscale-cloud-prem-engineering-management/",
-          "publishedOn": "2022-08-02T14:00:01.000Z",
-          "wordCount": 4154,
-          "title": "PlanetScale CEO on Cloud-Prem and Climbing the Engineering Ladder",
-          "imageUrl": "https://future.com/wp-content/uploads/2022/08/SocialShare-SamLambertQA-Facebook.png"
         }
       ]
     },
@@ -1286,16 +1336,6 @@
           "wordCount": 3223,
           "title": "Saving bandwidth with delta firmware updates",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/installing-gdb",
-          "author": null,
-          "description": "In this mini article, I’ll be going on a few strategies and nuances around\ngetting a copy of GDB installed for debugging ARM chips.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/installing-gdb",
-          "publishedOn": "2022-08-03T00:00:00.000Z",
-          "wordCount": 2752,
-          "title": "Tools we use: installing GDB for ARM",
-          "imageUrl": "https://interrupt.memfault.com/img/installing-gdb/cover.png"
         }
       ]
     },
@@ -1361,6 +1401,96 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/906660/",
+          "author": "corbet",
+          "description": "Kernel code can, at times, be quite inward looking; it often refers to\nitself.  To enable this introspection, the kernel has evolved several\nmechanisms for identifying specific locations in the code and carrying out\nactions related to those locations.  The code-tagging\nframework patch set, posted by Suren Baghdasaryan and Kent Overstreet,\nis an attempt to replace various ad hoc implementations with a\nsingle framework, and to add some new applications as well.",
+          "link": "https://lwn.net/Articles/906660/",
+          "publishedOn": "2022-09-01T14:34:49.000Z",
+          "wordCount": null,
+          "title": "[$] A framework for code tagging",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906778/",
+          "author": "jake",
+          "description": "Security updates have been issued by Fedora (pdns-recursor, thunderbird, and vim), Gentoo (firefox, thunderbird-bin, virtualbox, and webkit-gtk), Red Hat (convert2rhel), SUSE (gstreamer-plugins-good, open-vm-tools, postgresql12, rsync, and ucode-intel), and Ubuntu (linux-azure, linux-gcp, linux-hwe).",
+          "link": "https://lwn.net/Articles/906778/",
+          "publishedOn": "2022-09-01T13:49:06.000Z",
+          "wordCount": 222,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906067/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for September 1, 2022 is available.",
+          "link": "https://lwn.net/Articles/906067/",
+          "publishedOn": "2022-09-01T02:16:43.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for September 1, 2022",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906512/",
+          "author": "jake",
+          "description": "A fairly lengthy discussion of whether there should be a way to\nbreak out of (or \ncontinue) more than one level of nested loops in Python recently\ntook place in the Ideas\ncategory of the language's discussion forum.  The idea is\nattractive, at least in an abstract sense—some other languages support\njumping out of \nmultiple loops at once—but it seems unlikely to go anywhere for Python.\nThe barrier to new features is fairly high, for sure, but there is also a\nneed for proponents to provide real-world examples that demonstrate their\nadvantages.  That, too, is a difficult bar to clear, as was seen in the\ndiscussion.",
+          "link": "https://lwn.net/Articles/906512/",
+          "publishedOn": "2022-08-31T21:14:51.000Z",
+          "wordCount": null,
+          "title": "[$] Python multi-level break and continue",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906628/",
+          "author": "corbet",
+          "description": "The\n5.19.6,\n5.15.64, and\n5.10.140\nstable kernel updates have been released; each contains another set of\nimportant fixes, as usual.",
+          "link": "https://lwn.net/Articles/906628/",
+          "publishedOn": "2022-08-31T16:34:48.000Z",
+          "wordCount": 137,
+          "title": "A few more stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906604/",
+          "author": "corbet",
+          "description": "The GitHub blog series on how the Git database works continues with this\nlook at file-history queries.\n\n\n\tIf these history modes usually have the same output, then why\n\twouldn’t we always use --full-history\n\t--simplify-merges? The reason is performance. Not only\n\tdoes simplified history speed up the query by skipping a large\n\tportion of commits, it also allows iterative output. The simplified\n\thistory can output portions of the history without walking the\n\tentire history. By contrast, the --simplify-merges algorithm is\n\tdefined recursively starting at commits with no parents. Git cannot\n\toutput a single result until walking all reachable commits and\n\tcomputing their diffs on the input path. This can be extremely slow\n\tfor large repositories.",
+          "link": "https://lwn.net/Articles/906604/",
+          "publishedOn": "2022-08-31T14:36:52.000Z",
+          "wordCount": 244,
+          "title": "Git’s Database Internals III: File History Queries (GitHub blog)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906579/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (dpdk, net-snmp, php-horde-mime-viewer, php-horde-turba, and webkit2gtk), Fedora (rsync), Oracle (openssl and systemd), Red Hat (booth, kernel, kernel-rt, and openssl), Slackware (vim), SUSE (bluez, java-1_8_0-ibm, postgresql10, and zlib), and Ubuntu (kernel, linux, linux-raspi, linux-aws, and linux-oem-5.14).",
+          "link": "https://lwn.net/Articles/906579/",
+          "publishedOn": "2022-08-31T13:31:02.000Z",
+          "wordCount": 247,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906380/",
+          "author": "jake",
+          "description": "Dealing with the non-free firmware that is increasingly needed to install\nDebian has been a hot topic for the\ndistribution over the past few months.  The problem goes back further \nstill, of course, but Steve McIntyre re-raised the \nissue in April, which resulted in a predictable lengthy discussion\nthread on the debian-devel mailing list.  Now McIntyre has proposed a\ngeneral resolution (GR) with the intent of resolving how to give users a way to\ninstall the distribution on their hardware while trying to avoid trampling\non the \n\"100% free\" guarantee in the Debian Social\nContract.  Finding the right balance is going to be tricky as is shown\nby the multiple GR \noptions that have been proposed in the discussion.",
+          "link": "https://lwn.net/Articles/906380/",
+          "publishedOn": "2022-08-30T21:26:43.000Z",
+          "wordCount": null,
+          "title": "[$] Debian to vote on its firmware path",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906502/",
+          "author": "corbet",
+          "description": "Sourceware.org has long hosted the\nrepositories for many important free-software projects, including much of\nthe GNU toolchain.  Frank Ch. Eigler has posted\nabout some changes coming to Sourceware:\n\n\n\tRed Hat has been and continues to be a generous sponsor of the\n\thardware, connectivity, and the very modest employee time it\n\trequires.  We are glad to report there are zero indications of any\n\tchange to this commitment.  Things are stable, new services are\n\tcoming online, and users seem to be happy.  However, it is always\n\tgood to think about any future needs.\n\n\tTo protect confidence in the long term future of this hosting\n\tservice, we have reached out to the Software Freedom Conservancy\n\t(SFC) to function as a \"fiscal sponsor\".",
+          "link": "https://lwn.net/Articles/906502/",
+          "publishedOn": "2022-08-30T20:20:07.000Z",
+          "wordCount": 291,
+          "title": "Sourceware seeking support from the Software Freedom Conservancy",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/906501/",
           "author": "corbet",
@@ -2010,76 +2140,6 @@
           "wordCount": 348,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/903475/",
-          "author": "jake",
-          "description": "Jonathan Blandford, who is a\nlongtime GNOME contributor—and a cruciverbalist\nfor longer still—thought it was time for GNOME to have a\ncrossword puzzle\napplication.  So he set out to create one, which turned \ninto something of a yak-shaving exercise,\nbut also, ultimately, into Crosswords.  Blandford\ncame to GUADEC 2022\nto give a talk describing his journey bringing this brain\nexerciser (and\nproductivity bane) to the GNOME desktop.",
-          "link": "https://lwn.net/Articles/903475/",
-          "publishedOn": "2022-08-02T20:32:25.000Z",
-          "wordCount": null,
-          "title": "[$] Crosswords for GNOME",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/903585/",
-          "author": "corbet",
-          "description": "Version 1.19 of the Go programming\nlanguage has been released.  \"Most of its changes are in the\nimplementation of the toolchain, runtime, and libraries. As always, the\nrelease maintains the Go 1 promise of compatibility. We expect almost all\nGo programs to continue to compile and run as before\".  This release\nincludes some memory-model tweaks, a LoongArch port, improvements in the\ndocumentation-comment mechanism, and more.",
-          "link": "https://lwn.net/Articles/903585/",
-          "publishedOn": "2022-08-02T18:09:45.000Z",
-          "wordCount": 178,
-          "title": "Go 1.19 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/903556/",
-          "author": "corbet",
-          "description": "Version\n2.36 of the GNU C Library has been released.  Changes include support\nfor the new DT_RELR relocation format,\nwrappers for the\nprocess_madvise(),\nprocess_mrelease(),\npidfd_open(),\npidfd_getfd(), and\npidfd_send_signal() system calls,\nwrappers for the new filesystem mounting API,\na DNS stub resolver that only does IPv4 queries,\nsupport for the BSD\narc4random() API (despite some last-minute\ndiscussion),\nLoongArch architecture support,\nand more.",
-          "link": "https://lwn.net/Articles/903556/",
-          "publishedOn": "2022-08-02T13:11:49.000Z",
-          "wordCount": 463,
-          "title": "GNU C Library 2.36 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/903555/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (curl and jetty9), Fedora (dovecot), Gentoo (vault), Scientific Linux (java-1.8.0-openjdk, java-11-openjdk, and squid), SUSE (booth, dovecot22, dwarves and elfutils, firefox, gimp, java-11-openjdk, kernel, and oracleasm), and Ubuntu (linux, linux-hwe-5.15, linux-lowlatency, linux-lowlatency-hwe-5.15, net-snmp, and samba).",
-          "link": "https://lwn.net/Articles/903555/",
-          "publishedOn": "2022-08-02T12:59:37.000Z",
-          "wordCount": 263,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/902854/",
-          "author": "corbet",
-          "description": "The 5.19 kernel was released,\nafter a one-week delay to deal with the fallout from the Retbleed\nmitigations, on July 31.  By that time, 16,399 commits (15,134\nnon-merge and 1,265 merges) had found their way into the mainline\nrepository, making this development cycle the busiest since 5.13 (16,030\nnon-merge changesets and 1,157 merges).  Tradition dictates that now is the time for a look\nat where the changes in 5.19 came from, and we've learned not to go against\ntradition.",
-          "link": "https://lwn.net/Articles/902854/",
-          "publishedOn": "2022-08-01T17:23:12.000Z",
-          "wordCount": null,
-          "title": "[$] Some 5.19 development statistics",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/903481/",
-          "author": "jake",
-          "description": "The 2022 Linux Plumbers Conference (LPC) has announced its schedule.  The conference will be held in Dublin, Ireland, September 12-14.\n\nThe schedule for when the miniconferences and tracks are going to occur is now posted at: https://lpc.events/event/16/timetable/#all\n\nThe runners for the miniconferences will be adding more details to each of their schedules over the coming weeks.\n\nThe Linux Plumbers Refereed track schedule and Kernel Summit schedule is now available at: https://lpc.events/event/16/timetable/#all.detailed\n\nThe leads for the networking and toolchain tracks will be adding more details to each of their schedules over the coming weeks, as well.",
-          "link": "https://lwn.net/Articles/903481/",
-          "publishedOn": "2022-08-01T16:54:50.000Z",
-          "wordCount": 218,
-          "title": "The 2022 Linux Plumbers Conference schedule is out",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/903455/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (booth, libpgjava, and thunderbird), Fedora (3mux, act, age, antlr4-project, apache-cloudstack-cloudmonkey, apptainer, aquatone, aron, asnip, assetfinder, astral, bettercap, buildah, butane, caddy, cadvisor, cheat, chisel, clash, clipman, commit-stream, containerd, cri-o, darkman, deepin-gir-generator, direnv, dnscrypt-proxy, dnsx, docker-distribution, doctl, douceur, duf, ffuf, fzf, geoipupdate, git-lfs, git-octopus, git-time-metric, glide, gmailctl, gnutls, go-bindata, goaltdns, gobuster, godep, godoctor, godotenv, gojq, golist, goloris, gomtree, google-guest-agent, gotags, gotun, grafana, gron, grpcurl, hakrevdns, hcloud, htmltest, httprobe, hulk, ignition, jid, kata-containers, kiln, kompose, kubernetes, libldb, manifest-tool, mass3, meg, meshbird, micro, mingw-harfbuzz, mingw-poppler, moby-engine, mqttcli, nats-server, nebula, netscanner, oci-seccomp-bpf-hook, ohmybackup, onionscan, open-policy-agent, origin, osbuild-composer, podman-tui, popub, powerline-go, reposurgeon, restic, runc, samba, shellz, shhgit, skopeo, snapd, snowcrash, source-to-image, subfinder, syncthing, sysutil, terrier, thunderbird, tiedot, toolbox, vgrep, vultr, vultr-cli, webanalyze, webkit2gtk3, weldr-client, wgctrl, xe-guest-utilities-latest, xen, xq, yggdrasil, yubihsm-connector, and a vast number of golang packages), Mageia (chromium-browser-stable, firefox, gdk-pixbuf2.0, python-ujson, and webmin), Red Hat (firefox and thunderbird), Slackware (gnutls), and SUSE (chromium, firefox, mozilla-nss, rubygem-tzinfo, samba, and xen).",
-          "link": "https://lwn.net/Articles/903455/",
-          "publishedOn": "2022-08-01T13:25:45.000Z",
-          "wordCount": 2070,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2328,6 +2388,26 @@
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=10906",
+          "author": "Stacey Higginbotham",
+          "description": "This week we start off talking about the Federal Trade Commission suing a data broker for sharing sensitive location data. It’s a topic we’re following closely, in part because location information can’t be anonymized even when companies promise that it strips identifying information from it. With that in mind, Fight for the Future, a nonprofit […]\nThe post Podcast: Is Kickstarter still relevant for smart devices? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-is-kickstarter-still-relevant-for-smart-devices/",
+          "publishedOn": "2022-09-01T13:00:02.000Z",
+          "wordCount": 1949,
+          "title": "Podcast: Is Kickstarter still relevant for smart devices?",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-31-at-4.19.27-PM.png?fit=1882%2C1314&ssl=1"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=10889",
+          "author": "Kevin C. Tofel",
+          "description": "On our most recent IoT Podcast episode, we took a question from John on our Voicemail hotline. John heard the recent news that Helium has added 5G hotspots alongside its existing LoRa hotspots. This is the result of Nova Labs, the company behind Helium, acquiring FreedomFi. He wants to understand what these new hotspots do […]\nThe post What the heck is this Helium 5G network? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/what-the-heck-is-this-helium-5g-network/",
+          "publishedOn": "2022-08-31T13:00:40.000Z",
+          "wordCount": 1998,
+          "title": "What the heck is this Helium 5G network?",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/888FF8F7-4119-45C7-AB04-084BFA06DAA4.png?fit=874%2C716&ssl=1"
+        },
+        {
           "id": "https://staceyoniot.com/?p=10900",
           "author": "Stacey Higginbotham",
           "description": "When it comes to industrial IoT, it’s pretty clear that sustainability use cases are driving more investments, although a new report from Microsoft shows how ROI is still a bigger use case in industrial automation. The report, which was released earlier this month, also shows how far companies have come in adopting smart manufacturing, and anticipates that the […]\nThe post Get ready for a lot of talk about digital twins appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2526,26 +2606,6 @@
           "wordCount": 2516,
           "title": "Insteon’s new boss is ready for business",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/2Year-Access-HubHero.png?fit=1500%2C891&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10736",
-          "author": "Kevin C. Tofel",
-          "description": "On our recent IoT Podcast, we mixed things up a bit and didn’t take a question from our IoT Voicemail Hotline. Instead, we answered a question that we received by email and Twitter from a number of smart home owners. It seems that people want to know what we think about Insteon now charging an […]\nThe post How upset should you really be about Insteon’s subscription plans? appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/how-upset-should-you-really-be-about-insteons-subscription-plans/",
-          "publishedOn": "2022-08-02T13:00:39.000Z",
-          "wordCount": 2211,
-          "title": "How upset should you really be about Insteon’s subscription plans?",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/2Year-Access-HubHero.png?fit=1500%2C891&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10742",
-          "author": "Stacey Higginbotham",
-          "description": "A few months ago, we had some tree work done on our property, and while here the crew left behind a water bottle, a rake, and a chainsaw. When we called to tell them, they weren’t concerned about the water bottle and rake; it was, however, worth it for them to come and fetch the chainsaw. […]\nThe post For $8 a month, this company will track your tools appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/for-8-a-month-this-company-will-track-your-tools/",
-          "publishedOn": "2022-08-01T14:45:59.000Z",
-          "wordCount": 2261,
-          "title": "For $8 a month, this company will track your tools",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/Toolie-on-equipment.jpg-1-scaled.jpg"
         }
       ]
     },
@@ -2559,18 +2619,7 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": [
-        {
-          "id": "http://subokim.wordpress.com/?p=11414",
-          "author": "subokim",
-          "description": "세상에 바꾸고 싶은 게 있고,내 의견이 옳다는 걸 주장하고 싶다면,댓글 배틀을 하지말고, 내 의견을 길게 정리해서,블로그나 유튜브에 올려놓고,나와 비슷한 사람을 모으세요. 목소리라는 건 함께 모여야 크게 들리니까요. 내 목소리가 그럴싸 하다면,아주 높은 확률로 누군가의 마음에 닿아,세상을 바꾸게 됩니다. 1. 의견을 정리해서 블로그에 올리다 보면,내 주장이 억지인지,실체 없는 감정 때문인지등등을 뒤돌아보게 됩니다. 공감 하는 분들이 모이다 […]",
-          "link": "https://subokim.wordpress.com/2022/08/03/if_you_want_to/",
-          "publishedOn": "2022-08-03T07:59:03.000Z",
-          "wordCount": 3722,
-          "title": "세상에 바꾸고 싶은 게 있다면",
-          "imageUrl": "https://subokim.files.wordpress.com/2022/08/change_the_world.jpg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "The Pasture",
@@ -2676,6 +2725,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86923",
+          "author": "씨앗(CEART)",
+          "description": "프랙티스(practice)는 정보·통신 분야에서 작업 산출물이나 프로세스 능력을 개선하는 소프트웨어 공학 활동이나 관리 활동을 의미한다. 왜 마이크로서비스인가? 오늘날의 비즈니스 환경은 전무후무하게 경쟁적이다. 기업의 규모나 업종에 상관없이 디지털 전환의 시대에는 제품이나 서비스의 스피드, 품질, 판매 후 유지 보수 등 모든 면에서 우위를 유지하기 쉽지 않다. 신규 진입자가 시장에 진입하는 것이 그 어느 때보다 쉬워지고, 예전 버전에서 생성된 […]\nThe post 마이크로서비스의 여섯 가지 베스트 프랙티스 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86923",
+          "publishedOn": "2022-09-01T01:48:51.000Z",
+          "wordCount": 3492,
+          "title": "마이크로서비스의 여섯 가지 베스트 프랙티스",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/android-gc03b08a77_640.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=86914",
+          "author": "자작나무",
+          "description": "정의당이 듣도 보도 못한 걸 시작했다. 31일부터 닷새 동안 정의당 소속 비례대표 5명에게 총사퇴 권고 여부를 묻는 당원 총투표를 한다고 한다. 물론 가결이 된다고 5명이 자동으로 의원직을 잃거나 하는 건 아니다. 그런 건 전혀 없다. 다만 총사퇴를 ‘권고’하는 것일 뿐. 이런 황당한 소동은 어떻게 시작된 것일까. 정의당 전 수석대변인 정호진이 7월 5일 비례대표 총사퇴를 요구하는 […]\nThe post 당원 총투표, 정의당의 유치 찬란한 자해극 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86914",
+          "publishedOn": "2022-08-31T10:39:20.000Z",
+          "wordCount": 2613,
+          "title": "당원 총투표, 정의당의 유치 찬란한 자해극",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/afasdfasf.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=86905",
           "author": "참여연대 사법감시센터",
@@ -2895,26 +2964,6 @@
           "wordCount": 2720,
           "title": "인하대생 사망 사건: 클릭 저널리즘 vs. 익명 대자보",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/2a142f2d8ef0b8c7645551742eb29188.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86621",
-          "author": "슬로우뉴스",
-          "description": "‘동의하지 않으면 계정을 사용할 수 없습니다.’ 메타가 개인정보 수집과 이용에 관한 이용자 동의를 요구하고, 이에 동의하지 않으면 페이스북과 인스타그램을 더는 이용할 수 없다는 방침을 세웠다. 원래 7월 26일 이후에는 동의하지 않으면 서비스를 사용할 수 없도록 할 계획이었지만, 기술적인 문제를 ‘표면적인 이유로 삼아’ 그  기한을 2주 후인 8월 8일로 연기했다(참고: MBC뉴스, 페북·인스타 개인정보 수집 “동의거부” […]\nThe post 메타의 약탈 동의 요청: ‘시간의 역사’보다 어려운 페북 정책 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86621",
-          "publishedOn": "2022-08-02T10:02:17.000Z",
-          "wordCount": 3612,
-          "title": "메타의 약탈 동의 요청: ‘시간의 역사’보다 어려운 페북 정책",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/qwgsdgf.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=86610",
-          "author": "윤대균",
-          "description": "이 글은 2022년 2월 공개된 미국 국방부(DoD)의 소프트웨어 현대화 전략(Software Modernization Strategy, 2021. 11.)을 분석한 것이다.1) 이 전략의 버전 1.0을 최초 발표한 것은 2021년 11월이며, 내부 검토를 거쳐 2022년 2월 일반에 공개했다. 소프트웨어 현대화 전략은 DoD의 디지털 현대화 전략의 중요한 한 축이며, 더 범위를 확대하면 미국 정부의 소프트웨어 현대화 전략과 맥을 같이한다고 볼 수 있다. […]\nThe post 미 국방부의 소프트웨어 현대화 전략 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86610",
-          "publishedOn": "2022-08-01T08:49:29.000Z",
-          "wordCount": 4179,
-          "title": "미 국방부의 소프트웨어 현대화 전략",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/01/i_003.jpg"
         }
       ]
     },
@@ -3252,26 +3301,6 @@
           "wordCount": 9621,
           "title": "2분기 AMD 실적을 읽는 5가지 질문과 AMD 전망",
           "imageUrl": "https://happist.com/wp-content/uploads/2017/05/AMD-Ryzen-발표하는-AMD-CEO-1.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587268",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587268/2%eb%b6%84%ea%b8%b0-%ec%8b%a4%ec%a0%81%ea%b3%bc-%eb%94%94%ec%a7%80%ed%83%88-%ea%b4%91%ea%b3%a0-%ed%8a%b8%eb%a0%8c%eb%93%9c",
-          "publishedOn": "2022-08-01T23:41:38.000Z",
-          "wordCount": 6536,
-          "title": "2분기 실적에서 읽는 디지탈 광고 트렌드",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/디지탈-광고-추이-분기별-디스플레이-광고-매출-증가율-22년-2분기-Graph-by-Happist.png"
-        },
-        {
-          "id": "https://happist.com/?p=587260",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587260/2%eb%b6%84%ea%b8%b0-%ec%9d%b8%ed%85%94-%ec%8b%a4%ec%a0%81-ib%ed%8f%89%ea%b0%80",
-          "publishedOn": "2022-08-01T09:11:50.000Z",
-          "wordCount": 6217,
-          "title": "2분기 인텔 실적을 읽는 월가의 시선, 나빠질만큼 나빠졌는데 바닥이 언제?",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/10/인텔-실적-인텔-데이타센터에서-서버를-살펴보는-남자와-여자-Image-from-Intel-IR-page.jpg"
         }
       ]
     },
@@ -3280,6 +3309,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=75212",
+          "author": "veritaholic",
+          "description": "오늘날, 건강과 장수는 인류의 가장 큰 관심사라 말할 수 있을 겁니다. 그래서 이 코너에서도 건강에 관한 소식을 가장 많이 다루게 됩니다. 바로 지난주에도 ‘영생’이라는 충분히 비현실적인 소재를 다뤘죠. 이번 주에는 최근 발표된 훨씬 더 현실적인 건강에 관한 뉴스 두 가지를 소개합니다. 물론 현실적이라고 해서 여러분께 명확한 지시사항을 말씀드리지는 못합니다. 오히려 그 반대에 가깝습니다. 현실이란 원래 그런 것이니까요. 첫 번째 소식은 6월 초 소개된 연구로, 바로 생선의 섭취에 관한 것입니다. 생선이 → 더 보기",
+          "link": "https://newspeppermint.com/2022/08/30/npc_poissonvitamin/?utm_source=rss&utm_medium=rss&utm_campaign=npc_poissonvitamin",
+          "publishedOn": "2022-08-30T22:59:29.000Z",
+          "wordCount": 1835,
+          "title": "[필진 칼럼] 생선과 비타민",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=75199",
           "author": "ingppoo",
@@ -3379,26 +3418,6 @@
           "wordCount": 1728,
           "title": "[필진 칼럼] 셰릴 샌드버그 사임과 다시 돌아보는 “린 인(Lean In)”",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75053",
-          "author": "veritaholic",
-          "description": "이제 비트코인이나 이더리움이라는 단어를 들어보지 않은 이들은 거의 없을 겁니다. 얼마 전 20~30대 대학원생들에게 코인을 사 본 경험이 있는지를 물은 적이 있습니다. 대략 20% 정도가 손을 들었습니다. 흥미로운 것은 주식을 사 본 사람들보다 더 많았다는 것이죠. 네이버 프리미엄 콘텐츠 독자분들도 암호화폐 또는 가상자산에 어느 정도는 익숙하실 겁니다. 아마 몇 년 전에 꽤 큰바람이 불었고, 이후 몇 년 잠잠하다가 지난해 다시 더 큰바람이 불었다는 것 정도도 아시겠지요. 즉, 코인이 거품인지 아닌지를 → 더 보기",
-          "link": "https://newspeppermint.com/2022/08/02/npc_cryptocrash/?utm_source=rss&utm_medium=rss&utm_campaign=npc_cryptocrash",
-          "publishedOn": "2022-08-02T22:59:29.000Z",
-          "wordCount": 2032,
-          "title": "[필진 칼럼] 코인은 정말 거품일까?",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75038",
-          "author": "ingppoo",
-          "description": "이어서 총기 규제를 좀처럼 진전시키지 못하는 미국 사회의 문제를 진단한 글을 한 편 더 썼습니다.   이틀 전에 소개한 샌디훅 이후 10년에 관한 글의 제목은 “무엇이 달라졌나?”가 아니라, “달라진 게 없다”고 단정적으로 썼어도 됐다는 생각이 듭니다. 지난 10년 동안 미국 학교에서는 수백 건의 총기 사고가 났고, 총기 난사로 분류할 수 있는 사건으로 좁혀도 수십 건이 일어났습니다. 학교 밖으로 범위를 넓히면 훨씬 더 참담합니다. 지난 주말은 미국의 현충일 연휴였는데, 연휴 사흘간 최소 → 더 보기",
-          "link": "https://newspeppermint.com/2022/08/01/npc_usgunculture/?utm_source=rss&utm_medium=rss&utm_campaign=npc_usgunculture",
-          "publishedOn": "2022-08-01T22:59:58.000Z",
-          "wordCount": 2398,
-          "title": "[필진 칼럼] 끊이지 않는 총기 난사와 미국 사회의 ‘제자리걸음’",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3413,6 +3432,26 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222863777061",
+          "author": "sellars",
+          "description": "(가) 곤(鯤)이 북녘 바다에 있다가 붕(鵬)이 되어 ‘天池’라 불리워지는 남녘 바다에로 날아간다는 것이다. 또 이와 유사한 우화가 外編 <秋水>장에도 나온다. 혜시가 양나라 재상시절에 자기의 자리를 노리는 것이 아닌가 두려워하고 있었는데, 장자가 혜시의 마음을 읽고 다음과 같이 말한다. 남쪽 바다에 원추라는 새가 있는데 북해로 날아가는데 오동나무가 아니면 머무르지 않고 대나무 열매가 아니면 먹지 않고 체천(體泉)이 아니면 마시지를 않으니 자네 혜시는 나 장자가 자네의 자리를 뺏을까 하고 전전긍긍하지 말라는 식으로 장자가 말하였다. (나) 곤(鯤)은 붕(鵬)이 되어 북에서 남으로 날아가고, 또 원추라는 새는 남쪽에서.......",
+          "link": "https://blog.naver.com/sellars/222863777061",
+          "publishedOn": "2022-09-01T01:45:59.000Z",
+          "wordCount": 101,
+          "title": "반존재론(反存在論)과 차이의 대긍정",
+          "imageUrl": null
+        },
+        {
+          "id": "https://blog.naver.com/sellars/222862761022",
+          "author": "sellars",
+          "description": "* 다음 논증들의 타당성과 부당성을 판별하라. (1) 모든 인간은 죽는다. 따라서 약간의 인간은 죽는다. (2) 모든 인간은 죽지 않는다. 따라서 약간의 인간은 죽지 않는다. (3) 약간의 인간은 죽지 않는다. 따라서 모든 인간은 죽지 않는다. (4) 약간의 인간이 죽는다는 것은 거짓이다. 따라서 모든 인간은 죽는다는 것도 거짓이다. ** 전통 논리학에 의하면, 문장, 진술, 명제는 질과 양을 갖고 있다. 질은 긍정과 부정이며, 양은 전칭양과 특칭양, 즉 ‘모든’과 ‘약간’이다. 질과 양을 조합하면 네 가지 표준적 정언명제가 도출된다. 즉 전칭 긍정명제, 전칭 부정명제, 특칭 긍정명제, 특칭 부정명제가 그것들이다. 이 표준적인 네 가지 명제.......",
+          "link": "https://blog.naver.com/sellars/222862761022",
+          "publishedOn": "2022-08-31T00:16:41.000Z",
+          "wordCount": 101,
+          "title": "26 대당 관계과 직접 추리",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222860888811",
           "author": "sellars",
@@ -3572,26 +3611,6 @@
           "wordCount": 101,
           "title": "5 칸트의 현상과 본체와 맹자의 소체와 대체",
           "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222838231318",
-          "author": "sellars",
-          "description": "<많은 급진적인 비평가들의 지속적인 노력에도 불구하고, 선형성과 객관성이라는 정신적 습관은 우리의 사유에 대해 헤게모니적 지배를 지속하고 있다. 그에 따라 A와 B 사이에서 일어나는 과정보다는, A가 아니면 B라는 개념에 대해 생각하거나 B의 개념을 A가 아닌 것으로 생각하는 것이 훨씬 더 쉽게 여겨진다. 흐름과 상호연결을 통해 사유하는 것은 여전히 어려운 과제로 남아 있다. 이론적 이성이 개념에 얽매여 있고 본질적인 관념에 고정되어 있다는 사실은 데이터, 경험 및 정보의 흐름 사이에 있는 유동성, 즉 과정들에 대한 적절한 표현을 찾기 어렵게 만든다. 이로 인해, 과정들은 이를 ‘문제’로 분류하는 공간적이고 은유적인.......",
-          "link": "https://blog.naver.com/sellars/222838231318",
-          "publishedOn": "2022-08-03T01:07:03.000Z",
-          "wordCount": 101,
-          "title": "7 선형성, 객관성, 논증성",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222837177249",
-          "author": "sellars",
-          "description": "글록의 논문 <칸트와 비트겐슈타인 - 철학, 필연성, 표상>(1997)은 칸트와 비트겐슈타인의 유사성과 차이성에 대해서 논의하고 있다. 글록의 요약에 따라 그의 주장을 다음처럼 정리할 수 있다. (1) 칸트와 비트겐슈타인이 서로 공유되는 철학관을 가지고 있다. 철학은 우리 경험의 방식이나 실재를 표상하는 방식에 요구되는 필연적 명제의 선험적 지위를 해명해야 한다. 경험이 가능할 수 있는 조건, 선험론적 조건을 해명하는 칸트의 작업이 전기 비트겐슈타인에게 언어적 표상의 선제조건을 해명하는 작업으로 변모한다. 칸트의 ‘반성적 전환’이 언어적으로 변형되어 추구되고 있다. (2) 요구되는 필연적 명제의 선험성을 해명하는데.......",
-          "link": "https://blog.naver.com/sellars/222837177249",
-          "publishedOn": "2022-08-02T00:26:22.000Z",
-          "wordCount": 101,
-          "title": "글록 - 칸트와 비트겐슈타인 1",
-          "imageUrl": null
         }
       ]
     },
@@ -3600,6 +3619,16 @@
       "feedUrl": "https://zipcpu.com/feed",
       "siteUrl": "https://zipcpu.com/",
       "articles": [
+        {
+          "id": "https://zipcpu.com/zipcpu/2022/08/30/not-my-fault.html",
+          "author": null,
+          "description": "I’ve  always commented that the way to get an interface working is to lock\nthe engineers responsible for each side of the interface together in a room\nuntil it works.  I like to say it in jest, but in many ways there’s a lot of\ntruth to it.\nOne of the challenges of working with Open Source anything really is debugging.\nTo be successful, an open source engineer needs to commit their time to\nsupporting their design–no matter how it is used.  As an illustration, what\nhappens when one engineer uses an open source design, uses it inappropriately,\nand then declares that it doesn’t work?  It can reflect poorly on the quality\nof the design–even if the design was and remains fully functional.\nAs an example, someone recently attempted to use my digital\nPLL.  They commented\nthat the PLL\nworked great,…",
+          "link": "https://zipcpu.com/zipcpu/2022/08/30/not-my-fault.html",
+          "publishedOn": "2022-08-30T04:00:00.000Z",
+          "wordCount": 3431,
+          "title": "It's not my fault!  Your code is broken.",
+          "imageUrl": null
+        },
         {
           "id": "https://zipcpu.com/blog/2022/08/24/protocol-design.html",
           "author": null,
