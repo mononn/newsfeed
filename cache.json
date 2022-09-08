@@ -10,18 +10,7 @@
       "title": "Alex Edwards",
       "feedUrl": "https://www.alexedwards.net/static/feed.rss",
       "siteUrl": "https://www.alexedwards.net/blog",
-      "articles": [
-        {
-          "id": "https://www.alexedwards.net/blog/the-fat-service-pattern",
-          "author": null,
-          "description": "In this post I'd like to talk about one of my favorite architectural patterns for building web applications and APIs in Go. It's kind of a mix between the service object and fat model patterns — so I mentally refer to it as the 'fat service' pattern, but it might have a more formal name that I'm not aware of 🙃\nIt's certainly not a perfect pattern (we'll discuss some of the pros and cons later) — but it is (deliberately) simple, pragmatic, and I find it often works well for small-to-medium sized projects.\nNote: Before we start I'd like to emphasize that there's no single 'correct' way to structure your project in Go. Different architectures suit different projects and teams, and this is just one option to consider.\n\n\nAt a high-level, the fat service pattern splits your project code into tw…",
-          "link": "https://www.alexedwards.net/blog/the-fat-service-pattern",
-          "publishedOn": "2022-08-08T10:15:00.000Z",
-          "wordCount": 1708,
-          "title": "The ‘fat service’  pattern for Go web applications",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Arjun Sreedharan",
@@ -99,26 +88,6 @@
           "wordCount": 2153,
           "title": "Writing An Open-Source C++ Static Analysis Tool",
           "imageUrl": "https://www.cppstories.com/2022/images/rsc.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2018/03/ifconstexpr/",
-          "author": null,
-          "description": "Before C++17, we had a few quite ugly-looking ways to write static if (if that works at compile time). For example, you could use tag dispatching or SFINAE. Fortunately, that’s changed, and we can now benefit from if constexpr and concepts from C++20!\nLet’s see how we can use it and replace some std::enable_if code.\nUpdated in April 2021: C++20 changes - concepts.\nUpdated in August 2022: More if constexpr examples (use case 4).\n\n\n\n     \n    \n\n\nCompile-time if in the form of if constexpr is a fantastic feature that went into C++17. With this functionality, we can improve the readability of some heavily templated code.\nAdditionally, with C++20, we got Concepts! This is another step to having almost “natural” compile-time code.\nThis blog post was inspired by an article @Meeting C++ with a sim…",
-          "link": "https://www.cppstories.com/2018/03/ifconstexpr/",
-          "publishedOn": "2022-08-08T00:00:00.000Z",
-          "wordCount": 3575,
-          "title": "Simplify Code with if constexpr and Concepts in C++17/C++20",
-          "imageUrl": "https://www.cppstories.com/2018/images/ifconstexpr.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2020/07/lambdas5ex.html/",
-          "author": null,
-          "description": "In this blog post I’ll show you a couple of interesting examples with lambda expressions. Do you know how to write a recursive lambda? Store them in a container? Or invoke at compile time?\nSee in the article.\nUpdated in August 2022: Added C++23 improvements.\nstd::function \n  \n\n\n\n\n     \n    \n\n\nWriting a recursive function is relatively straightforward: inside a function definition, you can call the same function by its name. How about lambdas?\nint main() {\n    auto factorial = [](int n) {\n        return n > 1 ? n * factorial(n - 1) : 1;\n    };\n    return factorial(5);\n}\n\n\nThis, unfortunately, doesn’t compile…\nHow can we fix this?\nOne way is to use std::function:\n#include <functional>\n\nint main() {\n    const std::function<int(int)> factorial = [&factorial](int n) {\n        return n > 1 ? n *…",
-          "link": "https://www.cppstories.com/2020/07/lambdas5ex.html/",
-          "publishedOn": "2022-08-08T00:00:00.000Z",
-          "wordCount": 1778,
-          "title": "5 Curious C++ Lambda Examples: Recursion, constexpr, Containers and More",
-          "imageUrl": "https://www.cppstories.com/2020/images/lambdas5ex.png"
         }
       ]
     },
@@ -163,6 +132,16 @@
       "siteUrl": "https://www.bluefruit.co.uk/blog/",
       "articles": [
         {
+          "id": "https://www.bluefruit.co.uk/?p=12296",
+          "author": "bluefruit",
+          "description": "We are often surrounded by embedded operating systems every day without realising it. That can be through the embedded systems in […]\nThe post A brief history of embedded operating systems appeared first on Bluefruit Software.",
+          "link": "https://www.bluefruit.co.uk/training/a-brief-history-of-embedded-operating-systems/",
+          "publishedOn": "2022-09-06T10:27:38.000Z",
+          "wordCount": 2636,
+          "title": "A brief history of embedded operating systems",
+          "imageUrl": "https://www.bluefruit.co.uk/content/uploads/2022/08/STM32F0-Discovery-microcontroller-development-board-thumb-1.jpg"
+        },
+        {
           "id": "https://www.bluefruit.co.uk/quality/how-to-improve-reliability-in-software-engineering/",
           "author": "Jane Orme",
           "description": "Reliability is essential to embedded software. And it can become crucial if you work in a safety-critical space or when devices […]\nThe post How to improve reliability in software engineering appeared first on Bluefruit Software.",
@@ -186,13 +165,23 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
-          "id": "https://cpuu.postype.com/post/12877300",
+          "id": "https://cpuu.postype.com/post/13054011",
           "author": "CPUU",
-          "description": "가. (설계단계) 보안설계기준\n\n입력 데이터 검증 및 표현\nDBMS 조회 및 결과 검증\nXML 조회 및 결과 검증\n디렉토리 서비스 조회 및 결과 검증\n시스템 자원 접근 및 명령어 수행 입력값 검증\n웹 서비스 요청 및 결과 검증\n웹 기반 중요 기능 수행 요청 유효성 검증\nHTTP 프로토콜 유효성 검증\n허용된 범위내 메모리 접근\n보안기능 입력값 검증\n업로드·다운로드 파일 검증\n\n보안기능\n인증 대상 및 방식\n인증 수행 제한\n비밀번호 관리\n중요자원 접근통제\n암호키 관리\n암호연산\n중요정보 저장\n중요정보 전송\n\n에러처리\n예외처리\n\n세션통제\n세션통제\n\n\n\n\n나. (구현단계) 보안약점 제거 기준\n\n입력 데이터 검증 및 표현\nSQL 삽입\n코드 삽입\n경로 조작 및 자원 삽입\n크로스사이트 스크립트\n운영체제 명령어 삽입\n위험한 형식 파일 업로드\n신뢰되지 않는 URL 주소로 자동접속 연결\n부적절한 XML 외부 개체 참조\nXML 삽입\nLDAP 삽입\n크로스사이트 요청 위조\n서버사이드 요청 위조\nHTTP 응답분할\n정수형 오버플로우\n보안기능 결정에 사용되는 부적절한 입력값\n메모리 버퍼 오버플로우\n포맷 스트링 삽입\n\n보안기능\n적절한 인증 없는 중요기능 허용\n부적절한 인가\n중요한 자원에 대한 잘못된 권한 설정\n취약한 암호화 알고리즘 사용\n암호화되지 않은 중요정보\n하드코드된 중요정보\n충분하지 않은 키 길이 사용\n적절하지 않은 난수 값 사용\n취약한 비밀번호 허용\n부적절한 전자서명 확인\n부적절한 인증서 유효성 검증\n사용자 하드디스크에 저장되는 쿠키를 통한 정보 노출\n주석문 안에 포함된 시스템 주요정보\n솔트 없이 일방향 해쉬 함수사용\n무결성 검사 없는 코드 다운로드\n반복된 인증시도 제한 기능 부재\n\n시간 및 상태\n경쟁조건: 검사 시점과 사용 시점(TOCTOU)\n종료되지 않는 반복문 또는 재귀 함수\n\n에러처리\n오류 메시지 정보노출\n오류상황 대응 부재\n부적절한 예외 처리\n\n코드오류\nNull Pointer 역참조\n부적절한 자원 해제\n해제된 자원 사용\n초기화되지 않은 변수 사용\n신뢰할 수 없는 데이터의 역직렬화\n\n캡슐화\n잘못된 세션에 의한 데이터 정보 노출\n제거되지 않고 남은 디버그 코드\nPublic 메소드부터 반환된 Private 배열\nPrivate 배열에 Public 데이터 할당\n\nAPI오용\nDNS lookup에 의존한 보안결정\n취약한 API 사용\n\n\n\n출처 : 소프트웨어 보안약점 진단가이드(2021.11.)",
-          "link": "https://cpuu.postype.com/post/12877300",
-          "publishedOn": "2022-08-09T06:19:42.000Z",
-          "wordCount": 726,
-          "title": "2022 KISA 소프트웨어 보안약점 기준",
+          "description": "기본적으로 Apple iOS앱들은 암호화(Encrypted) 되어 있을 수 있다. 하지만 아무리 보안을 위해 암호화를 했다하더라도, 실행을 하기 위해서는 반드시 암호화를 해제한 상태로 구동을 하게 된다. 이 시점에 복호화된 애플리케이션을 덤프해서 원본 IPA를 획득할 수 있을 것이다.\n이런 경우에 사용되는 도구가 frida-ios-dump이다.\nhttps://github.com/AloneMonkey/frida-ios-dump\n\n사전 준비 \n이 글에서는 사전준비가 미리 되어있다고 가정하겠다. 필요한 부분은 이전 블로그 게시글을 확인하면 좋다.\n- 탈옥한 iphone : https://cpuu.postype.com/post/10436260\n- frida 도구 설치 방법 : https://cpuu.postype.com/post/10415747\n\n\nFrida-ios-dump 설치\n% git clone https://github.com/AloneMonkey/frida-ios-dump.git\n% cd frida-ios-dump/\n% pip3 install -r requirements.txt --upgrade\n설치가 완료되면 dump.py 파일이 존재하는데, 여기에서 아래의 정보를 알맞게 입력해야 한다.\nUser = 'root'\nPassword = 'alpine'\nHost = 'IP주소'\nPort = 22\n탈옥된 아이폰이 root 계정 비밀번호가 alpine 이라고 할 때, 동일한 네트워크라면 192 또는 172로 시작하는 주소를 찾아서 입력하면 되고, ssh port 도 기본은 22 이지만 필요한 경우 알맞게 변경하면 된다.\n\n\n애플리케이션 추출\ndump 파이썬 스크립트에서 -l 옵션을 이용한다.\n또는 frida-ps 를 사용해도 같다.\n\n\n이렇게 확인된 Identifier 값을 입력하면 된다. 참고로 덤프를 할 때 해당 디바이스는 화면 잠금이 해제된 상태여야만 작업이 진행된다.\n\n\n추출된 IPA 파일은 사실상 압축된 형태의 내용으로, unzip 명령어를 사용하면 해제가 가능하다.\n% unzip unc0ver.ipa\n디렉토리 내부에 보면 arm64 형식의 Mach-O 바이너리 파일을 획득할 수 있다.\n% file unc0ver\nunc0ver: Mach-O 64-bit executable arm64\n리버스 엔지니어링을 하면 된다.\n참고 : \nhttps://cpuu.postype.com/post/11085234",
+          "link": "https://cpuu.postype.com/post/13054011",
+          "publishedOn": "2022-09-08T05:52:24.000Z",
+          "wordCount": 646,
+          "title": "frida-ios-dump 를 이용한 애플리케이션 IPA 파일 추출",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2022/09/08/14/48/9ff5bbca85959197157f9eb288541dad.png?w=600&h=300&q=65"
+        },
+        {
+          "id": "https://cpuu.postype.com/post/13004865",
+          "author": "CPUU",
+          "description": "누가 macOS에서 어셈블리 프로그래밍을 할까? 하겠냐만.. 그냥 심심해서 \"이게 되네?\"를 해보고자 테스트.\n% sw_vers\nProductName:    macOS \nProductVersion: 12.5.1\nBuildVersion:   21G83\n우선 실험환경은 Apple Silicon 버전의 일명 M1 macmini 이고 macOS Monterey(12.5) 운영체제 환경이다.\n\n\n개발 환경 구축\n기본적으로 컴파일 및 여러가지 진행을 위해 터미널에서 아래의 명령어로 관련 도구를 설치한다.\n% xcode-select --install\n명령어를 입력하면 화면에 위와 같은 메시지가 뜨고, 설치를 눌러 진행한다.\n\n\n설치 완료후 아래와 같이 현재 도구 버전을 확인해볼 수 있다.\n% xcode-select --version\nxcode-select version 2395. \n% gcc --version          \nApple clang version 13.1.6 (clang-1316.0.21.2.5)     \nTarget: arm64-apple-darwin21.6.0   \nThread model: posix    \nInstalledDir:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin       \n참고로 일반적인 리눅스와 다르게 애플은 clang 컴파일러를 사용한다. gcc를 이용했을 때 자동으로 clang 으로 연결된다.\n\n\n어셈블리 프로그래밍\n그렇다면 어셈블리 언어로 \"Hello World!\" 문자열…",
+          "link": "https://cpuu.postype.com/post/13004865",
+          "publishedOn": "2022-09-06T05:59:26.000Z",
+          "wordCount": 755,
+          "title": "Apple Silicon macOS에서 ARM64 assembly programming",
           "imageUrl": "https://d33pksfia2a94m.cloudfront.net/assets/img/social/sns_stream.png"
         }
       ]
@@ -225,6 +214,56 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "7d5b3487-1afe-4a54-8f34-fa45098dd950",
+          "author": "Christian Hernandez",
+          "description": "Note: The following is an excerpt from our The Path to GitOps e-book, which outlines Git best practices for GitOps deployment.\nWhen adopting GitOps, organizations must plan carefully to divide tasks and configuration files appropriately between repositories and directories in each repository. Standard practices have long existed for using Git-based workflows for infrastructure and software delivery. But with the dawn of cloud-native architectures and Kubernetes, you can now automate a wide range of deployments based on declarations stored in a Git repository.\nThe question of best practices comes up a lot when creating repositories for GitOps. There is no magic bullet, but several common patterns exist to match the various ways the organization interacts internally.\nConway's Law and GitOps\n…",
+          "link": "https://developers.redhat.com/articles/2022/09/07/how-set-your-gitops-directory-structure",
+          "publishedOn": "2022-09-07T07:00:00.000Z",
+          "wordCount": 4447,
+          "title": "How to set up your GitOps directory structure",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_GitOps_Kubernetes_Featured_ArticleB_0.png?itok=jYUcuOPP"
+        },
+        {
+          "id": "c5e44d48-3733-4add-8dfc-4e49bc4ad593",
+          "author": "Jamie Beck, Himanshu Yadav",
+          "description": "Security automation encompasses a wide variety of products and services designed to prevent loss or damage to data, applications, IT systems, and networks and to protect devices from malicious or unintended activities. Developers can use the Red Hat Ansible Automation Platform to pull together different security vendors and processes to speed up deployment and reduce errors from performing repetitive manual tasks.\nThis article explores five common security use cases that Ansible can automate:\nEnterprise firewalls\nIntrusion Detection and Prevention Systems, IDPS\nSecurity Information and Event Management (SIEM) systems\nPrivileged Access Management (PAM) tools\nEndpoint Protection Platform (EPP)\nEnterprise firewalls\nFirewalls control the traffic allowed to traverse networks, protecting line-of…",
+          "link": "https://developers.redhat.com/articles/2022/09/07/5-examples-security-automation-ansible",
+          "publishedOn": "2022-09-07T07:00:00.000Z",
+          "wordCount": 2523,
+          "title": "5 examples of security automation with Ansible",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
+        },
+        {
+          "id": "41f98b40-5aa6-451e-9c6d-2655264e4f6a",
+          "author": "Bernard Tison",
+          "description": "Red Hat OpenShift Connectors is a new cloud service offering from Red Hat. The service provides prebuilt connectors to enable quick and reliable connectivity across data, services, and systems. Each connector is a fully managed service, tightly integrated with Red Hat OpenShift Streams for Apache Kafka, Red Hat's managed cloud service for Apache Kafka.\nChange data capture (CDC) is a software process that detects changes (inserts, updates, deletes) to data in a database and transforms these changes into event streams that can be consumed by other systems or applications to react to these changes.\nTypical use cases for change data capture include: \nData replication\nStreaming analytics\nEvent-driven distributed applications\nRed Hat OpenShift Connectors offers several source connectors for chan…",
+          "link": "https://developers.redhat.com/articles/2022/09/07/configuring-change-data-capture",
+          "publishedOn": "2022-09-07T07:00:00.000Z",
+          "wordCount": 3590,
+          "title": "Red Hat OpenShift Connectors: Configuring change data capture",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Apache_Node.js_A-01.png?itok=k5oxUEYM"
+        },
+        {
+          "id": "8ed9f141-704e-4dfc-945c-32531df66593",
+          "author": "Heiker Medina",
+          "description": "It's officially September, and we're back with our monthly roundup to catch you up on the latest top articles and community resources featured on Red Hat Developer. In August, we published tutorials to help you improve the observability of your microservices, build security into your Node.js development process, easily containerize .NET applications, and more. Let's dive into the August highlights.\nContainerize .NET applications automatically\nTo run a .NET application in a container, you need a Dockerfile—but writing and managing Dockerfiles can be tedious. Enter the dotnet build-image tool, which enables you to create a container image from a .NET application without writing a Dockerfile.\nIn one of our most popular articles from the past month, Tom Deseyn shows you how to use build-image …",
+          "link": "https://developers.redhat.com/articles/2022/09/06/red-hat-developer-roundup-best-august-2022",
+          "publishedOn": "2022-09-06T07:00:00.000Z",
+          "wordCount": 2939,
+          "title": "Red Hat Developer roundup: Best of August 2022",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/RDH_Developer_Roundup.png?itok=kLwx8u_0"
+        },
+        {
+          "id": "af4e4d46-5834-4409-9225-eb8bfeaf27b1",
+          "author": "Gris Ge",
+          "description": "This article concludes the 4-part series about how to take advantage of the recent Rust support added to Linux. I hope you have read the previous articles in the series:\nPart 1: 3 essentials for writing a Linux system library in Rust\n\n\nPart 2: How to create C binding for a Rust library\n\n\nPart 3: How to create Python binding for a Rust library\n\n\n\nThis article will demonstrate how to build trust in a Continuous Integration (CI) system for your Rust library.\nYou can download the demo code from its GitHub repository.\nThe package contains:\nAn echo server listening on the Unix socket /tmp/librabc\nA Rust crate that connects to the socket and sends a ping packet every 2\nseconds\nA C/Python binding\nA command-line interface (CLI) for the client\nThe CI system of this GitHub repository is built on Gith…",
+          "link": "https://developers.redhat.com/articles/2022/09/06/build-trust-continuous-integration-your-rust-library",
+          "publishedOn": "2022-09-06T07:00:00.000Z",
+          "wordCount": 3605,
+          "title": "Build trust in continuous integration for your Rust library",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/How_Rust_makes_Rayon_magical-01.png?itok=8FImZDMa"
+        },
         {
           "id": "b3d1c182-4a4d-4c01-9cd0-42f9d9f0063a",
           "author": "Gris Ge",
@@ -464,36 +503,6 @@
           "wordCount": 2705,
           "title": "Connect to services on Kubernetes easily with kube-service-bindings",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/CP-nodejskubernetes_2x-e1615240548598.png?itok=-tne5COr"
-        },
-        {
-          "id": "190aad79-396f-4282-abbd-1cdc361872fa",
-          "author": "Ranjith Rajaram",
-          "description": "Podman is a major container platform, used by many developers in place of Docker. Podman v4.0 has extensive new support for the IPv6 address format. IPv6 networks with Network Address Translation (NAT) and port forwarding are now fully tested and supported in this latest version of the platform. You can also assign static IPv6 addresses to containers in these networks.\nPodman v4.0 is supported in versions 8.6 and 9 of Red Hat Enterprise Linux. This article shows you how to enable the new IPv6 support.\nChanges to Podman\nThe reason you need to take special steps to enable IPv6 is that Podman went through a major architectural change in version 4.0. The new network stack, which has been rewritten from scratch in Rust, is composed of two tools:\nNetavark: A network setup tool that configures ne…",
-          "link": "https://developers.redhat.com/articles/2022/08/10/how-conifgure-podman-40-ipv6",
-          "publishedOn": "2022-08-10T07:00:00.000Z",
-          "wordCount": 3300,
-          "title": "How to configure Podman 4.0 for IPv6",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2019/08/podman.png?itok=rIuCQyMl"
-        },
-        {
-          "id": "2526777f-7b53-4a26-88f8-8bf100b7ef8e",
-          "author": "Lucas Holmquist",
-          "description": "Making your Node.js applications secure is an essential part of the development of Node.js modules and applications. Security practices apply to both the code itself and your software development process. This installment of the ongoing Node.js Reference Architecture series focuses on some of the key security elements that JavaScript developers should address.\nRead the series so far:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code Coverage\nPart 8: Typescript\nThis article covers eight key elements of building security into your software development process to make your Node.js applications and modules robust:\nChoosing …",
-          "link": "https://developers.redhat.com/articles/2022/08/09/8-elements-securing-nodejs-applications",
-          "publishedOn": "2022-08-09T07:00:00.000Z",
-          "wordCount": 3688,
-          "title": "8 elements of securing Node.js applications",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
-        },
-        {
-          "id": "5adfbbc9-3385-45b5-8707-eff82e74941a",
-          "author": "Eric Deandrea",
-          "description": "Are you building microservices? Do you struggle with observability and with capturing telemetry data between distributed services? This article shows how to quickly and easily introduce OpenTelemetry into a distributed system built on Java with Quarkus. This combination allows you to visualize the interactions between all the microservices within an overall system.\nThe article introduces the official Quarkus sample application, Quarkus Superheroes, deploys it on the free Developer Sandbox for Red Hat OpenShift, and demonstrates how to collect and visualize telemetry data in order to observe microservices' behavior.\nWhat is OpenTelemetry?\nThe OpenTelemetry website states that \"OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, generate, collect, and export telemet…",
-          "link": "https://developers.redhat.com/articles/2022/08/08/opentelemetry-quarkus-superheroes-demo-observability",
-          "publishedOn": "2022-08-08T07:00:00.000Z",
-          "wordCount": 4368,
-          "title": "OpenTelemetry: A Quarkus Superheroes demo of observability",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/CacheClusters_QuarkusDataGrid_0.png?itok=AQQbcexT"
         }
       ]
     },
@@ -565,24 +574,33 @@
       "title": "Embedded Artistry",
       "feedUrl": "https://embeddedartistry.com/feed/",
       "siteUrl": "https://embeddedartistry.com/",
-      "articles": [
-        {
-          "id": "https://embeddedartistry.com/?p=21784",
-          "author": "Phillip Johnston",
-          "description": "8 August 2022 by Phillip JohnstonEmbedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our goal is to spread beneficial techniques and practices throughout … \nContinue reading \"Debugging Embedded Devices in Production\"\nThe post Debugging Embedded Devices in Production appeared first on Embedded Artistry.",
-          "link": "https://embeddedartistry.com/blog/2022/08/08/debugging-embedded-devices-in-production/",
-          "publishedOn": "2022-08-08T16:03:51.000Z",
-          "wordCount": 6554,
-          "title": "Debugging Embedded Devices in Production",
-          "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Embedded.com",
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4476147",
+          "author": "Fahad Masood",
+          "description": "Remote patient monitoring patches help doctors provide better care, but they pose challenges for power supply designers who must balance system performance and battery life...\nThe post Power supply design for primary cell powered patient monitors appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/power-supply-design-for-primary-cell-powered-patient-monitors/",
+          "publishedOn": "2022-09-06T19:22:00.000Z",
+          "wordCount": 5250,
+          "title": "Power supply design for primary cell powered patient monitors",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/09adi_fm-fig-02-t.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4476142",
+          "author": "Eric Whitley",
+          "description": "The manufacturing industry, in particular, sees cloud computing as an opportunity to implement revolutionary solutions that usher in the rise of the smart factory. Source:...\nThe post 4 elements of an effective smart manufacturing platform appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/4-elements-of-an-effective-smart-manufacturing-platform/",
+          "publishedOn": "2022-09-06T14:14:56.000Z",
+          "wordCount": 3957,
+          "title": "4 elements of an effective smart manufacturing platform",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/smart_mfg.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4476125",
           "author": "Nitin Dahad",
@@ -792,16 +810,6 @@
           "wordCount": 6266,
           "title": "Enabling a secure edge in cloud-based AI with Google Anthos bare metal",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/f0514lx-Figure-2-anthos-deployment-on-lynx-secure-edge-Image-2.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4475811",
-          "author": "Jellenie Rodriguez and Mary McCarthy",
-          "description": "Designing a thermistor-based temperature measurement system is a challenging, multistep process, but a combination of specialized hardware, software and development tools can ease this process....\nThe post Optimizing thermistor-based temperature sensing systems: System design appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/optimizing-thermistor-based-temperature-sensing-systems-system-design/",
-          "publishedOn": "2022-08-09T12:06:58.000Z",
-          "wordCount": 6961,
-          "title": "Optimizing thermistor-based temperature sensing systems: System design",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/2208adi-temp2_fig-01_t.jpg"
         }
       ]
     },
@@ -809,18 +817,7 @@
       "title": "EmbeddedRelated.com Blogs",
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
-      "articles": [
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1460.php",
-          "author": null,
-          "description": "Contents:\r\n\r\nIntroduction\n\r\nDo I Need To Be An Expert In Everything?\n\r\nHow Much Time Do I need?\n\r\nDo I need A College Degree?\n\r\nWhy Is The List So Big?\n\r\nDo I Really Need All These Things?\n\r\n\n\r\n\r\nThe Skills\n\r\nSoftware\n\r\n<a...",
-          "link": "https://www.embeddedrelated.com/showarticle/1460.php",
-          "publishedOn": "2022-08-09T12:39:39.000Z",
-          "wordCount": 3496,
-          "title": "Skills For Embedded Systems Software Developers",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Better Embedded System SW",
@@ -833,6 +830,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2022/09/weareplay-meet-sam-from-chicago-and-more-stories.html",
+          "author": null,
+          "description": "Posted by Leticia Lago, Developer Marketing\n \n\n A medical game for doctors, a language game for kids, a scary game for horror lovers and an escape room game for thrill seekers! In this latest batch of #WeArePlay stories, we’re celebrating the founders behind a wonderful variety of games from all over the world. Have a read and get gaming! \n\nTo start, let’s meet Sam from Chicago. Coming from a family of doctors, his Dad challenged him to make a game to help those in the medical field. Sam agreed, made a game and months later discovered over 100,000 doctors were able to practice medical procedures. This early success inspired him to found Level Ex - a company of 135, making world-class medical games for doctors across the globe. Despite his achievements, his Dad still hopes Sam may one day get into medicine himself and clinch a Nobel prize.   \n\n\n\n\nNext, a few more stories from around the world:\n\nAldo and Sandro from Peru - founders of Dark Dome. They combine storytelling and art to make thrilling and chilling games, filled with plot twists and jump scares.\n\n\n\n\n\n\nVladimir, Tomislav and Boris from Croatia - founders of Pine Studio. They won the Indie Games Festival 2021 with their game Cats In Time. \n\n\n\n\n\nKelly, Mikk, Reimo and Madde from Estonia - founders of ALPA kids. Their language games for children have a huge impact on early education and language preservation.\n\n\n\n\n\nCheck out all the stories now at g.co/play/weareplay and stay tuned for even more coming soon.\n\n\n\n\nHow useful did you find this blog post?\n★ ★ ★ ★ ★",
+          "link": "http://developers.googleblog.com/2022/09/weareplay-meet-sam-from-chicago-and-more-stories.html",
+          "publishedOn": "2022-09-07T16:42:00.000Z",
+          "wordCount": 1713,
+          "title": "#WeArePlay | Meet Sam from Chicago. More stories from Peru, Croatia and Estonia.",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxwsjHRjPNQuqyz3LwtKXHQZSHP9RYVWVkfHzqcbuydukpzHCj9CuEvJjBZTI7m5dQ4Fh8Lfuxzjp4qwJ9skSGy9NPaEUQ1EG7VTl9EZMOf63qah99AUhakTIXwj8hWiePg1eInClEfoca8TzW2pTw812kBTNCMvwEYWVm6dJ12Pc84nJ02YEyycqx/w1200-h630-p-k-no-nu/Android%20Devs%20_%20Google%20Devs%20-Blog_Header_1200x600%20%282%29.jpg"
+        },
+        {
+          "id": "http://developers.googleblog.com/2022/09/google-dev-library-letters-13th-issue.html",
+          "author": null,
+          "description": "Posted by Garima Mehra, Program Manager\n\n\n \n\n\n \n \n    \n                    \n                                    \nWelcome to the 13th Issue: ‘Google Dev Library letters’ is a technology newsletter curated to bring you some of the best projects developed with Google tech and submitted to the Google Dev Library platform. We are back with another boost of inspiration for your next project!\n                            \n            \n\n\nHero Content of the month\nCheck out shortlisted content from the Google technologies of your choice.\nAndroid\n\n\n\n\nContact Store API by Alex Styl\nContact Store is a modern API that makes access to contacts on Android devices simple to use. It solves for the most frequent use cases and makes developing enjoyable.\n\n\n\n\n\nCustom Progress Indicator by Samson Achiaga\nCustom…",
+          "link": "http://developers.googleblog.com/2022/09/google-dev-library-letters-13th-issue.html",
+          "publishedOn": "2022-09-06T17:00:00.001Z",
+          "wordCount": 1853,
+          "title": "Google Dev Library Letters : 13th Issue",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjftYWxB2WeEK67-Np7DySJYyFdbJhzj73v-5nbM2Wco1sF_jGJN3cWdWBwLLLnlQD2WcwzE5pmwE6Infgn4n3RL4wXTOERSTCzyJJtvg-mDq8p1JXg-ab4oTlMYb78nKRZdM-i0wNusSC-Wv6SEGsxlMV0uMQ9k3vuTbprJNZ1_2d_MTizxNzmlBL-/w1200-h630-p-k-no-nu/GoogleDev-GoogleDevLibrary-12thIssue-02%20%281%29.png"
+        },
         {
           "id": "http://developers.googleblog.com/2022/08/black-founders-class-of-2022.html",
           "author": null,
@@ -912,26 +929,6 @@
           "wordCount": 2269,
           "title": "Migrating from App Engine Blobstore to Cloud Storage (Module 16)",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL54ZJEJGx-selv6yaPEeVbOpPXbb18X40k98Mhqnh_TS5nRSvDPaauhuyntrhoVSG-3dPEMLrPpOlstf3FwfEkId-XBeZ8RR-leHaehSy_qYl7iFKxuWtBjIdNSv2B0ltPdn_Tqp_Ll1r3oToEOFkkYihJQLeiGANaexS6btKlvHBoaI9hpoZ3lqT/w1200-h630-p-k-no-nu/Module%2016%20header.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2022/08/google-dev-library-letters-12th-issue.html",
-          "author": null,
-          "description": "Posted by Garima Mehra, Program Manager\n\n\n ‘Google Dev Library Letters’ is curated to bring you some of the latest projects developed with Google tech submitted to Google Dev Library Platform. We hope this brings you the inspiration you need for your next project!\n\n\nAndroid\nShape your Image: Circle, Rounded Square, or Cuts at the corner in Android by Sriyank Siddhartha\nUsing the MDC library, shape images in just a few lines of code by using ShapeableImageView.\n\n\nFoso/Ktorfit by Jens Klingenberg\nHTTP client / Kotlin Symbol Processor for Kotlin Multiplatform (Js, Jvm, Android, Native, iOS) using KSP and Ktor clients inspired by Retrofit.\n\n\n\n\n\nFlutter\nInternationalization and Localization In Flutter by Lakshydeep Vikram\nChange your Flutter app to another locale or language.\n\n\n\n\nFinal vs Const…",
-          "link": "http://developers.googleblog.com/2022/08/google-dev-library-letters-12th-issue.html",
-          "publishedOn": "2022-08-09T17:03:00.000Z",
-          "wordCount": 1760,
-          "title": "Google Dev Library Letters — 12th Issue",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZpa2Qg8Eb3BKFmXA6KHjfy9wvSLGyCudMDwTyD5fid6Ki1wftDNBjWqpfuNLOVOMc76z9bruxZ8VhU7En4MLmX0vrRZNLM_1H4HU4NuBA1jLi20IVYwVygmCvDwCr94Uhb8ktrOWUeZq1dQgOHJuHvJag8y9qx5NpVFg_0qsXvPHmcWrSLOLJVH4-/w1200-h630-p-k-no-nu/GoogleDev-GoogleDevLibrary-12thIssue-02.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2022/08/becoming-a-Google-Developer-Expert-Shuyu-Asher-Guo.html",
-          "author": null,
-          "description": "Written by Shuyu (Asher) Guo, Dart & Flutter GDE, China\n \n\n \n\n At the end of May 2022, after more than a month of Google Developer Expert interviews, I finally became the fourth Flutter & Dart GDE in China. \nI believe that the title of GDE should be very familiar for Android or Machine Learning developers. If you’re not familiar, the Google Developer Experts program is a global network of highly experienced technology experts, influencers, and thought leaders who have expertise in Google technologies, and are active leaders in the space and contribute to the wider developer and startup ecosystem. \n  \nMy journey to becoming a GDE\n\nIn 2013, Android Bus was my first exposure to the Android community and it was at the ApkBus conference that I came into contact with the first GDE I’ve ever met.…",
-          "link": "http://developers.googleblog.com/2022/08/becoming-a-Google-Developer-Expert-Shuyu-Asher-Guo.html",
-          "publishedOn": "2022-08-08T18:09:00.000Z",
-          "wordCount": 2010,
-          "title": "From offstage to onstage, my experience of becoming a Google Developer Expert",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgv5xGpjSWdZN7SJYj47hFICokuOSKBoH7H4iQzipZE8Vv_gNiU32nXeImz_csgmZZmdmKAbIRPGx1226ouoIdECO6UxzGPkCFXoWbNuUTiuJahMHlVOY8SGAxubvi9x8NKfN-q3wEyFdg5TjMf65MmlW70Tz0h3TYdKs1SHU0OCjqljBJv3b55jaHo/w1200-h630-p-k-no-nu/GoogleDev-GuoShuyuGDEStory_1234x802.png"
         }
       ]
     },
@@ -953,13 +950,13 @@
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
         {
-          "id": "https://pythoninsider.blogspot.com/2022/08/python-3110rc1-is-now-available.html",
+          "id": "https://pythoninsider.blogspot.com/2022/09/python-releases-3107-3914-3814-and-3714.html",
           "author": null,
-          "description": "This is the first release candidate of Python 3.11\nhttps://www.python.org/downloads/release/python-3110rc1/\nThis release, **3.11.0rc1**, is the penultimate release preview.  Entering the release candidate phase, only reviewed code changes which are clear bug fixes are allowed between this release candidate and the final release. The second candidate and the last planned release preview is currently planned for Monday, 2022-09-05 while the official release is planned for Monday, 2022-10-03.\nThere will be no ABI changes from this point forward in the 3.11 series and the goal is that there will be as few code changes as possible.\nCall to action\nCore developers: all eyes on the docs now\n* Are all your changes properly documented?\n* Did you notice other changes you know of to have insufficient …",
-          "link": "https://pythoninsider.blogspot.com/2022/08/python-3110rc1-is-now-available.html",
-          "publishedOn": "2022-08-08T17:17:00.002Z",
-          "wordCount": 2024,
-          "title": "Python 3.11.0rc1 is now available",
+          "description": "We have some security content, and plenty of regular bug fixes for 3.10. Let’s dive right in.\n\n\nCVE-2020-10735\nConverting between int and str in bases other than 2 (binary), 4, 8 (octal), 16 (hexadecimal), or 32 such as base 10 (decimal) now raises a ValueError if the number of digits in string form is above a limit to avoid potential denial of service attacks due to the algorithmic complexity.\nSecurity releases for 3.9.14, 3.8.14, and 3.7.14 are made available simultaneously to address this issue, along with some less urgent security content.\nUpgrading your installations is highly recommended.\nPython 3.10.7\nGet it here:\nhttps://www.python.org/downloads/release/python-3107/\nThis bugfix version of Python was released out-of-schedule to address the CVE, and as such contains a smaller number …",
+          "link": "https://pythoninsider.blogspot.com/2022/09/python-releases-3107-3914-3814-and-3714.html",
+          "publishedOn": "2022-09-07T13:03:00.002Z",
+          "wordCount": 1775,
+          "title": "Python releases 3.10.7, 3.9.14, 3.8.14, and 3.7.14 are now available",
           "imageUrl": null
         }
       ]
@@ -969,6 +966,26 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0988/",
+          "author": null,
+          "description": "In 2018, Microsoft created ML.NET, a machine learning framework for .NET developers. Since then, the machine learning library has undergone significant changes and acquired new features to identify patterns within data. Let's see how these changes have affected the quality of ML.NET source code. And explore the errors, of course!",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/0988/",
+          "publishedOn": "2022-09-07T21:00:00.000Z",
+          "wordCount": 6065,
+          "title": "ML.NET: can Microsoft's machine learning be trusted?",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0988_ML_NET/image1_thm_intoblank_1200x630.png"
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0987/",
+          "author": null,
+          "description": "Most applications today use third-party libraries. If such a library contains a vulnerability, an app that uses this library may also be vulnerable. But how can you identify such problematic dependencies?",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/0987/",
+          "publishedOn": "2022-09-05T21:00:00.000Z",
+          "wordCount": 4642,
+          "title": "The risks of using vulnerable dependencies in your project, and how SCA helps manage them",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0987_PVS-Studio_SCA/image1_thm_intoblank_1200x630.png"
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0986/",
           "author": null,
@@ -1068,26 +1085,6 @@
           "wordCount": 4528,
           "title": "&quot;Our legacy of the past&quot; or why we divided the V512",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0978_V512_V1086_split/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/0977/",
-          "author": null,
-          "description": "You all know our mascot — a unicorn — many people grew fond of him! However, PVS-Studio has a supporting character who is also the antagonist of our product — a bug! Well, a bug is not omnipresent, indestructible evil. It's more like an everyday or a work-related trouble. In this article, you'll learn how we created a new character, and why he looks like a ladybug. Oh, and if you wonder why the hell he has a belly button — keep reading!",
-          "link": "https://pvs-studio.com/en/blog/posts/0977/",
-          "publishedOn": "2022-08-09T21:00:00.000Z",
-          "wordCount": 4863,
-          "title": "A tale of how PVS-Studio reimagined the bug",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0977_About_our_bug/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/0976/",
-          "author": null,
-          "description": "This is the second article about related variables and how the PVS-Studio analyzer deals with them. This time, let's talk about how we enhanced the mechanism we created, and what problems of the analyzer users this upgrade solved. We will also take a look at examples of related variables in real projects.",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/0976/",
-          "publishedOn": "2022-08-07T21:00:00.000Z",
-          "wordCount": 6725,
-          "title": "PVS-Studio's data flow analysis untangles more and more related variables",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0976_Related_variables_upgrade/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1205,16 +1202,6 @@
           "wordCount": 3878,
           "title": "How Headless Commerce Will Change How and Where We Buy",
           "imageUrl": "https://future.com/wp-content/uploads/2022/08/SocialShareCard-HeadlessCommerceQA-FB.png"
-        },
-        {
-          "id": "https://future.com/?p=6737",
-          "author": "Ben Stokes",
-          "description": "Over the last two years, I’ve built and launched eight tiny internet projects. From apps to websites, most of them have flopped — but together, my ragtag group of projects might be considered ramen profitable. My last project, Paper Website, lets you start a blog using pen and paper. It was a weird idea, but... Read More\nThe post Why Developers Are Building So Many Side Projects appeared first on Future.",
-          "link": "https://future.com/developers-side-projects/",
-          "publishedOn": "2022-08-09T14:00:43.000Z",
-          "wordCount": 2782,
-          "title": "Why Developers Are Building So Many Side Projects",
-          "imageUrl": "https://future.com/wp-content/uploads/2022/08/841-Tiny-Projects-Social-Share-Facebook-FINAL.jpg"
         }
       ]
     },
@@ -1247,6 +1234,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/august-2022-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nAugust\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/august-2022-roundup",
+          "publishedOn": "2022-09-06T00:00:00.000Z",
+          "wordCount": 1286,
+          "title": "What we've been reading in August",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/memfault-bluetooth",
           "author": null,
           "description": "In this post, I’ll go through how we evaluated Memfault at Blecon and talk through what we liked and why we decided to use it, how we integrated it into the nRF5 platform and carried the Memfault data over to the Memfault cloud via Bluetooth.\nContinue reading…",
@@ -1265,16 +1262,6 @@
           "wordCount": 1210,
           "title": "What we've been reading in July",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/ota-delta-updates",
-          "author": null,
-          "description": "In this post, we introduce the concept of delta (i.e. partial) firmware updates,\nexplain why you may want to implement them in your projects and go through an\nexample implementation from top to bottom.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/ota-delta-updates",
-          "publishedOn": "2022-08-09T00:00:00.000Z",
-          "wordCount": 3223,
-          "title": "Saving bandwidth with delta firmware updates",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
     },
@@ -1291,16 +1278,6 @@
           "publishedOn": "2022-08-22T11:13:30.000Z",
           "wordCount": 2530,
           "title": "50,000+ Downloads and Rising",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.iotsecurityfoundation.org/?p=21641",
-          "author": "-",
-          "description": "The IoTSF conference is the longest running event focused on IoT security and without question attracts the best speakers and key stakeholders on the subject from across the globe. This year is no exception with leaders from Governments, large organisations, SMEs, and vendor solutions to manage the IoT security risk. All play",
-          "link": "https://www.iotsecurityfoundation.org/revealing-the-iotsf-conference-2022/",
-          "publishedOn": "2022-08-09T08:00:36.000Z",
-          "wordCount": 2741,
-          "title": "Revealing The IoTSF Conference 2022",
           "imageUrl": null
         }
       ]
@@ -1351,6 +1328,106 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/907522/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of the 5.19.8, 5.15.66, and 5.10.142. As usual, those contain important\nfixes throughout the kernel tree. Immediately thereafter, he released\n5.15.67 to fix a permissions problem on a\nkernel build script.",
+          "link": "https://lwn.net/Articles/907522/",
+          "publishedOn": "2022-09-08T19:52:44.000Z",
+          "wordCount": 150,
+          "title": "New stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906511/",
+          "author": "corbet",
+          "description": "Huge pages are a mechanism implemented by the CPU that allows the management\nof memory in larger chunks.  Use of huge pages can increase performance\nsignificantly, which is why the kernel has a \"transparent huge page\"\nmechanism to try to create them when possible.  But a huge page will only\nbe helpful if most of the memory contained within it is actually in use;\notherwise it is just an expensive waste of memory.  This patch\nset from Alexander Zhu implements a mechanism to detect underutilized\nhuge pages and recover that wasted memory for other uses.",
+          "link": "https://lwn.net/Articles/906511/",
+          "publishedOn": "2022-09-08T18:25:29.000Z",
+          "wordCount": null,
+          "title": "[$] The transparent huge page shrinker",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907508/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (libgoogle-gson-java), Fedora (autotrace, insight, and open-vm-tools), Oracle (open-vm-tools), Red Hat (open-vm-tools, openvswitch2.13, openvswitch2.15, openvswitch2.16, openvswitch2.17, ovirt-host, and rh-nodejs14-nodejs and rh-nodejs14-nodejs-nodemon), Scientific Linux (open-vm-tools), Slackware (python3), SUSE (clamav, gdk-pixbuf, gpg2, icu, ImageMagick, java-1_8_0-ibm, libyajl, mariadb, udisks2, webkit2gtk3, and yast2-samba-provision), and Ubuntu (dnsmasq).",
+          "link": "https://lwn.net/Articles/907508/",
+          "publishedOn": "2022-09-08T13:59:07.000Z",
+          "wordCount": 320,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906796/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for September 8, 2022 is available.",
+          "link": "https://lwn.net/Articles/906796/",
+          "publishedOn": "2022-09-08T00:06:16.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for September 8, 2022",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907226/",
+          "author": "jake",
+          "description": "Starting a Python application typically results in a flurry of imports as\nmodules from various locations (and the modules they import) get added\ninto the application process.  All of that occurs before the application\neven gets started doing whatever it is the user actually launched it for;\nthat delay can be significant—and annoying.  Beyond that, many of those\nimports may not be necessary at all for the code path being followed, so\neagerly doing the import is purely wasted time.  A proposal back in May\nwould add a way for applications to choose lazy imports, where the import\nis deferred until the module is actually used.",
+          "link": "https://lwn.net/Articles/907226/",
+          "publishedOn": "2022-09-07T16:33:37.000Z",
+          "wordCount": null,
+          "title": "[$] Lazy imports for Python",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907382/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Fedora (curl, protobuf-c, and vim) and SUSE (gimp, java-1_8_0-openj9, libostree, openvswitch, python-bottle, python-Flask-Security-Too, and zabbix).",
+          "link": "https://lwn.net/Articles/907382/",
+          "publishedOn": "2022-09-07T09:40:56.000Z",
+          "wordCount": 202,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/906859/",
+          "author": "jake",
+          "description": "Linux Mint 21 \"Vanessa\" was released\non July 31.  There are no real headline-grabbing features that come\nwith the new release, as the project generally seeks to make incremental\nchanges, rather than larger, potentially disruptive ones.\nChanges in this release include a new Bluetooth manager that brings several\nimprovements,  driverless printing and scanning\nby default, a process monitor to inform the user\nabout resource-intensive background tasks, new functionality for the\nTimeshift system backup tool, and several major under-the-hood improvements\nto the Cinnamon \ndesktop environment.",
+          "link": "https://lwn.net/Articles/906859/",
+          "publishedOn": "2022-09-06T16:27:14.000Z",
+          "wordCount": null,
+          "title": "[$] A look at Linux Mint 21",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907278/",
+          "author": "corbet",
+          "description": "Version 5.2.0 of the GNU Awk implementation is out.  The biggest change,\nperhaps, is the addition of \"persistent memory\" support that allows gawk to\nkeep values around between runs.  Old-timers will be disappointed by\nthe removal of VAX/VMS support.",
+          "link": "https://lwn.net/Articles/907278/",
+          "publishedOn": "2022-09-06T08:51:46.000Z",
+          "wordCount": 1286,
+          "title": "Gawk 5.2.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907275/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Red Hat (pcs), SUSE (389-ds and firefox), and Ubuntu (linux-hwe-5.4 and linux-oracle).",
+          "link": "https://lwn.net/Articles/907275/",
+          "publishedOn": "2022-09-06T08:46:50.000Z",
+          "wordCount": 158,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907238/",
+          "author": "corbet",
+          "description": "Version\n22.03.0 of the OpenWrt distribution for routers (and beyond) has been\nreleased.  \"It incorporates over 3800 commits since branching the\nprevious OpenWrt 21.02 release and has been under development for about one\nyear\".  Changes include a new firewall implementation using nftables,\nyear-2038 readiness, dark mode in the LuCI web-based administration tool,\nand support for many more devices.",
+          "link": "https://lwn.net/Articles/907238/",
+          "publishedOn": "2022-09-06T07:10:11.000Z",
+          "wordCount": 2104,
+          "title": "OpenWrt 22.03.0 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/906852/",
           "author": "corbet",
@@ -2040,26 +2117,6 @@
           "wordCount": 414,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904197/",
-          "author": "jake",
-          "description": "A tool to discover known security vulnerabilities in the Python packages installed on\na system or required by a project, called pip-audit, was recently\ndiscussed on the Python discussion\nforum.  The developers of pip-audit raised\nthe idea of adding the functionality directly into the pip package installer, rather than\nkeeping it as a separately installable tool.  While the functionality provided by\npip-audit was seen as a clear benefit to the ecosystem, moving it\ninside the pip \"tent\" was not as overwhelmingly popular.  It is not obvious \nthat auditing is part of the role that the package\ninstaller should play.",
-          "link": "https://lwn.net/Articles/904197/",
-          "publishedOn": "2022-08-09T23:50:07.000Z",
-          "wordCount": null,
-          "title": "[$] Adding auditing to pip",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904101/",
-          "author": "corbet",
-          "description": "As Jeff Mahoney notes in this\nmessage to the openSUSE factory list, the reiserfs filesystem has been\nunmaintained for years and lacks many of the features that users have come\nto expect.  He has thus proposed removing reiserfs from openSUSE Tumbleweed\nimmediately.\n\n\n\tI recognize that there may be people out there with disks\n\tcontaining reiserfs file systems.  If these are in active use, I\n\twould seriously encourage migrating to something actively\n\tmaintained.",
-          "link": "https://lwn.net/Articles/904101/",
-          "publishedOn": "2022-08-07T17:53:18.000Z",
-          "wordCount": 187,
-          "title": "OpenSUSE considers dropping reiserfs",
-          "imageUrl": null
         }
       ]
     },
@@ -2074,6 +2131,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/patterns-of-distributed-systems/request-batch.html",
+          "author": null,
+          "description": "When distributing data leads to lots of small messages around a cluster\n      then network latency and the request processing time (including\n      serialization, deserialization of the request on the server side) can add\n      significant overhead. Unmesh Joshi shows how requests can\n      be combined into a Request Batch to improve throughput.\nmore…",
+          "link": "https://martinfowler.com/articles/patterns-of-distributed-systems/request-batch.html",
+          "publishedOn": "2022-09-06T15:21:00.000Z",
+          "wordCount": 1221,
+          "title": "Request Batch",
+          "imageUrl": "https://martinfowler.com/articles/patterns-of-distributed-systems/card.png"
+        },
         {
           "id": "https://martinfowler.com/articles/patterns-of-distributed-systems/key-range-partitions.html",
           "author": null,
@@ -2139,6 +2206,16 @@
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
       "articles": [
         {
+          "id": "https://medium.com/p/ece2c3691712",
+          "author": "Adwait Patankar",
+          "description": "In today’s world which is completely engulfed in social media, the notion of tags is not new. Most of the media publicly shared on the…",
+          "link": "https://blog.espressif.com/esp-insights-playing-with-device-tags-ece2c3691712?source=rss----d5414d5dee73---4",
+          "publishedOn": "2022-09-08T12:20:03.000Z",
+          "wordCount": 1994,
+          "title": "ESP Insights: Playing with Device Tags",
+          "imageUrl": "https://miro.medium.com/max/1200/1*hZPHeMOzuY3lsH1qAZHtBg.png"
+        },
+        {
           "id": "https://medium.com/p/fff3396b2dba",
           "author": "Adwait Patankar",
           "description": "ESP Insights Dashboard",
@@ -2147,26 +2224,6 @@
           "wordCount": 2613,
           "title": "ESP Insights : Custom Dashboards",
           "imageUrl": "https://miro.medium.com/max/1200/1*tITizmaiV8jmls-Gr9GCvw.png"
-        },
-        {
-          "id": "https://medium.com/p/4fd48c17c5b9",
-          "author": "Adwait Patankar",
-          "description": "It’s been a few months, since we first introduced our Group Analytics feature in the ESP Insights. Group Analytics allows a wholistic view…",
-          "link": "https://blog.espressif.com/esp-insights-group-analytics-with-dynamic-search-filters-4fd48c17c5b9?source=rss----d5414d5dee73---4",
-          "publishedOn": "2022-08-09T09:59:28.000Z",
-          "wordCount": 2171,
-          "title": "ESP Insights: Group Analytics with Dynamic Search Filters",
-          "imageUrl": "https://miro.medium.com/freeze/max/600/1*57NziABr7wzDOqhyuyWWqQ.gif"
-        },
-        {
-          "id": "https://medium.com/p/30eb7129a207",
-          "author": "ESP BOT",
-          "description": "Hi everyone,",
-          "link": "https://blog.espressif.com/july-2022-30eb7129a207?source=rss----d5414d5dee73---4",
-          "publishedOn": "2022-08-08T05:40:42.000Z",
-          "wordCount": 2618,
-          "title": "July 2022",
-          "imageUrl": "https://miro.medium.com/max/1200/0*5m0mEkf7dn0V0Nu4.jpg"
         }
       ]
     },
@@ -2188,6 +2245,16 @@
       "siteUrl": "https://novelbits.io/",
       "articles": [
         {
+          "id": "https://novelbits.io/?p=22402",
+          "author": "Mohammad Afaneh",
+          "description": "The Internet of Things (IoT) has been a buzzword for decades, but today this market is far from theoretical. There are over 10 billion active IoT devices globally, and one of the key technologies enabling this market growth is Bluetooth Low Energy (BLE).  Introduced in 2012, this flexible protocol provides wireless connection for many of […]\nThe post Bluetooth Low Energy (BLE): A Complete Guide appeared first on Novel Bits.",
+          "link": "https://novelbits.io/bluetooth-low-energy-ble-complete-guide/",
+          "publishedOn": "2022-09-06T11:54:43.000Z",
+          "wordCount": 10917,
+          "title": "Bluetooth Low Energy (BLE): A Complete Guide",
+          "imageUrl": "https://mlv0gpv1snjt.i.optimole.com/QjQqjz0._0gS~51496/w:auto/h:auto/q:90/https://novelbits.io/wp-content/uploads/2022/09/Bluetooth-Low-Energy-Guide.png"
+        },
+        {
           "id": "https://novelbits.io/?p=22320",
           "author": "Nthatisi Hlapisi",
           "description": "If you’re looking for a way to add BLE connectivity to your project, you have many options. So how do you know which module is right for you? We’ll help you understand the options available and make the best decision for your needs. How to select a BLE module There are a few key considerations […]\nThe post How to Choose a BLE Module for Your Project appeared first on Novel Bits.",
@@ -2206,16 +2273,6 @@
           "wordCount": 7952,
           "title": "The Ultimate Guide to Getting Started with Android Bluetooth LE Development",
           "imageUrl": "https://novelbits.io/wp-content/uploads/2022/08/Android-BLE-Development-2.png"
-        },
-        {
-          "id": "https://novelbits.io/?p=21553",
-          "author": "Mohammad Afaneh",
-          "description": "If you want to learn how to create a GATT server and load it with some attributes, then you might find this tutorial helpful. The process of creating a GATT server is not as daunting or complicated, that is, once you break it down into easy steps. What You Will Need: Read the ATT Protocol […]",
-          "link": "https://novelbits.io/design-bluetooth-low-energy-gatt-server-database/",
-          "publishedOn": "2022-08-09T11:55:49.000Z",
-          "wordCount": 3794,
-          "title": "Tutorial: How To Design A Bluetooth LE GATT Server For Your Application",
-          "imageUrl": "https://novelbits.io/wp-content/uploads/2022/08/Designing-Your-GATT-Server.png"
         }
       ]
     },
@@ -2223,18 +2280,7 @@
       "title": "null program",
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
-      "articles": [
-        {
-          "id": "https://nullprogram.com/blog/2022/08/08/",
-          "author": null,
-          "description": "I generally prefer C, so I’m accustomed to building whatever I need\non the fly, such as heaps, linked lists, and especially hash\ntables. Few programs use more than a small subset of a data structure’s\nfeatures, making their implementation smaller, simpler, and more\nefficient than the general case, which must handle every edge\ncase. A typical hash table tutorial will describe a relatively lengthy\nprogram, but in practice, bespoke hash tables are only a few lines of\ncode. Over the years I’ve worked out some basic principles for hash\ntable construction that aid in quick and efficient implementation. This\narticle covers the technique and philosophy behind what I’ve come to call\nthe “mask-step-index” (MSI) hash table, which is my standard approach.\nMSI hash tables are nothing novel, just a doub…",
-          "link": "https://nullprogram.com/blog/2022/08/08/",
-          "publishedOn": "2022-08-08T23:57:08.000Z",
-          "wordCount": 2588,
-          "title": "The quick and practical \"MSI\" hash table",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Preshing on Programming",
@@ -2310,16 +2356,6 @@
           "wordCount": 1515,
           "title": "Impact of number of files on number of review comments",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=7029",
-          "author": "Derek Jones",
-          "description": "The Linux Counter project was started in 1993, with the aim of tracking the growth of Linux users (the kernel was first released two years earlier). Anybody could register any of their machines running Linux; a user ran a script that gathered basic information about a machine, and the output was emailed to the project. […]",
-          "link": "https://shape-of-code.com/2022/08/07/analysis-of-a-subset-of-the-linux-counter-data/",
-          "publishedOn": "2022-08-07T22:16:56.000Z",
-          "wordCount": 1559,
-          "title": "Analysis of a subset of the Linux Counter data",
-          "imageUrl": null
         }
       ]
     },
@@ -2328,6 +2364,36 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=10949",
+          "author": "Stacey Higginbotham",
+          "description": "This week launched with a bang for those interested in the role insurers might play in the smart home as State Farm agreed to make a 1.2 billion equity investment in security firm ADT. This follows on the heels of Google’s equity investment in ADT in 2020 and signals a shift in the way insurance companies […]\nThe post Podcast: Insurers come for the smart home appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-insurers-come-for-the-smart-home/",
+          "publishedOn": "2022-09-08T13:00:08.000Z",
+          "wordCount": 1673,
+          "title": "Podcast: Insurers come for the smart home",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/09/Baby_s-Room-68-Puck-1024x713.png"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=10928",
+          "author": "Stacey Higginbotham",
+          "description": "If you know where to look, the Matter smart home protocol is already here. At the IFA show in Berlin which took place this week, Eve Systems is showing off its sensors interoperating with other Matter-compatible devices, while Google has a sign-up sheet for people to access Matter as part of a private developer preview program. If […]\nThe post It’s not yet fall, but Matter is already here appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/its-not-yet-fall-but-matter-is-already-here/",
+          "publishedOn": "2022-09-06T17:30:22.000Z",
+          "wordCount": 2113,
+          "title": "It’s not yet fall, but Matter is already here",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/09/FbkQWiDXEAEk34j.jpeg?fit=1920%2C1080&ssl=1"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=10924",
+          "author": "Stacey Higginbotham",
+          "description": "Imagine if your smart speaker could be trained to recognize your accent, or if a pair of running shoes could alert you in real time if your gait changed, indicating fatigue. Or if, in the industrial world, sensors could parse vibration information from a machine that changed location and function often in real time, halting […]\nThe post Can TinyML really provide on-device learning? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/can-tinyml-really-provide-on-device-learning/",
+          "publishedOn": "2022-09-06T16:37:12.000Z",
+          "wordCount": 2450,
+          "title": "Can TinyML really provide on-device learning?",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-01-at-9.58.31-AM.png"
+        },
         {
           "id": "https://staceyoniot.com/?p=10910",
           "author": "Stacey Higginbotham",
@@ -2507,36 +2573,6 @@
           "wordCount": 1927,
           "title": "Here’s a new, inexpensive smart dryer solution",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/01/bigstock-White-Clean-Laundry-Room-Moder-257148490.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10791",
-          "author": "Stacey Higginbotham",
-          "description": "In the wake of the Supreme Court’s Dobbs decision, which eliminated the right to abortion granted by Roe v. Wade, lawmakers and citizens in the U.S. have become acutely aware of the surveillance capabilities of their apps, phones, and connected devices. Worried that pregnant women seeking abortions in states where they are illegal might face […]\nThe post Is it finally time for a privacy-protecting data service? appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/is-it-finally-time-for-a-privacy-protecting-data-service/",
-          "publishedOn": "2022-08-09T15:06:56.000Z",
-          "wordCount": 2092,
-          "title": "Is it finally time for a privacy-protecting data service?",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/atIoT-Network-Architecture-1.png"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10779",
-          "author": "Stacey Higginbotham",
-          "description": "When Amazon said it would pay $1.7 billion to acquire iRobot, the maker of the Roomba vacuum and other home robots, I was dismayed. Sure, I’m leery of bringing more Amazon products into my home, given the company’s willingness to share private data with law enforcement, but for me the biggest disappointment is that if […]\nThe post Maps, mops and Matter: Why Amazon wants iRobot appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/maps-mops-and-matter-why-amazon-wants-irobot/",
-          "publishedOn": "2022-08-08T19:05:53.000Z",
-          "wordCount": 2648,
-          "title": "Maps, mops and Matter: Why Amazon wants iRobot",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/Screenshot_20220808-114825-1-e1659984665989.png"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10760",
-          "author": "Kevin C. Tofel",
-          "description": "As a smart watch owner since 2011, I’ve generally equated the word “wearable” with these devices. Indeed, only now — more than a decade since I wore that first Motorola MotoACTV watch — are we finally seeing wearables evolve. They now include smart clothing, advanced fitness trackers, more capable health monitors, and more. So maybe it’s time to consider […]\nThe post Smart scarves are wrapped in layers of ethics issues appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/smart-scarves-are-wrapped-in-layers-of-ethics-issues/",
-          "publishedOn": "2022-08-08T15:17:47.000Z",
-          "wordCount": 2263,
-          "title": "Smart scarves are wrapped in layers of ethics issues",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/Man-City-smart-scarf.jpg"
         }
       ]
     },
@@ -2550,7 +2586,18 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "http://subokim.wordpress.com/?p=11579",
+          "author": "subokim",
+          "description": "01.학교? 학교 식으로 생각하면 이렇다. 주어진 기준환경이 있고, 주어진 커리큘럼이 있고,거기에서 1등을 하는 거다. 그러면 어떤 보상이 따라온다.많은 학생들이 “성장”이라는 단어를 그렇게 받아들인다. 하지만, 아니다.세상은 무규칙 경기장이다.1등 한다고 보장해주는 것도 없고 상을 주는 사람도 없다.아니, 상 자체가 아무런 의미가 없다. 내가 잘하는 걸 상사에게 알려서 좀 더 높은 연봉을 제시받거나,다른 회사의 CEO가 알게 해서, 이직을 […]",
+          "link": "https://subokim.wordpress.com/2022/09/06/developers_growth/",
+          "publishedOn": "2022-09-06T08:23:36.000Z",
+          "wordCount": 3769,
+          "title": "개발자는 꼭 성장해야 하는가?",
+          "imageUrl": "https://subokim.files.wordpress.com/2022/09/growth_stress.jpg"
+        }
+      ]
     },
     {
       "title": "The Pasture",
@@ -2588,6 +2635,26 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=83336",
+          "author": "sticky",
+          "description": "By Edwin Austin Abbey – Metropolitan Museum of Art, online database: entry 10049, Public Domain, Link 넝마 옷 사이로 보이는 악행은 크게 보이는 법이지만, 법복과 털외투는 그 모든 걸 감춰주지. 죄에 황금 칠을 하면 강력한 정의의 창이라도 상처 하나 못 입히고 부러지는 거다. 누더기로 무장하면, 난쟁이의 지푸라기라도 뚫을 수 있다.[리어 왕, 윌리엄 셰익스피어, 김태원 옮김, […]",
+          "link": "http://economicview.net/83336/",
+          "publishedOn": "2022-09-07T23:17:57.000Z",
+          "wordCount": 1137,
+          "title": "“법복과 털외투는 악행을 감춰주지”",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Edwin_Austin_Abbey_King_Lear%2C_Act_I%2C_Scene_I_The_Metropolitan_Museum_of_Art.jpg"
+        },
+        {
+          "id": "http://economicview.net/?p=83306",
+          "author": "sticky",
+          "description": "“우리는 한국의 우려를 진지하게 받아들이고 진지한 논의를 할 자세가 되어있다.” (美국무부 산하의) 경제성장, 에너지, 환경 차관 호세 W. 페르난데즈는 한 논평에서 이렇게 말했다. “우리는 다음 달에 국내 규칙제정 과정을 시작함에 따라 더 자세한 사항을 알 수 있을 것이다.” 윤은 언급한 문제에 익숙한 두 번째 인물이라 할 수 있는 美하원의장 낸시 팰로시가 지난달 남한을 방문했을 때에 […]",
+          "link": "http://economicview.net/83306/",
+          "publishedOn": "2022-09-06T04:13:39.000Z",
+          "wordCount": 1417,
+          "title": "“치명적인 실수”를 수습해야할 한국 정부",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Seattle_City_Light_Superintendent_Gordon_Vickery_with_prototype_electric_car%2C_1973_%2834772918810%29.jpg"
+        },
+        {
           "id": "http://economicview.net/?p=83181",
           "author": "sticky",
           "description": "하나의 유령이 한국을 배회하고 있다. ‘당당치킨’이라는 유령이. 전 세계가 인플레이션으로 심한 몸살을 앓고 있다. 각국의 소비자는 치솟는 의식주 및 에너지 비용으로 고통받고 있다. 우리나라도 예외는 아니다. 6월 소비자물가 상승률은 1년 전보다 6.05% 뛰면서 외환위기 이후 23년 7개월 만에 최고치를 경신했다. 근원인플레이션과 에너지·식료품 가격 인상 영향이 컸다. 이러한 탓에 소비자들은 한 푼이라도 저렴한 상품을 구입하기 위해 […]",
@@ -2624,6 +2691,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86970",
+          "author": "경실련",
+          "description": "9월 4일 자 경향신문은 금융·공동인증서비스를 제공하는 한국금융결제원(이하 ‘금결원’)이 운영하는 오픈뱅킹이 전기통신금융사기의 창구로 악용되고 있음에도  시중은행들과 본인확인조치 책임을 서로 떠밀고 거짓말만 하고 있어서 피해 배상이 이루어지지 않고 있다고 지적했다. 경실련 역시 최근 피해자 고발대회를 열고 금융사들의 엉터리 핀테크 비대면 신분증 사본인증 금융사고를 문제제기 했다. 오픈뱅킹: 금융결제원에 참가한 기관(시중은행 및 일부 카드사, 카카오뱅크, 토스 등 )이 상호간 […]\nThe post 금융사기에 악용? 돈 벌면 장땡! (ft. 금결원과 은행의 무책임 앙상블) first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86970",
+          "publishedOn": "2022-09-08T09:33:45.000Z",
+          "wordCount": 3011,
+          "title": "금융사기에 악용? 돈 벌면 장땡! (ft. 금결원과 은행의 무책임 앙상블)",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/fsc-fss-kftc-triangle.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=86966",
+          "author": "민주언론시민연합",
+          "description": "상당히 많이 헷갈리기도 한다. 여 대 야의 구도가 개입하는 바람에 지금 대한민국을 이끌어 가고 있는 큰바람이 어디로 불고 있는지를 정확히 파악하지 못하고 있다. 내로남불형 진영논리에 갇혀서 민주주의를 향한 새로운 기운을 발견하지 못하고 있다. 대한민국의 민주주의를 다시 한 번 더 도약시킬 도도한 물결이 흘러가고 있음에도 관심을 쏟지 못하고 있다. 직업정치 분야에서 도드라지고 있지만, 사실은 대한민국 다양한 […]\nThe post ‘내 마음 속’ 반민주, 비민주와의 싸움: 민주화 시즌 3 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86966",
+          "publishedOn": "2022-09-07T09:57:47.000Z",
+          "wordCount": 2644,
+          "title": "‘내 마음 속’ 반민주, 비민주와의 싸움: 민주화 시즌 3",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2016/11/candle_006.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=86958",
+          "author": "민주언론시민연합",
+          "description": "국민의힘 비상대책위원회 효력 정지 가처분 결정 직후 주호영 비대위원장을 비롯해 국민의힘 인사 일부는 판사가 법원 내 특정 연구모임 소속이라며 “정당 자치를 훼손한 정치적 결정”이라고 주장했습니다. 주호영 비대위원장은 “재판장이 특정 연구모임 출신으로 편향성이 있고 이상한 결과가 있을 거라는 우려가 있었는데 그 우려가 현실화된 것 같다”고 말했는데요. 언론은 주 비대위원장 발언을 검증 없이 받아쓰기했고, 비슷한 보도는 우후죽순 […]\nThe post ‘가처분’ 주호영의 가짜뉴스 확성기로 전락한 언론 (ft. 따옴표 저널리즘) first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86958",
+          "publishedOn": "2022-09-06T09:00:46.000Z",
+          "wordCount": 2590,
+          "title": "‘가처분’ 주호영의 가짜뉴스 확성기로 전락한 언론 (ft. 따옴표 저널리즘)",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/5f971.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=86947",
           "author": "참여연대 사법감시센터",
@@ -2813,46 +2910,6 @@
           "wordCount": 2903,
           "title": "인권의 눈으로 돌아본 코로나19",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/i_008.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86726",
-          "author": "한상기",
-          "description": "유럽연합이 클라우드 전략이나 인공지능 관련 정책을 발표하는 배경 중 하나는 유럽 시민의 데이터를 어떻게 보호하고 효과적으로 활용할 것인가에 대한 고민에서 비롯한 것이다. 배경  이는 물론 데이터 주권에 관한 의지 표명이다. 한편 유럽연합이 법체계 구성을 서두르는 것은, 미국이 2018년 3월에 통과한 ‘클라우드 법’에서 해외에 저장된 데이터를 미국 법 집행기관이 요청하면 데이터를 제출하도록 명령할 수 있게 한 […]\nThe post EU 공통 데이터 스페이스(CEDS) 정책 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86726",
-          "publishedOn": "2022-08-10T07:59:17.000Z",
-          "wordCount": 3630,
-          "title": "EU 공통 데이터 스페이스(CEDS) 정책",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/data_carrousel.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86719",
-          "author": "민주언론시민연합",
-          "description": "지난달(2022. 7.) 대우조선해양 하청업체 노동조합 파업이 극적으로 봉합된 이후 파업 노동자에 대한 사측의 손해배상과 가압류 청구 문제가 과제로 남았습니다. 8일 3일 국회 환경노동위원회 전체회의에서는 이에 대한 공방이 벌어지기도 했는데요. 정부‧여당은 ‘사측 손해에 대해 엄정 대응하겠다’, 야당은 ‘파업 노조 상대 거액의 손배‧가압류는 제한해야 한다’는 입장을 피력했습니다. 특히 이주환 국민의힘 의원은 “파업 종료가 바로 면책으로 이어진다면 어느 […]\nThe post 대우조선 하청노동자 파업은 ‘합법’이다 (ft. 불법 낙인 기술자들) first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86719",
-          "publishedOn": "2022-08-09T09:17:53.000Z",
-          "wordCount": 2754,
-          "title": "대우조선 하청노동자 파업은 ‘합법’이다 (ft. 불법 낙인 기술자들)",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/684cfa.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86713",
-          "author": "경실련",
-          "description": "다가오는 8·15 광복절을 맞이하여 특별사면 등이 시행될 예정이라는 언론 보도가 있었다. 사면법 등 관련 법령에 따라 법무부는 오늘(9일) 사면심사위원회를 개최한다. 이재용 삼성전자 부회장, 신동빈 롯데그룹 회장, 박찬구 금호석유화학 회장 등이 대상이라고 한다. 이들은 국정농단 정경유착 범죄뿐만 아니라, 다양한 경제범죄를 저지른 범죄자들이다. 윤석열 대통령이 이들에게 사면을 한다면, 공정을 내세운 윤석열 정부의 기조에 정면으로 역행하는 것으로, 국민의 […]\nThe post 이재용 신동빈 박찬구 등 특별사면 안 된다 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86713",
-          "publishedOn": "2022-08-09T08:37:49.000Z",
-          "wordCount": 2558,
-          "title": "이재용 신동빈 박찬구 등 특별사면 안 된다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/pic_005.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86703",
-          "author": "경실련",
-          "description": "지난 8월 3일 JTBC 뉴스는국민연금공단이 가습기살균제 참사를 일으킨 기업 옥시레킷벤키저의 영국 본사인 레킷벤키저(RB)의 지분을 늘렸다고 보도했다. 현재 국민연금이 보유한 옥시 본사 주식은 약 3,600억 원으로, 0.53%의 지분을 소유하고 있다.  지난 4일 국민연금이 밝힌 바에 따르면, 국민연금이 레킷벤키저에 투자한 금액은 1,546억 원(2016년) → 3,539억 원(2021년)으로 늘었다. 가습기살균제 참사로 수많은 국민이 자신과 가족의 목숨을 빼앗겼음에도, 가습기 참사 […]\nThe post 가해자에 투자한 피해자: 가습기 참사 기업(RB)에 투자 늘린 국민연금 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86703",
-          "publishedOn": "2022-08-08T09:16:56.000Z",
-          "wordCount": 2524,
-          "title": "가해자에 투자한 피해자: 가습기 참사 기업(RB)에 투자 늘린 국민연금",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/noun-humidifier-665289.png"
         }
       ]
     },
@@ -2861,6 +2918,46 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=587718",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587718/%ea%b3%a8%eb%93%9c%eb%a7%8c%ec%82%ad%ec%8a%a4-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%a3%bc%ec%8b%9d-%eb%a7%a4%ec%88%98-%ec%b6%94%ec%b2%9c",
+          "publishedOn": "2022-09-07T14:01:40.000Z",
+          "wordCount": 5569,
+          "title": "골드만 삭스, 이익 증가와 IRA법안 수혜로 테슬라 주식 매수를 강력 추천",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/테슬라에서-내리는-여인-Photo-by-Taneli-Lahtinen.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587710",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587710/%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%9d%b4%ec%9d%b5-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-09-07T13:39:57.000Z",
+          "wordCount": 5358,
+          "title": "2022년 하반기 테슬라 이익 전망 – 테슬라 영업이익률 40% 전망",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/테슬라에서-내리는-여인-Photo-by-Taneli-Lahtinen.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587706",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587706/%ed%87%b4%ec%82%ac-%ed%9b%84%eb%b0%b0%ec%9d%98-%eb%8b%b9%eb%b6%80",
+          "publishedOn": "2022-09-07T12:33:07.000Z",
+          "wordCount": 5836,
+          "title": "10년 다닌 회사를 떠나며 – 어느 퇴사 후배의 당부",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/노송지대에서-담아본-맥문동-03774.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587703",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587703/%ec%9b%90%eb%8b%ac%eb%9f%ac-%ed%99%98%ec%9c%a8-1400%ec%9b%90",
+          "publishedOn": "2022-09-07T12:13:03.000Z",
+          "wordCount": 5229,
+          "title": "[기록용]원달러 환율이 1400원을 위협하던날",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/원달러-환율-2022년-9월-7일.png"
+        },
         {
           "id": "https://happist.com/?p=587701",
           "author": "happist",
@@ -3277,26 +3374,6 @@
           "wordCount": 1653,
           "title": "[필진 칼럼] 총기난사와 정신건강",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75095",
-          "author": "veritaholic",
-          "description": "어떤 사건이나 조건이 다음 사건을 발생시키는 인과관계는 우리가 이 세상을 이해하는 가장 기본적인 원칙 중의 하나입니다. 갓난아이 앞에서 잡고 있던 공을 놓아도 공이 여전히 공중에 떠 있는 마술을 보여주면 아이는 깜짝 놀랍니다. 아이에게도 공을 손에서 놓으면 바닥으로 떨어진다는 인과관계의 상식이 있다는 것입니다. 인과관계가 중요한 이유는 우리가 이를 통해 미래를 예측하고 대비할 수 있기 때문입니다. 제비가 낮게 날면 비가 온다는 사실을 발견한 이들은 남들보다 먼저 비를 대비할 수 있었습니다. 물론 제비가 → 더 보기",
-          "link": "https://newspeppermint.com/2022/08/09/npc_giraffeneck/?utm_source=rss&utm_medium=rss&utm_campaign=npc_giraffeneck",
-          "publishedOn": "2022-08-09T22:59:25.000Z",
-          "wordCount": 1832,
-          "title": "[필진 칼럼] 기린의 목이 길어진 진짜 이유",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75074",
-          "author": "ingppoo",
-          "description": "국가별로, 지역 별로 조금씩 차이는 있지만, 코로나19 팬데믹은 대체로 끝을 향해 가고 있습니다. 세계보건기구(WHO)의 추산에 따르면 코로나19 희생자는 전 세계적으로 1,500만 명이 넘습니다. 직접적인 사인이 코로나19 바이러스였던 사례뿐 아니라 팬데믹 때문에 의료 체계가 마비돼 만성 질환을 제때 치료를 받지 못하거나 수술을 받지 못해 숨진 사람들까지 모두 더한 숫자가 그렇습니다. 엔데믹(endemic)에 관한 논의를 통해 지난 2년 반 동안 우리가 부족했던 점을 돌아보고 반성하지 못한다면, 그래서 더 철저한 준비 태세를 갖추지 못한다면 → 더 보기",
-          "link": "https://newspeppermint.com/2022/08/07/npc_gatesphilanthropy/?utm_source=rss&utm_medium=rss&utm_campaign=npc_gatesphilanthropy",
-          "publishedOn": "2022-08-07T22:59:51.000Z",
-          "wordCount": 2135,
-          "title": "[필진 칼럼] 빌 게이츠가 말하는 다음번 팬데믹 막기 위한 ‘민관 협력’",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3459,26 +3536,6 @@
           "publishedOn": "2022-08-11T00:09:55.000Z",
           "wordCount": 101,
           "title": "[윤리와 사상] 칸트의 윤리학",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222844637713",
-          "author": "sellars",
-          "description": "나는 글록이 ‘선험론적’(transcendental)이라는 개념을 잘 이해하고 설명하고 있지만, 그럼에도 칸트와 비트겐슈타인을 논의하는 과정에서 그 개념을 잘 적용하고 있지 못하다고 생각한다. 선험론적 규칙이나 형식이 바로 대상에 대한 우리의 경험적 인식을 가능하게 하거나 실재에 대한 그림언어나 표상언어를 가능하게 하는 것이다. 글록은 이 점을 잘 지적하고 있지만, 따라서 칸트의 선험론적 관념론이 버클리의 관념론과 다르다고 말하고 있지만, 그럼에도 불구하고 칸트의 선험론적 관념론을 <우리가 경험하는 것, 즉 의자, 강, 돌 등이, 즉 현상이 우리가 알 수 없는 물자체의 단지 표상이라고 주장함으로써 로크주의의 표상설에 대.......",
-          "link": "https://blog.naver.com/sellars/222844637713",
-          "publishedOn": "2022-08-10T02:58:03.000Z",
-          "wordCount": 101,
-          "title": "글록의 <칸트와 비트겐슈타인> 2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222843585220",
-          "author": "sellars",
-          "description": "* 경험론은 다음 두 가지 기본적 주장을 한다. (i) 모든 관념이나 개념은 경험으로부터 온다. (ii) 모든 지식은 경험으로부터 온다. 이 주장들을 평가해 보라. ** 어떤 주장을 비판하는 한 가지 방법이 그 주장에 반대되고 대립되는 것을 생각해 보는 것이다. 경험적 지식에 대조되는 지식은 어떤 것인가? 혹은 경험을 통해 설명하기 어려운 그런 지식은 어떤 것인가? * 다음 글을 요약해 보라. (가) 우리가 갖고 있는 개념들을 우리는 어떻게 습득하는가? 우리가 갖고 있는 어떤 개념은 본유적(innate)이라고 주장되었다. 즉 그 개념은 우리가 태어날 때부터 갖고 있던 그런 개념들이다. 그렇지만 붉음의 개념이 본유적이라고 가정해 보자. 우리.......",
-          "link": "https://blog.naver.com/sellars/222843585220",
-          "publishedOn": "2022-08-09T00:33:21.000Z",
-          "wordCount": 101,
-          "title": "2 표상적 실재론",
           "imageUrl": null
         }
       ]
