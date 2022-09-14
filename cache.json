@@ -225,6 +225,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "d2745cb9-0e7f-4c18-88b2-a5ce98fb99ac",
+          "author": "Bob Reselman",
+          "description": "A regular expression (also called a regex or regexp) is a rule that a computer can use to match characters or groups of characters within a larger body of text. For instance, using regular expressions, you could find all the instances of the word cat in a document, or all instances of a word that begins with c and ends with t.\nUse of regular expressions in the real world can get much more complex—and powerful—than that. For example, imagine you need to write code verifying that all content in the body of an HTTP POST request is free of script injection attacks. Malicious code can appear in any number of ways, but you know that injected script code will always appear between  HTML tags. You can apply the regular expression .*, which matches any block of code text bracketed by  tags, to the …",
+          "link": "https://developers.redhat.com/articles/2022/09/14/beginners-guide-regular-expressions-grep",
+          "publishedOn": "2022-09-14T07:00:00.000Z",
+          "wordCount": 4490,
+          "title": "A beginner’s guide to regular expressions with grep",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Linux.png?itok=K8mzDGOj"
+        },
+        {
           "id": "195c9344-8250-48a9-9554-85515b7d00a9",
           "author": "Mickael Maison",
           "description": "This 55th edition of the Kafka Monthly Digest covers what happened in the Apache Kafka community in August 2022.\nFor last month’s digest, see Kafka Monthly Digest: July 2022.\nReleases\nThere is currently one release in progress, 3.3.0.\n3.3.0\nThe release process for 3.3.0 continued. José Armando García Sancio published the first release candidate on August 29. A few issues, including KAFKA-14187 and KAFKA-14156, were found during testing, so José built RC1 on September 1. The vote is currently ongoing. You can find the release plan in the wiki.\nKafka Improvement Proposals\nLast month, the community submitted three Kafka Improvement Proposals (KIPs) (KIP-863 to KIP-865). I'll highlight a couple of them:\nKIP-864: Add End-To-End Latency Metrics to Connectors. This KIP proposes adding a few new m…",
@@ -453,36 +463,6 @@
           "wordCount": 2755,
           "title": "How to easily deploy JBoss EAP on Azure",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
-        },
-        {
-          "id": "75fcba18-2deb-4b89-b6c2-c6e2fc0932a6",
-          "author": "Costas Papastathis, Michael Dawson",
-          "description": "This is the third and final article in a three-part series introducing kube-service-bindings for Node.js developers on Kubernetes. Together with the Service Binding Operator (SBO), kube-service-bindings makes it easier to share credentials for services with your applications.\nThe first article of this series offered background on the tools we're using, and the second set up some basic elements such as hosting on the Developer Sandbox for Red Hat OpenShift and a MongoDB database. Now we're going to use all these tools to create a binding between our Node.js application and the database.\nDeploy MongoDB as a cloud-hosted database\nThe previous article set up access between MongoDB Atlas and your OpenShift cluster. If you went through those steps successfully, you are ready to deploy a cloud-ho…",
-          "link": "https://developers.redhat.com/articles/2022/08/16/connect-mongodb-nodejs-application-kube-service-bindings",
-          "publishedOn": "2022-08-16T07:00:01.000Z",
-          "wordCount": 3012,
-          "title": "Connect MongoDB to a Node.js application with kube-service-bindings",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/CP-nodejs%2Bkubernetes_1x.png?itok=2CjL1Hz6"
-        },
-        {
-          "id": "3043fa12-1097-4bf5-86dc-b32acdc81bf8",
-          "author": "Costas Papastathis, Michael Dawson",
-          "description": "This is the second part of a three-part series explaining how to bind easily to databases and other backing services from Node.js applications running in Kubernetes. The first article in the series, Connect to services on Kubernetes easily with kube-service-bindings, introduced the tools we use for this simplified integration: kube-service-bindings and the Service Binding Operator (SBO).\nIn this article and the next, we'll set up a cluster with access to a MongoDB database. For our Kubernetes cluster, we use the Developer Sandbox for Red Hat OpenShift, a free service for developers to experiment and learn about open source tools.\nThe articles use a MongoDB example hosted in GitHub to show you kube-service-bindings in action. This example will illustrate the process of deploying a Node.js a…",
-          "link": "https://developers.redhat.com/articles/2022/08/16/enable-backing-services-kubernetes-kube-service-bindings",
-          "publishedOn": "2022-08-16T07:00:00.000Z",
-          "wordCount": 3059,
-          "title": "Enable backing services in Kubernetes with kube-service-bindings",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/CP-nodejskubernetes_2x-e1615240548598.png?itok=-tne5COr"
-        },
-        {
-          "id": "e727f048-6620-4039-9cca-83550b9309cc",
-          "author": "Laura Barcziova",
-          "description": "If you use open source projects from GitHub or GitLab in your infrastructure, you have probably established workflows to create project builds that you can install. You might create builds regularly and execute them in a similar manner across projects. Let's say you want to build the code changes in Fedora Linux or CentOS Stream for each commit, release, or pull request in these projects. Packit can automate this policy, fold into a CI/CD pipeline, and do even more.\nPackit is an open source project that tests and builds RPM packages on Fedora Linux, CentOS Stream, and other distributions to ease the integration of upstream projects with the distributions.\nThis article focuses on Packit Service, which operates on GitHub and GitLab. You can also install a command line interface (CLI) locally…",
-          "link": "https://developers.redhat.com/articles/2022/08/16/how-set-packit-simplify-upstream-project-integration",
-          "publishedOn": "2022-08-16T07:00:00.000Z",
-          "wordCount": 2665,
-          "title": "How to set up Packit to simplify upstream project integration",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_GitOps_Kubernetes_Featured_ArticleB_0.png?itok=jYUcuOPP"
         }
       ]
     },
@@ -810,16 +790,6 @@
           "wordCount": 5551,
           "title": "embedded news: 200MP image sensor, 5G mmWave IC, and more",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Review-Display-Systems-RDS-Kontron-K384x-series-Motherboards.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4475910",
-          "author": "Nitin Dahad",
-          "description": "The U.S. National Institute of Standards and Technology (NIST) recently selected four post-quantum cryptography (PQC) algorithms for standardization. We caught up with NXP Semiconductors’ cryptography expert to find out what it means.\nThe post Getting ready for post-quantum security mayhem appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/getting-ready-for-post-quantum-security-mayhem/",
-          "publishedOn": "2022-08-15T19:00:01.000Z",
-          "wordCount": 5540,
-          "title": "Getting ready for post-quantum security mayhem",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Quantum-processor-cyber-space_ss.jpg"
         }
       ]
     },
@@ -846,6 +816,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2022/09/helping-developers-build-with-google-matters.html",
+          "author": null,
+          "description": "Posted by Jeannie Zhang and Kevin Po; Product Managers, Nest\n \n\nAs the smart home industry prepares for a major shift in usability and interoperability with Matter launching later this year, we are working to help you build more devices and connections with Google products and beyond. \nAt Google I/O this year, we shared updates on how Google is continuing to support smart home developers, including the launch of our new and improved Google Home Developer Center. Today, we are excited to share that the Google Home Developer Console is now in Developer Preview at console.home.google.com.\n\nWhat is the Google Home Developer Console?\n\nThe Google Home Developer Console is a guided flow for developers looking to integrate with Google. It provides everything needed to build intelligent and innovat…",
+          "link": "http://developers.googleblog.com/2022/09/helping-developers-build-with-google-matters.html",
+          "publishedOn": "2022-09-14T17:00:00.001Z",
+          "wordCount": 1985,
+          "title": "Helping Developers Build with Google, Matters",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtXecGJaDm8rvLZyS29AohSP8EyTYgHUERSl4S3TFBwP6MLdF7q2beUDYXZjkj2fYgSXINbCAF_1vhGbrZx2nsjunyBzjpNvPpdsw5SHmg0Ds1ciHZULV_B84KM1_jv9cd3Io2RN_lENlklBxRyA7hYr4K3dOM_c9oZq8WK5BRrCH0o4uAiQLSBHuf/w1200-h630-p-k-no-nu/GoogleDev_DevConsolePublicPreview_1234x802.png"
+        },
         {
           "id": "http://developers.googleblog.com/2022/09/updates-to-emoji-new-characters-animation-colors-and-more.html",
           "author": null,
@@ -965,16 +945,6 @@
           "wordCount": 1672,
           "title": "#WeArePlay | Meet George from the UK. More stories from Croatia, USA and Kenya.",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFJIpeC8NsN4REor9_Oxf3M1vGaRPk0ckE7i5snouVQqjbHlWIHeHL-a_RMU4dhSeZzCvV4BWOfe8Hh2Dh3rKta3IcPGGeLV6-OE1UTri0guDuIhQtXc2EkMyr2SpVvc6cO3XBDweq3qzlv_QL5svK3tuXYybXuI83Rgczcv_iTArEhC4lu6ZUPkqp/w1200-h630-p-k-no-nu/Android%20Devs%20_%20Google%20Devs%20-Blog_Header_1200x600%20%281%29.jpg"
-        },
-        {
-          "id": "http://developers.googleblog.com/2022/08/migrating-from-app-engine-blobstore-to-cloud-storage-module-16.html",
-          "author": null,
-          "description": "Posted by Wesley Chun (@wescpy), Developer Advocate, Google Cloud\n   \n\n\nIntroduction and background\n  \nThe most recent Serverless Migration Station video demonstrated how to add use of the App Engine's Blobstore service to a sample Python 2 App Engine app, kicking off the first of a 2-part series on migrating away from Blobstore. In today's Module 16 video, we complete this journey, arriving at Cloud Storage. Moving away from proprietary App Engine services like Blobstore makes apps more portable, giving them enough flexibility to: \n\n Update to more recent language releases, say from Python 2 to 3 or Java 8 to 17, and run on App Engine's 2nd generation service \nShift across to other serverless platforms, like Cloud Functions or Cloud Run (with or without Docker), or  \nMove to VM-based serv…",
-          "link": "http://developers.googleblog.com/2022/08/migrating-from-app-engine-blobstore-to-cloud-storage-module-16.html",
-          "publishedOn": "2022-08-15T19:00:00.202Z",
-          "wordCount": 2269,
-          "title": "Migrating from App Engine Blobstore to Cloud Storage (Module 16)",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL54ZJEJGx-selv6yaPEeVbOpPXbb18X40k98Mhqnh_TS5nRSvDPaauhuyntrhoVSG-3dPEMLrPpOlstf3FwfEkId-XBeZ8RR-leHaehSy_qYl7iFKxuWtBjIdNSv2B0ltPdn_Tqp_Ll1r3oToEOFkkYihJQLeiGANaexS6btKlvHBoaI9hpoZ3lqT/w1200-h630-p-k-no-nu/Module%2016%20header.png"
         }
       ]
     },
@@ -1121,16 +1091,6 @@
           "wordCount": 4813,
           "title": "PVS-Studio 7.20: Unreal Engine, SAST, SCA",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0980_Release_7_20/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/0979/",
-          "author": null,
-          "description": "That's right, now you can keep up with the latest news from PVS-Studio! Our developers noticed — they prefer to get news about other products by email, but PVS-Studio doesn't have this option. So, one of our development teams got together and made the newsletter the way they wanted it to be. Basically, the team was reinventing a wheel for a year, but they were enthusiastic about it! If interested, you're welcome to read.",
-          "link": "https://pvs-studio.com/en/blog/posts/0979/",
-          "publishedOn": "2022-08-15T21:00:00.000Z",
-          "wordCount": 5218,
-          "title": "Automated newsletters: by developers, for developers",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0979_Mailling/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1363,6 +1323,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/908035/",
+          "author": "corbet",
+          "description": "The GitHub blog has a\ndetailed look at garbage collection in Git and the work that has been\ndone to make it faster.\n\n\n\tTo solve this problem, we turned to a long-discussed idea on the\n\tGit mailing list: cruft packs. The idea is simple: store an\n\tauxiliary list of mtime data alongside a pack containing\n\tjust unreachable objects. To garbage collect a repository, Git\n\tplaces the unreachable objects in a pack. That pack is designated\n\tas a “cruft pack” because Git also writes the mtime data\n\tcorresponding to each object in a separate file alongside that\n\tpack. This makes it possible to update the mtime of a\n\tsingle unreachable object without changing the mtimes of\n\tany other unreachable object.",
+          "link": "https://lwn.net/Articles/908035/",
+          "publishedOn": "2022-09-14T17:51:27.000Z",
+          "wordCount": 238,
+          "title": "Scaling Git’s garbage collection (GitHub blog)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/908032/",
+          "author": "corbet",
+          "description": "Version\n15 of the Unicode standard has been released.\n\n\n\tThis version adds 4,489 characters, bringing the total to 149,186\n\tcharacters. These additions include two new scripts, for a total of\n\t161 scripts, along with 20 new emoji characters, and 4,193 CJK\n\t(Chinese, Japanese, and Korean) ideographs.",
+          "link": "https://lwn.net/Articles/908032/",
+          "publishedOn": "2022-09-14T17:45:15.000Z",
+          "wordCount": 212,
+          "title": "Unicode 15 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907572/",
+          "author": "jake",
+          "description": "Typically, an urgent security release of a project is not for a\ntwo-year-old CVE, but such is the case for a recent\nPython release of four versions of the language.  The bug is a\ndenial of service (DoS) that can be caused by converting enormous numbers to\nstrings—or vice versa—but it was not deemed serious enough to fix\nwhen it \nwas first \nreported.  Evidently more recent reports, including a remote exploit of the\nbug, have raised its importance—causing a rushed-out fix.  But the\nfix breaks some existing Python code, and the process of handling the\nincident has left something to be desired, leading the project to look at\nways to improve its processes.",
+          "link": "https://lwn.net/Articles/907572/",
+          "publishedOn": "2022-09-14T11:38:57.000Z",
+          "wordCount": null,
+          "title": "[$] A Python security fix breaks (some) bignums",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/907983/",
+          "author": "corbet",
+          "description": "Security updates have been issued by CentOS (open-vm-tools), Debian (freecad and sqlite3), Fedora (qt5-qtwebengine and vim), SUSE (firefox, kernel, libzapojit, perl, postgresql14, and samba), and Ubuntu (dotnet6, dpdk, gdk-pixbuf, rust-regex, and systemd).",
+          "link": "https://lwn.net/Articles/907983/",
+          "publishedOn": "2022-09-14T11:31:37.000Z",
+          "wordCount": 241,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/907613/",
           "author": "jake",
@@ -2082,36 +2082,6 @@
           "wordCount": 232,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904771/",
-          "author": "corbet",
-          "description": "Version 13 of the Android system has landed\nin the Android Open Source Project; the list of changes is long.\n\n\n\tTo help users focus on the notifications that are most important to\n\tthem, Android 13 introduces a new notifications runtime\n\tpermission. Apps now need to request the notification permission\n\tfrom the user before posting notifications.",
-          "link": "https://lwn.net/Articles/904771/",
-          "publishedOn": "2022-08-15T18:56:38.000Z",
-          "wordCount": 221,
-          "title": "Android 13 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904032/",
-          "author": "corbet",
-          "description": "Linus Torvalds released\n6.0-rc1 and closed the merge window on\nAugust 14, as expected; by then, 13,543 non-merge changesets\nhad found their way into the mainline repository.  Just over half of those\nwere pulled after our first 6.0 merge-window\nsummary was written.  The latter part of the merge window tends to be\nmore focused on fixes than new features, but there were still a number of\ninteresting changes added during this time.",
-          "link": "https://lwn.net/Articles/904032/",
-          "publishedOn": "2022-08-15T15:41:38.000Z",
-          "wordCount": null,
-          "title": "[$] 6.0 Merge window, part 2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/904741/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (trafficserver), Fedora (freeciv, gnutls, kernel, libldb, mingw-gdk-pixbuf, owncloud-client, rust-ffsend, samba, thunderbird, and zlib), Gentoo (apache, binutils, chromium, glibc, gstreamer, libarchive, libebml, nokogiri, puma, qemu, xen, and xterm), Mageia (golang, libtiff, poppler, python-django, and ruby-sinatra), Red Hat (.NET 6.0 and .NET Core 3.1), SUSE (chromium, cifs-utils, kernel, open-iscsi, and trousers), and Ubuntu (webkit2gtk).",
-          "link": "https://lwn.net/Articles/904741/",
-          "publishedOn": "2022-08-15T13:46:02.000Z",
-          "wordCount": 318,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2380,6 +2350,16 @@
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=10971",
+          "author": "Kevin C. Tofel",
+          "description": "As we near the availability of Matter devices, this is the perfect time to understand exactly what to expect once we have those devices in our home. That’s the main takeaway I got from virtually attending a Silicon Labs Works With session on Tuesday. Panelists included representatives from Arm, The Connectivity Standards Alliance, Comcast, Google, […]\nThe post A level set on Matter and its future appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/a-level-set-on-matter-and-its-future/",
+          "publishedOn": "2022-09-14T17:24:12.000Z",
+          "wordCount": 2245,
+          "title": "A level set on Matter and its future",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/09/3ab2546e-5247-4824-8d32-e71f11038a95.jpg"
+        },
+        {
           "id": "https://staceyoniot.com/?p=10931",
           "author": "Kevin C. Tofel",
           "description": "It’s hard to believe that Google Glass debuted nearly a decade ago. I was one of the early “Glass Explorers,” which is a far kinder name than the other ones that were used to describe people like me at the time. Google Glass both ushered in the smart glasses movement and quickly died off as a consumer […]\nThe post Why smart glasses are on the cusp of being a gamechanger appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2578,16 +2558,6 @@
           "wordCount": 2359,
           "title": "Can the FTC restore our faith in technology?",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-11-at-1.13.23-PM.png"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10794",
-          "author": "Kevin C. Tofel",
-          "description": "Three months ago, we downgraded from two cars to one. That one is a 2022 Tesla Model 3. We absolutely love it, and so far, it’s met or exceeded all of our expectations. It’s a very connected car, of course. Yet, unlike most connected devices we purchase, we didn’t really review the data privacy implications […]\nThe post Tesla: The ultimate example of data privacy vs convenience appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/tesla-the-ultimate-example-of-data-privacy-vs-convenience/",
-          "publishedOn": "2022-08-15T20:57:27.000Z",
-          "wordCount": 2504,
-          "title": "Tesla: The ultimate example of data privacy vs convenience",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/08/697E8E73-F0BF-4BA2-8BF9-32C27892E8C2-scaled.jpeg"
         }
       ]
     },
@@ -2706,6 +2676,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=86997",
+          "author": "경실련",
+          "description": "어제(9월 13일) 금융위원회(이하 ‘금융위’)는 “상장회사 내부자(임원 및 지분율 10%이상 경영대주주)가 발행주식 수의 1%이상 또는 거래대금 50억원 이상 매매 시에는 30일 전에 사전공시 의무를 부과하겠다.”고 발표했다 지난해(2021년) 12월 10일 카카오페이 류영준 대표이사 등 경영진 8명이 코스피200 지수편입 당일 상장 때(11월 3일) 행사했던 스톡옵션(주식매수선택권) 주식 총 440,933주, 시가 899억원 상당을 매도하여 상장 대비 약 92억원(옵션 대비 약 […]\nThe post 내부자거래 사전공시제도, 환영하지만 더 확대 적용해야 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/86997",
+          "publishedOn": "2022-09-14T07:33:33.000Z",
+          "wordCount": 2357,
+          "title": "내부자거래 사전공시제도, 환영하지만 더 확대 적용해야",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/blur-g5976a9bed_640.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=86982",
           "author": "nomodem",
@@ -2923,6 +2903,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=587780",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587780/%ec%8b%a0%ea%b5%ac%eb%8c%80%ec%8b%9d%eb%ac%bc%ec%9b%90-%ea%bd%83%eb%ac%b4%eb%a6%87",
+          "publishedOn": "2022-09-14T13:56:24.000Z",
+          "wordCount": 5286,
+          "title": "신구대식물원 꽃무릇을 담아보다.",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/신구대식물원-꽃무릇을-담다-00122.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587764",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587764/%eb%b6%84%eb%8b%b9-%ec%a4%91%ec%95%99%ea%b3%b5%ec%9b%90-%ea%bd%83%eb%ac%b4%eb%a6%87",
+          "publishedOn": "2022-09-14T13:41:08.000Z",
+          "wordCount": 5264,
+          "title": "분당 중앙공원 꽃무릇을  담아보다",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/분당-중앙공원에서-꽃무릇을-담다-00426.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587758",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587758/8%ec%9b%94-cpi-%ed%95%b4%ec%84%9d",
+          "publishedOn": "2022-09-14T12:18:22.000Z",
+          "wordCount": 6077,
+          "title": "8월 CPI을 보는 월가의 시선",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
+        },
         {
           "id": "https://happist.com/?p=587743",
           "author": "happist",
@@ -3299,16 +3309,6 @@
           "wordCount": 1816,
           "title": "[필진 칼럼] 어른이 된다는 것은",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75119",
-          "author": "ingppoo",
-          "description": "지난 6월, 런던 근교에서 한 골프 대회가 열렸습니다. 리브(LIV)라는 낯선 이름의 대회는 여러모로 반쪽짜리 대회처럼 보였습니다. 참가 선수의 면면을 보면 유명한 선수도 있었지만, 아마추어 선수도 있었습니다. 무엇보다 (특히 미국에선) 골프 채널 어디를 틀어도 이 대회를 볼 수 없었습니다. 같은 시각 우리에게 익숙한 P.G.A.가 주관한 다른 대회가 열리고 있었기 때문입니다. 별로 주목할 게 없어 보이는 대회지만, 이 대회에 걸린 총상금은 2천만 달러였습니다. 골프에서 가장 권위가 높은 대회로 꼽히는 마스터스(Masters) 대회의 지난해 총상금이 → 더 보기",
-          "link": "https://newspeppermint.com/2022/08/15/npc_sportswashing/?utm_source=rss&utm_medium=rss&utm_campaign=npc_sportswashing",
-          "publishedOn": "2022-08-15T22:59:06.000Z",
-          "wordCount": 2152,
-          "title": "[필진 칼럼] 사우디 국부 펀드 주최 대안 골프 대회 LIV, 그리고 스포츠워싱",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3323,6 +3323,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222874178709",
+          "author": "sellars",
+          "description": "* 현대 사회사상가 갑, 을의 입장으로 적절한 것만을 〈보기〉에서 고른 것은? 갑: 지배 없는 상태로서의 자유와 간섭 없는 상태로서의 자유가 충돌할 때, 전자를 후자보다 우선해야 한다. 그것이 공화국의 핵심이다. 공화국의 공공선은 지배 없는 상태로서의 자유를 추구하는 시민들에게 좋은 것을 의미한다. 을: 자유라는 것은 한 사람 또는 일군의 사람이 다른 사람의 간섭 없이 스스로 할 수 있는 일을 할 수 있도록 방임되어야 할 영역은 무엇인가에 관한 물음과 관련된다. 이것은 통제나 간섭의 근원을 묻는 적극적 의미의 자유와 구분된다. 갑과 을이 누군지 알 수 있는가? 대충 을이 누구지 짐작할 수 있었지만, 그 짐작이 맞는지 자신이.......",
+          "link": "https://blog.naver.com/sellars/222874178709",
+          "publishedOn": "2022-09-14T00:47:35.000Z",
+          "wordCount": 101,
+          "title": "[윤리와 사상] 자유주의와 공화주의",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222873193286",
           "author": "sellars",
