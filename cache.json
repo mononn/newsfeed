@@ -126,6 +126,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2022/improve-loops-cpp2b/",
+          "author": null,
+          "description": "In this short article, I’ll show you several techniques to improve raw loops. I’ll take an example of a reverse iteration over a container and then transform it to get potentially better code.\nThe loop expression is an essential building block of programming. When you iterate over a container in C++20, we have the following options:\nRange based for loop with an initializer\nIterators\nAlgorithms\nRanges and views\nSee examples below:\n\n\n\n     \n    \n\n\nLet’s start with the following code; we’d like to print a std::vector in reverse:\nstd::vector vec { 1, 2, 3, 4, 5, 6 };\nfor (auto i = vec.size() - 1; i >= 0; --i) {\n    std::cout << i << \": \" << vec[i] << '\\n';\n}\n\n\nThis code is broken, as auto i will be unsigned and cannot be “less than 0”!  This is not a breakthrough, and we discussed this topic i…",
+          "link": "https://www.cppstories.com/2022/improve-loops-cpp2b/",
+          "publishedOn": "2022-09-26T00:00:00.000Z",
+          "wordCount": 1696,
+          "title": "5 Ways to Improve or Avoid Loops in C++20...23",
+          "imageUrl": "https://www.cppstories.com/2022/images/improve_loops.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/ssize-cpp20/",
           "author": null,
           "description": "In this article, I’ll show another technique that avoids mixing signed and unsigned types.\nIn my article Integer Conversions and Safe Comparisons in C++20 we learned about cmp_* integer comparison functions that allow us to compare various types of integer types. The functions are safe because they help with mixing signed and unsigned types. In C++20, there’s another handy feature: the non-member std::ssize() function that returns a signed number of elements in a container.\nLet’s see how to use it.\n\n\n\n     \n    \n\n\nC++20 offers many ways to avoid working with raw array/container indices:\nAlgorithms (they can avoid raw loops),\nRanges and views (for example, views::reverse),\nIterators,\nRange based for loop with an initializer (for example, to update the index count).\nOn the other hand, you ma…",
@@ -289,6 +299,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "0ebf20fc-5f39-4cff-bf81-9b729880a1b3",
+          "author": "Frédéric Bérat",
+          "description": "Even after thorough unit testing on both applications and their library dependencies, builds often go wrong and turn up hidden errors. This article introduces a new tool, the Mass Prebuilder (MPB), that automates builds on enormous numbers of reverse dependencies to find problems that are not caught through package testing.\nLet's look at a simple example. Roughly 1,200 packages in Red Hat-based distributions depend on GNU Autoconf. Knowing all of the packages by heart is unlikely, building them manually would take ages, and judging whether a failure is due to a change in GNU Autoconf is very difficult. A job for the Mass Prebuilder!\nWhat is the Mass Prebuilder?\nThe Mass Prebuilder is an open source set of tools that help developers create mass rebuilds around a limited set of packages, in …",
+          "link": "https://developers.redhat.com/articles/2022/09/26/find-errors-packages-through-mass-builds",
+          "publishedOn": "2022-09-26T07:00:00.000Z",
+          "wordCount": 4246,
+          "title": "Find errors in packages through mass builds",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_A%20%282%29.png?itok=zmrEAEN1"
+        },
         {
           "id": "af2d04c4-c425-4b66-b2db-7b7fc5ba23c0",
           "author": "Lucas Holmquist",
@@ -616,6 +636,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4476445",
+          "author": "Miro Samek",
+          "description": "Have you seen your stack lately? I mean, have you really looked at the stack memory and observed what exactly happens when a function is...\nThe post Programming embedded systems: Functions and the Stack appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/programming-embedded-systems-functions-and-the-stack/",
+          "publishedOn": "2022-09-26T09:00:00.000Z",
+          "wordCount": 3550,
+          "title": "Programming embedded systems: Functions and the Stack",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/programming_thumbnail3.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4476434",
           "author": "Lluis Beltran Gil",
@@ -1344,26 +1374,6 @@
             "type": "video/mp4"
           },
           "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/08/image-12.png"
-        },
-        {
-          "id": "https://kimchihill.com/?p=2101",
-          "author": "kimchihill",
-          "description": "한 창업자 분께서 제게 묻습니다. “채용이 너무 어렵고 경쟁이 심합니다. 리크루팅 팀이 아웃바운드를 해봐도 뾰족한 효과를 보기 어렵습니다”. 특히 자주 접하는 질문은 다음과 같습니다 “센드버드는 초반에 어떻게 채용을 하셨어요?” 이에 대한 답변으로, 저는 흔히 채용 경험 뿐 아니라 마케팅 및 영업 조직을 이끌어본 경험을 함께 담아 풀어내곤 합니다. 저의 경험 또한 제한적이지만, 시간이 지날 수록Continue reading \"월드클래스 채용팀이 역량 강화를 위해 참고하는 10가지 영업 조직의 운영 노하우\"\n월드클래스 채용팀이 역량 강화를 위해 참고하는 10가지 영업 조직의 운영 노하우 appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2022/08/28/kr-10lessons-world-class-recruitingteam-learn-from-sales/?utm_source=rss&utm_medium=rss&utm_campaign=kr-10lessons-world-class-recruitingteam-learn-from-sales",
-          "publishedOn": "2022-08-28T07:15:29.000Z",
-          "wordCount": 2417,
-          "title": "월드클래스 채용팀이 역량 강화를 위해 참고하는 10가지 영업 조직의 운영 노하우",
-          "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/08/채용-노하우.png"
-        },
-        {
-          "id": "https://kimchihill.com/?p=2097",
-          "author": "kimchihill",
-          "description": "Software 및 B2B 스타트업에 근무한다면 영업 파이프라인 미팅을 경험하셨을 겁니다. 많은 스타트업에서 파이프라인 미팅을 현재 파이프라인 커버리지 (pipeline coverage) 및 잠재 영업 대상을 주로 살펴보는 팀 혹은 리더십 미팅으로 정의합니다.  하지만 검토의 대상을 마케팅의 Demand generation, pre-qualified 파이프라인까지 확장하고, 파이프라인 모델 자체를 면밀하게 분석하려는 것을 포함하면 파이프라인 미팅이 가지는 전략적 목적이 달라지며, 매출이 만들어지는 전체Continue reading \"SaaS/B2B 스타트업을 성공으로 이끄는 영업 및 마케팅 파이프라인 분석\"\nSaaS/B2B 스타트업을 성공으로 이끄는 영업 및 마케팅 파이프라인 분석 appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2022/08/27/saas-b2b-%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85%ec%9d%84-%ec%84%b1%ea%b3%b5%ec%9c%bc%eb%a1%9c-%ec%9d%b4%eb%81%84%eb%8a%94-%ec%98%81%ec%97%85-%eb%b0%8f-%eb%a7%88%ec%bc%80%ed%8c%85-%ed%8c%8c%ec%9d%b4/?utm_source=rss&utm_medium=rss&utm_campaign=saas-b2b-%25ec%258a%25a4%25ed%2583%2580%25ed%258a%25b8%25ec%2597%2585%25ec%259d%2584-%25ec%2584%25b1%25ea%25b3%25b5%25ec%259c%25bc%25eb%25a1%259c-%25ec%259d%25b4%25eb%2581%2584%25eb%258a%2594-%25ec%2598%2581%25ec%2597%2585-%25eb%25b0%258f-%25eb%25a7%2588%25ec%25bc%2580%25ed%258c%2585-%25ed%258c%258c%25ec%259d%25b4",
-          "publishedOn": "2022-08-27T11:05:14.000Z",
-          "wordCount": 2063,
-          "title": "SaaS/B2B 스타트업을 성공으로 이끄는 영업 및 마케팅 파이프라인 분석",
-          "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/08/PIPELINE-MTG.jpg"
         }
       ]
     },
@@ -1411,6 +1421,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/909265/",
+          "author": "corbet",
+          "description": "The CHERI\narchitecture is the product of a research program to extend common\nCPU architectures \nin a way that prevents many types of memory-related bugs (and\nvulnerabilities).  At the 2022 GNU Tools Cauldron,\nAlex Coplan and Szabolcs Nagy described the work that has been done to\nbring GCC and the GNU C Library (glibc) to this architecture.  CHERI is a fundamentally\ndifferent approach to how memory is accessed, and supporting it properly is anything\nbut a trivial task.",
+          "link": "https://lwn.net/Articles/909265/",
+          "publishedOn": "2022-09-26T20:04:04.000Z",
+          "wordCount": null,
+          "title": "[$] Supporting CHERI capabilities in GCC and glibc",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909109/",
+          "author": "corbet",
+          "description": "The Human\nInterface Device (HID) standard dates back to the Windows 95 era.\nIt describes how devices like mice and keyboards present themselves to the\nhost computer, and has created a world where a single driver can handle a\nwide variety of devices from multiple manufacturers.  Or it would have, if\nthere weren't actual device manufacturers involved.  In the real world,\ndevices stretch and break the standard, each in its own special way.  At\nthe 2022 Linux Plumbers Conference,\nBenjamin Tissoires described how BPF can be used to simplify the\ntask of supporting HID devices.",
+          "link": "https://lwn.net/Articles/909109/",
+          "publishedOn": "2022-09-26T14:31:27.000Z",
+          "wordCount": null,
+          "title": "[$] BPF for HID drivers",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909439/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (expat and poppler), Fedora (dokuwiki), Gentoo (fetchmail, grub, harfbuzz, libaacplus, logcheck, mrxvt, oracle jdk/jre, rizin, smarty, and smokeping), Mageia (tcpreplay, thunderbird, and webkit2), SUSE (dpdk, permissions, postgresql14, puppet, and webkit2gtk3), and Ubuntu (linux-gkeop and sosreport).",
+          "link": "https://lwn.net/Articles/909439/",
+          "publishedOn": "2022-09-26T13:35:01.000Z",
+          "wordCount": 241,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909392/",
+          "author": "corbet",
+          "description": "The 6.0-rc7 kernel prepatch is out for\ntesting.\n\n\n\n\tSo I was thinking rc7 might end up larger than usual due to travel\n\thitting rc6, but it doesn't really seem to have happened.\n\n\tYeah, maybe it's marginally bigger than the historical average for\n\tthis time of the release cycle, but it definitely isn't some\n\toutlier, and it looks fairly normal. Which is all good, and makes\n\tme think that the final release will happen right on schedule next\n\tweekend, unless something unexpected happens. Knock wood.",
+          "link": "https://lwn.net/Articles/909392/",
+          "publishedOn": "2022-09-25T22:16:59.000Z",
+          "wordCount": 354,
+          "title": "Kernel prepatch 6.0-rc7",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/909226/",
           "author": "corbet",
@@ -2291,6 +2341,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=7129",
+          "author": "Derek Jones",
+          "description": "Software developers are employed by organizations and people change jobs, either voluntarily or not; every year a new batch of people join the workforce, e.g., new graduates. Governments track employment activities for a variety of reasons, e.g., tax collection, and monitoring labour supply and demand (for the purposes of planning). The US Bureau of Labor […]",
+          "link": "https://shape-of-code.com/2022/09/25/overview-of-broad-us-data-on-it-job-hiring-firing-and-quitting/",
+          "publishedOn": "2022-09-25T21:55:51.000Z",
+          "wordCount": 1462,
+          "title": "Overview of broad US data on IT job hiring/firing and quitting",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=7113",
           "author": "Derek Jones",
           "description": "Developers working on the implementation of a software system will have a list of work that needs to be done, a to-do list, known as the product backlog in Agile. The Agile development process differs from the Waterfall process in that the list of work items is intentionally incomplete when coding starts (discovery of new […]",
@@ -2337,6 +2397,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11037",
+          "author": "Stacey Higginbotham",
+          "description": "Assa Abloy, the company behind the Yale and August brands of connected locks, has released a new smart lock that’s smaller, sleeker, and waiting on the Matter smart home interoperability protocol. It’s been a while since I reviewed a connected lock. And other than an exhaustively prepared installation process, it’s clear smart locks haven’t changed […]\nThe post Yale’s new Assure Lock 2 is smaller and missing Matter appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/yales-new-assure-lock-2-is-smaller-and-missing-matter/",
+          "publishedOn": "2022-09-26T13:00:57.000Z",
+          "wordCount": 2451,
+          "title": "Yale’s new Assure Lock 2 is smaller and missing Matter",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/09/yale610.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=11034",
           "author": "Stacey Higginbotham",
@@ -2635,6 +2705,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=87092",
+          "author": "민주언론시민연합",
+          "description": "언론의 제1기능은 사회 제반 권력의 비판·감시·견제다. 선한 권력이야 별문제 없겠지만, 권력을 부당하게 사용할 가능성이 있는 세력에게는 눈엣가시다. 그래서 부당한 권력일수록 언론 장악의 유혹에 빠지기 쉽다. 그동안 공영방송에 끊임없이 불만을 제기한 국민의힘과 윤석열 정부도 그 유혹을 극복하지는 못하는 것 같다. 곳곳에서 공영방송 장악 움직임이 가시화되고 있다. 뜻 있는 공영방송 구성원들은 당연히 권력의 침탈에 저항할 것이고, 암흑의 […]\nThe post 공용방송이 ‘또’ 위험하다 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87092",
+          "publishedOn": "2022-09-25T23:25:05.000Z",
+          "wordCount": 2686,
+          "title": "공용방송이 ‘또’ 위험하다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/70c.jpeg"
+        },
+        {
           "id": "https://slownews.kr/?p=87077",
           "author": "씨앗(CEART)",
           "description": "성공적인 기업은 클라우드로 이전하는 것이 목표가 아니라 실질적인 비즈니스 가치를 제공하기 위해 클라우드를 사용하는 데 중점을 둔다. 중국의 클라우드 산업은 상대적으로 도입이 늦었던 것에 비해 전환 속도에서는 세계에서 가장 빠르게 성장하고 있으며, 규모에서는 미국에 이어 세계에서 두 번째로 큰 시장이다. 중국의 퍼블릭 클라우드 시장은 2021년 320억 달러에서 2025년 900억 달러로 향후 몇 년 동안 세 […]\nThe post 중국의 클라우드 산업: 아마존, MS, 구글이 힘 못쓰는 이유 first appeared on 슬로우뉴스.",
@@ -2831,6 +2911,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=587875",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587875/%ec%84%a0%ec%9a%b4%ec%82%ac-%ea%bd%83%eb%ac%b4%eb%a6%87-2",
+          "publishedOn": "2022-09-26T13:05:57.000Z",
+          "wordCount": 5368,
+          "title": "선운사 꽃무릇을 담아보다",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/선운사-꽃무릇을-담다-04163.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587867",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587867/%ea%bc%ac%eb%a6%ac%ed%92%80%ea%b3%bc-%eb%82%98%eb%b9%84",
+          "publishedOn": "2022-09-25T23:52:06.000Z",
+          "wordCount": 5093,
+          "title": "꼬리풀과 나비",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/꼬리풀과-나비01.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587863",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587863/%ea%b1%b4%eb%93%a4%eb%9d%bd%ec%9d%98-%ec%a0%84%eb%a7%9d-%ec%b1%84%ea%b6%8c%ec%9d%98-%ec%8b%9c%eb%8c%80%ea%b0%80-%ec%98%a8%eb%8b%a4",
+          "publishedOn": "2022-09-25T23:47:05.000Z",
+          "wordCount": 5239,
+          "title": "150조 채권 운영하는 건들락의 전망, 채권의 시대가 온다.",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/05/폭락하는-주식-Phoot-by-maxim-hopman.jpg"
+        },
         {
           "id": "https://happist.com/?p=587854",
           "author": "happist",
@@ -3040,16 +3150,6 @@
           "wordCount": 6323,
           "title": "2022년 파월 의장 잭슨홀 연설에 녹아있는 폴 보커  정신",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/08/1982년-워싱텅에서-열린-회의에서-시가를-피루고-있는-폴-볼커-연준의장.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587624",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587624/%ed%8c%8c%ec%9b%94-%ec%9d%98%ec%9e%a5-%ec%9e%ad%ec%8a%a8%ed%99%80-%ec%97%b0%ec%84%a4",
-          "publishedOn": "2022-08-28T02:12:26.000Z",
-          "wordCount": 8411,
-          "title": "2022년 파월 의장 잭슨홀 연설 전문",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/제롬-파월-이-면준-의장-Federal-Reserve-Chair-Jerome-Powell-Photo-by-Al-Drago-via-AP.jpg"
         }
       ]
     },
@@ -3181,6 +3281,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222884563200",
+          "author": "sellars",
+          "description": "* 주관적 관념론자인 버클리에 의하면, 우리가 아는 모든 것은 경험으로부터 오는 것이다. 따라서 경험으로부터 오지 않는 것은 지식이 되지 못한다. 버클리는 이 주장에 따라 직접 경험의 대상이 아닌, 추론의 대상이 되는 물리적 대상의 존재를 삭제해 버린다. 우리 마음에서 독립적으로 존재하고 있는 물리적 대상은 없다. 따라서 존재하는 모든 것은 우리 마음에 의존적이다. 공적(公的)이고 객관적이라고 상정되는 물리적 대상의 존재를 삭제하고 있지만, 그럼에도 이 물리적 대상이 담당하고 있는 공적인 객관성을 유지하기 위해 버클리는 타인의 마음과 신이 존재한다는 것을 인정하고 있다. 그러나 타인의 마음은 관찰 가능한가? 신의 존.......",
+          "link": "https://blog.naver.com/sellars/222884563200",
+          "publishedOn": "2022-09-26T04:36:53.000Z",
+          "wordCount": 101,
+          "title": "4 유아론(solipsism)",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222883646168",
           "author": "sellars",
