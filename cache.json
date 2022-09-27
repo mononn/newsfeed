@@ -164,16 +164,6 @@
           "wordCount": 2314,
           "title": "Integer Conversions and Safe Comparisons in C++20",
           "imageUrl": "https://www.cppstories.com/2022/images/safe_cmp.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2022/init-string-options/",
-          "author": null,
-          "description": "C++ is famous… or infamous for its complex initialization syntax. In this article, I’ll show you around 20 ways to initialize simple std::string variables. Can we somehow make it easier to understand?\n\n\n\n     \n    \n\n\nHave a look:\nvoid foo() {\n    std::string str0;\n    std::string str1 {};\n}\n\n\nWe have two local variables (with automatic storage duration), str0 is default initialized, while str1 is value initialized.\nWhile default initialization is unsafe for integers or other built-in types, it’s relatively fine (but less readable) for class types with a default constructor. In that case, a default constructor will be called, and the string object will get an empty value. The same constructor is invoked for value initialization.\nNevertheless, it’s best to set a value:\nvoid foo() {\n    int x…",
-          "link": "https://www.cppstories.com/2022/init-string-options/",
-          "publishedOn": "2022-08-29T00:00:00.000Z",
-          "wordCount": 2004,
-          "title": "20+ Ways to Init a String, Looking for Sanity",
-          "imageUrl": "https://www.cppstories.com/2022/images/str.png"
         }
       ]
     },
@@ -187,7 +177,18 @@
       "title": "The LLVM Project Blog",
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2022-08-14-libc++-format/",
+          "author": null,
+          "description": "Historically formatting text in C++, using the standard library, has beenunpleasant. It is possible to get nice output with the stream operators, but itis very verbose due to the stream manipulators. The other option is usingprintf, which is convenient but only supports a limited number of types andis not extendable. A non-standard option is using the{fmt} library. This article provides ashort introduction to the parts of this library that were standardized in C++20as std::format, as well as the current implementation status in LLVM 15.\nWhat is std::format\nstd::format is a text formatting library using format strings similar toPython’s formatand extensible for user defined types.\n\n#include <format>#include <iostream>int main() { std::cout << std::format(\"Hello {} in C++{}\", \"std::format\", …",
+          "link": "https://blog.llvm.org/posts/2022-08-14-libc++-format/",
+          "publishedOn": "2022-09-27T00:00:00.000Z",
+          "wordCount": 1534,
+          "title": "Text formatting in C++ using libc++",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Embedded in Academia",
@@ -299,6 +300,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "ab96f1c9-28ec-49c7-b59d-50bfb106f33c",
+          "author": "Hans-Peter Grahsl",
+          "description": "Encryption is valuable in Apache Kafka, as with other communication tools, for protecting data that might be sent to unanticipated or untrustworthy recipients. This series of articles introduces the open source Kryptonite for Kafka library, which is a community project I wrote. Kryptonite for Kafka requires no changes to source code, as it works entirely through configuration files. It currently does so by encrypting data through integration with Apache Kafka Connect, but there are plans to extend the scope of the project to other integration strategies for Kafka.\nThis first article in the series demonstrates encryption on individual fields in structured data, using a relational database and a NoSQL database as examples. The second article focuses on files and introduces some additional so…",
+          "link": "https://developers.redhat.com/articles/2022/09/27/end-end-field-level-encryption-apache-kafka-connect",
+          "publishedOn": "2022-09-27T07:00:00.000Z",
+          "wordCount": 3859,
+          "title": "End-to-end field-level encryption for Apache Kafka Connect",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC-security_1x.png?itok=puGidoF7"
+        },
         {
           "id": "0ebf20fc-5f39-4cff-bf81-9b729880a1b3",
           "author": "Frédéric Bérat",
@@ -528,16 +539,6 @@
           "wordCount": 2756,
           "title": "Kubernetes 101 for developers: Names, ports, YAML files, and more",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Kubernetes_Shared_image_A%20%282%29.png?itok=DmAMqXYf"
-        },
-        {
-          "id": "eaeb35d4-6a27-4010-9260-ae0102993164",
-          "author": "Don Schenck",
-          "description": "Containers, Kubernetes, and microservices have been a hot topic for the past few years, yet many developers may still be wondering how they all work. To take a somewhat different angle on the subject, this article will describe how a container image is constructed and executed using a non-traditional, conversational approach.\nFirst, let's take a quick look at the layers of a container image and how they relate to one another.\nWhat is a container image?\nBriefly, an image is an operating system that runs libraries and runtimes and an application, all enclosed in an Open Container Initiative (OCI) compliant file.\nFigure 1 illustrates an example: a Node.js application that uses the Express library, running on the Red Hat Universal Base Image (UBI) operating system. If you're not familiar with …",
-          "link": "https://developers.redhat.com/articles/2022/08/29/containers-and-container-images-101-developers",
-          "publishedOn": "2022-08-29T07:00:00.000Z",
-          "wordCount": 2375,
-          "title": "Containers and container images 101 for developers",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-containers_1x%20%281%29.png?itok=NK0oKjD5"
         }
       ]
     },
@@ -564,16 +565,6 @@
           "publishedOn": "2022-09-04T23:13:53.000Z",
           "wordCount": null,
           "title": "루나 디스플레이 mac-to-mac 모드 짧은 사용기",
-          "imageUrl": null
-        },
-        {
-          "id": "https://edykim.com/ko/post/php-generics-with-phpstan/",
-          "author": null,
-          "description": "여러 동적 타입 언어가 각자의 방식대로 강타입을 지원해가는 과정은 정말 흥미롭습니다. php에서도 타입에 대한 더욱 다양한 지원을 추가하려는 노력이 계속되고 있는 데다 PHPStan, Psalm…",
-          "link": "https://edykim.com/ko/post/php-generics-with-phpstan/",
-          "publishedOn": "2022-08-29T02:42:22.000Z",
-          "wordCount": 1982,
-          "title": "PHPStan으로 PHP 제네릭 활용하기",
           "imageUrl": null
         }
       ]
@@ -923,6 +914,16 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2022/09/register-now-for-firebase-summit-2022.html",
+          "author": null,
+          "description": "Posted by Grace Lopez, Product Marketing Manager\n  \n\n  \n One of the best things about Firebase is our community, so after three long years, we’re thrilled to announce that our seventh annual Firebase Summit is returning as a hybrid event with both in-person and virtual experiences! Our 1-day, in-person event will be held at Pier 57 in New York City on October 18, 2022. It will be a fun reunion for us to come together to learn, network, and share ideas. But if you’re unable to travel, don’t worry, you’ll still be able to take part in the activities online from your office/desk/couch wherever you are in the world.\nJoin us to learn how Firebase can help you accelerate app development, run your app with confidence, and scale your business. Registration is now open for both the physical and vir…",
+          "link": "http://developers.googleblog.com/2022/09/register-now-for-firebase-summit-2022.html",
+          "publishedOn": "2022-09-27T17:00:00.001Z",
+          "wordCount": 1776,
+          "title": "Register now for Firebase Summit 2022!",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiarDaIoxbPbIknx2yrkUo3GYzqCGixT_zXb_6w39f4GEIC9pGSs_n5U3reTxnPOsymmrpaftbltNr0pMTo2-pysx-EMdErJk-68hFxtVIdMui6qoA47XE7Opct9wUjnrfGeuAsARanHTaDkXIlNWW5X1lAP3pD69BvC3QwuFIouTa9aBBCVzGIrn7N/w1200-h630-p-k-no-nu/FBS_2022_Registration_Blog_C_No_Text.png"
+        },
+        {
           "id": "http://developers.googleblog.com/2022/09/apply-for-support-from-google-play-2m-indie-games-fund-in-latin-america.html",
           "author": null,
           "description": "Posted by Patricia Correa, Director, Global Developer Marketing\n  \nAs part of our commitment to helping all developers grow on our platform, at Google Play we have various programs focused on supporting small games studios. A few weeks ago we announced the winners of the Indie Games Festival in Europe, Korea and Japan, and the 2022 class of the Indie Games Accelerator.\n\nToday, we are launching the Indie Games Fund in Latin America. We will be awarding $2 million dollars in non-dilutive cash awards, in addition to hands-on support, to selected small games studios based in LATAM, to help them build and grow their businesses on Google Play.\nThe program is open to indie game developers who have already launched a game - whether it’s on Google Play or another mobile platform, PC or console. Each selected recipient will get between $150,000 and $200,000 dollars to help them take their game to the next level, and build successful businesses.\nCheck out all eligibility criteria and apply now. Priority will be given to applications received by 12:00 p.m. BRT, 31 October, 2022. \nFor more updates about all our programs, resources and tools for indie game developers, follow us on Twitter @GooglePlayBiz and Google Play business community on LinkedIn.\n\n\n\n\n\nHow useful did you find this blog post?\n★ ★ ★ ★ ★",
@@ -1079,6 +1080,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/0993/",
+          "author": null,
+          "description": "In this article, we are going to talk to Jason Turner, one of the CppCast founders. CppCast is the first podcast for C++ developers by C++ developers. From 2015 to 2022 CppCast had weekly conversations with C++ conference speakers, library authors, writers, ISO committee members, and more. Keep reading to learn about the CppCast backstory. You would find out one of the most entertaining YouTube channels about programming and some tips for C++ developers.",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/0993/",
+          "publishedOn": "2022-09-26T21:00:00.000Z",
+          "wordCount": 5517,
+          "title": "A talk with Jason Turner: the history of CppCast, and why it was shut down",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0993_The_history_of_CppCast/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/0992/",
           "author": null,
           "description": "In 2022, the PVS-Studio static analyzer for C and C++ turns 16 years old. If the analyzer were a human, it would have already finished high school! This project was started a long time ago, and since then its type system has not almost changed. In this article, we will look at the analyzer over time — what required improvements and how we went about it.",
@@ -1185,6 +1196,16 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.com",
       "articles": [
+        {
+          "id": "https://future.com/?p=7096",
+          "author": "Andrej Safundzic",
+          "description": "It’s been a little over a decade since Marc Andreesen famously declared that software was eating the world. He was right. Now, we’re in a new phase: There is powerful software everywhere we look, and we’ve been consuming it without much regard for the long-term effects. So much so that, today, we’re faced with an... Read More\nThe post Did We Overeat on Software? appeared first on Future.",
+          "link": "https://future.com/did-we-overeat-on-software/",
+          "publishedOn": "2022-09-27T14:00:05.000Z",
+          "wordCount": 3269,
+          "title": "Did We Overeat on Software?",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/09/895-Social-Share-Card-Overeat-on-Software-Final-Facebook.jpg"
+        },
         {
           "id": "https://future.com/?p=7073",
           "author": "Zach Caceres",
@@ -1321,6 +1342,16 @@
       "siteUrl": "https://kimchihill.com",
       "articles": [
         {
+          "id": "https://kimchihill.com/?p=2384",
+          "author": "kimchihill",
+          "description": "프롤로그(Prologue): Upfront 벤처스의 파트너, Mark Suster의 글 ( ‘What Does the Post Crash VC Market Look Like?’)을 본인 동의를 얻어 번역하였습니다. Upfront 벤처스는 $3.3B (4.7조원)의 자금을 운영하는 VC로, 시드라운드와 같은 초기 스타트업에 주로 투자하며, 1996년 설립된 이 후 LA와 SF 지역에서 활발히 투자를 이어가고 있습니다. 한국 및 미국 모두 대기 자금 (‘Dry Powder’)이 역대급으로 쌓여있는Continue reading \"Upfront Venture가 전망하는 대규모 시장 침체와 향후 글로벌 VC 전망\"\nUpfront Venture가 전망하는 대규모 시장 침체와 향후 글로벌 VC 전망 appeared first on Kimchi hill.",
+          "link": "https://kimchihill.com/2022/09/27/kr_translated_what-does-the-post-crash-vc-market-look-like/?utm_source=rss&utm_medium=rss&utm_campaign=kr_translated_what-does-the-post-crash-vc-market-look-like",
+          "publishedOn": "2022-09-27T07:04:49.000Z",
+          "wordCount": 2882,
+          "title": "Upfront Venture가 전망하는 대규모 시장 침체와 향후 글로벌 VC 전망",
+          "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/09/VENTURE-전망-2022-09-27_RESIZED.png"
+        },
+        {
           "id": "https://kimchihill.com/?p=2354",
           "author": "kimchihill",
           "description": "주변에서 도대체 시간이 어떻게 나서 김치힐을 운영하는지 질문을 자주 받습니다. 뉴스레터 구독자 분들께서도, 웹사이트 제작, 마케팅, 콘텐츠 제작 등 정말 혼자 하는 것이 맞는지, 분명 엄청 바쁠 텐데, 어떻게 시간이 나서 김치힐을 운영하는지 궁금해 하십니다. 오늘은 제가 김치힐에 들이는 돈과 시간, 그리고 운영 방법을 숨김 없이 공유하겠습니다. 김치힐 운영을 위한 구성 요소와 총 비용 김치힐Continue reading \"김치힐을 운영하는데 들어가는 시간과 비용\"\n김치힐을 운영하는데 들어가는 시간과 비용 appeared first on Kimchi hill.",
@@ -1421,6 +1452,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/909604/",
+          "author": "corbet",
+          "description": "Version\n5.6 of the LXD container manager is out.  Changes include the ability\nto stream log messages to a Grafana Loki server, Infiniband support for\nvirtual machines, a restricted network access mode, and more.",
+          "link": "https://lwn.net/Articles/909604/",
+          "publishedOn": "2022-09-27T16:50:33.000Z",
+          "wordCount": 147,
+          "title": "LXD 5.6 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909596/",
+          "author": "corbet",
+          "description": "Version 5.2 of the bash shell has been released.\n\n\n\tThe most notable new feature is the rewritten command substitution\n\tparsing code, which calls the bison parser recursively. This\n\treplaces the ad-hoc parsing used in previous versions, and allows\n\tbetter syntax checking and catches syntax errors much earlier. The\n\tshell attempts to do a much better job of parsing and expanding\n\tarray subscripts only once; this has visible effects in the `unset'\n\tbuiltin, word expansions, conditional commands, and other builtins\n\tthat can assign variable values as a side effect.",
+          "link": "https://lwn.net/Articles/909596/",
+          "publishedOn": "2022-09-27T14:37:54.000Z",
+          "wordCount": 2298,
+          "title": "Bash 5.2 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909578/",
+          "author": "corbet",
+          "description": "Yoshua Wuyts gives an overview of async\nRust and why it is interesting.\n\n\n\tConversations around \"why async\" often focus on performance - a\n\ttopic which is highly dependent on workloads, and results with\n\tpeople wholly talking past each other. While performance is not a\n\tbad reason to choose async Rust, we often we only notice\n\tperformance when we experience a lack of it. So I want to instead\n\ton which features async Rust provides which aren't present in\n\tnon-async Rust.",
+          "link": "https://lwn.net/Articles/909578/",
+          "publishedOn": "2022-09-27T13:53:46.000Z",
+          "wordCount": 195,
+          "title": "Wuyts: Why async Rust",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909576/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (dovecot and firefox-esr), Fedora (firefox and grafana), Red Hat (firefox and thunderbird), Slackware (dnsmasq and vim), SUSE (dpdk, firefox, kernel, libarchive, libcaca, mariadb, openvswitch, opera, permissions, podofo, snakeyaml, sqlite3, unzip, and vsftpd), and Ubuntu (expat, libvpx, linux-azure-fde, linux-oracle, squid, squid3, and webkit2gtk).",
+          "link": "https://lwn.net/Articles/909576/",
+          "publishedOn": "2022-09-27T13:22:13.000Z",
+          "wordCount": 367,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/909265/",
           "author": "corbet",
@@ -2150,16 +2221,6 @@
           "wordCount": 247,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906315/",
-          "author": "corbet",
-          "description": "The 6.0-rc3 kernel prepatch is out for\ntesting.\n\n\n\tSo as some people already noticed, last week was an anniversary\n\tweek - 31 years since the original Linux development\n\tannouncement. How time flies.\n\n\tBut this is not that kind of historic email - it's just the regular\n\tweekly RC release announcement, and things look pretty normal.",
-          "link": "https://lwn.net/Articles/906315/",
-          "publishedOn": "2022-08-28T22:40:07.000Z",
-          "wordCount": 168,
-          "title": "Kernel prepatch 6.0-rc3",
-          "imageUrl": null
         }
       ]
     },
@@ -2379,16 +2440,6 @@
           "wordCount": null,
           "title": "Programming Languages: History and Fundamentals",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=7073",
-          "author": "Derek Jones",
-          "description": "Once it has been agreed to implement new functionality, how long do the associated tasks have to wait in the to-do queue? An analysis of the SiP task data finds that waiting time has a power law distribution, i.e., , where is the number of tasks waiting a given amount of time; the LSST:DM Sprint/Story-point/Story […]",
-          "link": "https://shape-of-code.com/2022/08/28/task-backlog-waiting-times-are-power-laws/",
-          "publishedOn": "2022-08-28T22:22:01.000Z",
-          "wordCount": 1557,
-          "title": "Task backlog waiting times are power laws",
-          "imageUrl": null
         }
       ]
     },
@@ -2397,6 +2448,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11056",
+          "author": "Stacey Higginbotham",
+          "description": "IFTTT, which lets users link connected devices and web services to other connected devices and web services, has achieved $6 million in annual recurring revenue from 150,000 subscribers two years after it announced a subscription plan. Linden Tibbets, the CEO and co-founder of IFTTT, told me the company has reached break even on its revenue and […]\nThe post Surprise! People are shelling out for IoT subscriptions appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/surprise-people-are-shelling-out-for-iot-subscriptions/",
+          "publishedOn": "2022-09-27T13:00:09.000Z",
+          "wordCount": 2201,
+          "title": "Surprise! People are shelling out for IoT subscriptions",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/09/Screen-Shot-2022-09-22-at-2.42.41-PM.png?fit=1417%2C901&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=11037",
           "author": "Stacey Higginbotham",
@@ -2705,6 +2766,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=87097",
+          "author": "민주언론시민연합",
+          "description": "한국 언론에 놓인 주요 과제 중 하나로 공영언론 강화를 빼놓을 수는 없을 것이다. 그러나 공영언론사 주변에서 지금 벌어지고 있는 일들은 ‘공영언론의 공영화’가 아닌 공영언론의 탈(脫)공영화 흐름을 보인다. 앞으로 나가가는 진일보가 아닌 명백한 과거로의 퇴행 양상을 보이고 있다. 이 글을 쓰고 있는 9월 26일, ‘TBS 폐지 조례안’이 서울시 의회에 상정되며 서울시의회 주변의 긴장감이 높아지고 있다. “언론의 […]\nThe post TBS 폐지, YTN 민영화, 서울신문 투항… 댁의 공영언론은 안녕하십니까? first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87097",
+          "publishedOn": "2022-09-27T09:02:37.000Z",
+          "wordCount": 2602,
+          "title": "TBS 폐지, YTN 민영화, 서울신문 투항… 댁의 공영언론은 안녕하십니까?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/pic_001-2-1.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=87092",
           "author": "민주언론시민연합",
           "description": "언론의 제1기능은 사회 제반 권력의 비판·감시·견제다. 선한 권력이야 별문제 없겠지만, 권력을 부당하게 사용할 가능성이 있는 세력에게는 눈엣가시다. 그래서 부당한 권력일수록 언론 장악의 유혹에 빠지기 쉽다. 그동안 공영방송에 끊임없이 불만을 제기한 국민의힘과 윤석열 정부도 그 유혹을 극복하지는 못하는 것 같다. 곳곳에서 공영방송 장악 움직임이 가시화되고 있다. 뜻 있는 공영방송 구성원들은 당연히 권력의 침탈에 저항할 것이고, 암흑의 […]\nThe post 공용방송이 ‘또’ 위험하다 first appeared on 슬로우뉴스.",
@@ -2915,6 +2986,16 @@
           "id": "https://happist.com/?p=587875",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587875/%ec%84%a0%ec%9a%b4%ec%82%ac-%ea%bd%83%eb%ac%b4%eb%a6%87-%eb%8f%84%ec%86%94%ec%b2%9c-%ed%92%8d%ea%b2%bd",
+          "publishedOn": "2022-09-26T13:05:57.000Z",
+          "wordCount": 5368,
+          "title": "선운사 꽃무릇을 담아보다",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/선운사-꽃무릇을-담다-04163.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587875",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/587875/%ec%84%a0%ec%9a%b4%ec%82%ac-%ea%bd%83%eb%ac%b4%eb%a6%87-2",
           "publishedOn": "2022-09-26T13:05:57.000Z",
           "wordCount": 5368,
@@ -3120,36 +3201,6 @@
           "wordCount": 6015,
           "title": "CTV 광고 시장에서 격돌하는 유튜브와 틱톡 경쟁 상황",
           "imageUrl": "https://happist.com/wp-content/uploads/2020/01/틱톡.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587646",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587646/%eb%af%b8%ea%b5%ad-%ea%b2%bd%ec%a0%9c-%ed%95%b4%ec%84%9d",
-          "publishedOn": "2022-08-29T02:36:48.000Z",
-          "wordCount": 6696,
-          "title": "WSJ, 미국 경제는 침체가 아닌 정체일 수 있습니다. 미국 경제에 대한 새로운 해석",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/잭슨홀-미팅이-열리는-잭슨-호수가-보이는-풍경-주식시장의-암운처럼-을씨년스럽다-Jackson-Lake-Lodge-Moran-United-States-Photo-by-Kevin-Noble.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587644",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587644/%eb%8f%88%ec%9d%98-%ec%8b%ac%eb%a6%ac%ed%95%99",
-          "publishedOn": "2022-08-29T01:59:58.000Z",
-          "wordCount": 5414,
-          "title": "돈의 심리학에서 배우는 10가지 교훈",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/12/총을-든-여인-Young-woman-with-a-gun-Photo-bu-Sammy-Williams.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587637",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587637/%ed%8c%8c%ec%9b%94-%ec%9d%98%ec%9e%a5-%ec%9e%ad%ec%8a%a8%ed%99%80-%ec%97%b0%ec%84%a4%ea%b3%bc-%ed%8f%b4-%eb%b3%b4%ec%bb%a4-%ec%a0%95%ec%8b%a0",
-          "publishedOn": "2022-08-28T12:22:58.000Z",
-          "wordCount": 6323,
-          "title": "2022년 파월 의장 잭슨홀 연설에 녹아있는 폴 보커  정신",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/1982년-워싱텅에서-열린-회의에서-시가를-피루고-있는-폴-볼커-연준의장.jpg"
         }
       ]
     },
@@ -3257,16 +3308,6 @@
           "wordCount": 1835,
           "title": "[필진 칼럼] 생선과 비타민",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75199",
-          "author": "ingppoo",
-          "description": "미국 대법원과 관련 있는 사람들이 절대로 휴가를 쓸 수 없는 달이 있다면 6월입니다. 법으로 정해진 미국 대법원의 한 해는 10월 첫 번째 월요일에 시작해서 이듬해 10월 첫 번째 월요일 전날인 일요일에 끝납니다. 보통 대법관들은 6월 말 또는 7월 초부터 여름휴가 및 휴지기를 갖고, 한 해 동안 고민하고 논의한 사건들에 관해 내린 결정을 휴지기 직전인 6월에 잇달아 발표합니다. 대법관은 물론 대법관의 심복인 로클럭들, 재판에 참여한 변호사, 로펌, 담당 기자들에게도 6월은 가장 바쁜 → 더 보기",
-          "link": "https://newspeppermint.com/2022/08/28/npc_scotusgunoriginalism/?utm_source=rss&utm_medium=rss&utm_campaign=npc_scotusgunoriginalism",
-          "publishedOn": "2022-08-28T22:59:31.000Z",
-          "wordCount": 2119,
-          "title": "[필진 칼럼] 수정헌법 2조와 클래런스 토머스 대법관의 비뚤어진 원전주의",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3281,6 +3322,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222885385419",
+          "author": "sellars",
+          "description": "적어도(at least) 하나가 있다. (Ex)Fx 많아도 혹은 기껏해야(at most) 하나이다. (x)(y)[Fx&Fy→(x=y)] 딱, 혹은 정확하게(exactly) 하나가 있다. 딱 하나가 있다는 것은 <적어도 하나가 있다>와 <많아도 하나이다>의 연언이다. 따라서 (Ex)Fx & (x)(y)[(Fx&Fy)→(x=y)] 이 문장은 다음 문장과 동치이다. (Ex){x & (y)[Fy→(x=y)]} 이 두 문장이 동치라는 것은 다음처럼 증명된다. (Ex)Fx & (x)(y)[Fx&Fy→(x=y)] → (Ex){Fx & (y)[Fy→(x=y)]} 1 (Ex)Fx & (x)(y)[Fx&Fy→(x=y)] 2 (Ex)Fx (1 단순화) 3 Fa (2 존재예화) 4 (x)(y)[Fx&Fy→(x=y)] (1 단.......",
+          "link": "https://blog.naver.com/sellars/222885385419",
+          "publishedOn": "2022-09-27T02:02:45.000Z",
+          "wordCount": 101,
+          "title": "딱 하나가 있다",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222884563200",
           "author": "sellars",
@@ -3429,16 +3480,6 @@
           "publishedOn": "2022-08-31T00:16:41.000Z",
           "wordCount": 101,
           "title": "26 대당 관계과 직접 추리",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222860888811",
-          "author": "sellars",
-          "description": "맹자-왕양명과 주희를 대조시키는 이명휘의 글을 보다가 사중명의 <유학과 현대 세계>(1998)가 생각났다. 영미철학과 스트로슨을 전공한 사중명의 책도 이명휘와 유사하게 모종삼의 철학적 주장을 옹호하고 있다. (그러나 옹호의 논증을 제시하기 보다는 모종삼의 주장은 자세하게 풀어주고 있을 뿐이다.) 그가 다음처럼 말한다. <유학은 그 본질 면에서 말한다면, 그것은 심성(心性)의 학이요, 다른 말로 하면 내성(內省)의 학이다. 만약 그것이 학문의 일종이라면, 그것은 특별한 의미를 가지는 학문으로 일반적으로 일컬어지는 학문(knowledge, science)과 다르다. 그것은 개체에서 우주에 이르기까지의 도덕적 완성을 관계하는 생명.......",
-          "link": "https://blog.naver.com/sellars/222860888811",
-          "publishedOn": "2022-08-29T00:11:51.000Z",
-          "wordCount": 101,
-          "title": "사중명(謝仲明)의 <유학과 현대 세계>",
           "imageUrl": null
         }
       ]
