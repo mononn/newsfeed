@@ -345,6 +345,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "61b1b545-e963-4cef-a514-7ea1507a17fd",
+          "author": "Audrey Reznik",
+          "description": "Model servers, as illustrated in Figure 1, are very convenient for AI applications. They act as microservices and can abstract the entirety of inference execution, making them agnostic to the training framework and hardware. They also offer easy scalability and efficient resource utilization.\n\n\n\n\n          \nRed Hat OpenShift and Kubernetes are optimal places for deploying model servers. However, managing them directly can be a complex task in a large-scale environment. In this article, you'll learn how the OpenVINO Model Server Operator can make it straightforward.\nOperator installation\nThe operator can be easily installed from the OpenShift console. Just navigate to the OperatorHub menu (Figure 2), search for OpenVINO™ Toolkit Operator, then click the Install button.\n\n\n\n\n          \nDeploy…",
+          "link": "https://developers.redhat.com/articles/2022/09/30/perform-inference-using-intel-openvino-model-server-openshift",
+          "publishedOn": "2022-09-30T07:00:00.000Z",
+          "wordCount": 2658,
+          "title": "Perform inference using Intel OpenVINO Model Server on OpenShift",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-machine-learning_1x.png?itok=CERqkxYi"
+        },
+        {
           "id": "31f50823-24d0-4da8-9a0f-8cfc13ab586d",
           "author": "Serge Guelton",
           "description": "Flexible array members (FAM) is an extension of C89 standardized in C99. This article discusses how flexible array members offer convenience and improve performance and how compiler implementations can generate complications.\nFAM makes it possible to declare a struct with a dynamic size while keeping a flat memory layout. This is a textbook example:\nstruct fam {\n\n     int size;\n\n     double data[ ];\n\n};\nThe data array starts empty and will be loaded later, perhaps many times. Presumably, the programmer uses the size member to hold the current number of elements and updates that variable with each change to the data size.\nFlexible array members vs. pointer implementation\nFlexible array members allow faster allocation, better locality, and solid code generation. The feature is an alternative…",
@@ -563,26 +573,6 @@
           "wordCount": 3595,
           "title": "How to create C binding for a Rust library",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/How_Rust_makes_Rayon_magical-01.png?itok=8FImZDMa"
-        },
-        {
-          "id": "8055d5b0-1333-4669-9324-58cf32128e69",
-          "author": "Don Schenck",
-          "description": "In this article, I will present options for building containers that will run in Kubernetes and Red Hat OpenShift. There are many reasons against development in the environment that will ultimately run the container, such as cost, speed, tooling, and so on. Creating a container that works on your PC requires a local development environment that gives you the complete experience of coding, building, debugging, and running—and then pushes all pieces of the container to a host or cloud service. The best way to describe this process is tantamount to encapsulating your entire software building experience into one file and then sending it off to a server.\nContainer development offers a new way of thinking about software development. It is an application development model in which you decide whic…",
-          "link": "https://developers.redhat.com/articles/2022/09/01/my-advice-why-you-should-build-containers-your-pc",
-          "publishedOn": "2022-09-01T07:00:00.000Z",
-          "wordCount": 3352,
-          "title": "My advice on why you should build containers on your PC",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-containers_2x.png?itok=zN0DnK8F"
-        },
-        {
-          "id": "692bc784-5a5d-453e-9b61-ed3ba64a597a",
-          "author": "Gris Ge",
-          "description": "Rust is a good choice for writing a Linux\nsystem library due to guarantees on memory and thread safety, a revolutionary approach to memory ownership, and a polished Foreign Function Interface. In spite of a slightly steep learning curve, you will come to love Rust and especially its compiler.\nThis article is the first in a series focusing on Rust for Linux. Check out the other three articles:\nPart 2: How to create C binding for a Rust library\n\n\nPart 3: How to create Python binding for a Rust library\n\n\nPart 4: Build trust in continuous integration for your Rust library\n\n\n\nI have created a demo Git repository with simple code to help explain the points in this article. The repository contains:\nAn echo server listening on the Unix socket /tmp/librabc\nA Rust crate that connects to the socket a…",
-          "link": "https://developers.redhat.com/articles/2022/09/01/3-essentials-writing-linux-system-library-rust",
-          "publishedOn": "2022-09-01T07:00:00.000Z",
-          "wordCount": 3696,
-          "title": "3 essentials for writing a Linux system library in Rust",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/How_Rust_makes_Rayon_magical-01.png?itok=8FImZDMa"
         }
       ]
     },
@@ -671,6 +661,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4476476",
+          "author": "Emily Newton",
+          "description": "Businesses shipping electronics should do all they can to prevent loss and damage, so here are eight of the best ways to protect these shipments....\nThe post Essential practices for safely shipping sensitive electronics appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/essential-practices-for-safely-shipping-sensitive-electronics/",
+          "publishedOn": "2022-09-30T10:00:00.000Z",
+          "wordCount": 4191,
+          "title": "Essential practices for safely shipping sensitive electronics",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/shipping-t.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4476621",
           "author": "Gil Bernabeu",
@@ -920,26 +920,6 @@
           "wordCount": 4206,
           "title": "Siemens at Nissan, MEMS mic, CXL memory, and more embedded",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/Soundskrit-SKR0400.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4476097",
-          "author": "Nitin Dahad",
-          "description": "New Intel Pathfinder for RISC-V platform enables developers to create their own products using RISC-V cores and IP from the partner ecosystem, instantiate on FPGA and simulator platforms, and run operating systems and tool chains within a unified IDE. \nThe post Intel puts more weight behind RISC-V with Pathfinder platform appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/intel-puts-more-weight-behind-risc-v-with-pathfinder-platform-and-ecosystem/",
-          "publishedOn": "2022-08-31T19:02:09.000Z",
-          "wordCount": 4216,
-          "title": "Intel puts more weight behind RISC-V with Pathfinder platform",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Intel-Pathfinder-image_c.jpeg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4476093",
-          "author": "Jacob Beningo",
-          "description": "Software architecture is a critical design element that guides developers in building an embedded application successfully. Here are five pitfalls that can get in the...\nThe post 5 embedded software architecture pitfalls appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/5-embedded-software-architecture-pitfalls/",
-          "publishedOn": "2022-08-31T16:53:17.000Z",
-          "wordCount": 4189,
-          "title": "5 embedded software architecture pitfalls",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/08/Caryatids-Greece.jpeg"
         }
       ]
     },
@@ -1134,6 +1114,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/0994/",
+          "author": null,
+          "description": "Stride is a free, feature-packed and cross-platform game engine implemented in C#. Stride may certainly become an alternative to Unity, but what about the quality of its source code? Let's check Stride Game Engine with the help of the PVS-Studio static analyzer.",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/0994/",
+          "publishedOn": "2022-09-29T21:00:00.000Z",
+          "wordCount": 5743,
+          "title": "Stride Game Engine error review",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0994_Stride/image1_thm_intoblank_1200x630.png"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/0993/",
           "author": null,
           "description": "In this article, we are going to talk to Jason Turner, one of the CppCast founders. CppCast is the first podcast for C++ developers by C++ developers. From 2015 to 2022 CppCast had weekly conversations with C++ conference speakers, library authors, writers, ISO committee members, and more. Keep reading to learn about the CppCast backstory. You would find out one of the most entertaining YouTube channels about programming and some tips for C++ developers.",
@@ -1202,16 +1192,6 @@
           "wordCount": 4642,
           "title": "The risks of using vulnerable dependencies in your project, and how SCA helps manage them",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0987_PVS-Studio_SCA/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/0986/",
-          "author": null,
-          "description": "MSBuild is a popular open-source build platform created by Microsoft. Developers all over the world use MSBuild. In 2016, we checked it for the first time and found several suspicious places. Can we find anything this time? Let's see!",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/0986/",
-          "publishedOn": "2022-08-31T21:00:00.000Z",
-          "wordCount": 6150,
-          "title": "Build to order? Checking MSBuild for the second time",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0986_MSBuild/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1249,16 +1229,6 @@
           "wordCount": 3802,
           "title": "Research Twice, Build Once: How to Know Your Users as You Grow",
           "imageUrl": "https://future.com/wp-content/uploads/2022/08/SocialShareCard-UserResearch-Facebook.png"
-        },
-        {
-          "id": "https://future.com/?p=7009",
-          "author": "Michael Mignano",
-          "description": "This post originally ran here. Most great teams would agree, there’s nothing more powerful for executing on big ambitions than a clearly defined and well-communicated goal. But sometimes the stakes are much higher than usual. In these instances, a goal requires even more focus, execution, and clarity. All of these can be achieved through a... Read More\nThe post Grow or Die: A Framework for Turning Your Company Around Fast appeared first on Future.",
-          "link": "https://future.com/grow-or-die-supergoals/",
-          "publishedOn": "2022-08-31T18:22:46.000Z",
-          "wordCount": 4948,
-          "title": "Grow or Die: A Framework for Turning Your Company Around Fast",
-          "imageUrl": "https://future.com/wp-content/uploads/2022/08/Existential_Cliff_Facebook-1.jpg"
         }
       ]
     },
@@ -1394,21 +1364,6 @@
           "wordCount": 3818,
           "title": "Are you trying to hire the first VP of Sales in your SaaS startup? You have to read this",
           "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/09/Picture1.jpg"
-        },
-        {
-          "id": "https://kimchihill.com/?p=2138",
-          "author": "kimchihill",
-          "description": "가트너가 ‘2022년 이머징 테크놀로지 하이프 사이클 (Hype Cycle for Emerging Technologies, 2022)’보고서를 발표하며, AI 자동화 및 가속화가 중요한 화두이며, 이를 위해 주목해야 할 기술로 제너레이티브 AI (Generative AI, 생성형 AI모델)를 선정했습니다 제너레이티브 AI란?  제너레이티브 AI는 이용자가 AI에게 어떤 것을 만들어 달라고 요구하면, 그 요구에 맞춰서 결과를 만들어내는 인공지능을 말합니다. AI에게 특정 개념을 학습 시키는 것이Continue reading \"역시 생성모델 (Generative AI)이 미래다\"\n역시 생성모델 (Generative AI)이 미래다 appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2022/08/31/kr-generative-ai-is-the-future/?utm_source=rss&utm_medium=rss&utm_campaign=kr-generative-ai-is-the-future",
-          "publishedOn": "2022-08-31T08:30:42.000Z",
-          "wordCount": 2669,
-          "title": "역시 생성모델 (Generative AI)이 미래다",
-          "enclosure": {
-            "url": "https://video.twimg.com/ext_tw_video/1564626514393501703/pu/vid/720x720/JKBW02s0lKOwy061.mp4?tag=12",
-            "length": "810161",
-            "type": "video/mp4"
-          },
-          "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/08/image-12.png"
         }
       ]
     },
@@ -1456,6 +1411,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/909611/",
+          "author": "corbet",
+          "description": "Just over ten years ago, the Arm big.LITTLE architecture posed a challenge for the kernel's CPU\nscheduler: how should processes be assigned to CPUs when not all CPUs have\nthe same capacity?  The situation has not gotten simpler since then; new\nsystems bring new quirks that must be kept in mind for optimal scheduling.\nAt the 2022 Linux Plumbers Conference, Len\nBrown and Ricardo Neri talked about Intel's hybrid systems and the work\nthat is being done to schedule properly on those systems.",
+          "link": "https://lwn.net/Articles/909611/",
+          "publishedOn": "2022-09-30T14:39:35.000Z",
+          "wordCount": null,
+          "title": "[$] Hybrid scheduling gets more complicated",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909947/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (libsndfile and libvncserver), Fedora (bash), Red Hat (httpd24-httpd, java-1.7.1-ibm, and java-1.8.0-ibm), and SUSE (krb5-appl, libjpeg-turbo, python310, and slurm_20_02).",
+          "link": "https://lwn.net/Articles/909947/",
+          "publishedOn": "2022-09-30T14:07:43.000Z",
+          "wordCount": 170,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909881/",
+          "author": "jake",
+          "description": "Over on the Collabora blog, Marius Vlad writes about the recent \nWeston 11.0.0 release.  Weston is the reference compositor for the Wayland display server protocol.  Vlad looks at features of the release, including some things that are being deprecated and removed, as well as features coming in Weston 12. \n\nColor management infrastructure code has landed that allows HDR [high dynamic range] characteristics to be delivered to an HDR-capable monitor by setting-up HDR metadata in a weston.ini configuration file and delivering that to KMS [kernel mode setting]. Once Weston gains the ability to produce HDR content in a future version, it will come naturally supported.\n\nThis new version brings in multiple RDP [remote desktop protocol] improvements, like clipboard pasting, various keyboard language support, bumped support for a newer version of FreeRDP library, and many more other improvements and fixes.",
+          "link": "https://lwn.net/Articles/909881/",
+          "publishedOn": "2022-09-29T20:30:38.000Z",
+          "wordCount": 1133,
+          "title": "Weston 11.0: what's new, what's next (Collabora blog)",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/909496/",
           "author": "corbet",
@@ -2205,56 +2190,6 @@
           "wordCount": 222,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906067/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for September 1, 2022 is available.",
-          "link": "https://lwn.net/Articles/906067/",
-          "publishedOn": "2022-09-01T02:16:43.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for September 1, 2022",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906512/",
-          "author": "jake",
-          "description": "A fairly lengthy discussion of whether there should be a way to\nbreak out of (or \ncontinue) more than one level of nested loops in Python recently\ntook place in the Ideas\ncategory of the language's discussion forum.  The idea is\nattractive, at least in an abstract sense—some other languages support\njumping out of \nmultiple loops at once—but it seems unlikely to go anywhere for Python.\nThe barrier to new features is fairly high, for sure, but there is also a\nneed for proponents to provide real-world examples that demonstrate their\nadvantages.  That, too, is a difficult bar to clear, as was seen in the\ndiscussion.",
-          "link": "https://lwn.net/Articles/906512/",
-          "publishedOn": "2022-08-31T21:14:51.000Z",
-          "wordCount": null,
-          "title": "[$] Python multi-level break and continue",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906628/",
-          "author": "corbet",
-          "description": "The\n5.19.6,\n5.15.64, and\n5.10.140\nstable kernel updates have been released; each contains another set of\nimportant fixes, as usual.",
-          "link": "https://lwn.net/Articles/906628/",
-          "publishedOn": "2022-08-31T16:34:48.000Z",
-          "wordCount": 137,
-          "title": "A few more stable kernels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906604/",
-          "author": "corbet",
-          "description": "The GitHub blog series on how the Git database works continues with this\nlook at file-history queries.\n\n\n\tIf these history modes usually have the same output, then why\n\twouldn’t we always use --full-history\n\t--simplify-merges? The reason is performance. Not only\n\tdoes simplified history speed up the query by skipping a large\n\tportion of commits, it also allows iterative output. The simplified\n\thistory can output portions of the history without walking the\n\tentire history. By contrast, the --simplify-merges algorithm is\n\tdefined recursively starting at commits with no parents. Git cannot\n\toutput a single result until walking all reachable commits and\n\tcomputing their diffs on the input path. This can be extremely slow\n\tfor large repositories.",
-          "link": "https://lwn.net/Articles/906604/",
-          "publishedOn": "2022-08-31T14:36:52.000Z",
-          "wordCount": 244,
-          "title": "Git’s Database Internals III: File History Queries (GitHub blog)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906579/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (dpdk, net-snmp, php-horde-mime-viewer, php-horde-turba, and webkit2gtk), Fedora (rsync), Oracle (openssl and systemd), Red Hat (booth, kernel, kernel-rt, and openssl), Slackware (vim), SUSE (bluez, java-1_8_0-ibm, postgresql10, and zlib), and Ubuntu (kernel, linux, linux-raspi, linux-aws, and linux-oem-5.14).",
-          "link": "https://lwn.net/Articles/906579/",
-          "publishedOn": "2022-08-31T13:31:02.000Z",
-          "wordCount": 247,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2483,6 +2418,16 @@
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=11087",
+          "author": "Kevin C. Tofel",
+          "description": "FarmBOX is a DIY plant management system: It’s hard to believe that a meager $15 Raspberry Pi Zero 2 can help you grow indoor plants like a master gardener. OK, it takes more than just the $5 compute board; you’ll need a compatible camera sensor, a motor timer, and a few other hardware bits, too. Even […]\nThe post IoT news of the week for Sept. 30, 2022 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-for-sept-30-2022/",
+          "publishedOn": "2022-09-30T17:02:06.000Z",
+          "wordCount": 2323,
+          "title": "IoT news of the week for Sept. 30, 2022",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
+        },
+        {
           "id": "https://staceyoniot.com/?p=11083",
           "author": "Stacey Higginbotham",
           "description": "This week’s show focuses on Amazon’s new devices and services launched Wednesday. Kevin and I talk about Amazon’s direction with Alexa as the manager of your life. We also gawp at the price iRobot is charging for its latest iteration of the Roomba robotic vacuum, although Kevin convinces me it’s not too crazy. Then we […]\nThe post Podcast: Amazon’s turning Alexa into the brains of the home appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2701,16 +2646,6 @@
           "wordCount": 1949,
           "title": "Podcast: Is Kickstarter still relevant for smart devices?",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/Screen-Shot-2022-08-31-at-4.19.27-PM.png?fit=1882%2C1314&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=10889",
-          "author": "Kevin C. Tofel",
-          "description": "On our most recent IoT Podcast episode, we took a question from John on our Voicemail hotline. John heard the recent news that Helium has added 5G hotspots alongside its existing LoRa hotspots. This is the result of Nova Labs, the company behind Helium, acquiring FreedomFi. He wants to understand what these new hotspots do […]\nThe post What the heck is this Helium 5G network? appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/what-the-heck-is-this-helium-5g-network/",
-          "publishedOn": "2022-08-31T13:00:40.000Z",
-          "wordCount": 1998,
-          "title": "What the heck is this Helium 5G network?",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/08/888FF8F7-4119-45C7-AB04-084BFA06DAA4.png?fit=874%2C716&ssl=1"
         }
       ]
     },
@@ -2783,6 +2718,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=83637",
+          "author": "sticky",
+          "description": "생산수단의 사회적 소유는 인간이 조직화된 사회의 의지에 따라 그에 반응하도록 경제적 자극을 정하는 것이 가능하게 한다. 이 경우에 인간 행동의 경제법칙은 인간이 의도한 대로 작용한다. 그 외에도, 생산수단의 사회적 소유는 인간 행위의 상호작용 양식을 목적에 맞도록 계획하는 것을 가능하게 한다. 그 결과 인간 행위의 상호작용 법칙 또한 인간의 의도대로 작용한다. 마지막으로 생산수단의 사회적 소유는 생산관계의 […]",
+          "link": "http://economicview.net/83637/",
+          "publishedOn": "2022-09-29T23:26:37.000Z",
+          "wordCount": 1203,
+          "title": "“사회적 소유”에 대한 단상",
+          "imageUrl": "https://s0.wp.com/i/blank.jpg"
+        },
+        {
           "id": "http://economicview.net/?p=83336",
           "author": "sticky",
           "description": "By Edwin Austin Abbey – Metropolitan Museum of Art, online database: entry 10049, Public Domain, Link 넝마 옷 사이로 보이는 악행은 크게 보이는 법이지만, 법복과 털외투는 그 모든 걸 감춰주지. 죄에 황금 칠을 하면 강력한 정의의 창이라도 상처 하나 못 입히고 부러지는 거다. 누더기로 무장하면, 난쟁이의 지푸라기라도 뚫을 수 있다.[리어 왕, 윌리엄 셰익스피어, 김태원 옮김, […]",
@@ -2809,6 +2754,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=87128",
+          "author": "민주언론시민연합",
+          "description": "원-달러 환율이 1,400원을 넘어섰습니다. 미국 연방준비제도가 정책금리를 지속해서 큰 폭으로 올리며 긴축을 시사하자, 세계 금융시장이 흔들리고 있는데요. 한국 역시 1997년 외환위기와 2008년 글로벌 금융위기 이후 처음으로 1,400원을 돌파한 환율을 비롯해 코스피 2,300선이 무너지고, 무역수지가 넉 달 연속 적자를 기록하는 등 고환율·고금리·고물가에 무역적자까지 악화 하며 복합적 경제위기 우려가 확대되고 있습니다. 언론에도 경제위기를 강조하는 보도가 늘어나고 있는데요. […]\nThe post ‘물타기’ 언론의 놀라운 ‘받아쓰기’: 환율 급등이 국민 탓? first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87128",
+          "publishedOn": "2022-09-30T11:51:45.000Z",
+          "wordCount": 3129,
+          "title": "‘물타기’ 언론의 놀라운 ‘받아쓰기’: 환율 급등이 국민 탓?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/pic_003-2.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=87121",
           "author": "경실련",
@@ -2998,26 +2953,6 @@
           "wordCount": 2529,
           "title": "론스타와 모피아 그리고 ISDS 폐기해야 하는 이유",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/heart-g14dd1a0f7_1280.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=86923",
-          "author": "씨앗(CEART)",
-          "description": "프랙티스(practice)는 정보·통신 분야에서 작업 산출물이나 프로세스 능력을 개선하는 소프트웨어 공학 활동이나 관리 활동을 의미한다. 왜 마이크로서비스인가? 오늘날의 비즈니스 환경은 전무후무하게 경쟁적이다. 기업의 규모나 업종에 상관없이 디지털 전환의 시대에는 제품이나 서비스의 스피드, 품질, 판매 후 유지 보수 등 모든 면에서 우위를 유지하기 쉽지 않다. 신규 진입자가 시장에 진입하는 것이 그 어느 때보다 쉬워지고, 예전 버전에서 생성된 […]\nThe post 마이크로서비스의 여섯 가지 베스트 프랙티스 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86923",
-          "publishedOn": "2022-09-01T01:48:51.000Z",
-          "wordCount": 3492,
-          "title": "마이크로서비스의 여섯 가지 베스트 프랙티스",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/09/android-gc03b08a77_640.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=86914",
-          "author": "자작나무",
-          "description": "정의당이 듣도 보도 못한 걸 시작했다. 31일부터 닷새 동안 정의당 소속 비례대표 5명에게 총사퇴 권고 여부를 묻는 당원 총투표를 한다고 한다. 물론 가결이 된다고 5명이 자동으로 의원직을 잃거나 하는 건 아니다. 그런 건 전혀 없다. 다만 총사퇴를 ‘권고’하는 것일 뿐. 이런 황당한 소동은 어떻게 시작된 것일까. 정의당 전 수석대변인 정호진이 7월 5일 비례대표 총사퇴를 요구하는 […]\nThe post 당원 총투표, 정의당의 유치 찬란한 자해극 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/86914",
-          "publishedOn": "2022-08-31T10:39:20.000Z",
-          "wordCount": 2613,
-          "title": "당원 총투표, 정의당의 유치 찬란한 자해극",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/08/afasdfasf.jpg"
         }
       ]
     },
@@ -3234,6 +3169,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=75342",
+          "author": "ingppoo",
+          "description": "이번 회기 미국 대법원이 내린 판결 가운데 상대적으로 주목을 덜 받았지만, 장기적으로는 매우 큰 영향을 미칠 것으로 예상되는 판결이 바로 웨스트버지니아 대 환경보호청(EPA) 판결입니다. 그 내용에 관해 프리미엄 콘텐츠에도 글을 소개한 적이 있는데요, 팟캐스트 아메리카노 세 번째 시즌 두 번째로 함께 읽은 책 “지구를 살린 위대한 판결”의 뒷부분에서 엄청난 반전을 선사한 주인공 리사 헤인즐링 교수가 이번 대법원판결의 함의에 관해 애틀란틱에 칼럼을 썼습니다. 보수 대법관들이 요구하는 엄격한 원전주의와 지나치게 상세한 내용의 법안을 요구하는 → 더 보기",
+          "link": "https://newspeppermint.com/2022/09/29/npc_heinzerlingonscotus/?utm_source=rss&utm_medium=rss&utm_campaign=npc_heinzerlingonscotus",
+          "publishedOn": "2022-09-29T22:59:44.000Z",
+          "wordCount": 2870,
+          "title": "[전문 번역] 리사 헤인즐링 칼럼 “미국 정치를 집어삼킨 대법원”",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=75344",
           "author": "veritaholic",
           "description": "우유나 유제품을 먹고 나면 배가 불편하거나 화장실을 가야 하나요? 통계가 맞다면 이 글을 읽으시는 분들의 상당수는 그럴 겁니다. 이는 유당불내증이라 불리는 증상으로 어떤 의미에서 이는 정상입니다. 오히려 우유를 잘 소화하는 이들이 유전적으로는 예외에 속합니다. 그리고 여기에는 아직 우리가 답을 알지 못하는 흥미로운 문제가 있습니다. 그 문제에 대한 한가지 해답을 주는 연구가 지난 7월 27일 네이처지에 발표되었습니다. 일단 유당이 무엇인지, 그리고 왜 사람들은 유당불내증을 앓았는지를 먼저 봅시다. 유당(lactose)은 젖당이라고도 불리는, 포유류의 → 더 보기",
@@ -3346,6 +3291,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222888049927",
+          "author": "sellars",
+          "description": "고등학교 <생활과 윤리> 교과서가 비록 상세한 내용을 소개하고 있지 않지만, 그럼에도 우리가 알아야 할 기본적 사항들을 잘 제시해 주고 있다. 교양으로 배우는 대학의 윤리학, 가령 ‘윤리와 사고’, ‘현대사회와 윤리’ 등은 자기가 전공한 내용을 중심으로 강의 내용을 만드는 것보다 고등학교 <생활과 윤리>를 근거로 해서 거기에 나오는 내용을 더 상세하게 탐구하는 것이 연계성이라는 측면에서 더욱 좋을 듯 하다. <생활과 윤리>가 <윤리와 사상>과 다르게 실천 윤리학이기에, 즉 윤리적 문제에 대한 현실성을 갖고 있기에 윤리 이론에 대한 탐구보다 더 흥미를 가질 수 있다. 윤리적 문제나 주제에 대해 주장.......",
+          "link": "https://blog.naver.com/sellars/222888049927",
+          "publishedOn": "2022-09-30T00:13:12.000Z",
+          "wordCount": 101,
+          "title": "실천 윤리학",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222887205374",
           "author": "sellars",
@@ -3494,16 +3449,6 @@
           "publishedOn": "2022-09-03T00:40:12.000Z",
           "wordCount": 101,
           "title": "3 주관적 관념론",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222863777061",
-          "author": "sellars",
-          "description": "(가) 곤(鯤)이 북녘 바다에 있다가 붕(鵬)이 되어 ‘天池’라 불리워지는 남녘 바다에로 날아간다는 것이다. 또 이와 유사한 우화가 外編 <秋水>장에도 나온다. 혜시가 양나라 재상시절에 자기의 자리를 노리는 것이 아닌가 두려워하고 있었는데, 장자가 혜시의 마음을 읽고 다음과 같이 말한다. 남쪽 바다에 원추라는 새가 있는데 북해로 날아가는데 오동나무가 아니면 머무르지 않고 대나무 열매가 아니면 먹지 않고 체천(體泉)이 아니면 마시지를 않으니 자네 혜시는 나 장자가 자네의 자리를 뺏을까 하고 전전긍긍하지 말라는 식으로 장자가 말하였다. (나) 곤(鯤)은 붕(鵬)이 되어 북에서 남으로 날아가고, 또 원추라는 새는 남쪽에서.......",
-          "link": "https://blog.naver.com/sellars/222863777061",
-          "publishedOn": "2022-09-01T01:45:59.000Z",
-          "wordCount": 101,
-          "title": "반존재론(反存在論)과 차이의 대긍정",
           "imageUrl": null
         }
       ]
