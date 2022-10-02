@@ -2,10 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-10-01T20:19:54.788Z</updated>
+    <updated>2022-10-02T20:20:04.485Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Debian's firmware vote results]]></title>
+        <id>https://lwn.net/Articles/910065/</id>
+        <link href="https://lwn.net/Articles/910065/"/>
+        <updated>2022-10-02T17:36:45.000Z</updated>
+        <summary type="html"><![CDATA[The results are
+in on the Debian project's general-resolution
+vote regarding non-free firmware
+in the installer image.  The winning option
+allows the installer image to include firmware necessary to use the system:
+
+
+	We will include non-free firmware packages from the
+	"non-free-firmware" section of the Debian archive on our official
+	media (installer images and live images). The included firmware
+	binaries will normally be enabled by default where the system
+	determines that they are required, but where possible we will
+	include ways for users to disable this at boot (boot menu option,
+	kernel command line etc.).
+
+
+The vote also changes the Debian Social Contract to make it clear that
+including non-free firmware in this manner is allowed.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Serving static files and web apps in Go]]></title>
         <id>https://eli.thegreenplace.net/2022/serving-static-files-and-web-apps-in-go/</id>
@@ -3910,102 +3937,6 @@ out of the box; this is a common choice …</p>]]></summary>
         <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
         <author>
             <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3 주관적 관념론]]></title>
-        <id>https://blog.naver.com/sellars/222865515516</id>
-        <link href="https://blog.naver.com/sellars/222865515516"/>
-        <updated>2022-09-03T00:40:12.000Z</updated>
-        <summary type="html"><![CDATA[* 우리가 경험하는 것, 따라서 우리가 알 수 있는 것은 정신적 표상물, 감각 인상, 감각 소여, 관념이다. 반면에 실재 세계, 물리적 대상이 직접 경험할 수 없는 것이기 때문에, 이것과 정신적 표상물이 <유사>한지 우리는 알 수 없다. 나아가 이러한 실재 세계, 물리적 세계가 존재하는지 알 수 없다. 이것이 로크의 표상적 실재론을 비판하는 버클리의 주장이다. * 우리의 모든 지식은 경험으로부터 온다. 이것이 경험론의 근본적 논제이다. 로크를 비판하는데 버클리는 이 주장을 사용하고 있다. 경험으로부터 오지 않는 것, 즉 경험할 수 없는 것에 대해서 우리는 그것을 알 수 없다. 따라서 직접 경험의 대상이 아니라, 간접적 추론의.......]]></summary>
-        <author>
-            <name>sellars</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Arti 1.0.0 released]]></title>
-        <id>https://lwn.net/Articles/907023/</id>
-        <link href="https://lwn.net/Articles/907023/"/>
-        <updated>2022-09-02T23:23:50.000Z</updated>
-        <summary type="html"><![CDATA[Arti is a reimplementation of the Tor server in Rust; version 1.0.0 has
-just been released and proclaimed ready for production use.
-
-
-	When we defined our set of milestones, we defined Arti 1.0.0 as
-	"ready for production use": You should be able to use it in the
-	real world, to get a similar degree of privacy, usability, and
-	stability to what you would with a C client Tor. The APIs should be
-	(more or less) stable for embedders.
-
-	We believe we have achieved this. You can now use arti
-	proxy to 
-	connect to the Tor network to anonymize your network connections.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[IoT news of the week for Sept. 2, 2022]]></title>
-        <id>https://staceyoniot.com/?p=10910</id>
-        <link href="https://staceyoniot.com/iot-news-of-the-week-for-sept-2-2022/"/>
-        <updated>2022-09-02T20:15:24.000Z</updated>
-        <summary type="html"><![CDATA[Hello Kitty, meet Raspberry Pi: There’s yet another use for the inexpensive Raspberry Pi compute board. And you’re not likely to guess it, so I’ll just tell you: Someone made a cat doorbell using a Pi. No, the cat doesn’t press a button or show up on video. Instead, the Raspberry Pi listens at the […]
-The post IoT news of the week for Sept. 2, 2022 appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] What's in a (type) name?]]></title>
-        <id>https://lwn.net/Articles/906496/</id>
-        <link href="https://lwn.net/Articles/906496/"/>
-        <updated>2022-09-02T14:01:02.000Z</updated>
-        <summary type="html"><![CDATA[The kernel's manual
-pages are in a bit of an interesting position.  They 
-are managed as a separate project, distinct from the kernel's
-documentation, and have the task of documenting both the kernel's
-system-call interface and the wrappers for that interface provided by the C
-library.  Sometimes the two objectives come into conflict, as can be seen
-in a discussion that has been playing out over the course of the last year
-on whether to use C standard type names to describe kernel-defined
-structures.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Siemens at Nissan, MEMS mic, CXL memory, and more embedded]]></title>
-        <id>https://www.embedded.com/?p=4476116</id>
-        <link href="https://www.embedded.com/siemens-at-nissan-mems-mic-cxl-memory-and-more-embedded/"/>
-        <updated>2022-09-02T13:17:19.000Z</updated>
-        <summary type="html"><![CDATA[This week’s embedded news features Siemens at Nissan EV plant, Arm suing Qualcomm, a first bio-inspired directional MEMS microphone, memory connectivity platform for CXL, and more.
-The post Siemens at Nissan, MEMS mic, CXL memory, and more embedded appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/906973/</id>
-        <link href="https://lwn.net/Articles/906973/"/>
-        <updated>2022-09-02T12:32:23.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by CentOS (firefox, rsync, systemd, and thunderbird), Debian (chromium, dpdk, and sofia-sip), Fedora (kernel, thunderbird, and zlib), Red Hat (pcs and rh-mariadb103-galera and rh-mariadb103-mariadb), Slackware (poppler), SUSE (cifs-utils, curl, dwarves and elfutils, firefox, flatpak, gnutls, gpg2, harfbuzz, ignition, kernel, ldb, samba, libslirp, libsolv, libzypp, zypper, libtirpc, logrotate, mozilla-nss, ncurses, open-vm-tools, openssl-1_1, p11-kit, pcre, pcre2, podman, postgresql12, postgresql13, postgresql14, python-M2Crypto, python3, rsync, salt, spice, systemd-presets-common-SUSE, tiff, ucode-intel, xen, and zlib), and Ubuntu (curl, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15, linux-gcp, linux-gcp-5.15, linux-gke, linux-gke-5.15, linux-gkeop, linux-ibm, linux-kvm, linux-lowlatency, linux, linux-azure-4.15, linux-dell300x, linux-gcp-4.15, linux-kvm,
- linux-snapdragon, linux-aws, linux-azure, linux-bluefield, linux-gcp, linux-gcp-5.4,
- linux-gke, linux-gkeop, linux-ibm, linux-ibm-5.4, linux-kvm, linux-oracle,
- linux-oracle-5.4, and linux-aws-hwe).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[론스타와 모피아 그리고 ISDS 폐기해야 하는 이유]]></title>
-        <id>https://slownews.kr/?p=86940</id>
-        <link href="https://slownews.kr/86940"/>
-        <updated>2022-09-02T10:29:40.000Z</updated>
-        <summary type="html"><![CDATA[지난 8월 31일 론스타와 한국정부 간 투자자-국가분쟁(Investor-State Dispute, ISD)사건의 중재판정 결과가 발표되었습니다. 중재판정부는 금융 쟁점에 대한 론스타 측 주장을 일부 받아들여, 우리 정부 측에 한화 약 2,800억원에 상당하는 금액 및 2011. 12. 3.부터 완제일까지 한 달 만기 미국 국채 수익률에 따른 이자를 배상할 것을 명하였습니다. 산업자본인 론스타는 대주주 적격성을 충족하지 못해 처음부터 외환은행을 인수할 자격이 […]
-The post 론스타와 모피아 그리고 ISDS 폐기해야 하는 이유 first appeared on 슬로우뉴스.]]></summary>
-        <author>
-            <name>참여연대</name>
         </author>
     </entry>
     <entry>
