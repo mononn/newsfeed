@@ -334,16 +334,6 @@
           "wordCount": 646,
           "title": "frida-ios-dump 를 이용한 애플리케이션 IPA 파일 추출",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2022/09/08/14/48/9ff5bbca85959197157f9eb288541dad.png?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/13004865",
-          "author": "CPUU",
-          "description": "누가 macOS에서 어셈블리 프로그래밍을 할까? 하겠냐만.. 그냥 심심해서 \"이게 되네?\"를 해보고자 테스트.\n% sw_vers\nProductName:    macOS \nProductVersion: 12.5.1\nBuildVersion:   21G83\n우선 실험환경은 Apple Silicon 버전의 일명 M1 macmini 이고 macOS Monterey(12.5) 운영체제 환경이다.\n\n\n개발 환경 구축\n기본적으로 컴파일 및 여러가지 진행을 위해 터미널에서 아래의 명령어로 관련 도구를 설치한다.\n% xcode-select --install\n명령어를 입력하면 화면에 위와 같은 메시지가 뜨고, 설치를 눌러 진행한다.\n\n\n설치 완료후 아래와 같이 현재 도구 버전을 확인해볼 수 있다.\n% xcode-select --version\nxcode-select version 2395. \n% gcc --version          \nApple clang version 13.1.6 (clang-1316.0.21.2.5)     \nTarget: arm64-apple-darwin21.6.0   \nThread model: posix    \nInstalledDir:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin       \n참고로 일반적인 리눅스와 다르게 애플은 clang 컴파일러를 사용한다. gcc를 이용했을 때 자동으로 clang 으로 연결된다.\n\n\n어셈블리 프로그래밍\n그렇다면 어셈블리 언어로 \"Hello World!\" 문자열…",
-          "link": "https://cpuu.postype.com/post/13004865",
-          "publishedOn": "2022-09-06T05:59:26.000Z",
-          "wordCount": 755,
-          "title": "Apple Silicon macOS에서 ARM64 assembly programming",
-          "imageUrl": "https://d33pksfia2a94m.cloudfront.net/assets/img/social/sns_stream.png"
         }
       ]
     },
@@ -375,6 +365,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "4bc5a4ab-1f48-4233-b219-a86d2df9ae9a",
+          "author": "Bob Reselman",
+          "description": "This article is a third in a series about executing regular expressions using the grep executable that ships with Linux operating systems. The grep command filters content in a file or as output from stdout.\nThe first article in this series described the basics of using metacharacters and regular characters to create regular expressions. The second discussed working with quantifiers, pattern collections, groups, and word boundaries in regular expressions. This article uses the features described in the previous articles, along with new ones, to match and filter content in HTML files.\nMatching and retrieving text from HTML is a common task for a broad variety of IT professionals, particularly when troubleshooting issues in web pages. Thus, being able to apply regular expressions to HTML fil…",
+          "link": "https://developers.redhat.com/articles/2022/10/05/filter-content-html-using-regular-expressions-grep",
+          "publishedOn": "2022-10-05T07:00:00.000Z",
+          "wordCount": 4488,
+          "title": "Filter content in HTML using regular expressions in grep",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Linux.png?itok=K8mzDGOj"
+        },
         {
           "id": "61b1b545-e963-4cef-a514-7ea1507a17fd",
           "author": "Audrey Reznik",
@@ -564,26 +564,6 @@
           "wordCount": 3590,
           "title": "Red Hat OpenShift Connectors: Configuring change data capture",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Apache_Node.js_A-01.png?itok=k5oxUEYM"
-        },
-        {
-          "id": "8ed9f141-704e-4dfc-945c-32531df66593",
-          "author": "Heiker Medina",
-          "description": "It's officially September, and we're back with our monthly roundup to catch you up on the latest top articles and community resources featured on Red Hat Developer. In August, we published tutorials to help you improve the observability of your microservices, build security into your Node.js development process, easily containerize .NET applications, and more. Let's dive into the August highlights.\nContainerize .NET applications automatically\nTo run a .NET application in a container, you need a Dockerfile—but writing and managing Dockerfiles can be tedious. Enter the dotnet build-image tool, which enables you to create a container image from a .NET application without writing a Dockerfile.\nIn one of our most popular articles from the past month, Tom Deseyn shows you how to use build-image …",
-          "link": "https://developers.redhat.com/articles/2022/09/06/red-hat-developer-roundup-best-august-2022",
-          "publishedOn": "2022-09-06T07:00:00.000Z",
-          "wordCount": 2939,
-          "title": "Red Hat Developer roundup: Best of August 2022",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/RDH_Developer_Roundup.png?itok=kLwx8u_0"
-        },
-        {
-          "id": "af4e4d46-5834-4409-9225-eb8bfeaf27b1",
-          "author": "Gris Ge",
-          "description": "This article concludes the 4-part series about how to take advantage of the recent Rust support added to Linux. I hope you have read the previous articles in the series:\nPart 1: 3 essentials for writing a Linux system library in Rust\n\n\nPart 2: How to create C binding for a Rust library\n\n\nPart 3: How to create Python binding for a Rust library\n\n\n\nThis article will demonstrate how to build trust in a Continuous Integration (CI) system for your Rust library.\nYou can download the demo code from its GitHub repository.\nThe package contains:\nAn echo server listening on the Unix socket /tmp/librabc\nA Rust crate that connects to the socket and sends a ping packet every 2\nseconds\nA C/Python binding\nA command-line interface (CLI) for the client\nThe CI system of this GitHub repository is built on Gith…",
-          "link": "https://developers.redhat.com/articles/2022/09/06/build-trust-continuous-integration-your-rust-library",
-          "publishedOn": "2022-09-06T07:00:00.000Z",
-          "wordCount": 3605,
-          "title": "Build trust in continuous integration for your Rust library",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/How_Rust_makes_Rayon_magical-01.png?itok=8FImZDMa"
         }
       ]
     },
@@ -648,16 +628,6 @@
           "wordCount": 886,
           "title": "Derivative of the Exponential Function",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2022/sudoku-go-and-webassembly/",
-          "author": null,
-          "description": "<p>Over the summer my family has experienced a brief renaissance of interest in\nSudoku, particularly as I've tried to get my kids to practice solving some\nnon-trivial puzzles (pro tip: YouTube videos help).</p>\n<object class=\"align-center\" data=\"https://eli.thegreenplace.net/images/2022/sudoku-puzzle.svg\" type=\"image/svg+xml\">\nSudoku puzzle sample</object>\n<p>Naturally, whenever a programmer encounters Sudoku it's hard to avoid thinking\nabout automated solvers …</p>",
-          "link": "https://eli.thegreenplace.net/2022/sudoku-go-and-webassembly/",
-          "publishedOn": "2022-09-05T13:33:00.000Z",
-          "wordCount": null,
-          "title": "Sudoku, Go and WebAssembly",
-          "imageUrl": null
         }
       ]
     },
@@ -683,6 +653,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4476675",
+          "author": "Nitin Dahad",
+          "description": "Matter 1.0 specification helps alleviate the challenges of having different device ecosystems, products and protocols communicate by offering one unified standard for device makers to follow for many smart home applications.\nThe post Matter 1.0 spec aims for interoperable smart home IoT appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/matter-1-0-spec-aims-for-interoperable-smart-home-iot/",
+          "publishedOn": "2022-10-05T17:00:07.000Z",
+          "wordCount": 4831,
+          "title": "Matter 1.0 spec aims for interoperable smart home IoT",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/10/Matter-CSA.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4476666",
+          "author": "Alex Pluemer",
+          "description": "Advances in technology and new safety regulations and legislation are accelerating the adoption of driver monitoring systems (DMS) into passenger vehicles, a feature expected to become mandatory in new cars in many countries by the end of the decade.\nThe post The state of driver monitoring systems (DMS) today appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/the-state-of-driver-monitoring-systems-dms-today/",
+          "publishedOn": "2022-10-05T10:59:02.000Z",
+          "wordCount": 4822,
+          "title": "The state of driver monitoring systems (DMS) today",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/10/DMS-article-Theme-image-Mouser.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4476367",
           "author": "Mary McCarthy and Wasim Shaikh",
@@ -952,16 +942,6 @@
           "wordCount": 3957,
           "title": "4 elements of an effective smart manufacturing platform",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/smart_mfg.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4476125",
-          "author": "Nitin Dahad",
-          "description": "Omnivision has launched a BSI global shutter (GS) image sensor, the OG0TB, which it said is the world’s smallest image sensor for eye and face tracking in AR/VR/MR and metaverse consumer devices.\nThe post Three-layer stacking shrinks global shutter image sensor for eye tracking appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/three-layer-stacking-shrinks-global-shutter-image-sensor-for-eye-tracking/",
-          "publishedOn": "2022-09-05T14:28:45.000Z",
-          "wordCount": null,
-          "title": "Three-layer stacking shrinks global shutter image sensor for eye tracking",
-          "imageUrl": null
         }
       ]
     },
@@ -1234,16 +1214,6 @@
           "wordCount": 6065,
           "title": "ML.NET: can Microsoft's machine learning be trusted?",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0988_ML_NET/image1_thm_intoblank_1200x630.png"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/0987/",
-          "author": null,
-          "description": "Most applications today use third-party libraries. If such a library contains a vulnerability, an app that uses this library may also be vulnerable. But how can you identify such problematic dependencies?",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/0987/",
-          "publishedOn": "2022-09-05T21:00:00.000Z",
-          "wordCount": 4642,
-          "title": "The risks of using vulnerable dependencies in your project, and how SCA helps manage them",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0987_PVS-Studio_SCA/image1_thm_intoblank_1200x630.png"
         }
       ]
     },
@@ -1252,6 +1222,16 @@
       "feedUrl": "https://future.a16z.com/feed/",
       "siteUrl": "https://future.com",
       "articles": [
+        {
+          "id": "https://future.com/?p=7114",
+          "author": "Jimmy Lin and Nicole Neuman",
+          "description": "Jimmy Lin is CSO of Freenome, which is developing blood-based tests for early cancer detection, starting with colon cancer. He is a pioneer in developing computational approaches to extract insights from large-scale genomic data, having spearheaded the computational analyses of the first genome-wide sequencing studies in multiple cancer types.  Lin talked to Future about the... Read More\nThe post Why Applying Machine Learning to Biology is Hard – But Worth It appeared first on Future.",
+          "link": "https://future.com/why-applying-machine-learning-to-biology-is-hard-but-worth-it/",
+          "publishedOn": "2022-10-05T14:00:13.000Z",
+          "wordCount": 3234,
+          "title": "Why Applying Machine Learning to Biology is Hard – But Worth It",
+          "imageUrl": "https://future.com/wp-content/uploads/2022/10/1821-SocialShare-JimmyLin-QA-Facebook.jpg"
+        },
         {
           "id": "https://future.com/?p=7096",
           "author": "Andrej Safundzic",
@@ -1300,16 +1280,6 @@
           "wordCount": 1871,
           "title": "Pocket article: Debugging ccache misses",
           "imageUrl": "https://interrupt.memfault.com/img/ccache-debugging/ccache.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/august-2022-roundup",
-          "author": null,
-          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nAugust\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/august-2022-roundup",
-          "publishedOn": "2022-09-06T00:00:00.000Z",
-          "wordCount": 1286,
-          "title": "What we've been reading in August",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
     },
@@ -1406,16 +1376,6 @@
           "wordCount": 2661,
           "title": "글로벌 SaaS 만드시려면, ‘제발’ 영어 콘텐츠랑 SEO 하셔야 합니다",
           "imageUrl": "https://i0.wp.com/kimchihill.com/wp-content/uploads/2022/02/cropped-Kimchihill_1_1.jpg?fit=512%2C512&ssl=1"
-        },
-        {
-          "id": "https://kimchihill.com/?p=2172",
-          "author": "kimchihill",
-          "description": "If you are the founder of a B2B SaaS startup and have finally reached the stage of hiring your VP of Sales, we hope this helps you. The reason why we phrased the title so strongly is that the VP of Sales position is almost the first external executive hire at a B2B SaaS startupContinue reading \"Are you trying to hire the first VP of Sales in your SaaS startup? You have to read this\"\nAre you trying to hire the first VP of Sales in your SaaS startup? You have to read this appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2022/09/05/are-you-trying-to-hire-the-first-vp-of-sales-in-your-saas-startup-you-have-to-read-this/?utm_source=rss&utm_medium=rss&utm_campaign=are-you-trying-to-hire-the-first-vp-of-sales-in-your-saas-startup-you-have-to-read-this",
-          "publishedOn": "2022-09-05T09:25:58.000Z",
-          "wordCount": 3818,
-          "title": "Are you trying to hire the first VP of Sales in your SaaS startup? You have to read this",
-          "imageUrl": "https://kimchihill.com/wp-content/uploads/2022/09/Picture1.jpg"
         }
       ]
     },
@@ -1463,6 +1423,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/910418/",
+          "author": "corbet",
+          "description": "The New Yorker has a\nlengthy article on the Network Time Protocol and its creator David\nMills.\n\n\n\tCoders sometimes joke, morbidly, about the “bus factor.” How many\n\tpeople need to get hit by a bus before a given project is\n\tendangered? It’s difficult to determine the bus factor for N.T.P.,\n\tand time synchronization more broadly, especially now that\n\tcompanies such as Google have developed their own N.T.P.-inspired\n\tproprietary code. But it seems reasonable to say that N.T.P.’s bus\n\tfactor is rather small.",
+          "link": "https://lwn.net/Articles/910418/",
+          "publishedOn": "2022-10-05T15:46:56.000Z",
+          "wordCount": 209,
+          "title": "The Thorny Problem of Keeping the Internet’s Time (New Yorker)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/910417/",
+          "author": "corbet",
+          "description": "Mahmoud Al-Qudsi provides\nextensive details on what it takes to implement a safe semaphore type\nin the Rust language.\n\n\n\tThe problem is that with n > 1, there’s no concept of a\n\t“privileged” owning thread and all threads that have “obtained” the\n\tsemaphore do so equally. Therefore, a rust semaphore can only ever\n\tprovide read-only (&T) access to an underlying resource,\n\tlimiting the usefulness of such a semaphore almost to the point of\n\thaving no utility. As such, the only safe “owning” semaphore with\n\tread-write access that can exist in the rust world would be\n\tSemaphore<()>, or one that actually owns no data and can\n\tonly be used for its side effect of limiting concurrency while the\n\tsemaphore is “owned,” so to speak.",
+          "link": "https://lwn.net/Articles/910417/",
+          "publishedOn": "2022-10-05T15:26:03.000Z",
+          "wordCount": 724,
+          "title": "Al-Qudsi: Implementing truly safe semaphores in rust",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/910396/",
+          "author": "corbet",
+          "description": "The\n5.19.14,\n5.15.72,\n5.10.147,\n5.4.216, and\n4.19.261\nstable kernel updates have been released; each contains another set of\nimportant fixes.",
+          "link": "https://lwn.net/Articles/910396/",
+          "publishedOn": "2022-10-05T14:07:48.000Z",
+          "wordCount": 135,
+          "title": "More stable kernel updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/910395/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (barbican, mediawiki, and php-twig), Fedora (bash, chromium, lighttpd, postgresql-jdbc, and scala), Mageia (bash, chromium-browser-stable, and golang), Oracle (bind, bind9.16, and squid:4), Red Hat (bind, bind9.16, RHSSO, and squid:4), Scientific Linux (bind), SUSE (cifs-utils, libjpeg-turbo, nodejs14, and nodejs16), and Ubuntu (jackd2, linux-gke, and linux-intel-iotg).",
+          "link": "https://lwn.net/Articles/910395/",
+          "publishedOn": "2022-10-05T14:04:26.000Z",
+          "wordCount": 303,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/909980/",
+          "author": "jake",
+          "description": "The kernel's print function, printk(), has been the target of\nnumerous improvement efforts over the years for a\nvariety of reasons.  One persistent problem with printk() has been\nthat its latency is unacceptably high for the realtime Linux kernel; at\nthis point, printk() represents the last piece needing changes\nbefore the \nRT_PREEMPT patches can be fully merged.  So there have been efforts\nto rework printk() for latency and lots of other reasons, but\nthose have not made it into the mainline; a recent discussion at\nthe 2022 Linux Plumbers Conference (LPC)\nseems to have paved the way for new solution to land in the mainline before\ntoo long.",
+          "link": "https://lwn.net/Articles/909980/",
+          "publishedOn": "2022-10-04T20:34:58.000Z",
+          "wordCount": null,
+          "title": "[$] A discussion on printk()",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/910319/",
           "author": "corbet",
@@ -2232,46 +2242,6 @@
           "wordCount": 158,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/907238/",
-          "author": "corbet",
-          "description": "Version\n22.03.0 of the OpenWrt distribution for routers (and beyond) has been\nreleased.  \"It incorporates over 3800 commits since branching the\nprevious OpenWrt 21.02 release and has been under development for about one\nyear\".  Changes include a new firewall implementation using nftables,\nyear-2038 readiness, dark mode in the LuCI web-based administration tool,\nand support for many more devices.",
-          "link": "https://lwn.net/Articles/907238/",
-          "publishedOn": "2022-09-06T07:10:11.000Z",
-          "wordCount": 2104,
-          "title": "OpenWrt 22.03.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/906852/",
-          "author": "corbet",
-          "description": "The kernel is, in many ways, a marvel of scalability, but there is a\nlongstanding pain point in the memory-management subsystem that has\nresisted all attempts at elimination: the mmap_lock.  This lock\nwas inevitably a topic at the 2022 Linux\nStorage, Filesystem, Memory-Management and BPF Summit (LSFMM), where the idea of\nusing per-VMA locks was raised.  Suren Baghdasaryan has posted\nan implementation of that idea — but with an interesting twist on how\nthose locks are implemented.",
-          "link": "https://lwn.net/Articles/906852/",
-          "publishedOn": "2022-09-05T15:05:19.000Z",
-          "wordCount": null,
-          "title": "[$] Concurrent page-fault handling with per-VMA locks",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/907202/",
-          "author": "jake",
-          "description": "Monday's crop of stable kernels consists of 5.19.7, 5.15.65, 5.10.141, 5.4.212, 4.19.257, 4.14.292, and 4.9.327.  They are relatively small updates,\nbut still contain important fixes in various parts of the kernel tree;\nusers of those series should upgrade.",
-          "link": "https://lwn.net/Articles/907202/",
-          "publishedOn": "2022-09-05T14:52:52.000Z",
-          "wordCount": null,
-          "title": "Seven new stable kernels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/907201/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (flac, ghostscript, libmodbus, qemu, rails, ruby-rack, and thunderbird), Fedora (kernel, kernel-headers, kernel-tools, libtar, qt5-qtwebengine, subscription-manager-cockpit, tcpreplay, and vim), Mageia (chromium-browser-stable, webkit2, and ytnef), SUSE (curl, firefox, freerdp, gdk-pixbuf, ImageMagick, json-c, libgda, php-composer2, and python-pyxdg), and Ubuntu (libzstd, linux-aws, linux-aws-5.4, linux-azure-5.4, and linux-oem-5.17).",
-          "link": "https://lwn.net/Articles/907201/",
-          "publishedOn": "2022-09-05T14:24:29.000Z",
-          "wordCount": null,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2406,6 +2376,16 @@
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
       "articles": [
+        {
+          "id": "https://nullprogram.com/blog/2022/10/05/",
+          "author": null,
+          "description": "Go has a nifty synchronization utility called a WaitGroup, on which\none or more goroutines can wait for concurrent task completion. In other\nlanguages, the usual task completion convention is joining threads doing\nthe work. In Go, goroutines aren’t values and lack handles, so a WaitGroup\nreplaces joins. Building a WaitGroup using typical, portable primitives is\na messy affair involving constructors and destructors, managing lifetimes.\nHowever, on at least Linux and Windows, we can build a WaitGroup out of a\nzero-initialized integer, much like my 32-bit queue and 32-bit\nbarrier.\nIn case you’re not familiar with it, a typical WaitGroup use case in Go:\n\nvar wg sync.WaitGroup\nfor _, task := range tasks {\n    wg.Add(1)\n    go func(t Task) {\n        // ... do task ...\n        wg.Done()\n    }(tas…",
+          "link": "https://nullprogram.com/blog/2022/10/05/",
+          "publishedOn": "2022-10-05T03:19:07.000Z",
+          "wordCount": 1545,
+          "title": "How to build a WaitGroup from a 32-bit integer",
+          "imageUrl": null
+        },
         {
           "id": "https://nullprogram.com/blog/2022/10/03/",
           "author": null,
@@ -2839,16 +2819,6 @@
           "wordCount": 1137,
           "title": "“법복과 털외투는 악행을 감춰주지”",
           "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Edwin_Austin_Abbey_King_Lear%2C_Act_I%2C_Scene_I_The_Metropolitan_Museum_of_Art.jpg"
-        },
-        {
-          "id": "http://economicview.net/?p=83306",
-          "author": "sticky",
-          "description": "“우리는 한국의 우려를 진지하게 받아들이고 진지한 논의를 할 자세가 되어있다.” (美국무부 산하의) 경제성장, 에너지, 환경 차관 호세 W. 페르난데즈는 한 논평에서 이렇게 말했다. “우리는 다음 달에 국내 규칙제정 과정을 시작함에 따라 더 자세한 사항을 알 수 있을 것이다.” 윤은 언급한 문제에 익숙한 두 번째 인물이라 할 수 있는 美하원의장 낸시 팰로시가 지난달 남한을 방문했을 때에 […]",
-          "link": "http://economicview.net/83306/",
-          "publishedOn": "2022-09-06T04:13:39.000Z",
-          "wordCount": 1417,
-          "title": "“치명적인 실수”를 수습해야할 한국 정부",
-          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Seattle_City_Light_Superintendent_Gordon_Vickery_with_prototype_electric_car%2C_1973_%2834772918810%29.jpg"
         }
       ]
     },
@@ -2857,6 +2827,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=87143",
+          "author": "진보넷",
+          "description": "전 세계적으로 GAFAM(Google, Apple, Facebook, Amazon,Microsoft)의 독점과 불공정한 지위 남용으로 기울어진 운동장의 형태를 보이고 있습니다. 특히, 빅테크(디지털 플랫폼)가 온라인 소통의 중심으로 부상하면서 뉴스 미디어는 위기에 직면했습니다. 이 글에서는 ‘빅테크와 뉴스 미디어’ 사이의 불균형을 살펴보았습니다. 빅테크로 인해 어떻게 뉴스가 소비되는지, 그 소비패턴의 변화와 현황에 주목하여 문제점을 짚어보았습니다. 빅테크가 광고 비즈니스 독점과 어떤 관계가 있는지, 어떤 관점으로 […]\nThe post 빅테크(GAFAM)가 미디어 다양성에 미치는 영향 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87143",
+          "publishedOn": "2022-10-05T08:55:18.000Z",
+          "wordCount": 3315,
+          "title": "빅테크(GAFAM)가 미디어 다양성에 미치는 영향",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/10/AAAMM_Big_Tech.svg_.png"
+        },
         {
           "id": "https://slownews.kr/?p=87135",
           "author": "민주언론시민연합",
@@ -3054,6 +3034,46 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=587967",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587967/opec-%ea%b0%90%ec%82%b0-%eb%b0%9c%ed%91%9c-%ed%9b%84-%ec%9c%a0%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-10-05T20:00:31.000Z",
+          "wordCount": 6352,
+          "title": "OPEC+ 대규모 감산을 발표한 후 유가 전망 by Market Watch",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/석유-시추선-에너지-Photo-by-Maria-lupan.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587943",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587943/%ec%95%84%eb%a7%88%ec%a1%b4-%ed%88%ac%ec%9e%90-%ec%a0%84%eb%9e%b5",
+          "publishedOn": "2022-10-05T11:21:29.000Z",
+          "wordCount": 5984,
+          "title": "제프리스, 흥청망청한 아마존 투자 전략은 반독점 규제를 겨냥한 두더지 잡기((whack-a-mole) 전략이라고 주장",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/05/아마존-물류창고.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587941",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587941/sp-500-%ec%a0%84%eb%a7%9d-4",
+          "publishedOn": "2022-10-05T11:09:12.000Z",
+          "wordCount": 7123,
+          "title": "월가의 S&P 500 전망, 약세장 반등 후 더 하락할 것",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/05/폭락하는-주식-Phoot-by-maxim-hopman.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587939",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587939/k-%eb%b0%a9%ec%82%b0-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-10-05T00:57:20.000Z",
+          "wordCount": 5400,
+          "title": "장기적으로 K-방산 전망이 밝은 이유",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/03/뉴스위크-커버-1950년-8월-28일-한국전쟁-미국의-무기-러시아의-선동-Amerucas-Weapon-Russias-Propaganda.jpg"
+        },
         {
           "id": "https://happist.com/?p=587937",
           "author": "happist",
@@ -3253,16 +3273,6 @@
           "wordCount": 5229,
           "title": "[기록용]원달러 환율이 1400원을 위협하던날",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/09/원달러-환율-2022년-9월-7일.png"
-        },
-        {
-          "id": "https://happist.com/?p=587701",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/587701/%ec%9d%b8%ed%85%8d%ed%94%8c%eb%9f%ac%ec%8a%a4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2022-09-05T11:52:02.000Z",
-          "wordCount": null,
-          "title": "인텍플러스 리스크 분석을 통한 인텍플러스 주가 전망",
-          "imageUrl": null
         }
       ]
     },
@@ -3271,6 +3281,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=75375",
+          "author": "veritaholic",
+          "description": "사람들은 항상 거짓말을 합니다. 누구도 지켜보지 않을 때를 제외하면 말이죠. 그리고 무언가를 궁금해 할 때도 사람들은 솔직하게 자신의 의도를 드러냅니다. 이 두 가지 조건이 모두 만족하는 순간이 있습니다. 바로, 검색 엔진에 무언가를 찾아볼 때입니다. 구글의 데이터과학자였던 세스 스티븐스 다비도위치는 사람들이 구글에 무엇을 검색하는지를 바탕으로 2017년 ‘모두 거짓말을 한다’를 썼고, 이 책은 베스트셀러가 되었습니다. 그는 이 책에서 사람들이 남들에게는 밝히지 않는 성적 취향과 같은 사람의 진짜 속마음을 구글 검색에는 어떻게 드러내는지 보였고, 이런 → 더 보기",
+          "link": "https://newspeppermint.com/2022/10/04/npc_datadecision/?utm_source=rss&utm_medium=rss&utm_campaign=npc_datadecision",
+          "publishedOn": "2022-10-04T22:59:50.000Z",
+          "wordCount": 1831,
+          "title": "[필진 칼럼] 인생의 중요한 결정을 데이터를 기반으로 내릴 수 있을까요?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=75368",
           "author": "eyesopen1",
@@ -3360,16 +3380,6 @@
           "wordCount": 1889,
           "title": "[필진 칼럼] 사우디아라비아 방문 앞둔 바이든, 현실과 이상의 괴리",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75239",
-          "author": "veritaholic",
-          "description": "2020년 여름, 미국 트럼프 대통령은 틱톡에 대해 얼핏 무리해 보이는 공격을 시작했습니다. 중국의 IT 기업이지만 엄연히 사기업인 바이트댄스에 틱톡의 지분을 미국 회사에 매각하라고 명령했고, 이를 따르지 않으면 미국에서 틱톡의 사용을 금지하겠다고도 말했습니다. 어떤 이들은 이를 트럼프가 대선 승리를 위해 중국을 공격하는 것이라 이야기하기도 했습니다. 트럼프는 재선에 실패했고, 법원 역시 트럼프의 행정명령에 제동을 걸었습니다. 바이든은 트럼프의 행정명령을 폐기했습니다. 지난 5월, 뉴욕타임스의 칼럼니스트이자 복스(Vox)의 창업자인 에즈라 클라인은 틱톡이 가진 위험성을 다시 경고하는 → 더 보기",
-          "link": "https://newspeppermint.com/2022/09/05/npc_tiktok/?utm_source=rss&utm_medium=rss&utm_campaign=npc_tiktok",
-          "publishedOn": "2022-09-05T22:59:55.000Z",
-          "wordCount": null,
-          "title": "[필진 칼럼] 틱톡과 알고리듬",
-          "imageUrl": null
         }
       ]
     },
@@ -3384,6 +3394,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222892357702",
+          "author": "sellars",
+          "description": "식(識)은 주관적 마음 상태이다. 반면에 경(境)은 대상들이다. 식과 경, 어느 것이 우선적인가? 유식학은 이 문제에 대해 유식무경(唯識無境), 즉 식만 있으며, 식을 떠난 경은 존재하지 않는다고 주장한다. 그런데 우선성에 대한 질문 자체가 정당한가? <식을 떠난 경이 존재하지 않는다>는 표현이 애매하다. 그것은 경, 즉 대상은 식에 의존한다는 것을 의미한다. 또한 존재하는 대상에 대해서 우리가 알기 위해서 그것이 원리적으로 우리의 인식 대상이 되어야 한다는 것을 의미한다. 원리적으로 우리가 절대로 알 수 없는 대상의 존재라는 개념은 어떤 의미에서 공허하다. <개체적인 물질 또는 보편적인 관념은 그것을 인식하는 주.......",
+          "link": "https://blog.naver.com/sellars/222892357702",
+          "publishedOn": "2022-10-05T04:56:50.000Z",
+          "wordCount": 101,
+          "title": "유심론, 관념론, 내적 초월주의",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222891506405",
           "author": "sellars",
