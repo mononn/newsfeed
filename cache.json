@@ -208,16 +208,6 @@
           "wordCount": 1779,
           "title": "See My New Book: C++ Initialization Story",
           "imageUrl": "https://www.cppstories.com/2022/images/cppinit.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2022/safe-int-cmp-cpp20/",
-          "author": null,
-          "description": "Sometimes, If you mix different integer types in an expression, you might end up with tricky cases. For example, comparing long with size_t might give different results than long with unsigned short. C++20 brings some help, and there’s no need to learn all the complex rules :)\n\n\n\n     \n    \n\n\nLet’s have a look at two comparisons:\n#include <iostream>\n\nint main() {\n    long a = -100;\n    unsigned short b = 100;\n    std::cout << (a < b);   // 1\n    size_t c = 100;\n    std::cout << (a < c);   // 2\n}   \n\n\nIf you run the code @Compiler Explorer (GCC 12, x86-64, default flags) you’ll see:\n10\n\n\nWhy? Why not 11?\n(By the way, I asked that question on Twitter, see https://twitter.com/fenbf/status/1568566458333990914 - thank you for all the answers and hints)\nIf we run C++Insights, we’ll see the follo…",
-          "link": "https://www.cppstories.com/2022/safe-int-cmp-cpp20/",
-          "publishedOn": "2022-09-12T00:00:00.000Z",
-          "wordCount": 2314,
-          "title": "Integer Conversions and Safe Comparisons in C++20",
-          "imageUrl": "https://www.cppstories.com/2022/images/safe_cmp.png"
         }
       ]
     },
@@ -351,16 +341,6 @@
           "wordCount": 12806,
           "title": "Chat log exhibits from Twitter v. Musk case",
           "imageUrl": null
-        },
-        {
-          "id": "https://danluu.com/futurist-predictions/",
-          "author": null,
-          "description": "I've been reading a lot of predictions from people who are looking to understand what problems humanity will face 10-50 years out (and sometimes longer) in order to work in areas that will be instrumental for the future and wondering how accurate these predictions of the future are. The timeframe of predictions that are so far out means that only a tiny fraction of people making those kinds of predictions today have a track record so, if we want to evaluate which predictions are plausible, we need to look at something other than track record.\nThe idea behind the approach of this post was to look at predictions from an independently chosen set of predictors (Wikipedia's list of well-known futurists1) whose predictions are old enough to evaluate in order to understand which prediction techni…",
-          "link": "https://danluu.com/futurist-predictions/",
-          "publishedOn": "2022-09-12T00:00:00.000Z",
-          "wordCount": 32623,
-          "title": "Futurist prediction methods and accuracy",
-          "imageUrl": null
         }
       ]
     },
@@ -375,6 +355,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "690bf52f-bdb5-437c-93a7-5ba68d872b17",
+          "author": "Hans-Peter Grahsl",
+          "description": "The first article in this series explained the need for client-side, end-to-end encryption for data passing through Apache Kafka. The article also introduced the Kryptonite for Kafka project, which integrates with Apache Kafka Connect to achieve automatic encryption and decryption with no changes to application code.\nThis article, the second and last in this series, contains more advanced examples that cover a common scenario: File-based data integration between different kinds of storage. I'll show Kryptonite for Kafka features that support fine-grained, field-level encryption in this use case.\nTo keep things simple in the examples, a local file system serves as the source while the sink is set up in MinIO (Figure 1), an open source object storage service compatible with AWS S3.\n\n\n\n\n     …",
+          "link": "https://developers.redhat.com/articles/2022/10/11/file-based-kafka-connect-scenarios-end-end-encryption",
+          "publishedOn": "2022-10-11T07:00:00.000Z",
+          "wordCount": 3927,
+          "title": "File-based Kafka Connect scenarios with end-to-end encryption",
+          "imageUrl": "https://developers.redhat.com/themes/custom/rhdp2/images/metatags/metatag-image-articles.png"
+        },
         {
           "id": "e8d3ba9b-f454-462b-a9ad-d210d3632f10",
           "author": "Heiker Medina",
@@ -631,18 +621,7 @@
       "title": "edykim.com 블로그 RSS 피드",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com",
-      "articles": [
-        {
-          "id": "https://edykim.com/ko/post/vim-netrw-for-quick-nav/",
-          "author": null,
-          "description": "단축키/명령 탐색하기:  또는 명령행 도구에서  등 사용 새 윈도우에서 파일 열기:  또는  사용 미리보기: 탐색에서 파일 위로 커서 이동 후  미리보기 창 닫기:  설정 미리보기 우측에 표시:  미리보기 표시 크기:  탐색기 상단 표시 숨기기:",
-          "link": "https://edykim.com/ko/post/vim-netrw-for-quick-nav/",
-          "publishedOn": "2022-09-11T22:25:52.000Z",
-          "wordCount": 614,
-          "title": "vim netrw로 탐색하기 메모",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Eli Bendersky's website",
@@ -723,6 +702,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4476734",
+          "author": "David Wong",
+          "description": "Intelligent proximity sensors enable users of laptops and tablets to provide optimal connectivity and long battery life, but they must meet SAR compliance.\nThe post Ensuring SAR compliance in connected consumer devices appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/ensuring-sar-compliance-in-connected-consumer-devices/",
+          "publishedOn": "2022-10-11T11:46:22.000Z",
+          "wordCount": 3972,
+          "title": "Ensuring SAR compliance in connected consumer devices",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/10/SX9330-diagram.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4476728",
+          "author": "Keshav Pingali",
+          "description": "Graph technology opens new avenues for obtaining insights from data to make more informed and agile business decisions. Here are three tips to help systems developers make the most of graphs.\nThe post Top three tips for graph technology systems developers appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/top-three-tips-for-graph-technology-systems-developers/",
+          "publishedOn": "2022-10-11T10:45:14.000Z",
+          "wordCount": 3844,
+          "title": "Top three tips for graph technology systems developers",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/10/Katana-Graph-Image-for-Subtitle-2.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4476533",
           "author": "Miro Samek",
@@ -1030,6 +1029,16 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2022/10/build-smarter-and-ship-faster-with-the-latest-ecosystem-updates.html",
+          "author": null,
+          "description": "Posted by Jeanine Banks, VP/GM, Developer X and DevRel\n  \nAt last week’s Made by Google launch event, we announced several new hardware products including the Pixel 7 and Pixel 7 Pro, Google Pixel Watch, and Google Pixel Tablet—a suite of innovative products that we’re excited about. While sure to delight users, it got me thinking—what will these changes mean for developers? \nIt’s hard to build experiences that let users enjoy the best that their devices have to offer. Undoubtedly this brings a level of complexity for developers who will need to build and test against multiple OS updates and new features. That’s the thing about development—the environment is constantly evolving. We want to cut through the complexity and make it simpler to choose the technology you use, whether for an app o…",
+          "link": "http://developers.googleblog.com/2022/10/build-smarter-and-ship-faster-with-the-latest-ecosystem-updates.html",
+          "publishedOn": "2022-10-10T22:00:00.001Z",
+          "wordCount": null,
+          "title": "Build smarter and ship faster with the latest updates across our ecosystem",
+          "imageUrl": null
+        },
+        {
           "id": "http://developers.googleblog.com/2022/10/yasmine-evjen-shares-her-passion-for-android-development-and-how-to-get-involved-at-devfest.html",
           "author": null,
           "description": "Posted by Komal Sandhu - Global Program Manager, Google Developer Groups\n \n\n \n\n “I would love to see more stepping out of our comfort zones, playing with technology, and bringing back that joy of what got us into Android development in the first place.”\nLearn Android tools and tips from Android Community Lead, Yasmine Evjen, and hear from her first-hand on how to get involved.\n\n\nAmong the many inspiring experts in the Android developer community is Yasmine Evjen, a Googler for over five years who now serves as new Android Developer Relations Community team lead. Read on to see Yasmine’s Evjen’s outlook on her favorite Android tools and Android Developers who inspire her.\nWhat is your role and how long have you been at Google?\n\n     “I began my career at Google as a Design Advocate, support…",
@@ -1176,6 +1185,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/0997/",
+          "author": null,
+          "description": "This article is purposed to be in a friendly spirit manner and carries neither mockery, nor snobbery. It intends to protect from unnecessary stress those who are entering the programming world for the first time. If you are learning to sort arrays, parse strings right now and believe in \"oh, yes, this is what I'm going to do at work\" — keep reading to find out newbies' common misbeliefs.",
+          "link": "https://pvs-studio.com/en/blog/posts/0997/",
+          "publishedOn": "2022-10-10T21:00:00.000Z",
+          "wordCount": 6316,
+          "title": "Misbeliefs in programming career or how to survive as a newcomer",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/0997_IT/image1_thm_intoblank_1200x630.webp"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/0996/",
           "author": null,
           "description": ".NET Multi-platform App UI is a framework written by professionals. However, the code of some of its functions looks like the developers could have forgotten what null reference dereferencing could lead to.",
@@ -1311,6 +1330,16 @@
       "feedUrl": "https://interrupt.memfault.com/feed.xml",
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
+        {
+          "id": "https://interrupt.memfault.com/blog/september-2022-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nSeptember\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/september-2022-roundup",
+          "publishedOn": "2022-10-11T00:00:00.000Z",
+          "wordCount": 773,
+          "title": "What we've been reading in September",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
         {
           "id": "https://interrupt.memfault.com/blog/ccache-debugging",
           "author": null,
@@ -1520,6 +1549,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/910848/",
+          "author": "corbet",
+          "description": "The Opus codec is an audio codec that\nwas designed from the beginning to avoid existing patents in the field and\nbe royalty-free for all users.  It was standardized by the IETF in 2012 as\nRFC 6716.\nNow a company called Vectis (\"a premier\nfull-suite IP licensing and consultancy boutique\") is collecting\npatents that are claimed to read on Opus as a way of demanding\nroyalties on its use. \n\"The planned Opus program will focus on hardware devices and will not be\ndirected towards open-source software, applications, services, or\ncontent\".  (Thanks to Paul Wise).",
+          "link": "https://lwn.net/Articles/910848/",
+          "publishedOn": "2022-10-11T16:35:22.000Z",
+          "wordCount": 869,
+          "title": "Patent clouds for the Opus codec",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/910833/",
+          "author": "corbet",
+          "description": "Version 7.0.0\nof the VirtualBox virtualization system is out.  Changes include support\nfor fully encrypted virtual machines, a new performance-monitoring tool,\nimproved theme support, and a number of new devices.",
+          "link": "https://lwn.net/Articles/910833/",
+          "publishedOn": "2022-10-11T14:23:39.000Z",
+          "wordCount": 351,
+          "title": "VirtualBox 7.0.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/910828/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (connman, dbus, git, isc-dhcp, strongswan, and wordpress), Fedora (rubygem-pdfkit and seamonkey), Red Hat (gnutls,  nettle, rh-ruby27-ruby, and rh-ruby30-ruby), SUSE (libgsasl, python, and snakeyaml), and Ubuntu (graphite2, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15,\n linux-gcp, linux-gke, linux-gkeop, linux-hwe-5.15, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-5.15, linux-oracle, linux-raspi, linux, linux-aws, linux-bluefield, linux-gke, linux-gkeop, linux-hwe-5.4,\n linux-ibm, linux-ibm-5.4, linux-kvm, linux-oracle, linux, linux-dell300x, linux-kvm, linux-oracle, linux-raspi2,\n linux-snapdragon, linux-hwe, linux-oracle, openssh, and pcre3).",
+          "link": "https://lwn.net/Articles/910828/",
+          "publishedOn": "2022-10-11T14:05:40.000Z",
+          "wordCount": 268,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/909887/",
           "author": "corbet",
@@ -2309,16 +2368,6 @@
           "wordCount": 305,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/907729/",
-          "author": "corbet",
-          "description": "Linus has released 6.0-rc5 for testing.\n\"Nothing looks particularly scary, so jump right in\".",
-          "link": "https://lwn.net/Articles/907729/",
-          "publishedOn": "2022-09-12T06:56:46.000Z",
-          "wordCount": 127,
-          "title": "Kernel prepatch 6.0-rc5",
-          "imageUrl": null
         }
       ]
     },
@@ -2368,14 +2417,14 @@
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
       "articles": [
         {
-          "id": "https://medium.com/p/e44e79c0ae3",
+          "id": "https://medium.com/p/b8bc2ad04a00",
           "author": "Vilem Zavodny",
-          "description": "If you tried to make some fancy UI without any graphic library, you know, how hard it is. Fortunately, there are lot of graphical libraries…",
-          "link": "https://blog.espressif.com/making-the-fancy-user-interface-on-esp-has-never-been-easier-e44e79c0ae3?source=rss----d5414d5dee73---4",
-          "publishedOn": "2022-09-12T08:05:44.000Z",
-          "wordCount": 2342,
-          "title": "Making the Fancy User Interface on ESP Has Never Been Easier!",
-          "imageUrl": "https://miro.medium.com/max/1200/1*0UjwYKDwRnOWw1s_CaRgJQ.png"
+          "description": "",
+          "link": "https://blog.espressif.com/developing-user-interfaces-for-custom-boards-with-esp-microcontrollers-b8bc2ad04a00?source=rss----d5414d5dee73---4",
+          "publishedOn": "2022-10-11T13:33:09.000Z",
+          "wordCount": null,
+          "title": "Developing User Interfaces for Custom Boards with ESP microcontrollers",
+          "imageUrl": null
         }
       ]
     },
@@ -2537,6 +2586,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11145",
+          "author": "Stacey Higginbotham",
+          "description": "This article was originally published in my Oct. 7, 2022 newsletter.  The Connectivity Standards Alliance (CSA) released version 1 of the Matter smart home interoperability protocol this week, and I and millions (maybe just tens of thousands) of other users are now wondering how we get access to it on our devices. Major smart home companies including […]\nThe post How to get Matter on your devices appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-to-get-matter-on-your-devices/",
+          "publishedOn": "2022-10-11T13:25:53.000Z",
+          "wordCount": 2185,
+          "title": "How to get Matter on your devices",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2021/07/PXL_20210703_185546065-scaled.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=11098",
           "author": "Kevin C. Tofel",
@@ -2865,6 +2924,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=87177",
+          "author": "경실련",
+          "description": "“이 정책은 서민들의 주거 보호에 결국 실패했습니다. (…중략…) 그럼 누가 이득을 봤을까? LH와 민간 건설사 4곳이 분양 전환으로 얻는 시세차익은, LH 1조1천억원, 민간건설사 4곳 1조원, 합쳐서 2조1천억원입니다. 판교 분양에 성공했던 1만3천 세대의 아파트 주인들이 얻은 시세차익은 8조 원으로 추정됩니다. 공공이 강제수용한 땅에서 정작 서민들은 쫓겨나고, 공기업, 건설사들, 그리고 분양받은 소수의 사람들이 돈을 번 셈입니다.” – […]\nThe post 누구를 위한 ’10년주택’이었나: 서민 쫓겨나고 LH공사 4.25조 이익 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87177",
+          "publishedOn": "2022-10-11T08:43:48.000Z",
+          "wordCount": 2751,
+          "title": "누구를 위한 ’10년주택’이었나: 서민 쫓겨나고 LH공사 4.25조 이익",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/10/i_003-1-1.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=87165",
           "author": "오픈넷",
           "description": "2022년 7월 16일과 18일, 전주시가 설치·운영하는 기관인 전주시사회혁신센터 성평등전주(이하 ‘성평등전주’)는 ‘제3회 페미니즘 예술제 [지구탈출]’에 참여 작가로 선정된 10인 중 3인(작가 사랑해, 치명타, 이시마, 이하 ‘작가 3인’)을 이들의 사상과 양심을 이유로 일방적으로 전시에서 배제하였다. 성평등전주가 작가 3인을 전시에서 배제한 근거는 예술제 준비를 위한 비공개 워크숍에서 작가들이 했던 발언이었다. 작가 3인의 발언과 전시예정작품이 예술제 취지인 성평등 혹은 […]\nThe post 성평등전주, ‘성노동자’ 개념 사상 검열로 작가 3인을 내쫓다 first appeared on 슬로우뉴스.",
@@ -3062,6 +3131,36 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=587992",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587992/2022%eb%85%84-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%84%a4%eb%b9%84%ed%88%ac%ec%9e%90-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-10-11T10:44:39.000Z",
+          "wordCount": 5199,
+          "title": "2022년 반도체 설비투자 전망, YoY 21% 증가",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/10/2022년-반도체-설비투자-전망.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587983",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587983/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ea%b4%91%ea%b3%a0-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4",
+          "publishedOn": "2022-10-11T09:31:57.000Z",
+          "wordCount": 5766,
+          "title": "JP모건, 넷플릭스 광고 비즈니스로 수십억 달러를 벌 수 있다고 주장",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/넷플릭스-라이프스타일-이미지-image_10-Image-Source-NETFLIX_Featured.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=587981",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/587981/3%eb%b6%84%ea%b8%b0-amd-%ec%8b%a4%ec%a0%81%ea%b3%bc-amd-%ec%a3%bc%ea%b0%80%eb%aa%a9%ed%91%9c",
+          "publishedOn": "2022-10-11T09:22:46.000Z",
+          "wordCount": 6793,
+          "title": "22년 3분기 AMD 실적을 읽는 월가의 시각, 경쟁력은 여전한데 시황이 문제로다..",
+          "imageUrl": "https://happist.com/wp-content/uploads/2017/05/AMD-Ryzen-발표하는-AMD-CEO-1.jpg"
+        },
+        {
           "id": "https://happist.com/?p=587976",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -3250,16 +3349,6 @@
           "wordCount": 6077,
           "title": "8월 CPI을 보는 월가의 시선",
           "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587743",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587743/%ec%95%88%ec%96%91%ec%98%88%ec%88%a0%ea%b3%b5%ec%9b%90-%ec%95%88%ec%96%91-%ec%a0%84%eb%a7%9d%eb%8c%80",
-          "publishedOn": "2022-09-11T12:48:49.000Z",
-          "wordCount": 5392,
-          "title": "안양예술공원, 안양 전망대(Anyang Peak)",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/안양예술공원-전망대-Anyang-Peak-08540.jpg"
         }
       ]
     },
@@ -3391,6 +3480,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222897503036",
+          "author": "sellars",
+          "description": "* 소박실재론, 혹은 상식적 실재론의 기본 주장을 다음 세 명제로 표현할 수 있다. 비판해 보라. (가) 우리는 물리적 대상을 직접 지각한다. (나) 물리적 대상들은 우리로부터 독립적으로 존재하고, 공간에서 일정한 위치를 차지한다. (다) 이러한 대상들의 성질은 그 대상들이 현재 그렇게 있다고 지각하는 것과 같은 것이다. ** 비록 물리적 대상을 우리가 직접 지각한다고 할지라도, 우리가 지각하는 모든 것이 물리적 대상이 아니다. 꿈이나 환상에서 물리적 대상이 없는 지각을 우리는 한다. 물 속에서 굽은 것처럼 보이는 막대는 분명히 객관적 현상이지만, 막대의 굽음 혹은 굽은 막대는 사실, 즉 물리적 사실이 아니다. ** 현상과 실재, .......",
+          "link": "https://blog.naver.com/sellars/222897503036",
+          "publishedOn": "2022-10-11T08:00:52.000Z",
+          "wordCount": 101,
+          "title": "5 정리",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222895557611",
           "author": "sellars",
