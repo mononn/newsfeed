@@ -144,16 +144,6 @@
           "wordCount": 1696,
           "title": "5 Ways to Improve or Avoid Loops in C++20...23",
           "imageUrl": "https://www.cppstories.com/2022/images/improve_loops.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2022/ssize-cpp20/",
-          "author": null,
-          "description": "In this article, I’ll show another technique that avoids mixing signed and unsigned types.\nIn my article Integer Conversions and Safe Comparisons in C++20 we learned about cmp_* integer comparison functions that allow us to compare various types of integer types. The functions are safe because they help with mixing signed and unsigned types. In C++20, there’s another handy feature: the non-member std::ssize() function that returns a signed number of elements in a container.\nLet’s see how to use it.\n\n\n\n     \n    \n\n\nC++20 offers many ways to avoid working with raw array/container indices:\nAlgorithms (they can avoid raw loops),\nRanges and views (for example, views::reverse),\nIterators,\nRange based for loop with an initializer (for example, to update the index count).\nOn the other hand, you ma…",
-          "link": "https://www.cppstories.com/2022/ssize-cpp20/",
-          "publishedOn": "2022-09-19T00:00:00.000Z",
-          "wordCount": 1537,
-          "title": "Reducing Signed and Unsigned Mismatches with std::ssize()",
-          "imageUrl": "https://www.cppstories.com/2022/images/ssize.png"
         }
       ]
     },
@@ -311,6 +301,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "d0c6ef97-2223-46db-aef9-292c01f8dc7b",
+          "author": "Wojciech Trocki",
+          "description": "API services are a common component of Node.js applications. This installment of the ongoing Node.js reference architecture series focuses on the development of REST APIs using an API-first approach.\nRead the series so far:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code coverage\nPart 8: Typescript\nPart 9: Securing Node.js applications\nPart 10: API-first approach to building Node.js applications\nThe IBM and Red Hat team has provided a comprehensive reference for developers looking to build Node.js applications. The Markdown source file of the reference specification is also available on GitHub under the Apache 2.0 ope…",
+          "link": "https://developers.redhat.com/articles/2022/10/18/api-first-approach-building-nodejs-applications",
+          "publishedOn": "2022-10-18T07:00:00.000Z",
+          "wordCount": 3406,
+          "title": "An API-first approach to building Node.js applications",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Nodejs_topic_page__A%20copy.png?itok=_GJ-KNgc"
+        },
         {
           "id": "9f7ef34c-99e8-45e4-854b-0ef09d06823c",
           "author": "Don Schenck",
@@ -560,16 +560,6 @@
           "wordCount": 3374,
           "title": "How hashing and cryptography made the internet possible",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC-security_1x.png?itok=puGidoF7"
-        },
-        {
-          "id": "02dd2697-1069-4f18-a29a-6798c4e87270",
-          "author": "Heiker Medina",
-          "description": "Looking for tips and deep dives on Linux, including Red Hat Enterprise Linux? Red Hat Developer has a wide range of content for you. These are some of our favorite and most popular articles, cheat sheets, and lessons to help you get the most out of Linux, along with underlying tools like GCC and Linux-based platforms like Docker:\nHelpful Linux commands\nDon't know where to get started in RHEL? This interactive lesson schools you in a series of must-know commands.\nModular Perl in Red Hat Enterprise Linux 8 (Author: Petr Pisar)\nRed Hat Enterprise Linux comes with modules, a packaging concept allowing system administrators to select the desired software from multiple packaged versions. Learn how to manage Perl as a module, as well as how to manage CPAN modules provided by Perl.\nIntermediate Li…",
-          "link": "https://developers.redhat.com/articles/2022/09/19/best-ways-learn-about-linux-red-hat-developer",
-          "publishedOn": "2022-09-19T07:00:00.000Z",
-          "wordCount": 2602,
-          "title": "Best ways to learn about Linux from Red Hat Developer",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_A%20%282%29.png?itok=zmrEAEN1"
         }
       ]
     },
@@ -867,16 +857,6 @@
           "wordCount": 4635,
           "title": "Designing a power-saving solenoid driver: Design concepts￼",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/09Renesas_pt1_f2t.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4476582",
-          "author": "Jay Kruse",
-          "description": "When reading about 5G, it can appear to be the cure to all of our problems. But the technology may not live up to the...\nThe post Technical challenges curb expectations for 5G appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/technical-challenges-curb-expectations-for-5g/",
-          "publishedOn": "2022-09-19T00:11:00.000Z",
-          "wordCount": 4087,
-          "title": "Technical challenges curb expectations for 5G",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/09/img20220927044939Expect-to-Find-Some-Thorns-in-5G_0_w580_h500.jpg"
         }
       ]
     },
@@ -1344,6 +1324,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/910766/",
+          "author": "jake",
+          "description": "Since its inclusion in the Linux kernel, the WireGuard VPN tunnel has become\nincreasingly popular.  In general, WireGuard is simpler to configure than\nother VPNs, but the approach that it takes to authentication can present\nsome challenges. Each node in a WireGuard network has a cryptographic key\nthat serves as the node's identity; \nnodes that do not know each other's keys cannot directly communicate.\nKeeping\ntrack of these keys and distributing them to the other nodes\nin a mesh network quickly becomes a chore as the network grows.\nFortunately, there are now \nseveral open-source \ntools that can automate the management of these keys and make using\nWireGuard easier for both administrators and end users.",
+          "link": "https://lwn.net/Articles/910766/",
+          "publishedOn": "2022-10-18T15:18:25.000Z",
+          "wordCount": null,
+          "title": "[$] Identity management for WireGuard",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/911563/",
+          "author": "corbet",
+          "description": "Version\n106.0 of the Firefox browser has been released.  There are several new\nfeatures, including PDF editing, Firefox\nView (an overview of recently closed tabs), and a set of new color\nschemes.",
+          "link": "https://lwn.net/Articles/911563/",
+          "publishedOn": "2022-10-18T14:11:31.000Z",
+          "wordCount": 239,
+          "title": "Firefox 106 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/911562/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (glibc and libksba), Fedora (dhcp and kernel), Red Hat (.NET 6.0, .NET Core 3.1, compat-expat1, kpatch-patch, and nodejs:16), Slackware (xorg), SUSE (exiv2, expat, kernel, libreoffice, python, python-numpy, squid, and virtualbox), and Ubuntu (linux-azure and zlib).",
+          "link": "https://lwn.net/Articles/911562/",
+          "publishedOn": "2022-10-18T13:54:08.000Z",
+          "wordCount": 268,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/911494/",
           "author": "corbet",
@@ -2193,26 +2203,6 @@
           "wordCount": 321,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/908561/",
-          "author": "corbet",
-          "description": "The artemis.sh blog has a\ndetailed review of the state of Wayland compared to X.org.\n\n\n\tIt feels fantastic. It even made my software cursor\n\tnot feel so softwarey, which I’ve never experienced with a software\n\tcursor before. I have a pretty bad GPU, but on a higher end card\n\tyou’d get a huge benefit to this in games. If your card can render\n\tthe game many times faster than your monitor refresh rate, you can\n\tunlock your FPS in the game, tune your max_render_time to the\n\tabsolute minimum, and get EXTREMELY low latency while still having\n\tabsolutely no screen tearing whatsoever.\n\t\n\tAnd like, this is the first time I’ve ever seen the vsync setting\n\tin a game actually sync the game up with the vblank interval in a\n\tway that matters. It works for games in wine. It’s amazing. I have\n\tnever experienced gaming on Linux that looked this smooth in my\n\tlife.",
-          "link": "https://lwn.net/Articles/908561/",
-          "publishedOn": "2022-09-19T06:25:42.000Z",
-          "wordCount": 3405,
-          "title": "An X11 Apologist Tries Wayland (artemis.sh)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/908560/",
-          "author": "corbet",
-          "description": "The 6.0-rc6 kernel prepatch is out for\ntesting.\n\n\n\tSo this is an artificially small -rc release, because this past\n\tweek we had the Maintainers' Summit in Dublin (along with OSS EU\n\tand LPC 2022), so we've had a lot of maintainers traveling.\n\n\tOr - putting my ridiculously optimistic hat on - maybe things are\n\tjust so nice and stable that there just weren't all that many\n\tfixes?",
-          "link": "https://lwn.net/Articles/908560/",
-          "publishedOn": "2022-09-19T06:07:53.000Z",
-          "wordCount": 180,
-          "title": "Kernel prepatch 6.0-rc6",
-          "imageUrl": null
         }
       ]
     },
@@ -2433,16 +2423,6 @@
           "wordCount": 1462,
           "title": "Overview of broad US data on IT job hiring/firing and quitting",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=7113",
-          "author": "Derek Jones",
-          "description": "Developers working on the implementation of a software system will have a list of work that needs to be done, a to-do list, known as the product backlog in Agile. The Agile development process differs from the Waterfall process in that the list of work items is intentionally incomplete when coding starts (discovery of new […]",
-          "link": "https://shape-of-code.com/2022/09/18/optimal-sizing-of-a-product-backlog/",
-          "publishedOn": "2022-09-18T22:01:48.000Z",
-          "wordCount": 1474,
-          "title": "Optimal sizing of a product backlog",
-          "imageUrl": null
         }
       ]
     },
@@ -2451,6 +2431,26 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11150",
+          "author": "Kevin C. Tofel",
+          "description": "On a recent Internet of Things Podcast episode, we took a question from Dave on our Voicemail hotline. Dave’s landlord uses a SmartRent mobile app and Aeotec hub that connects to a smart Yale Assure door lock with Z-Wave. Dave wants to add a secondary Z-Wave controller to the Aeotec hub so that he can […]\nThe post Can you add a secondary Z-Wave controller for a connected door lock? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/can-you-add-a-secondary-z-wave-controller-for-a-connected-door-lock/",
+          "publishedOn": "2022-10-18T16:00:49.000Z",
+          "wordCount": 1700,
+          "title": "Can you add a secondary Z-Wave controller for a connected door lock?",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2021/06/IMG_0559.jpeg?fit=1985%2C1583&ssl=1"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=11202",
+          "author": "Stacey Higginbotham",
+          "description": "This story was originally published in my  Oct. 14 weekly IoT newsletter. One of the larger challenges associated with the internet of things is e-waste. Every sensor deployed into the world has a cache of heavy, rare metals and hard-to-recycle electronics inside. Yet the promise of using more sensors to help optimize production in factories or […]\nThe post NTT envisions a “greener” IoT sensor appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/ntt-envisions-a-greener-iot-sensor/",
+          "publishedOn": "2022-10-18T13:00:02.000Z",
+          "wordCount": 1880,
+          "title": "NTT envisions a “greener” IoT sensor",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/10/Table_2.jpeg?fit=610%2C343&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=11199",
           "author": "Stacey Higginbotham",
@@ -2780,6 +2780,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=87263",
+          "author": "오픈넷",
+          "description": "10월 7일 성평등전주는 공식사과문을 발표하였습니다. “성매매에 대한 다른 입장을 가진 예술가들과 예술제를 준비한다는 것이 그간의 선미촌의 변화 노력과 모순되는 것이라는 판단이 중요하게 작용”했고, “사랑해, 이시마, 치명타 3명의 작가에게 하차를 요구하는 것을 ‘전여문'(전북여성문화예술인연대)에 맡기고 사업의 주최기관인 성평등전주가 직접 작가들에게 상황을 설명하는 등의 적극적인 노력을 기울이지 않았던 것은 너무 안일한 대처”이며, “성평등전주가 예술가들을 민주적이지 않은 절차에 노출시킴으로써 […]\nThe post 성평등전주 ‘성노동’ 사상 검열로 쫓겨난 작가 사랑해와 치명타의 입장 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87263",
+          "publishedOn": "2022-10-18T09:19:12.000Z",
+          "wordCount": 3192,
+          "title": "성평등전주 ‘성노동’ 사상 검열로 쫓겨난 작가 사랑해와 치명타의 입장",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/10/pic_005.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=87252",
           "author": "진보넷",
           "description": "앞에서 빅테크와 뉴스미디어의 불균형을 제도적으로 해결하기 위한 유럽 각국의 움직임을 살펴보겠습니다. 유럽연합은 특히 ‘저작권’을 통해서 빅테크 기업을 규제하는 방식을 채택하고 있습니다. 유럽연합은 2019년 3월 20일, ‘디지털 단일시장 저작권 지침안'(이하 ‘저작권 지침안’)을 가결했습니다. 참고: ‘2019 저작권학술대회’ 유럽연합 디지털 단일시장 저작권 지침의 쟁점 및 시사점 저작권 지침안: 개요와 쟁점  저작권 지침안은 2019년 6월 7일 시행되고, 회원국은 2년 […]\nThe post 유럽의 미디어 다양성 전략: ‘저작권 지침안 vs. 구글’ 중심으로 first appeared on 슬로우뉴스.",
@@ -2986,6 +2996,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=588058",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/588058/%ec%95%a0%ed%94%8c-%ec%95%84%eb%a7%88%ec%a1%b4-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2022-10-18T09:19:17.000Z",
+          "wordCount": 6344,
+          "title": "10/18 애플, 아마존, 테슬라에 대한 월가의 시선",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/애플-캠퍼스-애플-파크-Apple-park-Photo-by-Carles-Rrabada-1024x576.jpg"
+        },
         {
           "id": "https://happist.com/?p=588047",
           "author": "happist",
@@ -3245,16 +3265,6 @@
           "wordCount": 5712,
           "title": "길상사 꽃무릇, 천재시인을 사랑한 여인의 사랑법",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/09/길상사에서-꽃무릇을-담다-00747.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=587807",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/587807/9%ec%9b%94-fomc-%ea%b4%80%ec%a0%84-%ed%8f%ac%ec%9d%b8%ed%8a%b8",
-          "publishedOn": "2022-09-18T12:52:29.000Z",
-          "wordCount": 5645,
-          "title": "[하나증권] 9월 FOMC의 관전 포인트",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/제롬-파월-이-면준-의장-Federal-Reserve-Chair-Jerome-Powell-Photo-by-Al-Drago-via-AP.jpg"
         }
       ]
     },
@@ -3263,6 +3273,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=75429",
+          "author": "ingppoo",
+          "description": "지난 8월, 마침내 인플레이션 감축법(Inflation Reduction Act)이 미국 하원의 표결을 통과했습니다. 730쪽에 달하는 법안의 골자를 이루는 건 법안의 이름인 인플레이션과는 무관해 보이는 기후변화 대응과 의료보험 지원 확대 방안입니다. 물론 법안 통과를 환영한다고 밝힌 백악관의 설명에 따르면, 에너지 요금과 의료비를 낮출 수 있다면 치솟은 물가를 안정시킬 수 있습니다. 바이든 대통령은 이번 주에 법안에 서명하겠다고 밝혔는데, 법이 발효되더라도 곧바로 물가가 내리지는 않을 겁니다. 여당인 민주당은 법을 통과시키기 위해 공화당과 협의하는 과정에서 원안의 → 더 보기",
+          "link": "https://newspeppermint.com/2022/10/17/npc_inflationreductionact/?utm_source=rss&utm_medium=rss&utm_campaign=npc_inflationreductionact",
+          "publishedOn": "2022-10-17T22:59:52.000Z",
+          "wordCount": 2537,
+          "title": "[필진 칼럼] 마침내 통과된 기후변화 대응법, 성공인가 실패인가?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=75414",
           "author": "veritaholic",
@@ -3352,16 +3372,6 @@
           "wordCount": 1789,
           "title": "[필진 칼럼] 게임화(gamification)에 대처하는 법",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75290",
-          "author": "ingppoo",
-          "description": "현대전(戰)이라고 하면 어떤 이미지가 떠오르시나요? 21세기 초 미국이 전 세계에서 벌인 ‘테러와의 전쟁’ 때만 해도 없었지만, 요즘엔 거의 빠짐없이 쓰이는 전술적인 핵심 무기가 바로 드론입니다. 지난 4월에 뉴욕타임스는 미국 공군 소속 드론 조종사들의 정신건강 문제가 얼마나 심각한지 고발했습니다. 조종사들은 라스베거스 근처의 평범한 사무실(처럼 보이지만, 실제로는 기밀 군사 시설)에 매일 출근해 지구 반대편의 드론으로 작전을 수행하는데, 예전에는 할 수 없던 명령을 수행하다가 외상 후 스트레스 장애(PTSD)를 비롯한 참전 군인들이 겪는 정신 → 더 보기",
-          "link": "https://newspeppermint.com/2022/09/18/npc_tb2warfare/?utm_source=rss&utm_medium=rss&utm_campaign=npc_tb2warfare",
-          "publishedOn": "2022-09-18T22:59:29.000Z",
-          "wordCount": 1927,
-          "title": "[필진 칼럼] 현대 전쟁의 공급망",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3376,6 +3386,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222903607561",
+          "author": "sellars",
+          "description": "(1) 일광욕하러 외출했다가 눈보라를 만난 얼룩다람쥐는 잠자리로 되돌아가면 그만이다. 그러나 호수의 숨구멍을 찾아서 200마일의 칠흑 같은 밤길을 날아온 모험심 많은 철새 기러기에게는 물러설 곳이 마땅치 않다. 기러기의 도착은 배수의 진을 친 어떤 예언자의 확신 같은 것을 내포한다. (2) 봄철 기러기의 일상을 관찰하다보면, 다른 놈보다 훨씬 여기저기 더 많이 날아다니고 더 많이 울어대는 외톨이들이 적지 않다는 것을 알게 된다. 누구나 이 놈들의 울음소리는 쓸쓸하다고 생각하기 쉽다. 또 이 심한 홀아비이거나 잃어버린 새끼를 찾아 헤매는 어미일 것이라고 지레짐작하기 쉽다. 그러나 경험이 많은 조류학자라면 새들의 행동을 그.......",
+          "link": "https://blog.naver.com/sellars/222903607561",
+          "publishedOn": "2022-10-18T06:09:25.000Z",
+          "wordCount": 101,
+          "title": "알도 레오폴드의 <모래 군의 열두 달> 2",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222902547905",
           "author": "sellars",
@@ -3564,16 +3584,6 @@
           "publishedOn": "2022-09-19T23:48:45.000Z",
           "wordCount": 101,
           "title": "27 계몽이란 무엇인가",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222878303750",
-          "author": "sellars",
-          "description": "Philosopher and Logician Saul Kripke’s Obituary at 81 One of the most influential analytic philosophers Saul Kripke’s obituary was revealed after his death at the age of 81 on September 15, 2022. Kripke was a Distinguished Professor of Philosophy at the Graduate Center of the City University of New York. He was also an emeritus professor at Princeton University. Saul was a central figure in a number of fields related to mathematical logic, philosophy of language, modal logic, metaphysics, epistemology, philosophy of mathematics, and recursion theory. 철학자이자 논리학자인 Saul Kripke, 81세로.......",
-          "link": "https://blog.naver.com/sellars/222878303750",
-          "publishedOn": "2022-09-18T22:35:26.000Z",
-          "wordCount": 101,
-          "title": "귀천(歸天)  솔 크립키",
           "imageUrl": null
         }
       ]
