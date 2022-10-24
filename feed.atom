@@ -2,10 +2,269 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.com/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2022-10-23T20:21:03.740Z</updated>
+    <updated>2022-10-24T20:21:49.861Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.com/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.com/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Shut Down C++ Embedded Systems with Calling the global Destructors]]></title>
+        <id>http://mcuoneclipse.com/?p=35503</id>
+        <link href="https://mcuoneclipse.com/2022/10/24/shut-down-c-embedded-systems-with-calling-the-global-destructors/"/>
+        <updated>2022-10-24T17:54:40.000Z</updated>
+        <summary type="html"><![CDATA[If using C++ on an embedded target, you depend on the constructors for global objects being called by the startup code. While in many cases an embedded system won’t stop, so you don’t need to call the global C++ destructors, … Continue reading →]]></summary>
+        <author>
+            <name>Erich Styger</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How odo 3.0 GA improves the developer experience]]></title>
+        <id>46afa612-02b2-4116-97fd-9dcd118a4ca9</id>
+        <link href="https://developers.redhat.com/articles/2022/10/24/odo-v3-ga-improves-developer-experience"/>
+        <updated>2022-10-24T17:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Developers love command-line productivity. We get that. This article describes how odo, a developer-focused command-line interface (CLI) for Red Hat OpenShift and Kubernetes, simplifies cloud-native development.
+odo supports fast, iterative development and lets developers focus on what's most important to them—code. The odo 3.0 GA release provides new and improved user experience and security. This new release also allows developers to automatically detect bindable resources, making it easier to connect applications to services.
+6 ways odo v3 GA improves the developer experience
+The following sections describe six odo v3 GA features and commands that improve the developer experience.
+1. Interactive commands
+odo has new interactive commands to help developers with the discoverability of cap…]]></summary>
+        <author>
+            <name>Serena Chechile Nichols</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[We’re getting a consumer IoT security label next year!]]></title>
+        <id>https://staceyoniot.com/?p=11237</id>
+        <link href="https://staceyoniot.com/were-getting-a-consumer-iot-security-label-next-year/"/>
+        <updated>2022-10-24T15:20:57.000Z</updated>
+        <summary type="html"><![CDATA[The White House is moving forward with an IoT security and privacy label, with plans to have a formal label by spring of 2023. To kickstart the effort, it invited officials from government, industry, academia, and consumer organizations to discuss what the label should cover and how to implement any labeling scheme. The White House […]
+The post We’re getting a consumer IoT security label next year! appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Would you like signs with those chars?]]></title>
+        <id>https://lwn.net/Articles/911914/</id>
+        <link href="https://lwn.net/Articles/911914/"/>
+        <updated>2022-10-24T15:20:14.000Z</updated>
+        <summary type="html"><![CDATA[Among the many quirks that make the C language so charming is the set of
+behaviors that
+it does not define; these include whether a char variable is a
+signed quantity or not.  The distinction often does not make a difference,
+but there are exceptions.  Kernel code, which runs on many different
+architectures, is where exceptions can certainly be found.  A recent
+attempt to eliminate the uncertain signedness of char variables
+did not get far — at least not in the direction it originally attempted to
+go.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The final 5.19.x stable kernel release]]></title>
+        <id>https://lwn.net/Articles/912186/</id>
+        <link href="https://lwn.net/Articles/912186/"/>
+        <updated>2022-10-24T15:19:40.000Z</updated>
+        <summary type="html"><![CDATA[Greg Kroah-Hartman has announced the release of the 5.19.17 stable kernel. "Note this is the
+LAST 5.19.y kernel to be released.  This 
+branch is now 
+end-of-life.  You should move to the 6.0.y branch at this point in time."]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Meeting robot power demands with modular designs]]></title>
+        <id>https://www.embedded.com/?p=4476851</id>
+        <link href="https://www.embedded.com/meeting-robot-power-demands-with-modular-designs/"/>
+        <updated>2022-10-24T14:52:50.000Z</updated>
+        <summary type="html"><![CDATA[Robot designs come in a wide array of power demands, which means many challenges for engineers, one of which is building the robot’s internal power infrastructure: this article looks at the considerations in determining the right approach for the design.
+The post Meeting robot power demands with modular designs appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Gopal Mitra</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gaynor: Buffers on the edge: Python and Rust]]></title>
+        <id>https://lwn.net/Articles/912181/</id>
+        <link href="https://lwn.net/Articles/912181/"/>
+        <updated>2022-10-24T14:51:19.000Z</updated>
+        <summary type="html"><![CDATA[Alex Gaynor examines the
+awkwardness that comes when trying to interface Python and Rust code.
+
+
+	The challenge is that if you want to pass some bytes to a Rust
+	library to parse them (or do any other processing for that matter),
+	the library almost certainly expects a &[u8], and
+	there’s no way to turn a &[ReadOnlyCell<u8>]
+	into a &[u8] safely, without allocating and
+	copying. And of course, the whole point of the Python buffer
+	protocol is to avoid these sorts of inefficiencies.
+
+	Therefore, the regrettable solution is that, right now, there is no
+	way to have all three of: efficiency, interoperability, and
+	soundness.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/912178/</id>
+        <link href="https://lwn.net/Articles/912178/"/>
+        <updated>2022-10-24T14:03:22.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (bluez, kernel, and lava), Fedora (ckeditor, drupal7, moby-engine, php-Smarty, and wavpack), Mageia (bind, e2fsprogs, epiphany, freerdp, kernel, kernel-linus, libconfuse, libosip2, ntfs-3g, perl-Image-ExifTool, and poppler), Oracle (firefox, java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, kernel, kernel-container, and thunderbird), Scientific Linux (firefox, java-1.8.0-openjdk, and java-11-openjdk), SUSE (bluez, firefox, kernel, libxml2, and tiff), and Ubuntu (linux-gcp).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[국가의 인권침해 범죄는 공소시효가 없다: 미군 기지촌 사건 (2022)]]></title>
+        <id>https://slownews.kr/?p=87323</id>
+        <link href="https://slownews.kr/87323"/>
+        <updated>2022-10-24T08:33:01.000Z</updated>
+        <summary type="html"><![CDATA[지난 2022년 9월 29일, 대한민국 대법원은 여성인권사에 길이 남을 역사적 판결을 내렸다. 미군 기지촌 ‘위안부’ 제도에 대한 한국정부의 책임을 최종 인정하고 원고 측인 피해자들의 손을 들어 주었던 것이다. 당사자 소송 8년 2개월, ‘기지촌여성인권연대’ 결성 10년만의 쾌거다. 당일 관련 단체들과 소송 당사자들은 대법원 앞에서 기자회견을 개최하고 “미군 위안부에 대한 국가의 책임, 즉 국가에 의한 폭력과 인권침해 […]
+The post 국가의 인권침해 범죄는 공소시효가 없다: 미군 기지촌 사건 (2022) first appeared on 슬로우뉴스.]]></summary>
+        <author>
+            <name>참여연대 사법감시센터</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How Ansible automates JBoss Web Server updates and upgrades]]></title>
+        <id>e026f9bc-6992-4291-a002-2f337893a4a8</id>
+        <link href="https://developers.redhat.com/articles/2022/10/24/ansible-automates-jws-updates-upgrades"/>
+        <updated>2022-10-24T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In the previous article, Automate Red Hat JBoss Web Server deployments with Ansible, I discussed how to fully automate the deployment of Red Hat JBoss Web Server with Red Hat Ansible Automation Platform. However, this initial installation and configuration is only the beginning. Once the Java server is in use, it must be maintained and updated. Otherwise, critical bugs could affect its operation, or a security vulnerability might expose it to bad actors.
+Fortunately, we can utilize Ansible and the JWS collection to mitigate these concerns, enabling it to fully patch your deployment by automation and to upgrade the server itself. In this article, we will cover, in detail, how to implement such automation.
+Note: Before you begin the steps in this article, install JBoss Web Server using the A…]]></summary>
+        <author>
+            <name>Romain Pelisse</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use design by contract to build Kubernetes Operators in Java]]></title>
+        <id>30c01f48-9df4-4f63-a9ec-330f7b539bee</id>
+        <link href="https://developers.redhat.com/articles/2022/10/24/use-design-contract-build-kubernetes-operators-java"/>
+        <updated>2022-10-24T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Kubernetes is great at automating the deployment, monitoring, and scaling of applications. Whatever you want Kubernetes to control—a service, deployment, etc.—is called a resource. This article shows you how to extend Kubernetes's capabilities by writing a Custom Resource Definition (CRD) and an Operator in Java.
+CRDs specify how to install, monitor, and manage resources, whereas Operators are agents that actually carry all that out. The usual language for writing an Operator is Go. But most Java teams prefer to keep all their code in Java: they want to avoid doing a deep dive into a new language, and to maintain a unified environment without supporting two sets of tools and practices.
+This article explains how to create a CRD and Operator in Java, complete with sample Java code and YAML s…]]></summary>
+        <author>
+            <name>Sun Tan, Andrea Peruffo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[애플과 테슬라 비교, 테슬라의 강력한 영업 레버리지 효과로 주가 10배 상승 주장]]></title>
+        <id>https://happist.com/?p=588104</id>
+        <link href="https://happist.com/588104/%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%98%81%ec%97%85-%eb%a0%88%eb%b2%84%eb%a6%ac%ec%a7%80-%ed%9a%a8%ea%b3%bc"/>
+        <updated>2022-10-24T03:03:10.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2100년 한국 인구는 반토막이나 가장 높은 인구 감소국이 된다는 UN 인구 예측]]></title>
+        <id>https://happist.com/?p=588100</id>
+        <link href="https://happist.com/588100/2100%eb%85%84-%ed%95%9c%ea%b5%ad-%ec%9d%b8%ea%b5%ac"/>
+        <updated>2022-10-24T01:09:18.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[미국이 반도체 전쟁을 시작한 이유]]></title>
+        <id>https://happist.com/?p=588098</id>
+        <link href="https://happist.com/588098/%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%a0%84%ec%9f%81-%ec%9d%b4%ec%9c%a0"/>
+        <updated>2022-10-24T00:08:43.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Smaller C++20 Features - My Presentation]]></title>
+        <id>https://www.cppstories.com/2022/talk-smaller-cpp20/</id>
+        <link href="https://www.cppstories.com/2022/talk-smaller-cpp20/"/>
+        <updated>2022-10-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In September and October, I had the pleasure of running two meetings about C++20 features for my local Cracow C++ User Group!
+Here are the slides and additional comments from the presentation.
+
+
+
+     
+    
+
+
+Initially I did one presentation using my article on smaller C++ 20 features (20 Smaller yet Handy C++20 Features - C++ Stories). Thanks to many valuable discussions during the talk, we decided to do a split. The first meeting was about language parts, and the second part was about library changes.
+
+While the list of topics is in a similar order as the article, I made a few changes:
+There’s a constinit slide with more examples instead of the Default Bitfield initializers.
+More examples of various features
+Additional links and references
+
+
+
+     
+    
+
+
+Here are the slides @Xara:
+20_cpp20_features_language
+20_cpp20_features_library
+
+
+And
+
+
+You can also have a look at my YT channel (the C++ Stories YT channel) and see the shorter version of the presentation (around 1 hour): 20 smaller C++20 features (Improved audio) - YouTube.
+
+
+
+     
+    
+
+
+Please join our meetup page if you want to hear more from the Cracow User Group.
+https://www.meetup.com/C-User-Group-Cracow/]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel prepatch 6.1-rc2]]></title>
+        <id>https://lwn.net/Articles/912100/</id>
+        <link href="https://lwn.net/Articles/912100/"/>
+        <updated>2022-10-23T23:54:39.000Z</updated>
+        <summary type="html"><![CDATA[The second 6.1 kernel prepatch is out for
+testing.  "Usually rc2 is a pretty quiet week, and it mostly started out
+that way too, but then things took a turn for the strange. End result:
+6.1-rc2 ended up being unusually large."]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[필진 칼럼] 탈레반의 아프가니스탄 수복 ‘벌써 1년’]]></title>
+        <id>https://newspeppermint.com/?p=75468</id>
+        <link href="https://newspeppermint.com/2022/10/23/npc_talibanafghanistan/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npc_talibanafghanistan"/>
+        <updated>2022-10-23T22:59:07.000Z</updated>
+        <summary type="html"><![CDATA[지난 8월 22일 네이버 프리미엄 콘텐츠에 올린 글입니다.  탈레반이 아프가니스탄의 수도 카불로 진격해오던 2021년 여름, 공항에서 필사적인 탈출을 시도하던 아프간 시민들의 모습은 전 세계에 큰 충격을 주었습니다. 뉴스페퍼민트도 당시 프리미엄 콘텐츠에 관련 기사와 칼럼들을 여러 편 소개했습니다. 위기에 처한 아프간 여학생들과 STEM의 역설 아프가니스탄, 20년 전으로 시계를 돌려보면 아프간 난민과 국내 정치 이후 지난 1년을 돌아보면, 코로나19 팬데믹은 좀처럼 사그라들지 않고 있고, 러시아는 우크라이나를 침공해 전쟁을 일으켰으며, 세계 각지에서 기후 재해가 → 더 보기]]></summary>
+        <author>
+            <name>eyesopen1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Studying the lifetime of Open source]]></title>
+        <id>https://shape-of-code.com/?p=7181</id>
+        <link href="https://shape-of-code.com/2022/10/23/studying-the-lifetime-of-open-source/"/>
+        <updated>2022-10-23T21:18:47.000Z</updated>
+        <summary type="html"><![CDATA[A software system can be said to be dead when the information needed to run it ceases to be available. Provided the necessary information is available, plus time/money, no software ever has to remain dead, hardware emulators can be created, support libraries can be created, and other necessary files cobbled together. In the case of […]]]></summary>
+        <author>
+            <name>Derek Jones</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[3분기 테슬라 실적, 일부 기대에는 미흡하나 장기 비전은 유효할듯]]></title>
         <id>https://happist.com/?p=588096</id>
@@ -271,6 +530,17 @@ Any organization that designs a system (defined broadly) will produce a
 Conway's Law is essentially the observation that the archite…]]></summary>
         <author>
             <name>Martin Fowler</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tools – The Raspberry Pi Pico]]></title>
+        <id>https://www.beningo.com/?p=14429</id>
+        <link href="https://www.beningo.com/tools-the-raspberry-pi-pico/"/>
+        <updated>2022-10-20T13:51:54.000Z</updated>
+        <summary type="html"><![CDATA[Normally, the Raspberry Pi Pico might not be thought of as a tool for professional embedded software developers. The Pico is a low-cost development board, not what we might consider … Continue reading Tools – The Raspberry Pi Pico
+Tools – The Raspberry Pi Pico first appeared on Beningo Embedded Group.]]></summary>
+        <author>
+            <name>Jacob Beningo</name>
         </author>
     </entry>
     <entry>
@@ -3939,16 +4209,6 @@ The post 중국의 클라우드 산업: 아마존, MS, 구글이 힘 못쓰는 �
         <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
         <author>
             <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[논증적 분석철학과 문학적 대륙철학 1]]></title>
-        <id>https://blog.naver.com/sellars/222883646168</id>
-        <link href="https://blog.naver.com/sellars/222883646168"/>
-        <updated>2022-09-25T05:41:41.000Z</updated>
-        <summary type="html"><![CDATA[크립키나 분석철학이 인문학적 관심과 소양이 있는 사람들에게 멀어진 이유로 문학이나 종교와의 괴리를 들었다. 어떤 의미에서 분석철학은 하나의 방법론적 개념이기에, 문학에 대한 분석철학이나 종교에 대한 분석철학이 충분히 가능하다. 그러나 일반적으로 가령 문학에 대한 분석철학은 문학 작품에서 우리가 귀담아 새겨야 할 어떤 철학적 주제나 명제를 해명해 주는 대신에 문학 자체에 대해서 학문적 분석을 하고 있다. 따라서 분석적 문학철학은 문학의 허구성이 어떤 개념이며, 그것이 사실과 어떻게 다른 것인지, 허구에 대한 심리적 반응이나 상상력, 은유 등을 탐구하고 있다. 이것이 일반적 경향이지만, 분석철학의 철학적 분석이나.......]]></summary>
-        <author>
-            <name>sellars</name>
         </author>
     </entry>
     <entry>
