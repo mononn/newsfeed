@@ -22,11 +22,89 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-11-04 datetime="2022-11-04T19:00:42.000Z">2022-11-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-11-04 datetime="2022-11-04T19:00:42.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-11-04 datetime="2022-11-04T23:32:11.000Z">2022-11-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-11-04 datetime="2022-11-04T23:32:11.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/913908/"
+                        open
+                      >
+                        <summary class="article-expander__title">SystemTap 4.8 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/913908/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version 4.8 of the SystemTap tracing tool is out.  &quot;Enhancements to this release include: kernel runtime improvements
+on multi-CPU systems, python3 tapset support through python3.11,
+tapset and template script for cve livepatching, bpf backend
+embedded-code assembler improvements&quot;.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/913291/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Two performance-oriented patches: epoll and NUMA balancing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/913291/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The search for better performance from the kernel never ends.  Recently
+there has been a stream of smaller patches that promise incremental
+performance gains, at least for some types of applications.  Read on for an
+overview of two of those patches, which make changes to the epoll system
+calls and to NUMA balancing.  This work shows where developers are looking
+for performance improvements — and that not everybody measures performance
+the same way.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/913849/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Friday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/913849/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (clickhouse, distro-info-data, and ntfs-3g), Fedora (firefox), Oracle (kernel), Slackware (mozilla), and SUSE (python-Flask-Security-Too).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -112,62 +190,6 @@ Note: The three vulnerabilities discussed in this blog were all fixed in Samsung
 
 As defenders, in-the-wild exploit samples give us important insight into what attackers are really doing. We get the “ground truth” data about the vulnerabilities and exploit techniques they’re using, which then informs our further research and guidance to security teams on what could have the biggest impact or return on investment. To do this, we need to know that the vulnerabilities and exploit samples were found in-the-wild. Over the past few years there’s been tremendo…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;31
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/913291/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Two performance-oriented patches: epoll and NUMA balancing</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/913291/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The search for better performance from the kernel never ends.  Recently
-there has been a stream of smaller patches that promise incremental
-performance gains, at least for some types of applications.  Read on for an
-overview of two of those patches, which make changes to the epoll system
-calls and to NUMA balancing.  This work shows where developers are looking
-for performance improvements — and that not everybody measures performance
-the same way.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/913849/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Friday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/913849/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by Debian (clickhouse, distro-info-data, and ntfs-3g), Fedora (firefox), Oracle (kernel), Slackware (mozilla), and SUSE (python-Flask-Security-Too).</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -4229,6 +4251,50 @@ Select virtualize and click L…</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Python Insider</button>
+                  <a class="source-heading__link" href="https://pythoninsider.blogspot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pythoninsider.blogspot.com/2022/10/python-3120-alpha-1-released.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Python 3.12.0 alpha 1 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2022/10/python-3120-alpha-1-released.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>As Pablo released Python 3.11.0 final earlier today, now it&#x27;s my turn to release Python 3.12.0 alpha 1.
+
+https://www.python.org/downloads/release/python-3120a1/
+
+
+
+This is an early developer preview of Python 3.12
+
+Major new features of the 3.12 series, compared to 3.11
+Python 3.12 is still in development. This release, 3.12.0a1, is the first of seven planned alpha releases.
+Alpha releases are intended to make it easier to test the current state of new features and bug fixes and to test the release process.
+During the alpha phase, features may be added up until the start of the beta phase (2023-05-08) and, if necessary, may be modified or deleted up until the release candidate phase (2023-07-31). Please keep in mind that this is a preview release and its use is not recommended for producti…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Eli Bendersky&#x27;s website</button>
                   <a class="source-heading__link" href="https://eli.thegreenplace.net/">Open</a>
                 </h3>
@@ -4634,6 +4700,79 @@ Note: Before you begin the steps in this article, install JBoss Web Server usin
 CRDs specify how to install, monitor, and manage resources, whereas Operators are agents that actually carry all that out. The usual language for writing an Operator is Go. But most Java teams prefer to keep all their code in Java: they want to avoid doing a deep dive into a new language, and to maintain a unified environment without supporting two sets of tools and practices.
 This article explains how to create a CRD and Operator in Java, complete with sample Java code and YAML s…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Python Insider</button>
+                  <a class="source-heading__link" href="https://pythoninsider.blogspot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pythoninsider.blogspot.com/2022/10/python-3110-is-now-available.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Python 3.11.0 is now available</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2022/10/python-3110-is-now-available.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>This is the release of Python 3.11.0
+Python 3.11 is finally released. In the CPython release team, we have put a lot of effort into making 3.11 the best version of Python possible. Better tracebacks, faster Python, exception groups and except*, typing improvements and much more. Get it here:
+https://www.python.org/downloads/release/python-3110/
+Major new features of the 3.11 series, compared to 3.10
+
+Among the new major new features and changes so far:
+
+
+PEP 657 – Include Fine-Grained Error Locations in Tracebacks
+PEP 654 – Exception Groups and except*
+PEP 673 – Self Type
+PEP 646 – Variadic Generics
+PEP 680 – tomllib: Support for Parsing TOML in the Standard Library
+PEP 675 – Arbitrary Literal String Type
+PEP 655 – Marking individual TypedDict items as required or potentially-missing
+bpo-4…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pythoninsider.blogspot.com/2022/10/python-core-development-sprint-2022-311.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Python Core Development Sprint 2022: 3.11 and beyond!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2022/10/python-core-development-sprint-2022-311.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>From October 3rd to October 7th a group of Python core developers gathered for a sprint hosted at Google. The event was mainly sponsored by Google and the Python Software Foundation. The core team used to do this annually between 2016 and 2019. It was high time to return to this tradition as the remote online sprints organized in years 2020 and 2021 proved to be a poor substitution for in-person collaboration.
+
+
+
+
+
+Participating in a core sprint that isn&#x27;t following a public tech conference is unique in many ways. We come fresh and ready to work on Python for the entire week, without the brain fog that builds up during a multi-day conference. With other contributors there with us, it&#x27;s easier to focus on the task at hand without professional or private interruptions. Finally, on a human le…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -9121,6 +9260,48 @@ improved theme support, and a number of new devices.</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Python Insider</button>
+                  <a class="source-heading__link" href="https://pythoninsider.blogspot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pythoninsider.blogspot.com/2022/10/python-versions-3108-3915-3815-3715-now.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Python versions 3.10.8, 3.9.15, 3.8.15, 3.7.15 now available</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2022/10/python-versions-3108-3915-3815-3715-now.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Déjà vu? Right, a month after the expedited releases we are doing the dance again. This coincides with the regular scheduled time for 3.10.8 but since we accrued a few fixes in 3.7 - 3.9 as well, we’re again releasing all four editions at the same time. We’re not promising to continue at this pace 
+Security content this time
+
+CVE-2022-40674: bundled libexpat was upgraded from 2.4.7 to 2.4.9 which fixes a heap use-after-free vulnerability in function doContent
+gh-97616: a fix for a possible buffer overflow in list *&#x3D; int
+gh-97612: a fix for possible shell injection in the example script get-remote-certificate.py(this issue originally had a CVE assigned to it, which its author withdrew)
+gh-96577: a fix for a potential buffer overrun in msilib
+
+Python 3.10.8
+Get it here: https://www.python.or…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >The ESP Journal - Medium</button>
                   <a class="source-heading__link" href="https://blog.espressif.com?source&#x3D;rss----d5414d5dee73---4">Open</a>
                 </h3>
@@ -10286,424 +10467,6 @@ The post How highly skilled engineers manage complexity of embedded systems desi
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;87165"
-                        open
-                      >
-                        <summary class="article-expander__title">성평등전주, ‘성노동자’ 개념 사상 검열로 작가 3인을 내쫓다</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/87165">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2019/05/i_010-1.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>2022년 7월 16일과 18일, 전주시가 설치·운영하는 기관인 전주시사회혁신센터 성평등전주(이하 ‘성평등전주’)는 ‘제3회 페미니즘 예술제 [지구탈출]’에 참여 작가로 선정된 10인 중 3인(작가 사랑해, 치명타, 이시마, 이하 ‘작가 3인’)을 이들의 사상과 양심을 이유로 일방적으로 전시에서 배제하였다. 성평등전주가 작가 3인을 전시에서 배제한 근거는 예술제 준비를 위한 비공개 워크숍에서 작가들이 했던 발언이었다. 작가 3인의 발언과 전시예정작품이 예술제 취지인 성평등 혹은 […]
-The post 성평등전주, ‘성노동자’ 개념 사상 검열로 작가 3인을 내쫓다 first appeared on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="dced428e-79ee-490f-9f8f-e410e684dd97"
-                        open
-                      >
-                        <summary class="article-expander__title">What&#x27;s inside an RPM .repo file?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/10/07/whats-inside-rpm-repo-file">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_A%20%282%29.png?itok&#x3D;zmrEAEN1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>The previous article in this series, How does RPM package discovery work?, described how the RPM package management technology discovers and installs an .rpm package on a local computer running the Red Hat Enterprise Linux, Fedora, or CentOS Stream operating system. In that article, you learned that the .repo files stored in the /etc/yum.repos.d directory of the local machine play a critical role in discovering, installing, and managing RPM packages.
-This article goes to the next level of detail to describe the format specified for a .repo file.
-This article describes not only the format specification for a .repo file but also describes the logic that&#x27;s applied to a .repo file when managing RPM packages on a given machine. But, before delving in, let&#x27;s review how RPM discovers a package on…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="7989058e-2a55-483d-926e-36cbd5eff3bf"
-                        open
-                      >
-                        <summary class="article-expander__title">Moving from apt to dnf package management</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2022/10/07/move-apt-dnf-package-management">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_A%20%282%29.png?itok&#x3D;zmrEAEN1" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>A package manager makes it simple to install GNU/Linux applications on a local computer. Before package management became commonplace, installing applications was a tedious, error-prone undertaking. The ease a package manager brings to installing an application on a Linux computer has been a major factor contributing to the widespread adoption of Linux as a mainstream operating system for both business and home users.
-Package management under Linux is divided, however. Two major systems co-exist:
-The APT package management system for Debian and its many derivatives, notably Ubuntu. Packages are marked with the .deb suffix and are managed through the apt command-line interface (CLI).
-The RPM package management system for Red Hat Enterprise Linux and its derivatives, notably Fedora and CentO…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >내 마음의 풍경</button>
-                  <a class="source-heading__link" href="https://blog.naver.com/sellars">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://blog.naver.com/sellars/222894150752"
-                        open
-                      >
-                        <summary class="article-expander__title">9 개인주의적 이성적 자아</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/222894150752">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>브라이도티의 은 결론을 제외한 각 장에서 다음과 같은 을 하고 있다. 첫째, 개인적 자아를 넘어서야 한다. 둘째, 인간중심주의로부터 벗어나야 한다. 단지 인간종의 생명만이 중요한 것이 아니다. 셋째, 삶과 죽음, 인간과 비인간이라는 이분법에서 벗어나야 한다. 넷째, 단지 인간만을 다루는 인문학으로부터 벗어나야 한다. 이렇게 정리된 주장에 대해서 나는 찬동한다. 그렇지만 그녀의 서술 스타일이 논증적이라기 보다는 서사적이고 설명적이며 제안적이기 때문에, 개인적 자아를 넘어서야 한다는 그녀의 첫째 주장도 글자 그대로 단순하게 받아들이기 어렵다. 그녀가 생각하는 극복해야 할 &lt;개인적 자아.......</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Kimchi hill</button>
-                  <a class="source-heading__link" href="https://kimchihill.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://kimchihill.com/?p&#x3D;2426"
-                        open
-                      >
-                        <summary class="article-expander__title">실리콘밸리의 스타트업 바이블 1 – ‘탁월한 조직이 빠지기 쉬운 5가지 함정’</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://kimchihill.com/2022/10/07/svbible-1-kr-5dysfunctions-of-a-team/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;svbible-1-kr-5dysfunctions-of-a-team">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://kimchihill.com/wp-content/uploads/2022/10/5-dysfunctions-cover-image_jpg.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>친구들과 팀 스포츠 경기를 해보신 분이라면, 원론적으로 당연한 ‘팀워크’를 성공하기가 얼마나 어려운지 실감하실 것 입니다. 하물며, 다 큰 어른들이 각자 세부적으로 다른 성공의 목표를 가지고 있는 회사에서, 시스템과 원칙이 여물지 않은 스타트업이라면 혼란이 더 크리라 예상합니다. 특히, 기존 멤버에서 경력직 멤버가 추가되는 여정, 한국팀 위주로 구성되었다가 글로벌 오피스를 세우며, 외국인 임원들이 입사하며 겪게 되는 입체적Continue reading &quot;실리콘밸리의 스타트업 바이블 1 – ‘탁월한 조직이 빠지기 쉬운 5가지 함정’&quot;
-실리콘밸리의 스타트업 바이블 1 – ‘탁월한 조직이 빠지기 쉬운 5가지 함정’ appeared first on Kimchi hill.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-10-06 datetime="2022-10-06T22:59:13.000Z">2022-10-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-10-06 datetime="2022-10-06T22:59:13.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;75393"
-                        open
-                      >
-                        <summary class="article-expander__title">[필진 칼럼] 미중 갈등 시대, 각국의 쉽지 않은 균형 잡기</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2022/10/06/npc_pelosiinasia/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npc_pelosiinasia">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>지난 8월 8일 네이버 프리미엄 콘텐츠에 올린 글입니다. 낸시 펠로시 미국 하원의장이 아시아 지역을 방문하면서 관련 뉴스가 쏟아져 나왔습니다. 대만 방문으로 인한 중국과 미국 사이의 갈등 고조가 가장 큰 주목을 받았지만, 국내에서는 방문지 가운데 한국이 포함되었음에도 휴가 중인 윤석열 대통령이 펠로시 의장을 만나지 않은 것을 두고 공방이 오갔습니다. 미국과 중국 사이에서 균형을 유지하기 위한 전략이라는 분석 이면에 한국 정부가 공항 의전도 제공하지 않은 것에 대한 비판이 일었고, (이후 대통령실이 오보라고 → 더 보기</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/910435/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Fingerprinting systems with TCP source-port selection</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/910435/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Back in May 2022, a mysterious set of patches titled insufficient TCP
-source port randomness crossed the mailing lists and was subsequently
-merged (at -rc6) into the 5.18 kernel.  Little information was available at
-the time about why significant changes to the networking stack needed to be
-made so late in the development cycle.  That situation has
-finally changed with the publication of this paper by Moshe Kol,
-Amit Klein, and Yossi Gilad.  It seems that the way the kernel chose port
-numbers for outgoing network connections made it possible to uniquely
-fingerprint users.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/910492/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Thursday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/910492/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by Debian (bind9 and nodejs), Red Hat (prometheus-jmx-exporter and squid), Slackware (dhcp), SUSE (pngcheck and sendmail), and Ubuntu (isc-dhcp, kitty, and linux-gcp-5.4).</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Google Developers Blog</button>
-                  <a class="source-heading__link" href="http://developers.googleblog.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://developers.googleblog.com/2022/10/google-cloud-next-developer-style.html"
-                        open
-                      >
-                        <summary class="article-expander__title">Google Cloud Next, developer style</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2022/10/google-cloud-next-developer-style.html">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh_rceC4NiUz-EzQKtbGDMVTALXqWFhKdzNPBFFsZecr9Pa5lgLyQUmSgcXyyG11XvnJEqSaPmS0UaFB1tqjRAck7ciLYi6IO8dABMIen94eegBzP0D2Y7omXNZ09-v8tGJ2QfVtEFL_KyXbnCIH2b6y-F6KQiavMZlAelGZ_2gQs6I3SvlEizVRE4/w1200-h630-p-k-no-nu/Next%20Social%20Image.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Posted by Jeana Jorgensen, Senior Director, Cloud Product Marketing and Sustainability, Google
-  
-
- 
-Google Cloud Next is coming up on October 11 - 13. Register at no cost today and join us live to explore what’s new and what’s coming next in Google Cloud. 
-You’ll find lots of developer-specific content in the Developer Zone. Here’s a preview of what we’ve curated for you this year. 
-A developer keynote to get you thinking about the future
-  
-For the Next developer keynote we’re going to share our top 10 cloud technology predictions that we believe could come true by the end of 2025.
-Hear from our experts who are on the cutting edge of many of these technology trends, whether it&#x27;s AI, data and analytics, or modern cloud infrastructure:
-
-
-
-
-
-
-Jeanine Banks, VP of Developer Products and Comm…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Beningo Embedded Group</button>
-                  <a class="source-heading__link" href="https://www.beningo.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.beningo.com/?p&#x3D;14395"
-                        open
-                      >
-                        <summary class="article-expander__title">5 Software Architecture Killers</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.beningo.com/5-software-architecture-killers/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The chip shortage has forced many embedded systems companies to rethink their software architecture. Many embedded systems have tightly coupled embedded software that makes the hardware-dependent microcontroller code indistinguishable from … Continue reading 5 Software Architecture Killers
-5 Software Architecture Killers first appeared on Beningo Embedded Group.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Stacey on IoT | Internet of Things news and analysis</button>
-                  <a class="source-heading__link" href="https://staceyoniot.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://staceyoniot.com/?p&#x3D;11133"
-                        open
-                      >
-                        <summary class="article-expander__title">Podcast: Matter is here. Now what?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/episode-392-matter-is-here-now-what/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://staceyoniot.com/wp-content/uploads/2022/10/Google-Matter.-png.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Matter is now official after almost three years of waiting, and Kevin and I are super excited. Well, I am. Kevin is more measured, but we talk about what to expect and when to expect Matter to start changing your smart home. In related news, we discuss Google’s new doorbell, mesh router and plans for […]
-The post Podcast: Matter is here. Now what? appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;87156"
-                        open
-                      >
-                        <summary class="article-expander__title">미 국방부 플랫폼 서비스 ‘플랫폼 원’</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/87156">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2022/10/DoD-Enterprise-DevSecOps-Initiative-Software-Ecosystem.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>현대전에서 소프트웨어의 중요성은 특별히 더 강조할 필요 없을 정도로 모두 공감하고 있다. 상대방의 주요 인프라를 무력화시키는 사이버전뿐만 아니라, 전장에서 싸우는 군인의 전투 능력 향상 및 생존 가능성 증대를 위해서도 소프트웨어에 의존할 수밖에 없는 것이 현대전의 양상이다. 이러한 전투 현장에서의 역량 우위는 궁극적으로 전쟁에서의 전술적 우위를 확보할 수 있는 기반을 제공한다. 전장 상황은 시시각각 변하기 마련이고, […]
-The post 미 국방부 플랫폼 서비스 ‘플랫폼 원’ first appeared on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -10899,8 +10662,8 @@ The post How to Choose a BLE Module for Your Project appeared first on Novel Bit
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/3396834729">
-        <time id="build-timestamp" datetime="2022-11-04T20:19:26.564Z">2022-11-04T20:19:26.564Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/3401521914">
+        <time id="build-timestamp" datetime="2022-11-05T20:20:05.821Z">2022-11-05T20:20:05.821Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
