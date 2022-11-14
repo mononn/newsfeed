@@ -71,6 +71,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2022/non-regular-members/",
+          "author": null,
+          "description": "If you have a class with a regular data member like an integer or string, you’ll get all special member functions out of the box. But how about different types? In this article, we’ll look at other categories of members like unique_ptr, raw pointers, references, or const members.\n\n\n\n     \n    \n\n\nIn my book on “C++ Initialization” I recently wrote a chapter about so-called non-regular data members.\nHere’s a definition based on cppreference - regular concept\nA type is regular, that is, it is copyable, default constructible, and equality comparable. It is satisfied by types that behave similarly to built-in types like int, and that are comparable with ==.\nFor example:\nclass Product {\npublic:    \n    Product() = default;\n    explicit Product(std::string name, unsigned id)\n    : name_(std::move…",
+          "link": "https://www.cppstories.com/2022/non-regular-members/",
+          "publishedOn": "2022-11-14T00:00:00.000Z",
+          "wordCount": 1492,
+          "title": "Summary of Non-Regular Data Members in C++",
+          "imageUrl": "https://www.cppstories.com/2022/images/non-regular.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/talk-smaller-cpp20/",
           "author": null,
           "description": "In September and October, I had the pleasure of running two meetings about C++20 features for my local Cracow C++ User Group!\nHere are the slides and additional comments from the presentation.\n\n\n\n     \n    \n\n\nInitially I did one presentation using my article on smaller C++ 20 features (20 Smaller yet Handy C++20 Features - C++ Stories). Thanks to many valuable discussions during the talk, we decided to do a split. The first meeting was about language parts, and the second part was about library changes.\n\nWhile the list of topics is in a similar order as the article, I made a few changes:\nThere’s a constinit slide with more examples instead of the Default Bitfield initializers.\nMore examples of various features\nAdditional links and references\n\n\n\n     \n    \n\n\nHere are the slides @Xara:\n20_cpp20_features_language\n20_cpp20_features_library\n\n\nAnd\n\n\nYou can also have a look at my YT channel (the C++ Stories YT channel) and see the shorter version of the presentation (around 1 hour): 20 smaller C++20 features (Improved audio) - YouTube.\n\n\n\n     \n    \n\n\nPlease join our meetup page if you want to hear more from the Cracow User Group.\nhttps://www.meetup.com/C-User-Group-Cracow/",
@@ -86,7 +96,18 @@
       "title": "Sticky Bits – Powered by Feabhas",
       "feedUrl": "https://blog.feabhas.com/feed/",
       "siteUrl": "https://blog.feabhas.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://blog.feabhas.com/?p=3760",
+          "author": "Niall Cooling",
+          "description": "Dynamic polymorphism (virtual functions) is central to Object-Oriented Programming (OOP). Used well, it provides hooks into an existing codebase where new functionality and behaviour can (relatively) easily be integrated into a proven, tested codebase.\nSubtype inheritance can bring significant benefits, including easier integration, reduced regression test time and improved maintenance.\nHowever, using virtual functions in C++ brings a runtime performance overhead. This overhead may appear inconsequential for individual calls, but in a non-trivial real-time embedded application, these overheads may build up and [...] \n\nThe post Using final in C++ to improve performance appeared first on Sticky Bits - Powered by Feabhas.",
+          "link": "https://blog.feabhas.com/2022/11/using-final-in-c-to-improve-performance/",
+          "publishedOn": "2022-11-14T16:26:23.000Z",
+          "wordCount": 3768,
+          "title": "Using final in C++ to improve performance",
+          "imageUrl": "https://blog.feabhas.com/wp-content/uploads/2022/11/Fig-1-Class-diagram-1024x547.png"
+        }
+      ]
     },
     {
       "title": "The LLVM Project Blog",
@@ -122,6 +143,16 @@
       "feedUrl": "https://www.bluefruit.co.uk/blog/feed",
       "siteUrl": "https://www.bluefruit.co.uk/blog/",
       "articles": [
+        {
+          "id": "https://www.bluefruit.co.uk/?p=12652",
+          "author": "Tristan Jago",
+          "description": "As an employee-owned company, it is important that everyone at Bluefruit Software has their voice heard. We recently held a company-wide […]\nThe post Meet Bluefruit’s new EOT trustees appeared first on Bluefruit Software.",
+          "link": "https://www.bluefruit.co.uk/people/meet-bluefruits-new-eot-trustees/",
+          "publishedOn": "2022-11-14T15:30:11.000Z",
+          "wordCount": 1987,
+          "title": "Meet Bluefruit’s new EOT trustees",
+          "imageUrl": "https://www.bluefruit.co.uk/content/uploads/2022/11/eot-election-2022-v1-thumb.jpg"
+        },
         {
           "id": "https://www.bluefruit.co.uk/processes/why-need-living-documentationsoftware-projects-how-to-do-it/",
           "author": "Jane Orme",
@@ -191,6 +222,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "f2546d72-10b9-4d83-a762-cf5c44656bf6",
+          "author": "Panagiotis Georgiadis",
+          "description": "Whether you are using Go to write a simple console-based utility or a fancy web application, it is always helpful to reference the previous version of your software. This information is essential, especially for developers. They need to know what the source code looked like in previous versions, so they can debug any issues introduced at specific points in time.\nTo do that, you need a system that can control and manage different versions of the source code, such as git. Whenever you want to capture a snapshot of the program's current codebase, you run a git commit command that saves the code at that point in time. To make sure you do not overwrite a previously saved record, git creates (by default) a unique identifier, hashed with the SHA-1 algorithm, for every commit.\nUsually, when a dece…",
+          "link": "https://developers.redhat.com/articles/2022/11/14/3-ways-embed-commit-hash-go-programs",
+          "publishedOn": "2022-11-14T07:00:00.000Z",
+          "wordCount": 2777,
+          "title": "3 ways to embed a commit hash in Go programs",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/03/Vulnerability_analysis_Golang_CR_Dependency_Analytics_A-01.png?itok=E3CtEgPQ"
+        },
         {
           "id": "668d4ce3-5724-4dc0-ab1a-f06a94845d7d",
           "author": "Francesco Ilario",
@@ -1262,6 +1303,46 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/914840/",
+          "author": "corbet",
+          "description": "NLnet Labs has put up a\nblog entry warning about the possible effects of the \"Cyber Resilience\nAct\" proposal in the European Commission.\n\n\n\tWe feel the current proposal misses a major opportunity. At a high\n\tlevel the 'essential cybersecurity requirements' are not\n\tunreasonable, but the compliance overhead can range from tough to\n\timpossible for small, or cash-strapped developers. The CRA could\n\tbring support to open-source developers maintaining the critical\n\tfoundations of our digital society. But instead of introducing\n\tincentives for integrators or financial support via the CRA, the\n\tcurrent proposal will overload small developers with compliance\n\twork.",
+          "link": "https://lwn.net/Articles/914840/",
+          "publishedOn": "2022-11-14T16:10:53.000Z",
+          "wordCount": 780,
+          "title": "Open-source software vs. the proposed Cyber Resilience Act (NLnet Labs)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/914031/",
+          "author": "corbet",
+          "description": "As a general rule, one need not have worked in the technology industry for\nlong before the value of good data backups becomes clear.  Creating a\nbackup that is truly good, though, can be a challenge if the filesystem in\nquestion is actively being changed while the backup process runs.  Over the\nyears, various ways of addressing this problem have been developed, ranging\nfrom simply shutting down the system while backups run to a variety of\nsnapshotting mechanisms.  The kernel may be about to get another approach\nto snapshots should the blksnap\npatch set from Sergei Shtepa find its way into the mainline.",
+          "link": "https://lwn.net/Articles/914031/",
+          "publishedOn": "2022-11-14T16:00:20.000Z",
+          "wordCount": null,
+          "title": "[$] Block-device snapshots with blksnap",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/914811/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (dropbear, php7.4, pixman, sysstat, and xorg-server), Fedora (mingw-expat, mingw-libtasn1, and mingw-pixman), Mageia (binutils/gdb, chromium-browser-stable, exiv2, libtiff, nodejs, pcre, pixman, wayland, and webkit2), Red Hat (device-mapper-multipath and libksba), SUSE (autotrace, busybox, libmodbus, php72, python-numpy, rustup, samba, varnish, xen, and xterm), and Ubuntu (thunderbird).",
+          "link": "https://lwn.net/Articles/914811/",
+          "publishedOn": "2022-11-14T14:03:55.000Z",
+          "wordCount": 325,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/914747/",
+          "author": "corbet",
+          "description": "Linus has released 6.1-rc5 for testing.\n\n\n\tBut we'll see. If things don't start calming down, this may be one\n\tof those releases that need an extra week. It wasn't a particularly\n\tbig merge window, but I don't particularly like how the rc's keep\n\tbeing on the bigger side.",
+          "link": "https://lwn.net/Articles/914747/",
+          "publishedOn": "2022-11-13T23:51:40.000Z",
+          "wordCount": 161,
+          "title": "Kernel prepatch 6.1-rc5",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/914041/",
           "author": "corbet",
           "description": "The Git source-code management system exists to track changes to a set of\nfiles; the stream of commits in a Git repository\nreflects the change history of those files.  What is seen in Git, though, is the\nfinal form of those commits; the changes that the patches themselves went\nthrough on their way toward acceptance are not shown there.  That history\ncan have value, especially while changes are still under consideration.\nThe proposed git\nevolve subcommand is a recognition that changes themselves go\nthrough changes and that this process might benefit from tooling support.",
@@ -2040,16 +2121,6 @@
           "wordCount": 680,
           "title": "Google launches KataOS",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/911272/",
-          "author": "corbet",
-          "description": "The\n6.0.2,\n5.19.16,\n5.15.74,\n5.10.148, and\n5.4.218\nstable kernel updates have all been released.  Among other things, these\nupdates contain the fixes for the recently disclosed WiFi vulnerabilities.",
-          "link": "https://lwn.net/Articles/911272/",
-          "publishedOn": "2022-10-15T15:25:47.000Z",
-          "wordCount": 143,
-          "title": "Saturday's stable kernel updates",
-          "imageUrl": null
         }
       ]
     },
@@ -2270,6 +2341,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=7232",
+          "author": "Derek Jones",
+          "description": "Tracking down coding mistakes is a common developer activity (for which training is rarely provided). Debugging code involves reasoning about differences between the actual and expected output produced by particular program input. The goal is to figure out the coding mistake, or at least narrow down the portion of code likely to contain the mistake. […]",
+          "link": "https://shape-of-code.com/2022/11/13/some-human-biases-in-conditional-reasoning/",
+          "publishedOn": "2022-11-13T22:59:05.000Z",
+          "wordCount": 1574,
+          "title": "Some human biases in conditional reasoning",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=7210",
           "author": "Derek Jones",
           "description": "Two years ago, my book Evidence-based Software Engineering: based on the publicly available data was released. The first two weeks saw 0.25 million downloads, and 0.5 million after six months. The paperback version on Amazon has sold perhaps 20 copies. How have the book contents fared, and how well has my claim to have discussed […]",
@@ -2316,6 +2397,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11339",
+          "author": "Stacey Higginbotham",
+          "description": "Amazon has built a fleet of robots to help workers get packages from its warehouses to your door, and on Thursday it showed off two new ones. The first is Sparrow, a machine designed to pick up items (not packages) from a container and place them in a different container. The second is a concept […]\nThe post Amazon is building robots at scale in Massachusetts appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/amazon-is-building-robots-at-scale-in-massachusetts/",
+          "publishedOn": "2022-11-14T18:17:39.000Z",
+          "wordCount": 2497,
+          "title": "Amazon is building robots at scale in Massachusetts",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/11/PXL_20221110_162250036.MP_.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=11326",
           "author": "Stacey Higginbotham",
@@ -2643,6 +2734,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=87491",
+          "author": "참여연대 사법감시센터",
+          "description": "2021년 4월 초의 어느 날 오후, ‘전장연’ 회원들은 사무실 인근의 한 노선버스 정류장에서 집회를 진행했다. 이들은 장애인의 이동권 보장을 요구하는 문구를 적은 피켓을 목에 걸고 집회하던 중 마침 정류장에 도착한 버스 앞으로 나가 구호를 외치면서 버스의 운행을 막았다. 이날 전장연 회원들이 집회를 벌인 시간은 총 20분 남짓이며, 이 중 노선버스를 막아선 시간은 15분 정도에 불과했다. […]\nThe post 왜 하필 출퇴근길에 시위하냐고요? 비장애인이 불편해야 장애인 목소리를 들으니까요… first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87491",
+          "publishedOn": "2022-11-14T10:08:21.000Z",
+          "wordCount": 4028,
+          "title": "왜 하필 출퇴근길에 시위하냐고요? 비장애인이 불편해야 장애인 목소리를 들으니까요…",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/11/noun-forgiving-2046656.png"
+        },
         {
           "id": "https://slownews.kr/?p=87485",
           "author": "슬로우뉴스",
@@ -3490,6 +3591,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222928304185",
+          "author": "sellars",
+          "description": "페란도의 <철학적 포스트휴머니즘>(2021)은 포스트휴머니즘에 대한 만물상과 같은 책이다. 포스트휴머니즘에 대한 전체적 지형도를 그려주고 있으므로 (비록 그녀의 박사논문을 중심으로 작성되었다고 하지만) 논쟁적 의미에서 깊이가 있다고 할 수 없는 책이다. 포스트휴머니즘과 관련되어 아주 많은 책을 읽고, 어떤 의미에서 잡다하게 혹은 종합적으로 철학적 포스트휴머니즘의 주장과 과제에 대해서 이야기하고 있다. 철학적 포스트휴머니즘은 다음과 같은 주장을 하고 있다. (1) 대립적인 이원론과 위계적 질서에 대해서 반대한다. 즉 탈이원론의 철학이다. (2) 탈인간주의 또는 탈인류중심주의이어야 한다. 인간을 담론의 중심에서 탈.......",
+          "link": "https://blog.naver.com/sellars/222928304185",
+          "publishedOn": "2022-11-14T04:32:48.000Z",
+          "wordCount": 101,
+          "title": "철학적 포스트휴머니즘의 전제들",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222926694236",
           "author": "sellars",
