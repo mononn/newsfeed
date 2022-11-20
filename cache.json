@@ -527,6 +527,16 @@
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
         {
+          "id": "https://eli.thegreenplace.net/2022/ssh-port-forwarding-with-go/",
+          "author": null,
+          "description": "<p>This post shows how to set up SSH port forwarding (&quot;tunnels&quot;) - both local and\nremote - using the extended Go standard library.</p>\n<div class=\"section\" id=\"setup\">\n<h2>Setup</h2>\n<p>While you <em>could</em> set up <tt class=\"docutils literal\">localhost</tt> forwarding for testing, to discuss a more\nrealistic scenario I would recommend spinning up a basic <a class=\"reference external\" href=\"https://en.wikipedia.org/wiki/Virtual_private_server\">VPS</a>. For the purpose of\nwriting …</p></div>",
+          "link": "https://eli.thegreenplace.net/2022/ssh-port-forwarding-with-go/",
+          "publishedOn": "2022-11-20T03:22:00.000Z",
+          "wordCount": 3411,
+          "title": "SSH port forwarding with Go",
+          "imageUrl": null
+        },
+        {
           "id": "https://eli.thegreenplace.net/2022/go-and-proxy-servers-part-2-https-proxies/",
           "author": null,
           "description": "<p>This is the second post in a series about proxy servers and Go. Here is a list\nof posts in the series:</p>\n<ul class=\"simple\">\n<li><a class=\"reference external\" href=\"https://eli.thegreenplace.net/2022/go-and-proxy-servers-part-1-http-proxies/\">Part 1 - HTTP Proxies</a></li>\n<li>Part 2 - HTTPS Proxies (this part)</li>\n</ul>\n<p>The previous part is an overview of proxy servers and presents some basic Go\nimplementations, as well as …</p>",
@@ -799,16 +809,6 @@
           "wordCount": 4093,
           "title": "Meeting robot power demands with modular designs",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/10/Wireless-Charging-Station-for-Warehouse-Robots.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4476815",
-          "author": "Nitin Dahad",
-          "description": "This week’s embedded news features various announcements including Arm’s reorganization, Pharrowtech’s 60GHz wireless board integrated into Renesas’ baseband modem, Andes Technology’s ISO 26262 compliant RISC-V CPU IP, plus more.\nThe post embedded news: Arm news, 60GHz modules, & ISO 26262 RISC-V CPU appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/embedded-news-arm-news-60ghz-modules-iso-26262-risc-v-cpu/",
-          "publishedOn": "2022-10-21T12:39:51.000Z",
-          "wordCount": 4205,
-          "title": "embedded news: Arm news, 60GHz modules, & ISO 26262 RISC-V CPU",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/10/Infineon-Cerence-application.jpg"
         }
       ]
     },
@@ -817,6 +817,26 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1485.php",
+          "author": null,
+          "description": "Overview\r\nWhen integrating a new peripheral onto an embedded Linux platform, we might think we always need to implement a kernel module to serve as a device driver. However, as we all know, absolutes such as “always” and “never” are rarely true. The same is true in this case. Implementing a device driver in kernel space on an embedded Linux platform should only be undertaken if the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1485.php",
+          "publishedOn": "2022-11-20T17:29:49.000Z",
+          "wordCount": 3976,
+          "title": "Peripheral Interaction Without a Linux Device Driver Using Spidev",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1484.php",
+          "author": null,
+          "description": "It is with some sadness that I have read that Fred Brooks has passed away. Brooks (1931 - 2022) worked at IBM and managed a large team developing the IBM System/360 computers in the early 1960s. Brooks was thirty years old at the start of this project. He founded the Computer Science Department at UNC Chapel Hill in 1964,...",
+          "link": "https://www.embeddedrelated.com/showarticle/1484.php",
+          "publishedOn": "2022-11-20T16:47:22.000Z",
+          "wordCount": 7872,
+          "title": "In Memoriam: Frederick P. Brooks, Jr. and The Mythical Man-Month",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1478.php",
           "author": null,
@@ -2032,36 +2052,6 @@
           "wordCount": 731,
           "title": "Mourning Wolfgang Denk",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/910873/",
-          "author": "corbet",
-          "description": "All memory accesses in a BPF program are\nstatically checked for safety using the \nverifier, which analyzes the program in its\nentirety before allowing it to run. While this allows BPF programs to\nsafely run in kernel space, it restricts how that program is able to use\npointers. Until recently, one such constraint was that the size of a memory\nregion referenced by a pointer in a BPF program must be statically known\nwhen a BPF program is loaded. A recent\npatch set by Joanne Koong enhances BPF to support loading programs with\npointers to dynamically sized memory regions.",
-          "link": "https://lwn.net/Articles/910873/",
-          "publishedOn": "2022-10-21T14:30:40.000Z",
-          "wordCount": null,
-          "title": "[$] More flexible memory access for BPF programs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/911991/",
-          "author": "corbet",
-          "description": "The 6.0.3 stable kernel update has been\nreleased; it contains over 800 important fixes.",
-          "link": "https://lwn.net/Articles/911991/",
-          "publishedOn": "2022-10-21T13:54:14.000Z",
-          "wordCount": 127,
-          "title": "Stable kernel 6.0.3",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/911989/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (poppler), Oracle (firefox and thunderbird), Red Hat (firefox, java-1.8.0-openjdk, java-11-openjdk, and java-17-openjdk), SUSE (bind, clone-master-clean-up, grafana, libksba, python3, tiff, and v4l2loopback), and Ubuntu (libreoffice).",
-          "link": "https://lwn.net/Articles/911989/",
-          "publishedOn": "2022-10-21T13:52:10.000Z",
-          "wordCount": 253,
-          "title": "Security updates for Friday",
-          "imageUrl": null
         }
       ]
     },
@@ -2153,6 +2143,16 @@
       "feedUrl": "https://mcuoneclipse.com/feed/",
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
+        {
+          "id": "http://mcuoneclipse.com/?p=35531",
+          "author": "Erich Styger",
+          "description": "With the war in the Ukraine, energy prices in Europe reached new record levels. This initially affected the gas price which does not affect my directly. But it had a bit impact on the price for electrical energy too. In … Continue reading →",
+          "link": "https://mcuoneclipse.com/2022/11/20/energy-crisis-in-europe-optimizing-a-building-from-4-5-to-2-4-mwh/",
+          "publishedOn": "2022-11-20T18:37:34.000Z",
+          "wordCount": 7052,
+          "title": "Energy Crisis in Europe: Optimizing a Building from 4.5 to 2.4 MWh",
+          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2022/11/2021-and-2022.jpg"
+        },
         {
           "id": "http://mcuoneclipse.com/?p=36119",
           "author": "Erich Styger",
@@ -2547,16 +2547,6 @@
           "wordCount": 2590,
           "title": "We’re getting a consumer IoT security label next year!",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/10/Screen-Shot-2022-10-20-at-2.14.26-PM.png"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=11226",
-          "author": "Kevin C. Tofel",
-          "description": "Why Netatmo’s video doorbell won’t support HomeKit Secure Video: Yet another smart home device isn’t getting a previously promised Apple HomeKit feature. This time it’s the Netatmo Video Doorbell. Even though it works with HomeKit, adding the HomeKit Secure Video (HSV) feature has been such a challenge that the company has given up on the problem. […]\nThe post IoT news of the week for Oct. 21, 2022 appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/iot-news-of-the-week-for-oct-21-2022/",
-          "publishedOn": "2022-10-21T19:15:13.000Z",
-          "wordCount": 2520,
-          "title": "IoT news of the week for Oct. 21, 2022",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
         }
       ]
     },
@@ -2854,16 +2844,6 @@
           "wordCount": 2835,
           "title": "국가의 인권침해 범죄는 공소시효가 없다: 미군 기지촌 사건 (2022)",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/10/noun-forced-prostitution-2745243.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=87302",
-          "author": "슬로우뉴스",
-          "description": "치매 예방법을 살펴보기 전에 건망증 문제를 살펴볼 필요가 있습니다. 건망증은 대부분 치매와 무관합니다. 가령 물건 위치를 잊거나 헷갈리는 것과 같은 건망증은 걱정할 필요가 없습니다. 하지만 등장인물을 기억하지 못해 소설을 읽지 못하는 것과 같이 체계적인 기억력 상실은 치매 초기에 자주 일어나는 현상으로 치매를 의심해야 합니다. 1. 술 끊기 리스택 박사는 늦어도 70세 전에는 술을 […]\nThe post 치매를 예방하는 14가지 방법 first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/87302",
-          "publishedOn": "2022-10-21T10:34:11.000Z",
-          "wordCount": 2432,
-          "title": "치매를 예방하는 14가지 방법",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/10/noun-grandparents-202104-1.png"
         }
       ]
     },
@@ -3331,16 +3311,6 @@
           "wordCount": 6078,
           "title": "미국의 중국 기술 통제 시도는 결국 미국 반도체에 해로울 뿐인 이유",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/10/2022년-10월-17일-미국-캘리포니아-산타클라라에-있는-Applied-Materials에서-Antony-Blinken-미국-국무장관이-Applied-Materials-CEO-Gary-Dickerson-근처에서-제품을-보고-있다-Photo-by-Josh-Edelson-via-REUTERS.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=588090",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/588090/22%eb%85%84-9%ec%9b%94-%ed%94%8c%eb%9e%ab%ed%8f%bc-%ec%a0%90%ec%9c%a0%ec%9c%a8",
-          "publishedOn": "2022-10-21T10:23:21.000Z",
-          "wordCount": 5257,
-          "title": "22년 9월 미국 TV 플랫폼 점유율과 스트리밍 점유율",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/03/Featured_pixabay_유튜브-편집-social-media-1233873.jpg"
         }
       ]
     },
@@ -3472,6 +3442,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222933527464",
+          "author": "sellars",
+          "description": "메이야수의 <유한성 이후>를 읽는 것이 내 철학적 사유에 도움을 주는가? 내가 일종의 칸트주의자이기 때문에, 이런 칸트주의를 비판하는 그의 사유가 부정적인 의미에서 도움을 줄 수 있다. 그럼에도 불구하고 그의 책을 읽어나가는 것이 무척 고역이다. 그것은 그가 내가 보기에는 말장난 같은 철학적 사유를 보여주기 때문이다. 그런데 그는 말장난이 아니라, 그가 보여주는 사유 방식이 바로 철학적 사유의 한 전형이라고 생각하고 있는 것 같다. 메이야수의 <유한성 이후> 2장 <형이상학, 신앙절대론, 사변>은 다음과 같은 것을 주장하고 싶어 한다. <선조성을 사유하는 것은 <사유 없는 세계>, 즉 <세계의 소.......",
+          "link": "https://blog.naver.com/sellars/222933527464",
+          "publishedOn": "2022-11-20T08:50:08.000Z",
+          "wordCount": 101,
+          "title": "메이야수 – 절대자에 대한 요구",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222930174266",
           "author": "sellars",
@@ -3660,16 +3640,6 @@
           "publishedOn": "2022-10-23T03:27:59.000Z",
           "wordCount": 101,
           "title": "29 스피노자의 일즉다(一卽多), 만유재신론(萬有在神論)의 철학",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222907168929",
-          "author": "sellars",
-          "description": "* 다음 글을 요약하고, 평가해 보라. 계몽이란 성년이 되는 것, 어린아이의 유치함으로부터 벗어나는 것이다. 우리가 물어야 하는 것은 이 정의 속에서 아직도 충분히 사유되지 않은 채 남아 있는 배후의 구도이다. 이 구도는 이 정의가 당연한 것으로 받아들이고 있는 성년과 미성년, 혹은 어른과 아이의 대립적 개념짝으로 이루어져 있다. 이 개념짝의 자명성을 의심하지 않는 한에서, 또 이 이분법에 기초한 특정한 직관에 의해 지배되고 조직되는 한에서, 이 계몽의 정의는 로고스중심주의의 무의식을 계승하고 있다. 계몽적 인간은 완전하게 된 인간이고, 그런 의미에서 어른이다. 이 어른의 완전성은 지성 사용 능력에 있다. 그러나 왜 지.......",
-          "link": "https://blog.naver.com/sellars/222907168929",
-          "publishedOn": "2022-10-22T04:59:16.000Z",
-          "wordCount": 101,
-          "title": "29 성인(成人)과 아이",
           "imageUrl": null
         }
       ]
