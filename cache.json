@@ -70,6 +70,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2022/const-options-cpp20/",
+          "author": null,
+          "description": "As of C++20, we have four keywords beginning with const. What do they all mean? Are they mostly the same? Let’s compare them in this article.\nconst vs constexpr \n  \n\n\n\n\n     \n    \n\n\nconst, our good old fried from the early days of C++ (and also C), can be applied to objects to indicate immutability. This keyword can also be added to non-static member functions, so those functions can be called on const instances of a given type.\nconst doesn’t imply any “compile-time” evaluation. The compiler can optimize the code and do so, but in general, const objects are initialized at runtime:\n// might be optimized to compile-time if compiled decides...\nconst int importantNum = 42;\n\n// will be inited at runtime\nstd::map<std::string, double> buildMap() { /*...*/ }\nconst std::map<std::string, double> cou…",
+          "link": "https://www.cppstories.com/2022/const-options-cpp20/",
+          "publishedOn": "2022-11-28T00:00:00.000Z",
+          "wordCount": 1667,
+          "title": "const vs constexpr vs consteval vs constinit in C++20",
+          "imageUrl": "https://www.cppstories.com/2022/images/const_options.png"
+        },
+        {
           "id": "https://www.cppstories.com/2022/sso-cpp20-checks/",
           "author": null,
           "description": "What is SSO \n  \n\n\n\n\n     \n    \n\n\nJust briefly, SSO stands for Short String Optimization. It’s usually implemented as a small buffer (an array or something similar) occurring in the same storage as the string object. When the string is short, this buffer is used instead of a separate dynamic memory allocation.\nSee a simplified diagram below:\n\nThe diagram illustrates two strings and where they “land” in the string object. If the string is long (longer than N characters), it needs a costly dynamic memory allocation, and the address to that new buffer will be stored in ptr. On the other hand, if the string is short, we can put it inside the object in the buf[N]. Usually, buf and ptr might be implemented as union to save space, as we use one or the other, but not both simultaneously.\nLet’s star…",
@@ -141,6 +151,16 @@
       "feedUrl": "https://www.bluefruit.co.uk/blog/feed",
       "siteUrl": "https://www.bluefruit.co.uk/blog/",
       "articles": [
+        {
+          "id": "https://www.bluefruit.co.uk/?p=12664",
+          "author": "Bluefruit",
+          "description": "While we might all be aware of the issues of rubbish, trash, debris, or similar in our locale, few of us […]\nThe post How to solve a problem like space debris (7 solutions) appeared first on Bluefruit Software.",
+          "link": "https://www.bluefruit.co.uk/quality/how-to-solve-a-problem-like-space-debris/",
+          "publishedOn": "2022-11-28T15:22:46.000Z",
+          "wordCount": 2667,
+          "title": "How to solve a problem like space debris (7 solutions)",
+          "imageUrl": "https://www.bluefruit.co.uk/content/uploads/2022/11/nasa-yZygONrUBe8-unsplash-1-scaled-e1668686416742.jpg"
+        },
         {
           "id": "https://www.bluefruit.co.uk/?p=12683",
           "author": "Emily King",
@@ -1160,6 +1180,46 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/915005/",
+          "author": "corbet",
+          "description": "The BPF subsystem, which allows code to be loaded into the kernel from user\nspace and safely executed in the kernel context, is bound to create a number of\nchallenges for the kernel as a whole.  One might not think that allocating\nmemory for BPF programs would be high on the list of problems, but life\n(and memory management) can be surprising.  The attempts to do a better job\nof providing space for compiled BPF code have, to date, only been partially\nsuccessful; now Song Liu is back with a new\napproach to finish the job.",
+          "link": "https://lwn.net/Articles/915005/",
+          "publishedOn": "2022-11-28T15:49:32.000Z",
+          "wordCount": null,
+          "title": "[$] Yet another try at the BPF program allocator",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/916063/",
+          "author": "corbet",
+          "description": "FFmpeg is an indispensable tool for\nworking with \naudio and video streams, but it can be challenging to learn to use well.\nFFmpeg — The\nUltimate Guide, posted by Csaba Kopias, can help.  \"This guide\ncovers the ins and outs of FFmpeg starting with fundamental concepts and\nmoving to media transcoding and video and audio processing providing\npractical examples along the way.\"",
+          "link": "https://lwn.net/Articles/916063/",
+          "publishedOn": "2022-11-28T15:49:03.000Z",
+          "wordCount": 303,
+          "title": "A useful guide to FFmpeg",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/916135/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium, commons-configuration2, graphicsmagick, heimdal, inetutils, ini4j, jackson-databind, and varnish), Fedora (drupal7-i18n, grub2, kubernetes, and python-slixmpp), Mageia (botan, golang, kernel, kernel-linus, radare2/rizin, and xterm), Red Hat (krb5, varnish, and varnish:6), SUSE (busybox, chromium, erlang, exiv2, firefox, freerdp, ganglia-web, java-1_8_0-openj9, nodejs12, nodejs14, opera, pixman, python3, sudo, tiff, and xen), and Ubuntu (libice and shadow).",
+          "link": "https://lwn.net/Articles/916135/",
+          "publishedOn": "2022-11-28T15:33:24.000Z",
+          "wordCount": 428,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/916051/",
+          "author": "corbet",
+          "description": "The 6.1-rc7 kernel prepatch has been\nreleased for testing.\n\n\n\n\tThere is really nothing here that makes me at all worried, except\n\tthat it's just a bit more than I'm comfortable with. It should just\n\thave slowed down more by now.\n\n\tAs a result, I'm now pretty sure that this is going to be one of\n\tthose \"we'll have an extra week and I'll make an rc8\"\n\treleases. Which then in turn means that now the next merge window\n\twill be solidly in the holiday season.",
+          "link": "https://lwn.net/Articles/916051/",
+          "publishedOn": "2022-11-27T23:03:10.000Z",
+          "wordCount": 198,
+          "title": "Kernel prepatch 6.1-rc7",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/915991/",
           "author": "jake",
           "description": "Greg Kroah-Hartman has released the 5.10.156, 5.4.225, 4.19.267, 4.14.300, and 4.9.334 stable kernels.  As usual, they\ncontain important fixes throughout the kernel tree.\n\nUpdate: 6.0.10 and 5.15.80 were released on November 26.",
@@ -1788,16 +1848,6 @@
           "wordCount": 167,
           "title": "Kernel prepatch 6.1-rc3",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/912992/",
-          "author": "jake",
-          "description": "The 5.10.151 kernel was released on\nOctober 28 with a small fix to the PAHOLE_FLAGS in the kernel\nbuild.  October 29 saw the release of the 6.0.6, 5.15.76, and \n5.4.221 stable kernels, each with the usual\ncollection of important fixes throughout the tree.",
-          "link": "https://lwn.net/Articles/912992/",
-          "publishedOn": "2022-10-29T13:34:03.000Z",
-          "wordCount": 158,
-          "title": "Four new stable kernels",
-          "imageUrl": null
         }
       ]
     },
@@ -1945,7 +1995,18 @@
       "title": "The ESP Journal - Medium",
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://medium.com/p/45f9d23de0ad",
+          "author": "Ondrej Kosta",
+          "description": "“I would like to start a new product design with my favorite chip but it’s out of stock! Oh, no! I’ll have to design new layout and develop…",
+          "link": "https://blog.espressif.com/esp-idf-custom-ethernet-phy-driver-quick-guide-45f9d23de0ad?source=rss----d5414d5dee73---4",
+          "publishedOn": "2022-11-28T16:57:23.000Z",
+          "wordCount": 3569,
+          "title": "ESP-IDF Custom Ethernet PHY Driver Quick Guide",
+          "imageUrl": "https://miro.medium.com/max/770/0*fxzfp0UeQ_MxBCed.jpeg"
+        }
+      ]
     },
     {
       "title": "/* the devil is in the detail */",
@@ -2028,6 +2089,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=7308",
+          "author": "Derek Jones",
+          "description": "Software does not wear out, but the world in which it runs evolves. Time and money is lost when, after implementing a feature in software, customer feedback is that the feature is not needed. How do Waterfall and Agile implementation processes compare in the number of unneeded feature/requirements that they implement? In a Waterfall process, […]",
+          "link": "https://shape-of-code.com/2022/11/27/unneeded-requirements-implemented-in-waterfall-agile/",
+          "publishedOn": "2022-11-27T22:34:39.000Z",
+          "wordCount": 1438,
+          "title": "Unneeded requirements implemented in Waterfall & Agile",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=7283",
           "author": "Derek Jones",
           "description": "Just like integer types, floating-point types are capable of representing a finite number of numeric values. An important difference between integer and floating types is that the result of arithmetic and relational operations using integer types is exactly representable in an integer type (provided they don’t overflow), while the result of arithmetic operations using floating […]",
@@ -2074,6 +2145,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11416",
+          "author": "Stacey Higginbotham",
+          "description": "Last year, I recommended the then-new Nanoleaf Lines, and I’m building on that recommendation in 2022. While I love the Lines as they are, Nanoleaf now has a way to make patterns over the standard 60- and 120-degree Lines connectors. For $99.99, you can get started using the Nanoleaf Lines Squared product, which uses 90-degree connectors. My […]\nThe post Smart stuff that should be on your 2022 holiday gift list appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/smart-stuff-that-should-be-on-your-2022-holiday-gift-list/",
+          "publishedOn": "2022-11-28T16:52:40.000Z",
+          "wordCount": 3497,
+          "title": "Smart stuff that should be on your 2022 holiday gift list",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/11/EA19907C-1851-4D3B-812B-E085840AEFC9-scaled.jpeg"
+        },
         {
           "id": "https://staceyoniot.com/?p=11414",
           "author": "Stacey Higginbotham",
@@ -2403,6 +2484,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=87596",
+          "author": "한상기",
+          "description": "인공지능 기술이 클라우드서비스를 통해서 하나의 플랫폼이나 프레임워크 등으로 제공하고 있는 것은 이제 기본적인 사항이다. 반대 방향으로 발전하는 인공지능 기술을 클라우드컴퓨팅이나 서비스에 적용해 클라우드서비스의 성능과 효율을 증가시키고자 하는 방향도 여러 측면에서 나타난다. 이를 통해 좀 더 효율적이고 전략적이며 통찰력 있는 방식으로 클라우드서비스를 제공하고 동시에 추가적인 유연성, 민첩성, 경비 절감을 얻을 수 있다. 데이터퀘스트는 인공지능 기술을 클라우드컴퓨팅에 […]\nThe post 인공지능 기술을 클라우드컴퓨팅에 결합할 때 얻을 수 있는 효과 first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87596",
+          "publishedOn": "2022-11-28T07:29:28.000Z",
+          "wordCount": 3584,
+          "title": "인공지능 기술을 클라우드컴퓨팅에 결합할 때 얻을 수 있는 효과",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/11/cloud-computing-4246668_640.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=87591",
           "author": "진보넷",
           "description": "메타, 구글 등 빅테크가 시장에서의 독점적 지위를 남용하여 자사 서비스에 비해 경쟁업체를 차별하거나 과도한 수수료를 요구하는 등 불법 행위를 하여 빅테크의 플랫폼을 사용하는 업체 및 이용자의 피해가 발생하고 있습니다. 각국의 규제기관이 반독점 소송을 제기하거나 시정요구를 하고 있지만, 빅테크는 소송으로 맞서고 있죠. 관련 시장을 어떻게 볼 것인지, 독점적 지위에 있는지, 불법 행위를 했는지 등 해결해야 할 […]\nThe post 빅테크(메타, 구글, 애플, 아마존) 독점력 남용, 세계 각국은 어떻게 대응하고 있을까 first appeared on 슬로우뉴스.",
@@ -2609,6 +2700,46 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=588591",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/588591/%ec%a0%8a%ec%9d%80-%ec%84%b8%eb%8c%80-%ec%9d%b4%ed%95%b4%ed%95%98%ea%b8%b0",
+          "publishedOn": "2022-11-28T10:47:04.000Z",
+          "wordCount": 5917,
+          "title": "송길영부사장, 젊은 세대 이해하기, 젊은 세대는 이렇게 생각합니다.",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/03/임신-인증하는-젊은-부부-Photo-by-Jonathan-Sanchez.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=588588",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/588588/2022%eb%85%84-%ec%9d%b4%ed%99%94%ec%97%ac%eb%8c%80-%ea%b0%80%ec%9d%84-%ed%92%8d%ea%b2%bd",
+          "publishedOn": "2022-11-28T07:54:33.000Z",
+          "wordCount": 5534,
+          "title": "2022년 이화여대 가을 풍경, feat 논술고사",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/11/가을-이화여대-풍경2022-04497.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=588577",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/588577/2023%eb%85%84-%eb%af%b8%ea%b5%ad-%ec%9d%b4%ec%bb%a4%eb%a8%b8%ec%8a%a4-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2022-11-28T05:18:56.000Z",
+          "wordCount": 5573,
+          "title": "2023년 미국 이커머스 전망 by eMarketer",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/08/수제품handmade-이커머스-업체-엣시ETSY-캠퍼스-Image-from-ETSY.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=588575",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/588575/%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85-%ec%b0%bd%ec%97%85-%ec%95%84%ec%9d%b4%eb%94%94%ec%96%b4",
+          "publishedOn": "2022-11-28T01:29:55.000Z",
+          "wordCount": 6114,
+          "title": "[펌글]와이콤비네이터의 스타트업 창업 아이디어 얻는 방법",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/03/티볼리-아이디어-스케치-쌍용자동차-제공.jpg"
+        },
         {
           "id": "https://happist.com/?p=588573",
           "author": "happist",
@@ -3078,16 +3209,6 @@
           "wordCount": null,
           "title": "3분기 애플 실적을 읽는 월가의 시선",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=588170",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/588170/22%eb%85%84-3%eb%b6%84%ea%b8%b0-%ec%95%84%eb%a7%88%ec%a1%b4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2022-10-29T10:01:15.000Z",
-          "wordCount": 7086,
-          "title": "3분기 아마존 실적을 읽는 월가의 시선, 23년 본 궤도를 회복할 것",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/01/아마존-웹사이트-광고-아마존-광고-Advertising-on-Amazon-Image-from-searchenginejournal.jpg"
         }
       ]
     },
@@ -3096,6 +3217,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=75588",
+          "author": "veritaholic",
+          "description": "정신과 신체를 별개의 대상으로 생각하는 데카르트의 이원론은 오랫동안 많은 이들의 인정을 받았습니다. 영혼이나 귀신, 또 영적인 세계와 같은 개념은 그러한 이원론에 바탕하고 있습니다. 그러나 현대 과학은 이원론을 부정하며, 우리가 나 자신에 관해 느끼는 몸과 분리된 자아라는 감각은 뇌의 신경세포가 만들어내는 환상일 뿐이라고 말합니다. 이원론에서 신체가 정신에, 또 정신이 신체에 영향을 미치는 것은 매우 신비한 현상입니다. 그러나 현대 과학은 실제로 정신이 신체에 매우 큰 영향을 미치는 다양한 기제를 밝혀냈습니다. 가짜 약이 → 더 보기",
+          "link": "https://newspeppermint.com/2022/11/27/npc_actinlivingpresent/?utm_source=rss&utm_medium=rss&utm_campaign=npc_actinlivingpresent",
+          "publishedOn": "2022-11-27T22:59:39.000Z",
+          "wordCount": 1793,
+          "title": "[필진 칼럼] 나를 위해 지금 현재에 충실합시다",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=75580",
           "author": "ingppoo",
@@ -3229,6 +3360,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/222940349399",
+          "author": "sellars",
+          "description": "유교, 불교, 도교 그리고 기독교를 모두 통합하려고 시도했던 근대 종교사상가의 작업이 나에게는 이상하게 보였다. 그들 사이의 유사성도 있겠지만, 차이가 있을 것이다. 김형효의 철학적 작업을 보면서 갖는 느낌도 유사하다. 그는 차이성을 주목하면서 각각의 사유가 갖고 있는 독특성에 대해서 이야기하는 대신에 그 공통성에 대해서 이야기하고, 공통적인 것과 관련해서 여러 철학적 사유를 <열거>한다. 또 그의 책, <철학적 사유와 진리에 대해서> 마지막 장은 종교적인 것에 대해 어떤 호의를 보여주고 있다. 12.2의 주장은 기도와 선정(禪定)이 중요하고 필요하다는 것이다. 그것이 바로 수행론이며, 도덕의 자리를 대신해서.......",
+          "link": "https://blog.naver.com/sellars/222940349399",
+          "publishedOn": "2022-11-28T06:00:17.000Z",
+          "wordCount": 101,
+          "title": "31 에카르트의 기도",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/222938729876",
           "author": "sellars",
@@ -3407,16 +3548,6 @@
           "publishedOn": "2022-10-31T03:55:56.000Z",
           "wordCount": 101,
           "title": "상관주의 혹은 초월론(transcendentalism)의 모순",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222914622845",
-          "author": "sellars",
-          "description": "(1) 나는 휴머니즘이나 그것이 암암리에 옹호하는 인간/휴먼 개념을 그다지 좋아하지 않는다. 반휴머니즘은 내 가족의 배경과 나의 지적, 개인적 계보의 많은 부분을 차지하고 있다. 그래서 나에게 휴머니즘의 위기는 진부하기까지 한 이야기다. ... 내가 유럽중심적이고 제국주의적인 경향을 지닌 휴머니즘의 역사적 쇠락이라는 개념을 반기는 이유는 주로 정치적이고 철학적인 이유에 근거한다. 물론, 역사적 맥락도 관련이 많다. 나는 제2차 세계대전 이후 격랑기에 지적으로 정치적으로 성인이 되었고, 이때는 휴머니즘적 이상이 근본에서부터 문제가 된 시기다. 1960년대와 1970년대 내내 페미니즘, 탈식민주의와 반인종주의, 반핵운동과 평.......",
-          "link": "https://blog.naver.com/sellars/222914622845",
-          "publishedOn": "2022-10-30T03:49:54.000Z",
-          "wordCount": null,
-          "title": "브라이도티의 반휴머니즘",
           "imageUrl": null
         }
       ]
