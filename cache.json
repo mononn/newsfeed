@@ -201,6 +201,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/13464285",
+          "author": "CPUU",
+          "description": "Andrew Case는 volatility의 창시자이다. 그는 지속적으로 개발 및 업데이트를 진행하고 있는데, 이번에 Black Hat USA 2022에서 whitepaper를 출시했기에 그 내용을 리뷰해본다.\n출처 : https://i.blackhat.com/USA-22/Wednesday/US-22-Case-New-Memory-Forensics-Techniques-to-Defeat-Device-Monitoring-Malware-wp.pdf\n유튜브 발표 : \nhttps://youtu.be/Qgu5CGV-4JY\n1. 개요:\n하드웨어 디바이스를 모니터링(도청) 할 수 있는 악성코드는 사용자에게 심각한 보안 위협 및 개인정보보호 침해를 야기할 수 있다. 디바이스 모니터링이란 일반적으로 키로깅, 클립보드 훔쳐보기, 마이크 및 음성 도청, 웹캠 영상 녹화 등을 수행하는 것을 지칭하며, 최신 운영체제들은 이러한 기능들을 제공하는 API를 포함하고 있으므로 만약 이를 악용하는 악성코드가 존재한다면 실제로 주요 인사들이나 요원들은 피해를 입을 수 있다.\n 그동안 존재했던 탐지 기법은 주로 커널 루트킷(Kernel rootkit)이라고 부르는 커널 영역에서 작동하는 악성코드에 대해서만 국한되어 있었다. 하지만 커널 루트킷을 차단하는 운영체제 수준의 접근 통제 정책(드라이버 서명, 인증서) 및 기술(루트킷 탐지)이 도입됨에 따라, 커널 루트킷은 대부분 감소하는 경향을 보이고 있다. \n그러나 반대로 하드웨어 장치를 합법적으로 이용하기 위해서는 쉬운 접근 방식 역시 필요하므로 이를 사용자 수준(userland)에서 호출하기 위한 …",
+          "link": "https://cpuu.postype.com/post/13464285",
+          "publishedOn": "2022-12-01T02:56:30.000Z",
+          "wordCount": 680,
+          "title": "[논문리뷰] 디바이스 모니터링 악성코드를 탐지하기 위한 메모리 포렌식 신규 기법",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2022/11/30/14/29/feb6e93e52478b5090262889c1d846ec.jpeg?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/13424833",
           "author": "CPUU",
           "description": "앞서 volatility3 를 활용하여 windows 및 linux에서 메모리 분석이 가능함을 확인했다.\nhttps://cpuu.postype.com/post/9993241https://cpuu.postype.com/post/11807930\n\n이제 마지막으로 macOS 환경도 volatility 이용한 메모리 포렌식이 가능한지?에 대한 실험 결과이다.\n실험을 진행하기 이전에 몇가지 제약사항이 있었고 아직까지 해결하지 못한 부분이 많다. 그 내용들을 몇가지 요약하자면..\n1) 현재 최신 macOS 환경에 대한 메모리 포렌식은 volatility 에서 지원하지 않는다. \n2) 2021년 이후 출시되고 있는 Apple Silicon 이 탭제된 Mac 컴퓨터에 대해서는 우선 현시점에서는 불가능한 것으로 판단된다. 공식 Volatility 에서는 지원이 되지 않고, 비공식적으로 arm64를 지원하기 위한 패치를 개발하는 개개인이 존재하는 것으로 보인다. \n\n\n그렇다면 macOS 메모리 포렌식 분석을 위해 메모리 덤프, 프로파일 생성, 볼라틸리티3 사용 등을 순서대로 살펴보자.\n\n\nmacOS 환경에서 메모리 덤프 추출\n일반적으로 윈도우는 FTK Imager 를 이용해서 쉽게 추출할 수 있고, Linux는 lime이나 avml이 존재한다. \nmacOS에서는 우선 오픈소스로는 osxpmem이 있다. osxpmem 은 https://github.com/Velocidex/c-aff4/releases 에서 Release 3.2 에 해당하는 파일을 다운받으면 된다. 알려진 바로는 10.8 부터 10.15 사이의 Intel x64 …",
@@ -239,6 +249,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "a3441653-fcf1-46d4-9f2c-edf088e96710",
+          "author": "Heiker Medina",
+          "description": "As we head towards the end of 2022, Red Hat Developer is taking a look back at the most intriguing and popular content for the technologies that matter most to our readers. We'll start off with a roundup of the best Red Hat Enterprise Linux content of 2022, highlighting some of the most popular stories about Red Hat's flagship Linux distribution.\nContainers\nJoin Karan Singh as he explains how to shrink the size of Docker container images using the open source project DockerSlim. If you want to dive deeper and learn more about Podman, an open source container platform that's an alternative to Docker and supported by Red Hat, review the resources for beginners and experts curated by the Red Hat Developer team.\nAnother exciting improvement is that .NET can now control Podman! Tom Deseyn intro…",
+          "link": "https://developers.redhat.com/articles/2022/12/01/top-linux-resources-2022",
+          "publishedOn": "2022-12-01T07:00:00.000Z",
+          "wordCount": 2530,
+          "title": "Top Linux resources of 2022",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_RHEL_9_Featured_Article_image_A.png?itok=1SKGrlIV"
+        },
         {
           "id": "7c6aa213-4b5d-49d7-816f-563f4f562e6c",
           "author": "Tom Deseyn",
@@ -833,6 +853,26 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2022/12/gde-community-highlight-lars-knudsen.html",
+          "author": null,
+          "description": "Posted by Monika Janota, Community Manager\n \n Lars Knudsen is a Google Developer Expert; we talked to him about how a $10 device can make computers more accessible for people with disabilities.\n  \n\n Monika: What inspired you to become a developer? What’s your current professional focus? \nLars: I got my MSc in engineering, but in fact my interest in tech started much earlier. When I was a kid in the 80s, my father owned a computing company working with graphic design. Sometimes, especially during the summer holidays, he would take me to work with him. At times, some of his employees would keep an eye on me. There was this really smart guy who once said to me, “Lars, I need to get some work done, but here's a C manual, and there’s a computer over there. Here’s how you start a C compiler. If …",
+          "link": "http://developers.googleblog.com/2022/12/gde-community-highlight-lars-knudsen.html",
+          "publishedOn": "2022-12-01T20:00:00.001Z",
+          "wordCount": 3936,
+          "title": "GDE community highlight: Lars Knudsen",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGz2F-hrCL5DD4iJQijPuW9cxnv_P1UcGEKztqUEMoGPczkdqyzV4zrlhU3GRXqWV5D8ZpRueZQNeR5X5DCkUH5_fDbNmXLxyQvN8ajGg9T6iB2gdcinLH6AwQ5P2bjHfzsqajWxvq9VS0JjSnnEbPooF1Pw0fIW8Tkw8AwjHr9xNfczPaUOMIc8Ne/w1200-h630-p-k-no-nu/Screen%20Shot%202022-11-30%20at%204.56.16%20PM.png"
+        },
+        {
+          "id": "http://developers.googleblog.com/2022/11/how-to-use-app-engine-pull-tasks-module-18.html",
+          "author": null,
+          "description": "Posted by Wesley Chun (@wescpy), Developer Advocate, Google Cloud\n \n\n   \nIntroduction and background\n  \nThe Serverless Migration Station mini-series helps App Engine developers modernize their apps to the latest language runtimes, such as from Python 2 to 3 or Java 8 to 17, or to sister serverless platforms Cloud Functions and Cloud Run. Another goal of this series is to demonstrate how to move away from App Engine's original APIs (now referred to as legacy bundled services) to Cloud standalone replacement services. Once no longer dependent on these proprietary services, apps become much more portable, making them flexible enough to: \n \nRun on 2nd generation App Engine runtimes  \nShift across to other serverless platforms, like Cloud Functions or Cloud Run (with or without Docker)  \nMove t…",
+          "link": "http://developers.googleblog.com/2022/11/how-to-use-app-engine-pull-tasks-module-18.html",
+          "publishedOn": "2022-11-30T17:00:00.001Z",
+          "wordCount": 2167,
+          "title": "How to use App Engine pull tasks (Module 18)",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfrUYKApd8815us2VdLtVVbtCU-D-TGJzCO7cb9sXCzpzMkPaudv37vA3IIiqFGfXYN52ytMMfRdqck8jb8Gmi65yljewTdU7op8_v0d8BP8Z3hEyGB5FsgHe_Rzzwoi4cuTRv0P_jGJpTcJOYakfdHOVgOUKxkR9sbpDgwp9gKKeuPWw4ElIG1b9K/w1200-h630-p-k-no-nu/unnamed%20%2822%29.png"
+        },
+        {
           "id": "http://developers.googleblog.com/2022/11/when-to-step-up-your-google-pay-transactions-as-a-psp.html",
           "author": null,
           "description": "Posted by Dominik Mengelt, Developer Relations Engineer, Google Pay and Nick Alteen, Technical Writer, Engineering, Wallet\n  \n\n  \nWhat is step-up authentication?\n  \nWhen processing payments, step-up authentication (or simply “step-up”) is the practice of requiring additional authentication measures based on user activity and certain risk signals. For example, redirecting the user to 3D Secure to authenticate a transaction. This can help to reduce potential fraud and chargebacks. The following graphic shows the high-level flow of a transaction to determine what's to be done if step-up is needed. \n \n\n\nFigure 1: Trigger your Risk Engine before sending the transaction to authorization if step-up is needed\n\n \nIt depends! When making a transaction, the Google Pay API response will return one of …",
@@ -901,16 +941,6 @@
           "wordCount": 2540,
           "title": "Extending support for App Engine bundled services (Module 17)",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLymIZrgbWqtWu7THuNJWWF98hia9CW34Leytep71r1xJNAWKIVrQgDziGw8BFj9IaYEMdzYo0p25gB9cRxzP-5hYMq30rDdPdVwUMKUVQ6q_sly6jWN7VBbZL4Bym4P4jn4p93LJpBUugjMz-P1q7wEGATeuNY_5pzF4BSRp1SBYeMTSravd5tAAG/w1200-h630-p-k-no-nu/sms019thumb.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2022/10/developer-journey-november22.html",
-          "author": null,
-          "description": "Posted by Lyanne Alfaro, DevRel Program Manager, Google Developer Studio\n  \n \nDeveloper Journey is a new monthly series to spotlight diverse and global developers sharing relatable challenges, opportunities, and wins in their journey. Every month, we will spotlight developers around the world, the Google tools they leverage, and the kind of products they are building. \nWe are kicking off #DevJourney in November to give members of our community the chance to share their stories through our social platforms. This month, it’s our pleasure to feature four members spanning products including Google Developer Expert, Android, and Cloud. Enjoy reading through their entries below and be on the lookout on social media platforms, where we will also showcase their work. \n \n\nSierra OBryan, Google Deve…",
-          "link": "http://developers.googleblog.com/2022/10/developer-journey-november22.html",
-          "publishedOn": "2022-11-01T16:00:00.001Z",
-          "wordCount": 3121,
-          "title": "Introducing Developer Journey: November 2022",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzYTNNK0e7eYabQvxTY2tzOfn-l1-j4WfBoD2O5QJ5Ct94SC5YYmRBSnpHUDIqLXLIIUCOF1LuFEC9yaOqTgNjkvVPzTwFFH7vf8QdDq4oZB0kncqF_BqjPosRdApWdn1PXwe118PeOybhh4wvdvJjnVoLRlNTyzmizKL0whHXzFNEm9o26jrhqF3j/w1200-h630-p-k-no-nu/GoogleDev_developerjourney_1234x802.png"
         }
       ]
     },
@@ -1184,6 +1214,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/916223/",
+          "author": "corbet",
+          "description": "The Document Foundation\n(TDF) was created in 2010 to steward and\nsupport the development of the \nLibreOffice suite, which was then a new fork of OpenOffice.org.  TDF has\nclearly been successful; unlike OpenOffice,\nwhich is currently under the Apache umbrella, LibreOffice is an actively\ndeveloped and widely \nused project.  But TDF has also been showing signs of stress in recent\nyears, and the situation does not appear to be getting better.  There are\ncurrently some significant disagreements over just what role TDF should\nplay; if those cannot be resolved, there is a real chance that they could\nrip the Foundation apart.",
+          "link": "https://lwn.net/Articles/916223/",
+          "publishedOn": "2022-12-01T15:09:22.000Z",
+          "wordCount": null,
+          "title": "[$] Disunity at The Document Foundation",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/916443/",
+          "author": "jake",
+          "description": "Security updates have been issued by CentOS (device-mapper-multipath, firefox, hsqldb, krb5, thunderbird, and xorg-x11-server), Debian (libraw), Fedora (freerdp and grub2), SUSE (bcel, emacs, glib2, glibc, grub2, nodejs10, and tomcat), and Ubuntu (linux-azure-fde and snapd).",
+          "link": "https://lwn.net/Articles/916443/",
+          "publishedOn": "2022-12-01T14:51:20.000Z",
+          "wordCount": 235,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/915254/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for December 1, 2022 is available.",
+          "link": "https://lwn.net/Articles/915254/",
+          "publishedOn": "2022-12-01T01:05:52.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for December 1, 2022",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/916204/",
+          "author": "jake",
+          "description": "The recent discussion of a proposed change to the Python language—the usual\nfare on the \nlanguage's Ideas\nforum—was interesting, somewhat less for the actual feature under\ndiscussion than \nfor the other issues raised.  The change itself is a minor, convenience\nfeature that would provide a reproducible iteration order for certain\nkinds of sets between\nseparate \ninvocations of the interpreter.  That is a pretty limited use case, and one\nthat could perhaps be fulfilled in other ways, but the discussion also\nhighlighted some \npotentially worrying trends in the way that feature ideas are handled in\nthe Python community.",
+          "link": "https://lwn.net/Articles/916204/",
+          "publishedOn": "2022-11-30T23:49:14.000Z",
+          "wordCount": null,
+          "title": "[$] Python and hashing None",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/916291/",
           "author": "corbet",
@@ -1823,46 +1893,6 @@
           "wordCount": 335,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/913392/",
-          "author": "corbet",
-          "description": "The\n5.4.222,\n4.19.263, and\n4.14.297\nstable kernel updates have been released.  The first two contain a single\npatch for a Clang compilation error; 4.14.297, instead, has a number of\nfixes and speculative-execution mitigations.",
-          "link": "https://lwn.net/Articles/913392/",
-          "publishedOn": "2022-11-01T23:16:23.000Z",
-          "wordCount": 150,
-          "title": "A few stable kernel updates",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/913260/",
-          "author": "jake",
-          "description": "At the recently concluded Netdev\n0x16 conference, which was held both in Lisbon, Portugal and virtually,\nStanford professor John Ousterhout gave his personal views on where\nnetworking in data centers needs to be headed.  To solve the problems that\nhe sees, he suggested some \"fairly significant changes\" to those\nenvironments, including leaving behind the venerable—ubiquitous—TCP\ntransport protocol.  While LWN was unable to attend the conference itself,\ndue to scheduling and time-zone conflicts, we were able to view the video of\nOusterhout's keynote talk to bring you this report.",
-          "link": "https://lwn.net/Articles/913260/",
-          "publishedOn": "2022-11-01T23:14:45.000Z",
-          "wordCount": null,
-          "title": "[$] Moving past TCP in the data center, part 1",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/913370/",
-          "author": "corbet",
-          "description": "The much-anticipated OpenSSL 3.0.7 release, which fixes some high-risk\nsecurity problems, is available.  The release\nnotes list two vulnerabilities (CVE-2022-3786 and CVE-2022-3602) that\nhave not yet been documented on the OpenSSL\nvulnerabilities page.  LWN commenter mat2 has provided the relevant information, though.  It\nis worth updating quickly, but many sites do not appear to be at immediate\nrisk.\n\nUpdate: the associated security\nadvisory is now available.",
-          "link": "https://lwn.net/Articles/913370/",
-          "publishedOn": "2022-11-01T16:01:44.000Z",
-          "wordCount": 987,
-          "title": "OpenSSL 3.0.7 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/913352/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (python3.7), Gentoo (android-tools, expat, firefox, libjxl, libxml2, pjproject, sqlite, thunderbird, and zlib), Oracle (compat-expat1), Slackware (php8 and vim), SUSE (kernel, libtasn1, podman, and pyenv), and Ubuntu (libtasn1-6).",
-          "link": "https://lwn.net/Articles/913352/",
-          "publishedOn": "2022-11-01T14:01:50.000Z",
-          "wordCount": 208,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -1877,6 +1907,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/bottlenecks-of-scaleups/etsy-product-delivery-culture.html",
+          "author": null,
+          "description": "A second article exploring the challenges Etsy faced as it scaled up.\n      Tim Cochran relates how CTO Mike Fisher identified\n      problems with the product delivery process, built a cross-functional\n      Product Delivery Culture team to analyze the situation, and began an\n      improvement program based on lean thinking and the ideas of Marty\n      Cagan.\nmore…",
+          "link": "https://martinfowler.com/articles/bottlenecks-of-scaleups/etsy-product-delivery-culture.html",
+          "publishedOn": "2022-12-01T15:10:00.000Z",
+          "wordCount": 1919,
+          "title": "Introducing a product delivery culture at Etsy",
+          "imageUrl": "https://martinfowler.com/articles/bottlenecks-of-scaleups/card.png"
+        },
         {
           "id": "https://martinfowler.com/articles/bottlenecks-of-scaleups/etsy-cloud-scale.html#WhatWereTheChallengesOfTheCloud",
           "author": null,
@@ -1956,16 +1996,6 @@
           "wordCount": 1994,
           "title": "Twitter feed now cross-posts to Mastodon",
           "imageUrl": "https://martinfowler.com/logo-sq.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/exploring-mastodon.html",
-          "author": null,
-          "description": "I've been a heavy user of Twitter over the last decade, and while\n      Musk's purchase of Twitter hasn't got me running for the exit, it has\n      prompted me to take a look at possible alternatives should Twitter change\n      into something no longer worthwhile for me. The obvious alternative is for\n      me to explore the fediverse with a Mastodon account. As I explore using\n      Mastodon, I'll make some notes here so that others can learn from my\n      explorations.\nmore…",
-          "link": "https://martinfowler.com/articles/exploring-mastodon.html",
-          "publishedOn": "2022-11-01T19:00:00.000Z",
-          "wordCount": 1368,
-          "title": "Exploring Mastodon",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
     },
@@ -1974,6 +2004,16 @@
       "feedUrl": "https://mcuoneclipse.com/feed/",
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
+        {
+          "id": "http://mcuoneclipse.com/?p=36234",
+          "author": "Erich Styger",
+          "description": "It is Advent time again, and for this year a new count down calendar has been created: a small village, illuminated day by day, with a Raspberry Pi Pico and SK6812 RGBW running the show. Continue reading →",
+          "link": "https://mcuoneclipse.com/2022/12/01/advent-calendar-2022/",
+          "publishedOn": "2022-12-01T20:01:44.000Z",
+          "wordCount": 3127,
+          "title": "Advent Calendar 2022",
+          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2022/12/advent-village.png"
+        },
         {
           "id": "http://mcuoneclipse.com/?p=35531",
           "author": "Erich Styger",
@@ -2003,16 +2043,6 @@
           "wordCount": 3586,
           "title": "How to make sure no Dynamic Memory is used",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2022/11/disabled-.heap-in-linker-script-file.jpg?w=1200"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=35641",
-          "author": "Erich Styger",
-          "description": "A typical debugging session involves just one ELF/Dwarf binary or executable. But what if I need to program multiple binary files with gdb? Things like loading both the bootloader and the application binary? Or I have a an on-chip file … Continue reading →",
-          "link": "https://mcuoneclipse.com/2022/11/01/loading-multiple-binary-files-with-gdb/",
-          "publishedOn": "2022-11-01T11:00:08.000Z",
-          "wordCount": 3642,
-          "title": "Loading Multiple (Binary) Files with GDB",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2022/11/loaded-multiple-files-with-gdb-in-eclipse.jpg?w=1200"
         }
       ]
     },
@@ -2160,6 +2190,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=11439",
+          "author": "Stacey Higginbotham",
+          "description": "This week’s show starts off with a review of news from AWS Re:Invent which is happening now in LAs Vegas. We cover the general availability of support for the latest version of the MQTT messaging protocol, the launch of LoRaWAN and other connectivity technologies as part of AWS Device Location services, and there will be […]\nThe post Podcast: How to pronounce IKEA’s Dirigera hub appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/11439-2/",
+          "publishedOn": "2022-12-01T14:00:15.000Z",
+          "wordCount": 1727,
+          "title": "Podcast: How to pronounce IKEA’s Dirigera hub",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/11/PH191127.jpg?fit=900%2C675&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=11425",
           "author": "Kevin C. Tofel",
@@ -2379,16 +2419,6 @@
           "wordCount": 3085,
           "title": "Google Nest Wifi Pro review: Matter ready and good for the money",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2022/11/image_Wifi3R_2022Q1_22H024x007_015_Chatham_Product_InSitu_LemonMint_HORIZONTAL_CLOSER_0054_HERO_R04-scaled.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=11263",
-          "author": "Stacey Higginbotham",
-          "description": "This story was originally published on Friday Oct. 28, 2022 in my weekly IoT newsletter.  This week, a three-year-old security startup called Perygee raised $4.75 million from investors that include some significant names in cybersecurity. The company says it has created a no-code cybersecurity platform that brings in data from devices on a network and marries that […]\nThe post Perygee is bringing no-code ease to OT cybersecurity appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/perygee-is-bringing-no-code-ease-to-ot-cybersecurity/",
-          "publishedOn": "2022-11-01T13:00:59.000Z",
-          "wordCount": 1966,
-          "title": "Perygee is bringing no-code ease to OT cybersecurity",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2022/10/unnamed-scaled.jpeg?fit=2560%2C1440&ssl=1"
         }
       ]
     },
@@ -2488,6 +2518,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=87624",
+          "author": "민주언론시민연합",
+          "description": "미디어 사업장에서 일하는 노동자들을 직간접으로 만나고 있습니다. 노동조합 활동을 하면서 직접 만나기도 하고, 언론 보도 또는 여러 재판 기록이나 각종 보고서 속에서 당신들을 만납니다. 어느덧 2022년이 한 달 남았습니다. 올해 어떻게 지내셨나요? 잘 계시나요? 안녕하신가요? 혹시 일하는 사업장에서 임금 및 단체교섭을 마무리하지 못한 건 아닌지요? 교섭 과정 중에 힘든 점은 없으셨는지요? 아니면 매각 또는 분사 […]\nThe post 비정규직 백화점이 된 방송사… 당신은 안녕하십니까? first appeared on 슬로우뉴스.",
+          "link": "https://slownews.kr/87624",
+          "publishedOn": "2022-12-01T09:31:42.000Z",
+          "wordCount": 2435,
+          "title": "비정규직 백화점이 된 방송사… 당신은 안녕하십니까?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/12/noun-broadcaster-1077297.png"
+        },
         {
           "id": "https://slownews.kr/?p=87613",
           "author": "윤대균",
@@ -2697,16 +2737,6 @@
           "wordCount": 3703,
           "title": "미래의 농업: 스마트팜, 어그테크, 정밀농업을 위한 클라우드 서비스",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2022/11/01.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=87399",
-          "author": "오픈넷",
-          "description": "망사용료법(전기통신사업법 개정안)은 합리적인 정책인가. 망사용료법은 일반 이용자를 위한 법안인가 아니면 망사업자를 위한 법안인가. 정치권에서 추진 중인 망사용료법에 관한 판단에 참고가 될 영국 오프콤 보고서가 지난 10월 24일 발표됐다. 오프콤 보고서의 내용을 확인하기 전에 우선 몇 가지 용어와 개념을 짚고 넘어가자. 1. 오프콤 » 방송통신위원회 오프콤(Ofcom)은 영국의 방송통신규제기구다. 정식 명칭은 커뮤니케이션청(Office of Communications)이다. 영국의 방송, […]\nThe post 망사용료 주장의 9가지 약점 (ft. 영국 오프콤 보고서) first appeared on 슬로우뉴스.",
-          "link": "https://slownews.kr/87399",
-          "publishedOn": "2022-11-01T10:05:18.000Z",
-          "wordCount": 3023,
-          "title": "망사용료 주장의 9가지 약점 (ft. 영국 오프콤 보고서)",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2022/11/pic_001.jpg"
         }
       ]
     },
@@ -3223,6 +3253,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=75593",
+          "author": "ingppoo",
+          "description": "지난 9월 28일 네이버 프리미엄 콘텐츠에 올린 글입니다. 중간선거 결과에 대한 자세한 분석은 조금 전에 아메리카노 팟캐스트에 새 에피소드를 올렸습니다.   2년에 한 번씩 모든 의석을 새로 뽑는 하원은 이변이 없는 한 공화당이 다수당 지위를 되찾을 것으로 보입니다. 지금 50:50인 상원은 치열한 접전이 펼쳐질 것으로 보입니다. 2년 뒤 대선에 과연 트럼프 전 대통령이 다시 출마할지도 이번 선거 결과에 달렸습니다. 트럼프가 전직 대통령은 선거에 직접 관여하지 않는 관행을 깨고 적극적으로 당내 → 더 보기",
+          "link": "https://newspeppermint.com/2022/12/01/npc_usmidterm2022/?utm_source=rss&utm_medium=rss&utm_campaign=npc_usmidterm2022",
+          "publishedOn": "2022-12-01T06:00:46.000Z",
+          "wordCount": 2873,
+          "title": "[필진 칼럼] 2022년 미국 중간선거는 무엇이 걸린 선거일까?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=75595",
           "author": "eyesopen1",
           "description": "히잡을 바로 쓰지 않았다는 이유로 이란 도덕 경찰에 붙잡혀 살해된 여성 마사 아마니의 죽음으로 반정부 시위가 빠르게 번지던 지난 9월 26일 네이버 프리미엄 콘텐츠에 쓴 글입니다.   한 여대생의 죽음으로 인해 촉발된 이란의 반정부 시위 사태가 심상치 않습니다. 이른바 “도덕 경찰”이 히잡을 헐렁하게 썼다는 이유로 22세 대학생 마사 아미니를 때려 숨지게 했고, 이에 반발한 시민들이 히잡을 불태우고 머리를 자르며 항의에 나선 것입니다. 시위는 수도 테헤란을 포함, 전국 각지로 퍼져나가고 있고, → 더 보기",
@@ -3351,16 +3391,6 @@
           "wordCount": 2221,
           "title": "[필진 칼럼] 미국 대법원 돕스 판결, 중간선거 뒤흔들까?",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=75518",
-          "author": "veritaholic",
-          "description": "정체성은 한 사람을 다른 사람과 구별 짓는 특성입니다. 영어 단어로는 “identity”가 정체성을 뜻하죠. 한 사람의 정체성이 어디에 있는가는 철학적인 질문이지만, 매우 현실적인 질문이기도 합니다. 오늘날 우리는 이 질문에 답하는 데 필요한 다양한 기술을 가지고 있습니다. 곧 내가 나임을 증명하는 기술입니다. 우리는 스마트폰을 열기 위해 지문이나 얼굴을 이용하며, 인터넷으로 송금하기 위해서는 기억 속의 비밀번호를 이용합니다. 국가가 발행하는 신분증은 여전히 중요한 기술이지만, 그리 오래되지 않았습니다. 영화 “마틴 기어의 귀향”은 몇백 년 전만 → 더 보기",
-          "link": "https://newspeppermint.com/2022/11/01/npc_identity/?utm_source=rss&utm_medium=rss&utm_campaign=npc_identity",
-          "publishedOn": "2022-11-01T22:59:42.000Z",
-          "wordCount": 1770,
-          "title": "[필진 칼럼] 정체성과 얼굴",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3368,7 +3398,28 @@
       "title": "WALLFLOWER",
       "feedUrl": "http://rss.egloos.com/blog/wallflower",
       "siteUrl": "http://wallflower.egloos.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "http://wallflower.egloos.com/4213845",
+          "author": "이택광",
+          "description": "독일 철학자 헤겔의 강의를 받아 적은 육필 원고가 발견되었다는 소식이다. 이미 소셜미디어에서 회람되고 있던 내용이지만, 영국의 <가디언>이 특집 기사로 작성하면서 세간에 확실하게 알려지게 되었다. 이 자료를 발견한 이는 <헤겔: 자유의 철학자>.... 글 전체보기",
+          "link": "http://wallflower.egloos.com/4213845",
+          "publishedOn": "2022-12-01T02:14:09.000Z",
+          "wordCount": 1027,
+          "title": "헤겔의 재발견?",
+          "imageUrl": "http://thumbnail.egloos.net/600x0/http://pds27.egloos.com/pds/202212/01/87/a0009187_63880ea429bf0.jpg"
+        },
+        {
+          "id": "http://wallflower.egloos.com/4213045",
+          "author": "이택광",
+          "description": "내년 행사 계획을 마무리 중인데, 이태원 참사와 북한 미사일 때문에 벌써 방문을 주저하는 분들이 등장하고 있다. 예민하다고 할 수도 있겠지만, 나 역시 우크라이나 전쟁 때문에 조지아 가야할 일도 취소했으니, 어쩌면 예측 가능한 변수 아니었을까. 작년이 나에게 더할.... 글 전체보기",
+          "link": "http://wallflower.egloos.com/4213045",
+          "publishedOn": "2022-11-05T01:05:45.000Z",
+          "wordCount": 650,
+          "title": "2022년 11월",
+          "imageUrl": "http://md.egloos.com/img/icon/ico_badreport.png"
+        }
+      ]
     },
     {
       "title": "내 마음의 풍경",
@@ -3563,16 +3614,6 @@
           "publishedOn": "2022-11-03T04:32:02.000Z",
           "wordCount": 101,
           "title": "2 모종삼의 삼통설(三統說)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/222917523686",
-          "author": "sellars",
-          "description": "https://blog.naver.com/sellars/222907856154 인간중심주의라는 개념이 다의적이다. 따라서 어떤 인간중심주의는 용인할 수 없지만, 어떤 인간중심주의는 그 설득력을 따져 보아야 한다고 생각한다. 윤리학의 경우, 인간중심적 윤리학을 다음처럼 묘사하고 있다. 쉽게 인정할 수 없는 인간중심주의적 윤리학은 다음과 같은 주장을 하고 있다. 즉 <오직 인간만이 도덕적 가치를 갖는다.> 따라서 자연에 대해서 우리는 직접적 책임을 갖는 것이 아니라, 간접적 책임을 갖는다. 그러나 오직 인간만이 도덕적 가치를 갖지 않는다. 인간에게만 적용되었던 도덕적 가치를 충분히 확장할 수 있다. 따라서 가령 동물도 도덕적 가치 혹은 생명적 가.......",
-          "link": "https://blog.naver.com/sellars/222917523686",
-          "publishedOn": "2022-11-02T04:41:25.000Z",
-          "wordCount": 101,
-          "title": "인간중심적 윤리학 1",
           "imageUrl": null
         }
       ]
