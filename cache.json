@@ -766,16 +766,6 @@
           "wordCount": null,
           "title": "Using Generative AI for Travel Inspiration and Discovery",
           "imageUrl": null
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/05/jetpack-compose-buttons-for-google-pay-google-wallet.html",
-          "author": null,
-          "description": "Posted by Stephen McDonald, Developer Programs Engineer\n\n\n\n\n\n\nWe recently released a new Google Pay button view on Android which brings a range of new features, such as the latest Material 3 design principles, dark and light themed versions, and other new customization capabilities. \n\n\nFigure 1: The new Google Pay button view for Android can be customized to make it more consistent with your checkout experience.\n\n\n\n\n\nJetpack Compose Buttons\nWe've now made the new Google Pay button available to Jetpack Compose developers with a new open source library compose-pay-button. Jetpack Compose is Android’s modern toolkit for building user interfaces when using the Kotlin language, and with this new library you can implement the Google Pay button in your Android apps with even less code than before. \nLet's look at a quick example. Here you can see a typical Jetpack Compose UI, with the Google Pay button added. The button accepts a Jetpack Compose modifier for customization, and supports a variety of labels, in this case \"Book with Google Pay\".\n\nsetContent {\n    Column() {\n        PayButton(\n            onClick = { println(\"Button clicked\") }, \n            allowedPaymentMethods = \"<JSON serialized allowedPaymentMethods>\",\n            modifier = Modifier.width(300.dp), \n            type = ButtonType.PAY_BOOK,\n        )\n    }\n}\n\n\nGoogle Wallet\nLastly, we've also released a corresponding library for Google Wallet, compose-wallet-button. The library provides a similar API to the Google Pay button, but instead bundles the same button assets available on the Google Wallet developer site, including both regular and condensed versions.\n\n\nFigure 2: Both regular and condensed versions of the Google Wallet button are available in the new library.\n\n\n\n\n\nReady to get started? Check out the GitHub repositories for both compose-pay-button and compose-wallet-button where you can learn more about the libraries and how to add them to your Android apps!",
-          "link": "http://developers.googleblog.com/2023/05/jetpack-compose-buttons-for-google-pay-google-wallet.html",
-          "publishedOn": "2023-05-19T17:00:00.000Z",
-          "wordCount": null,
-          "title": "Jetpack Compose Buttons for Google Pay and Google Wallet",
-          "imageUrl": null
         }
       ]
     },
@@ -964,6 +954,26 @@
       "feedUrl": "https://kimchihill.com/feed/",
       "siteUrl": "https://kimchihill.com",
       "articles": [
+        {
+          "id": "https://kimchihill.com/?p=2707",
+          "author": "kimchihill",
+          "description": "In my recent endeavor as the Head of Sales, APAC, alongside my role as Country Manager at Sendbird Korea Inc., I’ve embarked on a journey that brings me back to a sales-focused role after a hiatus of five years. Previously, as the Head of Growth at Sendbird from 2015 to 2018, I was involved inContinue reading \"A Comprehensive Approach to Sales Forecasting for SaaS Startups\"\nA Comprehensive Approach to Sales Forecasting for SaaS Startups appeared first on Kimchi hill.",
+          "link": "https://kimchihill.com/2023/06/18/a-comprehensive-approach-to-sales-forecasting-for-b2b-saas-startups/?utm_source=rss&utm_medium=rss&utm_campaign=a-comprehensive-approach-to-sales-forecasting-for-b2b-saas-startups",
+          "publishedOn": "2023-06-18T11:43:36.000Z",
+          "wordCount": 2385,
+          "title": "A Comprehensive Approach to Sales Forecasting for SaaS Startups",
+          "imageUrl": "https://kimchihill.com/wp-content/uploads/2023/06/cover-forecast_resized.jpg"
+        },
+        {
+          "id": "https://kimchihill.com/?p=2685",
+          "author": "kimchihill",
+          "description": "최근 작성한 블로그 글, SaaS 스타트업, Head of Sales의 성공적 온보딩을 위한 20가지 체크리스트, 에서 포어캐스트 방법론을 언급했는데, 관련하여 조금 더 자세히 설명해 달라는 문의가 있었습니다. 이전 회사에서는 주로 Enterprise Account Executive 등 IC (Individual Contributor) 역할을 맡다가 새로운 회사에서 처음으로 Head of Sales 역할을 맡게 되었을 때, 첫 포어캐스트 분석이 막연할 수 있습니다. HeadContinue reading \"SaaS 스타트업의 영업 리더십을 위한 포어캐스트 (Forecast) 방법론\"\nSaaS 스타트업의 영업 리더십을 위한 포어캐스트 (Forecast) 방법론 appeared first on Kimchi hill.",
+          "link": "https://kimchihill.com/2023/06/18/kr-a-comprehensive-approach-to-sales-forecasting-for-b2b-saas-startups/?utm_source=rss&utm_medium=rss&utm_campaign=kr-a-comprehensive-approach-to-sales-forecasting-for-b2b-saas-startups",
+          "publishedOn": "2023-06-18T10:12:02.000Z",
+          "wordCount": 2261,
+          "title": "SaaS 스타트업의 영업 리더십을 위한 포어캐스트 (Forecast) 방법론",
+          "imageUrl": "https://kimchihill.com/wp-content/uploads/2023/06/cover-forecast_resized.jpg"
+        },
         {
           "id": "https://kimchihill.com/?p=2672",
           "author": "kimchihill",
@@ -1426,16 +1436,6 @@
           "wordCount": 6808,
           "title": "Dependency Composition",
           "imageUrl": "https://martinfowler.com/articles/dependency-composition/card.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/2023-xref-problem.html",
-          "author": null,
-          "description": "Recently I found that xref in Emacs had stopped working for me on my mac laptop. Today I finally tried to figure out what went wrong. xref is just a front-end, all the work is done by backends. It took a while for me to realize (ie remember) that I was using the excellent dumb-jump package as the backend. dumb-jump uses a range of fast search commands (such as ag and ripgrep) to detect references without using the awkward tags tables that Emacs used to rely on.\nThe command flow between xref and dumb-jump is difficult to follow, but looking at the dumb-jump customization page alerted me to dumb-jump having a debug option. With this enabled, I could see what command dumb-jump was sending to the operating system. By default it uses git grep while in a git repo (almost everything I do is in a git repo). Its git grep command is quite complex, using regexps to (I assume) get more sensible results. I tried out the command it issued in my own terminal and it failed to find anything, while a simple git grep worked fine.\nArmed with a better knowledge of what was failing, I dug into dumb-jump’s issues and found Issue with git-grep. Reading that, I discovered that a change to git grep means that how git grep processes regexes differs depending on the operating system. This would mean that dumb-jump would need to detect git-grep’s version and the underlying OS to pick the right regexes for its search.\nThe fix for me is to force dumb-jump to use another searcher with (setq dumb-jump-force-searcher 'rg). With that my xref commands worked again.",
-          "link": "https://martinfowler.com/articles/2023-xref-problem.html",
-          "publishedOn": "2023-05-19T16:48:00.000Z",
-          "wordCount": 389,
-          "title": "Emacs xref stopped working on Macs with dumb-jump",
-          "imageUrl": null
         }
       ]
     },
@@ -2617,6 +2617,16 @@
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
         {
+          "id": "https://blog.naver.com/sellars/223131872966",
+          "author": "sellars",
+          "description": "로티의 <철학과 자연의 거울>에서 셀라스와 관련된 부분을 보면서 내가 로티의 언명을 예전보다 더 잘 이해하고 있다는 것을 스스로 느낀다. 이제 로티의 수사학에 속아 이것이 무슨 의미인지 생각하는 대신에 이렇게 쓰면 될 것을 왜 그 따위 표현하고 있는가 하고 로티를 질책한다. 무엇이 나를 이렇게 변화시킨 것인가? 그 동안 꾸준하게 로티의 책을 읽은 것도 아니다. <이성의 논리적 공간>(2014)을 쓰고 난 후에 의식적으로 이 주제에 대한 글들을 읽지 않으려고 했다. 그럼에도 그 책에서 주장한 것들이 로티의 <철학과 자연의 거울>(1979)에서 너무 분명하게 보인다. 예전에도 로티의 주장을 나름대로 요약했지만, 이.......",
+          "link": "https://blog.naver.com/sellars/223131872966",
+          "publishedOn": "2023-06-18T01:26:11.000Z",
+          "wordCount": 101,
+          "title": "명백하게 쓰기",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.naver.com/sellars/223131291102",
           "author": "sellars",
           "description": "의미 전체론 * 의미는 언어놀이나 삶의 형식이라는 문맥에서 차지하는 위치이다.(p. 25) * 적어도 비트겐슈타인과 셀라스 이래로, 기호의 “의미”는 그 내용에 덧붙여지는 “비물질적” 속성이 아니라 단지 언어놀이 혹은 삶의 형식 속에서 주위 사건들의 문맥 속에서 차지하는 위치라는 점은 완전히 명백한 것 같다. ... 로크에게 기호가 의미를 가진다는 것은 관념을 기호화함으로써 산출된 결과이다. 관념은 우리가 생각할 때 우리 정신 앞에 있는 것이다. ... 그러나 비트겐슈타인이나 셀라스에 의하면, 사물을 표상적으로, 혹은 지향적으로 만드는 것은 더 넓은 맥락 즉 다른 수많은 사물들과의 상호작용 속에서 이루어지는 역할이다. * 감.......",
@@ -2764,16 +2774,6 @@
           "publishedOn": "2023-05-22T04:24:56.000Z",
           "wordCount": null,
           "title": "자기의 테크놀로지",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223106965312",
-          "author": "sellars",
-          "description": "페란도의 <철학적 포스트휴머니즘>을 읽으면서 그녀 및 그들의 철학적 해명 및 설명이 문학과 연관되고 또 역사와 왜 연관되는지 어느 정도 이해할 수 있다. <철학적 인간학>이라는 철학의 분과가 독일 중심으로 발전되어 왔지만, 영미철학에서는 <철학적 인간학>이 그렇게 발전하지 못했다. 오히려 인간에 대한 진화 생물학이나 사회 생물학의 주장이나 촘스키의 영향 때문에 인간의 본성에 대한 고찰이 이루어지고 있다고 할 수 있다. (<촘스키와 푸코, 인간 본성을 말하다>(2015)는 <철학적 인간학>에서 다루고 있는 정형적인 문제들과 약간 다른 주제들을 모아놓고 있다.) 페란도는 <반복적으로 비인간화되.......",
-          "link": "https://blog.naver.com/sellars/223106965312",
-          "publishedOn": "2023-05-20T00:32:10.000Z",
-          "wordCount": null,
-          "title": "철학, 역사, 문학",
           "imageUrl": null
         }
       ]
