@@ -36,6 +36,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/h1-cpp-papers23/",
+          "author": null,
+          "description": "Last week the ISO committee met in Varna to discuss some of the first batch of C++26 features. It’s an excellent occasion to shed some light on the latest status and interesting C++ proposals.\nLet’s start!\nBy the way: This will be my first blog post with the #cpp26 tag!\nDisclaimer: The views expressed in this article are my own and do not represent the opinion of the ISO C++ Committee.\n\n\nReturn to In-Person ISO Meetings \n  \n\n\n\n\n     \n    \n\n\nWith the pandemic largely behind us, we’re left adapting to a blend of virtual and in-person meetings. The ISO Committee held its first “post-pandemic” in-person meeting in Kona, HI, USA, in November 2022, followed by another one in Issaquah, USA, in February 2023. These meetings predominantly follow a hybrid format.\nBoth meetings served to complete the…",
+          "link": "https://www.cppstories.com/2023/h1-cpp-papers23/",
+          "publishedOn": "2023-06-19T00:00:00.000Z",
+          "wordCount": 1895,
+          "title": "Five Awesome C++ Papers for the H1 2023 - C++26, Varna and More",
+          "imageUrl": "https://www.cppstories.com/2023/images/papersh123.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/ub-factory-constinit/",
           "author": null,
           "description": "A few years ago (see here, I showed an interesting implementation for self-registering classes in factories. It works, but one step might be at the edge of Undefined behavior. Fortunately, with C++20, its new constinit keyword, we can update the code and ensure it’s super safe.\n\n\n\n     \n    \n\n\nLet’s bring back the topic:\nHere’s a typical factory function. It creates unique_ptr with ZipCompression or BZCompression based on the passed name/filename:\nstatic unique_ptr<ICompressionMethod> Create(const string& fileName) {\n    auto extension = GetExtension(filename);\n    if (extension == \"zip\")\n        return make_unique<ZipCompression>();\n    else if (extension = \"bz\")\n        return make_unique<BZCompression>();\n\n    return nullptr;\n}\n\n\nHere are some issues with this approach:\nEach time you wr…",
@@ -154,6 +164,46 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "247ee026-f7f8-4c21-a5fb-5ed669d1a29f",
+          "author": "Sandhya Dasu",
+          "description": "Hybrid clouds are mixed computing environments that allow applications to use a combination of compute, networking, storage, and services in public clouds and private clouds, including clouds running on-premise or at a plethora of edge locations.\nTo accomplish this, hybrid cloud platforms must be designed to expose the best of the public clouds they support and present the advantages of private clouds while presenting a cohesive interface to the application developer—and preferably the cloud admin, too. A cloud admin can install a cloud instance called a cluster, consisting of a control plane (at least one instance) to manage the cluster and multiple compute instances that run applications on them.\nIn the rest of this article, \"developer\" specifically refers to a hybrid cloud platform deve…",
+          "link": "https://developers.redhat.com/articles/2023/06/19/tips-designing-features-hybrid-cloud",
+          "publishedOn": "2023-06-19T07:00:00.000Z",
+          "wordCount": 2748,
+          "title": "My advice for designing features for the hybrid cloud",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC_cloud1_2x.png?itok=7OTSzwEN"
+        },
+        {
+          "id": "d52965e3-51a4-4e11-944a-2debbc572c40",
+          "author": "Valentina Rodriguez Sosa",
+          "description": "MongoDB offers different operator types to utilize MongoDB with Red Hat OpenShift. MongoDB provides two certified operator products, MongoDB Enterprise Operator and MongoDB Atlas Operator. This article will cover how to set up and configure MongoDB Atlas on OpenShift.\nPrerequisites\nRead the overview to help you get started with Atlas.\nCreate an Atlas account.\nAdd your IP address to your account to ensure the OpenShift cluster will have connectivity with Atlas. \nHow to install MongoDB Atlas on OpenShift\nTo install the operators in your OpenShift cluster, access your OperatorHub.\nFilter by MongoDB in the field selector.\nSelect Certified as Source.\nSelect the MongoDB Atlas Operator, as shown in Figure 1.\n\n\n  \n\nFigure 1: Select the MongoDB Atlas Operator tile.\n\n\nClick Install. By default, it w…",
+          "link": "https://developers.redhat.com/articles/2023/06/19/how-set-mongodb-atlas-openshift",
+          "publishedOn": "2023-06-19T07:00:00.000Z",
+          "wordCount": 2995,
+          "title": "How to set up MongoDB Atlas on OpenShift",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/SP-openshift_2x-2.png?itok=BKoDbPZp"
+        },
+        {
+          "id": "f4a12a1f-cd63-4f30-bf77-f0781606e23b",
+          "author": "Robin Bobbitt",
+          "description": "As an Ansible Lightspeed engineer, my team works on the cloud service that interacts with Watson Code Assistant large language models for Ansible task generation. Curious to learn more about the mechanics of training such a model, I set out to create my own, very basic Ansible tasks model. I decided to do this using Red Hat OpenShift Data Science, which made it easy to configure and launch an environment pre-configured with everything I needed to train my model. I’ll walk through the steps I took here.\nTraining a basic Ansible tasks model for fun over a weekend on a single GPU would be an impossible task if not for the concept of “transfer learning.” Thanks to transfer learning, we can take an existing pre-trained model and fine-tune it on something new. In this case, we will use the Huggi…",
+          "link": "https://developers.redhat.com/articles/2023/06/19/fine-tune-large-language-models-using-openshift-data-science",
+          "publishedOn": "2023-06-19T07:00:00.000Z",
+          "wordCount": 3036,
+          "title": "Fine-tune large language models using OpenShift Data Science",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Red_Hat_OpenShift_Data_Science_0.png?itok=C0m7jk_F"
+        },
+        {
+          "id": "1b158985-49f8-4ef2-8f7a-afa95cad693f",
+          "author": "Andrew Burgess",
+          "description": "In this article, we will walk through the process of creating a custom stack unwinder for the GNU Project Debugger (GDB) using GDB's Python API. We'll first explore when writing such an unwinder might be necessary, then create a small example application that demonstrates a need for a custom unwinder before finally writing a custom unwinder for our application inside the debugger.\nBy the end of this tutorial, you'll be able to use our custom stack unwinder to allow GDB to create a full backtrace for our application.\nWhat is an unwinder?\nAn unwinder is how GDB figures out the call stack of an inferior, for example, GDB's backtrace command:\nBreakpoint 1, woof () at stack.c:4 4 return 0; \n\n(gdb) backtrace\n#0 woof () at stack.c:4\n#1 0x000000000040111f in bar () at stack.c:10\n#2 0x0000000000401…",
+          "link": "https://developers.redhat.com/articles/2023/06/19/debugging-gdb-create-custom-stack-winders",
+          "publishedOn": "2023-06-19T07:00:00.000Z",
+          "wordCount": 6091,
+          "title": "Debugging in GDB: Create custom stack winders",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2021_GNU_GDB-Developer_tutorial_Featured_Article__A-1.png?itok=uV-N2sMd"
+        },
         {
           "id": "c2388c55-04e2-4f1e-9aec-49ebd79b5021",
           "author": "Deepankar Jain",
@@ -401,6 +451,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4479672",
+          "author": "Nitin Dahad",
+          "description": "The latest embedded survey is out for 2023, and it shows not just burgeoning workloads and how engineers deal with it, but also most used design tools, OS’es and processors.\nThe post embedded survey 2023: more IP reuse as workloads surge appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/embedded-survey-2023-more-ip-reuse-as-workloads-surge/",
+          "publishedOn": "2023-06-19T18:57:11.000Z",
+          "wordCount": 4372,
+          "title": "embedded survey 2023: more IP reuse as workloads surge",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/06/Embedded-Market-Study-Report-2023-reuse-data.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4479656",
           "author": "Bill Lamie, Rafael Taubinger",
@@ -1003,6 +1063,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/935193/",
+          "author": "corbet",
+          "description": "Drew DeVault has announced\nthe launch of a new web site\nthat is intended to be a better introduction to the free-software\ncommunity.\n\n\n\tSome of my criticisms focused on the message: fsf.org and gnu.org\n\ttogether suffer from no small degree of incomprehensibility and\n\tinaccessibility which makes it difficult for new participants to\n\tlearn about the movement and apply it in practice to their own\n\tprojects.\n\n\tThis is something which is relatively easily fixed!",
+          "link": "https://lwn.net/Articles/935193/",
+          "publishedOn": "2023-06-19T15:40:40.000Z",
+          "wordCount": 2108,
+          "title": "DeVault:  Reforming the free software message",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/934940/",
+          "author": "corbet",
+          "description": "In the fast-moving open-source world, programs can come and go quickly; a\ntool that has many users today can easily be eclipsed by something better\nnext week.  Even in this environment, though, some programs endure for a\nlong time.  As an example, consider the\nPostgreSQL database system, which traces its\nhistory back to 1986.  Making fundamental changes to a large code base\nwith that much history is never an easy task.  As fundamental changes go,\nmoving PostgreSQL away from its process-oriented model is not a small one,\nbut it is one that the project is considering seriously.",
+          "link": "https://lwn.net/Articles/934940/",
+          "publishedOn": "2023-06-19T15:21:18.000Z",
+          "wordCount": null,
+          "title": "[$] PostgreSQL reconsiders its process-based model",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/935184/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (golang-go.crypto, maradns, requests, sofia-sip, and xmltooling), Fedora (chromium, iaito, iniparser, libX11, matrix-synapse, radare2, and thunderbird), Red Hat (c-ares, jenkins and jenkins-2-plugins, and texlive), SUSE (bluez, chromium, go1.19, go1.20, jetty-minimal, kernel, kubernetes1.18, kubernetes1.23, kubernetes1.24, libX11, open-vm-tools, openvswitch3, opera, syncthing, and xen), and Ubuntu (libcap2, libpod, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15,\n linux-azure-fde-5.15, linux-gcp, linux-gcp-5.15, linux-gke,\n linux-gke-5.15, linux-gkeop, linux-hwe-5.15, linux-ibm, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-5.15, linux-oracle,\n linux-oracle-5.15, linux-raspi, linux, linux-aws, linux-azure, linux-gcp, linux-hwe-5.19, linux-kvm,\n linux-lowlatency, linux-oracle, linux-raspi, linux, linux-aws, linux-lowlatency, linux-raspi, linux-oem-5.17, linux-oem-6.1, pypdf2, and qemu).",
+          "link": "https://lwn.net/Articles/935184/",
+          "publishedOn": "2023-06-19T14:00:49.000Z",
+          "wordCount": 440,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/935083/",
+          "author": "corbet",
+          "description": "The 6.4-rc7 kernel prepatch is out for\ntesting.  \"Nothing particular stands out in the rc this week,\nunless you count the mptcp selftest changes that are about making the tests\nwork on stable kernels too.\"",
+          "link": "https://lwn.net/Articles/935083/",
+          "publishedOn": "2023-06-18T23:28:11.000Z",
+          "wordCount": 148,
+          "title": "Kernel prepatch 6.4-rc7",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/934961/",
           "author": "jake",
@@ -1666,6 +1766,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=7945",
+          "author": "Derek Jones",
+          "description": "WebAssembly is an assembly-like language intended to be executed by web browsers on an internal stack machine. The intent is that compilers for high-level languages (i.e., C, Cobol, and C#) treat WebAssembly just like they would the assembly language of a cpu. Some substantial applications have been ported, e.g., the R statistical environment, which is […]",
+          "link": "https://shape-of-code.com/2023/06/18/webassembly-vs-javascript-performance-2023-edition/",
+          "publishedOn": "2023-06-18T22:25:16.000Z",
+          "wordCount": 1663,
+          "title": "WebAssembly vs JavaScript performance: 2023 edition",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=7912",
           "author": "Derek Jones",
           "description": "This week I have been investigating the impact of perturbing the evaluation of random floating-point expressions. In particular, the impact of adding 1 (and larger values) at a random point in an expression containing many binary operators (simply some combination of add/multiply). What mechanisms make it possible for the evaluation of an expression to be […]",
@@ -1712,6 +1822,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12534",
+          "author": "Stacey Higginbotham",
+          "description": "The Federal Communications Commission (FCC) wants to get back into the business of regulating privacy. On Wednesday, Chairwoman Jessica Rosenworcel announced the agency had created a Privacy and Data Protection Task Force that will be led by Loyaan Egal, the head of the enforcement bureau. The task force will continue its investigation of the sale of consumers’ […]\nThe post The FCC launches a privacy task force focused on wireless appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/the-fcc-launches-a-privacy-task-force-focused-on-wireless/",
+          "publishedOn": "2023-06-19T13:00:00.000Z",
+          "wordCount": 2944,
+          "title": "The FCC launches a privacy task force focused on wireless",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/06/jessica-rosenworcel-press-photo-09122018-scaled-e1687120576880.jpg?fit=2035%2C1228&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=12531",
           "author": "Stacey Higginbotham",
@@ -1949,6 +2069,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=91680",
+          "author": "민주언론시민연합",
+          "description": "윤석열 정부 1년을 경과하고 있는 오늘날, 한국 사회는 모든 분야에서 거대한 퇴행을 목도하고 있다. “바이든 날리면” 사태를 시작으로 국가지도자들의 거짓과 궤변은 일상화됐고 권력을 감시해야 할 언론은 침묵하거나 동조하고 있다. 영국 로이터저널리즘연구소 ‘디지털뉴스리포트 2022’에 따르면 한국의 뉴스 신뢰도는 최하위 수준으로 조사됐지만, 주요 언론은 보도조차 하지 않고 있다. 현 정부 출범 이후 많은 전문가가 걱정하는 분야가 미일...\nThe post ‘건폭’ 외친 노사법치주의의 파탄: 부조리 신고 85%가 ‘사측 불법’ appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/91680",
+          "publishedOn": "2023-06-19T08:23:23.000Z",
+          "wordCount": 3827,
+          "title": "‘건폭’ 외친 노사법치주의의 파탄: 부조리 신고 85%가 ‘사측 불법’",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/GettyImages-1396560355.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=91673",
+          "author": "정혜승",
+          "description": "“아, 요즘 시간이 없어서 못봤어” 내 목소리가 마치 변명처럼 들렸다. 유행을 놓친게 내 탓인 것 처럼, 꼭 봐야 하는데 아직 못봤으면 불안한 것 처럼. 영화든 넷플릭스든, 돈만 내고 방치한 애플이나 ‘무빙’ 나오면 결제할 디즈니라든지, 웨이브, 티빙, 쿠팡은 그렇다치고 난 카카오페이지, 네이버시리즈 호구다. 볼 게 너무 많은 시대가 문제다. 하여, 사람들은 ‘빨리 감기’를 택한다. 책 제목을...\nThe post 꿈에서도 가성비 찾는 시대: ‘영화를 빨리 감기로 보는 사람들’ (2022) appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/91673",
+          "publishedOn": "2023-06-19T05:47:21.000Z",
+          "wordCount": 3930,
+          "title": "꿈에서도 가성비 찾는 시대: ‘영화를 빨리 감기로 보는 사람들’ (2022)",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/GettyImages-489673880.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=91660",
+          "author": "이정환",
+          "description": "“물 수능 아니다”, 강남의 분노 잠재울 수 있을까. 국정원 인사 파동, 핵심은 파벌. “법 잘 아시는 분이 왜 이러시나.” 라면 값 내려라, 추경호의 지시가 문제인 이유. 오늘 서울 35도 폭염. 20대 자발적 백수 35만 명. “나를 살린 교수”, 주석중의 죽음. 더 깊게 읽기. 사모펀드 먹잇감이 된 버스. 학폭 즉시 분리가 보복 신고 부른다. 똥물에서 일한다고...\nThe post 대통령실 김건희 사진, 의도를 알 수 없다: 슬로우레터 6월19일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/91660",
+          "publishedOn": "2023-06-18T21:54:15.000Z",
+          "wordCount": 4809,
+          "title": "대통령실 김건희 사진, 의도를 알 수 없다: 슬로우레터 6월19일.",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/cDu25Ud009M7648965cb7f94c6.76005129.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=91647",
           "author": "이정환",
@@ -2267,6 +2417,36 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=590988",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/590988/26%eb%87%ac-%eb%af%b8%ea%b5%ad-%ec%a0%84%ea%b8%b0%ec%b0%a8-%ec%8b%9c%ec%9e%a5-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-06-19T11:14:27.000Z",
+          "wordCount": 5257,
+          "title": "BofA, ’26년 미국 전기차 시장 전망, 테슬라 점유율은 62%에서 18%로 급락할 것",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/06/tesla-market-share-2022q1.jpeg"
+        },
+        {
+          "id": "https://happist.com/?p=590985",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/590985/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-06-19T09:55:27.000Z",
+          "wordCount": 5615,
+          "title": "인공지능 컴퓨팅 리더, 엔비디아 투자의견 및 엔비디아 주가 전망(6/19 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/08/엔비디아-로고-nvidia-logo.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=590978",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/590978/%eb%b0%98%eb%8f%84%ec%b2%b4-%ed%83%91%ed%94%bd",
+          "publishedOn": "2023-06-19T09:22:39.000Z",
+          "wordCount": 5888,
+          "title": "6/19, 월가의 반도체주 전망, 모건스탠리 반도체 탑픽은 AMD  아닌 엔비디아 외",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/08/엔비디아-CEO-젠슨-황Jensen-Huang-발표모습.jpg"
+        },
+        {
           "id": "https://happist.com/?p=590976",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -2433,6 +2613,26 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77151",
+          "author": "NewsPeppermint",
+          "description": "트럼프 전 대통령이 지난주 또 기소됐습니다. 이번에는 법무부가 임명한 잭 스미스 특검이 트럼프를 기소했습니다. 연방 검찰이 전직 대통령을 기소한 것도 미국 역사상 이번이 처음 있는 일입니다. 예상된 일이긴 했지만, 막상 트럼프가 또 기소되자 미국 언론은 관련 기사과 칼럼을 쏟아냈습니다. 뉴욕타임스도 마찬가지였는데요, 많은 글을 두 부류로 나눠 보자면 트럼프가 구체적으로 어느 부분에서 법을 어떻게 어겨서 어떤 처벌을 받게 될 것인지 주목한 글과 그러든 말든 트럼프의 인기는 더 높아져 2024년 대선의 공화당 → 더 보기",
+          "link": "https://newspeppermint.com/2023/06/19/npsp_trumpdocuments/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumpdocuments",
+          "publishedOn": "2023-06-19T16:30:50.000Z",
+          "wordCount": 1441,
+          "title": "또 기소된 트럼프, 그러든 말든 대선 가도는 탄탄해서 더 문제",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
+          "id": "https://newspeppermint.com/?p=76685",
+          "author": "veritaholic",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 4월 19일 스프에 쓴 글입니다. 세상이 점점 더 빨리 돌아간다는 데 토를 달 사람은 별로 없을 겁니다. 해야 할 일도 늘어나고, 그래서 사람들은 바쁘다는 말을 점점 더 입에 달고 삽니다. 여기에 수시로 → 더 보기",
+          "link": "https://newspeppermint.com/2023/06/18/npsp_emailurgencybias/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_emailurgencybias",
+          "publishedOn": "2023-06-18T22:59:29.000Z",
+          "wordCount": 2180,
+          "title": "[뉴페@스프] ‘카톡 답장의 속도’가 알려주는 나와 그 사람과의 관계",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77136",
           "author": "NewsPeppermint",
