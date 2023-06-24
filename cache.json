@@ -122,16 +122,6 @@
           "wordCount": null,
           "title": "macOS 메모리 분석을 위한 volatility3 ISF 생성하기",
           "imageUrl": null
-        },
-        {
-          "id": "https://cpuu.postype.com/post/14601764",
-          "author": "CPUU",
-          "description": "애플 macOS가 M1, M2 시리즈로 출시되면서 이제 iPhone과 똑같은 ARM64 아키텍처를 사용한다. 그렇기 때문에 내부적으로 구현할 때 ARM 64bit assembly 언어를 그대로 사용할 수 있다.\n이 방법에 대해서 Stephen Smith, \"Programming with 64-Bit ARM Assembly Language\", Apress, 2020 책에서 다루고 있으나 설명이 다소 불친절하여, 직접 따라해보면서 과정을 기록해둔다.\n먼저 Xcode를 실행하여 새로운 프로젝트를 만든다. 참고로 Xcode version은 14.3이다.\n현재 Swift를 이용한 iOS앱 개발은 Storyboard 또는 SwiftUI 방식이 있다. 여기에서는 Storyboard 기준으로 설명한다.\n관련한 정보를 입력하고 저장된 폴더를 지정한다.\n이제 스토리보드 화면에서 Main 파일을 아래와 같이 디자인한다.\n기본적으로 단순한 TextField, Button, Label 을 배치했으며 각각의 변수명을 적당히 enterText, convertBtn, convertedText로 설정했고, 이를 뷰 컨트롤러에 IBOutlet으로 연결한다.\nViewController의 전체 소스코드는 다음과 같다.\n//\n//  ViewController.swift\n//  ToUpper\n//\n//  Created by CPUU on 2023/05/24.\n//\n\nimport UIKit\n\nclass ViewController: UIViewController {\n    @IBOutlet weak var enterText: UITextField!\n …",
-          "link": "https://cpuu.postype.com/post/14601764",
-          "publishedOn": "2023-05-26T01:17:14.000Z",
-          "wordCount": null,
-          "title": "iOS에서 ARM64 어셈블리로 구현된 함수 호출하기",
-          "imageUrl": null
         }
       ]
     },
@@ -854,16 +844,6 @@
           "wordCount": null,
           "title": "#WeArePlay | Meet Tessa and Saasha from the UK, founders of waste-fighting app Olio",
           "imageUrl": null
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/05/aapi-heritage-month-how-web-gde-vickie-li-views-the-importance-of-diversity.html",
-          "author": null,
-          "description": "Posted by Kevin Hernandez, Developer Relations Community Manager\n\n\n\n\n\n\n\nFor AAPI Heritage Month, we are celebrating Vickie Li, Web GDE\n\n\n\n\n\n\n\n\nVickie Li, Web GDE, is a Senior Security Engineer at Instacart where she works on a range of security tasks such as bug bounty reports and building internal security tooling. Although she went to school with the goal of becoming a developer, she discovered computer systems and started working on bug bounties as a way of exploring the security industry. From there, her interest in security blossomed and eventually inspired her to blog about security. As Vickie started to become more involved in blogging and sharing what she’s working on or learning, she started to realize that she really enjoyed the sense of community - both in the developer and AAPI…",
-          "link": "http://developers.googleblog.com/2023/05/aapi-heritage-month-how-web-gde-vickie-li-views-the-importance-of-diversity.html",
-          "publishedOn": "2023-05-25T14:00:00.003Z",
-          "wordCount": null,
-          "title": "AAPI Heritage Month: How Web GDE Vickie Li views the importance of diversity",
-          "imageUrl": null
         }
       ]
     },
@@ -1123,6 +1103,16 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/936127/",
+          "author": "jake",
+          "description": "Over on the Software Freedom Conservancy blog, Policy Fellow and Hacker-in-Residence Bradley M. Kuhn analyzes the recent changes to Red Hat Enterprise Linux (RHEL) source availability in light of the GPL.  It contains some interesting information about two alleged GPL violations that came about because the company's business model is structured in a way that brings it too close to non-compliance with the license, he said:\n\nPerhaps the biggest problem with a murky business model that skirts the line of GPL compliance is that violations can and do happen — since even a minor deviation from the business model clearly violates the GPL agreements. Pre-IBM Red Hat deserves a certain amount of credit, as SFC is aware of only two documented incidents of GPL violations that have occurred since 2006 regarding the RHEL business model. We've decided to share some general details of these violations for the purpose of explaining where this business model can so easily cross the line.\n\n[...] In another violation incident, we learned that Red Hat, in a specific non-USA country, was requiring that any customer who lowered the number of RHEL machines under service contract with Red Hat sign an additional agreement. This additional agreement promised that the customer had deleted every copy of RHEL in their entire organization other than the copies of RHEL that were currently contracted for service with Red Hat. Again, this is a \"further restriction\". The GPL agreements give everyone the unfettered right to make and keep as many copies of the software as they like, and a distributor of GPL'd software may not require a user to attest that they've deleted these legitimate, licensed copies of third-party-licensed software under the GPL. SFC informed Red Hat's legal department of this violation, and we were assured that this additional agreement would no longer be presented to any Red Hat customers in the future.",
+          "link": "https://lwn.net/Articles/936127/",
+          "publishedOn": "2023-06-23T21:23:15.000Z",
+          "wordCount": 7936,
+          "title": "Kuhn: A Comprehensive Analysis of the GPL Issues With the Red Hat Enterprise Linux (RHEL) Business Model",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/935602/",
           "author": "jake",
@@ -1849,16 +1839,6 @@
           "wordCount": 9842,
           "title": "What is Amazon Sidewalk & How Does it Work?",
           "imageUrl": "https://mlv0gpv1snjt.i.optimole.com/cb:lAJ-.51688/w:auto/h:auto/q:90/https://novelbits.io/wp-content/uploads/2023/06/Amazon-Sidewalk-featured-image.png"
-        },
-        {
-          "id": "https://novelbits.io/?p=24997",
-          "author": "Mohammad Afaneh",
-          "description": "In today’s interconnected world, the ability to track and monitor assets and people in real-time has become increasingly important. That’s where real-time location systems come into play, specifically Bluetooth-based systems utilizing RSSI and/or Bluetooth Direction Finding. Real-time location systems – or RTLS – can be used to identify and track the location of objects in […]\nThe post RSSI vs. Direction Finding – The Ultimate Guide to Bluetooth RTLS appeared first on Novel Bits.",
-          "link": "https://novelbits.io/bluetooth-rtls-direction-finding-and-rssi/",
-          "publishedOn": "2023-05-24T12:58:34.000Z",
-          "wordCount": 10071,
-          "title": "RSSI vs. Direction Finding – The Ultimate Guide to Bluetooth RTLS",
-          "imageUrl": "https://mlv0gpv1snjt.i.optimole.com/cb:lAJ-.51688/w:auto/h:auto/q:90/https://novelbits.io/wp-content/uploads/2023/05/RSSI-vs.-Direction-Finding-4.png"
         }
       ]
     },
@@ -3197,6 +3177,16 @@
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
         {
+          "id": "https://blog.naver.com/sellars/223137599890",
+          "author": "sellars",
+          "description": "칸트는 A판 머리말에서 말한다. 인간 이성은 대답할 수 없는 문제로 괴롭힘을 당하고 있다. 우리는 자연스럽게, 즉 <이성의 자연 본성 자체로부터 부과된> 그런 대답할 수 없는 문제에 괴롭힘을 당하고 있다. 칸트가 말하는 우리를 괴롭히는 문제가 바로 형이상학적 문제들이다. 가장 대표적인 것이 <순수이성비판>에서 다루고 있는 네 가지 형이상학적 문제이다. 첫째, 시간과 공간은 한계를 갖고 있는가? 즉 유한한가? 아니면 무한한가? 둘째, 세계의 합성된 실체는 단순한 부분으로 이루어져 있는가? 아니면 그렇지 않은가? 셋째, 자유, 혹은 자유에 의한 인과성이 존재하는가? 아니면 자유란 없는가? 넷째, 세계의 원인인 필연적.......",
+          "link": "https://blog.naver.com/sellars/223137599890",
+          "publishedOn": "2023-06-24T06:09:48.000Z",
+          "wordCount": 101,
+          "title": "순수이성 비판 강의 1",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.naver.com/sellars/223135539398",
           "author": "sellars",
           "description": "예전의 Y는 이미 읽은 부분이 이해되지 않으면 결코 그 다음 부분으로 나가지 않았다. 그렇지만 나는 이해되지 않는 부분은 그냥 삭제해 버린다. 저자에게는 중요할는지 모르겠지만, 이해도 되지 않는 그것은 사실 나에게 필요 없는 부분이다. 그 부분이 없이 나머지를 이해하면 된다. 자기를 적나라하게 드러내는 글쓰기, 아마 이것이 두려운 것인가? 분명치 않은 내용으로 자기를 숨겨 보았자 그것이 무슨 의미가 있단 말인가? 어려운 용어나 비유적 언어로 자기 생각을 포장하지만, 그것을 설명하라는 주문 앞에서 또 다시 어렵고 수사학적 이야기를 반복한다는 것은 자기 생각을 스스로 잘 이해하지 못했다는 증거이다. 스피박이 다음처럼 말.......",
@@ -3334,16 +3324,6 @@
           "publishedOn": "2023-05-28T00:34:58.000Z",
           "wordCount": null,
           "title": "장경과 이명휘의 논쟁",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223112274801",
-          "author": "sellars",
-          "description": "이명휘는 <중국 현대 신유학의 자아전환>(2013)의 마지막 장에서 모종삼의 도통론(道通論)을 다루고 있다. 이명휘에 의하면, 모종삼의 도통론은 자아중심적이고, 전통을 자임하고, 천하의 군림하는 그런 것이 아니다. 이명휘가 이렇게 주장할 수 있는 것은 (1) 사상에서의 도통론과 철학에서의 도통론을 구분하면서, 모종삼이 주장한 것이 우리의 일반적 인상과 다르게 철학에서의 도통론이 아니라, 사상, 문화에서의 도통론이기 때문이다. (2) 모종삼의 철학은 <범도덕주의>라고 지칭하고 있고, 이것 때문에 도덕적 폐쇄성을 갖고 온다고 비판하고 있지만, <범도덕주의>는 강한 의미와 약한 의미로 나눌 수 있다. 모종삼의 주.......",
-          "link": "https://blog.naver.com/sellars/223112274801",
-          "publishedOn": "2023-05-26T02:22:45.000Z",
-          "wordCount": null,
-          "title": "현대 신유가 모종삼의 도통론(道通論)",
           "imageUrl": null
         }
       ]
