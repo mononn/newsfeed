@@ -24,6 +24,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/finite-state-machines-variant-cpp/",
+          "author": null,
+          "description": "In this blog post, I’ll show you how to convert a “regular” enum-style finite state machine into a modern version based on std::variant from C++17. This technique allows you to improve design, work with value types and enhance code quality.\n\n\n\n     \n    \n\n\nLet’s start with a basic example:\nwe want to track a game player’s health status\nwe’d like to respond to events like “Hit by a monster” or “Healing bonus.”\nwhen the health point goes to 0, then we have to restart the game only if there are some remaining lives available\nHere’s a basic diagram with states and transitions:\n\n\n\n\n     \n    \n\n\nWe can quickly write some basic code based on enum classes:\nenum class HealthState { PlayerAlive, PlayerDead, GameOver };\nenum class Event { HitByMonster, Heal, Restart };\n\n\nAnd the state machine class:\n…",
+          "link": "https://www.cppstories.com/2023/finite-state-machines-variant-cpp/",
+          "publishedOn": "2023-06-26T00:00:00.000Z",
+          "wordCount": 2334,
+          "title": "Finite State Machine with std::variant",
+          "imageUrl": "https://www.cppstories.com/2023/images/fsm.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/h1-cpp-papers23/",
           "author": null,
           "description": "Last week the ISO committee met in Varna to discuss some of the first batch of C++26 features. It’s an excellent occasion to shed some light on the latest status and interesting C++ proposals.\nLet’s start!\nBy the way: This will be my first blog post with the #cpp26 tag!\nDisclaimer: The views expressed in this article are my own and do not represent the opinion of the ISO C++ Committee.\n\n\nReturn to In-Person ISO Meetings \n  \n\n\n\n\n     \n    \n\n\nWith the pandemic largely behind us, we’re left adapting to a blend of virtual and in-person meetings. The ISO Committee held its first “post-pandemic” in-person meeting in Kona, HI, USA, in November 2022, followed by another one in Issaquah, USA, in February 2023. These meetings predominantly follow a hybrid format.\nBoth meetings served to complete the…",
@@ -142,6 +152,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "a6b76d2d-0282-472f-8fca-4e4fc5eb51ab",
+          "author": "Donna Smalls",
+          "description": "Red Hat OpenShift is a Kubernetes-based app-dev platform that enables developers to build, deploy, and manage containerized applications. It provides a comprehensive set of tools and services for developers, operations teams, and IT organizations to streamline application development and delivery.\nRed Hat OpenShift version 4.13, the latest release, introduces several new features and enhancements that help organizations accelerate their digital transformation journey. Let's take a closer look at some of the key features of OpenShift 4.13.\nImproved developer experience\nOpenShift 4.13 introduces several new features that improve the developer experience and make it easier to build and deploy applications, including creating serverless functions from the developer perspective, using Red Hat O…",
+          "link": "https://developers.redhat.com/articles/2023/06/26/whats-new-red-hat-openshift-413",
+          "publishedOn": "2023-06-26T07:00:00.000Z",
+          "wordCount": 2653,
+          "title": "What's new in Red Hat OpenShift 4.13",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
+        },
+        {
+          "id": "92ce2ab7-2ec3-4eeb-b409-bb09e34dc3dd",
+          "author": "Nagesh Rathod",
+          "description": "This article demonstrates how to deploy gaming applications in a Kubernetes (K8s) cluster using Red Hat Ansible Automation Platform. The minikube cluster is the best single node cluster for a personal POC. For this article, we will use a minikube cluster and Ansible Automation Platform 2.3 and a restricted set of privileges in the cluster to deploy the application in Kubernetes. Automation and orchestration are a rock solid combination that yield more promising results.\nHow to start minikube\nMake sure you have kubectl and minikube CLI installed before getting started with the Kubernetes cluster.\n$ minikube start\n😄  minikube v1.26.1 on Redhat 9.1\n❗  Specified Kubernetes version 1.25.7 is newer than the newest supported version: v1.24.3. Use `minikube config defaults kubernetes-version` for…",
+          "link": "https://developers.redhat.com/articles/2023/06/26/how-deploy-apps-k8s-cluster-automation-controller",
+          "publishedOn": "2023-06-26T07:00:00.000Z",
+          "wordCount": 3535,
+          "title": "How to deploy apps in a K8s cluster via automation controller",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
+        },
         {
           "id": "f1be340e-5e44-46ce-9bee-d5eefdcccf6c",
           "author": "David Kwon",
@@ -450,6 +480,16 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4479734",
+          "author": "Nitin Dahad",
+          "description": "Following its announcement at Arduino day earlier this year, further details of its new UNO R4 32-bit development board are revealed, including the 12x8 RED LED matrix on board as well as one-click cloud connectivity for IoT applications.\nThe post Arduino launches 32-bit UNO board with Wi-Fi, cloud and 96 LED matrix appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/arduino-launches-32-bit-uno-board-with-wi-fi-cloud-and-96-led-matrix/",
+          "publishedOn": "2023-06-26T15:06:53.000Z",
+          "wordCount": 4275,
+          "title": "Arduino launches 32-bit UNO board with Wi-Fi, cloud and 96 LED matrix",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/06/Arduino-UNO-R4-WiFi-with-LED-matrix.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4479724",
           "author": "Nitin Dahad",
           "description": "In the future, automakers like Mercedes and BMW will be selling vehicles with marketing like Nvidia inside or Mobileye inside, just like a laptop might be bought that says Intel inside today.\nThe post Buying autonomous electric vehicles will soon be just like buying a laptop appeared first on Embedded.com.",
@@ -745,6 +785,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/06/code-for-all-10-principles-for-lgbtqia-product-inclusion.html",
+          "author": null,
+          "description": "Posted by Danny Rozenblit, Developer Marketing\n\n\n\n\n\nAs LGBTQIA+ Pride Month comes to a close, we will see rainbows leaving shopfronts and social media logos. The need for thoughtful inclusion, however, persists: developers have the opportunity to embrace Pride 365 days of the year by building LGBTQIA+ inclusive products, thinking about how testing and design choices affect others every day.\nUltimately, making your site, app, game, or software system more inclusive for LGBTQIA+ people can improve the user experience for everyone. Therefore, we’re showcasing 10 ways developers can build LGBTQIA+ inclusive products.\nWhile this is a non-exhaustive list, below are some core principles to consider as you build for everyone.\n\n\n\n\n\n\n\nLanguage matters\n\n\nUse gender-inclusive and non-binary language\n\n…",
+          "link": "http://developers.googleblog.com/2023/06/code-for-all-10-principles-for-lgbtqia-product-inclusion.html",
+          "publishedOn": "2023-06-26T19:00:00.001Z",
+          "wordCount": 2477,
+          "title": "Code for all: 10 principles for LGBTQIA+ product inclusion",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBSFANNkInklT1MduS3FxlTgOkPRAlWFj6q3pQuMsTOB8Zx8qguF2WiR445mg_N7ayb5QTQmc-GUTBdHwKEjWPo-LW9iIZtMG6yVQt35nAQl52ez1NOIDfNiUNINT-eGdWZfyKi05933klIYCr3luOCCFR4QqsIbblwm4gaiLUdZRleA40BUqiLbtXq-A/w1200-h630-p-k-no-nu/Gfd_PrideCampaign_1920x1080.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/06/welcoming-our-inaugural-google-for-startups-accelerator-cloud-north-america-cohort.html",
           "author": null,
@@ -1083,6 +1133,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/936405/",
+          "author": "corbet",
+          "description": "Red Hat's Mike McGrath responds\nto the many criticisms aimed at the company since it changed its policy\nregarding RHEL source code.\n\n\n\tUltimately, we do not find value in a RHEL rebuild and we are not\n\tunder any obligation to make things easier for rebuilders; this is\n\tour call to make. That brings me to CentOS Stream, of which there\n\tis immense confusion. I acknowledge that this is a change in a\n\tlongstanding tradition where we went above and beyond, and change\n\tlike this can cause some confusion. That confusion manifested as\n\taccusations about us going closed-source and about alleged GPL\n\tviolations. There is CentOS Stream the binary deliverable, and\n\tCentOS Stream the source repository. The CentOS Stream\n\tgitlab source is where we build RHEL releases, in the open for\n\tall to see. To call RHEL “closed source” is categorically untrue\n\tand inaccurate. CentOS Stream moves faster than RHEL, so it might\n\tnot be on HEAD, but the code is there. If you can’t find it, it’s a\n\tbug – please let us know.",
+          "link": "https://lwn.net/Articles/936405/",
+          "publishedOn": "2023-06-26T19:38:39.000Z",
+          "wordCount": 481,
+          "title": "McGrath: Red Hat’s commitment to open source",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/936113/",
+          "author": "corbet",
+          "description": "The 6.4 kernel was released\non June 25 after a nine-week development cycle.  By that point, 14,835\nnon-merge changesets had been pulled into the mainline kernel, a slight\nincrease from 6.3 (14,424 changesets) but still lower than many other\ndevelopment cycles.  As usual, LWN has taken a look at those changesets,\nwho contributed them, and what the most active developers were up to.",
+          "link": "https://lwn.net/Articles/936113/",
+          "publishedOn": "2023-06-26T16:12:29.000Z",
+          "wordCount": null,
+          "title": "[$] Development statistics for 6.4",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/936332/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (bind9 and owslib), Fedora (dav1d, dotnet6.0, dotnet7.0, mingw-dbus, vim, and wabt), and SUSE (cloud-init and golang-github-vpenso-prometheus_slurm_exporter).",
+          "link": "https://lwn.net/Articles/936332/",
+          "publishedOn": "2023-06-26T07:44:09.000Z",
+          "wordCount": 181,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/936132/",
+          "author": "corbet",
+          "description": "Linus has released the 6.4 kernel.\n\n\n\tMost of the stuff in my mailbox the last week has been about\n\tupcoming things for 6.5, and I already have 15 pull requests\n\tpending. I appreciate all you proactive people.\n\n\tBut that's for tomorrow. Today we're all busy build-testing the\n\tnewest kernel release, and checking that it's all good. Right?\n\n\nHeadline features in this release include:\ngeneric iterators for BPF,\nthe removal of the SELinux runtime disable\nknob,\nthe removal of the SLOB memory allocator,\nlinear address masking support on Intel\nCPUs,\nprocess-level samepage merging control,\nsupport for user trace events,\nmore infrastructure for writing kernel modules in Rust,\nper-VMA locks,\nand much more.\nSee the LWN merge-window summaries (part 1, part 2), and the (in-progress) KernelNewbies 6.4 page for\nthe details.",
+          "link": "https://lwn.net/Articles/936132/",
+          "publishedOn": "2023-06-26T00:11:56.000Z",
+          "wordCount": 537,
+          "title": "The 6.4 kernel has been released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/936127/",
           "author": "jake",
@@ -1828,6 +1918,16 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2023/06/26/",
+          "author": null,
+          "description": "I came across a question: How does one efficiently solve Two Sum in C?\nThere’s a naive quadratic time solution, but also an amortized linear time\nsolution using a hash table. Without a built-in or standard library hash\ntable, the latter sounds onerous. However, a mask-step-index table,\na hash table construction suitable for many problems, requires only a few\nlines of code. This approach is useful even when a standard hash table is\navailable, because by exploiting the known problem constraints, it\nbeats typical generic hash table performance by 1–2 orders of magnitude\n(demo).\nThe Two Sum exercise, restated:\nGiven an integer array and target, return the distinct indices of two\nelements that sum to the target.\nIn particular, the solution doesn’t find elements, but their indices. The\nexercise …",
+          "link": "https://nullprogram.com/blog/2023/06/26/",
+          "publishedOn": "2023-06-26T19:38:18.000Z",
+          "wordCount": 1748,
+          "title": "Solving \"Two Sum\" in C with a tiny hash table",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2023/06/22/",
           "author": null,
           "description": "A few years ago I set out on a personal journey to study and watch a\nperformance of each of Shakespeare’s 37 plays. I’ve reached my goal and,\nthough it’s not a usual topic around here, I wanted to get my thoughts\ndown while fresh. I absolutely loved some of these plays and performances,\nand so I’d like to highlight them, especially because my favorites are,\nwith one exception, not “popular” plays. Per tradition, I begin with my\nleast enjoyed plays and work my way up. All performances were either a\nrecording of a live stage or an adaptation, so they’re also available to\nyou if you’re interested, though in most cases not for free. I’ll mention\nnotable performances when applicable. The availability of a great\nperformance certainly influenced my play rankings.\nLike many of you, I had assigned …",
@@ -1936,6 +2036,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=7967",
+          "author": "Derek Jones",
+          "description": "Software systems are built by people, who are usually a member of one or more teams. While a lot of research effort has gone into studying the software/hardware used to build these systems, almost no effort has been invested in studying the activities of the people involved. The study of human behaviors and cultures, in […]",
+          "link": "https://shape-of-code.com/2023/06/25/anthropology-and-building-software-systems/",
+          "publishedOn": "2023-06-25T22:19:43.000Z",
+          "wordCount": 1248,
+          "title": "Anthropology and building software systems",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=7945",
           "author": "Derek Jones",
           "description": "WebAssembly is an assembly-like language intended to be executed by web browsers on an internal stack machine. The intent is that compilers for high-level languages (i.e., C, Cobol, and C#) treat WebAssembly just like they would the assembly language of a cpu. Some substantial applications have been ported, e.g., the R statistical environment, which is […]",
@@ -1982,6 +2092,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12571",
+          "author": "Stacey Higginbotham",
+          "description": "This story was originally published on June 23, 2023 in my weekly IoT newsletter. You can sign up here. Broadcom’s claim to fame before it became a chip and software conglomerate was that it was able to integrate multiple radios on a single chip. This integration led to energy and cost savings and propelled the adoption of […]\nThe post What Broadcom’s latest Wi-Fi 7 chips tell us about the IoT appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/what-broadcoms-latest-wi-fi-7-chips-tell-us-about-the-iot/",
+          "publishedOn": "2023-06-26T13:00:46.000Z",
+          "wordCount": 2724,
+          "title": "What Broadcom’s latest Wi-Fi 7 chips tell us about the IoT",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/06/annual-bluetooth-esl-shipments-1024x598.png"
+        },
         {
           "id": "https://staceyoniot.com/?p=12569",
           "author": "Stacey Higginbotham",
@@ -2269,6 +2389,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=91927",
+          "author": "정혜승",
+          "description": "제목부터 도발적이다. [암컷들]. 그런데 부제는 더하다. “방탕하고 쟁취하며 군림하는”.  옥스퍼드에서 리처드 도킨스 제자로 동물학을 전공하던 루시 쿡은 “암컷은 착취당하는 성”, “암컷은 수줍음이 많다”, “수컷은 효율성과 적극성을, 암컷은 수동성을 상징한다”는 가르침에 의문을 가졌다. 도킨스, 그 이전에 다윈이 짜놓은 교과서다. 진화론의 경전은 여성을 시민 취급 않던 아리스토텔레스까지 거슬러 올라간다. 그는 실제 암컷들을 확인하기 위해 자연으로 향했다. 학계를 떠나...\nThe post 빅토리아 시대와 다윈의 억압을 넘어서: ‘암컷들’ (2023) appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/91927",
+          "publishedOn": "2023-06-26T06:24:09.000Z",
+          "wordCount": 4264,
+          "title": "빅토리아 시대와 다윈의 억압을 넘어서: ‘암컷들’ (2023)",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/Queen_Victoria_-Golden_Jubilee_-3a_cropped.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=91845",
+          "author": "민노씨",
+          "description": "타인의 불행을 접하고 기쁨을 느낀 적 있는가? 나는 종종 이 감정을 느낀다. 미디어가 가장 열정적으로 어쩌면 진심을 다해 ‘우리 대신’해 주는 일은 유명 정치인과 기업인, 연예인, 스포츠 스타의 타락과 추락 그리고 불행을 추적하는 일이다. 타인의 불행과 피해가 명백한 범죄와 비행에 관한 것이라면 우리는 거기에 정의감을 결부해 만족감을 느끼지만, 그것이 딱히 범죄와 비행에 연결되지 않더라도, 그리고...\nThe post 타인의 불행은 나의 기쁨, ‘샤덴프로이데’ 권하는 사회 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/91845",
+          "publishedOn": "2023-06-26T03:50:04.000Z",
+          "wordCount": 4486,
+          "title": "타인의 불행은 나의 기쁨, ‘샤덴프로이데’ 권하는 사회",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/pic_005-2.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=91897",
+          "author": "이정환",
+          "description": "모스크바 턱밑까지 치고 올라온 반란군, 푸틴 쫄았나. 학원이 편의점보다 3배 많다. 출생 통보제 이전에 시행령부터 고친다. 네이버 압도적인 1위 자리 흔들린다. “또 태풍 오면 알거지.” 조선일보, “횟집 회식은 좋은 아이디어.” 돌아온 이낙연, “대선 출정식 같았다.” 낙태권 폐지가 미국 대선 최대 변수. 수미 감자, 못 먹게 될 수도 있다. 정의당 재창당한다. 나이스 먹통, 기술력 부족이 원인....\nThe post 기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로우레터 6월26일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/91897",
+          "publishedOn": "2023-06-25T22:07:45.000Z",
+          "wordCount": 5255,
+          "title": "기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로우레터 6월26일.",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/potatoes-888585_1280.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=91852",
           "author": "이정환",
@@ -2934,6 +3084,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=77200",
+          "author": "NewsPeppermint",
+          "description": "이달 들어 각기 다른 방식으로 남성성을 상징하던 인물 세 명이 죽었습니다. 모두 유명했던 인물로 큰 영향을 끼친 사람인 만큼 주요 언론이 일제히 부고 기사를 썼는데, 뉴욕타임스 칼럼니스트 로스 두댓이 서로 연관 없어 보이는 세 명의 죽음을 엮어 글 한 편을 썼습니다. 칼럼을 번역하고, 각각의 인물에 관한 배경 설명을 달았습니다. 전문 번역: 남성성을 상징하던 세 명의 죽음 해설: 언제고 남성성이 끝내 ‘사망’한다면 그 부고기사는 어떤 내용일까",
+          "link": "https://newspeppermint.com/2023/06/26/npsp_alienatedmen/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_alienatedmen",
+          "publishedOn": "2023-06-26T18:15:55.000Z",
+          "wordCount": 1390,
+          "title": "언제고 남성성이 끝내 ‘사망’한다면 그 부고기사는 어떤 내용일까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=76713",
           "author": "ingppoo",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 4월 24일 스프에 쓴 글입니다. 아직 2023년이 절반도 지나지 않았지만, 벌써 제 마음속 ‘올해의 책 후보’에 오른 책이 한 권 있습니다. ‘아버지의 해방일지’ ‘빨치산의 딸’ 정지아 작가가 지난해 펴낸 책으로, 실제 해방 → 더 보기",
@@ -3304,16 +3464,6 @@
           "publishedOn": "2023-05-29T02:33:24.000Z",
           "wordCount": null,
           "title": "의식철학과 이성주의 비판",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223113681102",
-          "author": "sellars",
-          "description": "대륙 신유가와 홍콩 신유가가 서로 논쟁하고 있다. 그런데 유교나 유학을 정치 제도화해야 한다는 장경(蔣慶)이라는 학자의 주장은 내가 보기에 시대착오적인 미친 소리 같다. (그리고 이러한 논의는 중국 공산당의 심기를 거슬릴 때, 즉 후덕하게 생겼지만 전혀 후덕하지 않은 시진평의 한 마디에 따라 언제나 사라질 처지에 지나지 않는다고 생각한다.) 비록 내 한 표가 아무런 현실적 힘이 없다고 해도, 내가 자유롭게 투표하거나 투표하지 않는 이 자유가 유교의 말씀 보다 더 소중하다고 나는 생각한다. 나는 장경과 이명휘의 논쟁이 <순전히 그들의 논쟁>이라고 생각한다. 그것은 중국문화와 전통, 유교나 유학에 대한 나름 자부심이.......",
-          "link": "https://blog.naver.com/sellars/223113681102",
-          "publishedOn": "2023-05-28T00:34:58.000Z",
-          "wordCount": null,
-          "title": "장경과 이명휘의 논쟁",
           "imageUrl": null
         }
       ]
