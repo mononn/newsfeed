@@ -164,6 +164,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "bd9a9000-fb9e-437c-b1c5-986aa4c56de0",
+          "author": "Ajay Pratap",
+          "description": "Dynamic plugins allow you to extend the Red Hat OpenShift UI at runtime, adding custom pages and other extensions. They are based on the webpack module federation. Plugins are registered with the console using the ConsolePlugin custom resource and enabled in the console operator config by a cluster administrator.\nPrerequisites\nNode.js\nyarn\nDocker or podman 3.2.0+\noc\nGetting started\nTo clone console plugin template repo, you should update the plugin metadata, such as the plugin name in the ConsolePlugin  declaration of package.json.\n\"consolePlugin\": {\n  \"name\": \"plugin-name\",\n  \"version\": \"0.0.1\",\n  \"displayName\": \"Dynamic Plugin\",\n  \"description\": \"OpenShift console dynamic plugin\",\n  \"exposedModules\": {\n    \"ExamplePage\": \"./components/ExamplePage\"\n  },\n  \"dependencies\": {\n    \"@console/p…",
+          "link": "https://developers.redhat.com/articles/2023/06/29/how-develop-and-deploy-openshift-console-dynamic-plugin",
+          "publishedOn": "2023-06-29T07:00:00.000Z",
+          "wordCount": 2772,
+          "title": "How to develop and deploy OpenShift console dynamic plugin",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift.png?itok=9HrphxKh"
+        },
+        {
           "id": "dcee9416-fcb2-4200-ba75-df414ff7a792",
           "author": "Himanshu Yadav",
           "description": "Red Hat Ansible Automation Platform 2.4 is generally available (GA). It is a simple, agentless automation platform that improves your current processes, integrates event-driven automation, and provides a sneak peek at how artificial intelligence (AI) will improve automation in the future. This article describes the new features you'll find in Ansible Automation Platform 2.4.\nEvent-Driven Ansible\nAnnounced as developer preview during AnsibleFest 2022, Event-Driven Ansible is now available with Ansible Automation Platform 2.4. Event-Driven Ansible is a scalable, responsive automation capability that processes events containing discrete, actionable intelligence. It empowers teams to determine the appropriate response to an event and execute automated actions to address or remediate it.\nEvent-…",
@@ -382,26 +392,6 @@
           "wordCount": 3486,
           "title": "Automate your Quarkus deployment using Ansible",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/java%2Bquarkus_2x.png?itok=saprke5a"
-        },
-        {
-          "id": "9fcab65e-5911-46ef-862f-4e4d1c3b4504",
-          "author": "David Malcolm",
-          "description": "I work at Red Hat on GCC, the GNU Compiler Collection. For the last four releases of GCC, I've been working on -fanalyzer, a static analysis pass that tries to identify various problems at compile-time, rather than at runtime. It performs \"symbolic execution\" of C source code—effectively simulating the behavior of the code along the various possible paths of execution through it (with some caveats that we'll discuss).\nThis article summarizes what's new with -fanalyzer in GCC 13, which has just been released.\n[ Learn more: New C features in GCC 13 ] \nNew warnings\nI first added the analyzer to GCC in GCC 10, with 15 new warnings for the compiler, and we've added more in each subsequent release (Table 1).\n\n\t\nTable 1: GCC warnings controlled by -fanalyzer by release\nRelease\n\t\t\tNew warnings\n\t\t\t…",
-          "link": "https://developers.redhat.com/articles/2023/05/31/improvements-static-analysis-gcc-13-compiler",
-          "publishedOn": "2023-05-31T07:00:00.000Z",
-          "wordCount": 3680,
-          "title": "Improvements to static analysis in the GCC 13 compiler",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/gcc_1x.png?itok=6l1b8Lo9"
-        },
-        {
-          "id": "8ef5986f-2a99-48a5-afe1-33e4654381e5",
-          "author": "Nikhil Mungale",
-          "description": "Red Hat Enterprise Linux (RHEL) for SAP Solutions is a secure and scalable platform tailored to the needs of SAP workloads, such as SAP NetWeaver, SAP S/4HANA, and the SAP HANA platform. As SAP Business Suite will be out of standard support by 2027, it is essential for developers and administrators to plan for a smooth migration to the SAP S/4 HANA platform. \nIn this article, we'll explore what RHEL for SAP Solutions is and the features and functionalities it provides to developers and administrators.\nWhat is Red Hat Enterprise Linux for SAP Solutions?\nRed Hat Enterprise Linux for SAP Solutions is tailored for SAP workloads such as the SAP HANA platform and S/4HANA. The SAP environment can be standardized on Red Hat Enterprise Linux. By standardizing the SAP environment on RHEL, businesses…",
-          "link": "https://developers.redhat.com/articles/2023/05/30/why-use-rhel-sap-solutions",
-          "publishedOn": "2023-05-30T13:30:00.000Z",
-          "wordCount": 2874,
-          "title": "Why use RHEL for SAP Solutions?",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL2-2x%20%281%29.png?itok=Cc5q7Npe"
         }
       ]
     },
@@ -480,6 +470,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4479758",
+          "author": "Jacob Beningo",
+          "description": "I know that working top down from your application code to low-level code sounds ridiculous to embedded developers, but it will result in a better...\nThe post Change your development approach to build better products appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/change-your-development-approach-to-build-better-products/",
+          "publishedOn": "2023-06-29T19:06:47.000Z",
+          "wordCount": 3749,
+          "title": "Change your development approach to build better products",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/06/boards-.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4479753",
           "author": "Ole Dreessen",
@@ -709,16 +709,6 @@
           "wordCount": 4014,
           "title": "RISE project gives RISC-V an open source software lift",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/06/Software_shutterstock_1676060566.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4479389",
-          "author": "Kaue Morcelles",
-          "description": "This articles discusses how differences between real-world and ideal signals in software-defined radios (SDRs) for simulations can significantly impact GPS/GNSS testing. It is not a...\nThe post Real world vs ideal signals in SDR-based simulations appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/real-world-vs-ideal-signals-in-sdr-based-simulations/",
-          "publishedOn": "2023-05-30T17:42:42.000Z",
-          "wordCount": 5263,
-          "title": "Real world vs ideal signals in SDR-based simulations",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/05/2305PerVices-sig_f04.png"
         }
       ]
     },
@@ -806,6 +796,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/06/weareplay-meet-yoshihiko-from-japan-more-stories-from-spain-cameroon-malaysia.html",
+          "author": null,
+          "description": "Posted by Leticia Lago, Developer Marketing\n\n\n\n\n\n\nIn our latest #WeArePlay stories, meet app and game founders from around the world bringing creative new ideas to their industries. From a mountaineering app that is helping to save lives, to game studios incorporating playful cultural nods and inclusive designs in their titles.\n\n\n\n\nIn our latest film, meet Yosihiko from Japan who founded YAMAP - an app for mountain climbers. After the 2011 Great East Japan Earthquake, he was inspired to bring people closer to nature and save lives. Despite having no programming experience, he and his team created a platform which enables mountaineers to safely check their location and share their climb activity logs, even when there’s no phone signal. The app has become very popular with climbers, who have…",
+          "link": "http://developers.googleblog.com/2023/06/weareplay-meet-yoshihiko-from-japan-more-stories-from-spain-cameroon-malaysia.html",
+          "publishedOn": "2023-06-29T16:00:00.001Z",
+          "wordCount": 2004,
+          "title": "#WeArePlay | Meet Yoshihiko from Japan. More stories from Spain, Cameroon and Malaysia",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-EdSf5Pw83O8oZorPVK3mA2RwHUCgj2-7YvbuikgqHjnszqm-kWYacsdmBH4wOHJX_IcK8ewQKC9oll2wHaiMmRGsgb1bec_nDV9ZrbBiOmwk9d8TvqKFY8S-_JMLLySArYpvEjEp8ijKWqS_VttwLu0wGkbNfSpVbdwTicLjVxzMUPomdR24wnA1mjs/w1200-h630-p-k-no-nu/%23WeArePlay%20Social%20.png"
+        },
+        {
+          "id": "http://developers.googleblog.com/2023/06/champion-innovator-elyes-manai.html",
+          "author": null,
+          "description": "Posted by Max Saltonstall, Developer Relations Engineer\n\n\n\nIn this ongoing interview series we sit down with Google Cloud Champion Innovators across the world to learn more about their journeys, their technology focus, and what excites them. Today we're talking to Elyes Manai. Elyes is a Machine Learning Consultant, Educator and Mentor. He helps companies tap into the power of data science to reduce costs and increase revenue as well as build relationships with relevant target audiences through educational content and community building.\n\n\nWhat is a Champion Innovator?\n\n\nChampion Innovators are a global network of more than 500 non-Google professionals, who are technical experts in Google Cloud products and services. Each Champion specializes in one of nine different technical categories w…",
+          "link": "http://developers.googleblog.com/2023/06/champion-innovator-elyes-manai.html",
+          "publishedOn": "2023-06-28T21:00:00.001Z",
+          "wordCount": 2408,
+          "title": "Champion Innovator Elyes Manai, based in Quebec City, Quebec, Canada",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3zW6BxOn3u3RFpOC-wGWbRxDvmVEAV4dZqjIaLPpT9Hdv6MhuEYQMrvs_wm1p15VrVqW23-MMC_F2TdxgicPOVZ6a6VyJBcgX6Ky2XUSFPcLNGj0Oq_tY-JRQREvDWVUiathwbpJvrj3YJmVRJvr-LrJ_o6lM-qCg9UaR8bO2KyXkWiYBBtlYAS8m/w1200-h630-p-k-no-nu/SOCIAL%20-%20Champion%20Innovator%20spotlight%20-%20Elyes%20Manai%20%281%29.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/06/register-for-google-cloud-next-23.html",
           "author": null,
@@ -961,16 +971,6 @@
           "wordCount": 5722,
           "title": "PVS-Studio 7.25: support for latest versions of QtCreator, Rider, and more",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1055_PressRelease_7_25/image1_thm_intoblank_1200x630.png?ver=06-15-2023-13-00-23"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1054/",
-          "author": null,
-          "description": "In this article, we will thoroughly examine the XSS vulnerability in a CMS written in C#. Let's recall the theory, figure out how the security defect looks from a user's perspective and in code, and also practice writing exploits.",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1054/",
-          "publishedOn": "2023-05-30T21:00:00.000Z",
-          "wordCount": 6288,
-          "title": "XSS vulnerability in the ASP.NET application: examining CVE-2023-24322 in mojoPortal CMS",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1054_XSS_mojoPortal/image1_thm_intoblank_1200x630.png?ver=05-31-2023-10-45-08"
         }
       ]
     },
@@ -1160,6 +1160,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/936576/",
+          "author": "corbet",
+          "description": "The Emacs editor is not tied to the Linux kernel; indeed, it was created\nsome years before Linux existed.  The Emacs code base is intended to be\nportable, and the editor runs, with varying levels of support, on a wide\nvariety of systems.  Recently, an energetic developer has worked to extend\nthe set of supported systems to Android; the result is a working port, but\nwhether that port will be accepted into the Emacs mainline is the topic of\nongoing conversation.",
+          "link": "https://lwn.net/Articles/936576/",
+          "publishedOn": "2023-06-29T14:40:17.000Z",
+          "wordCount": null,
+          "title": "[$] Emacs for Android",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/936752/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium and maradns), SUSE (iniparser, kubernetes1.23, python-reportlab, and python-sqlparse), and Ubuntu (accountsservice and linux, linux-aws, linux-aws-hwe, linux-azure, linux-azure-4.15,\n linux-dell300x, linux-gcp, linux-gcp-4.15, linux-hwe, linux-kvm,\n linux-oracle, linux-raspi2, linux-snapdragon).",
+          "link": "https://lwn.net/Articles/936752/",
+          "publishedOn": "2023-06-29T07:27:51.000Z",
+          "wordCount": 172,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/935773/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for June 29, 2023 is available.",
+          "link": "https://lwn.net/Articles/935773/",
+          "publishedOn": "2023-06-29T01:58:13.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for June 29, 2023",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/936340/",
           "author": "jake",
@@ -1875,6 +1905,16 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/articles/building-boba.html",
+          "author": null,
+          "description": "While it's fascinating to work directly with a Large Language Model,\n     such as ChatGPT, it takes some skill and practice to learn how to prompt it\n     effectively. My colleague Farooq Ali has been working on a co-pilot tool,\n     Boba AI, for using an LLM to help generate ideas for product strategy. From\n     this experience he as proposed eight patterns which he judges\n     will be generally useful for building these kinds of AI co-pilot applications.\nmore…",
+          "link": "https://martinfowler.com/articles/building-boba.html",
+          "publishedOn": "2023-06-29T14:10:00.000Z",
+          "wordCount": 5342,
+          "title": "Building Boba AI: Some lessons and patterns learnt in building an             LLM-powered generative application",
+          "imageUrl": "https://martinfowler.com/articles/building-boba/thumbnail.png"
+        },
+        {
           "id": "https://martinfowler.com/articles/linking-modular-arch.html",
           "author": null,
           "description": "Mobile applications often deliver features rapidly at first, but slow as\n     a codebase builds up. These common software problems are exacerbated by the\n     need to prioritize different features in different markets. Matthew\n     Foster describes an example of this from his work with clients,\n     and how using Domain-Driven Design and Team Topologies helped create a\n     modular architecture that substantially reduced the time needed to deliver\n     new features. \nmore…",
@@ -1883,16 +1923,6 @@
           "wordCount": null,
           "title": "Linking Modular Architecture to Development Teams",
           "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/intro-pet.html",
-          "author": null,
-          "description": "Making data open and available to all helps us all understand our world\n     and are thus better informed to shape the policies to run it. But such openness\n     does come with problems - one in particular is the invasion of people's\n     privacy. Detailed census information about household income helps debate\n     and planning for local government, but can reveal personal information that\n     citizens reasonably prefer to keep private. Privacy Enhancing Technologies\n     are tools that can finesse this problem. My colleague Katharine Jarmul is a\n     data scientist who is also an activist for personal privacy. Here she\n     introduces three of these tools that are usable now: Differential Privacy,\n     Distributed & Federated Analysis & Learning, and Encrypted Computation.\nmore…",
-          "link": "https://martinfowler.com/articles/intro-pet.html",
-          "publishedOn": "2023-05-30T14:32:00.000Z",
-          "wordCount": 5391,
-          "title": "Privacy Enhancing Technologies: An Introduction for Technologists",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
     },
@@ -2022,16 +2052,6 @@
           "publishedOn": "2023-06-22T19:10:25.000Z",
           "wordCount": 5011,
           "title": "My ranking of every Shakespeare play",
-          "imageUrl": null
-        },
-        {
-          "id": "https://nullprogram.com/blog/2023/05/31/",
-          "author": null,
-          "description": "I love fast builds, and for years I’ve been bothered by the build penalty\nfor translation units including windows.h. This header has an enormous\nnumber of definitions and declarations and so, for C programs, it tends to\ndominate the build time of those translation units. Most programs,\nespecially systems software, only needs a tiny portion of it. For example,\nwhen compiling u-config with GCC, two thirds of the debug build was\nspent processing windows.h just for 4 types, 16 definitions, and 16\nprototypes.\nTo give a sense of the numbers, here’s empty.c, which does nothing but\ninclude windows.h.\n\n#include <windows.h>\n\n\nWith the current Mingw-w64 headers, that’s ~82kLOC (non-blank):\n\n$ gcc -E empty.c | grep -vc '^$'\n82041\n\n\nWith w64devkit this takes my system ~450ms to compile with GCC:\n\n$ tim…",
-          "link": "https://nullprogram.com/blog/2023/05/31/",
-          "publishedOn": "2023-05-31T01:38:31.000Z",
-          "wordCount": null,
-          "title": "Hand-written Windows API prototypes: fast, flexible, and tedious",
           "imageUrl": null
         }
       ]
@@ -2169,6 +2189,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12584",
+          "author": "Stacey Higginbotham",
+          "description": "This week we learned a bit more about streaming provider Roku’s plans to build a smart home operating system. This is in addition to all of the new smart home devices the company has developed using Wyze hardware. Because Kevin Tofel is on vacation, I’m talking about all this with my co-host and the creator […]\nThe post Podcast: Why Roku wants a smart home OS appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-why-roku-wants-a-smart-home-os/",
+          "publishedOn": "2023-06-29T13:00:14.000Z",
+          "wordCount": 2174,
+          "title": "Podcast: Why Roku wants a smart home OS",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/06/1_gBxchxb1w83PjKlDMlZTeg.webp?fit=1440%2C811&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=12581",
           "author": "Stacey Higginbotham",
@@ -2388,16 +2418,6 @@
           "wordCount": null,
           "title": "The economy is stalling the adoption of the smart home",
           "imageUrl": null
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12408",
-          "author": "Stacey Higginbotham",
-          "description": "This story was originally published on Friday, May 26 in my weekly newsletter. You can sign up for it here.  I’m currently in Dallas for the Parks Associates Connections conference, where it’s clear that the smart home industry is laser-focused on five big topics. And while the mood here is fairly grim with regards to […]\nThe post My five big takeaways from this week’s big smart home event appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/my-five-big-takeaways-from-this-weeks-big-smart-home-event/",
-          "publishedOn": "2023-05-30T15:46:44.000Z",
-          "wordCount": null,
-          "title": "My five big takeaways from this week’s big smart home event",
-          "imageUrl": null
         }
       ]
     },
@@ -2476,6 +2496,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=92058",
+          "author": "슬로우뉴스",
+          "description": "[인터뷰] ‘어느날 갑자기 가해자 엄마가 되었습니다’ 저자 정승훈, “여론에 떠밀려 만든 누더기 법안, 문제의 본질을 보자.” 정승훈씨는 가해학생의 엄마였다. 정승훈씨와 그 아들이 겪었던 일은 학교폭력 사건의 복잡한 구조를 이해하는 몇 가지 힌트를 준다. 처음에는 별일 아니라고 생각했다. 어느날 아침 중학교 3학년 아들이 전화가 와서 후배를 때렸는데 학교에서 연락이 올 거라고 했다. 그게 시작이었다. 학폭위(학교폭력대책자치위원회)가 잡혔고...\nThe post “처벌 중심의 학폭위, 가해자의 반성도 피해자의 회복도 없었다.” appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92058",
+          "publishedOn": "2023-06-29T05:40:43.000Z",
+          "wordCount": 6486,
+          "title": "“처벌 중심의 학폭위, 가해자의 반성도 피해자의 회복도 없었다.”",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/anger-7158649_1280-1.png"
+        },
+        {
+          "id": "https://slownews.kr/?p=92006",
+          "author": "민노씨",
+          "description": "[슬로우민트] 이효석 박사와 함께하는 ‘좋은 책’에 관한 이야기, 첫 번째. 뉴스페퍼민트 이효석 대표는 슬로우뉴스와는 귀한 인연을 가진 분입니다. KAIST에서 물리학을 공부하고 양자 컴퓨터를 전공해 박사 학위를 받았으며, 하버드에서는 오늘날 AI의 배경 기술 중 하나인 정보이론을 연구했습니다. 하버드 연구원 시절 시작한 외신 번역 미디어 ‘뉴스페퍼민트’를 10년 이상 운영하며, 과학 전반의 다양한 영역과 번역 및 저작권에 대한...\nThe post 구성주의의 반격: ‘감정은 어떻게 만들어지는가’ (2017) appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92006",
+          "publishedOn": "2023-06-29T02:32:32.000Z",
+          "wordCount": 5771,
+          "title": "구성주의의 반격: ‘감정은 어떻게 만들어지는가’ (2017)",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/pic_002-4.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=92024",
+          "author": "이정환",
+          "description": "“왜 늘 이런 식으로 정책을 딜리버리하나.” “‘사이다 대통령’ 불안하다.” 메가스터디 등 동시 다발 세무조사. “이권 카르텔이라는 연극.” “문제는 자사고가 더 크다.” 호남 강타한 폭우, 오늘 수도권 북상. 오염수 시찰단 분석 결과 왜 공개 안 하나. 일베 게시판인줄, 윤석열의 막말. U자형 반등? 소비 심리 살아나나. “태양광 전력 차단, 망하라는 건가.” 오늘의 TMI. 만 나이 아직도 혼란....\nThe post “‘사이다 대통령’ 칭찬 아니다”, 윤석열 폭주에 보수 언론도 화들짝: 슬로우레터 6월29일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92024",
+          "publishedOn": "2023-06-28T21:53:50.000Z",
+          "wordCount": 4649,
+          "title": "“‘사이다 대통령’ 칭찬 아니다”, 윤석열 폭주에 보수 언론도 화들짝: 슬로우레터 6월29일.",
+          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/BMznAaZpxzmT649bbf5ace28b0.33571413.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=91984",
           "author": "이정환",
@@ -2974,6 +3024,76 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=591094",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591094/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a4%91%ea%b5%ad-%ec%88%98%ec%b6%9c-%ea%b7%9c%ec%a0%9c",
+          "publishedOn": "2023-06-29T10:57:53.000Z",
+          "wordCount": 5277,
+          "title": "골드만삭스, 미국의 중국 수출 규제에도 엔비디아는 쉽게 대체 판매처 찾을 수 있다고 주장",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/08/엔비디아-CEO-젠슨-황Jensen-Huang-발표모습.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591087",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591087/%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%8a%88%ed%8d%bc%ec%b0%a8%ec%a0%80-%ea%b0%9c%eb%b0%a9-2",
+          "publishedOn": "2023-06-29T10:07:38.000Z",
+          "wordCount": 5315,
+          "title": "번스타인, 테슬라 슈퍼차저 개방으로 2030년 120억 달러 매출 가능",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/05/테슬라-전기자동차-충전소-슈퍼차저-Tesla-Super-charger.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591084",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591084/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac%ea%b3%bc-%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-06-29T06:22:22.000Z",
+          "wordCount": 10523,
+          "title": "월가의 넷플릭스 투자의견과 넷플릭스 주가 전망(6/29 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/넷플릭스-오징어게임-한-장면-Image-from-netflix.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591082",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591082/%eb%a9%94%ed%83%80-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%eb%a9%94%ed%83%80-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-06-29T06:07:40.000Z",
+          "wordCount": 7606,
+          "title": "월가의 메타 투자의견 및 메타 주가 전망(6/29 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/페이스북-메타-표지판-Photo-by-CONSTANZA-HEVIA.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591067",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591067/%ec%95%8c%ed%8c%8c%eb%b2%b3-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac%ea%b3%bc-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-06-29T04:41:07.000Z",
+          "wordCount": 9625,
+          "title": "월가의 알파벳 투자의견과 알파벳 목표주가(6/29 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
+        },
+        {
+          "id": "https://happist.com/?p=591045",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591045/23-1q-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%a0-%ec%8b%a4%ec%a0%81",
+          "publishedOn": "2023-06-28T22:50:18.000Z",
+          "wordCount": 5393,
+          "title": "2분기 마이크론 실적, 기대보다 나은 실적과 전망과  반도체 반닥론을 확인하다.",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/마이크론-칩.webp"
+        },
+        {
+          "id": "https://happist.com/?p=591040",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591040/%eb%b2%a0%ed%8a%b8%eb%82%a8-%eb%8b%ac%eb%9e%8f-%ec%a3%bd%eb%a6%bc%ec%82%ac-%ec%97%ac%ed%96%89",
+          "publishedOn": "2023-06-28T22:03:31.000Z",
+          "wordCount": 5365,
+          "title": "베트남 달랏 여행, 달마대사의 인연이 깃든 달랏 죽림사 방문기",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/06/Screenshot_20230628_175408_-mPOP-1024x1424.jpg"
+        },
+        {
           "id": "https://happist.com/?p=591035",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -3231,6 +3351,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=76764",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 5월 1일 스프에 쓴 글입니다. 의식주(衣食住). 옷과 음식과 집. 사람이 사는 데 필요한 기본 요소 세 가지를 일컫는 말입니다. 그런데 생각해 보면, 현대 사회에서 인간이 옷, 음식, 집을 생산하고 조달하는 방법은 각각 → 더 보기",
+          "link": "https://newspeppermint.com/2023/06/28/npsp_ethicalconsumption/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_ethicalconsumption",
+          "publishedOn": "2023-06-28T22:59:41.000Z",
+          "wordCount": 2712,
+          "title": "[뉴페@스프] “너 혼자 그런다고 뭐가 바뀌니”에 대한 답은",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=77207",
           "author": "NewsPeppermint",
           "description": "마크 트웨인은 현실은 소설보다 이상하다고 말했습니다. 소설은 가능성에 구속되지만, 현실은 그럴 필요가 없기 때문입니다. 벌써 18년 전 소설보다 더 소설 같은 일이 바로 우리나라에서 일어났습니다. 사건의 주인공은 바로 황우석 박사입니다. 세계 최초로 줄기세포 복제에 성공하며, 난치병 환자들의 희망으로 떠올랐던 황우석 박사는 연구 과정에서 데이터를 조작하는 심각한 잘못을 저지른 것이 알려져 순식간에 추락했습니다. 그러나 명성을 얻으며 확보한 연구비로 계속 복제 사업을 진행한 황 박사는 현재 아랍에미리트에서 왕실이 애지중지하는 낙타 복제를 도맡아 → 더 보기",
@@ -3449,26 +3579,6 @@
           "wordCount": null,
           "title": "삶의 모든 데서 ‘포모(FOMO)’는 아니지 않나요?",
           "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=76461",
-          "author": "veritaholic",
-          "description": "* 지난해 11월부터 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 3월 20일 스프에 쓴 글입니다. 오늘날 미국은 명실상부한 세계 최강대국입니다. 지난 수십 년간 미국은 경제, 군사, 외교 등 모든 영역에서 다른 나라를 압도했습니다. 20세기 초까지만 하더라도 세계의 중심은 유럽이었습니다. 그러나 → 더 보기",
-          "link": "https://newspeppermint.com/2023/05/30/npsp_dependence/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_dependence",
-          "publishedOn": "2023-05-30T22:59:01.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] ‘각자도생’이냐 ‘공생’이냐 혹은 가운데 어딘가",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77012",
-          "author": "NewsPeppermint",
-          "description": "미국에선 코로나19 팬데믹 때 도입된 재택근무가 반영구적인 노동 형태로 자리잡은 곳이 많습니다. 그러다 보니 도심의 사무실들이 텅 비는 게 문제가 됐죠. 도시가 활기 찬 공간으로 되살아나기 위해서는 이번 기회에 많은 것이 바뀌어야 합니다. 하버드대학교 경제학과의 에드워드 글레이저 교수는 이를 위해 ‘놀이터 도시’라는 개념을 제안합니다. 글레이저 교수가 쓴 칼럼을 번역하고, 해설을 덧붙였습니다. 전문 번역: 이것은 어떤 신호일까, 뉴욕에 빈 사무실이 엠파이어스테이트 26개만큼 있다는 것. 해설: 도시가 놀이터 되면 오프라인도 살아날 수 있을까",
-          "link": "https://newspeppermint.com/2023/05/30/npsp_playgroundcity/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_playgroundcity",
-          "publishedOn": "2023-05-30T15:15:13.000Z",
-          "wordCount": null,
-          "title": "도시가 놀이터 되면 오프라인도 살아날 수 있을까",
-          "imageUrl": null
         }
       ]
     },
@@ -3632,16 +3742,6 @@
           "wordCount": null,
           "title": "테리 이글턴과 스피박",
           "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223116272273",
-          "author": "sellars",
-          "description": "비트겐슈타인은 말한다. 희망, 두려움, 의심은 사유의 형식이다. 혹은 삶의 사실이 아니라, 삶의 형식이라고 표현할 수 있다. 삶의 형식은 형식적 조건이다. 삶의 패턴이다. 유의미한 세계를 가능하게 만드는 것이다. 그것은 칸트의 경험 가능성의 조건에 대한 실존적인 대응물이다. 삶의 형식은 선험적 기능을 한다. 중요한 것은 원인과 법칙으로 바라보는 것이 아니라, 형식적 연결을 파악하는 것이다. 이것이 전체망(Übersicht), 혹은 통관적 제시(synoptic presentation)이다. 이 전체망이 형식적 연결들을 바라볼 수 있게 하는 선험적 기능을 한다. 어떤 표상이 일목요연(perspicuous)할 때, 그것은 모든 것을 우리 눈 앞에 놓는다. 그것은.......",
-          "link": "https://blog.naver.com/sellars/223116272273",
-          "publishedOn": "2023-05-31T01:17:00.000Z",
-          "wordCount": null,
-          "title": "후기 비트겐슈타인의 선험성",
-          "imageUrl": null
         }
       ]
     },
@@ -3649,7 +3749,18 @@
       "title": "The ZipCPU by Gisselquist Technology",
       "feedUrl": "https://zipcpu.com/feed",
       "siteUrl": "https://zipcpu.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://zipcpu.com/blog/2023/06/28/sdiopkt.html",
+          "author": null,
+          "description": "Fig 1. The KlusterLab board\n\n\n\nOne of my current projects is to test and bring up a 10Gb Ethernet\ntest board.  The board has been fondly named\nthe “KlusterLab”, because of all of the various interfaces present on it.\nAmong those interfaces are an SD port and an eMMC port.\nNow, how shall I verify their functionality?\nBuilding an SDIO/eMMC Controller\nMy first round of testing the SD port used my SPI-based SD card controller,\nSDSPI.  Using that controller, the card\nresponded in much the way I expected, save that the first sector of the card\nwasn’t what FATFS was expecting.\nSince this is simply board bringup, where we are just trying to verify that the\nhardware is working, I signed the component off as working.  I could obviously\nwrite to the device, and I could read from the device.  (Okay, I…",
+          "link": "https://zipcpu.com/blog/2023/06/28/sdiopkt.html",
+          "publishedOn": "2023-06-28T04:00:00.000Z",
+          "wordCount": 4006,
+          "title": "Using a Verilog task to simulate a packet generator for an SDIO controller",
+          "imageUrl": null
+        }
+      ]
     }
   ],
   "cliVersion": "1.15.1"
