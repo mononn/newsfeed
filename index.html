@@ -22,11 +22,586 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-04 datetime="2023-07-04T19:17:27.000Z">2023-07-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-04 datetime="2023-07-04T19:17:27.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-05 datetime="2023-07-05T18:24:08.000Z">2023-07-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-05 datetime="2023-07-05T18:24:08.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/937400/"
+                        open
+                      >
+                        <summary class="article-expander__title">Four stable kernel updates</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/937400/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The
+6.4.2,
+6.3.12,
+6.1.38, and
+5.15.120
+stable kernel updates have all been released; each contains another set of
+important fixes.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/937247/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Improving i_version</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/937247/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The i_version
+field in struct inode
+is meant to track changes to the data or metadata of a file.  There are
+some problems with the way that
+i_version is being handled in the kernel, 
+so Jeff Layton led a filesystem session at the
+2023 Linux Storage, Filesystem,
+Memory-Management and BPF Summit to discuss them and what to do
+about them.  For the most part, there are solutions in the works that will
+resolve most of the larger issues.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/937377/"
+                        open
+                      >
+                        <summary class="article-expander__title">The &quot;StackRot&quot; kernel vulnerability</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/937377/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Ruihan Li has disclosed
+a significant vulnerability introduced into the 6.1 kernel:
+
+
+	A flaw was found in the handling of stack expansion in the Linux
+	kernel 6.1 through 6.4, aka &quot;Stack Rot&quot;. The maple tree,
+	responsible for managing virtual memory areas, can undergo node
+	replacement without properly acquiring the MM write lock, leading
+	to use-after-free issues. An unprivileged local user could use this
+	flaw to compromise the kernel and escalate their privileges.
+
+	As StackRot is a Linux kernel vulnerability found in the memory
+	management subsystem, it affects almost all kernel configurations
+	and requires minimal capabilities to trigger. However, it should be
+	noted that maple nodes are freed using RCU callbacks, delaying the
+	actual memory deallocation until after the RCU grace
+	period. Consequently, exploiting this vulnerability is considered
+	challenging.
+
+
+The disclosure contains a detailed description of the problem.  Fixes have
+been merged into the
+mainline and the 6.4.1, 6.3.11, and 6.1.37
+stable kernel updates.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/936953/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Termux: Linux applications on Android</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/936953/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Termux is an Android app that
+provides a Linux environment and terminal emulator for such devices. Most
+command-line software can be used quite easily with Termux, 
+and GUI software can be run by installing a few extra apps. It is an excellent
+option for Android users who want to run Linux software occasionally on a
+device more portable than a laptop but do not want to use a dedicated Linux
+phone due to the cost or limitations of such devices.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/937369/"
+                        open
+                      >
+                        <summary class="article-expander__title">LXD moves into Canonical</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/937369/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The LXD container-management system is no longer a part of the linuxcontainers.org project:
+
+
+	Canonical, the creator and main contributor of the LXD project has
+	decided that after over 8 years as part of the Linux Containers
+	community, the project would now be better served directly under
+	Canonical’s own set of projects.
+
+	While the team behind Linux Containers regrets that decision and
+	will be missing LXD as one of its projects, it does respect
+	Canonical’s decision and is now in the process of moving the
+	project over.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/937368/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Wednesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/937368/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Fedora (firefox and python-reportlab), Slackware (mozilla), SUSE (dnsdist, grpc, protobuf, python-Deprecated, python-PyGithub, python-aiocontextvars, python-avro, python-bcrypt, python-cryptography, python- cryptography-vectors, python-google-api-core, pyt, kernel, kubernetes1.18, libdwarf, python311, qt6-base, rmt-server, and virtualbox), and Ubuntu (containerd, firefox, and python-django).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded.com</button>
+                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479803"
+                        open
+                      >
+                        <summary class="article-expander__title">Always-on listening IP uses just µW of power</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/always-on-listening-ip-uses-just-%c2%b5w-of-power/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Dolphin Design’s WhisperExtractor advanced mixed-signal architecture IP helps reduce power consumption by up to 99% at system level, enabling an always-on listening function at a power budget of just µW, with a simple 32 kHz clock.
+The post Always-on listening IP uses just µW of power appeared first on Embedded.com.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Stacey on IoT | Internet of Things news and analysis</button>
+                  <a class="source-heading__link" href="https://staceyoniot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;12604"
+                        open
+                      >
+                        <summary class="article-expander__title">Smart home labels: What works with what?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/smart-home-labels-what-works-with-what/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>It’s hard to believe that the Matter standard launched eight months ago at this point. Yes, there are still growing pains for Matter. But at least we’re starting to see smart home devices with the Matter label on them. In fact, we’re seeing new labels on products in 2023, so I thought to share what […]
+The post Smart home labels: What works with what? appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;77302"
+                        open
+                      >
+                        <summary class="article-expander__title">부자들의 일탈인가, 모험가의 비극일까… 잠수정 사고를 바라보는 두 가지 시선</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2023/07/05/npsp_titanregulation/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_titanregulation">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>지난달 북대서양 수심 4km 아래 타이타닉호의 잔해를 향해 잠수하다가 내파된 잠수정 타이탄호를 둘러싸고 많은 이야기가 나왔습니다. 특히 타이탄호를 책임진 조종사가 규제를 거추장스러운 것으로 여기며 안전 점검을 소홀히 해왔다는 사실이 드러나자, 해당 회사 오션게이트뿐 아니라 규제를 성장과 혁신을 방해하기만 하는 것으로 매도하는 견해에 대해서도 비판의 화살이 쏠렸습니다. 전문 번역: ‘타이타닉 관광’ 잠수정 타이탄호의 운명을 결정지은 속설 해설: 부자들의 일탈인가, 모험가의 비극일까… 잠수정 사고를 바라보는 두 가지 시선</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;591131"
+                        open
+                      >
+                        <summary class="article-expander__title">2분기 테슬라 판매량을 보는 월가의 시선, 기대 이상 관건은 자동차 마진</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591131/2%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8c%90%eb%a7%a4%eb%9f%89-%ed%8f%89%ea%b0%80">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92458"
+                        open
+                      >
+                        <summary class="article-expander__title">세일즈포스의 생성형 AI 기능: 7개 주요 모델별 정리</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92458">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>그랜드뷰 리서치의 최신 보고서에 따르면 전 세계 클라우드 AI 시장 규모는 2030년까지 6,476억 달러에 달할 것으로 예상되며, 2023년부터 2030년까지 39.6%의 연평균 성장률을 기록할 것으로 전망한다. 지능형 가상 비서에 대한 수요, 고객 서비스 향상을 위한 AI 도입, 빅 데이터의 성장이 시장의 성장을 이끄는 주요 요인이다. 또한, 많은 대기업이 투자 및 확장을 통해 시장 성장을 주도하고 있다....
+The post 세일즈포스의 생성형 AI 기능: 7개 주요 모델별 정리 appeared first on 슬로우뉴스.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92451"
+                        open
+                      >
+                        <summary class="article-expander__title">팬덤정치 시대의 정당: 문제와 해법</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92451">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>“인간 사회를 지배하는 법칙들 가운데 확실한 한 가지는 참여의 평등한 조건이 확장되는 만큼 참여를 조율하고 조직할 방법과 기술들도 같은 비율로 높아져야 한다는 것이다. 그래야만 사람들은 문명화된 상태로 지낼 수 있다.” 알렉시스 드 토크빌 『미국의 민주주의』 2권 중 정치에 관해서는, 현대를 살아가는 우리들에게 정당은 매우 특별하면서도 유일한 존재다. 현대 사회에서 정당의 역할은 다양한데, 몇 가지 나열하자면...
+The post 팬덤정치 시대의 정당: 문제와 해법 appeared first on 슬로우뉴스.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92390"
+                        open
+                      >
+                        <summary class="article-expander__title">뇌, 이야기 만들어 내는 기계</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92390">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[슬로우민트] 이효석 박사 추천 ‘좋은 책’ 이야기, 첫 번째 책 ‘감정은 어떻게 만들어지는가’ 여섯 번째 이야기: “바로 지금, 당신이 ‘사과’라는 단어를 읽는 바로 그 순간, 당신의 뇌는 마치 사과가 실제로 앞에 있는 것처럼 반응한다. 당신의 뇌는 당신이 과거에 보았고 맛보았던 사과에 관한 지식들을 조합하여 당신의 감각과 운동 부위에 있는 뉴런들의 점화 방식을 바꿈으로써 당신의 머릿속에서...
+The post 뇌, 이야기 만들어 내는 기계 appeared first on 슬로우뉴스.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="63131296-8036-4e40-a0a8-2ce85ee747af"
+                        open
+                      >
+                        <summary class="article-expander__title">How to use Kafka Cruise Control for cluster optimization</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/07/05/how-use-kafka-cruise-control-cluster-optimization">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/kafka-event-driven_2x.png?itok&#x3D;lizTGq2t" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>AMQ streams has recently promoted Cruise Control to the General Availability stage. It optimizes how Apache Kafka distributes the workload to improve performance and health. Often the Kafka clusters are deployed and grow over time, hosting multiple topics. Thanks to its robustness and elasticity reputation, the operations department tends to give it little care, monitoring the key health indicators. But they don’t know how to tune it to face the new workload.
+Cruise Control can become a fundamental ally in managing your Kafka clusters and getting the most out of your hardware resources. Plus, with the AMQ streams operator, it’s just a matter of turning a key. This article explains the key principles and how to make practical use of this new exciting capability.
+Unbalanced workloads
+When a …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Interrupt</button>
+                  <a class="source-heading__link" href="https://interrupt.memfault.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://interrupt.memfault.com/blog/june-2023-roundup"
+                        open
+                      >
+                        <summary class="article-expander__title">What we&#x27;ve been reading in June</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://interrupt.memfault.com/blog/june-2023-roundup">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Here are the articles, videos, and tools that we’ve been excited about this
+June.
+Continue reading…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-04 datetime="2023-07-04T23:36:10.000Z">2023-07-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-04 datetime="2023-07-04T23:36:10.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >내 마음의 풍경</button>
+                  <a class="source-heading__link" href="https://blog.naver.com/sellars">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://blog.naver.com/sellars/223147232050"
+                        open
+                      >
+                        <summary class="article-expander__title">비트겐슈타인과 칸트</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/223147232050">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>한의사 선생님이 이제 절대로 공부하지 말고 놀라고 강조한다. 공부와 반대에 있는 것, 즉 지금껏 내가 했던 것과 반대에 있던 것들을 하라고 충고한다. 나보고 사교춤을 배우라고 한다. 그러나 내가 하는 것이 어떤 의미에서 노는 것이다. 물론 그가 생각하는 노는 것과 내용이 다르지만, 나는 나름대로 즐겁게 놀고 있다. 비트겐슈타인과 칸트에 대한 자료를 정리하다가 잊었던 내가 쓴 글을 본다. 그것은 2008년에 쓴 것인데, 카벨과 말콤의 지적에 따라 비트겐슈타인의 전체 철학을 윤리적이고 종교적으로 바라볼 수 있고, 바라보아야 한다는 주장이다. https://blog.naver.com/sellars/100050208992 비트겐슈타인의 윤리 1 https://blog.nav.......</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92364"
+                        open
+                      >
+                        <summary class="article-expander__title">센 척 하는 윤석열, 역대 최약체 정권의 불안이 보인다: 슬로우레터 7월5일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92364">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>IAEA, “후쿠시마 오염수 방류해도 된다.” IAEA 보고서, 일본 정부에 첨삭 받았나. 미쓰비시가 낼 배상, 한국 정부가 공탁금을 왜 내나. “대통령이 카르텔이란 말에 꽂혀서.” 역전세 대책, 대출 늘린다. 오늘의 TMI. 기여 입학도 없애라. “미국에 희귀 광물 안 판다”, 중국의 뒤끝. 로스쿨 블랙홀. 장마라고 부르는 게 맞나. ‘시성비’ 따진다. 금괴 밀수범에 2조 원 벌금 합헌. 해법과 대안....
+The post 센 척 하는 윤석열, 역대 최약체 정권의 불안이 보인다: 슬로우레터 7월5일. appeared first on 슬로우뉴스.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92294"
+                        open
+                      >
+                        <summary class="article-expander__title">지금도 매일 김용균을 보내고 있다: ‘같이 가면 길이 된다’ (2023)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92294">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/07/pic_17.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>“새로운 경제라는 것이 주문만 디지털 최첨단으로 하는 것이고 물품은 죄다 사람들이 몸으로 끌고 지고 나른다… 무슨 혁명이라 하여 흰 연기만 뿜어대는 증기선이 나왔는데 강가에 들어서는 배를 여린 유부녀들이 끌었다. 사람이 석탄이나 말보다 쌌기 때문이다.” 이상헌, 같이 가면 길이 된다, ‘광인일기, 식인의 풍습을 보았다’, 생각의힘: 2023. 중에서 하이테크 시대에 마음이 불편한 이유를 이렇게 정확하게 정리해 준다....
+The post 지금도 매일 김용균을 보내고 있다: ‘같이 가면 길이 된다’ (2023) appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92283"
+                        open
+                      >
+                        <summary class="article-expander__title">사교육 이권 카르텔 ‘굿판’, 마지막 ‘제물’은 수험생</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92283">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/07/pic_11.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>윤석열 대통령은 6월 15일 이주호 부총리 겸 교육부장관의 교육개혁 진행상황을 보고 받던 중 “공교육 교과과정에서 다루지 않는 분야의 문제는 대학수학능력시험(수능) 출제에서 배제하라”고 지시했습니다. 교육과정 외 문제를 출제하는 것은 사교육에 의존하라는 것으로 “교육 당국과 사교육이 한 편(카르텔)이란 말”이냐고 지적했는데요. 수능을 불과 5개월 앞둔 시점에서 ‘초고난도 문항 배제’, ‘쉬운 수능’으로 해석되는 윤 대통령 발언은 수험생은 물론 교육계에...
+The post 사교육 이권 카르텔 ‘굿판’, 마지막 ‘제물’은 수험생 appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;92262"
+                        open
+                      >
+                        <summary class="article-expander__title">소리는 실재하는가, 감정은 실재하는가</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92262">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/07/GettyImages-1371070841.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>[슬로우민트] 이효석 박사 추천 ‘좋은 책’ 이야기, 첫 번째 책 ‘감정은 어떻게 만들어지는가’ 다섯 번째 이야기: 숲에서 나무 한 그루가 쓰러졌는데 그 소리를 들은 사람이 아무도 없다면, 소리가 난 것인가? 철학자들과 초등학교 교사들이 수도 없이 던진 이 케케묵은 물음은 인간의 경험에 관해, 그리고 특히 우리가 어떻게 감정을 경험하고 지각하는지에 관해 결정적인 단서를 제공한다. 이 수수께기에...
+The post 소리는 실재하는가, 감정은 실재하는가 appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -203,83 +778,6 @@ The post Particle’s new products adapt to the complex edge appeared first on S
                             <span class="media-object__text">
                               <span>To read and write data on an embedded device, a file system is very useful. LittleFS is a file system optimized for constraint devices. In this article I show, how LittleFS can use the MCU internal flash memory as storage. Continue reading →</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;92294"
-                        open
-                      >
-                        <summary class="article-expander__title">지금도 매일 김용균을 보내고 있다: ‘같이 가면 길이 된다’ (2023)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92294">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/07/pic_17.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>“새로운 경제라는 것이 주문만 디지털 최첨단으로 하는 것이고 물품은 죄다 사람들이 몸으로 끌고 지고 나른다… 무슨 혁명이라 하여 흰 연기만 뿜어대는 증기선이 나왔는데 강가에 들어서는 배를 여린 유부녀들이 끌었다. 사람이 석탄이나 말보다 쌌기 때문이다.” 이상헌, 같이 가면 길이 된다, ‘광인일기, 식인의 풍습을 보았다’, 생각의힘: 2023. 중에서 하이테크 시대에 마음이 불편한 이유를 이렇게 정확하게 정리해 준다....
-The post 지금도 매일 김용균을 보내고 있다: ‘같이 가면 길이 된다’ (2023) appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;92283"
-                        open
-                      >
-                        <summary class="article-expander__title">사교육 이권 카르텔 ‘굿판’, 마지막 ‘제물’은 수험생</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92283">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/07/pic_11.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>윤석열 대통령은 6월 15일 이주호 부총리 겸 교육부장관의 교육개혁 진행상황을 보고 받던 중 “공교육 교과과정에서 다루지 않는 분야의 문제는 대학수학능력시험(수능) 출제에서 배제하라”고 지시했습니다. 교육과정 외 문제를 출제하는 것은 사교육에 의존하라는 것으로 “교육 당국과 사교육이 한 편(카르텔)이란 말”이냐고 지적했는데요. 수능을 불과 5개월 앞둔 시점에서 ‘초고난도 문항 배제’, ‘쉬운 수능’으로 해석되는 윤 대통령 발언은 수험생은 물론 교육계에...
-The post 사교육 이권 카르텔 ‘굿판’, 마지막 ‘제물’은 수험생 appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;92262"
-                        open
-                      >
-                        <summary class="article-expander__title">소리는 실재하는가, 감정은 실재하는가</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92262">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/07/GettyImages-1371070841.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>[슬로우민트] 이효석 박사 추천 ‘좋은 책’ 이야기, 첫 번째 책 ‘감정은 어떻게 만들어지는가’ 다섯 번째 이야기: 숲에서 나무 한 그루가 쓰러졌는데 그 소리를 들은 사람이 아무도 없다면, 소리가 난 것인가? 철학자들과 초등학교 교사들이 수도 없이 던진 이 케케묵은 물음은 인간의 경험에 관해, 그리고 특히 우리가 어떻게 감정을 경험하고 지각하는지에 관해 결정적인 단서를 제공한다. 이 수수께기에...
-The post 소리는 실재하는가, 감정은 실재하는가 appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -10796,341 +11294,12 @@ beyond the machine-learning hype to consider the bigger picture.</span>
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Interrupt</button>
-                  <a class="source-heading__link" href="https://interrupt.memfault.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://interrupt.memfault.com/blog/may-2023-roundup"
-                        open
-                      >
-                        <summary class="article-expander__title">What we&#x27;ve been reading in May</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://interrupt.memfault.com/blog/may-2023-roundup">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Here are the articles, videos, and tools that we’ve been excited about this
-May.
-Continue reading…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-05 datetime="2023-06-05T22:59:42.000Z">2023-06-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-05 datetime="2023-06-05T22:59:42.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;77028"
-                        open
-                      >
-                        <summary class="article-expander__title">AI가 만들어낸 이미지의 위협, 과연 막을 수 있을까</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2023/06/05/npsp_aiphotoshop/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_aiphotoshop">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>인공지능(AI)이 바꿔놓은 현실, 바꿔놓을 미래에 관한 이야기가 어느 때보다 많이 쏟아지는 요즘입니다. 챗GPT의 등장으로 거대언어모델(LLM)을 이용한 생성 AI가 어떤 효과를 미칠지에 많은 관심이 모이는 가운데, 주목해야 하는 또 다른 분야가 바로 이미지입니다. 포토샵으로 유명한 어도비(Adobe)가 이에 대한 종합적인 대책으로 콘텐츠 진위 이니셔티브(Content Authenticity Initiative)를 내놓았습니다. 뉴욕타임스 칼럼니스트 파라드 만주가 쓴 칼럼을 번역하고, 해설을 썼습니다. 전문 번역: 인공지능 포토샵이 엄청나게 쉬워지면 무슨 문제가 생길까 해설: AI가 만들어낸 이미지의 위협, 과연 막을 수 → 더 보기</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded.com</button>
-                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479451"
-                        open
-                      >
-                        <summary class="article-expander__title">How to assess audio software to enhance sound quality</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/how-to-assess-audio-software-to-enhance-sound-quality/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2023/06/AudioTelligence-Audio-Assessment.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Software engineers understand the importance of testing their code during development, but the unique nature of audio means it presents special testing challenges for engineers....
-The post How to assess audio software to enhance sound quality appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479467"
-                        open
-                      >
-                        <summary class="article-expander__title">How CMMS is transforming maintenance data management</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/how-cmms-is-transforming-maintenance-data-management/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2023/06/industrial-data-management-.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Using a computerized maintenance management system (CMMS) provides near real-time results, supporting insight, and data-driven decisions to enhance business efficiency and effectiveness. Computerized maintenance management...
-The post How CMMS is transforming maintenance data management appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479448"
-                        open
-                      >
-                        <summary class="article-expander__title">Programming embedded systems: RTOS – inter-thread synchronization</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/programming-embedded-systems-rtos-inter-thread-synchronization/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2023/06/embedded_thumbnail-21.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>In this lesson, you learn about semaphores as the historically first inter-thread synchronization mechanism. So far, in this segment of lessons about the real time...
-The post Programming embedded systems: RTOS – inter-thread synchronization appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479438"
-                        open
-                      >
-                        <summary class="article-expander__title">Happy birthday DRAM!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/happy-birthday-dram/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2023/06/DRAM-Timeline.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>A reflection on the history of DRAM as it reaches its 55th anniversary, plus what’s next for DRAM.
-The post Happy birthday DRAM! appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded Artistry</button>
-                  <a class="source-heading__link" href="https://embeddedartistry.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://embeddedartistry.com/?p&#x3D;30086"
-                        open
-                      >
-                        <summary class="article-expander__title">Meson Pattern: Monorepo that Supports Individual Subproject Builds</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://embeddedartistry.com/blog/2023/06/05/meson-pattern-monorepo-that-supports-individual-subproject-builds/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>5 June 2023 by Phillip JohnstonAs mentioned in the article, Develop in a Monorepo and Distribute to Standalone Repositories Develop in a Monorepo and Distribute to Standalone Repositories, we’ve merged many of our repos into a monorepo setup, but we’re going to continue to distribute changes to the existing standalone repositories. To support this model, … 
-Continue reading &quot;Meson Pattern: Monorepo that Supports Individual Subproject Builds&quot;
-The post Meson Pattern: Monorepo that Supports Individual Subproject Builds appeared first on Embedded Artistry.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Google for Developers Blog - News about Web, Mobile, AI and Cloud</button>
-                  <a class="source-heading__link" href="http://developers.googleblog.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://developers.googleblog.com/2023/06/how-google-enables-experts-to-innovate.html"
-                        open
-                      >
-                        <summary class="article-expander__title">How Google Enables Experts To Innovate Developer Tools From Food To Music</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2023/06/how-google-enables-experts-to-innovate.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Posted by Lyanne Alfaro, DevRel Program Manager, Google Developer Studio
-
-
-
-
-
-
-Developer Journey is a monthly series highlighting diverse and global developers sharing relatable challenges, opportunities, and wins in their journey. Every month, we will spotlight developers around the world, the Google tools they leverage, and the kind of products they are building.
-
-
-
-This month we hear from developers who are Google Developer Experts and former Google Developer Student Clubs members building tools to enhance food delivery, developer playgrounds, and even real-time BPM counters for DJs. We also ask our community members about the role of allyship during Pride Month.
-Yves Kalume
-
-
-
-
-
-
-Lubumbashi, Democratic Republic of Congo
-Google Developer Expert, Android
-GDSC Alumni
-Android Developer
-Twi…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Stacey on IoT | Internet of Things news and analysis</button>
-                  <a class="source-heading__link" href="https://staceyoniot.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://staceyoniot.com/?p&#x3D;12418"
-                        open
-                      >
-                        <summary class="article-expander__title">Privacy and AI in the coming age of home robots</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/privacy-and-ai-in-the-coming-age-of-home-robots/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Have you ever seen the 1999 movie “Bicentennial Man”? It stars Robin Williams as an android who, over its 200-year lifespan, strives to become human. I won’t spoil the plot but instead note that watching this movie 24 years ago gave me hope that I’d one day have a home robot act as a personal butler. […]
-The post Privacy and AI in the coming age of home robots appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Almost Secure</button>
-                  <a class="source-heading__link" href="https://palant.info/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://palant.info/2023/06/05/introducing-pcvark-and-their-malicious-ad-blockers/"
-                        open
-                      >
-                        <summary class="article-expander__title">Introducing PCVARK and their malicious ad blockers</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://palant.info/2023/06/05/introducing-pcvark-and-their-malicious-ad-blockers/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>It isn’t news that the overwhelming majority of ad blockers in Chrome Web Store is either outright malicious or waiting to accumulate users before turning malicious. So it wasn’t a surprise that the very first ad blocker I chose semi-randomly (Adblock Web with 700,000 users) turned out malicious. Starting from it, I found another malicious extension (Ad-Blocker, 700,000 users) and two more that have been removed from Chrome Web Store a year ago (BitSafe Adblocker and Adblocker Unlimited).
-
-
-All these ad blockers and probably some more were developed by the company PCVARK. According to Malwarebytes Labs, this company specializes in developing “potentially unwanted programs.” In other words: they show users warnings about alleged compromise, only to push them into installing their software. …</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/5458126316">
-        <time id="build-timestamp" datetime="2023-07-04T20:14:07.073Z">2023-07-04T20:14:07.073Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/5468522420">
+        <time id="build-timestamp" datetime="2023-07-05T20:14:34.953Z">2023-07-05T20:14:34.953Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

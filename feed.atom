@@ -2,10 +2,245 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.github.io/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2023-07-04T20:14:07.117Z</updated>
+    <updated>2023-07-05T20:14:34.995Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.github.io/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.github.io/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Four stable kernel updates]]></title>
+        <id>https://lwn.net/Articles/937400/</id>
+        <link href="https://lwn.net/Articles/937400/"/>
+        <updated>2023-07-05T18:24:08.000Z</updated>
+        <summary type="html"><![CDATA[The
+6.4.2,
+6.3.12,
+6.1.38, and
+5.15.120
+stable kernel updates have all been released; each contains another set of
+important fixes.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Improving i_version]]></title>
+        <id>https://lwn.net/Articles/937247/</id>
+        <link href="https://lwn.net/Articles/937247/"/>
+        <updated>2023-07-05T16:09:45.000Z</updated>
+        <summary type="html"><![CDATA[The i_version
+field in struct inode
+is meant to track changes to the data or metadata of a file.  There are
+some problems with the way that
+i_version is being handled in the kernel, 
+so Jeff Layton led a filesystem session at the
+2023 Linux Storage, Filesystem,
+Memory-Management and BPF Summit to discuss them and what to do
+about them.  For the most part, there are solutions in the works that will
+resolve most of the larger issues.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Always-on listening IP uses just µW of power]]></title>
+        <id>https://www.embedded.com/?p=4479803</id>
+        <link href="https://www.embedded.com/always-on-listening-ip-uses-just-%c2%b5w-of-power/"/>
+        <updated>2023-07-05T16:03:26.000Z</updated>
+        <summary type="html"><![CDATA[Dolphin Design’s WhisperExtractor advanced mixed-signal architecture IP helps reduce power consumption by up to 99% at system level, enabling an always-on listening function at a power budget of just µW, with a simple 32 kHz clock.
+The post Always-on listening IP uses just µW of power appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Smart home labels: What works with what?]]></title>
+        <id>https://staceyoniot.com/?p=12604</id>
+        <link href="https://staceyoniot.com/smart-home-labels-what-works-with-what/"/>
+        <updated>2023-07-05T15:38:15.000Z</updated>
+        <summary type="html"><![CDATA[It’s hard to believe that the Matter standard launched eight months ago at this point. Yes, there are still growing pains for Matter. But at least we’re starting to see smart home devices with the Matter label on them. In fact, we’re seeing new labels on products in 2023, so I thought to share what […]
+The post Smart home labels: What works with what? appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Kevin C. Tofel</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The "StackRot" kernel vulnerability]]></title>
+        <id>https://lwn.net/Articles/937377/</id>
+        <link href="https://lwn.net/Articles/937377/"/>
+        <updated>2023-07-05T14:34:55.000Z</updated>
+        <summary type="html"><![CDATA[Ruihan Li has disclosed
+a significant vulnerability introduced into the 6.1 kernel:
+
+
+	A flaw was found in the handling of stack expansion in the Linux
+	kernel 6.1 through 6.4, aka "Stack Rot". The maple tree,
+	responsible for managing virtual memory areas, can undergo node
+	replacement without properly acquiring the MM write lock, leading
+	to use-after-free issues. An unprivileged local user could use this
+	flaw to compromise the kernel and escalate their privileges.
+
+	As StackRot is a Linux kernel vulnerability found in the memory
+	management subsystem, it affects almost all kernel configurations
+	and requires minimal capabilities to trigger. However, it should be
+	noted that maple nodes are freed using RCU callbacks, delaying the
+	actual memory deallocation until after the RCU grace
+	period. Consequently, exploiting this vulnerability is considered
+	challenging.
+
+
+The disclosure contains a detailed description of the problem.  Fixes have
+been merged into the
+mainline and the 6.4.1, 6.3.11, and 6.1.37
+stable kernel updates.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Termux: Linux applications on Android]]></title>
+        <id>https://lwn.net/Articles/936953/</id>
+        <link href="https://lwn.net/Articles/936953/"/>
+        <updated>2023-07-05T14:25:14.000Z</updated>
+        <summary type="html"><![CDATA[Termux is an Android app that
+provides a Linux environment and terminal emulator for such devices. Most
+command-line software can be used quite easily with Termux, 
+and GUI software can be run by installing a few extra apps. It is an excellent
+option for Android users who want to run Linux software occasionally on a
+device more portable than a laptop but do not want to use a dedicated Linux
+phone due to the cost or limitations of such devices.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LXD moves into Canonical]]></title>
+        <id>https://lwn.net/Articles/937369/</id>
+        <link href="https://lwn.net/Articles/937369/"/>
+        <updated>2023-07-05T13:56:56.000Z</updated>
+        <summary type="html"><![CDATA[The LXD container-management system is no longer a part of the linuxcontainers.org project:
+
+
+	Canonical, the creator and main contributor of the LXD project has
+	decided that after over 8 years as part of the Linux Containers
+	community, the project would now be better served directly under
+	Canonical’s own set of projects.
+
+	While the team behind Linux Containers regrets that decision and
+	will be missing LXD as one of its projects, it does respect
+	Canonical’s decision and is now in the process of moving the
+	project over.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/937368/</id>
+        <link href="https://lwn.net/Articles/937368/"/>
+        <updated>2023-07-05T13:51:45.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Fedora (firefox and python-reportlab), Slackware (mozilla), SUSE (dnsdist, grpc, protobuf, python-Deprecated, python-PyGithub, python-aiocontextvars, python-avro, python-bcrypt, python-cryptography, python- cryptography-vectors, python-google-api-core, pyt, kernel, kubernetes1.18, libdwarf, python311, qt6-base, rmt-server, and virtualbox), and Ubuntu (containerd, firefox, and python-django).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[부자들의 일탈인가, 모험가의 비극일까… 잠수정 사고를 바라보는 두 가지 시선]]></title>
+        <id>https://newspeppermint.com/?p=77302</id>
+        <link href="https://newspeppermint.com/2023/07/05/npsp_titanregulation/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_titanregulation"/>
+        <updated>2023-07-05T13:20:03.000Z</updated>
+        <summary type="html"><![CDATA[지난달 북대서양 수심 4km 아래 타이타닉호의 잔해를 향해 잠수하다가 내파된 잠수정 타이탄호를 둘러싸고 많은 이야기가 나왔습니다. 특히 타이탄호를 책임진 조종사가 규제를 거추장스러운 것으로 여기며 안전 점검을 소홀히 해왔다는 사실이 드러나자, 해당 회사 오션게이트뿐 아니라 규제를 성장과 혁신을 방해하기만 하는 것으로 매도하는 견해에 대해서도 비판의 화살이 쏠렸습니다. 전문 번역: ‘타이타닉 관광’ 잠수정 타이탄호의 운명을 결정지은 속설 해설: 부자들의 일탈인가, 모험가의 비극일까… 잠수정 사고를 바라보는 두 가지 시선]]></summary>
+        <author>
+            <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2분기 테슬라 판매량을 보는 월가의 시선, 기대 이상 관건은 자동차 마진]]></title>
+        <id>https://happist.com/?p=591131</id>
+        <link href="https://happist.com/591131/2%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8c%90%eb%a7%a4%eb%9f%89-%ed%8f%89%ea%b0%80"/>
+        <updated>2023-07-05T10:17:09.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[세일즈포스의 생성형 AI 기능: 7개 주요 모델별 정리]]></title>
+        <id>https://slownews.kr/?p=92458</id>
+        <link href="https://slownews.kr/92458"/>
+        <updated>2023-07-05T09:07:54.000Z</updated>
+        <summary type="html"><![CDATA[그랜드뷰 리서치의 최신 보고서에 따르면 전 세계 클라우드 AI 시장 규모는 2030년까지 6,476억 달러에 달할 것으로 예상되며, 2023년부터 2030년까지 39.6%의 연평균 성장률을 기록할 것으로 전망한다. 지능형 가상 비서에 대한 수요, 고객 서비스 향상을 위한 AI 도입, 빅 데이터의 성장이 시장의 성장을 이끄는 주요 요인이다. 또한, 많은 대기업이 투자 및 확장을 통해 시장 성장을 주도하고 있다....
+The post 세일즈포스의 생성형 AI 기능: 7개 주요 모델별 정리 appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>씨앗(CEART)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[팬덤정치 시대의 정당: 문제와 해법]]></title>
+        <id>https://slownews.kr/?p=92451</id>
+        <link href="https://slownews.kr/92451"/>
+        <updated>2023-07-05T08:09:39.000Z</updated>
+        <summary type="html"><![CDATA[“인간 사회를 지배하는 법칙들 가운데 확실한 한 가지는 참여의 평등한 조건이 확장되는 만큼 참여를 조율하고 조직할 방법과 기술들도 같은 비율로 높아져야 한다는 것이다. 그래야만 사람들은 문명화된 상태로 지낼 수 있다.” 알렉시스 드 토크빌 『미국의 민주주의』 2권 중 정치에 관해서는, 현대를 살아가는 우리들에게 정당은 매우 특별하면서도 유일한 존재다. 현대 사회에서 정당의 역할은 다양한데, 몇 가지 나열하자면...
+The post 팬덤정치 시대의 정당: 문제와 해법 appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>참여연대 의정감시센터</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to use Kafka Cruise Control for cluster optimization]]></title>
+        <id>63131296-8036-4e40-a0a8-2ce85ee747af</id>
+        <link href="https://developers.redhat.com/articles/2023/07/05/how-use-kafka-cruise-control-cluster-optimization"/>
+        <updated>2023-07-05T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AMQ streams has recently promoted Cruise Control to the General Availability stage. It optimizes how Apache Kafka distributes the workload to improve performance and health. Often the Kafka clusters are deployed and grow over time, hosting multiple topics. Thanks to its robustness and elasticity reputation, the operations department tends to give it little care, monitoring the key health indicators. But they don’t know how to tune it to face the new workload.
+Cruise Control can become a fundamental ally in managing your Kafka clusters and getting the most out of your hardware resources. Plus, with the AMQ streams operator, it’s just a matter of turning a key. This article explains the key principles and how to make practical use of this new exciting capability.
+Unbalanced workloads
+When a …]]></summary>
+        <author>
+            <name>Donato Marrazzo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[뇌, 이야기 만들어 내는 기계]]></title>
+        <id>https://slownews.kr/?p=92390</id>
+        <link href="https://slownews.kr/92390"/>
+        <updated>2023-07-05T03:32:55.000Z</updated>
+        <summary type="html"><![CDATA[[슬로우민트] 이효석 박사 추천 ‘좋은 책’ 이야기, 첫 번째 책 ‘감정은 어떻게 만들어지는가’ 여섯 번째 이야기: “바로 지금, 당신이 ‘사과’라는 단어를 읽는 바로 그 순간, 당신의 뇌는 마치 사과가 실제로 앞에 있는 것처럼 반응한다. 당신의 뇌는 당신이 과거에 보았고 맛보았던 사과에 관한 지식들을 조합하여 당신의 감각과 운동 부위에 있는 뉴런들의 점화 방식을 바꿈으로써 당신의 머릿속에서...
+The post 뇌, 이야기 만들어 내는 기계 appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>민노씨</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What we've been reading in June]]></title>
+        <id>https://interrupt.memfault.com/blog/june-2023-roundup</id>
+        <link href="https://interrupt.memfault.com/blog/june-2023-roundup"/>
+        <updated>2023-07-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here are the articles, videos, and tools that we’ve been excited about this
+June.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[비트겐슈타인과 칸트]]></title>
+        <id>https://blog.naver.com/sellars/223147232050</id>
+        <link href="https://blog.naver.com/sellars/223147232050"/>
+        <updated>2023-07-04T23:36:10.000Z</updated>
+        <summary type="html"><![CDATA[한의사 선생님이 이제 절대로 공부하지 말고 놀라고 강조한다. 공부와 반대에 있는 것, 즉 지금껏 내가 했던 것과 반대에 있던 것들을 하라고 충고한다. 나보고 사교춤을 배우라고 한다. 그러나 내가 하는 것이 어떤 의미에서 노는 것이다. 물론 그가 생각하는 노는 것과 내용이 다르지만, 나는 나름대로 즐겁게 놀고 있다. 비트겐슈타인과 칸트에 대한 자료를 정리하다가 잊었던 내가 쓴 글을 본다. 그것은 2008년에 쓴 것인데, 카벨과 말콤의 지적에 따라 비트겐슈타인의 전체 철학을 윤리적이고 종교적으로 바라볼 수 있고, 바라보아야 한다는 주장이다. https://blog.naver.com/sellars/100050208992 비트겐슈타인의 윤리 1 https://blog.nav.......]]></summary>
+        <author>
+            <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[센 척 하는 윤석열, 역대 최약체 정권의 불안이 보인다: 슬로우레터 7월5일.]]></title>
+        <id>https://slownews.kr/?p=92364</id>
+        <link href="https://slownews.kr/92364"/>
+        <updated>2023-07-04T22:00:49.000Z</updated>
+        <summary type="html"><![CDATA[IAEA, “후쿠시마 오염수 방류해도 된다.” IAEA 보고서, 일본 정부에 첨삭 받았나. 미쓰비시가 낼 배상, 한국 정부가 공탁금을 왜 내나. “대통령이 카르텔이란 말에 꽂혀서.” 역전세 대책, 대출 늘린다. 오늘의 TMI. 기여 입학도 없애라. “미국에 희귀 광물 안 판다”, 중국의 뒤끝. 로스쿨 블랙홀. 장마라고 부르는 게 맞나. ‘시성비’ 따진다. 금괴 밀수범에 2조 원 벌금 합헌. 해법과 대안....
+The post 센 척 하는 윤석열, 역대 최약체 정권의 불안이 보인다: 슬로우레터 7월5일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Brockmeier: Red Hat and the Clone Wars III: The dawn of CentOS]]></title>
         <id>https://lwn.net/Articles/937317/</id>
@@ -4479,141 +4714,6 @@ beyond the machine-learning hype to consider the bigger picture.]]></summary>
         <summary type="html"><![CDATA[Security updates have been issued by Debian (linux-5.10), Red Hat (cups-filters, curl, kernel, kernel-rt, kpatch-patch, and webkit2gtk3), SUSE (apache-commons-fileupload, openstack-heat, openstack-swift, python-Werkzeug, and openstack-heat, python-Werkzeug), and Ubuntu (frr, go, libraw, libssh, nghttp2, python2.7, python3.10, python3.11, python3.5, python3.6, python3.8, and xfce4-settings).]]></summary>
         <author>
             <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What we've been reading in May]]></title>
-        <id>https://interrupt.memfault.com/blog/may-2023-roundup</id>
-        <link href="https://interrupt.memfault.com/blog/may-2023-roundup"/>
-        <updated>2023-06-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Here are the articles, videos, and tools that we’ve been excited about this
-May.
-Continue reading…]]></summary>
-        <author>
-            <name>Interrupt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AI가 만들어낸 이미지의 위협, 과연 막을 수 있을까]]></title>
-        <id>https://newspeppermint.com/?p=77028</id>
-        <link href="https://newspeppermint.com/2023/06/05/npsp_aiphotoshop/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_aiphotoshop"/>
-        <updated>2023-06-05T22:59:42.000Z</updated>
-        <summary type="html"><![CDATA[인공지능(AI)이 바꿔놓은 현실, 바꿔놓을 미래에 관한 이야기가 어느 때보다 많이 쏟아지는 요즘입니다. 챗GPT의 등장으로 거대언어모델(LLM)을 이용한 생성 AI가 어떤 효과를 미칠지에 많은 관심이 모이는 가운데, 주목해야 하는 또 다른 분야가 바로 이미지입니다. 포토샵으로 유명한 어도비(Adobe)가 이에 대한 종합적인 대책으로 콘텐츠 진위 이니셔티브(Content Authenticity Initiative)를 내놓았습니다. 뉴욕타임스 칼럼니스트 파라드 만주가 쓴 칼럼을 번역하고, 해설을 썼습니다. 전문 번역: 인공지능 포토샵이 엄청나게 쉬워지면 무슨 문제가 생길까 해설: AI가 만들어낸 이미지의 위협, 과연 막을 수 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to assess audio software to enhance sound quality]]></title>
-        <id>https://www.embedded.com/?p=4479451</id>
-        <link href="https://www.embedded.com/how-to-assess-audio-software-to-enhance-sound-quality/"/>
-        <updated>2023-06-05T21:49:50.000Z</updated>
-        <summary type="html"><![CDATA[Software engineers understand the importance of testing their code during development, but the unique nature of audio means it presents special testing challenges for engineers....
-The post How to assess audio software to enhance sound quality appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Dave Betts</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How CMMS is transforming maintenance data management]]></title>
-        <id>https://www.embedded.com/?p=4479467</id>
-        <link href="https://www.embedded.com/how-cmms-is-transforming-maintenance-data-management/"/>
-        <updated>2023-06-05T21:48:50.000Z</updated>
-        <summary type="html"><![CDATA[Using a computerized maintenance management system (CMMS) provides near real-time results, supporting insight, and data-driven decisions to enhance business efficiency and effectiveness. Computerized maintenance management...
-The post How CMMS is transforming maintenance data management appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Bryan Christiansen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Programming embedded systems: RTOS – inter-thread synchronization]]></title>
-        <id>https://www.embedded.com/?p=4479448</id>
-        <link href="https://www.embedded.com/programming-embedded-systems-rtos-inter-thread-synchronization/"/>
-        <updated>2023-06-05T21:45:59.000Z</updated>
-        <summary type="html"><![CDATA[In this lesson, you learn about semaphores as the historically first inter-thread synchronization mechanism. So far, in this segment of lessons about the real time...
-The post Programming embedded systems: RTOS – inter-thread synchronization appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Miro Samek</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Meson Pattern: Monorepo that Supports Individual Subproject Builds]]></title>
-        <id>https://embeddedartistry.com/?p=30086</id>
-        <link href="https://embeddedartistry.com/blog/2023/06/05/meson-pattern-monorepo-that-supports-individual-subproject-builds/"/>
-        <updated>2023-06-05T17:47:37.000Z</updated>
-        <summary type="html"><![CDATA[5 June 2023 by Phillip JohnstonAs mentioned in the article, Develop in a Monorepo and Distribute to Standalone Repositories Develop in a Monorepo and Distribute to Standalone Repositories, we’ve merged many of our repos into a monorepo setup, but we’re going to continue to distribute changes to the existing standalone repositories. To support this model, … 
-Continue reading "Meson Pattern: Monorepo that Supports Individual Subproject Builds"
-The post Meson Pattern: Monorepo that Supports Individual Subproject Builds appeared first on Embedded Artistry.]]></summary>
-        <author>
-            <name>Phillip Johnston</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Google Enables Experts To Innovate Developer Tools From Food To Music]]></title>
-        <id>http://developers.googleblog.com/2023/06/how-google-enables-experts-to-innovate.html</id>
-        <link href="http://developers.googleblog.com/2023/06/how-google-enables-experts-to-innovate.html"/>
-        <updated>2023-06-05T17:30:00.002Z</updated>
-        <summary type="html"><![CDATA[Posted by Lyanne Alfaro, DevRel Program Manager, Google Developer Studio
-
-
-
-
-
-
-Developer Journey is a monthly series highlighting diverse and global developers sharing relatable challenges, opportunities, and wins in their journey. Every month, we will spotlight developers around the world, the Google tools they leverage, and the kind of products they are building.
-
-
-
-This month we hear from developers who are Google Developer Experts and former Google Developer Student Clubs members building tools to enhance food delivery, developer playgrounds, and even real-time BPM counters for DJs. We also ask our community members about the role of allyship during Pride Month.
-Yves Kalume
-
-
-
-
-
-
-Lubumbashi, Democratic Republic of Congo
-Google Developer Expert, Android
-GDSC Alumni
-Android Developer
-Twi…]]></summary>
-        <author>
-            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Happy birthday DRAM!]]></title>
-        <id>https://www.embedded.com/?p=4479438</id>
-        <link href="https://www.embedded.com/happy-birthday-dram/"/>
-        <updated>2023-06-05T13:55:01.000Z</updated>
-        <summary type="html"><![CDATA[A reflection on the history of DRAM as it reaches its 55th anniversary, plus what’s next for DRAM.
-The post Happy birthday DRAM! appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Peter Pöchmüller</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Privacy and AI in the coming age of home robots]]></title>
-        <id>https://staceyoniot.com/?p=12418</id>
-        <link href="https://staceyoniot.com/privacy-and-ai-in-the-coming-age-of-home-robots/"/>
-        <updated>2023-06-05T13:00:42.000Z</updated>
-        <summary type="html"><![CDATA[Have you ever seen the 1999 movie “Bicentennial Man”? It stars Robin Williams as an android who, over its 200-year lifespan, strives to become human. I won’t spoil the plot but instead note that watching this movie 24 years ago gave me hope that I’d one day have a home robot act as a personal butler. […]
-The post Privacy and AI in the coming age of home robots appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Kevin C. Tofel</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Introducing PCVARK and their malicious ad blockers]]></title>
-        <id>https://palant.info/2023/06/05/introducing-pcvark-and-their-malicious-ad-blockers/</id>
-        <link href="https://palant.info/2023/06/05/introducing-pcvark-and-their-malicious-ad-blockers/"/>
-        <updated>2023-06-05T12:04:38.000Z</updated>
-        <summary type="html"><![CDATA[It isn’t news that the overwhelming majority of ad blockers in Chrome Web Store is either outright malicious or waiting to accumulate users before turning malicious. So it wasn’t a surprise that the very first ad blocker I chose semi-randomly (Adblock Web with 700,000 users) turned out malicious. Starting from it, I found another malicious extension (Ad-Blocker, 700,000 users) and two more that have been removed from Chrome Web Store a year ago (BitSafe Adblocker and Adblocker Unlimited).
-
-
-All these ad blockers and probably some more were developed by the company PCVARK. According to Malwarebytes Labs, this company specializes in developing “potentially unwanted programs.” In other words: they show users warnings about alleged compromise, only to push them into installing their software. …]]></summary>
-        <author>
-            <name>Almost Secure</name>
         </author>
     </entry>
 </feed>
