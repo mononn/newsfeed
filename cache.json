@@ -69,6 +69,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/finite-state-machines-variant-vending-cpp/",
+          "author": null,
+          "description": "In my last article, we discussed Finite State Machines based on std::variant and some cool C++17 techniques. Today I want to go further and show you an example of a Vending Machine implementation.\nFinite State Machine with std::variant - C++ Stories\n\n\nStates & Events \n  \n\n\n\n\n     \n    \n\n\nHere’s a basic diagram that illustrates how the machine is going to work:\n\nFollowing the model from the last article, each state and the event will be a separate small structure. Later we can “pack” them into std::variant.\nHere are the states:\nnamespace state {\n    struct Idle { };\n    struct AmountEntered { int amount{ 0 }; int availableChange{ 0 }; };\n    struct ItemSelected { std::string item; int availableChange{ 0 }; };\n    struct ChangeDispensed { int change{ 0 }; };\n}\n\nusing VendingState = std::vari…",
+          "link": "https://www.cppstories.com/2023/finite-state-machines-variant-vending-cpp/",
+          "publishedOn": "2023-07-10T00:00:00.000Z",
+          "wordCount": 1491,
+          "title": "Finite State Machine with std::variant - Vending Machine",
+          "imageUrl": "https://www.cppstories.com/2023/images/fsm_vending.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/finite-state-machines-variant-cpp/",
           "author": null,
           "description": "In this blog post, I’ll show you how to convert a “regular” enum-style finite state machine into a modern version based on std::variant from C++17. This technique allows you to improve design, work with value types and enhance code quality.\n\n\n\n     \n    \n\n\nLet’s start with a basic example:\nwe want to track a game player’s health status\nwe’d like to respond to events like “Hit by a monster” or “Healing bonus.”\nwhen the health point goes to 0, then we have to restart the game only if there are some remaining lives available\nHere’s a basic diagram with states and transitions:\n\n\n\n\n     \n    \n\n\nWe can quickly write some basic code based on enum classes:\nenum class HealthState { PlayerAlive, PlayerDead, GameOver };\nenum class Event { HitByMonster, Heal, Restart };\n\n\nAnd the state machine class:\n…",
@@ -163,6 +173,16 @@
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
       "articles": [
         {
+          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:3c92171a-0169-4a74-a73a-615fce235c1e",
+          "author": "Yibo Cai",
+          "description": "This blog describes how to add Arm Scalable Vector Extension (SVE) support to a SIMD library. It also introduces SVE features and programming tips.(read more)",
+          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/sve-sve2-enablement-in-simd-library",
+          "publishedOn": "2023-07-10T12:00:00.000Z",
+          "wordCount": 6337,
+          "title": "SVE and SVE2 enablement in SIMD library",
+          "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-42/ARM1966_5F00_Blog_5F00_Header_5F00_Image_5F00_1_5F00_1600x900_5F00_ST1.jpg_2D00_900x506x2.jpg"
+        },
+        {
           "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:fca1d668-9e0d-419e-8c0d-f53ad51afe5d",
           "author": "Jamie Cunliffe",
           "description": "A quick look at Neon intrinsics in Rust. This will explain the status of the intrinsics in the Rust compiler. We will also show how they differ from C.(read more)",
@@ -218,6 +238,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "06abb28b-0e0b-4db7-ad85-71ea4eed991c",
+          "author": "Vitaliy Emporopulo",
+          "description": "Onboarding devices at the edge differs from doing so in a data center and presents some unique challenges. Among other requirements, the device onboarding process must:\nBe secure and reduce the risk of a malicious party tempering with a device or a rogue device being connected to the system.\nMinimize manual intervention in order to make the process cheaper, faster, more scalable, and more secure. A zero-touch or low-touch approach also allows personnel without specialized skills to onboard devices.\nThe FIDO Device Onboard (FDO) specification addresses both of these requirements. Red Hat Enterprise Linux (RHEL) offers FDO packages starting with version 8.6, based on the Fedora IoT implementation of FDO. You can follow How to onboard edge devices at scale with FDO and Linux to set up an FDO …",
+          "link": "https://developers.redhat.com/articles/2023/07/10/automate-edge-device-onboarding-ansible-fdo-collection",
+          "publishedOn": "2023-07-10T07:00:00.000Z",
+          "wordCount": 3646,
+          "title": "Automate edge device onboarding with Ansible FDO collection",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC-edgecomputing_2x.png?itok=cSNl9gix"
+        },
         {
           "id": "aa148867-32ad-4620-a1b5-4de2345f0f4d",
           "author": "Wuxin Zeng",
@@ -496,6 +526,36 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4479843",
+          "author": "Nitin Dahad",
+          "description": "The Hardware Pioneers Max 2023 exhibition and conference returns to London again this year on 13 July 2023, with a focus on AI hardware, connected devices (IoT), and security.\nThe post Hardware Pioneers Max 2023: a spotlight on AI hardware and security appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/hardware-pioneers-max-2023-a-spotlight-on-ai-hardware-and-security/",
+          "publishedOn": "2023-07-10T12:44:23.000Z",
+          "wordCount": 3881,
+          "title": "Hardware Pioneers Max 2023: a spotlight on AI hardware and security",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/Hardware-Pioneers-Max-speaker.jpeg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4479837",
+          "author": "Jacob Beningo",
+          "description": "The advent of LLMs will dramatically affect how we design embedded systems in the future. That future might not be here yet, but it may...\nThe post 7 expert tips for writing embedded software with ChatGPT appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/7-expert-tips-for-writing-embedded-software-with-chatgpt/",
+          "publishedOn": "2023-07-10T11:15:39.000Z",
+          "wordCount": 5205,
+          "title": "7 expert tips for writing embedded software with ChatGPT",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/ai-software-assist.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4479821",
+          "author": "Tim Weil",
+          "description": "The scale of growth of AI is drawing increasing concern about factors such as cost and the environmental impact of huge machine learning technologies. Optical could be an answer to addressing this.\nThe post Can we drive artificial intelligence’s exponential growth sustainably? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/can-we-drive-artificial-intelligences-exponential-growth-sustainably/",
+          "publishedOn": "2023-07-10T04:48:57.000Z",
+          "wordCount": 3762,
+          "title": "Can we drive artificial intelligence’s exponential growth sustainably?",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/sustaianble-computing_shutterstock.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4479803",
           "author": "Nitin Dahad",
           "description": "Dolphin Design’s WhisperExtractor advanced mixed-signal architecture IP helps reduce power consumption by up to 99% at system level, enabling an always-on listening function at a power budget of just µW, with a simple 32 kHz clock.\nThe post Always-on listening IP uses just µW of power appeared first on Embedded.com.",
@@ -723,6 +783,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1540.php",
+          "author": null,
+          "description": "This nice button uses the tiny M5 STAMP PICO and Cesanta's Mongoose as an HTTPS client to POST to the Telegram Bot API and send a message; the code is completely written in C. To try it, besides small fingers, you'll need to have a Wi-Fi network up and running and of course a Telegram account.\r\n\r\n\r\n\r\nHardware\r\nFor this demo there is no additional hardware needed, we just use the <a...",
+          "link": "https://www.embeddedrelated.com/showarticle/1540.php",
+          "publishedOn": "2023-07-09T23:23:01.000Z",
+          "wordCount": 3706,
+          "title": "Bellegram, a wireless DIY doorbell that sends you a Telegram message",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1543.php",
           "author": null,
           "description": "In the previous article (https://www.embeddedrelated.com/showarticle/1524.p...) we saw how to run NuttX RTOS using the SIMulator. Today we will see how NuttX's directory tree is organized and how to use the menuconfig to enable some applications, including some tricks to search and solve dependencies.\r\n\r\n<p style=\"text-align:...",
@@ -781,6 +851,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/07/meet-students-using-google-technologies.html",
+          "author": null,
+          "description": "Posted by Rachel Francois, Global Program Manager, Google Developer Student Clubs\n\n\n\n\n\n\n\n\nEvery year, university students who are members of Google Developer Student Clubs around the world are invited to create innovative solutions for real-world problems as part of the Solution Challenge. Participating students use Google products and platforms like Android, Firebase, TensorFlow, Google Cloud, and Flutter to build solutions for one or more of the United Nations’ 17 Sustainable Development Goals, which promote employment for all, economic growth, and climate action, to name a few. Agreed upon in 2015 by all 193 United Nations Member States, the goals aim to end poverty, ensure prosperity, and protect the planet by 2030.\nOn Demo Day, August 3, live on YouTube, the final 10 teams of the 2023…",
+          "link": "http://developers.googleblog.com/2023/07/meet-students-using-google-technologies.html",
+          "publishedOn": "2023-07-10T16:00:00.001Z",
+          "wordCount": 2569,
+          "title": "Meet the students using Google technologies to address the UN’s sustainability goals around the globe",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiv7-Om3E0j16Dn_mFZ_1u5Y4xeP6czt8eAtiOk9S1_aetpJ1moLytlmmk4T_vZ3q-ScdJRdeA3hdK9O7XPgxg_j3zfjGsp3HslvnUubdQzEyaRPeSyHkd8nAGYKvk4Ke_-UM2GFmGWBH7gPfSP1JCN9923xCvL66kZa7wE5-N4utsj_6rGcj0IUJXCCWo/w1200-h630-p-k-no-nu/Solution%20Challenge%20Demo%20Day%20-%20Social%20%282%29.png"
+        },
+        {
+          "id": "http://developers.googleblog.com/2023/07/weareplay-meet-people-creating-apps-and-games-in-japan.html",
+          "author": null,
+          "description": "Posted by Leticia Lago, Developer Marketing\n\n\n\n\n\n\n#WeArePlay is on a virtual world tour: starting first with the U.S. last summer by spotlighting the stories of app and game founders from every state, then visiting India sharing stories from across the country, and more recently visiting Europe by sharing stories from countries across the region. \nToday, we’re continuing our tour with one more stop: Japan. From a snowboarding app made by a paralympian, to a game inspired by the enchanting landmarks of Gifu. Discover the people growing apps and games businesses on Google Play.\nWe’re starting with stories from Chubu, Chugoku & Shikoku and Kinki, with more following throughout the year. Let’s explore some of the stories from across these 3 regions. \n\n\n\nTakao Hayashi, founder of Ateam Entertai…",
+          "link": "http://developers.googleblog.com/2023/07/weareplay-meet-people-creating-apps-and-games-in-japan.html",
+          "publishedOn": "2023-07-10T02:00:00.000Z",
+          "wordCount": 2137,
+          "title": "#WeArePlay | Meet the people creating apps and games in Japan",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXbnTGz_3pfEQhN5eSv4S50Pjrp0K7FXipcEwXW1raSdU48ajQJs3_GdexXuJBTs4FyygdEtgOK8RxtN9Weip_MPyHdXmB-agKPltyqlygYr71Guhk_-PyKVckIizuLpRwvcPxZ74nM52n2YiPnE_-oHPNLK4v3qXfF-QAMvafvGHCme-n40GPlZl_rZg/w1200-h630-p-k-no-nu/image27.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/07/developers-share-how-they-built-their-careers-from-machine-learning-to-cloud.html",
           "author": null,
@@ -1209,6 +1299,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/937006/",
+          "author": "corbet",
+          "description": "Linus Torvalds released\n6.5-rc1 and closed the merge window for this development cycle on\nJuly 9.  By that point, 11,730 non-merge changesets had been pulled\ninto the mainline for 6.5; over 7,700 of those were pulled after\nthe first-half merge-window summary was\nwritten.  The second half of the merge window saw a lot of code coming into\nthe mainline and a long list of significant changes.",
+          "link": "https://lwn.net/Articles/937006/",
+          "publishedOn": "2023-07-10T14:52:18.000Z",
+          "wordCount": null,
+          "title": "[$] The rest of the 6.5 merge window",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/937803/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (firefox-esr, fusiondirectory, ocsinventory-server, php-cas, and thunderbird), Fedora (dav1d, perl-CPAN, and yt-dlp), Red Hat (python39:3.9 and python39-devel:3.9), Slackware (mozilla), SUSE (prometheus-ha_cluster_exporter and prometheus-sap_host_exporter), and Ubuntu (ghostscript, linux-azure, linux-intel-iotg, linux-intel-iotg-5.15, and ruby-doorkeeper).",
+          "link": "https://lwn.net/Articles/937803/",
+          "publishedOn": "2023-07-10T14:28:27.000Z",
+          "wordCount": 220,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/937732/",
+          "author": "corbet",
+          "description": "Linus has released 6.5-rc1 and closed the\nmerge window for this release.\n\n\n\tAnyway, none of it looks hugely unusual. The biggest single mention\n\tprobably goes to what wasn't merged, with the bcachefs pull request\n\tresulting in a long thread (we didn't hit a hundred emails yet, but\n\tit's not far away).\n\n\nThe curious can read that long\nthread in the list archives.",
+          "link": "https://lwn.net/Articles/937732/",
+          "publishedOn": "2023-07-09T23:54:20.000Z",
+          "wordCount": 319,
+          "title": "Kernel prepatch 6.5-rc1",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/937631/",
           "author": "corbet",
@@ -2018,16 +2138,6 @@
           "wordCount": null,
           "title": "Kernel prepatch 6.4-rc6",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/934361/",
-          "author": "jake",
-          "description": "\"After 1 year, 9 months, and 28 days of development\", Debian 12, codenamed \"bookworm\", has been released.  The announcement has lots of details about package versions for desktop environments (6 are supported), kernel version (Linux 6.1 series), other package versions (compilers, graphics tools, office suites, languages, and more), architectures supported (8 for real hardware and 5 for cloud services), blends, and lots more.\n\nThis release contains over 11,089 new packages for a total count of 64,419 packages, while over 6,296 packages have been removed as \"obsolete\". 43,254 packages were updated in this release. The overall disk usage for \"bookworm\" is 365,016,420 kB (365 GB), and is made up of 1,341,564,204 lines of code.\n\n\"bookworm\" has more translated man pages than ever thanks to our translators who have made man-pages available in multiple languages such as: Czech, Danish, Greek, Finnish, Indonesian, Macedonian, Norwegian (Bokmål), Russian, Serbian, Swedish, Ukrainian, and Vietnamese. All of the systemd man pages are now completely available in German.\n\n\nSee the Debian 12\nrelease notes for additional information.",
-          "link": "https://lwn.net/Articles/934361/",
-          "publishedOn": "2023-06-10T14:39:54.000Z",
-          "wordCount": null,
-          "title": "Debian 12 \"bookworm\" released",
-          "imageUrl": null
         }
       ]
     },
@@ -2064,16 +2174,6 @@
           "publishedOn": "2023-06-15T00:00:00.000Z",
           "wordCount": 481,
           "title": "Water leak app notification in Home Assistant",
-          "imageUrl": null
-        },
-        {
-          "id": "tag:m0agx.eu,2023-06-11:/migrating-to-pelican.html",
-          "author": null,
-          "description": "Returning readers: please update your feed reader with the new RSS or Atom URL.\nI decided to migrate my blog from Wordpress to a static site generator. My main motivation, apart from just trying something new for the sake of it, was the endless stream of Wordpress updates and security …",
-          "link": "https://m0agx.eu/migrating-to-pelican.html",
-          "publishedOn": "2023-06-11T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Migrating to Pelican",
           "imageUrl": null
         }
       ]
@@ -2272,6 +2372,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=7992",
+          "author": "Derek Jones",
+          "description": "Coding activities that a developer might spend time on include: adding new functionality, fixing a reported fault, or fiddling with existing code with the intent of making it ‘better’ in some sense (which these days goes by the catch-all name of refactoring). Improving performance, e.g., changing software to use less cpu/memory is considered, by developers, […]",
+          "link": "https://shape-of-code.com/2023/07/09/the-lifetime-of-performance-coding-issues/",
+          "publishedOn": "2023-07-09T21:50:34.000Z",
+          "wordCount": 1596,
+          "title": "The lifetime of performance coding issues",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=7978",
           "author": "Derek Jones",
           "description": "How big is the binary for the Linux kernel? Depending on the value of around 15,000 configuration options, the size of the version 5.8 binary could be anywhere between 7.3Mb and 2,134 Mb. Who is interested in the size of the Linux kernel binary? We are not in the early 1980s, when memory for a […]",
@@ -2318,6 +2428,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12628",
+          "author": "Stacey Higginbotham",
+          "description": "This story was originally published in my July 07, 2023 newsletter. You can sign up for the newsletter here.  As tensions rise between the U.S. and China and Russia continues sponsoring cybersecurity attacks around the globe, it’s clear cybersecurity is never going back to being a niche issue CEOs and boards can foist off to a CSO or IT […]\nThe post As the industrial IoT looks more like IT, security must change appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/as-the-industrial-iot-looks-more-like-it-security-must-change/",
+          "publishedOn": "2023-07-10T13:00:38.000Z",
+          "wordCount": 2769,
+          "title": "As the industrial IoT looks more like IT, security must change",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/bigstock-Port-Of-Nagoya-Located-In-Ise-150436163.jpg?fit=900%2C600&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=12623",
           "author": "Stacey Higginbotham",
@@ -2530,18 +2650,7 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": [
-        {
-          "id": "http://subokim.wordpress.com/?p=12424",
-          "author": "subokim",
-          "description": "하지만, 기술철학을 바이블처럼 받아들이게 되면 제작의도를 지키려 노력한다.\n꽤 생각보다 아래 같은 케이스가 많다.\n\n\"이건 이렇게 되어야 하는데, 현실은 이래서 안되요.\"\n\"이건 이렇게 하려고 만든 기술인데, 이걸 고치게 되면 사고가 날거예요. 전 책임 없습니다.\"\n\n문제 해결보다는, 자기가 얼마나 훌륭한 학생인지 증명하고 싶어 한다.\n가장 흔한 케이스가 \"어떤 언어가 더 우월한가?\" 하는 논쟁이다.",
-          "link": "https://subokim.wordpress.com/2023/06/11/software-is-not-bible/",
-          "publishedOn": "2023-06-11T03:43:55.000Z",
-          "wordCount": null,
-          "title": "소프트웨어 기술을 바이블화하면 안된다.",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "The Pasture",
@@ -2584,6 +2693,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=92846",
+          "author": "정혜승",
+          "description": "분명 검색해서 찾을 정보가 있었다. 폰을 열었더니 카톡에 새 알림이 있다. 친구가 링크한 글로 넘어갔다. 꼬리를 물고 이어지는 뉴스 좀 보던 중 텔레그램으로 일정 조율 메시지가 왔다. 캘린더 보는데 인스타그램 알림이 떴다. 오, 친구가 가본 식당 좋아요. 백숙 먹고 싶은데 마트에 닭고기 할인 없나? 지난번 토마토 괜찮았는데 메이커스에서 재주문해야지? 페북 답글 올라왔네? 그런데 내가 왜...\nThe post 트위터 탈출 버튼! – ‘도둑맞은 집중력’ (2023) appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92846",
+          "publishedOn": "2023-07-10T08:45:41.000Z",
+          "wordCount": 3083,
+          "title": "트위터 탈출 버튼! – ‘도둑맞은 집중력’ (2023)",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/boy-g4ac004ed8_1280.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=92829",
+          "author": "민주언론시민연합",
+          "description": "[2023년 6월] 5·18 43년 특별기획 KBS광주 ‘1980, 로숑과 쇼벨’ 제작진을 만나다 송강호 배우 주연의 ‘천만 영화’ [택시운전사] (2017)는 5·18민주화운동의 진실을 세계에 알린 독일 외신기자 위르겐 힌츠페터 이야기를 담았다. 힌츠페터는 2003년 KBS 1TV에서 방영된 [KBS 일요스페셜] ‘80년 5월, 푸른 눈의 목격자’를 통해 대중에 알려졌는데, 이후 많은 이들이 5·18을 기록한 외신기자로 기억하고 있다. 1980년 5월, 광주에 있던...\nThe post ‘5·18 꼬마상주’ 찍은 로숑과 쇼벨: KBS광주가 증명한 수신료의 가치 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92829",
+          "publishedOn": "2023-07-10T06:39:30.000Z",
+          "wordCount": 3920,
+          "title": "‘5·18 꼬마상주’ 찍은 로숑과 쇼벨: KBS광주가 증명한 수신료의 가치",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/a349c56.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=92749",
+          "author": "민노씨",
+          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 슬로우뉴스 창간 동인 캡콜드(펜실베이니아주립대학교 김낙호 교수) 님은 만화 덕후이자 미디어 전문가로 연구 분야는 언론학입니다. 캡콜드 님께 알쏭달쏭한 사회적 논란과 지적 이슈에 관해 묻고, 그 답변을 정리합니다. 첫 번째 콜드케이스는 인어공주와 인종차별 그리고 PC(정치적 올바름)에 관한 이슈입니다. 가독성을 고려해 나눠서 올립니다. 캡콜드 님과의 대화는...\nThe post 인어공주, 디즈니의 해석본은 어떻게 추억의 원본이 되었는가 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92749",
+          "publishedOn": "2023-07-10T01:57:18.000Z",
+          "wordCount": 9807,
+          "title": "인어공주, 디즈니의 해석본은 어떻게 추억의 원본이 되었는가",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_012.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=92786",
+          "author": "이정환",
+          "description": "정치 생명 건다더니 출구 전략 찾는다. 그래서 종점은 어디로? 후쿠시마 오염수, 윤석열의 오랜 침묵. 갈등과 논란. 난민 7만 명, 네덜란드의 고민. 오염수 논란 같은 아스파탐 막걸리 논쟁. 한국 상속세가 OECD 최고? 통계 왜곡이다. 오늘의 TMI. 잠 적게 자는 나라 1위가 한국. “저는 종목 추천을 하지 않습니다.” 김봉현 탈옥 사례금이 40억 원이었다. 넷플릭스가 제작비를 깎기 시작했다....\nThe post 기시다 만나는 윤석열, 오염수 이야기 할까 안 할까: 슬로우레터 7월10일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/92786",
+          "publishedOn": "2023-07-09T22:10:22.000Z",
+          "wordCount": 4091,
+          "title": "기시다 만나는 윤석열, 오염수 이야기 할까 안 할까: 슬로우레터 7월10일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/jgy8RaDKGCR06469803d2f16c2.08520788-1000x667.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=92616",
           "author": "이정환",
@@ -3133,26 +3282,6 @@
           "wordCount": null,
           "title": "보수 언론이 흘리는 조국 출마설: 슬로우레터 6월12일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=91429",
-          "author": "이정환",
-          "description": "‘가짜뉴스’는 없다. 말이 현실을 규정할 때가 있다. ‘가짜뉴스’라는 말 좀 쓰지 말자는 수많은 논의가 있었지만 여전히 ‘가짜뉴스’만큼 입에 딱 붙는 말이 없는 게 사실이다. “이건 허위 조작 정보입니다, 여러분” 보다는 “가짜뉴스에 속지 마세요”라는 게 훨씬 강력하다는 걸 부정하기는 어렵다. 대통령 윤석열이 워싱턴포스트와 인터뷰에서 “100년 전의 일을 가지고 무조건 무릎꿇어야 한 하는 것은 받아들일 수 없다”고...\nThe post 챗GPT 시대, 진실과 거짓의 경계가 더욱 흐려진다. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91429",
-          "publishedOn": "2023-06-11T04:53:39.000Z",
-          "wordCount": null,
-          "title": "챗GPT 시대, 진실과 거짓의 경계가 더욱 흐려진다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=91418",
-          "author": "이정환",
-          "description": "챗GPT 초기 ‘세종대왕 맥북 던짐’ 사건 같은 건 유명한 인터넷 밈이 됐지만 더 큰 문제는 어디까지가 사실이고 어디까지가 헛소리인지 구분하기 어려운 상황으로 끌려 들어가고 있다는 것이다. ‘책임있는 AI’를 만들겠다고 선언했던 구글 바드 역시 챗GPT와 크게 다를바 없는 환각(hallucination) 현상을 쏟아내고 있다. 챗GPT를 만든 오픈AI의 수석 과학자 일리야 수츠케버는 “2년 안에 환각 문제는 크게 줄어들 것”이라고...\nThe post AI가 쓴 글과 사람이 쓴 글, AI도 잘 몰라본다. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91418",
-          "publishedOn": "2023-06-10T15:19:38.000Z",
-          "wordCount": null,
-          "title": "AI가 쓴 글과 사람이 쓴 글, AI도 잘 몰라본다.",
-          "imageUrl": null
         }
       ]
     },
@@ -3161,6 +3290,46 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=591174",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591174/%ea%b5%ac%ea%b8%80-%ea%b2%80%ec%83%89-%ec%a0%90%ec%9c%a0%ec%9c%a8",
+          "publishedOn": "2023-07-10T06:47:15.000Z",
+          "wordCount": 5309,
+          "title": "7/10, BofA, 구글 검색 점유율과 트래픽이 유지되고 있다고 평가",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
+        },
+        {
+          "id": "https://happist.com/?p=591172",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591172/%ec%95%a0%ed%94%8c-%ec%84%9c%eb%b9%84%ec%8a%a4-%eb%a7%a4%ec%b6%9c-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-07-10T06:43:58.000Z",
+          "wordCount": 5273,
+          "title": "7/10, 에버코어 ISI, 2027년까지 애플 서비스 매출 두자릿수 성장 전망",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/애플-캠퍼스-애플-파크-Apple-park-Photo-by-Carles-Rrabada-1024x576.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591170",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591170/%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-%ec%8b%9c%ea%b0%80%ec%b4%9d%ec%95%a1",
+          "publishedOn": "2023-07-10T06:39:36.000Z",
+          "wordCount": 5400,
+          "title": "7/10, 웨드부시, 2024년 초 마이크로소프트 시가총액 3조 달러 클럽 가입 전망",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/01/마이크로소프트-오피스-ChatGPT-통합.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591166",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591166/7-10-%ec%a3%bc%ec%9a%94-%ea%b8%b0%ec%97%85-%ec%a3%bc%ea%b0%80%eb%a5%bc-%eb%b3%b4%eb%8a%94-%ec%9b%94%ea%b0%80%ec%9d%98-%ec%8b%9c%ec%84%a0",
+          "publishedOn": "2023-07-10T01:56:49.000Z",
+          "wordCount": 5664,
+          "title": "7/10, 주요 기업 주가를 보는 월가의 시선",
+          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
+        },
         {
           "id": "https://happist.com/?p=591164",
           "author": "happist",
@@ -3470,16 +3639,6 @@
           "wordCount": null,
           "title": "테슬라 슈퍼차저 개방을 보는 월가의 시선, 전기차 생태계 모두에게 긍정적, 테슬라는 추가 수익원으로 작용할 것",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=590932",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/590932/%ec%95%84%eb%a7%88%ec%a1%b4-%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5-%ec%82%ac%ec%97%85",
-          "publishedOn": "2023-06-11T01:21:27.000Z",
-          "wordCount": null,
-          "title": "UBS, 아마존 인공지능 사업 수익화 가능성으로 아마존 목표주가 150달러로 상향 조정",
-          "imageUrl": null
         }
       ]
     },
@@ -3488,6 +3647,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77340",
+          "author": "NewsPeppermint",
+          "description": "지난달 말 미국 대법원이 회기 마지막에 내린 굵직굵직한 판결 가운데 가장 많이 회자하는 판결이 바로 수십 년 된 소수자 우대 정책에 내린 위헌 판결일 겁니다. 그런 가운데 소수자 우대 정책보다 더 큰 문제가 흔히 “기여입학제(legacy admissions)”로 불리는 제도라는 지적도 많이 나오고 있습니다. 대법원의 소수자 우대 정책 폐지의 문제를 지적한 칼럼을 번역하고, 기여입학제에 관한 설명을 덧붙였습니다. 전문 번역: 소수자 우대 정책 철폐는 시작에 불과하다 해설: ‘부모 찬스’ 그 자체인 기여입학제가 유지되는 이유 그리고 전망",
+          "link": "https://newspeppermint.com/2023/07/10/npsp_scotuslegacyadmission/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_scotuslegacyadmission",
+          "publishedOn": "2023-07-10T16:15:28.000Z",
+          "wordCount": 1402,
+          "title": "‘부모 찬스’ 그 자체인 기여입학제가 유지되는 이유 그리고 전망",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77329",
           "author": "NewsPeppermint",
@@ -3752,6 +3921,16 @@
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
         {
+          "id": "https://blog.naver.com/sellars/223151604983",
+          "author": "sellars",
+          "description": "스피박에 대한 임옥희의 해설서를 읽으면서 로티의 <미국만들기>가 생각났다. 쉽게 찾을 수 있도록 책꽂이에서 앞 쪽으로 약간 뽑아 놓았는데, 책이 없다. 몇 시간 동안 뒤져보아도 책을 찾을 수 없다. 내가 자주 가는 동네 도서관 두 곳 모두에 책이 없다. 이런 경우가 인내심이 바닥에 이르는 경우이다. 책이 나오면 찢어버리리라. 그런데 이런 단호한 결심 이후에 늘 그렇듯이 우연하게 책이 발견된다. 따로 읽으려고 주변에 두었는데 두꺼운 책들에 눌려 보이지 않았던 것이다. 그런데 이 책의 번역이 임옥희이다. 흥미롭다. 누구 글인지 모르겠지만 책 속표지에 다음과 같은 글이 있다. <과거 미국이 저지른 죄악이 미래를 위한 해.......",
+          "link": "https://blog.naver.com/sellars/223151604983",
+          "publishedOn": "2023-07-10T00:16:19.000Z",
+          "wordCount": 101,
+          "title": "9 미국만들기",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.naver.com/sellars/223150155123",
           "author": "sellars",
           "description": "수잔 프롬은 비트겐슈타인과 칸트에 대한 선행 연구 문헌들을 자세하게 살펴본 후, 이들이 칸트와 비트겐슈타인의 공통점에 치중했다고 지적한다. 반면에 자신은 칸트와 비트겐슈타인의 차이점에 주목하겠다고 주장한다. <비트겐슈타인과 칸트 사이의 차이는 이제까지의 2차 문헌들이 간과했고 공통성만 지적하느라 이념이 없어 전혀 볼 수 없었던 점에서 극히 뚜렷해진다. 정신적 작용의 문제가 바로 그것이다. 이 문제야말로 칸트에 관한 비트겐슈타인 비판의 비로소 개시될 수 있는 토대가 된다.> 수잔 프롬에 의하면 적어도 정신적 작용, 심적 작용의 문제에서 칸트와 비트겐슈타인의 차이가 아주 분명하다. 도대체 어떤 차이가 있는 것.......",
@@ -3919,16 +4098,6 @@
           "publishedOn": "2023-06-12T23:16:17.000Z",
           "wordCount": null,
           "title": "슬픈 망각",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223125677613",
-          "author": "sellars",
-          "description": "여유가 없는 경우, 다양한 것들을 바라보기 어렵다. 그 중에 반드시 하나를 골라 그것만을 옹호하려고 한다. 그러나 네 주제도 중요하지만, 동시에 내 주제도 중요하다. 물론 그 중요성을 평가하는 척도가 다른 것은 분명하다. <정작 하위주체 여성들은 스피박의 난해한 글을 직접 읽은 기회가 거의 없을 것이다.> 스피박의 글이 <난해>하다는 것에 대해서 어느 정도 인정되는 것 같다. 그런데 왜 난해하게 쓰는가? 나는 이해하기 쉽게 써야 한다고 생각한다. (나는 난해하게 글을 쓰는 것은 겉멋이 들어서 그렇다고 생각한다. 자기도 모르면서 마치 아는 것처럼 잘난 척 한다고 생각한다. 혹은 자기의 진짜 생각을 감추고 마치 그 이.......",
-          "link": "https://blog.naver.com/sellars/223125677613",
-          "publishedOn": "2023-06-11T00:44:47.000Z",
-          "wordCount": null,
-          "title": "해제와 평가",
           "imageUrl": null
         }
       ]
