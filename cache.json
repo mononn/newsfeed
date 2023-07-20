@@ -148,6 +148,16 @@
       "siteUrl": "https://www.bluefruit.co.uk/blog/",
       "articles": [
         {
+          "id": "https://www.bluefruit.co.uk/?p=13736",
+          "author": "Bluefruit",
+          "description": "Embedded systems security is essential to keeping embedded systems safe from any malicious behaviour. In a world where such systems are […]\nThe post The essential guide to embedded systems security appeared first on Bluefruit Software.",
+          "link": "https://www.bluefruit.co.uk/quality/the-essential-guide-to-embedded-systems-security/",
+          "publishedOn": "2023-07-20T09:58:27.000Z",
+          "wordCount": 2903,
+          "title": "The essential guide to embedded systems security",
+          "imageUrl": "https://www.bluefruit.co.uk/content/uploads/2023/07/siarhei-horbach-xJc-frJbuw-unsplash-1024x683.jpg"
+        },
+        {
           "id": "https://www.bluefruit.co.uk/?p=13576",
           "author": "Jane Orme",
           "description": "We often hear, “Aren’t our requirements just our user stories?”.   This often occurs when a product’s goal or intended use changes, […]\nThe post User stories are not requirements appeared first on Bluefruit Software.",
@@ -215,6 +225,36 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "7a77dfe6-885d-41e4-8f9f-843ec9e54e03",
+          "author": "Derek Parker",
+          "description": "Delve, the Go debugger, ships with the go-toolset package in Red Hat Enterprise Linux (RHEL). The go-toolset package in RHEL 9.2 contains Delve version 1.9.1, which contains many improvements and features.\nDelve 1.9.1 is also the last release to contain the old versioning scheme; new releases of Delve will mirror the corresponding Go release . versioning, only diverging for point releases. So, for example, the latest release of Delve is 1.20.x which corresponds to the 1.20.x release of Go. Delve releases a new minor version when the Go project releases a new version's first RC (Release Candidate). Once that version of Go is released in RHEL, the corresponding version of Delve is also released.\nNew features\nEach new release of Delve boasts many new features, fixes, and improvements. Let's t…",
+          "link": "https://developers.redhat.com/articles/2023/07/20/new-delve-features-rhel-92",
+          "publishedOn": "2023-07-20T07:00:00.000Z",
+          "wordCount": 2906,
+          "title": "New Delve features in RHEL 9.2",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/delve-debug_2x.png?itok=F-0v2qbw"
+        },
+        {
+          "id": "d3919bed-ea2c-4657-863d-ee1c80f89fc3",
+          "author": "Tathagata Paul, Himanshu Yadav",
+          "description": "In this article, we will demonstrate how to streamline the application deployment process on a Red Hat Enterprise Linux machine using Red Hat Ansible Automation Platform.\nPrerequisites\nTwo local VM’s configured with SSH connectivity.\nBridged networking enabled for the VMs.\nAnsible Automation Platform installed on the host VM.\nOur VMs are named vm1-host and vm2 respectively. Edit the /etc/hosts file on vm1-host to include the other VM as a device on the network. You can find its IP by using the command ip -a and then checking the inet address. In my case, it was the following address:\n192.168.17.4 vm2\nYou can try the following command to ping the other VM to check if the connection works.\nping vm2 \nAfter that, enable SSH and copy them to all the VMs using the following commands:\nssh-keygen\n…",
+          "link": "https://developers.redhat.com/articles/2023/07/20/how-deploy-applications-using-ansible-automation-platform",
+          "publishedOn": "2023-07-20T07:00:00.000Z",
+          "wordCount": 2897,
+          "title": "How to deploy applications using Ansible Automation Platform",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
+        },
+        {
+          "id": "8cdce30c-414d-4d73-b63f-953d4924da75",
+          "author": "Michael Santana",
+          "description": "Open vSwitch has moved away from using per-vport dispatch mode to using per-CPU dispatch mode. But this mode had issues with upcall handler thread imbalance and CPU mismatch error messages. These issues were mostly found in systems with tuned CPUs.\nThis article explains two main fixes that my patch series applied to Open vSwitch that alleviated these issues. The first fix resulted in the ovs-vswitchd sending an array of a size that the Open vSwitch kernel module will accept and not trigger the CPU mismatch error message. The second fix added additional upcall handler threads in cases of tuned CPUs to create a more balanced workload for the upcall handler threads.\nHistory of dispatch modes in Open vSwitch\nIn July 2021, my former colleague, Mark Grey, introduced per-CPU dispatch mode to Open…",
+          "link": "https://developers.redhat.com/articles/2023/07/20/how-balance-cpu-upcall-dispatch-mode-open-vswitch",
+          "publishedOn": "2023-07-20T07:00:00.000Z",
+          "wordCount": 3884,
+          "title": "How to balance per-CPU upcall dispatch mode in Open vSwitch",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2020/09/troubleshooting-pam-2x.png?itok=7scwdi4Z"
+        },
         {
           "id": "965ad223-1a40-4290-852c-3ecbd932dc4a",
           "author": "Jonathan Dowland",
@@ -424,26 +464,6 @@
           "wordCount": 2707,
           "title": "How to create a workspace via Try in Dev Spaces extension",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/sandbox-featured-image.png?itok=2r8OPFIe"
-        },
-        {
-          "id": "4b429401-f69f-41e5-b61f-556a73419c6d",
-          "author": "Yashwanth Maheshwaram",
-          "description": "Modernizing Java workloads bare-metal to containers running on the cloud is becoming critical for organizations. Cryostat is a container-native Java Virtual Machine (JVM) that helps you analyze the performance of these modernized workloads running as containers to offer your users a better experience. \nCryostat bridges other containerized JVMs and exposes a secure API for producing, analyzing, and retrieving JDK Flight Recorder (JFR) data from your cloud workloads. It can help fine-tune applications and troubleshoot performance using JVM metrics such as thread dump analysis, memory/heap consumption, garbage collection characteristics, etc. This article summarizes enhancements in Cryostat 2.3.\nWhat’s new in Cryostat 2.3? \nCryostat agent: Cryostat agent facilitates application discovery and JFR operations over HTTP API and can be included in your deployment. \nCross-namespace target discovery: A ClusterCryostat Custom Resource that can be configured to communicate with applications deployed across multiple namespaces.\nWeb interface enhancements:\n\t\nQuick start and guided tour: Short tutorials on how to navigate and perform basic functions in Cryostat.\nTopology view with bulk actions: View your deployed applications in an OpenShift-like topology view and create JFR recordings in bulk.\nCustomizable dashboards: View and configure cards displaying your JVM metrics on a dashboard.\n\n\nHow to use Cryostat for your Java workloads\nYou can install the Red Hat build of Cryostat using our OpenShift operator, available in Red Hat OpenShift's Operator Hub. \nFor non-production usage, you can also try our Helm chart, included as part of OpenShift’s Helm chart repository.\nWhat's new in Red Hat build of Cryostat 2.3 appeared first on Red Hat Developer.",
-          "link": "https://developers.redhat.com/articles/2023/06/21/whats-new-red-hat-build-cryostat-23",
-          "publishedOn": "2023-06-21T07:00:00.000Z",
-          "wordCount": 2274,
-          "title": "What's new in Red Hat build of Cryostat 2.3",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Java_ContainerJFR_Featured_Article__A-01.png?itok=N_594VC9"
-        },
-        {
-          "id": "0f8eb019-7e52-4ecf-9eac-a7e573abcde8",
-          "author": "Marek Polacek",
-          "description": "The latest major version of the GNU Compiler Collection (GCC), 13.1, was released in April 2023. Like every major GCC release, this version brings many additions, improvements, bug fixes, and new features. GCC 13 is already the system compiler in Fedora 38. Red Hat Enterprise Linux (RHEL) users will get GCC 13 in the Red Hat GCC Toolset (RHEL 8 and RHEL 9). It's also possible to try GCC 13 on godbolt.org and similar web pages.\nLike the article I wrote about GCC 10 and GCC 12, this article describes only new features implemented in the C++ front end; it does not discuss developments in the C++ language itself. Interesting changes in the standard C++ library that comes with GCC 13 are described in a separate blog post: New C features in GCC 13\nThe default dialect in GCC 13 is -std=gnu++17.  …",
-          "link": "https://developers.redhat.com/articles/2023/06/21/new-c-features-gcc-13",
-          "publishedOn": "2023-06-21T07:00:00.000Z",
-          "wordCount": 4915,
-          "title": "New C++ features in GCC 13",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/gcc_1x.png?itok=6l1b8Lo9"
         }
       ]
     },
@@ -721,16 +741,6 @@
           "wordCount": 3595,
           "title": "Deep learning model optimization reduces embedded AI inference time",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/06/embedl-image.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4479696",
-          "author": "Ricardo Camacho",
-          "description": "What’s new in MISRA C 2023 — the third edition and second revision of the MISRA C standard? MISRA C 2023 has been released! As...\nThe post MISRA C 2023 consolidates guidelines for embedded developers appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/misra-c-2023-consolidates-guidelines-for-embedded-developers/",
-          "publishedOn": "2023-06-20T12:16:36.000Z",
-          "wordCount": 4128,
-          "title": "MISRA C 2023 consolidates guidelines for embedded developers",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/06/2306misra_f1_thumb.jpg"
         }
       ]
     },
@@ -828,6 +838,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/07/whats-new-in-google-wallet.html",
+          "author": null,
+          "description": "Posted by Jose Ugia – Developer Relations Engineer\n\n\n\n\n\n\nDuring Google I/O 2023, and in our recent blog post, we shared some new pass types and features we’re adding to Google Wallet and discussed how you can use them to build and protect your passes more easily, and enhance the experience for your customers.\nRead on for a summary of what we covered during the event, or check out the recording of our session on YouTube: What's new in Google Pay and Google Wallet.\n\n\n\nSecure pass information with private passes\nWe’re glad to expand Generic Passes, adding support for sensitive data with the new generic private pass API. Generic private passes on Google Wallet are one more way we’re protecting users’ information, keeping their sensitive digital items safe. These types of passes require you to …",
+          "link": "http://developers.googleblog.com/2023/07/whats-new-in-google-wallet.html",
+          "publishedOn": "2023-07-20T17:00:00.054Z",
+          "wordCount": 2345,
+          "title": "What’s new in Google Wallet",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSrb-cJ4ZlM6strEiPK1mfMySxcy59cl_bhOf-G64A-LSJkFEuzeArhUZ14MGrMa3KC000w2Z9i3pRKz_ylSzldUPqIzsNylQAOIAsAJTy-Y_27NdYqf_KBvZYWdUNlU9K_OD8CH4ai69X-EioMsSI_wLhsvFY5eTvsx8sYkGZbklfdSvy647BmCXs/w1200-h630-p-k-no-nu/social-Google%20Dev%20-%20What%27s%20new%20in%20Google%20Wallet.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/07/google-chat-apis-now-generally-available-to-workspace-developers.html",
           "author": null,
@@ -947,16 +967,6 @@
           "wordCount": 2439,
           "title": "Welcoming our inaugural Google for Startups Accelerator: Cloud North America cohort",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYvwFny6fzXuqX2-8aTgNgj8ilFj-Fin3Wz4E4uFU5I0GomCQpnJxfilf5fPa_VSx_0EftzB8JgTlxLcIYfAPaxhg9lDR4wXck5GcagRRYCx3nfxqVte9DMFOka6GP383B8v6Bk9z2p9wlS_H_bGMzuHUJiaXQeWqQY6jW4Gz5w2fQzWxZ93ESfKZSlw8/w1200-h630-p-k-no-nu/image2.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/06/la-techweek-one-google-panel-building-a-startup-using-generative-ai.html",
-          "author": null,
-          "description": "Posted by Alexandra Dumas, Head of VC & Startup Partnerships, West Coast, Google\n\n\n\n\n\n\nEarlier this month, LA TechWeek hosted an array of thought leaders and innovative minds in the tech industry. As the Head of VC & Startup Partnerships West Coast at Google, I had the privilege of curating and facilitating an insightful panel event, supported by Google Cloud for Startups, on the topic of  \"Building with Generative AI\" with representatives from:\n\nGoogle Cloud: Josh Gwyther, Global AI Lead\nAndreessen Horowitz: Andrew Chen, General Partner\nGradient Ventures: Darian Shirazi, General Partner\nAlphabet’s X: Clarence Wooten, Director & Entrepreneur in Residence\n\n\n\n\n\n\n\n\n\nOur conversation was as rich in depth as it was in diversity; heightening the LA community's collective excitement for the futur…",
-          "link": "http://developers.googleblog.com/2023/06/la-techweek-one-google-panel-building-a-startup-using-generative-ai.html",
-          "publishedOn": "2023-06-20T21:00:00.002Z",
-          "wordCount": null,
-          "title": "A Look Back at LA #TechWeek OneGoogle Panel: Building a Startup Using Generative AI",
-          "imageUrl": null
         }
       ]
     },
@@ -985,16 +995,6 @@
           "publishedOn": "2023-07-11T20:08:00.003Z",
           "wordCount": 1876,
           "title": "Python 3.12.0 beta 4 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://pythoninsider.blogspot.com/2023/06/python-3120-beta-3-released.html",
-          "author": null,
-          "description": "I'm pleased to announce the release of Python 3.12 beta 3.\nhttps://www.python.org/downloads/release/python-3120b3/\nThis is a beta preview of Python 3.12\n\n\nPython 3.12 is still in development. This release, 3.12.0b3, is the third of four planned beta release previews of 3.12.\n\nBeta release previews are intended to give the wider community the opportunity to test new features and bug fixes and to prepare their projects to support the new feature release.\n\nWe strongly encourage maintainers of third-party Python projects to test with 3.12 during the beta phase and report issues found to [the Python bug tracker (https://github.com/python/cpython/issues) as soon as possible. While the release is planned to be feature complete entering the beta phase, it is possible that features may be modified …",
-          "link": "https://pythoninsider.blogspot.com/2023/06/python-3120-beta-3-released.html",
-          "publishedOn": "2023-06-20T18:52:00.000Z",
-          "wordCount": 1872,
-          "title": "Python 3.12.0 beta 3 released",
           "imageUrl": null
         }
       ]
@@ -1153,16 +1153,6 @@
           "wordCount": null,
           "title": "What we've been reading in June",
           "imageUrl": null
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu",
-          "author": null,
-          "description": "This article dives into QEMU, a popular open-source emulator, and how to use it to emulate a Raspberry Pi on your desktop. At the end of the article, we will put the whole environment in Docker, so you will be able to emulate a Raspberry Pi by just using a Docker container.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu",
-          "publishedOn": "2023-06-21T00:00:00.000Z",
-          "wordCount": 2260,
-          "title": "Emulating a Raspberry Pi in QEMU",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
     },
@@ -1233,6 +1223,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/938422/",
+          "author": "corbet",
+          "description": "Sometimes, the shortest patches lead to the longest threads; for a case in\npoint, see this\nthree-line change posted by Emanuele Giuseppe Esposito.  The purpose of\nthis change is to improve the security of locked-down systems by adding a\n\"revocation number\" to the kernel image.  But, as the discussion revealed,\nboth the cost and the value of this feature are seen differently across the\nkernel-development community.",
+          "link": "https://lwn.net/Articles/938422/",
+          "publishedOn": "2023-07-20T14:39:14.000Z",
+          "wordCount": null,
+          "title": "[$] Much ado about SBAT",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/938711/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium), Fedora (sysstat), Gentoo (openssh), Mageia (firefox/nss, kernel, kernel-linus, maven, mingw-nsis, mutt/neomutt, php, qt4/qtsvg5, and texlive), Red Hat (java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, and kpatch-patch), Slackware (curl and openssh), SUSE (curl, grafana, kernel, mariadb, MozillaFirefox, MozillaFirefox-branding-SLE, poppler, python-Flask, python310, samba, SUSE Manager Client Tools, and texlive), and Ubuntu (curl, ecdsautils, and samba).",
+          "link": "https://lwn.net/Articles/938711/",
+          "publishedOn": "2023-07-20T14:19:56.000Z",
+          "wordCount": 418,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/938053/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for July 20, 2023 is available.",
+          "link": "https://lwn.net/Articles/938053/",
+          "publishedOn": "2023-07-20T02:05:40.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for July 20, 2023",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/938409/",
           "author": "jake",
@@ -2012,36 +2032,6 @@
           "wordCount": 192,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/934941/",
-          "author": "jake",
-          "description": "Backporting fixes to stable kernels is an ongoing process that, in general,\nis handled by the stable maintainers or the developers of the fixes.\nHowever, due \nto some unhappiness in the XFS development\ncommunity with the process of handling stable fixes for that filesystem,\na different process has come about for backporting XFS patches to the\nstable kernels.  The three developers doing that work, Leah Rumancik, Amir\nGoldstein, and Chandan Babu Rajendra, led a plenary session at the \n2023 Linux Storage, Filesystem,\nMemory-Management and BPF Summit  (with Rajendra\nparticipating remotely)  to discuss that process.",
-          "link": "https://lwn.net/Articles/934941/",
-          "publishedOn": "2023-06-20T18:47:27.000Z",
-          "wordCount": null,
-          "title": "[$] Backporting XFS fixes to stable",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/935354/",
-          "author": "corbet",
-          "description": "The Rust project has announced\nthe formation of the Rust Leadership Council, which will take the place of\nthe existing Core Team and Leadership Chat groups.\n\n\n\tThe Council will assume responsibility for top-level governance\n\tconcerns while most of the responsibilities of the Rust Project\n\t(such as maintenance of the compiler and core tooling, evolution of\n\tthe language and standard libraries, administration of\n\tinfrastructure, etc.) remain with the nine top level teams.\n\n\nThe details on how this body is supposed to work can be found in RFC 3392.",
-          "link": "https://lwn.net/Articles/935354/",
-          "publishedOn": "2023-06-20T13:08:40.000Z",
-          "wordCount": 202,
-          "title": "The Rust Leadership Council",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/935353/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (libxpm and php7.3), Fedora (chromium), Mageia (kernel, kernel-linus, and sysstat), Red Hat (c-ares), SUSE (libwebp), and Ubuntu (cups-filters, libjettison-java, and libsvgpp-dev).",
-          "link": "https://lwn.net/Articles/935353/",
-          "publishedOn": "2023-06-20T12:56:23.000Z",
-          "wordCount": 194,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2302,6 +2292,26 @@
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=12682",
+          "author": "Stacey Higginbotham",
+          "description": "This week we dig in on two topics that will make the internet of things friendlier for consumers. The first is the newly announced cybersecurity label plan from the White House that will create a way for consumers to see if their planned IoT purchase meets adequate cybersecurity standards. The second is our suggestion that […]\nThe post Podcast: How to make IoT more consumer-friendly appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-how-to-make-iot-more-consumer-friendly/",
+          "publishedOn": "2023-07-20T13:00:33.000Z",
+          "wordCount": 2222,
+          "title": "Podcast: How to make IoT more consumer-friendly",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/Cyber_Trust_Mark_yellow.webp?fit=828%2C518&ssl=1"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=12391",
+          "author": "Kevin C. Tofel",
+          "description": "On a recent Internet of Things Podcast episode we took a voicemail from Michael on our podcast hotline. Michael has invested in Zigbee lights up to this point and he’s heard about some challenges that still face Matter devices some challenges that still face Matter devices. So the question really is, what Zigbee bulbs would […]\nThe post Zigbee bulbs: Replace them with Matter or stay with Zigbee? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/zigbee-bulbs-replace-them-with-matter-or-stay-with-zigbee/",
+          "publishedOn": "2023-07-20T11:00:16.000Z",
+          "wordCount": 2383,
+          "title": "Zigbee bulbs: Replace them with Matter or stay with Zigbee?",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2020/08/Philips-heart-of-Hue-system-square-2-scaled.jpg?fit=2560%2C1707&ssl=1"
+        },
+        {
           "id": "https://staceyoniot.com/?p=12679",
           "author": "Stacey Higginbotham",
           "description": "I’ve spent two weeks playing around with Roku’s smart home gear (which is Wyze hardware running a software overlay provided by Roku) and I can tell you it’s fine. If you’re the type of person who wants to experience the smart home circa 2013 with the addition of a services plan and an integration to […]\nThe post Life in the Roku smart home is pretty basic appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -2490,16 +2500,6 @@
           "wordCount": null,
           "title": "Smart gate locks are still barred from the market",
           "imageUrl": null
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12550",
-          "author": "Kevin C. Tofel",
-          "description": "When the Google Pixel Tablet was announced, I was intrigued by the tablet but excited by the dock. From a smart home perspective, this combination appeared to be nirvana. It’s two products in one: A tablet and a smart display/speaker, right? Sort of. Yes, the tablet itself is quite good, but I still feel let-down […]\nThe post Google Pixel Tablet: A great tablet, a so-so smart home device appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/google-pixel-tablet-a-great-tablet-a-so-so-smart-home-device/",
-          "publishedOn": "2023-06-20T14:04:31.000Z",
-          "wordCount": 3342,
-          "title": "Google Pixel Tablet: A great tablet, a so-so smart home device",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/06/IMG_1425.jpeg"
         }
       ]
     },
@@ -2556,6 +2556,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=93892",
+          "author": "Hingomaster",
+          "description": "꽤 오래 전의 일이다. 우리는 교권침해 피해자였습니다 교사인 아내가 학교에서 학생들 활동을 지도하고 있었는데, 일진으로 유명한 한 아이가 그 공간 한 켠에 놓인 소파에 드러누워 일어나지 않고 있었다. (그 아이가 전날 음주를 하고 그런 상태가 되었다는 것은 나중에 알게 된 사실이다.) 당연하겠지만, 활동 중에 아이가 드러누워 있으면 교사는 상태를 체크하고 조치를 취해야 한다. 그런데 이...\nThe post 잊겠지만, 잊을 수 없는 이야기: 서이초 교사 사망 사건에 부쳐 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/93892",
+          "publishedOn": "2023-07-20T08:25:36.000Z",
+          "wordCount": 3586,
+          "title": "잊겠지만, 잊을 수 없는 이야기: 서이초 교사 사망 사건에 부쳐",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12625777.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=93799",
+          "author": "김경래",
+          "description": "나는 10년 전 KBS를 그만 둔 전직 기자다. 미국에서 운전을 할 때 가급적 음악보다 라디오를 틀어 놓는다. 사람하고 얘기할 일도 자주 없는데 운전할 때라도 영어를 들어 보겠다는 마음인데, (당연히) 뭐라고 떠드는지 도통 알 수가 없다. 대개 꾹 참고 듣지만, 정 견디기 힘들 때면 김광석이나 잔나비 같은 음악을 재생한다. 노래든 말이든 스피커에서 한국어가 나오면 그렇게 속이...\nThe post KBS를 망가뜨리면 우리는 더 행복해질까? appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/93799",
+          "publishedOn": "2023-07-20T03:42:17.000Z",
+          "wordCount": 2944,
+          "title": "KBS를 망가뜨리면 우리는 더 행복해질까?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/landmark_img1.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=93779",
+          "author": "이정환",
+          "description": "검찰이 또 피의사실을 흘린다. 미국 잠수함에 올라탄 윤석열, 조중동은 감격. 수색 작업하던 해병, 급류에 휩쓸려 죽었다. 내년 최저임금은 9860원. 한국 경제성장률 또 후려쳤다. 원전 폐쇄를 불법으로? 김수현 기소 논란. 해법과 대안. 대중교통 달마다 최대 4만5000원 깎아준다. 오늘의 TMI. 코로나 확진 하루 3만 명. 얻어맞는 교사 5년 동안 1133명. 홍콩 오피스 투자 90% 손실 충격. 밑줄...\nThe post “무능한 야당과 무심한 용산”, 조중동의 불만이 끓어오르고 있다: 슬로우레터 7월20일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/93779",
+          "publishedOn": "2023-07-19T22:01:37.000Z",
+          "wordCount": 3218,
+          "title": "“무능한 야당과 무심한 용산”, 조중동의 불만이 끓어오르고 있다: 슬로우레터 7월20일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/j7VGGylK44TB64b7c5a6b34089.76560377-1000x667.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=93695",
           "author": "민노씨",
@@ -3125,26 +3155,6 @@
           "wordCount": 4905,
           "title": "장마 시작되는데 아직 반지하에 사는 사람들: 슬로우레터 6월22일.",
           "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=91757",
-          "author": "이정환",
-          "description": "엘리엇매니지먼트가 한국 정부를 상대로 낸 소송에서 한국 정부가 패소했다. 9900억 원의 손해 배상을 청구했는데 7%만 인정됐다. 그래도 크다. 690억 원에 법무 비용과 이자까지 포함하면 1300억 원을 지급해야 한다. 이 사건이 왜 중요한가. 이 사건의 본질은 이것이다. 더 깊게 들어가 볼까. 들통날 걸 몰랐을까. 사실상의 승소? 선방한 건 맞나. 다시 정리해 보면, 여기서 끝이 아니다. 론스타...\nThe post [컨텍스트] 1300억 원은 박근혜와 이재용이 내야 한다. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91757",
-          "publishedOn": "2023-06-21T06:21:48.000Z",
-          "wordCount": null,
-          "title": "[컨텍스트] 1300억 원은 박근혜와 이재용이 내야 한다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=91742",
-          "author": "이정환",
-          "description": "대통령 명 받들어 ‘사교육과의 전쟁’. 2030 엑스포는 부산, 리야드, 로마 3파전. 민주당 혁신위도 친명 논란. 기자협회 설문, 80%가 “이동관 방통위원장 반대”. 오늘의 TMI. 인천 세관에서 마약 60% 잡는다. 영국은 코로나 청문회 연다. 삼성물산 투자한 헤지펀드에 한국 정부가 690억 원 물어줘야 한다. 5000억 원 주는 글로컬 대학, 혁신에 점수를 줬다. 가불도 복지? “예상보다 반응 좋아 깜짝...\nThe post “13초 동안 브레이크를 잘못 밟을 순 없다”, 첫 급발진 인정: 슬로우레터 6월20일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91742",
-          "publishedOn": "2023-06-20T22:06:18.000Z",
-          "wordCount": null,
-          "title": "“13초 동안 브레이크를 잘못 밟을 순 없다”, 첫 급발진 인정: 슬로우레터 6월20일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3461,6 +3471,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=77012",
+          "author": "veritaholic",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 5월 29일 스프에 쓴 글입니다. 하버드의 경제학자 에드워드 글레이저는 2011년 베스트셀러 “도시의 승리”에서 도시를 인간이 만든 최고의 발명품이라 칭했습니다. 그의 도시 예찬은 인간이 모일수록 더 좋은 환경이 만들어진다고 말하는 점에서 인간에 대한 믿음과 → 더 보기",
+          "link": "https://newspeppermint.com/2023/07/19/npsp_playgroundcity/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_playgroundcity",
+          "publishedOn": "2023-07-19T22:59:13.000Z",
+          "wordCount": 1954,
+          "title": "[뉴페@스프] 도시가 놀이터 되면 오프라인도 살아날 수 있을까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=77402",
           "author": "NewsPeppermint",
           "description": "미국 유타주가 청소년의 소셜미디어 사용을 금지하는 법안을 통과했습니다. 공화당이 다수당인 주의회와 공화당 소속 스펜서 콕스 주지사가 뜻을 모아 법안을 처리했는데, 뉴욕타임스 오피니언 칼럼니스트 제인 코스턴이 콕스 주지사를 인터뷰했습니다. 인터뷰를 번역하고, 소셜미디어 금지가 원하는 긍정적인 효과로 이어질 수 있을지 분석해 봤습니다. 전문번역: 휴대폰으로부터 아이들을 구하겠다는 한 보수 정치인 해설: 소셜미디어 금지 실험, 청소년을 구원할 수 있을까",
@@ -3674,6 +3694,16 @@
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
         {
+          "id": "https://blog.naver.com/sellars/223161478686",
+          "author": "sellars",
+          "description": "+ 이제 형이상학을 사고방식의 혁명에 따라 거꾸로 수행해야 한다. 흥미로운 것은 사변 형이상학에 대해서 비판함에도 불구하고, 여전히 어떤 형이상학의 가능성에 대해서 칸트가 추구하고 있다는 것이다. 칸트가 다음처럼 말한다. <이제 형이상학에서 우리는 대상들의 직관과 관련해서 비슷한 방식을 시도해 볼 수 있다. 직관이 대상의 성질에 따라야 하는 것이라면, 나는 어떻게 그것에 관해서 선험적으로 알 수 있는가를 통찰하지 못한다. 그러나 대상이, 감관의 대상으로서 우리 직관 능력에 따른다면, 나는 이 가능성을 아주 잘 생각할 수 있다. 그러나 이 직관들이 인식이어야 한다면, 나는 이 직관에 머무를 수 없고, 표상인 그것을 대.......",
+          "link": "https://blog.naver.com/sellars/223161478686",
+          "publishedOn": "2023-07-20T05:23:33.000Z",
+          "wordCount": 101,
+          "title": "5 순수이성 비판 강의",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.naver.com/sellars/223160153276",
           "author": "sellars",
           "description": "블로그에 ‘애드 포스트’라는 광고 프로그램이 나타나도록 했다. 제헌절 날 하루 동안 111원을 벌었다. 땅을 파도 100원도 안 나온다는 말을 실감하도록 만들어 준다. 먼저 뜬 광고는 내가 살고 있는 동네를 중심으로 고기집, 술집, 카페, 빵집 등이 나오고, 학원, 스튜디오, 미용실 등 다양하게 광고가 나온다. 하단에 달린 두 번째 광고는 블로그의 주제어에 따라 달라지는 것 같다. 순수이성 비판에 대해 포스트를 썼는데, 순수이성 비판에 대한 강의들이 소개된다. 애드 포스트는 정직하게 내가 111원 벌었다고 공지해 준다. 이제 절판된 내 첫 책은 두 번 인세를 받은 것 같다. 마지막 인세를 받은 후에도 오래 동안 책이 간행되었음에도 인.......",
@@ -3821,16 +3851,6 @@
           "publishedOn": "2023-06-21T23:34:52.000Z",
           "wordCount": 101,
           "title": "철학의 외부",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223134715856",
-          "author": "sellars",
-          "description": "",
-          "link": "https://blog.naver.com/sellars/223134715856",
-          "publishedOn": "2023-06-21T02:55:45.000Z",
-          "wordCount": null,
-          "title": "[윤리와 사상] 소크라테스, 에피쿠로스, 에픽테토스",
           "imageUrl": null
         }
       ]
