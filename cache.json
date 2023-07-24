@@ -129,6 +129,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/intro-cpp-book/",
+          "author": null,
+          "description": "Lots of practical examples, general programming, software development techniques, OOP, parallel algorithms, plus C++ to combine it all into working applications. This is a short introduction to the book “Introduction to Programming with C++” by Prof. Boguslaw Cyganek, an excellent book for students who start their journey with system coding.\nLet’s see what’s inside.\nDisclaimer: I got a free copy from the author.\nDisclaimer 2: The links to Amazon are affiliate links, which provide me with some small commission.\n\n\n\n     \n    \n\n\nHere are the main links and info about the book:\n\nThe book on Amazon:\nIntroduction to Programming with C++ for Engineers @Amazon (released in  2021)).\nThe book page at Wiley:\nIntroduction to Programming with C++ for Engineers\nExcerpts (from the Wiley page)\nThe Introdu…",
+          "link": "https://www.cppstories.com/2023/intro-cpp-book/",
+          "publishedOn": "2023-07-24T00:00:00.000Z",
+          "wordCount": 1724,
+          "title": "Introduction to Programming with C++ For Engineers, Book Review",
+          "imageUrl": "https://www.cppstories.com/2023/images/book_rev_cyganek.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/finite-state-machines-variant-vending-cpp/",
           "author": null,
           "description": "In my last article, we discussed Finite State Machines based on std::variant and some cool C++17 techniques. Today I want to go further and show you an example of a Vending Machine implementation.\nFinite State Machine with std::variant - C++ Stories\n\n\nStates & Events \n  \n\n\n\n\n     \n    \n\n\nHere’s a basic diagram that illustrates how the machine is going to work:\n\nFollowing the model from the last article, each state and the event will be a separate small structure. Later we can “pack” them into std::variant.\nHere are the states:\nnamespace state {\n    struct Idle { };\n    struct AmountEntered { int amount{ 0 }; int availableChange{ 0 }; };\n    struct ItemSelected { std::string item; int availableChange{ 0 }; };\n    struct ChangeDispensed { int change{ 0 }; };\n}\n\nusing VendingState = std::vari…",
@@ -257,6 +267,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "a5d3493a-b750-4c63-bf76-468ecfbe2dde",
+          "author": "Eelco Chaudron",
+          "description": "Often, when troubleshooting Open vSwitch (OVS) in the field, you might be left wondering if the issue is really OVS-related, or if it's a problem with the kernel being overloaded. The kernel_delay.py tool can help you quickly identify if the focus of your investigation should be OVS or the Linux kernel.\nAbout kernel_delay.py\nkernel_delay.py consists of a Python script that uses the BCC framework to install eBPF probes.  The data the eBPF probes collect will be analyzed and presented to the user by the Python script. Some of the presented data can also be captured by the individual scripts included in the BBC framework.\nkernel_delay.py has two modes of operation:\nIn time mode, the tool runs for a specific time and collects the information.\nIn trigger mode, event collection can be started an…",
+          "link": "https://developers.redhat.com/articles/2023/07/24/troubleshooting-open-vswitch-kernel-blame",
+          "publishedOn": "2023-07-24T07:00:00.000Z",
+          "wordCount": 4801,
+          "title": "Troubleshooting Open vSwitch: Is the kernel to blame?",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_B.png?itok=PfB3lac5"
+        },
+        {
+          "id": "16141334-921b-453f-8708-44ee5d9057f6",
+          "author": "Muhammad Edwin",
+          "description": "Quite some time ago, Keycloak deprecated its adapters, including OpenID connect for Java adapters. For Spring Boot developers, this means we need to use Spring Security for OpenID and OAuth2 connectivity with Keycloak instead of relying on Keycloak adapters.\nIn this article, we'll create a sample Java application on top of Spring Boot 3 and protect it by using Spring Security and Keycloak, without having to use Keycloak adapters.\nInstall Keycloak\nFirst, we need to install Keycloak to our system. In this example, we are using Keycloak 17 and installing it using a container. Here we've used admin as the administrator username and password as its password.\n$ docker pull keycloak/keycloak:17.0.0\n$ docker run -p 8080:8080 \\ \n    -e KEYCLOAK_ADMIN=admin \\ \n    -e KEYCLOAK_ADMIN_PASSWORD=password…",
+          "link": "https://developers.redhat.com/articles/2023/07/24/how-integrate-spring-boot-3-spring-security-and-keycloak",
+          "publishedOn": "2023-07-24T07:00:00.000Z",
+          "wordCount": 3054,
+          "title": "How to integrate Spring Boot 3, Spring Security, and Keycloak",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/MobileAuthentication_KeyCloak_0.png?itok=DSALBFcV"
+        },
         {
           "id": "7a77dfe6-885d-41e4-8f9f-843ec9e54e03",
           "author": "Derek Parker",
@@ -555,6 +585,26 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4479962",
+          "author": "Nitin Dahad",
+          "description": "Solido helps identify optimization paths to improve PPA & perform statistical yield analysis at a fraction of runtime of brute-force methods.\nThe post Siemens launches assistive AI solution for IC design and verification appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/siemens-launches-assistive-ai-solution-for-ic-design-and-verification/",
+          "publishedOn": "2023-07-24T15:25:00.000Z",
+          "wordCount": 3720,
+          "title": "Siemens launches assistive AI solution for IC design and verification",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/Solido-DE-Launch-Press-Presentation-V2_Page_08.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4479957",
+          "author": "Nitin Dahad",
+          "description": "Cadence said users of its new Joules RTL Design Studio can achieve physical estimates quickly and accurately, claiming up to 5X productivity and up to 25% QoR improvements in the RTL.\nThe post Cadence RTL design tool claims 5x faster RTL convergence appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/cadence-rtl-design-tool-claims-5x-faster-rtl-convergence/",
+          "publishedOn": "2023-07-24T14:08:47.000Z",
+          "wordCount": 4385,
+          "title": "Cadence RTL design tool claims 5x faster RTL convergence",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/Cadence-Joules-RTL-Design-Studio.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4479953",
           "author": "Nitin Dahad",
           "description": "New “U.S. Cyber Trust Mark” label supports IoT security requirements under NISTIR 8425. This label will recognize products that meet these requirements, allowing them to display a U.S. government label and be listed in a registry indicating the products meet U.S. cybersecurity standards.\nThe post IoT security label planned for smart consumer IoT devices in U.S. appeared first on Embedded.com.",
@@ -781,6 +831,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1551.php",
+          "author": null,
+          "description": "In our C to C++ series, we’ve been discussing the fundamental details that embedded developers and teams need to transition from using C to C++. In our last post, C to C++: Bridging the Gap from C Structures to Classes, we discussed the differences between C and C++ structures and objects. Many teams interested in using C++ don’t need to jump off the deep end into metaprogramming and other...",
+          "link": "https://www.embeddedrelated.com/showarticle/1551.php",
+          "publishedOn": "2023-07-23T18:12:11.000Z",
+          "wordCount": 4706,
+          "title": "C to C++: 5 Tips for Refactoring C Code into C++",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1547.php",
           "author": null,
@@ -1223,6 +1283,76 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/939101/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has released six new stable kernels to address the Zenbleed vulnerability for AMD processors: 6.4.6, 6.1.41,\n5.15.122, 5.10.187, 5.4.250, and 4.19.289. \"All AMD processor users of the\n[...] kernel series who have not updated \ntheir microcode to the latest version, must upgrade.\"",
+          "link": "https://lwn.net/Articles/939101/",
+          "publishedOn": "2023-07-24T17:51:01.000Z",
+          "wordCount": 202,
+          "title": "Stable kernels to address Zenbleed released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939099/",
+          "author": "jake",
+          "description": "Tavis Ormandy reports \non a vulnerability that he has found in \"all Zen 2 class processors\"\nfrom AMD. (Wayback Machine link as the original site is overloaded.) It can\nallow local attackers to recover data used in string \noperations; \"If you remove the first word from the string 'hello world',\nwhat should the result be? This is the story of how we discovered that the\nanswer could be your root password!\" The report has lots of details,\nincluding an exploit; AMD has released a microcode\nupdate to address the problem.\n\nWe now know that basic operations like strlen, memcpy and strcmp will use\nthe vector registers - so we can effectively spy on those operations\nhappening anywhere on the system! It doesn't matter if they're happening in\nother virtual machines, sandboxes, containers, processes, whatever! \n\nThis works because the register file is shared by everything on the same\nphysical core. In fact, two hyperthreads even share the same physical\nregister file.",
+          "link": "https://lwn.net/Articles/939099/",
+          "publishedOn": "2023-07-24T17:41:58.000Z",
+          "wordCount": 439,
+          "title": "Zenbleed: an AMD Zen 2 speculative vulnerability",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/938637/",
+          "author": "corbet",
+          "description": "The kernel's address-space layout randomization is intended to make life\nharder for attackers by changing the placement of kernel text and data at\neach boot.  With this randomization, an attacker cannot know ahead of time\nwhere a vulnerable target will be found on any given system.  There are\ntechniques, though, that can be effective without knowing precisely where a\ngiven object is stored.  As a way of hardening systems against such\nattacks, the kernel will be gaining yet another form of randomization.",
+          "link": "https://lwn.net/Articles/938637/",
+          "publishedOn": "2023-07-24T14:50:51.000Z",
+          "wordCount": null,
+          "title": "[$] Randomness for kmalloc()",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939095/",
+          "author": "corbet",
+          "description": "The Debian project is now\nsupporting 64-bit RISC-V systems as an official architecture.  Some\nwork remains to be done, though:\n\n\n\tHowever before you rush to update your sources.list file, I want to\n\twarn you that the archive is currently almost empty, and that only\n\tthe sid and experimental suites are available. The procedure is to\n\trebootstrap the port within the official archive, which means we\n\twon't import the full debian-ports archive.",
+          "link": "https://lwn.net/Articles/939095/",
+          "publishedOn": "2023-07-24T14:50:35.000Z",
+          "wordCount": 274,
+          "title": "Debian adds RISC-V as an official architecture",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939035/",
+          "author": "corbet",
+          "description": "Version\n1.3 of the Inkscape drawing editor has been released.  \"With version\n1.3 of Inkscape, you’ll find improved performance, several new features,\nand a solid set of improvements to a few existing ones\".  Changes\ninclude a new shape-builder tool, a \"document resources\" dialog for the\nmanagement of drawings, a new pattern editor, and more.",
+          "link": "https://lwn.net/Articles/939035/",
+          "publishedOn": "2023-07-24T14:12:14.000Z",
+          "wordCount": 167,
+          "title": "Inkscape 1.3 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939059/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (webkit2gtk), Fedora (curl, dotnet6.0, dotnet7.0, ghostscript, kernel-headers, kernel-tools, libopenmpt, openssh, and samba), Mageia (virtualbox), Red Hat (java-1.8.0-openjdk and java-11-openjdk), and Scientific Linux (java-1.8.0-openjdk and java-11-openjdk).",
+          "link": "https://lwn.net/Articles/939059/",
+          "publishedOn": "2023-07-24T14:06:23.000Z",
+          "wordCount": 213,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939012/",
+          "author": "corbet",
+          "description": "Linus has released 6.5-rc3 for testing.\n\"Things continue to look pretty normal - there's nothing here that would\nseem to stand out, with both the commit counts and the diffs looking pretty\nmuch normal for rc3\".\n\nMeanwhile, Greg Kroah-Hartman has released the large\n6.4.5,\n6.1.40, and\n5.15.121\nstable updates; each contains another set of important fixes.",
+          "link": "https://lwn.net/Articles/939012/",
+          "publishedOn": "2023-07-23T23:32:28.000Z",
+          "wordCount": 177,
+          "title": "Kernel prepatch 6.5-rc3 and three stable kernels",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/938435/",
           "author": "corbet",
@@ -1931,6 +2061,16 @@
       "siteUrl": "https://m0agx.eu/",
       "articles": [
         {
+          "id": "tag:m0agx.eu,2023-07-24:/practical-comparison-of-ARM-compilers.html",
+          "author": null,
+          "description": "My inspiration for this article was this thread in r/embedded. There are still many myths and misconception when it comes to the\nsimple questions \"Which compiler should I use?\" or \"Which compiler is the best?\". I will try to share my practical experience with GCC, Clang and IAR on …",
+          "link": "https://m0agx.eu/practical-comparison-of-ARM-compilers.html",
+          "publishedOn": "2023-07-24T00:00:00.000Z",
+          "wordCount": 4515,
+          "title": "Practical comparison of ARM compilers",
+          "imageUrl": null
+        },
+        {
           "id": "tag:m0agx.eu,2023-07-16:/waveshare-rs485-to-wifi-ethernet-converter.html",
           "author": null,
           "description": "I have been planning to connect my Modbus electricity meter to Home Assistant for a while. Unfortunately my Home Assistant machine is placed far away from the breaker panel and I wanted to avoid running extra cabling. Modbus RTU to Modbus TCP conversion has been a solved problem for a …",
@@ -2135,6 +2275,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8024",
+          "author": "Derek Jones",
+          "description": "Fuzzing has become a popular area of research in the reliability & testing community, with a stream of papers claiming to have created a better tool/algorithm. The claims of ‘betterness’, made by the authors, often derive from the number of previously unreported faults discovered in some collection of widely used programs. Developers in industry will […]",
+          "link": "https://shape-of-code.com/2023/07/23/8024/",
+          "publishedOn": "2023-07-23T21:47:02.000Z",
+          "wordCount": 1407,
+          "title": "Benchmarking fuzzers",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8005",
           "author": "Derek Jones",
           "description": "Students sometimes ask me for suggestions of interesting research problems in software engineering. A summary of my two recurring suggestions, for this year, appears below; 2016/2017 and 2019/2020 versions. How many active users does a program or application have? The greater the number of users, the greater the number of reported faults. Estimates of program […]",
@@ -2181,6 +2331,26 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12700",
+          "author": "Stacey Higginbotham",
+          "description": "This story was originally published in my weekly newsletter on Friday July 21, 2023. You can sign up for my newsletter here.  This week, the Biden administration shared its plans for a label for consumer connected devices that would indicate a device had passed certain cybersecurity criteria. I subsequently explained why we need such a label, […]\nThe post How to add more privacy to the U.S. Cyber Trust Mark appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-to-add-more-privacy-to-the-u-s-cyber-trust-mark/",
+          "publishedOn": "2023-07-24T16:52:59.000Z",
+          "wordCount": 3111,
+          "title": "How to add more privacy to the U.S. Cyber Trust Mark",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/07/Screenshot-2023-07-20-at-7.23.41-AM.png"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=12698",
+          "author": "Stacey Higginbotham",
+          "description": "Actility acquires startup to shrink data sent over LPWAN networks: Actility has acquired a startup called Acklio, which makes a technology used to compress the data used to send data on LoRa networks. Acklio’s technology compresses the IP header that gets sent with each packet of data. Since the goal of Low-Power Wide-Area Networks is to […]\nThe post IoT news of the week for July 21, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-for-july-21-2023/",
+          "publishedOn": "2023-07-24T16:48:30.000Z",
+          "wordCount": 2561,
+          "title": "IoT news of the week for July 21, 2023",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=12682",
           "author": "Stacey Higginbotham",
@@ -2416,6 +2586,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=94048",
+          "author": "슬로우뉴스",
+          "description": "[서이초 교사 사망 사건에 부쳐] 지난 석 달 동안 슬로우뉴스가 만난 교육 현장의 목소리들. 그중 교총, 전교조, 조희연 교육감이 전한 ‘교권’에 관한 문제의식과 대안을 정리합니다. 교사가 스스로 목숨을 끊었습니다. 학교라는 공간에서 교사가 스스로 목숨을 포기(당)하는 상황을 어떻게 설명해야 할지 모르겠습니다. 서이초 교사의 죽음은 우리 사회의 숙제로 남겨졌습니다. 고통스럽게, 진심을 다해, 부끄러워하면서, 미안해하며 그 숙제를 풀어야...\nThe post 벼랑에 선 교권: 교총, 전교조 그리고 조희연 교육감이 말하는 해법 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94048",
+          "publishedOn": "2023-07-24T08:10:53.000Z",
+          "wordCount": 5014,
+          "title": "벼랑에 선 교권: 교총, 전교조 그리고 조희연 교육감이 말하는 해법",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12625775.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94063",
+          "author": "이정환",
+          "description": "학생 인권 때문에 교권이 침해된다고? 교사 짓밟는 무한 민원. 교사의 죽음, 무엇을 이야기할 것인가. 윤석열은 지하차도를 찾지 않았다. “백지화하겠다”던 원희룡, “국민이 검증해 달라”. 의문의 소포. 윤석열 장모 법정 구속. 이재명 영장 또 친다. 더 깊게 읽기. 출생신고 의무화했더니 영아 유기 늘었다. 검찰이 조국에게 입장문을 내라 했다. “개딸과 짜고 치나”, 민주당 내분 양상. 오늘의 TMI. 풍수...\nThe post 교사의 죽음, 무엇을 이야기할 것인가: 슬로우레터 7월24일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94063",
+          "publishedOn": "2023-07-23T22:05:02.000Z",
+          "wordCount": 3171,
+          "title": "교사의 죽음, 무엇을 이야기할 것인가: 슬로우레터 7월24일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/05/school-6900381_1280.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=94056",
           "author": "민주언론시민연합",
@@ -3015,16 +3205,6 @@
           "wordCount": 5255,
           "title": "기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로우레터 6월26일.",
           "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/potatoes-888585_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=91852",
-          "author": "이정환",
-          "description": "미국에서는 연체료를 받지 않겠다고 선언하는 공공 도서관이 늘고 있다. 반납 기간을 어긴 사람들에게 수백 년 동안 연체료가 거의 유일한 강제 수단이었는데 이게 효과가 없다는 판단을 뒤늦게 내리게 된 것이다. 미국에서는 2017년 내슈빌에서 시작했고 시카고와 댈러스, 샌프란시스코로 확산됐다. 2021년 뉴욕도 동참했다. 이게 왜 중요한가. 데이터가 말한다. 책이 돌아오기 시작했다. 연체료의 경제학: 1만 원 때문에 도서관을 끊었다....\nThe post 도서관 연체료를 없앴더니 나타난 놀라운 변화. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91852",
-          "publishedOn": "2023-06-25T06:01:40.000Z",
-          "wordCount": 4622,
-          "title": "도서관 연체료를 없앴더니 나타난 놀라운 변화.",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/benutzung_buehne.jpg"
         }
       ]
     },
@@ -3033,6 +3213,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=591267",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591267/%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%9e%a5%eb%b9%84%ec%a3%bc-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-07-24T10:15:43.000Z",
+          "wordCount": 5256,
+          "title": "반도체 장비주 투자의견 및 반도체 장비주 주가 전망(7/24 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/ASML에서-제작한-EUV-장비를-대한항공-항공기에-싣고-있는-모습-Image-from-ASML.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591265",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591265/%ed%80%84%ec%bb%b4-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%80%84%ec%bb%b4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2023-07-24T10:11:05.000Z",
+          "wordCount": 5230,
+          "title": "월가의 퀄컴 투자의견 및 퀄컴 주가 전망(7/24 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2017/02/LG-스마트폰-역사_2012년-5월-옵티머스-LTE2-퀄컴-스냅드래곤-S4-듀얼코어-칩-적용-가격은-93만-5000원-02-1.jpg"
+        },
         {
           "id": "https://happist.com/?p=591244",
           "author": "happist",
@@ -3320,6 +3520,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77433",
+          "author": "NewsPeppermint",
+          "description": "페이스북과 인스타그램의 모회사 메타(Meta)가 내놓은 새로운 소셜미디어 스레즈(Threads)가 출시 닷새 만에 이용자 1억 명을 돌파하며 기록을 써내려가고 있습니다. 일론 머스크가 인수한 뒤 잇단 실언과 사고로 이용자를 빠르게 잃고 있는 트위터와 대조됩니다. 실제로 트위터의 이용자를 노골적으로 유치하기 위해 기존 일정보다 출시 일정을 앞당겨 스레즈를 내놓자 머스크는 대놓고 저커버그를 저격하기도 했죠. 스레즈 현상을 둘러싸고 많은 기사와 분석이 쏟아지는 가운데 지금껏 우리가 알던 소셜미디어의 속성이 근본적으로 바뀌고 있다는 분석과 전망이 눈에 띄어 관련 → 더 보기",
+          "link": "https://newspeppermint.com/2023/07/24/npsp_threadssocialmedia/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_threadssocialmedia",
+          "publishedOn": "2023-07-24T05:00:59.000Z",
+          "wordCount": 1434,
+          "title": "스레즈 ‘반짝 성공’ 그 이후… 우리가 알던 ‘소셜미디어 시대’는 막을 내리게 될까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77016",
           "author": "ingppoo",

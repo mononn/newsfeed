@@ -2,10 +2,316 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.github.io/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2023-07-23T20:11:50.478Z</updated>
+    <updated>2023-07-24T20:11:22.259Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.github.io/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.github.io/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Stable kernels to address Zenbleed released]]></title>
+        <id>https://lwn.net/Articles/939101/</id>
+        <link href="https://lwn.net/Articles/939101/"/>
+        <updated>2023-07-24T17:51:01.000Z</updated>
+        <summary type="html"><![CDATA[Greg Kroah-Hartman has released six new stable kernels to address the Zenbleed vulnerability for AMD processors: 6.4.6, 6.1.41,
+5.15.122, 5.10.187, 5.4.250, and 4.19.289. "All AMD processor users of the
+[...] kernel series who have not updated 
+their microcode to the latest version, must upgrade."]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zenbleed: an AMD Zen 2 speculative vulnerability]]></title>
+        <id>https://lwn.net/Articles/939099/</id>
+        <link href="https://lwn.net/Articles/939099/"/>
+        <updated>2023-07-24T17:41:58.000Z</updated>
+        <summary type="html"><![CDATA[Tavis Ormandy reports 
+on a vulnerability that he has found in "all Zen 2 class processors"
+from AMD. (Wayback Machine link as the original site is overloaded.) It can
+allow local attackers to recover data used in string 
+operations; "If you remove the first word from the string 'hello world',
+what should the result be? This is the story of how we discovered that the
+answer could be your root password!" The report has lots of details,
+including an exploit; AMD has released a microcode
+update to address the problem.
+
+We now know that basic operations like strlen, memcpy and strcmp will use
+the vector registers - so we can effectively spy on those operations
+happening anywhere on the system! It doesn't matter if they're happening in
+other virtual machines, sandboxes, containers, processes, whatever! 
+
+This works because the register file is shared by everything on the same
+physical core. In fact, two hyperthreads even share the same physical
+register file.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to add more privacy to the U.S. Cyber Trust Mark]]></title>
+        <id>https://staceyoniot.com/?p=12700</id>
+        <link href="https://staceyoniot.com/how-to-add-more-privacy-to-the-u-s-cyber-trust-mark/"/>
+        <updated>2023-07-24T16:52:59.000Z</updated>
+        <summary type="html"><![CDATA[This story was originally published in my weekly newsletter on Friday July 21, 2023. You can sign up for my newsletter here.  This week, the Biden administration shared its plans for a label for consumer connected devices that would indicate a device had passed certain cybersecurity criteria. I subsequently explained why we need such a label, […]
+The post How to add more privacy to the U.S. Cyber Trust Mark appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IoT news of the week for July 21, 2023]]></title>
+        <id>https://staceyoniot.com/?p=12698</id>
+        <link href="https://staceyoniot.com/iot-news-of-the-week-for-july-21-2023/"/>
+        <updated>2023-07-24T16:48:30.000Z</updated>
+        <summary type="html"><![CDATA[Actility acquires startup to shrink data sent over LPWAN networks: Actility has acquired a startup called Acklio, which makes a technology used to compress the data used to send data on LoRa networks. Acklio’s technology compresses the IP header that gets sent with each packet of data. Since the goal of Low-Power Wide-Area Networks is to […]
+The post IoT news of the week for July 21, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Siemens launches assistive AI solution for IC design and verification]]></title>
+        <id>https://www.embedded.com/?p=4479962</id>
+        <link href="https://www.embedded.com/siemens-launches-assistive-ai-solution-for-ic-design-and-verification/"/>
+        <updated>2023-07-24T15:25:00.000Z</updated>
+        <summary type="html"><![CDATA[Solido helps identify optimization paths to improve PPA & perform statistical yield analysis at a fraction of runtime of brute-force methods.
+The post Siemens launches assistive AI solution for IC design and verification appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Randomness for kmalloc()]]></title>
+        <id>https://lwn.net/Articles/938637/</id>
+        <link href="https://lwn.net/Articles/938637/"/>
+        <updated>2023-07-24T14:50:51.000Z</updated>
+        <summary type="html"><![CDATA[The kernel's address-space layout randomization is intended to make life
+harder for attackers by changing the placement of kernel text and data at
+each boot.  With this randomization, an attacker cannot know ahead of time
+where a vulnerable target will be found on any given system.  There are
+techniques, though, that can be effective without knowing precisely where a
+given object is stored.  As a way of hardening systems against such
+attacks, the kernel will be gaining yet another form of randomization.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Debian adds RISC-V as an official architecture]]></title>
+        <id>https://lwn.net/Articles/939095/</id>
+        <link href="https://lwn.net/Articles/939095/"/>
+        <updated>2023-07-24T14:50:35.000Z</updated>
+        <summary type="html"><![CDATA[The Debian project is now
+supporting 64-bit RISC-V systems as an official architecture.  Some
+work remains to be done, though:
+
+
+	However before you rush to update your sources.list file, I want to
+	warn you that the archive is currently almost empty, and that only
+	the sid and experimental suites are available. The procedure is to
+	rebootstrap the port within the official archive, which means we
+	won't import the full debian-ports archive.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inkscape 1.3 released]]></title>
+        <id>https://lwn.net/Articles/939035/</id>
+        <link href="https://lwn.net/Articles/939035/"/>
+        <updated>2023-07-24T14:12:14.000Z</updated>
+        <summary type="html"><![CDATA[Version
+1.3 of the Inkscape drawing editor has been released.  "With version
+1.3 of Inkscape, you’ll find improved performance, several new features,
+and a solid set of improvements to a few existing ones".  Changes
+include a new shape-builder tool, a "document resources" dialog for the
+management of drawings, a new pattern editor, and more.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cadence RTL design tool claims 5x faster RTL convergence]]></title>
+        <id>https://www.embedded.com/?p=4479957</id>
+        <link href="https://www.embedded.com/cadence-rtl-design-tool-claims-5x-faster-rtl-convergence/"/>
+        <updated>2023-07-24T14:08:47.000Z</updated>
+        <summary type="html"><![CDATA[Cadence said users of its new Joules RTL Design Studio can achieve physical estimates quickly and accurately, claiming up to 5X productivity and up to 25% QoR improvements in the RTL.
+The post Cadence RTL design tool claims 5x faster RTL convergence appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/939059/</id>
+        <link href="https://lwn.net/Articles/939059/"/>
+        <updated>2023-07-24T14:06:23.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (webkit2gtk), Fedora (curl, dotnet6.0, dotnet7.0, ghostscript, kernel-headers, kernel-tools, libopenmpt, openssh, and samba), Mageia (virtualbox), Red Hat (java-1.8.0-openjdk and java-11-openjdk), and Scientific Linux (java-1.8.0-openjdk and java-11-openjdk).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[반도체 장비주 투자의견 및 반도체 장비주 주가 전망(7/24 업뎃)]]></title>
+        <id>https://happist.com/?p=591267</id>
+        <link href="https://happist.com/591267/%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%9e%a5%eb%b9%84%ec%a3%bc-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d"/>
+        <updated>2023-07-24T10:15:43.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[월가의 퀄컴 투자의견 및 퀄컴 주가 전망(7/24 업뎃)]]></title>
+        <id>https://happist.com/?p=591265</id>
+        <link href="https://happist.com/591265/%ed%80%84%ec%bb%b4-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%80%84%ec%bb%b4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d"/>
+        <updated>2023-07-24T10:11:05.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[벼랑에 선 교권: 교총, 전교조 그리고 조희연 교육감이 말하는 해법]]></title>
+        <id>https://slownews.kr/?p=94048</id>
+        <link href="https://slownews.kr/94048"/>
+        <updated>2023-07-24T08:10:53.000Z</updated>
+        <summary type="html"><![CDATA[[서이초 교사 사망 사건에 부쳐] 지난 석 달 동안 슬로우뉴스가 만난 교육 현장의 목소리들. 그중 교총, 전교조, 조희연 교육감이 전한 ‘교권’에 관한 문제의식과 대안을 정리합니다. 교사가 스스로 목숨을 끊었습니다. 학교라는 공간에서 교사가 스스로 목숨을 포기(당)하는 상황을 어떻게 설명해야 할지 모르겠습니다. 서이초 교사의 죽음은 우리 사회의 숙제로 남겨졌습니다. 고통스럽게, 진심을 다해, 부끄러워하면서, 미안해하며 그 숙제를 풀어야...
+The post 벼랑에 선 교권: 교총, 전교조 그리고 조희연 교육감이 말하는 해법 appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>슬로우뉴스</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Troubleshooting Open vSwitch: Is the kernel to blame?]]></title>
+        <id>a5d3493a-b750-4c63-bf76-468ecfbe2dde</id>
+        <link href="https://developers.redhat.com/articles/2023/07/24/troubleshooting-open-vswitch-kernel-blame"/>
+        <updated>2023-07-24T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Often, when troubleshooting Open vSwitch (OVS) in the field, you might be left wondering if the issue is really OVS-related, or if it's a problem with the kernel being overloaded. The kernel_delay.py tool can help you quickly identify if the focus of your investigation should be OVS or the Linux kernel.
+About kernel_delay.py
+kernel_delay.py consists of a Python script that uses the BCC framework to install eBPF probes.  The data the eBPF probes collect will be analyzed and presented to the user by the Python script. Some of the presented data can also be captured by the individual scripts included in the BBC framework.
+kernel_delay.py has two modes of operation:
+In time mode, the tool runs for a specific time and collects the information.
+In trigger mode, event collection can be started an…]]></summary>
+        <author>
+            <name>Eelco Chaudron</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to integrate Spring Boot 3, Spring Security, and Keycloak]]></title>
+        <id>16141334-921b-453f-8708-44ee5d9057f6</id>
+        <link href="https://developers.redhat.com/articles/2023/07/24/how-integrate-spring-boot-3-spring-security-and-keycloak"/>
+        <updated>2023-07-24T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Quite some time ago, Keycloak deprecated its adapters, including OpenID connect for Java adapters. For Spring Boot developers, this means we need to use Spring Security for OpenID and OAuth2 connectivity with Keycloak instead of relying on Keycloak adapters.
+In this article, we'll create a sample Java application on top of Spring Boot 3 and protect it by using Spring Security and Keycloak, without having to use Keycloak adapters.
+Install Keycloak
+First, we need to install Keycloak to our system. In this example, we are using Keycloak 17 and installing it using a container. Here we've used admin as the administrator username and password as its password.
+$ docker pull keycloak/keycloak:17.0.0
+$ docker run -p 8080:8080 \ 
+    -e KEYCLOAK_ADMIN=admin \ 
+    -e KEYCLOAK_ADMIN_PASSWORD=password…]]></summary>
+        <author>
+            <name>Muhammad Edwin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[스레즈 ‘반짝 성공’ 그 이후… 우리가 알던 ‘소셜미디어 시대’는 막을 내리게 될까]]></title>
+        <id>https://newspeppermint.com/?p=77433</id>
+        <link href="https://newspeppermint.com/2023/07/24/npsp_threadssocialmedia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_threadssocialmedia"/>
+        <updated>2023-07-24T05:00:59.000Z</updated>
+        <summary type="html"><![CDATA[페이스북과 인스타그램의 모회사 메타(Meta)가 내놓은 새로운 소셜미디어 스레즈(Threads)가 출시 닷새 만에 이용자 1억 명을 돌파하며 기록을 써내려가고 있습니다. 일론 머스크가 인수한 뒤 잇단 실언과 사고로 이용자를 빠르게 잃고 있는 트위터와 대조됩니다. 실제로 트위터의 이용자를 노골적으로 유치하기 위해 기존 일정보다 출시 일정을 앞당겨 스레즈를 내놓자 머스크는 대놓고 저커버그를 저격하기도 했죠. 스레즈 현상을 둘러싸고 많은 기사와 분석이 쏟아지는 가운데 지금껏 우리가 알던 소셜미디어의 속성이 근본적으로 바뀌고 있다는 분석과 전망이 눈에 띄어 관련 → 더 보기]]></summary>
+        <author>
+            <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introduction to Programming with C++ For Engineers, Book Review]]></title>
+        <id>https://www.cppstories.com/2023/intro-cpp-book/</id>
+        <link href="https://www.cppstories.com/2023/intro-cpp-book/"/>
+        <updated>2023-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lots of practical examples, general programming, software development techniques, OOP, parallel algorithms, plus C++ to combine it all into working applications. This is a short introduction to the book “Introduction to Programming with C++” by Prof. Boguslaw Cyganek, an excellent book for students who start their journey with system coding.
+Let’s see what’s inside.
+Disclaimer: I got a free copy from the author.
+Disclaimer 2: The links to Amazon are affiliate links, which provide me with some small commission.
+
+
+
+     
+    
+
+
+Here are the main links and info about the book:
+
+The book on Amazon:
+Introduction to Programming with C++ for Engineers @Amazon (released in  2021)).
+The book page at Wiley:
+Introduction to Programming with C++ for Engineers
+Excerpts (from the Wiley page)
+The Introdu…]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Practical comparison of ARM compilers]]></title>
+        <id>tag:m0agx.eu,2023-07-24:/practical-comparison-of-ARM-compilers.html</id>
+        <link href="https://m0agx.eu/practical-comparison-of-ARM-compilers.html"/>
+        <updated>2023-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[My inspiration for this article was this thread in r/embedded. There are still many myths and misconception when it comes to the
+simple questions "Which compiler should I use?" or "Which compiler is the best?". I will try to share my practical experience with GCC, Clang and IAR on …]]></summary>
+        <author>
+            <name>M0AGX / LB9MG</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel prepatch 6.5-rc3 and three stable kernels]]></title>
+        <id>https://lwn.net/Articles/939012/</id>
+        <link href="https://lwn.net/Articles/939012/"/>
+        <updated>2023-07-23T23:32:28.000Z</updated>
+        <summary type="html"><![CDATA[Linus has released 6.5-rc3 for testing.
+"Things continue to look pretty normal - there's nothing here that would
+seem to stand out, with both the commit counts and the diffs looking pretty
+much normal for rc3".
+
+Meanwhile, Greg Kroah-Hartman has released the large
+6.4.5,
+6.1.40, and
+5.15.121
+stable updates; each contains another set of important fixes.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[교사의 죽음, 무엇을 이야기할 것인가: 슬로우레터 7월24일.]]></title>
+        <id>https://slownews.kr/?p=94063</id>
+        <link href="https://slownews.kr/94063"/>
+        <updated>2023-07-23T22:05:02.000Z</updated>
+        <summary type="html"><![CDATA[학생 인권 때문에 교권이 침해된다고? 교사 짓밟는 무한 민원. 교사의 죽음, 무엇을 이야기할 것인가. 윤석열은 지하차도를 찾지 않았다. “백지화하겠다”던 원희룡, “국민이 검증해 달라”. 의문의 소포. 윤석열 장모 법정 구속. 이재명 영장 또 친다. 더 깊게 읽기. 출생신고 의무화했더니 영아 유기 늘었다. 검찰이 조국에게 입장문을 내라 했다. “개딸과 짜고 치나”, 민주당 내분 양상. 오늘의 TMI. 풍수...
+The post 교사의 죽음, 무엇을 이야기할 것인가: 슬로우레터 7월24일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Benchmarking fuzzers]]></title>
+        <id>https://shape-of-code.com/?p=8024</id>
+        <link href="https://shape-of-code.com/2023/07/23/8024/"/>
+        <updated>2023-07-23T21:47:02.000Z</updated>
+        <summary type="html"><![CDATA[Fuzzing has become a popular area of research in the reliability & testing community, with a stream of papers claiming to have created a better tool/algorithm. The claims of ‘betterness’, made by the authors, often derive from the number of previously unreported faults discovered in some collection of widely used programs. Developers in industry will […]]]></summary>
+        <author>
+            <name>Derek Jones</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C to C++: 5 Tips for Refactoring C Code into C++]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1551.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1551.php"/>
+        <updated>2023-07-23T18:12:11.000Z</updated>
+        <summary type="html"><![CDATA[In our C to C++ series, we’ve been discussing the fundamental details that embedded developers and teams need to transition from using C to C++. In our last post, C to C++: Bridging the Gap from C Structures to Classes, we discussed the differences between C and C++ structures and objects. Many teams interested in using C++ don’t need to jump off the deep end into metaprogramming and other...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[소식] 논문 – 플랫폼과 도시공간은 어떻게 관계 맺는가. 〈공간과 사회〉 33(2)]]></title>
         <id>https://attention2.space/?p=2718</id>
@@ -4226,17 +4532,6 @@ The post 기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로
         <summary type="html"><![CDATA[<하이데거에 의하면, 시간과 시간성을 구분해야 한다. 진정으로 의미 있는 시간은 바로 시간성이다. 인간은 시간성을 만들어가야 한다.> 시간과 시간성은 어떻게 구분되는가? 왜 하이데거는 시간이 아니라, 시간성이 진정 의미 있는 시간이라고 했는가? 인간이 시간성을 만들어 가야 한다는 것은 무슨 의미인가? <시간과 시간성은 다르다. 시간성이라는 말은 시간이 아니라, 어떤 것이 가지고 있는 시간적 성격, 혹은 시간적 구조를 가리킨다. 전자의 좋은 예는 후설의 ‘의식의 흐름’이고, 후자의 예는 하이데거의 현존재인 마음씀이다. 하이데거의 시간성은 흐름의 성격은 없고, 마음씀의 구조가 시간적이라는 것이다. 현존재의 존재.......]]></summary>
         <author>
             <name>sellars</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[도서관 연체료를 없앴더니 나타난 놀라운 변화.]]></title>
-        <id>https://slownews.kr/?p=91852</id>
-        <link href="https://slownews.kr/91852"/>
-        <updated>2023-06-25T06:01:40.000Z</updated>
-        <summary type="html"><![CDATA[미국에서는 연체료를 받지 않겠다고 선언하는 공공 도서관이 늘고 있다. 반납 기간을 어긴 사람들에게 수백 년 동안 연체료가 거의 유일한 강제 수단이었는데 이게 효과가 없다는 판단을 뒤늦게 내리게 된 것이다. 미국에서는 2017년 내슈빌에서 시작했고 시카고와 댈러스, 샌프란시스코로 확산됐다. 2021년 뉴욕도 동참했다. 이게 왜 중요한가. 데이터가 말한다. 책이 돌아오기 시작했다. 연체료의 경제학: 1만 원 때문에 도서관을 끊었다....
-The post 도서관 연체료를 없앴더니 나타난 놀라운 변화. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
         </author>
     </entry>
 </feed>

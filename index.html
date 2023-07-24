@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-23 datetime="2023-07-23T16:30:18.000Z">2023-07-23</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-23 datetime="2023-07-23T16:30:18.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-24 datetime="2023-07-24T17:51:01.000Z">2023-07-24</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-24 datetime="2023-07-24T17:51:01.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -34,24 +34,322 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >공간주의</button>
-                  <a class="source-heading__link" href="https://attention2.space">Open</a>
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://attention2.space/?p&#x3D;2718"
+                        data-accordion-key="https://lwn.net/Articles/939101/"
                         open
                       >
-                        <summary class="article-expander__title">[소식] 논문 – 플랫폼과 도시공간은 어떻게 관계 맺는가. 〈공간과 사회〉 33(2)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://attention2.space/2023/how_do_platform_and_urban_space_relate/">
+                        <summary class="article-expander__title">Stable kernels to address Zenbleed released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/939101/">
                           <div class="article-summary-box-inner media-object">
-                              <img src="https://i0.wp.com/attention2.space/wp-content/uploads/2023/07/제목-없음1-1.png?fit&#x3D;1200%2C703&amp;ssl&#x3D;1" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
-                              <span>공간주의 구성원 이승빈, 김영대, 신지연이 함께 공저한 논문 &quot;플랫폼과 도시공간은 어떻게 관계 맺는가: 서울 신촌 샵인샵 입지와 음식경관 분석&quot;이 학술지 《공간과 사회》 2023년 여름호(33권 2호)에 게재되었습니다.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
+                              <span>Greg Kroah-Hartman has released six new stable kernels to address the Zenbleed vulnerability for AMD processors: 6.4.6, 6.1.41,
+5.15.122, 5.10.187, 5.4.250, and 4.19.289. &quot;All AMD processor users of the
+[...] kernel series who have not updated 
+their microcode to the latest version, must upgrade.&quot;</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/939099/"
+                        open
+                      >
+                        <summary class="article-expander__title">Zenbleed: an AMD Zen 2 speculative vulnerability</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/939099/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Tavis Ormandy reports 
+on a vulnerability that he has found in &quot;all Zen 2 class processors&quot;
+from AMD. (Wayback Machine link as the original site is overloaded.) It can
+allow local attackers to recover data used in string 
+operations; &quot;If you remove the first word from the string &#x27;hello world&#x27;,
+what should the result be? This is the story of how we discovered that the
+answer could be your root password!&quot; The report has lots of details,
+including an exploit; AMD has released a microcode
+update to address the problem.
+
+We now know that basic operations like strlen, memcpy and strcmp will use
+the vector registers - so we can effectively spy on those operations
+happening anywhere on the system! It doesn&#x27;t matter if they&#x27;re happening in
+other virtual machines, sandboxes, containers, processes, whatever! 
+
+This works because the register file is shared by everything on the same
+physical core. In fact, two hyperthreads even share the same physical
+register file.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/938637/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Randomness for kmalloc()</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/938637/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The kernel&#x27;s address-space layout randomization is intended to make life
+harder for attackers by changing the placement of kernel text and data at
+each boot.  With this randomization, an attacker cannot know ahead of time
+where a vulnerable target will be found on any given system.  There are
+techniques, though, that can be effective without knowing precisely where a
+given object is stored.  As a way of hardening systems against such
+attacks, the kernel will be gaining yet another form of randomization.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/939095/"
+                        open
+                      >
+                        <summary class="article-expander__title">Debian adds RISC-V as an official architecture</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/939095/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The Debian project is now
+supporting 64-bit RISC-V systems as an official architecture.  Some
+work remains to be done, though:
+
+
+	However before you rush to update your sources.list file, I want to
+	warn you that the archive is currently almost empty, and that only
+	the sid and experimental suites are available. The procedure is to
+	rebootstrap the port within the official archive, which means we
+	won&#x27;t import the full debian-ports archive.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/939035/"
+                        open
+                      >
+                        <summary class="article-expander__title">Inkscape 1.3 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/939035/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version
+1.3 of the Inkscape drawing editor has been released.  &quot;With version
+1.3 of Inkscape, you’ll find improved performance, several new features,
+and a solid set of improvements to a few existing ones&quot;.  Changes
+include a new shape-builder tool, a &quot;document resources&quot; dialog for the
+management of drawings, a new pattern editor, and more.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/939059/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Monday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/939059/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (webkit2gtk), Fedora (curl, dotnet6.0, dotnet7.0, ghostscript, kernel-headers, kernel-tools, libopenmpt, openssh, and samba), Mageia (virtualbox), Red Hat (java-1.8.0-openjdk and java-11-openjdk), and Scientific Linux (java-1.8.0-openjdk and java-11-openjdk).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Stacey on IoT | Internet of Things news and analysis</button>
+                  <a class="source-heading__link" href="https://staceyoniot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;12700"
+                        open
+                      >
+                        <summary class="article-expander__title">How to add more privacy to the U.S. Cyber Trust Mark</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/how-to-add-more-privacy-to-the-u-s-cyber-trust-mark/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://staceyoniot.com/wp-content/uploads/2023/07/Screenshot-2023-07-20-at-7.23.41-AM.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This story was originally published in my weekly newsletter on Friday July 21, 2023. You can sign up for my newsletter here.  This week, the Biden administration shared its plans for a label for consumer connected devices that would indicate a device had passed certain cybersecurity criteria. I subsequently explained why we need such a label, […]
+The post How to add more privacy to the U.S. Cyber Trust Mark appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;12698"
+                        open
+                      >
+                        <summary class="article-expander__title">IoT news of the week for July 21, 2023</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/iot-news-of-the-week-for-july-21-2023/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Actility acquires startup to shrink data sent over LPWAN networks: Actility has acquired a startup called Acklio, which makes a technology used to compress the data used to send data on LoRa networks. Acklio’s technology compresses the IP header that gets sent with each packet of data. Since the goal of Low-Power Wide-Area Networks is to […]
+The post IoT news of the week for July 21, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded.com</button>
+                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479962"
+                        open
+                      >
+                        <summary class="article-expander__title">Siemens launches assistive AI solution for IC design and verification</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/siemens-launches-assistive-ai-solution-for-ic-design-and-verification/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embedded.com/wp-content/uploads/2023/07/Solido-DE-Launch-Press-Presentation-V2_Page_08.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Solido helps identify optimization paths to improve PPA &amp; perform statistical yield analysis at a fraction of runtime of brute-force methods.
+The post Siemens launches assistive AI solution for IC design and verification appeared first on Embedded.com.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479957"
+                        open
+                      >
+                        <summary class="article-expander__title">Cadence RTL design tool claims 5x faster RTL convergence</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/cadence-rtl-design-tool-claims-5x-faster-rtl-convergence/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embedded.com/wp-content/uploads/2023/07/Cadence-Joules-RTL-Design-Studio.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Cadence said users of its new Joules RTL Design Studio can achieve physical estimates quickly and accurately, claiming up to 5X productivity and up to 25% QoR improvements in the RTL.
+The post Cadence RTL design tool claims 5x faster RTL convergence appeared first on Embedded.com.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;591267"
+                        open
+                      >
+                        <summary class="article-expander__title">반도체 장비주 투자의견 및 반도체 장비주 주가 전망(7/24 업뎃)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591267/%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%9e%a5%eb%b9%84%ec%a3%bc-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://happist.com/wp-content/uploads/2021/10/ASML에서-제작한-EUV-장비를-대한항공-항공기에-싣고-있는-모습-Image-from-ASML.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;591265"
+                        open
+                      >
+                        <summary class="article-expander__title">월가의 퀄컴 투자의견 및 퀄컴 주가 전망(7/24 업뎃)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591265/%ed%80%84%ec%bb%b4-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%80%84%ec%bb%b4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://happist.com/wp-content/uploads/2017/02/LG-스마트폰-역사_2012년-5월-옵티머스-LTE2-퀄컴-스냅드래곤-S4-듀얼코어-칩-적용-가격은-93만-5000원-02-1.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -72,6 +370,304 @@
                   <a class="source-heading__link" href="https://slownews.kr">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;94048"
+                        open
+                      >
+                        <summary class="article-expander__title">벼랑에 선 교권: 교총, 전교조 그리고 조희연 교육감이 말하는 해법</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/94048">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12625775.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>[서이초 교사 사망 사건에 부쳐] 지난 석 달 동안 슬로우뉴스가 만난 교육 현장의 목소리들. 그중 교총, 전교조, 조희연 교육감이 전한 ‘교권’에 관한 문제의식과 대안을 정리합니다. 교사가 스스로 목숨을 끊었습니다. 학교라는 공간에서 교사가 스스로 목숨을 포기(당)하는 상황을 어떻게 설명해야 할지 모르겠습니다. 서이초 교사의 죽음은 우리 사회의 숙제로 남겨졌습니다. 고통스럽게, 진심을 다해, 부끄러워하면서, 미안해하며 그 숙제를 풀어야...
+The post 벼랑에 선 교권: 교총, 전교조 그리고 조희연 교육감이 말하는 해법 appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="a5d3493a-b750-4c63-bf76-468ecfbe2dde"
+                        open
+                      >
+                        <summary class="article-expander__title">Troubleshooting Open vSwitch: Is the kernel to blame?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/07/24/troubleshooting-open-vswitch-kernel-blame">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_B.png?itok&#x3D;PfB3lac5" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Often, when troubleshooting Open vSwitch (OVS) in the field, you might be left wondering if the issue is really OVS-related, or if it&#x27;s a problem with the kernel being overloaded. The kernel_delay.py tool can help you quickly identify if the focus of your investigation should be OVS or the Linux kernel.
+About kernel_delay.py
+kernel_delay.py consists of a Python script that uses the BCC framework to install eBPF probes.  The data the eBPF probes collect will be analyzed and presented to the user by the Python script. Some of the presented data can also be captured by the individual scripts included in the BBC framework.
+kernel_delay.py has two modes of operation:
+In time mode, the tool runs for a specific time and collects the information.
+In trigger mode, event collection can be started an…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="16141334-921b-453f-8708-44ee5d9057f6"
+                        open
+                      >
+                        <summary class="article-expander__title">How to integrate Spring Boot 3, Spring Security, and Keycloak</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/07/24/how-integrate-spring-boot-3-spring-security-and-keycloak">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/MobileAuthentication_KeyCloak_0.png?itok&#x3D;DSALBFcV" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Quite some time ago, Keycloak deprecated its adapters, including OpenID connect for Java adapters. For Spring Boot developers, this means we need to use Spring Security for OpenID and OAuth2 connectivity with Keycloak instead of relying on Keycloak adapters.
+In this article, we&#x27;ll create a sample Java application on top of Spring Boot 3 and protect it by using Spring Security and Keycloak, without having to use Keycloak adapters.
+Install Keycloak
+First, we need to install Keycloak to our system. In this example, we are using Keycloak 17 and installing it using a container. Here we&#x27;ve used admin as the administrator username and password as its password.
+$ docker pull keycloak/keycloak:17.0.0
+$ docker run -p 8080:8080 \ 
+    -e KEYCLOAK_ADMIN&#x3D;admin \ 
+    -e KEYCLOAK_ADMIN_PASSWORD&#x3D;password…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;77433"
+                        open
+                      >
+                        <summary class="article-expander__title">스레즈 ‘반짝 성공’ 그 이후… 우리가 알던 ‘소셜미디어 시대’는 막을 내리게 될까</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2023/07/24/npsp_threadssocialmedia/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_threadssocialmedia">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>페이스북과 인스타그램의 모회사 메타(Meta)가 내놓은 새로운 소셜미디어 스레즈(Threads)가 출시 닷새 만에 이용자 1억 명을 돌파하며 기록을 써내려가고 있습니다. 일론 머스크가 인수한 뒤 잇단 실언과 사고로 이용자를 빠르게 잃고 있는 트위터와 대조됩니다. 실제로 트위터의 이용자를 노골적으로 유치하기 위해 기존 일정보다 출시 일정을 앞당겨 스레즈를 내놓자 머스크는 대놓고 저커버그를 저격하기도 했죠. 스레즈 현상을 둘러싸고 많은 기사와 분석이 쏟아지는 가운데 지금껏 우리가 알던 소셜미디어의 속성이 근본적으로 바뀌고 있다는 분석과 전망이 눈에 띄어 관련 → 더 보기</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >C++ Stories</button>
+                  <a class="source-heading__link" href="https://www.cppstories.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.cppstories.com/2023/intro-cpp-book/"
+                        open
+                      >
+                        <summary class="article-expander__title">Introduction to Programming with C++ For Engineers, Book Review</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.cppstories.com/2023/intro-cpp-book/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.cppstories.com/2023/images/book_rev_cyganek.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Lots of practical examples, general programming, software development techniques, OOP, parallel algorithms, plus C++ to combine it all into working applications. This is a short introduction to the book “Introduction to Programming with C++” by Prof. Boguslaw Cyganek, an excellent book for students who start their journey with system coding.
+Let’s see what’s inside.
+Disclaimer: I got a free copy from the author.
+Disclaimer 2: The links to Amazon are affiliate links, which provide me with some small commission.
+
+
+
+     
+    
+
+
+Here are the main links and info about the book:
+
+The book on Amazon:
+Introduction to Programming with C++ for Engineers @Amazon (released in  2021)).
+The book page at Wiley:
+Introduction to Programming with C++ for Engineers
+Excerpts (from the Wiley page)
+The Introdu…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >M0AGX / LB9MG</button>
+                  <a class="source-heading__link" href="https://m0agx.eu/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="tag:m0agx.eu,2023-07-24:/practical-comparison-of-ARM-compilers.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Practical comparison of ARM compilers</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://m0agx.eu/practical-comparison-of-ARM-compilers.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>My inspiration for this article was this thread in r/embedded. There are still many myths and misconception when it comes to the
+simple questions &quot;Which compiler should I use?&quot; or &quot;Which compiler is the best?&quot;. I will try to share my practical experience with GCC, Clang and IAR on …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-23 datetime="2023-07-23T23:32:28.000Z">2023-07-23</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-23 datetime="2023-07-23T23:32:28.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/939012/"
+                        open
+                      >
+                        <summary class="article-expander__title">Kernel prepatch 6.5-rc3 and three stable kernels</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/939012/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Linus has released 6.5-rc3 for testing.
+&quot;Things continue to look pretty normal - there&#x27;s nothing here that would
+seem to stand out, with both the commit counts and the diffs looking pretty
+much normal for rc3&quot;.
+
+Meanwhile, Greg Kroah-Hartman has released the large
+6.4.5,
+6.1.40, and
+5.15.121
+stable updates; each contains another set of important fixes.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;94063"
+                        open
+                      >
+                        <summary class="article-expander__title">교사의 죽음, 무엇을 이야기할 것인가: 슬로우레터 7월24일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/94063">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/05/school-6900381_1280.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>학생 인권 때문에 교권이 침해된다고? 교사 짓밟는 무한 민원. 교사의 죽음, 무엇을 이야기할 것인가. 윤석열은 지하차도를 찾지 않았다. “백지화하겠다”던 원희룡, “국민이 검증해 달라”. 의문의 소포. 윤석열 장모 법정 구속. 이재명 영장 또 친다. 더 깊게 읽기. 출생신고 의무화했더니 영아 유기 늘었다. 검찰이 조국에게 입장문을 내라 했다. “개딸과 짜고 치나”, 민주당 내분 양상. 오늘의 TMI. 풍수...
+The post 교사의 죽음, 무엇을 이야기할 것인가: 슬로우레터 7월24일. appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -108,6 +704,107 @@ The post 두 얼굴의 언론: 코로나 땐 WHO 못 믿겠다! vs. 핵폐수 �
                               <span>기록적 폭우로 전국에 큰 피해가 발생하자 윤석열 대통령은 수해 지역을 찾아 빠른 복구를 약속했습니다. 윤 대통령은 7월 18일 국무회의에서 “국민 혈세는 재난으로 인한 국민 눈물을 닦아드리는 데 적극적으로 사용돼야 한다”며 “이권 카르텔, 부패 카르텔에 대한 보조금을 전부 폐지하고 그 재원으로 수해복구와 피해 보전에 재정을 투입”하라고 지시했습니다. 수해복구 가용 재원으로 이권 카르텔 보조금을 삭감해 지원하겠다는 윤...
 The post 이권 카르텔 보조금으로 수해복구? “저도 어이가 없다” appeared first on 슬로우뉴스.</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >The Shape of Code</button>
+                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://shape-of-code.com/?p&#x3D;8024"
+                        open
+                      >
+                        <summary class="article-expander__title">Benchmarking fuzzers</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2023/07/23/8024/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Fuzzing has become a popular area of research in the reliability &amp; testing community, with a stream of papers claiming to have created a better tool/algorithm. The claims of ‘betterness’, made by the authors, often derive from the number of previously unreported faults discovered in some collection of widely used programs. Developers in industry will […]</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >EmbeddedRelated.com Blogs</button>
+                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1551.php"
+                        open
+                      >
+                        <summary class="article-expander__title">C to C++: 5 Tips for Refactoring C Code into C++</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1551.php">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embeddedrelated.com/new2/images/blog_generic_image.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>In our C to C++ series, we’ve been discussing the fundamental details that embedded developers and teams need to transition from using C to C++. In our last post, C to C++: Bridging the Gap from C Structures to Classes, we discussed the differences between C and C++ structures and objects. Many teams interested in using C++ don’t need to jump off the deep end into metaprogramming and other...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >공간주의</button>
+                  <a class="source-heading__link" href="https://attention2.space">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://attention2.space/?p&#x3D;2718"
+                        open
+                      >
+                        <summary class="article-expander__title">[소식] 논문 – 플랫폼과 도시공간은 어떻게 관계 맺는가. 〈공간과 사회〉 33(2)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://attention2.space/2023/how_do_platform_and_urban_space_relate/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://i0.wp.com/attention2.space/wp-content/uploads/2023/07/제목-없음1-1.png?fit&#x3D;1200%2C703&amp;ssl&#x3D;1" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>공간주의 구성원 이승빈, 김영대, 신지연이 함께 공저한 논문 &quot;플랫폼과 도시공간은 어떻게 관계 맺는가: 서울 신촌 샵인샵 입지와 음식경관 분석&quot;이 학술지 《공간과 사회》 2023년 여름호(33권 2호)에 게재되었습니다.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -10250,27 +10947,6 @@ The post 기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;91852"
-                        open
-                      >
-                        <summary class="article-expander__title">도서관 연체료를 없앴더니 나타난 놀라운 변화.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/91852">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/benutzung_buehne.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>미국에서는 연체료를 받지 않겠다고 선언하는 공공 도서관이 늘고 있다. 반납 기간을 어긴 사람들에게 수백 년 동안 연체료가 거의 유일한 강제 수단이었는데 이게 효과가 없다는 판단을 뒤늦게 내리게 된 것이다. 미국에서는 2017년 내슈빌에서 시작했고 시카고와 댈러스, 샌프란시스코로 확산됐다. 2021년 뉴욕도 동참했다. 이게 왜 중요한가. 데이터가 말한다. 책이 돌아오기 시작했다. 연체료의 경제학: 1만 원 때문에 도서관을 끊었다....
-The post 도서관 연체료를 없앴더니 나타난 놀라운 변화. appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10309,8 +10985,8 @@ The post 도서관 연체료를 없앴더니 나타난 놀라운 변화. appeare
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/5638394047">
-        <time id="build-timestamp" datetime="2023-07-23T20:11:50.444Z">2023-07-23T20:11:50.444Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/5649350030">
+        <time id="build-timestamp" datetime="2023-07-24T20:11:22.214Z">2023-07-24T20:11:22.214Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
