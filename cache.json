@@ -147,16 +147,6 @@
           "wordCount": 1491,
           "title": "Finite State Machine with std::variant - Vending Machine",
           "imageUrl": "https://www.cppstories.com/2023/images/fsm_vending.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2023/finite-state-machines-variant-cpp/",
-          "author": null,
-          "description": "In this blog post, I’ll show you how to convert a “regular” enum-style finite state machine into a modern version based on std::variant from C++17. This technique allows you to improve design, work with value types and enhance code quality.\n\n\n\n     \n    \n\n\nLet’s start with a basic example:\nwe want to track a game player’s health status\nwe’d like to respond to events like “Hit by a monster” or “Healing bonus.”\nwhen the health point goes to 0, then we have to restart the game only if there are some remaining lives available\nHere’s a basic diagram with states and transitions:\n\n\n\n\n     \n    \n\n\nWe can quickly write some basic code based on enum classes:\nenum class HealthState { PlayerAlive, PlayerDead, GameOver };\nenum class Event { HitByMonster, Heal, Restart };\n\n\nAnd the state machine class:\n…",
-          "link": "https://www.cppstories.com/2023/finite-state-machines-variant-cpp/",
-          "publishedOn": "2023-06-26T00:00:00.000Z",
-          "wordCount": 2334,
-          "title": "Finite State Machine with std::variant",
-          "imageUrl": "https://www.cppstories.com/2023/images/fsm.png"
         }
       ]
     },
@@ -248,7 +238,18 @@
       "title": "CPUU의 Daydreamin&#039;",
       "feedUrl": "https://cpuu.postype.com/rss",
       "siteUrl": "https://cpuu.postype.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://cpuu.postype.com/post/14969771",
+          "author": "CPUU",
+          "description": "개요\n유클리드 호제법(Euclidean algorithm)이란 2개의 자연수의 최대공약수(greatest common divisor, GCD)를 구하는 알고리즘 중 하나이다. 호제법이란 말은 두 수가 서로(互) 상대방 수를 나누어(除)서 결국 원하는 수를 얻는 알고리즘을 나타낸다. 2개의 자연수(또는 정식) a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a>b), a와 b의 최대공약수는 b와 r의 최대공약수와 같다. 이 성질에 따라, b를 r로 나눈 나머지 r'를 구하고, 다시 r을 r'로 나눈 나머지를 구하는 과정을 반복하여 나머지가 0이 되었을 때 나누는 수가 a와 b의 최대공약수이다. \n(출처: 위키백과)\n\n\n최대공약수 예시\n\n\n최소공배수 계산\n최소공배수는 특별한 알고리즘없이 최대공약수만 알면 쉽게 계산할 수 있다.\nA = G * a\nB = G * b 라고 했을 때\n최대공약수 G 를 구했다면\n최소공배수는 G * a * b이므로\n두 수 의 곱( G * G * a * b) 에서 최소공배수 G를 나눠주면 된다.\nF# 구현\ngcd 함수를 구현한 후 계속해서 gcd를 다시 사용하는 구조를 봤을 때 재귀함수를 사용하면 간단하게 구현할 수 있다. 단, 종료조건을 정확하게 명시해야 한다.\nopen System\n\nlet rec gcd m n =\n    match n with\n    | 0 -> m\n    | _ -> gcd n (m % n)\n\nlet lcm m n =\n    if m = 0 || n = 0 then 0\n    else abs (m * n) / gcd m n\n\nlet rec readInt () =\n    match Int32.TryParse(Console.ReadLine()) with\n    | (true, value) -> value\n    | _ -> \n        printfn \"Invalid input. Please enter a valid integer.\"\n        readInt()\n\nlet main () =\n    printfn \"Enter the first integer:\"\n    let m = readInt()\n\n    printfn \"Enter the second integer:\"\n    let n = readInt()\n\n    let result_gcd = gcd m n\n    let result_lcm = lcm m n\n\n    printfn \"The greatest common divisor of %d and %d is %d.\" m n result_gcd\n    printfn \"The least common multiple of %d and %d is %d.\" m n result_lcm\n\nmain()\n\n\n실행결과\n$ fsharp dotnet run\nEnter the first integer:\n78696\nEnter the second integer:\n19332\nThe greatest common divisor of 78696 and 19332 is 36.\nThe least common multiple of 78696 and 19332 is 42259752.",
+          "link": "https://cpuu.postype.com/post/14969771",
+          "publishedOn": "2023-07-25T01:59:10.000Z",
+          "wordCount": 978,
+          "title": "F# 유클리드 호제법(Euclidean algorithm) 이용한 최대공약수, 최소공배수 계산",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/07/25/10/56/f3155383bc00ea23a7b27af1ac490ee9.png?w=600&h=300&q=65"
+        }
+      ]
     },
     {
       "title": null,
@@ -267,6 +268,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "86833e73-bbec-48eb-8325-912250049ea6",
+          "author": "Jianzhu Zhang, Andrew Kiselev, Daniel Kostecki",
+          "description": "Accelerating the software development life cycle while ensuring the quality and performance of applications is a challenging task. GitHub Actions makes it easy to automate all required CI software workflows for your GitHub repository.\nGitHub Actions Runner is an application that runs a job from a GitHub Actions workflow. GitHub Actions also provides a self-hosted runner that allows you to run continuous integration (CI) tests that require actual hardware. End-to-end testing (E2E testing) is a popular methodology to test an application's functionality and performance under real-life conditions. Still, it often demands actual hardware, rendering it infeasible to run on the public cloud.\nIn this article, we'll delve into our experience performing E2E testing for an open source project on-prem…",
+          "link": "https://developers.redhat.com/articles/2023/07/25/end-end-testing-self-hosted-runners-github-actions",
+          "publishedOn": "2023-07-25T07:00:00.000Z",
+          "wordCount": 3642,
+          "title": "End-to-end testing with self-hosted runners in GitHub Actions",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-containers_2x.png?itok=zN0DnK8F"
+        },
         {
           "id": "a5d3493a-b750-4c63-bf76-468ecfbe2dde",
           "author": "Eelco Chaudron",
@@ -496,26 +507,6 @@
           "wordCount": 2601,
           "title": "What's new in Ansible Automation Platform 2.4",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
-        },
-        {
-          "id": "a6b76d2d-0282-472f-8fca-4e4fc5eb51ab",
-          "author": "Donna Smalls",
-          "description": "Red Hat OpenShift is a Kubernetes-based app-dev platform that enables developers to build, deploy, and manage containerized applications. It provides a comprehensive set of tools and services for developers, operations teams, and IT organizations to streamline application development and delivery.\nRed Hat OpenShift version 4.13, the latest release, introduces several new features and enhancements that help organizations accelerate their digital transformation journey. Let's take a closer look at some of the key features of OpenShift 4.13.\nImproved developer experience\nOpenShift 4.13 introduces several new features that improve the developer experience and make it easier to build and deploy applications, including creating serverless functions from the developer perspective, using Red Hat O…",
-          "link": "https://developers.redhat.com/articles/2023/06/26/whats-new-red-hat-openshift-413",
-          "publishedOn": "2023-06-26T07:00:00.000Z",
-          "wordCount": 2653,
-          "title": "What's new in Red Hat OpenShift 4.13",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
-        },
-        {
-          "id": "92ce2ab7-2ec3-4eeb-b409-bb09e34dc3dd",
-          "author": "Nagesh Rathod",
-          "description": "This article demonstrates how to deploy gaming applications in a Kubernetes (K8s) cluster using Red Hat Ansible Automation Platform. The minikube cluster is the best single node cluster for a personal POC. For this article, we will use a minikube cluster and Ansible Automation Platform 2.3 and a restricted set of privileges in the cluster to deploy the application in Kubernetes. Automation and orchestration are a rock solid combination that yield more promising results.\nHow to start minikube\nMake sure you have kubectl and minikube CLI installed before getting started with the Kubernetes cluster.\n$ minikube start\n😄  minikube v1.26.1 on Redhat 9.1\n❗  Specified Kubernetes version 1.25.7 is newer than the newest supported version: v1.24.3. Use `minikube config defaults kubernetes-version` for…",
-          "link": "https://developers.redhat.com/articles/2023/06/26/how-deploy-apps-k8s-cluster-automation-controller",
-          "publishedOn": "2023-06-26T07:00:00.000Z",
-          "wordCount": 3535,
-          "title": "How to deploy apps in a K8s cluster via automation controller",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         }
       ]
     },
@@ -541,6 +532,16 @@
       "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml",
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
+        {
+          "id": "https://eli.thegreenplace.net/2023/common-pitfalls-in-go-benchmarking/",
+          "author": null,
+          "description": "<p>Go programmers have the good fortune of excellent testing and benchmarking\ntooling built into the standard library - in the <tt class=\"docutils literal\">testing</tt> package. However,\n<em>benchmarking is hard</em>. This isn't Go specific; it's just one of those things\nexperienced developers learn over time.</p>\n<p>This post lists some common benchmarking pitfalls Go programmers run …</p>",
+          "link": "https://eli.thegreenplace.net/2023/common-pitfalls-in-go-benchmarking/",
+          "publishedOn": "2023-07-24T23:43:00.000Z",
+          "wordCount": 1987,
+          "title": "Common pitfalls in Go benchmarking",
+          "imageUrl": null
+        },
         {
           "id": "https://eli.thegreenplace.net/2023/preview-ranging-over-functions-in-go/",
           "author": null,
@@ -584,6 +585,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4479983",
+          "author": "Benjamin Monate",
+          "description": "Mathematically proven code correctness and hardware awareness leads to 100% coverage and zero issues for safety- and security-critical systems.\nThe post How exhaustive static analysis improves software testing accuracy appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/how-exhaustive-static-analysis-improves-software-testing-accuracy/",
+          "publishedOn": "2023-07-25T11:17:31.000Z",
+          "wordCount": 4683,
+          "title": "How exhaustive static analysis improves software testing accuracy",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/TrustInSoft-Fig2BYLINEupdated-buffer-overflow-with-overlay.png"
+        },
         {
           "id": "https://www.embedded.com/?p=4479962",
           "author": "Nitin Dahad",
@@ -633,6 +644,16 @@
           "wordCount": 3762,
           "title": "Should you abstract your RTOS?",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/abstraction-layers-.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4479976",
+          "author": "Panch Chandrasekaran",
+          "description": "AI can help 5G networks dynamically allocate resources, manage traffic, and detect anomalies. AI can also leverage 5G to deliver personalized, contextualized, intelligent services to users and devices. \nThe post How AI and software can drive 5G data center transformation appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/how-ai-and-software-can-drive-5g-data-center-transformation/",
+          "publishedOn": "2023-07-20T10:21:11.000Z",
+          "wordCount": 4186,
+          "title": "How AI and software can drive 5G data center transformation",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/AI-in-5G-Infrastructure.png"
         },
         {
           "id": "https://www.embedded.com/?p=4479927",
@@ -839,6 +860,16 @@
           "publishedOn": "2023-07-23T18:12:11.000Z",
           "wordCount": 4706,
           "title": "C to C++: 5 Tips for Refactoring C Code into C++",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1550.php",
+          "author": null,
+          "description": "Unit tests are designed to test units of software, but what exactly is a unit of software? It can be a function or a method, a class, or even an entire module. \nIf you're just starting with unit testing, chances are you're testing the implementation of a function or a method. Consequently, if the implementation changes, you must update your tests as well, which can render the entire...",
+          "link": "https://www.embeddedrelated.com/showarticle/1550.php",
+          "publishedOn": "2023-07-23T12:17:09.000Z",
+          "wordCount": 3290,
+          "title": "Why Should Unit Tests Feel Like Simulations?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
         {
@@ -1283,6 +1314,26 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/938779/",
+          "author": "jake",
+          "description": "There was something of a space theme that pervaded the Embedded Linux\nConference (ELC) portion of the 2023 Embedded\nOpen Source Summit (EOSS), which is an umbrella event for various\nsub-conferences related to embedded open-source development.  That may\npartly be because one of the organizers of EOSS (and ELC), Tim Bird,\ndescribed himself as \"a bit of a space junkie\"; he made that observation\nduring a panel session that he led on embedded Linux in space.  Bird and\nfour panelists discussed various aspects of the use of Linux in\nspace-related systems, including where it has been used, the\ncharacteristics and challenges of aerospace deployments, certification of\nLinux for aerospace use, and more.",
+          "link": "https://lwn.net/Articles/938779/",
+          "publishedOn": "2023-07-25T15:03:55.000Z",
+          "wordCount": null,
+          "title": "[$] A discussion on Linux in space",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939179/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (python-git and renderdoc), Red Hat (edk2, kernel, kernel-rt, and kpatch-patch), Slackware (kernel), SUSE (firefox, libcap, openssh, openssl-1_1, python39, and zabbix), and Ubuntu (cinder, ironic, nova, python-glance-store, python-os-brick, frr, graphite-web, and openssh).",
+          "link": "https://lwn.net/Articles/939179/",
+          "publishedOn": "2023-07-25T13:24:17.000Z",
+          "wordCount": 279,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/939101/",
           "author": "jake",
@@ -2032,26 +2083,6 @@
           "wordCount": null,
           "title": "[$] Development statistics for 6.4",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/936332/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (bind9 and owslib), Fedora (dav1d, dotnet6.0, dotnet7.0, mingw-dbus, vim, and wabt), and SUSE (cloud-init and golang-github-vpenso-prometheus_slurm_exporter).",
-          "link": "https://lwn.net/Articles/936332/",
-          "publishedOn": "2023-06-26T07:44:09.000Z",
-          "wordCount": 181,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/936132/",
-          "author": "corbet",
-          "description": "Linus has released the 6.4 kernel.\n\n\n\tMost of the stuff in my mailbox the last week has been about\n\tupcoming things for 6.5, and I already have 15 pull requests\n\tpending. I appreciate all you proactive people.\n\n\tBut that's for tomorrow. Today we're all busy build-testing the\n\tnewest kernel release, and checking that it's all good. Right?\n\n\nHeadline features in this release include:\ngeneric iterators for BPF,\nthe removal of the SELinux runtime disable\nknob,\nthe removal of the SLOB memory allocator,\nlinear address masking support on Intel\nCPUs,\nprocess-level samepage merging control,\nsupport for user trace events,\nmore infrastructure for writing kernel modules in Rust,\nper-VMA locks,\nand much more.\nSee the LWN merge-window summaries (part 1, part 2), and the (in-progress) KernelNewbies 6.4 page for\nthe details.",
-          "link": "https://lwn.net/Articles/936132/",
-          "publishedOn": "2023-06-26T00:11:56.000Z",
-          "wordCount": 537,
-          "title": "The 6.4 kernel has been released",
-          "imageUrl": null
         }
       ]
     },
@@ -2098,6 +2129,26 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/bliki/TeamTopologies.html",
+          "author": null,
+          "description": "Any large software effort, such as the software estate for a large\n    company, requires a lot of people - and whenever you have a lot of people\n    you have to figure out how to divide them into effective teams. Forming\n    Business Capability Centric teams helps software efforts to\n    be responsive to customers’ needs, but the range of skills required often\n    overwhelms such teams. Team Topologies is a model\n    for describing the organization of software development teams,\n    developed by Matthew Skelton and Manuel Pais. It defines four forms\n    of teams and three modes of team\n    interactions. The model encourages healthy interactions that allow \n    business-capability centric teams to flourish in their task of providing a\n    steady flow of valuable software.\nThe primary kind o…",
+          "link": "https://martinfowler.com/bliki/TeamTopologies.html",
+          "publishedOn": "2023-07-25T13:25:00.000Z",
+          "wordCount": 1618,
+          "title": "Bliki: TeamTopologies",
+          "imageUrl": "https://martinfowler.com/bliki/images/team-topologies/diagram.png"
+        },
+        {
+          "id": "https://martinfowler.com/bliki/TwoPizzaTeam.html",
+          "author": null,
+          "description": "A two-pizza team is a small team\n  that fully supports software for a particular business capability. The term\n  became popular as it used to describe how Amazon organized their software staff.\nThe name suggests the most obvious aspect of such teams, their size. The\n  name comes from the principle that the team should no larger than can be fed\n  with two pizzas. (Although we are talking about American Pizzas here, which\n  seemed alarmingly huge when I first encountered them over here.) Keeping a\n  team small keeps it cohesive, forming tight working relationships. Typically I\n  hear this means such teams are about 5-8 people, although my experience\n  suggests that the upper limit is somewhere about 15.\nAlthough the name focuses solely on the size, just as important is the\n  team's focus. A …",
+          "link": "https://martinfowler.com/bliki/TwoPizzaTeam.html",
+          "publishedOn": "2023-07-25T13:22:00.000Z",
+          "wordCount": 680,
+          "title": "Bliki: TwoPizzaTeam",
+          "imageUrl": "https://martinfowler.com/logo-sq.png"
+        },
+        {
           "id": "https://martinfowler.com/articles/platform-teams-stuff-done.html",
           "author": null,
           "description": "Platform teams have a unique reliance on other teams to ensure adoption\n     of their platform - getting code changes into other teams' codebase is\n     critical to their success. Pete Hodgson structures how\n     platform teams collaborate into phases\n     of migration, consumption, and evolution. He describes what's different in\n     each of these phases, the operating models to adopt, and which cross-team\n     collaboration patterns work best.\nmore…",
@@ -2135,6 +2186,16 @@
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
         {
+          "id": "http://mcuoneclipse.com/?p=37773",
+          "author": "Erich Styger",
+          "description": "The LinkServer software can be used with scripts to automate things. A useful script I'm using is one to regain access to MCUs early in the boot process. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/07/25/linkserver-scripting-and-how-to-recover-mcus-with-a-script/",
+          "publishedOn": "2023-07-25T07:34:22.000Z",
+          "wordCount": 5728,
+          "title": "LinkServer Scripting, and how to Recover MCUs with a Script",
+          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/07/relative-subfolder.png?w=1200"
+        },
+        {
           "id": "http://mcuoneclipse.com/?p=37747",
           "author": "Erich Styger",
           "description": "The GNU linker (ld) has a really cool option to 'wrap' or 'hijack' a symbol or function. For example I can wrap all printf() calls in a application and add my own code to it. In this example, I show how to add a timestamp to every printf() call. Continue reading →",
@@ -2170,7 +2231,18 @@
       "title": "The ESP Journal - Medium",
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://medium.com/p/e5fa87998126",
+          "author": "ALI HASSAN SHAH",
+          "description": "Integrating OpenAI capabilities into projects has become increasingly trends in today’s fast-paced technological landscape. OpenAI offers a…",
+          "link": "https://blog.espressif.com/openai-component-accelerating-the-integration-of-openai-apis-in-projects-e5fa87998126?source=rss----d5414d5dee73---4",
+          "publishedOn": "2023-07-25T08:07:44.000Z",
+          "wordCount": 3070,
+          "title": "OpenAI Component | Accelerating the integration of OpenAI APIs in projects",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*AoJSsmWQ8-XL8iD_GOtlEQ.jpeg"
+        }
+      ]
     },
     {
       "title": "/* the devil is in the detail */",
@@ -2313,16 +2385,6 @@
           "wordCount": 1619,
           "title": "Predicting the size of the Linux kernel binary",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=7967",
-          "author": "Derek Jones",
-          "description": "Software systems are built by people, who are usually a member of one or more teams. While a lot of research effort has gone into studying the software/hardware used to build these systems, almost no effort has been invested in studying the activities of the people involved. The study of human behaviors and cultures, in […]",
-          "link": "https://shape-of-code.com/2023/06/25/anthropology-and-building-software-systems/",
-          "publishedOn": "2023-06-25T22:19:43.000Z",
-          "wordCount": 1248,
-          "title": "Anthropology and building software systems",
-          "imageUrl": null
         }
       ]
     },
@@ -2331,6 +2393,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12705",
+          "author": "Kevin C. Tofel",
+          "description": "As a homeowner, I take my 1 Gbps internet service for granted. I love having a fast connection, particularly because have so many connected devices. But I’ve gotten so used to it that I don’t have the perspective of others who might live in an apartment that has much slower wireless networking speeds. And if […]\nThe post Why Eero is going after the rental property market with Wi-Fi appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/why-eero-is-going-after-the-rental-property-market-with-wi-fi/",
+          "publishedOn": "2023-07-25T16:02:56.000Z",
+          "wordCount": 2597,
+          "title": "Why Eero is going after the rental property market with Wi-Fi",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2020/11/Eero-6-Pro-three-pack.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=12700",
           "author": "Stacey Higginbotham",
@@ -2586,6 +2658,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=94105",
+          "author": "이정환",
+          "description": "“업무 폭탄에 ○○ 난리 겹쳐, 숨이 막혔다.” 교권보호위 막으면 교장 징계한다. “학생인권 조례, 의무와 존중이 빠졌다.” 더 깊게 읽기. 괴담으로 중단됐다고? 해법과 대안. “휠체어를 탄다고 의존적일 이유는 없다.” “대학 랭킹을 없애야 지방대가 산다.” 보증보험 강화하니 전세가 마른다. 플라스틱 재활용 시장이 뜬다. 오늘의 TMI. 백선엽도 인정했는데, 굳이 친일파 기록 삭제. “지하차도 출동 안 한 게 아니라...\nThe post “대통령 5년이 뭐가 대단하다고, 너무 겁이 없어요.”: 슬로우레터 7월25일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94105",
+          "publishedOn": "2023-07-24T22:03:31.000Z",
+          "wordCount": 3564,
+          "title": "“대통령 5년이 뭐가 대단하다고, 너무 겁이 없어요.”: 슬로우레터 7월25일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/WwXKJ8Uzvznx649e65967b02b3.75062034-1000x667.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=94048",
           "author": "슬로우뉴스",
@@ -3175,36 +3257,6 @@
           "wordCount": 4081,
           "title": "왜 검경은, 재판 가면 질 게 뻔한데도, 수사기록을 공개하지 않는가",
           "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/GettyImages-1270367536.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=91927",
-          "author": "정혜승",
-          "description": "제목부터 도발적이다. [암컷들]. 그런데 부제는 더하다. “방탕하고 쟁취하며 군림하는”.  옥스퍼드에서 리처드 도킨스 제자로 동물학을 전공하던 루시 쿡은 “암컷은 착취당하는 성”, “암컷은 수줍음이 많다”, “수컷은 효율성과 적극성을, 암컷은 수동성을 상징한다”는 가르침에 의문을 가졌다. 도킨스, 그 이전에 다윈이 짜놓은 교과서다. 진화론의 경전은 여성을 시민 취급 않던 아리스토텔레스까지 거슬러 올라간다. 그는 실제 암컷들을 확인하기 위해 자연으로 향했다. 학계를 떠나...\nThe post 빅토리아 시대와 다윈의 억압을 넘어서: ‘암컷들’ (2023) appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91927",
-          "publishedOn": "2023-06-26T06:24:09.000Z",
-          "wordCount": 4264,
-          "title": "빅토리아 시대와 다윈의 억압을 넘어서: ‘암컷들’ (2023)",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/Queen_Victoria_-Golden_Jubilee_-3a_cropped.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=91845",
-          "author": "민노씨",
-          "description": "타인의 불행을 접하고 기쁨을 느낀 적 있는가? 나는 종종 이 감정을 느낀다. 미디어가 가장 열정적으로 어쩌면 진심을 다해 ‘우리 대신’해 주는 일은 유명 정치인과 기업인, 연예인, 스포츠 스타의 타락과 추락 그리고 불행을 추적하는 일이다. 타인의 불행과 피해가 명백한 범죄와 비행에 관한 것이라면 우리는 거기에 정의감을 결부해 만족감을 느끼지만, 그것이 딱히 범죄와 비행에 연결되지 않더라도, 그리고...\nThe post 타인의 불행은 나의 기쁨, ‘샤덴프로이데’ 권하는 사회 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91845",
-          "publishedOn": "2023-06-26T03:50:04.000Z",
-          "wordCount": 4486,
-          "title": "타인의 불행은 나의 기쁨, ‘샤덴프로이데’ 권하는 사회",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/pic_005-2.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=91897",
-          "author": "이정환",
-          "description": "모스크바 턱밑까지 치고 올라온 반란군, 푸틴 쫄았나. 학원이 편의점보다 3배 많다. 출생 통보제 이전에 시행령부터 고친다. 네이버 압도적인 1위 자리 흔들린다. “또 태풍 오면 알거지.” 조선일보, “횟집 회식은 좋은 아이디어.” 돌아온 이낙연, “대선 출정식 같았다.” 낙태권 폐지가 미국 대선 최대 변수. 수미 감자, 못 먹게 될 수도 있다. 정의당 재창당한다. 나이스 먹통, 기술력 부족이 원인....\nThe post 기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로우레터 6월26일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/91897",
-          "publishedOn": "2023-06-25T22:07:45.000Z",
-          "wordCount": 5255,
-          "title": "기후변화 충격, 수미 감자 못 먹게 될 수도 있다: 슬로우레터 6월26일.",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/potatoes-888585_1280.jpg"
         }
       ]
     },
@@ -3520,6 +3572,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77028",
+          "author": "veritaholic",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 5일 스프에 쓴 글입니다. 인간은 자신이 이해하지 못하는 새로운 기술에 늘 두려움을 느꼈습니다. 그 기술이 자신을 위협하는 존재가 될 때 두려움은 배가 됩니다. 메리 셸리의 프랑켄슈타인이 출간된 것은 기계가 인간을 대체할 → 더 보기",
+          "link": "https://newspeppermint.com/2023/07/24/npsp_aiphotoshop/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_aiphotoshop",
+          "publishedOn": "2023-07-25T01:30:42.000Z",
+          "wordCount": 1981,
+          "title": "[뉴페@스프] AI가 만들어낸 이미지의 위협, 과연 막을 수 있을까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77433",
           "author": "NewsPeppermint",
@@ -3881,16 +3943,6 @@
           "publishedOn": "2023-06-27T00:19:30.000Z",
           "wordCount": 101,
           "title": "알튀세르 - 요약",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223138347982",
-          "author": "sellars",
-          "description": "<하이데거에 의하면, 시간과 시간성을 구분해야 한다. 진정으로 의미 있는 시간은 바로 시간성이다. 인간은 시간성을 만들어가야 한다.> 시간과 시간성은 어떻게 구분되는가? 왜 하이데거는 시간이 아니라, 시간성이 진정 의미 있는 시간이라고 했는가? 인간이 시간성을 만들어 가야 한다는 것은 무슨 의미인가? <시간과 시간성은 다르다. 시간성이라는 말은 시간이 아니라, 어떤 것이 가지고 있는 시간적 성격, 혹은 시간적 구조를 가리킨다. 전자의 좋은 예는 후설의 ‘의식의 흐름’이고, 후자의 예는 하이데거의 현존재인 마음씀이다. 하이데거의 시간성은 흐름의 성격은 없고, 마음씀의 구조가 시간적이라는 것이다. 현존재의 존재.......",
-          "link": "https://blog.naver.com/sellars/223138347982",
-          "publishedOn": "2023-06-25T09:18:50.000Z",
-          "wordCount": 101,
-          "title": "하이데거의 시간과 시간성",
           "imageUrl": null
         }
       ]
