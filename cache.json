@@ -219,6 +219,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/14982716",
+          "author": "CPUU",
+          "description": "나에게 애증의 자격증이 되어버린 SW보안약점 진단원...\n2023년에 1차 교육에 참석한 후, 2023년 1차 자격시험에 응시하여 동회차 합격!!!!! 했다고 자랑하면 좋겠지만 사실은... 4수만에 합격했다.\n일전에 <불합격 후기>를 올린 적이 있다.\nhttps://cpuu.postype.com/post/13370786\n간단히 요약하면, 이 시험은 6년의 개발 경력 혹은 3년의 취약점 분석 경력이 있어야 응시가 가능하다. 즉, 이 시험을 치르는 사람들은 모두 다 직장인이라고 보면 된다. \n예를 들어 정보처리기사나 정보보안기사 시험은 대학교4학년이면 응시가 가능한 시험이다.  물론 보안기사도 실기 시험이 범위가 워낙 넓어서 합격하기가 쉽지는 않지만, 어쨌거나 그때는 '시간'이 많고, 솔직히 본인 공부 외에 책임져야 할 것들이 상대적으로 적은 시기이다. \n그러나 현재 이 시험을 응시하는 6년 차 직장인 분들은 결혼한 분들이 대부분이실 거고 퇴근 후에도 자녀 육아에 힘써야 하시기 때문에 결코 공부시간을 내는 게 쉽지는 않다. 그렇기 때문에 이 시험을 단순히 합격하기 쉽다/어렵다고 말하기가 힘들다. 만약에 하루 10시간씩 도서관이나 독서실 가서 방해받지 않고 공부에만 집중하실 수 있는 환경의 분들이라면 이 시험은 쉬운 시험이다. 공부해야 할 범위도 명확하기 때문에 600페이지 분량을 통째로 외워버리기만 하면 누구나 합격할 수 있다. 그러나, 직장과 육아를 병행하는 환경에서는 하루에 1~2시간 공부하는 것도 대단한 것이다. 본인도 지하철 1시간 정도씩 출퇴근하는 왕복 2시간 정도를 최대한 활용하려 했으나 그마저도 체력…",
+          "link": "https://cpuu.postype.com/post/14982716",
+          "publishedOn": "2023-07-28T13:55:57.000Z",
+          "wordCount": 975,
+          "title": "SW보안약점 진단원 합격 후기",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/07/27/10/49/4f2f0b164a1c9af09aadb4621b0d4d2d.png?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/14969771",
           "author": "CPUU",
           "description": "개요\n유클리드 호제법(Euclidean algorithm)이란 2개의 자연수의 최대공약수(greatest common divisor, GCD)를 구하는 알고리즘 중 하나이다. 호제법이란 말은 두 수가 서로(互) 상대방 수를 나누어(除)서 결국 원하는 수를 얻는 알고리즘을 나타낸다. 2개의 자연수(또는 정식) a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a>b), a와 b의 최대공약수는 b와 r의 최대공약수와 같다. 이 성질에 따라, b를 r로 나눈 나머지 r'를 구하고, 다시 r을 r'로 나눈 나머지를 구하는 과정을 반복하여 나머지가 0이 되었을 때 나누는 수가 a와 b의 최대공약수이다. \n(출처: 위키백과)\n\n\n최대공약수 예시\n\n\n최소공배수 계산\n최소공배수는 특별한 알고리즘없이 최대공약수만 알면 쉽게 계산할 수 있다.\nA = G * a\nB = G * b 라고 했을 때\n최대공약수 G 를 구했다면\n최소공배수는 G * a * b이므로\n두 수 의 곱( G * G * a * b) 에서 최소공배수 G를 나눠주면 된다.\nF# 구현\ngcd 함수를 구현한 후 계속해서 gcd를 다시 사용하는 구조를 봤을 때 재귀함수를 사용하면 간단하게 구현할 수 있다. 단, 종료조건을 정확하게 명시해야 한다.\nopen System\n\nlet rec gcd m n =\n    match n with\n    | 0 -> m\n    | _ -> gcd n (m % n)\n\nlet lcm m n =\n    if m = 0 || n = 0 then 0\n    else abs (m * n) / gcd m n\n\nlet rec readInt () =\n    match Int32.TryParse(Console.ReadLine()) with\n    | (true, value) -> value\n    | _ -> \n        printfn \"Invalid input. Please enter a valid integer.\"\n        readInt()\n\nlet main () =\n    printfn \"Enter the first integer:\"\n    let m = readInt()\n\n    printfn \"Enter the second integer:\"\n    let n = readInt()\n\n    let result_gcd = gcd m n\n    let result_lcm = lcm m n\n\n    printfn \"The greatest common divisor of %d and %d is %d.\" m n result_gcd\n    printfn \"The least common multiple of %d and %d is %d.\" m n result_lcm\n\nmain()\n\n\n실행결과\n$ fsharp dotnet run\nEnter the first integer:\n78696\nEnter the second integer:\n19332\nThe greatest common divisor of 78696 and 19332 is 36.\nThe least common multiple of 78696 and 19332 is 42259752.",
@@ -247,6 +257,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "e588c9d2-ed9d-44b6-ad76-67949bc05ad7",
+          "author": "Valentina Rodriguez Sosa",
+          "description": "Last month Red Hat Developer hosted DevNation Day: Modern App Dev. This one-day virtual event brought together application developers, DevOps and platform engineers, enterprise architects, and application managers from across the globe.\nAttendees participated in hands-on labs and got expert advice from Red Hat practitioners on best practices, technologies, and architectures advancing the state of modern application development on the hybrid cloud with Red Hat OpenShift and Kubernetes. The event featured talks on app modernization, APIs, serverless, security, microservices, internal developer platforms, containers, application architecture, and much more.\nThe videos from DevNation Day: Modern App Dev are now available for you to watch online anytime. Read on to explore some of the highlight…",
+          "link": "https://developers.redhat.com/articles/2023/07/28/devnation-day-modern-app-dev-videos-are-now-available",
+          "publishedOn": "2023-07-28T13:00:00.000Z",
+          "wordCount": 2945,
+          "title": "DevNation Day: Modern App Dev videos are now available",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Coding_Shared_image_A-01%20%284%29.png?itok=M_lzdbim"
+        },
         {
           "id": "856d3b68-0f0b-4e2d-b415-573a25634c83",
           "author": "Lucas Holmquist",
@@ -506,16 +526,6 @@
           "wordCount": 3113,
           "title": "ISystemTap: An interactive SystemTap notebook",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/SystemTap_A-1-1.png?itok=YTOvSvaL"
-        },
-        {
-          "id": "bd9a9000-fb9e-437c-b1c5-986aa4c56de0",
-          "author": "Ajay Pratap",
-          "description": "Dynamic plugins allow you to extend the Red Hat OpenShift UI at runtime, adding custom pages and other extensions. They are based on the webpack module federation. Plugins are registered with the console using the ConsolePlugin custom resource and enabled in the console operator config by a cluster administrator.\nPrerequisites\nNode.js\nyarn\nDocker or podman 3.2.0+\noc\nGetting started\nTo clone console plugin template repo, you should update the plugin metadata, such as the plugin name in the ConsolePlugin  declaration of package.json.\n\"consolePlugin\": {\n  \"name\": \"plugin-name\",\n  \"version\": \"0.0.1\",\n  \"displayName\": \"Dynamic Plugin\",\n  \"description\": \"OpenShift console dynamic plugin\",\n  \"exposedModules\": {\n    \"ExamplePage\": \"./components/ExamplePage\"\n  },\n  \"dependencies\": {\n    \"@console/p…",
-          "link": "https://developers.redhat.com/articles/2023/06/29/how-develop-and-deploy-openshift-console-dynamic-plugin",
-          "publishedOn": "2023-06-29T07:00:00.000Z",
-          "wordCount": 2772,
-          "title": "How to develop and deploy OpenShift console dynamic plugin",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift.png?itok=9HrphxKh"
         }
       ]
     },
@@ -594,6 +604,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480016",
+          "author": "Nitin Dahad",
+          "description": "Biodegradable PCBs using Soluboard substrate from Jiva Materials are being piloted by Infineon with a view to reducing carbon footprint. \nThe post Infineon trials biodegradable PCBs to minimize electronic waste appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/infineon-trials-biodegradable-pcbs-to-minimize-electronic-waste/",
+          "publishedOn": "2023-07-28T15:17:45.000Z",
+          "wordCount": 3855,
+          "title": "Infineon trials biodegradable PCBs to minimize electronic waste",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/University-of-Washington-Biodegrading-Mouse.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480008",
+          "author": "Nitin Dahad",
+          "description": "Video interview with Joachim Kunkel of Synopsys covers latest trends in IP, automotive, IoT & security, and challenge for multi-die design.\nThe post Interview: multi-die addresses chip complexity but power is a challenge appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/interview-multi-die-addresses-chip-complexity-but-power-is-a-challenge/",
+          "publishedOn": "2023-07-28T10:44:52.000Z",
+          "wordCount": 3383,
+          "title": "Interview: multi-die addresses chip complexity but power is a challenge",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/Joachim-Kunkel-Synopsys.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480003",
           "author": "Jacob Beningo",
@@ -842,6 +872,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1553.php",
+          "author": null,
+          "description": "I started out embedded programming on small, 8-bit devices, with limited memory. High-level languages were not an option, so I became proficient in using assembly language. For modest sized applications, it was a reasonable option and, apart from that, there were no tools to support any other languages. I was always happy with that, because I could readily access all the functionality of the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1553.php",
+          "publishedOn": "2023-07-27T10:59:35.000Z",
+          "wordCount": 3312,
+          "title": "Assembly language is best - except when it isn’t",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1551.php",
           "author": null,
           "description": "In our C to C++ series, we’ve been discussing the fundamental details that embedded developers and teams need to transition from using C to C++. In our last post, C to C++: Bridging the Gap from C Structures to Classes, we discussed the differences between C and C++ structures and objects. Many teams interested in using C++ don’t need to jump off the deep end into metaprogramming and other...",
@@ -1059,26 +1099,6 @@
           "wordCount": 2004,
           "title": "#WeArePlay | Meet Yoshihiko from Japan. More stories from Spain, Cameroon and Malaysia",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-EdSf5Pw83O8oZorPVK3mA2RwHUCgj2-7YvbuikgqHjnszqm-kWYacsdmBH4wOHJX_IcK8ewQKC9oll2wHaiMmRGsgb1bec_nDV9ZrbBiOmwk9d8TvqKFY8S-_JMLLySArYpvEjEp8ijKWqS_VttwLu0wGkbNfSpVbdwTicLjVxzMUPomdR24wnA1mjs/w1200-h630-p-k-no-nu/%23WeArePlay%20Social%20.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/06/champion-innovator-elyes-manai.html",
-          "author": null,
-          "description": "Posted by Max Saltonstall, Developer Relations Engineer\n\n\n\nIn this ongoing interview series we sit down with Google Cloud Champion Innovators across the world to learn more about their journeys, their technology focus, and what excites them. Today we're talking to Elyes Manai. Elyes is a Machine Learning Consultant, Educator and Mentor. He helps companies tap into the power of data science to reduce costs and increase revenue as well as build relationships with relevant target audiences through educational content and community building.\n\n\nWhat is a Champion Innovator?\n\n\nChampion Innovators are a global network of more than 500 non-Google professionals, who are technical experts in Google Cloud products and services. Each Champion specializes in one of nine different technical categories w…",
-          "link": "http://developers.googleblog.com/2023/06/champion-innovator-elyes-manai.html",
-          "publishedOn": "2023-06-28T21:00:00.001Z",
-          "wordCount": 2408,
-          "title": "Champion Innovator Elyes Manai, based in Quebec City, Quebec, Canada",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3zW6BxOn3u3RFpOC-wGWbRxDvmVEAV4dZqjIaLPpT9Hdv6MhuEYQMrvs_wm1p15VrVqW23-MMC_F2TdxgicPOVZ6a6VyJBcgX6Ky2XUSFPcLNGj0Oq_tY-JRQREvDWVUiathwbpJvrj3YJmVRJvr-LrJ_o6lM-qCg9UaR8bO2KyXkWiYBBtlYAS8m/w1200-h630-p-k-no-nu/SOCIAL%20-%20Champion%20Innovator%20spotlight%20-%20Elyes%20Manai%20%281%29.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/06/register-for-google-cloud-next-23.html",
-          "author": null,
-          "description": "Posted by Brian Hall, Vice President, Product and Industry Marketing, Google Cloud & Max Saltonstall, Developer Relations Engineer\n\n\n\n\n\n\nDevelopers - it’s finally here . . . the Google Cloud Next ‘23 session library is live!\nSo many awesome sessions to choose from, it's tough!\nOf course we start with the big story of the year, the thing on everyone's (everything's?) mind: AI!\nMachine learning and AI\n\n\nCheck out \"5 practical considerations for adopting AI\" to get started or \"Build your organization’s future on Google AI and machine learning infrastructure\" for teams that are looking to expand into cross-functional AI-powered innovation.\nBuilding modern apps\n\n\nSometimes you've got an awesome idea, and you are looking for a way to speed up getting it to market. We can help. Attend \"Building f…",
-          "link": "http://developers.googleblog.com/2023/06/register-for-google-cloud-next-23.html",
-          "publishedOn": "2023-06-28T16:00:00.001Z",
-          "wordCount": 2092,
-          "title": "Register for Google Cloud Next ‘23 and get some sweet perks",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXra3Gzazzdl--dk_1YEzI83d9yKRO5-t8dC4EEXzUTDFJ47cbt7P_fDYDI9M8VkQYOFeKP3Fk4hFM_OOBxTqXrfdeLDKqrTLJN8Nij0QG0n3BU_6IVXp7cZDfPLcFZULxwOW_oIl3r4vjbt4LBgUcc4jZIZKqBB06RLmrXi3TdnpeQRhVgjb_BJBQYhY/w1200-h630-p-k-no-nu/image1.png"
         }
       ]
     },
@@ -1300,6 +1320,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/939542/",
+          "author": "corbet",
+          "description": "For those who are interested in the gory details of how the StackRot vulnerability works, Ruihan Li has\nposted a detailed\nwriteup of the bug and how it can be exploited.\n\n\n\tAs StackRot is a Linux kernel vulnerability found in the memory\n\tmanagement subsystem, it affects almost all kernel configurations\n\tand requires minimal capabilities to trigger. However, it should be\n\tnoted that maple nodes are freed using RCU callbacks, delaying the\n\tactual memory deallocation until after the RCU grace\n\tperiod. Consequently, exploiting this vulnerability is considered\n\tchallenging.\n\n\tTo the best of my knowledge, there are currently no publicly\n\tavailable exploits targeting use-after-free-by-RCU (UAFBR)\n\tbugs. This marks the first instance where UAFBR bugs have been\n\tproven to be exploitable, even without the presence of\n\tCONFIG_PREEMPT or CONFIG_SLAB_MERGE_DEFAULT settings.",
+          "link": "https://lwn.net/Articles/939542/",
+          "publishedOn": "2023-07-28T18:16:37.000Z",
+          "wordCount": 242,
+          "title": "Exploiting the StackRot vulnerability",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939097/",
+          "author": "corbet",
+          "description": "One of the longstanding strengths of Linux, and a key to its early success,\nis its ability to interoperate with other systems.  That interoperability\nincludes filesystems; Linux supports a wide range of filesystem types,\nallowing it to mount filesystems created by many other operating systems.\nSome of those filesystem implementations, though, are better maintained\nthan others; developers at both the kernel and distribution levels are\ncurrently considering, again, how to minimize the security risks presented\nby the others.",
+          "link": "https://lwn.net/Articles/939097/",
+          "publishedOn": "2023-07-28T16:28:45.000Z",
+          "wordCount": null,
+          "title": "[$] Unmaintained filesystems as a threat vector",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939519/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (kernel and libmail-dkim-perl), Fedora (openssh), and SUSE (kernel).",
+          "link": "https://lwn.net/Articles/939519/",
+          "publishedOn": "2023-07-28T14:43:03.000Z",
+          "wordCount": 134,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939511/",
+          "author": "corbet",
+          "description": "Systemd 254 has been released.  As usual, there is a long list of changes,\nincluding a new list-paths command for systemctl, the\nability to send POSIX signals to services, a \"soft reboot\" feature that\nrestarts user space while leaving the kernel in place, improved support for\n\"confidential\nvirtual machines\", and a lot more.\n\nThe announcement also notes the support for split-/usr systems\nwill be removed in the next release, and support for version-one control\ngroups and for System V service scripts will be deleted in the near\nfuture as well.",
+          "link": "https://lwn.net/Articles/939511/",
+          "publishedOn": "2023-07-28T14:29:23.000Z",
+          "wordCount": 6122,
+          "title": "Systemd 254 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/939445/",
           "author": "jake",
@@ -2039,56 +2099,6 @@
           "wordCount": null,
           "title": "[$] Emacs for Android",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/936752/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (chromium and maradns), SUSE (iniparser, kubernetes1.23, python-reportlab, and python-sqlparse), and Ubuntu (accountsservice and linux, linux-aws, linux-aws-hwe, linux-azure, linux-azure-4.15,\n linux-dell300x, linux-gcp, linux-gcp-4.15, linux-hwe, linux-kvm,\n linux-oracle, linux-raspi2, linux-snapdragon).",
-          "link": "https://lwn.net/Articles/936752/",
-          "publishedOn": "2023-06-29T07:27:51.000Z",
-          "wordCount": 172,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/935773/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for June 29, 2023 is available.",
-          "link": "https://lwn.net/Articles/935773/",
-          "publishedOn": "2023-06-29T01:58:13.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for June 29, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/936340/",
-          "author": "jake",
-          "description": "JupyterLab is a\nweb-based development environment widely used by data scientists,\nengineers, and educators for data visualization, data analysis,\nprototyping, and interactive learning materials. The Jupyter community has recently announced the\nrelease of JupyterLab 4.0, introducing lots of new features and performance\nimprovements to enhance its capabilities both in research and educational\nsettings.",
-          "link": "https://lwn.net/Articles/936340/",
-          "publishedOn": "2023-06-28T15:55:50.000Z",
-          "wordCount": null,
-          "title": "[$] JupyterLab 4.0: a development environment for education and research",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/936672/",
-          "author": "corbet",
-          "description": "The\n6.3.10,\n6.1.36,\n5.15.119,\n5.10.186,\n5.4.249,\n4.19.288, and\n4.14.320\nstable kernels have all been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/936672/",
-          "publishedOn": "2023-06-28T13:02:55.000Z",
-          "wordCount": 139,
-          "title": "Stable kernel updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/936671/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Mageia (docker-docker-registry, libcap, libx11, mediawiki, python-requests, python-tornado, sofia-sip, sqlite, and xonotic), Red Hat (kernel, kernel-rt, kpatch-patch, libssh, libtiff, python27:2.7, python39:3.9, python39-devel:3.9, ruby:2.7, sqlite, systemd, and virt:rhel, virt-devel:rhel), SUSE (bind, cosign, guile1, lilypond, keepass, kubernetes1.24, nodejs16, nodejs18, phpMyAdmin, and sqlite3), and Ubuntu (etcd).",
-          "link": "https://lwn.net/Articles/936671/",
-          "publishedOn": "2023-06-28T12:58:59.000Z",
-          "wordCount": 302,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2259,6 +2269,16 @@
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
       "articles": [
         {
+          "id": "https://medium.com/p/969830fd6cdb",
+          "author": "Lucas Tamborrino",
+          "description": "Zephyr OS is an open-source, scalable, and adaptable real-time operating system (RTOS) for multiple hardware platforms, including…",
+          "link": "https://blog.espressif.com/core-dump-a-powerful-tool-for-debugging-programs-in-zephyr-with-esp32-boards-969830fd6cdb?source=rss----d5414d5dee73---4",
+          "publishedOn": "2023-07-28T19:00:25.000Z",
+          "wordCount": 4029,
+          "title": "Core Dump: A Powerful Tool for Debugging Programs in Zephyr with ESP32 Boards",
+          "imageUrl": "https://miro.medium.com/v2/da:true/resize:fit:850/1*jYTUyas5elSy9YEC7g4MMg.gif"
+        },
+        {
           "id": "https://medium.com/p/e5fa87998126",
           "author": "ALI HASSAN SHAH",
           "description": "Integrating OpenAI capabilities into projects has become increasingly trends in today’s fast-paced technological landscape. OpenAI offers a…",
@@ -2418,6 +2438,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12720",
+          "author": "Stacey Higginbotham",
+          "description": "PTC’s CEO is set to step down: Jim Heppelmann, the CEO of PTC, which over the last decade has transitioned from a CAD software company to an industrial IoT software provider, will step down in February 2024. Neil Barua, president of PTC’s service lifecycle management business, will replace him as CEO. Heppelmann, who has been at PTC for […]\nThe post IoT news of the week for July 28, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-for-july-28-2023/",
+          "publishedOn": "2023-07-28T17:33:01.000Z",
+          "wordCount": 2566,
+          "title": "IoT news of the week for July 28, 2023",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=12717",
           "author": "Stacey Higginbotham",
@@ -2684,6 +2714,36 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=94319",
+          "author": "임예인",
+          "description": "초등학교 교사의 사망 사건 이후 모든 사회 이슈를 교권이 잡아먹은 느낌인데, 일련의 사건을 돌아보면 패턴을 읽을 수 있다. 지난주 오송 지하차도 사고 때는 경찰이 왜 제때 출동을 안 했느냐, 그 이전에 왜 지하차도를 차단하지 않났느냐를 두고 책임 공방이 있었다. 예천에서는 해병대원이 무리한 구조 작업에 투입됐다 급류에 휩쓸려 사망하는 사고도 있었다. 더 거슬러 올라가 보면 지난해...\nThe post 시스템의 붕괴, 왜 권한 없는 말단 공무원에게 책임을 묻나. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94319",
+          "publishedOn": "2023-07-28T06:42:44.000Z",
+          "wordCount": 2941,
+          "title": "시스템의 붕괴, 왜 권한 없는 말단 공무원에게 책임을 묻나.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12527163.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94309",
+          "author": "윤지명",
+          "description": "연일 주호민 작가의 재판 이야기가 화두다. 우리는 기자들의 기사로 전달 받는게 전부라서 사실 정확한 팩트를 체크하기엔 현재로선 무리가 있다. 하지만 한 가지 확실한 건 있다. 학교 안에 중재기관이 없고 학생들의 과잉 행동을 통제할 정책이 없다. 교사도 학생도 모두 ‘안전’하지 못한 시스템이란 이야기다. 교사는 한 명인데 과잉 행동을 하는 학생이 안전을 위협할 때 모두를 보호할 만한...\nThe post 주호민의 아이도, 그 아이의 교사도 모두 피해자다. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94309",
+          "publishedOn": "2023-07-28T01:18:52.000Z",
+          "wordCount": 3077,
+          "title": "주호민의 아이도, 그 아이의 교사도 모두 피해자다.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/05/person-homeless-bullied-hiding-9137c42208f57f7064ab6176a705ebeb-600x401.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94293",
+          "author": "이정환",
+          "description": "세금 깎아줄 테니 결혼하라고? 조세 부담률 20% 턱걸이, 소득 재분배는 악화. 정전 협정 70년, 키워드가 달랐다. 포스트 4대강 시작한다. 해법과 대안. 청년과 지방을 잇는 넥스트 로컬. 장애친화 산부인과에서 깨달은 것들. 1시간 1000원에 24시간 아이돌봄. 오늘의 TMI. 미국이 한국보다 금리 2%포인트 높다. 삼성전자 상반기 반도체 적자 9조 원. 몽골 인구 10%가 한국 유학 또는 취업. 꽁초가...\nThe post 금수저 한정 혜택, 세금 깎아 줄 테니 결혼하세요: 슬로우레터 7월28일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94293",
+          "publishedOn": "2023-07-27T22:04:27.000Z",
+          "wordCount": 3858,
+          "title": "금수저 한정 혜택, 세금 깎아 줄 테니 결혼하세요: 슬로우레터 7월28일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/WLA_nyhistorical_William_G_Forbes_Fork_and_spoon-1000x750.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=94259",
           "author": "이정환",
           "description": "김건희 고속도로 논란이 새로운 국면으로 흐르고 있다. 대통령에 당선되자 마자 대통령 부인 소유의 땅으로 노선을 구부러지게 만드는 게 가능할까. 그게 아니라면 왜 예타(예비타당성조사)까지 끝낸 사업을 뒤집었을까. 지금까지 나온 여러 정황을 종합하면 새 정부 출범 직후 노선이 바뀌었는데 마침 우연히도 그 고속도로 종점에 김건희 땅이 있었을 뿐 둘 사이의 연결고리는 드러난 바 없다는 게 현실적인 결론이다....\nThe post 김건희 고속도로 미스터리, 이렇게 끝내선 안 된다. appeared first on 슬로우뉴스.",
@@ -2712,6 +2772,16 @@
           "wordCount": 3450,
           "title": "누가 수도꼭지의 물을 잠글 것인가: 슬로우레터 7월27일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/cat-getiegert-tiger-fur-preview.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94182",
+          "author": "Hingomaster",
+          "description": "2023년 2월은 인구 측면에서 파멸적인 기간으로 기록될 것이다. 신생아 수 2만 명 붕괴라는 충격적인 사실도 사실이나, 혼인 건수 역시 전년 동기 대비 8.4% 감소했기 때문이다. 특히 혼인 건수의 경우 지난 코로나 대유행 시기의 터널을 지나 반등이 기대되던 시점이었기 때문에 더욱 충격적인 결과라 할 수 있다. 한국은 특히 혼인 건수와 출생아 수 간의 관계가 밀접한 나라이다....\nThe post 저출산의 이유: 평등하지 않은 세상은 자연스럽게 무너집니다 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94182",
+          "publishedOn": "2023-07-26T13:47:47.000Z",
+          "wordCount": 3022,
+          "title": "저출산의 이유: 평등하지 않은 세상은 자연스럽게 무너집니다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pregnant-gd87124c60_1280.jpg"
         },
         {
           "id": "https://slownews.kr/?p=94168",
@@ -3282,36 +3352,6 @@
           "wordCount": 3631,
           "title": "폐지줍던 노인들이 사라졌다: 슬로우레터 6월30일.",
           "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/GettyImages-jv11862912-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=92058",
-          "author": "슬로우뉴스",
-          "description": "[인터뷰] ‘어느날 갑자기 가해자 엄마가 되었습니다’ 저자 정승훈, “여론에 떠밀려 만든 누더기 법안, 문제의 본질을 보자.” 정승훈씨는 가해학생의 엄마였다. 정승훈씨와 그 아들이 겪었던 일은 학교폭력 사건의 복잡한 구조를 이해하는 몇 가지 힌트를 준다. 처음에는 별일 아니라고 생각했다. 어느날 아침 중학교 3학년 아들이 전화가 와서 후배를 때렸는데 학교에서 연락이 올 거라고 했다. 그게 시작이었다. 학폭위(학교폭력대책자치위원회)가 잡혔고...\nThe post “처벌 중심의 학폭위, 가해자의 반성도 피해자의 회복도 없었다.” appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/92058",
-          "publishedOn": "2023-06-29T05:40:43.000Z",
-          "wordCount": 6486,
-          "title": "“처벌 중심의 학폭위, 가해자의 반성도 피해자의 회복도 없었다.”",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/anger-7158649_1280-1.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=92006",
-          "author": "민노씨",
-          "description": "[슬로우민트] 이효석 박사와 함께하는 ‘좋은 책’에 관한 이야기, 첫 번째. 뉴스페퍼민트 이효석 대표는 슬로우뉴스와는 귀한 인연을 가진 분입니다. KAIST에서 물리학을 공부하고 양자 컴퓨터를 전공해 박사 학위를 받았으며, 하버드에서는 오늘날 AI의 배경 기술 중 하나인 정보이론을 연구했습니다. 하버드 연구원 시절 시작한 외신 번역 미디어 ‘뉴스페퍼민트’를 10년 이상 운영하며, 과학 전반의 다양한 영역과 번역 및 저작권에 대한...\nThe post 구성주의의 반격: ‘감정은 어떻게 만들어지는가’ (2017) appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/92006",
-          "publishedOn": "2023-06-29T02:32:32.000Z",
-          "wordCount": 5771,
-          "title": "구성주의의 반격: ‘감정은 어떻게 만들어지는가’ (2017)",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/pic_002-4.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=92024",
-          "author": "이정환",
-          "description": "“왜 늘 이런 식으로 정책을 딜리버리하나.” “‘사이다 대통령’ 불안하다.” 메가스터디 등 동시 다발 세무조사. “이권 카르텔이라는 연극.” “문제는 자사고가 더 크다.” 호남 강타한 폭우, 오늘 수도권 북상. 오염수 시찰단 분석 결과 왜 공개 안 하나. 일베 게시판인줄, 윤석열의 막말. U자형 반등? 소비 심리 살아나나. “태양광 전력 차단, 망하라는 건가.” 오늘의 TMI. 만 나이 아직도 혼란....\nThe post “‘사이다 대통령’ 칭찬 아니다”, 윤석열 폭주에 보수 언론도 화들짝: 슬로우레터 6월29일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/92024",
-          "publishedOn": "2023-06-28T21:53:50.000Z",
-          "wordCount": 4649,
-          "title": "“‘사이다 대통령’ 칭찬 아니다”, 윤석열 폭주에 보수 언론도 화들짝: 슬로우레터 6월29일.",
-          "imageUrl": "https://i0.wp.com/slownews.kr/wp-content/uploads/2023/06/BMznAaZpxzmT649bbf5ace28b0.33571413.jpeg"
         }
       ]
     },
@@ -3320,6 +3360,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=591281",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591281/2q-23-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2023-07-27T10:34:04.000Z",
+          "wordCount": 6257,
+          "title": "2분기 구글 알파벳 실적을 읽는 월가의 시선",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
+        },
         {
           "id": "https://happist.com/?p=591279",
           "author": "happist",
@@ -3589,56 +3639,6 @@
           "wordCount": 5315,
           "title": "번스타인, 테슬라 슈퍼차저 개방으로 2030년 120억 달러 매출 가능",
           "imageUrl": "https://happist.com/wp-content/uploads/2018/05/테슬라-전기자동차-충전소-슈퍼차저-Tesla-Super-charger.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591084",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591084/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac%ea%b3%bc-%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2023-06-29T06:22:22.000Z",
-          "wordCount": 10523,
-          "title": "월가의 넷플릭스 투자의견과 넷플릭스 주가 전망(6/29 업뎃)",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/넷플릭스-오징어게임-한-장면-Image-from-netflix.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591082",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591082/%eb%a9%94%ed%83%80-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%eb%a9%94%ed%83%80-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2023-06-29T06:07:40.000Z",
-          "wordCount": 7606,
-          "title": "월가의 메타 투자의견 및 메타 주가 전망(6/29 업뎃)",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/페이스북-메타-표지판-Photo-by-CONSTANZA-HEVIA.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591067",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591067/%ec%95%8c%ed%8c%8c%eb%b2%b3-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac%ea%b3%bc-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2023-06-29T04:41:07.000Z",
-          "wordCount": 9625,
-          "title": "월가의 알파벳 투자의견과 알파벳 목표주가(6/29 업뎃)",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
-        },
-        {
-          "id": "https://happist.com/?p=591045",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591045/23-1q-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%a0-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-06-28T22:50:18.000Z",
-          "wordCount": 5393,
-          "title": "2분기 마이크론 실적, 기대보다 나은 실적과 전망과  반도체 반닥론을 확인하다.",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/07/마이크론-칩.webp"
-        },
-        {
-          "id": "https://happist.com/?p=591040",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591040/%eb%b2%a0%ed%8a%b8%eb%82%a8-%eb%8b%ac%eb%9e%8f-%ec%a3%bd%eb%a6%bc%ec%82%ac-%ec%97%ac%ed%96%89",
-          "publishedOn": "2023-06-28T22:03:31.000Z",
-          "wordCount": 5365,
-          "title": "베트남 달랏 여행, 달마대사의 인연이 깃든 달랏 죽림사 방문기",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/06/Screenshot_20230628_175408_-mPOP-1024x1424.jpg"
         }
       ]
     },
@@ -3845,26 +3845,6 @@
           "publishedOn": "2023-06-29T22:59:27.000Z",
           "wordCount": 2923,
           "title": "[뉴페@스프] ‘1등 뉴스’ ‘시청률 1위’ 앵커 해고는 무엇을 위한 결정이었나",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=76764",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 5월 1일 스프에 쓴 글입니다. 의식주(衣食住). 옷과 음식과 집. 사람이 사는 데 필요한 기본 요소 세 가지를 일컫는 말입니다. 그런데 생각해 보면, 현대 사회에서 인간이 옷, 음식, 집을 생산하고 조달하는 방법은 각각 → 더 보기",
-          "link": "https://newspeppermint.com/2023/06/28/npsp_ethicalconsumption/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_ethicalconsumption",
-          "publishedOn": "2023-06-28T22:59:41.000Z",
-          "wordCount": 2712,
-          "title": "[뉴페@스프] “너 혼자 그런다고 뭐가 바뀌니”에 대한 답은",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77207",
-          "author": "NewsPeppermint",
-          "description": "마크 트웨인은 현실은 소설보다 이상하다고 말했습니다. 소설은 가능성에 구속되지만, 현실은 그럴 필요가 없기 때문입니다. 벌써 18년 전 소설보다 더 소설 같은 일이 바로 우리나라에서 일어났습니다. 사건의 주인공은 바로 황우석 박사입니다. 세계 최초로 줄기세포 복제에 성공하며, 난치병 환자들의 희망으로 떠올랐던 황우석 박사는 연구 과정에서 데이터를 조작하는 심각한 잘못을 저지른 것이 알려져 순식간에 추락했습니다. 그러나 명성을 얻으며 확보한 연구비로 계속 복제 사업을 진행한 황 박사는 현재 아랍에미리트에서 왕실이 애지중지하는 낙타 복제를 도맡아 → 더 보기",
-          "link": "https://newspeppermint.com/2023/06/28/npsp_wshwang/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_wshwang",
-          "publishedOn": "2023-06-28T09:40:43.000Z",
-          "wordCount": 1439,
-          "title": "18년 전 세계를 놀라게 했던 ‘황우석 사태’와 그 이후",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
