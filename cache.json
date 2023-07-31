@@ -107,6 +107,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/cpp20-understanding-views-impl/",
+          "author": null,
+          "description": "In this article, we’d shed some light on the implementation of  ranges::reverse_view and std::views::reverse. We’ll compare them to understand the differences between views and their adaptor objects.\nLet’s jump in.\nranges::reverse_view and std::views::reverse in Action \n  \n\n\n\n\n     \n    \n\n\nLet’s look at an example to understand how these views work. Assume we have a range r of integers from 1 to 5. When we apply std::views::reverse to r, it creates a view representing the elements of r in the reverse order.\n#include <ranges>\n#include <vector>\n#include <iostream>\n\nint main() {\n    std::vector<int> r = {1, 2, 3, 4, 5};\n    auto reversed = r | std::views::reverse;\n    for (auto i : reversed)\n        std::cout << i << \" \";\n        \n    // same as:\n    for (auto i : r | std::views::reverse)\n   …",
+          "link": "https://www.cppstories.com/2023/cpp20-understanding-views-impl/",
+          "publishedOn": "2023-07-31T00:00:00.000Z",
+          "wordCount": 2034,
+          "title": "Understanding Ranges Views and View Adaptors Objects in C++20/C++23",
+          "imageUrl": "https://www.cppstories.com/2023/images/views_impl.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/intro-cpp-book/",
           "author": null,
           "description": "Lots of practical examples, general programming, software development techniques, OOP, parallel algorithms, plus C++ to combine it all into working applications. This is a short introduction to the book “Introduction to Programming with C++” by Prof. Boguslaw Cyganek, an excellent book for students who start their journey with system coding.\nLet’s see what’s inside.\nDisclaimer: I got a free copy from the author.\nDisclaimer 2: The links to Amazon are affiliate links, which provide me with some small commission.\n\n\n\n     \n    \n\n\nHere are the main links and info about the book:\n\nThe book on Amazon:\nIntroduction to Programming with C++ for Engineers @Amazon (released in  2021)).\nThe book page at Wiley:\nIntroduction to Programming with C++ for Engineers\nExcerpts (from the Wiley page)\nThe Introdu…",
@@ -236,6 +246,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "f0a4f278-0ff6-4b5d-829b-0748f004daa5",
+          "author": "Bruno Larsen",
+          "description": "Recent discussion in the Fedora list about frame pointers led us to think it may be an interesting idea to explain what frame pointers can and can't do for unwinding. To summarize the discussion, there was a request from a Fedora developer that, by default, all packages in Fedora should be built with explicit frame pointers to make it easier to profile and optimize. Those opposing the change cited the performance impact that such a change would have on the system. Even though that change has already been implemented, we thought it would be interesting to give some insight into the costs from the compiler team's perspective.\nUnwinding or backtracing?\nA common first point of confusion is the difference between unwinding and backtracing, as some discussions seem to use interchangeably or refe…",
+          "link": "https://developers.redhat.com/articles/2023/07/31/frame-pointers-untangling-unwinding",
+          "publishedOn": "2023-07-31T07:00:00.000Z",
+          "wordCount": 4366,
+          "title": "Frame pointers: Untangling the unwinding",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_B.png?itok=PfB3lac5"
+        },
+        {
+          "id": "9ebaf8e2-b7d9-40c7-b416-097082c4f22d",
+          "author": "Michael Dawson",
+          "description": "In many applications, completing more than a single update as an atomic unit (transaction) is needed to preserve data integrity. This installment of the ongoing Node.js Reference Architecture series covers the Node.js reference architecture team’s experience with integrating transactions into your application to satisfy this requirement.\nFollow the series:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code Coverage\nPart 8: Typescript\nPart 9: Securing Node.js applications\nPart 10: Accessibility\nPart 11: Typical development workflows\nPart 12: Npm development\nPart 13: Problem determination\nPart 14: Testing\nPart 15: Transact…",
+          "link": "https://developers.redhat.com/articles/2023/07/31/how-handle-transactions-nodejs-reference-architecture",
+          "publishedOn": "2023-07-31T07:00:00.000Z",
+          "wordCount": 2684,
+          "title": "How to handle transactions in Node.js reference architecture",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
+        },
         {
           "id": "e588c9d2-ed9d-44b6-ad76-67949bc05ad7",
           "author": "Valentina Rodriguez Sosa",
@@ -1209,18 +1239,7 @@
       "title": "Kimchi hill",
       "feedUrl": "https://kimchihill.com/feed/",
       "siteUrl": "https://kimchihill.com",
-      "articles": [
-        {
-          "id": "https://kimchihill.com/?p=2662",
-          "author": "kimchihill",
-          "description": "After graduating from college, my first job was at McKinsey, where I spent two and a half years before joining the Sendbird startup team. Now, after eight years with Sendbird, I reflect on the journey that surpassed my time at McKinsey by more than threefold.. Surprisingly, my journey with Sendbird has exceeded my time atContinue reading \"Leaving McKinsey and Hodling Through a Startup’s Beginning to Unicorn\"\nLeaving McKinsey and Hodling Through a Startup’s Beginning to Unicorn appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2023/07/01/what-i-learned-from-leaving-mckinsey-and-hodling-through-a-startups-beginning-to-unicorn/?utm_source=rss&utm_medium=rss&utm_campaign=what-i-learned-from-leaving-mckinsey-and-hodling-through-a-startups-beginning-to-unicorn",
-          "publishedOn": "2023-07-01T11:24:11.000Z",
-          "wordCount": 3814,
-          "title": "Leaving McKinsey and Hodling Through a Startup’s Beginning to Unicorn",
-          "imageUrl": "https://kimchihill.com/wp-content/uploads/2023/04/McKinsey_sendbird-resized.jpg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Kwang Yul Seo",
@@ -1239,6 +1258,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/939808/",
+          "author": "corbet",
+          "description": "Version 29.1 of the Emacs editor has been released.  There is a long list\nof changes, including integration with the Tree-sitter\nincremental parsing library, the ability to access SQLite databases, \n\"pure GTK\" display support (which enables Wayland support), and a lot more; see the\nNEWS file for all the details.",
+          "link": "https://lwn.net/Articles/939808/",
+          "publishedOn": "2023-07-31T15:05:28.000Z",
+          "wordCount": 789,
+          "title": "Emacs 29.1 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939807/",
+          "author": "corbet",
+          "description": "Version 3.2 of the GNU COBOL compiler is out.  \"The amount of features\nare too much to note, but you can skip over the attached NEWS file to\ninvestigate them.\"  These new features include improved support for\nCOBOL dialects, performance improvements, better GDB debugging support, and\nmore.",
+          "link": "https://lwn.net/Articles/939807/",
+          "publishedOn": "2023-07-31T14:58:54.000Z",
+          "wordCount": 4552,
+          "title": "GnuCOBOL 3.2 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939389/",
+          "author": "corbet",
+          "description": "It is well understood that concurrency makes programming problems harder;\nthe high level of concurrency inherent in kernel development is one of the\nreasons why kernel work can be challenging.  Things can get even worse,\nthough, if concurrent access happens in places where the code is not\nexpecting it.  The long story accompanying this\nshort patch from Christian Brauner is illustrative of the kind of\nproblem that can arise when assumptions about concurrency prove to be\nincorrect.",
+          "link": "https://lwn.net/Articles/939389/",
+          "publishedOn": "2023-07-31T14:46:19.000Z",
+          "wordCount": null,
+          "title": "[$] A virtual filesystem locking surprise",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939770/",
+          "author": "jake",
+          "description": "Security updates have been issued by CentOS (apr-util, bcel, c-ares, emacs, git, java-1.8.0-openjdk, libwebp, open-vm-tools, python, and python3), Debian (amd64-microcode, kernel, and thunderbird), Fedora (iperf3), SUSE (cdi-apiserver-container, cdi-cloner-container, cdi- controller-container, cdi-importer-container, cdi-operator-container, cdi- uploadproxy-container, cdi-uploadserver-container, cont, cjose, java-17-openjdk, jtidy, kernel-firmware, kubevirt, virt-api-container, virt-controller-container, virt-handler-container, virt-launcher-container, virt-libguestfs-tools- container, virt-operator-container, libqt5-qtbase, librsvg, libvirt, openssl-1_0_0, openssl-3, qemu, samba, thunderbird, and zabbix), and Ubuntu (linux-iot and wireshark).",
+          "link": "https://lwn.net/Articles/939770/",
+          "publishedOn": "2023-07-31T14:04:13.000Z",
+          "wordCount": 368,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/939685/",
+          "author": "corbet",
+          "description": "The  6.5-rc4 kernel prepatch is out for\ntesting.\n\n\n\tSo here we are, and the 6.5 release cycle continues to look\n\tentirely normal.\n\n\tIn fact, it's *so* normal that we have hit on a very particular\n\t(and peculiar) pattern with the rc4 releases: we have had *exactly*\n\t328 non-merge commits in rc4 in 6.2, 6.3 and now 6.5. Weird\n\tcoincidence.\n\n\tAnd honestly, that weird numerological coincidence is just about\n\tthe most interesting thing here.",
+          "link": "https://lwn.net/Articles/939685/",
+          "publishedOn": "2023-07-30T21:14:43.000Z",
+          "wordCount": 549,
+          "title": "Kernel prepatch 6.5-rc4",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/939568/",
           "author": "corbet",
@@ -1978,16 +2047,6 @@
           "wordCount": 269,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/937079/",
-          "author": "corbet",
-          "description": "The\n6.4.1,\n6.3.11, and\n6.1.37\nstable kernels have been released; each contains another set of important\nfixes.",
-          "link": "https://lwn.net/Articles/937079/",
-          "publishedOn": "2023-07-01T20:50:28.000Z",
-          "wordCount": 184,
-          "title": "Three 6.x stable kernels",
-          "imageUrl": null
         }
       ]
     },
@@ -2023,6 +2082,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/bottlenecks-of-scaleups/04-costs.html",
+          "author": null,
+          "description": "As startups begin to grow rapidly, they often find that early decisions\n     that helped them find a product/market fit lead to excessive costs once\n     traffic increases. These costs can threaten a scaleup's ability to grow.\n     Sofia Tania and Stefania Stefansdottir have worked with\n     many scaleups in this predicament and share their approach to understanding\n     and reducing these costs.\nmore…",
+          "link": "https://martinfowler.com/articles/bottlenecks-of-scaleups/04-costs.html",
+          "publishedOn": "2023-07-31T13:30:00.000Z",
+          "wordCount": 1682,
+          "title": "Bottlenecks of Scaleups: Cost Efficiency",
+          "imageUrl": "https://martinfowler.com/articles/bottlenecks-of-scaleups/card.png"
+        },
         {
           "id": "https://martinfowler.com/articles/exploring-gen-ai.html#median---a-tale-in-three-functions",
           "author": null,
@@ -2139,16 +2208,6 @@
           "wordCount": 3903,
           "title": "LittleFS File System with MCU Internal FLASH Memory",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/07/littlefs-file-system-data-in-internal-flash-memory.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=37684",
-          "author": "Erich Styger",
-          "description": "A ligature is a font feature, combining multiple 'characters' into a single glyph. This can be very useful for programming and source code, and makes reading source code easier. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/07/01/nicer-coding-ligatures-with-eclipse-and-visual-studio-code/",
-          "publishedOn": "2023-07-01T12:27:54.000Z",
-          "wordCount": 3571,
-          "title": "‘Nicer Coding’: Ligatures with Eclipse and Visual Studio Code",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/07/ligature-font-eclipse.png"
         }
       ]
     },
@@ -2271,6 +2330,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8045",
+          "author": "Derek Jones",
+          "description": "Who are today’s ‘famous’ academics in software engineering? Famous as in, you can mention their name when chatting with general software developers, and expect those present to have heard of them, or you have heard their names dropped into a conversation, say, at least 3+ times this year (I’m excluding academics who are famous within […]",
+          "link": "https://shape-of-code.com/2023/07/30/who-are-the-famous-academics-in-software-engineering/",
+          "publishedOn": "2023-07-30T22:05:23.000Z",
+          "wordCount": 1513,
+          "title": "Who are the famous academics in software engineering?",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8024",
           "author": "Derek Jones",
           "description": "Fuzzing has become a popular area of research in the reliability & testing community, with a stream of papers claiming to have created a better tool/algorithm. The claims of ‘betterness’, made by the authors, often derive from the number of previously unreported faults discovered in some collection of widely used programs. Developers in industry will […]",
@@ -2317,6 +2386,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12722",
+          "author": "Stacey Higginbotham",
+          "description": "This story originally ran on Friday, July 28, 2023 in my weekly IoT newsletter. You can sign up for the newsletter here.  Bloomberg this week called the end of the smartphone era and the dawning of the AI era, all based on the fact that chip manufacturing firm TSMC now has a “double-digit percentage gap” in […]\nThe post How to think about AI based on what we learned with IoT appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/how-to-think-about-ai-based-on-what-we-learned-with-iot/",
+          "publishedOn": "2023-07-31T13:00:46.000Z",
+          "wordCount": 2788,
+          "title": "How to think about AI based on what we learned with IoT",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/industryai.jpg?fit=900%2C471&ssl=1"
+        },
         {
           "id": "https://staceyoniot.com/?p=12720",
           "author": "Stacey Higginbotham",
@@ -2572,6 +2651,56 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=94454",
+          "author": "이정환",
+          "description": "악성 민원에 시달리는 교사를 위한 현실적인 조언. 학교폭력과 악성민원, 교사의 교권은 모두 맞물리는 문제다. 교사는 쏟아지는 학부모의 민원을 감당해야 하지만 정작 권한이 없거나 자칫 아동학대로 몰리는 경우도 있다. 학생인권을 강화했더니 교권이 추락했다는 해괴한 논리도 떠돈다. 미네소타주립대 교수 월터 로버츠는 “학부모를 문제 해결의 파트너로 끌어들여야 한다”고 주장한다. 다음은 월터 로버츠가 쓴 교사와 학부모가 학교 폭력 문제를...\nThe post 학폭과 교권, 학부모는 문제 해결의 파트너가 돼야 한다. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94454",
+          "publishedOn": "2023-07-31T06:51:37.000Z",
+          "wordCount": 4192,
+          "title": "학폭과 교권, 학부모는 문제 해결의 파트너가 돼야 한다.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-1320066140.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94410",
+          "author": "이정환",
+          "description": "[서평] 노회찬 평전. 2018년 7월23일 아침, 노회찬이 죽었다는 소식을 들었을 때 가장 먼저 떠오른 생각은 이것이었다. ‘삼성이 노회찬을 죽였다.’ 최근 출간된 ‘노회찬 평전’을 집어 들었을 때 가장 먼저 펼쳐 본 챕터가 “삼성 X파일, 7년 싸움의 시작”이었다. 이게 왜 중요한가. 이것은 영화가 아니다. 이것은 현실이다. 무슨 일이 있었나. 삼성 돈은 뒷 탈이 없다고들 했다. 노회찬과 드루킹의...\nThe post 우리가 노회찬의 죽음을 기억해야 하는 이유. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94410",
+          "publishedOn": "2023-07-31T02:59:43.000Z",
+          "wordCount": 3916,
+          "title": "우리가 노회찬의 죽음을 기억해야 하는 이유.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/HoeChan_Speech-1000x665-1.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94395",
+          "author": "이정환",
+          "description": "이동관의 등판, 전쟁이 시작됐다. 이동관 아들 학폭 논란, 빠져 나갈 수 있을까. 이재명 구속 영장, 검찰도 후달린다. 명낙회동, 화기애애하지는 않았다. 민주당의 올드보이들. 오늘의 TMI. 북한은 중국보다 러시아를 더 챙겼다. 4인 가구 중위소득 540만 원. 더 깊게 읽기. 성범죄 사건, 국민참여 재판으로 가면 절반이 무죄. 위험의 바깥은 없다. 해법과 대안. 인구 늘어나는 캐나다, 96%가 이민자. 목욕탕을...\nThe post 올드보이들의 시대, 전쟁이 시작됐다: 슬로우레터 7월31일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94395",
+          "publishedOn": "2023-07-30T22:05:16.000Z",
+          "wordCount": 3983,
+          "title": "올드보이들의 시대, 전쟁이 시작됐다: 슬로우레터 7월31일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/IE001904018_PHT.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94372",
+          "author": "민노씨",
+          "description": "[명묵적지수] ‘K를 생각한다’의 저자 임명묵 님과 논쟁적 인물과 현상, 이슈에 관해 이야기합니다. 임명묵 님은 슬로우뉴스와 오랫동안 함께한 필자입니다. 묵적지수(묵수)는 춘추전국시대 사상가 ‘묵적(묵자)의 지킴’이라는 고사에서 유래한 말로 ‘서로 차별 없이 똑같이 사랑하고, 이롭게 하자’는 묵자의 사상적 면모를 잘 보여줍니다. 오늘날 이 고사성어는 때론 융통성이 없어 보이더라도 주장과 소신을 굽히지 않는 행동과 언명, 그런 사람을 가리킬 때...\nThe post K(카진스키)를 생각한다: 1. 좌파 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94372",
+          "publishedOn": "2023-07-30T21:05:24.000Z",
+          "wordCount": 5793,
+          "title": "K(카진스키)를 생각한다: 1. 좌파",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_004-9.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=94360",
+          "author": "민노씨",
+          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 이 글은 아래 다섯 개 기사로 발행된 인터뷰를 하나로 통합한 것입니다. (편집자) 슬로우뉴스 창간 동인 캡콜드(펜실베이니아주립대학교 김낙호 교수) 님은 만화 덕후이자 미디어 전문가로 연구 분야는 언론학입니다. 캡콜드 님께 사회적 논란과 지적 이슈에 관해 묻고, 그 답변을 정리합니다. 첫 번째 콜드케이스는 인어공주와 PC(정치적 올바름)...\nThe post 인어공주와 PC: 숭배와 혐오의 이분법, 그 가짜논쟁을 넘어서 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94360",
+          "publishedOn": "2023-07-30T05:01:27.000Z",
+          "wordCount": 20518,
+          "title": "인어공주와 PC: 숭배와 혐오의 이분법, 그 가짜논쟁을 넘어서",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_008-1-1000x441.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=94336",
           "author": "민노씨",
@@ -3180,6 +3309,26 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=591334",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591334/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%8b%a4%ec%a0%81-%eb%b6%84%ec%84%9d",
+          "publishedOn": "2023-07-31T10:42:09.000Z",
+          "wordCount": 5937,
+          "title": "23년 2분기 삼성전자 실적 분석, 반도체 업황 읽기",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/07/삼성전자-수원사업장-전경-Image-from-Samsung-Electronics.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591328",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591328/%eb%af%b8%ea%b5%ad-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%9e%a5%eb%b9%84%ec%a3%bc-%ec%8b%a4%ec%a0%81",
+          "publishedOn": "2023-07-31T09:12:50.000Z",
+          "wordCount": 6070,
+          "title": "미국 반도체 장비주 실적을 읽는 월가의 시선",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/07/미국-반도체-장비주-KLA-본사-전경.jpg"
+        },
+        {
           "id": "https://happist.com/?p=591317",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -3438,26 +3587,6 @@
           "wordCount": null,
           "title": "2분기 테슬라 판매량을 보는 월가의 시선, 기대 이상 관건은 자동차 마진",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=591123",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591123/%eb%82%98%ec%9d%b4%ed%82%a4-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac%ea%b3%bc-%eb%82%98%ec%9d%b4%ed%82%a4-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2023-07-02T02:52:33.000Z",
-          "wordCount": 6219,
-          "title": "월가의 나이키 투자의견 및 나이키 주가 전망 보고서(7/2 업뎃)",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/06/serena-williams-23-slams_original-web.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591117",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591117/23-2q-%eb%82%98%ec%9d%b4%ed%82%a4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2023-07-02T02:26:49.000Z",
-          "wordCount": 5816,
-          "title": "2분기 나이키 실적을 읽는 월가의 시선, 우려보다 나은 긍정적인 면이 많으나 FY24 나이키 전망은 실망스럽다",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/06/나이키-도약-공중으로-뛰어오른-나이키-모델-Image-from-Nike.jpg"
         }
       ]
     },
