@@ -85,6 +85,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/five-adv-init-techniques-cpp/",
+          "author": null,
+          "description": "From dynamic container operations to compile-time constants, C++ offers a variety of techniques (as in this famous Meme :)). In this article, we’ll delve into advanced initialization methods likereserve() and emplace_backfor containers to tuples with piecewise_construct and forward_as_tuple. Thanks to those techniques, we can reduce the number of temporary objects and create variables more efficiently.\nLet’s jump in.\n\n\n\n     \n    \n\n\nAs a background, we can use the following class that will be handy to illustrate when its special member functions are called. That way, we’ll be able to see extra temporary objects.\nstruct MyType {\n    MyType() { std::cout << \"MyType default\\n\"; }\n    explicit MyType(std::string str) : str_(std::move(str)) { \n        std::cout << std::format(\"MyType {}\\n\", str…",
+          "link": "https://www.cppstories.com/2023/five-adv-init-techniques-cpp/",
+          "publishedOn": "2023-08-07T00:00:00.000Z",
+          "wordCount": 2638,
+          "title": "Five Advanced Initialization Techniques in C++: From reserve() to piecewise_construct and More.",
+          "imageUrl": "https://www.cppstories.com/2023/images/cpp_init_five.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/cpp20-understanding-views-impl/",
           "author": null,
           "description": "In this article, we’d shed some light on the implementation of  ranges::reverse_view and std::views::reverse. We’ll compare them to understand the differences between views and their adaptor objects.\nLet’s jump in.\nranges::reverse_view and std::views::reverse in Action \n  \n\n\n\n\n     \n    \n\n\nLet’s look at an example to understand how these views work. Assume we have a range r of integers from 1 to 5. When we apply std::views::reverse to r, it creates a view representing the elements of r in the reverse order.\n#include <ranges>\n#include <vector>\n#include <iostream>\n\nint main() {\n    std::vector<int> r = {1, 2, 3, 4, 5};\n    auto reversed = r | std::views::reverse;\n    for (auto i : reversed)\n        std::cout << i << \" \";\n        \n    // same as:\n    for (auto i : r | std::views::reverse)\n   …",
@@ -245,6 +255,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "24c3af41-9fa3-40ea-9de1-ec100baab076",
+          "author": "Aine Keenan",
+          "description": "There is nothing developers and users hate more than waiting a long time for new software features to be deployed. Being stuck in an endless loop of long response times for QA and feedback is painful, especially when they have started a new project.\nRed Hat OpenShift is highly regarded. It is the perfect platform for your organization to implement the DevOps approach, speeding up the time for ideas to go from development to deployment. Red Hat OpenShift will allow your organization's unified platform to build, test, review, and deploy your applications. Here, your organization will be able to utilize secure, reliable, cloud-native products while uniting the inner and outer loop of development.\nMany developers have heard of the benefits DevOps provides, such as faster deployment, greater au…",
+          "link": "https://developers.redhat.com/articles/2023/08/07/how-fully-utilize-openshift-devops",
+          "publishedOn": "2023-08-07T07:00:00.000Z",
+          "wordCount": 3031,
+          "title": "How to fully utilize OpenShift for DevOps",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-devops.png?itok=lalUe1PS"
+        },
+        {
+          "id": "12071637-6791-4339-9caf-dbd9ee480991",
+          "author": "Jorge Balderas",
+          "description": "OpenShift APIs for Data Protection (OADP) is an operator that lets you back up and restore workloads in Red Hat OpenShift clusters. It is based on the upstream open source project Velero. You can use OADP to backup and restore all Kubernetes resources for a given project, including persistent volumes.\nIt is a best practice to be able to recreate your workloads via Infrastructure as Code (IAC) pipelines or automation. Most Kubernetes projects in production already have a way to be recreated; however, when it comes to restoring data from persistent volumes, that requires a separate solution. OADP can fill that gap. This article will focus primarily on restoring persistent volumes.\nHow does OADP back up persistent volumes?\nOADP allows backing up and restoring persistent volumes via either Res…",
+          "link": "https://developers.redhat.com/articles/2023/08/07/back-kubernetes-persistent-volumes-using-oadp",
+          "publishedOn": "2023-08-07T07:00:00.000Z",
+          "wordCount": 3437,
+          "title": "Back up Kubernetes persistent volumes using OADP",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_OS_Shared_image_A_3.png?itok=96qQ_zu-"
+        },
         {
           "id": "67ff1453-79fe-40e5-85d1-0dfa64b17a72",
           "author": "Vivien Wang",
@@ -568,16 +598,6 @@
           "wordCount": 2859,
           "title": "Preview: ranging over functions in Go",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2023/ungrammar-in-go-and-resilient-parsing/",
-          "author": null,
-          "description": "<p>It won't be news to the readers of this blog that I have <a class=\"reference external\" href=\"https://github.com/eliben/pycparser\">some interest</a> in\n<a class=\"reference external\" href=\"https://eli.thegreenplace.net/tag/compilation\">compiler</a>\n<a class=\"reference external\" href=\"https://eli.thegreenplace.net/tag/recursive-descent-parsing\">front-ends</a>.\nSo when I heard about a new(-ish) DSL for\n<a class=\"reference external\" href=\"https://en.wikipedia.org/wiki/Parse_tree\">concrete syntax trees</a> (CST), I\ncouldn't resist playing with it a bit.</p>\n<p><a class=\"reference external\" href=\"https://github.com/rust-analyzer/ungrammar/tree/master\">Ungrammar</a> is used\nin <tt class=\"docutils literal\"><span class=\"pre\">rust-analyzer</span></tt> to define and access a …</p>",
-          "link": "https://eli.thegreenplace.net/2023/ungrammar-in-go-and-resilient-parsing/",
-          "publishedOn": "2023-07-08T13:12:00.000Z",
-          "wordCount": 858,
-          "title": "Ungrammar in Go and resilient parsing",
-          "imageUrl": null
         }
       ]
     },
@@ -592,6 +612,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480086",
+          "author": "Nitin Dahad",
+          "description": "Optical connections will be an important advancement for PCIe architecture as they will allow for higher performance, lower power consumption, extended reach and reduced latency.\nThe post New workgroup for delivering PCIe over optical appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/new-workgroup-for-delivering-pcie-over-optical/",
+          "publishedOn": "2023-08-07T12:50:42.000Z",
+          "wordCount": 3417,
+          "title": "New workgroup for delivering PCIe over optical",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/01/PCI-SIG_PCIe-6.0-targets-data-intensive-markets.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480078",
+          "author": "Nitin Dahad",
+          "description": "UEC to deliver on Ethernet-based open, interoperable, high-performance full-communications stack architecture to meet the growing network demands of AI & HPC at scale.\nThe post Ultra Ethernet Consortium (UEC) to develop full stack for AI and HPC appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/ultra-ethernet-consortium-uec-to-develop-full-stack-for-ai-and-hpc/",
+          "publishedOn": "2023-08-07T11:11:11.000Z",
+          "wordCount": 3879,
+          "title": "Ultra Ethernet Consortium (UEC) to develop full stack for AI and HPC",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/The_Linux_Foundation_Ultra_Ethernet_Consortium.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480070",
           "author": "Nitin Dahad",
@@ -958,6 +998,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/08/makersuite-expands-adds-new-features-for-ai-makers.html",
+          "author": null,
+          "description": "Posted by Simon Tokumine, Director of Product Management\n\n\n\n\n\n\nWhen we announced MakerSuite earlier this year, we were delighted to see people from all over the world sign up for the waitlist. With MakerSuite we want to help anyone become an AI maker and easily create innovative AI applications with Google’s large generative models. We’re excited to see how it’s being used.\nToday, we’re expanding access to MakerSuite to cover 179 countries and territories, including anyone with a Google Workspace account. This means that more developers than ever can sign up to create AI applications with our latest language model, PaLM 2.\nWe’re also introducing three helpful features:\n\n  \nAutomatically optimize your text prompts\n\n\n\n\n\nWant to write better prompts? Now, you can write a text prompt and click \"Prompt Suggestion\" to get ideas and suggestions to get better responses \n\n\n\n  \n  \nEnable dark mode\n\n\n\n\n\nIn MakerSuite, you can now switch from light mode to dark mode in the settings.\n\n\n\n  \n  \nImport and export your data with Google sheets and CSV to save time and collaborate effectively\n\n  \n\n\n\nImport and export your data to and from Google Sheets or CSV files easily. This can save you time by eliminating the need to recreate data that you have already created. It can also help you collaborate more effectively with others by allowing you to share your results easily.\n\n\n\n\nEasily go from MakerSuite to code\nSince the PaLM API is integrated into MakerSuite, it’s easy to quickly try different prompts from your browser, and then incorporate them into your code—no machine learning expertise required.\n\n\nOnce your prompt is ready, simply copy your code in just one click and integrate it into your project\n\n\n  \n\n\n  \nGet started\nSign up and learn more on our Generative AI for Developers website.  Be sure to check out our quick-start guide, browse our prompt gallery, and explore sample apps for inspiration. We can't wait to see what you build with MakerSuite!",
+          "link": "http://developers.googleblog.com/2023/08/makersuite-expands-adds-new-features-for-ai-makers.html",
+          "publishedOn": "2023-08-04T19:00:00.021Z",
+          "wordCount": 1804,
+          "title": "MakerSuite expands to 179 countries and territories, and adds helpful features for AI makers",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUamN23ar5ECnM46ve6N1OZI7skScieV26fpn4Riuoj5-3nNJSrrhGoe8xyFyA0FluTwNrxtzC2CysOTauOIexrYsdFphRX_p76R2JS6bJfD57m5r4o52I0fsVTs1ZXCKbLK1ZSZfnGHErGOj64neCd5MhD0YMBAUHg7BAYaoSfamVVQtnBl2ylcWSC6I/w1200-h630-p-k-no-nu/G4D-Makersuite-Expands-Social-v2.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/08/weareplay-meet-ayushi-nikhil-from-india-and-more-stories-from-around-the-world.html",
           "author": null,
@@ -1348,6 +1398,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/940684/",
+          "author": "jake",
+          "description": "The Linux Containers project has\nannounced the addition of\nIncus, which is a fork of LXD\n5.16 started by Aleksa Sarai. Incus was created in response to Canonical's removal of LXD from Linux\nContainers.  \n\nAfter some discussion with Aleksa and a fair bit of encouragement from our\ncommunity, we have made the decision to take Incus under the umbrella of\nLinux Containers and will commit to it the infrastructure which was\npreviously made available to LXD. \n\nThe goal of Incus is to provide a fully community led alternative to\nCanonical's LXD as well as providing an opportunity to correct some\nmistakes that were made during LXD's development which couldn't be\ncorrected without breaking backward compatibility. \n\nIn addition to Aleksa, the initial set of maintainers for Incus will\ninclude Christian Brauner, Serge Hallyn, Stéphane Graber and Tycho\nAndersen, effectively including the entire team that once created LXD.",
+          "link": "https://lwn.net/Articles/940684/",
+          "publishedOn": "2023-08-07T14:48:30.000Z",
+          "wordCount": 646,
+          "title": "Introducing Incus",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/940683/",
+          "author": "corbet",
+          "description": "Sourceware, the development home for\nthe GNU toolchain and more, is about to celebrate its 25th anniversary and\nis looking\nforward to the next 25 years:\n\n\n\tThat is why in the last couple of years we have started to\n   \tdiversify our hardware partners, setup new services using\n   \tcontainers and isolated VMs, investigated secure supply chain\n   \tissues, added redundant mirrors, created a non-profit home,\n   \tcollected funds, invested in open communication, open office hours\n   \tand introduced community oversight by a Sourceware Project\n   \tLeadership Committee with the help from the Software Freedom\n   \tConservancy.",
+          "link": "https://lwn.net/Articles/940683/",
+          "publishedOn": "2023-08-07T14:35:06.000Z",
+          "wordCount": 205,
+          "title": "The Sourceware 25 roadmap",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/940403/",
+          "author": "corbet",
+          "description": "Return-oriented\nprogramming (ROP) has, for some years now, been a valuable tool for\nthose who would subvert a system's security.  It is thus not surprising\nthat a lot of effort has gone into thwarting ROP attacks, which depend on\ncorrupting the call stack with a carefully chosen set of return addresses,\nat both the hardware and software levels.  One result of this work is\nshadow stacks, which can detect corruption of the call stack, allowing the\noperating system to react accordingly.  The 64-bit Arm implementation of\nshadow stacks is called \"guarded control stack\" (GCS); patches implementing\nsupport for this feature are currently under discussion.",
+          "link": "https://lwn.net/Articles/940403/",
+          "publishedOn": "2023-08-07T14:24:27.000Z",
+          "wordCount": null,
+          "title": "[$] Shadow stacks for 64-bit Arm systems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/940682/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (burp, chromium, ghostscript, openimageio, pdfcrack, python-werkzeug, thunderbird, and webkit2gtk), Fedora (amanda, libopenmpt, llhttp, samba, seamonkey, and xen), Red Hat (thunderbird), Slackware (mozilla and samba), and SUSE (perl-Net-Netmask, python-Django1, trytond, and virtualbox).",
+          "link": "https://lwn.net/Articles/940682/",
+          "publishedOn": "2023-08-07T14:23:29.000Z",
+          "wordCount": 235,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/940618/",
+          "author": "corbet",
+          "description": "Linus has released 6.5-rc5 for testing.\n\"Things continue to look pretty normal. Not a huge number of commits,\nand most of the ones here are tiny\".",
+          "link": "https://lwn.net/Articles/940618/",
+          "publishedOn": "2023-08-06T23:17:03.000Z",
+          "wordCount": 139,
+          "title": "Kernel prepatch 6.5-rc5",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/940567/",
           "author": "corbet",
@@ -2461,6 +2561,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8070",
+          "author": "Derek Jones",
+          "description": "The number of Function points, FP, contained in the implementation of a software system are counted by following a specified counting process. The number of FP counted for a project is mapped to a cost estimate by multiplying the number of FP by the predetermined cost value of one FP; the predetermined value is based […]",
+          "link": "https://shape-of-code.com/2023/08/06/accuracy-of-function-point-estimates/",
+          "publishedOn": "2023-08-06T21:26:04.000Z",
+          "wordCount": 1600,
+          "title": "Accuracy of Function Point estimates",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8045",
           "author": "Derek Jones",
           "description": "Who are today’s ‘famous’ academics in software engineering? Famous as in, you can mention their name when chatting with general software developers, and expect those present to have heard of them, or you have heard their names dropped into a conversation, say, at least 3+ times this year (I’m excluding academics who are famous within […]",
@@ -2507,6 +2617,26 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12748",
+          "author": "Stacey Higginbotham",
+          "description": "This story was originally published on Friday, August 4, 2023 in my weekly newsletter. You can sign up for that newsletter here.  Just last week I had my third frustrating experience with a Matter device. But it’s time I stop blaming the Matter spec for the challenges I’m facing. My issues are really with the ecosystem […]\nThe post Matter’s problem isn’t the standard; it’s the vendors appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/matters-problem-isnt-the-standard-its-the-vendors/",
+          "publishedOn": "2023-08-07T14:57:45.000Z",
+          "wordCount": 3365,
+          "title": "Matter’s problem isn’t the standard; it’s the vendors",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/Apple-Matter-accessory-error.jpeg"
+        },
+        {
+          "id": "https://staceyoniot.com/?p=12746",
+          "author": "Stacey Higginbotham",
+          "description": "It looks like a Chinese hacking group is attacking air-gapped networks: Kaspersky has documented a sophisticated attack created by a hacking group associated with China. The attack uses several stages to get malware onto air-gapped devices, infiltrate other devices on the network, and then copy and exfiltrate files. (Bleeping Computer) This is why we need cybersecurity […]\nThe post IoT news of the week for August 4, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/iot-news-of-the-week-for-august-4-2023/",
+          "publishedOn": "2023-08-07T14:54:29.000Z",
+          "wordCount": 2474,
+          "title": "IoT news of the week for August 4, 2023",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=12740",
           "author": "Stacey Higginbotham",
@@ -2752,6 +2882,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=94933",
+          "author": "이정환",
+          "description": "최악의 잼버리, 경고가 없었던 게 아니다. 어쩌다 이 모양이 됐나. 민주당 돈 봉투 연루 의원 최소 19명. 더 깊게 읽기. “칼든 미친 사람 갑자기 안 생긴다.” 정신질환 방치해 비극 불렀다? 묻지마 범죄, 일본이 먼저 겪었다. “페이스북은 책임 없다”는 논문 들여다 보니. 세계의 약국? 죽음의 약국, 인도. 무량판이 문제가 아니다. 해법과 대안. 밀집 사육이 문제? 면적...\nThe post “죽은 문재인과 싸우지 마라”, 조선일보의 조언: 슬로우레터 8월7일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/94933",
+          "publishedOn": "2023-08-06T21:50:51.000Z",
+          "wordCount": 6155,
+          "title": "“죽은 문재인과 싸우지 마라”, 조선일보의 조언: 슬로우레터 8월7일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GBu2EUqKTrPQ64cb33a9e75910.29186334-1000x667.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=94916",
           "author": "씨앗(CEART)",
@@ -3400,6 +3540,16 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=591426",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591426/2%eb%b6%84%ea%b8%b0-%ed%80%84%ec%bb%b4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2023-08-07T04:14:07.000Z",
+          "wordCount": 5541,
+          "title": "2분기 퀄컴 실적을 읽는 월가의 시선, 퀄컴 스마트폰 사업은 시기적이 아닌 구조적인 문제에 직면",
+          "imageUrl": "https://happist.com/wp-content/uploads/2017/02/LG-스마트폰-역사_2012년-5월-옵티머스-LTE2-퀄컴-스냅드래곤-S4-듀얼코어-칩-적용-가격은-93만-5000원-02-1.jpg"
+        },
+        {
           "id": "https://happist.com/?p=591414",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -3697,6 +3847,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=77525",
+          "author": "NewsPeppermint",
+          "description": "트럼프 전 대통령이 ‘또’ 기소됐습니다. 다음 대선까지는 15개월이나 남았지만, 주로 트럼프 전 대통령의 혐의를 미국 사법부가 어떻게 다루는지에 관한 뉴스가 나올 때마다 대선의 향배를 점치는 분석이 벌써 등장하고 있습니다. 아주 이른 감이 있지만, 여론조사도 나오기 시작했고요. 전반적인 구도만 놓고 보면 미국은 분명 민주당 대 공화당, 혹은 좀 더 정확히 표현하자면 트럼프 대 반트럼프로 극명하게 나뉘어져 있는 것 같습니다. 그러나 여론조사에서 실제 유권자들의 답변을 좀 더 자세히 들여다보면, 여론은 좀 더 → 더 보기",
+          "link": "https://newspeppermint.com/2023/08/07/npsp_uselectionpolarization/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_uselectionpolarization",
+          "publishedOn": "2023-08-07T07:30:00.000Z",
+          "wordCount": 1485,
+          "title": "각자 다른 ‘평행 우주’에 살고 있는 여야 지지자들이 함께 맞이할 내년 선거",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=77136",
           "author": "veritaholic",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 17일 스프에 쓴 글입니다. 지난 5월, 미국 대법원은 앤디 워홀의 작품인 가수 프린스의 초상화가 타인의 저작권을 침해했다고 판결했습니다. 앤디 워홀은 20세기 중반 대중문화를 예술로 만든 팝아트를 현대 미술의 한 장르로 격상시킨 → 더 보기",
@@ -3855,16 +4015,6 @@
           "wordCount": 1402,
           "title": "‘부모 찬스’ 그 자체인 기여입학제가 유지되는 이유 그리고 전망",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77329",
-          "author": "NewsPeppermint",
-          "description": "기후변화로 매년 여름 폭염이 기승을 부리고 있습니다. 날이 더워지면 너도나도 에어컨을 틀고 전기를 쓸 일이 많아져 전력망에 부담이 가고 정전이 발생하기도 하죠. 텍사스대학교의 마이클 웨버 교수가 폭염이 찾아오는 여름철 정전 사태를 예방하기 위해 필요한 발상의 전환에 대해 칼럼을 썼습니다. 칼럼을 번역하고, 에너지를 절약해 기후변화의 피해를 줄이기 위해 필요한 또 다른 발상의 전환에 관해서도 정리해 봤습니다. 전문 번역: 여름철 ‘폭염 정전’을 피하려면 발상의 전환이 필요하다 해설: 기후변화로 더욱 부족해진 전기… 뒤집어 접근해보자는 제안",
-          "link": "https://newspeppermint.com/2023/07/08/npsp_saveelectricity/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_saveelectricity",
-          "publishedOn": "2023-07-08T08:15:54.000Z",
-          "wordCount": 1372,
-          "title": "기후변화로 더욱 부족해진 전기… 뒤집어 접근해보자는 제안",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3879,6 +4029,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/223176826288",
+          "author": "sellars",
+          "description": "5. 사실적 혹은 논리적 차원에서 로크가 주장하는 백지 상태의 인간은 우리에게 주어진 경험의 작용을 충실하게, 혹은 사실적으로 서술할 수 있다. 따라서 경험의 작용을 발생적, 사실적, 심리적으로 충실하게 묘사할 수 있다. 6. 그러나 이러한 생각은 곧 흄에 의해 반박 당한다. 흄에 의하면 우리는 백지 상태의 존재가 아니다. 우리는 이미 그 나름의 심리적 기제를 갖고 있는 그런 존재이다. 따라서 우리는 세상이나 경험을 로크가 주장하듯이 투명하게 서술할 수 있는 존재가 아니다. 우리는 우리에게 주어진 심리적 기제에 의해 세상을 서술할 수밖에 없다. 이 과정을 잘 서술함으로써 자연주의 철학이 가능할 수 있고, 동시에 세상을 투명.......",
+          "link": "https://blog.naver.com/sellars/223176826288",
+          "publishedOn": "2023-08-07T00:31:12.000Z",
+          "wordCount": 101,
+          "title": "선험적 지식",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/223176015783",
           "author": "sellars",
