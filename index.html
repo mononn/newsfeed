@@ -22,11 +22,559 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-07 datetime="2023-08-07T14:57:45.000Z">2023-08-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-07 datetime="2023-08-07T14:57:45.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-08 datetime="2023-08-08T19:04:45.000Z">2023-08-08</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-08 datetime="2023-08-08T19:04:45.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/940798/"
+                        open
+                      >
+                        <summary class="article-expander__title">Stable kernels with security fixes</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/940798/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The
+6.4.9,
+6.1.44,
+5.15.125,
+5.10.189,
+5.4.252,
+4.19.290, and
+4.14.321
+stable kernel updates have all been released; they are dominated by fixes
+for the latest round of
+speculative-execution vulnerabilities.
+
+Do note the warning attached to each of these releases:
+
+
+	Note, PLEASE TEST this kernel if you are on the 6.4.y tree before
+	using it in a real workload.  This was a quick release due to the
+	obvious security fixes in it, and as such, it has not had very much
+	testing &quot;in the wild&quot;.  Please let us know of any problems seen.
+	Also note that the user/kernel api for the new security mitigations
+	might be changing over time, so do not get used to them being fixed
+	in stone just yet.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/940783/"
+                        open
+                      >
+                        <summary class="article-expander__title">Another round of speculative-execution vulnerabilities</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/940783/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>There is a newly disclosed set of vulnerabilities in Intel processors that
+have been given the name Downfall
+attacks.
+
+
+	Downfall attacks targets a critical weakness found in billions of
+	modern processors used in personal and cloud computers. This
+	vulnerability, identified as CVE-2022-40982, enables a user to
+	access and steal data from other users who share the same
+	computer. For instance, a malicious app obtained from an app store
+	could use the Downfall attack to steal sensitive information like
+	passwords, encryption keys, and private data such as banking
+	details, personal emails, and messages. Similarly, in cloud
+	computing environments, a malicious customer could exploit the
+	Downfall vulnerability to steal data and credentials from other
+	customers who share the same cloud computer.
+
+
+A series of patches has landed in the mainline kernel, including one for gather data sampling
+mitigation and one to disable the AVX
+extension on CPUs where microcode mitigation is not available.
+&quot;This is a *big* hammer.  It is known to break buggy userspace that
+uses incomplete, buggy AVX enumeration.&quot;
+
+Not to be left out, AMD processors suffer from a return-stack overflow
+vulnerability, again exploitable via speculative execution; this patch, also just
+merged, describes the problem and its mitigation.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/940755/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/940755/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (libhtmlcleaner-java and thunderbird), Red Hat (dbus, kernel, kernel-rt, kpatch-patch, and thunderbird), Scientific Linux (thunderbird), SUSE (chromium, gstreamer-plugins-bad, gstreamer-plugins-base, gstreamer-plugins-good, gstreamer-plugins-ugly, kernel-firmware, libqt5-qtbase, libqt5-qtsvg, librsvg, pcre2, perl-Net-Netmask, qt6-base, and thunderbird), and Ubuntu (firefox).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Google for Developers Blog - News about Web, Mobile, AI and Cloud</button>
+                  <a class="source-heading__link" href="http://developers.googleblog.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://developers.googleblog.com/2023/08/introducing-project-idx-experiment-to-improve-full-stack-multiplatform-app-development.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Introducing Project IDX, An Experiment to Improve Full-stack, Multiplatform App Development</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2023/08/introducing-project-idx-experiment-to-improve-full-stack-multiplatform-app-development.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtW6l74AgUklRIlEcpq0z9R55YNmhjrz7PhUhAq_yyE_yDWoN8ijinmEONSiMDMxMbm6cjNqvpR3hqgJYmg16OQJQluIxjLwmJp13a0iohog15sQ4232lX4UTXfCf3iOMggWGISNuwnrzPUCn_aM2jQhsMYN31efikH2mqcBLoh5aQe8V0FtyC9PeKQOk/w1200-h630-p-k-no-nu/Project-IDX-Social%20%281%29.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Posted by Bre Arder, UX Research Lead, Kirupa Chinnathambi, Product Lead, Ashwin Raghav Mohan Ganesh, Engineering Lead, Erin Kidwell, Director of Engineering, and Roman Nurik, Design Lead
+
+
+
+  
+
+These days, getting an app from zero to production – especially one that works well across mobile, web, and desktop platforms – can feel like building a Rube Goldberg machine.  You’ve got to navigate an endless sea of complexity, duct-taping together a tech stack that&#x27;ll help you bootstrap, compile, test, deploy, and monitor your apps.
+While Google’s been working on making multiplatform app development easier for years – from Angular and Flutter to Google Cloud and Firebase – it feels like there’s even more we can do to make the entire multiplatform app development workflow faster and more friction…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded.com</button>
+                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4480130"
+                        open
+                      >
+                        <summary class="article-expander__title">Flash Memory Summit: exploring memory innovation for the AI era</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/flash-memory-summit-exploring-memory-innovation-for-the-ai-era/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embedded.com/wp-content/uploads/2023/08/Featured-image-Flash-Memory-Summit-2TB_Pooled_CXL_Memory_System_for_AI.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>A roundup of some of the keynotes, news and selected previews of what’s being showcased at the Flash Memory Summit taking place at the Santa Clara Convention Center this week, 8-10 August 2023.
+The post Flash Memory Summit: exploring memory innovation for the AI era appeared first on Embedded.com.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4480126"
+                        open
+                      >
+                        <summary class="article-expander__title">Validating multinode CAN system performance</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/validating-multinode-can-system-performance/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://www.embedded.com/wp-content/uploads/2023/08/can_network_.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This article explains the correct system-level testing approach to evaluate the controller area network (CAN) transceiver. This article explains the correct system-level testing approach to...
+The post Validating multinode CAN system performance appeared first on Embedded.com.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Stacey on IoT | Internet of Things news and analysis</button>
+                  <a class="source-heading__link" href="https://staceyoniot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://staceyoniot.com/?p&#x3D;12751"
+                        open
+                      >
+                        <summary class="article-expander__title">How to take the first step toward smart energy management</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://staceyoniot.com/how-to-take-the-first-step-toward-smart-energy-management/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://staceyoniot.com/wp-content/uploads/2023/04/LoadCenterVideo2_1550178641462.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Given the extreme heat this summer and the general awareness of how fragile our power grids are, there is a growing consensus that smart homes should include some form of smart energy management component. Today that might be a smart thermostat that’s hooked into a utility’s demand response program. But it’s likely that in the next […]
+The post How to take the first step toward smart energy management appeared first on Stacey on IoT | Internet of Things news and analysis.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Architectures and Processors blog</button>
+                  <a class="source-heading__link" href="https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="dd9e70c8-6d3c-4c71-b136-2456382a7b5c:8dd2de8f-9fa8-4b12-8625-b8c02c975f74"
+                        open
+                      >
+                        <summary class="article-expander__title">Using Perf to enable PMU functionality on Armv8-A CPUs: Enable Arm PMU support for the kernel and install Linux Perf tool</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/p1-perf-pmu-feature-armv8-cpus">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-42/ARM2028_5F00_Blog_5F00_Header_5F00_Images_5F00_1600x900_5F00_1_5F00_ST1.png_2D00_900x506x2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This blog post introduces how to enable PMU feature in Armv8-A CPUs and provides an example of performance analysis workflow on real Armv8-A  platform.(read more)</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Martin Fowler</button>
+                  <a class="source-heading__link" href="https://martinfowler.com/feed.atom">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://martinfowler.com/articles/creating-integrated-tech-strategy.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Creating an integrated business and technology strategy</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://martinfowler.com/articles/creating-integrated-tech-strategy.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://martinfowler.com/articles/creating-integrated-tech-strategy/card.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>My colleague Sarah Taraporewalla describes an approach
+     to building technology strategy that challenges the convention. It starts
+     by identifying the overall strategic directions that the organization is
+     considering, and using common aspects of these directions to indicate the
+     investigations needed for the organization to understand the technology
+     implications raised by that strategic change. This first
+     installment looks at two of these directions: expanding the business
+     by creating complementary products, and expanding the business into new
+     markets and regions. 
+more…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;95058"
+                        open
+                      >
+                        <summary class="article-expander__title">참담한 죽음이 왜 ‘뉴스거리’인가</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/95058">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/07/GettyImages-1383011258.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>시절이 하 수상하다. 서울 신림역에 이어 경기도 성남시 서현역 인근에서 ‘무차별 칼부림’ 사건이 일어났다. 범인이 마트에서 칼을 사는 모습, 인터넷에서 지나던 행인을 이유도 없이 갑자기 찌르며 상해를 입히는 모습 등 악몽 같았을 시간과 장면을 언론은 상세하게 전달하고 있고, 소셜미디어는 열심히 퍼 나르고 있다. 평일 낮 아무 곳에서 언제라도 무차별 살인 사건이 벌어질 수 있다는 공포가...
+The post 참담한 죽음이 왜 ‘뉴스거리’인가 appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;94571"
+                        open
+                      >
+                        <summary class="article-expander__title">2011년의 소년, 2023년의 교사</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/94571">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12569446.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>… 그리고 그때나 지금이나 교육부장관 이주호. 그러나 ‘시간’이 나를 알고 있는지를 나는 모른다. 그것이 내 슬픔이다. 그러나 내 슬픔으로 무슨 단단한 보석이라도 만들었으면…… 정현종, [나는 별아저씨], ‘절망할 수 없는 것조차 절망하지는 말고’ 중에서 비극은 언제나 어디서나 있고, 죽음은 언제나 어디에나 있다. 정인이는 16개월이었다. 부끄러움도 사치스럽다고 느껴질 때가 있다. 그때 남는 게 슬픔인지 분노인지 잘 모르겠다....
+The post 2011년의 소년, 2023년의 교사 appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;23
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;95021"
+                        open
+                      >
+                        <summary class="article-expander__title">[컨텍스트] ‘다크 바이든’, 짤 하나가 판을 바꾼다.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/95021">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/08/maxresdefault.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>웹 사이트에는 ‘404 에러’라는 게 있다. 없는 페이지에 접근하면 뜨는 메시지다. 조 바이든(미국 대통령)이 재선 출마를 선언하면서 캠페인 웹사이트를 공개했는데 이 사이트의 404 에러 페이지가 관심을 불러모았다. “다크 브랜든을 찾으셨군요(You found dark brandon)”라는 메시지와 함께 레이저 빔을 쏘는 바이든의 일러스트가 등장한다. (다크 브랜든이 바이든의 어둠의 자아라는 설정이다.) “당신을 다시 레일 위에 올려놓겠습니다(Let’s get you back...
+The post [컨텍스트] ‘다크 바이든’, 짤 하나가 판을 바꾼다. appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="f4881473-baf0-4e93-8f8b-428a1e7d9bdd"
+                        open
+                      >
+                        <summary class="article-expander__title">Implementing clean architecture solutions: A practical example</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/08/08/implementing-clean-architecture-solutions-practical-example">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/themes/custom/rhdp2/images/metatags/metatag-image-articles.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>The purpose of this project is to provide developers with a practical example of how clean architecture can be implemented in a real-world scenario. By examining this sample project&#x27;s code and structure, you will be able to better understand the key concepts and patterns involved in clean architecture.
+Why clean architecture?
+These days, the IT world is flooded with an overwhelming number of libraries, technologies, frameworks, and platforms to choose from. What&#x27;s considered the ultimate solution today may become outdated tomorrow. What doesn&#x27;t exist today might become tomorrow&#x27;s ultimate solution. Clean architecture incorporates principles like SOLID and domain-driven design and enforces them through module structuring during compilation. However, it&#x27;s important to note that not everythin…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="cb65c017-d049-40bf-8af6-eda4b988872d"
+                        open
+                      >
+                        <summary class="article-expander__title">How to monitor workloads using OpenShift monitoring stack</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/08/08/how-monitor-workloads-using-openshift-monitoring-stack">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok&#x3D;nBHNqroV" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>The out-of-the-box monitoring stack in Red Hat OpenShift provides a comprehensive set of tools and services to monitor various aspects of your workloads, including metrics, logs, events, and traces. With this monitoring stack, you can gain valuable insights into the health and performance of your applications, identify and troubleshoot issues, and optimize resource utilization. This allows you to deliver a seamless user experience and confidently meet your business objectives.
+In this article, we will explore the monitoring stack in Red Hat OpenShift and how to use it to monitor a sample application effectively using Prometheus and Grafana.
+How to monitor a sample application
+We will use an OpenShift cluster with version 4.10.36 in this example.
+Step 1: Create a ConfigMap
+Create a ConfigMa…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-07 datetime="2023-08-07T21:58:58.000Z">2023-08-07</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-07 datetime="2023-08-07T21:58:58.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;94984"
+                        open
+                      >
+                        <summary class="article-expander__title">‘택배 없는 날’ 어렵게 합의했더니 쿠팡은 불참: 슬로우레터 8월8일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/94984">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2023/08/space-5933930_1280.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>잼버리 4만 명 서울로 올라온다. 오늘도 37도까지 치솟는다. 후쿠시마 오염수 방류 시작한다. 더 깊게 읽기. 한동훈의 엄벌주의, 미국은 모범 사례 아니다. 야영장에 130억 원 밖에 안 썼다고? 예산 챙기려 무리수 뒀다. 오늘의 TMI. ‘택배 없는 날’ 어렵게 합의했더니 쿠팡은 불참. 코로나 하루 6만 명. “오늘만 이 가격”, 다크 패턴 마케팅 못한다. 술자리 2차가 사라졌다. 친문...
+The post ‘택배 없는 날’ 어렵게 합의했더니 쿠팡은 불참: 슬로우레터 8월8일. appeared first on 슬로우뉴스.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >MCU on Eclipse</button>
+                  <a class="source-heading__link" href="https://mcuoneclipse.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://mcuoneclipse.com/?p&#x3D;38074"
+                        open
+                      >
+                        <summary class="article-expander__title">VS Code: Getting Started, literally</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://mcuoneclipse.com/2023/08/07/vs-code-getting-started-literally/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://mcuoneclipse.files.wordpress.com/2023/08/starting-visual-studio-code.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This article shows how to start and exit VS Code, plus how it deals with multiple windows. Continue reading →</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -274,6 +822,60 @@ The post Ultra Ethernet Consortium (UEC) to develop full stack for AI and HPC ap
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;591439"
+                        open
+                      >
+                        <summary class="article-expander__title">23년 2분기 클라우드 시장 분석 및 클라우드 점유율 전망</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591439/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%90%ec%9c%a0%ec%9c%a8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;591426"
+                        open
+                      >
+                        <summary class="article-expander__title">2분기 퀄컴 실적을 읽는 월가의 시선, 퀄컴 스마트폰 사업은 시기적이 아닌 구조적인 문제에 직면</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591426/2%eb%b6%84%ea%b8%b0-%ed%80%84%ec%bb%b4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://happist.com/wp-content/uploads/2017/02/LG-스마트폰-역사_2012년-5월-옵티머스-LTE2-퀄컴-스냅드래곤-S4-듀얼코어-칩-적용-가격은-93만-5000원-02-1.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >NewsPeppermint</button>
                   <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
                 </h3>
@@ -351,40 +953,6 @@ It is a best practice to be able to recreate your workloads via Infrastructure a
 How does OADP back up persistent volumes?
 OADP allows backing up and restoring persistent volumes via either Res…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;591426"
-                        open
-                      >
-                        <summary class="article-expander__title">2분기 퀄컴 실적을 읽는 월가의 시선, 퀄컴 스마트폰 사업은 시기적이 아닌 구조적인 문제에 직면</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591426/2%eb%b6%84%ea%b8%b0-%ed%80%84%ec%bb%b4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2017/02/LG-스마트폰-역사_2012년-5월-옵티머스-LTE2-퀄컴-스냅드래곤-S4-듀얼코어-칩-적용-가격은-93만-5000원-02-1.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -1732,6 +2300,28 @@ The post Podcast: So many new hubs, and a primer on LPWANs appeared first on Sta
                   <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="2acf5595-4721-4ec9-9ad8-bc740ec57fe1"
+                        open
+                      >
+                        <summary class="article-expander__title">Discover 3 advantages of Podman over Docker</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/08/03/3-advantages-docker-podman">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/intro_podman_2x.png?itok&#x3D;j7UCP4h6" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Many think of Podman to be a replacement for Docker (if they have heard of Podman at all). But, this is not the case, as Podman is another option that provides better security and developer features. Podman is a cloud-native, daemonless tool that helps developers manage their Linux containers. Podman is all about security, but also minimizing the friction between your local development environment and production.
+Podman uses a microservices approach, creating a network with many other cloud-native products, such as Buildah and Skopeo, to build and push containers. This makes Podman a lighter and faster application than Docker, allowing for customization and changes.
+In this article, we will describe three advantages of Podman related to extensions and embedded tools integrated in the Podma…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -11092,48 +11682,6 @@ The post 트위터 탈출 버튼! – ‘도둑맞은 집중력’ (2023) appear
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;92829"
-                        open
-                      >
-                        <summary class="article-expander__title">‘5·18 꼬마상주’ 찍은 로숑과 쇼벨: KBS광주가 증명한 수신료의 가치</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92829">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/07/a349c56.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>[2023년 6월] 5·18 43년 특별기획 KBS광주 ‘1980, 로숑과 쇼벨’ 제작진을 만나다 송강호 배우 주연의 ‘천만 영화’ [택시운전사] (2017)는 5·18민주화운동의 진실을 세계에 알린 독일 외신기자 위르겐 힌츠페터 이야기를 담았다. 힌츠페터는 2003년 KBS 1TV에서 방영된 [KBS 일요스페셜] ‘80년 5월, 푸른 눈의 목격자’를 통해 대중에 알려졌는데, 이후 많은 이들이 5·18을 기록한 외신기자로 기억하고 있다. 1980년 5월, 광주에 있던...
-The post ‘5·18 꼬마상주’ 찍은 로숑과 쇼벨: KBS광주가 증명한 수신료의 가치 appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;92749"
-                        open
-                      >
-                        <summary class="article-expander__title">인어공주, 디즈니의 해석본은 어떻게 추억의 원본이 되었는가</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92749">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/07/pic_012.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 슬로우뉴스 창간 동인 캡콜드(펜실베이니아주립대학교 김낙호 교수) 님은 만화 덕후이자 미디어 전문가로 연구 분야는 언론학입니다. 캡콜드 님께 알쏭달쏭한 사회적 논란과 지적 이슈에 관해 묻고, 그 답변을 정리합니다. 첫 번째 콜드케이스는 인어공주와 인종차별 그리고 PC(정치적 올바름)에 관한 이슈입니다. 가독성을 고려해 나눠서 올립니다. 캡콜드 님과의 대화는...
-The post 인어공주, 디즈니의 해석본은 어떻게 추억의 원본이 되었는가 appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;33
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -11204,39 +11752,6 @@ KDDI, a telecommunications operator in Japan with over 40 million customers, wan
 Every year, university students who are members of Google Developer Student Clubs around the world are invited to create innovative solutions for real-world problems as part of the Solution Challenge. Participating students use Google products and platforms like Android, Firebase, TensorFlow, Google Cloud, and Flutter to build solutions for one or more of the United Nations’ 17 Sustainable Development Goals, which promote employment for all, economic growth, and climate action, to name a few. Agreed upon in 2015 by all 193 United Nations Member States, the goals aim to end poverty, ensure prosperity, and protect the planet by 2030.
 On Demo Day, August 3, live on YouTube, the final 10 teams of the 2023…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="http://developers.googleblog.com/2023/07/weareplay-meet-people-creating-apps-and-games-in-japan.html"
-                        open
-                      >
-                        <summary class="article-expander__title">#WeArePlay | Meet the people creating apps and games in Japan</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2023/07/weareplay-meet-people-creating-apps-and-games-in-japan.html">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXbnTGz_3pfEQhN5eSv4S50Pjrp0K7FXipcEwXW1raSdU48ajQJs3_GdexXuJBTs4FyygdEtgOK8RxtN9Weip_MPyHdXmB-agKPltyqlygYr71Guhk_-PyKVckIizuLpRwvcPxZ74nM52n2YiPnE_-oHPNLK4v3qXfF-QAMvafvGHCme-n40GPlZl_rZg/w1200-h630-p-k-no-nu/image27.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Posted by Leticia Lago, Developer Marketing
-
-
-
-
-
-
-#WeArePlay is on a virtual world tour: starting first with the U.S. last summer by spotlighting the stories of app and game founders from every state, then visiting India sharing stories from across the country, and more recently visiting Europe by sharing stories from countries across the region. 
-Today, we’re continuing our tour with one more stop: Japan. From a snowboarding app made by a paralympian, to a game inspired by the enchanting landmarks of Gifu. Discover the people growing apps and games businesses on Google Play.
-We’re starting with stories from Chubu, Chugoku &amp; Shikoku and Kinki, with more following throughout the year. Let’s explore some of the stories from across these 3 regions. 
-
-
-
-Takao Hayashi, founder of Ateam Entertai…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -11314,27 +11829,6 @@ The post Hardware Pioneers Max 2023: a spotlight on AI hardware and security app
                               <span>The advent of LLMs will dramatically affect how we design embedded systems in the future. That future might not be here yet, but it may...
 The post 7 expert tips for writing embedded software with ChatGPT appeared first on Embedded.com.</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;17
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4479821"
-                        open
-                      >
-                        <summary class="article-expander__title">Can we drive artificial intelligence’s exponential growth sustainably?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/can-we-drive-artificial-intelligences-exponential-growth-sustainably/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embedded.com/wp-content/uploads/2023/07/sustaianble-computing_shutterstock.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>The scale of growth of AI is drawing increasing concern about factors such as cost and the environmental impact of huge machine learning technologies. Optical could be an answer to addressing this.
-The post Can we drive artificial intelligence’s exponential growth sustainably? appeared first on Embedded.com.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -11500,398 +11994,12 @@ The post As the industrial IoT looks more like IT, security must change appeared
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="06abb28b-0e0b-4db7-ad85-71ea4eed991c"
-                        open
-                      >
-                        <summary class="article-expander__title">Automate edge device onboarding with Ansible FDO collection</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/07/10/automate-edge-device-onboarding-ansible-fdo-collection">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/GC-edgecomputing_2x.png?itok&#x3D;cSNl9gix" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Onboarding devices at the edge differs from doing so in a data center and presents some unique challenges. Among other requirements, the device onboarding process must:
-Be secure and reduce the risk of a malicious party tempering with a device or a rogue device being connected to the system.
-Minimize manual intervention in order to make the process cheaper, faster, more scalable, and more secure. A zero-touch or low-touch approach also allows personnel without specialized skills to onboard devices.
-The FIDO Device Onboard (FDO) specification addresses both of these requirements. Red Hat Enterprise Linux (RHEL) offers FDO packages starting with version 8.6, based on the Fedora IoT implementation of FDO. You can follow How to onboard edge devices at scale with FDO and Linux to set up an FDO …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;591174"
-                        open
-                      >
-                        <summary class="article-expander__title">7/10, BofA, 구글 검색 점유율과 트래픽이 유지되고 있다고 평가</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591174/%ea%b5%ac%ea%b8%80-%ea%b2%80%ec%83%89-%ec%a0%90%ec%9c%a0%ec%9c%a8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;591172"
-                        open
-                      >
-                        <summary class="article-expander__title">7/10, 에버코어 ISI, 2027년까지 애플 서비스 매출 두자릿수 성장 전망</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591172/%ec%95%a0%ed%94%8c-%ec%84%9c%eb%b9%84%ec%8a%a4-%eb%a7%a4%ec%b6%9c-%ec%a0%84%eb%a7%9d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2022/08/애플-캠퍼스-애플-파크-Apple-park-Photo-by-Carles-Rrabada-1024x576.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;591170"
-                        open
-                      >
-                        <summary class="article-expander__title">7/10, 웨드부시, 2024년 초 마이크로소프트 시가총액 3조 달러 클럽 가입 전망</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591170/%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-%ec%8b%9c%ea%b0%80%ec%b4%9d%ec%95%a1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2023/01/마이크로소프트-오피스-ChatGPT-통합.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;591166"
-                        open
-                      >
-                        <summary class="article-expander__title">7/10, 주요 기업 주가를 보는 월가의 시선</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/591166/7-10-%ec%a3%bc%ec%9a%94-%ea%b8%b0%ec%97%85-%ec%a3%bc%ea%b0%80%eb%a5%bc-%eb%b3%b4%eb%8a%94-%ec%9b%94%ea%b0%80%ec%9d%98-%ec%8b%9c%ec%84%a0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >내 마음의 풍경</button>
-                  <a class="source-heading__link" href="https://blog.naver.com/sellars">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://blog.naver.com/sellars/223151604983"
-                        open
-                      >
-                        <summary class="article-expander__title">9 미국만들기</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://blog.naver.com/sellars/223151604983">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>스피박에 대한 임옥희의 해설서를 읽으면서 로티의 가 생각났다. 쉽게 찾을 수 있도록 책꽂이에서 앞 쪽으로 약간 뽑아 놓았는데, 책이 없다. 몇 시간 동안 뒤져보아도 책을 찾을 수 없다. 내가 자주 가는 동네 도서관 두 곳 모두에 책이 없다. 이런 경우가 인내심이 바닥에 이르는 경우이다. 책이 나오면 찢어버리리라. 그런데 이런 단호한 결심 이후에 늘 그렇듯이 우연하게 책이 발견된다. 따로 읽으려고 주변에 두었는데 두꺼운 책들에 눌려 보이지 않았던 것이다. 그런데 이 책의 번역이 임옥희이다. 흥미롭다. 누구 글인지 모르겠지만 책 속표지에 다음과 같은 글이 있다. &lt;과거 미국이 저지른 죄악이 미래를 위한 해.......</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >C++ Stories</button>
-                  <a class="source-heading__link" href="https://www.cppstories.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.cppstories.com/2023/finite-state-machines-variant-vending-cpp/"
-                        open
-                      >
-                        <summary class="article-expander__title">Finite State Machine with std::variant - Vending Machine</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.cppstories.com/2023/finite-state-machines-variant-vending-cpp/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.cppstories.com/2023/images/fsm_vending.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>In my last article, we discussed Finite State Machines based on std::variant and some cool C++17 techniques. Today I want to go further and show you an example of a Vending Machine implementation.
-Finite State Machine with std::variant - C++ Stories
-
-
-States &amp; Events 
-  
-
-
-
-
-     
-    
-
-
-Here’s a basic diagram that illustrates how the machine is going to work:
-
-Following the model from the last article, each state and the event will be a separate small structure. Later we can “pack” them into std::variant.
-Here are the states:
-namespace state {
-    struct Idle { };
-    struct AmountEntered { int amount{ 0 }; int availableChange{ 0 }; };
-    struct ItemSelected { std::string item; int availableChange{ 0 }; };
-    struct ChangeDispensed { int change{ 0 }; };
-}
-
-using VendingState &#x3D; std::vari…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-09 datetime="2023-07-09T23:54:20.000Z">2023-07-09</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-09 datetime="2023-07-09T23:54:20.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/937732/"
-                        open
-                      >
-                        <summary class="article-expander__title">Kernel prepatch 6.5-rc1</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/937732/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Linus has released 6.5-rc1 and closed the
-merge window for this release.
-
-
-	Anyway, none of it looks hugely unusual. The biggest single mention
-	probably goes to what wasn&#x27;t merged, with the bcachefs pull request
-	resulting in a long thread (we didn&#x27;t hit a hundred emails yet, but
-	it&#x27;s not far away).
-
-
-The curious can read that long
-thread in the list archives.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >EmbeddedRelated.com Blogs</button>
-                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1540.php"
-                        open
-                      >
-                        <summary class="article-expander__title">Bellegram, a wireless DIY doorbell that sends you a Telegram message</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1540.php">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embeddedrelated.com/new2/images/blog_generic_image.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>This nice button uses the tiny M5 STAMP PICO and Cesanta&#x27;s Mongoose as an HTTPS client to POST to the Telegram Bot API and send a message; the code is completely written in C. To try it, besides small fingers, you&#x27;ll need to have a Wi-Fi network up and running and of course a Telegram account.
-
-
-
-Hardware
-For this demo there is no additional hardware needed, we just use the &lt;a...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;92786"
-                        open
-                      >
-                        <summary class="article-expander__title">기시다 만나는 윤석열, 오염수 이야기 할까 안 할까: 슬로우레터 7월10일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/92786">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/07/jgy8RaDKGCR06469803d2f16c2.08520788-1000x667.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>정치 생명 건다더니 출구 전략 찾는다. 그래서 종점은 어디로? 후쿠시마 오염수, 윤석열의 오랜 침묵. 갈등과 논란. 난민 7만 명, 네덜란드의 고민. 오염수 논란 같은 아스파탐 막걸리 논쟁. 한국 상속세가 OECD 최고? 통계 왜곡이다. 오늘의 TMI. 잠 적게 자는 나라 1위가 한국. “저는 종목 추천을 하지 않습니다.” 김봉현 탈옥 사례금이 40억 원이었다. 넷플릭스가 제작비를 깎기 시작했다....
-The post 기시다 만나는 윤석열, 오염수 이야기 할까 안 할까: 슬로우레터 7월10일. appeared first on 슬로우뉴스.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >The Shape of Code</button>
-                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shape-of-code.com/?p&#x3D;7992"
-                        open
-                      >
-                        <summary class="article-expander__title">The lifetime of performance coding issues</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2023/07/09/the-lifetime-of-performance-coding-issues/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Coding activities that a developer might spend time on include: adding new functionality, fixing a reported fault, or fiddling with existing code with the intent of making it ‘better’ in some sense (which these days goes by the catch-all name of refactoring). Improving performance, e.g., changing software to use less cpu/memory is considered, by developers, […]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/5789457686">
-        <time id="build-timestamp" datetime="2023-08-07T20:12:01.699Z">2023-08-07T20:12:01.699Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/5801486110">
+        <time id="build-timestamp" datetime="2023-08-08T20:12:46.057Z">2023-08-08T20:12:46.057Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
