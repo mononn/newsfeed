@@ -4,19 +4,7 @@
       "title": "ACM Queue - All Queue Content",
       "feedUrl": "https://queue.acm.org/rss/feeds/queuecontent.xml",
       "siteUrl": "http://queue.acm.org/",
-      "articles": [
-        {
-          "id": "3606027",
-          "author": null,
-          "description": "",
-          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3606027",
-          "publishedOn": "2023-07-18T14:02:48.000Z",
-          "wordCount": null,
-          "title": "Stone Knives and Bear Skins",
-          "itunes": {},
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Arjun Sreedharan",
@@ -195,6 +183,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/15129084",
+          "author": "CPUU",
+          "description": "선형대수학에서 행렬(matrix)를 곱하는 연산이 사용된다.\n다음과 같은 두 개의 2 by 2 행렬이 있다고 했을 때,\n그 곱(product) 인 C = A x B 에서 C의 각 원소들은 다음과 같이 계산한다.\n예를 들면, 다음과 같다.\n일반적으로 2개의 n by n  행렬 A 와 B가 있으면, 그 곱 C는 다음과 같이 구한다.\n이 정의를 사용하여 행렬 곱셉 알고리즘을 표현할 수 있다.\nlet matrixMultiplication (matA: int[][])(matB: int[][]) : int[][] =\n    let n = matA.Length\n\n    let result = Array.init n (fun _ -> Array.create n 0)\n\n    for i in 0 .. n - 1 do\n        for j in 0 .. n - 1 do\n            for k in 0 .. n - 1 do\n                result.[i].[j] <- result.[i].[j] + matA.[i].[k] * matB.[k].[j]\n\n    result\n\nlet matrixA = [|\n                [|2; 3|];\n                [|4; 1|]\n             |]\n\nlet matrixB = [|\n                [|5; 7|];\n                [|6; 8|]\n             |]\n\nlet result = matrixMultiplication matrixA matrixB\nfor row in result do\n    printfn \"%A\" row",
+          "link": "https://cpuu.postype.com/post/15129084",
+          "publishedOn": "2023-08-17T06:26:45.000Z",
+          "wordCount": 972,
+          "title": "F# 이용한 n by n 행렬의 곱셈",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/17/15/24/3d1ec1f78378828a1513e95d5efa676a.png?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/15108529",
           "author": "CPUU",
           "description": "최근 제이펍에서 해킹/보안과 관련한 책들이 자주 출시되고 있다. \n원서 정보는 Corey Ball, \"Hacking APIs\", NoStarch, 2022 이다.\n한국어판 정보는 다음과 같다.\n한선용 옮김, \"API 해킹의 모든 것\", 제이펍, 2023\nCorey Ball의 \"Hacking APIs: Breaking Web Application Programming Interfaces\"는 애플리케이션 프로그래밍 인터페이스(APIs)의 보안 측면을 이해하고 탐구할 필요성을 다루는 안내서이다. 초기 개요에서부터 이 책은 REST, SOAP, 그리고 GraphQL과 같은 일반적인 유형의 웹 API들을 다룰 것이라고 소개한다.  \n디지털 세상은 웹으로 연결되어 있으므로 이러한 API들에 크게 의존적이다. 따라서 API 사용의 잠재적 취약점을 이해하는 것은 중요하다.  \n저자인 Corey Ball은 사이버보안 컨설팅 관리자로서의 10년 이상의 경력을 가지고 있기에 그의 저술의 신빙성이 높다. 이 책이 기술적으로 탄탄할 뿐만 아니라 매력적이고 사려 깊게 제시될 것이라는 기대감이 들었다. \n\n\n이 책의 각 단원은 다음과 같은 내용을 포함하고 있다.\n\n\nPART I: 웹 API 보안이 작동하는 방식\nChapter 0: 보안 테스트 준비: API 보안 테스트에 필요한 준비에 대한 필수 가이드로, 도구, 자원, 초기 고려 사항을 아마도 개요로 설명한다.\nChapter 1: 웹 애플리케이션이 작동하는 방법: 웹 애플리케이션의 기본 구성 요소를 분석하며, 그 구조, 기능, 일반적인 사용 사례를 설명한다.\nChapter 2: 웹 A…",
@@ -243,6 +241,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "04c37be9-99a3-482a-a854-e946e04feef4",
+          "author": "Alex Soto Bueno",
+          "description": "Flask is a popular web framework for building web applications in Python. It is considered a microframework because it provides only the bare essentials for web development, focusing on simplicity and extensibility. \nFlask is one of the most popular frameworks for developing REST applications in Python. Flask also has a server to do local deployments and test the application, but no one would go with it to production. So we need another server to deploy the application in production, and one option is to use a WSGI (Web Server Gateway Interface) server like Gunicorn.\nIn this tutorial, you will learn how to create a Flask application, configure it to Gunicorn, and containerize it.\nThe application\nLet's create a simple Hello World application using Flask as a web framework.\nYou’ll need to in…",
+          "link": "https://developers.redhat.com/articles/2023/08/17/how-deploy-flask-application-python-gunicorn",
+          "publishedOn": "2023-08-17T07:00:00.000Z",
+          "wordCount": 2958,
+          "title": "How to deploy a Flask application in Python with Gunicorn",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Python-01%20%282%29.png?itok=bApqv4pD"
+        },
+        {
+          "id": "85c81dff-bf72-479e-a422-b8b89c71a12a",
+          "author": "David Kornel, Jakub Stejskal",
+          "description": "Although continuous integration is widely used in public projects, it has many limitations such as the size of resources or execution time. For instance, when you use GitHub actions free tier, you are limited to agents with 2 cpu and 7 GB of memory and total execution time of 2000 minutes per month. Other CI providers, like Azure Pipelines or Travis CI, have similar limitations. Continuous integration systems are popular, but free tier is not enough for some use cases. Fortunately, there is the Testing Farm for community projects maintained or co-maintained by Red Hat or Fedora/CentOS projects. \nIn this article, we will focus on how to use Testing Farm for projects with written and managed tests in different testing frameworks like JUnit. \nWhat is Testing Farm?\nTesting Farm is an open-sour…",
+          "link": "https://developers.redhat.com/articles/2023/08/17/how-testing-farm-makes-testing-your-upstream-project-easier",
+          "publishedOn": "2023-08-17T07:00:00.000Z",
+          "wordCount": 3669,
+          "title": "How Testing Farm makes testing your upstream project easier",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_GitOps_Kubernetes_Featured_ArticleB.png?itok=O-n7ZF1W"
+        },
         {
           "id": "84707ab3-c724-4420-bf24-ce65336254ca",
           "author": "Vamsi Ravula, Hugo Guerrero",
@@ -542,26 +560,6 @@
           "wordCount": 3884,
           "title": "How to balance per-CPU upcall dispatch mode in Open vSwitch",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2020/09/troubleshooting-pam-2x.png?itok=7scwdi4Z"
-        },
-        {
-          "id": "965ad223-1a40-4290-852c-3ecbd932dc4a",
-          "author": "Jonathan Dowland",
-          "description": "On June 6, we shipped the latest feature update to the OpenJDK containers with a number of new features:\n\n\t\nAll the containers are rebased onto the latest Red Hat Enterprise Linux (RHEL) point releases: RHEL 8.8 and RHEL 9.2.\nWe’ve improved the handling of the JAVA_APP_NAME configuration option to accept app names containing spaces (OPENJDK-1551).\nWe've updated the included version of Apache Maven from 3.6 to 3.8 (OPENJDK-1464).\nWe shipped the first source containers for the legacy RHEL 7-based OpenJDK containers. For more information on source containers, see this Red Hat Customer Portal article.\nThis release also includes the most recent Critical Patch Update (CPU) versions of OpenJDK 8, 11, and 17 (8u372, 11.0.19, and 17.0.7, respectively), which we independently shipped in April.\nMaximum heap size\nLast time we blogged about plans to change the default value for the configuration option JAVA_MAX_MEM_RATIO in the June update of the Universal Base Image (UBI) 8 images.\nThis option corresponds to the JVM argument -XX:MaxRAMPercentage, and we planned to change the default from 50.0 to 80.0 (80% of detected RAM) (OPENJDK-559), aligning the default with the UBI9 images.\nUnfortunately, this change didn't make the cut for the June update, and the default value remains 50%. We are now targeting the August update for this change.\nCustomers who want to preview the new value can set it explicitly: JAVA_MAX_MEM_RATIO=80.0.\nWhat's next\nThe next OpenJDK CPU is scheduled for July 18, 2023. We'll ship updated containers shortly afterward. As usual, those container updates will be solely for the updated OpenJDK and will not contain changes to the container scripts themselves. Our next container feature update is planned for August.\nWe do all our planning in the open on the Red Hat Issue Tracker. If there's something you'd like to see, get in touch, either by leaving a comment or (for an image change) filing an issue.\nWhat's new in the Red Hat UBI OpenJDK containers appeared first on Red Hat Developer.",
-          "link": "https://developers.redhat.com/articles/2023/07/19/whats-new-red-hat-ubi-openjdk-containers",
-          "publishedOn": "2023-07-19T07:00:00.000Z",
-          "wordCount": 2309,
-          "title": "What's new in the Red Hat UBI OpenJDK containers",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/openJDK-featured-image.png?itok=8yOsjC-y"
-        },
-        {
-          "id": "c81250ec-0fca-472f-9d40-943ba5153745",
-          "author": "Antoine Tenart",
-          "description": "Understanding why a packet drops in the Linux kernel is not always easy. The networking stack is wide and reasons to refuse a given packet are multiple and include invalid data from a protocol, firewall rules, wrong checksum, full queues, qdisc or XDP actions, and many more reasons. It is possible to look at indicators such as MIB counters and statistic counters, but often those are generic and triggered for different reasons, but most importantly their coverage is small, and it's impossible to match a specific packet to a given counter increase. \nSocket buffer drop reasons\nThe socket buffer, SKB (struct sk_buff) is the main data structure representing a packet in the Linux kernel networking stack. When a packet is dropped in the Linux kernel, in most cases, it means its associated socket …",
-          "link": "https://developers.redhat.com/articles/2023/07/19/how-retrieve-packet-drop-reasons-linux-kernel",
-          "publishedOn": "2023-07-19T07:00:00.000Z",
-          "wordCount": 2798,
-          "title": "How to retrieve packet drop reasons in the Linux kernel",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_B.png?itok=PfB3lac5"
         }
       ]
     },
@@ -609,6 +607,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480184",
+          "author": "Nitin Dahad",
+          "description": "We talked to Balaji Kanigicherla at Renesas Electronics to learn about the challenges in bridging the memory and compute gap to address the demand for AI applications.\nThe post Renesas’ Balaji Kanigicherla: industry needs to bridge compute & memory appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/renesas-balaji-kanigicherla-industry-needs-to-bridge-compute-memory/",
+          "publishedOn": "2023-08-17T12:20:57.000Z",
+          "wordCount": 4202,
+          "title": "Renesas’ Balaji Kanigicherla: industry needs to bridge compute & memory",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Balaji-Kanigicherla-Renesas.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480177",
           "author": "Miro Samek",
@@ -868,26 +876,6 @@
           "wordCount": 4186,
           "title": "How AI and software can drive 5G data center transformation",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/AI-in-5G-Infrastructure.png"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4479927",
-          "author": "Ole Dreessen",
-          "description": "Concluding this series on convolutional neural networks (CNNs), we explain the hardware conversion of a CNN and specifically the benefits of using an AI microcontroller...\nThe post Hardware conversion of convolutional neural networks appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/hardware-conversion-of-convolutional-neural-networks/",
-          "publishedOn": "2023-07-18T17:10:55.000Z",
-          "wordCount": 4926,
-          "title": "Hardware conversion of convolutional neural networks",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/2307adi-cnn3_f03.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4479922",
-          "author": "Chad Steider",
-          "description": "We discuss wireless IoT technologies in agriculture and the role of the Wi-SUN open-source, open-standard protocol in serving as a foundational LPWAN technology for smart...\nThe post Reaping IoT benefits with smart agriculture appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/reaping-iot-benefits-with-smart-agriculture/",
-          "publishedOn": "2023-07-18T16:35:15.000Z",
-          "wordCount": 4171,
-          "title": "Reaping IoT benefits with smart agriculture",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/smart-ag-.jpg"
         }
       ]
     },
@@ -896,6 +884,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1562.php",
+          "author": null,
+          "description": "Overview\r\nIn a previous blog post, https://www.embeddedrelated.com/showarticle/1547.php, we learned how a devicetree in an embedded software application based on The Zephyr Project could describe the hardware on the device. We saw an example of how the four LEDs that are present on an nRF52840 development kit (<a...",
+          "link": "https://www.embeddedrelated.com/showarticle/1562.php",
+          "publishedOn": "2023-08-16T11:34:56.000Z",
+          "wordCount": 3479,
+          "title": "Getting Started With Zephyr: Devicetree Bndings",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1552.php",
           "author": null,
@@ -965,16 +963,6 @@
           "wordCount": 3164,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1547.php",
-          "author": null,
-          "description": "In the last blog post, (Getting Started With Zephyr: Kconfig), we saw how the \"Kconfig\" infrastructure can be used to enable and disable specific Zephyr subsystems. Specifically, we observed the three main elements of the Kconfig infrastructure. First, we saw how the Kconfig infrastructure is formulated and an example of a Kconfig file to enable the LED subsystem. Second, we saw how specific...",
-          "link": "https://www.embeddedrelated.com/showarticle/1547.php",
-          "publishedOn": "2023-07-18T11:21:40.000Z",
-          "wordCount": 4036,
-          "title": "Getting Started With Zephyr: Devicetrees",
-          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
       ]
     },
@@ -995,6 +983,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/08/meet-google-for-startups-accelerator-women-founders-class-of-2023.html",
+          "author": null,
+          "description": "Posted by Iran Karimian, Startup Developer Ecosystem Lead, Canada\n\n\n\n\n\n\nIt’s an unfortunate truth that women founders are massively underrepresented among venture-backed entrepreneurs and VC investors, with companies founded solely by women receiving less than 3% of all venture capital investments.  In response to this, it has become more apparent of the need to invest in women entrepreneurs in alternate ways - such as mentorship guidance and technical support to help grow and scale their business. \n \n\nBack in 2020, we launched the Google for Startups Accelerator: Women Founders program to bridge the gender gap in the North American startup ecosystem, and provide high-quality mentorship opportunities, technical guidance, support and community for women founders in the region. Since then, t…",
+          "link": "http://developers.googleblog.com/2023/08/meet-google-for-startups-accelerator-women-founders-class-of-2023.html",
+          "publishedOn": "2023-08-17T12:00:00.012Z",
+          "wordCount": 2038,
+          "title": "Meet the Google for Startups Accelerator: Women Founders Class of 2023",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDs2jVzLt6KZyvx3XxXnF5Z7gv42edA0jeuxPvhbGqEXWVv4SON0qMX1_B0rK_HBYPXABODxot8tMtwhg78A1N_Ko_LV3RcO_CijGdTvkNPDhsZvjSItIRmgNdPHyUYEoGlXevIrSdBMryj4Q5NKOjMIDZl52U-e_uY5nASePTCz1X6saZP36LzjKlpd4/w1200-h630-p-k-no-nu/Women-Founders-Accelerator-Social%20%283%29.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/08/developers-share-how-they-build-with-google-tools-and-bard.html",
           "author": null,
@@ -1162,6 +1160,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/1063/",
+          "author": null,
+          "description": "PVS-Studio 7.26 has been released. Now you can run the analysis in plugins for VS Code and Qt Creator; upload the analysis results to DefectDojo, and more. In this note, we'll take a closer look at...",
+          "link": "https://pvs-studio.com/en/blog/posts/1063/",
+          "publishedOn": "2023-08-16T21:00:00.000Z",
+          "wordCount": 4856,
+          "title": "PVS-Studio 7.26: running analysis in VS Code and Qt Creator, integration with DefectDojo, and more",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1063_Release_7_26/image1_thm_intoblank_1200x630.png?ver=08-17-2023-10-00-17"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/1062/",
           "author": null,
           "description": "How to simplify the process of bug fixing and prevent vulnerable code from being released? Use error and vulnerability management tools. We will use PVS-Studio to search for errors, and DefectDojo...",
@@ -1316,16 +1324,6 @@
           "wordCount": 5438,
           "title": "Understanding Battery Performance of IoT Devices",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/embedded-async-rust",
-          "author": null,
-          "description": "In this article, we explore the inner workings of Futures, cooperative\nscheduling, and Async Rust executors, highlighting their significance in\noptimizing resource utilization. Moreover, we introduce the Rust Embassy\nproject, an innovative framework designed to unlock the power of asynchronous\nprogramming on microcontrollers.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/embedded-async-rust",
-          "publishedOn": "2023-07-19T00:00:00.000Z",
-          "wordCount": 4316,
-          "title": "Asynchronous Rust on Cortex-M Microcontrollers",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
     },
@@ -1375,6 +1373,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/941985/",
+          "author": "corbet",
+          "description": "SUSE's long story of corporate ownership is gaining a new chapter; the\ncompany has announced\nthat it's majority shareholder (Marcel LUX III SARL) will acquiring the\nremaining shares, and will take the company private and off of the stock\nexchange.  \"SUSE’s Management Board and Supervisory Board support the\nstrategic opportunity from delisting of the company as it will allow SUSE\nto focus fully on its operational priorities and execution of its long-term\nstrategy.\"",
+          "link": "https://lwn.net/Articles/941985/",
+          "publishedOn": "2023-08-17T19:51:58.000Z",
+          "wordCount": 192,
+          "title": "SUSE to be acquired, taken private",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/941614/",
+          "author": "corbet",
+          "description": "In its default configuration, the Linux kernel will allow processes to\nallocate more memory than the system can actually provide; this policy\nenables better utilization of physical memory and works just fine — most of\nthe time.  On occasions, though, the kernel may find itself unable to\nprovide memory that processes may think already belongs to them.  If the\nsituation gets bad enough, the only solution (short of rebooting) is to\ndeclare a sort of memory bankruptcy and write off some of the kernel's\ndebts by killing one or more processes.  Over the years, a great deal of\neffort has gone into heuristics to select the processes that the user is\nleast likely to miss.  This problem is still clearly not solved to\neverybody's satisfaction, though, so it was only a matter of time before\nsomebody introduced a way to select the out-of-memory (OOM) victim using\nBPF.",
+          "link": "https://lwn.net/Articles/941614/",
+          "publishedOn": "2023-08-17T16:15:54.000Z",
+          "wordCount": null,
+          "title": "[$] Out-of-memory victim selection with BPF",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/941935/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (open-vm-tools, openjdk-11, and openssh), Fedora (librsvg2, llhttp, opensc, and rust), Oracle (.NET 6.0, .NET 7.0, iperf3, microcode_ctl, postgresql:10, and python-requests), SUSE (openssl-1_0_0, perl-Cpanel-JSON-XS, postgresql12, and postgresql15), and Ubuntu (ceph, haproxy, heat, libpod, and postgresql-12, postgresql-14, postgresql-15).",
+          "link": "https://lwn.net/Articles/941935/",
+          "publishedOn": "2023-08-17T14:16:56.000Z",
+          "wordCount": 276,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/941046/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for August 17, 2023 is available.",
+          "link": "https://lwn.net/Articles/941046/",
+          "publishedOn": "2023-08-17T00:59:54.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for August 17, 2023",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/941799/",
+          "author": "corbet",
+          "description": "Readers have been pointing us to HashiCorp's announcement\nthat it is moving to its own \"Business Source License\" for some of its\n(formerly) open-source products.  Like other companies (example) that have taken this path, HashiCorp\nis removing the freedom to use its products commercially in ways that it\nsees as competitive.  This is, in a real sense, an old and tiresome story.\n\nThe lessons to be drawn from this change are old as well.  One is to beware\nof depending on any platform, free or proprietary, that is controlled by a\nsingle company.  It is a rare company that will not try to take advantage\nof that control at some point.\n\nThe other is to beware of contributor license agreements.  HashiCorp's\nagreement used\nto read that it existed \"to ensure that our projects remain licensed\nunder Free and Open Source licenses\"; the current version doesn't say that\nanymore.  But both versions give HashiCorp the right to play exactly this\nkind of game with any code contributed by outsiders.  Developers who were\ncontributing to a free-software project will now have their code used in a\nrather more proprietary setting.  When a company is given the right to take\nsomebody else's code proprietary, many of them will eventually make use of\nthat right.",
+          "link": "https://lwn.net/Articles/941799/",
+          "publishedOn": "2023-08-16T22:34:04.000Z",
+          "wordCount": 2291,
+          "title": "HashiCorp's license change",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/941745/",
           "author": "jake",
@@ -2194,46 +2242,6 @@
           "wordCount": 320,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938536/",
-          "author": "corbet",
-          "description": "Version\n3.0 of Cython (described\nas \"a programming language that makes writing C\nextensions for the Python language as easy as Python itself\") has been\nreleased.  Changes include support for Python through 3.11 (but 2.6 support\nwas dropped), the implementation of a number of PEPs, initial support for\nthe CPython limited API, better exception handling, and more.",
-          "link": "https://lwn.net/Articles/938536/",
-          "publishedOn": "2023-07-18T21:50:33.000Z",
-          "wordCount": 499,
-          "title": "Cython 3.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938524/",
-          "author": "corbet",
-          "description": "The 2023 sambaXP conference was held May 10 and 11 in Goettingen, Germany.\nVideos\nof the talks held there have now been posted on YouTube; topics covered\ninclude an io_uring update, fuzzing, passwordless services, GPL compliance,\nand much more.",
-          "link": "https://lwn.net/Articles/938524/",
-          "publishedOn": "2023-07-18T18:41:46.000Z",
-          "wordCount": 154,
-          "title": "SambaXP 2023 videos posted",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938236/",
-          "author": "jake",
-          "description": "In a session at the 2023 Real Time Linux Summit, Thomas Gleixner answered\nquestions about the realtime feature of the kernel, its status, and the Real-Time Linux\nproject's plans for the future.  The talk was billed as a \"Q&A about\nPREEMPT_RT\" with a caveat: \"anything except printk() and\ndocumentation\".  As might be guessed, the first two questions were on just\nthose topics, but there were plenty of other questions (and answers) too.\nThe summit was \nheld in conjunction with the inaugural Embedded\nOpen Source Summit in Prague, Czechia at the end of June.",
-          "link": "https://lwn.net/Articles/938236/",
-          "publishedOn": "2023-07-18T14:06:48.000Z",
-          "wordCount": null,
-          "title": "[$] A Q&A about the realtime patches",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938488/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (java-1.8.0-openjdk), Red Hat (bind, bind9.16, curl, edk2, java-1.8.0-ibm, kernel, kernel-rt, and kpatch-patch), SUSE (iniparser, installation-images, java-1_8_0-ibm, kernel, libqt5-qtbase, nodejs16, openvswitch, and ucode-intel), and Ubuntu (linux-oem-6.0 and linux-xilinx-zynqmp).",
-          "link": "https://lwn.net/Articles/938488/",
-          "publishedOn": "2023-07-18T13:19:56.000Z",
-          "wordCount": 315,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2279,6 +2287,26 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-06",
+          "author": null,
+          "description": "At Thoughtworks, we are strong practitioners of Test Driven Development (TDD).\n     Naturally this leads to the question of how generative AI can help with\n     this technique. Paul Sobocinski writes a brief memo\n     explaining how some of our teams have used TDD with GitHub\n     Copilot. As ever, co-pilot can't be relied on to fly the plane, but\n     can suggest some useful ideas for the red and green steps. It isn't\n     very helpful for the all-important refactoring step.\nmore…",
+          "link": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-06",
+          "publishedOn": "2023-08-17T18:44:00.000Z",
+          "wordCount": 5691,
+          "title": "TDD with GitHub Copilot",
+          "imageUrl": "https://martinfowler.com/logo-sq.png"
+        },
+        {
+          "id": "https://martinfowler.com/articles/bottlenecks-of-scaleups/04-costs.html#ReviewAndGovernTechnologyPortfolio",
+          "author": null,
+          "description": "Sofia Tania  and  Stefania\n       Stefansdottir complete their examination of how to overcome the\n       bottleneck that costs impose on a scaleup. In this final installment,\n       they look at how to review and govern the technology portfolio,\n       optimize rates, and provide a general view of cost efficiency initiatives\n       during the life-cycle of a scaleup.\nmore…",
+          "link": "https://martinfowler.com/articles/bottlenecks-of-scaleups/04-costs.html#ReviewAndGovernTechnologyPortfolio",
+          "publishedOn": "2023-08-17T00:00:00.000Z",
+          "wordCount": 7371,
+          "title": "Final parts of the cost bottleneck of scaleups",
+          "imageUrl": "https://martinfowler.com/articles/bottlenecks-of-scaleups/card.png"
+        },
         {
           "id": "https://martinfowler.com/articles/creating-integrated-tech-strategy.html#risk",
           "author": null,
@@ -2458,16 +2486,6 @@
           "wordCount": 4480,
           "title": "How platform teams get stuff done",
           "imageUrl": "https://martinfowler.com/articles/platform-teams-stuff-done/card.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/xapo-architecture-experience.html",
-          "author": null,
-          "description": "It's common to see a centralized architecture function that sets\n     standards and oversees development projects. Such teams often suffer from\n     being far removed from the issues of implementation with long\n     feedback loops that slow down the flow of work. To counter these problems,\n     many organizations have explored a decentralized approach to yield\n     alignment between teams without these problems. One such organization is\n     Xapo bank, which did this using ideas taken from Domain-Driven Design, Team\n     Topologies, and the Architectural Advice Process.\nmore…",
-          "link": "https://martinfowler.com/articles/xapo-architecture-experience.html",
-          "publishedOn": "2023-07-18T11:46:00.000Z",
-          "wordCount": 5389,
-          "title": "Decentralizing the Practice of Architecture at Xapo Bank",
-          "imageUrl": "https://martinfowler.com/articles/xapo-architecture-experience/card.png"
         }
       ]
     },
@@ -2844,6 +2862,16 @@
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=12796",
+          "author": "Stacey Higginbotham",
+          "description": "Amazon’s head of devices David Limp plans to retire, as part of a wave of executives leaving Amazon in the last year. Also, next year Alexa and the Amazon Echo will be ten years old, which prompted us to take a look at the role Alexa and the Amazon Echo has played in the smart […]\nThe post Podcast: Can Alexa (and the smart home) stand on its own? appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/podcast-can-alexa-and-the-smart-home-stand-on-its-own/",
+          "publishedOn": "2023-08-17T13:00:22.000Z",
+          "wordCount": 2198,
+          "title": "Podcast: Can Alexa (and the smart home) stand on its own?",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/Masonite_M-Pwr_Shot1b.jpeg?fit=610%2C682&ssl=1"
+        },
+        {
           "id": "https://staceyoniot.com/?p=12783",
           "author": "Stacey Higginbotham",
           "description": "If you need any more indication that Matter is not going to kill all of the pre-existing standards in the smart home anytime soon, check out the launch this week of Trident IoT, a new company devoted to building Z-wave chips. Trident was founded in April to design and support Z-wave devices, and launched this […]\nThe post Z-Wave gets a boost with new chip provider appeared first on Stacey on IoT | Internet of Things news and analysis.",
@@ -3042,16 +3070,6 @@
           "wordCount": 3110,
           "title": "Life in the Roku smart home is pretty basic",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/07/PXL_20230713_202533204.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12659",
-          "author": "Stacey Higginbotham",
-          "description": "The White House unveiled its plan for a U.S. Cyber Trust Mark that will certify that the IoT device marked with the label has met a set of security criteria developed to protect consumers’ networks and device data. The U.S. Cyber Trust Mark will be a voluntary program administered by the Federal Communications Commission, and […]\nThe post The White House details its IoT cybersecurity label plan appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/the-white-house-details-its-iot-cybersecurity-label-plan/",
-          "publishedOn": "2023-07-18T09:00:25.000Z",
-          "wordCount": 3579,
-          "title": "The White House details its IoT cybersecurity label plan",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2019/03/bigstock-Detail-Of-The-United-States-Ca-264809974.jpg"
         }
       ]
     },
@@ -3119,6 +3137,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=95479",
+          "author": "김정철",
+          "description": "오해는 하지 말자. 나는 리뷰어로서 아이폰과 갤럭시가 기기의 디자인적 완성도나 OS에 있어서 큰 차이가 없다고 본다. 벤치마크를 해보면 약간 차이가 있지만, 실사용상에서는 큰 차이가 느껴지지 않는다. 각기 단점도 있다. 아이폰은 지역화가 부족하고, 갤럭시는 애플뮤직이나 애플 TV+ 같은 서비스가 없는 게 단점이다. 흑역사도 서로 만만치 않다. 삼성전자는 GOS(Game Optimizing Service; 게임 최적화를 위한 시스템 애플리케이션) 성능...\nThe post 삼성전자 스마트폰은 왜 쿨하게 보이지 않을까? appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95479",
+          "publishedOn": "2023-08-17T06:38:03.000Z",
+          "wordCount": 5127,
+          "title": "삼성전자 스마트폰은 왜 쿨하게 보이지 않을까?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/갤럭시-Z-폴드5-엑스포-케이스-1-e1691656337542.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95459",
+          "author": "민주언론시민연합",
+          "description": "말도 많고 탈도 많았던 ‘2023 새만금 세계 스카우트 잼버리’가 8월 11일 폐영식을 끝으로 막을 내렸습니다. 1,117억 원 넘는 예산이 투입됐음에도 야영지의 기반·편의시설은 형편 없었고, 폭염과 태풍, 해충 문제까지 더해지며 준비 부실 문제가 도마 위에 올랐는데요. 태풍 ‘카눈’의 북상을 앞두고 새만금 부지에서 조기 철수 결정이 내려지자, 대원들은 아쉬운 발길을 옮겨야만 했습니다. 새로운 모험과 교류라는 잼버리 본연의...\nThe post 잼버리 파행, 책임 규명 vs. K팝 물타기+전북도에 떠넘기기 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95459",
+          "publishedOn": "2023-08-17T04:06:49.000Z",
+          "wordCount": 5238,
+          "title": "잼버리 파행, 책임 규명 vs. K팝 물타기+전북도에 떠넘기기",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/pic_008.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95433",
+          "author": "이정환",
+          "description": "이동관의 믿는 구석. 이재명 검찰 출석, 오늘은 백현동 특혜 의혹. 언론진흥재단 이사장 해임은 부결. 미국의 중국 견제 최전선에 한국이 선다. 잼버리 청구서 어디로 보내나. 민주당 1특검 4국조 밀어붙인다. 더 깊게 읽기. 외국인 유학생이 저출생 대책이라고? 이제는 아이 두 명도 다자녀. 외국인 절반인 도시 나온다. 판사 신상 털기 어떻게 볼까. 오늘의 TMI. 국립생태원의 멸종 위기종, 보낼...\nThe post 이재명의 맷집이 문제다: 슬로우레터 8월17일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95433",
+          "publishedOn": "2023-08-16T22:01:19.000Z",
+          "wordCount": 5871,
+          "title": "이재명의 맷집이 문제다: 슬로우레터 8월17일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/maxresdefault-2.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95417",
+          "author": "정혜승",
+          "description": "[마냐의 북라이딩] 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, ‘홍보가 아니라 소통입니다’ 저자 정혜승의 종횡무진 독서 탐험기. 오늘 함께 읽을 책은 이얼 프레스의 [더티 워크] (오윤성 옮김, 한겨레출판: 2023)입니다. 정의롭게 포장된 사회에서 윤리적으로 ‘더러운 일’을 떠맡는 사람들, 가령 정신병동의 교도관, 암살 드론 조종사, 정육공장 도축 담당 미등록 외국인 노동자 등 ’21세기 미국의 불가촉천민’과 그...\nThe post 선량한 사회의 더러운 일, 누구에게 전가되는가 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95417",
+          "publishedOn": "2023-08-16T09:05:21.000Z",
+          "wordCount": 5738,
+          "title": "선량한 사회의 더러운 일, 누구에게 전가되는가",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/prison-553836_1280.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=95378",
           "author": "이정환",
@@ -3718,26 +3776,6 @@
           "wordCount": 3218,
           "title": "“무능한 야당과 무심한 용산”, 조중동의 불만이 끓어오르고 있다: 슬로우레터 7월20일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/j7VGGylK44TB64b7c5a6b34089.76560377-1000x667.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=93695",
-          "author": "민노씨",
-          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 디즈니 실사판 ‘인어공주'(2023)를 둘러싼 PC(정치적 올바름)와 작품의 원전성에 관한 논란은 앞선 글에서 정리한 것처럼 ‘가짜 논쟁’이었습니다. 애니메이션 버전의 ‘인어공주'(1989)도 안데르센의 인어공주라는 원전에 대한 하나의 해석판이었죠. 물론 원전은 그 자체로 불가침의 성물은 아닙니다. 좋은 작품은 시간과 공간을 뛰어넘어 항상 ‘당대의 관객’과 함께 숨쉬고 대화합니다....\nThe post PC 가짜 논쟁의 종착지: 답은 작품에 있다 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/93695",
-          "publishedOn": "2023-07-19T07:26:45.000Z",
-          "wordCount": 5516,
-          "title": "PC 가짜 논쟁의 종착지: 답은 작품에 있다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-1478115457.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=93716",
-          "author": "이정환",
-          "description": "“강이 범람한다” 경고 24번 있었다. “이권 카르텔 보조금으로 수해 복구한다”고? 그래도 추경은 안 한다. 출생신고 안 된 아이 최소 249명 사망. 미국 핵잠수함이 들어왔다. 러시아가 틀어쥔 우크라이나 곡물. 엘리엇 투자자 소송에 취소 소송 냈다. 더 깊게 읽기. 감리가 문제다. 강준만이 MBC를 저격했다. 해법과 대안. 위기 대응, 매뉴얼이 문제다. 미국은 “과할 정도로 대처한다.” 쓰레기를 항공유로 만들기까지...\nThe post 삼성 눈치 봤나, 질게 뻔한데 엘리엇 취소소송 냈다: 슬로우레터 7월19일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/93716",
-          "publishedOn": "2023-07-18T23:41:08.000Z",
-          "wordCount": 3141,
-          "title": "삼성 눈치 봤나, 질게 뻔한데 엘리엇 취소소송 냈다: 슬로우레터 7월19일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/item_people_161193_20220727175428_MEU.jpg"
         }
       ]
     },
@@ -4004,6 +4042,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=77601",
+          "author": "NewsPeppermint",
+          "description": "기후변화로 잦아지고, 더 극단적인 형태로 나타나는 각종 이상기후 이야기가 너무 흔해서 점점 더 뉴스 거리가 되지 않는 세상이 왔습니다. 그런 가운데 태풍이 이례적으로 한반도를 남에서 북으로 관통하고, 하와이에서는 100년 만에 최악의 피해를 낸 산불이 발생했습니다. 이상기후에 관한 칼럼을 번역하고, 해설을 썼습니다. 전문 번역: 8월에 폭염과 산불과 스키장이 공존하는 그곳, 캘리포니아 해설: 올 여름이 그래도 시원한 축에 들 것이라는 과학자들이 있다?",
+          "link": "https://newspeppermint.com/2023/08/16/npsp_climateweirding/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_climateweirding",
+          "publishedOn": "2023-08-16T22:59:35.000Z",
+          "wordCount": 1384,
+          "title": "올 여름이 그래도 시원한 축에 들 것이라는 과학자들이 있다?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=77167",
           "author": "veritaholic",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 21일 스프에 쓴 글입니다. 아직 물리학자들은 시간의 정체를 만족스러울 정도로 밝히지 못했지만, 적어도 시간이 우주의 시작 이후로 계속 존재했다는 것은 분명합니다. 하지만 우리가 시간을 숫자로 측정하고, 이용할 수 있게 된 것은 → 더 보기",
@@ -4162,16 +4210,6 @@
           "wordCount": 1954,
           "title": "[뉴페@스프] 도시가 놀이터 되면 오프라인도 살아날 수 있을까",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77402",
-          "author": "NewsPeppermint",
-          "description": "미국 유타주가 청소년의 소셜미디어 사용을 금지하는 법안을 통과했습니다. 공화당이 다수당인 주의회와 공화당 소속 스펜서 콕스 주지사가 뜻을 모아 법안을 처리했는데, 뉴욕타임스 오피니언 칼럼니스트 제인 코스턴이 콕스 주지사를 인터뷰했습니다. 인터뷰를 번역하고, 소셜미디어 금지가 원하는 긍정적인 효과로 이어질 수 있을지 분석해 봤습니다. 전문번역: 휴대폰으로부터 아이들을 구하겠다는 한 보수 정치인 해설: 소셜미디어 금지 실험, 청소년을 구원할 수 있을까",
-          "link": "https://newspeppermint.com/2023/07/19/npsp_socialmediabanutah/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_socialmediabanutah",
-          "publishedOn": "2023-07-19T06:30:53.000Z",
-          "wordCount": 1368,
-          "title": "소셜미디어 금지 실험, 청소년을 구원할 수 있을까",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -4224,16 +4262,6 @@
           "publishedOn": "2023-07-20T05:23:33.000Z",
           "wordCount": 101,
           "title": "5 순수이성 비판 강의",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223160153276",
-          "author": "sellars",
-          "description": "블로그에 ‘애드 포스트’라는 광고 프로그램이 나타나도록 했다. 제헌절 날 하루 동안 111원을 벌었다. 땅을 파도 100원도 안 나온다는 말을 실감하도록 만들어 준다. 먼저 뜬 광고는 내가 살고 있는 동네를 중심으로 고기집, 술집, 카페, 빵집 등이 나오고, 학원, 스튜디오, 미용실 등 다양하게 광고가 나온다. 하단에 달린 두 번째 광고는 블로그의 주제어에 따라 달라지는 것 같다. 순수이성 비판에 대해 포스트를 썼는데, 순수이성 비판에 대한 강의들이 소개된다. 애드 포스트는 정직하게 내가 111원 벌었다고 공지해 준다. 이제 절판된 내 첫 책은 두 번 인세를 받은 것 같다. 마지막 인세를 받은 후에도 오래 동안 책이 간행되었음에도 인.......",
-          "link": "https://blog.naver.com/sellars/223160153276",
-          "publishedOn": "2023-07-18T20:35:32.000Z",
-          "wordCount": 101,
-          "title": "광고 및 저술 수입",
           "imageUrl": null
         }
       ]
