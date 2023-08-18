@@ -530,36 +530,6 @@
           "wordCount": 3054,
           "title": "How to integrate Spring Boot 3, Spring Security, and Keycloak",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/MobileAuthentication_KeyCloak_0.png?itok=DSALBFcV"
-        },
-        {
-          "id": "7a77dfe6-885d-41e4-8f9f-843ec9e54e03",
-          "author": "Derek Parker",
-          "description": "Delve, the Go debugger, ships with the go-toolset package in Red Hat Enterprise Linux (RHEL). The go-toolset package in RHEL 9.2 contains Delve version 1.9.1, which contains many improvements and features.\nDelve 1.9.1 is also the last release to contain the old versioning scheme; new releases of Delve will mirror the corresponding Go release . versioning, only diverging for point releases. So, for example, the latest release of Delve is 1.20.x which corresponds to the 1.20.x release of Go. Delve releases a new minor version when the Go project releases a new version's first RC (Release Candidate). Once that version of Go is released in RHEL, the corresponding version of Delve is also released.\nNew features\nEach new release of Delve boasts many new features, fixes, and improvements. Let's t…",
-          "link": "https://developers.redhat.com/articles/2023/07/20/new-delve-features-rhel-92",
-          "publishedOn": "2023-07-20T07:00:00.000Z",
-          "wordCount": 2906,
-          "title": "New Delve features in RHEL 9.2",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/delve-debug_2x.png?itok=F-0v2qbw"
-        },
-        {
-          "id": "d3919bed-ea2c-4657-863d-ee1c80f89fc3",
-          "author": "Tathagata Paul, Himanshu Yadav",
-          "description": "In this article, we will demonstrate how to streamline the application deployment process on a Red Hat Enterprise Linux machine using Red Hat Ansible Automation Platform.\nPrerequisites\nTwo local VM’s configured with SSH connectivity.\nBridged networking enabled for the VMs.\nAnsible Automation Platform installed on the host VM.\nOur VMs are named vm1-host and vm2 respectively. Edit the /etc/hosts file on vm1-host to include the other VM as a device on the network. You can find its IP by using the command ip -a and then checking the inet address. In my case, it was the following address:\n192.168.17.4 vm2\nYou can try the following command to ping the other VM to check if the connection works.\nping vm2 \nAfter that, enable SSH and copy them to all the VMs using the following commands:\nssh-keygen\n…",
-          "link": "https://developers.redhat.com/articles/2023/07/20/how-deploy-applications-using-ansible-automation-platform",
-          "publishedOn": "2023-07-20T07:00:00.000Z",
-          "wordCount": 2897,
-          "title": "How to deploy applications using Ansible Automation Platform",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
-        },
-        {
-          "id": "8cdce30c-414d-4d73-b63f-953d4924da75",
-          "author": "Michael Santana",
-          "description": "Open vSwitch has moved away from using per-vport dispatch mode to using per-CPU dispatch mode. But this mode had issues with upcall handler thread imbalance and CPU mismatch error messages. These issues were mostly found in systems with tuned CPUs.\nThis article explains two main fixes that my patch series applied to Open vSwitch that alleviated these issues. The first fix resulted in the ovs-vswitchd sending an array of a size that the Open vSwitch kernel module will accept and not trigger the CPU mismatch error message. The second fix added additional upcall handler threads in cases of tuned CPUs to create a more balanced workload for the upcall handler threads.\nHistory of dispatch modes in Open vSwitch\nIn July 2021, my former colleague, Mark Grey, introduced per-CPU dispatch mode to Open…",
-          "link": "https://developers.redhat.com/articles/2023/07/20/how-balance-cpu-upcall-dispatch-mode-open-vswitch",
-          "publishedOn": "2023-07-20T07:00:00.000Z",
-          "wordCount": 3884,
-          "title": "How to balance per-CPU upcall dispatch mode in Open vSwitch",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2020/09/troubleshooting-pam-2x.png?itok=7scwdi4Z"
         }
       ]
     },
@@ -607,6 +577,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480194",
+          "author": "Julian Durand and Amandeep Grover",
+          "description": "The old security methods still serve their purpose, but the need for advanced data protection based on zero trust is now a must have. Playing...\nThe post Progressing beyond transport layer security for the IoT appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/progressing-beyond-transport-layer-security-for-the-iot/",
+          "publishedOn": "2023-08-18T11:34:56.000Z",
+          "wordCount": 4869,
+          "title": "Progressing beyond transport layer security for the IoT",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Beyond_TLS_.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480184",
           "author": "Nitin Dahad",
@@ -885,6 +865,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1563.php",
+          "author": null,
+          "description": "…and it was good.\r\n\t\n\r\n\r\nWhy is it that code starts out nice and deteriorates over time?",
+          "link": "https://www.embeddedrelated.com/showarticle/1563.php",
+          "publishedOn": "2023-08-16T15:39:30.000Z",
+          "wordCount": 3428,
+          "title": "In the beginning, there was no code…",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1562.php",
           "author": null,
           "description": "Overview\r\nIn a previous blog post, https://www.embeddedrelated.com/showarticle/1547.php, we learned how a devicetree in an embedded software application based on The Zephyr Project could describe the hardware on the device. We saw an example of how the four LEDs that are present on an nRF52840 development kit (<a...",
@@ -983,6 +973,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/08/mediapipe-for-raspberry-pi-and-ios.html",
+          "author": null,
+          "description": "Posted by Paul Ruiz, Developer Relations Engineer\n\n\n\n\n\n\nBack in May we released MediaPipe Solutions, a set of tools for no-code and low-code solutions to common on-device machine learning tasks, for Android, web, and Python. Today we’re happy to announce that the initial version of the iOS SDK, plus an update for the Python SDK to support the Raspberry Pi, are available. These include support for audio classification, face landmark detection, and various natural language processing tasks. Let’s take a look at how you can use these tools for the new platforms.\nObject Detection for Raspberry Pi\n\n\nAside from setting up your Raspberry Pi hardware with a camera, you can start by installing the MediaPipe dependency, along with OpenCV and NumPy if you don’t have them already.\n\npython -m pip insta…",
+          "link": "http://developers.googleblog.com/2023/08/mediapipe-for-raspberry-pi-and-ios.html",
+          "publishedOn": "2023-08-18T16:00:00.002Z",
+          "wordCount": 2040,
+          "title": "MediaPipe for Raspberry Pi and iOS",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZJSoD0HltimJnR39B2aJedRry75i4eS3U7pXb4rZ8i7IHPnX7qi_8yF_tAvvnPTARxm8SSHYyMwCW02mIKYuAsUqfrYUxyvNDpX3XDSd0GVY2_UpTq7XYHq39ye7zay8GvT_6NgxjpuCWieQgRBWcYZ5QRR5FqIqR-iSsxhUuyW6H5_hFcw2Q1Hfe0EQ/w1200-h630-p-k-no-nu/MediaPipe_Social_V03.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/08/meet-google-for-startups-accelerator-women-founders-class-of-2023.html",
           "author": null,
@@ -1373,6 +1373,26 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/941154/",
+          "author": "corbet",
+          "description": "It is fair to say that the DNF package\nmanager is not the favorite tool of many Fedora users.  It was brought\nin as a replacement for Yum but got off to a\nrather rocky start;  DNF has\nstabilized over the years, though and the complaints have subsided. That can only\nmean one thing: it must be time to throw it away and start over from the\nbeginning.  The replacement, called DNF5, was slated to be a part of the\nFedora 39 release, due in October, but that is not going to happen.",
+          "link": "https://lwn.net/Articles/941154/",
+          "publishedOn": "2023-08-18T13:48:46.000Z",
+          "wordCount": null,
+          "title": "[$] DNF5 delayed",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942076/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (chromium, rar, and unrar-nonfree), Fedora (microcode_ctl, trafficserver, and webkitgtk), SUSE (ImageMagick, kernel, nodejs16, nodejs18, postgresql12, postgresql15, re2c, and samba), and Ubuntu (ghostscript, haproxy, linux, linux-aws, linux-aws-5.15, linux-gcp, linux-hwe-5.15, linux-ibm,\n linux-intel-iotg, linux-intel-iotg-5.15, linux-kvm, linux-lowlatency,\n linux-lowlatency-hwe-5.15, linux-nvidia, linux-oracle, linux-oracle-5.15,\n linux-raspi, linux-hwe-5.4, linux-xilinx-zynqmp, poppler, and zziplib).",
+          "link": "https://lwn.net/Articles/942076/",
+          "publishedOn": "2023-08-18T12:48:39.000Z",
+          "wordCount": 278,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/941985/",
           "author": "corbet",
@@ -2202,46 +2222,6 @@
           "wordCount": 418,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938053/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for July 20, 2023 is available.",
-          "link": "https://lwn.net/Articles/938053/",
-          "publishedOn": "2023-07-20T02:05:40.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for July 20, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938409/",
-          "author": "jake",
-          "description": "The advantages of the Rust programming language are generally well-known;\nmemory safety is a feature that has attracted a lot of developer attention\nover the last few years.  At the inaugural Embedded\nOpen Source Summit (EOSS), which is an umbrella event for numerous\nembedded-related conferences, Martin Mosler presented on using Rust for an\nembedded project.  In the talk, he showed how easy it is to get up and\nrunning with a Rust-based application on a RISC-V-based development board.",
-          "link": "https://lwn.net/Articles/938409/",
-          "publishedOn": "2023-07-19T19:26:42.000Z",
-          "wordCount": null,
-          "title": "[$] Rust for embedded",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938617/",
-          "author": "corbet",
-          "description": "The\n6.4.4 and\n6.1.39\nstable kernel updates have been released; each contains a large number of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/938617/",
-          "publishedOn": "2023-07-19T16:33:01.000Z",
-          "wordCount": 135,
-          "title": "Two large stable kernel updates",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938596/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (bind9, libapache2-mod-auth-openidc, and python-django), Fedora (nodejs18 and redis), Red Hat (python3.9 and webkit2gtk3), Scientific Linux (bind and kernel), SUSE (cni, cni-plugins, cups-filters, curl, dbus-1, ImageMagick, kernel, libheif, and python-requests), and Ubuntu (bind9, connman, curl, libwebp, and yajl).",
-          "link": "https://lwn.net/Articles/938596/",
-          "publishedOn": "2023-07-19T13:30:41.000Z",
-          "wordCount": 320,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2476,16 +2456,6 @@
           "wordCount": 680,
           "title": "Bliki: TwoPizzaTeam",
           "imageUrl": "https://martinfowler.com/logo-sq.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/platform-teams-stuff-done.html",
-          "author": null,
-          "description": "Platform teams have a unique reliance on other teams to ensure adoption\n     of their platform - getting code changes into other teams' codebase is\n     critical to their success. Pete Hodgson structures how\n     platform teams collaborate into phases\n     of migration, consumption, and evolution. He describes what's different in\n     each of these phases, the operating models to adopt, and which cross-team\n     collaboration patterns work best.\nmore…",
-          "link": "https://martinfowler.com/articles/platform-teams-stuff-done.html",
-          "publishedOn": "2023-07-19T14:21:00.000Z",
-          "wordCount": 4480,
-          "title": "How platform teams get stuff done",
-          "imageUrl": "https://martinfowler.com/articles/platform-teams-stuff-done/card.png"
         }
       ]
     },
@@ -2494,6 +2464,16 @@
       "feedUrl": "https://mcuoneclipse.com/feed/",
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
+        {
+          "id": "http://mcuoneclipse.com/?p=38111",
+          "author": "Erich Styger",
+          "description": "With Surplus-Solar-Charging, available solar energy is used to charge an electrical vehicle instead feeding it to the grid, increasing self-consumption of the solar energy and saving money. This article describes how such an open source controller gets integrated into a wallbox. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/08/17/integrating-solar-surplus-charge-controller-into-ev-wallbox/",
+          "publishedOn": "2023-08-17T21:53:00.000Z",
+          "wordCount": 3753,
+          "title": "Integrating Solar-Surplus-Charge-Controller into EV Wallbox",
+          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/integrated-controller.png"
+        },
         {
           "id": "http://mcuoneclipse.com/?p=38556",
           "author": "Erich Styger",
@@ -2795,7 +2775,18 @@
       "title": "research!rsc",
       "feedUrl": "https://research.swtch.com/feed.atom",
       "siteUrl": "http://research.swtch.com/feed.atom",
-      "articles": []
+      "articles": [
+        {
+          "id": "http://research.swtch.com/ub",
+          "author": null,
+          "description": "The meaning of “undefined behavior” has changed significantly since its introduction in the 1980s.",
+          "link": "http://research.swtch.com/ub",
+          "publishedOn": "2023-08-18T16:00:00.000Z",
+          "wordCount": 4306,
+          "title": "C and C++ Prioritize Performance over Correctness",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "AEP코리아네트",
@@ -3060,16 +3051,6 @@
           "wordCount": 2383,
           "title": "Zigbee bulbs: Replace them with Matter or stay with Zigbee?",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2020/08/Philips-heart-of-Hue-system-square-2-scaled.jpg?fit=2560%2C1707&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12679",
-          "author": "Stacey Higginbotham",
-          "description": "I’ve spent two weeks playing around with Roku’s smart home gear (which is Wyze hardware running a software overlay provided by Roku) and I can tell you it’s fine. If you’re the type of person who wants to experience the smart home circa 2013 with the addition of a services plan and an integration to […]\nThe post Life in the Roku smart home is pretty basic appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/life-in-the-roku-smart-home-is-pretty-basic/",
-          "publishedOn": "2023-07-19T14:53:02.000Z",
-          "wordCount": 3110,
-          "title": "Life in the Roku smart home is pretty basic",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/07/PXL_20230713_202533204.jpg"
         }
       ]
     },
@@ -3137,6 +3118,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=95536",
+          "author": "정혜승",
+          "description": "놀라울 따름이다. 이동관은 정말 일을 ‘잘’ 했다. 이게 정부가 해서는 안되는 불법탈법 언론장악이란 것만 빼면 꼼꼼하고 치밀했다. 이걸 하나하나 밝혀낸 게 윤석열 지검장 시절의 수사팀이란 게 아이러니다. 18일 국회에서 이동관 인사청문회가 열린다. 통과되지 않더라도 대통령이 강행할 가능성이 크다. 이런 사람이 방송통신 정책을 총괄하는 방통위원장 후보라니. 언론이 들고 일어나야 마땅한데 순한 언론들은 조용하다. 지금 우리가 어떤...\nThe post 언론장악 기술자 이동관이 한 일 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95536",
+          "publishedOn": "2023-08-18T03:19:02.000Z",
+          "wordCount": 4623,
+          "title": "언론장악 기술자 이동관이 한 일",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/mosa34I5gi.jpeg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95514",
+          "author": "이정환",
+          "description": "“부정 있었다면 이미 가루가 됐을 것.” 두 번 쫓겨난 정연주. “오늘부터 완전히 다른 날 될 것.” 교권 침해 해법, 이게 최선입니까. 오늘의 TMI. “노사모냐” 묻던 전주혜의 반전 과거. 코스피·코스닥 상장사 순이익 58%·41% 급감. 챗GPT는 진보적 성향? 해법과 대안. 국민연금 인상 시나리오 나왔다. 슬럼화된 산단, 내버려두니 계속 퍼진다. K마운틴? 등산화도 빌려줍니다. 밑줄 쳐 가며 읽은 칼럼....\nThe post “이렇게 애국심 없고 무능한 보수는 처음”: 슬로우레터 8월18일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95514",
+          "publishedOn": "2023-08-17T22:00:11.000Z",
+          "wordCount": 5351,
+          "title": "“이렇게 애국심 없고 무능한 보수는 처음”: 슬로우레터 8월18일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/fFMpDdX8vf2S64c298b2e6b1a1.17049668-1000x655.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=95479",
           "author": "김정철",
@@ -3756,26 +3757,6 @@
           "wordCount": 3586,
           "title": "잊겠지만, 잊을 수 없는 이야기: 서이초 교사 사망 사건에 부쳐",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12625777.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=93799",
-          "author": "김경래",
-          "description": "나는 10년 전 KBS를 그만 둔 전직 기자다. 미국에서 운전을 할 때 가급적 음악보다 라디오를 틀어 놓는다. 사람하고 얘기할 일도 자주 없는데 운전할 때라도 영어를 들어 보겠다는 마음인데, (당연히) 뭐라고 떠드는지 도통 알 수가 없다. 대개 꾹 참고 듣지만, 정 견디기 힘들 때면 김광석이나 잔나비 같은 음악을 재생한다. 노래든 말이든 스피커에서 한국어가 나오면 그렇게 속이...\nThe post KBS를 망가뜨리면 우리는 더 행복해질까? appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/93799",
-          "publishedOn": "2023-07-20T03:42:17.000Z",
-          "wordCount": 2944,
-          "title": "KBS를 망가뜨리면 우리는 더 행복해질까?",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/landmark_img1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=93779",
-          "author": "이정환",
-          "description": "검찰이 또 피의사실을 흘린다. 미국 잠수함에 올라탄 윤석열, 조중동은 감격. 수색 작업하던 해병, 급류에 휩쓸려 죽었다. 내년 최저임금은 9860원. 한국 경제성장률 또 후려쳤다. 원전 폐쇄를 불법으로? 김수현 기소 논란. 해법과 대안. 대중교통 달마다 최대 4만5000원 깎아준다. 오늘의 TMI. 코로나 확진 하루 3만 명. 얻어맞는 교사 5년 동안 1133명. 홍콩 오피스 투자 90% 손실 충격. 밑줄...\nThe post “무능한 야당과 무심한 용산”, 조중동의 불만이 끓어오르고 있다: 슬로우레터 7월20일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/93779",
-          "publishedOn": "2023-07-19T22:01:37.000Z",
-          "wordCount": 3218,
-          "title": "“무능한 야당과 무심한 용산”, 조중동의 불만이 끓어오르고 있다: 슬로우레터 7월20일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/j7VGGylK44TB64b7c5a6b34089.76560377-1000x667.jpeg"
         }
       ]
     },
@@ -4042,6 +4023,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=77200",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 26일 스프에 쓴 글입니다. 뉴욕타임스에서 즐겨 읽는 코너 중 하나가 바로 부고(obituaries)란입니다. 사실 부고 기사는 단순히 누가, 언제, 몇 살을 일기로 숨졌다는 단순한 정보 이상으로 중요한 글입니다. 고인이 어떤 사람이었는지, 고인의 → 더 보기",
+          "link": "https://newspeppermint.com/2023/08/17/npsp_alienatedmen/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_alienatedmen",
+          "publishedOn": "2023-08-17T22:59:55.000Z",
+          "wordCount": 2751,
+          "title": "[뉴페@스프] 언제고 남성성이 끝내 ‘사망’한다면 그 부고기사는 어떤 내용일까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=77601",
           "author": "NewsPeppermint",
           "description": "기후변화로 잦아지고, 더 극단적인 형태로 나타나는 각종 이상기후 이야기가 너무 흔해서 점점 더 뉴스 거리가 되지 않는 세상이 왔습니다. 그런 가운데 태풍이 이례적으로 한반도를 남에서 북으로 관통하고, 하와이에서는 100년 만에 최악의 피해를 낸 산불이 발생했습니다. 이상기후에 관한 칼럼을 번역하고, 해설을 썼습니다. 전문 번역: 8월에 폭염과 산불과 스키장이 공존하는 그곳, 캘리포니아 해설: 올 여름이 그래도 시원한 축에 들 것이라는 과학자들이 있다?",
@@ -4200,16 +4191,6 @@
           "wordCount": 2325,
           "title": "[뉴페@스프] 삶의 모든 데서 ‘포모(FOMO)’는 아니지 않나요?",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77012",
-          "author": "veritaholic",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 5월 29일 스프에 쓴 글입니다. 하버드의 경제학자 에드워드 글레이저는 2011년 베스트셀러 “도시의 승리”에서 도시를 인간이 만든 최고의 발명품이라 칭했습니다. 그의 도시 예찬은 인간이 모일수록 더 좋은 환경이 만들어진다고 말하는 점에서 인간에 대한 믿음과 → 더 보기",
-          "link": "https://newspeppermint.com/2023/07/19/npsp_playgroundcity/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_playgroundcity",
-          "publishedOn": "2023-07-19T22:59:13.000Z",
-          "wordCount": 1954,
-          "title": "[뉴페@스프] 도시가 놀이터 되면 오프라인도 살아날 수 있을까",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -4224,6 +4205,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/223187337657",
+          "author": "sellars",
+          "description": "운환의 유피",
+          "link": "https://blog.naver.com/sellars/223187337657",
+          "publishedOn": "2023-08-18T11:57:21.000Z",
+          "wordCount": 101,
+          "title": "이것과 그것",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/223176826288",
           "author": "sellars",
@@ -4252,16 +4243,6 @@
           "publishedOn": "2023-07-22T07:58:13.000Z",
           "wordCount": null,
           "title": "인간에 대한 정의(定義)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223161478686",
-          "author": "sellars",
-          "description": "+ 이제 형이상학을 사고방식의 혁명에 따라 거꾸로 수행해야 한다. 흥미로운 것은 사변 형이상학에 대해서 비판함에도 불구하고, 여전히 어떤 형이상학의 가능성에 대해서 칸트가 추구하고 있다는 것이다. 칸트가 다음처럼 말한다. <이제 형이상학에서 우리는 대상들의 직관과 관련해서 비슷한 방식을 시도해 볼 수 있다. 직관이 대상의 성질에 따라야 하는 것이라면, 나는 어떻게 그것에 관해서 선험적으로 알 수 있는가를 통찰하지 못한다. 그러나 대상이, 감관의 대상으로서 우리 직관 능력에 따른다면, 나는 이 가능성을 아주 잘 생각할 수 있다. 그러나 이 직관들이 인식이어야 한다면, 나는 이 직관에 머무를 수 없고, 표상인 그것을 대.......",
-          "link": "https://blog.naver.com/sellars/223161478686",
-          "publishedOn": "2023-07-20T05:23:33.000Z",
-          "wordCount": 101,
-          "title": "5 순수이성 비판 강의",
           "imageUrl": null
         }
       ]
