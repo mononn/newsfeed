@@ -51,6 +51,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/monadic-optional-ops-cpp23/",
+          "author": null,
+          "description": "In this post we’ll have a look at new operations added to std::optional in C++23. These operations, inspired by functional programming concepts, offer a more concise and expressive way to work with optional values, reducing boilerplate and improving code readability.\nLet’s meet and_then(), transform() and or_else(), new member functions.\nif/else and optional C++20 \n  \n\n\n\n\n     \n    \n\n\nIn C++20 when you work with std::optional you have to rely heavily on conditional checks to ensure safe access to the contained values. This often led to nested if/else code blocks, which could make the code verbose and harder to follow.\nConsider the task of fetching a user profile. The profile might be available in a cache, or it might need to be fetched from a server. Once retrieved, we want to extract the …",
+          "link": "https://www.cppstories.com/2023/monadic-optional-ops-cpp23/",
+          "publishedOn": "2023-08-21T00:00:00.000Z",
+          "wordCount": 2074,
+          "title": "How to Use Monadic Operations for `std::optional` in C++23",
+          "imageUrl": "https://www.cppstories.com/2023/images/monadic_optional.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/five-adv-init-techniques-cpp/",
           "author": null,
           "description": "From dynamic container operations to compile-time constants, C++ offers a variety of techniques (as in this famous Meme :)). In this article, we’ll delve into advanced initialization methods likereserve() and emplace_backfor containers to tuples with piecewise_construct and forward_as_tuple. Thanks to those techniques, we can reduce the number of temporary objects and create variables more efficiently.\nLet’s jump in.\n\n\n\n     \n    \n\n\nAs a background, we can use the following class that will be handy to illustrate when its special member functions are called. That way, we’ll be able to see extra temporary objects.\nstruct MyType {\n    MyType() { std::cout << \"MyType default\\n\"; }\n    explicit MyType(std::string str) : str_(std::move(str)) { \n        std::cout << std::format(\"MyType {}\\n\", str…",
@@ -173,6 +183,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/15154097",
+          "author": "CPUU",
+          "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
+          "link": "https://cpuu.postype.com/post/15154097",
+          "publishedOn": "2023-08-21T05:23:07.000Z",
+          "wordCount": 967,
+          "title": "F# 으로 역행렬 구하기",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/15129084",
           "author": "CPUU",
           "description": "선형대수학에서 행렬(matrix)를 곱하는 연산이 사용된다.\n다음과 같은 두 개의 2 by 2 행렬이 있다고 했을 때,\n그 곱(product) 인 C = A x B 에서 C의 각 원소들은 다음과 같이 계산한다.\n예를 들면, 다음과 같다.\n일반적으로 2개의 n by n  행렬 A 와 B가 있으면, 그 곱 C는 다음과 같이 구한다.\n이 정의를 사용하여 행렬 곱셉 알고리즘을 표현할 수 있다.\nlet matrixMultiplication (matA: int[][])(matB: int[][]) : int[][] =\n    let n = matA.Length\n\n    let result = Array.init n (fun _ -> Array.create n 0)\n\n    for i in 0 .. n - 1 do\n        for j in 0 .. n - 1 do\n            for k in 0 .. n - 1 do\n                result.[i].[j] <- result.[i].[j] + matA.[i].[k] * matB.[k].[j]\n\n    result\n\nlet matrixA = [|\n                [|2; 3|];\n                [|4; 1|]\n             |]\n\nlet matrixB = [|\n                [|5; 7|];\n                [|6; 8|]\n             |]\n\nlet result = matrixMultiplication matrixA matrixB\nfor row in result do\n    printfn \"%A\" row",
@@ -231,6 +251,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "931cb792-207d-46e9-9c81-ac6eef13aa85",
+          "author": "Deepankar Jain, Himanshu Yadav",
+          "description": "In this article, you will learn how to use the Red Hat Ansible Automation Platform from the Google Cloud Platform (GCP) Marketplace to automatically provision GCP resources.\nOverview of Ansible Automation Platform on GCP\nRed Hat Ansible Automation Platform is available on the Google Cloud Platform (GCP) Marketplace as a self-managed offering that enables enterprise-wide automation with the benefits of Ansible Automation Platform deployed on GCP cloud. This offering integrates seamlessly with native GCP apis and the full ansible collection for GCP, co-developed and security-tested by Google and Red Hat.\nBy combining the power of Red Hat Enterprise Linux, Red Hat OpenShift, and GCP tools, developers can effectively scale their cloud infrastructure and leverage technologies like containers, K…",
+          "link": "https://developers.redhat.com/articles/2023/08/21/how-use-ansible-automation-platform-gcp-marketplace",
+          "publishedOn": "2023-08-21T07:00:00.000Z",
+          "wordCount": 3095,
+          "title": "How to use Ansible Automation Platform from GCP Marketplace",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
+        },
         {
           "id": "04c37be9-99a3-482a-a854-e946e04feef4",
           "author": "Alex Soto Bueno",
@@ -527,7 +557,18 @@
       "title": "edykim.com 블로그 RSS 피드",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://edykim.com/ko/post/earth-from-mars/",
+          "author": null,
+          "description": "Earth from Mars – NASA: Climate Change: Vital Signs of the Planet을 번역했습니다.  이 사진은 NASA…",
+          "link": "https://edykim.com/ko/post/earth-from-mars/",
+          "publishedOn": "2023-08-21T01:16:58.000Z",
+          "wordCount": 652,
+          "title": "화성에서 본 지구",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Eli Bendersky's website",
@@ -563,7 +604,7 @@
           "description": "The purpose of this article is to present features of a secure RTOS for MCU-based devices and show how their use can enable developers to...\nThe post Secure RTOS enables high security for microcontroller systems appeared first on Embedded.com.",
           "link": "https://www.embedded.com/secure-rtos-enables-high-security-for-microcontroller-systems/",
           "publishedOn": "2023-08-20T12:07:22.000Z",
-          "wordCount": 8928,
+          "wordCount": 9826,
           "title": "Secure RTOS enables high security for microcontroller systems",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/secure_device-.jpg"
         },
@@ -860,7 +901,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3217,
+          "wordCount": 3199,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         },
@@ -933,6 +974,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/08/student-leaders-building-apps-using-google-technology.html",
+          "author": null,
+          "description": "Posted by Kübra Zengin, North America GDSC Regional Lead\n\n\n\n\n\n\nServing as a Google Developer Student Clubs (GDSC) Lead at the university level builds technical skills and leadership skills that serve alumni well in their post-graduate careers. Four GDSC Alumni Leads from universities in Canada and the U.S. have gone on to meaningful careers in the tech industry, and share their experiences.\n\n\n\n\n\n\n\nDaniel Shirvani: The Next Frontier in Patient Data\n\n\nDaniel Shirvani graduated from the University of British Columbia (UBC) in Vancouver, Canada, in 2023, with a Bachelor’s of Science in Pharmacology, and will soon return to UBC for medical school. He served as Google Developer Student Clubs (GDSC) Lead and founding team member. He also launched his own software company, Leftindust Systems, in 2…",
+          "link": "http://developers.googleblog.com/2023/08/student-leaders-building-apps-using-google-technology.html",
+          "publishedOn": "2023-08-21T15:00:00.208Z",
+          "wordCount": 2890,
+          "title": "Meet the student leaders building apps using Google technology",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUi4F608Xe7Y9r1OS3BrfeuXhUGETWSRS6VPX4GaJQasmPF3PWCmjkDmisWHLpC_d_dOz_qXMr0YdJJtau8exzpq2FkvHJxpXSk_q5XYYgA9L2y2ypy76Wry3-mosgVxyzX51HEcS8efRrPmtp7J0xI7oiEJv7qo2q8nxLhNqo7KwbDllIEOoyck2sZu4/w1200-h630-p-k-no-nu/Social%20-%20G4D%20-%20Meet%20the%20student%20leaders%20building%20apps%20using%20Google%20technology.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/08/mediapipe-for-raspberry-pi-and-ios.html",
           "author": null,
@@ -1302,6 +1353,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/941764/",
+          "author": "corbet",
+          "description": "Making a filesystem implementation robust in the face of maliciously\ncreated filesystem images is a challenging task even when the\nimplementation is actively maintained, which many in the kernel are not.  There is a way to\nmake that task even harder, though: modify that filesystem image behind the\nimplementation's back while it is mounted.  A recent discussion on the\nlinux-fsdevel list reveals an ongoing disagreement over whether (and how)\nthis threat should be addressed.",
+          "link": "https://lwn.net/Articles/941764/",
+          "publishedOn": "2023-08-21T17:02:58.000Z",
+          "wordCount": null,
+          "title": "[$] Defending mounted filesystems from the root user",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942312/",
+          "author": "jake",
+          "description": "The Document Foundation\nhas announced\nthe release of LibreOffice 7.6 Community.  It is the last release\nusing the existing numbering scheme as the office suite will move to date-based\nrelease numbers starting with LibreOffice 24.2 in\nFebruary, 2024.  Highlights of this release include support for\ndocument themes, including import and export of them, a new navigation\npanel for Impress and Draw, zoom-gesture support, font-handling\nimprovements, and lots more; the release\nnotes have all the details.\n\n\nLibreOffice 7.6 Community's new features have been developed by 148\ncontributors: 61% of code commits are from the 52 developers employed by\nthree companies sitting in TDF's Advisory Board – Collabora, Red Hat and\nallotropia – or other organizations, 15% are from 7 developers at The\nDocument Foundation, and the remaining 24% are from 89 individual\nvolunteers. \n\nOther 202 volunteers – representing hundreds of other people providing\ntranslations – have committed localizations in 160 languages. LibreOffice\n7.6 Community is released in 120 different language versions, more than any\nother free or proprietary software, and as such can be used in the native\nlanguage (L1) by over 5.4 billion people worldwide. In addition, over 2.3\nbillion people speak one of those 120 languages as their second language\n(L2).",
+          "link": "https://lwn.net/Articles/942312/",
+          "publishedOn": "2023-08-21T15:00:29.000Z",
+          "wordCount": 317,
+          "title": "LibreOffice 7.6 Community released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942311/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (fastdds, flask, and kernel), Fedora (chromium, dotnet6.0, dotnet7.0, gerbv, java-1.8.0-openjdk, libreswan, procps-ng, and spectre-meltdown-checker), SUSE (chromium, kernel-firmware, krb5, opensuse-welcome, and python-mitmproxy), and Ubuntu (clamav, firefox, and vim).",
+          "link": "https://lwn.net/Articles/942311/",
+          "publishedOn": "2023-08-21T14:46:10.000Z",
+          "wordCount": 279,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942248/",
+          "author": "jake",
+          "description": "Linus Torvalds has released the 6.5-rc7 kernel\nprepatch, which looks to be the final release candidate before the likely\nrelease of Linux 6.5 next Sunday.  Torvalds released it a little earlier\nthan usual due to some travel; overall things look to be in good shape:\n\nBut apart from the timezone difference, everything looks entirely\nnormal. Drivers (GPU, networking and sound dominate - the usual\nsuspects, in other words) and architecture fixes. The latter are\nmostly arm devicetree fixlets, but also some x86 cleanups and fallout\nfrom the embargo last week.\n\nNot a huge amount of patches, and I really get the feeling that a lot\nof maintainers are on vacation. But I will be optimistic and also\nblame it all being quiet on things working fairly well.",
+          "link": "https://lwn.net/Articles/942248/",
+          "publishedOn": "2023-08-20T21:10:32.000Z",
+          "wordCount": 280,
+          "title": "Linux 6.5-rc7 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/941154/",
           "author": "corbet",
@@ -2369,7 +2460,7 @@
           "description": "The first release of the Visual Studio Code Extension from NXP supports SDKs with version 2.13. This article shows two ways how to import and build projects with previous SDK versions Continue reading →",
           "link": "https://mcuoneclipse.com/2023/08/20/vs-code-importing-pre-v2-13-0-mcuxpresso-sdk-projects/",
           "publishedOn": "2023-08-20T17:39:59.000Z",
-          "wordCount": 3857,
+          "wordCount": 3894,
           "title": "VS Code: Importing pre-v2.13.0 MCUXpresso SDK Projects",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2016/09/intro-sumo-robot.png"
         },
@@ -2592,16 +2683,6 @@
           "wordCount": 5728,
           "title": "LinkServer Scripting, and how to Recover MCUs with a Script",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/07/relative-subfolder.png?w=1200"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=37747",
-          "author": "Erich Styger",
-          "description": "The GNU linker (ld) has a really cool option to 'wrap' or 'hijack' a symbol or function. For example I can wrap all printf() calls in a application and add my own code to it. In this example, I show how to add a timestamp to every printf() call. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/07/22/gnu-linker-wizardry-wrapping-printf-with-timestamps/",
-          "publishedOn": "2023-07-22T18:02:34.000Z",
-          "wordCount": 3923,
-          "title": "GNU Linker Wizardry: Wrapping printf() with Timestamps",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/07/printf-with-timestamps.png?w=1200"
         }
       ]
     },
@@ -2610,6 +2691,16 @@
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
       "articles": [
+        {
+          "id": "https://medium.com/p/301201c24cba",
+          "author": "Chirag Atal",
+          "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
+          "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
+          "publishedOn": "2023-08-21T04:35:36.000Z",
+          "wordCount": 2835,
+          "title": "Announcing ESP ZeroCode",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
+        },
         {
           "id": "https://medium.com/p/969830fd6cdb",
           "author": "Lucas Tamborrino",
@@ -2725,6 +2816,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8109",
+          "author": "Derek Jones",
+          "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
+          "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
+          "publishedOn": "2023-08-20T22:02:12.000Z",
+          "wordCount": 1489,
+          "title": "Local variable naming: some  previously unexplored factors",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8087",
           "author": "Derek Jones",
           "description": "If people were not motivated to write software, computers would not have anything to do. What motivates a person to write software? The source of human motivation may be intrinsic, as when pleasure is derived from performing the activity, or it may be extrinsic, such as being paid. For some developers, writing software is a […]",
@@ -2771,6 +2872,16 @@
       "feedUrl": "https://staceyoniot.com/feed/",
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
+        {
+          "id": "https://staceyoniot.com/?p=12807",
+          "author": "Stacey Higginbotham",
+          "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. I wasn’t going to write anything more in this newsletter, but I was feeling inspired and so decided to leave y’all with one final opinion — and one final mandate. During a webinar Thursday focused […]\nThe post We are entering our maintenance era appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/we-are-entering-our-maintenance-era/",
+          "publishedOn": "2023-08-21T15:20:13.000Z",
+          "wordCount": 2818,
+          "title": "We are entering our maintenance era",
+          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/bigstock-Assortment-Of-Diy-Gardening-To-463818149.jpg"
+        },
         {
           "id": "https://staceyoniot.com/?p=12804",
           "author": "Stacey Higginbotham",
@@ -3027,6 +3138,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=95650",
+          "author": "정호재",
+          "description": "[정호재의 아시안 퍼스펙티브] 가깝도고 먼 ‘동남아시아’를 통해 한국을 바라보고 아시아 시대를 꿈꿉니다. 올여름엔 유독 미국서 찾아오는 손님이 많았다. 코로나 팬데믹 3년의 공백 때문이었다. 텍사스서 온 친구 A는 무려 7년 만에 한국을 찾았다. 그새 그는 꽤 거창한 사업가로 변신해 있었다. 손목엔 4만 달러 ‘금통’ 롤렉스가, 머릿속엔 향후 안정적으로 굴릴 사업에 대한 구상이 한창이었다. 한 마디로 ‘아메리칸드림’에...\nThe post 이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤? appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95650",
+          "publishedOn": "2023-08-21T06:49:47.000Z",
+          "wordCount": 5977,
+          "title": "이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/1218.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95627",
+          "author": "이정환",
+          "description": "“미국은 두목, 일본은 중간 보스, 한국은 행동대원.” “중국 빼고 모두 찬성.” 정연주 끌어내린 자리에 류희림. 이동관 청문회, 타격감이 없었다. 해법과 대안. 옥상을 빌려드립니다. 법원이 정신병원 입원 판단? 문제는 인력 부족. 폴란드는 우크라이나 난민 980만 명을 받았다. 오늘의 TMI. 서초동 떠나는 변호사들. 통영국제음악당은 녹음의 전당. 47년 만의 러시아 달 탐사는 실패. 전경련이 아니라 한경협. 밑줄 쳐가며...\nThe post 윤석열 맘대로, ‘미국 외교의 꿈’을 안겨줬다: 슬로우레터 8월21일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95627",
+          "publishedOn": "2023-08-20T22:05:17.000Z",
+          "wordCount": 5449,
+          "title": "윤석열 맘대로, ‘미국 외교의 꿈’을 안겨줬다: 슬로우레터 8월21일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/xwegfGYjTPaY64dfe8ed72a865.16241433-1000x666.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=95605",
           "author": "이정환",
@@ -3646,16 +3777,6 @@
           "wordCount": 2810,
           "title": "두 얼굴의 언론: 코로나 땐 WHO 못 믿겠다! vs. 핵폐수 방류엔 IAEA 믿어라?",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/Vienna_International_Center.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94054",
-          "author": "민주언론시민연합",
-          "description": "기록적 폭우로 전국에 큰 피해가 발생하자 윤석열 대통령은 수해 지역을 찾아 빠른 복구를 약속했습니다. 윤 대통령은 7월 18일 국무회의에서 “국민 혈세는 재난으로 인한 국민 눈물을 닦아드리는 데 적극적으로 사용돼야 한다”며 “이권 카르텔, 부패 카르텔에 대한 보조금을 전부 폐지하고 그 재원으로 수해복구와 피해 보전에 재정을 투입”하라고 지시했습니다. 수해복구 가용 재원으로 이권 카르텔 보조금을 삭감해 지원하겠다는 윤...\nThe post 이권 카르텔 보조금으로 수해복구? “저도 어이가 없다” appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94054",
-          "publishedOn": "2023-07-23T06:25:10.000Z",
-          "wordCount": 3211,
-          "title": "이권 카르텔 보조금으로 수해복구? “저도 어이가 없다”",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/mWKbeX4dxGNf64b4cc3ecbce65.97415947.jpg"
         }
       ]
     },
@@ -3893,16 +4014,6 @@
           "wordCount": 5230,
           "title": "월가의 퀄컴 투자의견 및 퀄컴 주가 전망(7/24 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2017/02/LG-스마트폰-역사_2012년-5월-옵티머스-LTE2-퀄컴-스냅드래곤-S4-듀얼코어-칩-적용-가격은-93만-5000원-02-1.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591244",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591244/2q-%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2023-07-23T02:16:14.000Z",
-          "wordCount": 6134,
-          "title": "2분기 넷플릭스 실적을 읽는 월가의 시선",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/넷플릭스-LA-본사-LAHQ_19-Image-Source-NETFLIX.jpg"
         }
       ]
     },
@@ -3911,6 +4022,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77633",
+          "author": "NewsPeppermint",
+          "description": "불평등을 이야기할 때 우리는 주로 경제적인 지표를 따집니다. 그런데 좀 더 깊이 들여다 보면, 경제적인 불평등을 낳는 좀 더 근본적인, 구조적인 요인과 환경이 나타납니다. 오늘은 그 가운데 뉴욕타임스 칼럼니스트 이써 맥컬리가 ‘시간의 불평등’에 관해 쓴 글을 옮기고, 해설을 덧붙였습니다. 전문 번역: ‘시간의 빈곤’, 값을 매기기조차 어려운 불평등의 민낯 해설: ‘시간의 불평등’에 가려진 근본적 요인을 봐야 할 때",
+          "link": "https://newspeppermint.com/2023/08/20/npsp_timeinequality/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_timeinequality",
+          "publishedOn": "2023-08-21T02:40:54.000Z",
+          "wordCount": 1372,
+          "title": "‘시간의 불평등’에 가려진 근본적 요인을 봐야 할 때",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77207",
           "author": "veritaholic",
@@ -4089,16 +4210,6 @@
           "publishedOn": "2023-07-24T05:00:59.000Z",
           "wordCount": 1434,
           "title": "스레즈 ‘반짝 성공’ 그 이후… 우리가 알던 ‘소셜미디어 시대’는 막을 내리게 될까",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77016",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 5월 31일 스프에 쓴 글입니다. 지난달 뉴욕타임스에는 “2023년 뉴욕 100대 레스토랑”이라는 거창한 제목의 기사가 실렸습니다. 유명한 음식 비평가 피트 웰스(Pete Wells)가 고른 최고의 식당 목록의 최신 개정판이라고 할 수 있습니다. 맛집 가보는 걸 → 더 보기",
-          "link": "https://newspeppermint.com/2023/07/22/npsp_tyrannyofthebest/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_tyrannyofthebest",
-          "publishedOn": "2023-07-22T22:59:00.000Z",
-          "wordCount": 2325,
-          "title": "[뉴페@스프] 삶의 모든 데서 ‘포모(FOMO)’는 아니지 않나요?",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
