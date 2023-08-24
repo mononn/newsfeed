@@ -2,15 +2,213 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.github.io/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2023-08-23T20:11:48.811Z</updated>
+    <updated>2023-08-24T20:12:16.752Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.github.io/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.github.io/newsfeed/feed.atom"/>
     <entry>
-        <title type="html"><![CDATA[Programmatically access working locations with the Calendar API]]></title>
+        <title type="html"><![CDATA[[$] A more dynamic software I/O TLB]]></title>
+        <id>https://lwn.net/Articles/940973/</id>
+        <link href="https://lwn.net/Articles/940973/"/>
+        <updated>2023-08-24T15:32:06.000Z</updated>
+        <summary type="html"><![CDATA[The kernel's software I/O translation lookaside buffer ("swiotlb") is an
+obscure corner of the DMA-support layer.  The swiotlb was initially
+introduced to enable DMA for devices with special challenges, and one might
+have expected it to fade away as newer peripherals came along.  Instead,
+though, the swiotlb has turned out to be useful in places outside of its
+original use cases.  This
+patch set from Petr Tesarik now aims to update the swiotlb with an eye
+toward its continuing use indefinitely into the future.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rust 1.72.0 released]]></title>
+        <id>https://lwn.net/Articles/942656/</id>
+        <link href="https://lwn.net/Articles/942656/"/>
+        <updated>2023-08-24T15:20:35.000Z</updated>
+        <summary type="html"><![CDATA[Version
+1.72.0 of the Rust compiler has been released.  Changes include
+improved diagnostics and the removal of a limit on const evaluation:
+
+
+	To prevent user-provided const evaluation from getting into a
+	compile-time infinite loop or otherwise taking unbounded time at
+	compile time, Rust previously limited the maximum number of
+	statements run as part of any given constant evaluation. However,
+	especially creative Rust code could hit these limits and produce a
+	compiler error. Worse, whether code hit the limit could vary wildly
+	based on libraries invoked by the user; if a library you invoked
+	split a statement into two within one of its functions, your code
+	could then fail to compile.
+
+	Now, you can do an unlimited amount of const evaluation at compile
+	time.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Thursday]]></title>
+        <id>https://lwn.net/Articles/942654/</id>
+        <link href="https://lwn.net/Articles/942654/"/>
+        <updated>2023-08-24T14:26:07.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (w3m), Fedora (libqb), Mageia (docker-containerd, kernel, kernel-linus, microcode, php, redis, and samba), Oracle (kernel, kernel-container, and openssh), Scientific Linux (subscription-manager), SUSE (ca-certificates-mozilla, erlang, gawk, gstreamer-plugins-base, indent, java-1_8_0-ibm, kernel, kernel-firmware, krb5, libcares2, nodejs14, nodejs16, openssl-1_1, openssl-3, poppler, postfix, redis, webkit2gtk3, and xen), and Ubuntu (php8.1).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Technology Strategy for Emerging Technologies and Markets]]></title>
+        <id>https://martinfowler.com/articles/creating-integrated-tech-strategy.html#RespondingToTheEverChangingFuture</id>
+        <link href="https://martinfowler.com/articles/creating-integrated-tech-strategy.html#RespondingToTheEverChangingFuture"/>
+        <updated>2023-08-24T13:44:00.000Z</updated>
+        <summary type="html"><![CDATA[Sarah Taraporewalla completes her study of building a
+     technology strategy that's integrated with strategic business interests.
+     This final strategic direction considers the ever-changing future,
+     suggesting lines of inquiry to consider the impact of new
+     technologies, market trends, and broader social-political changes. 
+more…]]></summary>
+        <author>
+            <name>Martin Fowler</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[주식 트레이딩과 인생에 대한 4가지 원칙]]></title>
+        <id>https://happist.com/?p=591505</id>
+        <link href="https://happist.com/591505/%ec%a3%bc%ec%8b%9d-%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9%ea%b3%bc-%ec%9d%b8%ec%83%9d%ec%97%90-%eb%8c%80%ed%95%9c-4%ea%b0%80%ec%a7%80-%ec%9b%90%ec%b9%99"/>
+        <updated>2023-08-24T13:16:21.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Episode 437: Goodbye and good luck]]></title>
+        <id>https://staceyoniot.com/?p=12815</id>
+        <link href="https://staceyoniot.com/episode-437-goodbye-and-good-luck/"/>
+        <updated>2023-08-24T13:00:02.000Z</updated>
+        <summary type="html"><![CDATA[This is the final episode of The Internet of Things Podcast, and to send us off after eight years, we don’t discuss the big news of the day such as Arm’s planned IPO, a new display option from Brilliant, or new gear from Leviton. Instead we share our reasons for stepping back from the show, […]
+The post Episode 437: Goodbye and good luck appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
+        <author>
+            <name>Stacey Higginbotham</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Accellera working group to consider federated simulation standard]]></title>
+        <id>https://www.embedded.com/?p=4480248</id>
+        <link href="https://www.embedded.com/accellera-working-group-to-consider-federated-simulation-standard/"/>
+        <updated>2023-08-24T12:29:03.000Z</updated>
+        <summary type="html"><![CDATA[Working group will explore industry interest in developing a standardized communication interface to enable interoperability of virtual modeling, simulation, and integration throughout the product lifecycle.
+The post Accellera working group to consider federated simulation standard appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Integrate OpenShift Service Mesh with cert-manager and Vault]]></title>
+        <id>88a8e202-a314-4576-8af1-d640007153a0</id>
+        <link href="https://developers.redhat.com/articles/2023/08/24/integrate-openshift-service-mesh-cert-manager-and-vault"/>
+        <updated>2023-08-24T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Provisioning strong identities for every workload using X.509 certificates and establishing mutual TLS (mTLS) as a full stack solution for transport security without requiring any code changes is one of the many features offered out of the box by Red Hat OpenShift Service Mesh (based on the upstream Istio project).
+This article explores configuring HashiCorp Vault as the PKI engine (or certificate back-end) for signing OpenShift Service Mesh workloads using cert-manager and istio-csr.
+Default and pluggable CA scenario
+Until OpenShift Service Mesh 2.3, we had to rely on workload certificates that were either created by the auto-generated self-signed root cert and key or by a custom root / intermediate Certificate Authority (CA) and key that is exposed to the underlying control plane infrast…]]></summary>
+        <author>
+            <name>Shankar Govindarajan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to leverage AI to generate Apache Camel routes]]></title>
+        <id>2f7a1af0-e9b5-4f59-87ac-1d7f0edf3ca6</id>
+        <link href="https://developers.redhat.com/articles/2023/08/24/how-leverage-ai-generate-apache-camel-routes"/>
+        <updated>2023-08-24T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In recent years, the integration of artificial intelligence (AI) in various fields has sparked new possibilities and advancements. One intriguing application of AI lies in generating domain-specific language (DSL) documents. DSLs are designed to address specific domains or problem spaces (such as enterprise integration), allowing developers to express solutions in a more natural way, removing the cognitive complexity related to boilerplate code. In this article, we will delve into the idea of leveraging AI to generate Apache Camel DSL.
+ChatGPT and Camel
+One of the primary areas where AI can be applied is in generating DSL code. By training AI models on existing Apache Camel DSL codebases, these models can learn the patterns, syntax, and semantic relationships unique to the language. With t…]]></summary>
+        <author>
+            <name>Andrea Tarocchi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[노동시간 주권: 잡과 업무의 차이]]></title>
+        <id>https://slownews.kr/?p=95308</id>
+        <link href="https://slownews.kr/95308"/>
+        <updated>2023-08-24T06:38:34.000Z</updated>
+        <summary type="html"><![CDATA[[제네바 오전 8시] 국제노동기구(ILO) 고용정책국장 이상헌 박사와 나누는 노동과 세계 그리고 인간에 관한 이야기 수치화된 경제보다는 노동 속에서 살아가는 구체적인 인간을 바라보려 애쓰는 이상헌 박사는 국제노동기구(ILO)에서 25년째 일하고 있습니다. 매주 혹은 격주, 제네바 시각 오전 8시에 만나 이야기합니다. 이 글은 2023년 7월 14일 인터뷰를 정리했습니다. 민노: 국제노동기구를 선택한 특별한 이유나 계기가 있나요. 이상헌: 제가 학부에선...
+The post 노동시간 주권: 잡과 업무의 차이 appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>민노씨</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for August 24, 2023]]></title>
+        <id>https://lwn.net/Articles/941867/</id>
+        <link href="https://lwn.net/Articles/941867/"/>
+        <updated>2023-08-24T02:24:37.000Z</updated>
+        <summary type="html"><![CDATA[The LWN.net Weekly Edition for August 24, 2023 is available.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[놀라움의 연속, 23년 2분기 엔비디아 실적]]></title>
+        <id>https://happist.com/?p=591496</id>
+        <link href="https://happist.com/591496/23%eb%85%84-2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81"/>
+        <updated>2023-08-24T00:41:17.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[‘깨진 독’ 오염수 방류, 30년으로 안 끝난다: 슬로우레터 8월24일.]]></title>
+        <id>https://slownews.kr/?p=95768</id>
+        <link href="https://slownews.kr/95768"/>
+        <updated>2023-08-23T22:07:32.000Z</updated>
+        <summary type="html"><![CDATA[오늘부터 오염수 방류 시작. 수산업 피해 3.7조 원이라는데 정부 지원은 10분의 1. “사법신뢰 회복” 외친 이균용, 아동 성폭행 재판에서 “젊으니까 감경.” 달의 남극, 얼음이 있을까. 군인도 부족한데 의경을 다시 뽑는다고? 더 깊게 읽기. 판사 출신 KBS 이사장의 수상쩍은 과거. 법정 스릴러 같았던 이화영 재판. 준 건 많은데 얻은 건 없다. 자영업자 비중 20% 붕괴. 오늘의...
+The post ‘깨진 독’ 오염수 방류, 30년으로 안 끝난다: 슬로우레터 8월24일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Everything you never wanted to know about Win32 environment blocks]]></title>
+        <id>https://nullprogram.com/blog/2023/08/23/</id>
+        <link href="https://nullprogram.com/blog/2023/08/23/"/>
+        <updated>2023-08-23T21:51:10.000Z</updated>
+        <summary type="html"><![CDATA[In an effort to avoid programming by superstition, I did a deep dive
+into the Win32 “environment block,” the data structure holding a process’s
+environment variables, in order to better understand it. Along the way I
+discovered implied and undocumented behaviors. (The environment block
+must not to be confused with the Process Environment Block (PEB)
+which is different.) Because I cannot possibly retain all the quirky
+details in my head for long, I’m writing them down for future reference. I
+ran my tests on different Windows versions as far back as Windows XP SP3
+in order to fill in gaps where documentation is ambiguous, incomplete, or
+wrong. Overall conclusion: Correct, direct manipulation of an environment
+block is impossible in the general case due to under-specified and
+incorrect docume…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[내 생각을 조종하는 자들을 극복하려면… ‘알고리듬’ 선택이 대안인가]]></title>
+        <id>https://newspeppermint.com/?p=77637</id>
+        <link href="https://newspeppermint.com/2023/08/23/npsp_algorithm/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_algorithm"/>
+        <updated>2023-08-23T21:30:24.000Z</updated>
+        <summary type="html"><![CDATA[알고리듬(algorithm)은 페르시아의 수학자 알 콰리즈미의 이름에서 유래한 단어로 알려져 있습니다. 어떤 일을 수행하는 절차나 방법을 의미하는 이 단어는 곱셈을 하는 방법에서부터 음식의 레시피에 이르는 중립적인 단어였습니다. 하지만 오늘날 이 단어는 인간의 선택에 관여하며 자유의지를 침해하는 부정적 의미를 가지게 되었습니다. 특히 소셜미디어의 추천 알고리듬은 아마 오늘날 알고리듬이 가장 부정적인 의미로 쓰이는 사례 가운데 하나일 겁니다. 탐사보도 전문기자 줄리아 앵윈이 소셜미디어의 추천 알고리듬이 우리의 생각에 어떻게 영향을 미치는지 칼럼을 썼습니다. 해당 칼럼을 → 더 보기]]></summary>
+        <author>
+            <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use working locations with the Calendar API for apps and workflows]]></title>
         <id>http://developers.googleblog.com/2023/08/programmatically-access-working-locations-with-calendar-api.html</id>
         <link href="http://developers.googleblog.com/2023/08/programmatically-access-working-locations-with-calendar-api.html"/>
-        <updated>2023-08-23T19:00:00.001Z</updated>
+        <updated>2023-08-23T19:00:00.002Z</updated>
         <summary type="html"><![CDATA[Posted by Chanel Greco, Developer Advocate
 
 
@@ -148,6 +346,17 @@ numbers (&quot;potentially&quot; because it <em>will</em> run out of memory even
 then, I've used this code <em>many</em> times - mostly because it's short and clear …</p>]]></summary>
         <author>
             <name>Eli Bendersky's website</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Securing Firmware Updates With AES Encryption]]></title>
+        <id>https://interrupt.memfault.com/blog/firmware-encryption-with-python</id>
+        <link href="https://interrupt.memfault.com/blog/firmware-encryption-with-python"/>
+        <updated>2023-08-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this publication, we will explore a simple method to encrypt the firmware using the AES algorithm, using open-source libraries in Python. Of course, we will also see how to decrypt the firmware from the MCU using the AES encryption engine.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
         </author>
     </entry>
     <entry>
@@ -532,6 +741,7 @@ let result = inverse2x2 matri…]]></summary>
         <id>https://medium.com/p/301201c24cba</id>
         <link href="https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4"/>
         <updated>2023-08-21T04:35:36.000Z</updated>
+        <summary type="html"><![CDATA[Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…]]></summary>
         <author>
             <name>Chirag Atal</name>
         </author>
@@ -5046,200 +5256,6 @@ The post Let there be light: The LiFi standard could illuminate the IoT appeared
 The post 폭우 ‘인재’가 환경단체 탓? 억지 주장의 배경은 4대강 사업 명예회복! appeared first on 슬로우뉴스.]]></summary>
         <author>
             <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Checking usage of realloc with Valgrind]]></title>
-        <id>c5547e6b-2fea-4c4e-842f-8a14a7dfec72</id>
-        <link href="https://developers.redhat.com/articles/2023/07/26/checking-usage-realloc-valgrind"/>
-        <updated>2023-07-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[One of the C dynamic memory allocation functions is realloc. Given a pointer, realloc will resize the memory block it points to. This sounds like a simple and useful mechanism to do memory management. But realloc has various gotchas that Valgrind Memcheck can check for to ensure you use the function correctly. Memory blocks should exist and have not yet been freed, blocks can be moved when resized, on failure to resize the memory block might leak, and what happens when a block is reduced to zero size might be undefined.
-Introducing realloc
-The realloc function is defined as void *realloc(void *ptr, size_t size);. Given a pointer to an existing memory block, it will try to resize that memory block to the given size, making the block larger or smaller. The current memory content of the block…]]></summary>
-        <author>
-            <name>Mark Wielaard</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Manage Kafka clusters with AKHQ and AMQ streams]]></title>
-        <id>03c3e30e-2987-41f7-9c98-5197fc74dc70</id>
-        <link href="https://developers.redhat.com/articles/2023/07/26/manage-kafka-clusters-akhq-and-amq-streams"/>
-        <updated>2023-07-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A Graphical User Interface, or GUI, is highly important for Apache Kafka administrators and developers. Having the ability to visualize and interact with topics or make changes quickly can save a significant amount of time. While Red Hat's AMQ streams Operator is often considered a lightweight GUI, more advanced and detailed information can only be obtained using command-line tools such as kafka-consumer-groups.sh, kafka-acls.sh, etc.
-In most of the customer implementations of Kafka clusters I have encountered, the most common question is: "Where is the web console?"
-The answer to this question is simple: AMQ streams does not have a built-in GUI. However, there are many free and paid third-party options available that are fully compatible with AMQ streams. Among dozens of tools, one partic…]]></summary>
-        <author>
-            <name>Rogerio Santos</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[좋은 뉴스를 읽어야 덜 속는다 (ft. 가짜뉴스 테스트)]]></title>
-        <id>https://slownews.kr/?p=94159</id>
-        <link href="https://slownews.kr/94159"/>
-        <updated>2023-07-26T06:18:23.000Z</updated>
-        <summary type="html"><![CDATA[의심 많으면 더 잘 속는다 케임브리지대학교 심리학과에서 잘못된 정보와 양극화를 연구하기 위해 만든 테스트 가운데 일부로(전체는 20가지), 하버드대학교 니먼연구소가 소개한 글을 발췌 인용한 것이다. 연구를 주도한 라코엔 마텐스(Rakoen Maertens)는 “사람들이 잘못된 정보를 공유하는 건 그들이 실제로 그걸 믿기 때문이 아니라 특정 집단에 소속돼 있거나 특정 유명인을 따르거나 특정 문제에 대한 태도가 있고 그러한 태도를 표현하고...
-The post 좋은 뉴스를 읽어야 덜 속는다 (ft. 가짜뉴스 테스트) appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[정치를 위해 과학적 사실을 부정하는 그 나라는 어디인가]]></title>
-        <id>https://newspeppermint.com/?p=77449</id>
-        <link href="https://newspeppermint.com/2023/07/25/npsp_politicizeclimate/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_politicizeclimate"/>
-        <updated>2023-07-26T02:08:03.000Z</updated>
-        <summary type="html"><![CDATA[미국은 기후변화를 둘러싸고 사람들의 의견이 가장 극명하게 갈라진 나라 중 하나입니다. 인간의 산업활동에 의해 대기 중에 원래보다 훨씬 더 많이 배출된 이산화탄소 탓에 지구가 더워졌고 온난화가 여러 기후 재해를 부르는 이상 기후로 이어졌다는 데 많은 과학자들이 합의했지만, 여전히 미국의 주요 정당 가운데 한 곳은 기후변화에 관한 과학적 사실을 부정하고 있습니다. 뉴욕 시립대학교의 명예교수이자 뉴욕타임스에 일주일에 두 편씩 칼럼을 쓰는 폴 크루그먼이 왜 기후를 정치적인 의제로 삼아야 하는지 칼럼을 썼습니다. 전문 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Machine Learning Communities: Q2 ‘23 highlights and achievements]]></title>
-        <id>http://developers.googleblog.com/2023/07/MLCommunities2023Q2.html</id>
-        <link href="http://developers.googleblog.com/2023/07/MLCommunities2023Q2.html"/>
-        <updated>2023-07-26T01:00:00.001Z</updated>
-        <summary type="html"><![CDATA[Posted by Nari Yoon, Bitnoori Keum, Hee Jung, DevRel Community Manager / Soonson Kwon, DevRel Program Manager 
-
-
-
-
-
-
-
-Let’s explore highlights and accomplishments of vast Google Machine Learning communities over the second quarter of 2023. We are enthusiastic and grateful about all the activities by the global network of ML communities. Here are the highlights!
-ML Training Campaigns Summary
-More than 35 communities around the world have hosted ML Campaigns distributed by the ML Developer Programs team during the first half of the year. Thank you all for your training efforts for the entire ML community!
-
-ML Study Jams: TFUG Bauchi, GDSC Uninter, TFUG Abidjan, MLAct, Universitas Pendidikan Indonesia, National Institute of Technology (Kosen), Kumamoto College, GDG Assiut, GDG Bassam, GDG Clo…]]></summary>
-        <author>
-            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Understanding Battery Performance of IoT Devices]]></title>
-        <id>https://interrupt.memfault.com/blog/monitoring-battery-life</id>
-        <link href="https://interrupt.memfault.com/blog/monitoring-battery-life"/>
-        <updated>2023-07-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In this post, I’ll cover how to start thinking about collecting metrics that contribute to battery life, how to dig into this data for individual devices, and finally how to aggregate all metrics from devices in the field to accurately predict the battery life of devices in the field for a given firmware release. All of these abilities will help projects optimize battery life and combat issues quickly when they arise, whether you have ten or a million devices in the field.
-Continue reading…]]></summary>
-        <author>
-            <name>Interrupt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[살아돌아온 이상민, 각자도생의 한국 사회: 슬로우레터 7월26일.]]></title>
-        <id>https://slownews.kr/?p=94143</id>
-        <link href="https://slownews.kr/94143"/>
-        <updated>2023-07-25T22:12:04.000Z</updated>
-        <summary type="html"><![CDATA[끈질기다, 이상민. 이화영의 자백? “정신 차리라”는 이화영의 아내. 불황형 성장, 심상치 않다. 더 깊게 읽기. “체포 동의안 기명 투표하자.” 친강 사라지고 왕이가 돌아왔다. 이스라엘 극우 연정의 사법 장악. 원전 늘렸더니 온실가스 줄었다고? 수신료 분리 징수, EBS에 더 큰 타격. 해법과 대안. 카이스트가 수능을 3%만 뽑는 이유. 이재명표 청년연금, 국민연금이 받을까. 화순이 월세 1만 원? 나주는...
-The post 살아돌아온 이상민, 각자도생의 한국 사회: 슬로우레터 7월26일. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[23년 2분기 구글 알파벳 실적 분석]]></title>
-        <id>https://happist.com/?p=591272</id>
-        <link href="https://happist.com/591272/23%eb%85%84-2%eb%b6%84%ea%b8%b0-%ea%b5%ac%ea%b8%80-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%8b%a4%ec%a0%81-%eb%b6%84%ec%84%9d"/>
-        <updated>2023-07-25T22:02:15.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why Eero is going after the rental property market with Wi-Fi]]></title>
-        <id>https://staceyoniot.com/?p=12705</id>
-        <link href="https://staceyoniot.com/why-eero-is-going-after-the-rental-property-market-with-wi-fi/"/>
-        <updated>2023-07-25T16:02:56.000Z</updated>
-        <summary type="html"><![CDATA[As a homeowner, I take my 1 Gbps internet service for granted. I love having a fast connection, particularly because have so many connected devices. But I’ve gotten so used to it that I don’t have the perspective of others who might live in an apartment that has much slower wireless networking speeds. And if […]
-The post Why Eero is going after the rental property market with Wi-Fi appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Kevin C. Tofel</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] A discussion on Linux in space]]></title>
-        <id>https://lwn.net/Articles/938779/</id>
-        <link href="https://lwn.net/Articles/938779/"/>
-        <updated>2023-07-25T15:03:55.000Z</updated>
-        <summary type="html"><![CDATA[There was something of a space theme that pervaded the Embedded Linux
-Conference (ELC) portion of the 2023 Embedded
-Open Source Summit (EOSS), which is an umbrella event for various
-sub-conferences related to embedded open-source development.  That may
-partly be because one of the organizers of EOSS (and ELC), Tim Bird,
-described himself as "a bit of a space junkie"; he made that observation
-during a panel session that he led on embedded Linux in space.  Bird and
-four panelists discussed various aspects of the use of Linux in
-space-related systems, including where it has been used, the
-characteristics and challenges of aerospace deployments, certification of
-Linux for aerospace use, and more.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bliki: TeamTopologies]]></title>
-        <id>https://martinfowler.com/bliki/TeamTopologies.html</id>
-        <link href="https://martinfowler.com/bliki/TeamTopologies.html"/>
-        <updated>2023-07-25T13:25:00.000Z</updated>
-        <summary type="html"><![CDATA[Any large software effort, such as the software estate for a large
-    company, requires a lot of people - and whenever you have a lot of people
-    you have to figure out how to divide them into effective teams. Forming
-    Business Capability Centric teams helps software efforts to
-    be responsive to customers’ needs, but the range of skills required often
-    overwhelms such teams. Team Topologies is a model
-    for describing the organization of software development teams,
-    developed by Matthew Skelton and Manuel Pais. It defines four forms
-    of teams and three modes of team
-    interactions. The model encourages healthy interactions that allow 
-    business-capability centric teams to flourish in their task of providing a
-    steady flow of valuable software.
-The primary kind o…]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
-        <id>https://lwn.net/Articles/939179/</id>
-        <link href="https://lwn.net/Articles/939179/"/>
-        <updated>2023-07-25T13:24:17.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (python-git and renderdoc), Red Hat (edk2, kernel, kernel-rt, and kpatch-patch), Slackware (kernel), SUSE (firefox, libcap, openssh, openssl-1_1, python39, and zabbix), and Ubuntu (cinder, ironic, nova, python-glance-store, python-os-brick, frr, graphite-web, and openssh).]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bliki: TwoPizzaTeam]]></title>
-        <id>https://martinfowler.com/bliki/TwoPizzaTeam.html</id>
-        <link href="https://martinfowler.com/bliki/TwoPizzaTeam.html"/>
-        <updated>2023-07-25T13:22:00.000Z</updated>
-        <summary type="html"><![CDATA[A two-pizza team is a small team
-  that fully supports software for a particular business capability. The term
-  became popular as it used to describe how Amazon organized their software staff.
-The name suggests the most obvious aspect of such teams, their size. The
-  name comes from the principle that the team should no larger than can be fed
-  with two pizzas. (Although we are talking about American Pizzas here, which
-  seemed alarmingly huge when I first encountered them over here.) Keeping a
-  team small keeps it cohesive, forming tight working relationships. Typically I
-  hear this means such teams are about 5-8 people, although my experience
-  suggests that the upper limit is somewhere about 15.
-Although the name focuses solely on the size, just as important is the
-  team's focus. A …]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How exhaustive static analysis improves software testing accuracy]]></title>
-        <id>https://www.embedded.com/?p=4479983</id>
-        <link href="https://www.embedded.com/how-exhaustive-static-analysis-improves-software-testing-accuracy/"/>
-        <updated>2023-07-25T11:17:31.000Z</updated>
-        <summary type="html"><![CDATA[Mathematically proven code correctness and hardware awareness leads to 100% coverage and zero issues for safety- and security-critical systems.
-The post How exhaustive static analysis improves software testing accuracy appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Benjamin Monate</name>
         </author>
     </entry>
 </feed>

@@ -178,7 +178,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 744,
+          "wordCount": 728,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -232,12 +232,32 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "88a8e202-a314-4576-8af1-d640007153a0",
+          "author": "Shankar Govindarajan",
+          "description": "Provisioning strong identities for every workload using X.509 certificates and establishing mutual TLS (mTLS) as a full stack solution for transport security without requiring any code changes is one of the many features offered out of the box by Red Hat OpenShift Service Mesh (based on the upstream Istio project).\nThis article explores configuring HashiCorp Vault as the PKI engine (or certificate back-end) for signing OpenShift Service Mesh workloads using cert-manager and istio-csr.\nDefault and pluggable CA scenario\nUntil OpenShift Service Mesh 2.3, we had to rely on workload certificates that were either created by the auto-generated self-signed root cert and key or by a custom root / intermediate Certificate Authority (CA) and key that is exposed to the underlying control plane infrast…",
+          "link": "https://developers.redhat.com/articles/2023/08/24/integrate-openshift-service-mesh-cert-manager-and-vault",
+          "publishedOn": "2023-08-24T07:00:00.000Z",
+          "wordCount": 3931,
+          "title": "Integrate OpenShift Service Mesh with cert-manager and Vault",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_ServiceMesh_Topic_Image_A_1.jpg?itok=OW7hjVcD"
+        },
+        {
+          "id": "2f7a1af0-e9b5-4f59-87ac-1d7f0edf3ca6",
+          "author": "Andrea Tarocchi",
+          "description": "In recent years, the integration of artificial intelligence (AI) in various fields has sparked new possibilities and advancements. One intriguing application of AI lies in generating domain-specific language (DSL) documents. DSLs are designed to address specific domains or problem spaces (such as enterprise integration), allowing developers to express solutions in a more natural way, removing the cognitive complexity related to boilerplate code. In this article, we will delve into the idea of leveraging AI to generate Apache Camel DSL.\nChatGPT and Camel\nOne of the primary areas where AI can be applied is in generating DSL code. By training AI models on existing Apache Camel DSL codebases, these models can learn the patterns, syntax, and semantic relationships unique to the language. With t…",
+          "link": "https://developers.redhat.com/articles/2023/08/24/how-leverage-ai-generate-apache-camel-routes",
+          "publishedOn": "2023-08-24T07:00:00.000Z",
+          "wordCount": 2924,
+          "title": "How to leverage AI to generate Apache Camel routes",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Global_Shared_image__A_0.png?itok=wxw-bY7J"
+        },
+        {
           "id": "e3e03ffe-d779-4cc9-a6f7-dc2b76ccd0c5",
           "author": "Philip Hayes",
           "description": "Red Hat OpenShift is an ideal location to re-platform Red Hat JBoss Enterprise Application Platform (JBoss EAP) workloads. We discussed this topic in previous articles, such as Why you should migrate your Java workloads to OpenShift. Here's a summary of the benefits:\nScalability: OpenShift can automatically scale JBoss EAP instances based on demand, making it more efficient and responsive to changes in traffic.\nImmutability: JBoss EAP applications deployed on OpenShift are built as immutable images, making it easier to promote with confidence from lower to higher environments and removing the possibility of configuration creep.\nResource allocation: On OpenShift, resources can be allocated dynamically based on actual usage, allowing for better resource utilization and cost efficiency.\nDeplo…",
           "link": "https://developers.redhat.com/articles/2023/08/23/how-migrate-complex-jboss-eap-application-openshift",
           "publishedOn": "2023-08-23T07:00:00.000Z",
-          "wordCount": 4039,
+          "wordCount": 4037,
           "title": "How to migrate a complex JBoss EAP application to OpenShift",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
         },
@@ -247,7 +267,7 @@
           "description": "Red Hat's migration toolkit for applications 6.2 takes Java application modernization a step further with new integrations for Jira, migration waves management, and Red Hat OpenShift monitoring.\nWith these integrations, the migration toolkit for applications can now help organizations create a backlog of work directly on Jira so that your engineering teams can pick up tickets. The support for migration waves enables you to process the backlog in batches and then plan for the whole application modernization at once. You can also make migration waves available directly on Jira. \nRead on for a complete list of new features in the migration toolkit for applications 6.2, available with a Red Hat OpenShift subscription.\nJira integration\nThe integration of the migration toolkit for applications w…",
           "link": "https://developers.redhat.com/articles/2023/08/22/migration-toolkit-applications-62-agile-java-modernization",
           "publishedOn": "2023-08-22T17:30:00.000Z",
-          "wordCount": 2310,
+          "wordCount": 2308,
           "title": "Migration toolkit for applications 6.2: Agile Java modernization",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC_migration1_2x.png?itok=mNjHPyLj"
         },
@@ -257,7 +277,7 @@
           "description": "Ansible Lightspeed is a generative AI tool that provides an efficient way for developers to create Ansible content and automation tasks for Ansible playbooks. In this article, we will explore how to install and use Ansible Lightspeed in Visual Studio Code. This makes it easy to create Ansible content; you can simply type in plain English descriptions and Ansible Lightspeed will generate the code recommendations for you.\nPrerequisites\nBefore proceeding through this tutorial, make sure you have installed the following:\nVisual Studio Code (VS Code)\nPython 3.9+\nAnsible Automation Platform 2.x (see How to install Ansible Automation Platform 2.4 on RHEL 9.1).\n1. Install Ansible extension in VS Code\nThe Ansible extension offers intelligent code completion, syntax highlighting, and error checking …",
           "link": "https://developers.redhat.com/articles/2023/08/22/enhance-ansible-development-experience-lightspeed",
           "publishedOn": "2023-08-22T07:00:00.000Z",
-          "wordCount": 2858,
+          "wordCount": 2856,
           "title": "Enhance Ansible development experience with Lightspeed",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         },
@@ -267,7 +287,7 @@
           "description": "In this article, you will learn how to use Red Hat Ansible Automation Platform from the Google Cloud Platform (GCP) Marketplace to automatically provision GCP resources.\nOverview of Ansible Automation Platform on GCP\nRed Hat Ansible Automation Platform is available on the Google Cloud Platform (GCP) Marketplace as a self-managed offering that enables enterprise-wide automation with the benefits of Ansible Automation Platform deployed on GCP cloud. This offering integrates seamlessly with native GCP APIs and the full Ansible collection for GCP, co-developed and security-tested by Google and Red Hat.\nBy combining the power of Red Hat Enterprise Linux, Red Hat OpenShift, and GCP tools, developers can effectively scale their cloud infrastructure and leverage technologies like containers, Kuber…",
           "link": "https://developers.redhat.com/articles/2023/08/21/how-use-ansible-automation-platform-gcp-marketplace",
           "publishedOn": "2023-08-21T07:00:00.000Z",
-          "wordCount": 3091,
+          "wordCount": 3089,
           "title": "How to use Ansible Automation Platform from GCP Marketplace",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         },
@@ -510,26 +530,6 @@
           "wordCount": 3812,
           "title": "How to use a Python multiprocessing module",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/Python-01.png?itok=zrT9l9Ni"
-        },
-        {
-          "id": "c5547e6b-2fea-4c4e-842f-8a14a7dfec72",
-          "author": "Mark Wielaard",
-          "description": "One of the C dynamic memory allocation functions is realloc. Given a pointer, realloc will resize the memory block it points to. This sounds like a simple and useful mechanism to do memory management. But realloc has various gotchas that Valgrind Memcheck can check for to ensure you use the function correctly. Memory blocks should exist and have not yet been freed, blocks can be moved when resized, on failure to resize the memory block might leak, and what happens when a block is reduced to zero size might be undefined.\nIntroducing realloc\nThe realloc function is defined as void *realloc(void *ptr, size_t size);. Given a pointer to an existing memory block, it will try to resize that memory block to the given size, making the block larger or smaller. The current memory content of the block…",
-          "link": "https://developers.redhat.com/articles/2023/07/26/checking-usage-realloc-valgrind",
-          "publishedOn": "2023-07-26T07:00:00.000Z",
-          "wordCount": 3904,
-          "title": "Checking usage of realloc with Valgrind",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Valgrind_tool_TopicImage-01.png?itok=3fkuVoKT"
-        },
-        {
-          "id": "03c3e30e-2987-41f7-9c98-5197fc74dc70",
-          "author": "Rogerio Santos",
-          "description": "A Graphical User Interface, or GUI, is highly important for Apache Kafka administrators and developers. Having the ability to visualize and interact with topics or make changes quickly can save a significant amount of time. While Red Hat's AMQ streams Operator is often considered a lightweight GUI, more advanced and detailed information can only be obtained using command-line tools such as kafka-consumer-groups.sh, kafka-acls.sh, etc.\nIn most of the customer implementations of Kafka clusters I have encountered, the most common question is: \"Where is the web console?\"\nThe answer to this question is simple: AMQ streams does not have a built-in GUI. However, there are many free and paid third-party options available that are fully compatible with AMQ streams. Among dozens of tools, one partic…",
-          "link": "https://developers.redhat.com/articles/2023/07/26/manage-kafka-clusters-akhq-and-amq-streams",
-          "publishedOn": "2023-07-26T07:00:00.000Z",
-          "wordCount": 2859,
-          "title": "Manage Kafka clusters with AKHQ and AMQ streams",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Product_AMQ_0.png?itok=T8pFSXxk"
         }
       ]
     },
@@ -579,12 +579,22 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4480248",
+          "author": "Nitin Dahad",
+          "description": "Working group will explore industry interest in developing a standardized communication interface to enable interoperability of virtual modeling, simulation, and integration throughout the product lifecycle.\nThe post Accellera working group to consider federated simulation standard appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/accellera-working-group-to-consider-federated-simulation-standard/",
+          "publishedOn": "2023-08-24T12:29:03.000Z",
+          "wordCount": 3524,
+          "title": "Accellera working group to consider federated simulation standard",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Federated-Simulation-Standard-PWG-intro_Page_2.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4480237",
           "author": "Nitin Dahad",
           "description": "New Amazon Sidewalk SoCs from Silicon Labs are part of series of IoT related announcements at the company’s Works With developers conference 2023.\nThe post Silicon Labs dual band SoCs for Amazon Sidewalk BLE and sub-GHz FSK appeared first on Embedded.com.",
           "link": "https://www.embedded.com/silicon-labs-dual-band-socs-for-amazon-sidewalk-ble-and-sub-ghz-fsk/",
           "publishedOn": "2023-08-23T14:15:49.000Z",
-          "wordCount": 3556,
+          "wordCount": 3553,
           "title": "Silicon Labs dual band SoCs for Amazon Sidewalk BLE and sub-GHz FSK",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Silicon-Labs-SG23SG28.jpg"
         },
@@ -594,7 +604,7 @@
           "description": "You should be careful not to make assumptions about what is scalable based on the non-obvious features of your earlier larger platform. Hardware design for...\nThe post Avoid these pitfalls when scaling audio systems design appeared first on Embedded.com.",
           "link": "https://www.embedded.com/avoid-these-pitfalls-when-scaling-audio-systems-design/",
           "publishedOn": "2023-08-22T12:11:55.000Z",
-          "wordCount": 4145,
+          "wordCount": 4142,
           "title": "Avoid these pitfalls when scaling audio systems design",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/pcb_scaled-.jpg"
         },
@@ -604,7 +614,7 @@
           "description": "The purpose of this article is to present features of a secure RTOS for MCU-based devices and show how their use can enable developers to...\nThe post Secure RTOS enables high security for microcontroller systems appeared first on Embedded.com.",
           "link": "https://www.embedded.com/secure-rtos-enables-high-security-for-microcontroller-systems/",
           "publishedOn": "2023-08-20T12:07:22.000Z",
-          "wordCount": 8932,
+          "wordCount": 8929,
           "title": "Secure RTOS enables high security for microcontroller systems",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/secure_device-.jpg"
         },
@@ -827,16 +837,6 @@
           "wordCount": 4384,
           "title": "How to define your ideal embedded build system",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4479983",
-          "author": "Benjamin Monate",
-          "description": "Mathematically proven code correctness and hardware awareness leads to 100% coverage and zero issues for safety- and security-critical systems.\nThe post How exhaustive static analysis improves software testing accuracy appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/how-exhaustive-static-analysis-improves-software-testing-accuracy/",
-          "publishedOn": "2023-07-25T11:17:31.000Z",
-          "wordCount": 4683,
-          "title": "How exhaustive static analysis improves software testing accuracy",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/TrustInSoft-Fig2BYLINEupdated-buffer-overflow-with-overlay.png"
         }
       ]
     },
@@ -881,7 +881,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3219,
+          "wordCount": 3221,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         },
@@ -939,9 +939,9 @@
           "author": null,
           "description": "Posted by Chanel Greco, Developer Advocate\n\n\n\n\n\n\nGiving Google Workspace users the ability to set their working location and working hours in Google Calendar was an important step in helping our customers’ employees adapt to a hybrid world. Sending a Chat message asking “Will you be in the office tomorrow?” soon became obsolete as anyone could share where and when they would be working within Calendar. \nTo improve the hybrid working experience, many organizations rely on third-party or company-internal tools to enable tasks like hot desk booking or scheduling days in the office. Until recently, there was no way to programmatically synchronize the working location set in Calendar with such tools.\n\n\n\n\n\n\nRobin displays the working location from Google Calendar in their application and updates…",
           "link": "http://developers.googleblog.com/2023/08/programmatically-access-working-locations-with-calendar-api.html",
-          "publishedOn": "2023-08-23T19:00:00.001Z",
-          "wordCount": 2140,
-          "title": "Programmatically access working locations with the Calendar API",
+          "publishedOn": "2023-08-23T19:00:00.002Z",
+          "wordCount": 2155,
+          "title": "Use working locations with the Calendar API for apps and workflows",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMpfAwBiAmAJrOd5toOHcsJgJofdeW2iuR4qFYbqNiB1hXJVCCKfhHvHt1v13saDoSMqKtazjCQsAL7Am7y6u7I0LDnqWTCyH-UmCBVCfCTGS2ETdIxQL1yp37W6MfDR1v2zPpPsqrZch0TUeXiY6pwgUq550hXd5feS4FTkeZhSW66MM1isFwAPiKv7k/w1200-h630-p-k-no-nu/Social%20-%20G4D%20-%20Programmatically%20access%20working%20locations%20with%20the%20Calendar%20API.png"
         },
         {
@@ -1093,16 +1093,6 @@
           "wordCount": 3337,
           "title": "Designing the user experience of passkeys on Google accounts",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ6Gv0ApeGwNWYcpiuXL-fD8umKIQ743VnZbWcsEG1fy5PlywKf_wofwEcLRBEnNvXRrTBQRlnR-Aq1SusunCV38Bl8PXfj8kOP2ZN5eFbXqeTM9SwvOi94Ll0KOcY-U2J2tCiVhWWoyuAbIeqyQuRIgLhpoCsxe5fxPWElkykVTUrCYmlB9qmqu2ySMI/w1200-h630-p-k-no-nu/SOCIAL-G4D-%20An%20Update%20on%20our%20FHE%20work.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/07/MLCommunities2023Q2.html",
-          "author": null,
-          "description": "Posted by Nari Yoon, Bitnoori Keum, Hee Jung, DevRel Community Manager / Soonson Kwon, DevRel Program Manager \n\n\n\n\n\n\n\nLet’s explore highlights and accomplishments of vast Google Machine Learning communities over the second quarter of 2023. We are enthusiastic and grateful about all the activities by the global network of ML communities. Here are the highlights!\nML Training Campaigns Summary\nMore than 35 communities around the world have hosted ML Campaigns distributed by the ML Developer Programs team during the first half of the year. Thank you all for your training efforts for the entire ML community!\n\nML Study Jams: TFUG Bauchi, GDSC Uninter, TFUG Abidjan, MLAct, Universitas Pendidikan Indonesia, National Institute of Technology (Kosen), Kumamoto College, GDG Assiut, GDG Bassam, GDG Clo…",
-          "link": "http://developers.googleblog.com/2023/07/MLCommunities2023Q2.html",
-          "publishedOn": "2023-07-26T01:00:00.001Z",
-          "wordCount": 4278,
-          "title": "Machine Learning Communities: Q2 ‘23 highlights and achievements",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOMqgNs3DN-QVshMi8cU-t6yAT07snjvCgIdnZ3gqzLkZXmYi3kzYiGCJmFURGMx42ajPAXQtY8_Nx5U4CRJOpPDAQM4224VWh5hvCsMPU1kxailuXOQqgikXdBj_iesJ-vNWxmeJMSK_NMMtUiwG25cM9HkXTX3X0GFW7aq06O-QM-jcbXKlK5hUZDmM/w1200-h630-p-k-no-nu/GfD_Editorial_Machine%20Learning%20Communities-%20Q3%20%E2%80%9823%20highlights%20and%20achievements_Social_02.png"
         }
       ]
     },
@@ -1247,6 +1237,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/firmware-encryption-with-python",
+          "author": null,
+          "description": "In this publication, we will explore a simple method to encrypt the firmware using the AES algorithm, using open-source libraries in Python. Of course, we will also see how to decrypt the firmware from the MCU using the AES encryption engine.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/firmware-encryption-with-python",
+          "publishedOn": "2023-08-23T00:00:00.000Z",
+          "wordCount": 4613,
+          "title": "Securing Firmware Updates With AES Encryption",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/debugging-android-devices",
           "author": null,
           "description": "In this article we will explore the different facilities and tools available to debug Android based devices and produce robust systems that can handle a wide range of applications from smart fridges, to payment terminals, and of course mobile phones.\nContinue reading…",
@@ -1284,16 +1284,6 @@
           "publishedOn": "2023-08-02T00:00:00.000Z",
           "wordCount": 1106,
           "title": "What we've been reading in July",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/monitoring-battery-life",
-          "author": null,
-          "description": "In this post, I’ll cover how to start thinking about collecting metrics that contribute to battery life, how to dig into this data for individual devices, and finally how to aggregate all metrics from devices in the field to accurately predict the battery life of devices in the field for a given firmware release. All of these abilities will help projects optimize battery life and combat issues quickly when they arise, whether you have ten or a million devices in the field.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/monitoring-battery-life",
-          "publishedOn": "2023-07-26T00:00:00.000Z",
-          "wordCount": 5438,
-          "title": "Understanding Battery Performance of IoT Devices",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
@@ -1333,6 +1323,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/940973/",
+          "author": "corbet",
+          "description": "The kernel's software I/O translation lookaside buffer (\"swiotlb\") is an\nobscure corner of the DMA-support layer.  The swiotlb was initially\nintroduced to enable DMA for devices with special challenges, and one might\nhave expected it to fade away as newer peripherals came along.  Instead,\nthough, the swiotlb has turned out to be useful in places outside of its\noriginal use cases.  This\npatch set from Petr Tesarik now aims to update the swiotlb with an eye\ntoward its continuing use indefinitely into the future.",
+          "link": "https://lwn.net/Articles/940973/",
+          "publishedOn": "2023-08-24T15:32:06.000Z",
+          "wordCount": null,
+          "title": "[$] A more dynamic software I/O TLB",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942656/",
+          "author": "corbet",
+          "description": "Version\n1.72.0 of the Rust compiler has been released.  Changes include\nimproved diagnostics and the removal of a limit on const evaluation:\n\n\n\tTo prevent user-provided const evaluation from getting into a\n\tcompile-time infinite loop or otherwise taking unbounded time at\n\tcompile time, Rust previously limited the maximum number of\n\tstatements run as part of any given constant evaluation. However,\n\tespecially creative Rust code could hit these limits and produce a\n\tcompiler error. Worse, whether code hit the limit could vary wildly\n\tbased on libraries invoked by the user; if a library you invoked\n\tsplit a statement into two within one of its functions, your code\n\tcould then fail to compile.\n\n\tNow, you can do an unlimited amount of const evaluation at compile\n\ttime.",
+          "link": "https://lwn.net/Articles/942656/",
+          "publishedOn": "2023-08-24T15:20:35.000Z",
+          "wordCount": 236,
+          "title": "Rust 1.72.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942654/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (w3m), Fedora (libqb), Mageia (docker-containerd, kernel, kernel-linus, microcode, php, redis, and samba), Oracle (kernel, kernel-container, and openssh), Scientific Linux (subscription-manager), SUSE (ca-certificates-mozilla, erlang, gawk, gstreamer-plugins-base, indent, java-1_8_0-ibm, kernel, kernel-firmware, krb5, libcares2, nodejs14, nodejs16, openssl-1_1, openssl-3, poppler, postfix, redis, webkit2gtk3, and xen), and Ubuntu (php8.1).",
+          "link": "https://lwn.net/Articles/942654/",
+          "publishedOn": "2023-08-24T14:26:07.000Z",
+          "wordCount": 385,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/941867/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for August 24, 2023 is available.",
+          "link": "https://lwn.net/Articles/941867/",
+          "publishedOn": "2023-08-24T02:24:37.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for August 24, 2023",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/942529/",
           "author": "jake",
@@ -1399,7 +1429,7 @@
           "description": "The Document Foundation\nhas announced\nthe release of LibreOffice 7.6 Community.  It is the last release\nusing the existing numbering scheme as the office suite will move to date-based\nrelease numbers starting with LibreOffice 24.2 in\nFebruary, 2024.  Highlights of this release include support for\ndocument themes, including import and export of them, a new navigation\npanel for Impress and Draw, zoom-gesture support, font-handling\nimprovements, and lots more; the release\nnotes have all the details.\n\n\nLibreOffice 7.6 Community's new features have been developed by 148\ncontributors: 61% of code commits are from the 52 developers employed by\nthree companies sitting in TDF's Advisory Board – Collabora, Red Hat and\nallotropia – or other organizations, 15% are from 7 developers at The\nDocument Foundation, and the remaining 24% are from 89 individual\nvolunteers. \n\nOther 202 volunteers – representing hundreds of other people providing\ntranslations – have committed localizations in 160 languages. LibreOffice\n7.6 Community is released in 120 different language versions, more than any\nother free or proprietary software, and as such can be used in the native\nlanguage (L1) by over 5.4 billion people worldwide. In addition, over 2.3\nbillion people speak one of those 120 languages as their second language\n(L2).",
           "link": "https://lwn.net/Articles/942312/",
           "publishedOn": "2023-08-21T15:00:29.000Z",
-          "wordCount": 772,
+          "wordCount": 839,
           "title": "LibreOffice 7.6 Community released",
           "imageUrl": null
         },
@@ -2142,26 +2172,6 @@
           "wordCount": 328,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938779/",
-          "author": "jake",
-          "description": "There was something of a space theme that pervaded the Embedded Linux\nConference (ELC) portion of the 2023 Embedded\nOpen Source Summit (EOSS), which is an umbrella event for various\nsub-conferences related to embedded open-source development.  That may\npartly be because one of the organizers of EOSS (and ELC), Tim Bird,\ndescribed himself as \"a bit of a space junkie\"; he made that observation\nduring a panel session that he led on embedded Linux in space.  Bird and\nfour panelists discussed various aspects of the use of Linux in\nspace-related systems, including where it has been used, the\ncharacteristics and challenges of aerospace deployments, certification of\nLinux for aerospace use, and more.",
-          "link": "https://lwn.net/Articles/938779/",
-          "publishedOn": "2023-07-25T15:03:55.000Z",
-          "wordCount": null,
-          "title": "[$] A discussion on Linux in space",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939179/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (python-git and renderdoc), Red Hat (edk2, kernel, kernel-rt, and kpatch-patch), Slackware (kernel), SUSE (firefox, libcap, openssh, openssl-1_1, python39, and zabbix), and Ubuntu (cinder, ironic, nova, python-glance-store, python-os-brick, frr, graphite-web, and openssh).",
-          "link": "https://lwn.net/Articles/939179/",
-          "publishedOn": "2023-07-25T13:24:17.000Z",
-          "wordCount": 279,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2208,6 +2218,16 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/articles/creating-integrated-tech-strategy.html#RespondingToTheEverChangingFuture",
+          "author": null,
+          "description": "Sarah Taraporewalla completes her study of building a\n     technology strategy that's integrated with strategic business interests.\n     This final strategic direction considers the ever-changing future,\n     suggesting lines of inquiry to consider the impact of new\n     technologies, market trends, and broader social-political changes. \nmore…",
+          "link": "https://martinfowler.com/articles/creating-integrated-tech-strategy.html#RespondingToTheEverChangingFuture",
+          "publishedOn": "2023-08-24T13:44:00.000Z",
+          "wordCount": 10474,
+          "title": "Technology Strategy for Emerging Technologies and Markets",
+          "imageUrl": "https://martinfowler.com/articles/creating-integrated-tech-strategy/card.png"
+        },
+        {
           "id": "https://martinfowler.com/articles/demo-front-end.html",
           "author": null,
           "description": "Many software teams create services exposed as APIs, designed to be\n     consumed by other software and thus without any user-interface. Such\n     services are hard to demonstrate, as they effectively just dump pages of\n     JSON. A demo front-end is a simple user-interface just used to\n     manipulate such an API. Matteo Vaccari describes how and\n     why to build one - showing its usefulness both in explaining the\n     API's capabilities to stakeholders and to help client developers explore\n     how to interact with the API.\nmore…",
@@ -2223,7 +2243,7 @@
           "description": "Having a robust digital talent strategy is a competitive advantage in\n     today’s fiercely competitive market. This enables businesses to have the\n     right talent and have the right competencies to meet current and future\n     demand to meet business goals or to stay on track for digital\n     transformation aspirations. Sarah Taraporewalla continues\n     her article on how to create an integrated business and technology strategy\n     by looking at questions raised by two strategic directions that\n     support people: culture and internal systems.\nmore…",
           "link": "https://martinfowler.com/articles/creating-integrated-tech-strategy.html#SupportingThePeople",
           "publishedOn": "2023-08-22T15:22:00.000Z",
-          "wordCount": 9504,
+          "wordCount": 10474,
           "title": "Strategic Directions supporting the people",
           "imageUrl": "https://martinfowler.com/articles/creating-integrated-tech-strategy/card.png"
         },
@@ -2405,26 +2425,6 @@
           "publishedOn": "2023-07-26T14:52:00.000Z",
           "wordCount": 1082,
           "title": "Exploring Gen AI - The toolchain",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
-        },
-        {
-          "id": "https://martinfowler.com/bliki/TeamTopologies.html",
-          "author": null,
-          "description": "Any large software effort, such as the software estate for a large\n    company, requires a lot of people - and whenever you have a lot of people\n    you have to figure out how to divide them into effective teams. Forming\n    Business Capability Centric teams helps software efforts to\n    be responsive to customers’ needs, but the range of skills required often\n    overwhelms such teams. Team Topologies is a model\n    for describing the organization of software development teams,\n    developed by Matthew Skelton and Manuel Pais. It defines four forms\n    of teams and three modes of team\n    interactions. The model encourages healthy interactions that allow \n    business-capability centric teams to flourish in their task of providing a\n    steady flow of valuable software.\nThe primary kind o…",
-          "link": "https://martinfowler.com/bliki/TeamTopologies.html",
-          "publishedOn": "2023-07-25T13:25:00.000Z",
-          "wordCount": 1618,
-          "title": "Bliki: TeamTopologies",
-          "imageUrl": "https://martinfowler.com/bliki/images/team-topologies/diagram.png"
-        },
-        {
-          "id": "https://martinfowler.com/bliki/TwoPizzaTeam.html",
-          "author": null,
-          "description": "A two-pizza team is a small team\n  that fully supports software for a particular business capability. The term\n  became popular as it used to describe how Amazon organized their software staff.\nThe name suggests the most obvious aspect of such teams, their size. The\n  name comes from the principle that the team should no larger than can be fed\n  with two pizzas. (Although we are talking about American Pizzas here, which\n  seemed alarmingly huge when I first encountered them over here.) Keeping a\n  team small keeps it cohesive, forming tight working relationships. Typically I\n  hear this means such teams are about 5-8 people, although my experience\n  suggests that the upper limit is somewhere about 15.\nAlthough the name focuses solely on the size, just as important is the\n  team's focus. A …",
-          "link": "https://martinfowler.com/bliki/TwoPizzaTeam.html",
-          "publishedOn": "2023-07-25T13:22:00.000Z",
-          "wordCount": 680,
-          "title": "Bliki: TwoPizzaTeam",
           "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
@@ -2674,12 +2674,12 @@
         {
           "id": "https://medium.com/p/301201c24cba",
           "author": "Chirag Atal",
-          "description": "",
+          "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": null,
+          "wordCount": 3222,
           "title": "Announcing ESP ZeroCode",
-          "imageUrl": null
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         },
         {
           "id": "https://medium.com/p/969830fd6cdb",
@@ -2727,6 +2727,16 @@
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
       "articles": [
+        {
+          "id": "https://nullprogram.com/blog/2023/08/23/",
+          "author": null,
+          "description": "In an effort to avoid programming by superstition, I did a deep dive\ninto the Win32 “environment block,” the data structure holding a process’s\nenvironment variables, in order to better understand it. Along the way I\ndiscovered implied and undocumented behaviors. (The environment block\nmust not to be confused with the Process Environment Block (PEB)\nwhich is different.) Because I cannot possibly retain all the quirky\ndetails in my head for long, I’m writing them down for future reference. I\nran my tests on different Windows versions as far back as Windows XP SP3\nin order to fill in gaps where documentation is ambiguous, incomplete, or\nwrong. Overall conclusion: Correct, direct manipulation of an environment\nblock is impossible in the general case due to under-specified and\nincorrect docume…",
+          "link": "https://nullprogram.com/blog/2023/08/23/",
+          "publishedOn": "2023-08-23T21:51:10.000Z",
+          "wordCount": 1588,
+          "title": "Everything you never wanted to know about Win32 environment blocks",
+          "imageUrl": null
+        },
         {
           "id": "https://nullprogram.com/blog/2023/07/31/",
           "author": null,
@@ -2791,7 +2801,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1494,
+          "wordCount": 1493,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2833,12 +2843,22 @@
       "siteUrl": "https://staceyoniot.com/",
       "articles": [
         {
+          "id": "https://staceyoniot.com/?p=12815",
+          "author": "Stacey Higginbotham",
+          "description": "This is the final episode of The Internet of Things Podcast, and to send us off after eight years, we don’t discuss the big news of the day such as Arm’s planned IPO, a new display option from Brilliant, or new gear from Leviton. Instead we share our reasons for stepping back from the show, […]\nThe post Episode 437: Goodbye and good luck appeared first on Stacey on IoT | Internet of Things news and analysis.",
+          "link": "https://staceyoniot.com/episode-437-goodbye-and-good-luck/",
+          "publishedOn": "2023-08-24T13:00:02.000Z",
+          "wordCount": 2131,
+          "title": "Episode 437: Goodbye and good luck",
+          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/lights2016.jpeg?fit=1251%2C938&ssl=1"
+        },
+        {
           "id": "https://staceyoniot.com/?p=12811",
           "author": "Stacey Higginbotham",
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 2795,
+          "wordCount": 2940,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -3011,16 +3031,6 @@
           "wordCount": 2867,
           "title": "Let there be light: The LiFi standard could illuminate the IoT",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/802.11-bb-LAM-ONE.webp?fit=1439%2C842&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12705",
-          "author": "Kevin C. Tofel",
-          "description": "As a homeowner, I take my 1 Gbps internet service for granted. I love having a fast connection, particularly because have so many connected devices. But I’ve gotten so used to it that I don’t have the perspective of others who might live in an apartment that has much slower wireless networking speeds. And if […]\nThe post Why Eero is going after the rental property market with Wi-Fi appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/why-eero-is-going-after-the-rental-property-market-with-wi-fi/",
-          "publishedOn": "2023-07-25T16:02:56.000Z",
-          "wordCount": 2597,
-          "title": "Why Eero is going after the rental property market with Wi-Fi",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2020/11/Eero-6-Pro-three-pack.jpg"
         }
       ]
     },
@@ -3089,12 +3099,32 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=95308",
+          "author": "민노씨",
+          "description": "[제네바 오전 8시] 국제노동기구(ILO) 고용정책국장 이상헌 박사와 나누는 노동과 세계 그리고 인간에 관한 이야기 수치화된 경제보다는 노동 속에서 살아가는 구체적인 인간을 바라보려 애쓰는 이상헌 박사는 국제노동기구(ILO)에서 25년째 일하고 있습니다. 매주 혹은 격주, 제네바 시각 오전 8시에 만나 이야기합니다. 이 글은 2023년 7월 14일 인터뷰를 정리했습니다. 민노: 국제노동기구를 선택한 특별한 이유나 계기가 있나요. 이상헌: 제가 학부에선...\nThe post 노동시간 주권: 잡과 업무의 차이 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95308",
+          "publishedOn": "2023-08-24T06:38:34.000Z",
+          "wordCount": 6174,
+          "title": "노동시간 주권: 잡과 업무의 차이",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/photo_2023-08-16_11-47-54.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95768",
+          "author": "이정환",
+          "description": "오늘부터 오염수 방류 시작. 수산업 피해 3.7조 원이라는데 정부 지원은 10분의 1. “사법신뢰 회복” 외친 이균용, 아동 성폭행 재판에서 “젊으니까 감경.” 달의 남극, 얼음이 있을까. 군인도 부족한데 의경을 다시 뽑는다고? 더 깊게 읽기. 판사 출신 KBS 이사장의 수상쩍은 과거. 법정 스릴러 같았던 이화영 재판. 준 건 많은데 얻은 건 없다. 자영업자 비중 20% 붕괴. 오늘의...\nThe post ‘깨진 독’ 오염수 방류, 30년으로 안 끝난다: 슬로우레터 8월24일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95768",
+          "publishedOn": "2023-08-23T22:07:32.000Z",
+          "wordCount": 5672,
+          "title": "‘깨진 독’ 오염수 방류, 30년으로 안 끝난다: 슬로우레터 8월24일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/SSC_20230406161841-1000x750.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=95754",
           "author": "민주언론시민연합",
           "description": "이동관 후보자의 방송통신위원장 임명이 임박했다. 8월 18일 청문회에서 야당 의원들이 온갖 비위 의혹을 제기하고 다양한 증거자료를 제시했지만 크게 효과가 없을 상황이다. 다수당인 야당이 저항해 국회가 청문보고서를 채택하지 않는다 해도, 애초 이 후보자를 지명한 윤 대통령의 의지가 확고하다니 임명은 기정사실이나 다름이 없다. 이 후보 임명 반대는 의회에서만이 아니다. 한국기자협회가 6월 16일부터 19일 오전까지 소속 회원 1만...\nThe post 2008년 총선 재연을 꿈꾸는가? 기자 80% 반대 이동관 임명 임박 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95754",
           "publishedOn": "2023-08-23T10:39:41.000Z",
-          "wordCount": 4548,
+          "wordCount": 4570,
           "title": "2008년 총선 재연을 꿈꾸는가? 기자 80% 반대 이동관 임명 임박",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/bd0f9b89912c34898b682d029a725366.jpg"
         },
@@ -3697,26 +3727,6 @@
           "wordCount": 4217,
           "title": "폭우 ‘인재’가 환경단체 탓? 억지 주장의 배경은 4대강 사업 명예회복!",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/361242773_592022713112860_1262158995734286603_n.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94159",
-          "author": "민주언론시민연합",
-          "description": "의심 많으면 더 잘 속는다 케임브리지대학교 심리학과에서 잘못된 정보와 양극화를 연구하기 위해 만든 테스트 가운데 일부로(전체는 20가지), 하버드대학교 니먼연구소가 소개한 글을 발췌 인용한 것이다. 연구를 주도한 라코엔 마텐스(Rakoen Maertens)는 “사람들이 잘못된 정보를 공유하는 건 그들이 실제로 그걸 믿기 때문이 아니라 특정 집단에 소속돼 있거나 특정 유명인을 따르거나 특정 문제에 대한 태도가 있고 그러한 태도를 표현하고...\nThe post 좋은 뉴스를 읽어야 덜 속는다 (ft. 가짜뉴스 테스트) appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94159",
-          "publishedOn": "2023-07-26T06:18:23.000Z",
-          "wordCount": 3242,
-          "title": "좋은 뉴스를 읽어야 덜 속는다 (ft. 가짜뉴스 테스트)",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv13025270.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94143",
-          "author": "이정환",
-          "description": "끈질기다, 이상민. 이화영의 자백? “정신 차리라”는 이화영의 아내. 불황형 성장, 심상치 않다. 더 깊게 읽기. “체포 동의안 기명 투표하자.” 친강 사라지고 왕이가 돌아왔다. 이스라엘 극우 연정의 사법 장악. 원전 늘렸더니 온실가스 줄었다고? 수신료 분리 징수, EBS에 더 큰 타격. 해법과 대안. 카이스트가 수능을 3%만 뽑는 이유. 이재명표 청년연금, 국민연금이 받을까. 화순이 월세 1만 원? 나주는...\nThe post 살아돌아온 이상민, 각자도생의 한국 사회: 슬로우레터 7월26일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94143",
-          "publishedOn": "2023-07-25T22:12:04.000Z",
-          "wordCount": 4048,
-          "title": "살아돌아온 이상민, 각자도생의 한국 사회: 슬로우레터 7월26일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/7.jpg"
         }
       ]
     },
@@ -3726,12 +3736,32 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=591505",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591505/%ec%a3%bc%ec%8b%9d-%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9%ea%b3%bc-%ec%9d%b8%ec%83%9d%ec%97%90-%eb%8c%80%ed%95%9c-4%ea%b0%80%ec%a7%80-%ec%9b%90%ec%b9%99",
+          "publishedOn": "2023-08-24T13:16:21.000Z",
+          "wordCount": 6087,
+          "title": "주식 트레이딩과 인생에 대한 4가지 원칙",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/07/비트코인과-주식-시세판-암호화폐-시세-bitcoin-Photo-by-RoyBuri.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591496",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591496/23%eb%85%84-2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81",
+          "publishedOn": "2023-08-24T00:41:17.000Z",
+          "wordCount": 6091,
+          "title": "놀라움의 연속, 23년 2분기 엔비디아 실적",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/07/9b8afed2b07ba6fd4b8e690d41df571a.jpeg"
+        },
+        {
           "id": "https://happist.com/?p=591487",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591487/%ed%83%9c%ec%95%88-%ec%9a%b4%ec%97%ac%ed%95%b4%eb%b3%80-%ec%86%94%eb%b0%ad-%ec%84%9d%ec%96%91-%ec%b6%9c%ec%82%ac",
           "publishedOn": "2023-08-22T12:05:33.000Z",
-          "wordCount": 5464,
+          "wordCount": 5520,
           "title": "태안 운여해변 출사, 운여해변 솔밭 석양을 담다",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/안면도-운여해변-솔숲-석양-8870.jpg"
         },
@@ -3954,16 +3984,6 @@
           "wordCount": 5007,
           "title": "휴가철, 김포공항 차량 이동 시 김포공항 주차장 선택",
           "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591272",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591272/23%eb%85%84-2%eb%b6%84%ea%b8%b0-%ea%b5%ac%ea%b8%80-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%8b%a4%ec%a0%81-%eb%b6%84%ec%84%9d",
-          "publishedOn": "2023-07-25T22:02:15.000Z",
-          "wordCount": 5827,
-          "title": "23년 2분기 구글 알파벳 실적 분석",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
         }
       ]
     },
@@ -3972,6 +3992,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77637",
+          "author": "NewsPeppermint",
+          "description": "알고리듬(algorithm)은 페르시아의 수학자 알 콰리즈미의 이름에서 유래한 단어로 알려져 있습니다. 어떤 일을 수행하는 절차나 방법을 의미하는 이 단어는 곱셈을 하는 방법에서부터 음식의 레시피에 이르는 중립적인 단어였습니다. 하지만 오늘날 이 단어는 인간의 선택에 관여하며 자유의지를 침해하는 부정적 의미를 가지게 되었습니다. 특히 소셜미디어의 추천 알고리듬은 아마 오늘날 알고리듬이 가장 부정적인 의미로 쓰이는 사례 가운데 하나일 겁니다. 탐사보도 전문기자 줄리아 앵윈이 소셜미디어의 추천 알고리듬이 우리의 생각에 어떻게 영향을 미치는지 칼럼을 썼습니다. 해당 칼럼을 → 더 보기",
+          "link": "https://newspeppermint.com/2023/08/23/npsp_algorithm/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_algorithm",
+          "publishedOn": "2023-08-23T21:30:24.000Z",
+          "wordCount": 1411,
+          "title": "내 생각을 조종하는 자들을 극복하려면… ‘알고리듬’ 선택이 대안인가",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77633",
           "author": "NewsPeppermint",
@@ -4130,16 +4160,6 @@
           "publishedOn": "2023-07-27T00:10:47.000Z",
           "wordCount": 2090,
           "title": "[뉴페@스프] 매번 하는 고민 “그와의 관계를 어떻게 하는 게 좋을까”",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77449",
-          "author": "NewsPeppermint",
-          "description": "미국은 기후변화를 둘러싸고 사람들의 의견이 가장 극명하게 갈라진 나라 중 하나입니다. 인간의 산업활동에 의해 대기 중에 원래보다 훨씬 더 많이 배출된 이산화탄소 탓에 지구가 더워졌고 온난화가 여러 기후 재해를 부르는 이상 기후로 이어졌다는 데 많은 과학자들이 합의했지만, 여전히 미국의 주요 정당 가운데 한 곳은 기후변화에 관한 과학적 사실을 부정하고 있습니다. 뉴욕 시립대학교의 명예교수이자 뉴욕타임스에 일주일에 두 편씩 칼럼을 쓰는 폴 크루그먼이 왜 기후를 정치적인 의제로 삼아야 하는지 칼럼을 썼습니다. 전문 → 더 보기",
-          "link": "https://newspeppermint.com/2023/07/25/npsp_politicizeclimate/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_politicizeclimate",
-          "publishedOn": "2023-07-26T02:08:03.000Z",
-          "wordCount": 1411,
-          "title": "정치를 위해 과학적 사실을 부정하는 그 나라는 어디인가",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
