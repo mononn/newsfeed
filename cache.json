@@ -178,7 +178,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 728,
+          "wordCount": 733,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -510,26 +510,6 @@
           "wordCount": 2945,
           "title": "DevNation Day: Modern App Dev videos are now available",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Coding_Shared_image_A-01%20%284%29.png?itok=M_lzdbim"
-        },
-        {
-          "id": "856d3b68-0f0b-4e2d-b415-573a25634c83",
-          "author": "Lucas Holmquist",
-          "description": "Welcome back to the Node.js reference architecture series. In this article, we’ll take a look at testing in the Node.js landscape and discuss the guidelines recommended by the Node.js reference architecture team.\nFollow the series:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code coverage\nPart 8: Typescript\nPart 9: Securing Node.js applications\nPart 10: Accessibility\nPart 11: Typical development workflows\nPart 12: npm development\nPart 13: Problem determination\nPart 14: Testing\nPart 15: Transaction handling\n2 Testing tools\nTesting is probably one of the most important parts of any software development practice. It is al…",
-          "link": "https://developers.redhat.com/articles/2023/07/27/introduction-nodejs-reference-architecture-testing",
-          "publishedOn": "2023-07-27T07:00:00.000Z",
-          "wordCount": 3177,
-          "title": "Introduction to the Node.js reference architecture: Testing",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
-        },
-        {
-          "id": "16267114-4448-4f0e-8d14-7b3bfbaf2a81",
-          "author": "Rodolfo Olivieri",
-          "description": "In this article, we will learn how to work with a specific Python class from the multiprocessing module, the process class. I will give you a quick overview with examples.\nWhat is a Python multiprocessing module?\nWhat better way of describing what the module than to pull from the official documentation? Multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads.\nThe threading module is not the focus of this article, but in summary, the threading module will handle a small segment of code execution (lightweight and with shared memory), while the multiprocessing one will handle a p…",
-          "link": "https://developers.redhat.com/articles/2023/07/27/how-use-python-multiprocessing-module",
-          "publishedOn": "2023-07-27T07:00:00.000Z",
-          "wordCount": 3812,
-          "title": "How to use a Python multiprocessing module",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/Python-01.png?itok=zrT9l9Ni"
         }
       ]
     },
@@ -579,6 +559,16 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4480257",
+          "author": "Nitin Dahad",
+          "description": "There are risks with respect to China and competition from RISC-V, but Arm IPO is likely to focus on opportunity from AI. \nThe post Is AI the winning card for a successful Arm IPO? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/is-ai-the-winning-card-for-a-successful-arm-ipo/",
+          "publishedOn": "2023-08-25T18:10:36.000Z",
+          "wordCount": 4589,
+          "title": "Is AI the winning card for a successful Arm IPO?",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Arm-featured-image.jpg"
+        },
+        {
           "id": "https://www.embedded.com/?p=4480248",
           "author": "Nitin Dahad",
           "description": "Working group will explore industry interest in developing a standardized communication interface to enable interoperability of virtual modeling, simulation, and integration throughout the product lifecycle.\nThe post Accellera working group to consider federated simulation standard appeared first on Embedded.com.",
@@ -604,7 +594,7 @@
           "description": "You should be careful not to make assumptions about what is scalable based on the non-obvious features of your earlier larger platform. Hardware design for...\nThe post Avoid these pitfalls when scaling audio systems design appeared first on Embedded.com.",
           "link": "https://www.embedded.com/avoid-these-pitfalls-when-scaling-audio-systems-design/",
           "publishedOn": "2023-08-22T12:11:55.000Z",
-          "wordCount": 4142,
+          "wordCount": 4137,
           "title": "Avoid these pitfalls when scaling audio systems design",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/pcb_scaled-.jpg"
         },
@@ -614,7 +604,7 @@
           "description": "The purpose of this article is to present features of a secure RTOS for MCU-based devices and show how their use can enable developers to...\nThe post Secure RTOS enables high security for microcontroller systems appeared first on Embedded.com.",
           "link": "https://www.embedded.com/secure-rtos-enables-high-security-for-microcontroller-systems/",
           "publishedOn": "2023-08-20T12:07:22.000Z",
-          "wordCount": 8929,
+          "wordCount": 8924,
           "title": "Secure RTOS enables high security for microcontroller systems",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/secure_device-.jpg"
         },
@@ -881,7 +871,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3221,
+          "wordCount": 3192,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         },
@@ -1073,26 +1063,6 @@
           "wordCount": 2418,
           "title": "Champion Innovator David Cardozo, based in Victoriaville, Quebec",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgdLQVXv37zoi0ArtTn5wwgv-xpROrbV9U4Q_tiG7tCMjE3HMsUGhIrO0hrCEMWl6bxkijLRyl3WWpmyBfDcW6lwOCmteCqgjEbwYep2RMMgfrjXKXnFHUJMbOLfrPQYAFpikEuZmkw80qG55Ueo0Rl6h_7By4z0LwnU02hmOvATtJXQNy68CkDhiU6L4/w1200-h630-p-k-no-nu/social-G4D-David-Cardozo-Champion-Innovators.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/07/whats-new-for-developers-building-solutions-on-google-workspace.html",
-          "author": null,
-          "description": "Posted by Chanel Greco, Developer Advocate Google Workspace\n\n\n\n\n\n\nGoogle Workspace offers tools for productivity and collaboration for the ways we work. It also offers a rich set of APIs, SDKs, and no-code/low-code tools to create apps and integrate workflows that integrate directly into the surfaces across Google Workspace.\nLeading software makers like Atlassian, Asana, LumApps and Miro are building integrations with Google Workspace apps—like Google Docs, Meet, and Chat—to make it easier than ever to access data and act right in the tools relied on by more than 3 billion users and 9 million paying customers.\nAt I/O’23 we had some exciting announcements for new features that give developers more options when integrating apps with Google Workspace.\n \n\nThird-party smart chips in Google Docs…",
-          "link": "http://developers.googleblog.com/2023/07/whats-new-for-developers-building-solutions-on-google-workspace.html",
-          "publishedOn": "2023-07-26T23:00:00.001Z",
-          "wordCount": 2757,
-          "title": "What’s new for developers building solutions on Google Workspace - mid-year recap",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_9dMKSyZZKBb8uzAnimG216_5Bv1yN9ulvKW00rDbCak25SUl9KznL_HxwH8wjN3jV2fyn4K9qVoyyd1ZmFJRDqqQZZ1cukTDz16-DFLfjrLukSsZsthi8MbEFT1x9NYuJOlIVgWLLWcy6qHB2xCUdfWbQqc8jX1h0FDedws_If-HYIXQf7ekZ1Ov854/w1200-h630-p-k-no-nu/social-G4D---Now-in-GA-for-all-Workspace-developers--Extend-the-power-of-your-Chat-Apps-with-the-Google-Chat-API.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/07/bringing-passkeys-to-googledotcom.html",
-          "author": null,
-          "description": "Posted by Court Jacinic, Senior UX Writer, Mitchell Galavan, Interaction Designer, and Silvia Convento, User Experience Researcher\n\n\nThis article also appears on web.dev\n\n\n\nPasskeys are a simple and secure cross-device authentication technology that enables creating online accounts and signing in to them without entering a password. To log in to an account, users are simply shown a prompt to to use the screen lock on their device, such as touching the fingerprint sensor.\nGoogle has been working with the FIDO Alliance for years, alongside Apple and Microsoft, to bring passkeys to the world. In 2022 we rolled out platform support for passkeys so that Android and Chrome users can seamlessly sign in to apps and websites across all their devices. In May 2023, we enabled signing in to Google Acc…",
-          "link": "http://developers.googleblog.com/2023/07/bringing-passkeys-to-googledotcom.html",
-          "publishedOn": "2023-07-26T16:00:00.397Z",
-          "wordCount": 3337,
-          "title": "Designing the user experience of passkeys on Google accounts",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ6Gv0ApeGwNWYcpiuXL-fD8umKIQ743VnZbWcsEG1fy5PlywKf_wofwEcLRBEnNvXRrTBQRlnR-Aq1SusunCV38Bl8PXfj8kOP2ZN5eFbXqeTM9SwvOi94Ll0KOcY-U2J2tCiVhWWoyuAbIeqyQuRIgLhpoCsxe5fxPWElkykVTUrCYmlB9qmqu2ySMI/w1200-h630-p-k-no-nu/SOCIAL-G4D-%20An%20Update%20on%20our%20FHE%20work.png"
         }
       ]
     },
@@ -1114,6 +1084,16 @@
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
         {
+          "id": "https://pythoninsider.blogspot.com/2023/08/python-3115-31013-3918-and-3818-is-now.html",
+          "author": null,
+          "description": "There’s security content in the releases, let’s dive right in.\ngh-108310: Fixed an issue where instances of ssl.SSLSocket\n were vulnerable to a bypass of the TLS handshake and included \nprotections (like certificate verification) and treating sent \nunencrypted data as if it were post-handshake TLS encrypted data. \nSecurity issue reported as CVE-2023-40217 1 by Aapo Oksman. Patch by Gregory P. Smith.\n\nUpgrading is highly recommended to all users of affected versions.\nPython 3.11.5\nGet it here: https://www.python.org/downloads/release/python-3115/\n\nThis release was held up somewhat by the resolution of this CVE, \nwhich is why it includes a whopping 328 new commits since 3.11.4 \n(compared to 238 commits between 3.10.4 and 3.10.5). Among those, there \nis a fix for CVE-2023-41105 which affected Python 3.11.0 - 3.11.4. See gh-106242 for details.\nThere are also some fixes for crashes, check out the change log to see all information.\nMost importantly, the release notes on the downloads page include a description of the Larmor precession. I understood some of the words there!\nPython 3.10.13\nGet it here: https://www.python.org/downloads/release/python-31013/\n\n16 commits.\nPython 3.9.18\nGet it here: https://www.python.org/downloads/release/python-3918/\n\n11 commits.\nPython 3.8.18\nGet it here: https://www.python.org/downloads/release/python-3818/\n\n9 commits.\nStay safe and upgrade!\nThanks to all of the many volunteers who help make Python Development\n and these releases possible! Please consider supporting our efforts by \nvolunteering yourself or through organization contributions to the \nPython Software Foundation.\n–\n@ambv\nNed Deily @nad\n@steve.dower\n@pablogsal\n@ambv\n@thomas",
+          "link": "https://pythoninsider.blogspot.com/2023/08/python-3115-31013-3918-and-3818-is-now.html",
+          "publishedOn": "2023-08-24T20:56:00.003Z",
+          "wordCount": 1641,
+          "title": "Python 3.11.5, 3.10.13, 3.9.18, and 3.8.18 is now available",
+          "imageUrl": null
+        },
+        {
           "id": "https://pythoninsider.blogspot.com/2023/08/python-3120-release-candidate-1-released.html",
           "author": null,
           "description": "I'm pleased to announce the release of Python 3.12 release candidate 1.\nhttps://www.python.org/downloads/release/python-3120rc1/\n\nThis is the first release candidate of Python 3.12.0\nThis release, 3.12.0rc1, is the penultimate release \npreview. Entering the release candidate phase, only reviewed code \nchanges which are clear bug fixes are allowed between this release \ncandidate and the final release. The second candidate (and the last \nplanned release preview) is scheduled for Monday, 2023-09-04, while the \nofficial release of 3.12.0 is scheduled for Monday, 2023-10-02.\nThere will be no ABI changes from this point forward in the 3.12 series, and the goal is that there will be as few code changes as possible.\nCall to action\nWe strongly encourage maintainers of third-party Python projects to…",
@@ -1130,6 +1110,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1064/",
+          "author": null,
+          "description": "The developers have an endless amount of ways to make mistakes while writing code. However, sometimes we can find obvious and interesting patterns in how and where developers make mistakes. Let's...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1064/",
+          "publishedOn": "2023-08-24T21:00:00.000Z",
+          "wordCount": 9619,
+          "title": "Common patterns of typos in programming",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1064_patterns_of_typos/image1_thm_intoblank_1200x630.png?ver=08-25-2023-09-55-28"
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/1063/",
           "author": null,
@@ -1324,6 +1314,36 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/942770/",
+          "author": "jake",
+          "description": "The OpenTF Foundation has announced that it is moving forward with its eponymous fork of HashiCorp Terraform, which was recently changed to a non-FOSS license by the company.  The organization has applied to become part of the Linux Foundation, \"with the end goal of having OpenTF as part of Cloud Native Computing Foundation\".  There is a GitHub repository for its manifesto, but the code repository for OpenTF is private for now, with plans to open it up in the next week or two.  Work has been going on for the last week and more developers are coming on board:\n\nSo far, four companies pledged the equivalent of 14 full-time engineers (FTEs) to the OpenTF initiative. We expect this number to at least double in the following few weeks. To give you some perspective, Terraform was effectively maintained by about 5 FTEs from HashiCorp in the last 2 years. If you don’t believe us, look at their repository. \n\n\nSome of the people behind OpenTF are participating in a Hacker News thread, so more information can be found there as well.",
+          "link": "https://lwn.net/Articles/942770/",
+          "publishedOn": "2023-08-25T17:56:53.000Z",
+          "wordCount": 296,
+          "title": "OpenTF Announces Fork of Terraform",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/940509/",
+          "author": "corbet",
+          "description": "The more one pays attention to the Internet of Things (IoT), the more one\nlearns to appreciate simple, unconnected devices.  Your editor long ago\nacquired an aversion to products that advertise themselves as \"smart\"\nor \"WiFi-enabled\".  There can be advantages, though, to devices that\ncontain microprocessors, are Internet connected, and are remotely\naccessible, if they are implemented well.  The OpenSprinkler sprinkler timer would\nappear to be a case in point.",
+          "link": "https://lwn.net/Articles/940509/",
+          "publishedOn": "2023-08-25T16:27:19.000Z",
+          "wordCount": null,
+          "title": "[$] The OpenSprinkler controller",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942766/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (tryton-server), Fedora (youtube-dl), SUSE (clamav and krb5), and Ubuntu (cjose and fastdds).",
+          "link": "https://lwn.net/Articles/942766/",
+          "publishedOn": "2023-08-25T15:14:51.000Z",
+          "wordCount": 153,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/940973/",
           "author": "corbet",
           "description": "The kernel's software I/O translation lookaside buffer (\"swiotlb\") is an\nobscure corner of the DMA-support layer.  The swiotlb was initially\nintroduced to enable DMA for devices with special challenges, and one might\nhave expected it to fade away as newer peripherals came along.  Instead,\nthough, the swiotlb has turned out to be useful in places outside of its\noriginal use cases.  This\npatch set from Petr Tesarik now aims to update the swiotlb with an eye\ntoward its continuing use indefinitely into the future.",
@@ -1339,7 +1359,7 @@
           "description": "Version\n1.72.0 of the Rust compiler has been released.  Changes include\nimproved diagnostics and the removal of a limit on const evaluation:\n\n\n\tTo prevent user-provided const evaluation from getting into a\n\tcompile-time infinite loop or otherwise taking unbounded time at\n\tcompile time, Rust previously limited the maximum number of\n\tstatements run as part of any given constant evaluation. However,\n\tespecially creative Rust code could hit these limits and produce a\n\tcompiler error. Worse, whether code hit the limit could vary wildly\n\tbased on libraries invoked by the user; if a library you invoked\n\tsplit a statement into two within one of its functions, your code\n\tcould then fail to compile.\n\n\tNow, you can do an unlimited amount of const evaluation at compile\n\ttime.",
           "link": "https://lwn.net/Articles/942656/",
           "publishedOn": "2023-08-24T15:20:35.000Z",
-          "wordCount": 236,
+          "wordCount": 273,
           "title": "Rust 1.72.0 released",
           "imageUrl": null
         },
@@ -1441,16 +1461,6 @@
           "publishedOn": "2023-08-21T14:46:10.000Z",
           "wordCount": 279,
           "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942248/",
-          "author": "jake",
-          "description": "Linus Torvalds has released the 6.5-rc7 kernel\nprepatch, which looks to be the final release candidate before the likely\nrelease of Linux 6.5 next Sunday.  Torvalds released it a little earlier\nthan usual due to some travel; overall things look to be in good shape:\n\nBut apart from the timezone difference, everything looks entirely\nnormal. Drivers (GPU, networking and sound dominate - the usual\nsuspects, in other words) and architecture fixes. The latter are\nmostly arm devicetree fixlets, but also some x86 cleanups and fallout\nfrom the embargo last week.\n\nNot a huge amount of patches, and I really get the feeling that a lot\nof maintainers are on vacation. But I will be optimistic and also\nblame it all being quiet on things working fairly well.",
-          "link": "https://lwn.net/Articles/942248/",
-          "publishedOn": "2023-08-20T21:10:32.000Z",
-          "wordCount": 280,
-          "title": "Linux 6.5-rc7 released",
           "imageUrl": null
         },
         {
@@ -2132,46 +2142,6 @@
           "wordCount": 142,
           "title": "Five new stable kernels",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938712/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for July 27, 2023 is available.",
-          "link": "https://lwn.net/Articles/938712/",
-          "publishedOn": "2023-07-27T02:59:54.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for July 27, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/938769/",
-          "author": "jake",
-          "description": "The U-Boot\n\"universal boot loader\" is used extensively in the embedded-Linux world.\nAt the 2023 Embedded\nOpen Source Summit (EOSS), Simon Glass gave a presentation (slides,\nYouTube video) on\nthe status of the project, with a focus on new features added over the last\nseveral years. He also wanted to talk about complexity in the firmware\nworld, which he believes is increasing, and how U-Boot can help manage that\ncomplexity.  The talk was something of a grab bag of ideas and changes\nthroughout the increasingly large footprint of the project.",
-          "link": "https://lwn.net/Articles/938769/",
-          "publishedOn": "2023-07-26T21:12:05.000Z",
-          "wordCount": null,
-          "title": "[$] A status update for U-Boot",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939332/",
-          "author": "corbet",
-          "description": "The extensible scheduler class enables the\ncreation of CPU schedulers in BPF.  After the fourth\nversion of this series was greeted with relative silence, Tejun Heo asked about\nthe status of this work:\n\n\n\tWe are comfortable with the current API. Everything we tried fit\n\tpretty well. It will continue to evolve but sched_ext now seems\n\tmature enough for initial inclusion. I suppose lack of response\n\tdoesn't indicate tacit agreement from everyone, so what are you\n\tguys all thinking?\n\n\nScheduler maintainer Peter Zijlstra gave\nhim his answer: \"I'm still hating the whole thing with a\npassion\".  He went on to make it clear that this work will not be\nmerged into the mainline.  So, it seems, developers wanting to try their\nhand at BPF scheduler development will need to apply an out-of-tree patch\nseries, for now at least.",
-          "link": "https://lwn.net/Articles/939332/",
-          "publishedOn": "2023-07-26T17:34:15.000Z",
-          "wordCount": 282,
-          "title": "Extensible scheduler class rejected",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939305/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (amd64-microcode, gst-plugins-bad1.0, gst-plugins-base1.0, gst-plugins-good1.0, iperf3, openjdk-17, and pandoc), Fedora (389-ds-base, kitty, and thunderbird), SUSE (libqt5-qtbase, libqt5-qtsvg, mysql-connector-java, netty, netty-tcnative, openssl, openssl-1_1, openssl1, php7, python-scipy, and xmltooling), and Ubuntu (amd64-microcode, avahi, libxpm, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15,\n linux-azure-fde, linux-azure-fde-5.15, linux-gcp, linux-gcp-5.15,\n linux-gke, linux-gke-5.15, linux-gkeop, linux-gkeop-5.15, linux-hwe-5.15,\n linux-ibm, linux-intel-iotg, linux-kvm, linux-lowlatency,\n linux-lowlatency-hwe-5.15, linux-nvidia, linux-oracle, linux-oracle-5.15,\n linux-raspi, linux, linux-aws, linux-azure, linux-gcp, linux-ibm, linux-kvm,\n linux-lowlatency, linux-oracle, linux-raspi, linux-oem-5.17, linux-oem-6.0, linux-oem-6.1, openstack-trove, and python-django).",
-          "link": "https://lwn.net/Articles/939305/",
-          "publishedOn": "2023-07-26T13:50:47.000Z",
-          "wordCount": 328,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2415,16 +2385,6 @@
           "publishedOn": "2023-07-27T14:34:00.000Z",
           "wordCount": 2163,
           "title": "Exploring Gen AI - Three versions of a median",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/exploring-gen-ai.html#the-toolchain",
-          "author": null,
-          "description": "My colleague Birgitta Böckeler has long been one of our senior\n     technology leaders in Germany. She's now moved into a new role coordinating\n     our work with Generative AI and its effect of software delivery practices.\n     She's decided to publish her exploration in a series of memos. The first\n     memo looks at the current toolchain for LLMs, categorizing them by what\n     tasks they help with, how we interact with the LLM, and where they come from.\nmore…",
-          "link": "https://martinfowler.com/articles/exploring-gen-ai.html#the-toolchain",
-          "publishedOn": "2023-07-26T14:52:00.000Z",
-          "wordCount": 1082,
-          "title": "Exploring Gen AI - The toolchain",
           "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
@@ -2677,7 +2637,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3222,
+          "wordCount": 3185,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         },
@@ -2733,7 +2693,7 @@
           "description": "In an effort to avoid programming by superstition, I did a deep dive\ninto the Win32 “environment block,” the data structure holding a process’s\nenvironment variables, in order to better understand it. Along the way I\ndiscovered implied and undocumented behaviors. (The environment block\nmust not to be confused with the Process Environment Block (PEB)\nwhich is different.) Because I cannot possibly retain all the quirky\ndetails in my head for long, I’m writing them down for future reference. I\nran my tests on different Windows versions as far back as Windows XP SP3\nin order to fill in gaps where documentation is ambiguous, incomplete, or\nwrong. Overall conclusion: Correct, direct manipulation of an environment\nblock is impossible in the general case due to under-specified and\nincorrect docume…",
           "link": "https://nullprogram.com/blog/2023/08/23/",
           "publishedOn": "2023-08-23T21:51:10.000Z",
-          "wordCount": 1588,
+          "wordCount": 1613,
           "title": "Everything you never wanted to know about Win32 environment blocks",
           "imageUrl": null
         },
@@ -2801,7 +2761,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1493,
+          "wordCount": 1494,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2848,7 +2808,7 @@
           "description": "This is the final episode of The Internet of Things Podcast, and to send us off after eight years, we don’t discuss the big news of the day such as Arm’s planned IPO, a new display option from Brilliant, or new gear from Leviton. Instead we share our reasons for stepping back from the show, […]\nThe post Episode 437: Goodbye and good luck appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/episode-437-goodbye-and-good-luck/",
           "publishedOn": "2023-08-24T13:00:02.000Z",
-          "wordCount": 2131,
+          "wordCount": 2172,
           "title": "Episode 437: Goodbye and good luck",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/lights2016.jpeg?fit=1251%2C938&ssl=1"
         },
@@ -2868,7 +2828,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. I wasn’t going to write anything more in this newsletter, but I was feeling inspired and so decided to leave y’all with one final opinion — and one final mandate. During a webinar Thursday focused […]\nThe post We are entering our maintenance era appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/we-are-entering-our-maintenance-era/",
           "publishedOn": "2023-08-21T15:20:13.000Z",
-          "wordCount": 2939,
+          "wordCount": 2988,
           "title": "We are entering our maintenance era",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/bigstock-Assortment-Of-Diy-Gardening-To-463818149.jpg"
         },
@@ -3021,16 +2981,6 @@
           "wordCount": 2131,
           "title": "Podcast: Tracking air quality with the IoT",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/Screenshot-2023-07-26-at-3.35.04-PM.png?fit=783%2C424&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12673",
-          "author": "Kevin C. Tofel",
-          "description": "This story was originally published in my weekly newsletter on Friday July 21, 2023. You can sign up for my newsletter here.  Tired of having dozens of IoT devices competing for the same wireless airwaves as your computers, phones, and televisions? There might be a solution in the form of LiFi, or light fidelity, networks. That’s […]\nThe post Let there be light: The LiFi standard could illuminate the IoT appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/let-there-be-light-the-lifi-standard-could-illuminate-the-iot/",
-          "publishedOn": "2023-07-26T13:00:47.000Z",
-          "wordCount": 2867,
-          "title": "Let there be light: The LiFi standard could illuminate the IoT",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/802.11-bb-LAM-ONE.webp?fit=1439%2C842&ssl=1"
         }
       ]
     },
@@ -3098,6 +3048,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=95736",
+          "author": "민노씨",
+          "description": "[슬로우민트] 뉴스페퍼민트 이효석 대표가 추천하는 좋은 책에 관한 이야기. 두 번째 책은 다윈의 ‘성선택’ 이론의 복권을 시도한 ‘아름다움의 진화'(리처드 프럼). “나는 공작의 꽁지에 있는 깃털을 들여다볼 때마다 구역질이 난다네!” 찰스 다윈, Darwin to Asa Gray, April 3 [1860], Darwin Correspondence Project, Letter 2743. 다윈은 [종의 기원] (1859)을 발표한 이듬해인 1860년에 친구에게 보내는 편지에서 진심으로 공작의...\nThe post 찰스 다윈, 다윈이즘에 대한 최초의 반역자 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95736",
+          "publishedOn": "2023-08-25T06:31:18.000Z",
+          "wordCount": 4920,
+          "title": "찰스 다윈, 다윈이즘에 대한 최초의 반역자",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/11888974263_862ea3f5ba_k.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95827",
+          "author": "민주언론시민연합",
+          "description": "급기야 윤석열 정권이 ‘파시즘의 수령’에 빠지지 않을까라는 우려가 본격적으로 제기되기 시작했다. 8월 15일 경향신문 칼럼 [여적/‘파시스트 되는 법’]은 윤석열 정권이 비판 언론과 시민사회, 노조를 적으로 규정해 혐오를 조장하는 등 곳곳에서 파시즘적 징후가 감지된다고 지적했다. 그런 우려에 동감하면서도 사실은 더 비관적이다. 파시즘의 수렁이 전제주의 국가를 위한 진지를 구축하는 단계로 보이기 때문이다. 파시스트 사회나 전제주의 국가나 별반...\nThe post 다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95827",
+          "publishedOn": "2023-08-25T03:56:32.000Z",
+          "wordCount": 5074,
+          "title": "다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2016/10/i_001-14.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95802",
+          "author": "이정환",
+          "description": "하루 460톤, 17일 동안 1차 방류. “총선 영향 없게 서둘러 달라 했다.” 프리고진 사망 미스터리. “길거리에 경찰이 많이 보이도록.” 라임 사태 직전 돈 빼간 의원은 김상희. 해법과 대안. 성동구의 반지하 탈출 프로젝트. “일단 얼려두세요”, 난자 동결 시술 지원. 카페가 없어서 청년들이 안 오나. 오늘의 TMI. 인도 달착륙, 인터스텔라 제작비보다 쌌다. 전국노래자랑 시청률 반토막. 세력 키우는...\nThe post 30년의 숙제 또는 도박, 윤석열은 끝내 한 마디도 안 했다: 슬로우레터 8월25일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95802",
+          "publishedOn": "2023-08-24T22:05:38.000Z",
+          "wordCount": 5623,
+          "title": "30년의 숙제 또는 도박, 윤석열은 끝내 한 마디도 안 했다: 슬로우레터 8월25일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/nW7Dx0UC57MA64e6e3e3c9f940.57376225-1000x666.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=95308",
           "author": "민노씨",
@@ -3687,46 +3667,6 @@
           "wordCount": 3086,
           "title": "김건희 고속도로 미스터리, 이렇게 끝내선 안 된다.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/dVDlWkXD0BzW648825ae341f90.61003009-1000x646.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94188",
-          "author": "김원장",
-          "description": "힝고 님(김현성)이 쓴 [저출산의 이유]에 관한 제 견해입니다. 분명 주택이나 소득에서 출발해 결국은 불평등의 문제일겁니다. 저는 생각이 조금 다릅니다. 저는 ‘우리 사회가 너무 빡세서’ 아이를 낳지 않는다고 생각합니다. 그러니 일과 일상의 강도와 속도를 조금 누그러뜨려야 합니다. 많이들 여기에 동의합니다. 그럼 단기적으로 생산성이 떨어지는 사회가 되죠. 이 부분은 동의를 하지 않습니다. 그러니 이상한 대책만 쏟아집니다. 집값이나...\nThe post 저출산의 ‘또 다른’ 이유: 이렇게나 빡센 나라… appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94188",
-          "publishedOn": "2023-07-26T23:02:24.000Z",
-          "wordCount": 3624,
-          "title": "저출산의 ‘또 다른’ 이유: 이렇게나 빡센 나라…",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/356937531_2297843330604624_6927081358287499666_n-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94200",
-          "author": "이정환",
-          "description": "퇴로가 없는 김건희 로드 논란. 누가 이화영을 압박하나. 극한 기후와 한계 식량 시대. 학폭도 교권도 기승전 학생부. 집시법 개정도 인기 투표로 결정했다. 더 깊게 읽기. 역 전세 위험 102만 가구, 집주인에 대출 규제 풀어준다. 또 신생아 월 2만 붕괴. 일본은 지난해 80만 명 줄었다. 오늘의 TMI. 코로나 확진자 하루 4만 명 넘는다. 홍준표, 내년 총선...\nThe post 누가 수도꼭지의 물을 잠글 것인가: 슬로우레터 7월27일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94200",
-          "publishedOn": "2023-07-26T21:59:41.000Z",
-          "wordCount": 3450,
-          "title": "누가 수도꼭지의 물을 잠글 것인가: 슬로우레터 7월27일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/cat-getiegert-tiger-fur-preview.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94182",
-          "author": "Hingomaster",
-          "description": "2023년 2월은 인구 측면에서 파멸적인 기간으로 기록될 것이다. 신생아 수 2만 명 붕괴라는 충격적인 사실도 사실이나, 혼인 건수 역시 전년 동기 대비 8.4% 감소했기 때문이다. 특히 혼인 건수의 경우 지난 코로나 대유행 시기의 터널을 지나 반등이 기대되던 시점이었기 때문에 더욱 충격적인 결과라 할 수 있다. 한국은 특히 혼인 건수와 출생아 수 간의 관계가 밀접한 나라이다....\nThe post 저출산의 이유: 평등하지 않은 세상은 자연스럽게 무너집니다 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94182",
-          "publishedOn": "2023-07-26T13:47:47.000Z",
-          "wordCount": 3022,
-          "title": "저출산의 이유: 평등하지 않은 세상은 자연스럽게 무너집니다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pregnant-gd87124c60_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94168",
-          "author": "민주언론시민연합",
-          "description": "7월 15일 기록적인 폭우로 충북 청주시 오송읍 궁평 제2지하차도에서 차량 17대가 물에 잠겨 14명이 숨지는 사고가 있었습니다. 천재가 아닌 인재에 가까웠습니다. 청주엔 7월 13일부터 큰 비가 이어졌으나 지자체는 심각성을 인지하지 못하거나 관할이 아니라는 이유로 대응하지 않았고, 지하차도와 직선거리로 약 600m 떨어진 미호천교에서는 확장 공사가 진행되면서 기존 제방을 헐고 임시 제방을 쌓아둔 상태였습니다. 인근 주민들은 이...\nThe post 폭우 ‘인재’가 환경단체 탓? 억지 주장의 배경은 4대강 사업 명예회복! appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94168",
-          "publishedOn": "2023-07-26T08:12:15.000Z",
-          "wordCount": 4217,
-          "title": "폭우 ‘인재’가 환경단체 탓? 억지 주장의 배경은 4대강 사업 명예회복!",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/361242773_592022713112860_1262158995734286603_n.jpg"
         }
       ]
     },
@@ -3771,7 +3711,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591470/%ec%95%94%ec%9a%b8%ed%95%9c-%ec%a4%91%ea%b5%ad-%ec%a0%84%eb%a7%9d",
           "publishedOn": "2023-08-22T03:08:08.000Z",
-          "wordCount": 5757,
+          "wordCount": 5769,
           "title": "WSJ, 지금 중국 정점을 목격하고 있는 걸까?  암울한 중국 미래 전망",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/Screenshot_20230822-120712_Chrome.jpg"
         },
@@ -3954,36 +3894,6 @@
           "wordCount": 6257,
           "title": "2분기 구글 알파벳 실적을 읽는 월가의 시선",
           "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
-        },
-        {
-          "id": "https://happist.com/?p=591279",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591279/2q-23-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2023-07-27T04:08:18.000Z",
-          "wordCount": 5700,
-          "title": "2분기 마이크로소프트 실적을 읽는 월가의 시선",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/마이크로소프트-빌딩-Microsoft-building-Photo-by-Matthew-manuel.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591277",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591277/23-2q-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-07-26T10:46:58.000Z",
-          "wordCount": 5238,
-          "title": "23년 2분기 마이크로소프트 실적 분석",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/06/마이크로소프트-빌딩-Microsoft-building-Photo-by-Matthew-manuel.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591274",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591274/%ea%b9%80%ed%8f%ac%ea%b3%b5%ed%95%ad-%ec%a3%bc%ec%b0%a8%ec%9e%a5-%ec%b6%94%ec%b2%9c",
-          "publishedOn": "2023-07-26T10:24:56.000Z",
-          "wordCount": 5007,
-          "title": "휴가철, 김포공항 차량 이동 시 김포공항 주차장 선택",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
         }
       ]
     },
@@ -4150,16 +4060,6 @@
           "publishedOn": "2023-08-01T02:30:43.000Z",
           "wordCount": 1409,
           "title": "‘줄 서서 먹는 맛집’, ‘나만 아는 보석 같은 식당’… 어디를 더 가고 싶을까",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77042",
-          "author": "veritaholic",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 7일 스프에 쓴 글입니다. 인간은 사회적 동물입니다. 아리스토텔레스의 이 말은 인간에게 사회적 관계, 곧 다른 사람들과의 관계가 얼마나 중요한지를 보여줍니다. 우리 일상의 대부분은 다른 이와의 상호작용으로 구성되어 있으며 무인도에서 혼자 살아가는 → 더 보기",
-          "link": "https://newspeppermint.com/2023/07/26/npsp_ambivalentrelationship/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_ambivalentrelationship",
-          "publishedOn": "2023-07-27T00:10:47.000Z",
-          "wordCount": 2090,
-          "title": "[뉴페@스프] 매번 하는 고민 “그와의 관계를 어떻게 하는 게 좋을까”",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
