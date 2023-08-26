@@ -178,7 +178,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 733,
+          "wordCount": 743,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -574,7 +574,7 @@
           "description": "Working group will explore industry interest in developing a standardized communication interface to enable interoperability of virtual modeling, simulation, and integration throughout the product lifecycle.\nThe post Accellera working group to consider federated simulation standard appeared first on Embedded.com.",
           "link": "https://www.embedded.com/accellera-working-group-to-consider-federated-simulation-standard/",
           "publishedOn": "2023-08-24T12:29:03.000Z",
-          "wordCount": 3524,
+          "wordCount": 3529,
           "title": "Accellera working group to consider federated simulation standard",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Federated-Simulation-Standard-PWG-intro_Page_2.jpg"
         },
@@ -584,7 +584,7 @@
           "description": "New Amazon Sidewalk SoCs from Silicon Labs are part of series of IoT related announcements at the company’s Works With developers conference 2023.\nThe post Silicon Labs dual band SoCs for Amazon Sidewalk BLE and sub-GHz FSK appeared first on Embedded.com.",
           "link": "https://www.embedded.com/silicon-labs-dual-band-socs-for-amazon-sidewalk-ble-and-sub-ghz-fsk/",
           "publishedOn": "2023-08-23T14:15:49.000Z",
-          "wordCount": 3553,
+          "wordCount": 3548,
           "title": "Silicon Labs dual band SoCs for Amazon Sidewalk BLE and sub-GHz FSK",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Silicon-Labs-SG23SG28.jpg"
         },
@@ -817,16 +817,6 @@
           "wordCount": 3383,
           "title": "Interview: multi-die addresses chip complexity but power is a challenge",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/Joachim-Kunkel-Synopsys.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480003",
-          "author": "Jacob Beningo",
-          "description": "Without a well-defined vision for what your build system should entail, you may find that your team is less productive than they could be. Have...\nThe post How to define your ideal embedded build system appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/how-to-define-your-ideal-embedded-build-system/",
-          "publishedOn": "2023-07-27T16:37:12.000Z",
-          "wordCount": 4384,
-          "title": "How to define your ideal embedded build system",
-          "imageUrl": null
         }
       ]
     },
@@ -871,7 +861,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3192,
+          "wordCount": 3223,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         },
@@ -894,16 +884,6 @@
           "wordCount": 4062,
           "title": "Jumping from MCUs to FPGAs - 5 things you need to know",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/94446/parallele%20vs%20serial_90917.jpg"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1553.php",
-          "author": null,
-          "description": "I started out embedded programming on small, 8-bit devices, with limited memory. High-level languages were not an option, so I became proficient in using assembly language. For modest sized applications, it was a reasonable option and, apart from that, there were no tools to support any other languages. I was always happy with that, because I could readily access all the functionality of the...",
-          "link": "https://www.embeddedrelated.com/showarticle/1553.php",
-          "publishedOn": "2023-07-27T10:59:35.000Z",
-          "wordCount": 3312,
-          "title": "Assembly language is best - except when it isn’t",
-          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
       ]
     },
@@ -1053,16 +1033,6 @@
           "wordCount": 1736,
           "title": "Indie Games Fund: Apply for support from Google Play’s $2M fund in Latin America",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgov9zCEptjrANJkD9-G2EWoJLmxJ7tL4OeheV9uUdl02iVFRN2a5exnh7s3tXKNGt0ddn8MWzkhBwjeHEP1D2IbCkvN72B4LNfyuIj_cieG9uw9MAGeL1EpQBx4HV_flZ_ZORWWWo6KaX9KU23wY3JfpUDVIF9zhLaJdJDz548ZZgAH1Uoy9m5DUO4Nk/w1200-h630-p-k-no-nu/Indie-Games-Social.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/07/champion-innovator-david-cardozo-based.html",
-          "author": null,
-          "description": "Posted by Max Saltonstall, Developer Relations Engineer\n\n\n\n\n\n\n\nGoogle Cloud Champion Innovators are a global network of more than 500 non-Google professionals, who are technical experts in Google Cloud products and services. Each Champion specializes in one of nine different technical categories: cloud AI/ML, data analytics, hybrid multi-cloud, modern architecture, security and networking, serverless app development, storage, Workspace and databases.\nIn our ongoing interview series we sit down with Champion Innovators across the world to learn more about their journeys, their technology focus, and what excites them.\nToday we're talking to David Cardozo, a Machine Learning Scientist, Kubeflow Community member and ML GDE. \n\n\n\n\n\n\nWhat tech area has you most fascinated right now, and why?\nI lo…",
-          "link": "http://developers.googleblog.com/2023/07/champion-innovator-david-cardozo-based.html",
-          "publishedOn": "2023-07-27T17:00:00.002Z",
-          "wordCount": 2418,
-          "title": "Champion Innovator David Cardozo, based in Victoriaville, Quebec",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgdLQVXv37zoi0ArtTn5wwgv-xpROrbV9U4Q_tiG7tCMjE3HMsUGhIrO0hrCEMWl6bxkijLRyl3WWpmyBfDcW6lwOCmteCqgjEbwYep2RMMgfrjXKXnFHUJMbOLfrPQYAFpikEuZmkw80qG55Ueo0Rl6h_7By4z0LwnU02hmOvATtJXQNy68CkDhiU6L4/w1200-h630-p-k-no-nu/social-G4D-David-Cardozo-Champion-Innovators.png"
         }
       ]
     },
@@ -1319,7 +1289,7 @@
           "description": "The OpenTF Foundation has announced that it is moving forward with its eponymous fork of HashiCorp Terraform, which was recently changed to a non-FOSS license by the company.  The organization has applied to become part of the Linux Foundation, \"with the end goal of having OpenTF as part of Cloud Native Computing Foundation\".  There is a GitHub repository for its manifesto, but the code repository for OpenTF is private for now, with plans to open it up in the next week or two.  Work has been going on for the last week and more developers are coming on board:\n\nSo far, four companies pledged the equivalent of 14 full-time engineers (FTEs) to the OpenTF initiative. We expect this number to at least double in the following few weeks. To give you some perspective, Terraform was effectively maintained by about 5 FTEs from HashiCorp in the last 2 years. If you don’t believe us, look at their repository. \n\n\nSome of the people behind OpenTF are participating in a Hacker News thread, so more information can be found there as well.",
           "link": "https://lwn.net/Articles/942770/",
           "publishedOn": "2023-08-25T17:56:53.000Z",
-          "wordCount": 296,
+          "wordCount": 693,
           "title": "OpenTF Announces Fork of Terraform",
           "imageUrl": null
         },
@@ -2112,36 +2082,6 @@
           "wordCount": 6122,
           "title": "Systemd 254 released",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939445/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (curl), Fedora (kitty, mingw-qt5-qtbase, and mingw-qt6-qtbase), Mageia (cri-o, kernel, kernel-linus, mediawiki, and microcode), SUSE (chromium, conmon, go1.20-openssl, iperf, java-11-openjdk, kernel-firmware, and mariadb), and Ubuntu (libvirt, linux, linux-aws, linux-aws-5.4, linux-azure, linux-azure-5.4, linux-gcp,\n linux-gcp-5.4, linux-gke, linux-gkeop, linux-hwe-5.4, linux-ibm,\n linux-ibm-5.4, linux-kvm, linux-oracle, linux-oracle-5.4, linux-raspi,\n linux-raspi-5.4, linux-xilinx-zynqmp, linux, linux-aws, linux-aws-hwe, linux-azure, linux-azure-4.15,\n linux-dell300x, linux-gcp, linux-gcp-4.15, linux-hwe, linux-kvm,\n linux-oracle, linux-snapdragon, linux, linux-aws, linux-kvm, linux-lts-xenial, linux-aws-5.19, linux-gcp-5.19, linux-hwe-5.19, linux-intel-iotg-5.15, linux-iot, llvm-toolchain-13, llvm-toolchain-14, llvm-toolchain-15, open-iscsi, open-vm-tools, and xorg-server-hwe-16.04).",
-          "link": "https://lwn.net/Articles/939445/",
-          "publishedOn": "2023-07-27T19:27:55.000Z",
-          "wordCount": 329,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939217/",
-          "author": "corbet",
-          "description": "The fchmodat()\nsystem call on Linux hides a little secret: it does not actually implement\nall of the functionality that the man page claims (and that POSIX\ncalls for).  As a result, C libraries have to do a bit of a complicated\nworkaround to provide the API that applications expect.  That situation\nlooks likely to change with the 6.6 kernel, though, as the result of this patch\nseries posted by Alexey Gladkov.",
-          "link": "https://lwn.net/Articles/939217/",
-          "publishedOn": "2023-07-27T17:35:49.000Z",
-          "wordCount": null,
-          "title": "[$] Flags for fchmodat()",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939421/",
-          "author": "jake",
-          "description": "The 6.4.7, 6.1.42, 5.15.123, 5.10.188, and 5.4.251 stable kernels have been released.  As\nusual, they all contain lots of important fixes; users of those series\nshould upgrade.",
-          "link": "https://lwn.net/Articles/939421/",
-          "publishedOn": "2023-07-27T14:48:15.000Z",
-          "wordCount": 142,
-          "title": "Five new stable kernels",
-          "imageUrl": null
         }
       ]
     },
@@ -2376,16 +2316,6 @@
           "wordCount": 1682,
           "title": "Bottlenecks of Scaleups: Cost Efficiency",
           "imageUrl": "https://martinfowler.com/articles/bottlenecks-of-scaleups/card.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/exploring-gen-ai.html#median---a-tale-in-three-functions",
-          "author": null,
-          "description": "Birgitta Böckeler continues her explorations in using\n     LLMs, this time by asking GitHub Copilot to write a median\n     function. It gave her three suggestions to choose from. The\n     experience shows you still have to know what you're doing when asking LLMs\n     to write code, since the LLM's programming skills are often rather flawed.\nmore…",
-          "link": "https://martinfowler.com/articles/exploring-gen-ai.html#median---a-tale-in-three-functions",
-          "publishedOn": "2023-07-27T14:34:00.000Z",
-          "wordCount": 2163,
-          "title": "Exploring Gen AI - Three versions of a median",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
     },
@@ -2395,12 +2325,22 @@
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
         {
+          "id": "http://mcuoneclipse.com/?p=38729",
+          "author": "Erich Styger",
+          "description": "Modern tools need a powerful and flexible package and virtual environment manager. Conda or Miniconda has been developed around Python and Data Science, but is very useful for packaging environments for embedded development. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/08/25/vs-code-virtual-environments-for-embedded-development-with-conda/",
+          "publishedOn": "2023-08-25T21:40:00.000Z",
+          "wordCount": 4782,
+          "title": "VS Code: Virtual Environments for Embedded Development with Conda",
+          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/conda-in-vs-code.jpg?w=1200"
+        },
+        {
           "id": "http://mcuoneclipse.com/?p=38670",
           "author": "Erich Styger",
           "description": "The i.MX RT1010 EVK comes with an LPC4322-based debug probe. The default firmware can be easily replaced, giving a performance boost and added functionality. Continue reading →",
           "link": "https://mcuoneclipse.com/2023/08/23/upgrading-lpc4322-based-debug-probe-firmware-on-rt10xx/",
           "publishedOn": "2023-08-23T13:39:38.000Z",
-          "wordCount": 4082,
+          "wordCount": 4084,
           "title": "Upgrading LPC4322-based Debug Probe Firmware on RT10xx",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/nxp-i.mx-rt1010-evk-board.jpg"
         },
@@ -2637,7 +2577,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3185,
+          "wordCount": 3223,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         },
@@ -2669,18 +2609,7 @@
       "title": "Novel Bits",
       "feedUrl": "https://www.novelbits.io/feed",
       "siteUrl": "https://novelbits.io/",
-      "articles": [
-        {
-          "id": "https://novelbits.io/?p=25409",
-          "author": "Mohammad Afaneh",
-          "description": "It feels like an eternity since Bluetooth beacons were introduced! Sure, it’s been about 10 years, and yet they still show up in new use cases every single day. In today’s tutorial, we are going to focus on Apple’s iBeacon technology standard and implement our own iBeacon device step-by-step on the Silicon Labs BG22 Explorer […]\nThe post Mastering iBeacon: Step-by-step Silicon Labs BG22 Implementation Tutorial appeared first on Novel Bits.",
-          "link": "https://novelbits.io/ibeacon-tutorial-silicon-labs-bg22/",
-          "publishedOn": "2023-07-27T13:00:00.000Z",
-          "wordCount": 10768,
-          "title": "Mastering iBeacon: Step-by-step Silicon Labs BG22 Implementation Tutorial",
-          "imageUrl": "https://mlv0gpv1snjt.i.optimole.com/cb:lAJ-.51688/w:auto/h:auto/q:90/https://novelbits.io/wp-content/uploads/2023/07/iBeacon-Silicon-Labs-BG22.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "null program",
@@ -2693,7 +2622,7 @@
           "description": "In an effort to avoid programming by superstition, I did a deep dive\ninto the Win32 “environment block,” the data structure holding a process’s\nenvironment variables, in order to better understand it. Along the way I\ndiscovered implied and undocumented behaviors. (The environment block\nmust not to be confused with the Process Environment Block (PEB)\nwhich is different.) Because I cannot possibly retain all the quirky\ndetails in my head for long, I’m writing them down for future reference. I\nran my tests on different Windows versions as far back as Windows XP SP3\nin order to fill in gaps where documentation is ambiguous, incomplete, or\nwrong. Overall conclusion: Correct, direct manipulation of an environment\nblock is impossible in the general case due to under-specified and\nincorrect docume…",
           "link": "https://nullprogram.com/blog/2023/08/23/",
           "publishedOn": "2023-08-23T21:51:10.000Z",
-          "wordCount": 1613,
+          "wordCount": 1704,
           "title": "Everything you never wanted to know about Win32 environment blocks",
           "imageUrl": null
         },
@@ -2761,7 +2690,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1494,
+          "wordCount": 1493,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2808,7 +2737,7 @@
           "description": "This is the final episode of The Internet of Things Podcast, and to send us off after eight years, we don’t discuss the big news of the day such as Arm’s planned IPO, a new display option from Brilliant, or new gear from Leviton. Instead we share our reasons for stepping back from the show, […]\nThe post Episode 437: Goodbye and good luck appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/episode-437-goodbye-and-good-luck/",
           "publishedOn": "2023-08-24T13:00:02.000Z",
-          "wordCount": 2172,
+          "wordCount": 2174,
           "title": "Episode 437: Goodbye and good luck",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/lights2016.jpeg?fit=1251%2C938&ssl=1"
         },
@@ -2828,7 +2757,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. I wasn’t going to write anything more in this newsletter, but I was feeling inspired and so decided to leave y’all with one final opinion — and one final mandate. During a webinar Thursday focused […]\nThe post We are entering our maintenance era appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/we-are-entering-our-maintenance-era/",
           "publishedOn": "2023-08-21T15:20:13.000Z",
-          "wordCount": 2988,
+          "wordCount": 2990,
           "title": "We are entering our maintenance era",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/bigstock-Assortment-Of-Diy-Gardening-To-463818149.jpg"
         },
@@ -2971,16 +2900,6 @@
           "wordCount": 2566,
           "title": "IoT news of the week for July 28, 2023",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12717",
-          "author": "Stacey Higginbotham",
-          "description": "This week we didn’t see a ton of news, yet we managed to talk about several big trends in IoT. We started with an update on Amazon’s planned acquisition of iRobot, and Amazon dropping the price by 15%. We explain why and then decided to explain in depth why we need the planned cybersecurity labeling […]\nThe post Podcast: Tracking air quality with the IoT appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/podcast-tracking-air-quality-with-the-iot/",
-          "publishedOn": "2023-07-27T13:00:23.000Z",
-          "wordCount": 2131,
-          "title": "Podcast: Tracking air quality with the IoT",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/Screenshot-2023-07-26-at-3.35.04-PM.png?fit=783%2C424&ssl=1"
         }
       ]
     },
@@ -3627,46 +3546,6 @@
           "wordCount": 12805,
           "title": "‘감정’에 관한 뇌 과학의 최전선: 일곱 가지 질문",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/rose-165819_1280-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94319",
-          "author": "임예인",
-          "description": "초등학교 교사의 사망 사건 이후 모든 사회 이슈를 교권이 잡아먹은 느낌인데, 일련의 사건을 돌아보면 패턴을 읽을 수 있다. 지난주 오송 지하차도 사고 때는 경찰이 왜 제때 출동을 안 했느냐, 그 이전에 왜 지하차도를 차단하지 않났느냐를 두고 책임 공방이 있었다. 예천에서는 해병대원이 무리한 구조 작업에 투입됐다 급류에 휩쓸려 사망하는 사고도 있었다. 더 거슬러 올라가 보면 지난해...\nThe post 시스템의 붕괴, 왜 권한 없는 말단 공무원에게 책임을 묻나. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94319",
-          "publishedOn": "2023-07-28T06:42:44.000Z",
-          "wordCount": 2941,
-          "title": "시스템의 붕괴, 왜 권한 없는 말단 공무원에게 책임을 묻나.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12527163.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94309",
-          "author": "윤지명",
-          "description": "연일 주호민 작가의 재판 이야기가 화두다. 우리는 기자들의 기사로 전달 받는게 전부라서 사실 정확한 팩트를 체크하기엔 현재로선 무리가 있다. 하지만 한 가지 확실한 건 있다. 학교 안에 중재기관이 없고 학생들의 과잉 행동을 통제할 정책이 없다. 교사도 학생도 모두 ‘안전’하지 못한 시스템이란 이야기다. 교사는 한 명인데 과잉 행동을 하는 학생이 안전을 위협할 때 모두를 보호할 만한...\nThe post 주호민의 아이도, 그 아이의 교사도 모두 피해자다. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94309",
-          "publishedOn": "2023-07-28T01:18:52.000Z",
-          "wordCount": 3077,
-          "title": "주호민의 아이도, 그 아이의 교사도 모두 피해자다.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/05/person-homeless-bullied-hiding-9137c42208f57f7064ab6176a705ebeb-600x401.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94293",
-          "author": "이정환",
-          "description": "세금 깎아줄 테니 결혼하라고? 조세 부담률 20% 턱걸이, 소득 재분배는 악화. 정전 협정 70년, 키워드가 달랐다. 포스트 4대강 시작한다. 해법과 대안. 청년과 지방을 잇는 넥스트 로컬. 장애친화 산부인과에서 깨달은 것들. 1시간 1000원에 24시간 아이돌봄. 오늘의 TMI. 미국이 한국보다 금리 2%포인트 높다. 삼성전자 상반기 반도체 적자 9조 원. 몽골 인구 10%가 한국 유학 또는 취업. 꽁초가...\nThe post 금수저 한정 혜택, 세금 깎아 줄 테니 결혼하세요: 슬로우레터 7월28일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94293",
-          "publishedOn": "2023-07-27T22:04:27.000Z",
-          "wordCount": 3858,
-          "title": "금수저 한정 혜택, 세금 깎아 줄 테니 결혼하세요: 슬로우레터 7월28일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/WLA_nyhistorical_William_G_Forbes_Fork_and_spoon-1000x750.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94259",
-          "author": "이정환",
-          "description": "김건희 고속도로 논란이 새로운 국면으로 흐르고 있다. 대통령에 당선되자 마자 대통령 부인 소유의 땅으로 노선을 구부러지게 만드는 게 가능할까. 그게 아니라면 왜 예타(예비타당성조사)까지 끝낸 사업을 뒤집었을까. 지금까지 나온 여러 정황을 종합하면 새 정부 출범 직후 노선이 바뀌었는데 마침 우연히도 그 고속도로 종점에 김건희 땅이 있었을 뿐 둘 사이의 연결고리는 드러난 바 없다는 게 현실적인 결론이다....\nThe post 김건희 고속도로 미스터리, 이렇게 끝내선 안 된다. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94259",
-          "publishedOn": "2023-07-27T11:35:31.000Z",
-          "wordCount": 3086,
-          "title": "김건희 고속도로 미스터리, 이렇게 끝내선 안 된다.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/dVDlWkXD0BzW648825ae341f90.61003009-1000x646.jpg"
         }
       ]
     },
@@ -3884,16 +3763,6 @@
           "wordCount": 7113,
           "title": "2분기 메타 실적을 읽는 월가의 시선, 기대 이상의 실적과 기대 이상의 가이던스",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/06/페이스북-메타-표지판-Photo-by-CONSTANZA-HEVIA.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591281",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591281/2q-23-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2023-07-27T10:34:04.000Z",
-          "wordCount": 6257,
-          "title": "2분기 구글 알파벳 실적을 읽는 월가의 시선",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
         }
       ]
     },
@@ -3902,6 +3771,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77263",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 7월 3일 스프에 쓴 글입니다. *** 지난 회기 대법원 판결 가운데 소수자 우대 정책 위헌 판결에 관해서는 아메리카노에서도 다뤘습니다. 6월은 미국 대법원과 관련한 일을 하는 사람들이 가장 바쁜 달입니다. 미국 대법원 회기는 → 더 보기",
+          "link": "https://newspeppermint.com/2023/08/25/npsp_scotus2023/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_scotus2023",
+          "publishedOn": "2023-08-25T22:59:12.000Z",
+          "wordCount": 2382,
+          "title": "[뉴페@스프] 매번 헌법을 고쳐나가는 그곳, 올해 주요 판결은",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77637",
           "author": "NewsPeppermint",
