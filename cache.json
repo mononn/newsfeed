@@ -178,7 +178,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 743,
+          "wordCount": 736,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -201,16 +201,6 @@
           "wordCount": 982,
           "title": "[북리뷰] API 해킹의 모든 것",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/14/14/29/ac5260e7e7a2ef711d0ea876ff9a0f30.jpeg?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/14982716",
-          "author": "CPUU",
-          "description": "나에게 애증의 자격증이 되어버린 SW보안약점 진단원...\n2023년에 1차 교육에 참석한 후, 2023년 1차 자격시험에 응시하여 동회차 합격!!!!! 했다고 자랑하면 좋겠지만 사실은... 4수만에 합격했다.\n일전에 <불합격 후기>를 올린 적이 있다.\nhttps://cpuu.postype.com/post/13370786\n간단히 요약하면, 이 시험은 6년의 개발 경력 혹은 3년의 취약점 분석 경력이 있어야 응시가 가능하다. 즉, 이 시험을 치르는 사람들은 모두 다 직장인이라고 보면 된다. \n예를 들어 정보처리기사나 정보보안기사 시험은 대학교4학년이면 응시가 가능한 시험이다.  물론 보안기사도 실기 시험이 범위가 워낙 넓어서 합격하기가 쉽지는 않지만, 어쨌거나 그때는 '시간'이 많고, 솔직히 본인 공부 외에 책임져야 할 것들이 상대적으로 적은 시기이다. \n그러나 현재 이 시험을 응시하는 6년 차 직장인 분들은 결혼한 분들이 대부분이실 거고 퇴근 후에도 자녀 육아에 힘써야 하시기 때문에 결코 공부시간을 내는 게 쉽지는 않다. 그렇기 때문에 이 시험을 단순히 합격하기 쉽다/어렵다고 말하기가 힘들다. 만약에 하루 10시간씩 도서관이나 독서실 가서 방해받지 않고 공부에만 집중하실 수 있는 환경의 분들이라면 이 시험은 쉬운 시험이다. 공부해야 할 범위도 명확하기 때문에 600페이지 분량을 통째로 외워버리기만 하면 누구나 합격할 수 있다. 그러나, 직장과 육아를 병행하는 환경에서는 하루에 1~2시간 공부하는 것도 대단한 것이다. 본인도 지하철 1시간 정도씩 출퇴근하는 왕복 2시간 정도를 최대한 활용하려 했으나 그마저도 체력…",
-          "link": "https://cpuu.postype.com/post/14982716",
-          "publishedOn": "2023-07-28T13:55:57.000Z",
-          "wordCount": 975,
-          "title": "SW보안약점 진단원 합격 후기",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/07/27/10/49/4f2f0b164a1c9af09aadb4621b0d4d2d.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -500,16 +490,6 @@
           "wordCount": 2684,
           "title": "How to handle transactions in Node.js reference architecture",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
-        },
-        {
-          "id": "e588c9d2-ed9d-44b6-ad76-67949bc05ad7",
-          "author": "Valentina Rodriguez Sosa",
-          "description": "Last month Red Hat Developer hosted DevNation Day: Modern App Dev. This one-day virtual event brought together application developers, DevOps and platform engineers, enterprise architects, and application managers from across the globe.\nAttendees participated in hands-on labs and got expert advice from Red Hat practitioners on best practices, technologies, and architectures advancing the state of modern application development on the hybrid cloud with Red Hat OpenShift and Kubernetes. The event featured talks on app modernization, APIs, serverless, security, microservices, internal developer platforms, containers, application architecture, and much more.\nThe videos from DevNation Day: Modern App Dev are now available for you to watch online anytime. Read on to explore some of the highlight…",
-          "link": "https://developers.redhat.com/articles/2023/07/28/devnation-day-modern-app-dev-videos-are-now-available",
-          "publishedOn": "2023-07-28T13:00:00.000Z",
-          "wordCount": 2945,
-          "title": "DevNation Day: Modern App Dev videos are now available",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_Coding_Shared_image_A-01%20%284%29.png?itok=M_lzdbim"
         }
       ]
     },
@@ -797,26 +777,6 @@
           "wordCount": 5847,
           "title": "Boost ADC throughput by optimizing your MCU SPI driver",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/fine-tune-.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480016",
-          "author": "Nitin Dahad",
-          "description": "Biodegradable PCBs using Soluboard substrate from Jiva Materials are being piloted by Infineon with a view to reducing carbon footprint. \nThe post Infineon trials biodegradable PCBs to minimize electronic waste appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/infineon-trials-biodegradable-pcbs-to-minimize-electronic-waste/",
-          "publishedOn": "2023-07-28T15:17:45.000Z",
-          "wordCount": 3855,
-          "title": "Infineon trials biodegradable PCBs to minimize electronic waste",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/University-of-Washington-Biodegrading-Mouse.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480008",
-          "author": "Nitin Dahad",
-          "description": "Video interview with Joachim Kunkel of Synopsys covers latest trends in IP, automotive, IoT & security, and challenge for multi-die design.\nThe post Interview: multi-die addresses chip complexity but power is a challenge appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/interview-multi-die-addresses-chip-complexity-but-power-is-a-challenge/",
-          "publishedOn": "2023-07-28T10:44:52.000Z",
-          "wordCount": 3383,
-          "title": "Interview: multi-die addresses chip complexity but power is a challenge",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/07/Joachim-Kunkel-Synopsys.jpg"
         }
       ]
     },
@@ -1284,12 +1244,22 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/942864/",
+          "author": "corbet",
+          "description": "The\n6.1.48,\n5.15.128, and\n5.10.192\nstable kernels have been released; each contains another set of important\nfixes.",
+          "link": "https://lwn.net/Articles/942864/",
+          "publishedOn": "2023-08-27T18:05:03.000Z",
+          "wordCount": 130,
+          "title": "Three stable kernels",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/942770/",
           "author": "jake",
           "description": "The OpenTF Foundation has announced that it is moving forward with its eponymous fork of HashiCorp Terraform, which was recently changed to a non-FOSS license by the company.  The organization has applied to become part of the Linux Foundation, \"with the end goal of having OpenTF as part of Cloud Native Computing Foundation\".  There is a GitHub repository for its manifesto, but the code repository for OpenTF is private for now, with plans to open it up in the next week or two.  Work has been going on for the last week and more developers are coming on board:\n\nSo far, four companies pledged the equivalent of 14 full-time engineers (FTEs) to the OpenTF initiative. We expect this number to at least double in the following few weeks. To give you some perspective, Terraform was effectively maintained by about 5 FTEs from HashiCorp in the last 2 years. If you don’t believe us, look at their repository. \n\n\nSome of the people behind OpenTF are participating in a Hacker News thread, so more information can be found there as well.",
           "link": "https://lwn.net/Articles/942770/",
           "publishedOn": "2023-08-25T17:56:53.000Z",
-          "wordCount": 693,
+          "wordCount": 1499,
           "title": "OpenTF Announces Fork of Terraform",
           "imageUrl": null
         },
@@ -1359,7 +1329,7 @@
           "description": "Greg Kroah-Hartman has announced the release of two new stable kernels: 6.4.12 and 6.1.47.  Both contain lots of important fixes\nthroughout the kernel tree.",
           "link": "https://lwn.net/Articles/942529/",
           "publishedOn": "2023-08-23T17:44:57.000Z",
-          "wordCount": 141,
+          "wordCount": 175,
           "title": "Stable kernels 6.4.12 and 6.1.47",
           "imageUrl": null
         },
@@ -1421,16 +1391,6 @@
           "publishedOn": "2023-08-21T15:00:29.000Z",
           "wordCount": 839,
           "title": "LibreOffice 7.6 Community released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942311/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (fastdds, flask, and kernel), Fedora (chromium, dotnet6.0, dotnet7.0, gerbv, java-1.8.0-openjdk, libreswan, procps-ng, and spectre-meltdown-checker), SUSE (chromium, kernel-firmware, krb5, opensuse-welcome, and python-mitmproxy), and Ubuntu (clamav, firefox, and vim).",
-          "link": "https://lwn.net/Articles/942311/",
-          "publishedOn": "2023-08-21T14:46:10.000Z",
-          "wordCount": 279,
-          "title": "Security updates for Monday",
           "imageUrl": null
         },
         {
@@ -2032,56 +1992,6 @@
           "wordCount": 549,
           "title": "Kernel prepatch 6.5-rc4",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939568/",
-          "author": "corbet",
-          "description": "The Python Steering Council has announced\nits intent to accept PEP\n703 (Making the Global Interpreter Lock Optional in CPython), with\ninitial support possibly showing up in the 3.13 release.  There are still\nsome details to work out, though.\n\n\n\tWe want to be very careful with backward compatibility. We do not\n\twant another Python 3 situation, so any changes in third-party code\n\tneeded to accommodate no-GIL builds should just work in with-GIL\n\tbuilds (although backward compatibility with older Python versions\n\twill still need to be addressed). This is not Python 4. We are\n\tstill considering the requirements we want to place on ABI\n\tcompatibility and other details for the two builds and the effect\n\ton backward compatibility.",
-          "link": "https://lwn.net/Articles/939568/",
-          "publishedOn": "2023-07-28T22:03:51.000Z",
-          "wordCount": 1719,
-          "title": "No-GIL mode coming for Python",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939542/",
-          "author": "corbet",
-          "description": "For those who are interested in the gory details of how the StackRot vulnerability works, Ruihan Li has\nposted a detailed\nwriteup of the bug and how it can be exploited.\n\n\n\tAs StackRot is a Linux kernel vulnerability found in the memory\n\tmanagement subsystem, it affects almost all kernel configurations\n\tand requires minimal capabilities to trigger. However, it should be\n\tnoted that maple nodes are freed using RCU callbacks, delaying the\n\tactual memory deallocation until after the RCU grace\n\tperiod. Consequently, exploiting this vulnerability is considered\n\tchallenging.\n\n\tTo the best of my knowledge, there are currently no publicly\n\tavailable exploits targeting use-after-free-by-RCU (UAFBR)\n\tbugs. This marks the first instance where UAFBR bugs have been\n\tproven to be exploitable, even without the presence of\n\tCONFIG_PREEMPT or CONFIG_SLAB_MERGE_DEFAULT settings.",
-          "link": "https://lwn.net/Articles/939542/",
-          "publishedOn": "2023-07-28T18:16:37.000Z",
-          "wordCount": 242,
-          "title": "Exploiting the StackRot vulnerability",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939097/",
-          "author": "corbet",
-          "description": "One of the longstanding strengths of Linux, and a key to its early success,\nis its ability to interoperate with other systems.  That interoperability\nincludes filesystems; Linux supports a wide range of filesystem types,\nallowing it to mount filesystems created by many other operating systems.\nSome of those filesystem implementations, though, are better maintained\nthan others; developers at both the kernel and distribution levels are\ncurrently considering, again, how to minimize the security risks presented\nby the others.",
-          "link": "https://lwn.net/Articles/939097/",
-          "publishedOn": "2023-07-28T16:28:45.000Z",
-          "wordCount": null,
-          "title": "[$] Unmaintained filesystems as a threat vector",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939519/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (kernel and libmail-dkim-perl), Fedora (openssh), and SUSE (kernel).",
-          "link": "https://lwn.net/Articles/939519/",
-          "publishedOn": "2023-07-28T14:43:03.000Z",
-          "wordCount": 134,
-          "title": "Security updates for Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939511/",
-          "author": "corbet",
-          "description": "Systemd 254 has been released.  As usual, there is a long list of changes,\nincluding a new list-paths command for systemctl, the\nability to send POSIX signals to services, a \"soft reboot\" feature that\nrestarts user space while leaving the kernel in place, improved support for\n\"confidential\nvirtual machines\", and a lot more.\n\nThe announcement also notes the support for split-/usr systems\nwill be removed in the next release, and support for version-one control\ngroups and for System V service scripts will be deleted in the near\nfuture as well.",
-          "link": "https://lwn.net/Articles/939511/",
-          "publishedOn": "2023-07-28T14:29:23.000Z",
-          "wordCount": 6122,
-          "title": "Systemd 254 released",
-          "imageUrl": null
         }
       ]
     },
@@ -2577,19 +2487,9 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3223,
+          "wordCount": 3267,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
-        },
-        {
-          "id": "https://medium.com/p/969830fd6cdb",
-          "author": "Lucas Tamborrino",
-          "description": "Zephyr OS is an open-source, scalable, and adaptable real-time operating system (RTOS) for multiple hardware platforms, including…",
-          "link": "https://blog.espressif.com/core-dump-a-powerful-tool-for-debugging-programs-in-zephyr-with-esp32-boards-969830fd6cdb?source=rss----d5414d5dee73---4",
-          "publishedOn": "2023-07-28T19:00:25.000Z",
-          "wordCount": 4029,
-          "title": "Core Dump: A Powerful Tool for Debugging Programs in Zephyr with ESP32 Boards",
-          "imageUrl": "https://miro.medium.com/v2/da:true/resize:fit:850/1*jYTUyas5elSy9YEC7g4MMg.gif"
         }
       ]
     },
@@ -2617,12 +2517,22 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2023/08/27/",
+          "author": null,
+          "description": "For the typical DLL function call you declare the function prototype (via\nheader file), you inform the link editor (ld, link) that the DLL\nexports a symbol with that name (import library), it matches the declared\nname with this export, and it becomes an import in your program’s import\ntable. What happens when two different DLLs export the same symbol? The\nlink editor will pick the first found. But what if you want to use both\nexports? If they have the same name, how could program or link editor\ndistinguish them? In this article I’ll demonstrate a technique to resolve\nthis by creating a program which links with and directly uses two\ndifferent C runtimes (CRTs) simultaneously.\nIn PE executable images, an import isn’t just a symbol, but a tuple\nof DLL name and symbol. For human display, a tup…",
+          "link": "https://nullprogram.com/blog/2023/08/27/",
+          "publishedOn": "2023-08-27T01:46:31.000Z",
+          "wordCount": 1103,
+          "title": "How to link identical function names from different DLLs",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2023/08/23/",
           "author": null,
           "description": "In an effort to avoid programming by superstition, I did a deep dive\ninto the Win32 “environment block,” the data structure holding a process’s\nenvironment variables, in order to better understand it. Along the way I\ndiscovered implied and undocumented behaviors. (The environment block\nmust not to be confused with the Process Environment Block (PEB)\nwhich is different.) Because I cannot possibly retain all the quirky\ndetails in my head for long, I’m writing them down for future reference. I\nran my tests on different Windows versions as far back as Windows XP SP3\nin order to fill in gaps where documentation is ambiguous, incomplete, or\nwrong. Overall conclusion: Correct, direct manipulation of an environment\nblock is impossible in the general case due to under-specified and\nincorrect docume…",
           "link": "https://nullprogram.com/blog/2023/08/23/",
           "publishedOn": "2023-08-23T21:51:10.000Z",
-          "wordCount": 1704,
+          "wordCount": 1714,
           "title": "Everything you never wanted to know about Win32 environment blocks",
           "imageUrl": null
         },
@@ -2690,7 +2600,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1493,
+          "wordCount": 1491,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2890,16 +2800,6 @@
           "wordCount": 2788,
           "title": "How to think about AI based on what we learned with IoT",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/07/industryai.jpg?fit=900%2C471&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12720",
-          "author": "Stacey Higginbotham",
-          "description": "PTC’s CEO is set to step down: Jim Heppelmann, the CEO of PTC, which over the last decade has transitioned from a CAD software company to an industrial IoT software provider, will step down in February 2024. Neil Barua, president of PTC’s service lifecycle management business, will replace him as CEO. Heppelmann, who has been at PTC for […]\nThe post IoT news of the week for July 28, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/iot-news-of-the-week-for-july-28-2023/",
-          "publishedOn": "2023-07-28T17:33:01.000Z",
-          "wordCount": 2566,
-          "title": "IoT news of the week for July 28, 2023",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
         }
       ]
     },
@@ -3536,16 +3436,6 @@
           "wordCount": 20518,
           "title": "인어공주와 PC: 숭배와 혐오의 이분법, 그 가짜논쟁을 넘어서",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_008-1-1000x441.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94336",
-          "author": "민노씨",
-          "description": "[슬로우민트] 뉴스페퍼민트 이효석 박사가 추천하는 ‘좋은 책’에 관한 조금 더 깊은 이야기 이 글은 아래 일곱 개의 기사로 나눠 발행했던 인터뷰를 모두 합친 통합본입니다. (편집자) 뉴스페퍼민트 이효석 대표는 슬로우뉴스와는 귀한 인연을 가진 분입니다. KAIST에서 물리학을 공부하고 양자 컴퓨터를 전공해 박사 학위를 받았으며, 하버드에서는 오늘날 AI의 배경 기술 중 하나인 정보이론을 연구했습니다. 하버드 연구원 시절 시작한...\nThe post ‘감정’에 관한 뇌 과학의 최전선: 일곱 가지 질문 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94336",
-          "publishedOn": "2023-07-29T01:19:23.000Z",
-          "wordCount": 12805,
-          "title": "‘감정’에 관한 뇌 과학의 최전선: 일곱 가지 질문",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/rose-165819_1280-1.jpg"
         }
       ]
     },
@@ -3554,6 +3444,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=591508",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591508/2q-23-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2023-08-27T13:33:06.000Z",
+          "wordCount": 7167,
+          "title": "놀라운 2분기 엔비디아 실적을 읽는 월가의 시각",
+          "imageUrl": "https://happist.com/wp-content/uploads/2020/08/엔비디아-로고-nvidia-logo.jpg"
+        },
         {
           "id": "https://happist.com/?p=591505",
           "author": "happist",
@@ -3580,7 +3480,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591487/%ed%83%9c%ec%95%88-%ec%9a%b4%ec%97%ac%ed%95%b4%eb%b3%80-%ec%86%94%eb%b0%ad-%ec%84%9d%ec%96%91-%ec%b6%9c%ec%82%ac",
           "publishedOn": "2023-08-22T12:05:33.000Z",
-          "wordCount": 5520,
+          "wordCount": 5464,
           "title": "태안 운여해변 출사, 운여해변 솔밭 석양을 담다",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/안면도-운여해변-솔숲-석양-8870.jpg"
         },
@@ -3590,7 +3490,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591470/%ec%95%94%ec%9a%b8%ed%95%9c-%ec%a4%91%ea%b5%ad-%ec%a0%84%eb%a7%9d",
           "publishedOn": "2023-08-22T03:08:08.000Z",
-          "wordCount": 5769,
+          "wordCount": 5757,
           "title": "WSJ, 지금 중국 정점을 목격하고 있는 걸까?  암울한 중국 미래 전망",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/Screenshot_20230822-120712_Chrome.jpg"
         },
