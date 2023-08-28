@@ -41,12 +41,22 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/beautiful-cpp-book-review/",
+          "author": null,
+          "description": "Today, I’ll show you my review of a cool book, “Beautiful C++,” written by two well-known C++ experts and educators: Kate Gregory and Guy Davidson. The book’s unique style gives us a valuable perspective on effective and safe C++ code.\nLet’s see what’s inside.\nDisclaimer: I got a free copy from the publisher.\nDisclaimer 2: The links to Amazon are affiliate links, which provide me with some small commission.\n\n\n\n     \n    \n\n\nHere are the main links and info about the book:\n\nThe book on Amazon:\nBeautiful C++: 30 Core Guidelines for Writing Clean, Safe, and Fast Code @Amazon (released December 16, 2021).\nThe book page at Pearson:\nBeautiful C++: 30 Core Guidelines for Writing Clean, Safe, and Fast Code\nAll sample code is indexed at https://godbolt.org/z/cg30-ch0.0\nFor example, https://godbolt.o…",
+          "link": "https://www.cppstories.com/2023/beautiful-cpp-book-review/",
+          "publishedOn": "2023-08-28T00:00:00.000Z",
+          "wordCount": 2081,
+          "title": "Beautiful C++: 30 Core Guidelines... Book Review",
+          "imageUrl": "https://www.cppstories.com/2023/images/book_rev_beautiful.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/monadic-optional-ops-cpp23/",
           "author": null,
           "description": "In this post we’ll have a look at new operations added to std::optional in C++23. These operations, inspired by functional programming concepts, offer a more concise and expressive way to work with optional values, reducing boilerplate and improving code readability.\nLet’s meet and_then(), transform() and or_else(), new member functions.\nif/else and optional C++20 \n  \n\n\n\n\n     \n    \n\n\nIn C++20 when you work with std::optional you have to rely heavily on conditional checks to ensure safe access to the contained values. This often led to nested if/else code blocks, which could make the code verbose and harder to follow.\nConsider the task of fetching a user profile. The profile might be available in a cache, or it might need to be fetched from a server. Once retrieved, we want to extract the …",
           "link": "https://www.cppstories.com/2023/monadic-optional-ops-cpp23/",
           "publishedOn": "2023-08-21T00:00:00.000Z",
-          "wordCount": 2074,
+          "wordCount": 2080,
           "title": "How to Use Monadic Operations for `std::optional` in C++23",
           "imageUrl": "https://www.cppstories.com/2023/images/monadic_optional.png"
         },
@@ -178,7 +188,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 736,
+          "wordCount": 731,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -221,6 +231,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "90a0a2b6-a596-4f34-92e1-fc37aae7ff8e",
+          "author": "Tathagata Paul, Himanshu Yadav",
+          "description": "Ansible lint is a command-line tool that checks Ansible playbooks for errors and suggests improvements for the code written in the playbooks. This helps the users adhere to certain standards to follow while writing the playbooks to maintain the integrity of their code.\nThis article demonstrates how to install Ansible lint. We will also explore use cases and how to prevent errors during execution of playbooks and save debugging time.\nHow to install Ansible lint\nThe easiest way to install Ansible lint is by using pip as follows:\npython3 -m pip install –user ansible-lint\nOn Red Hat Enterprise Linux (RHEL) systems with a Red Hat Ansible Automation Platform subscription, we can also use dnf to install Ansible lint:\ndnf install ansible-lint\nWe can also install Ansible lint from the source reposi…",
+          "link": "https://developers.redhat.com/articles/2023/08/28/how-ansible-lint-improves-playbook-debugging",
+          "publishedOn": "2023-08-28T07:00:00.000Z",
+          "wordCount": 2719,
+          "title": "How Ansible lint improves playbook debugging",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
+        },
         {
           "id": "88a8e202-a314-4576-8af1-d640007153a0",
           "author": "Shankar Govindarajan",
@@ -531,7 +551,18 @@
       "title": "Embedded Artistry",
       "feedUrl": "https://embeddedartistry.com/feed/",
       "siteUrl": "https://embeddedartistry.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://embeddedartistry.com/?p=34270",
+          "author": "Phillip Johnston",
+          "description": "28 August 2023 by Phillip JohnstonEmbedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our goal is to spread beneficial techniques … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
+          "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
+          "publishedOn": "2023-08-28T17:42:32.000Z",
+          "wordCount": 7345,
+          "title": "Best Practices for Safeguarding Your Connected Devices",
+          "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
+        }
+      ]
     },
     {
       "title": "Embedded.com",
@@ -544,7 +575,7 @@
           "description": "There are risks with respect to China and competition from RISC-V, but Arm IPO is likely to focus on opportunity from AI. \nThe post Is AI the winning card for a successful Arm IPO? appeared first on Embedded.com.",
           "link": "https://www.embedded.com/is-ai-the-winning-card-for-a-successful-arm-ipo/",
           "publishedOn": "2023-08-25T18:10:36.000Z",
-          "wordCount": 4589,
+          "wordCount": 5506,
           "title": "Is AI the winning card for a successful Arm IPO?",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Arm-featured-image.jpg"
         },
@@ -786,6 +817,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1567.php",
+          "author": null,
+          "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
+          "link": "https://www.embeddedrelated.com/showarticle/1567.php",
+          "publishedOn": "2023-08-24T16:41:32.000Z",
+          "wordCount": 3925,
+          "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1563.php",
           "author": null,
           "description": "…and it was good.\r\n\t\n\r\n\r\nWhy is it that code starts out nice and deteriorates over time?",
@@ -821,7 +862,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3223,
+          "wordCount": 3202,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         },
@@ -1244,12 +1285,52 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/941675/",
+          "author": "corbet",
+          "description": "The 6.5 kernel was released\non August 27 after a nine-week development cycle.  By that time, some\n13,561 non-merge changesets had found their way into the mainline\nrepository, the lowest number seen since the 5.15 release (12,377\nchangesets) in late 2021.  Nonetheless, quite a bit of significant work was\ndone in this cycle; read on for a look at where that work came from.",
+          "link": "https://lwn.net/Articles/941675/",
+          "publishedOn": "2023-08-28T15:16:18.000Z",
+          "wordCount": null,
+          "title": "[$] Development statistics for the 6.5 kernel",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942937/",
+          "author": "jake",
+          "description": "August 26 was the 25th anniversary of the release of the  Bugzilla bug tracker as open-source software under the Mozilla Public License (MPL).  A blog post for the occasion has some announcements, including several upcoming releases, help wanted, and a new legal entity to house the project:\n\n\nWhich now brings us to today, when I’m happy to announce the formation of Zarro Boogs Corporation, which will now be overseeing the Bugzilla Project. This is a taxable non-profit non-charitable corporation - we have filed with the IRS our intent to operate under US Tax Code §501(c)(4) (still pending approval from the IRS) meaning the IRS would require us to spend money raised on project expenses and not make a profit, but money donated to us will not earn you a tax deduction because we aren’t a charity (software development is not considered a charitable cause in the US). Unlike Thunderbird, which is a subsidiary of the Mozilla Foundation, we are an independent entity not owned by or associated with the Mozilla Foundation, although they have licensed the use of the Bugzilla trademark to us.",
+          "link": "https://lwn.net/Articles/942937/",
+          "publishedOn": "2023-08-28T15:10:17.000Z",
+          "wordCount": 308,
+          "title": "Bugzilla Celebrates 25 Years With Special Announcements (Bugzilla blog)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942922/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium, clamav, librsvg, rar, and unrar-nonfree), Fedora (caddy, chromium, and xen), and SUSE (ca-certificates-mozilla, gawk, ghostscript, java-1_8_0-ibm, java-1_8_0-openjdk, php7, qemu, and xen).",
+          "link": "https://lwn.net/Articles/942922/",
+          "publishedOn": "2023-08-28T14:32:55.000Z",
+          "wordCount": 255,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/942876/",
+          "author": "corbet",
+          "description": "Linus has, as expected, released the 6.5\nkernel.\n\n\n\tI still have this nagging feeling that a lot of people are on\n\tvacation and that things have been quiet partly due to that. But\n\tthis release has been going smoothly, so that's probably just me\n\tbeing paranoid.  The biggest patches this last week were literally\n\tjust to our selftests.\n\n\nHeadline features in 6.5 include\nfaster booting on large x86 systems,\nArm Permission Indirection Extension\nsupport,\nRust 1.68.2 support,\nunaccepted memory handling,\n\"mount beneath\" support for filesystems,\nthe cachestat() system call,\nthe ability to pass a pidfd via a SCM_CREDENTIALS control message,\nscope-based resource management for\ninternal kernel code,\nthe deprecation of the SLAB allocator,\nand more.  See the LWN merge-window summaries\n(part 1,\npart 2) and the (in-progress)\nKernelNewbies 6.5 page\nfor details.",
+          "link": "https://lwn.net/Articles/942876/",
+          "publishedOn": "2023-08-27T22:30:38.000Z",
+          "wordCount": 251,
+          "title": "The 6.5 kernel has been released",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/942864/",
           "author": "corbet",
-          "description": "The\n6.1.48,\n5.15.128, and\n5.10.192\nstable kernels have been released; each contains another set of important\nfixes.",
+          "description": "The\n6.1.48,\n5.15.128, and\n5.10.192\nstable kernels have been released; each contains another set of important\nfixes.\n\nUpdate: 6.1.49 has also been\nreleased.  \"This upgrade is only for all users of the 6.1 series that\nuse the x86 platform OR the F2FS file system.  If that's not you, feel free\nto ignore this release.\"",
           "link": "https://lwn.net/Articles/942864/",
           "publishedOn": "2023-08-27T18:05:03.000Z",
-          "wordCount": 130,
+          "wordCount": 167,
           "title": "Three stable kernels",
           "imageUrl": null
         },
@@ -1259,7 +1340,7 @@
           "description": "The OpenTF Foundation has announced that it is moving forward with its eponymous fork of HashiCorp Terraform, which was recently changed to a non-FOSS license by the company.  The organization has applied to become part of the Linux Foundation, \"with the end goal of having OpenTF as part of Cloud Native Computing Foundation\".  There is a GitHub repository for its manifesto, but the code repository for OpenTF is private for now, with plans to open it up in the next week or two.  Work has been going on for the last week and more developers are coming on board:\n\nSo far, four companies pledged the equivalent of 14 full-time engineers (FTEs) to the OpenTF initiative. We expect this number to at least double in the following few weeks. To give you some perspective, Terraform was effectively maintained by about 5 FTEs from HashiCorp in the last 2 years. If you don’t believe us, look at their repository. \n\n\nSome of the people behind OpenTF are participating in a Hacker News thread, so more information can be found there as well.",
           "link": "https://lwn.net/Articles/942770/",
           "publishedOn": "2023-08-25T17:56:53.000Z",
-          "wordCount": 1499,
+          "wordCount": 1649,
           "title": "OpenTF Announces Fork of Terraform",
           "imageUrl": null
         },
@@ -1351,46 +1432,6 @@
           "publishedOn": "2023-08-23T14:15:07.000Z",
           "wordCount": 293,
           "title": "Security updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/941796/",
-          "author": "jake",
-          "description": "The\nPineTime is an inexpensive\nsmartwatch developed by PINE64 that is\ndesigned to run open-source operating systems. Despite its low cost, however,\nit has most of the features expected from more expensive, proprietary\nsmartwatches. Because it runs open-source software, though, interested\ndevelopers \ncan add any other useful features that they dream up.",
-          "link": "https://lwn.net/Articles/941796/",
-          "publishedOn": "2023-08-22T14:47:30.000Z",
-          "wordCount": null,
-          "title": "[$] PineTime: a smartwatch for open-source software",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942405/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (intel-microcode, lxc, and zabbix), Fedora (clamav), SUSE (python-configobj), and Ubuntu (clamav).",
-          "link": "https://lwn.net/Articles/942405/",
-          "publishedOn": "2023-08-22T14:20:29.000Z",
-          "wordCount": 157,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/941764/",
-          "author": "corbet",
-          "description": "Making a filesystem implementation robust in the face of maliciously\ncreated filesystem images is a challenging task even when the\nimplementation is actively maintained, which many in the kernel are not.  There is a way to\nmake that task even harder, though: modify that filesystem image behind the\nimplementation's back while it is mounted.  A recent discussion on the\nlinux-fsdevel list reveals an ongoing disagreement over whether (and how)\nthis threat should be addressed.",
-          "link": "https://lwn.net/Articles/941764/",
-          "publishedOn": "2023-08-21T17:02:58.000Z",
-          "wordCount": null,
-          "title": "[$] Defending mounted filesystems from the root user",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942312/",
-          "author": "jake",
-          "description": "The Document Foundation\nhas announced\nthe release of LibreOffice 7.6 Community.  It is the last release\nusing the existing numbering scheme as the office suite will move to date-based\nrelease numbers starting with LibreOffice 24.2 in\nFebruary, 2024.  Highlights of this release include support for\ndocument themes, including import and export of them, a new navigation\npanel for Impress and Draw, zoom-gesture support, font-handling\nimprovements, and lots more; the release\nnotes have all the details.\n\n\nLibreOffice 7.6 Community's new features have been developed by 148\ncontributors: 61% of code commits are from the 52 developers employed by\nthree companies sitting in TDF's Advisory Board – Collabora, Red Hat and\nallotropia – or other organizations, 15% are from 7 developers at The\nDocument Foundation, and the remaining 24% are from 89 individual\nvolunteers. \n\nOther 202 volunteers – representing hundreds of other people providing\ntranslations – have committed localizations in 160 languages. LibreOffice\n7.6 Community is released in 120 different language versions, more than any\nother free or proprietary software, and as such can be used in the native\nlanguage (L1) by over 5.4 billion people worldwide. In addition, over 2.3\nbillion people speak one of those 120 languages as their second language\n(L2).",
-          "link": "https://lwn.net/Articles/942312/",
-          "publishedOn": "2023-08-21T15:00:29.000Z",
-          "wordCount": 839,
-          "title": "LibreOffice 7.6 Community released",
           "imageUrl": null
         },
         {
@@ -2240,7 +2281,7 @@
           "description": "Modern tools need a powerful and flexible package and virtual environment manager. Conda or Miniconda has been developed around Python and Data Science, but is very useful for packaging environments for embedded development. Continue reading →",
           "link": "https://mcuoneclipse.com/2023/08/25/vs-code-virtual-environments-for-embedded-development-with-conda/",
           "publishedOn": "2023-08-25T21:40:00.000Z",
-          "wordCount": 4782,
+          "wordCount": 5212,
           "title": "VS Code: Virtual Environments for Embedded Development with Conda",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/conda-in-vs-code.jpg?w=1200"
         },
@@ -2487,7 +2528,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3267,
+          "wordCount": 3377,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -2595,12 +2636,22 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8134",
+          "author": "Derek Jones",
+          "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
+          "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
+          "publishedOn": "2023-08-27T21:29:59.000Z",
+          "wordCount": 1500,
+          "title": "Readability of anonymous inner classes and lambda expressions",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8109",
           "author": "Derek Jones",
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1491,
+          "wordCount": 1505,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2647,7 +2698,7 @@
           "description": "This is the final episode of The Internet of Things Podcast, and to send us off after eight years, we don’t discuss the big news of the day such as Arm’s planned IPO, a new display option from Brilliant, or new gear from Leviton. Instead we share our reasons for stepping back from the show, […]\nThe post Episode 437: Goodbye and good luck appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/episode-437-goodbye-and-good-luck/",
           "publishedOn": "2023-08-24T13:00:02.000Z",
-          "wordCount": 2174,
+          "wordCount": 2173,
           "title": "Episode 437: Goodbye and good luck",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/lights2016.jpeg?fit=1251%2C938&ssl=1"
         },
@@ -2657,7 +2708,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 2940,
+          "wordCount": 2972,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -2667,7 +2718,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. I wasn’t going to write anything more in this newsletter, but I was feeling inspired and so decided to leave y’all with one final opinion — and one final mandate. During a webinar Thursday focused […]\nThe post We are entering our maintenance era appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/we-are-entering-our-maintenance-era/",
           "publishedOn": "2023-08-21T15:20:13.000Z",
-          "wordCount": 2990,
+          "wordCount": 2989,
           "title": "We are entering our maintenance era",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/bigstock-Assortment-Of-Diy-Gardening-To-463818149.jpg"
         },
@@ -2868,12 +2919,32 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=95868",
+          "author": "정혜승",
+          "description": "[마냐의 북라이딩] 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, ‘홍보가 아니라 소통입니다’ 저자 정혜승의 종횡무진 독서 탐험기. 오늘 [마냐의 북라이딩]에서 함께 읽을 책은 ‘맬러리 오마라, 정영은 옮김, [걸리 드링크], RHK: 2023.’입니다. ‘인류사 뒤편에 존재했던 위대한 여성 술꾼들의 연대기’라는 부제를 단 이 책은 알코올을 발견하고, 지켜내고, 찬양해온 모든 취한 여자들의 ‘방대한’ 역사를 담아내고 있습니다. 술의...\nThe post 위대한 여성 술꾼들: 여신과 수녀, 마녀와 가수, 사업가와 밀수업자까지 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95868",
+          "publishedOn": "2023-08-28T06:27:21.000Z",
+          "wordCount": 6354,
+          "title": "위대한 여성 술꾼들: 여신과 수녀, 마녀와 가수, 사업가와 밀수업자까지",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/gm-3647e85b-fcae-4723-ae0e-21e962f76509-bridget.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=95841",
+          "author": "이정환",
+          "description": "“기준치 미만이던데?”라는 멍청한 소리. 중국은 일본 수산물 전면 수입 금지. 홍범도·김좌진 치운 자리에 백선엽 올린다고? 광주 정율성 공원도 논란. 이동관 보도를 보면 누가 줄을 섰는지 보인다. 더 깊게 읽기. 이재명 1년, 점수가 높지 않다. 김상희 특혜 환매 의혹, 이복현의 작품이었다. 전기요금 3억 원 아끼려 국가 슈퍼컴 가동 중단. 오늘의 TMI. 새끼 펭귄 1만 마리 죽었다....\nThe post 후쿠시마 오염수, 프레임 전쟁이 시작됐다: 슬로우레터 8월28일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/95841",
+          "publishedOn": "2023-08-27T22:00:38.000Z",
+          "wordCount": 6205,
+          "title": "후쿠시마 오염수, 프레임 전쟁이 시작됐다: 슬로우레터 8월28일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/Water_Storage_Tanks_02813604.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=95736",
           "author": "민노씨",
           "description": "[슬로우민트] 뉴스페퍼민트 이효석 대표가 추천하는 좋은 책에 관한 이야기. 두 번째 책은 다윈의 ‘성선택’ 이론의 복권을 시도한 ‘아름다움의 진화'(리처드 프럼). “나는 공작의 꽁지에 있는 깃털을 들여다볼 때마다 구역질이 난다네!” 찰스 다윈, Darwin to Asa Gray, April 3 [1860], Darwin Correspondence Project, Letter 2743. 다윈은 [종의 기원] (1859)을 발표한 이듬해인 1860년에 친구에게 보내는 편지에서 진심으로 공작의...\nThe post 찰스 다윈, 다윈이즘에 대한 최초의 반역자 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95736",
           "publishedOn": "2023-08-25T06:31:18.000Z",
-          "wordCount": 4920,
+          "wordCount": 4907,
           "title": "찰스 다윈, 다윈이즘에 대한 최초의 반역자",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/11888974263_862ea3f5ba_k.jpg"
         },
@@ -2883,7 +2954,7 @@
           "description": "급기야 윤석열 정권이 ‘파시즘의 수령’에 빠지지 않을까라는 우려가 본격적으로 제기되기 시작했다. 8월 15일 경향신문 칼럼 [여적/‘파시스트 되는 법’]은 윤석열 정권이 비판 언론과 시민사회, 노조를 적으로 규정해 혐오를 조장하는 등 곳곳에서 파시즘적 징후가 감지된다고 지적했다. 그런 우려에 동감하면서도 사실은 더 비관적이다. 파시즘의 수렁이 전제주의 국가를 위한 진지를 구축하는 단계로 보이기 때문이다. 파시스트 사회나 전제주의 국가나 별반...\nThe post 다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95827",
           "publishedOn": "2023-08-25T03:56:32.000Z",
-          "wordCount": 5074,
+          "wordCount": 5082,
           "title": "다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2016/10/i_001-14.jpg"
         },
@@ -2953,7 +3024,7 @@
           "description": "“어떻게 안보가 위험해진다는 것이냐.” 방문진 이사장 해임, KBS에는 황근 추천. 대법원장엔 윤석열 후배가 유력. 후쿠시마 오염수 24일 방류 가능성. 돈 받고 문제 판 교사들 188명. 누가 사단장을 감싸고 도나. 후쿠시마 오염수 안전 홍보 영상, 대통령실에서 만들었다. 체포 동의안 투표 보이콧? 민주당 내분. 해법과 대안. 장애인의 씻을 권리. ‘먹튀’ 기업에 받아낸 사회적 고용기금. “교사를 죄인으로 간주한...\nThe post “어떻게 안보가 위험해진다는 것이냐” 세상 평화로운 대통령: 슬로우레터 8월22일. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95665",
           "publishedOn": "2023-08-21T22:05:19.000Z",
-          "wordCount": 5850,
+          "wordCount": 5264,
           "title": "“어떻게 안보가 위험해진다는 것이냐” 세상 평화로운 대통령: 슬로우레터 8월22일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/a1EpyQAhthjl64e160cb21aba6.64733764-1000x666.jpg"
         },
@@ -2983,7 +3054,7 @@
           "description": "넷플릭스가 원래 DVD 대여 서비스로 출발했다는 건 다들 알고 있을 텐데 아직까지도 DVD 대여를 계속해 왔다는 건 모르는 사람이 많았을 것 같다. 최근까지도 100만 명 이상이 DVD 대여 서비스를 이용하고 있다는 놀라운 사실. 마지막 랜덤 우편 발송. 이게 왜 중요한가. TMI. 다르게 읽기. 알짜배기 사업을 왜 접을까. 생각해 볼 부분.\nThe post 넷플릭스가 DVD 사업을 접는다는 사실이 의미하는 것. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95605",
           "publishedOn": "2023-08-20T08:23:05.000Z",
-          "wordCount": 4778,
+          "wordCount": 4790,
           "title": "넷플릭스가 DVD 사업을 접는다는 사실이 의미하는 것.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/50373348322_e50b8f1ee1_b.jpg"
         },
@@ -3426,16 +3497,6 @@
           "wordCount": 5793,
           "title": "K(카진스키)를 생각한다: 1. 좌파",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_004-9.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94360",
-          "author": "민노씨",
-          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 이 글은 아래 다섯 개 기사로 발행된 인터뷰를 하나로 통합한 것입니다. (편집자) 슬로우뉴스 창간 동인 캡콜드(펜실베이니아주립대학교 김낙호 교수) 님은 만화 덕후이자 미디어 전문가로 연구 분야는 언론학입니다. 캡콜드 님께 사회적 논란과 지적 이슈에 관해 묻고, 그 답변을 정리합니다. 첫 번째 콜드케이스는 인어공주와 PC(정치적 올바름)...\nThe post 인어공주와 PC: 숭배와 혐오의 이분법, 그 가짜논쟁을 넘어서 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94360",
-          "publishedOn": "2023-07-30T05:01:27.000Z",
-          "wordCount": 20518,
-          "title": "인어공주와 PC: 숭배와 혐오의 이분법, 그 가짜논쟁을 넘어서",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_008-1-1000x441.jpg"
         }
       ]
     },
@@ -3480,7 +3541,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591487/%ed%83%9c%ec%95%88-%ec%9a%b4%ec%97%ac%ed%95%b4%eb%b3%80-%ec%86%94%eb%b0%ad-%ec%84%9d%ec%96%91-%ec%b6%9c%ec%82%ac",
           "publishedOn": "2023-08-22T12:05:33.000Z",
-          "wordCount": 5464,
+          "wordCount": 5520,
           "title": "태안 운여해변 출사, 운여해변 솔밭 석양을 담다",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/안면도-운여해변-솔숲-석양-8870.jpg"
         },
@@ -3490,7 +3551,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591470/%ec%95%94%ec%9a%b8%ed%95%9c-%ec%a4%91%ea%b5%ad-%ec%a0%84%eb%a7%9d",
           "publishedOn": "2023-08-22T03:08:08.000Z",
-          "wordCount": 5757,
+          "wordCount": 5769,
           "title": "WSJ, 지금 중국 정점을 목격하고 있는 걸까?  암울한 중국 미래 전망",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/Screenshot_20230822-120712_Chrome.jpg"
         },
@@ -3671,6 +3732,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77668",
+          "author": "NewsPeppermint",
+          "description": "중국 경제 위기가 심상치 않다는 기사가 연이어 나오고 있습니다. 폴 크루그먼도 뉴욕타임스 칼럼에 이에 관한 이야기를 썼습니다. 이번 경제 위기가 지금까지 위기와 어떻게 다른지 이해하려면 중국의 현재 상황을 좀 더 자세히 들여다 봐야 합니다. 크루그먼의 칼럼을 번역하고, 다른 기사들을 모아 해설을 달았습니다. 전문 번역: 지금 중국에 닥친 경제 위기, 얼마나 심각한가? [폴 크루그먼] 해설: 중국 부동산 위기, 이번엔 뭐가 다른가?",
+          "link": "https://newspeppermint.com/2023/08/27/npsp_chinaeconomy/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_chinaeconomy",
+          "publishedOn": "2023-08-28T01:35:19.000Z",
+          "wordCount": 1372,
+          "title": "중국 부동산 위기, 이번엔 뭐가 다른가?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77263",
           "author": "ingppoo",
