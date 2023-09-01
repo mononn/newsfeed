@@ -125,14 +125,24 @@
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
       "articles": [
         {
+          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:5920324a-8c57-47d0-b042-cdebcb8fe27e",
+          "author": "Chris Goodyer",
+          "description": "We have released our first version of Arm Performance Libraries (ArmPL) fully compatible with M-series Apple silicon running macOS.(read more)",
+          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/first-macos-release-of-arm-performance-libraries",
+          "publishedOn": "2023-09-01T09:12:00.000Z",
+          "wordCount": 4282,
+          "title": "First macOS release of Arm Performance Libraries",
+          "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-12/Untitled-design_2D00_36.jpg_2D00_1600x900.jpg"
+        },
+        {
           "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:202b4d5d-d704-49ef-829c-94e4a13ca579",
           "author": "Jiaming Guo",
           "description": "Part 3. This blog introduces how to enable PMU feature in Armv8-A CPUs and provides an example of performance analysis workflow on real Armv8-A  platform.(read more)",
           "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/p3-perf-pmu-feature-armv8-cpus",
           "publishedOn": "2023-08-22T10:00:00.000Z",
-          "wordCount": 5024,
+          "wordCount": 5005,
           "title": "Using Perf to enable PMU functionality on Armv8-A CPUs: Stage 3 and Stage 4",
-          "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-42/ARM2028_5F00_Blog_5F00_Header_5F00_Images_5F00_1600x900_5F00_1_5F00_ST1.jpg"
+          "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-42/8055.ARM2028_5F00_Blog_5F00_Header_5F00_Images_5F00_1600x900_5F00_1_5F00_ST1.jpg"
         },
         {
           "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:045af537-b42a-4ca7-8a4b-521ac4c6ab4d",
@@ -167,7 +177,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 733,
+          "wordCount": 734,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -210,6 +220,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "94e338a7-dd9b-4b3a-b292-0941474d3d31",
+          "author": "Romain Pelisse",
+          "description": "For decades now, software projects have relied on messaging APIs to exchange data. In the Java/Java EE ecosystem, this method of asynchronous communication has been standardized by the JMS specification. In many cases, individuals and organizations leverage Red Hat JBoss Enterprise Application Platform (JBoss EAP) to act as message-oriented middleware (MOM), which facilitates the management of message queues and topics.\nMessaging ensures that no messages are lost as they are transmitted from the client and delivered to interested parties. On top of that, JBoss EAP provides authentication and other security-focused capabilities on top of the management functions.\nIn this article, we'll show how to fully automate the setup of JBoss EAP and a JMS queue using Ansible so that we can easily make…",
+          "link": "https://developers.redhat.com/articles/2023/09/01/automate-message-queue-deployment-jboss-eap",
+          "publishedOn": "2023-09-01T07:00:00.000Z",
+          "wordCount": 8013,
+          "title": "Automate message queue deployment on JBoss EAP",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
+        },
         {
           "id": "f47b49a2-c3b2-480f-ad54-b943d9caebdf",
           "author": "Arjun Shankar",
@@ -299,16 +319,6 @@
           "wordCount": 4035,
           "title": "How to migrate a complex JBoss EAP application to OpenShift",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
-        },
-        {
-          "id": "a1f6500c-f583-4d1c-8cc7-9e2255a829fa",
-          "author": "Yashwanth Maheshwaram",
-          "description": "Red Hat's migration toolkit for applications 6.2 takes Java application modernization a step further with new integrations for Jira, migration waves management, and Red Hat OpenShift monitoring.\nWith these integrations, the migration toolkit for applications can now help organizations create a backlog of work directly on Jira so that your engineering teams can pick up tickets. The support for migration waves enables you to process the backlog in batches and then plan for the whole application modernization at once. You can also make migration waves available directly on Jira. \nRead on for a complete list of new features in the migration toolkit for applications 6.2, available with a Red Hat OpenShift subscription.\nJira integration\nThe integration of the migration toolkit for applications w…",
-          "link": "https://developers.redhat.com/articles/2023/08/22/migration-toolkit-applications-62-agile-java-modernization",
-          "publishedOn": "2023-08-22T17:30:00.000Z",
-          "wordCount": 2306,
-          "title": "Migration toolkit for applications 6.2: Agile Java modernization",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC_migration1_2x.png?itok=mNjHPyLj"
         },
         {
           "id": "04c37be9-99a3-482a-a854-e946e04feef4",
@@ -439,36 +449,6 @@
           "wordCount": 3437,
           "title": "Back up Kubernetes persistent volumes using OADP",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_OS_Shared_image_A_3.png?itok=96qQ_zu-"
-        },
-        {
-          "id": "2acf5595-4721-4ec9-9ad8-bc740ec57fe1",
-          "author": "Aine Keenan",
-          "description": "Many think of Podman to be a replacement for Docker (if they have heard of Podman at all). But, this is not the case, as Podman is another option that provides better security and developer features. Podman is a cloud-native, daemonless tool that helps developers manage their Linux containers. Podman is all about security, but also minimizing the friction between your local development environment and production.\nPodman uses a microservices approach, creating a network with many other cloud-native products, such as Buildah and Skopeo, to build and push containers. This makes Podman a lighter and faster application than Docker, allowing for customization and changes.\nIn this article, we will describe three advantages of Podman related to extensions and embedded tools integrated in the Podma…",
-          "link": "https://developers.redhat.com/articles/2023/08/03/3-advantages-docker-podman",
-          "publishedOn": "2023-08-03T07:00:00.000Z",
-          "wordCount": 3255,
-          "title": "Discover 3 advantages of Podman over Docker",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/intro_podman_2x.png?itok=j7UCP4h6"
-        },
-        {
-          "id": "67ff1453-79fe-40e5-85d1-0dfa64b17a72",
-          "author": "Vivien Wang",
-          "description": "The VMware Antrea Operator, a network cluster operator for deploying Antrea as the default cluster network in Red Hat OpenShift, is now certified and available as a container network interface (CNI) plug-in and can be deployed on OpenShift 4.9, 4.10, 4.11, and 4.12.\nThe container network interface (CNI) badge represents a distinct classification in the Red Hat OpenShift certification ecosystem and is reserved for networking solutions that integrate with OpenShift via a CNI plug-in.\nTo qualify for this badge, the CNI plug-in must be deployed and managed through an operator. Partners are required to complete the relevant operator certification and successfully pass a series of end-to-end tests. Once approved, the operator is published in the Red Hat Ecosystem Catalog and can be utilized by c…",
-          "link": "https://developers.redhat.com/articles/2023/08/03/vmware-antrea-now-generally-available-openshift",
-          "publishedOn": "2023-08-03T07:00:00.000Z",
-          "wordCount": 2709,
-          "title": "VMware Antrea is now Generally Available on OpenShift",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
-        },
-        {
-          "id": "2acf5595-4721-4ec9-9ad8-bc740ec57fe1",
-          "author": "Aine Keenan",
-          "description": "Many think of Podman to be a replacement for Docker (if they have heard of Podman at all). But, this is not the case, as Podman is another option that provides better security and developer features. Podman is a cloud-native, daemonless tool that helps developers manage their Linux containers. Podman is all about security, but also minimizing the friction between your local development environment and production.\nPodman uses a microservices approach, creating a network with many other cloud-native products, such as Buildah and Skopeo, to build and push containers. This makes Podman a lighter and faster application than Docker, allowing for customization and changes.\nIn this article, we will describe three advantages of Podman related to extensions and embedded tools integrated in the Podma…",
-          "link": "https://developers.redhat.com/articles/2023/08/03/3-reasons-drop-docker-podman",
-          "publishedOn": "2023-08-03T07:00:00.000Z",
-          "wordCount": 3238,
-          "title": "3 reasons to drop Docker for Podman",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/intro_podman_2x.png?itok=j7UCP4h6"
         }
       ]
     },
@@ -517,7 +497,7 @@
           "description": "28 August 2023 by Phillip JohnstonEmbedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our goal is to spread beneficial techniques … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7302,
+          "wordCount": 7300,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -528,6 +508,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480308",
+          "author": "Nitin Dahad",
+          "description": "Semtech and Oxit collaboration uses the Oxtech multi-connectivity module to allow customers to connect to AWS IoT Core for both Amazon Sidewalk and LoRaWan.\nThe post Module enables single IoT endpoint for Amazon Sidewalk and LoRaWAN appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/module-enables-single-iot-endpoint-for-amazon-sidewalk-and-lorawan/",
+          "publishedOn": "2023-09-01T14:16:12.000Z",
+          "wordCount": 3501,
+          "title": "Module enables single IoT endpoint for Amazon Sidewalk and LoRaWAN",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/semtech-oxit-module.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480297",
+          "author": "Nitin Dahad",
+          "description": "Recogni’s new Pegasus PCIe card allows its Scorpio processor to be integrated into any mobility solution needing autonomous capability, when used in conjunction with the company’s SDK.\nThe post PCIe card for AI inferencing processor targets autonomous mobility market appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/pcie-card-for-ai-inferencing-processor-targets-autonomous-mobility-market/",
+          "publishedOn": "2023-09-01T11:41:57.000Z",
+          "wordCount": 3679,
+          "title": "PCIe card for AI inferencing processor targets autonomous mobility market",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/Recogni-Pegasus.jpg"
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480294",
+          "author": "Jacob Beningo",
+          "description": "Over the last few years, there have been currents in the software industry that the future of code is no code. Businesses today are constantly...\nThe post Will no code solutions dominate the future of embedded? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/will-no-code-solutions-dominate-the-future-of-embedded/",
+          "publishedOn": "2023-09-01T11:18:53.000Z",
+          "wordCount": 3736,
+          "title": "Will no code solutions dominate the future of embedded?",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/no-code-.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480286",
           "author": "Nitin Dahad",
@@ -544,7 +554,7 @@
           "description": "We discuss the main concepts behind event-driven programming, which, after object-oriented programming, is another fundamental stepping stone in understanding modern embedded software. In this lesson,...\nThe post Programming embedded systems: event-driven programming appeared first on Embedded.com.",
           "link": "https://www.embedded.com/programming-embedded-systems-event-driven-programming/",
           "publishedOn": "2023-08-29T17:48:07.000Z",
-          "wordCount": 3712,
+          "wordCount": 3721,
           "title": "Programming embedded systems: event-driven programming",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/embedded_thumbnail-27.jpg"
         },
@@ -554,7 +564,7 @@
           "description": "The modern concept of a CI/CD pipeline is that it is automated and facilitates delivering rapid, minor improvements in software to the customer. In my...\nThe post How to define your ideal embedded CI/CD pipeline appeared first on Embedded.com.",
           "link": "https://www.embedded.com/how-to-define-your-ideal-embedded-ci-cd-pipeline/",
           "publishedOn": "2023-08-29T17:36:28.000Z",
-          "wordCount": 5123,
+          "wordCount": 4348,
           "title": "How to define your ideal embedded CI/CD pipeline",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/2308jb_f1.png"
         },
@@ -564,7 +574,7 @@
           "description": "Dual source energy harvesting inputs allow applications such as a remote control which can have separate PV cells on its front and rear to maintain an energy input whether the device is left face up or face down.\nThe post Energy harvesting PMIC accepts two sources including PV, RF, and kinetic appeared first on Embedded.com.",
           "link": "https://www.embedded.com/energy-harvesting-pmic-accepts-two-sources-including-pv-rf-and-kinetic/",
           "publishedOn": "2023-08-29T16:34:18.000Z",
-          "wordCount": 3521,
+          "wordCount": 4448,
           "title": "Energy harvesting PMIC accepts two sources including PV, RF, and kinetic",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/e-peas-AEM13920.jpg"
         },
@@ -574,7 +584,7 @@
           "description": "There are risks with respect to China and competition from RISC-V, but Arm IPO is likely to focus on opportunity from AI. \nThe post Is AI the winning card for a successful Arm IPO? appeared first on Embedded.com.",
           "link": "https://www.embedded.com/is-ai-the-winning-card-for-a-successful-arm-ipo/",
           "publishedOn": "2023-08-25T18:10:36.000Z",
-          "wordCount": 5509,
+          "wordCount": 4590,
           "title": "Is AI the winning card for a successful Arm IPO?",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Arm-featured-image.jpg"
         },
@@ -597,26 +607,6 @@
           "wordCount": 3554,
           "title": "Silicon Labs dual band SoCs for Amazon Sidewalk BLE and sub-GHz FSK",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Silicon-Labs-SG23SG28.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480232",
-          "author": "Dave Betts",
-          "description": "You should be careful not to make assumptions about what is scalable based on the non-obvious features of your earlier larger platform. Hardware design for...\nThe post Avoid these pitfalls when scaling audio systems design appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/avoid-these-pitfalls-when-scaling-audio-systems-design/",
-          "publishedOn": "2023-08-22T12:11:55.000Z",
-          "wordCount": 4140,
-          "title": "Avoid these pitfalls when scaling audio systems design",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/pcb_scaled-.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480227",
-          "author": "Ralph Moore",
-          "description": "The purpose of this article is to present features of a secure RTOS for MCU-based devices and show how their use can enable developers to...\nThe post Secure RTOS enables high security for microcontroller systems appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/secure-rtos-enables-high-security-for-microcontroller-systems/",
-          "publishedOn": "2023-08-20T12:07:22.000Z",
-          "wordCount": 8919,
-          "title": "Secure RTOS enables high security for microcontroller systems",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/secure_device-.jpg"
         },
         {
           "id": "https://www.embedded.com/?p=4480210",
@@ -796,12 +786,22 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1571.php",
+          "author": null,
+          "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1571.php",
+          "publishedOn": "2023-08-31T16:14:27.000Z",
+          "wordCount": 3407,
+          "title": "Who needs source code?",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1570.php",
           "author": null,
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3039,
+          "wordCount": 3032,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -811,7 +811,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32077,
+          "wordCount": 32055,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -821,7 +821,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3922,
+          "wordCount": 3945,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -861,7 +861,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3249,
+          "wordCount": 3233,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         },
@@ -1003,26 +1003,6 @@
           "wordCount": 1804,
           "title": "MakerSuite expands to 179 countries and territories, and adds helpful features for AI makers",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUamN23ar5ECnM46ve6N1OZI7skScieV26fpn4Riuoj5-3nNJSrrhGoe8xyFyA0FluTwNrxtzC2CysOTauOIexrYsdFphRX_p76R2JS6bJfD57m5r4o52I0fsVTs1ZXCKbLK1ZSZfnGHErGOj64neCd5MhD0YMBAUHg7BAYaoSfamVVQtnBl2ylcWSC6I/w1200-h630-p-k-no-nu/G4D-Makersuite-Expands-Social-v2.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/08/weareplay-meet-ayushi-nikhil-from-india-and-more-stories-from-around-the-world.html",
-          "author": null,
-          "description": "Posted by Leticia Lago, Developer Marketing\n\n\n\n\n\n\nThis month, we’re sharing new #WeArePlay stories from inspiring founders creating apps which help people improve their quality of life. From a diabetes management tracker to an upskilling platform for women, hear the stories behind some groundbreaking apps on Google Play. \n\n\n\nFirstly, meet Nikhil and Ayushi from Bengaluru, India. During the Covid-19 lockdowns, Nikhil watched as his mother picked up new hobbies and tried making different dishes in the kitchen. Seeing his mom researching new recipes and cooking resources, it struck him that there was a lack of educational platforms in India specifically targeted at women. This gave him and his wife, Ayushi, the idea to create Alippo: an upskilling app for women that provides classes and train…",
-          "link": "http://developers.googleblog.com/2023/08/weareplay-meet-ayushi-nikhil-from-india-and-more-stories-from-around-the-world.html",
-          "publishedOn": "2023-08-02T21:00:00.001Z",
-          "wordCount": 2043,
-          "title": "#WeArePlay | Meet Ayushi & Nikhil from India. More stories from around the world.",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdmEJi3qu1RQTXGNr8Mo_4XI5nj_978ypW4tl5nnRHXamSDjzvYI6avItXWsJQSceh3uGfnT1oGO1FGnzoEiSdQQvJbEGiYP5jHtUFPfWVwmZ6wglwXS1qRLnYsru6DxRMO2DGfCItt-X7hyzqMrNugWVd03vl3rvL5pb85yKQN5BoQEZVoHAiM-B-Zbw/w1200-h630-p-k-no-nu/image16.jpg"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/08/how-its-made-lupe-fiasco-text-fx.html",
-          "author": null,
-          "description": "Posted by Aaron Wade, Creative Technologist\n\n\n\n\n\nGoogle Lab Sessions is a series of experimental AI collaborations with innovators. In our latest Lab Session we wanted to explore specifically how AI could expand human creativity. So we turned to GRAMMY® Award-winning rapper and MIT Visiting Scholar Lupe Fiasco to build an AI experiment called TextFX.\n\n\n\nThe discovery process\nWe started by spending time with Lupe to observe and learn about his creative process. This process was invariably marked by a sort of linguistic “tinkering”—that is, deconstructing language and then reassembling it in novel and innovative ways. Some of Lupe’s techniques, such as simile and alliteration, draw from the canon of traditional literary devices. But many of his tactics are entirely unique. Among them was a c…",
-          "link": "http://developers.googleblog.com/2023/08/how-its-made-lupe-fiasco-text-fx.html",
-          "publishedOn": "2023-08-02T15:55:00.003Z",
-          "wordCount": 2655,
-          "title": "How it’s Made: TextFX is a suite of AI tools inspired by Lupe Fiasco’s lyrical and linguistic techniques",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD4PB32C-Ri9nYtZ58HpTxeV7vJpkN6yhR66V7GT3_NYEAFFdc3QUwsqgw61T0wQyDF2-lEHnGg19OZnY_IsD5em2otssvElH0_0Tuq5pqjJM1U9HzQpxQyd29Vr32fzugTCU_PQb6viaGdZGCdM7lL_OGCFXVYnXO4M4m12wRBSS4NqiZ2uWxcJ6K3BU/w1200-h630-p-k-no-nu/Lupe-Fiasco-LLM-Social.png"
         }
       ]
     },
@@ -1071,12 +1051,22 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1066/",
+          "author": null,
+          "description": "In the words of Mr. John Carmack, \"Focus is a matter of deciding what things you're not going to do\". Taking inspiration from this quote, let's not waste any time and delve into analyzing the code of...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1066/",
+          "publishedOn": "2023-08-31T21:00:00.000Z",
+          "wordCount": 8372,
+          "title": "Oh my C! How they wrote code back in the Quake days",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1066_Quake_World/image1_thm_intoblank_1200x630.png?ver=09-01-2023-15-30-24"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1065/",
           "author": null,
           "description": "How to improve the quality and reliability of a codebase? One of the answers to this question is to use static analysis. In this article, we are going to check how this methodology can improve the...",
           "link": "https://pvs-studio.com/en/blog/posts/cpp/1065/",
           "publishedOn": "2023-08-29T21:00:00.000Z",
-          "wordCount": 8024,
+          "wordCount": 8034,
           "title": "PVS-Studio vs CodeLite: a battle for the perfect code",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1065_CodeLite/image1_thm_intoblank_1200x630.png?ver=08-30-2023-15-30-22"
         },
@@ -1086,7 +1076,7 @@
           "description": "The developers have an endless amount of ways to make mistakes while writing code. However, sometimes we can find obvious and interesting patterns in how and where developers make mistakes. Let's...",
           "link": "https://pvs-studio.com/en/blog/posts/cpp/1064/",
           "publishedOn": "2023-08-24T21:00:00.000Z",
-          "wordCount": 9622,
+          "wordCount": 9633,
           "title": "Common patterns of typos in programming",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1064_patterns_of_typos/image1_thm_intoblank_1200x630.png?ver=08-30-2023-11-25-21"
         },
@@ -1119,16 +1109,6 @@
           "wordCount": 5647,
           "title": "Analysis of suspicious code fragments in MassTransit",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1061_MassTransit/image1_thm_intoblank_1200x630.png?ver=08-09-2023-10-15-05"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1060/",
-          "author": null,
-          "description": "The C# developers are familiar with the term \"boxing\". It can be either obvious or unnoticeable. For example, the addition of a value type and string can cause boxing. Or not. Something like...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1060/",
-          "publishedOn": "2023-08-02T21:00:00.000Z",
-          "wordCount": 5955,
-          "title": "Does C# always have boxing with string concatenation and interpolation?",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1060_NoteAboutBoxing/image1_thm_intoblank_1200x630.png?ver=08-03-2023-10-05-28"
         }
       ]
     },
@@ -1142,48 +1122,7 @@
       "title": "Project Zero",
       "feedUrl": "https://googleprojectzero.blogspot.com/feeds/posts/default",
       "siteUrl": "https://googleprojectzero.blogspot.com/",
-      "articles": [
-        {
-          "id": "https://googleprojectzero.blogspot.com/2023/08/mte-as-implemented-part-3-kernel.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=4mNYFHt_IKFsPe52toizH6nwuZUPj2AFYBEz-aMyENVctA_KpTDBIb9wIwVqFCm-);.lst-kix_46kwnuz47r-3>li{counter-increment:lst-ctn-kix_46kwnuz47r-3}ol.lst-kix_46kwnuz47r-1.start{counter-reset:lst-ctn-kix_46kwnuz47r-1 0}.lst-kix_8lngbvh6wilc-4>li{counter-increment:lst-ctn-kix_8lngbvh6wilc-4}ol.lst-kix_46kwnuz47r-0{list-style-type:none}ol.lst-kix_46kwnuz47r-2{list-style-type:none}.lst-kix_46kwnuz47r-2>li{counter-increment:lst-ctn-kix_46kwnuz47r-2}.lst-kix_8lngbvh6wilc-5>li{counter-increment:lst-ctn-kix_8lngbvh6wilc-5}ol.lst-kix_cp4qttrp12lb-6.start{counter-reset:lst-ctn-kix_cp4qttrp12lb-6 0}ol.lst-kix_46kwnuz47r-1{list-style-type:none}ol.lst-kix_46kwnuz47r-4{list-style-type:none}ol.lst-kix_46kwnuz47r-3{list-style-type:none}ol.lst-kix_8lngbvh6w…",
-          "link": "https://googleprojectzero.blogspot.com/2023/08/mte-as-implemented-part-3-kernel.html",
-          "publishedOn": "2023-08-02T16:30:00.003Z",
-          "wordCount": 3979,
-          "title": "MTE As Implemented, Part 3: The Kernel",
-          "imageUrl": null
-        },
-        {
-          "id": "https://googleprojectzero.blogspot.com/2023/08/mte-as-implemented-part-2-mitigation.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=4mNYFHt_IKFsPe52toizH6nwuZUPj2AFYBEz-aMyENXbDjL3Cv1g7CpfdyRoONLEXShKQSnoFmUtAspFfwQKag);ol.lst-kix_46kwnuz47r-8.start{counter-reset:lst-ctn-kix_46kwnuz47r-8 0}.lst-kix_46kwnuz47r-3>li{counter-increment:lst-ctn-kix_46kwnuz47r-3}ol.lst-kix_46kwnuz47r-1.start{counter-reset:lst-ctn-kix_46kwnuz47r-1 0}.lst-kix_46kwnuz47r-8>li{counter-increment:lst-ctn-kix_46kwnuz47r-8}ol.lst-kix_46kwnuz47r-0{list-style-type:none}ol.lst-kix_46kwnuz47r-2{list-style-type:none}.lst-kix_46kwnuz47r-2>li{counter-increment:lst-ctn-kix_46kwnuz47r-2}ol.lst-kix_cp4qttrp12lb-6.start{counter-reset:lst-ctn-kix_cp4qttrp12lb-6 0}ol.lst-kix_46kwnuz47r-1{list-style-type:none}ol.lst-kix_46kwnuz47r-4{list-style-type:none}ol.lst-kix_46kwnuz47r-3{list-style-type:none}.ls…",
-          "link": "https://googleprojectzero.blogspot.com/2023/08/mte-as-implemented-part-2-mitigation.html",
-          "publishedOn": "2023-08-02T16:30:00.002Z",
-          "wordCount": 4473,
-          "title": "MTE As Implemented, Part 2: Mitigation Case Studies",
-          "imageUrl": null
-        },
-        {
-          "id": "https://googleprojectzero.blogspot.com/2023/08/mte-as-implemented-part-1.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=cGvuclDC_Z1vE_cnVEU6AbvdjsQquauI-GoInd1DzsRjfxSl7duaBsON8MRB32eGNP6BCxV-AQSEvP01Vpd9xT0e5qzIIUg9OvSRGeMDk3I);.lst-kix_exl34y7adtul-6>li{counter-increment:lst-ctn-kix_exl34y7adtul-6}.lst-kix_s8b3u49h11dr-4>li:before{content:\"-  \"}.lst-kix_s8b3u49h11dr-6>li:before{content:\"-  \"}.lst-kix_w66ctsc8735u-5>li{counter-increment:lst-ctn-kix_w66ctsc8735u-5}.lst-kix_s8b3u49h11dr-3>li:before{content:\"-  \"}.lst-kix_s8b3u49h11dr-7>li:before{content:\"-  \"}.lst-kix_7336pfhg38rf-8>li{counter-increment:lst-ctn-kix_7336pfhg38rf-8}ol.lst-kix_w66ctsc8735u-1.start{counter-reset:lst-ctn-kix_w66ctsc8735u-1 0}.lst-kix_s8b3u49h11dr-5>li:before{content:\"-  \"}ol.lst-kix_pmivlm2h8rwq-6.start{counter-reset:lst-ctn-kix_pmivlm2h8rwq-6 0}.lst-kix_cm1sbgja1sfy-…",
-          "link": "https://googleprojectzero.blogspot.com/2023/08/mte-as-implemented-part-1.html",
-          "publishedOn": "2023-08-02T16:30:00.001Z",
-          "wordCount": 6484,
-          "title": "MTE As Implemented, Part 1: Implementation Testing",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMHoNMKuGPvlidYVL_BUOhGiFYegcPW4BPK5erQcRBgrGaGbM4UPEfThNtiYN-EB7c0jBdMcBr8OXGebX3tuEHd581P-6YuQTQAXvu3bt_6ZZn3UpN15InQCZNpu7J6tJKpIQvmIAWXWwg4fnRu5JrrkAfZVwn61YfloEdgHjXNbdC5DX05Z1L_fRx/w1200-h630-p-k-no-nu/image1.png"
-        },
-        {
-          "id": "https://googleprojectzero.blogspot.com/2023/08/summary-mte-as-implemented.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=DFQxm4rd7fRHgM9OTejWVT5Vho6BE7M80rHXEVKqXWdbV0WvE1cEyAoIq5yYZlSc);.lst-kix_exl34y7adtul-6>li{counter-increment:lst-ctn-kix_exl34y7adtul-6}.lst-kix_kzys3uxts4nk-6>li:before{content:\"\" counter(lst-ctn-kix_kzys3uxts4nk-6,decimal) \". \"}.lst-kix_kzys3uxts4nk-8>li:before{content:\"\" counter(lst-ctn-kix_kzys3uxts4nk-8,lower-roman) \". \"}.lst-kix_s8b3u49h11dr-4>li:before{content:\"-  \"}.lst-kix_s8b3u49h11dr-6>li:before{content:\"-  \"}.lst-kix_kzys3uxts4nk-7>li:before{content:\"\" counter(lst-ctn-kix_kzys3uxts4nk-7,lower-latin) \". \"}.lst-kix_w66ctsc8735u-5>li{counter-increment:lst-ctn-kix_w66ctsc8735u-5}.lst-kix_s8b3u49h11dr-3>li:before{content:\"-  \"}.lst-kix_s8b3u49h11dr-7>li:before{content:\"-  \"}.lst-kix_7336pfhg38rf-8>li{counter-increment:…",
-          "link": "https://googleprojectzero.blogspot.com/2023/08/summary-mte-as-implemented.html",
-          "publishedOn": "2023-08-02T16:30:00.000Z",
-          "wordCount": 3559,
-          "title": "Summary: MTE As Implemented",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Two Cents",
@@ -1284,6 +1223,26 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/943022/",
+          "author": "corbet",
+          "description": "The pidfd API has been added to the kernel\nover the last several years to provide a race-free way for processes to\nrefer to each other.  While the GNU C Library (glibc) gained\nbasic pidfd support with the 2.36 release in 2022, it still lacks a\ncomplete solution for race-free process creation.  This\npatch set from Adhemerval Zanella seems likely to fill that gap in the\nnear future, though, with an extension to the posix_spawn()\nAPI.",
+          "link": "https://lwn.net/Articles/943022/",
+          "publishedOn": "2023-09-01T14:46:06.000Z",
+          "wordCount": null,
+          "title": "[$] Race-free process creation in the GNU C Library",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943302/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium, firefox-esr, and gst-plugins-ugly1.0), Fedora (firefox, libeconf, libwebsockets, mosquitto, and rust-rustls-webpki), SUSE (amazon-ssm-agent, open-vm-tools, and terraform-provider-helm), and Ubuntu (linux-azure, linux-azure, linux-azure-5.15, linux-azure-fde, linux-gcp-5.15, linux-gcp-5.4, linux-oracle-5.4, linux-gkeop, linux-gkeop-5.15, linux-intel-iotg, linux-kvm, linux-oracle, and python-git).",
+          "link": "https://lwn.net/Articles/943302/",
+          "publishedOn": "2023-09-01T14:05:27.000Z",
+          "wordCount": 261,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/942954/",
           "author": "corbet",
           "description": "As of this writing, 4,588 non-merge changesets have been pulled into the\nmainline repository for the 6.6 kernel release.  The 6.6 merge window, in\nother words, is just getting started.  Nonetheless, a fair amount of\nsignificant work has already been pulled, so the time has come to summarize\nwhat has happened so far in this development cycle.",
@@ -1369,7 +1328,7 @@
           "description": "The OpenChain site carries the sad news of the\npassing of Satoru Ueda.  Your editor first met Ueda San at the 2007 Linux Foundation Japan Symposium, where a\nsmall group of dedicated developers and managers was working hard to bring\nopen-source development practices to the country.  Ueda San was always a\nstrong advocate for this cause and deserves much credit for the success of\nLinux and open source in Japan.  He was also always a warm and welcoming\nperson; he will be much missed.",
           "link": "https://lwn.net/Articles/942973/",
           "publishedOn": "2023-08-29T13:50:16.000Z",
-          "wordCount": 206,
+          "wordCount": 314,
           "title": "Rest in peace Satoru Ueda",
           "imageUrl": null
         },
@@ -1411,26 +1370,6 @@
           "publishedOn": "2023-08-27T22:30:38.000Z",
           "wordCount": 251,
           "title": "The 6.5 kernel has been released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942864/",
-          "author": "corbet",
-          "description": "The\n6.1.48,\n5.15.128, and\n5.10.192\nstable kernels have been released; each contains another set of important\nfixes.\n\nUpdate: 6.1.49 has also been\nreleased.  \"This upgrade is only for all users of the 6.1 series that\nuse the x86 platform OR the F2FS file system.  If that's not you, feel free\nto ignore this release.\"",
-          "link": "https://lwn.net/Articles/942864/",
-          "publishedOn": "2023-08-27T18:05:03.000Z",
-          "wordCount": 167,
-          "title": "Three stable kernels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942770/",
-          "author": "jake",
-          "description": "The OpenTF Foundation has announced that it is moving forward with its eponymous fork of HashiCorp Terraform, which was recently changed to a non-FOSS license by the company.  The organization has applied to become part of the Linux Foundation, \"with the end goal of having OpenTF as part of Cloud Native Computing Foundation\".  There is a GitHub repository for its manifesto, but the code repository for OpenTF is private for now, with plans to open it up in the next week or two.  Work has been going on for the last week and more developers are coming on board:\n\nSo far, four companies pledged the equivalent of 14 full-time engineers (FTEs) to the OpenTF initiative. We expect this number to at least double in the following few weeks. To give you some perspective, Terraform was effectively maintained by about 5 FTEs from HashiCorp in the last 2 years. If you don’t believe us, look at their repository. \n\n\nSome of the people behind OpenTF are participating in a Hacker News thread, so more information can be found there as well.",
-          "link": "https://lwn.net/Articles/942770/",
-          "publishedOn": "2023-08-25T17:56:53.000Z",
-          "wordCount": 2038,
-          "title": "OpenTF Announces Fork of Terraform",
           "imageUrl": null
         },
         {
@@ -1892,56 +1831,6 @@
           "wordCount": 225,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939364/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for August 3, 2023 is available.",
-          "link": "https://lwn.net/Articles/939364/",
-          "publishedOn": "2023-08-03T02:30:31.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for August 3, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939981/",
-          "author": "jake",
-          "description": "The Python global interpreter lock (GIL) has long been a barrier to\nincreasing the performance of programs by using multiple threads—the GIL\nserializes access to the interpreter's virtual machine such that only one thread\ncan be executing Python code at any given time.  There are other mechanisms\nto provide \nconcurrency for the language, but the specter of the GIL—and its reality as\nwell—have often been cited as a major negative for Python.  Back in October\n2021, Sam Gross introduced\na proof-of-concept, no-GIL version of the\nlanguage. It was met with a lot of excitement at the time, but\nseemed to languish to a certain extent for more than a year; now, the Python\nSteering \nCouncil has announced its intent to accept the\nno-GIL feature.  It will still be some time before it lands in a\nreleased Python version—and there is the possibility that it all has to be\nrolled back at some point—but there are several companies backing the\neffort, which gives it all a good chance to succeed.",
-          "link": "https://lwn.net/Articles/939981/",
-          "publishedOn": "2023-08-02T22:01:48.000Z",
-          "wordCount": null,
-          "title": "[$] GIL removal and the Faster CPython project",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940152/",
-          "author": "corbet",
-          "description": "Google's Project Zero has spent some time studying the Arm memory tagging\nextension (MTE), support for which was\nmerged into the 5.10 kernel, and posted\nthe results:\n\n\n\tDespite its limitations, MTE is still by far the most promising\n\tpath forward for improving C/C++ software security in 2023. The\n\tability of MTE to detect memory corruption exploitation at the\n\tfirst dangerous access provides a significant improvement in\n\tdiagnostic and potential security effectiveness.\n\n\nThere is a\nseparate section on weaknesses in the current kernel implementation of\nMTE support.",
-          "link": "https://lwn.net/Articles/940152/",
-          "publishedOn": "2023-08-02T17:06:48.000Z",
-          "wordCount": 203,
-          "title": "Project Zero on Arm MTE",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940144/",
-          "author": "corbet",
-          "description": "The Asahi Linux project, which is\nworking to create a Linux distribution for Apple hardware, has announced\nthat its new \"flagship\" distribution will be based on Fedora Linux.\n\n\n\tWorking directly with upstream means not only can we integrate more\n\tclosely with the core distribution, but we can also get issues in\n\tother packages fixed quickly and smoothly. This is particularly\n\timportant for platforms like desktop ARM64, where we still run into\n\trandom app and package bugs quite often. ARM64 desktop Linux has\n\tbeen a niche platform (until now!), and with much less testing\n\tcomes a higher propensity for bugs, so it’s very important that we\n\tcan address these issues quickly. Fedora already has a very solid,\n\tfully supported ARM64 port with a large userbase in the\n\tserver/headless segment, so it is an excellent base to build upon\n\tand help improve the state of desktop Linux on ARM64 for everyone.\n\n\nThere is a version for \"adventurous users\" to play with now, with an\nofficial release expected by the end of the month.",
-          "link": "https://lwn.net/Articles/940144/",
-          "publishedOn": "2023-08-02T16:41:26.000Z",
-          "wordCount": 563,
-          "title": "Asahi Linux to become a Fedora remix",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940103/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (bouncycastle), Fedora (firefox), Red Hat (cjose, curl, iperf3, kernel, kernel-rt, kpatch-patch, libeconf, libxml2, mod_auth_openidc:2.3, openssh, and python-requests), SUSE (firefox, jtidy, libredwg, openssl, salt, SUSE Manager Client Tools, and SUSE Manager Salt Bundle), and Ubuntu (firefox).",
-          "link": "https://lwn.net/Articles/940103/",
-          "publishedOn": "2023-08-02T13:54:20.000Z",
-          "wordCount": 411,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2160,7 +2049,7 @@
           "description": "Modern tools need a powerful and flexible package and virtual environment manager. Conda or Miniconda has been developed around Python and Data Science, but is very useful for packaging environments for embedded development. Continue reading →",
           "link": "https://mcuoneclipse.com/2023/08/25/vs-code-virtual-environments-for-embedded-development-with-conda/",
           "publishedOn": "2023-08-25T21:40:00.000Z",
-          "wordCount": 5212,
+          "wordCount": 5337,
           "title": "VS Code: Virtual Environments for Embedded Development with Conda",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/conda-in-vs-code.jpg?w=1200"
         },
@@ -2353,16 +2242,6 @@
           "wordCount": 3621,
           "title": "VS Code: IDE Installation",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/vs-code-first-screen.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=37976",
-          "author": "Erich Styger",
-          "description": "This article shows how to write an application for the LPC55S69 to communicate with a RS-485 bus. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/03/rs-485-with-nxp-lpc55s69/",
-          "publishedOn": "2023-08-02T22:47:00.000Z",
-          "wordCount": 4364,
-          "title": "RS-485 with NXP LPC55S69",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/lpc55s69-evk-with-rs-485.png"
         }
       ]
     },
@@ -2377,7 +2256,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3080,
+          "wordCount": 3225,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -2491,7 +2370,7 @@
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1506,
+          "wordCount": 1507,
           "title": "Readability of anonymous inner classes and lambda expressions",
           "imageUrl": null
         },
@@ -2501,7 +2380,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1503,
+          "wordCount": 1504,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2548,7 +2427,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 3019,
+          "wordCount": 3020,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -2661,16 +2540,6 @@
           "wordCount": 2167,
           "title": "Podcast: So many new hubs, and a primer on LPWANs",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/Soluboard_disassembled.jpg?fit=2126%2C1383&ssl=1"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12732",
-          "author": "Kevin C. Tofel",
-          "description": "After two-and-a-half years of primarily using HomeKit, now called Apple Home, I think it’s time for a change in my smart home. Prior to settling on Apple’s platform, I used Google Home for a while. And before that, I was a Samsung SmartThings user. Moving forward, I think it’s time to transition to Home Assistant […]\nThe post Why I’m switching to Home Assistant appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/why-im-switching-to-home-assistant/",
-          "publishedOn": "2023-08-02T14:12:29.000Z",
-          "wordCount": 3007,
-          "title": "Why I’m switching to Home Assistant",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/04/Matter-devices-added.png"
         }
       ]
     },
@@ -2684,18 +2553,7 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": [
-        {
-          "id": "http://subokim.wordpress.com/?p=12497",
-          "author": "subokim",
-          "description": "이 글의 청중은 정책담당자, 교육설계자, CTO 정도가 될 것 같습니다.해결책을 제안하는 건 아니고, 문제현상 인식. 정의. 공유 정도를 하고 싶었습니다. 교육시장 공교육은 보통 사람이 생각하는 교육과 다릅니다.“전 국민을 대상으로 하는 교육시스템”으로 세부 목적에 따라 산업화(?)되었기 때문입니다. 아무렇게나 가르쳐도 교육입니다만 공교육은 그렇게 이해하면 안됩니다.보편적이어야 하고, 반복.지속.확장 가능해야 하기 때문입니다.확장이란 교육대상을 넓힐 수 있다는 뜻입니다.교육 내용과 품질... Continue Reading →",
-          "link": "https://subokim.wordpress.com/2023/08/02/whats-problem-in-education/",
-          "publishedOn": "2023-08-02T09:01:27.000Z",
-          "wordCount": 3279,
-          "title": "개발자 부족, 해결될 수 있을까?",
-          "imageUrl": "https://subokim.files.wordpress.com/2023/08/curriculum_map_large.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "The Pasture",
@@ -2738,6 +2596,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=96026",
+          "author": "임예인",
+          "description": "윤재옥(국민의힘 원내대표)이 이런 말을 했다. “마치 미국산 쇠고기 먹으면 당장 광우병 걸리고 다 죽는다는 광우병 사태와 똑같은 모습이다.” 고현곤(중앙일보 편집인)은 “후쿠시마 오염수에서 광우병 사태가 오버랩된다”고 지적했고 조선일보는 “‘광우병국민대책회의’에 속했던 시민 단체 952개 중 195개 단체가 ‘일본 방사성 오염수 방류 저지 공동행동’에도 참여하고 있다”고 보도했다. ‘광우병 촛불집회’를 진보의 비과학성을 공격하는 전가의 보도처럼 써먹는 사람들이 있다. 보수...\nThe post 광우병이 별 거 아니었다고? 사후 확증편향이다 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96026",
+          "publishedOn": "2023-09-01T00:23:26.000Z",
+          "wordCount": 4616,
+          "title": "광우병이 별 거 아니었다고? 사후 확증편향이다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/pexels-photo-14565555-1000x667.jpeg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96042",
+          "author": "이정환",
+          "description": "생산과 소비, 투자, 트리플 감소 충격. 결국 홍범도 흉상 철거한다. 이재명 무기한 단식. 반값이 된 완도 전복. 대통령의 노량진 이벤트 “우럭탕 싹 비우고 국물 추가” 간토대학살(관동대학살) 100년, 윤석열의 답답한 침묵. 더 깊게 읽기. 오늘부터 비대면 진료 단속. 서울 집값이 다시 뛴다고? 해법과 대안. 낙타 등이 부러졌다면 이제라도 멈춰야 한다. 수도권 최대 마약 치료 병원 문...\nThe post “윤석열의 폭주는 막나가도 국민들이 무덤덤하기 때문”: 슬로우레터 9월1일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96042",
+          "publishedOn": "2023-08-31T22:05:33.000Z",
+          "wordCount": 5741,
+          "title": "“윤석열의 폭주는 막나가도 국민들이 무덤덤하기 때문”: 슬로우레터 9월1일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/WQMy4lRMXWKD64f033620951c5.34968948-1000x666.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=96004",
           "author": "이정환",
@@ -2824,7 +2702,7 @@
           "description": "[슬로우민트] 뉴스페퍼민트 이효석 대표가 추천하는 좋은 책에 관한 이야기. 두 번째 책은 다윈의 ‘성선택’ 이론의 복권을 시도한 ‘아름다움의 진화'(리처드 프럼). “나는 공작의 꽁지에 있는 깃털을 들여다볼 때마다 구역질이 난다네!” 찰스 다윈, Darwin to Asa Gray, April 3 [1860], Darwin Correspondence Project, Letter 2743. 다윈은 [종의 기원] (1859)을 발표한 이듬해인 1860년에 친구에게 보내는 편지에서 진심으로 공작의...\nThe post 찰스 다윈, 다윈이즘에 대한 최초의 반역자 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95736",
           "publishedOn": "2023-08-25T06:31:18.000Z",
-          "wordCount": 4919,
+          "wordCount": 5146,
           "title": "찰스 다윈, 다윈이즘에 대한 최초의 반역자",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/11888974263_862ea3f5ba_k.jpg"
         },
@@ -2917,26 +2795,6 @@
           "wordCount": 5476,
           "title": "이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤?",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/1218.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95627",
-          "author": "이정환",
-          "description": "“미국은 두목, 일본은 중간 보스, 한국은 행동대원.” “중국 빼고 모두 찬성.” 정연주 끌어내린 자리에 류희림. 이동관 청문회, 타격감이 없었다. 해법과 대안. 옥상을 빌려드립니다. 법원이 정신병원 입원 판단? 문제는 인력 부족. 폴란드는 우크라이나 난민 980만 명을 받았다. 오늘의 TMI. 서초동 떠나는 변호사들. 통영국제음악당은 녹음의 전당. 47년 만의 러시아 달 탐사는 실패. 전경련이 아니라 한경협. 밑줄 쳐가며...\nThe post 윤석열 맘대로, ‘미국 외교의 꿈’을 안겨줬다: 슬로우레터 8월21일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95627",
-          "publishedOn": "2023-08-20T22:05:17.000Z",
-          "wordCount": 5474,
-          "title": "윤석열 맘대로, ‘미국 외교의 꿈’을 안겨줬다: 슬로우레터 8월21일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/xwegfGYjTPaY64dfe8ed72a865.16241433-1000x666.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95605",
-          "author": "이정환",
-          "description": "넷플릭스가 원래 DVD 대여 서비스로 출발했다는 건 다들 알고 있을 텐데 아직까지도 DVD 대여를 계속해 왔다는 건 모르는 사람이 많았을 것 같다. 최근까지도 100만 명 이상이 DVD 대여 서비스를 이용하고 있다는 놀라운 사실. 마지막 랜덤 우편 발송. 이게 왜 중요한가. TMI. 다르게 읽기. 알짜배기 사업을 왜 접을까. 생각해 볼 부분.\nThe post 넷플릭스가 DVD 사업을 접는다는 사실이 의미하는 것. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95605",
-          "publishedOn": "2023-08-20T08:23:05.000Z",
-          "wordCount": 4768,
-          "title": "넷플릭스가 DVD 사업을 접는다는 사실이 의미하는 것.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/50373348322_e50b8f1ee1_b.jpg"
         },
         {
           "id": "https://slownews.kr/?p=95579",
@@ -3237,46 +3095,6 @@
           "wordCount": 5589,
           "title": "FMOps에서 찾는 새로운 기회",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/image1-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94820",
-          "author": "김헌용",
-          "description": "[주호민 – 특수교사 논란] 함께하는장애인교원노동조합 김헌용 위원장(중학교 영어교사)이 말하는 장애인 통합교육의 현실. 주호민 사건을 접하자마자 강한 기시감이 들었다. 나도 평생 겪었거니와 교사로 근무하면서 수없이 목격했던 바로 그 배제와 격리, 분리의 논리가 이 사건에서도 똑같이 작동하고 있었다. 카스트제도: 장애 통합교육의 현실 장애인에게 대한민국 교육은 철저히 서열화되어 있다. 우생학적 논리로 철저히 위계화되어 있다. 그리고 그 마지막 격리...\nThe post 진짜 빌런은 학교다: 장애인 통합교육의 현실 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94820",
-          "publishedOn": "2023-08-03T06:47:39.000Z",
-          "wordCount": 5803,
-          "title": "진짜 빌런은 학교다: 장애인 통합교육의 현실",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GettyImages-1491357656.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94789",
-          "author": "capcold",
-          "description": "언어에는 ChatGPT, 이미지에는 미드저니. 공공의 사안을 논의하고 의견을 수렴하려면, 사회적 현실과 가치를 반영하는 사실과 의견을 꾸준히 섭취해야 한다. 좋은 음식을 만들려면 좋은 재료가 필요한 것처럼 말이다.  그러나 이러한 재료들이 AI의 급속한 발전으로 인해, 실재하는 인간사의 조건들을 우리의 당연한 기대치보다 훨씬 덜 반영하는 상태가 될 수 있다. 그렇기에 많은 현인들이 이미, AI가 우리의 공론장을 본질적으로 파괴해서 해를 끼칠 것이라는 경고를...\nThe post AI는 공론장을 파괴하지 않는다(…그건 우리가 했으니까) appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94789",
-          "publishedOn": "2023-08-03T03:42:01.000Z",
-          "wordCount": 4095,
-          "title": "AI는 공론장을 파괴하지 않는다(…그건 우리가 했으니까)",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GettyImages-1458848927.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94792",
-          "author": "이정환",
-          "description": "“음식 10초만 늦길 바랄 때도.” LH 전관업체들, 1년에 400억 원 사업 챙겼다. 미국의 굴욕, 신용 등급 떨어졌다. 민주당 혁신위를 누가 흔드나. 상온 상압 초전도체 만들기 참 쉽죠? 이동관 임명 앞두고 KBS MBC 손보나. 더 깊게 읽기. 이동관 재산 3배 늘어난 비결. 트럼프 세 번째 기소, 이번에는 진짜 크다. 주호민의 사과문이 말하는 것. 해법과 대안. 교사...\nThe post 상온상압 초전도체 만들기 참 쉽죠?: 슬로우레터 8월3일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94792",
-          "publishedOn": "2023-08-02T22:10:21.000Z",
-          "wordCount": 4024,
-          "title": "상온상압 초전도체 만들기 참 쉽죠?: 슬로우레터 8월3일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/4526727.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94760",
-          "author": "민주언론시민연합",
-          "description": "‘검찰 특수활동비’ 점차 정황을 드러내지만, 조선일보, 채널A, JTBC는 사실상 무(無)보도, 조선일보와 문화일보는 물타기까지. 탐사보도 전문매체 뉴스타파와 3개 시민단체 세금도둑잡아라·정보공개센터·함께하는시민행동이 협업하여 우리 사회 성역이던 검찰 특수활동비 등 예산자료를 분석해 결과를 공개하고 있습니다. 이들은 검찰을 상대로 정보공개 행정소송을 낸 지 3년 7개월 만인 지난 6월 24일 검찰로부터 자료를 전달받았습니다. 그러나 이번 자료 역시 전체가 아닌 일부에 불과하고,...\nThe post 검찰 특수활동비 논란, 외면하고 물타기하는 언론들 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94760",
-          "publishedOn": "2023-08-02T10:06:40.000Z",
-          "wordCount": 3460,
-          "title": "검찰 특수활동비 논란, 외면하고 물타기하는 언론들",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GettyImages-jv11354993.jpg"
         }
       ]
     },
@@ -3331,7 +3149,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591555/%ea%b0%95%ec%9b%90-%ed%83%9c%eb%b0%b1-%eb%b0%94%eb%9e%8c%ec%9d%98-%ec%96%b8%eb%8d%95",
           "publishedOn": "2023-08-28T22:12:12.000Z",
-          "wordCount": 5391,
+          "wordCount": 5447,
           "title": "강원 태백 바람의 언덕 다녀온 이야기",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/강원-태백-바람의-언덕-3892.jpg"
         },
@@ -3474,16 +3292,6 @@
           "wordCount": 6021,
           "title": "2분기 애플 실적 분석",
           "imageUrl": "https://happist.com/wp-content/uploads/2019/02/애플-신사옥-스티브-잡스-극장-전경-Apples-Steve-Jobs-Theater-round-black-and-white-building-during-daytime-Image-carles-rabada.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591373",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591373/2q-23-amd-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-08-02T22:22:42.000Z",
-          "wordCount": 6020,
-          "title": "2분기 AMD 실적 분석, 월가 예상치 상회했으나 가이던스는 기대 이하",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/10/AMD-데이터센터-공력의-일등공신-AMD-서버용-CPU-EPYC-Image-from-AMD.jpg"
         }
       ]
     },
@@ -3670,26 +3478,6 @@
           "publishedOn": "2023-08-05T22:59:01.000Z",
           "wordCount": 2069,
           "title": "[뉴페@스프] 더 독창적인 방식으로 기존의 독창성을 해체한 ‘앤디 워홀’",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77092",
-          "author": "veritaholic",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 14일 스프에 쓴 글입니다. 지난주 뉴욕을 비롯한 미국 북동부 일대 하늘은 짙은 황토색 연기로 뒤덮였습니다. 캐나다 전역에서 일어난 수백 건 이상의 산불에 의한 연기가 바람을 타고 미국까지 날아간 것입니다. 산불로 인한 → 더 보기",
-          "link": "https://newspeppermint.com/2023/08/02/npsp_airquality/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_airquality",
-          "publishedOn": "2023-08-02T22:59:09.000Z",
-          "wordCount": 1894,
-          "title": "[뉴페@스프] 다시 ‘코로나 대책’이 필요한 상황이 올 수 있는 이유",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77491",
-          "author": "NewsPeppermint",
-          "description": "우리나라에서는 오는 15일 개봉 예정인 영화 <오펜하이머>가 미국에서는 개봉하면서 많은 이야기를 낳고 있습니다. 인류가 실제로 사용한 무기 가운데 가장 위력이 컸고, 끔찍한 재앙을 초래했던 무기가 바로 핵무기이기 때문에 원자폭탄 개발에 참여한 과학자들의 이야기는 늘 많은 관심을 끌 만한 소재였습니다. 뉴욕타임스에도 관련 칼럼이 많이 올라왔는데, 그 가운데 핵 에너지 개발에 비견할 만한 새로운 기술인 인공지능 기술이 무기, 전쟁에 쓰이면 어떻게 될지 짚어본 칼럼을 번역하고 해설을 달았습니다. 전문 번역: 우리 시대의 오펜하이머 모멘트: → 더 보기",
-          "link": "https://newspeppermint.com/2023/08/02/npsp_oppenheimer/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_oppenheimer",
-          "publishedOn": "2023-08-02T13:30:51.000Z",
-          "wordCount": 1410,
-          "title": "AI 무기는 과거의 원자폭탄 위력 이상이 될 것… 그러면 어떻게?",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
