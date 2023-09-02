@@ -125,22 +125,12 @@
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
       "articles": [
         {
-          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:5920324a-8c57-47d0-b042-cdebcb8fe27e",
-          "author": "Chris Goodyer",
-          "description": "We have released our first version of Arm Performance Libraries (ArmPL) fully compatible with M-series Apple silicon running macOS.(read more)",
-          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/first-macos-release-of-arm-performance-libraries",
-          "publishedOn": "2023-09-01T09:12:00.000Z",
-          "wordCount": 4282,
-          "title": "First macOS release of Arm Performance Libraries",
-          "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-12/Untitled-design_2D00_36.jpg_2D00_1600x900.jpg"
-        },
-        {
           "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:202b4d5d-d704-49ef-829c-94e4a13ca579",
           "author": "Jiaming Guo",
           "description": "Part 3. This blog introduces how to enable PMU feature in Armv8-A CPUs and provides an example of performance analysis workflow on real Armv8-A  platform.(read more)",
           "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/p3-perf-pmu-feature-armv8-cpus",
           "publishedOn": "2023-08-22T10:00:00.000Z",
-          "wordCount": 5005,
+          "wordCount": 5024,
           "title": "Using Perf to enable PMU functionality on Armv8-A CPUs: Stage 3 and Stage 4",
           "imageUrl": "https://community.arm.com:443/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-21-42/8055.ARM2028_5F00_Blog_5F00_Header_5F00_Images_5F00_1600x900_5F00_1_5F00_ST1.jpg"
         },
@@ -177,7 +167,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 734,
+          "wordCount": 744,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -463,7 +453,7 @@
           "description": "Earth from Mars – NASA: Climate Change: Vital Signs of the Planet을 번역했습니다.  이 사진은 NASA…",
           "link": "https://edykim.com/ko/post/earth-from-mars/",
           "publishedOn": "2023-08-21T01:16:58.000Z",
-          "wordCount": 652,
+          "wordCount": 650,
           "title": "화성에서 본 지구",
           "imageUrl": null
         }
@@ -497,7 +487,7 @@
           "description": "28 August 2023 by Phillip JohnstonEmbedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our goal is to spread beneficial techniques … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7300,
+          "wordCount": 7292,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -574,7 +564,7 @@
           "description": "Dual source energy harvesting inputs allow applications such as a remote control which can have separate PV cells on its front and rear to maintain an energy input whether the device is left face up or face down.\nThe post Energy harvesting PMIC accepts two sources including PV, RF, and kinetic appeared first on Embedded.com.",
           "link": "https://www.embedded.com/energy-harvesting-pmic-accepts-two-sources-including-pv-rf-and-kinetic/",
           "publishedOn": "2023-08-29T16:34:18.000Z",
-          "wordCount": 4448,
+          "wordCount": 3531,
           "title": "Energy harvesting PMIC accepts two sources including PV, RF, and kinetic",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/e-peas-AEM13920.jpg"
         },
@@ -584,7 +574,7 @@
           "description": "There are risks with respect to China and competition from RISC-V, but Arm IPO is likely to focus on opportunity from AI. \nThe post Is AI the winning card for a successful Arm IPO? appeared first on Embedded.com.",
           "link": "https://www.embedded.com/is-ai-the-winning-card-for-a-successful-arm-ipo/",
           "publishedOn": "2023-08-25T18:10:36.000Z",
-          "wordCount": 4590,
+          "wordCount": 4592,
           "title": "Is AI the winning card for a successful Arm IPO?",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Arm-featured-image.jpg"
         },
@@ -757,26 +747,6 @@
           "wordCount": 5274,
           "title": "An eventful week in the world of Arm and RISC-V",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Lars-Reger-at-CES-2023.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480055",
-          "author": "Richard Elberger",
-          "description": "Licensing models, source code modification constraints, and industry certification are the top business considerations when choosing an RTOS. \nThe post Three key factors in choosing a real-time operating system (RTOS) appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/three-key-factors-in-choosing-a-real-time-operating-system-rtos/",
-          "publishedOn": "2023-08-03T15:32:09.000Z",
-          "wordCount": 4375,
-          "title": "Three key factors in choosing a real-time operating system (RTOS)",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/RTOS_ss.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480049",
-          "author": "Saumitra Jagdale",
-          "description": "Next generation high bandwidth memory, known as HBM3e or HBM3 Gen2 will help overcome memory bottlenecks in delivering growth in AI accelerator chips.\nThe post AI acceleration will need HBM3 to overcome memory bottlenecks appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/ai-acceleration-will-need-hbm3-to-overcome-memory-bottlenecks/",
-          "publishedOn": "2023-08-03T12:53:53.000Z",
-          "wordCount": 5176,
-          "title": "AI acceleration will need HBM3 to overcome memory bottlenecks",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Micron-hbm3.jpg"
         }
       ]
     },
@@ -791,7 +761,7 @@
           "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
           "link": "https://www.embeddedrelated.com/showarticle/1571.php",
           "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3407,
+          "wordCount": 3435,
           "title": "Who needs source code?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -801,7 +771,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3032,
+          "wordCount": 3045,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -821,7 +791,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3945,
+          "wordCount": 3940,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -861,19 +831,9 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3233,
+          "wordCount": 3245,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1544.php",
-          "author": null,
-          "description": "Contents:\r\n\r\nIntroduction\n\r\nThe Problem\n\r\nSymbol Framing\n\r\nImplementing Serial Output\n\r\nWorking With A Logic Analyzer\n\r\nWorking With A TTL-USB Serial Adapter\n\r\nDisciplined Engineering\n\r\n\r\nApplying Six Software Design Tools\n\r\n\r\nTDD...",
-          "link": "https://www.embeddedrelated.com/showarticle/1544.php",
-          "publishedOn": "2023-08-03T13:08:23.000Z",
-          "wordCount": 7988,
-          "title": "Bit-Banged Async Serial Output And Disciplined Engineering",
-          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
       ]
     },
@@ -1223,6 +1183,16 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/943400/",
+          "author": "corbet",
+          "description": "The\n6.5.1,\n6.4.14,\n6.1.51,\n5.15.130,\n5.10.194,\n5.4.256,\n4.19.294, and\n4.14.325\nstable kernel updates have all been released; each contains another set of\nimportant fixes.",
+          "link": "https://lwn.net/Articles/943400/",
+          "publishedOn": "2023-09-02T14:01:10.000Z",
+          "wordCount": 143,
+          "title": "A pile of stable kernel updates",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/943022/",
           "author": "corbet",
           "description": "The pidfd API has been added to the kernel\nover the last several years to provide a race-free way for processes to\nrefer to each other.  While the GNU C Library (glibc) gained\nbasic pidfd support with the 2.36 release in 2022, it still lacks a\ncomplete solution for race-free process creation.  This\npatch set from Adhemerval Zanella seems likely to fill that gap in the\nnear future, though, with an extension to the posix_spawn()\nAPI.",
@@ -1360,16 +1330,6 @@
           "publishedOn": "2023-08-28T14:32:55.000Z",
           "wordCount": 255,
           "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942876/",
-          "author": "corbet",
-          "description": "Linus has, as expected, released the 6.5\nkernel.\n\n\n\tI still have this nagging feeling that a lot of people are on\n\tvacation and that things have been quiet partly due to that. But\n\tthis release has been going smoothly, so that's probably just me\n\tbeing paranoid.  The biggest patches this last week were literally\n\tjust to our selftests.\n\n\nHeadline features in 6.5 include\nfaster booting on large x86 systems,\nArm Permission Indirection Extension\nsupport,\nRust 1.68.2 support,\nunaccepted memory handling,\n\"mount beneath\" support for filesystems,\nthe cachestat() system call,\nthe ability to pass a pidfd via a SCM_CREDENTIALS control message,\nscope-based resource management for\ninternal kernel code,\nthe deprecation of the SLAB allocator,\nand more.  See the LWN merge-window summaries\n(part 1,\npart 2) and the (in-progress)\nKernelNewbies 6.5 page\nfor details.",
-          "link": "https://lwn.net/Articles/942876/",
-          "publishedOn": "2023-08-27T22:30:38.000Z",
-          "wordCount": 251,
-          "title": "The 6.5 kernel has been released",
           "imageUrl": null
         },
         {
@@ -1801,36 +1761,6 @@
           "wordCount": 325,
           "title": "Security updates for Friday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939842/",
-          "author": "corbet",
-          "description": "The kernel community has never had a smooth relationship with the purveyors\nof proprietary kernel modules.  Developers tend to strongly dislike those\nmodules, which cannot be debugged or fixed by anybody other than their\ncreator, and many see them as a violation of the kernel's license and their\ncopyrights on the code.  Nonetheless, proprietary modules are tolerated,\nwithin bounds.  A recent patch from Christoph Hellwig suggests that those\nbounds are about to be tightened slightly, in a somewhat surprising way.",
-          "link": "https://lwn.net/Articles/939842/",
-          "publishedOn": "2023-08-03T14:39:15.000Z",
-          "wordCount": null,
-          "title": "[$] Making life (even) harder for proprietary modules",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940336/",
-          "author": "jake",
-          "description": "The 6.4.8, 6.1.43, and 5.15.124 stable kernels have been released.\nAs usual, they contain important fixes throughout the kernel tree.",
-          "link": "https://lwn.net/Articles/940336/",
-          "publishedOn": "2023-08-03T14:30:13.000Z",
-          "wordCount": 139,
-          "title": "Stable kernels 6.4.8, 6.1.43, and 5.15.124",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940335/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (linux-5.10), Red Hat (.NET 6.0 and iperf3), Slackware (openssl), SUSE (kernel, mariadb, poppler, and python-Django), and Ubuntu (gst-plugins-base1.0, gst-plugins-good1.0, maradns, openjdk-20, and vim).",
-          "link": "https://lwn.net/Articles/940335/",
-          "publishedOn": "2023-08-03T14:23:34.000Z",
-          "wordCount": 225,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
         }
       ]
     },
@@ -2025,16 +1955,6 @@
           "wordCount": 2802,
           "title": "Creating an integrated business and technology strategy",
           "imageUrl": "https://martinfowler.com/articles/creating-integrated-tech-strategy/card.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/exploring-gen-ai.html#in-line-assistance---how-can-it-get-in-the-way?",
-          "author": null,
-          "description": "While coding assistants like Copilot can improve speed and flow, they\n     can also disrupt it. Birgitta Böckeler looks at two ways\n     in which they can get in the way: amplifying bad or outdated\n     practices, and review fatigue.\nmore…",
-          "link": "https://martinfowler.com/articles/exploring-gen-ai.html#in-line-assistance---how-can-it-get-in-the-way?",
-          "publishedOn": "2023-08-03T15:37:00.000Z",
-          "wordCount": 4050,
-          "title": "Exploring Gen AI: how can in-line assistance get in the way?",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
     },
@@ -2256,7 +2176,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3225,
+          "wordCount": 3244,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -2370,7 +2290,7 @@
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1507,
+          "wordCount": 1504,
           "title": "Readability of anonymous inner classes and lambda expressions",
           "imageUrl": null
         },
@@ -2380,7 +2300,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1504,
+          "wordCount": 1506,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2530,16 +2450,6 @@
           "wordCount": 2474,
           "title": "IoT news of the week for August 4, 2023",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12740",
-          "author": "Stacey Higginbotham",
-          "description": "This week’s show kicks off with a surprising revelation from Kevin, who has decided to swap out his smart home platform. He explains his choice, which also may represent a theme of sorts, as we see more and more high-end smart home hubs hit the market. We discuss the HOOBS Pro device and the Homey […]\nThe post Podcast: So many new hubs, and a primer on LPWANs appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/podcast-so-many-new-hubs-and-a-primer-on-lpwans/",
-          "publishedOn": "2023-08-03T13:00:41.000Z",
-          "wordCount": 2167,
-          "title": "Podcast: So many new hubs, and a primer on LPWANs",
-          "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/Soluboard_disassembled.jpg?fit=2126%2C1383&ssl=1"
         }
       ]
     },
@@ -2589,7 +2499,18 @@
       "title": "economic view",
       "feedUrl": "http://feeds.feedburner.com/Economic_View",
       "siteUrl": "http://economicview.net",
-      "articles": []
+      "articles": [
+        {
+          "id": "http://economicview.net/?p=84649",
+          "author": "sticky",
+          "description": "오랜만에 블로그에 글을 올린다. 바쁜 시기도 있었고 나름대로 시련의 시기도 있어서 마음의 여유가 없었단 탓이다. 이제 좀 삶이 안정되었으니 다시 글쓰기를 시작할까 한다. 예열 차원에서 역사학자 박태균 씨의 통찰력 넘치는 박정희라는 인물에 대한 강의 영상을 올린다. 한반도의 현대사에서 가장 문제적인 인물, 박정희에 대한 연구야말로 한반도의 과거뿐 아니라 현재와 미래에 대해 고민하는 데에 있어 중요한 열쇠 […]",
+          "link": "http://economicview.net/84649/",
+          "publishedOn": "2023-09-02T01:17:46.000Z",
+          "wordCount": 1113,
+          "title": "박정희는 누구인가?",
+          "imageUrl": "http://img.youtube.com/vi/kW9hXmO30nU/0.jpg"
+        }
+      ]
     },
     {
       "title": "슬로우뉴스",
@@ -2712,7 +2633,7 @@
           "description": "급기야 윤석열 정권이 ‘파시즘의 수령’에 빠지지 않을까라는 우려가 본격적으로 제기되기 시작했다. 8월 15일 경향신문 칼럼 [여적/‘파시스트 되는 법’]은 윤석열 정권이 비판 언론과 시민사회, 노조를 적으로 규정해 혐오를 조장하는 등 곳곳에서 파시즘적 징후가 감지된다고 지적했다. 그런 우려에 동감하면서도 사실은 더 비관적이다. 파시즘의 수렁이 전제주의 국가를 위한 진지를 구축하는 단계로 보이기 때문이다. 파시스트 사회나 전제주의 국가나 별반...\nThe post 다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95827",
           "publishedOn": "2023-08-25T03:56:32.000Z",
-          "wordCount": 5082,
+          "wordCount": 5084,
           "title": "다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2016/10/i_001-14.jpg"
         },
@@ -2762,7 +2683,7 @@
           "description": "이균용에 대한 상반된 평가. ‘기재부 패싱’에서 ‘기재 강점기’로. 한국 정부는 단 한 번도 반대하지 않았다. 차라리 ‘지옥고’에서 살자. 이동관의 임무는 KBS와 MBC 사장 교체. 더 깊게 읽기. 외국인 노동자 부모까지 건보가 필요할까. 한전 한 달 이자만 2000억 원. 해법과 대안. AI로 뉴스 긁어가려면 돈 내라. 강원도에 오면 전공의 수당 100만 원 줍니다. 귀가 서비스 1회에...\nThe post 오염수 방류, 한국 정부는 단 한 번도 반대하지 않았다: 슬로우레터 8월23일. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95707",
           "publishedOn": "2023-08-22T22:05:59.000Z",
-          "wordCount": 5740,
+          "wordCount": 5686,
           "title": "오염수 방류, 한국 정부는 단 한 번도 반대하지 않았다: 슬로우레터 8월23일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/8656859377_8ca39bddc0_b.jpg"
         },
@@ -2792,7 +2713,7 @@
           "description": "[정호재의 아시안 퍼스펙티브] 가깝도고 먼 ‘동남아시아’를 통해 한국을 바라보고 아시아 시대를 꿈꿉니다. 올여름엔 유독 미국서 찾아오는 손님이 많았다. 코로나 팬데믹 3년의 공백 때문이었다. 텍사스서 온 친구 A는 무려 7년 만에 한국을 찾았다. 그새 그는 꽤 거창한 사업가로 변신해 있었다. 손목엔 4만 달러 ‘금통’ 롤렉스가, 머릿속엔 향후 안정적으로 굴릴 사업에 대한 구상이 한창이었다. 한 마디로 ‘아메리칸드림’에...\nThe post 이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤? appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95650",
           "publishedOn": "2023-08-21T06:49:47.000Z",
-          "wordCount": 5476,
+          "wordCount": 5961,
           "title": "이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤?",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/1218.jpg"
         },
@@ -3055,46 +2976,6 @@
           "wordCount": 5601,
           "title": "데이터 클라우드: 최신 이용 동향",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GettyImages-1382671219.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94376",
-          "author": "민노씨",
-          "description": "[명묵적지수] ‘K를 생각한다’ 임명묵 님과 논쟁적 인물과 현상, 이슈에 관해 이야기합니다. 민노: 드라마 [맨헌트: 유나바머] (2017, 디스커버리 커뮤니케이션, 넷플릭스) 얘기도 좀 할까요? 드라마 속 ‘유나바머’는 고립된 존재의 고독, 국가 기획의 실패. 그런 두 가지 속성이 두드러졌던 것 같습니다. 때론 찌질함이랄까… 그런 묘사도 디테일했고요. 다만, 테러리스트 이미지는 다소 퇴색된 것 같기도 합니다. 좀 미화됐달까. 임명묵: 살인...\nThe post K(카진스키)를 생각한다: 04. 맨헌트 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94376",
-          "publishedOn": "2023-08-04T05:43:05.000Z",
-          "wordCount": 8082,
-          "title": "K(카진스키)를 생각한다: 04. 맨헌트",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/pic_002-6.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94844",
-          "author": "이정환",
-          "description": "잼버리, 사람 죽기 전에 멈춰야 한다. “검찰이 표적 수사했다”는데 그 검찰이 윤석열. 또 무차별 흉기 난동. “상온초전도체, 큰 실망에 그칠 수도.” 해법과 대안. “특수학교 보내라”는 게 혐오다. “주문이 잘못돼도 이해해 주세요.” ‘브레이크 밟는 힘’ 기록, 급발진 잡을까. 더 깊게 읽기. 나를 건드려? 쌍방울 김성태의 반격. 8월 중에 이재명 영장 친다. 이재명 체포 동의안, 예상 가능한...\nThe post “특수학교로 보내라”는 게 혐오다: 슬로우레터 8월4일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94844",
-          "publishedOn": "2023-08-03T22:00:32.000Z",
-          "wordCount": 5661,
-          "title": "“특수학교로 보내라”는 게 혐오다: 슬로우레터 8월4일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GettyImages-1415247987.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94782",
-          "author": "민주언론시민연합",
-          "description": "법무부가 ‘검사와 사법경찰관의 상호협력과 일반적 수사준칙에 관한 규정’ 개정안을 입법예고 했습니다. 법무부는 2021년 ‘수사권 조정’에 따른 수사 지연과 부실 수사 등 부작용, 2022년 ‘검수완박법’ 고발인 이의신청권 폐지 등에 따른 국민보호 공백 개선을 이유로 들었는데요. 수사준칙은 대통령령으로 국무회의를 통해 효력이 발휘되는데요. 문재인 정부 시절 검·경수사권 조정으로 시행된 수사준칙을 불과 1년 만에 시행령을 통해 복구하는 이번 개정안은...\nThe post 시행령 꼼수로 ‘검수원복’, 눈감은 조선·중앙 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94782",
-          "publishedOn": "2023-08-03T08:52:33.000Z",
-          "wordCount": 4858,
-          "title": "시행령 꼼수로 ‘검수원복’, 눈감은 조선·중앙",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/KakaoTalk_20230425_114804815_07.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94770",
-          "author": "한상기",
-          "description": "생성형 AI의 가장 대표적인 사례인 거대 언어 모델(LLM)은 막대한 규모의 다양한 입력 데이터 학습을 통해 텍스트 외에도 이미지, 음성, 영상 등의 다양한 응용 영역에서 높은 성능을 보일 수 있기 때문에 이를 기반 모델 또는 파운데이션 모델(Foundation Model:FM)이라고 부르고 있다. 이 이름은 스탠포드 대학 인간중심인공지능연구소에서 2021년 ‘파운데이션 모델의 기회와 위기’라는 보고서를 내고 파운데이션 모델 연구 센터를...\nThe post FMOps에서 찾는 새로운 기회 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94770",
-          "publishedOn": "2023-08-03T08:25:38.000Z",
-          "wordCount": 5589,
-          "title": "FMOps에서 찾는 새로운 기회",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/image1-1.jpg"
         }
       ]
     },
@@ -3139,7 +3020,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591568/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ec%a3%bc%ea%b0%80",
           "publishedOn": "2023-08-29T12:32:50.000Z",
-          "wordCount": 5544,
+          "wordCount": 5533,
           "title": "월가의 클라우드 관련주 투자의견 및 클라우드 관련주 주가 전망(8/30 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png"
         },
@@ -3272,26 +3153,6 @@
           "wordCount": 5729,
           "title": "2분기 애플 실적을 읽는 월가의 시선, 단기적인 수요 약세는 애플 주가를 끌어 내릴 것",
           "imageUrl": "https://happist.com/wp-content/uploads/2020/05/코로나-팬데믹으로-폐쇄된-애플-스토러-앞을-지나는-남며-Perth-WA-Australia-Photo-by-harry-cunningham.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591392",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591392/2q-23-%ec%95%84%eb%a7%88%ec%a1%b4-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-08-04T00:21:18.000Z",
-          "wordCount": 5924,
-          "title": "2분기 아마존 실적 분석, 메인 비즈니스 성장 전환 및 흑자 전환",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/01/아마존-웹사이트-광고-아마존-광고-Advertising-on-Amazon-Image-from-searchenginejournal.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591386",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591386/2q-23-%ec%95%a0%ed%94%8c-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-08-03T23:27:11.000Z",
-          "wordCount": 6021,
-          "title": "2분기 애플 실적 분석",
-          "imageUrl": "https://happist.com/wp-content/uploads/2019/02/애플-신사옥-스티브-잡스-극장-전경-Apples-Steve-Jobs-Theater-round-black-and-white-building-during-daytime-Image-carles-rabada.jpg"
         }
       ]
     },
@@ -3300,6 +3161,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77340",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 7월 10일 스프에 쓴 글입니다. *** 스프에도 소수자 우대 정책, 대법원 판결, 기여입학제에 관해 글을 여러 편 썼네요. 아메리카노에서도 이 사안을 자세히 풀어 설명했습니다. 지난달 말 미국 대법원이 회기 마지막에 굵직굵직한 판결을 → 더 보기",
+          "link": "https://newspeppermint.com/2023/09/01/npsp_scotuslegacyadmission/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_scotuslegacyadmission",
+          "publishedOn": "2023-09-01T22:59:28.000Z",
+          "wordCount": 2126,
+          "title": "[뉴페@스프] ‘부모 찬스’ 그 자체인 기여입학제가 유지되는 이유 그리고 전망",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77329",
           "author": "ingppoo",
@@ -3493,6 +3364,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/223200391662",
+          "author": "sellars",
+          "description": "나는 지금 여기에 누워 산소 가자는 하늘을 보고 있다. 그런데 많이 아프다. 아프지 않았으면 좋겠다.",
+          "link": "https://blog.naver.com/sellars/223200391662",
+          "publishedOn": "2023-09-02T04:33:16.000Z",
+          "wordCount": 101,
+          "title": "은평 성모병원",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/223187337657",
           "author": "sellars",
