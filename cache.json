@@ -100,18 +100,7 @@
       "title": "Embedded Software Insights | Latest Embedded Technology News",
       "feedUrl": "https://www.bluefruit.co.uk/blog/feed",
       "siteUrl": "https://www.bluefruit.co.uk/blog/",
-      "articles": [
-        {
-          "id": "https://www.bluefruit.co.uk/?p=13670",
-          "author": "Jane Orme",
-          "description": "Estimated reading time: 6 minutes  Sometimes our clients struggle with managing lengthy requirement documents that might only be partially implemented by […]\nThe post Executable Specifications in software development appeared first on Bluefruit Software.",
-          "link": "https://www.bluefruit.co.uk/quality/executable-specifications-in-software-development/",
-          "publishedOn": "2023-08-04T11:01:32.000Z",
-          "wordCount": 2684,
-          "title": "Executable Specifications in software development",
-          "imageUrl": "https://www.bluefruit.co.uk/content/uploads/2023/07/Executable-Specifications-thumb.jpg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Bartosz Ciechanowski",
@@ -167,7 +156,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 744,
+          "wordCount": 741,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -487,7 +476,7 @@
           "description": "28 August 2023 by Phillip JohnstonEmbedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our goal is to spread beneficial techniques … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7292,
+          "wordCount": 7305,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -584,7 +573,7 @@
           "description": "Working group will explore industry interest in developing a standardized communication interface to enable interoperability of virtual modeling, simulation, and integration throughout the product lifecycle.\nThe post Accellera working group to consider federated simulation standard appeared first on Embedded.com.",
           "link": "https://www.embedded.com/accellera-working-group-to-consider-federated-simulation-standard/",
           "publishedOn": "2023-08-24T12:29:03.000Z",
-          "wordCount": 3524,
+          "wordCount": 4441,
           "title": "Accellera working group to consider federated simulation standard",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Federated-Simulation-Standard-PWG-intro_Page_2.jpg"
         },
@@ -737,16 +726,6 @@
           "wordCount": 3879,
           "title": "Ultra Ethernet Consortium (UEC) to develop full stack for AI and HPC",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/The_Linux_Foundation_Ultra_Ethernet_Consortium.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480070",
-          "author": "Nitin Dahad",
-          "description": "New company to push adoption of RISC-V, Arm IPO reports, Tenstorrent funding, and SiFive talks RISC-V.\nThe post An eventful week in the world of Arm and RISC-V appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/an-eventful-week-in-the-world-of-arm-and-risc-v/",
-          "publishedOn": "2023-08-04T17:11:50.000Z",
-          "wordCount": 5274,
-          "title": "An eventful week in the world of Arm and RISC-V",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Lars-Reger-at-CES-2023.jpg"
         }
       ]
     },
@@ -761,7 +740,7 @@
           "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
           "link": "https://www.embeddedrelated.com/showarticle/1571.php",
           "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3435,
+          "wordCount": 3448,
           "title": "Who needs source code?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -771,7 +750,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3045,
+          "wordCount": 3013,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -781,7 +760,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32055,
+          "wordCount": 32087,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -791,7 +770,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3940,
+          "wordCount": 4139,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -831,7 +810,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3245,
+          "wordCount": 3238,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         }
@@ -953,16 +932,6 @@
           "wordCount": 2322,
           "title": "Introducing Project IDX, An Experiment to Improve Full-stack, Multiplatform App Development",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtW6l74AgUklRIlEcpq0z9R55YNmhjrz7PhUhAq_yyE_yDWoN8ijinmEONSiMDMxMbm6cjNqvpR3hqgJYmg16OQJQluIxjLwmJp13a0iohog15sQ4232lX4UTXfCf3iOMggWGISNuwnrzPUCn_aM2jQhsMYN31efikH2mqcBLoh5aQe8V0FtyC9PeKQOk/w1200-h630-p-k-no-nu/Project-IDX-Social%20%281%29.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/08/makersuite-expands-adds-new-features-for-ai-makers.html",
-          "author": null,
-          "description": "Posted by Simon Tokumine, Director of Product Management\n\n\n\n\n\n\nWhen we announced MakerSuite earlier this year, we were delighted to see people from all over the world sign up for the waitlist. With MakerSuite we want to help anyone become an AI maker and easily create innovative AI applications with Google’s large generative models. We’re excited to see how it’s being used.\nToday, we’re expanding access to MakerSuite to cover 179 countries and territories, including anyone with a Google Workspace account. This means that more developers than ever can sign up to create AI applications with our latest language model, PaLM 2.\nWe’re also introducing three helpful features:\n\n  \nAutomatically optimize your text prompts\n\n\n\n\n\nWant to write better prompts? Now, you can write a text prompt and click \"Prompt Suggestion\" to get ideas and suggestions to get better responses \n\n\n\n  \n  \nEnable dark mode\n\n\n\n\n\nIn MakerSuite, you can now switch from light mode to dark mode in the settings.\n\n\n\n  \n  \nImport and export your data with Google sheets and CSV to save time and collaborate effectively\n\n  \n\n\n\nImport and export your data to and from Google Sheets or CSV files easily. This can save you time by eliminating the need to recreate data that you have already created. It can also help you collaborate more effectively with others by allowing you to share your results easily.\n\n\n\n\nEasily go from MakerSuite to code\nSince the PaLM API is integrated into MakerSuite, it’s easy to quickly try different prompts from your browser, and then incorporate them into your code—no machine learning expertise required.\n\n\nOnce your prompt is ready, simply copy your code in just one click and integrate it into your project\n\n\n  \n\n\n  \nGet started\nSign up and learn more on our Generative AI for Developers website.  Be sure to check out our quick-start guide, browse our prompt gallery, and explore sample apps for inspiration. We can't wait to see what you build with MakerSuite!",
-          "link": "http://developers.googleblog.com/2023/08/makersuite-expands-adds-new-features-for-ai-makers.html",
-          "publishedOn": "2023-08-04T19:00:00.021Z",
-          "wordCount": 1804,
-          "title": "MakerSuite expands to 179 countries and territories, and adds helpful features for AI makers",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUamN23ar5ECnM46ve6N1OZI7skScieV26fpn4Riuoj5-3nNJSrrhGoe8xyFyA0FluTwNrxtzC2CysOTauOIexrYsdFphRX_p76R2JS6bJfD57m5r4o52I0fsVTs1ZXCKbLK1ZSZfnGHErGOj64neCd5MhD0YMBAUHg7BAYaoSfamVVQtnBl2ylcWSC6I/w1200-h630-p-k-no-nu/G4D-Makersuite-Expands-Social-v2.png"
         }
       ]
     },
@@ -1741,26 +1710,6 @@
           "wordCount": 459,
           "title": "Mourning Bram Moolenaar",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/939973/",
-          "author": "corbet",
-          "description": "The big kernel lock (BKL) is a distant memory now but, for years, it was\none of the more intractable problems faced by the kernel development\ncommunity.  The end of the BKL does not mean that the kernel is without\nproblematic locks, however.  In recent times, some attention has been paid\nto the software-interrupt (or \"bottom half\") lock, which can create latency\nproblems, especially on realtime systems.  Frederic Weisbecker is taking a\nnew tack in his campaign to cut this lock down to size, with an approach\nbased on how the BKL was eventually removed.",
-          "link": "https://lwn.net/Articles/939973/",
-          "publishedOn": "2023-08-04T14:26:20.000Z",
-          "wordCount": null,
-          "title": "[$] Beginning the software-interrupt lock pushdown",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940481/",
-          "author": "jake",
-          "description": "Security updates have been issued by CentOS (bind and kernel), Debian (cjose, firefox-esr, ntpsec, and python-django), Fedora (chromium, firefox, librsvg2, and webkitgtk), Red Hat (firefox), Scientific Linux (firefox and openssh), SUSE (go1.20, ImageMagick, javapackages-tools, javassist, mysql-connector-java, protobuf, python-python-gflags, kernel, openssl-1_1, pipewire, python-pip, and xtrans), and Ubuntu (cargo, rust-cargo, cpio, poppler, and xmltooling).",
-          "link": "https://lwn.net/Articles/940481/",
-          "publishedOn": "2023-08-04T14:18:12.000Z",
-          "wordCount": 325,
-          "title": "Security updates for Friday",
-          "imageUrl": null
         }
       ]
     },
@@ -1969,7 +1918,7 @@
           "description": "Modern tools need a powerful and flexible package and virtual environment manager. Conda or Miniconda has been developed around Python and Data Science, but is very useful for packaging environments for embedded development. Continue reading →",
           "link": "https://mcuoneclipse.com/2023/08/25/vs-code-virtual-environments-for-embedded-development-with-conda/",
           "publishedOn": "2023-08-25T21:40:00.000Z",
-          "wordCount": 5337,
+          "wordCount": 5484,
           "title": "VS Code: Virtual Environments for Embedded Development with Conda",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/conda-in-vs-code.jpg?w=1200"
         },
@@ -2176,7 +2125,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3244,
+          "wordCount": 3225,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -2290,7 +2239,7 @@
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1504,
+          "wordCount": 1506,
           "title": "Readability of anonymous inner classes and lambda expressions",
           "imageUrl": null
         },
@@ -2518,6 +2467,36 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=96129",
+          "author": "민주언론시민연합",
+          "description": "[2023년 8월 민언련 이달의 좋은 보도상 수상 인터뷰] 뉴스펭귄의 ‘기업 기후행동지수 프로젝트-온실가스 100만 톤 클럽’ 대기를 구성하는 기체 중 온실효과를 일으키는 이산화탄소, 메탄 등을 온실가스라고 한다. 온실가스는 지구 기온 유지에 중요한 역할을 하는데, 태양에서 오는 열을 흡수하거나 반사해 지구 표면 온도를 상승시키기 때문이다. 이처럼 중요한 온실가스가 ‘지구가열화’ 원인으로 지목되는 건 ‘너무 많아’서다. 그렇다면 온실가스가 많은...\nThe post 뉴스펭귄, ‘100만 톤 그룹’ 기업 온실가스 감시한다 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96129",
+          "publishedOn": "2023-09-03T16:45:02.000Z",
+          "wordCount": 5209,
+          "title": "뉴스펭귄, ‘100만 톤 그룹’ 기업 온실가스 감시한다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/emperor-penguins-429128_1280.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96120",
+          "author": "참여연대 사법감시센터",
+          "description": "사장이 예민한 거 아니야? 직원이 이겨 먹으려고 든 거 아니야? 서로 사이가 안 좋은가? 라며 관계의 상태나 성격에서 이유를 찾아서는 반복되는 갑질의 고리를 끊기 어렵다. 흠집을 찾아내 누군가를 악당으로 만들어 내쫓았더니, 비슷한 사람이 같은 자리를 꿰차 유사한 일이 반복된다. 갑질이 그렇다. 다양다색한 갑질의 면면 갑질의 갑은 ‘사회·경제적 관계에서 우월한 지위에 있는 사람’을 말하고, 질은 ‘직업이나...\nThe post 위탁업체 직원에 갑질한 아파트 주민회장, 손해배상책임 질까? appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96120",
+          "publishedOn": "2023-09-03T15:12:41.000Z",
+          "wordCount": 4879,
+          "title": "위탁업체 직원에 갑질한 아파트 주민회장, 손해배상책임 질까?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/GettyImages-jv12238029.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96101",
+          "author": "천경호",
+          "description": "소수의 민원에 휘둘리는 학교와 사회 학교폭력 대책과 관련해 민주당 이탄희 의원실을 방문한 적이 있었습니다. 한 고등학교의 학교폭력 사안이 사회적 이슈가 되었고 이탄희 의원이 학교폭력 신고가 있으면 피해학생과 가해학생을 즉시분리하는 방안의 법안을 내놓았습니다. 학교 현장은 반발했습니다. 신고 즉시 분리조치 한다면 가해 추정 학생에 대한 무죄 추정의 원칙을 위반하는 것이고 허위 신고나 쌍방이 신고할 경우 어떻게 처리해야...\nThe post 단 한 명의 동료 교사도 잃고 싶지 않습니다 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96101",
+          "publishedOn": "2023-09-03T07:57:09.000Z",
+          "wordCount": 5008,
+          "title": "단 한 명의 동료 교사도 잃고 싶지 않습니다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/2023090231104440.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=96026",
           "author": "임예인",
           "description": "윤재옥(국민의힘 원내대표)이 이런 말을 했다. “마치 미국산 쇠고기 먹으면 당장 광우병 걸리고 다 죽는다는 광우병 사태와 똑같은 모습이다.” 고현곤(중앙일보 편집인)은 “후쿠시마 오염수에서 광우병 사태가 오버랩된다”고 지적했고 조선일보는 “‘광우병국민대책회의’에 속했던 시민 단체 952개 중 195개 단체가 ‘일본 방사성 오염수 방류 저지 공동행동’에도 참여하고 있다”고 보도했다. ‘광우병 촛불집회’를 진보의 비과학성을 공격하는 전가의 보도처럼 써먹는 사람들이 있다. 보수...\nThe post 광우병이 별 거 아니었다고? 사후 확증편향이다 appeared first on 슬로우뉴스.",
@@ -2553,7 +2532,7 @@
           "description": "‘같이 가면 길이 된다’ 북살롱 텍스트북 북토크 지상중계 “스위스는 빵 공장에서 노동자가 기계에 끼는 사고가 발생하면 당장 국정조사 들어갑니다. 난리나요.” 우리는 노동자가 다치고 죽는 것에 둔감한 나라다. 어쩌다 누군가의 드라마틱한 비극에 관심 가질 뿐 대체로 노동자가 날마다 죽어가는 현실에 관심이 없다. 그게 이상한 거란다. 경제학 박사로 노동을 연구해온 이상헌 국제노동기구(ILO) 고용정책국장을 저서 ‘같이 가면 길이...\nThe post 빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95985",
           "publishedOn": "2023-08-30T12:13:45.000Z",
-          "wordCount": 5053,
+          "wordCount": 4598,
           "title": "빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/pumpkin-bread-food-bread-gluten-dish-banana-bread-1629442-pxhere.com_-1000x667.jpg"
         },
@@ -2623,7 +2602,7 @@
           "description": "[슬로우민트] 뉴스페퍼민트 이효석 대표가 추천하는 좋은 책에 관한 이야기. 두 번째 책은 다윈의 ‘성선택’ 이론의 복권을 시도한 ‘아름다움의 진화'(리처드 프럼). “나는 공작의 꽁지에 있는 깃털을 들여다볼 때마다 구역질이 난다네!” 찰스 다윈, Darwin to Asa Gray, April 3 [1860], Darwin Correspondence Project, Letter 2743. 다윈은 [종의 기원] (1859)을 발표한 이듬해인 1860년에 친구에게 보내는 편지에서 진심으로 공작의...\nThe post 찰스 다윈, 다윈이즘에 대한 최초의 반역자 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95736",
           "publishedOn": "2023-08-25T06:31:18.000Z",
-          "wordCount": 5146,
+          "wordCount": 4732,
           "title": "찰스 다윈, 다윈이즘에 대한 최초의 반역자",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/11888974263_862ea3f5ba_k.jpg"
         },
@@ -2686,36 +2665,6 @@
           "wordCount": 5686,
           "title": "오염수 방류, 한국 정부는 단 한 번도 반대하지 않았다: 슬로우레터 8월23일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/8656859377_8ca39bddc0_b.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95687",
-          "author": "민주언론시민연합",
-          "description": "방송 장악을 위한 정권의 폭주가 거침없다. 방송통신위원회가 터무니없는 꼬투리로 남영진 KBS 이사장을 해임한 데 이어 권태선 방송문화진흥회 이사장을 해임했다. 독립적 운영을 해야 할 방송통신위원회가 상임위원 구성도 제대로 되지 않은 상태에서 노골적으로 정권의 전위대 노릇에 나섰다. 여론과 시민들의 비판에도 아랑곳하지 않는 태세다. 내년 국회의원 선거를 앞두고 공영방송을 앞세워 유리한 여론을 만들려는 초조함이 드러난 것일 수 있다....\nThe post 미디어의 시장화: 윤 정부의 반지성적 반달리즘 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95687",
-          "publishedOn": "2023-08-22T02:58:27.000Z",
-          "wordCount": 4856,
-          "title": "미디어의 시장화: 윤 정부의 반지성적 반달리즘",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/VwTN6GNB3f776476d3aa1b1ea5.41668889.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95665",
-          "author": "이정환",
-          "description": "“어떻게 안보가 위험해진다는 것이냐.” 방문진 이사장 해임, KBS에는 황근 추천. 대법원장엔 윤석열 후배가 유력. 후쿠시마 오염수 24일 방류 가능성. 돈 받고 문제 판 교사들 188명. 누가 사단장을 감싸고 도나. 후쿠시마 오염수 안전 홍보 영상, 대통령실에서 만들었다. 체포 동의안 투표 보이콧? 민주당 내분. 해법과 대안. 장애인의 씻을 권리. ‘먹튀’ 기업에 받아낸 사회적 고용기금. “교사를 죄인으로 간주한...\nThe post “어떻게 안보가 위험해진다는 것이냐” 세상 평화로운 대통령: 슬로우레터 8월22일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95665",
-          "publishedOn": "2023-08-21T22:05:19.000Z",
-          "wordCount": 5846,
-          "title": "“어떻게 안보가 위험해진다는 것이냐” 세상 평화로운 대통령: 슬로우레터 8월22일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/a1EpyQAhthjl64e160cb21aba6.64733764-1000x666.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95650",
-          "author": "정호재",
-          "description": "[정호재의 아시안 퍼스펙티브] 가깝도고 먼 ‘동남아시아’를 통해 한국을 바라보고 아시아 시대를 꿈꿉니다. 올여름엔 유독 미국서 찾아오는 손님이 많았다. 코로나 팬데믹 3년의 공백 때문이었다. 텍사스서 온 친구 A는 무려 7년 만에 한국을 찾았다. 그새 그는 꽤 거창한 사업가로 변신해 있었다. 손목엔 4만 달러 ‘금통’ 롤렉스가, 머릿속엔 향후 안정적으로 굴릴 사업에 대한 구상이 한창이었다. 한 마디로 ‘아메리칸드림’에...\nThe post 이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤? appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95650",
-          "publishedOn": "2023-08-21T06:49:47.000Z",
-          "wordCount": 5961,
-          "title": "이주가사노동자, 싱가포르(절대적 차별)와 미국(능력주의) 사이 어디쯤?",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/1218.jpg"
         },
         {
           "id": "https://slownews.kr/?p=95579",
@@ -2966,16 +2915,6 @@
           "wordCount": 6155,
           "title": "“죽은 문재인과 싸우지 마라”, 조선일보의 조언: 슬로우레터 8월7일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GBu2EUqKTrPQ64cb33a9e75910.29186334-1000x667.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94916",
-          "author": "씨앗(CEART)",
-          "description": "세상은 빠르게 변화하고 있으며, 그 변화를 지원하는 가장 강력한 원동력은 바로 데이터다. 데이터는 기술의 연구, 정책, 혁신, 제품, 서비스 등을 재구성하고 있다. 인공지능은 모든 산업에서 핵심 워크플로와 프로세스를 재고하도록 유도하여 소프트웨어와 기업 전반에 걸쳐 근본적인 변화를 촉진하고 있다. 공급망 시스템상의 물류부터 소매점 진열대의 적절한 재고 확보, 의약품 및 백신의 신속한 개발까지 모든 것을 개선할 수...\nThe post 데이터 클라우드: 최신 이용 동향 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94916",
-          "publishedOn": "2023-08-04T08:29:17.000Z",
-          "wordCount": 5601,
-          "title": "데이터 클라우드: 최신 이용 동향",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GettyImages-1382671219.jpg"
         }
       ]
     },
@@ -3020,7 +2959,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591568/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ec%a3%bc%ea%b0%80",
           "publishedOn": "2023-08-29T12:32:50.000Z",
-          "wordCount": 5533,
+          "wordCount": 5544,
           "title": "월가의 클라우드 관련주 투자의견 및 클라우드 관련주 주가 전망(8/30 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png"
         },
