@@ -151,12 +151,22 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/14359096",
+          "author": "CPUU",
+          "description": "CPPG에 대한 나의 예전 기억\n개인정보관리사라는 일명 CPPG 시험이 있다. \n사실 이 시험의 존재는 꽤 오래전부터 알고있었다. 시험접수 사이트에 로그인을 해보니 2015년에 접수를 했다가 취소를 했던 기록이 있다. 기억을 더듬어보니 당시 공군 장교로 병역을 마치고 취업을 준비하던 시기에 정보보안 분야로 진출하려면 뭐라도 하나 이력을 더 만들고 싶어서 (그때 정보보안기사도 땄었고, 디지털포렌식전문가2급도 땄었다).. 마침 그때 BoB과정을 이수하고 있었는데, 옆의 컨설팅 트랙에서는 뭔가 다들 열심히 도전하는 느낌이길래 나도 신청을 했었던 것 같다. 그러나 결과적으로 당시 대학원에 합격하게 되었고 해당 자격증이 필요없어졌다는 생각에(정확히는 공부를 하기가 싫어서) 바로 환불을 했었던 것이다.\n이 시험을 바로 환불 결정했던 이유가 무엇일까? 나는 natural born 공돌이이고 지금도 기술 분야를 본업으로 삼고 있는 것은 여전하다. 그런데 이 시험은 쉽게 말해 문과 성향의 지식을 많이 필요로 하고, 정확히는 <개인정보보호법>에 대해 깊은 이해가 필요한 자격증이다. 그래서 그때는 도저히 공부할 엄두가 나지 않았다.\n\n\nCPPG를 도전하게 된 계기\n시간이 흐르면서 간혹 이 자격을 검색해보곤했는데, 그때마다 종종 CPPG가 국가공인 자격으로 전환된다, 안된다, 하는 뜬소문이 많았다. 그래서 어떤 의미에서는 국가공인으로 전환된 이후 시험을 보는게 이득이라는 생각도 있었고, 그래서 그냥저냥 계속 기다렸다. 하지만 국가공인 전환은 되지 않았다. 아직까지도.\n그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…",
+          "link": "https://cpuu.postype.com/post/14359096",
+          "publishedOn": "2023-09-04T06:00:41.000Z",
+          "wordCount": 747,
+          "title": "CPPG 개인정보관리사 불합격 후기",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/04/15/00/33/88f9dc86cce73ec915ba47b48ccc2b56.jpeg?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/15154097",
           "author": "CPUU",
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 741,
+          "wordCount": 738,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -200,12 +210,22 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "1f49616c-32b2-4328-83a4-638f9319260d",
+          "author": "Deepankar Jain, Himanshu Yadav",
+          "description": "Dynamic inventories in the Red Hat Ansible Automation Platform revolutionize the way to manage infrastructure in the cloud. Instead of relying on static inventories that require manual updates when virtual machines (VMs) are launched, terminated, or replaced, dynamic inventories automatically discover and run VMs across any cloud provider. This means that when you delete an old VM and launch a new one, Ansible Automation Platform seamlessly adapts and performs actions on the updated infrastructure without requiring manual intervention.\nBy harnessing dynamic inventories, the Ansible Automation Platform empowers cloud administrators and DevOps teams to effortlessly manage and orchestrate on-demand cloud resources. This article explores the power of dynamic inventories, focusing on their util…",
+          "link": "https://developers.redhat.com/articles/2023/09/04/how-use-dynamic-inventories-ansible-automation",
+          "publishedOn": "2023-09-04T07:00:00.000Z",
+          "wordCount": 3091,
+          "title": "How to use dynamic inventories in Ansible Automation",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/03/2020_Ansible_Inventory_Featured_Article__A-01.png?itok=nKTtNIm5"
+        },
+        {
           "id": "94e338a7-dd9b-4b3a-b292-0941474d3d31",
           "author": "Romain Pelisse",
           "description": "For decades now, software projects have relied on messaging APIs to exchange data. In the Java/Java EE ecosystem, this method of asynchronous communication has been standardized by the JMS specification. In many cases, individuals and organizations leverage Red Hat JBoss Enterprise Application Platform (JBoss EAP) to act as message-oriented middleware (MOM), which facilitates the management of message queues and topics.\nMessaging ensures that no messages are lost as they are transmitted from the client and delivered to interested parties. On top of that, JBoss EAP provides authentication and other security-focused capabilities on top of the management functions.\nIn this article, we'll show how to fully automate the setup of JBoss EAP and a JMS queue using Ansible so that we can easily make…",
           "link": "https://developers.redhat.com/articles/2023/09/01/automate-message-queue-deployment-jboss-eap",
           "publishedOn": "2023-09-01T07:00:00.000Z",
-          "wordCount": 8013,
+          "wordCount": 8012,
           "title": "Automate message queue deployment on JBoss EAP",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
         },
@@ -215,7 +235,7 @@
           "description": "While glibc's highly configurable name resolution and character set handling features offer an advantage when it comes to system configuration and installed content, there are limitations when it comes to statically linked applications. This article summarizes the current state, recent improvements, and plans for moving toward truly statically linked applications.\nAlthough dynamic linking has advantages, making it the default choice for situations where binary compatibility is guaranteed (i.e., many Red Hat Enterprise Linux components), static linking is still useful in many situations such as:\nApplication developers wanting to ensure that their binaries run on a wide range of operating system vendors and versions.\n\nContainer introspection tools injected via oc-inject might bring their own…",
           "link": "https://developers.redhat.com/articles/2023/08/31/how-we-ensure-statically-linked-applications-stay-way",
           "publishedOn": "2023-08-31T07:00:00.000Z",
-          "wordCount": 2730,
+          "wordCount": 2729,
           "title": "How we ensure statically linked applications stay that way",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Global_Shared_image__A_0.png?itok=wxw-bY7J"
         },
@@ -225,7 +245,7 @@
           "description": "A new operator for Istio is now available on Red Hat OpenShift as a developer preview. This new operator, temporarily known as the Sail Operator, will serve as the foundation for Red Hat OpenShift Service Mesh 3, which will be released in the upcoming year.\nKey features\nKey features of the new operator include:\nSimplified configuration: The operator utilizes a single custom resource, IstioHelmInstall, to configure the Istio control plane (istiod), using Istio's Helm artifact values for customization.\nFocused management: The operator solely manages Istio and does not handle complementary projects such as Kiali, Prometheus, Grafana, Jaeger, or Elasticsearch. Independent operators will continue to support these integrations.\nUpstream Istio: Instead of the Maistra.io distribution, the operator…",
           "link": "https://developers.redhat.com/articles/2023/08/30/istio-sail-operator-openshift",
           "publishedOn": "2023-08-30T07:00:00.000Z",
-          "wordCount": 2537,
+          "wordCount": 2536,
           "title": "Presenting a new Istio operator on OpenShift",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_OS_Shared_image_A_3.png?itok=96qQ_zu-"
         },
@@ -235,7 +255,7 @@
           "description": "After years of working on software written in C and C++, I switched to working on a project that is implemented in Go. More developers may find themselves working in the Go ecosystem as more software, such as Red Hat OpenShift and Kubernetes, is implemented in Go. This article discusses the primary language differences between Go and C++, differences in the development environments, and differences in the program-building environment. Examples and code snippets are from the Grafana sources.\nProgram syntax\nGo statements are terminated by a semicolon. Go treats the end of a non-blank line as a semicolon unless it can be determined that the line is incomplete. As a result, go requires the opening brace to be on the same line as the function definition:\n func (s *Server) init() error {\n  ...\n …",
           "link": "https://developers.redhat.com/articles/2023/08/30/go-c-developers-beginners-guide",
           "publishedOn": "2023-08-30T07:00:00.000Z",
-          "wordCount": 4249,
+          "wordCount": 4248,
           "title": "Go for C++ developers: A beginner's guide",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/2020_RHD_Coding_imageA%402x.png?itok=yhf9uUNZ"
         },
@@ -245,7 +265,7 @@
           "description": "MongoDB is designed and built for cloud-native applications. It has become one of the fastest growing database technologies in a fast-growing market boosted by AI, e-commerce, big data, and more. MongoDB, ranked fifth overall for databases worldwide, is used by over half of the Fortune 100 and 19 of the 20 largest banks.\nMongoDB is the number one non-relational NoSQL database, using document-oriented technology that makes the developer experience simpler and more productive, especially for modern containerized applications. Instead of storing data in rows and columns, MongoDB stores data inside a collection of documents that are more flexible and extensible. That makes it perfect for e-commerce product catalogs and user profiles, multimedia content management, business intelligence, and mo…",
           "link": "https://developers.redhat.com/articles/2023/08/29/lightbits-openshift-boost-mongodb-performance-aws",
           "publishedOn": "2023-08-29T07:00:00.000Z",
-          "wordCount": 4259,
+          "wordCount": 4258,
           "title": "How LightBits and OpenShift boost MongoDB performance in AWS",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
         },
@@ -255,7 +275,7 @@
           "description": "In this article, I'll give a brief overview of cross-origin resource sharing (CORS) in the context of modern web applications and their interactions with HTTP APIs. I will also provide a sample solution(hosted on GitHub) for avoiding CORS-related issues in a web application that's served from Red Hat OpenShift.\nThe sample solution uses Red Hat's Universal Base Images for Node.js, NGINX, and Java. Instructions are included in this post to help you deploy and test the sample solution for free in the Developer Sandbox for Red Hat OpenShift.\nWhat exactly is CORS?\nIf you're not familiar with CORS or need a refresher, you should take a look at this excellent primer published by Julia Evans on wizardzines.com. To summarize, when JavaScript executing in a web browser on one origin (e.g., https://u…",
           "link": "https://developers.redhat.com/articles/2023/08/29/avoid-cors-errors-openshift-web-applications",
           "publishedOn": "2023-08-29T07:00:00.000Z",
-          "wordCount": 3927,
+          "wordCount": 3926,
           "title": "Conquer CORS errors in OpenShift web applications",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
         },
@@ -265,7 +285,7 @@
           "description": "Ansible lint is a command-line tool that checks Ansible playbooks for errors and suggests improvements for the code written in the playbooks. This helps the users adhere to certain standards to follow while writing the playbooks to maintain the integrity of their code.\nThis article demonstrates how to install Ansible lint. We will also explore use cases and how to prevent errors during execution of playbooks and save debugging time.\nHow to install Ansible lint\nThe easiest way to install Ansible lint is by using pip as follows:\npython3 -m pip install –user ansible-lint\nOn Red Hat Enterprise Linux (RHEL) systems with a Red Hat Ansible Automation Platform subscription, we can also use dnf to install Ansible lint:\ndnf install ansible-lint\nWe can also install Ansible lint from the source reposi…",
           "link": "https://developers.redhat.com/articles/2023/08/28/how-ansible-lint-improves-playbook-debugging",
           "publishedOn": "2023-08-28T07:00:00.000Z",
-          "wordCount": 2717,
+          "wordCount": 2716,
           "title": "How Ansible lint improves playbook debugging",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         },
@@ -275,7 +295,7 @@
           "description": "Provisioning strong identities for every workload using X.509 certificates and establishing mutual TLS (mTLS) as a full stack solution for transport security without requiring any code changes is one of the many features offered out of the box by Red Hat OpenShift Service Mesh (based on the upstream Istio project).\nThis article explores configuring HashiCorp Vault as the PKI engine (or certificate back-end) for signing OpenShift Service Mesh workloads using cert-manager and istio-csr.\nDefault and pluggable CA scenario\nUntil OpenShift Service Mesh 2.3, we had to rely on workload certificates that were either created by the auto-generated self-signed root cert and key or by a custom root / intermediate Certificate Authority (CA) and key that is exposed to the underlying control plane infrast…",
           "link": "https://developers.redhat.com/articles/2023/08/24/integrate-openshift-service-mesh-cert-manager-and-vault",
           "publishedOn": "2023-08-24T07:00:00.000Z",
-          "wordCount": 3929,
+          "wordCount": 3928,
           "title": "Integrate OpenShift Service Mesh with cert-manager and Vault",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_ServiceMesh_Topic_Image_A_1.jpg?itok=OW7hjVcD"
         },
@@ -285,19 +305,9 @@
           "description": "In recent years, the integration of artificial intelligence (AI) in various fields has sparked new possibilities and advancements. One intriguing application of AI lies in generating domain-specific language (DSL) documents. DSLs are designed to address specific domains or problem spaces (such as enterprise integration), allowing developers to express solutions in a more natural way, removing the cognitive complexity related to boilerplate code. In this article, we will delve into the idea of leveraging AI to generate Apache Camel DSL.\nChatGPT and Camel\nOne of the primary areas where AI can be applied is in generating DSL code. By training AI models on existing Apache Camel DSL codebases, these models can learn the patterns, syntax, and semantic relationships unique to the language. With t…",
           "link": "https://developers.redhat.com/articles/2023/08/24/how-leverage-ai-generate-apache-camel-routes",
           "publishedOn": "2023-08-24T07:00:00.000Z",
-          "wordCount": 2922,
+          "wordCount": 2921,
           "title": "How to leverage AI to generate Apache Camel routes",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Global_Shared_image__A_0.png?itok=wxw-bY7J"
-        },
-        {
-          "id": "e3e03ffe-d779-4cc9-a6f7-dc2b76ccd0c5",
-          "author": "Philip Hayes",
-          "description": "Red Hat OpenShift is an ideal location to re-platform Red Hat JBoss Enterprise Application Platform (JBoss EAP) workloads. We discussed this topic in previous articles, such as Why you should migrate your Java workloads to OpenShift. Here's a summary of the benefits:\nScalability: OpenShift can automatically scale JBoss EAP instances based on demand, making it more efficient and responsive to changes in traffic.\nImmutability: JBoss EAP applications deployed on OpenShift are built as immutable images, making it easier to promote with confidence from lower to higher environments and removing the possibility of configuration creep.\nResource allocation: On OpenShift, resources can be allocated dynamically based on actual usage, allowing for better resource utilization and cost efficiency.\nDeplo…",
-          "link": "https://developers.redhat.com/articles/2023/08/23/how-migrate-complex-jboss-eap-application-openshift",
-          "publishedOn": "2023-08-23T07:00:00.000Z",
-          "wordCount": 4035,
-          "title": "How to migrate a complex JBoss EAP application to OpenShift",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
         },
         {
           "id": "04c37be9-99a3-482a-a854-e946e04feef4",
@@ -473,10 +483,10 @@
         {
           "id": "https://embeddedartistry.com/?p=34270",
           "author": "Phillip Johnston",
-          "description": "28 August 2023 by Phillip JohnstonEmbedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our goal is to spread beneficial techniques … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
+          "description": "28 August 2023 by Phillip Johnston • Last updated 4 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7305,
+          "wordCount": 7403,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -573,7 +583,7 @@
           "description": "Working group will explore industry interest in developing a standardized communication interface to enable interoperability of virtual modeling, simulation, and integration throughout the product lifecycle.\nThe post Accellera working group to consider federated simulation standard appeared first on Embedded.com.",
           "link": "https://www.embedded.com/accellera-working-group-to-consider-federated-simulation-standard/",
           "publishedOn": "2023-08-24T12:29:03.000Z",
-          "wordCount": 4441,
+          "wordCount": 3524,
           "title": "Accellera working group to consider federated simulation standard",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Federated-Simulation-Standard-PWG-intro_Page_2.jpg"
         },
@@ -735,12 +745,22 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1572.php",
+          "author": null,
+          "description": "With the ever increasing number of applications involving video processing, AI or edge computing the appetite for suitably skilled FPGA Engineers has never been higher from the market which is expected to grow to $15 billion USD by 2027!\nIn terms of industries opportunities can be typically found within:\n\nAutomotive\nAerospace\nDefense\nData Processing\n\nHowever this list is...",
+          "link": "https://www.embeddedrelated.com/showarticle/1572.php",
+          "publishedOn": "2023-09-04T10:28:23.000Z",
+          "wordCount": 3146,
+          "title": "FPGA skills for the modern world",
+          "imageUrl": "https://au.mouser.com/images/marketingid/2019/microsites/0/Zynq-7000%20SoCArchitectural%20Overview.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1571.php",
           "author": null,
           "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
           "link": "https://www.embeddedrelated.com/showarticle/1571.php",
           "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3448,
+          "wordCount": 3415,
           "title": "Who needs source code?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -750,7 +770,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3013,
+          "wordCount": 3002,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -760,7 +780,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32087,
+          "wordCount": 32089,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -770,7 +790,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 4139,
+          "wordCount": 4126,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -810,7 +830,7 @@
           "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
           "link": "https://www.embeddedrelated.com/showarticle/1549.php",
           "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3238,
+          "wordCount": 3211,
           "title": "From Embedded Software Engineer to Musician",
           "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         }
@@ -1152,6 +1172,26 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/943239/",
+          "author": "corbet",
+          "description": "The kernel-development community has recently been discussing a number of\nindependent patches, each of which is intended to help improve the security\nof deployed systems in some way.  They touch on a number of areas within the\nkernel, including the question of how widely io_uring should be available,\nhow to allow virtual machines to attest to their integrity, and the best\nway to inform applications when their random-number generators need to be\nreseeded.",
+          "link": "https://lwn.net/Articles/943239/",
+          "publishedOn": "2023-09-04T14:24:54.000Z",
+          "wordCount": null,
+          "title": "[$] Security topics: io_uring, VM attestation, and random-reseed notifications",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943492/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (thunderbird), Fedora (firefox, kernel, kubernetes, and mediawiki), Mageia (openldap), SUSE (terraform), and Ubuntu (atftp, busybox, and thunderbird).",
+          "link": "https://lwn.net/Articles/943492/",
+          "publishedOn": "2023-09-04T13:54:40.000Z",
+          "wordCount": 181,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/943400/",
           "author": "corbet",
           "description": "The\n6.5.1,\n6.4.14,\n6.1.51,\n5.15.130,\n5.10.194,\n5.4.256,\n4.19.294, and\n4.14.325\nstable kernel updates have all been released; each contains another set of\nimportant fixes.",
@@ -1279,26 +1319,6 @@
           "publishedOn": "2023-08-28T15:16:18.000Z",
           "wordCount": null,
           "title": "[$] Development statistics for the 6.5 kernel",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942937/",
-          "author": "jake",
-          "description": "August 26 was the 25th anniversary of the release of the  Bugzilla bug tracker as open-source software under the Mozilla Public License (MPL).  A blog post for the occasion has some announcements, including several upcoming releases, help wanted, and a new legal entity to house the project:\n\n\nWhich now brings us to today, when I’m happy to announce the formation of Zarro Boogs Corporation, which will now be overseeing the Bugzilla Project. This is a taxable non-profit non-charitable corporation - we have filed with the IRS our intent to operate under US Tax Code §501(c)(4) (still pending approval from the IRS) meaning the IRS would require us to spend money raised on project expenses and not make a profit, but money donated to us will not earn you a tax deduction because we aren’t a charity (software development is not considered a charitable cause in the US). Unlike Thunderbird, which is a subsidiary of the Mozilla Foundation, we are an independent entity not owned by or associated with the Mozilla Foundation, although they have licensed the use of the Bugzilla trademark to us.",
-          "link": "https://lwn.net/Articles/942937/",
-          "publishedOn": "2023-08-28T15:10:17.000Z",
-          "wordCount": 353,
-          "title": "Bugzilla Celebrates 25 Years With Special Announcements (Bugzilla blog)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942922/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (chromium, clamav, librsvg, rar, and unrar-nonfree), Fedora (caddy, chromium, and xen), and SUSE (ca-certificates-mozilla, gawk, ghostscript, java-1_8_0-ibm, java-1_8_0-openjdk, php7, qemu, and xen).",
-          "link": "https://lwn.net/Articles/942922/",
-          "publishedOn": "2023-08-28T14:32:55.000Z",
-          "wordCount": 255,
-          "title": "Security updates for Monday",
           "imageUrl": null
         },
         {
@@ -1690,26 +1710,6 @@
           "wordCount": 139,
           "title": "Kernel prepatch 6.5-rc5",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940567/",
-          "author": "corbet",
-          "description": "Faith Ekstrand announces\non the Collabora blog\nthat NVK, an open-source driver for NVIDIA GPUs, will be included in the\nMesa 23.3 release.\n\n\n\tMerging into mesa/main is certainly a big milestone but NVK is\n\tnowhere near finished. It will take a long time before we get the\n\tbugs worked out and get a full feature set with reasonable\n\tperformance. What it does mean is that we're pretty confident in\n\tthe core of the driver and that we have a good base to build on\n\tgoing forward.\n\n\nThe necessary kernel support is planned for the 6.6 release; this\nblog post from David Airlie describes the work being done on that side.",
-          "link": "https://lwn.net/Articles/940567/",
-          "publishedOn": "2023-08-05T19:40:47.000Z",
-          "wordCount": 225,
-          "title": "Ekstrand: NVK Has landed",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940551/",
-          "author": "corbet",
-          "description": "Bram Moolenaar, the creator of the vim editor, passed\naway on August 3.  \"Bram dedicated a large part of his life to\nVIM and he was very proud of the VIM community that you are all part\nof.\"  He will be missed.",
-          "link": "https://lwn.net/Articles/940551/",
-          "publishedOn": "2023-08-05T14:29:59.000Z",
-          "wordCount": 459,
-          "title": "Mourning Bram Moolenaar",
-          "imageUrl": null
         }
       ]
     },
@@ -1736,16 +1736,6 @@
           "publishedOn": "2023-08-11T00:00:00.000Z",
           "wordCount": 324,
           "title": "What is inside a Mean Well DIN rail power supply",
-          "imageUrl": null
-        },
-        {
-          "id": "tag:m0agx.eu,2023-08-06:/scheduling-posts-with-pelican.html",
-          "author": null,
-          "description": "Pelican has no facility for scheduling posts. However, it is very easy to do it with basic shell scripting and cron. I started by adding Scheduled: yes field to the draft post.",
-          "link": "https://m0agx.eu/scheduling-posts-with-pelican.html",
-          "publishedOn": "2023-08-06T00:00:00.000Z",
-          "wordCount": 556,
-          "title": "Scheduling posts with Pelican",
           "imageUrl": null
         }
       ]
@@ -2091,26 +2081,6 @@
           "wordCount": 3811,
           "title": "MCUXpresso IDE 11.8.0",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/mcuxpresso-ide-11.8.0.png?w=1200"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38039",
-          "author": "Erich Styger",
-          "description": "If you want to uninstall Visual Studio code, you can run the 'uninstall', but this will not remove everything. This article describes how to remove all the extensions and the settings. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/06/vs-code-uninstall-completely/",
-          "publishedOn": "2023-08-06T07:59:25.000Z",
-          "wordCount": 3604,
-          "title": "VS Code: Uninstall completely",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/uninstalling-vs-code.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38017",
-          "author": "Erich Styger",
-          "description": "This article describes how to download and install Visual Studio Code. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/05/vs-code-ide-installation/",
-          "publishedOn": "2023-08-05T14:23:37.000Z",
-          "wordCount": 3621,
-          "title": "VS Code: IDE Installation",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/vs-code-first-screen.png"
         }
       ]
     },
@@ -2125,7 +2095,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3225,
+          "wordCount": 3200,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -2234,12 +2204,22 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8152",
+          "author": "Derek Jones",
+          "description": "Study after study finds that the predictive power of both the Halstead metric and the McCabe cyclomatic complexity metric is no better than counting lines of code, for the characteristics of interest. Why do people continue to use and cite the Halstead and McCabe metrics? My experience, talking to people, is that many believe these […]",
+          "link": "https://shape-of-code.com/2023/09/03/halstead-mccabe-metrics-the-wisdom-of-the-ancients/",
+          "publishedOn": "2023-09-03T21:46:40.000Z",
+          "wordCount": 1641,
+          "title": "Halstead & McCabe metrics: The wisdom of the ancients",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8134",
           "author": "Derek Jones",
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1506,
+          "wordCount": 1528,
           "title": "Readability of anonymous inner classes and lambda expressions",
           "imageUrl": null
         },
@@ -2249,7 +2229,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1506,
+          "wordCount": 1519,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2467,12 +2447,32 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=96179",
+          "author": "민주언론시민연합",
+          "description": "공영방송이 다시 격랑에 휩싸였다. 이명박 정부 때 홍보수석으로 방송장악을 지휘했던 이동관 특보가 이번엔 방송정책을 총괄하는 방송통신위원장으로 전면에 등장했다. 윤석열 대통령이 야당의 부적격 청문보고서와 시민사회의 반대 여론도 무시한 채 임명을 강행한 것이다. 이동관은 8월 28일 방송통신위원장 취임사에서 “공영방송은 각종 특혜를 당연시하면서도 ‘노영방송’이라는 이중성으로 정치적 편향성과 가짜뉴스 확산은 물론 국론을 분열시켜 왔다”고 왜곡된 언론관을 드러내며 “서비스·재원·인력 구조...\nThe post 언론장악 시즌2, 공영방송을 지키기 위한 세 가지 조건 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96179",
+          "publishedOn": "2023-09-04T05:22:17.000Z",
+          "wordCount": 5090,
+          "title": "언론장악 시즌2, 공영방송을 지키기 위한 세 가지 조건",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/pic_008.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96138",
+          "author": "이정환",
+          "description": "‘공교육 멈춤의 날’에 쏟아진 사회적 연대와 지지. “숨이 안 쉬어진다”던 교사의 죽음. ‘쓴 약 처방’ 국민연금 개혁안. “L자 침체” 우려에 추경호 “9월부터 상당히 괜찮아질 것.” ‘항명’ 논란 박정훈 영장 기각. 대법원장 후보자의 이해할 수 없는 판결. 해법과 대안. 플라스틱이 친환경적일 수 있는 이유. 강제 입원으로 범죄 예방? 접근이 잘못됐다. 오늘의 TMI. 하늘색은 ‘더 마신다’, 검은색은...\nThe post “숨이 안 쉬어진다”던 교사의 죽음: 슬로우레터 9월4일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96138",
+          "publishedOn": "2023-09-03T22:08:21.000Z",
+          "wordCount": 6025,
+          "title": "“숨이 안 쉬어진다”던 교사의 죽음: 슬로우레터 9월4일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/2023090232083423.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=96129",
           "author": "민주언론시민연합",
           "description": "[2023년 8월 민언련 이달의 좋은 보도상 수상 인터뷰] 뉴스펭귄의 ‘기업 기후행동지수 프로젝트-온실가스 100만 톤 클럽’ 대기를 구성하는 기체 중 온실효과를 일으키는 이산화탄소, 메탄 등을 온실가스라고 한다. 온실가스는 지구 기온 유지에 중요한 역할을 하는데, 태양에서 오는 열을 흡수하거나 반사해 지구 표면 온도를 상승시키기 때문이다. 이처럼 중요한 온실가스가 ‘지구가열화’ 원인으로 지목되는 건 ‘너무 많아’서다. 그렇다면 온실가스가 많은...\nThe post 뉴스펭귄, ‘100만 톤 그룹’ 기업 온실가스 감시한다 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96129",
           "publishedOn": "2023-09-03T16:45:02.000Z",
-          "wordCount": 5209,
+          "wordCount": 5228,
           "title": "뉴스펭귄, ‘100만 톤 그룹’ 기업 온실가스 감시한다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/emperor-penguins-429128_1280.jpg"
         },
@@ -2482,7 +2482,7 @@
           "description": "사장이 예민한 거 아니야? 직원이 이겨 먹으려고 든 거 아니야? 서로 사이가 안 좋은가? 라며 관계의 상태나 성격에서 이유를 찾아서는 반복되는 갑질의 고리를 끊기 어렵다. 흠집을 찾아내 누군가를 악당으로 만들어 내쫓았더니, 비슷한 사람이 같은 자리를 꿰차 유사한 일이 반복된다. 갑질이 그렇다. 다양다색한 갑질의 면면 갑질의 갑은 ‘사회·경제적 관계에서 우월한 지위에 있는 사람’을 말하고, 질은 ‘직업이나...\nThe post 위탁업체 직원에 갑질한 아파트 주민회장, 손해배상책임 질까? appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96120",
           "publishedOn": "2023-09-03T15:12:41.000Z",
-          "wordCount": 4879,
+          "wordCount": 4904,
           "title": "위탁업체 직원에 갑질한 아파트 주민회장, 손해배상책임 질까?",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/GettyImages-jv12238029.jpg"
         },
@@ -2532,7 +2532,7 @@
           "description": "‘같이 가면 길이 된다’ 북살롱 텍스트북 북토크 지상중계 “스위스는 빵 공장에서 노동자가 기계에 끼는 사고가 발생하면 당장 국정조사 들어갑니다. 난리나요.” 우리는 노동자가 다치고 죽는 것에 둔감한 나라다. 어쩌다 누군가의 드라마틱한 비극에 관심 가질 뿐 대체로 노동자가 날마다 죽어가는 현실에 관심이 없다. 그게 이상한 거란다. 경제학 박사로 노동을 연구해온 이상헌 국제노동기구(ILO) 고용정책국장을 저서 ‘같이 가면 길이...\nThe post 빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95985",
           "publishedOn": "2023-08-30T12:13:45.000Z",
-          "wordCount": 4598,
+          "wordCount": 5053,
           "title": "빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/pumpkin-bread-food-bread-gluten-dish-banana-bread-1629442-pxhere.com_-1000x667.jpg"
         },
@@ -2562,7 +2562,7 @@
           "description": "방송통신위원장 축출 시도로 시작된 방송장악 프로젝트가 본격적으로 작동하고 있다. 독립성이 생명인 방송통신위원회의 위원장을 ‘대통령 국정 철학과 맞지 않은 사람이니 사퇴해야 한다’는 반민주적이고 해괴한 논리로 공격하더니, 방송장악의 선봉에 섰던 사람을 방송통신위원장으로 임명했다. 그렇다면 현 정부의 국정 철학은 방송장악인가? 다수결 원리 악용한 공영방송 침탈 지난 1년여간 민주주의 사회에서 이해하기 힘든 일들이 연속해서 벌어졌다. 도대체 왜 그랬을까? 그...\nThe post 소 잃었어도 외양간은 고치자: 정치적 후견주의 극복해야 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95947",
           "publishedOn": "2023-08-29T15:37:57.000Z",
-          "wordCount": 4859,
+          "wordCount": 4876,
           "title": "소 잃었어도 외양간은 고치자: 정치적 후견주의 극복해야",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/vote-5676563_1280.jpg"
         },
@@ -2612,7 +2612,7 @@
           "description": "급기야 윤석열 정권이 ‘파시즘의 수령’에 빠지지 않을까라는 우려가 본격적으로 제기되기 시작했다. 8월 15일 경향신문 칼럼 [여적/‘파시스트 되는 법’]은 윤석열 정권이 비판 언론과 시민사회, 노조를 적으로 규정해 혐오를 조장하는 등 곳곳에서 파시즘적 징후가 감지된다고 지적했다. 그런 우려에 동감하면서도 사실은 더 비관적이다. 파시즘의 수렁이 전제주의 국가를 위한 진지를 구축하는 단계로 보이기 때문이다. 파시스트 사회나 전제주의 국가나 별반...\nThe post 다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95827",
           "publishedOn": "2023-08-25T03:56:32.000Z",
-          "wordCount": 5084,
+          "wordCount": 5074,
           "title": "다가올 파국적 전제주의 사회, 누가 악몽을 막을 것인가",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2016/10/i_001-14.jpg"
         },
@@ -2642,29 +2642,9 @@
           "description": "오늘부터 오염수 방류 시작. 수산업 피해 3.7조 원이라는데 정부 지원은 10분의 1. “사법신뢰 회복” 외친 이균용, 아동 성폭행 재판에서 “젊으니까 감경.” 달의 남극, 얼음이 있을까. 군인도 부족한데 의경을 다시 뽑는다고? 더 깊게 읽기. 판사 출신 KBS 이사장의 수상쩍은 과거. 법정 스릴러 같았던 이화영 재판. 준 건 많은데 얻은 건 없다. 자영업자 비중 20% 붕괴. 오늘의...\nThe post ‘깨진 독’ 오염수 방류, 30년으로 안 끝난다: 슬로우레터 8월24일. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95768",
           "publishedOn": "2023-08-23T22:07:32.000Z",
-          "wordCount": 5672,
+          "wordCount": 5665,
           "title": "‘깨진 독’ 오염수 방류, 30년으로 안 끝난다: 슬로우레터 8월24일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/SSC_20230406161841-1000x750.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95754",
-          "author": "민주언론시민연합",
-          "description": "이동관 후보자의 방송통신위원장 임명이 임박했다. 8월 18일 청문회에서 야당 의원들이 온갖 비위 의혹을 제기하고 다양한 증거자료를 제시했지만 크게 효과가 없을 상황이다. 다수당인 야당이 저항해 국회가 청문보고서를 채택하지 않는다 해도, 애초 이 후보자를 지명한 윤 대통령의 의지가 확고하다니 임명은 기정사실이나 다름이 없다. 이 후보 임명 반대는 의회에서만이 아니다. 한국기자협회가 6월 16일부터 19일 오전까지 소속 회원 1만...\nThe post 2008년 총선 재연을 꿈꾸는가? 기자 80% 반대 이동관 임명 임박 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95754",
-          "publishedOn": "2023-08-23T10:39:41.000Z",
-          "wordCount": 4570,
-          "title": "2008년 총선 재연을 꿈꾸는가? 기자 80% 반대 이동관 임명 임박",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/bd0f9b89912c34898b682d029a725366.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95707",
-          "author": "이정환",
-          "description": "이균용에 대한 상반된 평가. ‘기재부 패싱’에서 ‘기재 강점기’로. 한국 정부는 단 한 번도 반대하지 않았다. 차라리 ‘지옥고’에서 살자. 이동관의 임무는 KBS와 MBC 사장 교체. 더 깊게 읽기. 외국인 노동자 부모까지 건보가 필요할까. 한전 한 달 이자만 2000억 원. 해법과 대안. AI로 뉴스 긁어가려면 돈 내라. 강원도에 오면 전공의 수당 100만 원 줍니다. 귀가 서비스 1회에...\nThe post 오염수 방류, 한국 정부는 단 한 번도 반대하지 않았다: 슬로우레터 8월23일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95707",
-          "publishedOn": "2023-08-22T22:05:59.000Z",
-          "wordCount": 5686,
-          "title": "오염수 방류, 한국 정부는 단 한 번도 반대하지 않았다: 슬로우레터 8월23일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/8656859377_8ca39bddc0_b.jpg"
         },
         {
           "id": "https://slownews.kr/?p=95579",
@@ -2924,6 +2904,26 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=591611",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591611/%eb%a7%a5%eb%ac%b8%eb%8f%99-%ec%b6%9c%ec%82%ac",
+          "publishedOn": "2023-09-04T07:39:15.000Z",
+          "wordCount": 5722,
+          "title": "23년 9월 맥문동 출사 여행",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/1693812492976.jpg"
+        },
+        {
+          "id": "https://happist.com/?p=591606",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591606/%ea%b5%ad%eb%82%b4-ott-%ec%9d%b4%ec%9a%a9%ec%9e%90-%ec%b6%94%ec%9d%b4",
+          "publishedOn": "2023-09-04T03:37:04.000Z",
+          "wordCount": 5356,
+          "title": "국내 OTT 이용자 추이(23년 7월 업뎃)",
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/08/쿠팡이츠-배달중인-쿠팡이츠-배달원-coupang-eats-delivery-woman-Image-from-Coupang.jpg"
+        },
+        {
           "id": "https://happist.com/?p=591584",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -2959,7 +2959,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591568/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ec%a3%bc%ea%b0%80",
           "publishedOn": "2023-08-29T12:32:50.000Z",
-          "wordCount": 5544,
+          "wordCount": 5533,
           "title": "월가의 클라우드 관련주 투자의견 및 클라우드 관련주 주가 전망(8/30 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png"
         },
@@ -3002,26 +3002,6 @@
           "wordCount": 7167,
           "title": "놀라운 2분기 엔비디아 실적을 읽는 월가의 시각",
           "imageUrl": "https://happist.com/wp-content/uploads/2020/08/엔비디아-로고-nvidia-logo.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591505",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591505/%ec%a3%bc%ec%8b%9d-%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9%ea%b3%bc-%ec%9d%b8%ec%83%9d%ec%97%90-%eb%8c%80%ed%95%9c-4%ea%b0%80%ec%a7%80-%ec%9b%90%ec%b9%99",
-          "publishedOn": "2023-08-24T13:16:21.000Z",
-          "wordCount": 6087,
-          "title": "주식 트레이딩과 인생에 대한 4가지 원칙",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/07/비트코인과-주식-시세판-암호화폐-시세-bitcoin-Photo-by-RoyBuri.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591496",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591496/23%eb%85%84-2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-08-24T00:41:17.000Z",
-          "wordCount": 6091,
-          "title": "놀라움의 연속, 23년 2분기 엔비디아 실적",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/07/9b8afed2b07ba6fd4b8e690d41df571a.jpeg"
         },
         {
           "id": "https://happist.com/?p=591463",
@@ -3082,16 +3062,6 @@
           "wordCount": 6695,
           "title": "2분기 아마존 실적을 읽는 월가의 시선, 메인 비즈니스 및 마진 개선으로 아마존 주가 변곡점",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/05/아마존-물류창고.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591401",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591401/2q-23-%ec%95%a0%ed%94%8c-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2023-08-06T07:57:47.000Z",
-          "wordCount": 5729,
-          "title": "2분기 애플 실적을 읽는 월가의 시선, 단기적인 수요 약세는 애플 주가를 끌어 내릴 것",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/05/코로나-팬데믹으로-폐쇄된-애플-스토러-앞을-지나는-남며-Perth-WA-Australia-Photo-by-harry-cunningham.jpg"
         }
       ]
     },
@@ -3100,6 +3070,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77718",
+          "author": "NewsPeppermint",
+          "description": "여러 분야에서 세계 최고의 도시로 꼽히는 뉴욕의 치부 중 하나는 바로 도시의 지하 세계를 사실상 장악하고 있는 쥐입니다. 뉴욕을 여행한 분이라면 지하철역이나 쓰레기통 근처에서 쥐를 본 경험이 한 번쯤은 있을 겁니다. 뉴욕시도 쥐를 퇴치하기 위해 많은 노력을 기울여 왔지만, 별 효과는 없었던 것 같습니다. 이런 가운데 10년 넘게 쥐를 연구해 온 생물학자 제이슨 먼시 사우스 박사가 뉴욕타임스에 칼럼을 썼습니다. 문제는 쥐가 아니라 쥐를 전혀 이해하지 못하면서 소용없는 해결책을 바꾸지 않는 → 더 보기",
+          "link": "https://newspeppermint.com/2023/09/03/npsp_nycrat/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_nycrat",
+          "publishedOn": "2023-09-03T22:30:42.000Z",
+          "wordCount": 1439,
+          "title": "지구를 위해 미국인들이 해야 하는 일 중 하나는",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77340",
           "author": "ingppoo",
@@ -3279,16 +3259,6 @@
           "wordCount": 1485,
           "title": "각자 다른 ‘평행 우주’에 살고 있는 여야 지지자들이 함께 맞이할 내년 선거",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77136",
-          "author": "veritaholic",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 17일 스프에 쓴 글입니다. 지난 5월, 미국 대법원은 앤디 워홀의 작품인 가수 프린스의 초상화가 타인의 저작권을 침해했다고 판결했습니다. 앤디 워홀은 20세기 중반 대중문화를 예술로 만든 팝아트를 현대 미술의 한 장르로 격상시킨 → 더 보기",
-          "link": "https://newspeppermint.com/2023/08/05/npsp_warhol/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_warhol",
-          "publishedOn": "2023-08-05T22:59:01.000Z",
-          "wordCount": 2069,
-          "title": "[뉴페@스프] 더 독창적인 방식으로 기존의 독창성을 해체한 ‘앤디 워홀’",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
@@ -3331,16 +3301,6 @@
           "publishedOn": "2023-08-07T00:31:12.000Z",
           "wordCount": 101,
           "title": "선험적 지식",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223176015783",
-          "author": "sellars",
-          "description": "(몸이 아주 아프다. 따라서 나름 순서에 따라 공부하고 글을 올리고 있는데, 당분간 더 이상 이 작업을 할 수 없을 것 같다. 사실 이번 주는 메이야수의 <유한성 이후>를 공부하고 그것에 대한 논평을 써야 하는데, 그의 책을 읽을 체력과 집중력이 되지 못한다. 그래서 생각한 것이 이 대안이다. 하루에 아주 조금 공부하고 글을 쓸 것이다.) 1. 그것이 알갱이로 되어 있다는 것은 그것이 하나의 문장으로 되어 있다는 의미가 아니다. 단어와 문장은 구분되어야 한다. 문장은 단순한 알갱이의 집합이 아니다. 단어적인 것과 문장적인 것은 구분되어야 한다. 2. 단어들의 집합이 어떻게 문장을 해명할 수 있는가? 나는 가능하지 않다고 본.......",
-          "link": "https://blog.naver.com/sellars/223176015783",
-          "publishedOn": "2023-08-05T21:48:19.000Z",
-          "wordCount": 101,
-          "title": "알갱이주의",
           "imageUrl": null
         }
       ]
