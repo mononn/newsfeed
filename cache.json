@@ -156,7 +156,7 @@
           "description": "CPPG에 대한 나의 예전 기억\n개인정보관리사라는 일명 CPPG 시험이 있다. \n사실 이 시험의 존재는 꽤 오래전부터 알고있었다. 시험접수 사이트에 로그인을 해보니 2015년에 접수를 했다가 취소를 했던 기록이 있다. 기억을 더듬어보니 당시 공군 장교로 병역을 마치고 취업을 준비하던 시기에 정보보안 분야로 진출하려면 뭐라도 하나 이력을 더 만들고 싶어서 (그때 정보보안기사도 땄었고, 디지털포렌식전문가2급도 땄었다).. 마침 그때 BoB과정을 이수하고 있었는데, 옆의 컨설팅 트랙에서는 뭔가 다들 열심히 도전하는 느낌이길래 나도 신청을 했었던 것 같다. 그러나 결과적으로 당시 대학원에 합격하게 되었고 해당 자격증이 필요없어졌다는 생각에(정확히는 공부를 하기가 싫어서) 바로 환불을 했었던 것이다.\n이 시험을 바로 환불 결정했던 이유가 무엇일까? 나는 natural born 공돌이이고 지금도 기술 분야를 본업으로 삼고 있는 것은 여전하다. 그런데 이 시험은 쉽게 말해 문과 성향의 지식을 많이 필요로 하고, 정확히는 <개인정보보호법>에 대해 깊은 이해가 필요한 자격증이다. 그래서 그때는 도저히 공부할 엄두가 나지 않았다.\n\n\nCPPG를 도전하게 된 계기\n시간이 흐르면서 간혹 이 자격을 검색해보곤했는데, 그때마다 종종 CPPG가 국가공인 자격으로 전환된다, 안된다, 하는 뜬소문이 많았다. 그래서 어떤 의미에서는 국가공인으로 전환된 이후 시험을 보는게 이득이라는 생각도 있었고, 그래서 그냥저냥 계속 기다렸다. 하지만 국가공인 전환은 되지 않았다. 아직까지도.\n그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…",
           "link": "https://cpuu.postype.com/post/14359096",
           "publishedOn": "2023-09-04T06:00:41.000Z",
-          "wordCount": 750,
+          "wordCount": 746,
           "title": "CPPG 개인정보관리사 불합격 후기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/04/15/00/33/88f9dc86cce73ec915ba47b48ccc2b56.jpeg?w=600&h=300&q=65"
         },
@@ -166,7 +166,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 733,
+          "wordCount": 743,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -210,12 +210,22 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "1865d737-c8ff-415b-9ed7-1b4b8fc7678a",
+          "author": "Kevin Dubois",
+          "description": "Quarkus extensions are one of Quarkus' best hidden-in-plain-sight features. Read on to learn how Quarkus extensions give Java superpowers and how you can get started with them.  \nWhat are Quarkus extensions?\nQuarkus extensions are essentially adapter layers for Java-based libraries or technologies that enhance your application.\nHowever, the scope of Quarkus extensions goes well beyond \"just\" importing dependent libraries. They can significantly increase the application's performance, help developers be more productive while developing their applications, integrate complex dependencies much easier, and simplify the application's source code.\nExamples of Quarkus extensions include the Java Database Connectivity (JDBC) libraries, OpenAPI generators, Kubernetes manifest generators, and Apache …",
+          "link": "https://developers.redhat.com/articles/2023/09/06/introduction-quarkus-extensions-java-dependencies",
+          "publishedOn": "2023-09-06T07:00:00.000Z",
+          "wordCount": 3474,
+          "title": "Quarkus extensions give Java dependencies superpowers",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/java%2Bquarkus_2x.png?itok=saprke5a"
+        },
+        {
           "id": "ef06738c-3521-4668-8779-1dab80cd34e9",
           "author": "Aine Keenan",
           "description": "Python has emerged as a go-to language for students, new programmers, and experienced developers. This general-purpose programming language is dynamically typed, memory-managed, and supports multiple programming paradigms. Python is popular for web development, data science, artificial intelligence and machine learning (AI/ML), scripting for Linux, and more.\nContainers are a game-changing solution for packaging your code and dependencies, allowing for your application to run quickly and consistently across any environment. Using containers to support your Python application enables efficient development and deployment.\nThis article shows how to use containers to support your Python applications. We'll take a pre-configured application and build a Containerfile for it from scratch. Addition…",
           "link": "https://developers.redhat.com/articles/2023/09/05/beginners-guide-python-containers",
           "publishedOn": "2023-09-05T07:00:00.000Z",
-          "wordCount": 4214,
+          "wordCount": 4213,
           "title": "A beginner's guide to Python containers",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/python-apps-linux-containers.png?itok=95wQnYB6"
         },
@@ -225,7 +235,7 @@
           "description": "Dynamic inventories in the Red Hat Ansible Automation Platform revolutionize the way to manage infrastructure in the cloud. Instead of relying on static inventories that require manual updates when virtual machines (VMs) are launched, terminated, or replaced, dynamic inventories automatically discover and run VMs across any cloud provider. This means that when you delete an old VM and launch a new one, Ansible Automation Platform seamlessly adapts and performs actions on the updated infrastructure without requiring manual intervention.\nBy harnessing dynamic inventories, the Ansible Automation Platform empowers cloud administrators and DevOps teams to effortlessly manage and orchestrate on-demand cloud resources. This article explores the power of dynamic inventories, focusing on their util…",
           "link": "https://developers.redhat.com/articles/2023/09/04/how-use-dynamic-inventories-ansible-automation",
           "publishedOn": "2023-09-04T07:00:00.000Z",
-          "wordCount": 3090,
+          "wordCount": 3089,
           "title": "How to use dynamic inventories in Ansible Automation",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/03/2020_Ansible_Inventory_Featured_Article__A-01.png?itok=nKTtNIm5"
         },
@@ -235,7 +245,7 @@
           "description": "For decades now, software projects have relied on messaging APIs to exchange data. In the Java/Java EE ecosystem, this method of asynchronous communication has been standardized by the JMS specification. In many cases, individuals and organizations leverage Red Hat JBoss Enterprise Application Platform (JBoss EAP) to act as message-oriented middleware (MOM), which facilitates the management of message queues and topics.\nMessaging ensures that no messages are lost as they are transmitted from the client and delivered to interested parties. On top of that, JBoss EAP provides authentication and other security-focused capabilities on top of the management functions.\nIn this article, we'll show how to fully automate the setup of JBoss EAP and a JMS queue using Ansible so that we can easily make…",
           "link": "https://developers.redhat.com/articles/2023/09/01/automate-message-queue-deployment-jboss-eap",
           "publishedOn": "2023-09-01T07:00:00.000Z",
-          "wordCount": 8011,
+          "wordCount": 8010,
           "title": "Automate message queue deployment on JBoss EAP",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
         },
@@ -245,7 +255,7 @@
           "description": "While glibc's highly configurable name resolution and character set handling features offer an advantage when it comes to system configuration and installed content, there are limitations when it comes to statically linked applications. This article summarizes the current state, recent improvements, and plans for moving toward truly statically linked applications.\nAlthough dynamic linking has advantages, making it the default choice for situations where binary compatibility is guaranteed (i.e., many Red Hat Enterprise Linux components), static linking is still useful in many situations such as:\nApplication developers wanting to ensure that their binaries run on a wide range of operating system vendors and versions.\n\nContainer introspection tools injected via oc-inject might bring their own…",
           "link": "https://developers.redhat.com/articles/2023/08/31/how-we-ensure-statically-linked-applications-stay-way",
           "publishedOn": "2023-08-31T07:00:00.000Z",
-          "wordCount": 2728,
+          "wordCount": 2727,
           "title": "How we ensure statically linked applications stay that way",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Global_Shared_image__A_0.png?itok=wxw-bY7J"
         },
@@ -255,7 +265,7 @@
           "description": "A new operator for Istio is now available on Red Hat OpenShift as a developer preview. This new operator, temporarily known as the Sail Operator, will serve as the foundation for Red Hat OpenShift Service Mesh 3, which will be released in the upcoming year.\nKey features\nKey features of the new operator include:\nSimplified configuration: The operator utilizes a single custom resource, IstioHelmInstall, to configure the Istio control plane (istiod), using Istio's Helm artifact values for customization.\nFocused management: The operator solely manages Istio and does not handle complementary projects such as Kiali, Prometheus, Grafana, Jaeger, or Elasticsearch. Independent operators will continue to support these integrations.\nUpstream Istio: Instead of the Maistra.io distribution, the operator…",
           "link": "https://developers.redhat.com/articles/2023/08/30/istio-sail-operator-openshift",
           "publishedOn": "2023-08-30T07:00:00.000Z",
-          "wordCount": 2535,
+          "wordCount": 2534,
           "title": "Presenting a new Istio operator on OpenShift",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_OS_Shared_image_A_3.png?itok=96qQ_zu-"
         },
@@ -265,7 +275,7 @@
           "description": "After years of working on software written in C and C++, I switched to working on a project that is implemented in Go. More developers may find themselves working in the Go ecosystem as more software, such as Red Hat OpenShift and Kubernetes, is implemented in Go. This article discusses the primary language differences between Go and C++, differences in the development environments, and differences in the program-building environment. Examples and code snippets are from the Grafana sources.\nProgram syntax\nGo statements are terminated by a semicolon. Go treats the end of a non-blank line as a semicolon unless it can be determined that the line is incomplete. As a result, go requires the opening brace to be on the same line as the function definition:\n func (s *Server) init() error {\n  ...\n …",
           "link": "https://developers.redhat.com/articles/2023/08/30/go-c-developers-beginners-guide",
           "publishedOn": "2023-08-30T07:00:00.000Z",
-          "wordCount": 4247,
+          "wordCount": 4246,
           "title": "Go for C++ developers: A beginner's guide",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/2020_RHD_Coding_imageA%402x.png?itok=yhf9uUNZ"
         },
@@ -275,7 +285,7 @@
           "description": "MongoDB is designed and built for cloud-native applications. It has become one of the fastest growing database technologies in a fast-growing market boosted by AI, e-commerce, big data, and more. MongoDB, ranked fifth overall for databases worldwide, is used by over half of the Fortune 100 and 19 of the 20 largest banks.\nMongoDB is the number one non-relational NoSQL database, using document-oriented technology that makes the developer experience simpler and more productive, especially for modern containerized applications. Instead of storing data in rows and columns, MongoDB stores data inside a collection of documents that are more flexible and extensible. That makes it perfect for e-commerce product catalogs and user profiles, multimedia content management, business intelligence, and mo…",
           "link": "https://developers.redhat.com/articles/2023/08/29/lightbits-openshift-boost-mongodb-performance-aws",
           "publishedOn": "2023-08-29T07:00:00.000Z",
-          "wordCount": 4257,
+          "wordCount": 4256,
           "title": "How LightBits and OpenShift boost MongoDB performance in AWS",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
         },
@@ -285,7 +295,7 @@
           "description": "In this article, I'll give a brief overview of cross-origin resource sharing (CORS) in the context of modern web applications and their interactions with HTTP APIs. I will also provide a sample solution(hosted on GitHub) for avoiding CORS-related issues in a web application that's served from Red Hat OpenShift.\nThe sample solution uses Red Hat's Universal Base Images for Node.js, NGINX, and Java. Instructions are included in this post to help you deploy and test the sample solution for free in the Developer Sandbox for Red Hat OpenShift.\nWhat exactly is CORS?\nIf you're not familiar with CORS or need a refresher, you should take a look at this excellent primer published by Julia Evans on wizardzines.com. To summarize, when JavaScript executing in a web browser on one origin (e.g., https://u…",
           "link": "https://developers.redhat.com/articles/2023/08/29/avoid-cors-errors-openshift-web-applications",
           "publishedOn": "2023-08-29T07:00:00.000Z",
-          "wordCount": 3925,
+          "wordCount": 3924,
           "title": "Conquer CORS errors in OpenShift web applications",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
         },
@@ -295,19 +305,9 @@
           "description": "Ansible lint is a command-line tool that checks Ansible playbooks for errors and suggests improvements for the code written in the playbooks. This helps the users adhere to certain standards to follow while writing the playbooks to maintain the integrity of their code.\nThis article demonstrates how to install Ansible lint. We will also explore use cases and how to prevent errors during execution of playbooks and save debugging time.\nHow to install Ansible lint\nThe easiest way to install Ansible lint is by using pip as follows:\npython3 -m pip install –user ansible-lint\nOn Red Hat Enterprise Linux (RHEL) systems with a Red Hat Ansible Automation Platform subscription, we can also use dnf to install Ansible lint:\ndnf install ansible-lint\nWe can also install Ansible lint from the source reposi…",
           "link": "https://developers.redhat.com/articles/2023/08/28/how-ansible-lint-improves-playbook-debugging",
           "publishedOn": "2023-08-28T07:00:00.000Z",
-          "wordCount": 2715,
+          "wordCount": 2714,
           "title": "How Ansible lint improves playbook debugging",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
-        },
-        {
-          "id": "88a8e202-a314-4576-8af1-d640007153a0",
-          "author": "Shankar Govindarajan",
-          "description": "Provisioning strong identities for every workload using X.509 certificates and establishing mutual TLS (mTLS) as a full stack solution for transport security without requiring any code changes is one of the many features offered out of the box by Red Hat OpenShift Service Mesh (based on the upstream Istio project).\nThis article explores configuring HashiCorp Vault as the PKI engine (or certificate back-end) for signing OpenShift Service Mesh workloads using cert-manager and istio-csr.\nDefault and pluggable CA scenario\nUntil OpenShift Service Mesh 2.3, we had to rely on workload certificates that were either created by the auto-generated self-signed root cert and key or by a custom root / intermediate Certificate Authority (CA) and key that is exposed to the underlying control plane infrast…",
-          "link": "https://developers.redhat.com/articles/2023/08/24/integrate-openshift-service-mesh-cert-manager-and-vault",
-          "publishedOn": "2023-08-24T07:00:00.000Z",
-          "wordCount": 3927,
-          "title": "Integrate OpenShift Service Mesh with cert-manager and Vault",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_ServiceMesh_Topic_Image_A_1.jpg?itok=OW7hjVcD"
         },
         {
           "id": "04c37be9-99a3-482a-a854-e946e04feef4",
@@ -398,26 +398,6 @@
           "wordCount": 3083,
           "title": "The process of migrating Java applications",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-java1_1x%20%283%29_3.png?itok=9jZWkOjD"
-        },
-        {
-          "id": "f4881473-baf0-4e93-8f8b-428a1e7d9bdd",
-          "author": "Maarten Vandeperre",
-          "description": "The purpose of this project is to provide developers with a practical example of how clean architecture can be implemented in a real-world scenario. By examining this sample project's code and structure, you will be able to better understand the key concepts and patterns involved in clean architecture.\nWhy clean architecture?\nThese days, the IT world is flooded with an overwhelming number of libraries, technologies, frameworks, and platforms to choose from. What's considered the ultimate solution today may become outdated tomorrow. What doesn't exist today might become tomorrow's ultimate solution. Clean architecture incorporates principles like SOLID and domain-driven design and enforces them through module structuring during compilation. However, it's important to note that not everythin…",
-          "link": "https://developers.redhat.com/articles/2023/08/08/implementing-clean-architecture-solutions-practical-example",
-          "publishedOn": "2023-08-08T07:00:00.000Z",
-          "wordCount": 4722,
-          "title": "Implementing clean architecture solutions: A practical example",
-          "imageUrl": "https://developers.redhat.com/themes/custom/rhdp2/images/metatags/metatag-image-articles.png"
-        },
-        {
-          "id": "cb65c017-d049-40bf-8af6-eda4b988872d",
-          "author": "Jude Niroshan",
-          "description": "The out-of-the-box monitoring stack in Red Hat OpenShift provides a comprehensive set of tools and services to monitor various aspects of your workloads, including metrics, logs, events, and traces. With this monitoring stack, you can gain valuable insights into the health and performance of your applications, identify and troubleshoot issues, and optimize resource utilization. This allows you to deliver a seamless user experience and confidently meet your business objectives.\nIn this article, we will explore the monitoring stack in Red Hat OpenShift and how to use it to monitor a sample application effectively using Prometheus and Grafana.\nHow to monitor a sample application\nWe will use an OpenShift cluster with version 4.10.36 in this example.\nStep 1: Create a ConfigMap\nCreate a ConfigMa…",
-          "link": "https://developers.redhat.com/articles/2023/08/08/how-monitor-workloads-using-openshift-monitoring-stack",
-          "publishedOn": "2023-08-08T07:00:00.000Z",
-          "wordCount": 3121,
-          "title": "How to monitor workloads using OpenShift monitoring stack",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
         }
       ]
     },
@@ -463,10 +443,10 @@
         {
           "id": "https://embeddedartistry.com/?p=34270",
           "author": "Phillip Johnston",
-          "description": "28 August 2023 by Phillip Johnston • Last updated 5 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
+          "description": "28 August 2023 by Phillip Johnston • Last updated 6 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7386,
+          "wordCount": 7408,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -513,7 +493,7 @@
           "description": "Recogni’s new Pegasus PCIe card allows its Scorpio processor to be integrated into any mobility solution needing autonomous capability, when used in conjunction with the company’s SDK.\nThe post PCIe card for AI inferencing processor targets autonomous mobility market appeared first on Embedded.com.",
           "link": "https://www.embedded.com/pcie-card-for-ai-inferencing-processor-targets-autonomous-mobility-market/",
           "publishedOn": "2023-09-01T11:41:57.000Z",
-          "wordCount": 4601,
+          "wordCount": 3684,
           "title": "PCIe card for AI inferencing processor targets autonomous mobility market",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/Recogni-Pegasus.jpg"
         },
@@ -523,7 +503,7 @@
           "description": "Over the last few years, there have been currents in the software industry that the future of code is no code. Businesses today are constantly...\nThe post Will no code solutions dominate the future of embedded? appeared first on Embedded.com.",
           "link": "https://www.embedded.com/will-no-code-solutions-dominate-the-future-of-embedded/",
           "publishedOn": "2023-09-01T11:18:53.000Z",
-          "wordCount": 4665,
+          "wordCount": 3748,
           "title": "Will no code solutions dominate the future of embedded?",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/no-code-.jpg"
         },
@@ -696,26 +676,6 @@
           "wordCount": 4674,
           "title": "Validating multinode CAN system performance",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/can_network_.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480086",
-          "author": "Nitin Dahad",
-          "description": "Optical connections will be an important advancement for PCIe architecture as they will allow for higher performance, lower power consumption, extended reach and reduced latency.\nThe post New workgroup for delivering PCIe over optical appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/new-workgroup-for-delivering-pcie-over-optical/",
-          "publishedOn": "2023-08-07T12:50:42.000Z",
-          "wordCount": 3417,
-          "title": "New workgroup for delivering PCIe over optical",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2022/01/PCI-SIG_PCIe-6.0-targets-data-intensive-markets.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480078",
-          "author": "Nitin Dahad",
-          "description": "UEC to deliver on Ethernet-based open, interoperable, high-performance full-communications stack architecture to meet the growing network demands of AI & HPC at scale.\nThe post Ultra Ethernet Consortium (UEC) to develop full stack for AI and HPC appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/ultra-ethernet-consortium-uec-to-develop-full-stack-for-ai-and-hpc/",
-          "publishedOn": "2023-08-07T11:11:11.000Z",
-          "wordCount": 3879,
-          "title": "Ultra Ethernet Consortium (UEC) to develop full stack for AI and HPC",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/The_Linux_Foundation_Ultra_Ethernet_Consortium.jpg"
         }
       ]
     },
@@ -730,7 +690,7 @@
           "description": "With the ever increasing number of applications involving video processing, AI or edge computing the appetite for suitably skilled FPGA Engineers has never been higher from the market which is expected to grow to $15 billion USD by 2027!\nIn terms of industries opportunities can be typically found within:\n\nAutomotive\nAerospace\nDefense\nData Processing\n\nHowever this list is...",
           "link": "https://www.embeddedrelated.com/showarticle/1572.php",
           "publishedOn": "2023-09-04T10:28:23.000Z",
-          "wordCount": 3142,
+          "wordCount": 3118,
           "title": "FPGA skills for the modern world",
           "imageUrl": "https://au.mouser.com/images/marketingid/2019/microsites/0/Zynq-7000%20SoCArchitectural%20Overview.png"
         },
@@ -740,7 +700,7 @@
           "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
           "link": "https://www.embeddedrelated.com/showarticle/1571.php",
           "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3441,
+          "wordCount": 3452,
           "title": "Who needs source code?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -750,7 +710,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3005,
+          "wordCount": 3039,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -760,7 +720,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32086,
+          "wordCount": 32057,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -770,7 +730,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 4099,
+          "wordCount": 3945,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -803,16 +763,6 @@
           "wordCount": 4151,
           "title": "Quaternions and the spatial rotations in motion enabled wearable devices. Exploiting the potential of smart IMUs attitude estimation.",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1549.php",
-          "author": null,
-          "description": "As with almost everyone, I always loved listening to music and in fact, I wrote most of my books listening to my all-time favorite musician, Gino Vannelli.\r\n\r\nMy son James is a professional musician who graduated from Berklee College of Music in 2015 and plays guitar and specializes in the Flamenco and World Music styles. James released his first album (Orange Night) in 2018 and his Duckland...",
-          "link": "https://www.embeddedrelated.com/showarticle/1549.php",
-          "publishedOn": "2023-08-07T15:49:13.000Z",
-          "wordCount": 3242,
-          "title": "From Embedded Software Engineer to Musician",
-          "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/1/capture_8003.png"
         }
       ]
     },
@@ -833,6 +783,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/09/supporting-black-tech-entrepreneurs-fourth-google-for-startups-accelerator-black-founders-program.html",
+          "author": null,
+          "description": "Posted by Lauren O’Neil, Startup Developer Ecosystem Lead, and Matt Ridenour, Head of US Startup Ecosystem\n\n\n\n\n\n\nWe are thrilled to announce our latest cohort of the Google for Startups Accelerator: Black Founders program as it embarks on its fourth year serving Black founders in the U.S. and Canada.\nThe 12 companies selected for this year’s cohort reflect the trends of the broader application pool -  startups focused on improving healthcare outcomes,  protecting the environment,  reducing consumer energy consumption, and removing  barriers to financial resources and home ownership (just to name a few). Additionally, these companies are utilizing emerging AI technologies to streamline and simplify customer, consumer, and professional experiences at all levels. \n\n\n\n\n\n\"This year's cohort rep…",
+          "link": "http://developers.googleblog.com/2023/09/supporting-black-tech-entrepreneurs-fourth-google-for-startups-accelerator-black-founders-program.html",
+          "publishedOn": "2023-09-06T15:00:00.000Z",
+          "wordCount": 2310,
+          "title": "Supporting Black tech entrepreneurs through the fourth Google for Startups Accelerator: Black Founders program",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3o3Jxl0w0ouLuwWnEoATQacp5aXsDhizV2Pl1gMySMQdDJwG1Z6jL9LB6jQ7nX6I95hN00tlCKP8nUYwC20ejxz1UBMNq3e3JC_6prWtX-uz-X6TwSzh8vEvPLMSSiZvHaxw5cil9uzWfY7k7K_KzEQ-zqZulPE6kZFgMZbn9ssmMtDdiWg0ARYL3xbI/w1200-h630-p-k-no-nu/Accelerator-Black-Founders-Social.png"
+        },
         {
           "id": "http://developers.googleblog.com/2023/09/how-space-invaders-arcore-game-was-made.html",
           "author": null,
@@ -963,12 +923,22 @@
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
         {
+          "id": "https://pythoninsider.blogspot.com/2023/09/python-3120-release-candidate-2-now.html",
+          "author": null,
+          "description": "I'm pleased to announce the release of Python 3.12 release candidate 2.\n\nhttps://www.python.org/downloads/release/python-3120rc2/\n \nThis is the second release candidate of Python 3.12.0\nThis release, 3.12.0rc2, is the last release preview for Python 3.12.\nThere will be no ABI changes from this point forward\n in the 3.12 series. The intent is for the final release of 3.12.0, \nscheduled for Monday, 2023-10-02, to be identical to this release \ncandidate. This is the last chance to find critical problems in Python 3.12.\nCall to action\nWe strongly encourage maintainers of third-party Python projects to \nprepare their projects for 3.12 compatibilities during this phase, and \nwhere necessary publish Python 3.12 wheels on PyPI to be ready for the \nfinal release of 3.12.0. Any binary wheels built a…",
+          "link": "https://pythoninsider.blogspot.com/2023/09/python-3120-release-candidate-2-now.html",
+          "publishedOn": "2023-09-06T11:05:00.000Z",
+          "wordCount": 1929,
+          "title": "Python 3.12.0 release candidate 2 now available",
+          "imageUrl": null
+        },
+        {
           "id": "https://pythoninsider.blogspot.com/2023/08/python-3115-31013-3918-and-3818-is-now.html",
           "author": null,
           "description": "There’s security content in the releases, let’s dive right in.\ngh-108310: Fixed an issue where instances of ssl.SSLSocket\n were vulnerable to a bypass of the TLS handshake and included \nprotections (like certificate verification) and treating sent \nunencrypted data as if it were post-handshake TLS encrypted data. \nSecurity issue reported as CVE-2023-40217 1 by Aapo Oksman. Patch by Gregory P. Smith.\n\nUpgrading is highly recommended to all users of affected versions.\nPython 3.11.5\nGet it here: https://www.python.org/downloads/release/python-3115/\n\nThis release was held up somewhat by the resolution of this CVE, \nwhich is why it includes a whopping 328 new commits since 3.11.4 \n(compared to 238 commits between 3.10.4 and 3.10.5). Among those, there \nis a fix for CVE-2023-41105 which affected Python 3.11.0 - 3.11.4. See gh-106242 for details.\nThere are also some fixes for crashes, check out the change log to see all information.\nMost importantly, the release notes on the downloads page include a description of the Larmor precession. I understood some of the words there!\nPython 3.10.13\nGet it here: https://www.python.org/downloads/release/python-31013/\n\n16 commits.\nPython 3.9.18\nGet it here: https://www.python.org/downloads/release/python-3918/\n\n11 commits.\nPython 3.8.18\nGet it here: https://www.python.org/downloads/release/python-3818/\n\n9 commits.\nStay safe and upgrade!\nThanks to all of the many volunteers who help make Python Development\n and these releases possible! Please consider supporting our efforts by \nvolunteering yourself or through organization contributions to the \nPython Software Foundation.\n–\n@ambv\nNed Deily @nad\n@steve.dower\n@pablogsal\n@ambv\n@thomas",
           "link": "https://pythoninsider.blogspot.com/2023/08/python-3115-31013-3918-and-3818-is-now.html",
           "publishedOn": "2023-08-24T20:56:00.003Z",
-          "wordCount": 1641,
+          "wordCount": 1646,
           "title": "Python 3.11.5, 3.10.13, 3.9.18, and 3.8.18 is now available",
           "imageUrl": null
         }
@@ -980,12 +950,22 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1067/",
+          "author": null,
+          "description": "I've been looking for a challenge to put the PVS-Studio analyzer through its paces, and that's why I chose GCC, an open-source compiler collection. It's not the first time we check this project...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1067/",
+          "publishedOn": "2023-09-05T21:00:00.000Z",
+          "wordCount": 6329,
+          "title": "Checking the GCC 13 compiler with the help of PVS-Studio",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1067_GCC13/image1_thm_intoblank_1200x630.png?ver=09-06-2023-11-40-16"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1066/",
           "author": null,
           "description": "In the words of Mr. John Carmack, \"Focus is a matter of deciding what things you're not going to do\". Taking inspiration from this quote, let's not waste any time and delve into analyzing the code of...",
           "link": "https://pvs-studio.com/en/blog/posts/cpp/1066/",
           "publishedOn": "2023-08-31T21:00:00.000Z",
-          "wordCount": 8390,
+          "wordCount": 8368,
           "title": "Oh my C! How they wrote code back in the Quake days",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1066_Quake_World/image1_thm_intoblank_1200x630.png?ver=09-01-2023-15-30-24"
         },
@@ -995,7 +975,7 @@
           "description": "How to improve the quality and reliability of a codebase? One of the answers to this question is to use static analysis. In this article, we are going to check how this methodology can improve the...",
           "link": "https://pvs-studio.com/en/blog/posts/cpp/1065/",
           "publishedOn": "2023-08-29T21:00:00.000Z",
-          "wordCount": 8052,
+          "wordCount": 8043,
           "title": "PVS-Studio vs CodeLite: a battle for the perfect code",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1065_CodeLite/image1_thm_intoblank_1200x630.png?ver=08-30-2023-15-30-22"
         },
@@ -1005,7 +985,7 @@
           "description": "The developers have an endless amount of ways to make mistakes while writing code. However, sometimes we can find obvious and interesting patterns in how and where developers make mistakes. Let's...",
           "link": "https://pvs-studio.com/en/blog/posts/cpp/1064/",
           "publishedOn": "2023-08-24T21:00:00.000Z",
-          "wordCount": 9651,
+          "wordCount": 9627,
           "title": "Common patterns of typos in programming",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1064_patterns_of_typos/image1_thm_intoblank_1200x630.png?ver=08-30-2023-11-25-21"
         },
@@ -1152,6 +1132,46 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/943619/",
+          "author": "jake",
+          "description": "A recent discussion on the Python forum looked at a way to\nprotect module objects (and users) from mistaken attribute assignment and\ndeletion. \nThere are ways \nto get the same effect today, but the mechanism that would be used causes a\nperformance penalty for an unrelated, and heavily used, action: attribute\nlookup on modules.  Back in 2017, PEP 562 (\"Module __getattr__\nand __dir__\") set the stage for adding magic methods to module objects; now\na new proposal would extend that idea to add __setattr__() and\n__delattr__() to them.",
+          "link": "https://lwn.net/Articles/943619/",
+          "publishedOn": "2023-09-06T19:29:17.000Z",
+          "wordCount": null,
+          "title": "[$] Altering Python attribute handling for modules",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943699/",
+          "author": "corbet",
+          "description": "The Mozilla Foundation has published a\nreport on the data-collection and privacy practices of 25 car brands.\n\n\n\tWe reviewed 25 car brands in our research and we handed out 25\n\t\"dings\" for how those companies collect and use data and personal\n\tinformation. That’s right: every car brand we looked at collects\n\tmore personal data than necessary and uses that information for a\n\treason other than to operate your vehicle and manage their\n\trelationship with you. For context, 63% of the mental health apps\n\t(another product category that stinks at privacy) we reviewed this\n\tyear received this \"ding.\"\n\n\nProof, once again, that running Linux does not automatically make a device\nprivacy-friendly.",
+          "link": "https://lwn.net/Articles/943699/",
+          "publishedOn": "2023-09-06T14:57:35.000Z",
+          "wordCount": 2510,
+          "title": "Mozilla: It’s Official: Cars Are the Worst Product Category We Have Ever Reviewed for Privacy",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943697/",
+          "author": "corbet",
+          "description": "Leandro Moreira is maintaining a\ndetailed description of Linux network tuning parameters and how they\nall tie together.  There is a lot of good information for administrators\nseeking a better understanding of how all those knobs work and\ninteroperate.  (Seen on HN).",
+          "link": "https://lwn.net/Articles/943697/",
+          "publishedOn": "2023-09-06T14:46:27.000Z",
+          "wordCount": 182,
+          "title": "A guide to network performance tuning",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943679/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (aom and php7.3), Fedora (freeimage and mingw-freeimage), Scientific Linux (thunderbird), SUSE (amazon-ssm-agent, chromium, container-suseconnect, docker, glib2, php7, python-Django1, and rubygem-rails-html-sanitizer), and Ubuntu (kernel, linux, linux-aws, linux-aws-5.4, linux-gcp, linux-hwe-5.4, linux-ibm,\n linux-iot, linux-kvm, linux-oracle, linux-oracle-5.4, linux, linux-aws, linux-aws-6.2, linux-hwe-6.2, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-6.2, linux-raspi, linux, linux-aws, linux-aws-hwe, linux-gcp, linux-gcp-4.15, linux-hwe,\n linux-kvm, linux-oracle, and linux, linux-gcp, linux-hwe-5.15, linux-ibm, linux-kvm, linux-lowlatency,\n linux-lowlatency-hwe-5.15, linux-nvidia).",
+          "link": "https://lwn.net/Articles/943679/",
+          "publishedOn": "2023-09-06T13:13:52.000Z",
+          "wordCount": 271,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/943498/",
           "author": "jake",
           "description": "The Linux Vendor Firmware Service (LVFS)\nprovides a repository where vendors can upload firmware updates that can be\naccessed by the fwupd\nfirmware update daemon on Linux systems.  That mechanism allows users to keep\nthe hardware components of their systems up to date with the latest firmware\nreleases, but it has gotten so \npopular that the daily metadata queries are starting to swamp the LVFS\ncontent delivery network (CDN) server.  So Richard Hughes, who developed\nfwupd and LVFS, suggested\nthat it would make sense to start looking at ways to reduce that burden;\nthe idea was discussed in a recent thread on the Fedora devel mailing list.",
@@ -1167,7 +1187,7 @@
           "description": "FOSS Force looks\nat the KDE Gear 23.08 release.\n\n\n\tFor this release, developers have been working in high gear (no pun\n\tintended) as there were important improvements made to many of\n\tGear’s most iconic applications. Not only that: just a little over\n\ta year after its arrival, the Kalendar app is going through a name\n\tchange as it morphs into what appears will eventually become a\n\tfull-featured email application.",
           "link": "https://lwn.net/Articles/943596/",
           "publishedOn": "2023-09-05T16:44:20.000Z",
-          "wordCount": 196,
+          "wordCount": 266,
           "title": "KDE Gear 23.08 Arrived With Plenty of Changes (FOSS Force)",
           "imageUrl": null
         },
@@ -1259,46 +1279,6 @@
           "publishedOn": "2023-08-31T00:14:29.000Z",
           "wordCount": null,
           "title": "[$] LWN.net Weekly Edition for August 31, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942962/",
-          "author": "jake",
-          "description": "A series of rabbit holes, some of which led to unshaved\nyaks, \nrecently landed me on a book called Mastering Emacs.\nGiven that I have been using Emacs \"professionally\" for more than 16\nyears—and first looked into it a good ways into the previous century—I\nshould probably be pretty well-versed in that editor-cum-operating-system.\nSadly, for a variety of reasons, that is not really true, but the book and\nsome concerted effort have been helping me down a path toward Emacs-ian\nenlightenment.  Mastering Emacs may also help others who are\nstruggling in the frothy sea that makes up Emacs documentation.",
-          "link": "https://lwn.net/Articles/942962/",
-          "publishedOn": "2023-08-30T18:50:13.000Z",
-          "wordCount": null,
-          "title": "[$] Mastering Emacs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943110/",
-          "author": "corbet",
-          "description": "The\n6.4.13,\n6.1.50,\n5.15.129,\n5.10.193,\n5.4.255,\n4.19.293, and\n4.14.324\nstable kernels have been released; each contains another set of important\nfixes.",
-          "link": "https://lwn.net/Articles/943110/",
-          "publishedOn": "2023-08-30T17:12:47.000Z",
-          "wordCount": 134,
-          "title": "Seven stable kernels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943087/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (qpdf, ring, and tryton-server), Fedora (mingw-qt5-qtbase and moby-engine), Red Hat (cups, kernel, kernel-rt, kpatch-patch, librsvg2, and virt:rhel and virt-devel:rhel), and Ubuntu (amd64-microcode, firefox, linux, linux-aws, linux-aws-5.15, linux-gcp, linux-gke, linux-gkeop,\n linux-hwe-5.15, linux-ibm, linux-kvm, linux-lowlatency,\n linux-lowlatency-hwe-5.15, linux-nvidia, linux-oracle, linux-oracle-5.15, linux, linux-aws, linux-aws-5.4, linux-gcp, linux-hwe-5.4, linux-kvm,\n linux-oracle, linux-xilinx-zynqmp, linux, linux-aws, linux-aws-6.2, linux-azure, linux-hwe-6.2, linux-ibm,\n linux-kvm, linux-lowlatency, linux-lowlatency-hwe-6.2, linux-raspi, linux-bluefield, linux-ibm, linux-oem-6.1, and openjdk-lts, openjdk-17).",
-          "link": "https://lwn.net/Articles/943087/",
-          "publishedOn": "2023-08-30T13:22:58.000Z",
-          "wordCount": 311,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942767/",
-          "author": "jake",
-          "description": "\"Sugar\" is, to a certain extent, in the eye of the beholder—at least when\nit comes to syntax.  Programming languages are often made up of a (mostly)\nirreducible core, with lots of sugary constructs sprinkled on top—the syntactic sugar. No one\nwants to be forced to do without the extra syntax—at least not for their\nfavorite pieces—but it is worth looking at how a language's constructs can\nbe built from the core.  That is just what Brett Cannon has been doing for\nPython, on his blog and in talks,\nincluding a talk at PyCon back in April (YouTube video).",
-          "link": "https://lwn.net/Articles/942767/",
-          "publishedOn": "2023-08-29T15:46:01.000Z",
-          "wordCount": null,
-          "title": "[$] Python is (mostly) made of syntactic sugar",
           "imageUrl": null
         },
         {
@@ -1639,46 +1619,6 @@
           "publishedOn": "2023-08-08T13:18:06.000Z",
           "wordCount": 306,
           "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940684/",
-          "author": "jake",
-          "description": "The Linux Containers project has\nannounced the addition of\nIncus, which is a fork of LXD\n5.16 started by Aleksa Sarai. Incus was created in response to Canonical's removal of LXD from Linux\nContainers.  \n\nAfter some discussion with Aleksa and a fair bit of encouragement from our\ncommunity, we have made the decision to take Incus under the umbrella of\nLinux Containers and will commit to it the infrastructure which was\npreviously made available to LXD. \n\nThe goal of Incus is to provide a fully community led alternative to\nCanonical's LXD as well as providing an opportunity to correct some\nmistakes that were made during LXD's development which couldn't be\ncorrected without breaking backward compatibility. \n\nIn addition to Aleksa, the initial set of maintainers for Incus will\ninclude Christian Brauner, Serge Hallyn, Stéphane Graber and Tycho\nAndersen, effectively including the entire team that once created LXD.",
-          "link": "https://lwn.net/Articles/940684/",
-          "publishedOn": "2023-08-07T14:48:30.000Z",
-          "wordCount": 646,
-          "title": "Introducing Incus",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940683/",
-          "author": "corbet",
-          "description": "Sourceware, the development home for\nthe GNU toolchain and more, is about to celebrate its 25th anniversary and\nis looking\nforward to the next 25 years:\n\n\n\tThat is why in the last couple of years we have started to\n   \tdiversify our hardware partners, setup new services using\n   \tcontainers and isolated VMs, investigated secure supply chain\n   \tissues, added redundant mirrors, created a non-profit home,\n   \tcollected funds, invested in open communication, open office hours\n   \tand introduced community oversight by a Sourceware Project\n   \tLeadership Committee with the help from the Software Freedom\n   \tConservancy.",
-          "link": "https://lwn.net/Articles/940683/",
-          "publishedOn": "2023-08-07T14:35:06.000Z",
-          "wordCount": 205,
-          "title": "The Sourceware 25 roadmap",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940403/",
-          "author": "corbet",
-          "description": "Return-oriented\nprogramming (ROP) has, for some years now, been a valuable tool for\nthose who would subvert a system's security.  It is thus not surprising\nthat a lot of effort has gone into thwarting ROP attacks, which depend on\ncorrupting the call stack with a carefully chosen set of return addresses,\nat both the hardware and software levels.  One result of this work is\nshadow stacks, which can detect corruption of the call stack, allowing the\noperating system to react accordingly.  The 64-bit Arm implementation of\nshadow stacks is called \"guarded control stack\" (GCS); patches implementing\nsupport for this feature are currently under discussion.",
-          "link": "https://lwn.net/Articles/940403/",
-          "publishedOn": "2023-08-07T14:24:27.000Z",
-          "wordCount": null,
-          "title": "[$] Shadow stacks for 64-bit Arm systems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940682/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (burp, chromium, ghostscript, openimageio, pdfcrack, python-werkzeug, thunderbird, and webkit2gtk), Fedora (amanda, libopenmpt, llhttp, samba, seamonkey, and xen), Red Hat (thunderbird), Slackware (mozilla and samba), and SUSE (perl-Net-Netmask, python-Django1, trytond, and virtualbox).",
-          "link": "https://lwn.net/Articles/940682/",
-          "publishedOn": "2023-08-07T14:23:29.000Z",
-          "wordCount": 235,
-          "title": "Security updates for Monday",
           "imageUrl": null
         }
       ]
@@ -2041,16 +1981,6 @@
           "wordCount": 3434,
           "title": "VS Code: Color Themes",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/theme.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38074",
-          "author": "Erich Styger",
-          "description": "This article shows how to start and exit VS Code, plus how it deals with multiple windows. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/07/vs-code-getting-started-literally/",
-          "publishedOn": "2023-08-07T21:13:00.000Z",
-          "wordCount": 3666,
-          "title": "VS Code: Getting Started, literally",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/starting-visual-studio-code.png"
         }
       ]
     },
@@ -2062,12 +1992,12 @@
         {
           "id": "https://medium.com/p/301201c24cba",
           "author": "Chirag Atal",
-          "description": "",
+          "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": null,
+          "wordCount": 3248,
           "title": "Announcing ESP ZeroCode",
-          "imageUrl": null
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
       ]
     },
@@ -2127,7 +2057,7 @@
           "description": "In September last year, a breach at LastPass’ parent company GoTo (formerly LogMeIn) culminated in attackers siphoning out all data from their servers. The criticism from the security community has been massive. This was not so much because of the breach itself, such things happen, but because of the many obvious ways in which LastPass made matters worse: taking months to notify users, failing to provide useful mitigation instructions, downplaying the severity of the attack, ignoring technical issues which have been publicized years ago and made the attackers’ job much easier. The list goes on.\nNow this has been almost a year ago. LastPass promised to improve, both as far as their communication goes and on the technical side of things. So let’s take a look at whether they managed to delive…",
           "link": "https://palant.info/2023/09/05/a-year-after-the-disastrous-breach-lastpass-has-not-improved/",
           "publishedOn": "2023-09-05T14:59:32.000Z",
-          "wordCount": 2188,
+          "wordCount": 2680,
           "title": "A year after the disastrous breach, LastPass has not improved",
           "imageUrl": "https://palant.info/2023/09/05/a-year-after-the-disastrous-breach-lastpass-has-not-improved/ship.jpg"
         },
@@ -2189,7 +2119,7 @@
           "description": "Study after study finds that the predictive power of both the Halstead metric and the McCabe cyclomatic complexity metric is no better than counting lines of code, for the characteristics of interest. Why do people continue to use and cite the Halstead and McCabe metrics? My experience, talking to people, is that many believe these […]",
           "link": "https://shape-of-code.com/2023/09/03/halstead-mccabe-metrics-the-wisdom-of-the-ancients/",
           "publishedOn": "2023-09-03T21:46:40.000Z",
-          "wordCount": 1647,
+          "wordCount": 1654,
           "title": "Halstead & McCabe metrics: The wisdom of the ancients",
           "imageUrl": null
         },
@@ -2209,7 +2139,7 @@
           "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
           "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
           "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1519,
+          "wordCount": 1518,
           "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         },
@@ -2236,7 +2166,7 @@
           "description": "This is the final episode of The Internet of Things Podcast, and to send us off after eight years, we don’t discuss the big news of the day such as Arm’s planned IPO, a new display option from Brilliant, or new gear from Leviton. Instead we share our reasons for stepping back from the show, […]\nThe post Episode 437: Goodbye and good luck appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/episode-437-goodbye-and-good-luck/",
           "publishedOn": "2023-08-24T13:00:02.000Z",
-          "wordCount": 2174,
+          "wordCount": 2175,
           "title": "Episode 437: Goodbye and good luck",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/lights2016.jpeg?fit=1251%2C938&ssl=1"
         },
@@ -2246,7 +2176,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 3019,
+          "wordCount": 3070,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -2256,7 +2186,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. I wasn’t going to write anything more in this newsletter, but I was feeling inspired and so decided to leave y’all with one final opinion — and one final mandate. During a webinar Thursday focused […]\nThe post We are entering our maintenance era appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/we-are-entering-our-maintenance-era/",
           "publishedOn": "2023-08-21T15:20:13.000Z",
-          "wordCount": 2990,
+          "wordCount": 2991,
           "title": "We are entering our maintenance era",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/bigstock-Assortment-Of-Diy-Gardening-To-463818149.jpg"
         },
@@ -2329,26 +2259,6 @@
           "wordCount": 2452,
           "title": "How to take the first step toward smart energy management",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/04/LoadCenterVideo2_1550178641462.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12748",
-          "author": "Stacey Higginbotham",
-          "description": "This story was originally published on Friday, August 4, 2023 in my weekly newsletter. You can sign up for that newsletter here.  Just last week I had my third frustrating experience with a Matter device. But it’s time I stop blaming the Matter spec for the challenges I’m facing. My issues are really with the ecosystem […]\nThe post Matter’s problem isn’t the standard; it’s the vendors appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/matters-problem-isnt-the-standard-its-the-vendors/",
-          "publishedOn": "2023-08-07T14:57:45.000Z",
-          "wordCount": 3365,
-          "title": "Matter’s problem isn’t the standard; it’s the vendors",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/Apple-Matter-accessory-error.jpeg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12746",
-          "author": "Stacey Higginbotham",
-          "description": "It looks like a Chinese hacking group is attacking air-gapped networks: Kaspersky has documented a sophisticated attack created by a hacking group associated with China. The attack uses several stages to get malware onto air-gapped devices, infiltrate other devices on the network, and then copy and exfiltrate files. (Bleeping Computer) This is why we need cybersecurity […]\nThe post IoT news of the week for August 4, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/iot-news-of-the-week-for-august-4-2023/",
-          "publishedOn": "2023-08-07T14:54:29.000Z",
-          "wordCount": 2474,
-          "title": "IoT news of the week for August 4, 2023",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
         }
       ]
     },
@@ -2417,6 +2327,16 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=96266",
+          "author": "이정환",
+          "description": "경제 위기보다 무서운 윤석열 정부의 낙관론. 교사들 징계 안 한다. “희대의 대선 공작”, 강도 높은 대통령실의 비난. 뉴스타파 때리기, 방통심의위까지 나섰다. 위안부 기억의 터 기습 철거. 홍범도 흉상 철거는 뉴라이트 교수 작품. 글로벌 외톨이, 김정은-푸틴의 만남. 시진핑도 전 정권 탓. 조선일보가 극찬한 류호정-한덕수의 토론. 오늘의 TMI. 서울광장 아래 공간 있어요. 20년 뒤 원금의 2배, 개인...\nThe post “윤석열의 가장 큰 리스크는 고집이다”: 슬로우레터 9월6일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96266",
+          "publishedOn": "2023-09-05T22:08:35.000Z",
+          "wordCount": 6431,
+          "title": "“윤석열의 가장 큰 리스크는 고집이다”: 슬로우레터 9월6일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/jsN0w5f9LTrN64f16a633d3d69.61145921-1000x666.jpeg"
+        },
+        {
           "id": "https://slownews.kr/?p=96233",
           "author": "민주언론시민연합",
           "description": "‘언론장악 기술자’로 불리는 이동관 씨가 방송통신위원장으로 결국 입성하면서 벌어지는 일들이 폭주를 넘어 ‘광란의 질주’라고 해야 할 정도다. 그를 앞세워서 현 정부가 벌이는 언론에 대한 개입도 전방위로 펼쳐지고 있다. 그런데 방송통신위원장이라기보다는 방송‘통제’위원장이라고 불려야 할 이동관 씨나 현 정권의 언론 ‘정책’-그것을 정책이라는 이름으로 부를 수 있다면-이 겨냥하는 것은 단지 공영언론기관이나 공영방송에 ‘우군’을 앉히거나 정권에 유리한 보도로 압박하는...\nThe post 이동관이 꿈꾸는 세상: 모든 방송의 종편화 appeared first on 슬로우뉴스.",
@@ -2429,10 +2349,10 @@
         {
           "id": "https://slownews.kr/?p=96235",
           "author": "이정환",
-          "description": "론스타가 한국 정부를 상대로 낸 투자자국가소송(ISDS)에서 패소 판정을 받은 뒤 1년이 지났다. 론스타가 7월21일 취소 소송을 냈고 한국 정부도 9월3일 취소 소송을 냈다. 이게 왜 중요한가. 핵심 쟁점은. 더 깊이 읽기. 모두가 론스타의 사람들. 결론.\nThe post 늘어난 론스타 이자 137억 원, 한동훈이 낼 건가. appeared first on 슬로우뉴스.",
+          "description": "론스타가 한국 정부를 상대로 낸 투자자국가소송(ISDS)에서 패소 판정을 받은 뒤 1년이 지났다. 론스타가 7월21일 취소 소송을 냈고 한국 정부도 9월3일 취소 소송을 냈다. 이게 왜 중요한가. 핵심 쟁점은. 더 깊이 읽기. 모두가 론스타의 사람들. 본질은 이것이다. 결론.\nThe post 늘어난 론스타 이자 137억 원, 한동훈이 낼 건가. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96235",
           "publishedOn": "2023-09-05T07:59:20.000Z",
-          "wordCount": 4943,
+          "wordCount": 5067,
           "title": "늘어난 론스타 이자 137억 원, 한동훈이 낼 건가.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/KakaoTalk_20230425_114804815_07-scaled-e1693900130652.jpg"
         },
@@ -2502,7 +2422,7 @@
           "description": "소수의 민원에 휘둘리는 학교와 사회 학교폭력 대책과 관련해 민주당 이탄희 의원실을 방문한 적이 있었습니다. 한 고등학교의 학교폭력 사안이 사회적 이슈가 되었고 이탄희 의원이 학교폭력 신고가 있으면 피해학생과 가해학생을 즉시분리하는 방안의 법안을 내놓았습니다. 학교 현장은 반발했습니다. 신고 즉시 분리조치 한다면 가해 추정 학생에 대한 무죄 추정의 원칙을 위반하는 것이고 허위 신고나 쌍방이 신고할 경우 어떻게 처리해야...\nThe post 단 한 명의 동료 교사도 잃고 싶지 않습니다 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96101",
           "publishedOn": "2023-09-03T07:57:09.000Z",
-          "wordCount": 5008,
+          "wordCount": 4466,
           "title": "단 한 명의 동료 교사도 잃고 싶지 않습니다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/2023090231104440.jpg"
         },
@@ -2542,7 +2462,7 @@
           "description": "‘같이 가면 길이 된다’ 북살롱 텍스트북 북토크 지상중계 “스위스는 빵 공장에서 노동자가 기계에 끼는 사고가 발생하면 당장 국정조사 들어갑니다. 난리나요.” 우리는 노동자가 다치고 죽는 것에 둔감한 나라다. 어쩌다 누군가의 드라마틱한 비극에 관심 가질 뿐 대체로 노동자가 날마다 죽어가는 현실에 관심이 없다. 그게 이상한 거란다. 경제학 박사로 노동을 연구해온 이상헌 국제노동기구(ILO) 고용정책국장을 저서 ‘같이 가면 길이...\nThe post 빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95985",
           "publishedOn": "2023-08-30T12:13:45.000Z",
-          "wordCount": 5053,
+          "wordCount": 5020,
           "title": "빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/pumpkin-bread-food-bread-gluten-dish-banana-bread-1629442-pxhere.com_-1000x667.jpg"
         },
@@ -2572,7 +2492,7 @@
           "description": "방송통신위원장 축출 시도로 시작된 방송장악 프로젝트가 본격적으로 작동하고 있다. 독립성이 생명인 방송통신위원회의 위원장을 ‘대통령 국정 철학과 맞지 않은 사람이니 사퇴해야 한다’는 반민주적이고 해괴한 논리로 공격하더니, 방송장악의 선봉에 섰던 사람을 방송통신위원장으로 임명했다. 그렇다면 현 정부의 국정 철학은 방송장악인가? 다수결 원리 악용한 공영방송 침탈 지난 1년여간 민주주의 사회에서 이해하기 힘든 일들이 연속해서 벌어졌다. 도대체 왜 그랬을까? 그...\nThe post 소 잃었어도 외양간은 고치자: 정치적 후견주의 극복해야 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95947",
           "publishedOn": "2023-08-29T15:37:57.000Z",
-          "wordCount": 4876,
+          "wordCount": 4868,
           "title": "소 잃었어도 외양간은 고치자: 정치적 후견주의 극복해야",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/vote-5676563_1280.jpg"
         },
@@ -2605,16 +2525,6 @@
           "wordCount": 6205,
           "title": "후쿠시마 오염수, 프레임 전쟁이 시작됐다: 슬로우레터 8월28일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/Water_Storage_Tanks_02813604.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95736",
-          "author": "민노씨",
-          "description": "[슬로우민트] 뉴스페퍼민트 이효석 대표가 추천하는 좋은 책에 관한 이야기. 두 번째 책은 다윈의 ‘성선택’ 이론의 복권을 시도한 ‘아름다움의 진화'(리처드 프럼). “나는 공작의 꽁지에 있는 깃털을 들여다볼 때마다 구역질이 난다네!” 찰스 다윈, Darwin to Asa Gray, April 3 [1860], Darwin Correspondence Project, Letter 2743. 다윈은 [종의 기원] (1859)을 발표한 이듬해인 1860년에 친구에게 보내는 편지에서 진심으로 공작의...\nThe post 찰스 다윈, 다윈이즘에 대한 최초의 반역자 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95736",
-          "publishedOn": "2023-08-25T06:31:18.000Z",
-          "wordCount": 5086,
-          "title": "찰스 다윈, 다윈이즘에 대한 최초의 반역자",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/11888974263_862ea3f5ba_k.jpg"
         },
         {
           "id": "https://slownews.kr/?p=95579",
@@ -2835,26 +2745,6 @@
           "wordCount": 6922,
           "title": "2011년의 소년, 2023년의 교사",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/07/GettyImages-jv12569446.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95021",
-          "author": "이정환",
-          "description": "웹 사이트에는 ‘404 에러’라는 게 있다. 없는 페이지에 접근하면 뜨는 메시지다. 조 바이든(미국 대통령)이 재선 출마를 선언하면서 캠페인 웹사이트를 공개했는데 이 사이트의 404 에러 페이지가 관심을 불러모았다. “다크 브랜든을 찾으셨군요(You found dark brandon)”라는 메시지와 함께 레이저 빔을 쏘는 바이든의 일러스트가 등장한다. (다크 브랜든이 바이든의 어둠의 자아라는 설정이다.) “당신을 다시 레일 위에 올려놓겠습니다(Let’s get you back...\nThe post [컨텍스트] ‘다크 바이든’, 짤 하나가 판을 바꾼다. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95021",
-          "publishedOn": "2023-08-08T06:10:50.000Z",
-          "wordCount": 4933,
-          "title": "[컨텍스트] ‘다크 바이든’, 짤 하나가 판을 바꾼다.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/maxresdefault.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=94984",
-          "author": "이정환",
-          "description": "잼버리 4만 명 서울로 올라온다. 오늘도 37도까지 치솟는다. 후쿠시마 오염수 방류 시작한다. 더 깊게 읽기. 한동훈의 엄벌주의, 미국은 모범 사례 아니다. 야영장에 130억 원 밖에 안 썼다고? 예산 챙기려 무리수 뒀다. 오늘의 TMI. ‘택배 없는 날’ 어렵게 합의했더니 쿠팡은 불참. 코로나 하루 6만 명. “오늘만 이 가격”, 다크 패턴 마케팅 못한다. 술자리 2차가 사라졌다. 친문...\nThe post ‘택배 없는 날’ 어렵게 합의했더니 쿠팡은 불참: 슬로우레터 8월8일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/94984",
-          "publishedOn": "2023-08-07T21:58:58.000Z",
-          "wordCount": 5353,
-          "title": "‘택배 없는 날’ 어렵게 합의했더니 쿠팡은 불참: 슬로우레터 8월8일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/space-5933930_1280.jpg"
         }
       ]
     },
@@ -2863,6 +2753,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=591659",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591659/%ec%a0%84%ea%b3%a1%ed%95%ad-%ec%9d%bc%eb%aa%b0",
+          "publishedOn": "2023-09-06T03:17:27.000Z",
+          "wordCount": 5435,
+          "title": "9/5 전곡항 일몰 출사기, 노을 속 지는 해사 아름다웠다.",
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/전곡항-일몰-0387.jpg"
+        },
         {
           "id": "https://happist.com/?p=591611",
           "author": "happist",
@@ -2879,7 +2779,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591606/%ea%b5%ad%eb%82%b4-ott-%ec%9d%b4%ec%9a%a9%ec%9e%90-%ec%b6%94%ec%9d%b4",
           "publishedOn": "2023-09-04T03:37:04.000Z",
-          "wordCount": 5356,
+          "wordCount": 5451,
           "title": "국내 OTT 이용자 추이(23년 8월 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2021/08/쿠팡이츠-배달중인-쿠팡이츠-배달원-coupang-eats-delivery-woman-Image-from-Coupang.jpg"
         },
@@ -2889,7 +2789,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591584/%ec%b5%9c%ec%9e%ac%ec%b2%9c-%ec%84%9c%ec%9a%b8%eb%8c%80-%ec%a1%b8%ec%97%85%ec%8b%9d-%ec%b6%95%ec%82%ac",
           "publishedOn": "2023-08-31T04:43:09.000Z",
-          "wordCount": 6361,
+          "wordCount": 6280,
           "title": "최재천교수의 서울대 졸업식 축사 전문과 하일라이트",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/470403_381912_361.jpg"
         },
@@ -2929,7 +2829,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591555/%ea%b0%95%ec%9b%90-%ed%83%9c%eb%b0%b1-%eb%b0%94%eb%9e%8c%ec%9d%98-%ec%96%b8%eb%8d%95",
           "publishedOn": "2023-08-28T22:12:12.000Z",
-          "wordCount": 5447,
+          "wordCount": 5391,
           "title": "강원 태백 바람의 언덕 다녀온 이야기",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/강원-태백-바람의-언덕-3892.jpg"
         },
@@ -2952,16 +2852,6 @@
           "wordCount": 5830,
           "title": "한강 발원지 태백 검룡소, 운치있는 곳으로 친구들과 산책삼아 다녀오기 좋은 곳",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/강원-태백-검룡소한강-발원지-4130.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591508",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591508/2q-23-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2023-08-27T13:33:06.000Z",
-          "wordCount": 7167,
-          "title": "놀라운 2분기 엔비디아 실적을 읽는 월가의 시각",
-          "imageUrl": "https://happist.com/wp-content/uploads/2020/08/엔비디아-로고-nvidia-logo.jpg"
         },
         {
           "id": "https://happist.com/?p=591463",
@@ -2992,16 +2882,6 @@
           "wordCount": null,
           "title": "월가의 월마트 투자의견 및 월마트 주가 전망(8/9 업뎃)",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=591439",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591439/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ec%a0%90%ec%9c%a0%ec%9c%a8",
-          "publishedOn": "2023-08-07T11:12:37.000Z",
-          "wordCount": 5724,
-          "title": "23년 2분기 클라우드 시장 분석 및 클라우드 점유율 전망",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png"
         }
       ]
     },
@@ -3010,6 +2890,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77728",
+          "author": "NewsPeppermint",
+          "description": "‘자유’, ‘자유주의’가 대통령의 입에 자주 오르내리고 있습니다. 그러나 색깔론의 도구로 쓰이는 자유는 더 많은 자유를 보장하기 위해서가 아니라, 오히려 다른 이의 자유를 억압하는 기제로 쓰이는 것처럼 보입니다. 즉 자유라는 개념이 남용되고 있는 듯한 느낌을 지우기 어렵습니다. 그러던 중 뉴욕타임스에 예일대학교 새뮤얼 모인 교수가 쓴 칼럼을 봤습니다. 냉전 시대를 거치며 자유의 개념이 극도로 왜곡됐고, 이게 아직 고쳐지지 않았으므로 자유주의가 쇄신하고 부활하려면 서둘러 노선을 수정해야 한다는 내용이었습니다. 칼럼을 번역하고 해설을 달았습니다. 전문 → 더 보기",
+          "link": "https://newspeppermint.com/2023/09/06/npsp_liberalism/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_liberalism",
+          "publishedOn": "2023-09-06T17:25:04.000Z",
+          "wordCount": 1412,
+          "title": "‘자유’라는 가면을 쓴 색깔론, 그들의 자유는 누구를 위한 걸까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77718",
           "author": "NewsPeppermint",
@@ -3098,16 +2988,6 @@
           "publishedOn": "2023-08-21T02:40:54.000Z",
           "wordCount": 1372,
           "title": "‘시간의 불평등’에 가려진 근본적 요인을 봐야 할 때",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77207",
-          "author": "veritaholic",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 그에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 6월 28일 스프에 쓴 글입니다. 아직 과학 분야의 노벨상을 하나도 받지 못한 나라에서 전 세계가 주목하는 연구 결과를 연일 내놓는 과학자가 있습니다. 언론을 다루는 방법도 능숙하며 정치력 또한 뛰어난 그는 곧 국가 → 더 보기",
-          "link": "https://newspeppermint.com/2023/08/19/npsp_wshwang/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_wshwang",
-          "publishedOn": "2023-08-19T22:59:43.000Z",
-          "wordCount": 2041,
-          "title": "[뉴페@스프] 18년 전 세계를 놀라게 했던 ‘황우석 사태’와 그 이후",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         },
         {
