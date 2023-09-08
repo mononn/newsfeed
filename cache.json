@@ -146,7 +146,7 @@
           "description": "CPPG에 대한 나의 예전 기억\n개인정보관리사라는 일명 CPPG 시험이 있다. \n사실 이 시험의 존재는 꽤 오래전부터 알고있었다. 시험접수 사이트에 로그인을 해보니 2015년에 접수를 했다가 취소를 했던 기록이 있다. 기억을 더듬어보니 당시 공군 장교로 병역을 마치고 취업을 준비하던 시기에 정보보안 분야로 진출하려면 뭐라도 하나 이력을 더 만들고 싶어서 (그때 정보보안기사도 땄었고, 디지털포렌식전문가2급도 땄었다).. 마침 그때 BoB과정을 이수하고 있었는데, 옆의 컨설팅 트랙에서는 뭔가 다들 열심히 도전하는 느낌이길래 나도 신청을 했었던 것 같다. 그러나 결과적으로 당시 대학원에 합격하게 되었고 해당 자격증이 필요없어졌다는 생각에(정확히는 공부를 하기가 싫어서) 바로 환불을 했었던 것이다.\n이 시험을 바로 환불 결정했던 이유가 무엇일까? 나는 natural born 공돌이이고 지금도 기술 분야를 본업으로 삼고 있는 것은 여전하다. 그런데 이 시험은 쉽게 말해 문과 성향의 지식을 많이 필요로 하고, 정확히는 <개인정보보호법>에 대해 깊은 이해가 필요한 자격증이다. 그래서 그때는 도저히 공부할 엄두가 나지 않았다.\n\n\nCPPG를 도전하게 된 계기\n시간이 흐르면서 간혹 이 자격을 검색해보곤했는데, 그때마다 종종 CPPG가 국가공인 자격으로 전환된다, 안된다, 하는 뜬소문이 많았다. 그래서 어떤 의미에서는 국가공인으로 전환된 이후 시험을 보는게 이득이라는 생각도 있었고, 그래서 그냥저냥 계속 기다렸다. 하지만 국가공인 전환은 되지 않았다. 아직까지도.\n그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…",
           "link": "https://cpuu.postype.com/post/14359096",
           "publishedOn": "2023-09-04T06:00:41.000Z",
-          "wordCount": 749,
+          "wordCount": 744,
           "title": "CPPG 개인정보관리사 불합격 후기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/04/15/00/33/88f9dc86cce73ec915ba47b48ccc2b56.jpeg?w=600&h=300&q=65"
         },
@@ -156,7 +156,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 744,
+          "wordCount": 740,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -199,6 +199,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "13909259-cf88-4513-a5a4-851cb12e8e99",
+          "author": "Jakub Stejskal, David Kornel",
+          "description": "Packit is an open source project aiming to ease your project's integration with Fedora Linux, CentOS Stream, and other distributions. Packit is mostly used by projects that build RPM packages. We won't go through the onboarding process that was already described in a previous article, but we would like to introduce you to new features that were recently promoted into production.\nTesting Farm execution\nFrom Packit, you can easily trigger the tests on Testing Farm even without building the RPMs. This is very handy for projects that basically don't build RPMs but want to use these two services for verifying the code. As a good example, we can refer to the Strimzi project where users consume container images.\nIn such cases, the users want to trigger the tests, verify the code and see some outp…",
+          "link": "https://developers.redhat.com/articles/2023/09/08/how-trigger-jobs-manually-packit",
+          "publishedOn": "2023-09-08T07:00:00.000Z",
+          "wordCount": 2672,
+          "title": "How to trigger jobs manually in Packit",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_B.png?itok=PfB3lac5"
+        },
         {
           "id": "f06cdd57-aa99-482f-834b-86238f0e8672",
           "author": "Yftach Herzog",
@@ -290,16 +300,6 @@
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
         },
         {
-          "id": "f6dcaacf-6295-4d9e-a103-5d15a1d0fdee",
-          "author": "Evan Shortiss",
-          "description": "In this article, I'll give a brief overview of cross-origin resource sharing (CORS) in the context of modern web applications and their interactions with HTTP APIs. I will also provide a sample solution(hosted on GitHub) for avoiding CORS-related issues in a web application that's served from Red Hat OpenShift.\nThe sample solution uses Red Hat's Universal Base Images for Node.js, NGINX, and Java. Instructions are included in this post to help you deploy and test the sample solution for free in the Developer Sandbox for Red Hat OpenShift.\nWhat exactly is CORS?\nIf you're not familiar with CORS or need a refresher, you should take a look at this excellent primer published by Julia Evans on wizardzines.com. To summarize, when JavaScript executing in a web browser on one origin (e.g., https://u…",
-          "link": "https://developers.redhat.com/articles/2023/08/29/avoid-cors-errors-openshift-web-applications",
-          "publishedOn": "2023-08-29T07:00:00.000Z",
-          "wordCount": 3922,
-          "title": "Conquer CORS errors in OpenShift web applications",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
-        },
-        {
           "id": "04c37be9-99a3-482a-a854-e946e04feef4",
           "author": "Alex Soto Bueno",
           "description": "Flask is a popular web framework for building web applications in Python. It is considered a microframework because it provides only the bare essentials for web development, focusing on simplicity and extensibility. \nFlask is one of the most popular frameworks for developing REST applications in Python. Flask also has a server to do local deployments and test the application, but no one would go with it to production. So we need another server to deploy the application in production, and one option is to use a WSGI (Web Server Gateway Interface) server like Gunicorn.\nIn this tutorial, you will learn how to create a Flask application, configure it to Gunicorn, and containerize it.\nThe application\nLet's create a simple Hello World application using Flask as a web framework.\nYou’ll need to in…",
@@ -368,16 +368,6 @@
           "wordCount": 3060,
           "title": "How to use Ansible Automation Platform from Azure Marketplace",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
-        },
-        {
-          "id": "7cad34ec-4b5d-4414-a3d2-639a2c8e6c2f",
-          "author": "Deepankar Jain, Himanshu Yadav",
-          "description": "In this article, you will learn how to use the Red Hat Ansible Automation Platform from the Amazon Web Services (AWS) Marketplace to automatically provision AWS resources.\nOverview of Ansible Automation Platform on AWS \nRed Hat Ansible Automation Platform is available on the Amazon Web Services (AWS) Marketplace. It is a self-managed offering that enables enterprise-wide automation with the benefits of deploying Ansible Automation Platform on AWS cloud. This offering integrates seamlessly with native AWS services and the full Ansible collection for AWS, co-developed and security-tested by AWS and Red Hat.\nBy combining the power of Red Hat Enterprise Linux, Red Hat OpenShift, and AWS services, developers can effectively scale their cloud infrastructure and leverage technologies such as cont…",
-          "link": "https://developers.redhat.com/articles/2023/08/10/benefits-deploying-ansible-automation-platform-aws",
-          "publishedOn": "2023-08-10T07:00:00.000Z",
-          "wordCount": 3064,
-          "title": "The benefits of deploying Ansible Automation Platform on AWS",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         }
       ]
     },
@@ -426,7 +416,7 @@
           "description": "28 August 2023 by Phillip Johnston • Last updated 7 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 8150,
+          "wordCount": 8113,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -645,12 +635,22 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1573.php",
+          "author": null,
+          "description": "Background\r\nNordic Semiconductor is a leader in wireless SoC’s, especially in BLE MCU’s with their nRF product line. The nRF5 SDK was released in 2012, and up until recently was the primary SDK for development on their chipsets.\r\n\r\nIn Sept of 2021, Nordic announced that they would be moving all new development over to...",
+          "link": "https://www.embeddedrelated.com/showarticle/1573.php",
+          "publishedOn": "2023-09-07T16:24:54.000Z",
+          "wordCount": 3674,
+          "title": "nRF5 to nRF Connect SDK migration via DFU over BLE",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vTX_TM8c5zCE-FvgvfFhSw.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1572.php",
           "author": null,
           "description": "With the ever increasing number of applications involving video processing, AI or edge computing the appetite for suitably skilled FPGA Engineers has never been higher from the market which is expected to grow to $15 billion USD by 2027!\nIn terms of industries opportunities can be typically found within:\n\nAutomotive\nAerospace\nDefense\nData Processing\n\nHowever this list is...",
           "link": "https://www.embeddedrelated.com/showarticle/1572.php",
           "publishedOn": "2023-09-04T10:28:23.000Z",
-          "wordCount": 3124,
+          "wordCount": 3145,
           "title": "FPGA skills for the modern world",
           "imageUrl": "https://au.mouser.com/images/marketingid/2019/microsites/0/Zynq-7000%20SoCArchitectural%20Overview.png"
         },
@@ -660,7 +660,7 @@
           "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
           "link": "https://www.embeddedrelated.com/showarticle/1571.php",
           "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3434,
+          "wordCount": 3419,
           "title": "Who needs source code?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -670,7 +670,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3005,
+          "wordCount": 3016,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -680,7 +680,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32075,
+          "wordCount": 32058,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -690,7 +690,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3951,
+          "wordCount": 3942,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -712,16 +712,6 @@
           "publishedOn": "2023-08-16T11:34:56.000Z",
           "wordCount": 3479,
           "title": "Getting Started With Zephyr: Devicetree Bndings",
-          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1552.php",
-          "author": null,
-          "description": "Wearable devices are becoming quite popular these days. Fitness trackers, medical sensors and much more implement different systems to acquire (sensors) and process user information. Among every potential design I have contributed as a researcher or engineer for a wearable system there is one that almost always was mentioned at initial stages. This is the ability to track user motion (or a...",
-          "link": "https://www.embeddedrelated.com/showarticle/1552.php",
-          "publishedOn": "2023-08-10T06:32:27.000Z",
-          "wordCount": 4151,
-          "title": "Quaternions and the spatial rotations in motion enabled wearable devices. Exploiting the potential of smart IMUs attitude estimation.",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
       ]
@@ -1079,12 +1069,52 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/943995/",
+          "author": "jake",
+          "description": "In a series of posts on his blog, Oscar Benjamin looks at SymPy, which is a Python-based symbolic-mathematics library.  In the first article, he outlines the \"big changes for SymPy with particular focus on speed\".  The second covers polynomial handling; subsequent articles will examine other pieces of the puzzle.\n\nI will be writing this in a series of blog posts. This first post will outline the structure of the foundations of a computer algebra system (CAS) like SymPy, describe some problems SymPy currently has and what can be done to address them. Then subsequent posts will focus in more detail on particular components and the work that has been done and what should be done in the future.",
+          "link": "https://lwn.net/Articles/943995/",
+          "publishedOn": "2023-09-08T15:54:21.000Z",
+          "wordCount": 235,
+          "title": "Benjamin: Towards a new SymPy",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943758/",
+          "author": "corbet",
+          "description": "The work to add support for large anonymous\nfolios to the kernel has been underway for some time, but this feature\nhas not yet landed in the mainline.  The author of this work, Ryan Roberts,\nhas been trying to get a handle on what the remaining obstacles are so he\ncan address them.  On September 6, an online meeting of\nmemory-management developers discussed that topic and made some progress;\nthere is still some work to do, though, before large anonymous folios can\ngo upstream.",
+          "link": "https://lwn.net/Articles/943758/",
+          "publishedOn": "2023-09-08T14:41:27.000Z",
+          "wordCount": null,
+          "title": "[$] Prerequisites for large anonymous folios",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943990/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium, libssh2, memcached, and python-django), Fedora (netconsd), Oracle (firefox and thunderbird), Scientific Linux (firefox), SUSE (open-vm-tools), and Ubuntu (grub2-signed, grub2-unsigned, shim, and shim-signed, plib, and python2.7, python3.5).",
+          "link": "https://lwn.net/Articles/943990/",
+          "publishedOn": "2023-09-08T14:23:00.000Z",
+          "wordCount": 207,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/943969/",
+          "author": "corbet",
+          "description": "This\nars technica article looks at the widespread deployment of Google's\n\"privacy sandbox\" in the Chrome browser:\n\n\n\tIf you haven't been following this, this feature will track the web\n\tpages you visit and generate a list of advertising topics that it\n\twill share with web pages whenever they ask, and it's built\n\tdirectly into the Chrome browser. It's been in the news previously\n\tas \"FLoC\" and then the \"Topics API,\" and despite widespread\n\topposition from just about every non-advertiser in the world,\n\tGoogle owns Chrome and is one of the world's biggest advertising\n\tcompanies, so this is being railroaded into the production builds.\n\n\nFor those who use Chrome anyway, there are instructions on how to disable\nthis functionality.",
+          "link": "https://lwn.net/Articles/943969/",
+          "publishedOn": "2023-09-08T13:40:24.000Z",
+          "wordCount": 714,
+          "title": "Google bakes a user-tracking ad platform directly into Chrome (ars technica)",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/943869/",
           "author": "corbet",
           "description": "The Ubuntu blog has a\ndetailed article on plans to add full-disk encryption, with the key\nstored in the system's trusted platform module (TPM), to the desktop\ndistribution.\n\n\n\tIn order to deliver these benefits, the implementation of\n\tTPM-backed FDE relies on two main design principles. First, it\n\tseals the FDE secret key to the full EFI state, including the\n\tkernel command line. Second, access to the decryption key will only\n\tbe permitted if and when the device boots software that has been\n\tdefined as authorised to access the confidential data.  This is\n\twhen the initrd code will unseal the key in the secure-boot\n\tprotected kernel.efi at boot time.",
           "link": "https://lwn.net/Articles/943869/",
           "publishedOn": "2023-09-07T16:56:27.000Z",
-          "wordCount": 2545,
+          "wordCount": 5394,
           "title": "Ubuntu to add TPM-backed full-disk encryption",
           "imageUrl": null
         },
@@ -1144,7 +1174,7 @@
           "description": "The Mozilla Foundation has published a\nreport on the data-collection and privacy practices of 25 car brands.\n\n\n\tWe reviewed 25 car brands in our research and we handed out 25\n\t\"dings\" for how those companies collect and use data and personal\n\tinformation. That’s right: every car brand we looked at collects\n\tmore personal data than necessary and uses that information for a\n\treason other than to operate your vehicle and manage their\n\trelationship with you. For context, 63% of the mental health apps\n\t(another product category that stinks at privacy) we reviewed this\n\tyear received this \"ding.\"\n\n\nProof, once again, that running Linux does not automatically make a device\nprivacy-friendly.",
           "link": "https://lwn.net/Articles/943699/",
           "publishedOn": "2023-09-06T14:57:35.000Z",
-          "wordCount": 4651,
+          "wordCount": 5055,
           "title": "Mozilla: It’s Official: Cars Are the Worst Product Category We Have Ever Reviewed for Privacy",
           "imageUrl": null
         },
@@ -1154,7 +1184,7 @@
           "description": "Leandro Moreira is maintaining a\ndetailed description of Linux network tuning parameters and how they\nall tie together.  There is a lot of good information for administrators\nseeking a better understanding of how all those knobs work and\ninteroperate.  (Seen on HN).",
           "link": "https://lwn.net/Articles/943697/",
           "publishedOn": "2023-09-06T14:46:27.000Z",
-          "wordCount": 187,
+          "wordCount": 209,
           "title": "A guide to network performance tuning",
           "imageUrl": null
         },
@@ -1186,46 +1216,6 @@
           "publishedOn": "2023-09-05T16:44:20.000Z",
           "wordCount": 271,
           "title": "KDE Gear 23.08 Arrived With Plenty of Changes (FOSS Force)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943584/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (file and thunderbird), Fedora (exercism, libtommath, moby-engine, and python-pyramid), Oracle (cups and kernel), Red Hat (firefox, kernel, kernel-rt, kpatch-patch, and thunderbird), SUSE (amazon-ecs-init, buildah, busybox, djvulibre, exempi, firefox, gsl, keylime, kubernetes1.18, php7, and sccache), and Ubuntu (docker-registry and linux-azure-5.4).",
-          "link": "https://lwn.net/Articles/943584/",
-          "publishedOn": "2023-09-05T13:46:43.000Z",
-          "wordCount": 402,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943239/",
-          "author": "corbet",
-          "description": "The kernel-development community has recently been discussing a number of\nindependent patches, each of which is intended to help improve the security\nof deployed systems in some way.  They touch on a number of areas within the\nkernel, including the question of how widely io_uring should be available,\nhow to allow virtual machines to attest to their integrity, and the best\nway to inform applications when their random-number generators need to be\nreseeded.",
-          "link": "https://lwn.net/Articles/943239/",
-          "publishedOn": "2023-09-04T14:24:54.000Z",
-          "wordCount": null,
-          "title": "[$] Security topics: io_uring, VM attestation, and random-reseed notifications",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943492/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (thunderbird), Fedora (firefox, kernel, kubernetes, and mediawiki), Mageia (openldap), SUSE (terraform), and Ubuntu (atftp, busybox, and thunderbird).",
-          "link": "https://lwn.net/Articles/943492/",
-          "publishedOn": "2023-09-04T13:54:40.000Z",
-          "wordCount": 181,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943400/",
-          "author": "corbet",
-          "description": "The\n6.5.1,\n6.4.14,\n6.1.51,\n5.15.130,\n5.10.194,\n5.4.256,\n4.19.294, and\n4.14.325\nstable kernel updates have all been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/943400/",
-          "publishedOn": "2023-09-02T14:01:10.000Z",
-          "wordCount": 143,
-          "title": "A pile of stable kernel updates",
           "imageUrl": null
         },
         {
@@ -1496,36 +1486,6 @@
           "publishedOn": "2023-08-10T14:21:12.000Z",
           "wordCount": 156,
           "title": "Security updates for Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940290/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for August 10, 2023 is available.",
-          "link": "https://lwn.net/Articles/940290/",
-          "publishedOn": "2023-08-10T01:46:45.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for August 10, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940780/",
-          "author": "jake",
-          "description": "The global interpreter lock (GIL) has been a part of CPython since the\nbeginning—nearly—but\nthat seems likely to change over the next five or so \nyears.  As we described last week, the\nPython steering council has announced\nits intention to start moving toward a no-GIL\nCPython, potentially as soon as Python 3.13 in October 2024\nfor the preliminaries.   The no-GIL version of CPython comes from Sam\nGross, who introduced\nit as a proof-of-concept nearly two years\nago; now, the idea has been formalized in a Python Enhancement Proposal\n(PEP) that describes no-GIL mode and how it interacts with the rest of the\nPython ecosystem.",
-          "link": "https://lwn.net/Articles/940780/",
-          "publishedOn": "2023-08-09T22:27:49.000Z",
-          "wordCount": null,
-          "title": "[$] CPython without a global interpreter lock",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940912/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (cjose, hdf5, and orthanc), Fedora (java-17-openjdk and seamonkey), Red Hat (curl, dbus, iperf3, kernel, kpatch-patch, libcap, libxml2, nodejs:16, nodejs:18, postgresql:10, postgresql:12, postgresql:13, and python-requests), SUSE (bluez, cjose, gstreamer-plugins-bad, gstreamer-plugins-base, gstreamer-plugins-good, gstreamer-plugins-ugly, keylime, openssl-1_1, openssl-3, pipewire, poppler, qemu, rubygem-actionpack-4_2, rubygem-actionpack-5_1, rust1.71, tomcat, webkit2gtk3, and wireshark), and Ubuntu (binutils, dotnet6, dotnet7, openssh, php-dompdf, and unixodbc).",
-          "link": "https://lwn.net/Articles/940912/",
-          "publishedOn": "2023-08-09T13:23:42.000Z",
-          "wordCount": 442,
-          "title": "Security updates for Wednesday",
           "imageUrl": null
         }
       ]
@@ -1858,16 +1818,6 @@
           "wordCount": 3795,
           "title": "VS Code: MCUXpresso Installer",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/install-with-mcuxpresso-installer.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38236",
-          "author": "Erich Styger",
-          "description": "“There is no such thing as a free lunch.” https://en.wikipedia.org/wiki/No_such_thing_as_a_free_lunch And this applies to VS Code and many of its extensions. You agree to the licensing conditions, and you pay with your data. VS Code source code is MIT licensed, … Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/10/vs-code-telemetry-free-vscodium/",
-          "publishedOn": "2023-08-09T22:32:00.000Z",
-          "wordCount": 4228,
-          "title": "VS Code: Telemetry-free VSCodium",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/vscodium.png"
         }
       ]
     },
@@ -1879,12 +1829,12 @@
         {
           "id": "https://medium.com/p/301201c24cba",
           "author": "Chirag Atal",
-          "description": "",
+          "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": null,
+          "wordCount": 3215,
           "title": "Announcing ESP ZeroCode",
-          "imageUrl": null
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
       ]
     },
@@ -2001,36 +1951,6 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
-          "id": "https://shape-of-code.com/?p=8152",
-          "author": "Derek Jones",
-          "description": "Study after study finds that the predictive power of both the Halstead metric and the McCabe cyclomatic complexity metric is no better than counting lines of code, for the characteristics of interest. Why do people continue to use and cite the Halstead and McCabe metrics? My experience, talking to people, is that many believe these […]",
-          "link": "https://shape-of-code.com/2023/09/03/halstead-mccabe-metrics-the-wisdom-of-the-ancients/",
-          "publishedOn": "2023-09-03T21:46:40.000Z",
-          "wordCount": 1655,
-          "title": "Halstead & McCabe metrics: The wisdom of the ancients",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8134",
-          "author": "Derek Jones",
-          "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
-          "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
-          "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1528,
-          "title": "Readability of anonymous inner classes and lambda expressions",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8109",
-          "author": "Derek Jones",
-          "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
-          "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
-          "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1519,
-          "title": "Local variable naming: some  previously unexplored factors",
-          "imageUrl": null
-        },
-        {
           "id": "https://shape-of-code.com/?p=8087",
           "author": "Derek Jones",
           "description": "If people were not motivated to write software, computers would not have anything to do. What motivates a person to write software? The source of human motivation may be intrinsic, as when pleasure is derived from performing the activity, or it may be extrinsic, such as being paid. For some developers, writing software is a […]",
@@ -2038,6 +1958,36 @@
           "publishedOn": "2023-08-13T22:29:58.000Z",
           "wordCount": 1210,
           "title": "Motivation and software development",
+          "imageUrl": null
+        },
+        {
+          "id": "https://shape-of-code.com/?p=8070",
+          "author": "Derek Jones",
+          "description": "The number of Function points, FP, contained in the implementation of a software system are counted by following a specified counting process. The number of FP counted for a project is mapped to a cost estimate by multiplying the number of FP by the predetermined cost value of one FP; the predetermined value is based […]",
+          "link": "https://shape-of-code.com/2023/08/06/accuracy-of-function-point-estimates/",
+          "publishedOn": "2023-08-06T21:26:04.000Z",
+          "wordCount": 1600,
+          "title": "Accuracy of Function Point estimates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://shape-of-code.com/?p=8045",
+          "author": "Derek Jones",
+          "description": "Who are today’s ‘famous’ academics in software engineering? Famous as in, you can mention their name when chatting with general software developers, and expect those present to have heard of them, or you have heard their names dropped into a conversation, say, at least 3+ times this year (I’m excluding academics who are famous within […]",
+          "link": "https://shape-of-code.com/2023/07/30/who-are-the-famous-academics-in-software-engineering/",
+          "publishedOn": "2023-07-30T22:05:23.000Z",
+          "wordCount": 1513,
+          "title": "Who are the famous academics in software engineering?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://shape-of-code.com/?p=8024",
+          "author": "Derek Jones",
+          "description": "Fuzzing has become a popular area of research in the reliability & testing community, with a stream of papers claiming to have created a better tool/algorithm. The claims of ‘betterness’, made by the authors, often derive from the number of previously unreported faults discovered in some collection of widely used programs. Developers in industry will […]",
+          "link": "https://shape-of-code.com/2023/07/23/8024/",
+          "publishedOn": "2023-07-23T21:47:02.000Z",
+          "wordCount": 1407,
+          "title": "Benchmarking fuzzers",
           "imageUrl": null
         }
       ]
@@ -2063,7 +2013,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 3070,
+          "wordCount": 3069,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -2204,6 +2154,26 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=96390",
+          "author": "이정환",
+          "description": "다음은 8월24일 미디어오늘 주최로 열린 미디어의 미래 컨퍼런스 세션 가운데 집중 토론 내용을 정리한 것이다. 모더레이터는 슬로우뉴스 대표 이정환이고 토론자는 숙명여대 교수 강형철과 건국대 교수 황용석, 이화여대 교수 최지향, 방송광고공사 연구위원 강신규다. 시간 관계로 다 하지 못한 질문과 답변을 이정환과 슬로우뉴스에 준독립편집자(editor-at-large)로 참여하고 있는 펜실베니아주립대 교수 김낙호가 보완했다. 이 기사는 미디어오늘에 공동 게재한다. 질문 1:...\nThe post “저널리즘 생태계를 흔드는 권력과 자본, 질적 혁신과 신뢰 회복이 해법이다.” appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96390",
+          "publishedOn": "2023-09-08T02:12:24.000Z",
+          "wordCount": 7715,
+          "title": "“저널리즘 생태계를 흔드는 권력과 자본, 질적 혁신과 신뢰 회복이 해법이다.”",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/4275697636-scaled-e1694139049288.jpeg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96362",
+          "author": "이정환",
+          "description": "장기 저성장 국면에 들어섰다. 화웨이 새 스마트폰에 미국이 화들짝. 일본도 무인 달 탐사선 발사. 이화영이 또 말을 바꿨다. 더 깊게 읽기. 김만배 인터뷰 사건의 핵심(지난 이야기). 뉴스타파의 반격. 윤석열 정부와 검찰의 반격. 새롭게 확인된 사실. 신학림: “그러면 조우형은 가가지고 박길배하고 커피 한 잔 마시고 온 거야? 아니면 윤석열하고 마시고 온 거야?” 김만배: “아니, 아니, 혼자,...\nThe post 경험하지 못한 성장률, 한국 경제 엔진이 꺼져간다: 슬로우레터 9월8일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96362",
+          "publishedOn": "2023-09-07T21:57:44.000Z",
+          "wordCount": 5848,
+          "title": "경험하지 못한 성장률, 한국 경제 엔진이 꺼져간다: 슬로우레터 9월8일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/2496802.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=96324",
           "author": "이정환",
           "description": "윤석열 커피, 특검까지 갈까. 뉴스타파 퇴출? 문화부에 서울시까지 거든다. 김만배 두 번째 출소. ‘3개월짜리’ 이준석, 진짜 석 달만에 쫓아냈다. ‘건전 재정’ 외치더니 금전 돌려 막기 153조 원. R&D 예산, 이렇게 후려쳐도 되나? “국민 뜻에 반하면 끌어내려야 민주주의.” 성범죄에 너그러웠던 대법원장 후보자. 국방부 장관의 거짓말. 기아차 노동자 사망사고. 킬러 문항 뺐더니 수학 변별력 줄었다. 오늘의 TMI....\nThe post 커피를 누가 타줬는지가 중요한 게 아니다: 슬로우레터 9월7일. appeared first on 슬로우뉴스.",
@@ -2259,9 +2229,9 @@
           "description": "[제네바 오전 8시] 국제노동기구(ILO) 고용정책국장 이상헌 박사와 나누는 노동과 세계 그리고 인간에 관한 이야기 ‘어쩌다 보니 선진국’이라는 말이 한때 유행했습니다. 일제의 치욕과 한국전쟁의 폐허를 극복하고, 한국은 세계 10위권의 경제 대국으로 올라섰습니다. 하지만 잼버리 파행이 보여준 주먹구구식 행정과 책임 정치의 부재, 청주시 오송 지하차도 침수 사건이 웅변한 후진국형 인재, 증오와 혐오의 극단을 보여주는 무차별 범죄, 기자...\nThe post 한국을 벤치마킹한다는 것의 의미 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95569",
           "publishedOn": "2023-09-05T06:23:06.000Z",
-          "wordCount": 5943,
+          "wordCount": 5921,
           "title": "한국을 벤치마킹한다는 것의 의미",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/image.jpeg"
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/GENEVA-GettyImages-1452223657-1.jpg"
         },
         {
           "id": "https://slownews.kr/?p=96192",
@@ -2329,7 +2299,7 @@
           "description": "윤재옥(국민의힘 원내대표)이 이런 말을 했다. “마치 미국산 쇠고기 먹으면 당장 광우병 걸리고 다 죽는다는 광우병 사태와 똑같은 모습이다.” 고현곤(중앙일보 편집인)은 “후쿠시마 오염수에서 광우병 사태가 오버랩된다”고 지적했고 조선일보는 “‘광우병국민대책회의’에 속했던 시민 단체 952개 중 195개 단체가 ‘일본 방사성 오염수 방류 저지 공동행동’에도 참여하고 있다”고 보도했다. ‘광우병 촛불집회’를 진보의 비과학성을 공격하는 전가의 보도처럼 써먹는 사람들이 있다. 보수...\nThe post 광우병이 별 거 아니었다고? 사후 확증편향이다 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96026",
           "publishedOn": "2023-09-01T00:23:26.000Z",
-          "wordCount": 4616,
+          "wordCount": 4628,
           "title": "광우병이 별 거 아니었다고? 사후 확증편향이다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/pexels-photo-14565555-1000x667.jpeg"
         },
@@ -2359,7 +2329,7 @@
           "description": "‘같이 가면 길이 된다’ 북살롱 텍스트북 북토크 지상중계 “스위스는 빵 공장에서 노동자가 기계에 끼는 사고가 발생하면 당장 국정조사 들어갑니다. 난리나요.” 우리는 노동자가 다치고 죽는 것에 둔감한 나라다. 어쩌다 누군가의 드라마틱한 비극에 관심 가질 뿐 대체로 노동자가 날마다 죽어가는 현실에 관심이 없다. 그게 이상한 거란다. 경제학 박사로 노동을 연구해온 이상헌 국제노동기구(ILO) 고용정책국장을 저서 ‘같이 가면 길이...\nThe post 빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95985",
           "publishedOn": "2023-08-30T12:13:45.000Z",
-          "wordCount": 5053,
+          "wordCount": 5038,
           "title": "빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/pumpkin-bread-food-bread-gluten-dish-banana-bread-1629442-pxhere.com_-1000x667.jpg"
         },
@@ -2382,26 +2352,6 @@
           "wordCount": 5882,
           "title": "“윤석열의 ‘아무 말 대잔치’, 어안이 벙벙했다”: 슬로우레터 8월30일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/Knf2NVU5a3P564db2a35ad6876.14344635-1000x666.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95947",
-          "author": "민주언론시민연합",
-          "description": "방송통신위원장 축출 시도로 시작된 방송장악 프로젝트가 본격적으로 작동하고 있다. 독립성이 생명인 방송통신위원회의 위원장을 ‘대통령 국정 철학과 맞지 않은 사람이니 사퇴해야 한다’는 반민주적이고 해괴한 논리로 공격하더니, 방송장악의 선봉에 섰던 사람을 방송통신위원장으로 임명했다. 그렇다면 현 정부의 국정 철학은 방송장악인가? 다수결 원리 악용한 공영방송 침탈 지난 1년여간 민주주의 사회에서 이해하기 힘든 일들이 연속해서 벌어졌다. 도대체 왜 그랬을까? 그...\nThe post 소 잃었어도 외양간은 고치자: 정치적 후견주의 극복해야 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95947",
-          "publishedOn": "2023-08-29T15:37:57.000Z",
-          "wordCount": 4876,
-          "title": "소 잃었어도 외양간은 고치자: 정치적 후견주의 극복해야",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/vote-5676563_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95906",
-          "author": "이정환",
-          "description": "“나라 거덜나기 직전이었다.” 독립운동가 흉상, 홍범도만 옮긴다. 대통령실 구내 식당 모둠회가 25분 만에 동났다는데. 오염수 희석 비율 700 대 1로 줄었다. 폭주하는 이동관 방통위. “인당수에 뛰어들어야.” 오늘의 TMI. “결혼 하는 것이 좋다”, 36%뿐. 트럼프 머그샷 효과, 지지율 60% 육박. ‘당근마켓’ 말고 그냥 ‘당근’. 부채 201조 원, 한전 사장에 김동철. 더 깊게 읽기. “가판 대응하지 마라”,...\nThe post 일본 가리비의 한국 공습 막을 수 있나: 슬로우레터 8월29일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95906",
-          "publishedOn": "2023-08-28T21:56:56.000Z",
-          "wordCount": 5979,
-          "title": "일본 가리비의 한국 공습 막을 수 있나: 슬로우레터 8월29일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/seashell-crustaceans-scallop-shells.jpg"
         },
         {
           "id": "https://slownews.kr/?p=95579",
@@ -2552,26 +2502,6 @@
           "wordCount": 6628,
           "title": "애국주의 트롤링과 페이스북의 침묵 (ft. 독재에 맞서 미래를 위해 싸우는 방법)",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/Ferdinand_Marcos.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95139",
-          "author": "이정환",
-          "description": "지붕 날아가고 열차가 탈선할 수준의 태풍. 잼버리 콘서트 잘 될까. 뷔페 차려놓고 기다렸는데, 입국도 안 했다니. 개발에 올인한 새만금 잔혹사. 땡볕에 17km(2만9100걸음) 카트몰이, 코스트코 노동자의 죽음. 공사장 바닥 또 무너졌다. KBS와 방문진 인사 결국 강행. 더 깊게 읽기. 억울한 죽음 밝히겠다는 데 항명이라고? 강남 롤스로이스 사건, 신원 보증으로 풀어줬다고? 중국도 일본식 장기 침체에 빠지나. 오늘의...\nThe post 사라진 갯벌, 새만금의 교훈을 읽자: 슬로우레터 8월10일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95139",
-          "publishedOn": "2023-08-09T22:04:21.000Z",
-          "wordCount": 5707,
-          "title": "사라진 갯벌, 새만금의 교훈을 읽자: 슬로우레터 8월10일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/수라_still-04.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95121",
-          "author": "민주언론시민연합",
-          "description": "사모펀드 버스준공영제 침탈 드러낸 한겨레를 만나다 [민언련 이달의 좋은 보도상, 2023년 7월 수상자 인터뷰] 서울시 은평구에서 출발해 독립문역, 광화문, 순천향대학병원을 지나 강남구까지 갔다 돌아오는 741번 파란버스. 서울시 도봉구에서 출발해 미아사거리역, 충무로역, 강남역을 지나 양재꽃시장에서 회차하는 140번 파란버스. 한국BRT가 운행하는 버스노선이다. 서울 버스업체 65곳 중 한국BRT, 동아운수, 도원교통 등 6곳이 사모펀드 차파트너스자산운용(차파트너스) 소유다. 서울 시내버스는 준공영제라는데...\nThe post 방금 낸 버스비 1200원, 사모펀드 호주머니로 간다 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95121",
-          "publishedOn": "2023-08-09T09:05:49.000Z",
-          "wordCount": null,
-          "title": "방금 낸 버스비 1200원, 사모펀드 호주머니로 간다",
-          "imageUrl": null
         }
       ]
     },
@@ -2586,7 +2516,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591659/%ec%a0%84%ea%b3%a1%ed%95%ad-%ec%9d%bc%eb%aa%b0",
           "publishedOn": "2023-09-06T03:17:27.000Z",
-          "wordCount": 5475,
+          "wordCount": 5435,
           "title": "9/5 전곡항 일몰 출사기, 노을 속 지는 해사 아름다웠다.",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/09/전곡항-일몰-0387.jpg"
         },
@@ -2596,7 +2526,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591611/%eb%a7%a5%eb%ac%b8%eb%8f%99-%ec%b6%9c%ec%82%ac",
           "publishedOn": "2023-09-04T07:39:15.000Z",
-          "wordCount": 5825,
+          "wordCount": 5765,
           "title": "23년 9월 맥문동 출사 여행",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/09/1693812492976.jpg"
         },
@@ -2616,7 +2546,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591584/%ec%b5%9c%ec%9e%ac%ec%b2%9c-%ec%84%9c%ec%9a%b8%eb%8c%80-%ec%a1%b8%ec%97%85%ec%8b%9d-%ec%b6%95%ec%82%ac",
           "publishedOn": "2023-08-31T04:43:09.000Z",
-          "wordCount": 6280,
+          "wordCount": 6361,
           "title": "최재천교수의 서울대 졸업식 축사 전문과 하일라이트",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/470403_381912_361.jpg"
         },
@@ -2646,7 +2576,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591568/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ec%a3%bc%ea%b0%80",
           "publishedOn": "2023-08-29T12:32:50.000Z",
-          "wordCount": 5533,
+          "wordCount": 5544,
           "title": "월가의 클라우드 관련주 투자의견 및 클라우드 관련주 주가 전망(8/30 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png"
         },
@@ -2689,26 +2619,6 @@
           "wordCount": 5153,
           "title": "의료 인공지능(AI) 기업 루닛 실적",
           "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591448",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/591448/%eb%a6%ac%eb%b9%84%ec%95%88-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%eb%a6%ac%eb%b9%84%ec%95%88-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2023-08-09T11:59:07.000Z",
-          "wordCount": null,
-          "title": "전기차 리비안 투자의견 및 리비안 주가 전망(8/9 업뎃)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=591446",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/591446/%ec%9b%94%eb%a7%88%ed%8a%b8-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%9b%94%eb%a7%88%ed%8a%b8-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2023-08-09T11:50:48.000Z",
-          "wordCount": null,
-          "title": "월가의 월마트 투자의견 및 월마트 주가 전망(8/9 업뎃)",
-          "imageUrl": null
         }
       ]
     },
@@ -2885,16 +2795,6 @@
           "publishedOn": "2023-08-10T23:15:39.000Z",
           "wordCount": 2430,
           "title": "수십 년 된 소수자 우대정책, 2023년에도 공정할까? ‘공정’이란 가치는 어떻게 구현해야 하나",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77538",
-          "author": "NewsPeppermint",
-          "description": "최근 우리 사회에도 자꾸 일어나 드물지 않은 일이 되어버린 무차별 폭력은 범인과 아무런 관련이 없는 나도 피해자가 될 수 있다는 두려움을 불러일으킵니다. 사람은 누구나 폭력 범죄의 피해자가 될 가능성을 과대평가하는 경향이 있습니다. 여기에 다른 몇 가지 편견과 서로 신뢰하지 못하는 세태가 더해지면, 공권력을 비롯해 치안을 맡은 주체조차 믿지 못해 스스로 무장하거나 타인에 대한 경계심이 지나치게 높아져 치안은 더 나빠지는 악순환에 빠지게 됩니다. 전문번역: 사람들이 겁에 질려 총을 사기 시작한다, 그다음은 이렇습니다. → 더 보기",
-          "link": "https://newspeppermint.com/2023/08/09/npsp_trustviolence/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trustviolence",
-          "publishedOn": "2023-08-10T00:45:48.000Z",
-          "wordCount": 1398,
-          "title": "모두가 모두를 믿지 못하게 되면 어떻게 해야 할까",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
