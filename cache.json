@@ -191,7 +191,7 @@
           "description": "CPPG에 대한 나의 예전 기억\n개인정보관리사라는 일명 CPPG 시험이 있다. \n사실 이 시험의 존재는 꽤 오래전부터 알고있었다. 시험접수 사이트에 로그인을 해보니 2015년에 접수를 했다가 취소를 했던 기록이 있다. 기억을 더듬어보니 당시 공군 장교로 병역을 마치고 취업을 준비하던 시기에 정보보안 분야로 진출하려면 뭐라도 하나 이력을 더 만들고 싶어서 (그때 정보보안기사도 땄었고, 디지털포렌식전문가2급도 땄었다).. 마침 그때 BoB과정을 이수하고 있었는데, 옆의 컨설팅 트랙에서는 뭔가 다들 열심히 도전하는 느낌이길래 나도 신청을 했었던 것 같다. 그러나 결과적으로 당시 대학원에 합격하게 되었고 해당 자격증이 필요없어졌다는 생각에(정확히는 공부를 하기가 싫어서) 바로 환불을 했었던 것이다.\n이 시험을 바로 환불 결정했던 이유가 무엇일까? 나는 natural born 공돌이이고 지금도 기술 분야를 본업으로 삼고 있는 것은 여전하다. 그런데 이 시험은 쉽게 말해 문과 성향의 지식을 많이 필요로 하고, 정확히는 <개인정보보호법>에 대해 깊은 이해가 필요한 자격증이다. 그래서 그때는 도저히 공부할 엄두가 나지 않았다.\n\n\nCPPG를 도전하게 된 계기\n시간이 흐르면서 간혹 이 자격을 검색해보곤했는데, 그때마다 종종 CPPG가 국가공인 자격으로 전환된다, 안된다, 하는 뜬소문이 많았다. 그래서 어떤 의미에서는 국가공인으로 전환된 이후 시험을 보는게 이득이라는 생각도 있었고, 그래서 그냥저냥 계속 기다렸다. 하지만 국가공인 전환은 되지 않았다. 아직까지도.\n그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…",
           "link": "https://cpuu.postype.com/post/14359096",
           "publishedOn": "2023-09-04T06:00:41.000Z",
-          "wordCount": 741,
+          "wordCount": 749,
           "title": "CPPG 개인정보관리사 불합격 후기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/04/15/00/33/88f9dc86cce73ec915ba47b48ccc2b56.jpeg?w=600&h=300&q=65"
         },
@@ -201,7 +201,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 734,
+          "wordCount": 735,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         },
@@ -471,7 +471,7 @@
           "description": "28 August 2023 by Phillip Johnston • Last updated 7 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 8120,
+          "wordCount": 8111,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -641,46 +641,6 @@
           "wordCount": 4227,
           "title": "Is DevOps right for you?",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/sw_dev-.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480162",
-          "author": "Nitin Dahad",
-          "description": "Applied Digital Corporation and Zededa partner to deliver on-demand transmutable AI cloud service enabling dynamic access and purchase of GPU resources by the hour to execute and scale AI, ML, and HPC workloads.\nThe post Partnership delivers on-demand GPU by the hour for HPC and AI appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/partnership-delivers-on-demand-gpu-by-the-hour-for-hpc-and-ai/",
-          "publishedOn": "2023-08-11T16:57:24.000Z",
-          "wordCount": 3474,
-          "title": "Partnership delivers on-demand GPU by the hour for HPC and AI",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/zededa-visibility-security.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480151",
-          "author": "Marcus Nissemark",
-          "description": "Embedded hypervisors & separation kernels can both address separation requirements. But the default shouldn't rely solely on hypervisors. \nThe post Hypervisors solve all your software partitioning issues. Do they really? appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/hypervisors-solve-all-your-software-partitioning-issues-do-they-really/",
-          "publishedOn": "2023-08-11T12:33:13.000Z",
-          "wordCount": 5453,
-          "title": "Hypervisors solve all your software partitioning issues. Do they really?",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Green-Hills-Software-hypervisor-article-figure-2.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480142",
-          "author": "Steven Caliguri",
-          "description": "By keeping the IoT device's location information exclusively within the device itself rather than stored in the clouds, we can address the growing concerns of data privacy and security in IoT deployments.\nThe post Secure IoT location awareness: why edge wins over cloud appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/secure-iot-location-awareness-why-edge-wins-over-cloud/",
-          "publishedOn": "2023-08-11T11:10:11.000Z",
-          "wordCount": 3749,
-          "title": "Secure IoT location awareness: why edge wins over cloud",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/IoT-location-shutterstock_1677936880.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480137",
-          "author": "Nitin Dahad",
-          "description": "Terms of agreement between MIPI Alliance and Automotive SerDes Alliance (ASA) create a pathway for implementers to use MIPI CSI-2 directly, or “natively,\" with the ASA-ML physical layer (PHY) interface.\nThe post Associations align around MIPI CSI-2 automotive camera interface appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/associations-align-around-mipi-csi-2-automotive-camera-interface/",
-          "publishedOn": "2023-08-11T09:43:07.000Z",
-          "wordCount": 3506,
-          "title": "Associations align around MIPI CSI-2 automotive camera interface",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Liaison-MIPI-ASA.jpg"
         }
       ]
     },
@@ -692,10 +652,10 @@
         {
           "id": "https://www.embeddedrelated.com/showarticle/1574.php",
           "author": null,
-          "description": "Lesson #10 of my Modern Embedded Programming Video Course explains what stack overflow is and shows what can transpire deep inside an embedded microcontroller when the stack pointer register (SP) goes out of bounds. You can <a title=\"watch Lesson 10\"...",
+          "description": "Lesson #10 of my Modern Embedded Programming Video Course explains what stack overflow is and shows what can transpire deep inside an embedded microcontroller when the stack pointer register (SP) goes out of bounds. You can watch the YouTube video to see the details, but...",
           "link": "https://www.embeddedrelated.com/showarticle/1574.php",
           "publishedOn": "2023-09-08T20:34:00.000Z",
-          "wordCount": 4677,
+          "wordCount": 4705,
           "title": "Are We Shooting Ourselves in the Foot with Stack Overflow?",
           "imageUrl": "https://www.state-machine.com/attachments/stack_overflow.jpg"
         },
@@ -705,7 +665,7 @@
           "description": "Background\r\nNordic Semiconductor is a leader in wireless SoC’s, especially in BLE MCU’s with their nRF product line. The nRF5 SDK was released in 2012, and up until recently was the primary SDK for development on their chipsets.\r\n\r\nIn Sept of 2021, Nordic announced that they would be moving all new development over to...",
           "link": "https://www.embeddedrelated.com/showarticle/1573.php",
           "publishedOn": "2023-09-07T16:24:54.000Z",
-          "wordCount": 3690,
+          "wordCount": 3702,
           "title": "nRF5 to nRF Connect SDK migration via DFU over BLE",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vTX_TM8c5zCE-FvgvfFhSw.png"
         },
@@ -715,7 +675,7 @@
           "description": "With the ever increasing number of applications involving video processing, AI or edge computing the appetite for suitably skilled FPGA Engineers has never been higher from the market which is expected to grow to $15 billion USD by 2027!\nIn terms of industries opportunities can be typically found within:\n\nAutomotive\nAerospace\nDefense\nData Processing\n\nHowever this list is...",
           "link": "https://www.embeddedrelated.com/showarticle/1572.php",
           "publishedOn": "2023-09-04T10:28:23.000Z",
-          "wordCount": 3147,
+          "wordCount": 3152,
           "title": "FPGA skills for the modern world",
           "imageUrl": "https://au.mouser.com/images/marketingid/2019/microsites/0/Zynq-7000%20SoCArchitectural%20Overview.png"
         },
@@ -735,7 +695,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3036,
+          "wordCount": 3088,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -745,7 +705,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32060,
+          "wordCount": 32053,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -755,7 +715,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3942,
+          "wordCount": 3943,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -1149,7 +1109,7 @@
           "description": "This\nars technica article looks at the widespread deployment of Google's\n\"privacy sandbox\" in the Chrome browser:\n\n\n\tIf you haven't been following this, this feature will track the web\n\tpages you visit and generate a list of advertising topics that it\n\twill share with web pages whenever they ask, and it's built\n\tdirectly into the Chrome browser. It's been in the news previously\n\tas \"FLoC\" and then the \"Topics API,\" and despite widespread\n\topposition from just about every non-advertiser in the world,\n\tGoogle owns Chrome and is one of the world's biggest advertising\n\tcompanies, so this is being railroaded into the production builds.\n\n\nFor those who use Chrome anyway, there are instructions on how to disable\nthis functionality.",
           "link": "https://lwn.net/Articles/943969/",
           "publishedOn": "2023-09-08T13:40:24.000Z",
-          "wordCount": 1560,
+          "wordCount": 1937,
           "title": "Google bakes a user-tracking ad platform directly into Chrome (ars technica)",
           "imageUrl": null
         },
@@ -1159,7 +1119,7 @@
           "description": "The Ubuntu blog has a\ndetailed article on plans to add full-disk encryption, with the key\nstored in the system's trusted platform module (TPM), to the desktop\ndistribution.\n\n\n\tIn order to deliver these benefits, the implementation of\n\tTPM-backed FDE relies on two main design principles. First, it\n\tseals the FDE secret key to the full EFI state, including the\n\tkernel command line. Second, access to the decryption key will only\n\tbe permitted if and when the device boots software that has been\n\tdefined as authorised to access the confidential data.  This is\n\twhen the initrd code will unseal the key in the secure-boot\n\tprotected kernel.efi at boot time.",
           "link": "https://lwn.net/Articles/943869/",
           "publishedOn": "2023-09-07T16:56:27.000Z",
-          "wordCount": 6498,
+          "wordCount": 7162,
           "title": "Ubuntu to add TPM-backed full-disk encryption",
           "imageUrl": null
         },
@@ -1462,36 +1422,6 @@
           "wordCount": 173,
           "title": "Kernel prepatch 6.5-rc6",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/940808/",
-          "author": "corbet",
-          "description": "LWN recently covered a discussion on\nfile-position locking that demonstrated the hazards that can result\nfrom unexpected concurrency.  It turns out that this discussion had not yet\nfully run its course.  Since that article was written, additional changes\nintended to address a performance regression evolved into a core virtual\nfilesystem (VFS) layer API change to carry out some much-delayed housecleaning.",
-          "link": "https://lwn.net/Articles/940808/",
-          "publishedOn": "2023-08-11T14:48:59.000Z",
-          "wordCount": null,
-          "title": "[$] Following up on file-position locking",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/941273/",
-          "author": "jake",
-          "description": "Greg Kroah-Hartman has announced the release of the\n6.4.10, 6.1.45, \n5.10.190, 5.4.253, 4.19.291, and 4.14.322 stable kernels.  Note that 5.15.126\nwas also in\nthe review process for this batch, but has not (yet) been \nreleased.  Meanwhile, the rest of the batch all have important fixes throughout\nthe kernel tree, as usual.\n\nUpdate: the 5.15.126 announcement\nhas now gone out as well.",
-          "link": "https://lwn.net/Articles/941273/",
-          "publishedOn": "2023-08-11T14:35:19.000Z",
-          "wordCount": 176,
-          "title": "New stable kernels released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/941271/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (intel-microcode, kernel, and php-dompdf), Fedora (linux-firmware, OpenImageIO, and php), Oracle (aardvark-dns, kernel, linux-firmware, python-flask, and python-werkzeug), SUSE (container-suseconnect, go1.19, gstreamer-plugins-bad, gstreamer-plugins-base, gstreamer-plugins-good, java-11-openjdk, kernel-firmware, kubernetes1.24, openssl-1_1, poppler, python-scipy, qatengine, ucode-intel, util-linux, and vim), and Ubuntu (dotnet6, dotnet7, php-dompdf, and velocity-tools).",
-          "link": "https://lwn.net/Articles/941271/",
-          "publishedOn": "2023-08-11T14:15:35.000Z",
-          "wordCount": 346,
-          "title": "Security updates for Friday",
-          "imageUrl": null
         }
       ]
     },
@@ -1645,12 +1575,22 @@
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
         {
+          "id": "http://mcuoneclipse.com/?p=38827",
+          "author": "Erich Styger",
+          "description": "Students and Alumni optimized an electrical race car (Forumula Student Electric) and accelerated it from 0 to 100 km/h in 0.956 seconds. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/09/10/electrical-race-car-from-0-to-100-km-h-in-0-956-seconds/",
+          "publishedOn": "2023-09-10T12:39:21.000Z",
+          "wordCount": 3803,
+          "title": "Electrical Race Car: From 0 to 100 km/h in 0.956 Seconds",
+          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/09/fse-team.jpg"
+        },
+        {
           "id": "http://mcuoneclipse.com/?p=38804",
           "author": "Erich Styger",
           "description": "SEGGER has released a new firmware which implements power switching of the target MCU on LPC4322-based OB designs. Continue reading →",
           "link": "https://mcuoneclipse.com/2023/09/07/new-segger-j-link-ob-lpc4322-based-firmware-with-target-power/",
           "publishedOn": "2023-09-07T18:07:57.000Z",
-          "wordCount": 3483,
+          "wordCount": 3485,
           "title": "New SEGGER J-Link-OB LPC4322-based Firmware with Target Power",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/09/j-link-ob-firmware-powering-target-mcu-1.jpg"
         },
@@ -1753,26 +1693,6 @@
           "wordCount": 3685,
           "title": "VS Code: MCUXpresso SDK Repository",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/vs-code-import-repository.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38385",
-          "author": "Erich Styger",
-          "description": "With “Adding RGBW Wings and Enclosure to a Debug Probe” I have a really shiny enclosure for the MCU-Link Pro Enclosure. But I did not had enough time to replicate this for a full set of classroom hardware. The original card … Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/12/laser-cut-mcu-link-pro-enclosure-for-the-masses/",
-          "publishedOn": "2023-08-12T03:42:00.000Z",
-          "wordCount": 3748,
-          "title": "Laser-cut MCU-Link Pro Enclosure for the Masses",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/mcu-link-pro-enclosure-using-pmma.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38328",
-          "author": "Erich Styger",
-          "description": "If you cannot remember your debug probe serial number, then a nickname can help. This article shows a nickname can be assigned to a debug probe to identify it in a debug session. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/11/assigning-nicknames-to-debug-probes/",
-          "publishedOn": "2023-08-11T12:38:33.000Z",
-          "wordCount": 3546,
-          "title": "Assigning Nicknames to Debug Probes",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/multiple-mcu-link-debug-probes-1.png"
         }
       ]
     },
@@ -1787,7 +1707,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3178,
+          "wordCount": 3179,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -1911,7 +1831,7 @@
           "description": "Study after study finds that the predictive power of both the Halstead metric and the McCabe cyclomatic complexity metric is no better than counting lines of code, for the characteristics of interest. Why do people continue to use and cite the Halstead and McCabe metrics? My experience, talking to people, is that many believe these […]",
           "link": "https://shape-of-code.com/2023/09/03/halstead-mccabe-metrics-the-wisdom-of-the-ancients/",
           "publishedOn": "2023-09-03T21:46:40.000Z",
-          "wordCount": 1667,
+          "wordCount": 1668,
           "title": "Halstead & McCabe metrics: The wisdom of the ancients",
           "imageUrl": null
         },
@@ -1921,7 +1841,7 @@
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1529,
+          "wordCount": 1528,
           "title": "Readability of anonymous inner classes and lambda expressions",
           "imageUrl": null
         },
@@ -1968,7 +1888,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 3135,
+          "wordCount": 3136,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -2021,16 +1941,6 @@
           "wordCount": 3472,
           "title": "Homey Pro review: Great potential but check device support",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/IMG_2681-scaled.jpeg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12777",
-          "author": "Stacey Higginbotham",
-          "description": "Here’s a bit more on Philips Hue’s potential as a home security play: On an earnings call the president of Signify, which owns the Philips Hue brand, said the company was working on a security camera for it. Now reports are saying that there are four cameras planned and some contact sensors. I’ve had Hue lights in my […]\nThe post IoT news of the week for August 11, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/iot-news-of-the-week-for-august-11-2023/",
-          "publishedOn": "2023-08-11T18:14:26.000Z",
-          "wordCount": 2508,
-          "title": "IoT news of the week for August 11, 2023",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
         }
       ]
     },
@@ -2044,7 +1954,18 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "http://subokim.wordpress.com/?p=12672",
+          "author": "subokim",
+          "description": "뭔가 주장하려고 쓴 글은 아닙니다.문제 현상을 정확하게 “정의”해보고자 정리를 해보았습니다.40,50대 스타트업 CTO, CEO 들은 공감하지 않을까 싶습니다. 서버의 변화 1997년 HP서버를 모 기업에 납품하던 기억이 납니다.미국에서 조립되어 오기 때문에 무진동차에 실어 옮겼습니다.저는 검수한다고 주차장에서부터 선임 따라다녔던 기억이… 주문 후 제작.배송에 5~6개월이 걸렸기 때문에,프로젝트 시작할 때 주문하고, 서버가 도착할 때쯤 어플리케이션 개발을 완료했습니다.분석, 설계, 개발, 구현... Continue Reading →",
+          "link": "https://subokim.wordpress.com/2023/09/10/what-changed-from-cloud/",
+          "publishedOn": "2023-09-10T14:27:54.000Z",
+          "wordCount": 3501,
+          "title": "클라우드가 일반화되면서 달라진 점",
+          "imageUrl": "https://subokim.files.wordpress.com/2023/09/server111.jpg"
+        }
+      ]
     },
     {
       "title": "The Pasture",
@@ -2214,7 +2135,7 @@
           "description": "[2023년 8월 민언련 이달의 좋은 보도상 수상 인터뷰] 뉴스펭귄의 ‘기업 기후행동지수 프로젝트-온실가스 100만 톤 클럽’ 대기를 구성하는 기체 중 온실효과를 일으키는 이산화탄소, 메탄 등을 온실가스라고 한다. 온실가스는 지구 기온 유지에 중요한 역할을 하는데, 태양에서 오는 열을 흡수하거나 반사해 지구 표면 온도를 상승시키기 때문이다. 이처럼 중요한 온실가스가 ‘지구가열화’ 원인으로 지목되는 건 ‘너무 많아’서다. 그렇다면 온실가스가 많은...\nThe post 뉴스펭귄, ‘100만 톤 그룹’ 기업 온실가스 감시한다 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96129",
           "publishedOn": "2023-09-03T16:45:02.000Z",
-          "wordCount": 5228,
+          "wordCount": 5247,
           "title": "뉴스펭귄, ‘100만 톤 그룹’ 기업 온실가스 감시한다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/emperor-penguins-429128_1280.jpg"
         },
@@ -2224,7 +2145,7 @@
           "description": "사장이 예민한 거 아니야? 직원이 이겨 먹으려고 든 거 아니야? 서로 사이가 안 좋은가? 라며 관계의 상태나 성격에서 이유를 찾아서는 반복되는 갑질의 고리를 끊기 어렵다. 흠집을 찾아내 누군가를 악당으로 만들어 내쫓았더니, 비슷한 사람이 같은 자리를 꿰차 유사한 일이 반복된다. 갑질이 그렇다. 다양다색한 갑질의 면면 갑질의 갑은 ‘사회·경제적 관계에서 우월한 지위에 있는 사람’을 말하고, 질은 ‘직업이나...\nThe post 위탁업체 직원에 갑질한 아파트 주민회장, 손해배상책임 질까? appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96120",
           "publishedOn": "2023-09-03T15:12:41.000Z",
-          "wordCount": 4904,
+          "wordCount": 4505,
           "title": "위탁업체 직원에 갑질한 아파트 주민회장, 손해배상책임 질까?",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/GettyImages-jv12238029.jpg"
         },
@@ -2274,7 +2195,7 @@
           "description": "‘같이 가면 길이 된다’ 북살롱 텍스트북 북토크 지상중계 “스위스는 빵 공장에서 노동자가 기계에 끼는 사고가 발생하면 당장 국정조사 들어갑니다. 난리나요.” 우리는 노동자가 다치고 죽는 것에 둔감한 나라다. 어쩌다 누군가의 드라마틱한 비극에 관심 가질 뿐 대체로 노동자가 날마다 죽어가는 현실에 관심이 없다. 그게 이상한 거란다. 경제학 박사로 노동을 연구해온 이상헌 국제노동기구(ILO) 고용정책국장을 저서 ‘같이 가면 길이...\nThe post 빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95985",
           "publishedOn": "2023-08-30T12:13:45.000Z",
-          "wordCount": 5038,
+          "wordCount": 4593,
           "title": "빵 공장에서 사람이 죽었다, 우리는 왜 분노하지 않나",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/pumpkin-bread-food-bread-gluten-dish-banana-bread-1629442-pxhere.com_-1000x667.jpg"
         },
@@ -2284,7 +2205,7 @@
           "description": "홍범도 장군 관련해서 자유시 참변 이야기가 많이 나오는데, 제대로 알고 쓰는 이가 드물다. 흉상 이전을 추진하는 국방부도 홍범도 장군이 자유시 참변에 책임이 있다는 주장이 있다고만 할 뿐 구체적인 근거를 제시하지는 못했다. 독립운동 역사는 초기에 사료 부족으로 정확한 사실보다는 소문에 의거해서 작성되었던 사례가 많다. 박은식의 ‘한국 독립운동 지혈사’ 같은 것들이 심한데, 거기 나온 기술을 그대로 믿으면...\nThe post 철지난 이념 전쟁, 누가 왜 홍범도 장군을 모독하나 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95969",
           "publishedOn": "2023-08-30T07:37:16.000Z",
-          "wordCount": 4980,
+          "wordCount": 4531,
           "title": "철지난 이념 전쟁, 누가 왜 홍범도 장군을 모독하나",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/20210817104526429_ClXnSC_wIwgKc_KJUgUFnk-1000x667.jpg"
         },
@@ -2294,7 +2215,7 @@
           "description": "감세에 발목 잡힌 윤석열, 긴축해도 재정 적자. 해병대 수사 무마는 윤석열 지시였다. 이동관 첫날, 공영방송 예산을 후려쳤다. 홍범도는 빨치산? 독립군 몰살을 주도했다고? 더 깊게 읽기. “이진숙과 최민희, 모두 철회하라.” 해법과 대안. 30년 넘게 국민연금 내고 월 157만 원. 국민연금 개혁 18가지 시나리오. 억만장자들이 만드는 반값 신도시. 어르신들 운전면허 반납해 주세요. 학부모 민원 대응팀, ‘을’들의 폭탄...\nThe post “윤석열의 ‘아무 말 대잔치’, 어안이 벙벙했다”: 슬로우레터 8월30일. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/95956",
           "publishedOn": "2023-08-29T22:01:44.000Z",
-          "wordCount": 5882,
+          "wordCount": 5873,
           "title": "“윤석열의 ‘아무 말 대잔치’, 어안이 벙벙했다”: 슬로우레터 8월30일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/Knf2NVU5a3P564db2a35ad6876.14344635-1000x666.jpg"
         },
@@ -2417,16 +2338,6 @@
           "wordCount": 6170,
           "title": "눈 떠보니 후진국, 아직 끝난 게 아니다: 슬로우레터 8월14일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/m0a6UMVqWagQ64cb339c0f7522.28164458-1000x637.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=95231",
-          "author": "정호재",
-          "description": "[정호재의 아시안 퍼스펙티브] 가깝도고 먼 ‘동남아시아’를 통해 한국을 바라보고 아시아 시대를 꿈꿉니다. 요즘 국내 정치 이슈로 스트레스 받을 때면 유튜브에서 용혜인 의원 영상을 찾아 본다. 자연스레 마음이 가라앉는다. “옳지, 저거지! 나의 생각이 틀린 게 아니구나.” 이 분은 언제나 차가운 표정으로 똑 부러지게 주장하고, 배경 논리도 정연하다 못해 아귀가 딱딱 들어맞는다. 누가 써준 글이 아닐텐데, 그...\nThe post 평범한 ‘보통의 정치’를 꿈꾸며: 피타 림짜른낫과 용혜인 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/95231",
-          "publishedOn": "2023-08-11T08:47:20.000Z",
-          "wordCount": 5617,
-          "title": "평범한 ‘보통의 정치’를 꿈꾸며: 피타 림짜른낫과 용혜인",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/08/Pita_Limjaroenrat_@CentralWorld_07092023.jpg"
         }
       ]
     },
@@ -2441,7 +2352,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591659/%ec%a0%84%ea%b3%a1%ed%95%ad-%ec%9d%bc%eb%aa%b0",
           "publishedOn": "2023-09-06T03:17:27.000Z",
-          "wordCount": 5435,
+          "wordCount": 5389,
           "title": "9/5 전곡항 일몰 출사기, 노을 속 지는 해사 아름다웠다.",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/09/전곡항-일몰-0387.jpg"
         },
@@ -2451,7 +2362,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591611/%eb%a7%a5%eb%ac%b8%eb%8f%99-%ec%b6%9c%ec%82%ac",
           "publishedOn": "2023-09-04T07:39:15.000Z",
-          "wordCount": 5765,
+          "wordCount": 5825,
           "title": "23년 9월 맥문동 출사 여행",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/09/1693812492976.jpg"
         },
@@ -2461,7 +2372,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591606/%ea%b5%ad%eb%82%b4-ott-%ec%9d%b4%ec%9a%a9%ec%9e%90-%ec%b6%94%ec%9d%b4",
           "publishedOn": "2023-09-04T03:37:04.000Z",
-          "wordCount": 5451,
+          "wordCount": 5405,
           "title": "국내 OTT 이용자 추이(23년 8월 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2021/08/쿠팡이츠-배달중인-쿠팡이츠-배달원-coupang-eats-delivery-woman-Image-from-Coupang.jpg"
         },
@@ -2501,7 +2412,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591568/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b4%80%eb%a0%a8%ec%a3%bc-%ec%a3%bc%ea%b0%80",
           "publishedOn": "2023-08-29T12:32:50.000Z",
-          "wordCount": 5533,
+          "wordCount": 5544,
           "title": "월가의 클라우드 관련주 투자의견 및 클라우드 관련주 주가 전망(8/30 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/클라우드-점유율-추이-Q2-2023-Cloud-vendors.png"
         },
@@ -2511,7 +2422,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591555/%ea%b0%95%ec%9b%90-%ed%83%9c%eb%b0%b1-%eb%b0%94%eb%9e%8c%ec%9d%98-%ec%96%b8%eb%8d%95",
           "publishedOn": "2023-08-28T22:12:12.000Z",
-          "wordCount": 5391,
+          "wordCount": 5447,
           "title": "강원 태백 바람의 언덕 다녀온 이야기",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/강원-태백-바람의-언덕-3892.jpg"
         },
@@ -2521,7 +2432,7 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591536/%ec%b2%ad%ec%98%a5%ec%82%b0-%ec%9c%a1%eb%b0%b1%eb%a7%88%ec%a7%80%ea%b8%b0",
           "publishedOn": "2023-08-28T14:14:04.000Z",
-          "wordCount": 5262,
+          "wordCount": 5339,
           "title": "환상적인 청옥산 육백마지기 아침 풍경을 담다",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/강원-육백마지기-아침-풍경-3245.jpg"
         },
@@ -2531,19 +2442,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591518/%ed%95%9c%ea%b0%95-%eb%b0%9c%ec%9b%90%ec%a7%80-%ed%83%9c%eb%b0%b1-%ea%b2%80%eb%a3%a1%ec%86%8c",
           "publishedOn": "2023-08-28T13:49:42.000Z",
-          "wordCount": 5734,
+          "wordCount": 5830,
           "title": "한강 발원지 태백 검룡소, 운치있는 곳으로 친구들과 산책삼아 다녀오기 좋은 곳",
           "imageUrl": "https://happist.com/wp-content/uploads/2023/08/강원-태백-검룡소한강-발원지-4130.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=591463",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/591463/%eb%a3%a8%eb%8b%9b-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-08-11T09:21:10.000Z",
-          "wordCount": 5153,
-          "title": "의료 인공지능(AI) 기업 루닛 실적",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
         }
       ]
     },
