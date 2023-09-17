@@ -68,9 +68,9 @@
           "description": "공간주의 구성원 김영대가 작성한 에세이 \"도시의 그림 그리기 혹은 서스펜스의 게임\"이 국립현대미술관 워치 앤 칠 3.0의  페이지에 업로드되었습니다. 도시의 그림을 만들어가는 서스펜스의 게임에 주목하십시오.",
           "link": "https://attention2.space/2023/watchandchill/",
           "publishedOn": "2023-09-05T05:13:21.000Z",
-          "wordCount": 1737,
+          "wordCount": null,
           "title": "[소식] 전시연계 – 도시의 그림 그리기 혹은 서스펜스의 게임 (국립현대미술관 워치앤칠)",
-          "imageUrl": "https://i0.wp.com/attention2.space/wp-content/uploads/2023/09/F4wyDq2bUAAVxcf.png?fit=1199%2C582&ssl=1"
+          "imageUrl": null
         }
       ]
     },
@@ -171,7 +171,7 @@
           "description": "CPPG에 대한 나의 예전 기억\n개인정보관리사라는 일명 CPPG 시험이 있다. \n사실 이 시험의 존재는 꽤 오래전부터 알고있었다. 시험접수 사이트에 로그인을 해보니 2015년에 접수를 했다가 취소를 했던 기록이 있다. 기억을 더듬어보니 당시 공군 장교로 병역을 마치고 취업을 준비하던 시기에 정보보안 분야로 진출하려면 뭐라도 하나 이력을 더 만들고 싶어서 (그때 정보보안기사도 땄었고, 디지털포렌식전문가2급도 땄었다).. 마침 그때 BoB과정을 이수하고 있었는데, 옆의 컨설팅 트랙에서는 뭔가 다들 열심히 도전하는 느낌이길래 나도 신청을 했었던 것 같다. 그러나 결과적으로 당시 대학원에 합격하게 되었고 해당 자격증이 필요없어졌다는 생각에(정확히는 공부를 하기가 싫어서) 바로 환불을 했었던 것이다.\n이 시험을 바로 환불 결정했던 이유가 무엇일까? 나는 natural born 공돌이이고 지금도 기술 분야를 본업으로 삼고 있는 것은 여전하다. 그런데 이 시험은 쉽게 말해 문과 성향의 지식을 많이 필요로 하고, 정확히는 <개인정보보호법>에 대해 깊은 이해가 필요한 자격증이다. 그래서 그때는 도저히 공부할 엄두가 나지 않았다.\n\n\nCPPG를 도전하게 된 계기\n시간이 흐르면서 간혹 이 자격을 검색해보곤했는데, 그때마다 종종 CPPG가 국가공인 자격으로 전환된다, 안된다, 하는 뜬소문이 많았다. 그래서 어떤 의미에서는 국가공인으로 전환된 이후 시험을 보는게 이득이라는 생각도 있었고, 그래서 그냥저냥 계속 기다렸다. 하지만 국가공인 전환은 되지 않았다. 아직까지도.\n그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…",
           "link": "https://cpuu.postype.com/post/14359096",
           "publishedOn": "2023-09-04T06:00:41.000Z",
-          "wordCount": 751,
+          "wordCount": 746,
           "title": "CPPG 개인정보관리사 불합격 후기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/04/15/00/33/88f9dc86cce73ec915ba47b48ccc2b56.jpeg?w=600&h=300&q=65"
         },
@@ -181,7 +181,7 @@
           "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
           "link": "https://cpuu.postype.com/post/15154097",
           "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 735,
+          "wordCount": 745,
           "title": "F# 으로 역행렬 구하기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         }
@@ -371,7 +371,7 @@
           "description": "28 August 2023 by Phillip Johnston • Last updated 7 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7725,
+          "wordCount": 7773,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -458,7 +458,7 @@
           "description": "How to apply event-driven programming to embedded systems such as your ARM Cortex-M-based TivaC board. In the previous episode of this series, I introduced the...\nThe post Programming embedded systems: event-driven active objects appeared first on Embedded.com.",
           "link": "https://www.embedded.com/programming-embedded-systems-event-driven-active-objects/",
           "publishedOn": "2023-09-12T12:05:48.000Z",
-          "wordCount": 4641,
+          "wordCount": 3708,
           "title": "Programming embedded systems: event-driven active objects",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/embedded_thumbnail-28.jpg"
         },
@@ -491,16 +491,6 @@
           "wordCount": 4789,
           "title": "How secure authentication improves PoC testing and cuts risk",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480194",
-          "author": "Julian Durand and Amandeep Grover",
-          "description": "The old security methods still serve their purpose, but the need for advanced data protection based on zero trust is now a must have. Playing...\nThe post Progressing beyond transport layer security for the IoT appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/progressing-beyond-transport-layer-security-for-the-iot/",
-          "publishedOn": "2023-08-18T11:34:56.000Z",
-          "wordCount": 4869,
-          "title": "Progressing beyond transport layer security for the IoT",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/08/Beyond_TLS_.jpg"
         }
       ]
     },
@@ -510,73 +500,83 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
-          "id": "https://www.embeddedrelated.com/showarticle/1574.php",
+          "id": "https://www.embeddedrelated.com/showarticle/1563.php",
           "author": null,
-          "description": "Lesson #10 of my Modern Embedded Programming Video Course explains what stack overflow is and shows what can transpire deep inside an embedded microcontroller when the stack pointer register (SP) goes out of bounds. You can watch the YouTube video to see the details, but...",
-          "link": "https://www.embeddedrelated.com/showarticle/1574.php",
-          "publishedOn": "2023-09-08T20:34:00.000Z",
-          "wordCount": 5170,
-          "title": "Are We Shooting Ourselves in the Foot with Stack Overflow?",
-          "imageUrl": "https://www.state-machine.com/attachments/stack_overflow.jpg"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1573.php",
-          "author": null,
-          "description": "Background\r\nNordic Semiconductor is a leader in wireless SoC’s, especially in BLE MCU’s with their nRF product line. The nRF5 SDK was released in 2012, and up until recently was the primary SDK for development on their chipsets.\r\n\r\nIn Sept of 2021, Nordic announced that they would be moving all new development over to...",
-          "link": "https://www.embeddedrelated.com/showarticle/1573.php",
-          "publishedOn": "2023-09-07T16:24:54.000Z",
-          "wordCount": 3871,
-          "title": "nRF5 to nRF Connect SDK migration via DFU over BLE",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vTX_TM8c5zCE-FvgvfFhSw.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1572.php",
-          "author": null,
-          "description": "With the ever increasing number of applications involving video processing, AI or edge computing the appetite for suitably skilled FPGA Engineers has never been higher from the market which is expected to grow to $15 billion USD by 2027!\nIn terms of industries opportunities can be typically found within:\n\nAutomotive\nAerospace\nDefense\nData Processing\n\nHowever this list is...",
-          "link": "https://www.embeddedrelated.com/showarticle/1572.php",
-          "publishedOn": "2023-09-04T10:28:23.000Z",
-          "wordCount": 3141,
-          "title": "FPGA skills for the modern world",
-          "imageUrl": "https://au.mouser.com/images/marketingid/2019/microsites/0/Zynq-7000%20SoCArchitectural%20Overview.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1571.php",
-          "author": null,
-          "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
-          "link": "https://www.embeddedrelated.com/showarticle/1571.php",
-          "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3424,
-          "title": "Who needs source code?",
+          "description": "…and it was good.\r\n\t\n\r\n\r\nWhy is it that code starts out nice and deteriorates over time?",
+          "link": "https://www.embeddedrelated.com/showarticle/1563.php",
+          "publishedOn": "2023-08-16T15:39:30.000Z",
+          "wordCount": 3428,
+          "title": "In the beginning, there was no code…",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
         {
-          "id": "https://www.embeddedrelated.com/showarticle/1570.php",
+          "id": "https://www.embeddedrelated.com/showarticle/1562.php",
           "author": null,
-          "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
-          "link": "https://www.embeddedrelated.com/showarticle/1570.php",
-          "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3157,
-          "title": "New book on Elliptic Curve Cryptography",
+          "description": "Overview\r\nIn a previous blog post, https://www.embeddedrelated.com/showarticle/1547.php, we learned how a devicetree in an embedded software application based on The Zephyr Project could describe the hardware on the device. We saw an example of how the four LEDs that are present on an nRF52840 development kit (<a...",
+          "link": "https://www.embeddedrelated.com/showarticle/1562.php",
+          "publishedOn": "2023-08-16T11:34:56.000Z",
+          "wordCount": 3479,
+          "title": "Getting Started With Zephyr: Devicetree Bndings",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
         {
-          "id": "https://www.embeddedrelated.com/showarticle/1568.php",
+          "id": "https://www.embeddedrelated.com/showarticle/1552.php",
           "author": null,
-          "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
-          "link": "https://www.embeddedrelated.com/showarticle/1568.php",
-          "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32057,
-          "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
-          "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
+          "description": "Wearable devices are becoming quite popular these days. Fitness trackers, medical sensors and much more implement different systems to acquire (sensors) and process user information. Among every potential design I have contributed as a researcher or engineer for a wearable system there is one that almost always was mentioned at initial stages. This is the ability to track user motion (or a...",
+          "link": "https://www.embeddedrelated.com/showarticle/1552.php",
+          "publishedOn": "2023-08-10T06:32:27.000Z",
+          "wordCount": 4151,
+          "title": "Quaternions and the spatial rotations in motion enabled wearable devices. Exploiting the potential of smart IMUs attitude estimation.",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
         {
-          "id": "https://www.embeddedrelated.com/showarticle/1567.php",
+          "id": "https://www.embeddedrelated.com/showarticle/1544.php",
           "author": null,
-          "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
-          "link": "https://www.embeddedrelated.com/showarticle/1567.php",
-          "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3942,
-          "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
+          "description": "Contents:\r\n\r\nIntroduction\n\r\nThe Problem\n\r\nSymbol Framing\n\r\nImplementing Serial Output\n\r\nWorking With A Logic Analyzer\n\r\nWorking With A TTL-USB Serial Adapter\n\r\nDisciplined Engineering\n\r\n\r\nApplying Six Software Design Tools\n\r\n\r\nTDD...",
+          "link": "https://www.embeddedrelated.com/showarticle/1544.php",
+          "publishedOn": "2023-08-03T13:08:23.000Z",
+          "wordCount": 7988,
+          "title": "Bit-Banged Async Serial Output And Disciplined Engineering",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1554.php",
+          "author": null,
+          "description": "Are you a microcontroller expert beckoned by the siren song of the FPGA? Not long ago, that was me. FPGA-expert friends of mine regularly extolled the virtues of these mysterious components and I wanted in. When I made the leap, I found a world seemingly very familiar, but in reality, vastly different. My years of C programming and microcontroller use often gave pre preconceived...",
+          "link": "https://www.embeddedrelated.com/showarticle/1554.php",
+          "publishedOn": "2023-07-31T18:12:38.000Z",
+          "wordCount": 4062,
+          "title": "Jumping from MCUs to FPGAs - 5 things you need to know",
+          "imageUrl": "https://s3.amazonaws.com/embeddedrelated/user/94446/parallele%20vs%20serial_90917.jpg"
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1553.php",
+          "author": null,
+          "description": "I started out embedded programming on small, 8-bit devices, with limited memory. High-level languages were not an option, so I became proficient in using assembly language. For modest sized applications, it was a reasonable option and, apart from that, there were no tools to support any other languages. I was always happy with that, because I could readily access all the functionality of the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1553.php",
+          "publishedOn": "2023-07-27T10:59:35.000Z",
+          "wordCount": 3312,
+          "title": "Assembly language is best - except when it isn’t",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1551.php",
+          "author": null,
+          "description": "In our C to C++ series, we’ve been discussing the fundamental details that embedded developers and teams need to transition from using C to C++. In our last post, C to C++: Bridging the Gap from C Structures to Classes, we discussed the differences between C and C++ structures and objects. Many teams interested in using C++ don’t need to jump off the deep end into metaprogramming and other...",
+          "link": "https://www.embeddedrelated.com/showarticle/1551.php",
+          "publishedOn": "2023-07-23T18:12:11.000Z",
+          "wordCount": 4706,
+          "title": "C to C++: 5 Tips for Refactoring C Code into C++",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1550.php",
+          "author": null,
+          "description": "Unit tests are designed to test units of software, but what exactly is a unit of software? It can be a function or a method, a class, or even an entire module. \nIf you're just starting with unit testing, chances are you're testing the implementation of a function or a method. Consequently, if the implementation changes, you must update your tests as well, which can render the entire...",
+          "link": "https://www.embeddedrelated.com/showarticle/1550.php",
+          "publishedOn": "2023-07-23T12:17:09.000Z",
+          "wordCount": 3290,
+          "title": "Why Should Unit Tests Feel Like Simulations?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
       ]
@@ -667,16 +667,6 @@
           "wordCount": 2890,
           "title": "Meet the student leaders building apps using Google technology",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUi4F608Xe7Y9r1OS3BrfeuXhUGETWSRS6VPX4GaJQasmPF3PWCmjkDmisWHLpC_d_dOz_qXMr0YdJJtau8exzpq2FkvHJxpXSk_q5XYYgA9L2y2ypy76Wry3-mosgVxyzX51HEcS8efRrPmtp7J0xI7oiEJv7qo2q8nxLhNqo7KwbDllIEOoyck2sZu4/w1200-h630-p-k-no-nu/Social%20-%20G4D%20-%20Meet%20the%20student%20leaders%20building%20apps%20using%20Google%20technology.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/08/mediapipe-for-raspberry-pi-and-ios.html",
-          "author": null,
-          "description": "Posted by Paul Ruiz, Developer Relations Engineer\n\n\n\n\n\n\nBack in May we released MediaPipe Solutions, a set of tools for no-code and low-code solutions to common on-device machine learning tasks, for Android, web, and Python. Today we’re happy to announce that the initial version of the iOS SDK, plus an update for the Python SDK to support the Raspberry Pi, are available. These include support for audio classification, face landmark detection, and various natural language processing tasks. Let’s take a look at how you can use these tools for the new platforms.\nObject Detection for Raspberry Pi\n\n\nAside from setting up your Raspberry Pi hardware with a camera, you can start by installing the MediaPipe dependency, along with OpenCV and NumPy if you don’t have them already.\n\npython -m pip insta…",
-          "link": "http://developers.googleblog.com/2023/08/mediapipe-for-raspberry-pi-and-ios.html",
-          "publishedOn": "2023-08-18T16:00:00.002Z",
-          "wordCount": 2040,
-          "title": "MediaPipe for Raspberry Pi and iOS",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZJSoD0HltimJnR39B2aJedRry75i4eS3U7pXb4rZ8i7IHPnX7qi_8yF_tAvvnPTARxm8SSHYyMwCW02mIKYuAsUqfrYUxyvNDpX3XDSd0GVY2_UpTq7XYHq39ye7zay8GvT_6NgxjpuCWieQgRBWcYZ5QRR5FqIqR-iSsxhUuyW6H5_hFcw2Q1Hfe0EQ/w1200-h630-p-k-no-nu/MediaPipe_Social_V03.png"
         }
       ]
     },
@@ -899,7 +889,7 @@
           "description": "The Debian project is mourning Abraham Raji, who died in an accident on September 13.\n\nAbraham was a popular and respected Debian Developer as well a prominent free software champion in his home state of Kerala, India. He was a talented graphic designer and led design and branding work for DebConf23 and several other local events in recent years. Abraham gave his time selflessly when mentoring new contributors to the Debian project, and he was instrumental in creating and maintaining the Debian India website.\n\nThe Debian Project honors his good work and strong dedication to Debian and Free Software. Abraham’s contributions will not be forgotten, and the high standards of his work will continue to serve as an inspiration to others.",
           "link": "https://lwn.net/Articles/944596/",
           "publishedOn": "2023-09-15T22:50:17.000Z",
-          "wordCount": 246,
+          "wordCount": 277,
           "title": "The Debian Project mourns the loss of Abraham Raji",
           "imageUrl": null
         },
@@ -929,7 +919,7 @@
           "description": "Version 16\nof the PostgreSQL database manager has been released.\n\n\nPostgreSQL 16 contains many new features and enhancements, including:\n\n    Allow parallelization of FULL and internal right OUTER hash joins\n\n    Allow logical replication from standby servers\n\n    Allow logical replication subscribers to apply large transactions in parallel\n\n    Allow monitoring of I/O statistics using the new pg_stat_io view\n\n    Add SQL/JSON constructors and identity functions\n\n    Improve performance of vacuum freezing\n\n    Add support for regular expression matching of user and database\nnames in pg_hba.conf, and user names in pg_ident.conf",
           "link": "https://lwn.net/Articles/944516/",
           "publishedOn": "2023-09-14T20:58:03.000Z",
-          "wordCount": 197,
+          "wordCount": 248,
           "title": "PostgreSQL 16 released",
           "imageUrl": null
         },
@@ -1009,7 +999,7 @@
           "description": "The GCC stack-protector feature detects stack-based buffer overruns by\nputting a canary value on the stack and noticing if that value is changed.\nIt\nturns out, though, that dynamically allocated local variables (such as\nvariable-length arrays and space obtained with alloca()) are\nplaced beyond the canary, so overflows of those variables will not be\ndetected.  As a result, arm64 binaries built with vulnerable versions of\nGCC are not as protected as they should be and need to be rebuilt.\n\n\n\tDynamic allocations are just as susceptible to overflows as other\n\tlocals. In fact, they're arguably more susceptible because they're\n\talmost always arrays, whereas fixed locals are often integers,\n\tpointers, or other types to which variable-length data is never\n\twritten. GCC's own heuristics for when to use a stack guard reflect\n\tthis.\n\n\nKees Cook, meanwhile, has pointed out that\nthe kernel no longer uses variable-length arrays, so kernel builds should\nnot be affected by this vulnerability.",
           "link": "https://lwn.net/Articles/944307/",
           "publishedOn": "2023-09-12T21:18:11.000Z",
-          "wordCount": 1887,
+          "wordCount": 2225,
           "title": "A GCC -fstack-protector vulnerability on arm64",
           "imageUrl": null
         },
@@ -1041,26 +1031,6 @@
           "publishedOn": "2023-09-12T12:23:00.000Z",
           "wordCount": 274,
           "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/941154/",
-          "author": "corbet",
-          "description": "It is fair to say that the DNF package\nmanager is not the favorite tool of many Fedora users.  It was brought\nin as a replacement for Yum but got off to a\nrather rocky start;  DNF has\nstabilized over the years, though and the complaints have subsided. That can only\nmean one thing: it must be time to throw it away and start over from the\nbeginning.  The replacement, called DNF5, was slated to be a part of the\nFedora 39 release, due in October, but that is not going to happen.",
-          "link": "https://lwn.net/Articles/941154/",
-          "publishedOn": "2023-08-18T13:48:46.000Z",
-          "wordCount": null,
-          "title": "[$] DNF5 delayed",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/942076/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (chromium, rar, and unrar-nonfree), Fedora (microcode_ctl, trafficserver, and webkitgtk), SUSE (ImageMagick, kernel, nodejs16, nodejs18, postgresql12, postgresql15, re2c, and samba), and Ubuntu (ghostscript, haproxy, linux, linux-aws, linux-aws-5.15, linux-gcp, linux-hwe-5.15, linux-ibm,\n linux-intel-iotg, linux-intel-iotg-5.15, linux-kvm, linux-lowlatency,\n linux-lowlatency-hwe-5.15, linux-nvidia, linux-oracle, linux-oracle-5.15,\n linux-raspi, linux-hwe-5.4, linux-xilinx-zynqmp, poppler, and zziplib).",
-          "link": "https://lwn.net/Articles/942076/",
-          "publishedOn": "2023-08-18T12:48:39.000Z",
-          "wordCount": 278,
-          "title": "Security updates for Friday",
           "imageUrl": null
         }
       ]
@@ -1213,16 +1183,6 @@
           "wordCount": 3903,
           "title": "VS Code: Importing pre-v2.13.0 MCUXpresso SDK Projects",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2016/09/intro-sumo-robot.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38117",
-          "author": "Erich Styger",
-          "description": "Sometimes linker errors can be challenging to solve. Here is an example ... Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/18/solving-linker-error-cannot-move-location-counter-backwards/",
-          "publishedOn": "2023-08-18T21:39:00.000Z",
-          "wordCount": 3847,
-          "title": "Solving Linker Error: “cannot move location counter backwards”",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/disabled-automatic-placement-of-code-read-protection-field-in-image.png"
         }
       ]
     },
@@ -1237,7 +1197,7 @@
           "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
           "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
           "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3333,
+          "wordCount": 3249,
           "title": "Announcing ESP ZeroCode",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
         }
@@ -1336,18 +1296,7 @@
       "title": "research!rsc",
       "feedUrl": "https://research.swtch.com/feed.atom",
       "siteUrl": "http://research.swtch.com/feed.atom",
-      "articles": [
-        {
-          "id": "http://research.swtch.com/ub",
-          "author": null,
-          "description": "The meaning of “undefined behavior” has changed significantly since its introduction in the 1980s.",
-          "link": "http://research.swtch.com/ub",
-          "publishedOn": "2023-08-18T16:00:00.000Z",
-          "wordCount": 4306,
-          "title": "C and C++ Prioritize Performance over Correctness",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "AEP코리아네트",
@@ -1372,7 +1321,7 @@
           "description": "Careful analysis is required to extract reliable conclusions from data. Sloppy analysis can lead to incorrect conclusions being drawn. The U-shaped plots cited as evidence for an ‘optimal’ number of LOC in a function/method that minimises the number of reported faults in a function, were shown to be caused by a mathematical artifact. What patterns […]",
           "link": "https://shape-of-code.com/2023/09/10/optimal-function-length-an-analysis-of-the-cited-data/",
           "publishedOn": "2023-09-10T22:17:13.000Z",
-          "wordCount": 1846,
+          "wordCount": 1845,
           "title": "Optimal function length: an analysis of the cited data",
           "imageUrl": null
         },
@@ -1382,7 +1331,7 @@
           "description": "Study after study finds that the predictive power of both the Halstead metric and the McCabe cyclomatic complexity metric is no better than counting lines of code, for the characteristics of interest. Why do people continue to use and cite the Halstead and McCabe metrics? My experience, talking to people, is that many believe these […]",
           "link": "https://shape-of-code.com/2023/09/03/halstead-mccabe-metrics-the-wisdom-of-the-ancients/",
           "publishedOn": "2023-09-03T21:46:40.000Z",
-          "wordCount": 1863,
+          "wordCount": 1864,
           "title": "Halstead & McCabe metrics: The wisdom of the ancients",
           "imageUrl": null
         },
@@ -1392,7 +1341,7 @@
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1537,
+          "wordCount": 1538,
           "title": "Readability of anonymous inner classes and lambda expressions",
           "imageUrl": null
         },
@@ -1429,7 +1378,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 3139,
+          "wordCount": 3140,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -1442,16 +1391,6 @@
           "wordCount": 2992,
           "title": "We are entering our maintenance era",
           "imageUrl": "https://staceyoniot.com/wp-content/uploads/2023/08/bigstock-Assortment-Of-Diy-Gardening-To-463818149.jpg"
-        },
-        {
-          "id": "https://staceyoniot.com/?p=12804",
-          "author": "Stacey Higginbotham",
-          "description": "Verdigris has raised $10M for smarter buildings: I am so excited by this news, because roughly eight years ago I met one of the founders of Verdigris in an Austin coffee shop to talk about how to use AI and connected HVAC to make buildings greener. The company just raised $10 million in funding (in this environment!) led […]\nThe post IoT news of the week for August 18, 2023 appeared first on Stacey on IoT | Internet of Things news and analysis.",
-          "link": "https://staceyoniot.com/iot-news-of-the-week-for-august-18-2023/",
-          "publishedOn": "2023-08-18T20:15:18.000Z",
-          "wordCount": 2801,
-          "title": "IoT news of the week for August 18, 2023",
-          "imageUrl": "https://staceyoniot.com/wp-content/uploads/2017/08/iot-news-week.jpg"
         }
       ]
     },
@@ -1472,7 +1411,7 @@
           "description": "뭔가 주장하려고 쓴 글은 아닙니다.변화를 기록해보고자 정리한 글입니다. 서버의 변화 1997년 HP서버를 모 기업에 납품하던 기억이 납니다.미국에서 조립되어 오기 때문에 무진동차에 실어 옮겼습니다.저는 검수한다고 주차장에서부터 따라다녔던 기억이… 주문 후 제작.배송에 5~6개월이 걸렸기 때문에,프로젝트 시작할 때 주문하고, 개발을 완료할 때쯤 서버가 도착했습니다.분석, 설계, 개발, 구현 – 폭포수 계단 방식(Waterfall)으로 일할 수 밖에 없었죠.일정을 그렇게 맞추도록 일을... Continue Reading →",
           "link": "https://subokim.wordpress.com/2023/09/10/what-changed-from-cloud/",
           "publishedOn": "2023-09-10T14:27:54.000Z",
-          "wordCount": 3491,
+          "wordCount": 3492,
           "title": "클라우드가 일반화되면서 달라진 점",
           "imageUrl": "https://subokim.files.wordpress.com/2023/09/server111.jpg"
         }
@@ -1532,13 +1471,13 @@
       "articles": [
         {
           "id": "https://slownews.kr/?p=96803",
-          "author": "권혁재",
-          "description": "RE100이 우리 현실에는 안 맞으니 CF100 하자는 의견들을 자주 보는데, 좋든 싫든 재생 에너지와 탄소 중립 이슈를 애플이 어떻게 푸는지를 보면 우리 에너지 정책에도 참고 할 수 있습니다. 애플은 마진율이 높은 회사입니다. 스마트폰 제조원가의 거의 세 배를 받고 판매하지만, 잘 팔리고 고객 충성도도 높습니다. 브랜드 가치가 매우 높은데, 이렇게 하려면 계속해서 차별화 포인트를 만들어야 합니다....\nThe post “애플이 쇼한다”고? 삼성전자와 LG엔솔은 애플에 부품 안 팔 건가? appeared first on 슬로우뉴스.",
+          "author": "권효재",
+          "description": "RE100이 우리 현실에는 안 맞으니 CF100 하자는 의견들을 자주 보는데, 좋든 싫든 재생 에너지와 탄소중립 이슈를 애플이 어떻게 푸는지를 보면 우리 에너지 정책에도 참고 할 수 있습니다. 애플은 마진율이 높은 회사입니다. 스마트폰 제조원가의 거의 세 배를 받고 판매하지만, 잘 팔리고 고객 충성도도 높습니다. 브랜드 가치가 매우 높은데, 이렇게 하려면 계속해서 차별화 포인트를 만들어야 합니다. 애플은...\nThe post “애플이 쇼한다”고? 삼성전자와 LG엔솔은 애플에 부품 안 팔 건가? appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96803",
           "publishedOn": "2023-09-16T08:34:33.000Z",
-          "wordCount": 4775,
+          "wordCount": 4902,
           "title": "“애플이 쇼한다”고? 삼성전자와 LG엔솔은 애플에 부품 안 팔 건가?",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/apple-watch-series-9-2.jpeg"
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/c2d9ada1-2630-406f-aa9f-bd685926ba54_cook-green.jpeg"
         },
         {
           "id": "https://slownews.kr/?p=96764",
@@ -1556,7 +1495,7 @@
           "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 미 연방대법원의 영향은… 낙태 문제뿐만이 아닙니다. 총기 규제, 건강보험, 인종차별 교육 같은 문제들도 마찬가지죠. 결국 이런 미국적 사고는 다른 나라에도 전파됩니다. 미국 우익의 담론을 그대로 수입하는 한국 우익, 특히 인터넷을 중심으로 활동하는 우익의 행태에는 이런 영향이 느껴집니다. 김낙호(캡콜드) 펜실베이니아주립대학교 교수 2019년 4월 11일,...\nThe post 50년간 약속을 미룬 대가… 미 연방대법원의 역습 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96575",
           "publishedOn": "2023-09-14T07:40:42.000Z",
-          "wordCount": 6813,
+          "wordCount": 7340,
           "title": "50년간 약속을 미룬 대가… 미 연방대법원의 역습",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/REPEAL_YES01.jpg"
         },
@@ -1613,11 +1552,11 @@
         {
           "id": "https://slownews.kr/?p=96608",
           "author": "이정환",
-          "description": "“2020년에도 약속했었지. 무슨 대단한 환경주의자라도 되는 것처럼.”… ‘어머니 대자연’에게 야단맞는 팀쿡. 애플의 이번 신제품 공개 행사는 특별했다. USB-C 포트를 도입한다는 건 이미 알려졌고 아이폰 15나 애플워치 울트라 2 등도 예상을 크게 벗어나지 않았지만(누군가는 또 “혁신은 없었다”고 외칠 것이다.) 이번에는 특별히 탄소 중립 선언에 무게가 실렸다. 에너지 소모를 줄였고 재활용 부품을 쓰고 포장재에 플라스틱을 없애고 항공...\nThe post 이것이 진짜 혁신, 애플의 탄소 중립 선언이 놀라운 이유. appeared first on 슬로우뉴스.",
+          "description": "“2020년에도 약속했었지. 무슨 대단한 환경주의자라도 되는 것처럼.”… ‘어머니 대자연’에게 야단맞는 팀쿡. 애플의 이번 신제품 공개 행사는 특별했다. USB-C 포트를 도입한다는 건 이미 알려졌고 아이폰 15나 애플워치 울트라 2 등도 예상을 크게 벗어나지 않았지만(누군가는 또 “혁신은 없었다”고 외칠 것이다.) 이번에는 특별히 탄소중립 선언에 무게가 실렸다. 에너지 소모를 줄였고 재활용 부품을 쓰고 포장재에 플라스틱을 없애고 항공 운송...\nThe post 이것이 진짜 혁신, 애플의 탄소중립 선언이 놀라운 이유. appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96608",
           "publishedOn": "2023-09-13T03:30:03.000Z",
-          "wordCount": 4612,
-          "title": "이것이 진짜 혁신, 애플의 탄소 중립 선언이 놀라운 이유.",
+          "wordCount": 4581,
+          "title": "이것이 진짜 혁신, 애플의 탄소중립 선언이 놀라운 이유.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/489547290.jpg"
         },
         {
@@ -1656,7 +1595,7 @@
           "description": "[지역소멸의 해법] 한종호 소풍벤처스 파트너, 전 강원창조혁신센터장에게 듣는 지역 활성화 해법과 국가 R&D의 딜레마, 그리고 지역의 매력과 그 조건. ‘지역소멸’이라는 표현은 일본 정치인 마스다 히로야가 2014년 [지방소멸]이라는 책을 발간하면서 널리 쓰이기 시작했습니다. 지역주민으로는 공포스럽고, 모멸감을 느낄 수도 있는 충격요법식 표현이었죠. 하지만 초고령화와 인구 감소는 더 큰 공포였습니다. 책에 앞서 일본 국토교통성은 [국토의 장기전망: 중간보고서] (2011)을...\nThe post 지역소멸, 돈 준다 집 준다로 해결할 수 없다 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96308",
           "publishedOn": "2023-09-11T04:46:48.000Z",
-          "wordCount": 7551,
+          "wordCount": 7559,
           "title": "지역소멸, 돈 준다 집 준다로 해결할 수 없다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/kansuikoen-1400x700-1.jpg"
         },
@@ -1726,7 +1665,7 @@
           "description": "‘언론장악 기술자’로 불리는 이동관 씨가 방송통신위원장으로 결국 입성하면서 벌어지는 일들이 폭주를 넘어 ‘광란의 질주’라고 해야 할 정도다. 그를 앞세워서 현 정부가 벌이는 언론에 대한 개입도 전방위로 펼쳐지고 있다. 그런데 방송통신위원장이라기보다는 방송‘통제’위원장이라고 불려야 할 이동관 씨나 현 정권의 언론 ‘정책’-그것을 정책이라는 이름으로 부를 수 있다면-이 겨냥하는 것은 단지 공영언론기관이나 공영방송에 ‘우군’을 앉히거나 정권에 유리한 보도로 압박하는...\nThe post 이동관이 꿈꾸는 세상: 모든 방송의 종편화 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96233",
           "publishedOn": "2023-09-05T08:02:02.000Z",
-          "wordCount": 4576,
+          "wordCount": 4546,
           "title": "이동관이 꿈꾸는 세상: 모든 방송의 종편화",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2016/11/IE002042588_STD.jpg"
         },
@@ -1753,9 +1692,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591797/arm-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-arm-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
           "publishedOn": "2023-09-15T02:10:17.000Z",
-          "wordCount": 5375,
+          "wordCount": 5403,
           "title": "ARM 투자의견 및 ARM 주가 전망(9/15 업뎃)",
-          "imageUrl": null
+          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/ARM-나스닥-상장.jpg"
         },
         {
           "id": "https://happist.com/?p=591795",
@@ -1763,9 +1702,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591795/%ea%b0%80%ec%9d%84%ea%bd%83-%ec%b6%9c%ec%82%ac%ec%a7%80",
           "publishedOn": "2023-09-15T01:32:03.000Z",
-          "wordCount": 5205,
+          "wordCount": 5185,
           "title": "가을꽃 출사지",
-          "imageUrl": null
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/09/선운사-꽃무릇을-담다-04163.jpg"
         },
         {
           "id": "https://happist.com/?p=591763",
@@ -1783,9 +1722,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591759/%eb%aa%a8%ea%b1%b4%ec%8a%a4%ed%83%a0%eb%a6%ac-%ec%9c%8c%ec%8a%a8-sp500-25-%ec%9d%b4%ec%83%81-%ea%b8%89%eb%9d%bd-%ea%b0%80%eb%8a%a5-%ea%b2%bd%ea%b3%a0",
           "publishedOn": "2023-09-13T08:50:01.000Z",
-          "wordCount": 5468,
+          "wordCount": 5480,
           "title": "모건스탠리 윌슨, “S&P500, 25% 이상 급락 가능” 경고",
-          "imageUrl": null
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/05/주식시장-sp-500-폭락-financial.jpg"
         },
         {
           "id": "https://happist.com/?p=591723",
@@ -1803,9 +1742,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591714/%ec%8a%a4%ed%83%80%eb%b2%85%ec%8a%a4-%ed%98%b8%eb%b0%95%eb%9d%bc%eb%96%bc-%eb%a7%88%ec%bc%80%ed%8c%85-%ec%82%ac%eb%a1%80",
           "publishedOn": "2023-09-12T03:18:49.000Z",
-          "wordCount": 6321,
+          "wordCount": 6306,
           "title": "스타벅스 호박라떼 마케팅 사례와 스타벅스 커뮤니티 전략",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/낙엽과-스타벅스-호박라떼-.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://happist.com/?p=591696",
@@ -1843,9 +1782,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591606/%ea%b5%ad%eb%82%b4-ott-%ec%9d%b4%ec%9a%a9%ec%9e%90-%ec%b6%94%ec%9d%b4",
           "publishedOn": "2023-09-04T03:37:04.000Z",
-          "wordCount": 5432,
+          "wordCount": 5452,
           "title": "국내 OTT 이용자 추이(23년 8월 업뎃)",
-          "imageUrl": null
+          "imageUrl": "https://happist.com/wp-content/uploads/2021/08/쿠팡이츠-배달중인-쿠팡이츠-배달원-coupang-eats-delivery-woman-Image-from-Coupang.jpg"
         }
       ]
     },
@@ -1985,16 +1924,6 @@
           "publishedOn": "2023-09-02T04:33:16.000Z",
           "wordCount": 101,
           "title": "은평 성모병원",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.naver.com/sellars/223187337657",
-          "author": "sellars",
-          "description": "운환의 유피",
-          "link": "https://blog.naver.com/sellars/223187337657",
-          "publishedOn": "2023-08-18T11:57:21.000Z",
-          "wordCount": 101,
-          "title": "이것과 그것",
           "imageUrl": null
         }
       ]
