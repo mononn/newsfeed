@@ -2,10 +2,171 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.github.io/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2023-09-17T20:11:22.686Z</updated>
+    <updated>2023-09-18T20:12:58.287Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.github.io/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.github.io/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Moving physical pages from user space]]></title>
+        <id>https://lwn.net/Articles/944115/</id>
+        <link href="https://lwn.net/Articles/944115/"/>
+        <updated>2023-09-18T15:10:51.000Z</updated>
+        <summary type="html"><![CDATA[Processes in a Linux system run within their own virtual address spaces.
+Their virtual addresses map to physical pages provided by the hardware, but
+the kernel takes pains to hide the physical addresses of those pages;
+processes normally have no way of knowing (and no need to know) where their
+memory is located in physical memory.  As a result, the system calls for
+memory management also deal in virtual addresses.  Gregory Price is
+currently trying to create an exception to this rule with a
+proposal for a new system call that would operate on memory using physical
+addresses.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[감사합니다]]></title>
+        <id>https://blog.naver.com/sellars/223215059986</id>
+        <link href="https://blog.naver.com/sellars/223215059986"/>
+        <updated>2023-09-18T11:47:54.000Z</updated>
+        <summary type="html"><![CDATA[김영건 선생님 아들입니다. 먼저 아버지께서 쓰신 글에 달아주신 댓글. 그리고 추모해주시는 모든 분들께 아버지 대신 감사의 말씀을 드리고자 합니다. 조문하러 와주신 동료, 선후배 선생님들 그리고 아버지 수업을 들었던 학생분들 모두 감사합니다. 와주신 분들 덕분에 어머니와 제가 힘을 많이 얻었고 아버지를 기쁘고 행복하게 보내드릴 수 있었습니다. 평소 아버지께서는 학자로서의 삶에 대해 강조하시고 중요하게 생각하셨습니다. "학자가 말이야 그러해서는 안 돼." "나는 학자이기 때문에 당연히 책을 읽고 공부를 하는 거야." 또한 학교에서 학생들과 함께 이야기하는 것을 참 좋아하셨습니다. 질문을 던지고 그.......]]></summary>
+        <author>
+            <name>sellars</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/944744/</id>
+        <link href="https://lwn.net/Articles/944744/"/>
+        <updated>2023-09-18T07:14:01.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (firefox-esr, libwebp, and thunderbird), Fedora (chromium, curl, flac, libtommath, libwebp, matrix-synapse, python-matrix-common, redis, and rust-pythonize), Gentoo (binwalk, ghostscript, python-requests, rar, samba, and wireshark), Oracle (.NET 6.0, kernel, and kernel-container), Slackware (python3), and SUSE (firefox).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Comparing OpenShift Service Mesh and Service Interconnect]]></title>
+        <id>c2991c76-3cf9-44ce-bee9-acdea2c4a93c</id>
+        <link href="https://developers.redhat.com/articles/2023/09/18/comparing-openshift-service-mesh-and-service-interconnect"/>
+        <updated>2023-09-18T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In today's digital landscape, where organizations increasingly rely on interconnected applications and services to execute business operations, the ability to connect software and data across different environments is becoming increasingly vital. However, achieving seamless connectivity is no easy feat, as varying application architectures and on-premises and cloud infrastructures often present disparities that require careful management of interconnections for optimal operation, risk management, managing skill sets across the technical team, ensuring enough observability, and how security is being handled.
+This article discusses two Red Hat technologies, Red Hat OpenShift Service Mesh and Red Hat Service Interconnect, that offer different approaches to address these requirements and provi…]]></summary>
+        <author>
+            <name>Mauricio "Maltron" Leal, Vamsi Ravula</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A statistics update in Open vSwitch user space datapath]]></title>
+        <id>31406c88-48e4-4cec-a6b6-9095aa82356d</id>
+        <link href="https://developers.redhat.com/articles/2023/09/18/statistics-update-open-vswitch-user-space-datapath"/>
+        <updated>2023-09-18T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[With the demands for higher bandwidth, came the need for scaling and processing packets on more CPU resources. In Open vSwitch (OVS) using DPDK for faster IO, this translated to using more receive and transmit queues to allow more PMD threads to process the packets. This adds some complexity to a system not easy to understand in the first place. Support or operation people still want to know how much traffic is received and how it is distributed across the CPU resources. To offer help, this article describes new statistics added for the user space datapath in OVS 2.17 and later.
+Per queue statistics for DPDK ports
+A first evolution in OVS 2.17 consisted of exposing receive and transmit queues statistics per DPDK physical ports in ovsdb.
+For example:
+# ovs-vsctl get interface dpdk0 statisti…]]></summary>
+        <author>
+            <name>David Marchand</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel prepatch 6.6-rc2]]></title>
+        <id>https://lwn.net/Articles/944705/</id>
+        <link href="https://lwn.net/Articles/944705/"/>
+        <updated>2023-09-18T05:43:15.000Z</updated>
+        <summary type="html"><![CDATA[The 6.6-rc2 kernel prepatch is out for
+testing.
+
+
+I think the most notable thing about 6.6-rc2 is simply that it's
+exactly 32 years to the day since the 0.01 release. And that's a round
+number if you are a computer person.
+
+Because other than the random date, I don't see anything that really
+stands out here.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GM, 포드 등 자동차 주식 투자의견 및 자동차 주가 전망(9/18 업뎃)]]></title>
+        <id>https://happist.com/?p=591846</id>
+        <link href="https://happist.com/591846/%ec%9e%90%eb%8f%99%ec%b0%a8-%ec%a3%bc%ec%8b%9d-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%9e%90%eb%8f%99%ec%b0%a8-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d"/>
+        <updated>2023-09-18T04:45:18.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[이번 주목할 23년 9월 FOMC 포인트 4가지]]></title>
+        <id>https://happist.com/?p=591833</id>
+        <link href="https://happist.com/591833/9%ec%9b%94-fomc-%ed%8f%ac%ec%9d%b8%ed%8a%b8"/>
+        <updated>2023-09-18T02:51:37.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[마스크도 없이 유해물질에 방치된 ‘무늬만 관리직’ 노동자]]></title>
+        <id>https://slownews.kr/?p=96846</id>
+        <link href="https://slownews.kr/96846"/>
+        <updated>2023-09-18T00:39:43.000Z</updated>
+        <summary type="html"><![CDATA[[‘반올림’ 임자운 변호사 소송기] 방독마스크도 없이 벤젠, 시너, 디클로로메탄 혼합 유기용제 환경에 노출된 ‘서류만 관리직’인 현장 노동자가 희귀질환에 걸렸다. 하지만 직업병을 인정하지 않는 근로복지공단. 공단을 상대로 한 법적 공방의 기록. “그동안 좋은 일이 너무 없었는데 … 참 좋네요.. 감사합니다.” 어제 일이다. 변호사 일하며 가장 좋은 때를 꼽으라면, 승소 판결 소식을 전하며 감사 인사 받을 때다....
+The post 마스크도 없이 유해물질에 방치된 ‘무늬만 관리직’ 노동자 appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>임자운</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2 Lines Of Code and 3 C++17 Features - The overload Pattern]]></title>
+        <id>https://www.cppstories.com/2019/02/2lines3featuresoverload.html/</id>
+        <link href="https://www.cppstories.com/2019/02/2lines3featuresoverload.html/"/>
+        <updated>2023-09-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how the overload pattern works for std::variant visitation and how it changed with C++20 and C++23.
+While I was doing research for my book and blog posts about C++17 several times, I stumbled upon this pattern for visitation of std::variant:
+template<class... Ts> struct overload : Ts... { using Ts::operator()...; };
+template<class... Ts> overload(Ts...) -> overload<Ts...>;
+
+
+With the above pattern, you can provide separate lambdas “in-place” for visitation.
+It’s just two lines of compact C++ code but packs some exciting techniques.
+Let’s see how this works and go through the three new C++17 features that make this pattern possible.
+
+
+
+Changelog
+
+
+Updated on 18th Septeber 2023: C++23 updates, and Compiler Explorer examples.
+
+Updated on 13th January 2020: better description for th…]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Some data on the size of Cobol programs/paragraphs]]></title>
+        <id>https://shape-of-code.com/?p=8197</id>
+        <link href="https://shape-of-code.com/2023/09/17/some-data-on-the-size-of-cobol-programs-paragraphs/"/>
+        <updated>2023-09-17T22:35:00.000Z</updated>
+        <summary type="html"><![CDATA[Before the internet took off in the 1990s, COBOL was the most popular language, measured in lines of code in production use. People who program in Cobol often have a strong business focus, and don’t hang out on sites used aggregated by surveys of programming language use; use of the language is almost completely invisible […]]]></summary>
+        <author>
+            <name>Derek Jones</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[집값 안 오른 것처럼 속였다? ‘마사지’냐, 통계 해석이냐: 슬로우레터 9월18일.]]></title>
+        <id>https://slownews.kr/?p=96857</id>
+        <link href="https://slownews.kr/96857"/>
+        <updated>2023-09-17T21:59:30.000Z</updated>
+        <summary type="html"><![CDATA[통계 조작일까, 감사 조작일까. 통계 ‘마사지’냐, 해석이냐 이재명 단식 19일째, 출구전략이 없다. 김태우 빈자리 도전하는 김태우. 위키트리 주식 팔았다던 김행, 시누이가 대주주. 오늘의 TMI. 가야 고분군, ‘세계 문화유산’으로 지정됐다. “요즘 여든은 마흔.” 바티칸 성당에 김대건 성상 오픈. 해법과 대안. 3미터 높이 태양광 패널, 농사 지으면서 전기도 판다. ‘펜타닐 성지’로 불렸던 병원, 과징금 내고 계속 장사한다....
+The post 집값 안 오른 것처럼 속였다? ‘마사지’냐, 통계 해석이냐: 슬로우레터 9월18일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[static-server: an HTTP server in Go for static content]]></title>
         <id>https://eli.thegreenplace.net/2023/static-server-an-http-server-in-go-for-static-content/</id>
@@ -153,7 +314,7 @@ The post The benefit of non-volatile memory (NVM) for edge AI appeared first on 
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[ARM 투자의견 및 ARM 주가 전망(9/15 업뎃)]]></title>
+        <title type="html"><![CDATA[ARM 투자의견 및 ARM 주가 전망(9/18 업뎃)]]></title>
         <id>https://happist.com/?p=591797</id>
         <link href="https://happist.com/591797/arm-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-arm-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d"/>
         <updated>2023-09-15T02:10:17.000Z</updated>
@@ -563,35 +724,6 @@ not be affected by this vulnerability.]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[$] Arduino: open source for microcontroller boards]]></title>
-        <id>https://lwn.net/Articles/944038/</id>
-        <link href="https://lwn.net/Articles/944038/"/>
-        <updated>2023-09-12T20:27:49.000Z</updated>
-        <summary type="html"><![CDATA[Arduino has emerged as one of the
-prime success stories of the open-hardware movement. In recent years, the
-company has shifted its focus toward Internet of Things (IoT)
-applications. As part of this transformation, it has completely redesigned
-its open-source integrated development environment (IDE), adding a more
-professional feature set for its hobbyist target audience. If you have
-experimented with Arduino in the past, but have lost track of its
-progress, now might be a good time to give it another try.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Password-stealing Linux malware served for 3 years and no one noticed (Ars Technica)]]></title>
-        <id>https://lwn.net/Articles/944306/</id>
-        <link href="https://lwn.net/Articles/944306/"/>
-        <updated>2023-09-12T20:26:30.000Z</updated>
-        <summary type="html"><![CDATA[Ars Technica reports on a credential-stealing Trojan horse that would infect only some of those who installed the "Free Download Manager".  The article is based on a Kaspersky report that details the malicious payload offered up at that site from 2020 to 2022.
-
-The site, freedownloadmanager[.]org, offered a benign version of a Linux offering known as the Free Download Manager. Starting in 2020, the same domain at times redirected users to the domain deb.fdmpkg[.]org, which served a malicious version of the app. The version available on the malicious domain contained a script that downloaded two executable files to the /var/tmp/crond and /var/tmp/bs file paths. The script then used the cron job scheduler to cause the file at /var/tmp/crond to launch every 10 minutes. With that, devices that had installed the booby-trapped version of Free Download Manager were permanently backdoored.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[How Red Hat enhances the developer experience]]></title>
         <id>5e063440-428c-4394-98d8-ed28280c925b</id>
         <link href="https://developers.redhat.com/articles/2023/09/12/how-red-hat-enhances-developer-experience"/>
@@ -602,17 +734,6 @@ Red Hat reduces friction for developers
 Red Hat's primary goal is to make it easier for you to create and deploy cloud-first applications. Our hybrid cloud approach builds on an open source foundation, enabling you to design software once and deploy it to any (or every) clou…]]></summary>
         <author>
             <name>Mithun T. Dhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
-        <id>https://lwn.net/Articles/944263/</id>
-        <link href="https://lwn.net/Articles/944263/"/>
-        <updated>2023-09-12T12:23:00.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (node-cookiejar and orthanc), Oracle (firefox, kernel, and kernel-container), Red Hat (flac and httpd:2.4), Slackware (vim), SUSE (python-Django, terraform-provider-aws, terraform-provider-helm, and terraform-provider-null), and Ubuntu (c-ares, curl, linux-azure, linux-azure-5.15, linux-azure-fde, linux-azure-fde-5.15,
- linux-raspi, and linux-ibm, linux-ibm-5.4).]]></summary>
-        <author>
-            <name>corbet</name>
         </author>
     </entry>
     <entry>
@@ -853,6 +974,16 @@ running on one site (via JavaScript embedded in …</p>]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Are We Shooting Ourselves in the Foot with Stack Overflow?]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1574.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1574.php"/>
+        <updated>2023-09-08T20:34:00.000Z</updated>
+        <summary type="html"><![CDATA[Lesson #10 of my Modern Embedded Programming Video Course explains what stack overflow is and shows what can transpire deep inside an embedded microcontroller when the stack pointer register (SP) goes out of bounds. You can watch the YouTube video to see the details, but...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How to trigger jobs manually in Packit]]></title>
         <id>13909259-cf88-4513-a5a4-851cb12e8e99</id>
         <link href="https://developers.redhat.com/articles/2023/09/08/how-trigger-jobs-manually-packit"/>
@@ -895,6 +1026,19 @@ The post 경험하지 못한 성장률, 한국 경제 엔진이 꺼져간다: �
         <summary type="html"><![CDATA[SEGGER has released a new firmware which implements power switching of the target MCU on LPC4322-based OB designs. Continue reading →]]></summary>
         <author>
             <name>Erich Styger</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nRF5 to nRF Connect SDK migration via DFU over BLE]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1573.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1573.php"/>
+        <updated>2023-09-07T16:24:54.000Z</updated>
+        <summary type="html"><![CDATA[Background
+Nordic Semiconductor is a leader in wireless SoC’s, especially in BLE MCU’s with their nRF product line. The nRF5 SDK was released in 2012, and up until recently was the primary SDK for development on their chipsets.
+
+In Sept of 2021, Nordic announced that they would be moving all new development over to...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
     <entry>
@@ -1085,17 +1229,6 @@ Continue reading…]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[“윤석열의 가장 큰 리스크는 고집이다”: 슬로우레터 9월6일.]]></title>
-        <id>https://slownews.kr/?p=96266</id>
-        <link href="https://slownews.kr/96266"/>
-        <updated>2023-09-05T22:08:35.000Z</updated>
-        <summary type="html"><![CDATA[경제 위기보다 무서운 윤석열 정부의 낙관론. 교사들 징계 안 한다. “희대의 대선 공작”, 강도 높은 대통령실의 비난. 뉴스타파 때리기, 방통심의위까지 나섰다. 위안부 기억의 터 기습 철거. 홍범도 흉상 철거는 뉴라이트 교수 작품. 글로벌 외톨이, 김정은-푸틴의 만남. 시진핑도 전 정권 탓. 조선일보가 극찬한 류호정-한덕수의 토론. 오늘의 TMI. 서울광장 아래 공간 있어요. 20년 뒤 원금의 2배, 개인...
-The post “윤석열의 가장 큰 리스크는 고집이다”: 슬로우레터 9월6일. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Checking the GCC 13 compiler with the help of PVS-Studio]]></title>
         <id>https://pvs-studio.com/en/blog/posts/cpp/1067/</id>
         <link href="https://pvs-studio.com/en/blog/posts/cpp/1067/"/>
@@ -1135,29 +1268,6 @@ Now this has been almost a year ago. LastPass promised to improve, both as far a
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[이동관이 꿈꾸는 세상: 모든 방송의 종편화]]></title>
-        <id>https://slownews.kr/?p=96233</id>
-        <link href="https://slownews.kr/96233"/>
-        <updated>2023-09-05T08:02:02.000Z</updated>
-        <summary type="html"><![CDATA[‘언론장악 기술자’로 불리는 이동관 씨가 방송통신위원장으로 결국 입성하면서 벌어지는 일들이 폭주를 넘어 ‘광란의 질주’라고 해야 할 정도다. 그를 앞세워서 현 정부가 벌이는 언론에 대한 개입도 전방위로 펼쳐지고 있다. 그런데 방송통신위원장이라기보다는 방송‘통제’위원장이라고 불려야 할 이동관 씨나 현 정권의 언론 ‘정책’-그것을 정책이라는 이름으로 부를 수 있다면-이 겨냥하는 것은 단지 공영언론기관이나 공영방송에 ‘우군’을 앉히거나 정권에 유리한 보도로 압박하는...
-The post 이동관이 꿈꾸는 세상: 모든 방송의 종편화 appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A beginner's guide to Python containers]]></title>
-        <id>ef06738c-3521-4668-8779-1dab80cd34e9</id>
-        <link href="https://developers.redhat.com/articles/2023/09/05/beginners-guide-python-containers"/>
-        <updated>2023-09-05T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Python has emerged as a go-to language for students, new programmers, and experienced developers. This general-purpose programming language is dynamically typed, memory-managed, and supports multiple programming paradigms. Python is popular for web development, data science, artificial intelligence and machine learning (AI/ML), scripting for Linux, and more.
-Containers are a game-changing solution for packaging your code and dependencies, allowing for your application to run quickly and consistently across any environment. Using containers to support your Python application enables efficient development and deployment.
-This article shows how to use containers to support your Python applications. We'll take a pre-configured application and build a Containerfile for it from scratch. Addition…]]></summary>
-        <author>
-            <name>Aine Keenan</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[[소식] 전시연계 – 도시의 그림 그리기 혹은 서스펜스의 게임 (국립현대미술관 워치앤칠)]]></title>
         <id>https://attention2.space/?p=2803</id>
         <link href="https://attention2.space/2023/watchandchill/"/>
@@ -1168,24 +1278,21 @@ This article shows how to use containers to support your Python applications. We
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[23년 9월 맥문동 출사 여행]]></title>
-        <id>https://happist.com/?p=591611</id>
-        <link href="https://happist.com/591611/%eb%a7%a5%eb%ac%b8%eb%8f%99-%ec%b6%9c%ec%82%ac"/>
-        <updated>2023-09-04T07:39:15.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <title type="html"><![CDATA[FPGA skills for the modern world]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1572.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1572.php"/>
+        <updated>2023-09-04T10:28:23.000Z</updated>
+        <summary type="html"><![CDATA[With the ever increasing number of applications involving video processing, AI or edge computing the appetite for suitably skilled FPGA Engineers has never been higher from the market which is expected to grow to $15 billion USD by 2027!
+In terms of industries opportunities can be typically found within:
+
+Automotive
+Aerospace
+Defense
+Data Processing
+
+However this list is...]]></summary>
         <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to use dynamic inventories in Ansible Automation]]></title>
-        <id>1f49616c-32b2-4328-83a4-638f9319260d</id>
-        <link href="https://developers.redhat.com/articles/2023/09/04/how-use-dynamic-inventories-ansible-automation"/>
-        <updated>2023-09-04T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Dynamic inventories in the Red Hat Ansible Automation Platform revolutionize the way to manage infrastructure in the cloud. Instead of relying on static inventories that require manual updates when virtual machines (VMs) are launched, terminated, or replaced, dynamic inventories automatically discover and run VMs across any cloud provider. This means that when you delete an old VM and launch a new one, Ansible Automation Platform seamlessly adapts and performs actions on the updated infrastructure without requiring manual intervention.
-By harnessing dynamic inventories, the Ansible Automation Platform empowers cloud administrators and DevOps teams to effortlessly manage and orchestrate on-demand cloud resources. This article explores the power of dynamic inventories, focusing on their util…]]></summary>
-        <author>
-            <name>Deepankar Jain, Himanshu Yadav</name>
+            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
     <entry>
@@ -1204,16 +1311,6 @@ CPPG를 도전하게 된 계기
 그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…]]></summary>
         <author>
             <name>CPUU</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[국내 OTT 이용자 추이(23년 8월 업뎃)]]></title>
-        <id>https://happist.com/?p=591606</id>
-        <link href="https://happist.com/591606/%ea%b5%ad%eb%82%b4-ott-%ec%9d%b4%ec%9a%a9%ec%9e%90-%ec%b6%94%ec%9d%b4"/>
-        <updated>2023-09-04T03:37:04.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
         </author>
     </entry>
     <entry>
@@ -1290,6 +1387,16 @@ they rarely do it in real-time and …]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Who needs source code?]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1571.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1571.php"/>
+        <updated>2023-08-31T16:14:27.000Z</updated>
+        <summary type="html"><![CDATA[When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[[뉴페@스프] 기후변화로 더욱 부족해진 전기… 뒤집어 접근해보자는 제안]]></title>
         <id>https://newspeppermint.com/?p=77329</id>
         <link href="https://newspeppermint.com/2023/08/30/npsp_saveelectricity/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_saveelectricity"/>
@@ -1320,6 +1427,17 @@ Another month, another reason to celebrate trailblazing creators behind some of 
 Ingrid is a big fan of horseback riding and has always loved the social aspect of the sport. But when she wanted to take her passion online, she was surprised to be unable to find sports platforms specifically tailored to equestrians. So, Ingrid and her co-founders, Totta and Erika, took matters into their own hands, pooling their collective experiences in marketing, programming and economics to create Ridely: a platform that ai…]]></summary>
         <author>
             <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New book on Elliptic Curve Cryptography]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1570.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1570.php"/>
+        <updated>2023-08-30T15:47:59.000Z</updated>
+        <summary type="html"><![CDATA[Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA
+Along the way I had proposed to explain an encryption scheme described on NIST as...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
     <entry>
@@ -1363,6 +1481,16 @@ The default flow
 Chrome Sync isn’t some obscure feature of Google Chrome. In fact, as of Chrome 116 setting up sync is part of the su…]]></summary>
         <author>
             <name>Almost Secure</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1568.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1568.php"/>
+        <updated>2023-08-28T18:32:44.000Z</updated>
+        <summary type="html"><![CDATA[In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
     <entry>
@@ -1504,6 +1632,16 @@ Ned Deily @nad
 @thomas]]></summary>
         <author>
             <name>Python Insider</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Three more things you need to know when transitioning from MCUs to FPGAs]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1567.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1567.php"/>
+        <updated>2023-08-24T16:41:32.000Z</updated>
+        <summary type="html"><![CDATA[I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \$100 FPGA experimenter boards (some quite a bit sub \$100). The major vendors have low or no cost versions of their tool chains and...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
     <entry>
@@ -1851,158 +1989,6 @@ Consider the task of fetching a user profile. The profile might be available in 
         <summary type="html"><![CDATA[The first release of the Visual Studio Code Extension from NXP supports SDKs with version 2.13. This article shows two ways how to import and build projects with previous SDK versions Continue reading →]]></summary>
         <author>
             <name>Erich Styger</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Interview questions for embedded engineers]]></title>
-        <id>tag:m0agx.eu,2023-08-20:/interview-questions-for-embedded-engineers.html</id>
-        <link href="https://m0agx.eu/interview-questions-for-embedded-engineers.html"/>
-        <updated>2023-08-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is an article about technical questions that can be asked in an interview
-for an embedded systems engineer that I have "standardized on"
-after doing multiple interviews. It does not cover other topics like how to do the initial
-screening, task assignments, soft skills,
-or "fantastic beasts, where to find them and how to retain them".]]></summary>
-        <author>
-            <name>M0AGX / LB9MG</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How secure authentication improves PoC testing and cuts risk]]></title>
-        <id>https://www.embedded.com/?p=4480210</id>
-        <link href="https://www.embedded.com/how-secure-authentication-improves-poc-testing-and-cuts-risk/"/>
-        <updated>2023-08-19T16:27:27.000Z</updated>
-        <summary type="html"><![CDATA[Electronic authentication can simplify design of PoC instruments and help device manufacturers mitigate security risks, reducing the chance of misdiagnosis or delayed diagnosis. The growing...
-The post How secure authentication improves PoC testing and cuts risk appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Aileen Cleary, Kris Panaro, and Chang Liu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[인간종 다양성의 위기, 21세기 제국 시스템에서 벌어지는 포복 절도의 패러독스.]]></title>
-        <id>https://slownews.kr/?p=95579</id>
-        <link href="https://slownews.kr/95579"/>
-        <updated>2023-08-19T13:19:46.000Z</updated>
-        <summary type="html"><![CDATA[나는 생물종 다양성의 문제보다 인간종 다양성의 문제가 훨씬 심각하며, 후자가 전자의 원인이라고 생각한다. 하지만 놀랍게도 인간종 다양성의 문제는 이야기가 나오질 않는다. 잠깐 다른 이야기지만, 주디스 버틀러 식으로 “인간 중심주의를 벗어나자”는 이야기를 나는 아주 싫어한다. 이건 유럽인들이 ‘유럽 중심주의’를 벗어나겠다는 말과 마찬가지로 가능하지도 않으면서 젠체만 이빠이하는 더욱 황당한 최신판 ‘유럽 중심주의’로 귀결될 뿐이다. 루쉰 선생 말마따라...
-The post 인간종 다양성의 위기, 21세기 제국 시스템에서 벌어지는 포복 절도의 패러독스. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>홍기빈</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[그럼에도 ‘상온 초전도체’가 정말이라면 세상은 어떻게 바뀔까]]></title>
-        <id>https://newspeppermint.com/?p=77623</id>
-        <link href="https://newspeppermint.com/2023/08/19/npsp_lk99/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_lk99"/>
-        <updated>2023-08-19T12:50:43.000Z</updated>
-        <summary type="html"><![CDATA[국내 연구진의 임시 논문으로 촉발된 상온 초전도체 논란은 전 세계의 관심을 불러일으켰지만 아쉽게도 헛소동으로 끝날 듯합니다. 세계 각국의 여러 연구진이 해당 물질은 초전도체가 아니라고 말하고 있기 때문입니다. 상온 초전도체에 사람들이 이런 뜨거운 관심을 보이는 데는 이유가 있습니다. 만약 상온 초전도체를 인류가 쉽게 만들 수 있게 된다면 이는 산업혁명 이상의 엄청난 변화를 인류가 경험하게 될 수 있기 때문입니다. 뉴욕타임스에서 쓴 칼럼을 번역하고, 초전도체가 무엇인지, 왜 잠시나마 큰 주목을 받았는지, (이번에는 실패했지만) → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[In the beginning, there was no code…]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1563.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1563.php"/>
-        <updated>2023-08-16T15:39:30.000Z</updated>
-        <summary type="html"><![CDATA[…and it was good.
-	
-
-
-Why is it that code starts out nice and deteriorates over time?]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Getting Started With Zephyr: Devicetree Bndings]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1562.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1562.php"/>
-        <updated>2023-08-16T11:34:56.000Z</updated>
-        <summary type="html"><![CDATA[Overview
-In a previous blog post, https://www.embeddedrelated.com/showarticle/1547.php, we learned how a devicetree in an embedded software application based on The Zephyr Project could describe the hardware on the device. We saw an example of how the four LEDs that are present on an nRF52840 development kit (<a...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Quaternions and the spatial rotations in motion enabled wearable devices. Exploiting the potential of smart IMUs attitude estimation.]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1552.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1552.php"/>
-        <updated>2023-08-10T06:32:27.000Z</updated>
-        <summary type="html"><![CDATA[Wearable devices are becoming quite popular these days. Fitness trackers, medical sensors and much more implement different systems to acquire (sensors) and process user information. Among every potential design I have contributed as a researcher or engineer for a wearable system there is one that almost always was mentioned at initial stages. This is the ability to track user motion (or a...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bit-Banged Async Serial Output And Disciplined Engineering]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1544.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1544.php"/>
-        <updated>2023-08-03T13:08:23.000Z</updated>
-        <summary type="html"><![CDATA[Contents:
-
-Introduction
-
-The Problem
-
-Symbol Framing
-
-Implementing Serial Output
-
-Working With A Logic Analyzer
-
-Working With A TTL-USB Serial Adapter
-
-Disciplined Engineering
-
-
-Applying Six Software Design Tools
-
-
-TDD...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jumping from MCUs to FPGAs - 5 things you need to know]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1554.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1554.php"/>
-        <updated>2023-07-31T18:12:38.000Z</updated>
-        <summary type="html"><![CDATA[Are you a microcontroller expert beckoned by the siren song of the FPGA? Not long ago, that was me. FPGA-expert friends of mine regularly extolled the virtues of these mysterious components and I wanted in. When I made the leap, I found a world seemingly very familiar, but in reality, vastly different. My years of C programming and microcontroller use often gave pre preconceived...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Assembly language is best - except when it isn’t]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1553.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1553.php"/>
-        <updated>2023-07-27T10:59:35.000Z</updated>
-        <summary type="html"><![CDATA[I started out embedded programming on small, 8-bit devices, with limited memory. High-level languages were not an option, so I became proficient in using assembly language. For modest sized applications, it was a reasonable option and, apart from that, there were no tools to support any other languages. I was always happy with that, because I could readily access all the functionality of the...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C to C++: 5 Tips for Refactoring C Code into C++]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1551.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1551.php"/>
-        <updated>2023-07-23T18:12:11.000Z</updated>
-        <summary type="html"><![CDATA[In our C to C++ series, we’ve been discussing the fundamental details that embedded developers and teams need to transition from using C to C++. In our last post, C to C++: Bridging the Gap from C Structures to Classes, we discussed the differences between C and C++ structures and objects. Many teams interested in using C++ don’t need to jump off the deep end into metaprogramming and other...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why Should Unit Tests Feel Like Simulations?]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1550.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1550.php"/>
-        <updated>2023-07-23T12:17:09.000Z</updated>
-        <summary type="html"><![CDATA[Unit tests are designed to test units of software, but what exactly is a unit of software? It can be a function or a method, a class, or even an entire module. 
-If you're just starting with unit testing, chances are you're testing the implementation of a function or a method. Consequently, if the implementation changes, you must update your tests as well, which can render the entire...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
 </feed>
