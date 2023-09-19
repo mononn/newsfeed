@@ -104,16 +104,6 @@
           "wordCount": 2081,
           "title": "Beautiful C++: 30 Core Guidelines... Book Review",
           "imageUrl": "https://www.cppstories.com/2023/images/book_rev_beautiful.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2023/monadic-optional-ops-cpp23/",
-          "author": null,
-          "description": "In this post we’ll have a look at new operations added to std::optional in C++23. These operations, inspired by functional programming concepts, offer a more concise and expressive way to work with optional values, reducing boilerplate and improving code readability.\nLet’s meet and_then(), transform() and or_else(), new member functions.\nif/else and optional C++20 \n  \n\n\n\n\n     \n    \n\n\nIn C++20 when you work with std::optional you have to rely heavily on conditional checks to ensure safe access to the contained values. This often led to nested if/else code blocks, which could make the code verbose and harder to follow.\nConsider the task of fetching a user profile. The profile might be available in a cache, or it might need to be fetched from a server. Once retrieved, we want to extract the …",
-          "link": "https://www.cppstories.com/2023/monadic-optional-ops-cpp23/",
-          "publishedOn": "2023-08-21T00:00:00.000Z",
-          "wordCount": 2080,
-          "title": "How to Use Monadic Operations for `std::optional` in C++23",
-          "imageUrl": "https://www.cppstories.com/2023/images/monadic_optional.png"
         }
       ]
     },
@@ -127,7 +117,18 @@
       "title": "The LLVM Project Blog",
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2023-09-19-diagnostic-improvements-in-clang-17/",
+          "author": null,
+          "description": "Introduction\nIn the last few months, I have been a part of an ongoing effort to improve Clang’s diagnostic capabilities.The newly released Clang 17 brings several of these improvements to the forefront.This blog post aims to provide a comprehensive overview of these diagnostic enhancements.We will employ simplified code examples and compare diagnostic outputs from Clang 16 and Clang 17 to illustrate how the latest updates can enhance the development experience for Clang users.\nMulti-line printing of code snippets\nOne of the most anticipated diagnostic features of Clang 17 is its support for multi-line printing of code snippets.This marks a departure from the old single-line limit, which used to make it difficult to fully understand the context around a code issue.This new feature improves …",
+          "link": "https://blog.llvm.org/posts/2023-09-19-diagnostic-improvements-in-clang-17/",
+          "publishedOn": "2023-09-19T00:00:00.000Z",
+          "wordCount": 2135,
+          "title": "Diagnostic Improvements in Clang 17",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Embedded in Academia",
@@ -181,19 +182,9 @@
           "description": "CPPG에 대한 나의 예전 기억\n개인정보관리사라는 일명 CPPG 시험이 있다. \n사실 이 시험의 존재는 꽤 오래전부터 알고있었다. 시험접수 사이트에 로그인을 해보니 2015년에 접수를 했다가 취소를 했던 기록이 있다. 기억을 더듬어보니 당시 공군 장교로 병역을 마치고 취업을 준비하던 시기에 정보보안 분야로 진출하려면 뭐라도 하나 이력을 더 만들고 싶어서 (그때 정보보안기사도 땄었고, 디지털포렌식전문가2급도 땄었다).. 마침 그때 BoB과정을 이수하고 있었는데, 옆의 컨설팅 트랙에서는 뭔가 다들 열심히 도전하는 느낌이길래 나도 신청을 했었던 것 같다. 그러나 결과적으로 당시 대학원에 합격하게 되었고 해당 자격증이 필요없어졌다는 생각에(정확히는 공부를 하기가 싫어서) 바로 환불을 했었던 것이다.\n이 시험을 바로 환불 결정했던 이유가 무엇일까? 나는 natural born 공돌이이고 지금도 기술 분야를 본업으로 삼고 있는 것은 여전하다. 그런데 이 시험은 쉽게 말해 문과 성향의 지식을 많이 필요로 하고, 정확히는 <개인정보보호법>에 대해 깊은 이해가 필요한 자격증이다. 그래서 그때는 도저히 공부할 엄두가 나지 않았다.\n\n\nCPPG를 도전하게 된 계기\n시간이 흐르면서 간혹 이 자격을 검색해보곤했는데, 그때마다 종종 CPPG가 국가공인 자격으로 전환된다, 안된다, 하는 뜬소문이 많았다. 그래서 어떤 의미에서는 국가공인으로 전환된 이후 시험을 보는게 이득이라는 생각도 있었고, 그래서 그냥저냥 계속 기다렸다. 하지만 국가공인 전환은 되지 않았다. 아직까지도.\n그러다 작년에 깨달은 사실이 있는데, ISMS-P 인증심사원 자…",
           "link": "https://cpuu.postype.com/post/14359096",
           "publishedOn": "2023-09-04T06:00:41.000Z",
-          "wordCount": 754,
+          "wordCount": 746,
           "title": "CPPG 개인정보관리사 불합격 후기",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/04/15/00/33/88f9dc86cce73ec915ba47b48ccc2b56.jpeg?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/15154097",
-          "author": "CPUU",
-          "description": "선형대수에서 행렬관련 연산을 할 때 역행렬이 굉장히 중요하게 사용된다.\n행렬 A의 역행렬은 A와 곱해서 단위 행렬을 만드는 행렬을 뜻한다. 표기할 때는 A^-1 로 표시한다. \n즉 A^-1 에 A를 곱하면 I 가 된다.\n\n\n2 by 2 행렬인 경우\n한국의 고등학교 교육과정에서 배웠던 행렬은 2 by 2 까지만을 다뤘었다.\n위와 같은 2 by 2 행렬이 있을 때, 그 역행렬은 다음과 같이 계산된다.\n여기에서 ad-bc 값을 행렬식(determinant) 이라고 부르는데, 수학에서 0으로 나누는 것은 정의되지 않으므로 만약 det 값이 0인 경우는 역행렬이 존재하지 않는다고 판정한다.\n이와 같은 근거로, F# 코드를 사용하면 2 by 2 행렬의 역행렬을 다음과 같이 구할 수 있다.\nlet inverse2x2 (matrix: float list list) : float list list =\n    let a = matrix.[0].[0]\n    let b = matrix.[0].[1]\n    let c = matrix.[1].[0]\n    let d = matrix.[1].[1]\n\n    let det = a * d - b * c\n\n    if det = 0.0 then\n        failwith \"The matrix does not have an inverse.\"\n    else\n        [[ d / det; -b / det]; [-c / det; a / det]]\n\n// 테스트\nlet matrix2x2 = [[1.0; 2.0]; [3.0; 4.0]]\nlet result = inverse2x2 matri…",
-          "link": "https://cpuu.postype.com/post/15154097",
-          "publishedOn": "2023-08-21T05:23:07.000Z",
-          "wordCount": 744,
-          "title": "F# 으로 역행렬 구하기",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/08/21/10/36/dd5773ac3c89ead1d079867942e1338f.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -215,12 +206,22 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "5a7e37cf-e472-4465-8b2f-4226bbc93d45",
+          "author": "Christophe Laprun",
+          "description": "Java Operator SDK(JOSDK) is an open source project that aims to simplify the task of creating Kubernetes operators using Java. Container Solutions started the project, and Red Hat is now a major contributor. The JOSDK project now lives under the Operator Framework umbrella, which is a Cloud Native Computing Foundation (CNCF) incubating project.\nThe first article in this series introduced JOSDK and explained why it could be interesting to create operators in Java. The second article showed how the JOSDK Quarkus extension quarkus-operator-sdk, also called QOSDK, facilitates the development experience by taking care of managing the Custom Resource Definition automatically. The third article focused on requirements for implementing the reconciliation logic for the example operator you build in…",
+          "link": "https://developers.redhat.com/articles/2023/09/19/write-operators-java-josdk-part-4-upgrading-strategies",
+          "publishedOn": "2023-09-19T07:00:00.000Z",
+          "wordCount": 3871,
+          "title": "Write operators in Java with JOSDK, Part 4: Upgrading strategies",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/java%2Bquarkus_2x.png?itok=saprke5a"
+        },
+        {
           "id": "c2991c76-3cf9-44ce-bee9-acdea2c4a93c",
           "author": "Mauricio \"Maltron\" Leal, Vamsi Ravula",
           "description": "In today's digital landscape, where organizations increasingly rely on interconnected applications and services to execute business operations, the ability to connect software and data across different environments is becoming increasingly vital. However, achieving seamless connectivity is no easy feat, as varying application architectures and on-premises and cloud infrastructures often present disparities that require careful management of interconnections for optimal operation, risk management, managing skill sets across the technical team, ensuring enough observability, and how security is being handled.\nThis article discusses two Red Hat technologies, Red Hat OpenShift Service Mesh and Red Hat Service Interconnect, that offer different approaches to address these requirements and provi…",
           "link": "https://developers.redhat.com/articles/2023/09/18/comparing-openshift-service-mesh-and-service-interconnect",
           "publishedOn": "2023-09-18T07:00:00.000Z",
-          "wordCount": 4520,
+          "wordCount": 4525,
           "title": "Comparing OpenShift Service Mesh and Service Interconnect",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_ServiceMesh_Topic_Image_A_1.png?itok=rMAsDFsL"
         },
@@ -230,7 +231,7 @@
           "description": "With the demands for higher bandwidth, came the need for scaling and processing packets on more CPU resources. In Open vSwitch (OVS) using DPDK for faster IO, this translated to using more receive and transmit queues to allow more PMD threads to process the packets. This adds some complexity to a system not easy to understand in the first place. Support or operation people still want to know how much traffic is received and how it is distributed across the CPU resources. To offer help, this article describes new statistics added for the user space datapath in OVS 2.17 and later.\nPer queue statistics for DPDK ports\nA first evolution in OVS 2.17 consisted of exposing receive and transmit queues statistics per DPDK physical ports in ovsdb.\nFor example:\n# ovs-vsctl get interface dpdk0 statisti…",
           "link": "https://developers.redhat.com/articles/2023/09/18/statistics-update-open-vswitch-user-space-datapath",
           "publishedOn": "2023-09-18T07:00:00.000Z",
-          "wordCount": 3185,
+          "wordCount": 3188,
           "title": "A statistics update in Open vSwitch user space datapath",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC-opensource_2x.png?itok=7tzJ8XTm"
         },
@@ -240,7 +241,7 @@
           "description": "Red Hat Enterprise Linux (RHEL) is a powerful and widely-used Linux distribution known for its stability, security features, and enterprise-grade support. When installing RHEL, you have the opportunity to configure it as a workstation to optimize performance and usability for your specific needs. In this article, we will guide you through the steps to configure RHEL as a workstation during the installation process.\nWhat is RHEL workstation?\nThe organization needs high-end workstations that can support developers and power users, such as artists, physicians, scientists, and engineers, so they can concentrate on what they do best. Designed for advanced Linux users and day-to-day usage with powerful hardware, Red Hat Enterprise Linux for Workstations (RHEL Workstation) is optimized for high-p…",
           "link": "https://developers.redhat.com/articles/2023/09/14/how-configure-rhel-workstation-during-installation",
           "publishedOn": "2023-09-14T07:00:00.000Z",
-          "wordCount": 3570,
+          "wordCount": 3573,
           "title": "How to configure RHEL as a workstation during installation",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL1_2x.png?itok=sH2E700S"
         },
@@ -250,7 +251,7 @@
           "description": "Ansible Molecule is a tool designed to aid in developing and testing Ansible playbooks, roles, and collections. It provides support for functional testing of Ansible content across multiple instances, operating systems and distributions, virtualization providers, test frameworks, and testing scenarios. Molecule helps Ansible content creators (automation specialists) consistently deliver automation content that is scalable, repeatable, and compatible with the latest Ansible versions.\nAnsible Molecule 6 is now available as a developer preview with Red Hat Ansible Automation Platform. This version will refocus and redefine the project as a tool for testing Ansible content with Ansible Automation Platform.\nThe developer preview enables us to collect feedback from our users as we work towards m…",
           "link": "https://developers.redhat.com/articles/2023/09/13/introducing-ansible-molecule-ansible-automation-platform",
           "publishedOn": "2023-09-13T07:00:00.000Z",
-          "wordCount": 4283,
+          "wordCount": 4298,
           "title": "Introducing Ansible Molecule with Ansible Automation Platform",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         },
@@ -270,7 +271,7 @@
           "description": "In today's rapidly evolving technology landscape, Red Hat Ansible Automation Platform offers a powerful solution for managing network configurations in Amazon Web Services (AWS). In this article, we will explore how you can leverage the capabilities of Ansible Automation Platform to simplify and automate your network configuration tasks in AWS.\nWe will guide you through the process of setting up the necessary credentials for your AWS account within the Ansible Automation Platform. We will then dive into playbook execution, demonstrating how you can execute playbooks to define and automate your network configurations in AWS. By the end of this article, you will have the knowledge and confidence to use Ansible Automation Platform to manage your network configurations in AWS effectively.\nPrer…",
           "link": "https://developers.redhat.com/articles/2023/09/12/how-automate-aws-network-using-ansible-automation",
           "publishedOn": "2023-09-12T07:00:00.000Z",
-          "wordCount": 2943,
+          "wordCount": 2946,
           "title": "How to automate AWS network using Ansible Automation",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         },
@@ -280,7 +281,7 @@
           "description": "Red Hat and customers often work together as partners to help get an application across the finish line. In this article, Stephen (electrical training ALLIANCE) and Michael (Red Hat) share the story of one such collaboration that led to success with Node.js in production.\nThe application\nThe electrical training ALLIANCE (ETA) has the mission to develop educational materials for electrical workers. They do this by developing national standards for the education and training of electrical workers, creating standardized training curricula, and assisting in establishing local educational programs. A key part of this work is to develop and provide an application for the 275 training programs that will assist in the day-to-day operations supporting apprentices within the program from application…",
           "link": "https://developers.redhat.com/articles/2023/09/12/nodejs-success-story-electrical-training-alliance",
           "publishedOn": "2023-09-12T07:00:00.000Z",
-          "wordCount": 3210,
+          "wordCount": 3215,
           "title": "A Node.js success story at the electrical training ALLIANCE",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
         },
@@ -290,7 +291,7 @@
           "description": "Packit is an open source project aiming to ease your project's integration with Fedora Linux, CentOS Stream, and other distributions. Packit is mostly used by projects that build RPM packages. We won't go through the onboarding process that was already described in a previous article, but we would like to introduce you to new features that were recently promoted into production.\nTesting Farm execution\nFrom Packit, you can easily trigger the tests on Testing Farm even without building the RPMs. This is very handy for projects that basically don't build RPMs but want to use these two services for verifying the code. As a good example, we can refer to the Strimzi project where users consume container images.\nIn such cases, the users want to trigger the tests, verify the code and see some outp…",
           "link": "https://developers.redhat.com/articles/2023/09/08/how-trigger-jobs-manually-packit",
           "publishedOn": "2023-09-08T07:00:00.000Z",
-          "wordCount": 2974,
+          "wordCount": 2977,
           "title": "How to trigger jobs manually in Packit",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_B.png?itok=PfB3lac5"
         },
@@ -300,19 +301,9 @@
           "description": "I would like to explain why the git pull command is not to be used lightly and to question whether it is ever needed. The git pull command may look harmless, but it is used in ways that often leave a fair amount of mess. I will discuss safer alternatives. This article is for beginner to intermediate Git users looking to extend their skills in using pull requests and merge requests when collaborating on a project.\nAlternatives to git pull\nThis section provides a condensed version of an approach for contributing to a software project without using git pull. I will go into more detail later.\nConfigure two remotes on your local repository so that you have origin pointing to your fork and upstream pointing to the repository you’re contributing to as follows:\n→ git clone forked-repo-url\n→ cd rep…",
           "link": "https://developers.redhat.com/articles/2023/09/07/drop-git-pull-fetch-and-rebase",
           "publishedOn": "2023-09-07T07:00:00.000Z",
-          "wordCount": 5766,
+          "wordCount": 5769,
           "title": "Drop git pull for fetch and rebase",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-devops.png?itok=lalUe1PS"
-        },
-        {
-          "id": "1865d737-c8ff-415b-9ed7-1b4b8fc7678a",
-          "author": "Kevin Dubois",
-          "description": "Quarkus extensions are one of Quarkus' best hidden-in-plain-sight features. Read on to learn how Quarkus extensions give Java superpowers and how you can get started with them.  \nWhat are Quarkus extensions?\nQuarkus extensions are essentially adapter layers for Java-based libraries or technologies that enhance your application.\nHowever, the scope of Quarkus extensions goes well beyond \"just\" importing dependent libraries. They can significantly increase the application's performance, help developers be more productive while developing their applications, integrate complex dependencies much easier, and simplify the application's source code.\nExamples of Quarkus extensions include the Java Database Connectivity (JDBC) libraries, OpenAPI generators, Kubernetes manifest generators, and Apache …",
-          "link": "https://developers.redhat.com/articles/2023/09/06/introduction-quarkus-extensions-java-dependencies",
-          "publishedOn": "2023-09-06T07:00:00.000Z",
-          "wordCount": 3747,
-          "title": "Quarkus extensions give Java dependencies superpowers",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/java%2Bquarkus_2x.png?itok=saprke5a"
         }
       ]
     },
@@ -320,18 +311,7 @@
       "title": "edykim.com 블로그 RSS 피드",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com",
-      "articles": [
-        {
-          "id": "https://edykim.com/ko/post/earth-from-mars/",
-          "author": null,
-          "description": "Earth from Mars – NASA: Climate Change: Vital Signs of the Planet을 번역했습니다.  이 사진은 NASA…",
-          "link": "https://edykim.com/ko/post/earth-from-mars/",
-          "publishedOn": "2023-08-21T01:16:58.000Z",
-          "wordCount": 650,
-          "title": "화성에서 본 지구",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Eli Bendersky's website",
@@ -381,7 +361,7 @@
           "description": "28 August 2023 by Phillip Johnston • Last updated 7 September 2023Embedded Artistry and Memfault are joining forces to host a quarterly embedded discussion panel that is focused on the technical aspects of building embedded systems at scale. We will be featuring guest panel members who are at the cutting edge of embedded development. Our … \nContinue reading \"Best Practices for Safeguarding Your Connected Devices\"\nThe post Best Practices for Safeguarding Your Connected Devices appeared first on Embedded Artistry.",
           "link": "https://embeddedartistry.com/blog/2023/08/28/best-practices-for-safeguarding-your-connected-devices/",
           "publishedOn": "2023-08-28T17:42:32.000Z",
-          "wordCount": 7518,
+          "wordCount": 7575,
           "title": "Best Practices for Safeguarding Your Connected Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
@@ -392,6 +372,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480430",
+          "author": "Nitin Dahad",
+          "description": "Unified Acceleration (UXL) Foundation wants to build largest open ecosystem for accelerated computing, using existing open standards, to foster a multi-architecture and multi-vendor programming platform for all accelerators.\nThe post oneAPI motivates new foundation for open standard accelerated compute appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/oneapi-motivates-new-foundation-for-open-standard-accelerated-compute/",
+          "publishedOn": "2023-09-19T13:45:12.000Z",
+          "wordCount": 4719,
+          "title": "oneAPI motivates new foundation for open standard accelerated compute",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/oneAPI-rgb-3000.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480426",
           "author": "Nitin Dahad",
@@ -428,7 +418,7 @@
           "description": "In low-power IoT and edge AI applications, AI models can be small enough to fit into the internal NVM of an SoC. The on-chip NVM could be used for both code storage and to hold the AI weights and CPU firmware.\nThe post The benefit of non-volatile memory (NVM) for edge AI appeared first on Embedded.com.",
           "link": "https://www.embedded.com/the-benefit-of-non-volatile-memory-nvm-for-edge-ai/",
           "publishedOn": "2023-09-15T09:59:29.000Z",
-          "wordCount": 4149,
+          "wordCount": 5082,
           "title": "The benefit of non-volatile memory (NVM) for edge AI",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/Weebit-NVM-Edge-AI-Image-1.jpg"
         },
@@ -438,7 +428,7 @@
           "description": "Foundries.io teams up with Arduino to give Portenta X8 SoM a ready-made system with hardware and software security and operational features required for compliance with the EU Cyber Resilience Act for the lifetime of each device.\nThe post Foundries.io helps Arduino SoM meet EU security straight out-of-the-box appeared first on Embedded.com.",
           "link": "https://www.embedded.com/foundries-io-helps-arduino-som-meet-eu-security-straight-out-of-the-box/",
           "publishedOn": "2023-09-14T13:11:55.000Z",
-          "wordCount": 3547,
+          "wordCount": 3556,
           "title": "Foundries.io helps Arduino SoM meet EU security straight out-of-the-box",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/Arduino-Portenta_X8.jpg"
         },
@@ -468,7 +458,7 @@
           "description": "How to apply event-driven programming to embedded systems such as your ARM Cortex-M-based TivaC board. In the previous episode of this series, I introduced the...\nThe post Programming embedded systems: event-driven active objects appeared first on Embedded.com.",
           "link": "https://www.embedded.com/programming-embedded-systems-event-driven-active-objects/",
           "publishedOn": "2023-09-12T12:05:48.000Z",
-          "wordCount": 3708,
+          "wordCount": 4641,
           "title": "Programming embedded systems: event-driven active objects",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/embedded_thumbnail-28.jpg"
         },
@@ -481,16 +471,6 @@
           "wordCount": 5280,
           "title": "Tackling edge AI challenges",
           "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/edge-ai-_.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480374",
-          "author": "Emily Newton",
-          "description": "Imaging technology permits nondestructive testing of delicate electronic components. How can manufacturers utilize this technology to produce quality electronics? Manufacturers must develop a thorough testing...\nThe post The role of imaging in electronics quality control appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/the-role-of-imaging-in-electronics-manufacturing-quality-control/",
-          "publishedOn": "2023-09-12T11:41:54.000Z",
-          "wordCount": 4032,
-          "title": "The role of imaging in electronics quality control",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/09/imaging2-.jpg"
         }
       ]
     },
@@ -500,12 +480,22 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1576.php",
+          "author": null,
+          "description": "In the uncharted land between Arduino-wielding kids and qualified electronics engineers emerged an entirely new market for embedded work. In this article, based on my personal experience and observations, I will attempt to outline this young market, the forces operating within it, and the kinds of people involved.\nA short history\nUp until fifteen years ago, give or take, embedded design was done...",
+          "link": "https://www.embeddedrelated.com/showarticle/1576.php",
+          "publishedOn": "2023-09-11T17:29:32.000Z",
+          "wordCount": 3646,
+          "title": "The Backstreet Consultant",
+          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1574.php",
           "author": null,
           "description": "Lesson #10 of my Modern Embedded Programming Video Course explains what stack overflow is and shows what can transpire deep inside an embedded microcontroller when the stack pointer register (SP) goes out of bounds. You can watch the YouTube video to see the details, but...",
           "link": "https://www.embeddedrelated.com/showarticle/1574.php",
           "publishedOn": "2023-09-08T20:34:00.000Z",
-          "wordCount": 5162,
+          "wordCount": 5503,
           "title": "Are We Shooting Ourselves in the Foot with Stack Overflow?",
           "imageUrl": "https://www.state-machine.com/attachments/stack_overflow.jpg"
         },
@@ -515,7 +505,7 @@
           "description": "Background\r\nNordic Semiconductor is a leader in wireless SoC’s, especially in BLE MCU’s with their nRF product line. The nRF5 SDK was released in 2012, and up until recently was the primary SDK for development on their chipsets.\r\n\r\nIn Sept of 2021, Nordic announced that they would be moving all new development over to...",
           "link": "https://www.embeddedrelated.com/showarticle/1573.php",
           "publishedOn": "2023-09-07T16:24:54.000Z",
-          "wordCount": 3856,
+          "wordCount": 3859,
           "title": "nRF5 to nRF Connect SDK migration via DFU over BLE",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vTX_TM8c5zCE-FvgvfFhSw.png"
         },
@@ -535,7 +525,7 @@
           "description": "When I first started out writing embedded code, I was very attracted by the fact that I could do everything. I would start with nothing in the memory and fill it with code, which would bring the device to life - an almost god-like power! I gained great satisfaction from knowing that a system was “all my own work”. I could be confident that I was using resources quite efficiently, as the...",
           "link": "https://www.embeddedrelated.com/showarticle/1571.php",
           "publishedOn": "2023-08-31T16:14:27.000Z",
-          "wordCount": 3442,
+          "wordCount": 3411,
           "title": "Who needs source code?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -545,7 +535,7 @@
           "description": "Last year I was asked by Manning Publications if I wanted to write another book on elliptic curve crypto. I said that as long as I can learn a lot of new math I'd love to. So I spent 6 months learning math and then another year writing. The first three chapters are now online here: http://mng.bz/D9NA\nAlong the way I had proposed to explain an encryption scheme described on NIST as...",
           "link": "https://www.embeddedrelated.com/showarticle/1570.php",
           "publishedOn": "2023-08-30T15:47:59.000Z",
-          "wordCount": 3149,
+          "wordCount": 3125,
           "title": "New book on Elliptic Curve Cryptography",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         },
@@ -555,7 +545,7 @@
           "description": "In this article we’re going to take a look at cycle time, queues, and inventory. Cycle time is a manufacturing term — for anything, not just semiconductors — meaning how long it takes for an individual product to make its way through a manufacturing process, from start to finish. We’re going to try to understand how long it takes to manufacture semiconductors. In...",
           "link": "https://www.embeddedrelated.com/showarticle/1568.php",
           "publishedOn": "2023-08-28T18:32:44.000Z",
-          "wordCount": 32035,
+          "wordCount": 32064,
           "title": "Supply Chain Games: What Have We Learned From the Great Semiconductor Shortage of 2021? (Part 5)",
           "imageUrl": "https://live.staticflickr.com/65535/52973454989_586bfdc6fe_o.png"
         },
@@ -565,7 +555,7 @@
           "description": "I’ve had microcontrollers (MCU) in my pocket for a few decades now. They have always been much more accessible than field programmable gate arrays (FPGA) but within the last few years, that has started to change. Quite a number of companies have developed sub \\$100 FPGA experimenter boards (some quite a bit sub \\$100). The major vendors have low or no cost versions of their tool chains and...",
           "link": "https://www.embeddedrelated.com/showarticle/1567.php",
           "publishedOn": "2023-08-24T16:41:32.000Z",
-          "wordCount": 3935,
+          "wordCount": 3928,
           "title": "Three more things you need to know when transitioning from MCUs to FPGAs",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
@@ -588,6 +578,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/09/announcing-inaugural-google-for-startups-accelerator-ai-first.html",
+          "author": null,
+          "description": "Posted by Yariv Adan, Director of Cloud Conversational AI and Pati Jurek, Google for startups Accelerator Regional Lead\n\n\n\n\nThis article is also shared on Google Cloud Blog\n\n\nToday’s startups are addressing the world's most pressing issues, and artificial intelligence (AI) is one of their most powerful tools. To empower startups to scale their business towards success in the rapidly evolving AI landscape, Google for Startups Accelerator: AI First offers a 10-week, equity-free program for AI-first startups in partnership with Google Cloud. Designed for seed to series A startups based in Europe and Israel, the program helps them grow and build responsibly with AI and machine learning (ML) from the ground up, with access to experts from Google Cloud and Google DeepMind, a mix of in-person and…",
+          "link": "http://developers.googleblog.com/2023/09/announcing-inaugural-google-for-startups-accelerator-ai-first.html",
+          "publishedOn": "2023-09-19T15:00:00.013Z",
+          "wordCount": 2024,
+          "title": "Announcing the Inaugural Google for Startups Accelerator: AI First cohort",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjniiVZFGi0AaeZwJXvIEipRb_yk939Lnr22p6aHSnq-Kb2tP7FSO5m2TJimf8R1QRXYoqhSr_05_H1G3HQB_HpwiC4Au0zz1yxvOhnyj5oqcI83kywSZlRgDXTkKEQdJYgQ5eCqeIjk2ds8ty6pr18wJDoJN38Z1MggGdAByIXsO7h00hVWeaIOM9dWfI/w1200-h630-p-k-no-nu/image2.jpg"
+        },
         {
           "id": "http://developers.googleblog.com/2023/09/global-hispanic-and-latino-developers-share-how-they-use-google-tools.html",
           "author": null,
@@ -678,12 +678,22 @@
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
         {
+          "id": "https://pythoninsider.blogspot.com/2023/09/python-3120-release-candidate-3-now.html",
+          "author": null,
+          "description": "I'm pleased to announce the release of Python 3.12 release candidate 3.\n\nhttps://www.python.org/downloads/release/python-3120rc3/\n \nThis is the second release candidate of Python 3.12.0\nThis release, 3.12.0rc3, is the absolutely last release preview for Python 3.12.\nThere will be no ABI changes from this point forward\n in the 3.12 series. The intent is for the final release of 3.12.0, \nscheduled for Monday, 2023-10-02, to be identical to this release \ncandidate. This really is the last chance to find critical problems in Python 3.12.\nCall to action\nWe strongly encourage maintainers of third-party Python projects to \nprepare their projects for 3.12 compatibilities during this phase, and \nwhere necessary publish Python 3.12 wheels on PyPI to be ready for the \nfinal release of 3.12.0. Any bin…",
+          "link": "https://pythoninsider.blogspot.com/2023/09/python-3120-release-candidate-3-now.html",
+          "publishedOn": "2023-09-19T11:21:00.000Z",
+          "wordCount": 1949,
+          "title": "Python 3.12.0 release candidate 3 now available",
+          "imageUrl": null
+        },
+        {
           "id": "https://pythoninsider.blogspot.com/2023/09/python-3120-release-candidate-2-now.html",
           "author": null,
           "description": "I'm pleased to announce the release of Python 3.12 release candidate 2.\n\nhttps://www.python.org/downloads/release/python-3120rc2/\n \nThis is the second release candidate of Python 3.12.0\nThis release, 3.12.0rc2, is the last release preview for Python 3.12.\nThere will be no ABI changes from this point forward\n in the 3.12 series. The intent is for the final release of 3.12.0, \nscheduled for Monday, 2023-10-02, to be identical to this release \ncandidate. This is the last chance to find critical problems in Python 3.12.\nCall to action\nWe strongly encourage maintainers of third-party Python projects to \nprepare their projects for 3.12 compatibilities during this phase, and \nwhere necessary publish Python 3.12 wheels on PyPI to be ready for the \nfinal release of 3.12.0. Any binary wheels built a…",
           "link": "https://pythoninsider.blogspot.com/2023/09/python-3120-release-candidate-2-now.html",
           "publishedOn": "2023-09-06T11:05:00.000Z",
-          "wordCount": 1933,
+          "wordCount": 1942,
           "title": "Python 3.12.0 release candidate 2 now available",
           "imageUrl": null
         },
@@ -766,7 +776,18 @@
       "title": "Project Zero",
       "feedUrl": "https://googleprojectzero.blogspot.com/feeds/posts/default",
       "siteUrl": "https://googleprojectzero.blogspot.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://googleprojectzero.blogspot.com/2023/09/analyzing-modern-in-wild-android-exploit.html",
+          "author": null,
+          "description": "By Seth Jenkins, Project Zero\n\nIntroduction\n\nIn December 2022, Google’s Threat Analysis Group (TAG) discovered an in-the-wild exploit chain targeting Samsung Android devices. TAG’s blog post covers the targeting and the actor behind the campaign. This is a technical analysis of the final stage of one of the exploit chains, specifically CVE-2023-0266 (a 0-day in the ALSA compatibility layer) and CVE-2023-26083 (a 0-day in the Mali GPU driver) as well as the techniques used by the attacker to gain kernel arbitrary read/write access.\n\nNotably, all of the previous stages of the exploit chain used n-day vulnerabilities:\n\n\nCVE-2022-4262, a vulnerability patched in Chrome that was unpatched in the Samsung browser (i.e. a \"Chrome n-day\"), was used to achieve RCE.\n\n\nCVE-2022-3038, another Chrome n-…",
+          "link": "https://googleprojectzero.blogspot.com/2023/09/analyzing-modern-in-wild-android-exploit.html",
+          "publishedOn": "2023-09-19T16:01:00.000Z",
+          "wordCount": 5370,
+          "title": "Analyzing a Modern In-the-wild Android Exploit",
+          "imageUrl": "https://lh5.googleusercontent.com/RLWmblhMLH7jllwERZNHJ8uQEfG6oGUHTYBkCJ993ZtiLm4hINP6eeFevFPxJwQ4XEEBTRFaJmpuU3Bd5WEUgMy4A1ylY0C9waFCh9rhWdlBRY8JsTAcA0IcwjtusWLhcQ4zH2khOZeVSzXsie6CNn4qMx7rr8lRlrQoqtB4oQC1e3fTFGfq-biw7B2sOO2s_WbOivMityLDoLdhq2uCAZzalffzJxTAiZVG0Q=w1200-h630-p-k-no-nu"
+        }
+      ]
     },
     {
       "title": "Two Cents",
@@ -874,6 +895,56 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/944892/",
+          "author": "corbet",
+          "description": "JDK 21, the reference implementation of the Java 21 language specification,\nhas\nbeen released.  \"This release includes fifteen JEPs [1], including\nthe final versions of Record Patterns (440), Pattern Matching for switch\n(441), and Virtual Threads (444)\".",
+          "link": "https://lwn.net/Articles/944892/",
+          "publishedOn": "2023-09-19T15:39:13.000Z",
+          "wordCount": 150,
+          "title": "JDK 21 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/944874/",
+          "author": "corbet",
+          "description": "The\n6.5.4,\n6.1.54,\n5.15.132, and\n5.10.195\nstable kernel updates have been released; each contains a relatively large\nset of important fixes.",
+          "link": "https://lwn.net/Articles/944874/",
+          "publishedOn": "2023-09-19T14:07:51.000Z",
+          "wordCount": 136,
+          "title": "Four stable kernels released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/944300/",
+          "author": "jake",
+          "description": "The security of digital products has become a topic of regulation\nin recent years. Currently, the European Union is moving forward\nwith another new law, which, if it comes into effect in a form\nclose to the current draft, will affect software developers worldwide.\nThis new proposal, called the \"Cyber\nResilience Act\" (CRA), brings mandatory security requirements on all\ndigital products, both software\nand hardware, that are available in Europe. While it aims at a worthy goal, the\nproposal is causing a stir among open-source communities.",
+          "link": "https://lwn.net/Articles/944300/",
+          "publishedOn": "2023-09-19T13:12:52.000Z",
+          "wordCount": null,
+          "title": "[$] The European Cyber Resilience Act",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/944849/",
+          "author": "corbet",
+          "description": "The Free Software Foundation looks\nforward to the 40th anniversary of the GNU project, coming soon:\n\n\n\tOn September 27, 1983, a computer scientist named Richard Stallman\n\tannounced the plan to develop a free software Unix-like operating\n\tsystem called GNU, for \"GNU's not Unix.\" GNU is the only operating\n\tsystem developed specifically for the sake of users' freedom, and\n\thas remained true to its founding ideals for forty years.",
+          "link": "https://lwn.net/Articles/944849/",
+          "publishedOn": "2023-09-19T10:35:56.000Z",
+          "wordCount": 311,
+          "title": "Forty years of GNU",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/944848/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (chromium, flac, gnome-shell, libwebp, openjdk-11, and xrdp), Fedora (giflib), Oracle (kernel), Red Hat (busybox, dbus, firefox, frr, kpatch-patch, libwebp, open-vm-tools, and thunderbird), Slackware (netatalk), SUSE (flac, gcc12, kernel, libeconf, libwebp, libxml2, and thunderbird), and Ubuntu (binutils, c-ares, libraw, linux-intel-iotg, nodejs, python-django, and vsftpd).",
+          "link": "https://lwn.net/Articles/944848/",
+          "publishedOn": "2023-09-19T10:31:12.000Z",
+          "wordCount": 473,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/944115/",
           "author": "corbet",
           "description": "Processes in a Linux system run within their own virtual address spaces.\nTheir virtual addresses map to physical pages provided by the hardware, but\nthe kernel takes pains to hide the physical addresses of those pages;\nprocesses normally have no way of knowing (and no need to know) where their\nmemory is located in physical memory.  As a result, the system calls for\nmemory management also deal in virtual addresses.  Gregory Price is\ncurrently trying to create an exception to this rule with a\nproposal for a new system call that would operate on memory using physical\naddresses.",
@@ -972,56 +1043,6 @@
           "wordCount": 310,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/943823/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for September 14, 2023 is available.",
-          "link": "https://lwn.net/Articles/943823/",
-          "publishedOn": "2023-09-14T00:59:40.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for September 14, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/944209/",
-          "author": "jake",
-          "description": "The \"Common Vulnerabilities and\nExposures\" (CVE) system was launched late \nin the previous century (September 1999) to track vulnerabilities in\nsoftware.  Over the years since, it has had a somewhat checkered\nreputation, along with some some attempts to\nreplace it, but CVE numbers are still the only effective way to track\nvulnerabilities.  While that can certainly be useful, the\nCVE-assignment (and severity scoring) process is not without its problems.\nThe prominence of CVE numbers, and the consequent increase in \n\"reputation\" for a reporter, have combined to create a system that can\nbe—and is—actively gamed.  Meanwhile, the organizations that oversee the\nsystem are ultimately not doing a particularly stellar job.",
-          "link": "https://lwn.net/Articles/944209/",
-          "publishedOn": "2023-09-13T20:46:31.000Z",
-          "wordCount": null,
-          "title": "[$] The bogus CVE problem",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/944355/",
-          "author": "corbet",
-          "description": "The\n6.5.3,\n6.4.16, and\n6.1.53\nstable kernel updates have been released; each contains a large number of\nimportant fixes.  Note that the 6.4.x line ends with 6.4.16.",
-          "link": "https://lwn.net/Articles/944355/",
-          "publishedOn": "2023-09-13T11:33:35.000Z",
-          "wordCount": 146,
-          "title": "Stable kernels 6.5.3, 6.4.16, and 6.1.53",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/944354/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (e2guardian), Fedora (libeconf), Red Hat (dmidecode, kernel, kernel-rt, keylime, kpatch-patch, libcap, librsvg2, linux-firmware, and qemu-kvm), Slackware (mozilla), SUSE (chromium and shadow), and Ubuntu (cups, dotnet6, dotnet7, file, flac, and ruby-redcloth).",
-          "link": "https://lwn.net/Articles/944354/",
-          "publishedOn": "2023-09-13T11:30:51.000Z",
-          "wordCount": 226,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/944307/",
-          "author": "corbet",
-          "description": "The GCC stack-protector feature detects stack-based buffer overruns by\nputting a canary value on the stack and noticing if that value is changed.\nIt\nturns out, though, that dynamically allocated local variables (such as\nvariable-length arrays and space obtained with alloca()) are\nplaced beyond the canary, so overflows of those variables will not be\ndetected.  As a result, arm64 binaries built with vulnerable versions of\nGCC are not as protected as they should be and need to be rebuilt.\n\n\n\tDynamic allocations are just as susceptible to overflows as other\n\tlocals. In fact, they're arguably more susceptible because they're\n\talmost always arrays, whereas fixed locals are often integers,\n\tpointers, or other types to which variable-length data is never\n\twritten. GCC's own heuristics for when to use a stack guard reflect\n\tthis.\n\n\nKees Cook, meanwhile, has pointed out that\nthe kernel no longer uses variable-length arrays, so kernel builds should\nnot be affected by this vulnerability.",
-          "link": "https://lwn.net/Articles/944307/",
-          "publishedOn": "2023-09-12T21:18:11.000Z",
-          "wordCount": 2420,
-          "title": "A GCC -fstack-protector vulnerability on arm64",
-          "imageUrl": null
         }
       ]
     },
@@ -1057,6 +1078,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-07",
+          "author": null,
+          "description": "How is code generation with GenAI different from more \"traditional\" code\n     generators? The newest memo in  Birgitta Böckeler's\n     explorations of GenAI talks about abstraction\n     levels in software engineering, and on which levels GenAI sits in the\n     translation of our thoughts into zeros and ones.\nmore…",
+          "link": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-07",
+          "publishedOn": "2023-09-19T07:57:00.000Z",
+          "wordCount": 6308,
+          "title": "How is GenAI different from other code generators?",
+          "imageUrl": "https://martinfowler.com/logo-sq.png"
+        },
         {
           "id": "https://martinfowler.com/articles/creating-integrated-tech-strategy.html#RespondingToTheEverChangingFuture",
           "author": null,
@@ -1153,16 +1184,6 @@
           "wordCount": 4091,
           "title": "Upgrading LPC4322-based Debug Probe Firmware on RT10xx",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/08/nxp-i.mx-rt1010-evk-board.jpg"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38597",
-          "author": "Erich Styger",
-          "description": "The first release of the Visual Studio Code Extension from NXP supports SDKs with version 2.13. This article shows two ways how to import and build projects with previous SDK versions Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/08/20/vs-code-importing-pre-v2-13-0-mcuxpresso-sdk-projects/",
-          "publishedOn": "2023-08-20T17:39:59.000Z",
-          "wordCount": 3903,
-          "title": "VS Code: Importing pre-v2.13.0 MCUXpresso SDK Projects",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2016/09/intro-sumo-robot.png"
         }
       ]
     },
@@ -1170,18 +1191,7 @@
       "title": "The ESP Journal - Medium",
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
-      "articles": [
-        {
-          "id": "https://medium.com/p/301201c24cba",
-          "author": "Chirag Atal",
-          "description": "Today Espressif is launching the ESP ZeroCode. This is a web application that lets you quickly prepare Matter-certifiable firmware, as per…",
-          "link": "https://blog.espressif.com/announcing-esp-zerocode-301201c24cba?source=rss----d5414d5dee73---4",
-          "publishedOn": "2023-08-21T04:35:36.000Z",
-          "wordCount": 3215,
-          "title": "Announcing ESP ZeroCode",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*QrZXmX5_xZsKcefl26Nw_Q.jpeg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "/* the devil is in the detail */",
@@ -1301,7 +1311,7 @@
           "description": "Before the internet took off in the 1990s, COBOL was the most popular language, measured in lines of code in production use. People who program in Cobol often have a strong business focus, and don’t hang out on sites used aggregated by surveys of programming language use; use of the language is almost completely invisible […]",
           "link": "https://shape-of-code.com/2023/09/17/some-data-on-the-size-of-cobol-programs-paragraphs/",
           "publishedOn": "2023-09-17T22:35:00.000Z",
-          "wordCount": 1602,
+          "wordCount": 1607,
           "title": "Some data on the size of Cobol programs/paragraphs",
           "imageUrl": null
         },
@@ -1311,7 +1321,7 @@
           "description": "Careful analysis is required to extract reliable conclusions from data. Sloppy analysis can lead to incorrect conclusions being drawn. The U-shaped plots cited as evidence for an ‘optimal’ number of LOC in a function/method that minimises the number of reported faults in a function, were shown to be caused by a mathematical artifact. What patterns […]",
           "link": "https://shape-of-code.com/2023/09/10/optimal-function-length-an-analysis-of-the-cited-data/",
           "publishedOn": "2023-09-10T22:17:13.000Z",
-          "wordCount": 1856,
+          "wordCount": 1857,
           "title": "Optimal function length: an analysis of the cited data",
           "imageUrl": null
         },
@@ -1331,18 +1341,8 @@
           "description": "The available evidence on readability is virtually non-existent, mostly consisting of a handful of meaningless experiments. Every now and again somebody runs an experiment comparing the readability of X and Y. All being well, this produces a concrete result that can be published. I think that it would be a much more effective use of […]",
           "link": "https://shape-of-code.com/2023/08/27/readability-of-anonymous-inner-classes-and-lambda-expressions/",
           "publishedOn": "2023-08-27T21:29:59.000Z",
-          "wordCount": 1540,
+          "wordCount": 1542,
           "title": "Readability of anonymous inner classes and lambda expressions",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8109",
-          "author": "Derek Jones",
-          "description": "Naming is a complicated topic, with factors including the semantic associations triggered by a name in the developer’s mind (e.g., arithmetic or bitwise operand), visual similarity to other identifiers, and usability (e.g., fewer characters). Within a method, local variables coexist with other local variables that are visible over some number of lines of code. Does […]",
-          "link": "https://shape-of-code.com/2023/08/20/local-variable-naming-some-previously-unexplored-factors/",
-          "publishedOn": "2023-08-20T22:02:12.000Z",
-          "wordCount": 1531,
-          "title": "Local variable naming: some  previously unexplored factors",
           "imageUrl": null
         }
       ]
@@ -1368,7 +1368,7 @@
           "description": "This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]\nThe post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.",
           "link": "https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/",
           "publishedOn": "2023-08-22T13:00:36.000Z",
-          "wordCount": 3139,
+          "wordCount": 3140,
           "title": "So long, and thanks for all the insights",
           "imageUrl": "https://i0.wp.com/staceyoniot.com/wp-content/uploads/2023/08/2020-01-08.jpg?fit=943%2C694&ssl=1"
         },
@@ -1401,7 +1401,7 @@
           "description": "뭔가 주장하려고 쓴 글은 아닙니다.변화를 기록해보고자 정리한 글입니다. 서버의 변화 1997년 HP서버를 모 기업에 납품하던 기억이 납니다.미국에서 조립되어 오기 때문에 무진동차에 실어 옮겼습니다.저는 검수한다고 주차장에서부터 따라다녔던 기억이… 주문 후 제작.배송에 5~6개월이 걸렸기 때문에,프로젝트 시작할 때 주문하고, 개발을 완료할 때쯤 서버가 도착했습니다.분석, 설계, 개발, 구현 – 폭포수 계단 방식(Waterfall)으로 일할 수 밖에 없었죠.일정을 그렇게 맞추도록 일을... Continue Reading →",
           "link": "https://subokim.wordpress.com/2023/09/10/what-changed-from-cloud/",
           "publishedOn": "2023-09-10T14:27:54.000Z",
-          "wordCount": 3487,
+          "wordCount": 3496,
           "title": "클라우드가 일반화되면서 달라진 점",
           "imageUrl": "https://subokim.files.wordpress.com/2023/09/server111.jpg"
         }
@@ -1459,6 +1459,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=96949",
+          "author": "이정환",
+          "description": "“대통령님, 내 손에 피가 묻어있는 것 같습니다.” 영화 ‘오펜하이머’의 한 장면이다. 원자폭탄의 아버지로 불리는 로버트 오펜하이머가 울상을 짓자 해리 트루먼(당시 미국 대통령)이 쏘아붙인다. “핵 폭탄을 누가 만들었는지, 그딴 거 신경이나 쓸 거 같소? 투하 명령을 내린 건 납니다. 히로시마와 나가사키가 당신과 무슨 상관이란 말이요?” 문을 닫고 나가는 오펜하이머 뒤로 트루먼의 짜증섞인 목소리가 들려온다. “저 울보를...\nThe post 오펜하이머 모멘트, 파멸의 버튼을 누가 눌렀는지 묻는 순간이 온다. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96949",
+          "publishedOn": "2023-09-19T09:57:12.000Z",
+          "wordCount": 5265,
+          "title": "오펜하이머 모멘트, 파멸의 버튼을 누가 눌렀는지 묻는 순간이 온다.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/Oppenheimer-copy.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96937",
+          "author": "민주언론시민연합",
+          "description": "윤석열 정권이 탐사보도 전문매체 뉴스타파를 계속 탄압하고 있습니다. 검찰이 지난 7월 대장동 개발사업 특혜 비리 사건 주범인 김만배 씨가 허위 인터뷰를 했다며 수사 상황을 흘리고(중앙일보 단독), 9월 1일 신학림 전 뉴스타파 전문위원(전 언론노조 위원장)에 대해 압수수색을 진행하며 본격적인 언론탄압과 여론몰이가 시작됐습니다. 9월 5일 대통령실은 ‘고위 관계자’란 익명을 통해 “희대의 대선 공작 사건”이라 지목했고, 김기현 국민의힘...\nThe post ‘김만배 인터뷰’ 검찰발 인용 보도 84%, 취재도 검증도 반론도 없는 받아쓰기 언론 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96937",
+          "publishedOn": "2023-09-19T06:46:31.000Z",
+          "wordCount": 4730,
+          "title": "‘김만배 인터뷰’ 검찰발 인용 보도 84%, 취재도 검증도 반론도 없는 받아쓰기 언론",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/writing-5283739_1280.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96791",
+          "author": "민노씨",
+          "description": "[제네바 오전 8시] 국제노동기구(ILO) 고용정책국장 이상헌 박사와 나누는 노동과 세계 그리고 인간에 관한 이야기 세상을 바라보는 자의 좌표가 있다. 그는 노동자이기도 하고, 교수이기도 하며, 이성애자이기도 하고, 동성애자이기도 하다. 그는 남성이기도 하고, 여성이기도 하며, 나이기도 하고, 당신이기도 하다. 어떻게 세상을 볼 것인가. 그렇게 물을 수 있다. 하지만 세상을 바라보는 당신은 지금 어디에 있는가. 당신이 자리한 정치사회경제적...\nThe post 찌질함을 드러낼 수 있는 용기 appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96791",
+          "publishedOn": "2023-09-19T01:20:44.000Z",
+          "wordCount": 6223,
+          "title": "찌질함을 드러낼 수 있는 용기",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/compass-1753659_1280.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=96909",
+          "author": "이정환",
+          "description": "전직 트위터 직원의 폭로. 세금 59조 원 ‘펑크’, 나라 살림 괜찮나. 조국 아들 인턴 증명서 논란, 최강욱 의원직 상실. 조국 재판도 불리하게 됐다. 민주당 돈봉투 첫 실토. 병원에 실려간 이재명, 영장 때린 검찰. “한동훈의 악담, 잔인하고 오만하다.” “윤석열이 풀어야 한다.” 대법원장 후보자의 과거, 이균용 3대 쟁점. 꽂고, 자르고, 폭주하는 방통위. 해법과 대안. “초등학생 65%는 지금...\nThe post “트럼프와 머스크가 저를 공격하고 있습니다”: 슬로우레터 9월19일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/96909",
+          "publishedOn": "2023-09-18T21:22:20.000Z",
+          "wordCount": 6037,
+          "title": "“트럼프와 머스크가 저를 공격하고 있습니다”: 슬로우레터 9월19일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/1577431082.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=96846",
           "author": "임자운",
@@ -1605,7 +1645,7 @@
           "description": "[지역소멸의 해법] 한종호 소풍벤처스 파트너, 전 강원창조혁신센터장에게 듣는 지역 활성화 해법과 국가 R&D의 딜레마, 그리고 지역의 매력과 그 조건. ‘지역소멸’이라는 표현은 일본 정치인 마스다 히로야가 2014년 [지방소멸]이라는 책을 발간하면서 널리 쓰이기 시작했습니다. 지역주민으로는 공포스럽고, 모멸감을 느낄 수도 있는 충격요법식 표현이었죠. 하지만 초고령화와 인구 감소는 더 큰 공포였습니다. 책에 앞서 일본 국토교통성은 [국토의 장기전망: 중간보고서] (2011)을...\nThe post 지역소멸, 돈 준다 집 준다로 해결할 수 없다 appeared first on 슬로우뉴스.",
           "link": "https://slownews.kr/96308",
           "publishedOn": "2023-09-11T04:46:48.000Z",
-          "wordCount": 7559,
+          "wordCount": 7551,
           "title": "지역소멸, 돈 준다 집 준다로 해결할 수 없다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/kansuikoen-1400x700-1.jpg"
         },
@@ -1618,46 +1658,6 @@
           "wordCount": 6420,
           "title": "그들에게 철도 산업은 죽은 고래였다: 슬로우레터 9월11일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/KTX-Sancheon-1000x576.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=96390",
-          "author": "이정환",
-          "description": "다음은 8월24일 미디어오늘 주최로 열린 미디어의 미래 컨퍼런스 세션 가운데 집중 토론 내용을 정리한 것이다. 모더레이터는 슬로우뉴스 대표 이정환이고 토론자는 숙명여대 교수 강형철과 건국대 교수 황용석, 이화여대 교수 최지향, 방송광고공사 연구위원 강신규다. 시간 관계로 다 하지 못한 질문과 답변을 이정환과 슬로우뉴스에 준독립편집자(editor-at-large)로 참여하고 있는 펜실베니아주립대 교수 김낙호가 보완했다. 이 기사는 미디어오늘에 공동 게재한다. 질문 1:...\nThe post “저널리즘 생태계를 흔드는 권력과 자본, 질적 혁신과 신뢰 회복이 해법이다.” appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/96390",
-          "publishedOn": "2023-09-08T02:12:24.000Z",
-          "wordCount": 7971,
-          "title": "“저널리즘 생태계를 흔드는 권력과 자본, 질적 혁신과 신뢰 회복이 해법이다.”",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/4275697636-scaled-e1694139049288.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=96362",
-          "author": "이정환",
-          "description": "장기 저성장 국면에 들어섰다. 화웨이 새 스마트폰에 미국이 화들짝. 일본도 무인 달 탐사선 발사. 이화영이 또 말을 바꿨다. 더 깊게 읽기. 김만배 인터뷰 사건의 핵심(지난 이야기). 뉴스타파의 반격. 윤석열 정부와 검찰의 반격. 새롭게 확인된 사실. 신학림: “그러면 조우형은 가가지고 박길배하고 커피 한 잔 마시고 온 거야? 아니면 윤석열하고 마시고 온 거야?” 김만배: “아니, 아니, 혼자,...\nThe post 경험하지 못한 성장률, 한국 경제 엔진이 꺼져간다: 슬로우레터 9월8일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/96362",
-          "publishedOn": "2023-09-07T21:57:44.000Z",
-          "wordCount": 5848,
-          "title": "경험하지 못한 성장률, 한국 경제 엔진이 꺼져간다: 슬로우레터 9월8일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/2496802.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=96324",
-          "author": "이정환",
-          "description": "윤석열 커피, 특검까지 갈까. 뉴스타파 퇴출? 문화부에 서울시까지 거든다. 김만배 두 번째 출소. ‘3개월짜리’ 이준석, 진짜 석 달만에 쫓아냈다. ‘건전 재정’ 외치더니 금전 돌려 막기 153조 원. R&D 예산, 이렇게 후려쳐도 되나? “국민 뜻에 반하면 끌어내려야 민주주의.” 성범죄에 너그러웠던 대법원장 후보자. 국방부 장관의 거짓말. 기아차 노동자 사망사고. 킬러 문항 뺐더니 수학 변별력 줄었다. 오늘의 TMI....\nThe post 커피를 누가 타줬는지가 중요한 게 아니다: 슬로우레터 9월7일. appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/96324",
-          "publishedOn": "2023-09-06T22:07:30.000Z",
-          "wordCount": 5983,
-          "title": "커피를 누가 타줬는지가 중요한 게 아니다: 슬로우레터 9월7일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/45767119504_7525ff1e5f_b.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=96302",
-          "author": "민주언론시민연합",
-          "description": "교사들이 서초구 초등학교에서 숨진 교사의 49재 추모일을 기리며 9월 4일을 ‘공교육 멈춤의 날’로 정하고, 전국에서 동시다발로 집회를 열었습니다. 교사들은 서초구 초등학교 교사 사망 진상규명과 아동학대 관련법 즉각 개정을 요구하며 ‘공교육 정상화’, ‘안전하게 교육할 권리’를 촉구했는데요. 대규모 집회를 앞두고 교육부는 집단행동을 위한 연가·병가 사용이나 재량휴업일은 위법이라 강조하며 교사들의 집단행동에 압력을 행사했습니다. 그러나 잇따른 교사 사망 소식까지...\nThe post 공교육 멈춤의 날, 달 가리키는데 손가락 타령하는 언론 appeared first on 슬로우뉴스.",
-          "link": "https://slownews.kr/96302",
-          "publishedOn": "2023-09-06T10:22:18.000Z",
-          "wordCount": 5131,
-          "title": "공교육 멈춤의 날, 달 가리키는데 손가락 타령하는 언론",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/09/asdfasdfa.jpg"
         }
       ]
     },
@@ -1692,9 +1692,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591797/arm-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-arm-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
           "publishedOn": "2023-09-15T02:10:17.000Z",
-          "wordCount": 5488,
-          "title": "ARM 투자의견 및 ARM 주가 전망(9/18 업뎃)",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/ARM-나스닥-상장.jpg"
+          "wordCount": 5601,
+          "title": "ARM 투자의견 및 ARM 주가 전망(9/19 업뎃)",
+          "imageUrl": null
         },
         {
           "id": "https://happist.com/?p=591795",
@@ -1742,9 +1742,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591714/%ec%8a%a4%ed%83%80%eb%b2%85%ec%8a%a4-%ed%98%b8%eb%b0%95%eb%9d%bc%eb%96%bc-%eb%a7%88%ec%bc%80%ed%8c%85-%ec%82%ac%eb%a1%80",
           "publishedOn": "2023-09-12T03:18:49.000Z",
-          "wordCount": 6321,
+          "wordCount": 6306,
           "title": "스타벅스 호박라떼 마케팅 사례와 스타벅스 커뮤니티 전략",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/낙엽과-스타벅스-호박라떼-.jpg"
+          "imageUrl": null
         },
         {
           "id": "https://happist.com/?p=591696",
@@ -1762,9 +1762,9 @@
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
           "link": "https://happist.com/591659/%ec%a0%84%ea%b3%a1%ed%95%ad-%ec%9d%bc%eb%aa%b0",
           "publishedOn": "2023-09-06T03:17:27.000Z",
-          "wordCount": 5436,
+          "wordCount": 5394,
           "title": "9/5 전곡항 일몰 출사기, 노을 속 지는 해는 아름다웠다.",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/09/전곡항-일몰-0387.jpg"
+          "imageUrl": null
         }
       ]
     },
@@ -1773,6 +1773,26 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=77449",
+          "author": "veritaholic",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 7월 26일 스프에 쓴 글입니다. 인간은 사회적 동물이며, 집단을 이룸으로써 만물의 영장이 될 수 있었습니다. 인간은 협력을 통해 다른 종과 차원이 다른 번영을 이루었습니다. 오늘날 우리의 의식주를 비롯한 삶의 거의 모든 요소에는 → 더 보기",
+          "link": "https://newspeppermint.com/2023/09/18/npsp_politicizeclimate/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_politicizeclimate",
+          "publishedOn": "2023-09-19T03:00:03.000Z",
+          "wordCount": 1911,
+          "title": "[뉴페@스프] 정치를 위해 과학적 사실을 부정하는 그 나라는 어디인가",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
+          "id": "https://newspeppermint.com/?p=77807",
+          "author": "NewsPeppermint",
+          "description": "내년 대선 본선까지 아직 1년도 더 남았지만, 미국 언론에는 대선 관련 뉴스가 틈만 나면 나옵니다. 도널드 트럼프 전 대통령의 기소 관련 소식도 결국은 공화당 내에서 맞수가 없어 보이는 유력한 차기 대권 후보 트럼프에 관한 이야기이므로, 대선 뉴스라고도 할 수 있었죠. 바이든 대통령에 관해선 최근 다양한 경로로 지지율이 낮다, 인기가 없다는 기사들이 나옵니다. 상대적으로 민주당을 지지하는 성향이 강한 뉴욕타임스 같은 언론에서도 그렇죠. 칼럼니스트 로스 두댓도 그 점을 살펴본 칼럼을 썼습니다. 이 → 더 보기",
+          "link": "https://newspeppermint.com/2023/09/18/npsp_unpopularbiden/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_unpopularbiden",
+          "publishedOn": "2023-09-18T22:10:03.000Z",
+          "wordCount": 1444,
+          "title": "인기 없는 현직 대 강점 잃은 전직의 리턴 매치, 결과는 어떨까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=77433",
           "author": "ingppoo",
@@ -1851,26 +1871,6 @@
           "publishedOn": "2023-09-03T22:30:42.000Z",
           "wordCount": 1439,
           "title": "지구를 위해 미국인들이 해야 하는 일 중 하나는",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77340",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 7월 10일 스프에 쓴 글입니다. *** 스프에도 소수자 우대 정책, 대법원 판결, 기여입학제에 관해 글을 여러 편 썼네요. 아메리카노에서도 이 사안을 자세히 풀어 설명했습니다. 지난달 말 미국 대법원이 회기 마지막에 굵직굵직한 판결을 → 더 보기",
-          "link": "https://newspeppermint.com/2023/09/01/npsp_scotuslegacyadmission/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_scotuslegacyadmission",
-          "publishedOn": "2023-09-01T22:59:28.000Z",
-          "wordCount": 2126,
-          "title": "[뉴페@스프] ‘부모 찬스’ 그 자체인 기여입학제가 유지되는 이유 그리고 전망",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77329",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 7월 8일 스프에 쓴 글입니다. 지구 곳곳에서 예년과 다른 날씨, 기후가 나타나는 건 더는 뉴스가 되지 않을 만큼 흔해졌습니다. 이상기후가 잦아진 이유에 관해서는 대부분 과학자가 합의에 이른 것으로 보입니다. 바로 인간의 활동이 → 더 보기",
-          "link": "https://newspeppermint.com/2023/08/30/npsp_saveelectricity/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_saveelectricity",
-          "publishedOn": "2023-08-30T22:59:54.000Z",
-          "wordCount": 2130,
-          "title": "[뉴페@스프] 기후변화로 더욱 부족해진 전기… 뒤집어 접근해보자는 제안",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
