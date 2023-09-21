@@ -2,10 +2,173 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mononn.github.io/newsfeed/index.html</id>
     <title>News Feed</title>
-    <updated>2023-09-20T20:12:49.619Z</updated>
+    <updated>2023-09-21T20:11:36.215Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://mononn.github.io/newsfeed/index.html"/>
     <link rel="self" href="https://mononn.github.io/newsfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Revisiting the kernel's preemption models (part 1)]]></title>
+        <id>https://lwn.net/Articles/944686/</id>
+        <link href="https://lwn.net/Articles/944686/"/>
+        <updated>2023-09-21T14:51:27.000Z</updated>
+        <summary type="html"><![CDATA[All that Ankur Arora seemingly wanted to do with this
+patch set was to make the process of clearing huge pages on x86
+systems go a little faster.  What resulted was an extensive discussion on
+the difficulties of managing preemption correctly in the kernel.  It may be
+that some changes will come to the plethora of preemption models that the
+kernel currently offers.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Red Hat community commitment to open source]]></title>
+        <id>b46be16a-3b92-4988-b8e6-5a089c0369a5</id>
+        <link href="https://developers.redhat.com/articles/2023/09/21/red-hat-community-commitment-open-source"/>
+        <updated>2023-09-21T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The increasing adoption of open source software underscores its tremendous value and impact. According to Gitnux, 78% of businesses use open source technologies, and about 96% of current applications contain at least one open source component. Developers also recognize the value of open source software in enhancing their skill sets and enabling them to collaborate on projects that push technological boundaries.
+Red Hat is the world’s largest open source company and a leading contributor to the Cloud Native Computing Foundation (CNCF). We strive to develop products and technologies that advance both the open source community and the digital landscape.
+Our extensive range of open source solutions encompasses operating systems, middleware, storage, container services, and developer tools and …]]></summary>
+        <author>
+            <name>Mithun T. Dhar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Thursday]]></title>
+        <id>https://lwn.net/Articles/945173/</id>
+        <link href="https://lwn.net/Articles/945173/"/>
+        <updated>2023-09-21T09:44:50.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (mutt, netatalk, and python2.7), Fedora (chromium, golang-github-prometheus-exporter-toolkit, golang-github-xhit-str2duration, and golang-gopkg-alecthomas-kingpin-2), Oracle (dmidecode, frr, libwebp, open-vm-tools, and thunderbird), Red Hat (libwebp and open-vm-tools), SUSE (cups, frr, mariadb, openvswitch3, python39, qemu, redis7, rubygem-rails-html-sanitizer, and skopeo), and Ubuntu (bind9, cups, and libppd).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[슬로우 데이터] 이재명 체포 동의안, 1표 차이가 갖는 의미.]]></title>
+        <id>https://slownews.kr/?p=97110</id>
+        <link href="https://slownews.kr/97110"/>
+        <updated>2023-09-21T09:25:51.000Z</updated>
+        <summary type="html"><![CDATA[이재명 체포 동의안이 1표 차이로 가결됐다. 재석의원 295명 가운데 찬성 149명, 반대 136명, 기권 6명, 무효 4명이었다. 이게 왜 중요한가. 어떻게 될까? 이재명의 운명은? 역사에 가정은 없지만.
+The post [슬로우 데이터] 이재명 체포 동의안, 1표 차이가 갖는 의미. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable kernel 5.10.196]]></title>
+        <id>https://lwn.net/Articles/945132/</id>
+        <link href="https://lwn.net/Articles/945132/"/>
+        <updated>2023-09-21T08:29:34.000Z</updated>
+        <summary type="html"><![CDATA[The 5.10.196 stable kernel has been
+released.  It fixes a single regression:
+
+This release is only needed by any 5.10.y user that uses configfs, it
+resolves a regression in 5.10.195 in that subsystem.  Note that many
+kernel subsystems use configfs for configuration so to be safe, you
+probably want to upgrade if you are not sure.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's new for developers in JDK 21]]></title>
+        <id>2be68ef1-4688-4937-afd9-ba002549dc90</id>
+        <link href="https://developers.redhat.com/articles/2023/09/21/whats-new-developers-jdk-21"/>
+        <updated>2023-09-21T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In an exciting development for Java developers, this September 19th marked the release of JDK 21. This release contains many new capabilities that benefit the Java ecosystem, including virtual threads, record patterns, and sequenced collections. There are also some interesting features in the preview for JDK 21, such as string templates, scoped values, and structured concurrency. This article highlights six new features in this release.
+Virtual threads
+Java's traditional threading model can quickly become an expensive operation if the application creates more threads than the operating system (OS) can handle. Also, in cases where the thread lifecycle is not long, the cost of creating a thread is high.
+Enter virtual threads, which solve this problem by mapping Java threads to carrier thread…]]></summary>
+        <author>
+            <name>Shaaf, Syed</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How SELinux improves Red Hat Enterprise Linux security]]></title>
+        <id>32e3bc93-0b1a-42ff-82de-d8a645c61134</id>
+        <link href="https://developers.redhat.com/articles/2023/09/21/how-selinux-improves-red-hat-enterprise-linux-security"/>
+        <updated>2023-09-21T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Security is a paramount concern in the digital world, and operating systems play a critical role in maintaining data and systems' integrity, confidentiality, and availability. One powerful security feature that stands out in the realm of Linux-based operating systems, notably Red Hat Enterprise Linux (RHEL), is  Security-Enhanced Linux (SELinux).
+This article is the first in a two-part series that will cover all aspects of SELinux, including different modes (enforcing), benefits, how it impacts running web applications on RHEL servers, creating custom policies, deploying the same configuration across a fleet of servers, and packaging SELinux policies in containers.
+In this article, we will delve into SELinux on RHEL, focusing on understanding its core concepts, benefits, and how it enhance…]]></summary>
+        <author>
+            <name>Nikhil Mungale</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Network testing with testpmd and noisy_vnf]]></title>
+        <id>f3a11ccf-dc3e-4f1e-b869-305dee44ed80</id>
+        <link href="https://developers.redhat.com/articles/2023/09/21/network-testing-testpmd-and-noisyvnf"/>
+        <updated>2023-09-21T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Developers of software-defined network (SDN) frameworks and applications often use the DPDK utility testpmd to test DPDK features and benchmark network hardware performance. In the upcoming DPDK release 23.07, we've extended the functionality of the noisy_vnf module in testpmd to allow better simulations of heavily loaded servers or complex workloads. This can allow for more realistic benchmarks.
+The default DPDK forwarding mode is io, which reads a batch of packets from an Rx queue and writes those packets directly to a Tx queue. Because the packets aren't processed or modified, the throughput achieved with this forwarding mode could be considered a theoretical maximum and not likely to be reproduced by real-world applications. Other forwarding modes like macswap and 5tswap process and mo…]]></summary>
+        <author>
+            <name>Mike Pattrick</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for September 21, 2023]]></title>
+        <id>https://lwn.net/Articles/944436/</id>
+        <link href="https://lwn.net/Articles/944436/"/>
+        <updated>2023-09-21T06:54:18.000Z</updated>
+        <summary type="html"><![CDATA[The LWN.net Weekly Edition for September 21, 2023 is available.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[구타유발자도 아니고… 관계유발자? 그게 도대체 뭔가!]]></title>
+        <id>https://slownews.kr/?p=96945</id>
+        <link href="https://slownews.kr/96945"/>
+        <updated>2023-09-21T05:21:17.000Z</updated>
+        <summary type="html"><![CDATA[[솔루션 저널리즘 프로젝트: 지역소멸] 전주에서 다양한 사업과 실험을 진행 중인 즐거운도시연구소 대표 정수경 박사에게 지역소멸의 현실적인 의미와 관계유발자의 개념 그리고 관계를 쌓는 방법에 관해 물었습니다. 지난 8월 말에서 9월 초까지 지리산포럼2023에 다녀왔다. 따뜻하고 아름다운 기억이다. 셋째 날 아침, ‘로컬’에 관한 발제와 토론이 있었다. 조희정(더가능연구소)의 발제를 통해 ‘관계인구’라는 단어를 처음 알았다. 정수경(즐거운도시연구소)의 토론으로 ‘관계유발자’라는 단어도 처음...
+The post 구타유발자도 아니고… 관계유발자? 그게 도대체 뭔가! appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>민노씨</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[23년 9월 FOMC  결과 리뷰]]></title>
+        <id>https://happist.com/?p=591863</id>
+        <link href="https://happist.com/591863/23%eb%85%84-9%ec%9b%94-fomc-%ea%b2%b0%ea%b3%bc"/>
+        <updated>2023-09-21T03:31:29.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[날마다 아침 7시 슬로우레터, 이렇게 만듭니다.]]></title>
+        <id>https://slownews.kr/?p=97088</id>
+        <link href="https://slownews.kr/97088"/>
+        <updated>2023-09-21T02:18:08.000Z</updated>
+        <summary type="html"><![CDATA[슬로우레터 100회를 맞아 구독자 여러분들이 궁금해하실 만한 내용을 간단히 인터뷰 형식으로 정리해 봤습니다. 슬로우레터는 벌써 구독자 수가 2200명이 넘었고요. 평균 오픈율은 9월21일 기준으로 55.6%입니다. 카카오의 제안으로 9월4일부터는 아침 7시~9시 사이에 모바일 다음 메인에 슬로우레터가 고정 노출되고 있습니다. 뉴스레터와 슬로우뉴스 본판, 오마이뉴스, 얼룩소, 그리고 다음 채널까지 슬로우레터에서만 하루 페이지뷰가 1만~10만 사이를 오가는 것 같습니다. 이슈에 따라...
+The post 날마다 아침 7시 슬로우레터, 이렇게 만듭니다. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] ‘줄 서서 먹는 맛집’, ‘나만 아는 보석 같은 식당’… 어디를 더 가고 싶을까]]></title>
+        <id>https://newspeppermint.com/?p=77480</id>
+        <link href="https://newspeppermint.com/2023/09/20/npsp_influencerrestaurants/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_influencerrestaurants"/>
+        <updated>2023-09-20T22:59:43.000Z</updated>
+        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 7월 31일 스프에 쓴 글입니다. 뉴욕 맨하탄 이스트빌리지에는 제가 자주 찾는 단골 식당이 하나 있습니다. 미슐랭 별을 받은 프랑스 식당에서 경력을 쌓은 한국인 셰프가 한식과 프랑스식을 섞은 퓨전 요리를 선보이는 식당으로, 음식은 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[이재명 운명의 날, 3가지 시나리오: 슬로우레터 9월21일.]]></title>
+        <id>https://slownews.kr/?p=97067</id>
+        <link href="https://slownews.kr/97067"/>
+        <updated>2023-09-20T22:05:25.000Z</updated>
+        <summary type="html"><![CDATA[세 가지 빅 이벤트. 이재명은 왜 그랬을까. 이탈표 28표에 달렸다. 세 가지 시나리오와 세 가지 전망. 윤미향 후원금 횡령, 2심에서 징역형+집행유예. 곳곳이 폭탄, 김행의 과거 발언 논란. “이완용 친일 어쩔 수 없었다”, 신원식 발언도 논란. KBS 수신료 분리했더니 96만 가구 미납. 해법과 대안. 리쇼어링 10년, 참담한 실패였다. 그 아파트엔 ‘문앞까지 배송’ 안 되는 이유. 오늘의...
+The post 이재명 운명의 날, 3가지 시나리오: 슬로우레터 9월21일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Leveraging Your Toolchain to Improve Security]]></title>
         <id>https://embeddedartistry.com/?p=35272</id>
@@ -112,7 +275,7 @@ Both amazing tools meet together in the Ansible Middleware community, providing 
         <id>https://slownews.kr/?p=97009</id>
         <link href="https://slownews.kr/97009"/>
         <updated>2023-09-20T06:39:35.000Z</updated>
-        <summary type="html"><![CDATA[한국 사람들은 주중에 0시5분에 잠들어서 7시9분에 일어난다. 주말에는 0시26분에 잠들어서 7시55분에 일어난다. 주중에는 6시간18분, 주말에는 6시간 26분을 잔다. (소숫점 이하 버림.) 한국보다 더 적게 자는 나라는 일본 뿐이다. 주중에는 6시간16분, 주말에는 6시간 24분을 잔다. 이게 왜 중요한가. 눈길을 끄는 데이터. 더 깊이 읽기. 결론: 일에서 벗어나야 잘 잘 수 있다. 참고 문헌.
+        <summary type="html"><![CDATA[한국 사람들은 주중에 0시5분에 잠들어서 7시9분에 일어난다. 주말에는 0시26분에 잠들어서 7시55분에 일어난다. 주중에는 6시간18분, 주말에는 6시간26분을 잔다. (소숫점 이하 버림.) 한국보다 더 적게 자는 나라는 일본 뿐이다. 주중에는 6시간16분, 주말에는 6시간24분을 잔다. 이게 왜 중요한가. 눈길을 끄는 데이터. 더 깊이 읽기. 결론: 일에서 벗어나야 잘 잘 수 있다. 참고 문헌.
 The post [슬로우 데이터] 가장 적게 자는 나라는 일본과 한국. appeared first on 슬로우뉴스.]]></summary>
         <author>
             <name>이정환</name>
@@ -126,6 +289,20 @@ The post [슬로우 데이터] 가장 적게 자는 나라는 일본과 한국. 
         <summary type="html"><![CDATA[당뇨 치료제로 개발된 약의 부작용으로 체중이 감소하는 데 착안해 개발된 새로운 비만치료제가 미국에서 열풍입니다. 약의 기전이 아직 완전히 알려지지 않았고, 출시된 지 얼마 되지 않아 장기적인 효과에 대한 데이터도 없지만, 수많은 이들이 오랫동안 관심 가졌던 다이어트에 효과가 있다는 소문이 나자 여러 비만치료제는 당뇨 진단을 받지 않으면 의료보험 적용을 받지 못해 대단히 비싼데도 불구하고 불티나게 팔리고 있습니다. 건강에 관한 칼럼을 쓰는 의사 애런 캐럴이 뉴욕타임스에 비만치료제와 항우울제를 복용하고 느낀 점을 칼럼으로 → 더 보기]]></summary>
         <author>
             <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Exploring printf on Cortex-M]]></title>
+        <id>https://interrupt.memfault.com/blog/printf-on-embedded</id>
+        <link href="https://interrupt.memfault.com/blog/printf-on-embedded"/>
+        <updated>2023-09-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The C printf function is a staple of embedded development. It’s a simple way
+to get logs or debug statements off the system and into a terminal on the host.
+This article explores the various ways to get printf on Cortex-M
+microcontrollers.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
         </author>
     </entry>
     <entry>
@@ -652,34 +829,6 @@ We …]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[$] Shrinking shrinker locking overhead]]></title>
-        <id>https://lwn.net/Articles/944199/</id>
-        <link href="https://lwn.net/Articles/944199/"/>
-        <updated>2023-09-15T14:51:21.000Z</updated>
-        <summary type="html"><![CDATA[Much of the kernel's performance is dependent on caching — keeping useful
-information around for future use to avoid the cost of looking it up again.
-The kernel aggressively caches pages of file data, directory entries,
-inodes, slab objects, and much more.  Without active measures, though,
-caches will tend to grow without bounds, leading to memory exhaustion.  The
-kernel's "shrinker" mechanism exists to be that active measure, but
-shrinkers have some performance difficulties of their own.  This
-patch series from Qi Zheng seeks to address one of the worst of those
-by removing some locking overhead.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/944581/</id>
-        <link href="https://lwn.net/Articles/944581/"/>
-        <updated>2023-09-15T14:45:13.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (c-ares and samba), Fedora (borgbackup, firefox, and libwebp), Oracle (.NET 6.0 and kernel), Slackware (libwebp), SUSE (chromium and firefox), and Ubuntu (atftp, dbus, gawk, libssh2, libwebp, modsecurity-apache, and mutt).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Discovery kit lets you explore smart connectivity with STM32H5 MCU]]></title>
         <id>https://www.embedded.com/?p=4480426</id>
         <link href="https://www.embedded.com/discovery-kit-lets-you-explore-smart-connectivity-with-stm32h5-mcu/"/>
@@ -752,65 +901,6 @@ The post The benefit of non-volatile memory (NVM) for edge AI appeared first on 
 The post ‘한중일’ 말고 ‘한일중’으로 불러달라고?: 슬로우레터 9월15일. appeared first on 슬로우뉴스.]]></summary>
         <author>
             <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PostgreSQL 16 released]]></title>
-        <id>https://lwn.net/Articles/944516/</id>
-        <link href="https://lwn.net/Articles/944516/"/>
-        <updated>2023-09-14T20:58:03.000Z</updated>
-        <summary type="html"><![CDATA[Version 16
-of the PostgreSQL database manager has been released.
-
-
-PostgreSQL 16 contains many new features and enhancements, including:
-
-    Allow parallelization of FULL and internal right OUTER hash joins
-
-    Allow logical replication from standby servers
-
-    Allow logical replication subscribers to apply large transactions in parallel
-
-    Allow monitoring of I/O statistics using the new pg_stat_io view
-
-    Add SQL/JSON constructors and identity functions
-
-    Improve performance of vacuum freezing
-
-    Add support for regular expression matching of user and database
-names in pg_hba.conf, and user names in pg_ident.conf]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Videos from FOSSY released (Software Freedom Conservancy)]]></title>
-        <id>https://lwn.net/Articles/944497/</id>
-        <link href="https://lwn.net/Articles/944497/"/>
-        <updated>2023-09-14T16:59:41.000Z</updated>
-        <summary type="html"><![CDATA[The Software Freedom Conservancy
-(SFC) has announced
-the availability of videos from the
-first-ever Free and Open Source Yearly
-(FOSSY) conference, which was held in July in Portland, Oregon in the US.
-
-During the four days of the conference, there were a wide variety of talks
-from speakers with a range of experience and backgrounds, and amazing
-community focused discussions. Featuring wide ranging topics such as a panel
-discussion about software coops, what
-is life like without a smartphone (where the picture on the right is
-from), and thinking
-about FOSS from a systems theory perspective. Our track organizers
-brought together communities from all over, and led by example choosing
-speakers, topics and setting up panels for important conversations. There
-is definitely a talk that will interest you, whether you are interested
-in nonprofit
-board structure, an
-introduction to Reproducible
-Builds or maybe you are looking to have more nature
-adventures with free software.]]></summary>
-        <author>
-            <name>jake</name>
         </author>
     </entry>
     <entry>
@@ -945,18 +1035,6 @@ The post Partnership offers solar-powered, self-sustaining IoT on LoRaWAN appear
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Introducing Ansible Molecule with Ansible Automation Platform]]></title>
-        <id>dd391abe-15a5-43e1-9cfd-d6b0b32bf624</id>
-        <link href="https://developers.redhat.com/articles/2023/09/13/introducing-ansible-molecule-ansible-automation-platform"/>
-        <updated>2023-09-13T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Ansible Molecule is a tool designed to aid in developing and testing Ansible playbooks, roles, and collections. It provides support for functional testing of Ansible content across multiple instances, operating systems and distributions, virtualization providers, test frameworks, and testing scenarios. Molecule helps Ansible content creators (automation specialists) consistently deliver automation content that is scalable, repeatable, and compatible with the latest Ansible versions.
-Ansible Molecule 6 is now available as a developer preview with Red Hat Ansible Automation Platform. This version will refocus and redefine the project as a tool for testing Ansible content with Ansible Automation Platform.
-The developer preview enables us to collect feedback from our users as we work towards m…]]></summary>
-        <author>
-            <name>Anshul Behl</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[2030 영끌러의 ‘부동산’ 도박은 성공할 수 있을까]]></title>
         <id>https://slownews.kr/?p=96640</id>
         <link href="https://slownews.kr/96640"/>
@@ -974,17 +1052,6 @@ The post 2030 영끌러의 ‘부동산’ 도박은 성공할 수 있을까 app
         <updated>2023-09-13T05:38:05.000Z</updated>
         <summary type="html"><![CDATA[[인터뷰] ‘커뮤니티 자본론’ 저자 전정환, “연결을 넘어 커뮤니티로… 변화는 장기 복리와 네트워크 승수 효과로 온다.” 2021년 12월, 제주 원도심의 중앙로 사거리에 38년 만에 횡단보도가 들어섰다. 횡단보도를 만들면 지하상가에 손님이 끊긴다는 반대가 있었기 때문이다. 언젠가부터 동문시장이나 탑동을 찾는 사람들은 지하상가를 찾기보다는 아예 길을 건너지 않게 됐다. 결국 상가진흥회가 나서서 상인들을 설득했고 제주시가 에스컬레이터와 엘리베이터를 설치하는 걸...
 The post “지역의 문제는 기회의 소멸, 우연히 운좋은 기회를 맞닥뜨릴 수 있는 도시를 만들자.” appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[이것이 진짜 혁신, 애플의 탄소중립 선언이 놀라운 이유.]]></title>
-        <id>https://slownews.kr/?p=96608</id>
-        <link href="https://slownews.kr/96608"/>
-        <updated>2023-09-13T03:30:03.000Z</updated>
-        <summary type="html"><![CDATA[“2020년에도 약속했었지. 무슨 대단한 환경주의자라도 되는 것처럼.”… ‘어머니 대자연’에게 야단맞는 팀쿡. 애플의 이번 신제품 공개 행사는 특별했다. USB-C 포트를 도입한다는 건 이미 알려졌고 아이폰 15나 애플워치 울트라 2 등도 예상을 크게 벗어나지 않았지만(누군가는 또 “혁신은 없었다”고 외칠 것이다.) 이번에는 특별히 탄소중립 선언에 무게가 실렸다. 에너지 소모를 줄였고 재활용 부품을 쓰고 포장재에 플라스틱을 없애고 항공 운송...
-The post 이것이 진짜 혁신, 애플의 탄소중립 선언이 놀라운 이유. appeared first on 슬로우뉴스.]]></summary>
         <author>
             <name>이정환</name>
         </author>
@@ -1008,54 +1075,6 @@ The post 이것이 진짜 혁신, 애플의 탄소중립 선언이 놀라운 이
 Continue reading…]]></summary>
         <author>
             <name>Interrupt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“대통령이 총선에 아무 생각이 없는 것 같다”: 슬로우레터 9월13일.]]></title>
-        <id>https://slownews.kr/?p=96582</id>
-        <link href="https://slownews.kr/96582"/>
-        <updated>2023-09-12T22:04:49.000Z</updated>
-        <summary type="html"><![CDATA[‘찍지마 빌런’의 귀환, “대통령이 총선에 아무 생각이 없는 것 같다.” 발끈한 미국, “국제 왕따에 구걸한다.” “오늘 왜 불렀는지 모르겠다.” KBS의 눈물, 사장 해임이 벌써 네 번째. 더 깊게 읽기. 한 사람 주장만 싣는 인터뷰의 한계. “미국을 온전히 믿지 마라.” 차례상 가격 줄었다고? 해법과 대안. 10% 서명에 33% 투표율, 주민 소환 너무 어렵다. 요양보호사 자격증 있어도...
-The post “대통령이 총선에 아무 생각이 없는 것 같다”: 슬로우레터 9월13일. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Red Hat enhances the developer experience]]></title>
-        <id>5e063440-428c-4394-98d8-ed28280c925b</id>
-        <link href="https://developers.redhat.com/articles/2023/09/12/how-red-hat-enhances-developer-experience"/>
-        <updated>2023-09-12T18:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hybrid and multicloud approaches offer developers more access to powerful computing resources than ever. However, this increasing complexity can make it challenging to manage all your development tasks, hindering productivity.
-Red Hat's cloud-first approach simplifies modern cloud environments. Our versatile toolbox maintains flexibility and limits cloud vendor lock-in by letting you work with a wide range of cloud tools and vendors. Let's explore how Red Hat reduces friction by designing tools with developers in mind.
-Red Hat reduces friction for developers
-Red Hat's primary goal is to make it easier for you to create and deploy cloud-first applications. Our hybrid cloud approach builds on an open source foundation, enabling you to design software once and deploy it to any (or every) clou…]]></summary>
-        <author>
-            <name>Mithun T. Dhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to automate AWS network using Ansible Automation]]></title>
-        <id>492d764e-70b0-4b1b-9bee-32f483ead950</id>
-        <link href="https://developers.redhat.com/articles/2023/09/12/how-automate-aws-network-using-ansible-automation"/>
-        <updated>2023-09-12T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In today's rapidly evolving technology landscape, Red Hat Ansible Automation Platform offers a powerful solution for managing network configurations in Amazon Web Services (AWS). In this article, we will explore how you can leverage the capabilities of Ansible Automation Platform to simplify and automate your network configuration tasks in AWS.
-We will guide you through the process of setting up the necessary credentials for your AWS account within the Ansible Automation Platform. We will then dive into playbook execution, demonstrating how you can execute playbooks to define and automate your network configurations in AWS. By the end of this article, you will have the knowledge and confidence to use Ansible Automation Platform to manage your network configurations in AWS effectively.
-Prer…]]></summary>
-        <author>
-            <name>Deepankar Jain, Himanshu Yadav</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A Node.js success story at the electrical training ALLIANCE]]></title>
-        <id>cb489f3b-c2e3-4654-810b-a1d47254da7e</id>
-        <link href="https://developers.redhat.com/articles/2023/09/12/nodejs-success-story-electrical-training-alliance"/>
-        <updated>2023-09-12T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Red Hat and customers often work together as partners to help get an application across the finish line. In this article, Stephen (electrical training ALLIANCE) and Michael (Red Hat) share the story of one such collaboration that led to success with Node.js in production.
-The application
-The electrical training ALLIANCE (ETA) has the mission to develop educational materials for electrical workers. They do this by developing national standards for the education and training of electrical workers, creating standardized training curricula, and assisting in establishing local educational programs. A key part of this work is to develop and provide an application for the 275 training programs that will assist in the day-to-day operations supporting apprentices within the program from application…]]></summary>
-        <author>
-            <name>Michael Dawson</name>
         </author>
     </entry>
     <entry>
@@ -1089,17 +1108,6 @@ The electrical training ALLIANCE (ETA) has the mission to develop educational ma
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[윤석열의 ‘늦바람’ 이념전쟁은 “불안하기 때문”: 슬로우레터 9월12일.]]></title>
-        <id>https://slownews.kr/?p=96552</id>
-        <link href="https://slownews.kr/96552"/>
-        <updated>2023-09-11T22:02:25.000Z</updated>
-        <summary type="html"><![CDATA[“월 6만5000원 대중교통 무제한”이 빠뜨린 것. “임기 보장이 공익에 부합한다.” 방통심의위원장의 위험천만한 ‘뇌피셜’. 단식 13일차 이재명, 오늘 또 검찰 출석. 김정은과 푸틴의 위험한 만남. 감시자는 누가 감시할 것인가, 선관위 채용 비리가 말하는 것. 해법과 대안. 일회용 컵 반환, 제주도와 세종시의 차이는? 라면값 인상의 원인은 북극의 온난화다. 탄소 중립은 공짜가 아니다. 더 깊게 읽기. 주택 인허가,...
-The post 윤석열의 ‘늦바람’ 이념전쟁은 “불안하기 때문”: 슬로우레터 9월12일. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Simple, yet easy-to-miss errors in code]]></title>
         <id>https://pvs-studio.com/en/blog/posts/cpp/1068/</id>
         <link href="https://pvs-studio.com/en/blog/posts/cpp/1068/"/>
@@ -1118,17 +1126,6 @@ The post 윤석열의 ‘늦바람’ 이념전쟁은 “불안하기 때문”:
 The post Eddystone Beacon Tutorial: Implementation using Silicon Labs BG22 Explorer Kit appeared first on Novel Bits.]]></summary>
         <author>
             <name>Mohammad Afaneh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[무엇이 ‘가짜 뉴스’인가 따져 봅시다.]]></title>
-        <id>https://slownews.kr/?p=96462</id>
-        <link href="https://slownews.kr/96462"/>
-        <updated>2023-09-11T06:35:01.000Z</updated>
-        <summary type="html"><![CDATA[매우 복잡한 사건이다. 그래서 속이기도 쉽고 속아 넘어가기도 쉽다. 이 글에서는 신학림(전 뉴스타파 전문위원)과 뉴스타파가 무엇을 잘못했는지 짚고, 확인된 사실과 남아있는 의혹, 그리고 정치적 공방을 구분하고, 우리가 해야 할 질문이 무엇인가 살펴본다. 신학림은 왜 그랬을까. 신학림 스스로 ‘인터뷰’라고 밝혔던 김만배(화천대유 대주주)와의 만남 사흘 뒤에 책값 명목으로 1억6500만 원을 받은 건 저널리즘의 윤리를 크게 벗어난 것이다....
-The post 무엇이 ‘가짜 뉴스’인가 따져 봅시다. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
         </author>
     </entry>
     <entry>
@@ -1295,16 +1292,6 @@ In Sept of 2021, Nordic announced that they would be moving all new developmen
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[‘자유’라는 가면을 쓴 색깔론, 그들의 자유는 누구를 위한 걸까]]></title>
-        <id>https://newspeppermint.com/?p=77728</id>
-        <link href="https://newspeppermint.com/2023/09/06/npsp_liberalism/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_liberalism"/>
-        <updated>2023-09-06T17:25:04.000Z</updated>
-        <summary type="html"><![CDATA[‘자유’, ‘자유주의’가 대통령의 입에 자주 오르내리고 있습니다. 그러나 색깔론의 도구로 쓰이는 자유는 더 많은 자유를 보장하기 위해서가 아니라, 오히려 다른 이의 자유를 억압하는 기제로 쓰이는 것처럼 보입니다. 즉 자유라는 개념이 남용되고 있는 듯한 느낌을 지우기 어렵습니다. 그러던 중 뉴욕타임스에 예일대학교 새뮤얼 모인 교수가 쓴 칼럼을 봤습니다. 냉전 시대를 거치며 자유의 개념이 극도로 왜곡됐고, 이게 아직 고쳐지지 않았으므로 자유주의가 쇄신하고 부활하려면 서둘러 노선을 수정해야 한다는 내용이었습니다. 칼럼을 번역하고 해설을 달았습니다. 전문 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Supporting Black tech entrepreneurs through the fourth Google for Startups Accelerator: Black Founders program]]></title>
         <id>http://developers.googleblog.com/2023/09/supporting-black-tech-entrepreneurs-fourth-google-for-startups-accelerator-black-founders-program.html</id>
         <link href="http://developers.googleblog.com/2023/09/supporting-black-tech-entrepreneurs-fourth-google-for-startups-accelerator-black-founders-program.html"/>
@@ -1350,16 +1337,6 @@ where necessary publish Python 3.12 wheels on PyPI to be ready for the
 final release of 3.12.0. Any binary wheels built a…]]></summary>
         <author>
             <name>Python Insider</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[9/5 전곡항 일몰 출사기, 노을 속 지는 해는 아름다웠다.]]></title>
-        <id>https://happist.com/?p=591659</id>
-        <link href="https://happist.com/591659/%ec%a0%84%ea%b3%a1%ed%95%ad-%ec%9d%bc%eb%aa%b0"/>
-        <updated>2023-09-06T03:17:27.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
         </author>
     </entry>
     <entry>
@@ -1858,116 +1835,6 @@ more…]]></summary>
         <summary type="html"><![CDATA[The i.MX RT1010 EVK comes with an LPC4322-based debug probe. The default firmware can be easily replaced, giving a performance boost and added functionality. Continue reading →]]></summary>
         <author>
             <name>Erich Styger</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My favorite prime number generator]]></title>
-        <id>https://eli.thegreenplace.net/2023/my-favorite-prime-number-generator/</id>
-        <link href="https://eli.thegreenplace.net/2023/my-favorite-prime-number-generator/"/>
-        <updated>2023-08-23T03:01:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>Many years ago I've re-posted a <a class="reference external" href="https://stackoverflow.com/a/568618/">Stack Overflow answer</a> with Python code for a terse prime sieve
-function that generates a potentially infinite sequence of prime
-numbers (&quot;potentially&quot; because it <em>will</em> run out of memory eventually). Since
-then, I've used this code <em>many</em> times - mostly because it's short and clear …</p>]]></summary>
-        <author>
-            <name>Eli Bendersky's website</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Securing Firmware Updates With AES Encryption]]></title>
-        <id>https://interrupt.memfault.com/blog/firmware-encryption-with-python</id>
-        <link href="https://interrupt.memfault.com/blog/firmware-encryption-with-python"/>
-        <updated>2023-08-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In this publication, we will explore a simple method to encrypt the firmware using the AES algorithm, using open-source libraries in Python. Of course, we will also see how to decrypt the firmware from the MCU using the AES encryption engine.
-Continue reading…]]></summary>
-        <author>
-            <name>Interrupt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Announcing Federated Credential Management (FedCM) Beta for Google Identity Services]]></title>
-        <id>http://developers.googleblog.com/2023/08/announcing-federated-credential-management-beta-for-gis.html</id>
-        <link href="http://developers.googleblog.com/2023/08/announcing-federated-credential-management-beta-for-gis.html"/>
-        <updated>2023-08-22T19:00:00.001Z</updated>
-        <summary type="html"><![CDATA[Posted by Gina Biernacki, Product Manager
-
-
-
-
-
-
-Today, the Google Identity team is announcing a beta program for developers to test our integration with the Chrome browser’s new FedCM (Federated Credential Management) API. 
-Audience
-This update is for all Google Identity Services (GIS) web developers who rely on the Chrome browser and use:
-
-One Tap, or 
-Auto Sign-In 
-
-
-Why FedCM 
-GIS currently uses third-party cookies to enable users to easily sign up and sign in to websites, making sign-in more secure for users by reducing reliance on passwords. However, as part of the Privacy Sandbox initiative, Chrome is phasing out support for third-party cookies in 2024 to protect user privacy online.
-The W3C FedID community group developed the FedCM API as a new privacy-preserving alternative to thir…]]></summary>
-        <author>
-            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Strategic Directions supporting the people]]></title>
-        <id>https://martinfowler.com/articles/creating-integrated-tech-strategy.html#SupportingThePeople</id>
-        <link href="https://martinfowler.com/articles/creating-integrated-tech-strategy.html#SupportingThePeople"/>
-        <updated>2023-08-22T15:22:00.000Z</updated>
-        <summary type="html"><![CDATA[Having a robust digital talent strategy is a competitive advantage in
-     today’s fiercely competitive market. This enables businesses to have the
-     right talent and have the right competencies to meet current and future
-     demand to meet business goals or to stay on track for digital
-     transformation aspirations. Sarah Taraporewalla continues
-     her article on how to create an integrated business and technology strategy
-     by looking at questions raised by two strategic directions that
-     support people: culture and internal systems.
-more…]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bottlenecks of Scaleups #05: Resilience and Observability]]></title>
-        <id>https://martinfowler.com/articles/bottlenecks-of-scaleups/05-resilience-and-observability.html</id>
-        <link href="https://martinfowler.com/articles/bottlenecks-of-scaleups/05-resilience-and-observability.html"/>
-        <updated>2023-08-22T14:21:00.000Z</updated>
-        <summary type="html"><![CDATA[Here is a new article in the bottlenecks of scaleups series, looking at
-     resilience and observability. Startups tend to only address resilience when
-     their systems are already down, often taking a very reactive approach. For
-     a scaleup, excessive system downtime represents a significant
-     bottleneck to the organization, both from the effort expended on
-     restoring function and also from the impact of customer dissatisfaction.
-     Punit Lad and Carl Nygard explain that to
-     move past this, resilience needs to be built into the business objectives,
-     which will influence the architecture, design, product management, and even
-     governance of business systems. 
-more…]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[So long, and thanks for all the insights]]></title>
-        <id>https://staceyoniot.com/?p=12811</id>
-        <link href="https://staceyoniot.com/so-long-and-thanks-for-all-the-insights/"/>
-        <updated>2023-08-22T13:00:36.000Z</updated>
-        <summary type="html"><![CDATA[This article was originally published in my weekly IoT newsletter on Friday August 18, 2023. It was my last newsletter. Most of y’all know that I am stepping back from producing the weekly Internet of Things podcast, and that I’m also stepping back from creating this newsletter focused on the internet of things. But it […]
-The post So long, and thanks for all the insights appeared first on Stacey on IoT | Internet of Things news and analysis.]]></summary>
-        <author>
-            <name>Stacey Higginbotham</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Using Perf to enable PMU functionality on Armv8-A CPUs: Stage 3 and Stage 4]]></title>
-        <id>dd9e70c8-6d3c-4c71-b136-2456382a7b5c:202b4d5d-d704-49ef-829c-94e4a13ca579</id>
-        <link href="https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/p3-perf-pmu-feature-armv8-cpus"/>
-        <updated>2023-08-22T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Part 3. This blog introduces how to enable PMU feature in Armv8-A CPUs and provides an example of performance analysis workflow on real Armv8-A  platform.(read more)]]></summary>
-        <author>
-            <name>Jiaming Guo</name>
         </author>
     </entry>
 </feed>
