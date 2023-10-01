@@ -1141,6 +1141,16 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2023/09/30/",
+          "author": null,
+          "description": "My last article had tips for for arena allocation. This next\narticle demonstrates a technique for building bespoke hash maps that\ncompose nicely with arena allocation. In addition, they’re fast, simple,\nand automatically scale to any problem that could reasonably be solved\nwith an in-memory hash map. To avoid resizing — both to better support\narenas and to simplify implementation — they have slightly above average\nmemory requirements. The design, which we’re calling a hash-trie, is the\nresult of fruitful collaboration with NRK, whose sibling article\nincludes benchmarks. It’s my new favorite data structure, and has proven\nincredibly useful. With a couple well-placed acquire/release atomics, we\ncan even turn it into a lock-free concurrent hash map.\nI’ve written before about MSI hash tables, …",
+          "link": "https://nullprogram.com/blog/2023/09/30/",
+          "publishedOn": "2023-09-30T23:18:40.000Z",
+          "wordCount": 2242,
+          "title": "An easy-to-implement, arena-friendly hash map",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2023/09/27/",
           "author": null,
           "description": "This article was discussed on Hacker News.\nOver the past year I’ve refined my approach to arena allocation.\nWith practice, it’s effective, simple, and fast; typically as easy to use\nas garbage collection but without the costs. Depending on need, an\nallocator can weigh just 7–25 lines of code — perfect when lacking a\nruntime. With the core details of my own technique settled, now is a\ngood time to document and share lessons learned. This is certainly not the\nonly way to approach arena allocation, but these are practices I’ve worked\nout to simplify programs and reduce mistakes.\nAn arena is a memory buffer and an offset into that buffer, initially\nzero. To allocate an object, grab a pointer at the offset, advance the\noffset by the size of the object, and return the pointer. There’s a little\nm…",
@@ -1528,6 +1538,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=591979",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/591979/23-3q-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%a0-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2023-10-01T05:14:03.000Z",
+          "wordCount": 6270,
+          "title": "마이크론 실적을 읽는 월가의 시선, 그럼에도 메모리 바닥은 쳤다.",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=591959",
           "author": "happist",
