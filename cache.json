@@ -64,6 +64,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/four-views-in-cpp23/",
+          "author": null,
+          "description": "In this blog post, we’ll look at several different view/reference types introduced in Modern C++. The first one is string_view added in C++17. C++20 brought std::span and ranges views. The last addition is std::mdspan from C++23.\nLet’s start.\n\n\n\n     \n    \n\n\nThe std::string_view type is a non-owning reference to a string. It provides an object-oriented way to represent strings and substrings without the overhead of copying or allocation that comes with std::string. std::string_view is especially handy in scenarios where temporary views are necessary, significantly improving the performance and expressiveness of string-handling code. The view object doesn’t allow modification of characters in the original string.\nHere’s a basic example:\n#include <format>\n#include <iostream>\n#include <string…",
+          "link": "https://www.cppstories.com/2023/four-views-in-cpp23/",
+          "publishedOn": "2023-10-09T00:00:00.000Z",
+          "wordCount": 1549,
+          "title": "Spans, string_view, and Ranges - Four View types (C++17 to C++23)",
+          "imageUrl": "https://www.cppstories.com/2023/images/fourviews_cpp23.png"
+        },
+        {
           "id": "https://www.cppstories.com/2019/02/2lines3featuresoverload.html/",
           "author": null,
           "description": "Learn how the overload pattern works for std::variant visitation and how it changed with C++20 and C++23.\nWhile I was doing research for my book and blog posts about C++17 several times, I stumbled upon this pattern for visitation of std::variant:\ntemplate<class... Ts> struct overload : Ts... { using Ts::operator()...; };\ntemplate<class... Ts> overload(Ts...) -> overload<Ts...>;\n\n\nWith the above pattern, you can provide separate lambdas “in-place” for visitation.\nIt’s just two lines of compact C++ code but packs some exciting techniques.\nLet’s see how this works and go through the three new C++17 features that make this pattern possible.\n\n\r\n\r\nChangelog\n\r\n\r\nUpdated on 18th Septeber 2023: C++23 updates, and Compiler Explorer examples.\n\r\nUpdated on 13th January 2020: better description for th…",
@@ -203,6 +213,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "13a0b0fc-74fe-4f0a-9a6a-5c3d3a10edd0",
+          "author": "Michael Dawson",
+          "description": "Many applications require more computation than can be handled by a single thread, CPU, process, or machine. This installment of the ongoing Node.js reference architecture series covers the team's experience on how to satisfy the need for larger computational resources in your Node.js application.\nFollow the series:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code coverage\nPart 8: Typescript\nPart 9: Securing Node.js applications\nPart 10: Accessibility\nPart 11: Typical development workflows\nPart 12: npm development\nPart 13: Problem determination\nPart 14: Testing\nPart 15: Transaction handling\nPart 16: Load balancing, thr…",
+          "link": "https://developers.redhat.com/articles/2023/10/09/load-balancing-threading-and-scaling-nodejs",
+          "publishedOn": "2023-10-09T07:00:00.000Z",
+          "wordCount": 3325,
+          "title": "Load balancing, threading, and scaling in Node.js",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_1x.png?itok=gBxwH-rX"
+        },
+        {
+          "id": "d1945731-4f23-412d-9e73-1617566944e0",
+          "author": "Vladimir Makarov",
+          "description": "I am a GCC compiler engineer, and for the past 15 years, I have primarily focused on the GCC register allocator and instruction scheduler. The major development of the GCC register allocator and instruction scheduler was completed quite some time ago, and these days, my main responsibility is maintaining these essential GCC components. About six years ago, I began dedicating half of my work time to improving performance of CRuby, the de facto standard Ruby implementation. A significant portion of this effort involved implementing the CRuby just-in-time (JIT) compiler.\nMy initial attempt to implement a CRuby JIT was MJIT (method based just-in-time compiler). MJIT provided a rapid way to implement JIT for CRuby. It was based on utilizing the GCC compiler, which generated machine code as .so …",
+          "link": "https://developers.redhat.com/articles/2023/10/09/mir-based-jit-prototype-ruby",
+          "publishedOn": "2023-10-09T07:00:00.000Z",
+          "wordCount": 5265,
+          "title": "An MIR-based JIT prototype for Ruby",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/ST-c_1x.png?itok=sAun-G9d"
+        },
         {
           "id": "c7e19de1-859c-41da-bf71-75056f779eea",
           "author": "Bruno Meseguer",
@@ -425,16 +455,6 @@
           "wordCount": 560,
           "title": "static-server: an HTTP server in Go for static content",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2023/introduction-to-cors-for-go-programmers/",
-          "author": null,
-          "description": "<p>From its inception, the Web has been a game of whackamole between people finding\nsecurity holes and exploits, and other people plugging these holes and adding\ndefensive security mechanisms.</p>\n<p>One of the busiest arenas in this struggle is the interaction between code\nrunning on one site (via JavaScript embedded in …</p>",
-          "link": "https://eli.thegreenplace.net/2023/introduction-to-cors-for-go-programmers/",
-          "publishedOn": "2023-09-09T12:50:00.000Z",
-          "wordCount": 3876,
-          "title": "Introduction to CORS for Go programmers",
-          "imageUrl": null
         }
       ]
     },
@@ -460,6 +480,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480561",
+          "author": "Miro Samek",
+          "description": "A state machine’s whole structure of states and transitions is fixed at design time but this might be too inflexible in many real-life situations. In...\nThe post Programming embedded systems: guard conditions appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/programming-embedded-systems-guard-conditions/",
+          "publishedOn": "2023-10-09T15:56:32.000Z",
+          "wordCount": 3492,
+          "title": "Programming embedded systems: guard conditions",
+          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/10/embedded_thumbnail-30.jpg"
+        },
         {
           "id": "https://www.embedded.com/?p=4480553",
           "author": "Nitin Dahad",
@@ -966,6 +996,46 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/947136/",
+          "author": "jake",
+          "description": "The Linux Containers project has\nannounced\nthe release version 0.1 of the Incus system container and\nvirtual-machine manager, which is a community-led fork of Canonical's LXD.   Incus 0.1 \"is roughly\nequivalent to LXD 5.18 but with a number of breaking changes on top of the\nobvious rename\".  There have been some changes made in the two months\nsince the fork:\n\nWith this initial release of Incus, we took the opportunity to remove a lot\nof unused or problematic features from LXD. Most of those changes are\nthings we would have liked to do in LXD but couldn’t due to having strong\nguarantees around backward compatibility. \n\nIncus will be similarly strict with backward compatibility in the future,\nbut as this is the first release of the fork, it was our one big\nopportunity to change things. \n\nThat said, the API and CLI are still extremely close to what LXD has,\nmaking it trivial if not completely seamless to port from LXD to Incus.\n\n\nThere is an online\nversion of Incus for those interested in giving it a try.",
+          "link": "https://lwn.net/Articles/947136/",
+          "publishedOn": "2023-10-09T14:55:28.000Z",
+          "wordCount": 290,
+          "title": "Incus 0.1 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/946394/",
+          "author": "corbet",
+          "description": "One of the significant features added to the mainline kernel during the 6.6\nmerge window was multi-grain timestamps, which allow the kernel to\nselectively store file modification times with higher resolution without\nhurting performance.  Unfortunately, this feature also caused some\nsurprising regressions, and was quickly ushered back out of the kernel as a\nresult.  It is instructive to look at how this feature went wrong, and how\nthe developers involved plan to move forward from here.",
+          "link": "https://lwn.net/Articles/946394/",
+          "publishedOn": "2023-10-09T14:50:46.000Z",
+          "wordCount": null,
+          "title": "[$] Rethinking multi-grain timestamps",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/947117/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (freerdp2, gnome-boxes, grub2, inetutils, lemonldap-ng, prometheus-alertmanager, python-urllib3, thunderbird, and vinagre), Fedora (freeimage, fwupd, libspf2, mingw-freeimage, thunderbird, and vim), Gentoo (c-ares, dav1d, Heimdal, man-db, and Oracle VirtualBox), Oracle (bind, bind9.16, firefox, ghostscript, glibc, ImageMagick, and thunderbird), Slackware (netatalk), SUSE (ImageMagick, nghttp2, poppler, python, python-gevent, and yq), and Ubuntu (bind9 and vim).",
+          "link": "https://lwn.net/Articles/947117/",
+          "publishedOn": "2023-10-09T14:23:06.000Z",
+          "wordCount": 331,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/947054/",
+          "author": "corbet",
+          "description": "Linus has released 6.6-rc5 for testing.\n\"Things are back to normal, and we have a networking pull this\nweek.\"",
+          "link": "https://lwn.net/Articles/947054/",
+          "publishedOn": "2023-10-08T21:11:05.000Z",
+          "wordCount": 132,
+          "title": "Kernel prepatch 6.6-rc5",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/946851/",
           "author": "corbet",
           "description": "Red Hat has announced\nthat its longstanding \"rhsa-announce\" mailing list will be shut down on\nOctober 10.  That is the list that receives security advisories for\nRed Hat Enterprise Linux and a whole slew of related products.  Anybody who\nwas counting on that list for Red Hat security advisories will need to find\nan alternative; a few options are listed in the announcement.",
@@ -1470,6 +1540,16 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2023/10/08/",
+          "author": null,
+          "description": "This article was discussed on Hacker News and on reddit.\nThis has been a ground-breaking year for my C skills, and paradigm shifts\nin my technique has provoked me to reconsider my habits and coding style.\nIt’s been my largest personal style change in years, so I’ve decided to\ntake a snapshot of its current state and my reasoning. These changes have\nproduced significant productive and organizational benefits, so while most\nis certainly subjective, it likely includes a few objective improvements.\nI’m not saying everyone should write C this way, and when I contribute\ncode to a project I follow their local style. This is about what works\nwell for me.\nPrimitive types\nStarting with the fundamentals, I’ve been using short names for primitive\ntypes. The resulting clarity was more than I had expect…",
+          "link": "https://nullprogram.com/blog/2023/10/08/",
+          "publishedOn": "2023-10-08T23:30:57.000Z",
+          "wordCount": 2138,
+          "title": "My personal C coding style as of late 2023",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2023/10/05/",
           "author": null,
           "description": "Previously I presented an arena-friendly hash map applicable to any\nprogramming language where one might use arena allocation. In this third\narticle I present a generic, arena-backed dynamic array. The details are\nspecific to C, as the most appropriate mechanism depends on the language\n(e.g. templates, generics). Just as in the previous two articles, the goal\nis to demonstrate an idea so simple that a full implementation fits on one\nterminal pager screen — a concept rather than a library.\nUnlike a hash map or linked list, a dynamic array — a data buffer with a\nsize that varies during run time — is more difficult to square with arena\nallocation. They’re contiguous by definition, and we cannot resize objects\nin the middle of an arena, i.e. realloc. So while convenient, they come\nwith trade-o…",
@@ -1536,6 +1616,16 @@
       "feedUrl": "https://shape-of-code.com/feed/",
       "siteUrl": "https://shape-of-code.com",
       "articles": [
+        {
+          "id": "https://shape-of-code.com/?p=8250",
+          "author": "Derek Jones",
+          "description": "You have a resource of person days to implement a project, and believe it is worth investing some of these days, , to improve team productivity (perhaps with training, or tooling). What is the optimal amount of resource to allocate to maximise the total project work performed (i.e., excluding the performance productivity work)? Without any […]",
+          "link": "https://shape-of-code.com/2023/10/08/criteria-for-increased-productivity-investment/",
+          "publishedOn": "2023-10-08T21:41:27.000Z",
+          "wordCount": 1498,
+          "title": "Criteria for  increased productivity investment",
+          "imageUrl": null
+        },
         {
           "id": "https://shape-of-code.com/?p=8229",
           "author": "Derek Jones",
@@ -1689,6 +1779,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=97761",
+          "author": "이정환",
+          "description": "새벽에 쏟아진 수천 발의 미사일, 9.11 이상의 충격. 왜 이런 일이 벌어졌나. 데이터가 말하는 비극. 최악의 시나리오. 가자지구는 지붕 없는 감옥. 맥락과 통찰. 대법원장 공백, 연말까지 간다. ‘드라마틱한 엑시트’, ‘김행방불명’은 어떻게. 강서구청장 사전 투표율은 역대 최고. 오늘의 TMI. 캠리는 단종, 소나타는 반토막. 부산대 맞춤법 검사기, 한달 1000만 건 조회. 해법과 대안. 피해 입증은 철저하게, CCTV부터...\nThe post 데이터가 말하는 예루살렘의 비극: 슬로우레터 10월9일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/97761",
+          "publishedOn": "2023-10-08T22:33:15.000Z",
+          "wordCount": 5548,
+          "title": "데이터가 말하는 예루살렘의 비극: 슬로우레터 10월9일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/10/Unfinished_Israeli_wall-1000x665.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=97732",
           "author": "이정환",
@@ -2174,6 +2274,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=77911",
+          "author": "NewsPeppermint",
+          "description": "2023년 미국은 노동조합의 해라고 불러도 과언이 아닐 정도로, 다양한 부문에서 노조가 파업을 벌이고 있습니다. 그 가운데 지난달 타결된 미국작가조합(WGA, Writers Guild of America)의 파업은 노동자들이 요구 조건을 거의 다 관철시켰다는 면에서 우선 많은 주목을 받았습니다. 그런데 코넬대학교의 아담 세스 리트윈 교수는 노조가 사측인 스튜디오 연합과의 협상에서 인공지능을 앞으로 어떻게 다룰 것인지 기준을 명확히 세운 점이 더욱 중요한 대목이라고 설명합니다. 리트윈 교수의 칼럼을 번역하고, 인공지능 시대에 인간이 기계와 협업하기 위해 갖춰야 → 더 보기",
+          "link": "https://newspeppermint.com/2023/10/09/npsp_wgalaborinai/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_wgalaborinai",
+          "publishedOn": "2023-10-09T18:10:04.000Z",
+          "wordCount": 1409,
+          "title": "인공지능의 시대, 우리가 찾아가야 할 균형점은 어디쯤일까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=77580",
           "author": "veritaholic",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 8월 14일 스프에 쓴 글입니다. 오늘날 멀티태스킹은 전혀 특별한 행동이 아닙니다. 혼자 무언가를 먹으면서 스마트폰을 꺼내지 않는 이는 드물 겁니다. 한때 불법이었던 운전 중 통화는 이제 운전을 방해하지 않는 이어폰이나 블루투스를 사용할 → 더 보기",
@@ -2326,6 +2436,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/223231795169",
+          "author": "sellars",
+          "description": "이제서야 모든 분들께 감사 인사를 드리고자 합니다. 저희는 지금 삶의 큰 변화 속에서 기존에 저희가 지닌 시각과 가치관의 변화가 나타나고 있지만 세상은 그와는 반대로 평소와 다름 없다는 점을 아침마다 느끼며 슬픔을 느낍니다. 평소와 같은 나날이지만 정신을 차려보면 가장 소중했던 사람이 없다는 사실을 그대로 받아들이기에 아직 어려움이 많지만 건강하게 이 시기를 이겨내고자 노력하고 있습니다. 바쁘신 시간 속에서 저희의 아픔에 공감해주시고 아버지를 찾아주셔서 정말로 감사합니다. 모든 분들께 직접 감사 인사를 드리는 것이 도리이나 그러지 못함을 너그럽게 이해해주시면 정말 감사하겠습니다. -김영건 아들, 김기덕 올림.......",
+          "link": "https://blog.naver.com/sellars/223231795169",
+          "publishedOn": "2023-10-09T04:30:54.000Z",
+          "wordCount": 101,
+          "title": "답례문",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/223215059986",
           "author": "sellars",
