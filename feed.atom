@@ -2,10 +2,112 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2023-10-22T20:11:30.723Z</updated>
+    <updated>2023-10-23T20:11:30.377Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Hyphens, minus, and dashes in Debian man pages]]></title>
+        <id>https://lwn.net/Articles/947941/</id>
+        <link href="https://lwn.net/Articles/947941/"/>
+        <updated>2023-10-23T13:07:27.000Z</updated>
+        <summary type="html"><![CDATA[It is probably fair to say that most Linux users spend little time thinking
+about the troff typesetting program, despite that application's
+groundbreaking role in computing history.  Troff (along with nroff) is
+still with us, though, even if they are called groff these days, and every
+now and then they make their presence known.  A recent groff change created
+a bit of a tempest within the Debian community, and has effectively been
+reverted there.  It all comes down to the question of what, exactly, is the
+character used to mark command-line options on Unix systems?]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/948522/</id>
+        <link href="https://lwn.net/Articles/948522/"/>
+        <updated>2023-10-23T13:06:30.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (krb5, redis, roundcube, ruby-rack, ruby-rmagick, zabbix, and zookeeper), Fedora (ansible-core, chromium, libvpx, mingw-xerces-c, python-asgiref, python-django, and vim), Mageia (cadence, kernel, kernel-linus, libxml2, nodejs, and shadow-utils), Oracle (nghttp2), Slackware (LibRaw), and SUSE (chromium, java-11-openjdk, nodejs18, python-Django, python-urllib3, and suse-module-tools).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel prepatch 6.6-rc7]]></title>
+        <id>https://lwn.net/Articles/948469/</id>
+        <link href="https://lwn.net/Articles/948469/"/>
+        <updated>2023-10-23T00:34:15.000Z</updated>
+        <summary type="html"><![CDATA[Linus has released 6.6-rc7 for testing.
+
+
+	Anyway, while this is all bigger than I'd have liked it to be, if
+	the upcoming week is quiet and normal, this is the last rc and next
+	Sunday will see the final release and then we'll open the merge
+	window for 6.7.  I simply am not aware of any issues that would be
+	showstoppers.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to use std::span from C++20]]></title>
+        <id>https://www.cppstories.com/2023/span-cpp20/</id>
+        <link href="https://www.cppstories.com/2023/span-cpp20/"/>
+        <updated>2023-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this article, we’ll look at std::span which is more generic than string_view and can help work with arbitrary contiguous collections.
+
+
+
+     
+    
+
+
+Here’s an example that illustrates the primary use case for std::span:
+In traditional C (or low-level C++), you’d pass an array to a function using a pointer and a size like this:
+void process_array(int* arr, std::size_t size) {
+  for(std::size_t i = 0; i < size; ++i) {
+    // do something with arr[i]
+  }
+}
+
+
+std::span simplifies the above code:
+void process_array(std::span<int> arr_span) {
+  for(auto& elem : arr_span) {
+    // do something with elem
+  }
+}
+
+
+The need to pass a separate size variable is eliminated, making your code less error-prone and more expressive.
+And in essence: std::span<T> is:
+a  lightweight abstraction of a contigu…]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Design of the Whetstone benchmark]]></title>
+        <id>https://shape-of-code.com/?p=8361</id>
+        <link href="https://shape-of-code.com/2023/10/22/design-of-the-whetstone-benchmark/"/>
+        <updated>2023-10-22T22:17:40.000Z</updated>
+        <summary type="html"><![CDATA[The Whetstone benchmark was once a widely cited measure of computer performance. This benchmark consisted of a single program, originally designed for Algol 60 based applications, and later translated to other languages (over 85% of published results used Fortran). The source used as representative of typical user programs came from scientific applications, which has some […]]]></summary>
+        <author>
+            <name>Derek Jones</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[생각이 다른 사람들을 만나야 한다: 슬로우레터 10월23일.]]></title>
+        <id>https://slownews.kr/?p=98515</id>
+        <link href="https://slownews.kr/98515"/>
+        <updated>2023-10-22T21:52:33.000Z</updated>
+        <summary type="html"><![CDATA[윤석열 서울 지지율 25%. 이준석 신당설, 쫓겨나길 원하나? 신당 창당 세 가지 시나리오. 무르익는 조국 출마설, 추미애와 송영길까지. “우리가 먼저”, 국민의힘 현수막 철거. 응답률 낮은 여론조사 퇴출. 윤석열 의전 비서관의 자녀 학폭 논란. 미국 국채 금리 5% 충격. 더 깊이 읽기. 국민의힘 혁신위원장 못 뽑는 이유. 가자 지구 병원 폭발이 폭격이 아니라고 보는 이유. 하마스는...
+The post 생각이 다른 사람들을 만나야 한다: 슬로우레터 10월23일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Adopting IEC 62443 standards for infrastructure cybersecurity]]></title>
         <id>https://www.embedded.com/?p=4480635</id>
@@ -3580,43 +3682,6 @@ The post “민주당 조롱하지 마라”, 국민의힘의 ‘로키’ 전�
 The post Selecting the right RTOS for your application appeared first on Embedded.com.]]></summary>
         <author>
             <name>Jacob Beningo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AEG(익스플로잇 자동 생성) 연구 동향]]></title>
-        <id>https://cpuu.postype.com/post/13744056</id>
-        <link href="https://cpuu.postype.com/post/13744056"/>
-        <updated>2023-09-24T06:26:52.000Z</updated>
-        <summary type="html"><![CDATA[출처: Thanassis Avgerinos, Sang Kil Cha, Alexandre Rebert, Edward J. Schwartz, Maverick Woo, and David Brumley. "Automatic Exploit Generation", Communications of the ACM, 2014 
-해당 기고문에서 소개된 History of AEG 섹션을 요약 번역함.
-
-기호 실행(Symbolic Execution)
-기호 실행(Symbolic execution)은 1975년경에 최초로 발명되었다고 알려진다. 이와 관련해서는 몇몇의 연구자들이 독립적으로 발표한 다음의 논문들이 있다.
-
-Boyer, R. S., Elspas, B., and Levitt, K. N. SELECT—A formal system for testing and debugging programs by symbolic execution. In Proceedings of the International Conference on Reliable Software (Los Angeles, Apr). ACM Press, New York, 1975, 234–245.
-Howden, W.E. Methodology for the generation of program test data. IEEE Transactions on Computers C-24, 5 (May 1975), 554–560.
-King, J.C. Symbolic execution and program testing. Commun. ACM 19, 7 (July 1976), 385–39…]]></summary>
-        <author>
-            <name>CPUU</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Saturday's stable kernel updates]]></title>
-        <id>https://lwn.net/Articles/945377/</id>
-        <link href="https://lwn.net/Articles/945377/"/>
-        <updated>2023-09-23T11:10:50.000Z</updated>
-        <summary type="html"><![CDATA[The
-6.5.5,
-6.1.55,
-5.15.133,
-5.10.197,
-5.4.257,
-4.19.295, and
-4.14.326
-stable kernel updates have all been released; each contains another set of
-important fixes.]]></summary>
-        <author>
-            <name>corbet</name>
         </author>
     </entry>
 </feed>

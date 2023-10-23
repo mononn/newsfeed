@@ -41,6 +41,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/span-cpp20/",
+          "author": null,
+          "description": "In this article, we’ll look at std::span which is more generic than string_view and can help work with arbitrary contiguous collections.\n\n\n\n     \n    \n\n\nHere’s an example that illustrates the primary use case for std::span:\nIn traditional C (or low-level C++), you’d pass an array to a function using a pointer and a size like this:\nvoid process_array(int* arr, std::size_t size) {\n  for(std::size_t i = 0; i < size; ++i) {\n    // do something with arr[i]\n  }\n}\n\n\nstd::span simplifies the above code:\nvoid process_array(std::span<int> arr_span) {\n  for(auto& elem : arr_span) {\n    // do something with elem\n  }\n}\n\n\nThe need to pass a separate size variable is eliminated, making your code less error-prone and more expressive.\nAnd in essence: std::span<T> is:\na  lightweight abstraction of a contigu…",
+          "link": "https://www.cppstories.com/2023/span-cpp20/",
+          "publishedOn": "2023-10-23T00:00:00.000Z",
+          "wordCount": 1856,
+          "title": "How to use std::span from C++20",
+          "imageUrl": "https://www.cppstories.com/2023/images/span.png"
+        },
+        {
           "id": "https://www.cppstories.com/2023/four-views-in-cpp23/",
           "author": null,
           "description": "In this blog post, we’ll look at several different view/reference types introduced in Modern C++. The first one is string_view added in C++17. C++20 brought std::span and ranges views. The last addition is std::mdspan from C++23.\nLet’s start.\n\n\n\n     \n    \n\n\nThe std::string_view type is a non-owning reference to a string. It provides an object-oriented way to represent strings and substrings without the overhead of copying or allocation that comes with std::string. std::string_view is especially handy in scenarios where temporary views are necessary, significantly improving the performance and expressiveness of string-handling code. The view object doesn’t allow modification of characters in the original string.\nHere’s a basic example:\n#include <format>\n#include <iostream>\n#include <string…",
@@ -150,18 +160,7 @@
       "title": "CPUU의 Daydreamin&#039;",
       "feedUrl": "https://cpuu.postype.com/rss",
       "siteUrl": "https://cpuu.postype.com",
-      "articles": [
-        {
-          "id": "https://cpuu.postype.com/post/13744056",
-          "author": "CPUU",
-          "description": "출처: Thanassis Avgerinos, Sang Kil Cha, Alexandre Rebert, Edward J. Schwartz, Maverick Woo, and David Brumley. \"Automatic Exploit Generation\", Communications of the ACM, 2014 \n해당 기고문에서 소개된 History of AEG 섹션을 요약 번역함.\n\n기호 실행(Symbolic Execution)\n기호 실행(Symbolic execution)은 1975년경에 최초로 발명되었다고 알려진다. 이와 관련해서는 몇몇의 연구자들이 독립적으로 발표한 다음의 논문들이 있다.\n\nBoyer, R. S., Elspas, B., and Levitt, K. N. SELECT—A formal system for testing and debugging programs by symbolic execution. In Proceedings of the International Conference on Reliable Software (Los Angeles, Apr). ACM Press, New York, 1975, 234–245.\nHowden, W.E. Methodology for the generation of program test data. IEEE Transactions on Computers C-24, 5 (May 1975), 554–560.\nKing, J.C. Symbolic execution and program testing. Commun. ACM 19, 7 (July 1976), 385–39…",
-          "link": "https://cpuu.postype.com/post/13744056",
-          "publishedOn": "2023-09-24T06:26:52.000Z",
-          "wordCount": 750,
-          "title": "AEG(익스플로잇 자동 생성) 연구 동향",
-          "imageUrl": "https://d33pksfia2a94m.cloudfront.net/assets/img/empty/empty_thumbnail_seo.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": null,
@@ -1102,6 +1101,36 @@
       "siteUrl": "https://lwn.net",
       "articles": [
         {
+          "id": "https://lwn.net/Articles/947941/",
+          "author": "corbet",
+          "description": "It is probably fair to say that most Linux users spend little time thinking\nabout the troff typesetting program, despite that application's\ngroundbreaking role in computing history.  Troff (along with nroff) is\nstill with us, though, even if they are called groff these days, and every\nnow and then they make their presence known.  A recent groff change created\na bit of a tempest within the Debian community, and has effectively been\nreverted there.  It all comes down to the question of what, exactly, is the\ncharacter used to mark command-line options on Unix systems?",
+          "link": "https://lwn.net/Articles/947941/",
+          "publishedOn": "2023-10-23T13:07:27.000Z",
+          "wordCount": null,
+          "title": "[$] Hyphens, minus, and dashes in Debian man pages",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/948522/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (krb5, redis, roundcube, ruby-rack, ruby-rmagick, zabbix, and zookeeper), Fedora (ansible-core, chromium, libvpx, mingw-xerces-c, python-asgiref, python-django, and vim), Mageia (cadence, kernel, kernel-linus, libxml2, nodejs, and shadow-utils), Oracle (nghttp2), Slackware (LibRaw), and SUSE (chromium, java-11-openjdk, nodejs18, python-Django, python-urllib3, and suse-module-tools).",
+          "link": "https://lwn.net/Articles/948522/",
+          "publishedOn": "2023-10-23T13:06:30.000Z",
+          "wordCount": 297,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/948469/",
+          "author": "corbet",
+          "description": "Linus has released 6.6-rc7 for testing.\n\n\n\tAnyway, while this is all bigger than I'd have liked it to be, if\n\tthe upcoming week is quiet and normal, this is the last rc and next\n\tSunday will see the final release and then we'll open the merge\n\twindow for 6.7.  I simply am not aware of any issues that would be\n\tshowstoppers.",
+          "link": "https://lwn.net/Articles/948469/",
+          "publishedOn": "2023-10-23T00:34:15.000Z",
+          "wordCount": 174,
+          "title": "Kernel prepatch 6.6-rc7",
+          "imageUrl": null
+        },
+        {
           "id": "https://lwn.net/Articles/948129/",
           "author": "corbet",
           "description": "Jeff Xu recently proposed\nthe addition of a new system call, named mseal(), that would allow\napplications to prevent modifications to selected memory mappings.  It\nwould enable the hardening of user-space applications against certain types\nof attacks; some other operating systems have this type of feature already.\nThere is support for adding this type of mechanism to the Linux kernel as\nwell, but it has become clear that mseal() will not land in the\nmainline in anything resembling its current form.  Instead, it has become\nan example of how not to do kernel development at a number of levels.",
@@ -1800,16 +1829,6 @@
           "wordCount": 285,
           "title": "Kernel prepatch 6.6-rc3",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/945377/",
-          "author": "corbet",
-          "description": "The\n6.5.5,\n6.1.55,\n5.15.133,\n5.10.197,\n5.4.257,\n4.19.295, and\n4.14.326\nstable kernel updates have all been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/945377/",
-          "publishedOn": "2023-09-23T11:10:50.000Z",
-          "wordCount": 380,
-          "title": "Saturday's stable kernel updates",
-          "imageUrl": null
         }
       ]
     },
@@ -2033,6 +2052,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8361",
+          "author": "Derek Jones",
+          "description": "The Whetstone benchmark was once a widely cited measure of computer performance. This benchmark consisted of a single program, originally designed for Algol 60 based applications, and later translated to other languages (over 85% of published results used Fortran). The source used as representative of typical user programs came from scientific applications, which has some […]",
+          "link": "https://shape-of-code.com/2023/10/22/design-of-the-whetstone-benchmark/",
+          "publishedOn": "2023-10-22T22:17:40.000Z",
+          "wordCount": 2153,
+          "title": "Design of the Whetstone benchmark",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8323",
           "author": "Derek Jones",
           "description": "How many lines of code have to be read to be likely to encounter every meaningful sequence of statements (a non-meaningful sequence would be the three statements break;break;break;)? First, it is necessary to work out the likelihood of encountering a given sequence of statements within lines of code. If we just consider statements, then the […]",
@@ -2196,6 +2225,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=98515",
+          "author": "이정환",
+          "description": "윤석열 서울 지지율 25%. 이준석 신당설, 쫓겨나길 원하나? 신당 창당 세 가지 시나리오. 무르익는 조국 출마설, 추미애와 송영길까지. “우리가 먼저”, 국민의힘 현수막 철거. 응답률 낮은 여론조사 퇴출. 윤석열 의전 비서관의 자녀 학폭 논란. 미국 국채 금리 5% 충격. 더 깊이 읽기. 국민의힘 혁신위원장 못 뽑는 이유. 가자 지구 병원 폭발이 폭격이 아니라고 보는 이유. 하마스는...\nThe post 생각이 다른 사람들을 만나야 한다: 슬로우레터 10월23일. appeared first on 슬로우뉴스.",
+          "link": "https://slownews.kr/98515",
+          "publishedOn": "2023-10-22T21:52:33.000Z",
+          "wordCount": 6644,
+          "title": "생각이 다른 사람들을 만나야 한다: 슬로우레터 10월23일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/10/8312612721_d7638a77e8_k-1000x667.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=98503",
           "author": "민주언론시민연합",
