@@ -2,10 +2,102 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2023-10-24T20:12:43.991Z</updated>
+    <updated>2023-10-25T20:12:43.617Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Weighted interleaving for memory tiering]]></title>
+        <id>https://lwn.net/Articles/948037/</id>
+        <link href="https://lwn.net/Articles/948037/"/>
+        <updated>2023-10-25T16:13:08.000Z</updated>
+        <summary type="html"><![CDATA[The kernel has, for many years, had the ability to control how memory
+allocation is performed in systems with multiple NUMA nodes.  More
+recently, NUMA nodes have also been pressed into service to represent
+different classes of memory; those nodes are now organized into tiers
+according to their performance characteristics.  While memory-allocation
+policies can control the placement of pages at the NUMA-node level, the
+kernel provides no way to connect those policies with memory tiers.  This
+patch series from Gregory Price aims to change this situation by
+allowing allocations to be placed across tiers in a weighted manner.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The path toward a no-GIL Python]]></title>
+        <id>https://lwn.net/Articles/948823/</id>
+        <link href="https://lwn.net/Articles/948823/"/>
+        <updated>2023-10-25T15:45:42.000Z</updated>
+        <summary type="html"><![CDATA[The Python Steering Council has posted a
+detailed plan for the addition of "free-threaded" (no global
+interpreter lock) support into the Python mainline.  It will not be a short
+process and does not have a guaranteed successful outcome.
+
+
+	Phase I: Experimental phase, which can start immediately, in which
+	the free-threaded build is enabled through a build-time
+	option. This should not be the default install anywhere. At least
+	one major Python release should include this experimental
+	free-threaded build, to allow third-party packages to test and do
+	their own experimentation. In this stage we should make it clear
+	the build is experimental, not supported for “production use”, and
+	may be reverted.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Seven stable kernel updates]]></title>
+        <id>https://lwn.net/Articles/948815/</id>
+        <link href="https://lwn.net/Articles/948815/"/>
+        <updated>2023-10-25T15:32:16.000Z</updated>
+        <summary type="html"><![CDATA[The
+6.5.9,
+6.1.60,
+5.15.137,
+5.10.199,
+5.4.259,
+4.19.297, and
+4.14.328
+stable kernels have all been released; each contains another set of
+important fixes.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/948814/</id>
+        <link href="https://lwn.net/Articles/948814/"/>
+        <updated>2023-10-25T15:29:07.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (gst-plugins-bad1.0, openssl, roundcube, and xorg-server), Fedora (dotnet6.0, dotnet7.0, roundcubemail, and wordpress), Mageia (redis), Oracle (dnsmasq, python27:2.7, python3, tomcat, and varnish), Red Hat (python39:3.9, python39-devel:3.9), Slackware (mozilla and vim), SUSE (openssl-3, poppler, ruby2.5, and xen), and Ubuntu (.Net, linux-gcp-5.15, linux-gkeop-5.15, linux-intel-iotg-5.15, linux-starfive-6.2, mysql-5.7, ncurses, and openssl).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The EU’s MDR explained for aesthetic device manufacturers]]></title>
+        <id>https://bluefruit.co.uk/?p=13925</id>
+        <link href="https://bluefruit.co.uk/quality/eu-mdr-explained-aesthetic-device-manufacturers/"/>
+        <updated>2023-10-25T12:11:58.000Z</updated>
+        <summary type="html"><![CDATA[The beauty and aesthetic device market is worth billions globally, with segments like tattoo removal expected to grow by $117.09 million […]
+The post The EU’s MDR explained for aesthetic device manufacturers appeared first on Bluefruit Software.]]></summary>
+        <author>
+            <name>Emily King</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[우리가 계속 피곤할 거라고 보는 세 가지 이유: 슬로우레터 10월25일.]]></title>
+        <id>https://slownews.kr/?p=98603</id>
+        <link href="https://slownews.kr/98603"/>
+        <updated>2023-10-24T22:02:09.000Z</updated>
+        <summary type="html"><![CDATA[‘내부총질’, 안철수와 이준석이 틈만 나면 싸우는 이유. ‘조추송’ 어벤져스에 정청래 “좀 거시기하다.” 국회 손 피켓 안 든다. “같은 순천 출신인데 아쉽다.” “위기 극복의 슬로건이 없다.” 오늘의 TMI. 여성이 6년 더 살지만 스트레스와 우울증 더 많다. 웬만한 아이돌이 임영웅을 못 당하는 이유. 배달 라이더, 주 54시간 일하고 월 284만 원 번다. 민주노총도 회계공시 한다. 더 깊게...
+The post 우리가 계속 피곤할 거라고 보는 세 가지 이유: 슬로우레터 10월25일. appeared first on 슬로우뉴스.]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Programming embedded systems: input-driven state machines]]></title>
         <id>https://www.embedded.com/?p=4480641</id>
@@ -3606,201 +3698,6 @@ the text being translated does not leave your machine."]]></summary>
 The post 재판 개입은 인정! 하지만 무죄? 사법농단 임성근 대법원 판결의 ‘트릭’ appeared first on 슬로우뉴스.]]></summary>
         <author>
             <name>참여연대 사법감시센터</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What’s new in vSphere on RHEL image builder]]></title>
-        <id>64dc81da-af3c-4d85-86eb-52476c1abf7a</id>
-        <link href="https://developers.redhat.com/articles/2023/09/26/whats-new-vsphere-rhel-image-builder"/>
-        <updated>2023-09-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The Red Hat Enterprise Linux image builder is now available for VMware vSphere with your Red Hat Enterprise Linux (RHEL) subscription. This service offers a simplified and efficient approach to creating personalized RHEL operating system images, complete with the latest updates and security enhancements for your hybrid cloud environments. It can be found on the left navigation of the Red Hat Hybrid Cloud Console.
-VMware vSphere on RHEL image builder
-The bundled Red Hat Insights image builder, integrated with Red Hat Insights, enables users to craft personalized images and seamlessly deploy them to their chosen cloud platforms like Amazon Web Services, Microsoft Azure, and Google Cloud Platform. It facilitates the download and upload of tailored images to the vSphere client and the creation…]]></summary>
-        <author>
-            <name>Vivien Wang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dynamically scale the Argo CD application controller with OpenShift GitOps 1.10]]></title>
-        <id>45c88151-3619-4f92-93ef-0d455cfeb24e</id>
-        <link href="https://developers.redhat.com/articles/2023/09/26/dynamically-scale-argo-cd-application-controller-openshift-gitops-110"/>
-        <updated>2023-09-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Prior to Red Hat OpenShift GitOps 1.10, the Operator supported setting the number of desired shards via a first-class setting in the Argo CD custom resource using the variable controller.sharding.replicas. The user still had to decide on the number of shards they wanted to have running. To make this an informed decision, users needed to consider the number of managed clusters per shard.
-Although this functionality helps define the number of replicas of Argo CD application controllers needed, it does not necessarily end up having the optimal use of the compute resources across all shards. For example, setting 2 shards may be too small for handling 10 clusters, while setting 50 shards will leave 40 shards unused and still consume the assigned compute resources.
-To solve this problem, OpenShi…]]></summary>
-        <author>
-            <name>Ishita Sequeira</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[언론개혁 운동의 문제는 정치 병행성이 아니라 정치 의존이다.]]></title>
-        <id>https://slownews.kr/?p=97324</id>
-        <link href="https://slownews.kr/97324"/>
-        <updated>2023-09-26T06:31:06.000Z</updated>
-        <summary type="html"><![CDATA[[지상중계] 87년 이후 언론운동의 평가와 과제: 자유언론실천선언 50주년 기획 세미나. 한국 언론운동은 정치병행성(political parallelism)에서 자유로울 수 있을까. 오래된 질문이고 불편한 질문이다. 정치 병행성이란 무엇인가. 조항제(부산대 교수)에 따르면 정치 병행성은 “특정 정당과 미디어가 정치적 주의 주장을 같이하는 경향, 곧 이념이나 논조에서 공동 보조를 취하는 일종의 정치와 미디어의 연합(coalition)현상”을 말한다. 정치 병행성이 정언유착처럼 특정 정당과 특정 언론의...
-The post 언론개혁 운동의 문제는 정치 병행성이 아니라 정치 의존이다. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[법비의 난: 언론장악 무리수, 어떻게 대응해야 할까]]></title>
-        <id>https://slownews.kr/?p=97322</id>
-        <link href="https://slownews.kr/97322"/>
-        <updated>2023-09-26T06:13:22.000Z</updated>
-        <summary type="html"><![CDATA[윤석열 정부의 광폭한 ‘공영방송 장악’ 공작이 막바지 국면으로 치닫고 있다. KBS 이사회는 지난 9월 12일 김의철 KBS 사장을 이사회에서 해임하고 난 뒤, 차기(보궐) 사장 선임 일정을 유례없이 초고속으로 진행하고 있다. 21일에서 25일까지 차기 사장 공개모집, 27일 서류심사, 추석 연휴 직후인 10월 4일 면접 심사를 거쳐 최종후보자 선임, 이후 대통령 재가와 국회 인사청문회 절차를 거쳐 임명되는...
-The post 법비의 난: 언론장악 무리수, 어떻게 대응해야 할까 appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[뒤집힌 판결, 변절한 작가, 멈춘 시스템: ‘로 대 웨이드’ 폐기로 본 미국]]></title>
-        <id>https://slownews.kr/?p=97203</id>
-        <link href="https://slownews.kr/97203"/>
-        <updated>2023-09-26T03:02:54.000Z</updated>
-        <summary type="html"><![CDATA[[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 케이스 02. 미연방대법원 민노: 앞서 연방대법원의 위상과 역할, 특히 정치형성적 기능에 관해 이야기해주셨는데요. 연방대법원 문제를 일단락하면 넘어가면 좋을 것 같습니다. 김낙호: 보수가 좀 더 강력해지고 극우화하는 동안에 민주당 쪽은 관료주의와 엘리트주의의 함정에 빠지다 보니, 시민들은 자신의 목소리가 제대로 반영되지 못하고, 한마디로 정치가 망가졌다고...
-The post 뒤집힌 판결, 변절한 작가, 멈춘 시스템: ‘로 대 웨이드’ 폐기로 본 미국 appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>민노씨</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[뉴페@스프] AI 무기는 과거의 원자폭탄 위력 이상이 될 것… 그러면 어떻게?]]></title>
-        <id>https://newspeppermint.com/?p=77491</id>
-        <link href="https://newspeppermint.com/2023/09/25/npsp_oppenheimer/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_oppenheimer"/>
-        <updated>2023-09-26T01:05:51.000Z</updated>
-        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 8월 2일 스프에 쓴 글입니다. ‘이제 나는 죽음이요, 세상의 파괴자가 되었다.’ 음산한 분위기의 이 독백은 힌두교 경전 바가바드 기타에 나오는 말로 원자폭탄 개발을 주도했던 물리학자 로버트 오펜하이머가 한 말로도 알려져 있습니다. 20세기 → 더 보기]]></summary>
-        <author>
-            <name>veritaholic</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[이재명 운명의 날, 3가지 시나리오와 2가지 핵심 변수: 슬로우레터 9월26일.]]></title>
-        <id>https://slownews.kr/?p=97284</id>
-        <link href="https://slownews.kr/97284"/>
-        <updated>2023-09-25T21:59:45.000Z</updated>
-        <summary type="html"><![CDATA[“결과가 어떻든 이재명 체제로 총선 치른다”는데. 이화영의 오락가락 진술이 변수. ‘위증교사’ 의혹, 통화 녹음도 튼다. “비열한 배신 행위”, 가결파 의원들에 비난 집중. 뉴스타파 인용 보도한 방송사 무더기 징계. 박근혜 인터뷰, 흥미로운 포인트. 비판 기사만 많다고? 네이버의 최대 위기. 더 깊게 읽기. 송파 일가족은 왜 위기 가구에 포함되지 않았을까. 1박 84만 원 해운대 엘시티가 아파트인 척...
-The post 이재명 운명의 날, 3가지 시나리오와 2가지 핵심 변수: 슬로우레터 9월26일. appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LibrePCB 1.0.0 Released]]></title>
-        <id>https://lwn.net/Articles/945519/</id>
-        <link href="https://lwn.net/Articles/945519/"/>
-        <updated>2023-09-25T20:50:47.000Z</updated>
-        <summary type="html"><![CDATA[The 1.0 version of the LibrePCB 
-"free, cross-platform, easy-to-use electronic design automation suite to draw schematics and design printed circuit boards".    
-As noted in a blog post back in May, a grant has helped spur development of the tool.  
-The focus for the release has been in adding features that were needed so that "there should be no show stopper anymore which prevents you from using LibrePCB for more complex PCB [printed circuit board] designs".  
-New features include a 3D viewer and export format for working with designs in a mechanical computer aided design (CAD) tool, support for manufacturer part number (MFN) management, and lots of board editor features such as 
-thermal relief pads in planes, blind & buried vias,
-keepout zones, and more. [Thanks to Alphonse Ogulla.]]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Programming embedded systems: what is a state machine?]]></title>
-        <id>https://www.embedded.com/?p=4480477</id>
-        <link href="https://www.embedded.com/programming-embedded-systems-what-is-a-state-machine/"/>
-        <updated>2023-09-25T20:16:59.000Z</updated>
-        <summary type="html"><![CDATA[What are event-driven state machines and, equally importantly, what problems do they solve and why would you use them? This installment starts a new segment...
-The post Programming embedded systems: what is a state machine? appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Miro Samek</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How next-generation debuggers speed code development]]></title>
-        <id>https://www.embedded.com/?p=4480462</id>
-        <link href="https://www.embedded.com/how-next-generation-debuggers-speed-code-development/"/>
-        <updated>2023-09-25T19:56:37.000Z</updated>
-        <summary type="html"><![CDATA[As code size increases, the need to capture and analyze code in real time is particularly useful for debugging and optimizing these complex systems. Microcontroller...
-The post How next-generation debuggers speed code development appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Rodger Richey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Getting Started With Zephyr: Devicetree Overlays]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1583.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1583.php"/>
-        <updated>2023-09-25T19:56:14.000Z</updated>
-        <summary type="html"><![CDATA[Introduction
-In the previous two blog posts (https://embeddedrelated.com/showarticle/1547.php and https://embeddedrelated.com/showarticle/1562.php), I demonstrated the “Devicetree” in The Zephyr Project RTOS. The Devicetree allows us to describe the hardware in our system to the OS. As we saw in the first blog post, Zephyr supports many popular System-On-Chips (SoCs) and corresponding...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The PuzzleFS container filesystem]]></title>
-        <id>https://lwn.net/Articles/945320/</id>
-        <link href="https://lwn.net/Articles/945320/"/>
-        <updated>2023-09-25T16:57:47.000Z</updated>
-        <summary type="html"><![CDATA[The last year or so has seen the posting of a few new filesystem types that
-are aimed at supporting container workloads.  PuzzleFS, presented at the
-2023 Kangrejos gathering by Ariel
-Miculas, is another contender in this area, but it has some features of its
-own, including a novel compression mechanism and an implementation written
-in Rust.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/945503/</id>
-        <link href="https://lwn.net/Articles/945503/"/>
-        <updated>2023-09-25T14:12:29.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (bind9, elfutils, flac, ghostscript, libapache-mod-jk, lldpd, and roundcube), Fedora (linux-firmware, roundcubemail, and thunderbird), Mageia (curl, file, firefox/thunderbird, ghostpcl, libtommath, and nodejs), Oracle (kernel, open-vm-tools, qemu, and virt:ol and virt-devel:rhel), SUSE (bind, busybox, djvulibre, exempi, ImageMagick, libqb, libssh2_org, opera, postfix, python, python36, renderdoc, webkit2gtk3, and xrdp), and Ubuntu (accountsservice and open-vm-tools).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Embedded Developers, Ditch Your IDEs – Here’s Why!]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1582.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1582.php"/>
-        <updated>2023-09-25T13:59:00.000Z</updated>
-        <summary type="html"><![CDATA[Most vendor-provided IDEs are based on Eclipse, a 20-year-old IDE primarily used for the development of Java applications. Nowadays, there are also custom-made IDEs that can feel and appear archaic.
-These are reasons not to like IDEs, but they are really not the reasons to avoid using them. They come packed with essential tools (compiler, linker, debugger), streamlining project generation,...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[한눈에 보는 윤석열 정부 의혹제기 수난사 10건]]></title>
-        <id>https://slownews.kr/?p=97268</id>
-        <link href="https://slownews.kr/97268"/>
-        <updated>2023-09-25T11:31:25.000Z</updated>
-        <summary type="html"><![CDATA[윤석열 정부가 국민의 귀와 입을 막기 위해 고소고발을 끊임없이 남발하고 있습니다. 민주주의 사회에서 대통령을 포함한 고위공직자는 항상 국민의 감시와 비판 대상임은 이미 판례로서 정립되어 있습니다. 그런데 윤석열 정부는 야당 의원들은 물론이고 언론사와 기자들까지 고소고발하고 있습니다. 사법부의 최종 판단이 어떻든 우선 고소고발하여, 정부 등에 불리한 의혹을 제기하면 ‘괴롭힘 당한다’는 시그널을 줌으로써 언론의 입을 막고 국민의 눈과...
-The post 한눈에 보는 윤석열 정부 의혹제기 수난사 10건 appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>참여연대 공익법센터</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WSJ, 인플레이션 극복에 얼마나 많은 희생이 필요한가]]></title>
-        <id>https://happist.com/?p=591952</id>
-        <link href="https://happist.com/591952/%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98-%ea%b7%b9%eb%b3%b5-%eb%b9%84%ec%9a%a9"/>
-        <updated>2023-09-25T09:36:46.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[존엄하게 죽는 법: 죽음 돕는 의사가 전하는 이야기]]></title>
-        <id>https://slownews.kr/?p=97256</id>
-        <link href="https://slownews.kr/97256"/>
-        <updated>2023-09-25T09:32:49.000Z</updated>
-        <summary type="html"><![CDATA[[마냐의 북라이딩] 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, ‘홍보가 아니라 소통입니다’ 저자 정혜승의 종횡무진 독서 탐험기. 오늘 ‘마냐의 북라이딩’에서 함께 읽을 책은 나는 ‘나는 죽음을 돕는 의사입니다, 스테파니 그린 지음, 최정수 옮김, 이봄: 2023’입니다. 2016년 캐나다 최초로 조력사망이 실행되던 해에 그 현장에 있던 스테파니 그림 박사가 기록한 근접 관찰 보고서인 이 책은 환자가...
-The post 존엄하게 죽는 법: 죽음 돕는 의사가 전하는 이야기 appeared first on 슬로우뉴스.]]></summary>
-        <author>
-            <name>정혜승</name>
         </author>
     </entry>
 </feed>
