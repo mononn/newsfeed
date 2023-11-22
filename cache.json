@@ -4,7 +4,41 @@
       "title": "ACM Queue - All Queue Content",
       "feedUrl": "https://queue.acm.org/rss/feeds/queuecontent.xml",
       "siteUrl": "http://queue.acm.org/",
-      "articles": []
+      "articles": [
+        {
+          "id": "3631176",
+          "author": null,
+          "description": "",
+          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3631176",
+          "publishedOn": "2023-11-14T13:45:39.000Z",
+          "wordCount": null,
+          "title": "Software Managers' Guide to Operational Excellence",
+          "itunes": {},
+          "imageUrl": null
+        },
+        {
+          "id": "3631182",
+          "author": null,
+          "description": "",
+          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3631182",
+          "publishedOn": "2023-11-11T10:49:37.000Z",
+          "wordCount": null,
+          "title": "Use Cases are Essential",
+          "itunes": {},
+          "imageUrl": null
+        },
+        {
+          "id": "3631327",
+          "author": null,
+          "description": "",
+          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3631327",
+          "publishedOn": "2023-11-09T14:56:53.000Z",
+          "wordCount": null,
+          "title": "Device Onboarding using FDO and the Untrusted Installer Model",
+          "itunes": {},
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Arjun Sreedharan",
@@ -26,16 +60,6 @@
           "wordCount": 1971,
           "title": "[소식] 논문 – 지아장커 영화의 경관, 지아장커 영화라는 경관 (〈대중서사연구〉 29(3))",
           "imageUrl": "https://i0.wp.com/attention2.space/wp-content/uploads/2023/11/the-world.webp?fit=900%2C598&ssl=1"
-        },
-        {
-          "id": "https://attention2.space/?p=2858",
-          "author": "attention2space",
-          "description": "“중간 영역(intermediate area)”이라는 이 공간은 위니코트의 개념으로서, 도전받지 않는 심리적 영역에 속하며 어머니의 돌봄하에 허용되고 체험되는 공간이자 유희의 공간이기도 하다. 이러한 영역은 중간 대상과 있는 바로 그곳에서 유아에게 그 대상의 객관성이나 주관성의 문제를 제기하지 않는다, 또한 이러한 중간영역은 예술, 종교, 문화와 연관된다.",
-          "link": "https://attention2.space/2023/the_queens_gambit/",
-          "publishedOn": "2023-10-10T05:30:56.000Z",
-          "wordCount": 3068,
-          "title": "중간대상으로서의 체스와 약물: 넷플릭스 미니시리즈 [퀸스 겜빗]의 베스하먼을 중심으로",
-          "imageUrl": "https://i0.wp.com/attention2.space/wp-content/uploads/2023/10/썸네일-사진.jpg?fit=750%2C746&ssl=1"
         }
       ]
     },
@@ -51,14 +75,24 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
-          "id": "https://www.cppstories.com/2023/span-cpp20/",
+          "id": "https://www.cppstories.com/2022/custom-stdformat-cpp20/",
           "author": null,
-          "description": "In this article, we’ll look at std::span which is more generic than string_view and can help work with arbitrary contiguous collections.\n\n\n\n     \n    \n\n\nHere’s an example that illustrates the primary use case for std::span:\nIn traditional C (or low-level C++), you’d pass an array to a function using a pointer and a size like this:\nvoid process_array(int* arr, std::size_t size) {\n  for(std::size_t i = 0; i < size; ++i) {\n    // do something with arr[i]\n  }\n}\n\n\nstd::span simplifies the above code:\nvoid process_array(std::span<int> arr_span) {\n  for(auto& elem : arr_span) {\n    // do something with elem\n  }\n}\n\n\nThe need to pass a separate size variable is eliminated, making your code less error-prone and more expressive.\nAnd in essence: std::span<T> is:\na  lightweight abstraction of a contigu…",
-          "link": "https://www.cppstories.com/2023/span-cpp20/",
-          "publishedOn": "2023-10-23T00:00:00.000Z",
-          "wordCount": 1856,
-          "title": "How to use std::span from C++20",
-          "imageUrl": "https://www.cppstories.com/2023/images/span.png"
+          "description": "std::format is a large and powerful addition in C++20 that allows us to format text into strings efficiently. It adds Python-style formatting with safety and ease of use.\nThis article will show you how to implement custom formatters that fit into this new std::format architecture.\nUpdated in Nov 2023: reflect the constness of the format() function, clarified in LWG issue 3636.\nstd::format \n  \n\n\n\n\n     \n    \n\n\nHere’s the Hello World example:\n#include <format>\n#include <iostream>\n#include <chrono>\n\nint main() {\n    auto ym = std::chrono::year { 2022 } / std::chrono::July;\n    std::string msg = std::format(\"{:*^10}\\n{:*>10}\\nin{}!\", \"hello\", \"world\", ym);\n    std::cout << msg;\n}\n\n\nPlay at Compiler Explorer.\nThe output:\n**hello***\n*****world\nin2022/Jul!\n\n\nAs you can see, we have argument place…",
+          "link": "https://www.cppstories.com/2022/custom-stdformat-cpp20/",
+          "publishedOn": "2023-11-19T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Formatting Custom types with std::format from C++20",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.cppstories.com/2023/spans-threads-cpp20/",
+          "author": null,
+          "description": "In this post, we’ll have fun using C++20’s spans to process data on multiple threads. What’s more, we’ll be equipped with the latest concurrency features from C++20.\nThis text was motivated by the following comment under my recent article on std::span:\nBut why does this article… not show the major use case? A span is non-owning, so passing it to a function it can work on a subset of data owned by someone else! You can have a vector of data, and let two threads process two halves of  it! Brilliant! By VictorEijkhout\nstd::thread \n  \n\n\n\n\n     \n    \n\n\nOur task is relatively simple but can be extended to various multi-phase computations.\nWe need to initialize a container with numbers, filter them, then build a histogram.\nHere’s the overview of the process:\n\nHere’s a slow start with std::thread\n…",
+          "link": "https://www.cppstories.com/2023/spans-threads-cpp20/",
+          "publishedOn": "2023-11-14T00:00:00.000Z",
+          "wordCount": null,
+          "title": "C++20, Spans, Threads and Fun",
+          "imageUrl": null
         }
       ]
     },
@@ -136,6 +170,16 @@
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
       "articles": [
         {
+          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:c86bc3e2-e81f-42d4-b927-2a51764fc07f",
+          "author": "Jiaming Guo",
+          "description": "This blog introduces how to profile firmware with Performance Monitor Unit (PMU) in Armv8-A CPU. It provides a reference implementation of the PMU library.(read more)",
+          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/profile-firmware-with-performance-monitor-unit-in-armv8-a-cpu",
+          "publishedOn": "2023-11-08T09:00:00.000Z",
+          "wordCount": null,
+          "title": "Profile firmware with Performance Monitor Unit (PMU) in Armv8-A CPU",
+          "imageUrl": null
+        },
+        {
           "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:00f8f5d2-2099-457d-b5ff-af7e87772412",
           "author": "Richard Grisenthwaite",
           "description": "Views from the Arm technical leadership team that it believes that today, the cost implications of tightening C++ relaxed atomics outweigh its benefit. (read more)",
@@ -200,28 +244,7 @@
       "title": "Red Hat Developer",
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
-      "articles": [
-        {
-          "id": "d6e91ea0-1d78-423b-a69e-d1fcca624933",
-          "author": "Nikhil Mungale",
-          "description": "Security-Enhanced Linux (SELinux) is a robust security framework that enforces mandatory fine-grained access controls on Red Hat Enterprise Linux systems. When managing server fleets and running containers, the deployment of customized SELinux policies becomes essential for maintaining a strong security posture.\nCustom SELinux policies empower organizations to customize access controls according to their unique requirements. Although Linux distributions come with default SELinux policies, they may not address all the use cases or applications within an organization's environment. Deploying custom policies allows you to establish precise rules that align with your infrastructure and applications.\nThis is the second article in our SELinux series. The first article described SELinux basics. T…",
-          "link": "https://developers.redhat.com/articles/2023/10/10/how-custom-selinux-policies-secure-servers-and-containers",
-          "publishedOn": "2023-10-10T07:00:00.000Z",
-          "wordCount": 4107,
-          "title": "How custom SELinux policies secure servers and containers",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL1_2x.png?itok=sH2E700S"
-        },
-        {
-          "id": "95d3a2f7-477c-4c56-8894-124fa034c2c2",
-          "author": "Trevor Royer",
-          "description": "One of the major challenges of managing a cluster and application resources with GitOps is validating that changes to the GitOps manifests are correct. When making changes to objects directly on the cluster, the user is immediately presented with feedback when issues exist. The user is able to troubleshoot and resolve those issues with the knowledge of the context of the changes they just made. When working with GitOps, that feedback cycle is often delayed and users don't receive feedback on changes until they are applied to the cluster, which could be hours or even weeks depending on the approval lifecycle of a change.\nTo reduce the number of errors in changes to a GitOps manifest and eliminate the dreaded Unknown state in an ArgoCD application, this article will discuss tools and best pr…",
-          "link": "https://developers.redhat.com/articles/2023/10/10/how-validate-gitops-manifests",
-          "publishedOn": "2023-10-10T07:00:00.000Z",
-          "wordCount": 4000,
-          "title": "How to validate GitOps manifests",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_GitOps_Kubernetes_Featured_ArticleA_0.png?itok=un5Iwpo9"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "edykim.com 블로그 RSS 피드",
@@ -235,33 +258,23 @@
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
         {
-          "id": "https://eli.thegreenplace.net/2023/es-module-imports-in-nodejs-and-the-browser/",
+          "id": "https://eli.thegreenplace.net/2023/using-ollama-with-langchaingo/",
           "author": null,
-          "description": "<p>For a <a class=\"reference external\" href=\"https://eli.thegreenplace.net/2023/cubic-spline-interpolation/\">recent project</a>, I wanted to\nhave some JS code (in multiple files) available for testing from the command-line\nwith Node.js, but also to be able to load the same code into a web page to be\ninvoked directly from a browser.</p>\n<p>I've encountered this same issue before …</p>",
-          "link": "https://eli.thegreenplace.net/2023/es-module-imports-in-nodejs-and-the-browser/",
-          "publishedOn": "2023-10-24T03:58:00.000Z",
-          "wordCount": 559,
-          "title": "ES Module imports in Node.js and the browser",
+          "description": "<p>One of the most exciting areas of LLM-related development in 2023 is the\navailability of powerful (and sometimes even open-source) models we can run\nlocally on our machines.</p>\n<p>Several tools exist that make it relatively easy to obtain, run and manage\nsuch models locally; for example <a class=\"reference external\" href=\"https://ollama.ai/\">Ollama</a> (written in Go …</p>",
+          "link": "https://eli.thegreenplace.net/2023/using-ollama-with-langchaingo/",
+          "publishedOn": "2023-11-22T13:25:00.000Z",
+          "wordCount": null,
+          "title": "Using Ollama with LangChainGo",
           "imageUrl": null
         },
         {
-          "id": "https://eli.thegreenplace.net/2023/better-http-server-routing-in-go-122/",
+          "id": "https://eli.thegreenplace.net/2023/retrieval-augmented-generation-in-go/",
           "author": null,
-          "description": "<p>An <a class=\"reference external\" href=\"https://github.com/golang/go/issues/61410\">exciting proposal</a> is\nexpected to land in Go 1.22 - enhancing the pattern-matching capabilities of\nthe default HTTP serving multiplexer in the <tt class=\"docutils literal\">net/http</tt> package.</p>\n<p>The existing multiplexer (<a class=\"reference external\" href=\"https://pkg.go.dev/net/http#ServeMux\">http.ServeMux</a>) offers rudimentary path matching, but\nnot much beyond that. This led to a cottage industry of 3rd party libraries …</p>",
-          "link": "https://eli.thegreenplace.net/2023/better-http-server-routing-in-go-122/",
-          "publishedOn": "2023-10-16T12:17:00.000Z",
-          "wordCount": 1209,
-          "title": "Better HTTP server routing in Go 1.22",
-          "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2023/cubic-spline-interpolation/",
-          "author": null,
-          "description": "<p>This post explains how cubic spline interpolation works, and presents a full\nimplementation in JavaScript, hooked up to a SVG-based visualization.\nAs a side effect, it also covers Gaussian elimination and presents a JavaScript\nimplementation of that as well.</p>\n<p>I love topics that mix math and programming in a meaningful …</p>",
-          "link": "https://eli.thegreenplace.net/2023/cubic-spline-interpolation/",
-          "publishedOn": "2023-10-12T12:57:00.000Z",
-          "wordCount": 1761,
-          "title": "Cubic spline interpolation",
+          "description": "<p>I've been reading more and more about LLM-based applications recently, itching\nto build something useful as a learning experience. In this post, I want to\nshare a Retrieval Augmented Generation (RAG) system I've built in 100% Go and\nsome insights I learned along the way.</p>\n<div class=\"section\" id=\"some-limitations-of-current-llms\">\n<h2>Some limitations of current LLMs …</h2></div>",
+          "link": "https://eli.thegreenplace.net/2023/retrieval-augmented-generation-in-go/",
+          "publishedOn": "2023-11-10T17:02:00.000Z",
+          "wordCount": null,
+          "title": "Retrieval Augmented Generation in Go",
           "imageUrl": null
         }
       ]
@@ -271,6 +284,16 @@
       "feedUrl": "https://embeddedartistry.com/feed/",
       "siteUrl": "https://embeddedartistry.com/",
       "articles": [
+        {
+          "id": "https://embeddedartistry.com/?p=37448",
+          "author": "Phillip Johnston",
+          "description": "8 November 2023 by Phillip JohnstonThis post is mostly a note-to-self, because I’ve solved this before but have no notes on it. I also hope that publishing it on my website might save someone a few minutes or hours in the future. Short Summary If your commit history has case-sensitive rename operations and you’re mucking … \nContinue reading \"Resolving Git Commit History Divergence Due to Case-Sensitive Rename Operations\"\nThe post Resolving Git Commit History Divergence Due to Case-Sensitive Rename Operations appeared first on Embedded Artistry.",
+          "link": "https://embeddedartistry.com/blog/2023/11/08/resolving-git-commit-history-divergence-due-to-case-sensitive-rename-operations/",
+          "publishedOn": "2023-11-08T18:05:14.000Z",
+          "wordCount": null,
+          "title": "Resolving Git Commit History Divergence Due to Case-Sensitive Rename Operations",
+          "imageUrl": null
+        },
         {
           "id": "https://embeddedartistry.com/?p=36852",
           "author": "Phillip Johnston",
@@ -288,6 +311,106 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4480963",
+          "author": "Nitin Dahad",
+          "description": "New N3202 SSD from Swissbit is designed to deliver reliability and endurance for various applications, including data logging, database access, edge servers, or telecom & networking in industrial as well as enterprise storage applications.\nThe post New PCIe SSD targets environments requiring reliability and endurance appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/new-pcie-ssd-targets-environments-requiring-reliability-and-endurance/",
+          "publishedOn": "2023-11-22T12:59:25.000Z",
+          "wordCount": null,
+          "title": "New PCIe SSD targets environments requiring reliability and endurance",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480945",
+          "author": "Mahesh Turaga",
+          "description": "This article explores the role of the cloud in democratizing generative AI to everyone from startups to large enterprises.\nThe post How will cloud democratize generative AI? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/how-will-cloud-democratize-generative-ai/",
+          "publishedOn": "2023-11-22T11:54:01.000Z",
+          "wordCount": null,
+          "title": "How will cloud democratize generative AI?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480947",
+          "author": "Miro Samek",
+          "description": "In this installment in the state machine segment, I introduce the state machine implementation in C that I consider optimal according to the criteria I...\nThe post Programming embedded systems: optimal state machine implementation in C appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/programming-embedded-systems-optimal-state-machine-implementation-in-c/",
+          "publishedOn": "2023-11-22T11:47:00.000Z",
+          "wordCount": null,
+          "title": "Programming embedded systems: optimal state machine implementation in C",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480958",
+          "author": "Jacob Beningo",
+          "description": "The future of RTOS applications may be POSIX-driven, ushering in a new era of cross-platform development in resource-constrained embedded systems. The quest for compatibility and...\nThe post Is POSIX the key to futureproofing your RTOS projects? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/is-posix-the-key-to-futureproofing-your-rtos-projects/",
+          "publishedOn": "2023-11-22T10:03:00.000Z",
+          "wordCount": null,
+          "title": "Is POSIX the key to futureproofing your RTOS projects?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480938",
+          "author": "Nitin Dahad",
+          "description": "A vendor-neutral open source RTOS certified for safety-critical applications and published under a permissive license is an “industry game changer” as Azure RTOS becomes Eclipse ThreadX under the Eclipse Foundation.\nThe post Azure RTOS goes open-source as Eclipse ThreadX appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/azure-rtos-goes-open-source-as-eclipse-threadx/",
+          "publishedOn": "2023-11-21T20:44:40.000Z",
+          "wordCount": null,
+          "title": "Azure RTOS goes open-source as Eclipse ThreadX",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480928",
+          "author": "Chet Babla",
+          "description": "Lidar is rapidly gaining interest and deployment for ADAS and automated vehicle sensing systems, but there are different approaches to implement the technology. This article explains these approaches and the relative benefits of coherent lidar detection.\nThe post Why coherent lidar is gaining traction in ADAS and automotive sensing appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/why-coherent-lidar-is-gaining-traction-in-adas-and-automotive-sensing/",
+          "publishedOn": "2023-11-20T17:54:01.000Z",
+          "wordCount": null,
+          "title": "Why coherent lidar is gaining traction in ADAS and automotive sensing",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480916",
+          "author": "Paul Marshall",
+          "description": "Designing a device and building in connectivity at the end is equivalent to swapping out a steam engine for an electric motor and expecting production to improve. Connectivity should be a strategic investment.\nThe post Why a ‘connected by design’ mindset is needed to realize true benefits of IoT appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/why-a-connected-by-design-mindset-is-needed-to-realize-true-benefits-of-iot/",
+          "publishedOn": "2023-11-17T18:04:24.000Z",
+          "wordCount": null,
+          "title": "Why a ‘connected by design’ mindset is needed to realize true benefits of IoT",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480897",
+          "author": "Jay Esfandyari, Royce Higashi",
+          "description": "This article looks at how a combination of MEMS microphones and audio accelerometers can capture low frequency vibrations of less than 2kHz through solid material, enabling detection of the vibration in the skull resulting from a speaker’s voice.\nThe post Using a high bandwidth accelerometer with MEMS mic to get better acoustic performance appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/using-a-high-bandwidth-accelerometer-with-mems-mic-to-get-better-acoustic-performance/",
+          "publishedOn": "2023-11-17T14:42:21.000Z",
+          "wordCount": null,
+          "title": "Using a high bandwidth accelerometer with MEMS mic to get better acoustic performance",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480853",
+          "author": "Alessandro Leonardi, Giorgio Paganini, and Fulvio Bagarelli",
+          "description": "With a reliable method of remote control, stepper motors can easily be controlled in real-time at longer distances without sacrificing any performance or speed. Industry...\nThe post Enabling reliable automation with remote motion control appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/enabling-reliable-automation-with-remote-motion-control/",
+          "publishedOn": "2023-11-14T14:04:35.000Z",
+          "wordCount": null,
+          "title": "Enabling reliable automation with remote motion control",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4480850",
+          "author": "Sam Bocetta",
+          "description": "How edge computing fortifies IoT devices against security breaches. The internet of things (IoT) has opened up a new frontier in the digital landscape, merging...\nThe post Demystifying edge security appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/demystifying-edge-security/",
+          "publishedOn": "2023-11-14T13:31:27.000Z",
+          "wordCount": null,
+          "title": "Demystifying edge security",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4480801",
           "author": "Nitin Dahad",
@@ -417,116 +540,6 @@
           "wordCount": null,
           "title": "Programming embedded systems: input-driven state machines",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480649",
-          "author": "Gilad David Maayan",
-          "description": "How Microsoft’s IoT Central migrator tool simplifies the process of migrating IoT solutions to the cloud. Embedded and internet of things (IoT) systems in the...\nThe post Migrating embedded systems to the cloud with Azure IoT Hub appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/migrating-embedded-systems-to-the-cloud-with-azure-iot-hub/",
-          "publishedOn": "2023-10-24T03:29:00.000Z",
-          "wordCount": null,
-          "title": "Migrating embedded systems to the cloud with Azure IoT Hub",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480635",
-          "author": "Christophe Tremlet",
-          "description": "The IEC 62443 series of standards for infrastructure cybersecurity offers an extensive layer of security, but it raises several challenges for those seeking certification. This...\nThe post Adopting IEC 62443 standards for infrastructure cybersecurity appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/adopting-iec-62443-standards-for-infrastructure-cybersecurity/",
-          "publishedOn": "2023-10-22T20:07:09.000Z",
-          "wordCount": null,
-          "title": "Adopting IEC 62443 standards for infrastructure cybersecurity",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480624",
-          "author": "Jacob Beningo",
-          "description": "In this post, we continue our work with ChatGPT by using it to update and improve the Makefile to manage a simulation and debug target....\nThe post Creating a makefile build system using ChatGPT: Makefile simulation target appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/creating-a-makefile-build-system-using-chatgpt-makefile-simulation-target/",
-          "publishedOn": "2023-10-22T17:07:39.000Z",
-          "wordCount": null,
-          "title": "Creating a makefile build system using ChatGPT: Makefile simulation target",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480618",
-          "author": "Michael Fuhrmann",
-          "description": "This article explores the road to developing secure devices by introducing the 13 Best Practices of IoT security and how they can be implemented in...\nThe post Ensuring security legislation compliance in IoT applications appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/ensuring-security-legislation-compliance-in-iot-applications/",
-          "publishedOn": "2023-10-18T12:03:14.000Z",
-          "wordCount": null,
-          "title": "Ensuring security legislation compliance in IoT applications",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480612",
-          "author": "Wilfred Nilsen",
-          "description": "Forging a trusted, secure communication pathway is challenging. This article delves into these issues and offers simple, streamlined solutions to secure your embedded server. If...\nThe post Secure embedded servers with automated certificate management appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/secure-embedded-servers-with-automated-certificate-management/",
-          "publishedOn": "2023-10-18T11:40:18.000Z",
-          "wordCount": null,
-          "title": "Secure embedded servers with automated certificate management",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480605",
-          "author": "Nitin Dahad",
-          "description": "Tracealyzer SDK enables developers to create custom extensions for full observability, including RTOS awareness and API tracing for deep insight into the runtime world.\nThe post Custom trace observability for all RTOS and silicon vendor APIs appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/custom-trace-observability-for-all-rtos-and-silicon-vendor-apis/",
-          "publishedOn": "2023-10-16T14:35:39.000Z",
-          "wordCount": null,
-          "title": "Custom trace observability for all RTOS and silicon vendor APIs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480600",
-          "author": "Nitin Dahad",
-          "description": "Developers can evaluate the ITTIA DB solution within their STM32 project thanks to a software expansion for STM32Cube.\nThe post Real-time database management for STM32 MCUs appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/real-time-database-management-for-stm32-mcus/",
-          "publishedOn": "2023-10-16T13:50:16.000Z",
-          "wordCount": null,
-          "title": "Real-time database management for STM32 MCUs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480595",
-          "author": "Jacob Beningo",
-          "description": "While embedded software might seem unique, it’s not so special that generative models can’t handle it! If you open a news feed, inbox, or any...\nThe post Will AI take embedded software jobs? appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/will-ai-take-embedded-software-jobs/",
-          "publishedOn": "2023-10-15T15:45:42.000Z",
-          "wordCount": null,
-          "title": "Will AI take embedded software jobs?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480589",
-          "author": "Erbe D. Reyta, Valentin Beleca, and Mihai Bancisor",
-          "description": "This article describes a complete RF signal generator implementation that outputs a single tone from DC up to 5.5 GHz with output power ranging from...\nThe post Implementing a Raspberry Pi-based synthesized RF signal generator appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/implementing-a-raspberry-pi-based-synthesized-rf-signal-generator/",
-          "publishedOn": "2023-10-10T16:24:05.000Z",
-          "wordCount": 6271,
-          "title": "Implementing a Raspberry Pi-based synthesized RF signal generator",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/10/2310adi-rf-fig-02.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480566",
-          "author": "Maharajan Veerabahu",
-          "description": "Smart cart systems equipped with multi-camera synchronization have emerged as game-changers, revolutionizing the customer shopping experience and autonomous checkout systems. The retail industry has undergone...\nThe post Implementing multi-camera synchronization for retail smart carts appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/implementing-multi-camera-synchronization-for-retail-smart-carts/",
-          "publishedOn": "2023-10-10T15:45:55.000Z",
-          "wordCount": 3789,
-          "title": "Implementing multi-camera synchronization for retail smart carts",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/10/retail-cart-.jpg"
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480561",
-          "author": "Miro Samek",
-          "description": "A state machine’s whole structure of states and transitions is fixed at design time but this might be too inflexible in many real-life situations. In...\nThe post Programming embedded systems: guard conditions appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/programming-embedded-systems-guard-conditions/",
-          "publishedOn": "2023-10-09T15:56:32.000Z",
-          "wordCount": 3492,
-          "title": "Programming embedded systems: guard conditions",
-          "imageUrl": "https://www.embedded.com/wp-content/uploads/2023/10/embedded_thumbnail-30.jpg"
         }
       ]
     },
@@ -535,6 +548,56 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1608.php",
+          "author": null,
+          "description": "The use of point pairing becomes very useful when many people are required to sign one document. This is typical in a contract situation when several people are agreeing to a set of requirements. If we used the method described in the blog on signatures, each person would sign the document, and then the verification process would require checking every single signature. By using...",
+          "link": "https://www.embeddedrelated.com/showarticle/1608.php",
+          "publishedOn": "2023-11-19T22:04:18.000Z",
+          "wordCount": null,
+          "title": "Elliptic Curve Cryptography - Multiple Signatures",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1606.php",
+          "author": null,
+          "description": "Let's face it, handling errors is boring and hard. It is not a case that most introductory programming classes just glimpse over the matter and focus on other topics.  There are various approaches, but when you need to distinguish between the happy and the unhappy paths, no one is a clear winner. In this article, I will focus on Error Codes (a quite common way of reporting errors in...",
+          "link": "https://www.embeddedrelated.com/showarticle/1606.php",
+          "publishedOn": "2023-11-16T07:19:28.000Z",
+          "wordCount": null,
+          "title": "Lightweight C++ Error-Codes Handling",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1604.php",
+          "author": null,
+          "description": "Robust engineering and programming practices may be vital for a successful embedded business, but they are rarely the reason why people are drawn into the embedded world in the first place. In this article I'll explain, with the help of a concrete example, what made me choose this line of work – and hopefully, bring back some fond memories to you too.\n  The Wonder Years\nThere's a famous quip,...",
+          "link": "https://www.embeddedrelated.com/showarticle/1604.php",
+          "publishedOn": "2023-11-13T19:09:34.000Z",
+          "wordCount": null,
+          "title": "Flood Fill, or: The Joy of Resource Constraints",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1589.php",
+          "author": null,
+          "description": "Introduction\r\nWhat does it mean to be an \"embedded systems engineer\"? What skills would it be beneficial for you to develop if you want to be a successful one? Whether you've only just finished your first Arduino project or you've been building embedded systems for decades, we could all benefit from periodically assessing our skills against a baseline and identifying new skills that we can...",
+          "link": "https://www.embeddedrelated.com/showarticle/1589.php",
+          "publishedOn": "2023-11-09T16:37:07.000Z",
+          "wordCount": null,
+          "title": "Embedded Systems Roadmaps",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1603.php",
+          "author": null,
+          "description": "Introduction\nEmbedded systems co-design is a methodology that harmonizes hardware and software design from the outset of system development. It is crucial for developing high-performance and efficient solutions. Embedded systems co-design, exemplified by innovations like Tesla's self-driving cars, is playing a pivotal role in addressing the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1603.php",
+          "publishedOn": "2023-11-04T19:16:05.000Z",
+          "wordCount": null,
+          "title": "Embedded Systems Co-design for Object Recognition: A Synergistic Approach",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1602.php",
           "author": null,
@@ -584,76 +647,6 @@
           "wordCount": null,
           "title": "Modern C++ in embedded development: Static Classes",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1596.php",
-          "author": null,
-          "description": "In my last post, C to C++: Using Abstract Interfaces to Create Hardware Abstraction Layers (HAL), I discussed how vital hardware abstraction layers are and how to use a C++ abstract interface to create them. You may be thinking, that’s great for C++, but I work in C! How do I create a HAL that can easily swap in and out different drivers? In today’s post, I will walk through exactly how to...",
-          "link": "https://www.embeddedrelated.com/showarticle/1596.php",
-          "publishedOn": "2023-10-23T14:08:14.000Z",
-          "wordCount": 3625,
-          "title": "Creating a Hardware Abstraction Layer (HAL) in C",
-          "imageUrl": "https://www.embeddedrelated.com/new2/images/blogs/blog-post_Jacob_Beningo_HAL_in_c.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1595.php",
-          "author": null,
-          "description": "To recap the basic math, an elliptic curve over a finite field has points $(x, y)$ which satisfy the equation $$y^2 = x^3 + a x + b \\text{ mod } q.$$When points are added to themselves multiple times we write the multiplication as $$Y = k P$$where $k$ is an integer. Since the number of points is finite, after a while we get to a value of $k = n$  such that $$\\mathscr O = n P....",
-          "link": "https://www.embeddedrelated.com/showarticle/1595.php",
-          "publishedOn": "2023-10-21T15:13:21.000Z",
-          "wordCount": 3901,
-          "title": "Elliptic Curve Cryptography - Key Exchange and Signatures",
-          "imageUrl": "https://freecontent.manning.com/cultivating-practical-expertise-learning-from-elliptic-cur ve-cryptography-for-developers/"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1588.php",
-          "author": null,
-          "description": "Introduction\r\nIt's possible that you've heard the term \"Turing complete\" before, probably in reference to a computer or a programming language. Certain programming languages are or are not \"Turing complete\" and occassionally odd stuff, like Conway's Game of Life, is called \"Turing complete\". But what, exactly, does this term mean and why is it important in the realm of computer science? To...",
-          "link": "https://www.embeddedrelated.com/showarticle/1588.php",
-          "publishedOn": "2023-10-16T16:42:40.000Z",
-          "wordCount": null,
-          "title": "What does it mean to be 'Turing complete'?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1591.php",
-          "author": null,
-          "description": "Cryptographic security has a lot of components. The simple stuff is the mathematics which is what I want to talk about. The hard stuff is preventing people from giving away things that should be secret (Loose lips sink ships still holds today!). The cryptographic security I want to talk about here comes from solving a mathematical problem to find a secret. The assumption is the attacker only...",
-          "link": "https://www.embeddedrelated.com/showarticle/1591.php",
-          "publishedOn": "2023-10-16T15:51:11.000Z",
-          "wordCount": 3357,
-          "title": "Elliptic Curve Cryptography - Security Considerations",
-          "imageUrl": "https://freecontent.manning.com/cultivating-practical-expertise-learning-from-elliptic-cur ve-cryptography-for-developers/"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1569.php",
-          "author": null,
-          "description": "The most common class of embedded projects need some form of interface to allow information to be exchanged between the machine and the user.\n\r\nThis can be done in a number of ways, the most ubiquitous approach being to include a general purpose display. \r\nBeing able to present elaborate graphics opens up the possibility to convey arbitarily common information via text.\n\r\nWhile a convenient...",
-          "link": "https://www.embeddedrelated.com/showarticle/1569.php",
-          "publishedOn": "2023-10-13T16:07:11.000Z",
-          "wordCount": null,
-          "title": "Handling Translations in an Embedded Project",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1590.php",
-          "author": null,
-          "description": "Cryptography is the art of hiding messages, NOT writing on graves, which is a direct translation a friend of mine once asked. I should have said \"that's engraving!\", but I was a week late. The main engine of encrypting a message uses a single key and a fast algorithm. The NIST standard is AES which can use key sizes of 128 bits, 192 bits, or 256 bits. Each of these is considered a level of...",
-          "link": "https://www.embeddedrelated.com/showarticle/1590.php",
-          "publishedOn": "2023-10-10T22:52:50.000Z",
-          "wordCount": null,
-          "title": "Elliptic Curve Cryptography - Basic Math",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1558.php",
-          "author": null,
-          "description": "The most common math algorithms that are needed when we deal with numbers in embedded systems are sum/subtraction, multiplication, division. When we move from scalar to vector quantities and complex numbers, we invariably run into square root when we operate with lengths of vectors. Square root also comes up as the geometric mean of numbers as well as different energy and rms calculations...",
-          "link": "https://www.embeddedrelated.com/showarticle/1558.php",
-          "publishedOn": "2023-10-10T16:30:47.000Z",
-          "wordCount": null,
-          "title": "Square root in fixed point VHDL",
-          "imageUrl": null
         }
       ]
     },
@@ -685,6 +678,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2023/11/firebase-demo-day-recap.html",
+          "author": null,
+          "description": "Posted by Annum Munir – Product Marketing Manager\n\n\n\n\n\n\n\nThis article also appears on the Firebase blog\n\nAfter sharing tons of teasers and behind-the-scenes footage over the past few weeks, we’re excited to announce that our very first Demo Day is finally here! Today, we released 10 demos (i.e. pre-recorded short videos) alongside technical resources to show you what’s new, what’s possible, and how you can solve your biggest app development challenges with Firebase. You don’t want to miss this peek at the future of Firebase!\nTune in from anywhere, at any time to check out the demos at your own pace.\n\n\nBuild, run and scale your apps with Firebase\nThe demos are designed to help you build and run full stack apps faster, harness the power of AI to work smarter and build engaging experiences, and use Google technology and tools together to be more productive.\nAI demos\nAI has everyone buzzing, but are you wondering how to practically use it in your app development workflow? You won’t want to miss these demos:\n\n  \n\n\n\n  \n\n \n\n\n\nFlutter and Project IDX demos\nWe also worked closely with our friends across Google, including Flutter and Project IDX (to name a few) to demo integrated solutions from your favorite Google products so you get a seamless development experience. Check them out:\n\n  \n\n  \n\n\n\nApp development demos\nAnd last but not least, we’re committed to helping you improve all parts of app development. Watch these demos on strengthening app security, releasing safely and reducing risk, and automating and scaling your infrastructure. We’ve even added new quality-of-life features and given the Firebase console a highly-requested makeover that’ll take you to the dark side.\n\n  \n\n\n\n  \n\n  \n  \n\n\nHappy Demo Day!\nCheck out the demos and then join the conversation on X (formerly Twitter) and LinkedIn using #FirebaseDemoDay to ask questions, give us feedback, and see what the rest of the community is saying.",
+          "link": "http://developers.googleblog.com/2023/11/firebase-demo-day-recap.html",
+          "publishedOn": "2023-11-08T22:00:00.001Z",
+          "wordCount": null,
+          "title": "See what's new & what’s possible with Firebase at Demo Day",
+          "imageUrl": null
+        },
         {
           "id": "http://developers.googleblog.com/2023/11/full-stack-development-in-project-idx.html",
           "author": null,
@@ -794,66 +797,6 @@
           "wordCount": 2383,
           "title": "Password manager Dashlane sees 70% increase in conversion rate for signing-in with passkeys compared to passwords",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh46mMR8BczBbrKLFsAgaapvT8smEsjkgzl3rM7s1zRakV8cJMOVV5hT02k-3XONeMhZSpoqVsdgEpbCfmBeZlvr7M6WFniOgDj6-KJMfQxhBfMQfmu2Up_wh2R50NGwa25tmoVZG1KAvLGxcDixrjA-44jCh1XERHU0_eYMhXWDCsUwlxcbVQDqnIKu6E/w1200-h630-p-k-no-nu/case-study-dashline-social.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/10/passkeys-week.html",
-          "author": null,
-          "description": "Posted by Milica Mihajlija, Technical Writer \n\n\n\n\n\n\n\nPasskeys are an easier and more secure alternative to passwords. They let users sign-in simply with a fingerprint, face scan, PIN or a pattern. This week we are sharing resources to help you understand passkeys and upgrade authentication on your sites and apps.\nEvery day from 23-27 October on @ChromiumDev and @AndroidDev we’ll share new materials, including blog posts, case studies, and a Q&A session. Use #PasskeysWeek to participate in the conversation and spread the word about your sites and apps  that support passkeys.\n\n\n\nJoin our live Q&A\nOn 25 October at 10 AM PDT, we’ll host a live Q&A session on Google for Developers YouTube channel where you’ll be able to ask questions in the live chat and get answers from passkeys engineers from…",
-          "link": "http://developers.googleblog.com/2023/10/passkeys-week.html",
-          "publishedOn": "2023-10-23T16:00:00.000Z",
-          "wordCount": 2018,
-          "title": "Passkeys week is here",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQamKkvgZXPO2TTvOWGIazgm5jKK9TRUQaMn9607IY8vybmT21OA8KnS_SGuJuAHIRHaQrTVJoaLhjSlTzTf09ne18pZlzjvFbc19U2zjGkvTn5UCe7XzkN_tMQVpkB82yezz4q6TzHaLMrhW8EXdMltr8toRjqNUe0ze3ZN6FrRHglksFW_uRvp-f1_4/w1200-h630-p-k-no-nu/SOCIAL-Intro-blog-on-passkeys-week.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/10/join-us-for-passkeys-week.html",
-          "author": null,
-          "description": "Posted by Milica Mihajlija, Technical Writer\n\n\n\n\n\n\nPasskeys are a safer and simpler alternative to passwords that works on all modern browsers and platforms. They enable signing into online accounts by using a device screen lock–with a fingerprint, facial recognition, PIN or a pattern.\nMore and more online services are adding passkey support every day. On 10 October, 2023, Google accounts made passkeys the default sign in method for all devices that support it.\n  \n\nTo accelerate our way into a passwordless future, from 23-27 October we are hosting Passkeys Week–an online event where you can learn everything you need to know to successfully implement passkeys. Use #PasskeysWeek to participate in the conversation and spread the word about your products that support passkeys.\nKeep an eye on @ChromiumDev and @AndroidDev, where we'll share new learning materials, including blog posts, case studies and pathways to earn passkeys badges on your Google Developer Profile.\n \n\nOn 25 October at 10 AM PDT, we’ll host a live Q&A session on Google for Developers YouTube channel where you can get all your questions about passkeys answered by passkeys engineers from Google. Bookmark this link or click \"Notify me\" to get alerted when the livestream is about to start:\n\n\nThe recording will also be available on the channel after the event — we hope you will tune in.",
-          "link": "http://developers.googleblog.com/2023/10/join-us-for-passkeys-week.html",
-          "publishedOn": "2023-10-17T19:30:00.001Z",
-          "wordCount": 1692,
-          "title": "Join us online from 23-27 October for Passkeys Week",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEina37R7RdDn18wLdTxVwm05Mf4tn2fwIyJB-3vJC5isOgr5dc0x9FyrnT5WJsQQkaR_O2efrxkhGTEShlilRgXZwEoQveRy6mxrZ50nXhVPc6hWYY_I4OiftdK3bgjmehKc0FBXDEKH7136OTn1ii-7X2-JfGdOr8sSYXOUHcOL6JoW1hjtErSWm6TCeE/w1200-h630-p-k-no-nu/passkey-editorial.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/10/save-date-for-firebases-first-demo-day.html",
-          "author": null,
-          "description": "Posted by Annum Munir, Product Marketing Manager\n\n\n\n\n\n\nThis article was originally posted on the Firebase blog.\nFor the past six years, we have shared the latest and greatest updates to Firebase, Google’s app development platform, at our annual Firebase Summit – this year, we wanted to do something a little different for our community of developers. So, in addition to the Flutter Firebase festival that just wrapped up, and meeting you all over the world at DevFests, we’re thrilled to announce our very first Firebase Demo Day, happening on November 8, 2023!\nWhat is Demo Day?\nDemo Day will be a virtual experience where we'll unveil short demos (i.e. pre-recorded videos) that showcase what's new, what's possible, and how you can solve your biggest app development challenges with Firebase. You…",
-          "link": "http://developers.googleblog.com/2023/10/save-date-for-firebases-first-demo-day.html",
-          "publishedOn": "2023-10-17T15:00:00.001Z",
-          "wordCount": 1823,
-          "title": "Save the date for Firebase’s first Demo Day!",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEnM1Ok2pqKa0acDDFUC64biAZAKjknZH30vXUztezZXdqrviQC8ZE-cnNVSSuGaJ9FMuVjYjNvYODHka67Gb846X_N9hyphenhyphenEKNsvkiKgNDtebvFqwqXoQRtouVREikWnpF-mEKbDNv2G-slL6u1N7Xo1JT81wveC4X2LoUux_2-QNO6KB7DCotxdeMkoVs/w1200-h630-p-k-no-nu/Firebase-Demo-Day-Social.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/10/people-of-ai-season-2.html",
-          "author": null,
-          "description": "Posted by Ashley Oldacre\n\n\n\n\n\n\n\nIf you are joining us for the first time, you can binge listen to our amazing 8 episodes from Season 1 wherever you get your podcasts.\n \n\nWe are back for another season of People of AI with a new lineup of incredible guests! I am so excited to introduce my new co-host Luiz Gustavo Martins as we meet inspiring people with interesting stories in the field of Artificial Intelligence.\nLast season we focused on the incredible journeys that our guests took to get into the field of AI. Through our stories, we highlighted that no matter who you are, what your interests are, or what you work on, there is a place for anyone to get into this field. We also explored how much more accessible the technology has become over the years, as well as the importance of building …",
-          "link": "http://developers.googleblog.com/2023/10/people-of-ai-season-2.html",
-          "publishedOn": "2023-10-12T16:00:00.001Z",
-          "wordCount": null,
-          "title": "People of AI: Season 2",
-          "imageUrl": null
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/10/how-machine-learning-gde-henry-ruiz-is-inspiredoby-resilience-in-his-community.html",
-          "author": null,
-          "description": "Posted by Kevin Hernandez, Developer Relations Community Manager\n\n\n\n\n\n\n\nFor Hispanic Heritage Month, we are celebrating Henry Ruiz, Machine Learning GDE, and Latin American and Hispanic developer voices.\nHenry Ruiz, Machine Learning GDE, originally had aspirations of becoming a soccer player in his home country of Colombia, but when his brother got injured he knew that he had to have a backup plan. With a love for video games, Henry decided to pursue an education in development and eventually discovered the world of computer science.\n \n\nToday, Henry is a Computer Scientist, working as a Research Specialist (Data Scientist) at Texas A&M AgriLife Research and finishing his Ph.D. in Engineering at Texas A&M University.\n\n\n\n\nHenry, who barely spoke English before immigrating to the United State…",
-          "link": "http://developers.googleblog.com/2023/10/how-machine-learning-gde-henry-ruiz-is-inspiredoby-resilience-in-his-community.html",
-          "publishedOn": "2023-10-10T17:00:00.001Z",
-          "wordCount": 2076,
-          "title": "How Machine Learning GDE Henry Ruiz is inspired by resilience in his community",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFAXyNw7C5R65DDtzMa0ypBmU_t7kST0XW47fEhmU9LYWGFBY76no7YyMgtRK5UxED5zEqn2vPF4Xxp-yDifFBFCn9byiS8Dq-AunGWi0nlSYnzoq88mL4UcO-CQSFe1-9UVWOkJeNQeyOVg5gK3BA8a5sthB2uHLgxhyenObjC3b9wx_5C8CTKYsK9EQ/w1200-h630-p-k-no-nu/SOCIAL-How-machine-learning-GDE-Henry-Ruiz-inspired-by-resilience-in-his-community.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/10/mediapipe-on-device-text-to-image-generation-solution-now-available-for-android-developers.html",
-          "author": null,
-          "description": "Posted by Paul Ruiz – Senior Developer Relations Engineer, and Kris Tonthat – Technical Writer \n\n\n\n\n\n\nEarlier this year, we previewed on-device text-to-image generation with diffusion models for Android via MediaPipe Solutions. Today we’re happy to announce that this is available as an early, experimental solution, Image Generator, for developers to try out on Android devices, allowing you to easily generate images entirely on-device in as quickly as ~15 seconds on higher end devices. We can’t wait to see what you create!\nThere are three primary ways that you can use the new MediaPipe Image Generator task: \n\nText-to-image generation based on text prompts using standard diffusion models.\nControllable text-to-image generation based on text prompts and conditioning images using diffusion plug…",
-          "link": "http://developers.googleblog.com/2023/10/mediapipe-on-device-text-to-image-generation-solution-now-available-for-android-developers.html",
-          "publishedOn": "2023-10-09T20:15:00.001Z",
-          "wordCount": 2479,
-          "title": "MediaPipe On-Device Text-to-Image Generation Solution Now Available for Android Developers",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1pTUGVbwfS4oH8yFDX2FBFU9mVTBUJpwd-aiZ46WaogBM6yojDB0RuzbsUAB-eLYHNoqWeaNppsw4vodp9uslZ_yeJQT37lOlnVruJDpTvWWCNWzDcXJfGTEtAuiwoSYZKyvqOZlTUhN97atFj2BmiI-CGX5wOow62Z49O4yprgtg4qHPvXcmGwjrhVQ/w1200-h630-p-k-no-nu/Editorial-GFD-and-Media-Piepe-social.png"
         }
       ]
     },
@@ -873,24 +816,53 @@
       "title": "Python Insider",
       "feedUrl": "https://feeds.feedburner.com/PythonInsider",
       "siteUrl": "https://pythoninsider.blogspot.com/",
-      "articles": [
-        {
-          "id": "https://pythoninsider.blogspot.com/2023/10/python-3130-alpha-1-is-now-available.html",
-          "author": null,
-          "description": "It’s not a very exciting release (yet), but it’s time for the first alpha of Python 3.13 anyway!\n\nhttps://www.python.org/downloads/release/python-3130a1/\nThis is an early developer preview of Python 3.13\n \nMajor new features of the 3.13 series, compared to 3.12\nPython 3.13 is still in development.  This release, 3.13.0a1 is the first of seven planned alpha releases.\nAlpha releases are intended to make it easier to test the current \nstate of new features and bug fixes and to test the release process.\nDuring the alpha phase, features may be added up until the start of \nthe beta phase (2024-05-07) and, if necessary, may be modified or \ndeleted up until the release candidate phase (2024-07-30).  Please keep \nin mind that this is a preview release and its use is not recommended for production environments.\nMany new features for Python 3.13 are still being planned and written.  The most notable change so far are new deprecations, most of which are scheduled for removal from Python 3.15 or 3.16\n(Hey, fellow core developer, if a feature you find important is missing from this list, let Thomas know.)\nThe next pre-release of Python 3.13 will be 3.13.0a2, currently scheduled for  2023-11-21.\n \nMore resources\nOnline Documentation\nPEP 719, 3.13 Release Schedule\nReport bugs at https://github.com/python/cpython/issues.\nHelp fund Python and its community. \n\n \nEnjoy the new releases\nThanks to all of the many volunteers who help make Python Development\n and these releases possible! Please consider supporting our efforts by \nvolunteering yourself or through organization contributions to the \nPython Software Foundation.\nRegards from lovely Czechia,\nYour release team,\nThomas Wouters \nNed Deily \nSteve Dower \nŁukasz Langa",
-          "link": "https://pythoninsider.blogspot.com/2023/10/python-3130-alpha-1-is-now-available.html",
-          "publishedOn": "2023-10-13T12:31:00.005Z",
-          "wordCount": 1650,
-          "title": "Python 3.13.0 alpha 1 is now available",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "from pvs-studio.com",
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/1082/",
+          "author": null,
+          "description": "Our team regularly posts educational articles, describes errors in open-source projects, and makes entertaining content. So, you can find many curious and useful things there. However, aren't we...",
+          "link": "https://pvs-studio.com/en/blog/posts/1082/",
+          "publishedOn": "2023-11-20T21:00:00.000Z",
+          "wordCount": null,
+          "title": "What C++, C# or Java article would you like to read on our blog?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1081/",
+          "author": null,
+          "description": "Jack London once said, \"You can't wait for inspiration. You have to go after it with a club\". When it comes to game development, the SDL project may well be such a club. How is it made, though?",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1081/",
+          "publishedOn": "2023-11-16T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Games! How they write code for SDL (+ interview with the creator)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1080/",
+          "author": null,
+          "description": ".NET 8 has been released, so it's time to start porting your projects to the new version. In this article, we'll look at new features and enhancements: C# 12, performance, Native AOT, GC, new types...",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1080/",
+          "publishedOn": "2023-11-13T21:00:00.000Z",
+          "wordCount": null,
+          "title": "What's new in .NET 8?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1079/",
+          "author": null,
+          "description": "VS Code is a code editor that many developers are familiar with. Adding different extensions to enhance the programming experience is one of its main features. Now one of them helps find errors more...",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1079/",
+          "publishedOn": "2023-11-08T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Using the PVS-Studio extension for VS Code to effectively handle errors in C# code",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1078/",
           "author": null,
@@ -920,66 +892,6 @@
           "wordCount": 7190,
           "title": "Typos, null pointers, and treacherous TAB: 33 fragments in the GTK library",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1076_GTK_and_tab/image1_thm_intoblank_1200x630.png?ver=10-26-2023-10-00-18"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/1075/",
-          "author": null,
-          "description": "Flipper Zero is a pocket \"multi-tool\" for geeks, a treasure for pentesters, and your own cyber pet. All you need to take full advantage of Flipper Zero is your imagination and a set of certain skills.",
-          "link": "https://pvs-studio.com/en/blog/posts/1075/",
-          "publishedOn": "2023-10-23T21:00:00.000Z",
-          "wordCount": 10006,
-          "title": "Interview with developers of Flipper Zero — a multi-tool for hackers and pentesters",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1075_FlipperZero/image1_thm_intoblank_1200x630.png?ver=10-24-2023-16-10-13"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1074/",
-          "author": null,
-          "description": "It's mid-fall which means a new version of C# is coming soon. It's time to find out what updates will soon appear in the language. Although C#12 has fewer features than previous versions, it still...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1074/",
-          "publishedOn": "2023-10-19T21:00:00.000Z",
-          "wordCount": 6210,
-          "title": "What's new in C# 12: overview",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1074_csharp12/image1_thm_intoblank_1200x630.png?ver=10-20-2023-09-50-12"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/1073/",
-          "author": null,
-          "description": "PVS-Studio 7.27 has been released. Now you can analyze .NET projects in the plugin for VS Code, check Unreal Engine projects directly in Rider — and there is more to come! See the details in this...",
-          "link": "https://pvs-studio.com/en/blog/posts/1073/",
-          "publishedOn": "2023-10-18T21:00:00.000Z",
-          "wordCount": 4657,
-          "title": "PVS-Studio 7.27: check C# code in VS Code, analyze Unreal Engine projects in Rider, and more",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1073_PressRelease_7_27/image1_thm_intoblank_1200x630.png?ver=10-19-2023-10-00-08"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1072/",
-          "author": null,
-          "description": "Examining the project code with the help of a static analyzer, sometimes we wonder how the error appeared and why no one noticed it. Would you like to see such an example? If so, welcome to read the...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1072/",
-          "publishedOn": "2023-10-17T21:00:00.000Z",
-          "wordCount": 8376,
-          "title": "FreeCAD and undefined behavior in C++ code: meditation for developers",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1072_FreeCAD/image1_thm_intoblank_1200x630.png?ver=10-18-2023-18-05-18"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1071/",
-          "author": null,
-          "description": "With the recent update, the PVS-Studio analyzer can issue warnings to possible code optimization in Unity Engine projects. If you are wondering what kind of warnings the analyzer issues, how it...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1071/",
-          "publishedOn": "2023-10-16T21:00:00.000Z",
-          "wordCount": 5852,
-          "title": "PVS-Studio helps optimize Unity Engine projects",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1071_Unity_optimizations/image1_thm_intoblank_1200x630.png?ver=10-17-2023-10-15-30"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1070/",
-          "author": null,
-          "description": "Entity Framework Core is developed by professionals who avoid mistakes thanks to their experience, code reviews, and a powerful testing system. However, even such a project is not without its gags...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1070/",
-          "publishedOn": "2023-10-11T21:00:00.000Z",
-          "wordCount": 5887,
-          "title": "5 amusing oddities in the code of Entity Framework Core",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1070_EntityFrameworkCoreCheck/image1_thm_intoblank_1200x630.png?ver=10-12-2023-11-10-23"
         }
       ]
     },
@@ -1003,16 +915,6 @@
           "wordCount": 4699,
           "title": "First handset with MTE on the market",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMUk4xkJBZCV6AiOVlAXpvjqe7Jy8zbE16O3VggdMsppvQyNa4JmkS05c2G6tnAQ2VBEqQDCtJ3MnZgTW3IICWVAdnDZOAW9B66AsuQZPN5wj_diwjLH3n_quGk9u4-nLoORIUXBuOX3KyxclJvUd87vWjBK8fBG79A70dLxa_vK2brlb5YgZaon5BoWU/w1200-h630-p-k-no-nu/Screenshot%202023-11-01%20at%204.54.22%E2%80%AFPM.png"
-        },
-        {
-          "id": "https://googleprojectzero.blogspot.com/2023/10/an-analysis-of-an-in-the-wild-ios-safari-sandbox-escape.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=lhDjYqiy3mZ0x6ROQEUoUw);.lst-kix_fcb9u51bqgft-4>li{counter-increment:lst-ctn-kix_fcb9u51bqgft-4}ol.lst-kix_shbeio5ln3sf-3.start{counter-reset:lst-ctn-kix_shbeio5ln3sf-3 0}.lst-kix_shbeio5ln3sf-0>li{counter-increment:lst-ctn-kix_shbeio5ln3sf-0}ul.lst-kix_wvnn2lytn2eh-3{list-style-type:none}ul.lst-kix_wvnn2lytn2eh-2{list-style-type:none}ul.lst-kix_wvnn2lytn2eh-5{list-style-type:none}ul.lst-kix_wvnn2lytn2eh-4{list-style-type:none}ul.lst-kix_wvnn2lytn2eh-1{list-style-type:none}.lst-kix_shbeio5ln3sf-6>li{counter-increment:lst-ctn-kix_shbeio5ln3sf-6}ul.lst-kix_wvnn2lytn2eh-0{list-style-type:none}ol.lst-kix_shbeio5ln3sf-7.start{counter-reset:lst-ctn-kix_shbeio5ln3sf-7 0}ol.lst-kix_fcb9u51bqgft-2.start{counter-reset:lst-ctn-kix_fcb9u51…",
-          "link": "https://googleprojectzero.blogspot.com/2023/10/an-analysis-of-an-in-the-wild-ios-safari-sandbox-escape.html",
-          "publishedOn": "2023-10-13T10:47:00.001Z",
-          "wordCount": 15673,
-          "title": "An analysis of an in-the-wild iOS Safari WebContent to GPU Process exploit",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrzpTZ2_H16_OJgFkwuJNmL120zmxWCcdrLlPXp-6x5SsweX8PosbAcKI9Sf8Ad0bYlMfDGwJ0Rz5GdwwEVnek-taAR1voRObiCwl7StIIx2gIHw7zH16AOi-TJRNiyDYKXprNRQNmt6vosLtafQdbjrRgTJB7HLUt_qc1sfCG_sAWZk_wfsfaei3c2-4/w1200-h630-p-k-no-nu/image7.png"
         }
       ]
     },
@@ -1028,6 +930,26 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/stm-viewer-debug",
+          "author": null,
+          "description": "If you’ve ever wanted to plot data acquired on your embedded target, this article is for you. It explores common use cases for real-time data visualization using STMViewer. Say goodbye to manual, time-consuming, and error-prone data collection and display methods to speed up your debugging process.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/stm-viewer-debug",
+          "publishedOn": "2023-11-15T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Visualizing Real-time Data With STMViewer",
+          "imageUrl": null
+        },
+        {
+          "id": "https://interrupt.memfault.com/blog/device-reliability-metrics",
+          "author": null,
+          "description": "This post will cover the most common reliability metrics that hardware manufacturers use. It will explore which are best for IoT devices, including a novel measurement, Crash Free Hours. We’ll cover exactly what you’ll need to collect on your devices within firmware to measure device reliability and ensure your devices are working as expected.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/device-reliability-metrics",
+          "publishedOn": "2023-11-08T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Counting Crashes to Improve Device Reliability",
+          "imageUrl": null
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/october-2023-roundup",
           "author": null,
           "description": "Here are the articles, videos, and tools that we’ve been excited about this\nOctober.\nContinue reading…",
@@ -1035,26 +957,6 @@
           "publishedOn": "2023-11-01T00:00:00.000Z",
           "wordCount": 1114,
           "title": "What we've been reading in October (2023)",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/rust-in-yocto",
-          "author": null,
-          "description": "At Memfault, our love affair with Rust began in late 2022. What drew us to Rust? Well, the typical allure of a modern programming language: an impressive type-system, memory safety without the constant jitters, efficient concurrency management, a thriving package ecosystem, and overwhelming support from our engineering team. To put it simply, we’re smitten. Our journey with Rust has been nothing short of transformative, enabling rapid progress and leading us to conquer challenges we previously deemed … non-trivial.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/rust-in-yocto",
-          "publishedOn": "2023-10-18T00:00:00.000Z",
-          "wordCount": 2321,
-          "title": "Rust on Yocto: A Seamless Integration",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/mcu-peripheral-forwarding",
-          "author": null,
-          "description": "PC applications that interact with MCUs are used by developers for a number of reasons, such as data visualization, monitoring during testing campaigns, and command and control via a GUI. In this article, we’ll explore mapping an MCU’s peripherals to your personal computer to simplify development of PC applications built for embedded systems.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/mcu-peripheral-forwarding",
-          "publishedOn": "2023-10-11T00:00:00.000Z",
-          "wordCount": 3410,
-          "title": "MCU Peripheral Forwarding",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
@@ -1094,6 +996,156 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/952354/",
+          "author": "corbet",
+          "description": "November 23 is the US Thanksgiving holiday; as is our tradition, we will\nnot be publishing an LWN Weekly Edition this week as we will be far too\nbusy eating.  We wish a good holiday to all of our readers (whether they\ncelebrate it or not); the weekly edition will return on November 30.",
+          "link": "https://lwn.net/Articles/952354/",
+          "publishedOn": "2023-11-22T16:37:04.000Z",
+          "wordCount": null,
+          "title": "Happy Thanksgiving",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952029/",
+          "author": "corbet",
+          "description": "Rust has been a prominent topic at the Kernel Maintainers Summit for the\nlast couple of years, and the 2023 meeting continued that tradition.  As\nRust-for-Linux developer Miguel Ojeda noted at the beginning of the session\ndedicated to the topic, the level of interest in using Rust for kernel\ndevelopment has increased significantly over the last year.  But Rust was\nexplicitly added to Linux as an experiment; is the kernel community now\nready to say that the experiment has succeeded?",
+          "link": "https://lwn.net/Articles/952029/",
+          "publishedOn": "2023-11-22T15:20:05.000Z",
+          "wordCount": null,
+          "title": "[$] Committing to Rust for kernel code",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952312/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (gimp), Fedora (audiofile and firefox), Mageia (postgresql), Red Hat (binutils, c-ares, fence-agents, glibc, kernel, kernel-rt, kpatch-patch, libcap, libqb, linux-firmware, ncurses, pixman, python-setuptools, samba, and tigervnc), Slackware (kernel and mozilla), SUSE (apache2-mod_jk, avahi, container-suseconnect, java-1_8_0-openjdk, libxml2, openssl-1_0_0, openssl-1_1, openvswitch, python3-setuptools, strongswan, ucode-intel, and util-linux), and Ubuntu (frr, gnutls28, hibagent, linux, linux-aws, linux-aws-5.15, linux-hwe-5.15, linux-ibm,\n linux-ibm-5.15, linux-kvm, linux-lowlatency, linux-lowlatency-hwe-5.15,\n linux-nvidia, linux-oracle, linux-oracle-5.15, linux-raspi, linux, linux-aws, linux-aws-5.4, linux-bluefield, linux-hwe-5.4,\n linux-ibm, linux-ibm-5.4, linux-iot, linux-kvm, linux-oracle,\n linux-oracle-5.4, linux-raspi, linux-raspi-5.4, linux-xilinx-zynqmp, linux, linux-aws, linux-aws-6.2, linux-hwe-6.2, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-6.2, linux-raspi, linux-starfive, linux, linux-aws, linux-aws-hwe, linux-hwe, linux-kvm, linux-oracle, linux, linux-aws, linux-laptop, linux-lowlatency, linux-oem-6.5,\n linux-oracle, linux-raspi, linux-starfive, linux-oem-6.1, mosquitto, rabbitmq-server, squid, and tracker-miners).",
+          "link": "https://lwn.net/Articles/952312/",
+          "publishedOn": "2023-11-22T15:17:35.000Z",
+          "wordCount": null,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952122/",
+          "author": "corbet",
+          "description": "The GNU Name System has now been formalized as RFC 9498.\n\n\n\tGNS addresses long-standing security and privacy issues in the\n\tubiquitous Domain Name System (DNS). Previous attempts to secure\n\tDNS (DNSSEC) fail to address critical security issues such as\n\tend-to-end security, query privacy, censorship, and centralization\n\tof root zone governance. After 40 years of patching, it is time for\n\ta new beginning.",
+          "link": "https://lwn.net/Articles/952122/",
+          "publishedOn": "2023-11-21T16:47:28.000Z",
+          "wordCount": null,
+          "title": "RFC 9498: The GNU Name System",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952121/",
+          "author": "corbet",
+          "description": "Version 2.43.0 of the Git\nsource-code management system has been release.  It includes a long list of\nimprovements and minor new features.",
+          "link": "https://lwn.net/Articles/952121/",
+          "publishedOn": "2023-11-21T16:42:58.000Z",
+          "wordCount": null,
+          "title": "Git 2.43.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/951846/",
+          "author": "corbet",
+          "description": "The Linux kernel supports a wide variety of filesystems, many of which are\nno longer in heavy use — or, perhaps, any use at all.  The kernel code\nimplementing the less-popular filesystems tends to be relatively unpopular\nas well, receiving little in the way of maintenance.  Keeping old\nfilesystems alive does place a burden on kernel developers, though, so it\nis not surprising that there is pressure to remove the least popular ones.\nAt the 2023 Kernel Maintainers Summit, the developers talked about these\nfilesystems and what can be done about them.",
+          "link": "https://lwn.net/Articles/951846/",
+          "publishedOn": "2023-11-21T15:06:55.000Z",
+          "wordCount": null,
+          "title": "[$] Trust in and maintenance of filesystems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952090/",
+          "author": "corbet",
+          "description": "Version\n120.0 of the Firefox browser is out.  Changes include a new \"copy link\nwithout site tracking\" option, the ability to enable the Global Privacy Control\nfeature, and some additional privacy features seemingly restricted to users\nin Germany.  The browser will now also import TLS root certificates from\nthe operating system by default on Windows, macOS, and Android.",
+          "link": "https://lwn.net/Articles/952090/",
+          "publishedOn": "2023-11-21T15:03:02.000Z",
+          "wordCount": null,
+          "title": "Firefox 120.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952089/",
+          "author": "corbet",
+          "description": "Faith Ekstrand has announced\nthat the NVK Vulkan driver for NVIDIA \"Turing\" GPUs has been certified as\nbeing fully compliant with the Vulkan 1.0 API.\n\n\n\tPractically, it means that we can pass the entire Vulkan\n\tconformance test suite. From the Khronos perspective, it means that\n\tNVK now meets the bar required to claim to support the Vulkan API\n\tofficially. (There are some legal implications to this which matter\n\tto the Mesa project, but most users don't care about them.) From\n\tthe perspective of users, it means the driver should pretty much\n\twork on Turing and later GPUs.",
+          "link": "https://lwn.net/Articles/952089/",
+          "publishedOn": "2023-11-21T14:58:33.000Z",
+          "wordCount": null,
+          "title": "Ekstrand: NVK reaches Vulkan 1.0 conformance",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952088/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (activemq, strongswan, and wordpress), Mageia (u-boot), SUSE (avahi, frr, libreoffice, nghttp2, openssl, openssl1, postgresql, postgresql15, postgresql16, python-Twisted, ucode-intel, and xen), and Ubuntu (avahi, hibagent, nodejs, strongswan, tang, and webkit2gtk).",
+          "link": "https://lwn.net/Articles/952088/",
+          "publishedOn": "2023-11-21T14:52:01.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/952000/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of the 6.6.2, 6.5.12,\n6.1.63, 5.15.139, 5.10.201, 5.4.261, 4.19.299, and 4.14.330 stable kernels.  They contain a\nrather large number of important fixes throughout the kernel tree.",
+          "link": "https://lwn.net/Articles/952000/",
+          "publishedOn": "2023-11-20T14:41:58.000Z",
+          "wordCount": null,
+          "title": "Eight new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/951999/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (freerdp2, lwip, netty, and wireshark), Fedora (dotnet6.0, dotnet7.0, golang, gst-devtools, gstreamer1, gstreamer1-doc, gstreamer1-plugin-libav, gstreamer1-plugins-bad-free, gstreamer1-plugins-base, gstreamer1-plugins-good, gstreamer1-plugins-ugly-free, gstreamer1-rtsp-server, gstreamer1-vaapi, podman-tui, prometheus-podman-exporter, python-gstreamer1, syncthing, and tigervnc), Mageia (chromium-browser-stable, haproxy, and tigervnc), Oracle (curl, ghostscript, microcode_ctl, nghttp2, open-vm-tools, samba, and squid), SUSE (gcc13, postgresql14, and yt-dlp), and Ubuntu (iniparser).",
+          "link": "https://lwn.net/Articles/951999/",
+          "publishedOn": "2023-11-20T14:30:19.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/951907/",
+          "author": "corbet",
+          "description": "The second 6.7 kernel prepatch is out for\ntesting.  \"The most noticeable thing is probably the turbostat tool\nupdate, which actually came in during the merge window, but was delayed by\njust waiting for getting the pull request properly signed.\"",
+          "link": "https://lwn.net/Articles/951907/",
+          "publishedOn": "2023-11-20T00:20:53.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.7-rc2",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/951550/",
+          "author": "corbet",
+          "description": "One of the core constraints when programming in the kernel is the need to\navoid sleeping when running in atomic context.  For the most part, the\nresponsibility for adherence to this rule is placed on the developer's\nshoulders;  Rust developers, though, want the compiler to ensure that code\nis safe whenever possible.  At the 2023 Linux\nPlumbers Conference, Gary Guo presented (via a remote link) the klint\ntool, which can find \nand flag many atomic-context violations before they turn into\nuser-affecting bugs.",
+          "link": "https://lwn.net/Articles/951550/",
+          "publishedOn": "2023-11-17T16:04:11.000Z",
+          "wordCount": null,
+          "title": "[$] Preventing atomic-context violations in Rust code with klint",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/951801/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (webkit2gtk), Fedora (microcode_ctl, pack, and tigervnc), Slackware (gimp), SUSE (frr, gcc13, go1.20, go1.20-openssl, go1.21, go1.21-openssl, libnbd, libxml2, python-Pillow, python-urllib3, and xen), and Ubuntu (intel-microcode and openvpn).",
+          "link": "https://lwn.net/Articles/951801/",
+          "publishedOn": "2023-11-17T13:43:13.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/951750/",
+          "author": "corbet",
+          "description": "Version\n1.74.0 of the Rust language has been released.  New features include\nbetter configuration for linters, authenticated cargo repositories, and\nsupport for projections in opaque return types.",
+          "link": "https://lwn.net/Articles/951750/",
+          "publishedOn": "2023-11-16T20:30:44.000Z",
+          "wordCount": null,
+          "title": "Rust 1.74.0 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/950538/",
           "author": "corbet",
@@ -1503,386 +1555,6 @@
           "wordCount": 478,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948589/",
-          "author": "corbet",
-          "description": "The 2023 election for members of the Linux Foundation Technical Advisory\nBoard will be held during the upcoming Linux\nPlumbers Conference.  The call\nfor nominees has been posted.\n\n\n\tThe TAB exists to provide advice from the kernel community to the\n\tLinux Foundation; it also serves to facilitate interactions both\n\twithin the community and with outside entities.  Over the last\n\tyear, the TAB has overseen the organization of the Linux Plumbers\n\tConference, released a kernel contribution maturity model for\n\torganizations, advised on code-of-conduct issues, and more.\n\n\nNominations should be sent in by November 13.",
-          "link": "https://lwn.net/Articles/948589/",
-          "publishedOn": "2023-10-23T22:22:04.000Z",
-          "wordCount": 241,
-          "title": "2023 Linux Foundation TAB election call for nominees",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947941/",
-          "author": "corbet",
-          "description": "It is probably fair to say that most Linux users spend little time thinking\nabout the troff typesetting program, despite that application's\ngroundbreaking role in computing history.  Troff (along with nroff) is\nstill with us, though, even if they are called groff these days, and every\nnow and then they make their presence known.  A recent groff change created\na bit of a tempest within the Debian community, and has effectively been\nreverted there.  It all comes down to the question of what, exactly, is the\ncharacter used to mark command-line options on Unix systems?",
-          "link": "https://lwn.net/Articles/947941/",
-          "publishedOn": "2023-10-23T13:07:27.000Z",
-          "wordCount": null,
-          "title": "[$] Hyphens, minus, and dashes in Debian man pages",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948522/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (krb5, redis, roundcube, ruby-rack, ruby-rmagick, zabbix, and zookeeper), Fedora (ansible-core, chromium, libvpx, mingw-xerces-c, python-asgiref, python-django, and vim), Mageia (cadence, kernel, kernel-linus, libxml2, nodejs, and shadow-utils), Oracle (nghttp2), Slackware (LibRaw), and SUSE (chromium, java-11-openjdk, nodejs18, python-Django, python-urllib3, and suse-module-tools).",
-          "link": "https://lwn.net/Articles/948522/",
-          "publishedOn": "2023-10-23T13:06:30.000Z",
-          "wordCount": 297,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948469/",
-          "author": "corbet",
-          "description": "Linus has released 6.6-rc7 for testing.\n\n\n\tAnyway, while this is all bigger than I'd have liked it to be, if\n\tthe upcoming week is quiet and normal, this is the last rc and next\n\tSunday will see the final release and then we'll open the merge\n\twindow for 6.7.  I simply am not aware of any issues that would be\n\tshowstoppers.",
-          "link": "https://lwn.net/Articles/948469/",
-          "publishedOn": "2023-10-23T00:34:15.000Z",
-          "wordCount": 174,
-          "title": "Kernel prepatch 6.6-rc7",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948129/",
-          "author": "corbet",
-          "description": "Jeff Xu recently proposed\nthe addition of a new system call, named mseal(), that would allow\napplications to prevent modifications to selected memory mappings.  It\nwould enable the hardening of user-space applications against certain types\nof attacks; some other operating systems have this type of feature already.\nThere is support for adding this type of mechanism to the Linux kernel as\nwell, but it has become clear that mseal() will not land in the\nmainline in anything resembling its current form.  Instead, it has become\nan example of how not to do kernel development at a number of levels.",
-          "link": "https://lwn.net/Articles/948129/",
-          "publishedOn": "2023-10-20T16:27:53.000Z",
-          "wordCount": null,
-          "title": "[$] mseal() and what comes after",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948368/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (linux-5.10 and webkit2gtk), Fedora (matrix-synapse and trafficserver), Mageia (chromium-browser-stable, ghostscript, libxpm, and ruby-RedCloth), Oracle (.NET 7.0, curl, dotnet7.0, galera, mariadb, go-toolset, golang, java-1.8.0-openjdk, and python-reportlab), Red Hat (php, php:8.0, tomcat, and varnish), Slackware (httpd), SUSE (bluetuith, grub2, kernel, rxvt-unicode, and suse-module-tools), and Ubuntu (dotnet6, dotnet7, dotnet8, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15,\n linux-azure-fde, linux-azure-fde-5.15, linux-gcp, linux-gke, linux-gkeop,\n linux-hwe-5.15, linux-ibm, linux-ibm-5.15, linux-kvm, linux-lowlatency,\n linux-lowlatency-hwe-5.15,linux-nvidia, linux-oracle, linux-raspi, linux, linux-aws, linux-aws-5.4, linux-azure, linux-azure-5.4, linux-gcp,\n linux-gkeop, linux-hwe-5.4, linux-ibm, linux-ibm-5.4, linux-kvm,\n linux-oracle, linux-oracle-5.4, linux-xilinx-zynqmp, linux, linux-aws, linux-aws-6.2, linux-azure, linux-azure-6.2,\n linux-azure-fde-6.2, linux-gcp, linux-gcp-6.2, linux-hwe-6.2, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-6.2, linux-oracle, linux-raspi,\n linux-starfive, linux, linux-aws, linux-azure, linux-azure-4.15, linux-gcp,\n linux-gcp-4.15, linux-hwe, linux-kvm, linux-oracle, linux, linux-aws, linux-kvm, linux-lts-xenial, linux-azure, linux-bluefield, linux-intel-iotg, linux-oem-6.1, linux-raspi, and mutt).",
-          "link": "https://lwn.net/Articles/948368/",
-          "publishedOn": "2023-10-20T13:33:46.000Z",
-          "wordCount": 416,
-          "title": "Security updates for Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948297/",
-          "author": "corbet",
-          "description": "The\n6.5.8,\n6.1.59, and\n5.15.136\nstable kernel updates have been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/948297/",
-          "publishedOn": "2023-10-19T21:41:31.000Z",
-          "wordCount": 133,
-          "title": "Three stable kernel updates",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947736/",
-          "author": "corbet",
-          "description": "When considering the interface provided by the GNU C Library (glibc),\nthoughts naturally turn to the programming interface as specified by POSIX,\nalong with numerous extensions added over the years.  But glibc also\nprovides a \"tunables\" interface to control how the library operates; rather\nthan being managed by a C API, tunables are set with the\nGLIBC_TUNABLES environment\nvariable.  Glibc tunables have been a part of a few security problems\ninvolving setuid binaries, most recently the \"Looney\nTunables\" bug disclosed at the beginning of October.  The glibc\ndevelopers are now considering significant changes to tunable handling in\nthe hope of avoiding such problems in the future.",
-          "link": "https://lwn.net/Articles/947736/",
-          "publishedOn": "2023-10-19T15:12:56.000Z",
-          "wordCount": null,
-          "title": "[$] Toward safer GNU C Library tunable handling",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948246/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (node-babel), Fedora (moodle), Gentoo (mailutils), Oracle (go-toolset:ol8 and java-11-openjdk), Red Hat (ghostscript, grafana, java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, nghttp2, nodejs:16, nodejs:18, and rhc-worker-script), SUSE (cni, cni-plugins, container-suseconnect, containerd, cups, exim, grub2, helm, libeconf, nodejs18, python3, runc, slurm, supportutils, and tomcat), and Ubuntu (glib2.0, openssl, and vips).",
-          "link": "https://lwn.net/Articles/948246/",
-          "publishedOn": "2023-10-19T14:15:43.000Z",
-          "wordCount": 505,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947529/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for October 19, 2023 is available.",
-          "link": "https://lwn.net/Articles/947529/",
-          "publishedOn": "2023-10-19T00:32:03.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for October 19, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/945870/",
-          "author": "jake",
-          "description": "Open-source hardware (or open hardware) refers to hardware that is\ndeveloped in a manner similar to open-source software. There's a widely\naccepted definition of open-source hardware, but it is probably not as well\nknown as its open-source-software counterpart.  In addition, there is a popular\ncertification program that hardware makers can use to indicate which of\ntheir devices meets that criteria.  But there are some vendors that are\nshowing more enthusiasm than others in participating in the process—or in\nproducing \nopen hardware at all.",
-          "link": "https://lwn.net/Articles/945870/",
-          "publishedOn": "2023-10-18T14:18:31.000Z",
-          "wordCount": null,
-          "title": "[$] Defining open hardware",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948098/",
-          "author": "corbet",
-          "description": "The GNOME Foundation has announced\nthe hiring of Holly Million as its new executive director.\n\n\n\tHolly is a multi-talented individual with a diverse background in\n\tnonprofit leadership, filmmaking, teaching, public speaking, and\n\twriting. Her commitment to empowering individuals to make a\n\tpositive impact aligns perfectly with the values and goals of the\n\tGNOME Foundation.",
-          "link": "https://lwn.net/Articles/948098/",
-          "publishedOn": "2023-10-18T13:38:30.000Z",
-          "wordCount": 173,
-          "title": "The GNOME Foundation's new executive director",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948097/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (slurm-wlm), Fedora (icecat and python-configobj), Oracle (dotnet6.0, kernel-container, nginx, nginx:1.20, nginx:1.22, and python3.9), Red Hat (bind9.16, curl, dotnet6.0, kernel-rt, kpatch-patch, nghttp2, nodejs, python-reportlab, and virt:rhel), Slackware (util), SUSE (buildah, conmon, erlang, glibc, kernel, nghttp2, opensc, python-urllib3, samba, slurm, and suse-module-tools), and Ubuntu (frr, linux-azure, and pmix).",
-          "link": "https://lwn.net/Articles/948097/",
-          "publishedOn": "2023-10-18T13:20:18.000Z",
-          "wordCount": 427,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/946870/",
-          "author": "corbet",
-          "description": "The Linux kernel has supported restartable\nsequences (sometimes referred to as \"RSEQ\") since 2018, but it remains\na bit of a niche feature, mostly useful to performance-oriented developers\nwho do not mind writing assembly code.  According to Mathieu Desnoyers, the developer\nbehind the kernel's implementation of restartable sequences, this feature\ncan be applicable to a much wider range of performance-sensitive code with\nproper library support.  He came to the 2023 GNU Tools Cauldron to\npresent the case for use of restartable sequences within the GNU C Library\n(glibc).",
-          "link": "https://lwn.net/Articles/946870/",
-          "publishedOn": "2023-10-17T14:48:10.000Z",
-          "wordCount": null,
-          "title": "[$] Improving C-library scalability with restartable sequences",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/948010/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (axis, nghttp2, node-babel7, and tomcat9), Fedora (curl and ghostscript), Oracle (bind, kernel-container, mariadb:10.5, and python3.11), Red Hat (.NET 7.0, go-toolset, golang, and go-toolset:rhel8), SUSE (kernel, libcue, libxml2, python-Django, and python-gevent), and Ubuntu (curl, ghostscript, iperf3, libcue, python2.7, quagga, and samba).",
-          "link": "https://lwn.net/Articles/948010/",
-          "publishedOn": "2023-10-17T13:55:34.000Z",
-          "wordCount": 277,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947927/",
-          "author": "corbet",
-          "description": "OpenBSD 7.4 is out.  Changes include a new kqueue1() system call\nthat allows close-on-exec behavior, support for better arm64 control-flow\nintegrity, support for TCP segmentation offloading, and much more.",
-          "link": "https://lwn.net/Articles/947927/",
-          "publishedOn": "2023-10-16T16:13:31.000Z",
-          "wordCount": 9345,
-          "title": "OpenBSD 7.4 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/946526/",
-          "author": "corbet",
-          "description": "Following up from last year's first Image-Based\nLinux Summit), a second meeting was held in Berlin on September 12th,\n2023, the day before All Systems Go!\n2023, at the Microsoft office. The goal of these summits is to find\ncommon ground among stakeholders from various engineering groups around the\ntopic of image-based Linux distributions, communicate progress, and attempt\nto build a strategy to tackle shared problems together. The organizers —\nLuca Boccassi, Lennart Poettering, and Christian Brauner — welcomed\nparticipants from the UAPI Group,\nwhich draws developers from a long list of companies with an interest in\nthis area, and spent the full day discussing a variety of topics. Full\nminutes have been published on the UAPI Group’s web site.",
-          "link": "https://lwn.net/Articles/946526/",
-          "publishedOn": "2023-10-16T15:20:27.000Z",
-          "wordCount": null,
-          "title": "[$] The 2023 Image-Based Linux Summit",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947891/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (batik, poppler, and tomcat9), Fedora (chromium, composer, curl, emacs, ghostscript, libwebp, libXpm, netatalk, nghttp2, python-asgiref, python-django, and webkitgtk), Mageia (curl and libX11), Oracle (bind, busybox, firefox, and kernel), Red Hat (curl, dotnet6.0, dotnet7.0, and nginx), SUSE (chromium, cni, cni-plugins, grub2, netatalk, opensc, opera, and wireshark), and Ubuntu (iperf3).",
-          "link": "https://lwn.net/Articles/947891/",
-          "publishedOn": "2023-10-16T13:55:20.000Z",
-          "wordCount": 349,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947825/",
-          "author": "corbet",
-          "description": "The 6.6-rc6 kernel prepatch is out for\ntesting.  \"So the previous week has been pretty calm, and a lot of the\ndiscussion has been about future changes as so often happens late in the\nrelease cycle.\"",
-          "link": "https://lwn.net/Articles/947825/",
-          "publishedOn": "2023-10-15T22:22:24.000Z",
-          "wordCount": 200,
-          "title": "Kernel prepatch 6.6-rc6",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947819/",
-          "author": "corbet",
-          "description": "The 6.1.58 stable kernel update has been\nreleased; it consists mostly of a handful of reverts in the NFS subsystem.",
-          "link": "https://lwn.net/Articles/947819/",
-          "publishedOn": "2023-10-15T19:15:13.000Z",
-          "wordCount": 135,
-          "title": "Stable kernel 6.1.58 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/946733/",
-          "author": "corbet",
-          "description": "The primary job of a compiler is to translate source code into a binary\nform that can be run by a computer.  Increasingly, though, developers want\nmore from their tools, compilers included.  Since the compiler must\nunderstand the code it is being asked to translate, it is in a good\nposition to provide information about how that code will execute — and\nwhere things might go wrong.  At the 2023 GNU Tools Cauldron,\nDavid Malcolm talked about recent work to improve the diagnostic output\nfrom the GCC compiler.",
-          "link": "https://lwn.net/Articles/946733/",
-          "publishedOn": "2023-10-13T15:11:00.000Z",
-          "wordCount": null,
-          "title": "[$] Recent improvements in GCC diagnostics",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947733/",
-          "author": "corbet",
-          "description": "Version\n23.10 of the Ubuntu distribution is out.  Changes include support for\nhardware-backed full-disk encryption, tighter control over user namespaces,\na new App Center application, and more.",
-          "link": "https://lwn.net/Articles/947733/",
-          "publishedOn": "2023-10-13T15:07:11.000Z",
-          "wordCount": 205,
-          "title": "Ubuntu 23.10 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947727/",
-          "author": "corbet",
-          "description": "Version\n23.05.0 of the OpenWrt distribution has been released: \"OpenWrt\n23.05 supports over 1790 devices. Support for over 200 new devices was\nadded in addition to the device support by OpenWrt 22.03\".  Along with\nnew device support, this release features a switch to the mbedtls\ncryptographic library, the ability to include utilities written in Rust, an\nupdated toolchain, and more.",
-          "link": "https://lwn.net/Articles/947727/",
-          "publishedOn": "2023-10-13T14:45:50.000Z",
-          "wordCount": 173,
-          "title": "OpenWrt 23.05.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947710/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (chromium, tomcat9, and webkit2gtk), Fedora (cacti, cacti-spine, grafana-pcp, libcue, mbedtls, samba, and vim), Oracle (kernel, libvpx, and thunderbird), Red Hat (bind and galera, mariadb), SUSE (exiv2, go1.20, go1.21, and kernel), and Ubuntu (ffmpeg).",
-          "link": "https://lwn.net/Articles/947710/",
-          "publishedOn": "2023-10-13T14:01:25.000Z",
-          "wordCount": 265,
-          "title": "Security updates for Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947606/",
-          "author": "corbet",
-          "description": "The Civil Infrastructure Platform project has announced\nthat it will be maintaining the 6.1 kernel for a minimum of ten years past\nits initial release (and, thus, through 2032).\n\n\n\tCIP kernels are maintained like regular long-term-stable (LTS)\n\tkernels, and developers of the CIP kernel are also involved in LTS\n\tkernel review and testing. While regular LTS kernels are moving\n\tback to 2 years maintenance, CIP kernels are set up for 10\n\tyears. In order to enable this extended lifetime, CIP kernels are\n\tscoped-down in actively supported kernel features and target\n\tarchitecture. At the same time, CIP kernels accept non-invasive\n\tbackports from newer mainline kernels that enable new hardware.",
-          "link": "https://lwn.net/Articles/947606/",
-          "publishedOn": "2023-10-12T16:24:23.000Z",
-          "wordCount": 407,
-          "title": "Civil Infrastructure Platform to maintain 6.1 for 10 years",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947173/",
-          "author": "corbet",
-          "description": "Programs running in the BPF machine can, depending on how they are\nattached, perform a number of privileged operations; the ability to load\nand run those programs, thus, must be a privileged operation in its own\nright.  Almost since the beginning of the extended-BPF era, developers have\nstruggled to find a way to allow users to run the programs they need\nwithout giving away more privilege than is necessary.  Earlier this year,\nthe idea of a BPF token ran into some\nopposition from security-oriented developers.  Andrii Nakryiko has since\nreturned with an\nupdated patch set that significantly increases the granularity of the\nprivileges that can be conferred with a BPF token.",
-          "link": "https://lwn.net/Articles/947173/",
-          "publishedOn": "2023-10-12T14:40:47.000Z",
-          "wordCount": null,
-          "title": "[$] Finer-grained BPF tokens",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947570/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (libcue, org-mode, python3.7, and samba), Fedora (libcue, oneVPL, oneVPL-intel-gpu, and xen), Mageia (glibc), Oracle (glibc, kernel, libssh2, libvpx, nodejs, and python-reportlab), Slackware (libcaca), SUSE (gsl, ImageMagick, kernel, opensc, python-urllib3, qemu, rage-encryption, samba, and xen), and Ubuntu (curl and samba).",
-          "link": "https://lwn.net/Articles/947570/",
-          "publishedOn": "2023-10-12T13:47:47.000Z",
-          "wordCount": 322,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/946626/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for October 12, 2023 is available.",
-          "link": "https://lwn.net/Articles/946626/",
-          "publishedOn": "2023-10-12T00:42:24.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for October 12, 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947288/",
-          "author": "jake",
-          "description": "While the vulnerability itself is pretty run-of-the-mill, the recently disclosed\nGNOME vulnerability has a number of interesting facets.  The problem lies\nin a library that reads files in a fairly obscure format, but it turns out\nthat files in that format are routinely—automatically—processed by GNOME if\nthey are downloaded to the local system.  That turns a vulnerability in a\nlargely unknown library into a one-click remote-code-execution flaw for\nthe GNOME desktop.",
-          "link": "https://lwn.net/Articles/947288/",
-          "publishedOn": "2023-10-11T20:11:02.000Z",
-          "wordCount": null,
-          "title": "[$] Remote execution in the GNOME tracker",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947411/",
-          "author": "corbet",
-          "description": "Version\n8.4.0 of the curl data-transfer tool has been released, mostly in\nresponse to a relatively severe security vulnerability that can be\ntriggered when a SOCKS5 proxy server is in use.  See this\nblog post for details on what went wrong.  \"In hindsight, shipping a\nheap overflow in code installed in over twenty billion instances is not an\nexperience I would recommend.\"",
-          "link": "https://lwn.net/Articles/947411/",
-          "publishedOn": "2023-10-11T12:52:40.000Z",
-          "wordCount": 456,
-          "title": "Curl 8.4.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947409/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (curl, mediawiki, tomcat10, and tomcat9), Fedora (libcaca, oneVPL, oneVPL-intel-gpu, and tracker-miners), Gentoo (curl), Mageia (cups and firefox, thunderbird), Red Hat (curl, kernel, kernel-rt, kpatch-patch, libqb, libssh2, linux-firmware, python-reportlab, tar, and the virt:rhel module), Slackware (curl, libcue, libnotify, nghttp2, and samba), SUSE (conmon, curl, glibc, kernel, php-composer2, python-reportlab, samba, and shadow), and Ubuntu (curl, dotnet6, dotnet7, firefox, libx11, samba, tiff, and webkit2gtk).",
-          "link": "https://lwn.net/Articles/947409/",
-          "publishedOn": "2023-10-11T12:44:58.000Z",
-          "wordCount": 480,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947296/",
-          "author": "corbet",
-          "description": "The\n6.5.7,\n6.1.57,\n5.15.135,\n5.10.198,\n5.4.258,\n4.19.296, and\n4.14.327\nstable kernel updates have all been released; each contains another set of\nimportant fixes.",
-          "link": "https://lwn.net/Articles/947296/",
-          "publishedOn": "2023-10-10T20:27:30.000Z",
-          "wordCount": 138,
-          "title": "Seven stable kernel updates",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947138/",
-          "author": "jake",
-          "description": "Back at the end of July, the Python steering council announced\nits intention to approve the proposal to make the global interpreter lock\n(GIL) optional over the next few Python releases.  The details of that\nacceptance are still being decided on, but work on the feature is\nproceeding—in discussion form at least.  Beyond that, though, there are\nefforts underway to solve that hardest of problems in computer\nscience, naming, for the no-GIL version.",
-          "link": "https://lwn.net/Articles/947138/",
-          "publishedOn": "2023-10-10T18:03:20.000Z",
-          "wordCount": null,
-          "title": "[$] Progress on no-GIL CPython",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947236/",
-          "author": "corbet",
-          "description": "The GitHub blog describes\na vulnerability in the libcue library (which is used by the GNOME\ndesktop) that can be exploited by a remote attacker to run code on a\ndesktop system if the target can be convinced to click on a malicious link.\n\n\n\tThe video shows me clicking a link in a webpage, which causes a cue\n\tsheet to be downloaded. Because the file is saved to ~/Downloads,\n\tit is then automatically scanned by tracker-miners. And because it\n\thas a .cue filename extension, tracker-miners uses libcue to parse\n\tthe file. The file exploits the vulnerability in libcue to gain\n\tcode execution and pop a calculator.",
-          "link": "https://lwn.net/Articles/947236/",
-          "publishedOn": "2023-10-10T13:47:52.000Z",
-          "wordCount": 844,
-          "title": "A remote code execution vulnerability in GNOME",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947233/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (chromium, firefox, and kernel), Gentoo (less and libcue), Red Hat (bind, libvpx, nodejs, and python3), Scientific Linux (firefox and thunderbird), SUSE (conmon, go1.20, go1.21, shadow, and thunderbird), and Ubuntu (libcue, ring, and ruby-kramdown).",
-          "link": "https://lwn.net/Articles/947233/",
-          "publishedOn": "2023-10-10T13:27:17.000Z",
-          "wordCount": 316,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947136/",
-          "author": "jake",
-          "description": "The Linux Containers project has\nannounced\nthe release version 0.1 of the Incus system container and\nvirtual-machine manager, which is a community-led fork of Canonical's LXD.   Incus 0.1 \"is roughly\nequivalent to LXD 5.18 but with a number of breaking changes on top of the\nobvious rename\".  There have been some changes made in the two months\nsince the fork:\n\nWith this initial release of Incus, we took the opportunity to remove a lot\nof unused or problematic features from LXD. Most of those changes are\nthings we would have liked to do in LXD but couldn’t due to having strong\nguarantees around backward compatibility. \n\nIncus will be similarly strict with backward compatibility in the future,\nbut as this is the first release of the fork, it was our one big\nopportunity to change things. \n\nThat said, the API and CLI are still extremely close to what LXD has,\nmaking it trivial if not completely seamless to port from LXD to Incus.\n\n\nThere is an online\nversion of Incus for those interested in giving it a try.",
-          "link": "https://lwn.net/Articles/947136/",
-          "publishedOn": "2023-10-09T14:55:28.000Z",
-          "wordCount": 290,
-          "title": "Incus 0.1 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/946394/",
-          "author": "corbet",
-          "description": "One of the significant features added to the mainline kernel during the 6.6\nmerge window was multi-grain timestamps, which allow the kernel to\nselectively store file modification times with higher resolution without\nhurting performance.  Unfortunately, this feature also caused some\nsurprising regressions, and was quickly ushered back out of the kernel as a\nresult.  It is instructive to look at how this feature went wrong, and how\nthe developers involved plan to move forward from here.",
-          "link": "https://lwn.net/Articles/946394/",
-          "publishedOn": "2023-10-09T14:50:46.000Z",
-          "wordCount": null,
-          "title": "[$] Rethinking multi-grain timestamps",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/947117/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (freerdp2, gnome-boxes, grub2, inetutils, lemonldap-ng, prometheus-alertmanager, python-urllib3, thunderbird, and vinagre), Fedora (freeimage, fwupd, libspf2, mingw-freeimage, thunderbird, and vim), Gentoo (c-ares, dav1d, Heimdal, man-db, and Oracle VirtualBox), Oracle (bind, bind9.16, firefox, ghostscript, glibc, ImageMagick, and thunderbird), Slackware (netatalk), SUSE (ImageMagick, nghttp2, poppler, python, python-gevent, and yq), and Ubuntu (bind9 and vim).",
-          "link": "https://lwn.net/Articles/947117/",
-          "publishedOn": "2023-10-09T14:23:06.000Z",
-          "wordCount": 331,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -1891,6 +1563,16 @@
       "feedUrl": "https://m0agx.eu/feeds/all.rss.xml",
       "siteUrl": "https://m0agx.eu/",
       "articles": [
+        {
+          "id": "tag:m0agx.eu,2023-11-12:/story-from-the-trenches-uninitialized-RAM-is-not-random.html",
+          "author": null,
+          "description": "This is another story from the world of \"it can't happen\". A device was undergoing final testing that spanned many days in different simulated conditions. The testing included power cycling whenever the conditions were changed. Once in a very long while, on the order of maybe once per week, the device failed to communicate with the test equipment.",
+          "link": "https://m0agx.eu/story-from-the-trenches-uninitialized-RAM-is-not-random.html",
+          "publishedOn": "2023-11-12T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Story from the trenches - uninitialized RAM is not random (enough)",
+          "imageUrl": null
+        },
         {
           "id": "tag:m0agx.eu,2023-10-26:/stack-on-cortex-m.html",
           "author": null,
@@ -1908,6 +1590,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/2023-liberal-arts.html",
+          "author": null,
+          "description": "My colleague Sannie Lee has met many students who are looking into\n     getting into technology, taking narrow professionally-oriented majors.\n     Sannie, however, has found that a traditional liberal-arts degree has given\n     her skills that are highly relevant to her work as a product manager.\nmore…",
+          "link": "https://martinfowler.com/articles/2023-liberal-arts.html",
+          "publishedOn": "2023-11-09T15:12:00.000Z",
+          "wordCount": null,
+          "title": "Three reasons a liberal arts degree helped me succeed in tech",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/articles/headless-component.html#AdaptingToANewUiRequirement",
           "author": null,
@@ -1946,6 +1638,36 @@
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
         {
+          "id": "http://mcuoneclipse.com/?p=39177",
+          "author": "Erich Styger",
+          "description": "The article explains how to use GNU gcov (coverage) with an embedded system, utilizing Visual Studio Code. It outlines the requirement of VS Code version, toolchain, semihosting, and a debug probe. Specific details are given on linking libraries, instrumenting source files, platform configuration, etc., with example provided on GitHub. The process offers the possibility to generate test coverage data for the software, which can be viewed within VS Code via the Gcov Viewer and coverage reports generated using gcovr utility. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/11/21/gnu-coverage-gcov-for-an-embedded-target-with-vs-code/",
+          "publishedOn": "2023-11-21T17:46:12.000Z",
+          "wordCount": null,
+          "title": "GNU Coverage (gcov) for an Embedded Target with VS Code",
+          "imageUrl": null
+        },
+        {
+          "id": "http://mcuoneclipse.com/?p=39153",
+          "author": "Erich Styger",
+          "description": "Watchpoints or data breakpoints are incredibly helpful tracing down who is reading or writing memory. This article shows how VS Code can be used with watchpoints. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/11/14/vs-code-data-breakpoints-and-watchpoints/",
+          "publishedOn": "2023-11-14T00:48:00.000Z",
+          "wordCount": null,
+          "title": "VS Code: Data Breakpoints and Watchpoints",
+          "imageUrl": null
+        },
+        {
+          "id": "http://mcuoneclipse.com/?p=39136",
+          "author": "Erich Styger",
+          "description": "Microsoft's Visual Studio Code (VS Code) offers over 40,000 extensions. However, the growing number of extensions can slow down the platform and cause conflicts. VS Code's 'Profiles', introduced in version 1.76, can alleviate this issue by allowing users to manage and switch sets of extensions, keybindings, and settings for different workflows and projects. Each profile is associated with a specific workspace, improving organization and efficiency. Continue reading →",
+          "link": "https://mcuoneclipse.com/2023/11/11/vs-code-cure-the-extension-creep-with-profiles/",
+          "publishedOn": "2023-11-11T16:17:21.000Z",
+          "wordCount": null,
+          "title": "VS Code: Cure the Extension Creep with Profiles",
+          "imageUrl": null
+        },
+        {
           "id": "http://mcuoneclipse.com/?p=39115",
           "author": "Erich Styger",
           "description": "CMake is a key cornerstone of development with VS Code, and it seems to loose the assigned CMake kit after a reload or restart. This article shows how I can make the setting permanent, so I'm not asked again to assign a kit. Continue reading →",
@@ -1954,46 +1676,6 @@
           "wordCount": 3732,
           "title": "“No Kit Selected”: Fixing VS Code CMake Kit Assignment",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/11/missing-kit-in-vs-code.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=39032",
-          "author": "Erich Styger",
-          "description": "The post discusses the implementation of file I/O with semihosting for the Raspberry Pi Pico SDK 1.5.1, enabling the RP2040 to access and use files on the host. This enhances the capabilities of the device, specifically for running tests and gathering test coverage information. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/10/24/implementing-file-i-o-semihosting-for-the-rp2040-and-vs-code/",
-          "publishedOn": "2023-10-24T02:10:00.000Z",
-          "wordCount": 4620,
-          "title": "Implementing File I/O Semihosting for the RP2040 and VS Code",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/10/file-semihosting-with-rp2040-and-vs-code.png?w=1200"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=39034",
-          "author": "Erich Styger",
-          "description": "There are plenty of debug options for the RP2040 available. In this article I show different options and the settings in VS Code I'm using. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/10/22/debug-probes-for-rp2040-with-vs-code/",
-          "publishedOn": "2023-10-22T06:45:06.000Z",
-          "wordCount": 4483,
-          "title": "Debug Probes for RP2040 with VS Code",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/10/rp2040-debugging-other-rp2040.jpg"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=39005",
-          "author": "Erich Styger",
-          "description": "With semihosting I can use standard I/O function like printf() and I can read and write data on the host through the debug connection. If used with care, this is a great feature especially for unit testing. Outline Semihosting is … Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/10/14/semihosting-with-vs-code-on-rp2040/",
-          "publishedOn": "2023-10-14T16:37:06.000Z",
-          "wordCount": 4080,
-          "title": "Semihosting with VS Code on RP2040",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/10/rp2040-pico-w-board-with-j-link-edu.png"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=38960",
-          "author": "Erich Styger",
-          "description": "In the OOP world, global objects get initialized with a constructor and destroyed at the end with a destructor. Interestingly, the GNU gcc has attributes to mark functions as constructor and destructors, which can greatly simply system startup and shutdown, … Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/10/09/global-constructors-and-destructors-with-c-not-c/",
-          "publishedOn": "2023-10-09T20:16:00.000Z",
-          "wordCount": 4888,
-          "title": "Global Constructors and Destructors with C (not C++)",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/10/funktion-market-as-constructor.png?w=1200"
         }
       ]
     },
@@ -2002,6 +1684,26 @@
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
       "articles": [
+        {
+          "id": "https://medium.com/p/52d7f3c6fd72",
+          "author": "ESP BOT",
+          "description": "",
+          "link": "https://blog.espressif.com/esp-zerocode-52d7f3c6fd72?source=rss----d5414d5dee73---4",
+          "publishedOn": "2023-11-13T07:59:00.000Z",
+          "wordCount": null,
+          "title": "ESP ZeroCode",
+          "imageUrl": null
+        },
+        {
+          "id": "https://medium.com/p/6f90fa89abe6",
+          "author": "Amey Inamdar",
+          "description": "",
+          "link": "https://blog.espressif.com/esp-zerocode-exl-module-powered-by-aws-iot-expresslink-simplifying-matter-compatible-6f90fa89abe6?source=rss----d5414d5dee73---4",
+          "publishedOn": "2023-11-13T07:51:08.000Z",
+          "wordCount": null,
+          "title": "ESP ZeroCode ExL Module powered by AWS IoT ExpressLink — Simplifying Matter-compatible…",
+          "imageUrl": null
+        },
         {
           "id": "https://medium.com/p/b1282a58e617",
           "author": "Mahavir Jain",
@@ -2021,26 +1723,6 @@
           "wordCount": 3854,
           "title": "Announcing the Arduino ESP32 Core version 3.0.0",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*mbgPJ15qOdlVhVdIjEtyjg.png"
-        },
-        {
-          "id": "https://medium.com/p/e8d5d29fef94",
-          "author": "Deepakumar V U",
-          "description": "Espressif Matter Series #10",
-          "link": "https://blog.espressif.com/matter-and-certificate-revocation-e8d5d29fef94?source=rss----d5414d5dee73---4",
-          "publishedOn": "2023-10-24T02:01:46.000Z",
-          "wordCount": 3091,
-          "title": "Matter and Certificate Revocation",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:786/1*n4o7gcH4c7L82-dL8N4jAQ.png"
-        },
-        {
-          "id": "https://medium.com/p/1b31eb334d14",
-          "author": "Deepakumar V U",
-          "description": "Espressif Matter Series #10",
-          "link": "https://blog.espressif.com/matter-and-certificate-revocation-1b31eb334d14?source=rss----d5414d5dee73---4",
-          "publishedOn": "2023-10-20T12:36:12.000Z",
-          "wordCount": 3105,
-          "title": "Matter and Certificate Revocation",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:1089/1*of3F7hyt2zYB6iXkrU9kJg.png"
         }
       ]
     },
@@ -2072,18 +1754,7 @@
       "title": "Almost Secure",
       "feedUrl": "https://palant.info/rss.xml",
       "siteUrl": "https://palant.info/",
-      "articles": [
-        {
-          "id": "https://palant.info/2023/10/19/implementing-a-share-on-mastodon-button-for-a-blog/",
-          "author": null,
-          "description": "I decided that I would make it easier for people to share my articles on social media, most importantly on Mastodon. However, my Hugo theme didn’t support showing a “Share on Mastodon” button yet. It wasn’t entirely trivial to add support either: unlike with centralized solutions like Facebook where a simple link is sufficient, here one would need to choose their home instance first.\nAs far as existing solutions go, the only reasonably sophisticated approach appears to be Share₂Fedi. It works nicely, privacy-wise one could do better however. So I ended up implementing my own solution while also generalizing that solution to support a variety of different Fediverse applications in addition to Mastodon.\n\n\n\n  \nContents\nWhy not Share₂Fedi?\nShare on Mastodon or on Fediverse?\nWhat to share?\nTrou…",
-          "link": "https://palant.info/2023/10/19/implementing-a-share-on-mastodon-button-for-a-blog/",
-          "publishedOn": "2023-10-19T13:31:41.000Z",
-          "wordCount": 1586,
-          "title": "Implementing a “Share on Mastodon” button for a blog",
-          "imageUrl": "https://palant.info/2023/10/19/implementing-a-share-on-mastodon-button-for-a-blog/share.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Preshing on Programming",
@@ -2126,6 +1797,26 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8419",
+          "author": "Derek Jones",
+          "description": "The book The Mythical Man-Month by Fred Brooks, first published in 1975, continues to be widely referenced, my 1995 edition cites over 250K copies in print. In the past I have found it to be a pleasant, relatively content free, read. Having spent some time analyzing computing data from the 1960s, I thought it would […]",
+          "link": "https://shape-of-code.com/2023/11/19/rereading-the-mythical-man-month/",
+          "publishedOn": "2023-11-19T23:16:33.000Z",
+          "wordCount": null,
+          "title": "Rereading The Mythical Man-Month",
+          "imageUrl": null
+        },
+        {
+          "id": "https://shape-of-code.com/?p=8400",
+          "author": "Derek Jones",
+          "description": "Issues surrounding the decades of decreasing cost/increasing performance of microcomputers, powered by Intel’s x86/Pentium have been extensively analysed. There has been a lot of analysis of pre-Intel computers, in particular Mainframe computers. Is there any major difference? Mainframes certainly got a lot faster throughout the 1960s and 1970s, and the Computer and Automation’s monthly census […]",
+          "link": "https://shape-of-code.com/2023/11/12/analyzing-mainframe-data-in-light-of-the-ibm-antitrust-cases/",
+          "publishedOn": "2023-11-12T22:53:25.000Z",
+          "wordCount": null,
+          "title": "Analyzing mainframe data in light of the IBM antitrust cases",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8392",
           "author": "Derek Jones",
           "description": "It’s now three years since my book, Evidence-based Software Engineering: based on the publicly available data, was released. What has happened in the last year, since I wrote about the first two years, and what might happen in the next year or so? There is now a Discord channel for discussing evidence-based software engineering. Blog […]",
@@ -2143,26 +1834,6 @@
           "publishedOn": "2023-10-29T23:32:13.000Z",
           "wordCount": 1686,
           "title": "Relative performance of computers from the 1950s/60s/70s",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8361",
-          "author": "Derek Jones",
-          "description": "The Whetstone benchmark was once a widely cited measure of computer performance. This benchmark consisted of a single program, originally designed for Algol 60 based applications, and later translated to other languages (over 85% of published results used Fortran). The source used as representative of typical user programs came from scientific applications, which has some […]",
-          "link": "https://shape-of-code.com/2023/10/22/design-of-the-whetstone-benchmark/",
-          "publishedOn": "2023-10-22T22:17:40.000Z",
-          "wordCount": 2153,
-          "title": "Design of the Whetstone benchmark",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8323",
-          "author": "Derek Jones",
-          "description": "How many lines of code have to be read to be likely to encounter every meaningful sequence of statements (a non-meaningful sequence would be the three statements break;break;break;)? First, it is necessary to work out the likelihood of encountering a given sequence of statements within lines of code. If we just consider statements, then the […]",
-          "link": "https://shape-of-code.com/2023/10/15/likelihood-of-encountering-a-given-sequence-of-statements/",
-          "publishedOn": "2023-10-15T22:12:11.000Z",
-          "wordCount": 2046,
-          "title": "Likelihood of encountering a given sequence of statements",
           "imageUrl": null
         }
       ]
@@ -2227,18 +1898,7 @@
       "title": "The Pasture",
       "feedUrl": "https://thephd.dev/feed",
       "siteUrl": "https://thephd.dev/",
-      "articles": [
-        {
-          "id": "https://thephd.dev/implementing-embed-c-and-c++",
-          "author": null,
-          "description": "I received a few complaints that #embed was difficult to implement and hard to optimize. And, the people making these claims",
-          "link": "https://thephd.dev/implementing-embed-c-and-c++",
-          "publishedOn": "2023-10-19T00:00:00.000Z",
-          "wordCount": 6125,
-          "title": "Implementing #embed for C and C++",
-          "imageUrl": "https://thephd.dev//assets/img/2023/10/swimming-reach-surface.jpg"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Vivonomicon's Blog",
