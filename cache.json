@@ -115,16 +115,6 @@
           "wordCount": null,
           "title": "Formatting Custom types with std::format from C++20",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2023/spans-threads-cpp20/",
-          "author": null,
-          "description": "In this post, we’ll have fun using C++20’s spans to process data on multiple threads. What’s more, we’ll be equipped with the latest concurrency features from C++20.\nThis text was motivated by the following comment under my recent article on std::span:\nBut why does this article… not show the major use case? A span is non-owning, so passing it to a function it can work on a subset of data owned by someone else! You can have a vector of data, and let two threads process two halves of  it! Brilliant! By VictorEijkhout\nstd::thread \n  \n\n\n\n\n     \n    \n\n\nOur task is relatively simple but can be extended to various multi-phase computations.\nWe need to initialize a container with numbers, filter them, then build a histogram.\nHere’s the overview of the process:\n\nHere’s a slow start with std::thread\n…",
-          "link": "https://www.cppstories.com/2023/spans-threads-cpp20/",
-          "publishedOn": "2023-11-14T00:00:00.000Z",
-          "wordCount": null,
-          "title": "C++20, Spans, Threads and Fun",
-          "imageUrl": null
         }
       ]
     },
@@ -619,16 +609,6 @@
           "wordCount": null,
           "title": "Lightweight C++ Error-Codes Handling",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1604.php",
-          "author": null,
-          "description": "Robust engineering and programming practices may be vital for a successful embedded business, but they are rarely the reason why people are drawn into the embedded world in the first place. In this article I'll explain, with the help of a concrete example, what made me choose this line of work – and hopefully, bring back some fond memories to you too.\n  The Wonder Years\nThere's a famous quip,...",
-          "link": "https://www.embeddedrelated.com/showarticle/1604.php",
-          "publishedOn": "2023-11-13T19:09:34.000Z",
-          "wordCount": null,
-          "title": "Flood Fill, or: The Joy of Resource Constraints",
-          "imageUrl": null
         }
       ]
     },
@@ -815,16 +795,6 @@
           "wordCount": null,
           "title": "Games! How they write code for SDL (+ interview with the creator)",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1080/",
-          "author": null,
-          "description": ".NET 8 has been released, so it's time to start porting your projects to the new version. In this article, we'll look at new features and enhancements: C# 12, performance, Native AOT, GC, new types...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1080/",
-          "publishedOn": "2023-11-13T21:00:00.000Z",
-          "wordCount": null,
-          "title": "What's new in .NET 8?",
-          "imageUrl": null
         }
       ]
     },
@@ -918,6 +888,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/954974/",
+          "author": "corbet",
+          "description": "The Rust for Linux (RFL) project may not have (yet) resulted in user-visible\nchanges to the Linux kernel, but it seems the wider world has taken notice.\nHongyu Li has announced\nthat the Rust for Linux code is now part of a satellite just launched\nout of China.  The satellite is running a system called RROS, which follows the old\nRTLinux pattern of running a realtime kernel alongside Linux.  The realtime\ncore is written in Rust, using the RFL groundwork.\n\n\n\tDespite its imperfections, we still want to share RROS with the\n\tcommunity, showcasing our serious commitment to using RFL for\n\tsubstantial projects and contributing to the community's\n\tgrowth. Our development journey with RROS has been greatly enriched\n\tby the support and knowledge from the RFL community. We also have\n\treceived invaluable assistance from enthusiastic forks here,\n\tespecially when addressing issues related to safety abstraction\n\n\n(Thanks to Dirk Behme).",
+          "link": "https://lwn.net/Articles/954974/",
+          "publishedOn": "2023-12-13T17:28:03.000Z",
+          "wordCount": 267,
+          "title": "Rust for Linux — in space",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/954964/",
+          "author": "corbet",
+          "description": "A new book called OpenPGP for application\ndevelopers has been released under the Creative Commons BY-SA license.\n\n\n\tThis document is not intended for end-users or implementers of\n\tOpenPGP libraries (or other software that directly handles internal\n\tOpenPGP data structures).\n\n\tInstead, this document is focused on the second group, application\n\tdevelopers, who use OpenPGP functionality in their software\n\tprojects. It describes the properties of the OpenPGP system and its\n\tuses. It presupposes solid knowledge of software development\n\tconcepts and of general cryptographic concepts. Thus, this text\n\tdescribes OpenPGP at the “library-level,” teaching concepts that\n\twill help software developers get started as a user of any\n\timplementation (e.g., OpenPGP.js, Sequoia-PGP).",
+          "link": "https://lwn.net/Articles/954964/",
+          "publishedOn": "2023-12-13T16:37:51.000Z",
+          "wordCount": 246,
+          "title": "OpenPGP for application developers",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/954921/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (debian-security-support and xorg-server), Fedora (java-17-openjdk, libcmis, and libreoffice), Mageia (fish), Red Hat (buildah, containernetworking-plugins, curl, fence-agents, kernel, kpatch-patch, libxml2, pixman, podman, runc, skopeo, and tracker-miners), SUSE (kernel, SUSE Manager 4.3.10 Release Notes, and SUSE Manager Client Tools), and Ubuntu (gnome-control-center, linux-gcp, linux-kvm, linux-gkeop, linux-gkeop-5.15, linux-hwe-6.2, linux-lowlatency-hwe-6.2, linux-nvidia-6.2, linux-lowlatency, linux-lowlatency-hwe-5.15, linux-oracle, linux-oracle-5.4, linux-raspi, linux-raspi-5.4, netatalk, and pydantic).",
+          "link": "https://lwn.net/Articles/954921/",
+          "publishedOn": "2023-12-13T14:49:38.000Z",
+          "wordCount": 418,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/954783/",
+          "author": "corbet",
+          "description": "Konstantin Ryabitsev has announced\nthat the movement of kernel mailing lists away from the venerable\nvger.kernel.org system is nearly complete:\n\n\n\tOver the past few months we've migrated all of the vger.kernel.org\n\tmailing lists, with the exception of the Big One (linux-kernel, aka\n\tLKML). This list alone is responsible for about 80% of all vger\n\tmailing list traffic, so we left it for the last.\n\n\tThis Thursday, December 14, at 11AM Pacific (19:00 UTC), we will\n\tswitch the MX record for vger to point to the new location\n\t(subspace.kernel.org), which will complete the mailing list\n\tmigration from the legacy vger server to the new infrastructure.",
+          "link": "https://lwn.net/Articles/954783/",
+          "publishedOn": "2023-12-12T22:04:15.000Z",
+          "wordCount": 703,
+          "title": "The end of vger.kernel.org",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/954777/",
+          "author": "corbet",
+          "description": "The story of Canonical's takeover of the LXD container manager, and the\nsubsequent creation of the Incus fork, has been\nsimmering for a while.  Now Incus developer Stéphane Graber reports\nthat Canonical has changed the license and contribution terms for LXD:\n\n\n\tPer the commit message performing the re-licensing, all further\n\tcontributions will be under the AGPLv3 license and all\n\tcontributions from Canonical employees have been re-licensed to\n\tAGPLv3.\n\n\tHowever, Canonical does not own the copyright on any contribution\n\tfrom non-employees, such as the many changes they have imported\n\tfrom Incus over the past few months. Those therefore remain under\n\tthe Apache2 license that they were contributed under.\n\n\tAs a result, Canonical cannot release LXD under the AGPLv3 license\n\tand likely never will be able to.  LXD is now under a weird mix of\n\tApache2 and AGPLv3 with no clear metadata indicating what file or\n\twhat part of each file is under one license or the other.\n\n\nHe also notes that this change will put an end to the flow of patches — in\neither direction — between the two projects.",
+          "link": "https://lwn.net/Articles/954777/",
+          "publishedOn": "2023-12-12T21:48:09.000Z",
+          "wordCount": 1845,
+          "title": "Graber: LXD now re-licensed and under a CLA",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/954059/",
           "author": "jake",
@@ -1513,6 +1533,16 @@
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
         {
+          "id": "https://martinfowler.com/bliki/SoftwareAndEngineering.html",
+          "author": null,
+          "description": "Throughout my career, people have compared software development to\n  “traditional” engineering, usually in a way to scold software developers for not\n  doing a proper job. As someone who got his degree in Electronic Engineering,\n  this resonated with me early in my career. But this way of thinking is flawed\n  because most people have the wrong impression of how engineering works in\n  practice.\nGlenn Vanderburg has spent a lot of time digging\n  into these misconceptions, and I strongly urge anyone who wants to compare\n  software development to engineering to watch his talk Real Software Engineering. It's also well worth\n  listening to his interview on the podcast Oddly\n  Influenced. Sadly I've not been able to persuade him to write this\n  material down - it would make a great article.\nAnother good thinker on this relationship is Hillel Wayne. He interviewed a\n  bunch of “crossovers” - people who had worked both in traditional engineering\n  and in software. He wrote up what he learned in a series of essays, starting\n  with Are We Really Engineers?",
+          "link": "https://martinfowler.com/bliki/SoftwareAndEngineering.html",
+          "publishedOn": "2023-12-13T05:00:00.000Z",
+          "wordCount": 274,
+          "title": "Bliki: SoftwareAndEngineering",
+          "imageUrl": "https://martinfowler.com/logo-sq.png"
+        },
+        {
           "id": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
           "author": null,
           "description": "Test-Driven Development (TDD) is a technique for building\n\tsoftware that guides software development by writing tests. It was\n\tdeveloped by Kent\n\tBeck in the late 1990's as part of\n\tExtreme Programming. In essence we follow three simple\n\tsteps repeatedly:\nWrite a test for the next bit of functionality you want to add.\nWrite the functional code until the test passes.\nRefactor both new and old code to make it well structured.\n\n\nAlthough these three steps, often summarized as Red - Green -\n  Refactor, are the heart of the process, there's also a vital initial\n  step where we write out a list of test cases first. We then pick one of these\n  tests, apply red-green-refactor to it, and once we're done pick the next.\n  Sequencing the tests properly is a skill, we want to pick tests that drive us\n …",
@@ -1587,16 +1617,6 @@
           "publishedOn": "2023-11-21T17:46:12.000Z",
           "wordCount": null,
           "title": "GNU Coverage (gcov) for an Embedded Target with VS Code",
-          "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=39153",
-          "author": "Erich Styger",
-          "description": "Watchpoints or data breakpoints are incredibly helpful tracing down who is reading or writing memory. This article shows how VS Code can be used with watchpoints. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/11/14/vs-code-data-breakpoints-and-watchpoints/",
-          "publishedOn": "2023-11-14T00:48:00.000Z",
-          "wordCount": null,
-          "title": "VS Code: Data Breakpoints and Watchpoints",
           "imageUrl": null
         }
       ]
@@ -1757,6 +1777,16 @@
       "siteUrl": "https://subokim.wordpress.com",
       "articles": [
         {
+          "id": "http://subokim.wordpress.com/?p=13110",
+          "author": "subokim",
+          "description": "가트너에서 지난 10월 17일, 2024년 트렌드를 발표했습니다. 보통 이런 자료들은 정부 쪽으로 넘어가 그 해의 정책방향에 반영됩니다.또는 은행권이나 통신사 처럼 정책방향에 발을 맞춰주는 기업들이 기술구매를 시도하기도 합니다. 당연히 프로젝트 수요가 생깁니다.다만, AI 로 넘어가면서 상황이 어려워졌습니다만… 내용이 조금 어렵습니다.초보자분들을 위해 설명해 봅니다. 01. AI Trust, Rish and Security Management (AI TRiSM) AI를 쓰면 뭐가 좋을까요?글쎄요.... Continue Reading →",
+          "link": "https://subokim.wordpress.com/2023/12/13/gartner-hype-cycle-2024/",
+          "publishedOn": "2023-12-13T08:12:20.000Z",
+          "wordCount": 4679,
+          "title": "가트너, 2024년 기술 트렌드 10가지 : 전략 읽기",
+          "imageUrl": "https://subokim.files.wordpress.com/2023/12/image-10.png"
+        },
+        {
           "id": "http://subokim.wordpress.com/?p=12988",
           "author": "subokim",
           "description": "이 글은 컴퓨터공학을 선택하거나, 편입하려고 하는 분들에게 쓰는 글입니다.많이들 헷갈려 하거든요. …. 개발자가 되려고 합니다. 컴퓨터 과학, 컴퓨터 공학, 소프트웨어 공학, 정보공학….아, 복잡합니다. 뭔지는 몰라도 저게 다 개발자가 된다는거죠? 흠, 그런데 막상 대학에 입학을 해보면 개발자인듯 아닌 듯.소프트웨어인 듯 아닌 듯, 그런 걸 배우게 됩니다. 사실 이제는 저게 경계선이 없습니다.각 대학의 교수님들이 계속 커리큘럼을 업데이트... Continue Reading →",
@@ -1821,6 +1851,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=84822",
+          "author": "sticky",
+          "description": "잡스는 창과 문서, 화면 등의 상단에 위치한 제목 표시 줄에도 똑같은 관심을 쏟아 부었다. 그것들의 디자인에 대해 고뇌하면서 앳킨슨과 케어에게 수없이 반복해서 수정하게 만들었다. [중략] 앳킨슨은 회상한다. “그가 만족할 때까지 아마 스무 개가 넘는 제목 표시 줄 디자인을 만들었을 거예요.” 어느 시점에서 케어와 앳킨슨은 더 중요한 일이 있는데 잡스 때문에 제목 표시 줄에 사소한 수정을 […]",
+          "link": "http://economicview.net/84822/",
+          "publishedOn": "2023-12-12T22:37:08.000Z",
+          "wordCount": 1232,
+          "title": "“사소한 게 아니야”",
+          "imageUrl": "https://s0.wp.com/i/blank.jpg"
+        },
+        {
           "id": "http://economicview.net/?p=84823",
           "author": "sticky",
           "description": "자신이 설계하는 새로운 컴퓨터가 애플 사의 자산이 된다는 데 동의한 이후에도 워즈는 그것을 자신이 몸담은 HP에 먼저 제공해야 한다고 느꼈다. [중략] 그래서 워즈는 1976년 봄에 HP의 직장 상사와 경영진에게 자신의 고안물을 보여주었다. HP의 경영진은 큰 인상을 받았지만 HP에서 상품으로 개발할 수는 없다고 말했다. 컴퓨터광이 취미 생활로 만들 법한 물건에 불과하고, 또 HP가 타깃으로 삼는 고품질 […]",
@@ -1837,6 +1877,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=100878",
+          "author": "정호재",
+          "description": "아시아에서 가장 취약한 전통이 사림(士林)의 존재감이다. 그나마 조선이 나라답게 작동했던 시절이 훈구파와 사림파가 적절하게 견제하며 권력을 주고받았던 때가 마지막이었다. 물론 이러한 균형은 여러 차례의 잔혹한 사화(士禍)로 막을 내렸으며, 이후는 교조화된 노론과 외척 세력이 정치와 사회를 지배하면서 체제 몰락으로 이어졌다. 지식이라는 형이상학적 권력을 제도화한 게 대학(大學)이라는 기관인데, 당연히 중세 종교사회와 연관이 깊다. 성직자는 당대 최고 지식인이어야...\nThe post 학생을 버린 대학: 한신대 우즈벡 학생 강제 출국 사건 appeared first on .",
+          "link": "https://slownews.kr/100878",
+          "publishedOn": "2023-12-13T05:57:08.000Z",
+          "wordCount": 5545,
+          "title": "학생을 버린 대학: 한신대 우즈벡 학생 강제 출국 사건",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/GettyImages-1463829416.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=100862",
+          "author": "이정환",
+          "description": "“습관성 각설이 외유다.” 윤석열 순방, 왜 더 많아 보일까. 쟁점과 현안. 장제원을 밟고 어디로 가나. 김기현 손절한 조선일보. 민주당은 여전히 이재명 충성 경쟁. ‘사쿠라’와 ‘김민새’. 더 깊게 읽기. 위성 정당을 막을 방법이 없다. 오늘의 TMI. 6070이 30대보다 신차 더 뽑았다. 구글 글로벌 검색어 1위 레시피 비빔밥. 억만장자 비밀금고 아부다비로 몰린다. 해법과 대안. ‘단계적 퇴출’이 빠졌다....\nThe post ‘습관성 각설이 외유’? 윤석열 순방 왜 더 많아 보일까: 슬로우레터 12월13일. appeared first on .",
+          "link": "https://slownews.kr/100862",
+          "publishedOn": "2023-12-12T22:01:29.000Z",
+          "wordCount": 5355,
+          "title": "‘습관성 각설이 외유’? 윤석열 순방 왜 더 많아 보일까: 슬로우레터 12월13일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/YwkFW3p7hx0m6578c970b5b3b2.55423736-1000x610.jpeg"
+        },
+        {
+          "id": "https://slownews.kr/?p=100848",
+          "author": "민주언론시민연합",
+          "description": "[민언련 이달의 좋은 보도상 수상자 인터뷰] 기획보도 ‘이토록 XY한 대법원’을 쓴 경향신문 이혜리·김희진·김혜리 기자 “당신이 성범죄 사건의 피해자가 되었다고 가정해보자.” “만약 당신이 남성이라면 성별이 같은 남성 판사를 적어도 한 명은 법정에서 만날 수 있다.” “그러나 당신이 여성이라면 이야기가 달라진다.” “재판부 전원이 여성 판사일 가능성은 전국 모든 고등법원에서 0%다.” 경향신문, ‘이토록 XY한 대법원’ (연재) 중에서 성범죄...\nThe post 역대 대법관 156명 중 여성은 얼마나 될까 appeared first on .",
+          "link": "https://slownews.kr/100848",
+          "publishedOn": "2023-12-12T13:22:35.000Z",
+          "wordCount": 5174,
+          "title": "역대 대법관 156명 중 여성은 얼마나 될까",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/GettyImages-1422967472-1000x773-1.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=100840",
           "author": "민주언론시민연합",
@@ -2215,6 +2285,36 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=593055",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593055/%eb%b0%b0%eb%9f%b0%ec%8a%a4-%ec%b1%84%ea%b6%8c-%ec%88%98%ec%9d%b5%eb%a5%a0-%ed%95%98%eb%9d%bd%ec%9d%80-%ec%a3%bc%ec%8b%9d-%ec%8b%9c%ec%9e%a5%ec%97%90-%ec%97%84%ec%b2%ad%eb%82%9c-%ed%98%b8%ec%9e%ac",
+          "publishedOn": "2023-12-13T12:07:07.000Z",
+          "wordCount": 5855,
+          "title": "배런스, 채권 수익률 하락은 주식 시장에 엄청난 호재가 될 수 있다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593040",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593040/%eb%b9%85%ed%85%8c%ed%81%ac%ec%9d%98-%eb%af%b8%eb%9e%98",
+          "publishedOn": "2023-12-13T05:21:48.000Z",
+          "wordCount": 6137,
+          "title": "차트로 살펴본 빅테크의 미래 by CB Insights",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593026",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593026/12-13-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2023-12-13T02:30:14.000Z",
+          "wordCount": 6403,
+          "title": "12/13, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
+        {
           "id": "https://happist.com/?p=593022",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -2492,6 +2592,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=78341",
+          "author": "NewsPeppermint",
+          "description": "“미국판 스카이 캐슬”로 불리던 바시티 블루 스캔들이 있었습니다. 미국의 부유한 기득권층이 자기 자녀에게 남들보다 앞서서 출발할 수 있는 특혜를 주려고 법까지 어겨가며 대학 입시에 부정을 저지른 일인데요, 칼럼니스트 제시카 그로즈가 왜 자식에게 물려줄 돈도 많은 부유층, 기득권층 부모들이 법을 어겨가면서까지 자녀를 명문대에 보내려 혈안이 돼 있는지 짚은 칼럼을 썼습니다. 흔히 미국을 누구든 열심히 일하면 성공할 수 있는 기회의 땅이라 부르고, 아메리칸 드림이란 말도 있지만, 계층 이동의 사다리 역할을 하는 교육에 공정함과 → 더 보기",
+          "link": "https://newspeppermint.com/2023/12/12/npsp_collegeamericandream/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_collegeamericandream",
+          "publishedOn": "2023-12-13T01:35:12.000Z",
+          "wordCount": 1437,
+          "title": "‘기회의 평등’에 기반했던 아메리칸 드림에 빨간 불이 켜진 까닭은",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
+        {
           "id": "https://newspeppermint.com/?p=78026",
           "author": "eyesopen1",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 10월 23일 스프에 쓴 글입니다. 뛰어난 재능을 보였지만 꽃 피울 기회를 얻지 못했거나, 업적을 남기고도 제대로 된 인정과 평가를 받지 못한 여성들의 명단은 성차별과 남성 중심주의의 역사만큼이나 깁니다. 자신도 뛰어난 조각가였지만, ‘로댕의 연인’으로만 알려졌던 → 더 보기",
@@ -2664,6 +2774,16 @@
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
       "siteUrl": "https://blog.naver.com/sellars",
       "articles": [
+        {
+          "id": "https://blog.naver.com/sellars/223266771190",
+          "author": "sellars",
+          "description": "정재현 류희성 교수님께... 고마움을 애기하고 싶은데 아직 얼굴보며 애기할 수 없어 편지합니다.. 조금만 더 울도록 봐주세요.. 병원에서 이건 아닌 것 같은데라고 하면 퇴원을 해야만하는 그 기가 막힌 수많은 결정들을 혼자해야 할 때 너무 힘들어 엉거주춤 서서 갈피를 잡지 못할 때 두 사람의 방문과 전화는 나에게 큰 힘이였구 위로였습니다.. 끊고 싶지않았지만.. 오래 붙잡고 싶었지만.. 그러면 안되기에 돌아서면 두렵구 무섭구 커다란 불안함을 않고 병실로 갈때 그 쓸쓸함.. 눈물을 감추고 그 사람을 보며 아무일 없던듯 애기할때 .. 두 분이 찾아 왔을때도 병원의 규약 때문에 혼자 올라가며 발걸음이 떨어지지 않았었습니다.. 그때.......",
+          "link": "https://blog.naver.com/sellars/223266771190?fromRss=true",
+          "publishedOn": "2023-11-16T10:41:23.000Z",
+          "wordCount": 101,
+          "title": "편지",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.naver.com/sellars/223266771190",
           "author": "sellars",
