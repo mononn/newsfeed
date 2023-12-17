@@ -207,6 +207,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/15845156",
+          "author": "CPUU",
+          "description": "이 논문은 흔히 Row-hammer attack 으로 알려져 있는 공격에 대한 연구이다. \nKim, Yoongu, et al. \"Flipping bits in memory without accessing them: An experimental study of DRAM disturbance errors.\" ACM SIGARCH Computer Architecture News 42.3 (2014): 361-372.\n이 방식은 Hardware 에 대한 공격이라고 할 수 있다. 거의 모든 종류의 DRAM이 공통적으로 가지고 있는 이슈를 이용한 공격이다. (논문의 저자진은 삼성 및 Intel에서 인턴쉽을 수행한적이 있는 카네기 멜론 출신의 연구자들인데, 이 현상을 발견한 후 논문으로 발표를 하게 되어 회사들 입장에서는 약간 곤란했었다고 한다.)\n\nDRAM이란 트랜지스터와 커패시터로 구성된 메모리 셀을 통해 데이터를 저장한다. 그리고 DRAM에 Access하거나 Refresh하는 방식으로 데이터를 관리한다. 원칙적으로 하나의 메모리 주소에 대한 접근은 다른 주소에 저장된 데이터에 의도하지 않은 영향을 미쳐서는 안된다. 이에 1970년대부터 DRAM 제조 업체들은 셀 간 간격을 유지하고 테스트를 통해 오류 발생 가능성을 최소화하고 있었다. 그러나 DRAM 공정 기술이 미세화됨에 따라 DRAM 셀 간의 전기적 상호 작용을 방지하기가 점점 더 어려워지고 있다. \n\n\n2014년 본 연구진의 실험에 따르면 상용 DRAM의 동일한 주소에 읽기 작업을 반복하다보면 인근 주소의 데이터를 손상시킬 수 있다는 것이 확인되었다. 마치 특정 row에 있는 부분을 해머로 계속 때리면 그 옆의 row들이 영향을 받는다는 취지에서 이름을 붙인 것이다. 일종의 Fault Injection 이라고 볼 수 있다. \n의도적으로 DRAM에 부하를 가하는 악의적인 프로그램을 통해, DRAM의 동일한 행을 활성화하는 것은 인근 행의 데이터를 손상시킬 수 있다는 사실을 인텔 및 AMD 주요 DRAM모듈(129개 중 110개)에서 확인하였다. \n\n\n해머링을 수행하다보면 트랜지스터 행에서 주변 인접한 행으로 전하가 누출되고, 그로 인해 메모리상의 특정 비트 값이 1에서 0으로, 또는 0에서 1로 뒤집힌다(flipping). 이 사소한 비트 전환으로 인해 운영체제 수준에서 권한 상승이 발생할 수도 있다. 실제로 이를 악용하여 시스템에서의 권한 상승이나 네트워크 기반 공격도 가능하다고 알려져 있다.\n\n\n후속 연구에 대해서는 추후 더 다룰 예정.\n\n\n참고: (유머)",
+          "link": "https://cpuu.postype.com/post/15845156",
+          "publishedOn": "2023-12-17T14:52:32.000Z",
+          "wordCount": 775,
+          "title": "[논문리뷰] Row hammer 논문 리뷰",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/12/17/23/40/b71cd3e7853440db88f9c8fbf1fd4885.png?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/15740043",
           "author": "CPUU",
           "description": "도커(Docker)가 부분 유료화 정책을 시행하고 있다. \n개인 사용자를 위한 Personal 은 여전히 무료이다. 그리고 도커 자체가 오픈소스이므로 리눅스상에서 도커를 설치해서 운영하는 것은 전혀 지장이 없다.\n유료화가 적용되는 경우는 \"Docker Desktop\"에 대한 부분, 그리고 \"기업 내 사용\"이 문제다. \n내가 개인적으로 내 컴퓨터에 도커 데스크탑을 설치하는 것은 비용이 발생하지 않지만, 회사 컴퓨터에는 도커 데스크탑을 설치해서는 안된다. \nmacOS를 사용하는 경우, Docker Desktop을 설치하면 자체적으로 Aarch64 리눅스를 가상화하여 도커를 설치하고, 도커 데몬을 그쪽에 연결하는 것으로 보인다. 이 기능은 편리하지만, 회사에서는 이 방식을 사용할 수 없다.\n\n\n그래서 대안으로 선택할 수 있는 것이 podman이다. podman은 데몬 방식을 사용하지 않는다는 것이 차이점이다.\nhttps://podman.io/\npodman은 무료이고 오픈소스이어서 회사 내 사용이 문제가 없는 것으로 보인다.\nmacOS 환경에서 podman은 QEMU기반의 가상 머신으로 동작한다. \npodman은 brew를 통해 설치할 수 있지만, 여기에서는 GUI 기반의 installer를 통해 Desktop 버전으로 설치해보자.\n(사이트: https://podman-desktop.io/downloads )\n나는 Apple M2 Pro가 탑재된 MacBook Pro를 사용하고 있으므로, arm64용 dmg파일을 다운받아 설치했다.\nPodman Desktop을 실행하면 podman을 초기 설치하기 위한 세팅이 진행된다. \nPodman Setup을 통해 기본으로 사용될 podman-machine를 지정하고 생성한다.\n이제 podman 이 설치되었을 것이다. 터미널에서 podman --help 명령어를 확인해보자.\n\n\n사용을 희망하는 '도커' 이미지를 podman으로 pull 할 수 있다. \n$ podman pull aflplusplus/aflplusplus\npull 작업이 완료되면 해당 이미지를 기반으로 컨테이너를 실행할 수 있게 된다. Desktop에서 이미지를 선택하고 Run Image를 선택하면 된다.\n컨테이너 화면에서 현재 실행중인 컨테이너를 확인할 수 있고, Tty를 통해 쉘 명령어를 테스트해볼 수도 있다.\npodman도 Arm64 macOS에서 구동하면, 자체적으로 Aarch64 리눅스를 기반으로 하는 컨테이너를 선택하는 것 같다.\n\n\n만약 굳이 intel용 컨테이너를 구동하고 싶다면? \n$ podman pull pwntools/pwntools:stable --arch x86_64\n이렇게 --arch 옵션으로 x86_64를 지정해준다.\n이렇게 실행된 컨테이너는 x86_64로 작동하고 있음을 알 수 있다. 이것은 사실 macOS의 입장에서는 어차피 qemu기반으로 컨테이너가 동작하기 때문에 x86_64인 컨테이너를 실행하도록 한 것과 같다.",
@@ -489,26 +499,6 @@
           "publishedOn": "2023-11-20T17:54:01.000Z",
           "wordCount": null,
           "title": "Why coherent lidar is gaining traction in ADAS and automotive sensing",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480916",
-          "author": "Paul Marshall",
-          "description": "Designing a device and building in connectivity at the end is equivalent to swapping out a steam engine for an electric motor and expecting production to improve. Connectivity should be a strategic investment.\nThe post Why a ‘connected by design’ mindset is needed to realize true benefits of IoT appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/why-a-connected-by-design-mindset-is-needed-to-realize-true-benefits-of-iot/",
-          "publishedOn": "2023-11-17T18:04:24.000Z",
-          "wordCount": null,
-          "title": "Why a ‘connected by design’ mindset is needed to realize true benefits of IoT",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4480897",
-          "author": "Jay Esfandyari, Royce Higashi",
-          "description": "This article looks at how a combination of MEMS microphones and audio accelerometers can capture low frequency vibrations of less than 2kHz through solid material, enabling detection of the vibration in the skull resulting from a speaker’s voice.\nThe post Using a high bandwidth accelerometer with MEMS mic to get better acoustic performance appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/using-a-high-bandwidth-accelerometer-with-mems-mic-to-get-better-acoustic-performance/",
-          "publishedOn": "2023-11-17T14:42:21.000Z",
-          "wordCount": null,
-          "title": "Using a high bandwidth accelerometer with MEMS mic to get better acoustic performance",
           "imageUrl": null
         }
       ]
@@ -1525,26 +1515,6 @@
           "wordCount": null,
           "title": "Kernel prepatch 6.7-rc2",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/951550/",
-          "author": "corbet",
-          "description": "One of the core constraints when programming in the kernel is the need to\navoid sleeping when running in atomic context.  For the most part, the\nresponsibility for adherence to this rule is placed on the developer's\nshoulders;  Rust developers, though, want the compiler to ensure that code\nis safe whenever possible.  At the 2023 Linux\nPlumbers Conference, Gary Guo presented (via a remote link) the klint\ntool, which can find \nand flag many atomic-context violations before they turn into\nuser-affecting bugs.",
-          "link": "https://lwn.net/Articles/951550/",
-          "publishedOn": "2023-11-17T16:04:11.000Z",
-          "wordCount": null,
-          "title": "[$] Preventing atomic-context violations in Rust code with klint",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/951801/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (webkit2gtk), Fedora (microcode_ctl, pack, and tigervnc), Slackware (gimp), SUSE (frr, gcc13, go1.20, go1.20-openssl, go1.21, go1.21-openssl, libnbd, libxml2, python-Pillow, python-urllib3, and xen), and Ubuntu (intel-microcode and openvpn).",
-          "link": "https://lwn.net/Articles/951801/",
-          "publishedOn": "2023-11-17T13:43:13.000Z",
-          "wordCount": null,
-          "title": "Security updates for Friday",
-          "imageUrl": null
         }
       ]
     },
@@ -1697,7 +1667,18 @@
       "title": "null program",
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://nullprogram.com/blog/2023/12/17/",
+          "author": null,
+          "description": "Users of mature C libraries conventionally get to choose how memory is\nallocated — that is, when it cannot be avoided entirely. The C\nstandard never laid down a convention — perhaps for the better —\nso each library re-invents an allocator interface. Not all are created\nequal, and most repeat a few fundamental mistakes. Often the interface is\nmerely a token effort, to check off that it’s “supported” without actual\nconsideration to its use. This article describes the critical features of\na practical allocator interface, and demonstrates why they’re important.\nBefore diving into the details, here’s the checklist for library authors:\nAll allocation functions accept a user-defined context pointer.\nThe “free” function accepts the original allocation size.\nThe “realloc” function accepts both old …",
+          "link": "https://nullprogram.com/blog/2023/12/17/",
+          "publishedOn": "2023-12-17T17:52:26.000Z",
+          "wordCount": 1983,
+          "title": "So you want custom allocator support in your C library",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Almost Secure",
@@ -2353,6 +2334,16 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=593086",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593086/%ec%9e%90%ec%9c%a8%ec%a3%bc%ed%96%89-%ed%85%8c%eb%a7%88%ec%a3%bc-%eb%84%a5%ec%8a%a4%ed%8a%b8%ec%b9%a9",
+          "publishedOn": "2023-12-16T15:47:40.000Z",
+          "wordCount": 6032,
+          "title": "자율주행 테마주 넥스트칩, 자율주행 성장 수혜를 받는 글로벌 영상신호처리 1위 기업",
+          "imageUrl": null
+        },
+        {
           "id": "https://happist.com/?p=593073",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -2847,16 +2838,6 @@
           "publishedOn": "2023-11-19T22:30:18.000Z",
           "wordCount": 1403,
           "title": "2029년 화성으로 간다는 계획에 앞서 해야 할 것들",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77881",
-          "author": "NewsPeppermint",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 10월 2일 스프에 쓴 글입니다. *** 이 글을 쓴 이종혁 교수와 중국 양안 관계, 경제 위기 등에 관해 나눈 이야기는 팟캐스트 아메리카노에서도 들으실 수 있습니다. 중국 경제가 긴 침체에 빠질 수 있다는 신호가 → 더 보기",
-          "link": "https://newspeppermint.com/2023/11/17/npsp_chinadecline/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_chinadecline",
-          "publishedOn": "2023-11-17T22:59:20.000Z",
-          "wordCount": 2115,
-          "title": "[뉴페@스프] 중국의 쇠퇴를 논하기 전에 생각해봐야 할 것들",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
