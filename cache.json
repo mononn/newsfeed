@@ -104,16 +104,6 @@
           "wordCount": 1635,
           "title": "Six Handy Operations for String Processing in C++20/23",
           "imageUrl": "https://www.cppstories.com/2023/images/stringops_cpp20_cpp23.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2022/custom-stdformat-cpp20/",
-          "author": null,
-          "description": "std::format is a large and powerful addition in C++20 that allows us to format text into strings efficiently. It adds Python-style formatting with safety and ease of use.\nThis article will show you how to implement custom formatters that fit into this new std::format architecture.\nUpdated in Nov 2023: reflect the constness of the format() function, clarified in LWG issue 3636.\nstd::format \n  \n\n\n\n\n     \n    \n\n\nHere’s the Hello World example:\n#include <format>\n#include <iostream>\n#include <chrono>\n\nint main() {\n    auto ym = std::chrono::year { 2022 } / std::chrono::July;\n    std::string msg = std::format(\"{:*^10}\\n{:*>10}\\nin{}!\", \"hello\", \"world\", ym);\n    std::cout << msg;\n}\n\n\nPlay at Compiler Explorer.\nThe output:\n**hello***\n*****world\nin2022/Jul!\n\n\nAs you can see, we have argument place…",
-          "link": "https://www.cppstories.com/2022/custom-stdformat-cpp20/",
-          "publishedOn": "2023-11-19T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Formatting Custom types with std::format from C++20",
-          "imageUrl": null
         }
       ]
     },
@@ -509,6 +499,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1616.php",
+          "author": null,
+          "description": "Image processing plays a crucial role in various applications, from medical imaging to computer vision and multimedia systems. Field-Programmable Gate Arrays (FPGAs) offer a versatile and efficient platform for implementing image processing algorithms. The unique features of FPGA hardware, such as parallelism and reconfigurability, enable high-performance and real-time processing, making it an...",
+          "link": "https://www.embeddedrelated.com/showarticle/1616.php",
+          "publishedOn": "2023-12-17T23:54:54.000Z",
+          "wordCount": null,
+          "title": "How to Implement Image Processing Algorithms in FPGA Hardware",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1613.php",
           "author": null,
           "description": "INTRODUCTION\r\nIn a previous blog post (Getting Started With Zephyr: Saving Data To Files), I demonstrated how to create an application using The Zephyr Project RTOS to store data on a microSD card. A microSD card can allow an embedded system to store tremendous amounts of data. The data can be stored locally when no Internet connection is present, or uploading data frequently is...",
@@ -846,6 +846,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/955001/",
+          "author": "corbet",
+          "description": "The NVIDIA Mellanox ConnectX HW family of adapters is a complex beast,\nsupporting networking, InfiniBand, RDMA, and more.  As a result, the mlx5\nkernel driver that supports this hardware is also complex, as is the\ninterface that it provides to user space.  The mlx5 developers have, for a\nwhile now, been proposing\nthe addition of a new control interface, in the form of a separate virtual\ndevice exported by the kernel, that would make vast amounts of debugging\ninformation available.  This driver has encountered some significant\nopposition on its way toward the mainline, though, raising a number of\nquestions about appropriate interfaces and when subsystem maintainers have\nveto power over submissions.",
+          "link": "https://lwn.net/Articles/955001/",
+          "publishedOn": "2023-12-18T15:01:32.000Z",
+          "wordCount": null,
+          "title": "[$] The intersection of mlx5, netdev, and lockdown",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/955566/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (freeimage, ghostscript, intel-microcode, spip, and xorg-server), Fedora (chromium, perl, perl-Devel-Cover, perl-PAR-Packer, polymake, PyDrive2, seamonkey, and vim), Gentoo (Leptonica), Mageia (audiofile, gimp, golang, and poppler), Oracle (buildah, containernetworking-plugins, gstreamer1-plugins-bad-free, kernel, kernel-container, libxml2, pixman, podman, postgresql, postgresql:15, runc, skopeo, tracker-miners, and webkit2gtk3), and SUSE (fish).",
+          "link": "https://lwn.net/Articles/955566/",
+          "publishedOn": "2023-12-18T14:00:13.000Z",
+          "wordCount": 345,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/955485/",
+          "author": "corbet",
+          "description": "Linus has released 6.7-rc6 for testing.\n\" Please do give this a test in between the last-minute xmas shopping or\nwhatever else is going on ...\"",
+          "link": "https://lwn.net/Articles/955485/",
+          "publishedOn": "2023-12-18T00:19:56.000Z",
+          "wordCount": 139,
+          "title": "Kernel prepatch 6.7-rc6",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/955481/",
+          "author": "corbet",
+          "description": "Changwoo Min provides\nan introduction to the sched_ext scheduling class:\n\n\n\tSched_ext was proposed to address the problems mentioned above. It\n\tallows users to write a custom scheduling policy using BPF without\n\tmodifying the kernel code. You don't need to struggle to maintain\n\tthe out-of-tree custom scheduler. In addition, BPF provides a safe\n\tkernel programming environment. In particular, the BPF verifier\n\tensures that your custom scheduler has neither a memory bug nor an\n\tinfinite loop. Also, if your custom scheduler misbehaves -- like\n\tfailing to schedule a task for too long (say 30 seconds), the\n\tkernel portion of sched_ext kills your custom scheduler and falls\n\tback to the default kernel scheduler (CFS or EEVDF). Last but not\n\tleast, you can update the BPF scheduler without reinstalling the\n\tkernel and rebooting a server.\n\n\n(LWN looked at sched_ext in February 2023).",
+          "link": "https://lwn.net/Articles/955481/",
+          "publishedOn": "2023-12-17T20:15:00.000Z",
+          "wordCount": 449,
+          "title": "Min: sched_ext: a BPF-extensible scheduler class (Part 1)",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/955366/",
           "author": "corbet",
@@ -1747,6 +1787,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8447",
+          "author": "Derek Jones",
+          "description": "The paper Empirically Testing Predictions of an Attrition on Warfare Model for the War in Ukraine, by Peter Turchin, recently showed up during one of my regular searches for software engineering data. A quick scan of the paper founded that it is very empirical, and that the analysis coding was done in R; I could […]",
+          "link": "https://shape-of-code.com/2023/12/17/patches-for-the-code-of-peter-turchins-attrition-warfare-model/",
+          "publishedOn": "2023-12-17T22:40:22.000Z",
+          "wordCount": 1732,
+          "title": "Patches for the code of Peter Turchin’s Attrition Warfare Model",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8438",
           "author": "Derek Jones",
           "description": "This year’s Christmas book list, based on what I read this year, and for the first time including a blog series that I’m sure will eventually appear in book form. “To Explain the World: The discovery of modern science” by Steven Weinberg, 2015. Unless you know that Steven Weinberg won a physics Nobel prize, this […]",
@@ -1906,6 +1956,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=100956",
+          "author": "민노씨",
+          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 캡콜드에게 2023년을 돌아볼 수 있는 키워드를 뽑아달라고 요청했다. 그는 챗GPT로 상징되는 생성형 AI와 정권 유지를 위한 억압적인 담론 전략으로서 ‘가짜뉴스’를 각각 가장 중요한 세계구 이슈와 국내 이슈로 뽑았다. 그 두 개의 키워드를 중심으로 이야기했다. 이 글은 그 첫 번째 글이다. 참고로 캡콜드가 선정한...\nThe post 2023년 미디어 이슈 결산 세계 편: 생성형 AI appeared first on .",
+          "link": "https://slownews.kr/100956",
+          "publishedOn": "2023-12-18T11:46:18.000Z",
+          "wordCount": 8217,
+          "title": "2023년 미디어 이슈 결산 세계 편: 생성형 AI",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/GettyImages-1456695248.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=101004",
+          "author": "이정환",
+          "description": "[컨텍스트] 양당+지역주의 타파 고민 없는 정치공학적 계산, 최병천도 유시민도 모두 틀렸다. 민주당은 결국 병립형 비례제로 갈 것인가. 최병천(신성장경제연구소 소장)이 권역별 병립형을 밀고 있고 몇 차례 논쟁이 있었지만 여전히 결론을 내리지 못한 상태다. 김어준의 ‘뉴스공장’에서 최병천을 몇 차례 띄웠고 이대로 가면 국민의힘이 과반을 얻는다는 공포가 확산되면서 병립형으로 기우는 분위기다. 이탄희(민주당 의원)가 위성정당 금지법을 발의하면서 연동형 포기는...\nThe post 이재명이 유시민의 제안을 받을까. appeared first on .",
+          "link": "https://slownews.kr/101004",
+          "publishedOn": "2023-12-18T07:46:38.000Z",
+          "wordCount": 5805,
+          "title": "이재명이 유시민의 제안을 받을까.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/isphtm_20161108192519564757.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=100978",
+          "author": "이정환",
+          "description": "탄핵 막으려 한동훈? “한동훈 되면 탄핵될 수도.” “이러다 또 탄핵 당한다.” 한동훈 정치력 시험대는 김건희. 류호정, 정의당 텔레그램에서 쫓겨났다. 적격이라던 정의찬, 없던 일로. 국민 89%가 의대 증원 찬성. 감액된 예산, 민주당이 단독 처리하나. 더 깊게 읽기. 지드래곤과 검사 처남의 전혀 다른 마약 수사. 다르게 읽기 화이트칼라 이그젬션. “민주당은 뭐했냐”고 묻는 조선일보. 오늘의 TMI. ‘오래 사는...\nThe post “이러다 또 탄핵 당한다”, 한동훈 비대위 두고 갈등 폭발: 슬로우레터 12월18일. appeared first on .",
+          "link": "https://slownews.kr/100978",
+          "publishedOn": "2023-12-17T22:17:46.000Z",
+          "wordCount": 5844,
+          "title": "“이러다 또 탄핵 당한다”, 한동훈 비대위 두고 갈등 폭발: 슬로우레터 12월18일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/11/image-1.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=100927",
           "author": "이정환",
@@ -2334,6 +2414,16 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=593089",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593089/%ea%b3%bc%eb%a5%b4%eb%8d%b0%ec%98%ac%eb%9d%bc-%ea%b0%90%eb%8f%85-%eb%a6%ac%eb%8d%94%ec%89%bd",
+          "publishedOn": "2023-12-18T09:23:37.000Z",
+          "wordCount": 6773,
+          "title": "선수와 감독으로 모두 성공한, 축구계 이단아, 과르데올라 감독 리더쉽",
+          "imageUrl": null
+        },
+        {
           "id": "https://happist.com/?p=593086",
           "author": "happist",
           "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
@@ -2680,6 +2770,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78366",
+          "author": "NewsPeppermint",
+          "description": "뉴욕타임스 오피니언 란에는 최근의 거시경제를 설명해 주는 글이 자주 올라옵니다. 이런 칼럼들은 대개 “바이든 행정부의 경제 성적표가 생각만큼 나쁘지 않다”는 결론으로 글을 맺곤 합니다. 구구절절 드는 이유를 읽다 보면 논리적으로 이해가 가다가도 한편으론 주변 사람들 사는 모습은 여전히 팍팍해 보이던데 경제가 정말 잘 돌아가고 있는 게 맞나 의구심이 들기도 합니다. 칼럼니스트 트리시 맥밀란 커텀이 이 괴리를 자세히 분석한 칼럼을 썼습니다. 소위 경제학자들이 거시경제 지표에 파묻혀 오히려 쉽게 확인할 수 있는 ‘필수 → 더 보기",
+          "link": "https://newspeppermint.com/2023/12/17/npsp_vibecession/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_vibecession",
+          "publishedOn": "2023-12-17T23:15:17.000Z",
+          "wordCount": 1437,
+          "title": "사람들 착각이 아니라 그들이 ‘진짜 현실’을 못 보는 것 아닐까요",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=78071",
           "author": "ingppoo",
