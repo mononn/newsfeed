@@ -2,10 +2,186 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2023-12-20T20:13:07.469Z</updated>
+    <updated>2023-12-21T20:12:58.099Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Data-type profiling for perf]]></title>
+        <id>https://lwn.net/Articles/955709/</id>
+        <link href="https://lwn.net/Articles/955709/"/>
+        <updated>2023-12-21T16:41:10.000Z</updated>
+        <summary type="html"><![CDATA[Tooling for profiling the effects of memory usage and layout has always
+lagged behind that for profiling processor activity, so Namhyung Kim's patch set for data-type profiling
+in perf is a welcome addition.  It provides aggregated breakdowns of
+memory accesses by data type that can inform structure layout and access
+pattern changes.  Existing tools have either, like heaptrack, focused on
+profiling allocations, or, like perf mem, on accounting memory
+accesses only at the address level.  This new work builds on the latter,
+using DWARF debugging information to correlate memory operations with their
+source-level types.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Embedded Systems Programming series]]></title>
+        <id>https://www.embedded.com/?p=4481095</id>
+        <link href="https://www.embedded.com/embedded-systems-programming-series/"/>
+        <updated>2023-12-21T16:06:58.000Z</updated>
+        <summary type="html"><![CDATA[Dr. Miro Samek brings his youtube series on embedded systems programming to embedded.com with original descriptions and summaries included with each video. Follow along in...
+The post Embedded Systems Programming series appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Miro Samek</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing `async fn` and return-position `impl Trait` in traits (Rust Blog)]]></title>
+        <id>https://lwn.net/Articles/955925/</id>
+        <link href="https://lwn.net/Articles/955925/"/>
+        <updated>2023-12-21T16:02:37.000Z</updated>
+        <summary type="html"><![CDATA[The Rust Blog announces
+the stabilization of a couple of trait features aimed at improving support
+for async code:
+
+
+	Ever since the stabilization of RFC #1522 in Rust 1.26, Rust has
+	allowed users to write impl Trait as the return type of
+	functions (often called "RPIT"). This means that the function
+	returns "some type that implements Trait". This is
+	commonly used to return closures, iterators, and other types that
+	are complex or impossible to write explicitly. [...]
+
+	Starting in Rust 1.75, you can use return-position impl
+	Trait in trait (RPITIT) definitions and in trait impls. For
+	example, you could use this to write a trait method that returns an
+	iterator: [...]
+
+	So what does all of this have to do with async functions? Well,
+	async functions are "just sugar" for functions that return
+	-> impl Future. Since these are now permitted in
+	traits, we also permit you to write traits that use async fn.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to combine UWB and BLE for secure entry systems]]></title>
+        <id>https://www.embedded.com/?p=4481084</id>
+        <link href="https://www.embedded.com/how-to-combine-uwb-and-ble-for-secure-entry-systems/"/>
+        <updated>2023-12-21T14:50:57.000Z</updated>
+        <summary type="html"><![CDATA[UWB might seem the perfect solution for secure keyless entry, but UWB radios are relatively power hungry. Combining UWB with BLE offers a solution enable coin cell driven solutions for secure entry. This article explores how.
+The post How to combine UWB and BLE for secure entry systems appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nick Wood</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Thursday]]></title>
+        <id>https://lwn.net/Articles/955914/</id>
+        <link href="https://lwn.net/Articles/955914/"/>
+        <updated>2023-12-21T13:58:45.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (firefox-esr), Fedora (kernel), Mageia (bluez), Oracle (fence-agents, gstreamer1-plugins-bad-free, opensc, openssl, postgresql:10, and postgresql:12), Red Hat (postgresql:15 and tigervnc), Slackware (proftpd), and SUSE (docker, rootlesskit, firefox, go1.20-openssl, go1.21-openssl, gstreamer-plugins-bad, libreoffice, libssh2_org, poppler, putty, rabbitmq-server, wireshark, xen, xorg-x11-server, and xwayland).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Remember Y2K?]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1617.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1617.php"/>
+        <updated>2023-12-21T09:44:16.000Z</updated>
+        <summary type="html"><![CDATA[Even if you do not remember the “Millennium bug” or “Y2K problem” and I guess, for some younger readers, this would be considered ancient history, I am sure that you have heard about it. In the late 1990s we were all sure that chaos would occur as the year 2000 dawned. The problem was that any code written to process the date might have used just two digits to store the year and,...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Getting started with RHEL on WSL]]></title>
+        <id>7825b3cc-a36e-46cf-ad19-38df9b2929e4</id>
+        <link href="https://developers.redhat.com/articles/2023/12/21/getting-started-rhel-windows-subsystem-linux"/>
+        <updated>2023-12-21T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Windows Subsystem for Linux (WSL) has opened up a new world for developers, allowing them to run Linux distributions alongside their Windows environment. The release of WSL 2 introduced support for more Linux distributions, including Red Hat Enterprise Linux (RHEL). In this article, we'll explore the steps to get started with RHEL on WSL, enabling developers to work seamlessly with Windows and Linux environments.
+Prerequisites
+Before we begin, ensure that you have the following prerequisites in place:
+WSL 2
+Installed RHEL on WSL
+Launch the RHEL distro on WSL
+This article assumes that you have successfully installed the WSL CLI on your machine, obtained the RHEL image from the hybrid cloud, and imported the RHEL image into WSL.
+Note: All following commands are performed in PowerShell wi…]]></summary>
+        <author>
+            <name>Nikhil Mungale</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to get more from OpenShift Service Mesh monitoring]]></title>
+        <id>0aa6b0e7-68d5-4806-9455-e5d3b1222a06</id>
+        <link href="https://developers.redhat.com/articles/2023/12/21/how-get-more-openshift-service-mesh-monitoring"/>
+        <updated>2023-12-21T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Red Hat OpenShift Service Mesh brings tracing and monitoring to your system with little effort. However, the information is basic. In this article, we will create three applications in the Quarkus, Node.Js, and Java languages to collect more detailed statistics with Jaeger, collect custom application specific metrics with Prometheus, and create new dashboards with Grafana.
+Jaeger
+Jaeger, installed by default in OpenShift Service Mesh, allows developers to configure their services to gather runtime statistics about their performance.
+It is important to understand the following terms:
+Span: Represents a logical unit of work, which has a unique name, a start time, and the duration of execution.
+Trace: This is an execution path of services in OpenShift Service Mesh. In other words, a trace is …]]></summary>
+        <author>
+            <name>Luis Falero Otiniano</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for December 21, 2023]]></title>
+        <id>https://lwn.net/Articles/955132/</id>
+        <link href="https://lwn.net/Articles/955132/"/>
+        <updated>2023-12-21T00:45:28.000Z</updated>
+        <summary type="html"><![CDATA[The LWN.net Weekly Edition for December 21, 2023 is available.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[12/21, 월가의 투자의견 및 주가 전망 보고서]]></title>
+        <id>https://happist.com/?p=593146</id>
+        <link href="https://happist.com/593146/12-21-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
+        <updated>2023-12-20T23:22:16.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[한동훈은 윤석열 아바타? 뒷말 끊이지 않는 이유: 슬로우레터 12월21일.]]></title>
+        <id>https://slownews.kr/?p=101209</id>
+        <link href="https://slownews.kr/101209"/>
+        <updated>2023-12-20T21:31:07.000Z</updated>
+        <summary type="html"><![CDATA[김순덕의 태세 전환. 영국 이코노미스트가 국민의힘 과반을 점쳤다고? 쟁점과 현안. 한동훈은 김종인이 아니다. 짠돌이 예산 합의. 다르게 읽기. 한국 경제 성적이 OECD 2위라고? 나이롱 산재 환자? 김건희 특검법은 악법 맞나. 더 깊게 읽기. 내란 혐의 인정, 트럼프 내년 선거 못 나올까. 연동형과 병립형, 끝나지 않은 토론. 해법과 대안. 기본소득 말고 안심소득? 오세훈의 실험. 오늘의 TMI....
+The post 한동훈은 윤석열 아바타? 뒷말 끊이지 않는 이유: 슬로우레터 12월21일. appeared first on .]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Top 10 errors found in C# projects in 2023]]></title>
+        <id>https://pvs-studio.com/en/blog/posts/csharp/1094/</id>
+        <link href="https://pvs-studio.com/en/blog/posts/csharp/1094/"/>
+        <updated>2023-12-20T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In 2023, PVS-Studio developers have written a lot of articles on checking open-source C# projects. As always, we're sharing the top 10 bugs we found this year. Have fun reading!]]></summary>
+        <author>
+            <name>from pvs-studio.com</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[QEMU 8.2.0 released]]></title>
+        <id>https://lwn.net/Articles/955832/</id>
+        <link href="https://lwn.net/Articles/955832/"/>
+        <updated>2023-12-20T20:21:00.000Z</updated>
+        <summary type="html"><![CDATA[Version 8.2.0 of
+the QEMU emulator is out.  Changes include new emulations for virtio-sound
+devices, universal flash storage devices, Xilinx Versal boards, and much
+more.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] Looking back at 2023]]></title>
         <id>https://lwn.net/Articles/954535/</id>
@@ -73,6 +249,16 @@ of ksmbd as broken in 5.15.]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[월가 분석가들이 코스트코 주식에 흥분하는 이유]]></title>
+        <id>https://happist.com/?p=593144</id>
+        <link href="https://happist.com/593144/%ec%bd%94%ec%8a%a4%ed%8a%b8%ec%bd%94-%ec%a3%bc%ec%8b%9d"/>
+        <updated>2023-12-20T12:36:37.000Z</updated>
+        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[배런스, 2024년 소매업 전망, 2024년 소매업은 힘든 시기를 겪을 수 있다.]]></title>
         <id>https://happist.com/?p=593141</id>
         <link href="https://happist.com/593141/2024%eb%85%84-%ec%86%8c%eb%a7%a4%ec%97%85-%ec%a0%84%eb%a7%9d"/>
@@ -125,6 +311,17 @@ Ranger however can be enabled in any pas…]]></summary>
 The post 2016년 총선넷 낙선운동, 6년만에 재심 무죄 appeared first on .]]></summary>
         <author>
             <name>참여연대 사법감시센터</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Logging on Embedded Devices]]></title>
+        <id>https://interrupt.memfault.com/blog/device-logging</id>
+        <link href="https://interrupt.memfault.com/blog/device-logging"/>
+        <updated>2023-12-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this article, I discuss some of the problems I’ve encountered in producing and analyzing device logs over the years, on single digit number of devices up to hundreds of thousands, and concepts I’ve applied to manage that complexity. My background is in Android development, so some of the examples may skew towards much more powerful hardware than simple microcontrollers.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
         </author>
     </entry>
     <entry>
@@ -3544,152 +3741,6 @@ The post Is POSIX the key to futureproofing your RTOS projects? appeared first o
 The post 박민 KBS 등판, ‘땡윤 뉴스’의 서막 appeared first on .]]></summary>
         <author>
             <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[동성애 처벌법 합헌 유감: 합의한 성관계와 전투력이 무슨 상관?]]></title>
-        <id>https://slownews.kr/?p=99899</id>
-        <link href="https://slownews.kr/99899"/>
-        <updated>2023-11-22T07:02:26.000Z</updated>
-        <summary type="html"><![CDATA[2023년 10월 26일, 헌법재판소는 소위 ‘동성애 처리법'(군형법 제92조의6 추행죄) 위헌법률심판에서 해당 법이 합헌 이라고 결정했다. 벌써 네 번째 결정, 15년째 제자리걸음인 셈이다. 동성 군인간 성관계 처벌 위한 ‘동성애 처벌법’ 군형법 제92조의6은 군인과 항문성교나 그 밖의 추행을 한 군인을 징역 2년 이하의 형에 처하는 법이다. 맥락을 모르는 사람이 보면 무엇을 처벌하기 위해 존재하는 법인지 알기가 어렵다....
-The post 동성애 처벌법 합헌 유감: 합의한 성관계와 전투력이 무슨 상관? appeared first on .]]></summary>
-        <author>
-            <name>참여연대 사법감시센터</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[공정한 사다리? 같은 출발선이라는 착각: 슬로우레터 11월22일.]]></title>
-        <id>https://slownews.kr/?p=99869</id>
-        <link href="https://slownews.kr/99869"/>
-        <updated>2023-11-21T22:03:26.000Z</updated>
-        <summary type="html"><![CDATA[북한 위성에 윤석열 황금마차가 밀렸다. 북한 정찰위성 발사, 남북 관계 더 꼬인다. 외교부 통신망도 하루종일 불통이었다. 부동산 보유세도 ‘ABM’, 부자 감세로 간다. “암컷 설친다” 발언 논란. 더 깊게 읽기. 윤석열 라인 검사의 복잡한 사정. 총수지만 임원은 아닙니다. 시진핑은 한국어 통역을 데려가지 않았다. 다르게 읽기. 연구개발 과제 성공률 95%가 말하는 것. “8년 동안 너무 많이 들어...
-The post 공정한 사다리? 같은 출발선이라는 착각: 슬로우레터 11월22일. appeared first on .]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure RTOS goes open-source as Eclipse ThreadX]]></title>
-        <id>https://www.embedded.com/?p=4480938</id>
-        <link href="https://www.embedded.com/azure-rtos-goes-open-source-as-eclipse-threadx/"/>
-        <updated>2023-11-21T20:44:40.000Z</updated>
-        <summary type="html"><![CDATA[A vendor-neutral open source RTOS certified for safety-critical applications and published under a permissive license is an “industry game changer” as Azure RTOS becomes Eclipse ThreadX under the Eclipse Foundation.
-The post Azure RTOS goes open-source as Eclipse ThreadX appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GNU Coverage (gcov) for an Embedded Target with VS Code]]></title>
-        <id>http://mcuoneclipse.com/?p=39177</id>
-        <link href="https://mcuoneclipse.com/2023/11/21/gnu-coverage-gcov-for-an-embedded-target-with-vs-code/"/>
-        <updated>2023-11-21T17:46:12.000Z</updated>
-        <summary type="html"><![CDATA[The article explains how to use GNU gcov (coverage) with an embedded system, utilizing Visual Studio Code. It outlines the requirement of VS Code version, toolchain, semihosting, and a debug probe. Specific details are given on linking libraries, instrumenting source files, platform configuration, etc., with example provided on GitHub. The process offers the possibility to generate test coverage data for the software, which can be viewed within VS Code via the Gcov Viewer and coverage reports generated using gcovr utility. Continue reading →]]></summary>
-        <author>
-            <name>Erich Styger</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RFC 9498: The GNU Name System]]></title>
-        <id>https://lwn.net/Articles/952122/</id>
-        <link href="https://lwn.net/Articles/952122/"/>
-        <updated>2023-11-21T16:47:28.000Z</updated>
-        <summary type="html"><![CDATA[The GNU Name System has now been formalized as RFC 9498.
-
-
-	GNS addresses long-standing security and privacy issues in the
-	ubiquitous Domain Name System (DNS). Previous attempts to secure
-	DNS (DNSSEC) fail to address critical security issues such as
-	end-to-end security, query privacy, censorship, and centralization
-	of root zone governance. After 40 years of patching, it is time for
-	a new beginning.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Git 2.43.0 released]]></title>
-        <id>https://lwn.net/Articles/952121/</id>
-        <link href="https://lwn.net/Articles/952121/"/>
-        <updated>2023-11-21T16:42:58.000Z</updated>
-        <summary type="html"><![CDATA[Version 2.43.0 of the Git
-source-code management system has been release.  It includes a long list of
-improvements and minor new features.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Trust in and maintenance of filesystems]]></title>
-        <id>https://lwn.net/Articles/951846/</id>
-        <link href="https://lwn.net/Articles/951846/"/>
-        <updated>2023-11-21T15:06:55.000Z</updated>
-        <summary type="html"><![CDATA[The Linux kernel supports a wide variety of filesystems, many of which are
-no longer in heavy use — or, perhaps, any use at all.  The kernel code
-implementing the less-popular filesystems tends to be relatively unpopular
-as well, receiving little in the way of maintenance.  Keeping old
-filesystems alive does place a burden on kernel developers, though, so it
-is not surprising that there is pressure to remove the least popular ones.
-At the 2023 Kernel Maintainers Summit, the developers talked about these
-filesystems and what can be done about them.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Firefox 120.0 released]]></title>
-        <id>https://lwn.net/Articles/952090/</id>
-        <link href="https://lwn.net/Articles/952090/"/>
-        <updated>2023-11-21T15:03:02.000Z</updated>
-        <summary type="html"><![CDATA[Version
-120.0 of the Firefox browser is out.  Changes include a new "copy link
-without site tracking" option, the ability to enable the Global Privacy Control
-feature, and some additional privacy features seemingly restricted to users
-in Germany.  The browser will now also import TLS root certificates from
-the operating system by default on Windows, macOS, and Android.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ekstrand: NVK reaches Vulkan 1.0 conformance]]></title>
-        <id>https://lwn.net/Articles/952089/</id>
-        <link href="https://lwn.net/Articles/952089/"/>
-        <updated>2023-11-21T14:58:33.000Z</updated>
-        <summary type="html"><![CDATA[Faith Ekstrand has announced
-that the NVK Vulkan driver for NVIDIA "Turing" GPUs has been certified as
-being fully compliant with the Vulkan 1.0 API.
-
-
-	Practically, it means that we can pass the entire Vulkan
-	conformance test suite. From the Khronos perspective, it means that
-	NVK now meets the bar required to claim to support the Vulkan API
-	officially. (There are some legal implications to this which matter
-	to the Mesa project, but most users don't care about them.) From
-	the perspective of users, it means the driver should pretty much
-	work on Turing and later GPUs.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
-        <id>https://lwn.net/Articles/952088/</id>
-        <link href="https://lwn.net/Articles/952088/"/>
-        <updated>2023-11-21T14:52:01.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (activemq, strongswan, and wordpress), Mageia (u-boot), SUSE (avahi, frr, libreoffice, nghttp2, openssl, openssl1, postgresql, postgresql15, postgresql16, python-Twisted, ucode-intel, and xen), and Ubuntu (avahi, hibagent, nodejs, strongswan, tang, and webkit2gtk).]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[나는 타인의 평가에서 자유로울 수 있을까]]></title>
-        <id>20231121-how-to-overcome-being-self-conscious</id>
-        <link href="https://evan-moon.github.io/2023/11/21/how-to-overcome-being-self-conscious/"/>
-        <updated>2023-11-21T12:58:27.000Z</updated>
-        <summary type="html"><![CDATA[…]]></summary>
-        <author>
-            <name>Evans Library</name>
         </author>
     </entry>
 </feed>
