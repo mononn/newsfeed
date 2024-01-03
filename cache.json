@@ -162,6 +162,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/9084973",
+          "author": "CPUU",
+          "description": "2002년 12월 28일 발간된 Phrack 매거진 60호에서 Basic integer overflows 라는 제목으로 정수 오버플로우 취약점의 위험성 및 악용 가능성에 대해 언급되었다. 이 취약점은 2023 CWE Top 25에서 여전히 14위를 기록하고 있다(CWE-190: Integer Overflow or Wraparound). 이 취약점에 대해 CERT-C Secure coding 가이드에서도 아래와 같이 안내하고 있다.\n\nCERT-C : INT30-C. Ensure that unsigned integer operations do not wrap\nCERT-C : INT32-C. Ensure that operations on signed integers do not result in overflow\n\n이 포스팅에서는 다음 논문의 내용을 기반으로 정리해본다.\nDietz, Will, et al. \"Understanding integer overflow in C/C++.\" ACM Transactions on Software Engineering and Methodology (TOSEM) 25.1 (2015): 1-29.\n\n1. 개요\n이 논문의 취지는 C/C++ 언어로 작성된 프로그램에서 정수 오버플로우(Integer Overflow)는 치명적인 오류나 악용 가능한 취약점을 초래할 수 있으며, 이를 추적하는 것은 상당히 어렵다는 것을 강조한다.\n이러한 버그를 자동으로 찾아주는 도구가 있다면 편리할 텐데, 모든 정수 오버플로우가 반드시 버그로 재현되는 것은 아니기 때문에 판정 기준을 만들 때 고려해야 할 사항이…",
+          "link": "https://cpuu.postype.com/post/9084973",
+          "publishedOn": "2024-01-03T02:57:40.000Z",
+          "wordCount": 761,
+          "title": "메모리 취약점:과거, 현재, 미래 (8) Integer Overflow",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/02/17/10/ebe96d60abaf9d1787f2a55187ffbd6f.png?w=600&h=300&q=65"
+        },
+        {
           "id": "https://cpuu.postype.com/post/15845156",
           "author": "CPUU",
           "description": "이 논문은 흔히 Row-hammer attack 으로 알려져 있는 공격에 대한 연구이다. \nKim, Yoongu, et al. \"Flipping bits in memory without accessing them: An experimental study of DRAM disturbance errors.\" ACM SIGARCH Computer Architecture News 42.3 (2014): 361-372.\n이 방식은 Hardware 에 대한 공격이라고 할 수 있다. 거의 모든 종류의 DRAM이 공통적으로 가지고 있는 이슈를 이용한 공격이다. (논문의 저자진은 삼성 및 Intel에서 인턴쉽을 수행한적이 있는 카네기 멜론 출신의 연구자들인데, 이 현상을 발견한 후 논문으로 발표를 하게 되어 회사들 입장에서는 약간 곤란했었다고 한다.)\n\nDRAM이란 트랜지스터와 커패시터로 구성된 메모리 셀을 통해 데이터를 저장한다. 그리고 DRAM에 Access하거나 Refresh하는 방식으로 데이터를 관리한다. 원칙적으로 하나의 메모리 주소에 대한 접근은 다른 주소에 저장된 데이터에 의도하지 않은 영향을 미쳐서는 안된다. 이에 1970년대부터 DRAM 제조 업체들은 셀 간 간격을 유지하고 테스트를 통해 오류 발생 가능성을 최소화하고 있었다. 그러나 DRAM 공정 기술이 미세화됨에 따라 DRAM 셀 간의 전기적 상호 작용을 방지하기가 점점 더 어려워지고 있다. \n\n\n2014년 본 연구진의 실험에 따르면 상용 DRAM의 동일한 주소에 읽기 작업을 반복하다보면 인근 주소의 데이터를 손상시킬 수 있다는 것이 확인되었다. 마치 특정 row에 있는 부분을 해머로 계속 때리면 그 옆의 row들이 영향을 받는다는 취지에서 이름을 붙인 것이다. 일종의 Fault Injection 이라고 볼 수 있다. \n의도적으로 DRAM에 부하를 가하는 악의적인 프로그램을 통해, DRAM의 동일한 행을 활성화하는 것은 인근 행의 데이터를 손상시킬 수 있다는 사실을 인텔 및 AMD 주요 DRAM모듈(129개 중 110개)에서 확인하였다. \n\n\n해머링을 수행하다보면 트랜지스터 행에서 주변 인접한 행으로 전하가 누출되고, 그로 인해 메모리상의 특정 비트 값이 1에서 0으로, 또는 0에서 1로 뒤집힌다(flipping). 이 사소한 비트 전환으로 인해 운영체제 수준에서 권한 상승이 발생할 수도 있다. 실제로 이를 악용하여 시스템에서의 권한 상승이나 네트워크 기반 공격도 가능하다고 알려져 있다.\n\n\n후속 연구에 대해서는 추후 더 다룰 예정.\n\n\n참고: (유머)",
@@ -190,6 +200,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "4649f433-4575-46da-84f9-76cc2af4688a",
+          "author": "Lucas Holmquist",
+          "description": "Welcome back to the Node.js reference architecture series. This post will serve as a wrap-up for the Node.js series and offer a look at what is coming next from our reference architecture team.\nCatch up on the rest of the series:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code coverage\nPart 8: TypeScript\nPart 9: Securing Node.js applications\nPart 10: Accessibility\nPart 11: Typical development workflows\nPart 12: npm development\nPart 13: Problem determination\nPart 14: Testing\nPart 15: Transaction handling\nPart 16: Load balancing, threading, and scaling\nPart 17: CI/CD\nPart 18: Wrap-up\nWhere we started\nWhen we started thi…",
+          "link": "https://developers.redhat.com/articles/2024/01/03/introduction-nodejs-reference-architecture-wrapping",
+          "publishedOn": "2024-01-03T07:00:00.000Z",
+          "wordCount": 2950,
+          "title": "Introduction to the Node.js reference architecture: Wrapping up",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
+        },
         {
           "id": "22437bbb-f952-4417-b426-1e8d6c17164b",
           "author": "Florian Weimer",
@@ -447,6 +467,46 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4481186",
+          "author": "Nitin Dahad",
+          "description": "NXP Platform Accelerator, co-developed with MicroEJ, leverages software containers with standard APIs to bring smartphone-like software design flexibility to the industrial and IoT edge.\nThe post NXP and MicroEJ use containers for software portability across MCUs appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/nxp-and-microej-use-containers-for-software-portability-across-mcus/",
+          "publishedOn": "2024-01-03T15:37:57.000Z",
+          "wordCount": null,
+          "title": "NXP and MicroEJ use containers for software portability across MCUs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481178",
+          "author": "Boris Radonic",
+          "description": "The fundamental working principle of brush-type DC motors has largely remained consistent for decades, but there have been dramatic advancements in technology, materials, and design....\nThe post Mastering motor control: motor control 101 appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/mastering-motor-control-motor-control-101/",
+          "publishedOn": "2024-01-03T14:27:19.000Z",
+          "wordCount": null,
+          "title": "Mastering motor control: motor control 101",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481162",
+          "author": "Nitin Dahad",
+          "description": "RivieraWaves Wi-Fi 7 IP platform helps developers implement latest high throughput Wi-Fi 7 features in SoCs targeting high-end consumer and industrial applications.\nThe post Ceva releases Wi-Fi 7 IP appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/ceva-releases-wi-fi-7-ip/",
+          "publishedOn": "2024-01-03T14:07:40.000Z",
+          "wordCount": null,
+          "title": "Ceva releases Wi-Fi 7 IP",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481154",
+          "author": "Miro Samek",
+          "description": "The automatically generated code tends to be the most solid part of the project, while the manually written parts are typically more problematic due to...\nThe post Programming embedded systems: automatic code generation appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/programming-embedded-systems-automatic-code-generation/",
+          "publishedOn": "2024-01-03T13:25:10.000Z",
+          "wordCount": null,
+          "title": "Programming embedded systems: automatic code generation",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4481150",
           "author": "Jacob Beningo",
@@ -898,16 +958,6 @@
           "wordCount": 6293,
           "title": "Day when Skynet becomes self-aware, and 69 reasons to chill out with colleagues. Part 2.",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1085_Holidays_for_developers_part2/image1_thm_intoblank_1200x630.png?ver=12-07-2023-12-00-25"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/1084/",
-          "author": null,
-          "description": "Sometimes it's difficult to come up with a reason for gathering and hanging out with your colleagues. You may say that we have official holidays and birthdays — yeah, that's right — but it's still...",
-          "link": "https://pvs-studio.com/en/blog/posts/1084/",
-          "publishedOn": "2023-12-04T21:00:00.000Z",
-          "wordCount": 6291,
-          "title": "Day when Skynet becomes self-aware, and 69 reasons to chill out with colleagues. Part 1.",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1084_Holidays_for_developers_part1/image1_thm_intoblank_1200x630.png?ver=12-05-2023-16-15-08"
         }
       ]
     },
@@ -1001,6 +1051,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/956699/",
+          "author": "jake",
+          "description": "On his blog, \nLuc Lenôtre introduces\nMaestro, \"a Unix-like kernel and operating system written from\nscratch in Rust\". Maestro is intended to be\n\"lightweight and compatible-enough with Linux to be usable in everyday\nlife\".  The project began, in C, back in 2018, but switched over to\nRust after a year-and-a-half.  The current status:\n\nMaestro is a monolithic kernel, supporting only the x86 (in 32 bits)\narchitecture for now. \n\nAt the time of writing, 135 out of 437 Linux system calls\n(roughly 31%) are \nmore or less implemented. The project has 48 800 lines of code\nacross 615 \nfiles (all repositories combined, counted using the cloc command). \n\n\nThere is a Hacker\nNews discussion of the project as well.",
+          "link": "https://lwn.net/Articles/956699/",
+          "publishedOn": "2024-01-03T16:05:57.000Z",
+          "wordCount": 259,
+          "title": "Lenôtre: Maestro - Introduction",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/956696/",
+          "author": "corbet",
+          "description": "Version 9.1 of the\nVim editor has been released.  \"This release is dedicated to Bram\nMoolenaar, Vims lead developer for more than 30 years, who passed away half\na year ago. The Vim project wouldn't exist without his work\".  Changes\ninclude new support for classes and objects in the scripting language,\nsmooth scrolling support, an EditorConfig plugin, and more.",
+          "link": "https://lwn.net/Articles/956696/",
+          "publishedOn": "2024-01-03T15:36:25.000Z",
+          "wordCount": 172,
+          "title": "Vim 9.1 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/956694/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (kernel), Fedora (slurm), Oracle (kernel and postgresql:15), Red Hat (firefox, gstreamer1-plugins-bad-free, thunderbird, tigervnc, and xorg-x11-server), SUSE (polkit, postfix, putty, w3m, and webkit2gtk3), and Ubuntu (nodejs).",
+          "link": "https://lwn.net/Articles/956694/",
+          "publishedOn": "2024-01-03T15:21:20.000Z",
+          "wordCount": 301,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/954544/",
+          "author": "corbet",
+          "description": "The calendar has flipped over into 2024 — another year has begun.  Here at\nLWN, we do not have a better idea of what this year will bring than anybody\nelse does, but that doesn't keep us from going out on a shaky limb and\nmaking predictions anyway.  Here, for the curious, are a few things that we\nthink may be in store for 2024.",
+          "link": "https://lwn.net/Articles/954544/",
+          "publishedOn": "2024-01-02T22:40:28.000Z",
+          "wordCount": null,
+          "title": "[$] LWN's guide to 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/956568/",
           "author": "corbet",
@@ -1720,56 +1810,6 @@
           "wordCount": 158,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/953736/",
-          "author": "corbet",
-          "description": "Version\n5.0 of the Django web framework is out.  Significant changes include database-computed\ndefault values, field groups in the templating system, and more; see the release\nnotes for details.",
-          "link": "https://lwn.net/Articles/953736/",
-          "publishedOn": "2023-12-04T16:03:23.000Z",
-          "wordCount": 142,
-          "title": "Django 5.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/953438/",
-          "author": "corbet",
-          "description": "The kernel's deadline scheduling class\noffers a solution to a number of realtime (or generally latency-sensitive)\nproblems, but it is also resistant to the usual solutions for the priority-inversion\nproblem.  The development community has been pursuing proxy execution as a\nsolution to a few scheduling challenges, including this one; the problem is\ndifficult and progress has been slow.  LWN last looked at proxy execution in June; at the 2023 Linux\nPlumbers Conference, John Stultz gave an overview of proxy execution,\nthe current status of the work, and the remaining problems to solve.",
-          "link": "https://lwn.net/Articles/953438/",
-          "publishedOn": "2023-12-04T16:00:05.000Z",
-          "wordCount": null,
-          "title": "[$] What remains to be done for proxy execution",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/953732/",
-          "author": "corbet",
-          "description": "Version 14.1 of the GDB debugger is out.  Changes include initial support\nfor the debugger\nadapter protocol, NO_COLOR support, the ability to work with\ninteger types larger than 64 bits, a number of enhancements to the\nPython API, and more.",
-          "link": "https://lwn.net/Articles/953732/",
-          "publishedOn": "2023-12-04T15:54:20.000Z",
-          "wordCount": 955,
-          "title": "GDB 14.1 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/953706/",
-          "author": "corbet",
-          "description": "Davidlohr Bueso has posted a\nsummary of the CXL microconference at the recently concluded Linux\nPlumbers Conference.  \"The goals for the track were to openly discuss\ncurrent on-going development efforts around the core driver, as well as\nexperimental memory management topics which lead to accommodating kernel\ninfrastructure for new technology and use cases.\"",
-          "link": "https://lwn.net/Articles/953706/",
-          "publishedOn": "2023-12-04T14:49:16.000Z",
-          "wordCount": 170,
-          "title": "Bueso: LPC 2023: CXL Microconference",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/953702/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (amanda, ncurses, nghttp2, opendkim, rabbitmq-server, and roundcube), Fedora (golang-github-openprinting-ipp-usb, kernel, kernel-headers, kernel-tools, and samba), Mageia (audiofile, galera, libvpx, and virtualbox), Oracle (kernel and postgresql:13), SUSE (openssl-3, optipng, and python-Pillow), and Ubuntu (firefox).",
-          "link": "https://lwn.net/Articles/953702/",
-          "publishedOn": "2023-12-04T14:22:40.000Z",
-          "wordCount": 247,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -1805,6 +1845,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/2023-music.html",
+          "author": null,
+          "description": "Another year, another time to pick six favorite musical\n     discoveries. 2023 includes ambient bluegrass, Afro-Andean funk, Northumbrian\n     smallpipes, dancing kora, and Ukrainian folk jazz.\nmore…",
+          "link": "https://martinfowler.com/articles/2023-music.html",
+          "publishedOn": "2024-01-02T23:42:00.000Z",
+          "wordCount": 854,
+          "title": "My favorite musical discoveries of 2023",
+          "imageUrl": "https://martinfowler.com/articles/2023-music/card.png"
+        },
         {
           "id": "https://martinfowler.com/bliki/SoftwareAndEngineering.html",
           "author": null,
@@ -2144,16 +2194,6 @@
           "wordCount": 1232,
           "title": "“사소한 게 아니야”",
           "imageUrl": "https://s0.wp.com/i/blank.jpg"
-        },
-        {
-          "id": "http://economicview.net/?p=84823",
-          "author": "sticky",
-          "description": "자신이 설계하는 새로운 컴퓨터가 애플 사의 자산이 된다는 데 동의한 이후에도 워즈는 그것을 자신이 몸담은 HP에 먼저 제공해야 한다고 느꼈다. [중략] 그래서 워즈는 1976년 봄에 HP의 직장 상사와 경영진에게 자신의 고안물을 보여주었다. HP의 경영진은 큰 인상을 받았지만 HP에서 상품으로 개발할 수는 없다고 말했다. 컴퓨터광이 취미 생활로 만들 법한 물건에 불과하고, 또 HP가 타깃으로 삼는 고품질 […]",
-          "link": "http://economicview.net/84823/",
-          "publishedOn": "2023-12-05T06:41:51.000Z",
-          "wordCount": 1236,
-          "title": "HP가 워즈니악의 제안을 거절할 때",
-          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Apple_1_mfk_bern.jpeg"
         }
       ]
     },
@@ -2162,6 +2202,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=101807",
+          "author": "권영전",
+          "description": "사이시옷은 발음 문제다 사이시옷 문제는 알고 보면 발음 문제다. 사실 모든 표기 문제는 발음 문제다. 글자는 결국 말을 담는 그릇일 뿐이니까. 그래서 한글 맞춤법은 들머리 제1항부터 “한글 맞춤법은 표준어를 소리대로 적”는다고 밝히고 있는 것이다. 만약 어떤 말을 사람마다 제각기 달리 발음한다면, 적을 때도 제각기 달리 적게 될 것이다. 그러니 ‘소리’, 즉 표준 발음이 없으면 맞춤법은...\nThe post 사이시옷, 없애기보다 더 많이 쓰자 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/101807",
+          "publishedOn": "2024-01-03T13:41:02.000Z",
+          "wordCount": 5195,
+          "title": "사이시옷, 없애기보다 더 많이 쓰자",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/GettyImages-a12240760.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=101796",
+          "author": "참여연대 사법감시센터",
+          "description": "[참여연대 사법감시센터 ‘광장에 나온 판결’] 김용균 5주기 코앞에 두고, 대법원 결국 김용균 원청업체 경영진 무죄 판결을 확정했다. 더 큰 문제는 김용균법(개정 산안법)과 중대재해처벌법(중처법)의 후퇴. 여기엔 민주당 책임도 작지 않다. 그날, 2018년 12월의 밤 그는 1994년에 태어났다. 외동아들이었다. 부모님의 속을 썩이는 일이 크게 없이 잘 자라서 군대까지 다녀오고, 대학 졸업 후에 서부발전이 운영하는 태안화력발전소(이하 ‘태안화력’)에 입사했다....\nThe post 대법원 면죄부보다 중요한 것, 김용균의 죽음으로 만든 법이 후퇴하고 있다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/101796",
+          "publishedOn": "2024-01-03T06:05:36.000Z",
+          "wordCount": 5407,
+          "title": "대법원 면죄부보다 중요한 것, 김용균의 죽음으로 만든 법이 후퇴하고 있다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/pic_005.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=101762",
+          "author": "이정환",
+          "description": "이재명 피습, 죽을 뻔 했다. 사고 5시간 만에 수술. 혐오의 정치를 혐오하는 방식. 쟁점과 현안. 한동훈은 또 대구로. 금융투자소득세 폐지, “조세 정의를 걷어찼다.” 90초만에 승객 379명 전원 탈출. 더 깊게 읽기. 태영건설과 SBS 가운데 고른다면? 태영건설 다음은 어딜까. 다르게 읽기. 출산 때문에 경제활동 참여 낮다는 건 거짓말. 노인들이 살기 좋은 세상을 만들어야 한다. 해법과 대안....\nThe post 혐오의 정치를 혐오하면서 혐오를 부추기는 조선일보의 방식: 슬로우레터 1월3일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/101762",
+          "publishedOn": "2024-01-02T22:03:22.000Z",
+          "wordCount": 6356,
+          "title": "혐오의 정치를 혐오하면서 혐오를 부추기는 조선일보의 방식: 슬로우레터 1월3일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/Hate-written-with-scrabble-39442-pixahive-1000x667.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=101692",
           "author": "박미숙",
@@ -2651,26 +2721,6 @@
           "wordCount": 6180,
           "title": "김건희 명품백 몰카 영상, MBC에 실리지 못한 이유: 슬로우레터 12월6일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/news-p.v1.20231128.cc04a8cf2998433faec7064f9d30258f_P1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=100456",
-          "author": "참여연대 의정감시센터",
-          "description": "“선거는 승부다. 이상적인 주장으로 멋있게 지면 무슨 소용 있겠나.” (이재명, 2023년 11월 28일) 지난 11월 28일, 선거제도 개정과 관련하여 묵묵부답으로 초지일관하던 원내 제1당인 더불어민주당 이재명 대표가 드디어 입을 열었다. 이 발언은 직접적으로 병립형 비례대표제로의 회귀를 분명하게 언급한 것은 아니지만, 선거에서 승리하기 위해 병립형 비례대표제라도 받을 수 있음을 시사하고 있다. 이 발언은 준연동형 비례대표제를 유지하고 위성정당을...\nThe post 병립형 회귀 vs. 준연동형, 민주당 갈등이 실망스러운 네 가지 이유 appeared first on .",
-          "link": "https://slownews.kr/100456",
-          "publishedOn": "2023-12-05T05:32:02.000Z",
-          "wordCount": 5200,
-          "title": "병립형 회귀 vs. 준연동형, 민주당 갈등이 실망스러운 네 가지 이유",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/11/398758459_24098677403080762_1611225423552432128_n.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=100432",
-          "author": "이정환",
-          "description": "“변죽만 울리는 개각.” 해박한 지식과 통찰력? 지금까지 뭘 했나. 요소수 대란에서 배운 게 없다. 더 깊게 읽기. 중대재해처벌법 50명 미만 적용 미룰까. “민주당이 더 나쁘다.” 다르게 읽기. 반윤+반명 신당 가능할까. 구글폼 창당? 온라인 정당은 다르다? ‘떴다당’ 열풍. 오늘의 TMI. 카페 테이블의 스마트폰이 사라지지 않는 이유. 엘니뇨 습격으로 초콜릿 가격 폭등. 한없이 기다리는 노인들. 고령층 온라인...\nThe post 졌지만 잘 싸돌아다녔다, 엑스포 실패가 불길한 이유: 슬로우레터 12월5일. appeared first on .",
-          "link": "https://slownews.kr/100432",
-          "publishedOn": "2023-12-04T22:03:53.000Z",
-          "wordCount": 5874,
-          "title": "졌지만 잘 싸돌아다녔다, 엑스포 실패가 불길한 이유: 슬로우레터 12월5일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/wckHfmdJJPwl655eb31c3acf74.81110231-1000x681.jpeg"
         }
       ]
     },
@@ -2679,6 +2729,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=593244",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593244/%ec%9d%80%ed%87%b4%ec%83%9d%ed%99%9c-%ec%97%b0%ea%b8%88-%ec%9d%b8%ec%b6%9c",
+          "publishedOn": "2024-01-03T10:59:16.000Z",
+          "wordCount": 5846,
+          "title": "슬기로운 은퇴생활, 연금 인출 팁",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593233",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593233/%ec%8a%a4%ed%8a%b8%eb%a6%ac%eb%b0%8d-%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%95%b4%ec%a7%80%ec%9c%a8-%ec%a6%9d%ea%b0%80",
+          "publishedOn": "2024-01-03T10:13:57.000Z",
+          "wordCount": 6480,
+          "title": "WSJ, 미국인들의 스트리밍 서비스 해지율이 급증하고 있다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593218",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593218/1-3-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-01-03T03:46:33.000Z",
+          "wordCount": 6935,
+          "title": "1/3, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=593216",
           "author": "happist",
@@ -3058,36 +3138,6 @@
           "wordCount": 5968,
           "title": "월가의 GM 투자의견 및 GM 주가 전망(12/5 업뎃)",
           "imageUrl": "https://happist.com/wp-content/uploads/2020/01/GM-크루즈-레벨-5-자율주행차-오리진-황혼속에-시내-주행-모습-01-Photo-by-GM-Cruise.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=592913",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/592913/%ec%8b%a4%eb%a7%9d%ec%8a%a4%eb%9f%ac%ec%9a%b8-4%eb%b6%84%ea%b8%b0-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2023-12-05T07:32:32.000Z",
-          "wordCount": 5998,
-          "title": "미즈호, 4분기 알파벳 실적은 월가를 실망시킬 것",
-          "imageUrl": "https://happist.com/wp-content/uploads/2021/04/구글-및-알파벳-CEO-순다르-피차이Sundar-Pichai-Image-from-Time.jpeg"
-        },
-        {
-          "id": "https://happist.com/?p=592911",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/592911/12-5-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2023-12-05T06:45:49.000Z",
-          "wordCount": 6715,
-          "title": "12/5, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/11/달랏-포토-스팟-산마이-.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=592905",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/592905/%ec%9b%94%eb%b0%b0%eb%8b%b9-etf-%eb%b6%84%eb%b0%b0%ec%9c%a8-%ec%88%9c%ec%9c%84",
-          "publishedOn": "2023-12-04T16:04:45.000Z",
-          "wordCount": 6099,
-          "title": "퇴직자 투자 – 매달 월급을 한번 더 받는다는 월배당 ETF 분배율 순위",
-          "imageUrl": "https://happist.com/wp-content/uploads/2023/11/달랏-포토-스팟-산마이-5925.jpg"
         }
       ]
     },
@@ -3096,6 +3146,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78458",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 11월 13일 스프에 쓴 글입니다. 전쟁은 서로 생각과 의견이 다른 인류가 벌일 수 있는 가장 잔인한 집단 폭력 행위입니다. 이미 전쟁이 벌어진 상황에서 총칼을 거두는 휴전이나 평화를 논의하는 건 소용없는 일이 될 가능성이 커 → 더 보기",
+          "link": "https://newspeppermint.com/2024/01/02/npsp_discoursetoxic/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_discoursetoxic",
+          "publishedOn": "2024-01-02T22:59:54.000Z",
+          "wordCount": 2422,
+          "title": "[뉴페@스프] 어쩌면 세상에서 가장 어려운 ‘공통분모 찾기’",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=78158",
           "author": "ingppoo",
@@ -3224,16 +3284,6 @@
           "publishedOn": "2023-12-06T02:00:17.000Z",
           "wordCount": 1390,
           "title": "전쟁 중인 나라보다 낮은 출생률, 우리가 해야 할 고민은",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=77964",
-          "author": "eyesopen1",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 10월 18일 스프에 쓴 글입니다. 2023년 노벨평화상은 이란의 인권 운동가 나르게스 모하마디에게 돌아갔습니다. 모하마디는 이른바 ‘히잡 시위’가 1년 넘게 이어지고 있는 이란에서 여성의 권리, 사형제도 등 다양한 부문의 인권 운동을 주도해 온 인물로, 노벨평화상을 → 더 보기",
-          "link": "https://newspeppermint.com/2023/12/04/npsp_nobelpeaceprize/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_nobelpeaceprize",
-          "publishedOn": "2023-12-04T22:59:00.000Z",
-          "wordCount": 1843,
-          "title": "[뉴페@스프] 수상 기준이 어떻길래? 올해도 이어진 노벨평화상 논란",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
