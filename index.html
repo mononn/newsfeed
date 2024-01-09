@@ -22,11 +22,403 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T18:46:51.000Z">2024-01-08</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T18:46:51.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-09 datetime="2024-01-09T19:32:58.000Z">2024-01-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-09 datetime="2024-01-09T19:32:58.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/957269/"
+                        open
+                      >
+                        <summary class="article-expander__title">Vcc: a Clang compiler for Vulkan</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/957269/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The Vcc compiler has been
+announced.
+
+
+	It’s exactly what the name implies: a clang-based compiler that
+	outputs code that runs on Vulkan.
+
+	Vcc can be thought of as a GLSL and HLSL competitor, but the true
+	intent of this project is to retire the concept of shading
+	languages entirely. Unlike existing shading languages, Vcc makes a
+	honest attempt to bring the entire C/C++ language family to Vulkan,
+	which means implementing a number of previously unseen features in
+	Vulkan shaders</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/957255/"
+                        open
+                      >
+                        <summary class="article-expander__title">The OpenWrt One project</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/957255/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>OpenWrt developer John Crispin says:
+&quot;In 2024 the OpenWrt project turns 20 years! Let&#x27;s celebrate this
+anniversary by launching our own first and fully upstream supported
+hardware design.&quot; The rest of the message describes the proposed
+OpenWrt-native network-routing system, based Banana Pi boards; the project is
+being organized through the Software Freedom Conservancy.  (Thanks to Dave
+Täht).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/957252/"
+                        open
+                      >
+                        <summary class="article-expander__title">Leemhuis: Regression tracking: state of the union early 2024</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/957252/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Thorsten Leemhuis writes
+about his plans for improving the kernel&#x27;s regression handling in the
+coming year.
+
+
+	Top-priority will be &quot;make regzbot more useful for kernel subsystem
+	maintainers&quot; from now on. My tracking efforts of course will
+	continue, but everything except regressions in the current and the
+	previous mainline cycle might not see much attention from my
+	side. This refocusing also means that I won&#x27;t work much on
+	resolving some ambiguities around &quot;how regressions are supposed to
+	be handled&quot; which lead to tension quite a few times. But all that
+	should be for the best in the long term.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/957239/"
+                        open
+                      >
+                        <summary class="article-expander__title">Shaw: Python 3.13 gets a JIT</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/957239/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Anthony Shaw describes
+the new copy-and-patch JIT that has been proposed for Python 3.13.
+
+
+	Copy-and-patch was selected because the compilation from bytecodes
+	to machine code is done as a set of “templates” that are then
+	stitched together and patched at runtime with the correct
+	values. This means that your average Python user isn’t running this
+	complex JIT compiler architecture inside their Python
+	runtime. Python writing it’s own IL and JIT would also be
+	unreasonable since so many are available off-the-shelf like LLVMs
+	and ryuJIT. But a full-JIT would require those being bundled with
+	Python and all the added overheads. A copy-and-patch JIT only
+	requires the LLVM JIT tools be installed on the machine where
+	CPython is compiled from source, and for most people that means the
+	machines of the CI that builds and packages CPython for python.org.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/957221/"
+                        open
+                      >
+                        <summary class="article-expander__title">Solus 4.5 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/957221/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version 4.5
+(&quot;Resilience&quot;) of the Solus distribution has been released.  &quot;This
+release brings updated applications and kernels, refreshed software stacks,
+a new installer, and a new ISO edition featuring the XFCE desktop
+environment.&quot;</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/957236/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/957236/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (squid), Fedora (podman), Mageia (dropbear), SUSE (eclipse-jgit, jsch, gcc13, helm3, opusfile, qt6-base, thunderbird, and wireshark), and Ubuntu (clamav, libclamunrar, and qemu).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;593356"
+                        open
+                      >
+                        <summary class="article-expander__title">1/9,  월가의 투자의견 및 주가 전망 보고서</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/593356/1-9-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;21
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="049960c0-57fd-4911-beb5-c51149161e5f"
+                        open
+                      >
+                        <summary class="article-expander__title">Connect a Quarkus app to an external PostgreSQL database</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/01/09/connect-quarkus-app-external-postgresql-database">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/ST-microservices_1x.png?itok&#x3D;bdFts8lR" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Pedal is a simple e-commerce application to sell bikes, manage employees, and control inventory. The Java application uses the Quarkus microservice framework and Spring to serve a web front end and a representational state transfer (REST) service. It also connects to a PostgreSQL database and SQL Server database.
+Hosting this Quarkus application’s PostgreSQL database externally provides several advantages, including automated backups, robust data persistence, extensive maintenance tools, and more straightforward scaling. Using external databases also reduces the operational burden on your application’s development team.
+This guide helps you integrate Pedal’s external PostgreSQL database with one of its Quarkus microservices deployed on Red Hat OpenShift.
+Overview of the external PostgreSQL…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="5f041927-5b53-47e9-aadc-8a8199804ef0"
+                        open
+                      >
+                        <summary class="article-expander__title">A fully automated setup of a JBoss EAP cluster using Ansible</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/01/09/fully-automated-setup-jboss-eap-cluster-using-ansible">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok&#x3D;WLLeSXKn" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Info alert: Note
+This article assumes that you have prior knowledge of both Ansible and the steps associated with a basic installation of Red Hat JBoss Enterprise Application Platform (JBoss EAP)/WildFly. Visit the Ansible courses page to learn the fundamentals of using Ansible.
+An earlier article already covered this topic. However, this article provides a much needed update to its content; particularly documenting how to use the Red Hat Ansible Certified Content Collection for JBoss EAP (redhat.eap) instead of the community version of the collection (middleware_automation.wildfly).
+The objective of this demonstration is to set up and run three JBoss EAP instances forming a cluster. In this context, the application servers must communicate with each other to synchronize the content of the…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;21
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-08 datetime="2024-01-08T22:59:18.000Z">2024-01-08</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-08 datetime="2024-01-08T22:59:18.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78202"
+                        open
+                      >
+                        <summary class="article-expander__title">[뉴페@스프] 2029년 화성으로 간다는 계획에 앞서 해야 할 것들</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/01/08/npsp_universehuman/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_universehuman">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 11월 20일 스프에 쓴 글입니다. 인간의 역사는 탐험의 역사이자 미지의 영역을 기지의 세계로 바꾸어 온 역사입니다. 원시시대 눈앞의 어두운 동굴 속에는 뱀이 있을 수도 있고 맛있는 버섯이 있을 수도 있었을 겁니다. 진화는 안전을 위해 → 더 보기</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78492"
+                        open
+                      >
+                        <summary class="article-expander__title">“작심삼일 그만” 균형 잡힌 새해 결심을 위하여</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/01/07/npsp_foodnoise/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_foodnoise">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>새해 결심의 계절입니다. 운동과 식단 조절을 통해 더 건강해지겠다는 다짐은 새해 결심의 단골 메뉴죠. 그 가운데 체중을 감량하겠다는 구체적인 목표도 자주 포함되곤 합니다. 그런데 체중 감량에 너무 집착하다 보면 문제가 되기도 하는데요, 최근 소셜미디어에서 자주 등장한 신조어 가운데 음식 소음(food noise)이란 말이 있습니다. 배가 고파서 무언가를 먹고 싶어지고 음식 생각이 나는 본능적인 식욕에 따른 반응을 지워내야 할 부정적인 의미를 담은 소음으로 표현한 것이죠. 비만 공포증을 비판하는 글을 써 온 철학자 → 더 보기</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;102084"
+                        open
+                      >
+                        <summary class="article-expander__title">우리가 김건희 논란으로 낭비하는 시간: 슬로우레터 1월9일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/102084">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2024/01/5286082-1000x659.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>윤석열 출근 체크 유튜브 차단. “김건희 리스크, 정면으로 다뤄야 한다.” ‘즉·강·끝’, 이제 완충 구역은 없다. 쟁점과 현안. 친명과 비명의 혈투. “내리꽂기식 공천, 총선 망하는 길.” 납작 엎드린 태영건설. 다르게 읽기. “검사들이 중립적으로 보이려는 노력도 하지 않는다.” “공영방송 낙하산 그만합시다.” 보좌관이 선거 지원, 괜찮은가. 더 깊게 읽기. 윤석열에게 해야 할 질문. 해법과 대안. 천덕꾸러기 양수 발전소의...
+The post 우리가 김건희 논란으로 낭비하는 시간: 슬로우레터 1월9일. appeared first on 슬로우뉴스..</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;20
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;101636"
+                        open
+                      >
+                        <summary class="article-expander__title">증오의 게임을 넘어서: 2024년에 제안하는 36가지 미디어 테제</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/101636">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2024/01/animals-1782431_1280.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>[캡:콜드케이스] 선거과 윤리, AI와 노동… 2024년 미디어 분야를 ‘캡콜드’ 김낙호 교수와 함께 전망하고 도전적인 미디어 테제를 제안합니다. 캡콜드에게 2024년 미디어 분야를 관통할 키워드와 문제 상황을 뽑아달라고 청했다. 2024년은 한국 4월 총선과 미국 11월 대선이 있는 해다. 그는 선거와 언론 윤리 문제를 첫손에 뽑았다. 캡콜드가 전망한 2024년 미디어계 화두는 다음과 같다. 2024년 미디어 분야 물론 대화는...
+The post 증오의 게임을 넘어서: 2024년에 제안하는 36가지 미디어 테제 appeared first on 슬로우뉴스..</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;41
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -157,41 +549,6 @@ important fixes throughout the kernel tree.</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;101636"
-                        open
-                      >
-                        <summary class="article-expander__title">증오의 게임을 넘어서: 2024년에 제안하는 36가지 미디어 테제</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/101636">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2024/01/animals-1782431_1280.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>[캡:콜드케이스] 선거과 윤리, AI와 노동… 2024년 미디어 분야를 ‘캡콜드’ 김낙호 교수와 함께 전망하고 도전적인 미디어 테제를 제안합니다. 캡콜드에게 2024년 미디어 분야를 관통할 키워드와 문제 상황을 뽑아달라고 청했다. 2024년은 한국 4월 총선과 미국 11월 대선이 있는 해다. 그는 선거와 언론 윤리 문제를 첫손에 뽑았다. 캡콜드가 전망한 2024년 미디어계 화두는 다음과 같다. 2024년 미디어 분야 물론 대화는...
-The post 증오의 게임을 넘어서: 2024년에 제안하는 36가지 미디어 테제 appeared first on 슬로우뉴스..</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;41
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >Red Hat Developer</button>
                   <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
                 </h3>
@@ -238,40 +595,6 @@ Traditional Ansible playbooks are typically executed on a schedule or triggered 
 Harnessing the power of Helm charts: Browse and install from OpenShift Toolkit
 Helm, the Kubernetes package manager, simplifies and accelerates the deployment of applications on OpenShift. With the OpenS…</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78492"
-                        open
-                      >
-                        <summary class="article-expander__title">“작심삼일 그만” 균형 잡힌 새해 결심을 위하여</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/01/07/npsp_foodnoise/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_foodnoise">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>새해 결심의 계절입니다. 운동과 식단 조절을 통해 더 건강해지겠다는 다짐은 새해 결심의 단골 메뉴죠. 그 가운데 체중을 감량하겠다는 구체적인 목표도 자주 포함되곤 합니다. 그런데 체중 감량에 너무 집착하다 보면 문제가 되기도 하는데요, 최근 소셜미디어에서 자주 등장한 신조어 가운데 음식 소음(food noise)이란 말이 있습니다. 배가 고파서 무언가를 먹고 싶어지고 음식 생각이 나는 본능적인 식욕에 따른 반응을 지워내야 할 부정적인 의미를 담은 소음으로 표현한 것이죠. 비만 공포증을 비판하는 글을 써 온 철학자 → 더 보기</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -8515,25 +8838,6 @@ Skupper ensures mutual TLS (mTLS) for inter-router communications by default, an
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;592992"
-                        open
-                      >
-                        <summary class="article-expander__title">주목해야할 구글 마피아 스타트업 10개 by CB Insight</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/592992/%ea%b5%ac%ea%b8%80-%eb%a7%88%ed%94%bc%ec%95%84-%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;22
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8562,26 +8866,6 @@ Skupper ensures mutual TLS (mTLS) for inter-router communications by default, an
                             <span class="media-object__text">
                               <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 10월 23일 스프에 쓴 글입니다. 뛰어난 재능을 보였지만 꽃 피울 기회를 얻지 못했거나, 업적을 남기고도 제대로 된 인정과 평가를 받지 못한 여성들의 명단은 성차별과 남성 중심주의의 역사만큼이나 깁니다. 자신도 뛰어난 조각가였지만, ‘로댕의 연인’으로만 알려졌던 → 더 보기</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78319"
-                        open
-                      >
-                        <summary class="article-expander__title">인간은 합리적이지만 또 비합리적인데요…</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2023/12/11/npsp_nudge/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_nudge">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>행동경제학을 바탕으로 한 넛지(nudges)는 지난 10년 사이 많은 주목을 받은 개념입니다. 다양한 부문에서 넛지가 도입되고 접목됐죠. 그러나 넛지의 효과를 둘러싼 논란도 처음부터 꾸준히 제기됐습니다. 행동경제학을 창시하는 데 중요한 역할을 했다고 볼 수 있는 대니얼 카네만도 비판에서 자유롭지 못하죠. 뉴욕대학교 디지털이론 연구소장 레이프 웨더비가 넛지의 효과와 한계에 관해 글을 썼습니다. 전문 번역: 대세가 된 ‘넛지’, 그러나 과학적 근거는 부족하다 해설: 인간은 합리적이지만 또 비합리적인데요…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -8617,27 +8901,6 @@ Skupper ensures mutual TLS (mTLS) for inter-router communications by default, an
                               <span>네덜란드에 간 윤석열 최대 고민은 쌍특검. ‘윤핵관’ 장제원 불출마. “윤석열과 화해? 망상이다.” 낙준연대 빅 텐트, 가능할까. 다르게 읽기. 직방 금지법 만드나. 총선 출발선이 다르다. 행복하다는 비율, 세계 꼴찌 수준인 이유. 더 깊게 읽기. 재벌 내부거래 41조 원 늘었다. 김건희 김영란법 위반, 검찰이 계속 뭉갤 수 있을까. “국감 전에 팩트체크 페이지 내려야 한다 했다.” 오늘의 TMI....
 The post 나라가 망해간다는 지표와 신호, 절박하긴 한 건가: 슬로우레터 12월12일. appeared first on .</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;20
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;100701"
-                        open
-                      >
-                        <summary class="article-expander__title">쿠팡과 파리바게뜨, 소비자가 무섭지 않은 이유</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/100701">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/12/pic_003-6.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>[제네바 오전 8시] 고 김용균 원청기업 및 대표 무죄 판결에 관하여… 국제노동기구 고용정책국장 이상헌 박사와 나누는 노동과 세계 그리고 인간에 관한 이야기. 5년 전. 김용균, 24살. 2018년 12월 10일 태안화력발전소 비정규직으로 일하면서 한밤중에 혼자 점검에 나섰다. 그게 마지막이었다. 석탄 운반용 컨베이어 벨트가 김용균을 삼켰다. 청년의 죽음을 우리는 슬퍼했다. 겨우겨우 중대재해처벌법을 만들었다. 지난 12월 7일, 김용균...
-The post 쿠팡과 파리바게뜨, 소비자가 무섭지 않은 이유 appeared first on .</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;41
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -8913,295 +9176,12 @@ The post How embedded development shift is influencing future compute appeared f
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="e05def17-6b6d-4bf6-9e22-4118960fd108"
-                        open
-                      >
-                        <summary class="article-expander__title">Our top Linux articles for developers in 2023</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/12/11/top-linux-articles-2023">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2023_Bestof_Featured_image_Linux.png?itok&#x3D;qTxV_kEs" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>We&#x27;re kicking off our annual year-end roundup with a look back at the Linux content that engaged our readers the most in 2023. Linux remains a dominant player in the cloud thanks to its stability and flexibility, and Red Hat Enterprise Linux (RHEL) continues to evolve for the containerized future, with the General Availability release of RHEL 9.3 last month.
-Our 10 most popular Linux articles of 2023
-Here are 10 of our most-read articles on Linux from 2023, which cover a mix of topics including containers, new milestones for RHEL, and various ways to simplify Linux systems management with the latest compilers and tools.
-New improvements in Red Hat Enterprise Linux
-How the new RHEL 9.2 improves the developer experience by Nikhil Mungale and Alex Krikos: This article highlights new features …</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="0173c929-42f8-46e1-bf11-a3324971e0c5"
-                        open
-                      >
-                        <summary class="article-expander__title">Over-provisioning nodes on OpenShift Service on AWS</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2023/12/11/over-provisioning-nodes-openshift-service-aws">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok&#x3D;fSwtvSOu" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>There might be occasions where over-provisioning your cluster will provide great benefit. If there are sudden bursts of pods being created in a short amount of time, there can be situations where a new node is spinning up but is not ready. This can cause issues as pods will stuck in a pending phase for about ten minutes whilst waiting for the new node. A solution to this is to over-provision your cluster. This enables a spare node at all times, or pre-emptily create a new node when the workflow starts to pick up.
-Use cases
-With this solution, pods are created that are considered low priority. When the more important workloads are created, the low priority pods get removed from the nodes. This leaves the low priority pods in a pending state. This forces Red Hat OpenShift to spawn a new node…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >C++ Stories</button>
-                  <a class="source-heading__link" href="https://www.cppstories.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.cppstories.com/2023/six-handy-ops-for-string-processing/"
-                        open
-                      >
-                        <summary class="article-expander__title">Six Handy Operations for String Processing in C++20/23</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.cppstories.com/2023/six-handy-ops-for-string-processing/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.cppstories.com/2023/images/stringops_cpp20_cpp23.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>In this article, we’ll explore six practical string processing operations introduced in C++20 and C++23. These features represent an evolution in this crucial area, covering a spectrum of operations from searching and appending to creation and stream handling.
-Let’s start with a simple yet long-awaited feature…
-contains(), C++23 
-  
-
-
-
-
-     
-    
-
-
-Finally, after decades of standardization, we have a super easy way to check if there’s one string inside the other. No need to use .find(str) !&#x3D; npos!
-Before C++23:
-#include 
-#include 
-
-int main() {
-    const std::string url &#x3D; &quot;https://isocpp.org&quot;;
-
-    if (url.find(&quot;https&quot;) !&#x3D; std::string::npos &amp;&amp;
-        url.find(&quot;.org&quot;) !&#x3D; std::string::npos &amp;&amp;
-        url.find(&quot;isocpp&quot;) !&#x3D; std::string::npos)
-        std::cout &lt;&lt; &quot;You&#x27;re us…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-10 datetime="2023-12-10T22:03:22.000Z">2023-12-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-10 datetime="2023-12-10T22:03:22.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;100736"
-                        open
-                      >
-                        <summary class="article-expander__title">원전으로 탈탄소? 워싱턴포스트가 윤석열을 ‘팩폭’했다: 슬로우레터 12월11일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/100736">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2023/12/pexels-photo-4460676-1000x563.jpeg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>살생부 돌면 김건희 특검법 반란표? “선거는 안중에도 없습니까.” 지지율 32%인데 또 외국 방문. “류호정 나가달라”, “못 나간다.” 이낙연, “이준석은 보기 드문 인재.” 더 깊게 읽기. 이준석 신당이 성공하기 어렵다고 보는 이유. 부울경·호남 이탈 80%가 청년이었다. 다르게 읽기. 문과 침공 이대로 좋은가. 유럽은 ‘마이너리티 리포트 법’ 만들었다. 해법과 대안. 워싱턴포스트의 윤석열 ‘팩폭’. 연 날려서 전기 만든다....
-The post 원전으로 탈탄소? 워싱턴포스트가 윤석열을 ‘팩폭’했다: 슬로우레터 12월11일. appeared first on .</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;20
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Python Insider</button>
-                  <a class="source-heading__link" href="https://pythoninsider.blogspot.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://pythoninsider.blogspot.com/2023/12/python-3117-is-now-available.html"
-                        open
-                      >
-                        <summary class="article-expander__title">Python 3.11.7 is now available</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2023/12/python-3117-is-now-available.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>This is the sixth maintenance release of Python 3.11
-Python 3.11.7 is the newest major release of the Python programming language, and it contains many new features and optimizations. Get it here:
-https://www.python.org/downloads/release/python-3117/
-Major new features of the 3.11 series, compared to 3.10
-
-Among the new major new features and changes so far:
-
-
-PEP 657 – Include Fine-Grained Error Locations in Tracebacks
-PEP 654 – Exception Groups and except*
-PEP 673 – Self Type
-PEP 646 – Variadic Generics
-PEP 680 – tomllib: Support for Parsing TOML in the Standard Library
-PEP 675 – Arbitrary Literal String Type
-PEP 655 – Marking individual TypedDict items as required or potentially-missing
-bpo-46752 – Introduce task groups to asyncio
-PEP 681 – Data Class Transforms
-bpo-433030– Atomic group…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >The Shape of Code</button>
-                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shape-of-code.com/?p&#x3D;8438"
-                        open
-                      >
-                        <summary class="article-expander__title">Christmas books for 2023</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2023/12/10/christmas-books-for-2023/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>This year’s Christmas book list, based on what I read this year, and for the first time including a blog series that I’m sure will eventually appear in book form. “To Explain the World: The discovery of modern science” by Steven Weinberg, 2015. Unless you know that Steven Weinberg won a physics Nobel prize, this […]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;592990"
-                        open
-                      >
-                        <summary class="article-expander__title">BofA, 주식 시장 괴물 랠리가 과매수 수준에 가까워지면서 주식 시장의 ‘매수’신호가 죽었다고 주장</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/592990/bofa-%ec%a3%bc%ec%8b%9d-%ec%8b%9c%ec%9e%a5-%ea%b4%b4%eb%ac%bc-%eb%9e%a0%eb%a6%ac%ea%b0%80-%ea%b3%bc%eb%a7%a4%ec%88%98-%ec%88%98%ec%a4%80%ec%97%90-%ea%b0%80%ea%b9%8c%ec%9b%8c%ec%a7%80%eb%a9%b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://happist.com/wp-content/uploads/2017/11/애플-주가-추세로-살펴본-시가총액-1조달러-가능성_AAPL_CHART.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;20
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/7452665824">
-        <time id="build-timestamp" datetime="2024-01-08T20:13:40.174Z">2024-01-08T20:13:40.174Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/7466377045">
+        <time id="build-timestamp" datetime="2024-01-09T20:13:47.471Z">2024-01-09T20:13:47.471Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
