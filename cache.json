@@ -205,16 +205,6 @@
           "wordCount": 761,
           "title": "메모리 취약점:과거, 현재, 미래 (8) Integer Overflow",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/02/17/10/ebe96d60abaf9d1787f2a55187ffbd6f.png?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/15845156",
-          "author": "CPUU",
-          "description": "이 논문은 흔히 Row-hammer attack 으로 알려져 있는 공격에 대한 연구이다. \nKim, Yoongu, et al. \"Flipping bits in memory without accessing them: An experimental study of DRAM disturbance errors.\" ACM SIGARCH Computer Architecture News 42.3 (2014): 361-372.\n이 방식은 Hardware 에 대한 공격이라고 할 수 있다. 거의 모든 종류의 DRAM이 공통적으로 가지고 있는 이슈를 이용한 공격이다. (논문의 저자진은 삼성 및 Intel에서 인턴쉽을 수행한적이 있는 카네기 멜론 출신의 연구자들인데, 이 현상을 발견한 후 논문으로 발표를 하게 되어 회사들 입장에서는 약간 곤란했었다고 한다.)\n\nDRAM이란 트랜지스터와 커패시터로 구성된 메모리 셀을 통해 데이터를 저장한다. 그리고 DRAM에 Access하거나 Refresh하는 방식으로 데이터를 관리한다. 원칙적으로 하나의 메모리 주소에 대한 접근은 다른 주소에 저장된 데이터에 의도하지 않은 영향을 미쳐서는 안된다. 이에 1970년대부터 DRAM 제조 업체들은 셀 간 간격을 유지하고 테스트를 통해 오류 발생 가능성을 최소화하고 있었다. 그러나 DRAM 공정 기술이 미세화됨에 따라 DRAM 셀 간의 전기적 상호 작용을 방지하기가 점점 더 어려워지고 있다. \n\n\n2014년 본 연구진의 실험에 따르면 상용 DRAM의 동일한 주소에 읽기 작업을 반복하다보면 인근 주소의 데이터를 손상시킬 수 있다는 것이 확인되었다. 마치 특정 row에 있는 부분을 해머로 계속 때리면 그 옆의 row들이 영향을 받는다는 취지에서 이름을 붙인 것이다. 일종의 Fault Injection 이라고 볼 수 있다. \n의도적으로 DRAM에 부하를 가하는 악의적인 프로그램을 통해, DRAM의 동일한 행을 활성화하는 것은 인근 행의 데이터를 손상시킬 수 있다는 사실을 인텔 및 AMD 주요 DRAM모듈(129개 중 110개)에서 확인하였다. \n\n\n해머링을 수행하다보면 트랜지스터 행에서 주변 인접한 행으로 전하가 누출되고, 그로 인해 메모리상의 특정 비트 값이 1에서 0으로, 또는 0에서 1로 뒤집힌다(flipping). 이 사소한 비트 전환으로 인해 운영체제 수준에서 권한 상승이 발생할 수도 있다. 실제로 이를 악용하여 시스템에서의 권한 상승이나 네트워크 기반 공격도 가능하다고 알려져 있다.\n\n\n후속 연구에 대해서는 추후 더 다룰 예정.\n\n\n참고: (유머)",
-          "link": "https://cpuu.postype.com/post/15845156",
-          "publishedOn": "2023-12-17T14:52:32.000Z",
-          "wordCount": 775,
-          "title": "[논문리뷰] Row hammer 논문 리뷰",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/12/17/23/40/b71cd3e7853440db88f9c8fbf1fd4885.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -246,6 +236,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "f3808583-5454-4d36-91d8-aa62ca106b91",
+          "author": "Markus Eisele, Hugo Guerrero",
+          "description": "Red Hat Developer Hub is now generally available. This article introduces Developer Hub and explains how it streamlines the development process. We also dive into the core concepts to ensure you're well-equipped to use Red Hat Developer Hub to leverage the power of Backstage in your projects.\nWhat is Backstage?\nIn the dynamic world of software development, teamwork and efficiency are essential, and the Backstage project promises to simplify and save development teams headaches. Originally created by Spotify and shared as an open source project with the Cloud Native Computing Foundation (CNCF), Backstage serves as a central hub for development teams, enabling the software development life cycle to become more manageable, accelerating new member onboarding, and centralizing resources require…",
+          "link": "https://developers.redhat.com/articles/2024/01/16/red-hat-developer-hub-your-gateway-seamless-development",
+          "publishedOn": "2024-01-16T14:00:00.000Z",
+          "wordCount": 3511,
+          "title": "Red Hat Developer Hub: Your gateway to seamless development",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2024_RH_Developer_Hub_Featured_imageV2.jpg?itok=ifSI3bfh"
+        },
+        {
+          "id": "52ba9f26-60e4-4590-8b06-18ca889cf86a",
+          "author": "Yashwanth Maheshwaram",
+          "description": "Red Hat OpenShift is a unified platform to build, modernize, and deploy applications at scale. Red Hat OpenShift offers a great developer experience in shipping your applications to the cloud.\nJavaScript (JS) is the most popular programming language, used by millions of developers around the world. While it’s one programming language, there are many popular frameworks within JavaScript that need different approaches.\nIn this series of articles, we are putting together a step-by-step guide that will enable you to be up and running JS applications on OpenShift. We expect you to have some familiarity with Vue.js and Red Hat OpenShift. Just in case you need a quick recap, check out these resources:\nOpenShift video\nDeveloper Sandbox for Red Hat OpenShift\nVue.js website\nContainerfile\nHow to depl…",
+          "link": "https://developers.redhat.com/articles/2024/01/16/how-deploy-vuejs-apps-openshift",
+          "publishedOn": "2024-01-16T07:00:00.000Z",
+          "wordCount": 2995,
+          "title": "How to deploy Vue.js apps to OpenShift",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
+        },
         {
           "id": "59b1f1a9-9a2e-4e40-8e44-282bc334442f",
           "author": "Nikhil Mungale",
@@ -455,26 +465,6 @@
           "wordCount": 3741,
           "title": "Contributions to the ComplianceAsCode project for OpenShift",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
-        },
-        {
-          "id": "8f039fd4-41a4-49b3-b631-4e381a67dd29",
-          "author": "Colleen Lobner",
-          "description": "We're wrapping up our Best of 2023 series by highlighting our most popular application development articles from the past year.\nThe business of delivering cloud-native applications gets more complex every day. It’s no surprise that solutions for improving developer experience are in high demand, especially for enterprise teams. Red Hat Developer Hub, based on the open source Backstage project, is one such solution that provides easy access to curated tools, resources, and Golden Path templates for quicker and easier software development. By reducing complexity and automating tedious tasks, developers are free to focus on what they do best: write code and ship new features.\nThe 10 most popular application development articles of 2023\nOur most-read articles on application development focus o…",
-          "link": "https://developers.redhat.com/articles/2023/12/18/top-application-development-articles-2023",
-          "publishedOn": "2023-12-18T07:00:00.000Z",
-          "wordCount": 3085,
-          "title": "Our top application development articles of 2023",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Bestof_Appdev_0.png?itok=1bEOLsmi"
-        },
-        {
-          "id": "41267961-eaea-41b9-a9e7-4fc50c72ac2f",
-          "author": "Shaaf, Syed",
-          "description": "Red Hat's latest build of Cryostat 2.4, designed specifically for the Red Hat OpenShift Container Platform, brings a wealth of features and enhancements that cater to various monitoring needs for Java applications.\nAt its core, Cryostat 2.4 excels in comprehensive Java Flight Recorder (JFR) data management. Users can effortlessly start, stop, retrieve, archive, import, and export JFR data, all through an intuitive web console or an accessible HTTP API. This enhances the ease with which developers can handle JVM performance data. Moreover, Cryostat 2.4 provides flexibility in terms of data storage and analysis. Users can store and analyze JFR data directly on their Red Hat OpenShift or export it to external monitoring applications for a deeper dive into the data.\nARM (aarch64)\nA significant…",
-          "link": "https://developers.redhat.com/articles/2023/12/18/java-monitoring-exploring-cryostat-24-features-openshift",
-          "publishedOn": "2023-12-18T07:00:00.000Z",
-          "wordCount": 3039,
-          "title": "Java monitoring: Exploring Cryostat 2.4 features on OpenShift",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-java1_1x%20%283%29_3.png?itok=9jZWkOjD"
         }
       ]
     },
@@ -574,6 +564,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4481319",
+          "author": "Jacob Beningo",
+          "description": "There are many great habits that will help you develop faster, more reliable firmware. Here are a few thoughts on habits you may want to...\nThe post 3 critical habits for faster, more reliable firmware appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/3-critical-habits-for-faster-more-reliable-firmware/",
+          "publishedOn": "2024-01-16T15:49:08.000Z",
+          "wordCount": null,
+          "title": "3 critical habits for faster, more reliable firmware",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481316",
+          "author": "Miro Samek",
+          "description": "In this video tutorial, you will see the rich semantics resulting from hierarchical state nesting, allowing you to model nuances of behavior. You first encountered...\nThe post Programming embedded systems: semantics of hierarchical state machines appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/programming-embedded-systems-semantics-of-hierarchical-state-machines/",
+          "publishedOn": "2024-01-16T15:47:13.000Z",
+          "wordCount": null,
+          "title": "Programming embedded systems: semantics of hierarchical state machines",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4481288",
           "author": "Anton Shilov",
@@ -830,16 +840,6 @@
           "wordCount": 2860,
           "title": "Remember Y2K?",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1616.php",
-          "author": null,
-          "description": "Image processing plays a crucial role in various applications, from medical imaging to computer vision and multimedia systems. Field-Programmable Gate Arrays (FPGAs) offer a versatile and efficient platform for implementing image processing algorithms. The unique features of FPGA hardware, such as parallelism and reconfigurability, enable high-performance and real-time processing, making it an...",
-          "link": "https://www.embeddedrelated.com/showarticle/1616.php",
-          "publishedOn": "2023-12-17T23:54:54.000Z",
-          "wordCount": null,
-          "title": "How to Implement Image Processing Algorithms in FPGA Hardware",
-          "imageUrl": null
         }
       ]
     },
@@ -1098,6 +1098,26 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/958424/",
+          "author": "corbet",
+          "description": "On January 13, Linus Torvalds let\nit be known that he had lost power due to the bad weather in the US\nPacific Northwest.  As of this writing, he has not yet resurfaced, so the\n6.8 merge window has ground to a halt.\n\n\n\tThere's apparently about 100k people without power, and I doubt our\n\tneighborhood is the priority, so I expect to be without power for\n\tsome time still. I hope I'm wrong, but a few years ago it took more\n\tthan a week to restore power due to all the downed trees. It's\n\thopefully nowhere near that, but..",
+          "link": "https://lwn.net/Articles/958424/",
+          "publishedOn": "2024-01-16T16:20:56.000Z",
+          "wordCount": 347,
+          "title": "A glitch in the merge window",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/958416/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Gentoo (KTextEditor, libspf2, libuv, and Nettle), Mageia (hplip), Oracle (container-tools:4.0, gnutls, idm:DL1, squid, squid34, and virt:ol, virt-devel:rhel), Red Hat (.NET 6.0, krb5, python3, rsync, and sqlite), SUSE (chromium, perl-Spreadsheet-ParseXLSX, postgresql, postgresql15, postgresql16, and rubygem-actionpack-5_1), and Ubuntu (binutils, libspf2, libssh2, mysql-5.7, w3m, webkit2gtk, and xerces-c).",
+          "link": "https://lwn.net/Articles/958416/",
+          "publishedOn": "2024-01-16T14:58:33.000Z",
+          "wordCount": 277,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/958341/",
           "author": "jake",
@@ -1857,26 +1877,6 @@
           "wordCount": 345,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/955485/",
-          "author": "corbet",
-          "description": "Linus has released 6.7-rc6 for testing.\n\" Please do give this a test in between the last-minute xmas shopping or\nwhatever else is going on ...\"",
-          "link": "https://lwn.net/Articles/955485/",
-          "publishedOn": "2023-12-18T00:19:56.000Z",
-          "wordCount": 139,
-          "title": "Kernel prepatch 6.7-rc6",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/955481/",
-          "author": "corbet",
-          "description": "Changwoo Min provides\nan introduction to the sched_ext scheduling class:\n\n\n\tSched_ext was proposed to address the problems mentioned above. It\n\tallows users to write a custom scheduling policy using BPF without\n\tmodifying the kernel code. You don't need to struggle to maintain\n\tthe out-of-tree custom scheduler. In addition, BPF provides a safe\n\tkernel programming environment. In particular, the BPF verifier\n\tensures that your custom scheduler has neither a memory bug nor an\n\tinfinite loop. Also, if your custom scheduler misbehaves -- like\n\tfailing to schedule a task for too long (say 30 seconds), the\n\tkernel portion of sched_ext kills your custom scheduler and falls\n\tback to the default kernel scheduler (CFS or EEVDF). Last but not\n\tleast, you can update the BPF scheduler without reinstalling the\n\tkernel and rebooting a server.\n\n\n(LWN looked at sched_ext in February 2023).",
-          "link": "https://lwn.net/Articles/955481/",
-          "publishedOn": "2023-12-17T20:15:00.000Z",
-          "wordCount": 449,
-          "title": "Min: sched_ext: a BPF-extensible scheduler class (Part 1)",
-          "imageUrl": null
         }
       ]
     },
@@ -2029,18 +2029,7 @@
       "title": "null program",
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
-      "articles": [
-        {
-          "id": "https://nullprogram.com/blog/2023/12/17/",
-          "author": null,
-          "description": "Users of mature C libraries conventionally get to choose how memory is\nallocated — that is, when it cannot be avoided entirely. The C\nstandard never laid down a convention — perhaps for the better —\nso each library re-invents an allocator interface. Not all are created\nequal, and most repeat a few fundamental mistakes. Often the interface is\nmerely a token effort, to check off that it’s “supported” without actual\nconsideration to its use. This article describes the critical features of\na practical allocator interface, and demonstrates why they’re important.\nBefore diving into the details, here’s the checklist for library authors:\nAll allocation functions accept a user-defined context pointer.\nThe “free” function accepts the original allocation size.\nThe “realloc” function accepts both old …",
-          "link": "https://nullprogram.com/blog/2023/12/17/",
-          "publishedOn": "2023-12-17T17:52:26.000Z",
-          "wordCount": 1983,
-          "title": "So you want custom allocator support in your C library",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Almost Secure",
@@ -2115,16 +2104,6 @@
           "publishedOn": "2023-12-24T22:44:12.000Z",
           "wordCount": 1633,
           "title": "Sample size needed to compare performance of two languages",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8447",
-          "author": "Derek Jones",
-          "description": "The paper Empirically Testing Predictions of an Attrition on Warfare Model for the War in Ukraine, by Peter Turchin, recently showed up during one of my regular searches for software engineering data. A quick scan of the paper founded that it is very empirical, and that the analysis coding was done in R; I could […]",
-          "link": "https://shape-of-code.com/2023/12/17/patches-for-the-code-of-peter-turchins-attrition-warfare-model/",
-          "publishedOn": "2023-12-17T22:40:22.000Z",
-          "wordCount": 1732,
-          "title": "Patches for the code of Peter Turchin’s Attrition Warfare Model",
           "imageUrl": null
         }
       ]
@@ -2309,6 +2288,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=102449",
+          "author": "이정환",
+          "description": "윤석열(대통령)의 벤틀리 발언은 기묘하다. 이게 왜 중요한가. 정확한 워딩은. 벤틀리 발언의 논리 구조. 진실은. 핵심은. 더 깊이 들어가 보자. 결론.\nThe post “내가 벤틀리를 타봤는데 말이야”, 윤석열 발언에 빠진 것. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/102449",
+          "publishedOn": "2024-01-16T08:38:03.000Z",
+          "wordCount": 4692,
+          "title": "“내가 벤틀리를 타봤는데 말이야”, 윤석열 발언에 빠진 것.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/jecdzuurRF0F655c3cb88e7a31.75687728-1000x666.jpeg"
+        },
+        {
+          "id": "https://slownews.kr/?p=102440",
+          "author": "박미숙",
+          "description": "[박미숙의 새 필드] 한국학이 활발한 영국 셰필드에서 대중문화를 공부한 박미숙 박사와 함께 대중문화에 비친 우리 자신의 모습을 이야기합니다. 오늘 추가할 새 필드는 풍자.   2023년 MBC연예대상 여자 신인상을 ‘풍자’가 받았다. 풍자의 수상과 수상소감은 새해에도 잔잔한 화제다. 2023년 유난히 유튜버나 BJ와 같은 1인 방송으로 인기를 얻어 공중파 텔레비전으로 진출한 경우가 많았다. 풍자 걱정하는 아빠, 그 아빠...\nThe post 풍자의 전성시대 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/102440",
+          "publishedOn": "2024-01-16T07:25:41.000Z",
+          "wordCount": 4561,
+          "title": "풍자의 전성시대",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/pic_004-7.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=102409",
+          "author": "이정환",
+          "description": "한동훈이 요즘 윤석열 이야기를 안 하는 이유. 떴다방 위성정당 또 만드나. 기자회견 안 한다. 기자회견 대신 민생 토론회, 총선 개입 논란. 쟁점과 현안. 김무성 7선 도전, 올드보이들의 귀환. 헤쳐모여 본격화. 더 깊게 읽기. 청부 민원 제보했더니 제보자를 압수수색. 한화, RSU로 경영권 승계 논란. 다르게 읽기. 부자+포퓰리즘이 말이 되는 이유. 해법과 대안. 도루묵이 돌아올 수 있을까....\nThe post 묻지도 따지지도 않고 1억 원 대출, 애 낳으면 탕감해 준다면?: 슬로우레터 1월16일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/102409",
+          "publishedOn": "2024-01-15T22:02:49.000Z",
+          "wordCount": 6000,
+          "title": "묻지도 따지지도 않고 1억 원 대출, 애 낳으면 탕감해 준다면?: 슬로우레터 1월16일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/415987271_942824123875532_5079468026333905352_n.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=102393",
           "author": "이정환",
@@ -2828,26 +2837,6 @@
           "wordCount": 8217,
           "title": "2023년 미디어 이슈 결산 세계 편: 생성형 AI",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/GettyImages-1456695248.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101004",
-          "author": "이정환",
-          "description": "[컨텍스트] 양당+지역주의 타파 고민 없는 정치공학적 계산, 최병천도 유시민도 모두 틀렸다. 민주당은 결국 병립형 비례제로 갈 것인가. 최병천(신성장경제연구소 소장)이 권역별 병립형을 밀고 있고 몇 차례 논쟁이 있었지만 여전히 결론을 내리지 못한 상태다. 김어준의 ‘뉴스공장’에서 최병천을 몇 차례 띄웠고 이대로 가면 국민의힘이 과반을 얻는다는 공포가 확산되면서 병립형으로 기우는 분위기다. 이탄희(민주당 의원)가 위성정당 금지법을 발의하면서 연동형 포기는...\nThe post 이재명이 유시민의 제안을 받을까. appeared first on .",
-          "link": "https://slownews.kr/101004",
-          "publishedOn": "2023-12-18T07:46:38.000Z",
-          "wordCount": 5805,
-          "title": "이재명이 유시민의 제안을 받을까.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/isphtm_20161108192519564757.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=100978",
-          "author": "이정환",
-          "description": "탄핵 막으려 한동훈? “한동훈 되면 탄핵될 수도.” “이러다 또 탄핵 당한다.” 한동훈 정치력 시험대는 김건희. 류호정, 정의당 텔레그램에서 쫓겨났다. 적격이라던 정의찬, 없던 일로. 국민 89%가 의대 증원 찬성. 감액된 예산, 민주당이 단독 처리하나. 더 깊게 읽기. 지드래곤과 검사 처남의 전혀 다른 마약 수사. 다르게 읽기 화이트칼라 이그젬션. “민주당은 뭐했냐”고 묻는 조선일보. 오늘의 TMI. ‘오래 사는...\nThe post “이러다 또 탄핵 당한다”, 한동훈 비대위 두고 갈등 폭발: 슬로우레터 12월18일. appeared first on .",
-          "link": "https://slownews.kr/100978",
-          "publishedOn": "2023-12-17T22:17:46.000Z",
-          "wordCount": 5844,
-          "title": "“이러다 또 탄핵 당한다”, 한동훈 비대위 두고 갈등 폭발: 슬로우레터 12월18일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/11/image-1.jpg"
         }
       ]
     },
@@ -2856,6 +2845,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=593480",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593480/2024%eb%85%84-%eb%a7%a4%ea%b7%b8%eb%8b%88%ed%94%bc%ec%84%bc%ed%8a%b8-7-%ec%98%88%ec%83%81",
+          "publishedOn": "2024-01-16T03:52:31.000Z",
+          "wordCount": 6806,
+          "title": "배런스, 2024년 매그니피센트 7 예상, 애플과 테슬라는 명단에서 빠질 것",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=593458",
           "author": "happist",
@@ -3371,16 +3370,6 @@
           "publishedOn": "2023-12-19T22:59:58.000Z",
           "wordCount": 2048,
           "title": "[뉴페@스프] 연금, 정해진 미래가 만든 ‘방 안의 코끼리’",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78366",
-          "author": "NewsPeppermint",
-          "description": "뉴욕타임스 오피니언 란에는 최근의 거시경제를 설명해 주는 글이 자주 올라옵니다. 이런 칼럼들은 대개 “바이든 행정부의 경제 성적표가 생각만큼 나쁘지 않다”는 결론으로 글을 맺곤 합니다. 구구절절 드는 이유를 읽다 보면 논리적으로 이해가 가다가도 한편으론 주변 사람들 사는 모습은 여전히 팍팍해 보이던데 경제가 정말 잘 돌아가고 있는 게 맞나 의구심이 들기도 합니다. 칼럼니스트 트리시 맥밀란 커텀이 이 괴리를 자세히 분석한 칼럼을 썼습니다. 소위 경제학자들이 거시경제 지표에 파묻혀 오히려 쉽게 확인할 수 있는 ‘필수 → 더 보기",
-          "link": "https://newspeppermint.com/2023/12/17/npsp_vibecession/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_vibecession",
-          "publishedOn": "2023-12-17T23:15:17.000Z",
-          "wordCount": 1437,
-          "title": "사람들 착각이 아니라 그들이 ‘진짜 현실’을 못 보는 것 아닐까요",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
