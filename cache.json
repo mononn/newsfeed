@@ -205,6 +205,16 @@
           "wordCount": 761,
           "title": "메모리 취약점:과거, 현재, 미래 (8) Integer Overflow",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/02/17/10/ebe96d60abaf9d1787f2a55187ffbd6f.png?w=600&h=300&q=65"
+        },
+        {
+          "id": "https://cpuu.postype.com/post/15845156",
+          "author": "CPUU",
+          "description": "이 논문은 흔히 Row-hammer attack 으로 알려져 있는 공격에 대한 연구이다. \nKim, Yoongu, et al. \"Flipping bits in memory without accessing them: An experimental study of DRAM disturbance errors.\" ACM SIGARCH Computer Architecture News 42.3 (2014): 361-372.\n이 방식은 Hardware 에 대한 공격이라고 할 수 있다. 거의 모든 종류의 DRAM이 공통적으로 가지고 있는 이슈를 이용한 공격이다. (논문의 저자진은 삼성 및 Intel에서 인턴쉽을 수행한적이 있는 카네기 멜론 출신의 연구자들인데, 이 현상을 발견한 후 논문으로 발표를 하게 되어 회사들 입장에서는 약간 곤란했었다고 한다.)\n\nRowhammer는 DRAM 메모리에 비트 플립을 발생시키는 공격이다. 비트 플립(bit flip)이란 말 그대로 메모리의 특정 값을 반전 시킨다는 것이다. 0인 값을 1로 바꾸거나 1인 값을 0으로 바꾸는 것이다. 별 것 아닌 것 같지만 그렇지 않다. 만약 이 특정 bit가 보안적으로 굉장히 중요한 역할을 하는 것이라면 결과적으로 이 작은 변동으로 인해 권한 상승이나 기타 악의적인 영향을 초래할 수도 있다.\nDRAM이란 트랜지스터와 커패시터로 구성된 메모리 셀을 통해 데이터를 저장한다. 그리고 DRAM에 Access하거나 Refresh하는 방식으로 데이터를 관리한다. 원칙적으로 하나의 메모리 주소에 대한 접근은 다른 주소에 저장된 데이터에 의도하지 않은 영향을 미쳐서는 안된다. 이에 1970년대부터 DRAM 제조 업체들은 셀 간 간격을 유지하고 테스트를 통해 오류 발생 가능성을 최소화하고 있었다. 그러나 DRAM 공정 기술이 미세화됨에 따라 DRAM 셀 간의 전기적 상호 작용을 방지하기가 점점 더 어려워지고 있다. \n2014년 본 연구진의 실험에 따르면 다음과 같은 순서로 상용 DRAM의 동일한 주소에 읽기 작업을 반복하다보면 인근 주소의 데이터를 손상시킬 수 있다는 것이 확인되었다. \n예를 들어 다음의 샘플 코드를 보자\n위의 코드에서 메모리 위치 X와 Y는 반복적으로 접근되고 있으며 Rowhammer 상황을 유발하게 된다. 주 메모리에서 X와 Y를 가져올 때마다 복사본이 캐시에 저장되며, 다음 번에 코드가 X, Y 메모리 위치에 접근하려고 하면 주 메모리 대신 캐시에서 데이터를 가져오게 되는데, 이렇게되면 rowhammer를 발생시킬 수 없다. 그래서 공격자는 의도적으로 캐시를 비워주기 위해 clflush를 해준다. \n마치 특정 row에 있는 부분을 해머로 계속 때리면 그 옆의 row들이 영향을 받는다는 취지에서 이름을 붙인 것이다. 일종의 Fault Injection 이라고 볼 수 있다. 결국 캐시를 활용하는 것을 의도적으로 방해하여, 동일한 주 메모리의 특정 위치를 반복적으로 액세스하게 만든다. 그러면 인접한 행과 전기적인 간섭 현상이 발생하게 된다. 이로 인해 전압 변동이 발생하고 평소보다 빠르게 주변 행들이 방전된다. 메모리 모듈들이 원래의 시간에 비해 셀을 새로 고칠  수 없는 정도가 되면 DRAM을 손상되고 결국 bitflip 현상을 관찰할 수 있게 된다.\n의도적으로 DRAM에 부하를 가하는 악의적인 프로그램을 통해, DRAM의 동일한 행을 활성화하는 것은 인근 행의 데이터를 손상시킬 수 있다는 사실을 인텔 및 AMD 주요 DRAM모듈(129개 중 110개)에서 확인하였다. \n\n\n해머링을 수행하다보면 트랜지스터 행에서 주변 인접한 행으로 전하가 누출되고, 그로 인해 메모리상의 특정 비트 값이 1에서 0으로, 또는 0에서 1로 뒤집힌다(flipping). 이 사소한 비트 전환으로 인해 운영체제 수준에서 권한 상승이 발생할 수도 있다. 실제로 이를 악용하여 시스템에서의 권한 상승이나 네트워크 기반 공격도 가능하다고 알려져 있다.\n\n\n후속 연구에 대해서는 추후 더 다룰 예정.\n참고) 2015년 3월 9일 Google Project Zero가 공개한 Rowhammer 이용한 권한 상승 사례\n\n\n(유머)",
+          "link": "https://cpuu.postype.com/post/15845156",
+          "publishedOn": "2023-12-29T07:30:18.000Z",
+          "wordCount": 764,
+          "title": "[논문리뷰] Rowhammer 논문 리뷰",
+          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/12/17/23/40/b71cd3e7853440db88f9c8fbf1fd4885.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -236,6 +246,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "c111124b-248c-4e1c-8d4d-d72d3ac6ae63",
+          "author": "Michael Thirion",
+          "description": "“Don’t break your toys… unless it’s to have 2 playable toys.”\nA significant part of my 10-year career as a consultant in middleware and applications development has been centered on microservices architectures, still an important topic for IT modernization nowadays.\nAt the very beginning, it was important to just explain the concepts, what it was about and why it wasn’t just another way to speak about service-oriented architecture (SOA). Then came best practices, patterns, and pitfalls.\nSome projects were greenfields, of course, but there were also many initiatives around modernizing monoliths by splitting them into smaller pieces.\nAfter a few years, I started to hear some negative feedback. That feedback highlighted and emphasized the higher complexity of the resulting solution. People we…",
+          "link": "https://developers.redhat.com/articles/2024/01/17/monolith-microservices-breaking-down-apps-useful-way",
+          "publishedOn": "2024-01-17T07:00:00.000Z",
+          "wordCount": 3511,
+          "title": "Monolith to microservices: Breaking down apps the useful way",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-microservices_1x.png?itok=bdFts8lR"
+        },
+        {
+          "id": "ab1c96df-9a02-4e7d-85e2-387e42e24c1a",
+          "author": "Francisco De Melo Junior, Alexander Barbosa Ayala",
+          "description": "In Red Hat OpenShift 4, the Operator framework became a fundamental part of the daily cluster operations. An operator is a custom controller that listens to a few custom resources. Operators can be used for networking, cluster management, or installing and running applications. They provide a custom mechanism that extends the default OpenShift Container Platform capabilities.\nSpecifically, in terms of application operators, Data Grid Operator (a Go application) deploys Red Hat Data Grid (a Java application) by providing five APIs for creating a Data Grid cluster/caches/custom settings. The Data Grid Operator provides Custom Resources (CRs), which are based on template files called Custom Resource Definitions (CRDs). The CRDs are installed together with the Data Grid Operator and will be lo…",
+          "link": "https://developers.redhat.com/articles/2024/01/17/how-install-and-upgrade-data-grid-8-operator",
+          "publishedOn": "2024-01-17T07:00:00.000Z",
+          "wordCount": 4109,
+          "title": "How to install and upgrade Data Grid 8 Operator",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-operators_1x_0.png?itok=aa6AhWnv"
+        },
         {
           "id": "f3808583-5454-4d36-91d8-aa62ca106b91",
           "author": "Markus Eisele, Hugo Guerrero",
@@ -455,16 +485,6 @@
           "wordCount": 3955,
           "title": "The new oracles of GCC",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/gcc_1x.png?itok=6l1b8Lo9"
-        },
-        {
-          "id": "6a98a921-e4d5-4b5e-bb40-7d04b0985bd0",
-          "author": "Bharath B",
-          "description": "The ComplianceAsCode project provides security guidance, baselines, and associated validation mechanisms utilizing the Security Content Automation Protocol (SCAP) to achieve security hardening for various products. ComplianceAsCode provides content for Red Hat OpenShift to comply with the requirements set by local government regulations and industry standards required for deploying the solution.\nThe ComplianceAsCode content follows the SCAP format to help translate the generic requirements set by the regulatory frameworks into implementation specifics and automate the remediations where possible. Refer to the SCAP Security Guide for more information on SCAP format.\nComplianceAsCode content guide provides the best practices and security relevant configuration guidelines to securely configur…",
-          "link": "https://developers.redhat.com/articles/2023/12/19/contributions-complianceascode-project-openshift",
-          "publishedOn": "2023-12-19T07:00:00.000Z",
-          "wordCount": 3741,
-          "title": "Contributions to the ComplianceAsCode project for OpenShift",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-openshift_1200x630_0.png?itok=nBHNqroV"
         }
       ]
     },
@@ -861,6 +881,26 @@
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
         {
+          "id": "http://developers.googleblog.com/2024/01/weareplay-how-a-childhood-experience-shaped-alvaros-entrepreneurial-journey.html",
+          "author": null,
+          "description": "Posted by Leticia Lago – Developer Marketing\n\n\n\n\n\n\n\n\nBeing trapped inside a house following a major earthquake as a child motivated Álvaro to research and improve the outcomes of destructive, large-scale quakes in Mexico. Using SkyAlert technology, sensors detect and report warnings of incoming earthquakes, giving people valuable time to prepare and get to safety.\nÁlvaro shared his story in our latest film for #WeArePlay, which spotlights the founders and creatives behind inspiring apps and games on Google Play. We caught up with him to find out his motivations for SkyAlert, the impact the app’s had and what his future plans are.\n\n\nWhat was the inspiration behind SkyAlert?\nBeing in Colima near the epicenter of a massive earthquake as a kid had a huge impact on me. I remember feeling powerl…",
+          "link": "http://developers.googleblog.com/2024/01/weareplay-how-a-childhood-experience-shaped-alvaros-entrepreneurial-journey.html",
+          "publishedOn": "2024-01-17T17:00:00.000Z",
+          "wordCount": 2231,
+          "title": "#WeArePlay | Learn how a childhood experience with an earthquake shaped Álvaro's entrepreneurial journey",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu218W2RyLDMAvOEcTDjLxA2tjNEFk6822pJCEX1uklhlS4xpUn4A5pQbmDLsnUgOC_Vfzy1stegKYeBgy0jdWOCimNm_I9eTkUg1l5lJRk0ASIaaZxda23M1MU6HvxT5yLhxzdzNMCRU3j457Tn6g7RLBLWs7sAvwCa3u0ytAAt_WUpmpGRM-HCmzGjA/w1200-h630-p-k-no-nu/%23WeArePlay%20Social%20.png"
+        },
+        {
+          "id": "http://developers.googleblog.com/2024/01/youtube-ads-creative-analysis.html",
+          "author": null,
+          "description": "Posted by Brian Craft, Satish Shreenivasa, Huikun Zhang, Manisha Arora and Paul Cubre – gTech Data Science Team\n\n\n\n\n\n\n\nIntroduction\n\n  \nWhy analyze YouTube ads?\nYouTube has billions of monthly logged-in users and every day people watch billions of hours of video and generate billions of views.  Businesses can connect with YouTube users using YouTube ads, which are promotional videos that appear on YouTube's website and app, with a variety of video ad formats and goals.\n\n\nA sample YouTube in-stream skippable video ad\n\n\nThe Challenge\nAn effective video ad focuses on the ABCDs.\n\nAttention:  Capturing the viewer's attention till the end.\nBranding:  Helping them hear or visualize the brand.\nConnection:  Making them feel something about the brand.\nDirection:  Encouraging them to take action.\n\n\nB…",
+          "link": "http://developers.googleblog.com/2024/01/youtube-ads-creative-analysis.html",
+          "publishedOn": "2024-01-16T20:00:00.000Z",
+          "wordCount": 2925,
+          "title": "YouTube Ads Creative Analysis",
+          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJDRkkLIGXtXAGJlcWhgGTyxib7_SNE-qWoheo7i8amIRknLpEPZz-EM4zoIPj8LQMQ2Wv8sLULjJO57y6GsLqAf49G33ZjlOePn56MKj6AnmqwJx5aa2FmKOmNfXvXMv0jbWdCfO8JsrchXUA5jBG2_N-Lf_evEtBnSnuhMG2Irge_KXHetA2tclEPd8/w1200-h630-p-k-no-nu/SOCIAL--YouTube-Ads-Creative-Analysis.png"
+        },
+        {
           "id": "http://developers.googleblog.com/2024/01/solution-challenge-2024-using-google-technology-to-address-united-nations-sustainable-development-goals.html",
           "author": null,
           "description": "Posted by Rachel Francois, Global Program Manager, Google Developer Student Clubs\n\n\n\n\nGoogle Developer Student Clubs celebrates 5 years of innovative solutions built by university students\n\n\n\n\nThis year marks the 5-year anniversary of the Google Developer Student Clubs Solution Challenge! For the past five years, the Solution Challenge has invited university students to use Google technologies to develop solutions for real-world problems.\nSince 2019:\n\nOver 110+ countries have participated\nOver 4,000+ projects have been submitted\nOver 1,000+ chapters have participated\n\n\nThe project solutions address one or more of the United Nations 17 Sustainable Development Goals, which aim to end poverty, ensure prosperity, and protect the planet by 2030. The goals were agreed upon by all 193 United Nati…",
@@ -899,16 +939,6 @@
           "wordCount": 2821,
           "title": "Global developers use Google tools to build solutions in recruiting, mentorship and more",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOxXUdNg7TL2QlrcbG9v9ke9NMLcIiv76nZF13aecQAmOUA12ACim-Rw7i5zklsWsjNrTxRDhQBPnUMHu1FS5AMhlsiSQ-BNAar62HF3bnjJXgAAGpL-jq5WXUizSj3QRrijsa2VNCnjdyepc2724OCfxyadb2g-19Vp6oMwVv-iff8Cis-v6I912JjnY/w1200-h630-p-k-no-nu/Social-Dev-Journey-December-G4D.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2023/12/weareplay-meet-steven-from-indonesia-more-stories-from-around-the-world.html",
-          "author": null,
-          "description": "Posted by Leticia Lago, Developer Marketing\n\n\n\nAs we bid farewell to 2023, we're excited to unveil our last #WeArePlay blog post of the year. From Lisbon to Dubai, let’s meet the creators behind the game-changing apps supporting communities, bringing innovation and joy to people.\n\n\n\n\n\n\nWe’re starting off in Indonesia, where Steven remembers his pocket money quickly running out while traveling around rural areas of Indonesia with his parents. Struck by how much more expensive food items were in the villages compared to Jakarta, he was inspired to create Super, providing more affordable goods outside the capital. The app allows shop owners to buy items stored locally and supply them to their communities at lower prices. It's helped boost the hyperlocal supply chain and raise living standards…",
-          "link": "http://developers.googleblog.com/2023/12/weareplay-meet-steven-from-indonesia-more-stories-from-around-the-world.html",
-          "publishedOn": "2023-12-18T18:00:00.000Z",
-          "wordCount": 2000,
-          "title": "#WeArePlay | Meet Steven from Indonesia. More stories from around the world",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu218W2RyLDMAvOEcTDjLxA2tjNEFk6822pJCEX1uklhlS4xpUn4A5pQbmDLsnUgOC_Vfzy1stegKYeBgy0jdWOCimNm_I9eTkUg1l5lJRk0ASIaaZxda23M1MU6HvxT5yLhxzdzNMCRU3j457Tn6g7RLBLWs7sAvwCa3u0ytAAt_WUpmpGRM-HCmzGjA/w1200-h630-p-k-no-nu/%23WeArePlay%20Social%20.png"
         }
       ]
     },
@@ -974,26 +1004,6 @@
           "wordCount": 4814,
           "title": "A hard quiz to crack for C++ programmers by Sergei Kushnirenko",
           "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1093_Cpp_kushnirenko_quize/image1_thm_intoblank_1200x630.png?ver=12-20-2023-12-10-36"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1092/",
-          "author": null,
-          "description": "It's December, the first snow has already fallen, and it means New Year's Eve is around the corner. Ahead of the holidays, we'll show you the most interesting errors found in the code of the popular...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1092/",
-          "publishedOn": "2023-12-18T21:00:00.000Z",
-          "wordCount": 7558,
-          "title": "New Year's Eve show: Top 10 errors in C and C++ projects in 2023",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1092_Top_10_CPP_Bugs_2023/image1_thm_intoblank_1200x630.png?ver=12-19-2023-15-05-26"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1091/",
-          "author": null,
-          "description": "The PVS-Studio team along with Sergei Kushnirenko prepared a quiz based on his publications. Take the quiz, challenge your focus and coding skills while looking for errors in the C++ code. This...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1091/",
-          "publishedOn": "2023-12-18T21:00:00.000Z",
-          "wordCount": 9445,
-          "title": "Breaking down the C++ quiz by Sergei Kushnirenko",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1091_cpp_quiz_by_Sergei_Kushnirenko/image1_thm_intoblank_1200x630.png?ver=12-19-2023-12-45-17"
         }
       ]
     },
@@ -1098,6 +1108,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/958518/",
+          "author": "corbet",
+          "description": "Networking maintainer Jakub Kicinski (along with several collaborators) has\nput up a summary of\nwhat happened in the kernel's network stack during 2023.\n\n\n\tThroughout those releases netdev patch handlers (DaveM, Jakub,\n\tPaolo) applied 7243 patches, and the resulting pull requests to\n\tLinus described the changes in 6398 words. Given the volume of work\n\twe cannot go over every improvement, or even cover networking\n\tsub-trees in much detail (BPF enhancements… wireless work on WiFi\n\t7…). We instead try to focus on major themes, and developments we\n\tsubjectively find interesting.",
+          "link": "https://lwn.net/Articles/958518/",
+          "publishedOn": "2024-01-17T19:52:19.000Z",
+          "wordCount": 203,
+          "title": "Kicinski: netdev in 2023",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/958497/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Fedora (zabbix), Gentoo (OpenJDK), Red Hat (kernel), Slackware (gnutls and xorg), SUSE (cloud-init, kernel, xorg-x11-server, and xwayland), and Ubuntu (freeimage, postgresql-10, and xorg-server, xwayland).",
+          "link": "https://lwn.net/Articles/958497/",
+          "publishedOn": "2024-01-17T15:00:23.000Z",
+          "wordCount": 263,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/958337/",
+          "author": "jake",
+          "description": "The new year arrived bearing a new version of Julia, a general-purpose, open-source\nprogramming language\nwith a focus on high-performance\nscientific computing.\nSome of Julia's unusual features are Lisp-inspired\nmetaprogramming, the ability to examine compiled representations of code in\nthe REPL or in a \"reactive\nnotebook\", an advanced type and dispatch system, and a sophisticated,\nbuilt-in package manager.\nVersion 1.10 brings big increases in\nspeed and developer convenience,\nespecially improvements in code precompilation and loading times. It also\nfeatures a new parser written in Julia.",
+          "link": "https://lwn.net/Articles/958337/",
+          "publishedOn": "2024-01-17T01:58:55.000Z",
+          "wordCount": null,
+          "title": "[$] Julia v1.10: Performance, a new parser, and more",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/958443/",
+          "author": "corbet",
+          "description": "Version\n9.0 of the Wine Windows-compatibility system has been released.\n\"This release represents a year of development effort and over 7,000\nindividual changes. It contains a large number of improvements that are\nlisted below. The main highlights are the new WoW64 architecture and the\nexperimental Wayland driver.\"",
+          "link": "https://lwn.net/Articles/958443/",
+          "publishedOn": "2024-01-16T22:32:54.000Z",
+          "wordCount": 363,
+          "title": "Wine 9.0 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/958424/",
           "author": "corbet",
@@ -1857,26 +1907,6 @@
           "wordCount": 211,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/955001/",
-          "author": "corbet",
-          "description": "The NVIDIA Mellanox ConnectX HW family of adapters is a complex beast,\nsupporting networking, InfiniBand, RDMA, and more.  As a result, the mlx5\nkernel driver that supports this hardware is also complex, as is the\ninterface that it provides to user space.  The mlx5 developers have, for a\nwhile now, been proposing\nthe addition of a new control interface, in the form of a separate virtual\ndevice exported by the kernel, that would make vast amounts of debugging\ninformation available.  This driver has encountered some significant\nopposition on its way toward the mainline, though, raising a number of\nquestions about appropriate interfaces and when subsystem maintainers have\nveto power over submissions.",
-          "link": "https://lwn.net/Articles/955001/",
-          "publishedOn": "2023-12-18T15:01:32.000Z",
-          "wordCount": null,
-          "title": "[$] The intersection of mlx5, netdev, and lockdown",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/955566/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (freeimage, ghostscript, intel-microcode, spip, and xorg-server), Fedora (chromium, perl, perl-Devel-Cover, perl-PAR-Packer, polymake, PyDrive2, seamonkey, and vim), Gentoo (Leptonica), Mageia (audiofile, gimp, golang, and poppler), Oracle (buildah, containernetworking-plugins, gstreamer1-plugins-bad-free, kernel, kernel-container, libxml2, pixman, podman, postgresql, postgresql:15, runc, skopeo, tracker-miners, and webkit2gtk3), and SUSE (fish).",
-          "link": "https://lwn.net/Articles/955566/",
-          "publishedOn": "2023-12-18T14:00:13.000Z",
-          "wordCount": 345,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -1988,16 +2018,6 @@
           "wordCount": 3861,
           "title": "Processor Expert Components: 24-Dec-2023 Release",
           "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/12/processor-expert-components.jpg?w=1200"
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=39676",
-          "author": "Erich Styger",
-          "description": "The post discusses the use of continuous integration and delivery (CI/CD) pipelines in embedded system testing. It presents a case study on an embedded project, where the author applies automated testing using CTest, Unity testing framework, and CMake, a software building tool, to ensure the project's robustness. The post also exhibits the usage of JRun tool for execution on the hardware and provides detailed instructions on adding and running tests either manually or through Visual Studio Code. It suggests that following this approach would facilitate a modern environment for hardware testing in embedded systems. Continue reading →",
-          "link": "https://mcuoneclipse.com/2023/12/18/modern-on-target-embedded-system-testing-with-cmake-and-ctest/",
-          "publishedOn": "2023-12-18T22:55:00.000Z",
-          "wordCount": 5923,
-          "title": "Modern On-Target  Embedded System Testing with CMake and CTest",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2023/12/ctest-in-vs-code.jpg?w=1200"
         }
       ]
     },
@@ -2288,6 +2308,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=102479",
+          "author": "이정환",
+          "description": "폭주하는 북한, 맞불 놓는 윤석열. 한동훈 딸 허위 스펙 의혹, 모두 ‘혐의 없음’. 쟁점과 현안. 윤석열은 오늘도. 이재명-원희룡, 인천 계양에서 붙는다. 더 깊게 읽기. 제3지대 신당, 민주당에 더 타격. 8년 전 ‘샤이 트럼프’, 이제는 대놓고 지지한다. 다르게 읽기. 의원 수 줄이는 게 개혁? 허경영인가. “탈원전하게 되면 반도체 포기해야 돼요.” “72억짜리 벤틀리를 타봤더니.” 그들에게 명예가 있나....\nThe post 한동훈이 이랬더라면 정말 무서울 뻔했다, 조선일보의 깊은 탄식: 슬로우레터 1월17일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/102479",
+          "publishedOn": "2024-01-16T22:04:47.000Z",
+          "wordCount": 6469,
+          "title": "한동훈이 이랬더라면 정말 무서울 뻔했다, 조선일보의 깊은 탄식: 슬로우레터 1월17일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/11_A35I4644.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=102449",
           "author": "이정환",
@@ -2817,26 +2847,6 @@
           "wordCount": 4561,
           "title": "LG그룹 경영권 분쟁 뒷이야기: “아들로 태어나지 않았다는 사실에 죄책감을 느꼈어요.”",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/49287.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101061",
-          "author": "이정환",
-          "description": "김기현은 억울하다. 송영길 구속. 민주당이 한동훈 비대위원장을 반기는 이유. 39개월 동안 11번 바꿨다. 강감찬을 임진왜란 때 쓰나. 한동훈 비대위가 맞닥뜨릴 첫 질문은 김건희. 이재명의 ‘안 한다’ 리더십에 부글부글. “민주화 다음 시대정신은 절제와 공존.” 다르게 읽기. 김건희 특검법, 동아일보의 제안. 반값 아파트가 로또가 됐다. 해법과 대안. 인천에서 태어나면 1억 원 받는다. 비빌 언덕이 필요했다. 고등학생 절반이...\nThe post ‘검은 코끼리’의 비극, “바보야, 문제는 대통령이야”: 슬로우레터 12월19일. appeared first on .",
-          "link": "https://slownews.kr/101061",
-          "publishedOn": "2023-12-18T22:01:15.000Z",
-          "wordCount": 5772,
-          "title": "‘검은 코끼리’의 비극, “바보야, 문제는 대통령이야”: 슬로우레터 12월19일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/elephant-animal_9XY7V4YM5J.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=100956",
-          "author": "민노씨",
-          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 캡콜드에게 2023년을 돌아볼 수 있는 키워드를 뽑아달라고 요청했다. 그는 챗GPT로 상징되는 생성형 AI와 정권 유지를 위한 억압적인 담론 전략으로서 ‘가짜뉴스’를 각각 가장 중요한 세계구 이슈와 국내 이슈로 뽑았다. 그 두 개의 키워드를 중심으로 이야기했다. 이 글은 그 첫 번째 글이다. 참고로 캡콜드가 선정한...\nThe post 2023년 미디어 이슈 결산 세계 편: 생성형 AI appeared first on .",
-          "link": "https://slownews.kr/100956",
-          "publishedOn": "2023-12-18T11:46:18.000Z",
-          "wordCount": 8217,
-          "title": "2023년 미디어 이슈 결산 세계 편: 생성형 AI",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/GettyImages-1456695248.jpg"
         }
       ]
     },
@@ -2845,6 +2855,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=593488",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/593488/1-17-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-01-17T04:55:17.000Z",
+          "wordCount": 7328,
+          "title": "1/17, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=593480",
           "author": "happist",
@@ -3244,26 +3264,6 @@
           "wordCount": 5843,
           "title": "AI가 추천하는 유망 자율주행 주식",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593095",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593095/12-19-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2023-12-19T04:00:20.000Z",
-          "wordCount": 6866,
-          "title": "12/19, 월가의 투자의견 및 주가전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593089",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593089/%ea%b3%bc%eb%a5%b4%eb%8d%b0%ec%98%ac%eb%9d%bc-%ea%b0%90%eb%8f%85-%eb%a6%ac%eb%8d%94%ec%89%bd",
-          "publishedOn": "2023-12-18T09:23:37.000Z",
-          "wordCount": 6773,
-          "title": "선수와 감독으로 모두 성공한, 축구계 이단아, 과르데올라 감독 리더쉽",
-          "imageUrl": null
         }
       ]
     },
@@ -3272,6 +3272,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78547",
+          "author": "NewsPeppermint",
+          "description": "오늘날 범죄실화는 신문과 잡지, 도서와 TV, 라디오, 팟캐스트, 유튜브, 영화 등 매체를 가리지 않고 인기를 누리고 있는 하나의 장르입니다. ‘범죄실화 장르’라는 용어가 익숙지 않더라도, 이 글을 읽는 여러분은 대부분 이 장르를 이미 접해보셨을 겁니다. 범죄 다큐멘터리나 범죄실화를 바탕으로 한 영화, 드라마는 스트리밍 사이트 인기 콘텐츠 목록에서 늘 상위를 차지하고 있으니까요. 지난 8일 뉴욕타임스에는 이처럼 범람하는 범죄실화 장르에 대한 통렬한 비판이 실렸습니다. 범죄 피해자 가족이 쓴 글이기 때문에 더욱 와닿는 글을 번역하고, → 더 보기",
+          "link": "https://newspeppermint.com/2024/01/17/npsp_truecrimestory/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_truecrimestory",
+          "publishedOn": "2024-01-17T04:45:57.000Z",
+          "wordCount": 1426,
+          "title": "장르가 된 범죄실화물, 어떻게 소비하는 게 정답일까",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=78208",
           "author": "eyesopen1",
