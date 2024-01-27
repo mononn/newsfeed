@@ -237,16 +237,6 @@
           "wordCount": 761,
           "title": "메모리 취약점:과거, 현재, 미래 (8) Integer Overflow",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/02/17/10/ebe96d60abaf9d1787f2a55187ffbd6f.png?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/15845156",
-          "author": "CPUU",
-          "description": "이 논문은 흔히 Row-hammer attack 으로 알려져 있는 공격에 대한 연구이다. \nKim, Yoongu, et al. \"Flipping bits in memory without accessing them: An experimental study of DRAM disturbance errors.\" ACM SIGARCH Computer Architecture News 42.3 (2014): 361-372.\n이 방식은 Hardware 에 대한 공격이라고 할 수 있다. 거의 모든 종류의 DRAM이 공통적으로 가지고 있는 이슈를 이용한 공격이다. (논문의 저자진은 삼성 및 Intel에서 인턴쉽을 수행한적이 있는 카네기 멜론 출신의 연구자들인데, 이 현상을 발견한 후 논문으로 발표를 하게 되어 회사들 입장에서는 약간 곤란했었다고 한다.)\n\nRowhammer는 DRAM 메모리에 비트 플립을 발생시키는 공격이다. 비트 플립(bit flip)이란 말 그대로 메모리의 특정 값을 반전 시킨다는 것이다. 0인 값을 1로 바꾸거나 1인 값을 0으로 바꾸는 것이다. 별 것 아닌 것 같지만 그렇지 않다. 만약 이 특정 bit가 보안적으로 굉장히 중요한 역할을 하는 것이라면 결과적으로 이 작은 변동으로 인해 권한 상승이나 기타 악의적인 영향을 초래할 수도 있다.\nDRAM이란 트랜지스터와 커패시터로 구성된 메모리 셀을 통해 데이터를 저장한다. 그리고 DRAM에 Access하거나 Refresh하는 방식으로 데이터를 관리한다. 원칙적으로 하나의 메모리 주소에 대한 접근은 다른 주소에 저장된 데이터에 의도하지 않은 영향을 미쳐서는 안된다. 이에 1970년대부터 DRAM 제조 업체들은 셀 간 간격을 유지하고 테스트를 통해 오류 발생 가능성을 최소화하고 있었다. 그러나 DRAM 공정 기술이 미세화됨에 따라 DRAM 셀 간의 전기적 상호 작용을 방지하기가 점점 더 어려워지고 있다. \n2014년 본 연구진의 실험에 따르면 다음과 같은 순서로 상용 DRAM의 동일한 주소에 읽기 작업을 반복하다보면 인근 주소의 데이터를 손상시킬 수 있다는 것이 확인되었다. \n예를 들어 다음의 샘플 코드를 보자\n위의 코드에서 메모리 위치 X와 Y는 반복적으로 접근되고 있으며 Rowhammer 상황을 유발하게 된다. 주 메모리에서 X와 Y를 가져올 때마다 복사본이 캐시에 저장되며, 다음 번에 코드가 X, Y 메모리 위치에 접근하려고 하면 주 메모리 대신 캐시에서 데이터를 가져오게 되는데, 이렇게되면 rowhammer를 발생시킬 수 없다. 그래서 공격자는 의도적으로 캐시를 비워주기 위해 clflush를 해준다. \n마치 특정 row에 있는 부분을 해머로 계속 때리면 그 옆의 row들이 영향을 받는다는 취지에서 이름을 붙인 것이다. 일종의 Fault Injection 이라고 볼 수 있다. 결국 캐시를 활용하는 것을 의도적으로 방해하여, 동일한 주 메모리의 특정 위치를 반복적으로 액세스하게 만든다. 그러면 인접한 행과 전기적인 간섭 현상이 발생하게 된다. 이로 인해 전압 변동이 발생하고 평소보다 빠르게 주변 행들이 방전된다. 메모리 모듈들이 원래의 시간에 비해 셀을 새로 고칠  수 없는 정도가 되면 DRAM을 손상되고 결국 bitflip 현상을 관찰할 수 있게 된다.\n의도적으로 DRAM에 부하를 가하는 악의적인 프로그램을 통해, DRAM의 동일한 행을 활성화하는 것은 인근 행의 데이터를 손상시킬 수 있다는 사실을 인텔 및 AMD 주요 DRAM모듈(129개 중 110개)에서 확인하였다. \n\n\n해머링을 수행하다보면 트랜지스터 행에서 주변 인접한 행으로 전하가 누출되고, 그로 인해 메모리상의 특정 비트 값이 1에서 0으로, 또는 0에서 1로 뒤집힌다(flipping). 이 사소한 비트 전환으로 인해 운영체제 수준에서 권한 상승이 발생할 수도 있다. 실제로 이를 악용하여 시스템에서의 권한 상승이나 네트워크 기반 공격도 가능하다고 알려져 있다.\n\n\n후속 연구에 대해서는 추후 더 다룰 예정.\n참고) 2015년 3월 9일 Google Project Zero가 공개한 Rowhammer 이용한 권한 상승 사례\n\n\n(유머)",
-          "link": "https://cpuu.postype.com/post/15845156",
-          "publishedOn": "2023-12-29T07:30:18.000Z",
-          "wordCount": 764,
-          "title": "[논문리뷰] Rowhammer 논문 리뷰",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2023/12/17/23/40/b71cd3e7853440db88f9c8fbf1fd4885.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -507,16 +497,6 @@
           "wordCount": 3182,
           "title": "How lazy debuginfo loading improves GDB and Valgrind",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/debuginfo_2x.png?itok=SRbp4A6C"
-        },
-        {
-          "id": "c60856e2-3066-4ce6-a992-9719d72ac457",
-          "author": "Etienne Dubois",
-          "description": "Autoscaling plays an important role in cloud-native applications, ensuring both efficiency and reliability. It automatically adapts resource allocation in response to current demands, scaling up during peak periods to maintain stable performance and scaling back in quieter times to reduce costs. This flexibility is especially useful for handling unpredictable traffic, ensuring applications stay responsive without using more resources than necessary. Essentially, autoscaling helps manage cloud applications effectively and cost-efficiently.\nThe custom metrics autoscaler operator enhances Red Hat OpenShift scaling capabilities, particularly for event-driven applications. Unlike the standard Horizontal Pod Autoscaler (HPA), which primarily scales applications based on CPU and memory metrics, t…",
-          "link": "https://developers.redhat.com/articles/2023/12/29/autoscaling-kafka-workloads-custom-metrics-autoscaler",
-          "publishedOn": "2023-12-29T07:00:00.000Z",
-          "wordCount": 4751,
-          "title": "Autoscaling Kafka workloads with custom metrics autoscaler",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/kafka-event-driven_2x.png?itok=lizTGq2t"
         }
       ]
     },
@@ -1980,36 +1960,6 @@
           "wordCount": 330,
           "title": "Gentoo in binary form",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956303/",
-          "author": "corbet",
-          "description": "Version\n1.75.0 of the Rust language has been released.  Notable changes include\n\"async\nfn and -> impl Trait in traits\", a pointer byte-offset\nAPI, some compiler performance improvements, and a number of stabilized APIs.",
-          "link": "https://lwn.net/Articles/956303/",
-          "publishedOn": "2023-12-28T18:33:02.000Z",
-          "wordCount": 147,
-          "title": "Rust 1.75.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/955708/",
-          "author": "jake",
-          "description": "Displaying an application's graphical output onto the screen requires\ncompositing and \nmode setting that are correctly synchronized among the various pieces,\nwith low overhead.\nIn this second and final article in the series, we will look at\nthose pieces of the Linux graphics stack. In the  first installment, we \nfollowed the path of graphics from the application, through Mesa, while\nusing the \nmemory-management features of the kernel's Direct\nRendering Manager (DRM) subsystem.\nWe ended up with an application's graphics data stored in an output buffer,\nso now\nit's time to display the image to the user.",
-          "link": "https://lwn.net/Articles/955708/",
-          "publishedOn": "2023-12-28T14:46:18.000Z",
-          "wordCount": null,
-          "title": "[$] The Linux graphics stack in a nutshell, part 2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956257/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (haproxy, libssh, and nodejs), Fedora (filezilla and minizip-ng), Gentoo (Git, libssh, and OpenSSH), and SUSE (gstreamer, postfix, webkit2gtk3, and zabbix).",
-          "link": "https://lwn.net/Articles/956257/",
-          "publishedOn": "2023-12-28T14:45:29.000Z",
-          "wordCount": 182,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
         }
       ]
     },
@@ -2399,6 +2349,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=103041",
+          "author": "이정환",
+          "description": "중대재해 처벌법이 시행된 건 2년 전인 2022년 1월27일이다. 50인 미만 사업장은 2년 뒤부터 적용하기로 했는데 그게 바로 오늘이다. 국민의힘은 아직 준비가 되지 않았다며 2년을 더 미루자는 법안을 발의했지만 민주당 등의 동의를 얻지 못했고 드디어 오늘부터 5인 이상 사업장에 전면 적용된다. 그런데 반응이 왜 이래? 핵심은 이것이다. 프레임의 왜곡. 돌려 말할 것 없다. TMI. 헛소리에 맞서는...\nThe post 중대재해 처벌법, 빵집 사장님들을 설득하는 방법. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103041",
+          "publishedOn": "2024-01-27T08:10:53.000Z",
+          "wordCount": null,
+          "title": "중대재해 처벌법, 빵집 사장님들을 설득하는 방법.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103037",
+          "author": "민주언론시민연합",
+          "description": "중대재해처벌법이 1월 27일부터 노동자 5~49명의 소규모 사업장까지 확대 적용됩니다. 전국의 사업장 83만여 곳(전체 사업장의 24%)과 이들 사업장에서 일하는 800만여 명 노동자가 대상입니다. 노동계는 안전하게 일할 권리를 보장받는 노동존중 사회의 밑거름이 될 것이라고 기대를 내비쳤지만, 한국경영자총협회 등은 산재 취약 기업에 대한 지원 대책을 모색해야 한다고 밝혔습니다. 전과자 줄폐업 운운하며 ‘공포’ 조성하는 보수언론 중대재해처벌법은 중대한 인명 피해를...\nThe post 중대재해처벌법, 소상공인 앞세워 ‘무논리’ 공포마케팅 나선 보수언론 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103037",
+          "publishedOn": "2024-01-26T13:22:08.000Z",
+          "wordCount": null,
+          "title": "중대재해처벌법, 소상공인 앞세워 ‘무논리’ 공포마케팅 나선 보수언론",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103025",
+          "author": "참여연대 의정감시센터",
+          "description": "국회는 여러 기관들 가운데 국민들로부터 가장 신뢰받지 못하는 기관이다. 국회 신뢰 고작 24% 한국행정연구원이 펴낸 2022년 사회통합실태조사에서 국회는 고작 24.1%의 신뢰도를 받았다. 새로울 것은 없다. 국회는 늘 불신의 대상이었다. 그러나 2021년도 조사에비해서도 약 10%의 신뢰도 하락이 나타난 것은 지금의 국회가 본연의 역할을 수행하지 못하고 있는지를 잘 보여준다. 물론 국회에 대한 낮은 신뢰에 대해서 국회의원을 비롯한...\nThe post 국회의원 수 줄이면 오히려 특권만 커진다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103025",
+          "publishedOn": "2024-01-26T12:38:34.000Z",
+          "wordCount": null,
+          "title": "국회의원 수 줄이면 오히려 특권만 커진다",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=103017",
           "author": "민주언론시민연합",
@@ -2858,46 +2838,6 @@
           "wordCount": 4716,
           "title": "번개탄, 유서, 언론의 조회수 장사는 끝나지 않았다",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/pic_001-15.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101597",
-          "author": "정혜승",
-          "description": "[마냐의 북라이딩] ‘외전’ 2023 베스트셀러 분석… 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, ‘홍보가 아니라 소통입니다’ 저자 정혜승의 종횡무진 독서 탐험기. 한해 베스트셀러 ‘시장’의 풍경을 정리해 봤다. 온라인서점 알라딘에서 월간 베스트셀러 리스트를 참고했고, 소설은 제외하고 봤는데, 그동안 내가 독서 팟캐스트에서 소개한 책들은 베스트셀러 트렌드에서 백만 광년 쯤 떨어진 딴 세상에 있었다. 조금 뻘쭘한 건...\nThe post 베스트셀러로 돌아보는 2023년의 풍경 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101597",
-          "publishedOn": "2023-12-29T06:29:19.000Z",
-          "wordCount": 5404,
-          "title": "베스트셀러로 돌아보는 2023년의 풍경",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/woman-4178187_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101557",
-          "author": "정연순",
-          "description": "어제 이선균 배우가 우리와 함께 살던 이 세상을 떠나갔다. 오후에 들어온 페이스북에는 애도로 가득했다. 큰 상실감, 분노, 한탄의 글을 읽노라니, 나 또한 마음이 착잡하여 일이 손에 잡히지 않을 지경이었다. 많은 이들이 피의사실 공표와 언론, 연예인(개인)의 사생활 폭로 문제를 짚으면서 정치권, 언론과 수사기관을 비난한다. 이 지점에서 생각해 볼 문제는 결국 세 가지다. 첫째는 피의사실 공표의 문제....\nThe post 알 권리? 물고 뜯고 즐기는… 잔인한 한국 사회 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101557",
-          "publishedOn": "2023-12-29T01:25:23.000Z",
-          "wordCount": 3983,
-          "title": "알 권리? 물고 뜯고 즐기는… 잔인한 한국 사회",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/2628967.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=101562",
-          "author": "이정환",
-          "description": "김건희 특검법이 통과됐다. 국민 여론은 압도적인 찬성. 거부권이 최선인가, 조중동의 질문. 정권 심판론 피로감, 한겨레의 우려. 검찰이 특검 불렀다. 쟁점과 현안. 한동훈 비대위, 3040 비정치인을 전면에. 정세균이 “벼랑 끝에서 손을 놓으라”고 말한 이유. 국방부 교재에 “독도는 분쟁 지역”이라고? 더 깊게 읽기. 국민의힘에 소장파 의원이 없는 이유. “한계가 너무 컸다.” 한국 사회에도 양극화 해소, 저출생·고령화, 기후변화,...\nThe post 김건희 특검 거부권 괜찮을까, 조중동의 우려와 경고: 슬로우레터 12월29일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101562",
-          "publishedOn": "2023-12-28T22:05:49.000Z",
-          "wordCount": 6241,
-          "title": "김건희 특검 거부권 괜찮을까, 조중동의 우려와 경고: 슬로우레터 12월29일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/45802-1000x635.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101540",
-          "author": "정호재",
-          "description": "우중충한 날씨 탓인가, 한 해를 보내는 착잡한 기분 때문일까, 유난히 기분이 침울했는데 27일 정오쯤에 들려온 뉴스는 다가올 새해의 작은 희망마저도 박살 내고 말았다. 마음이 뒤숭숭하니 일을 완전히 놓아 버렸다. 이 같은 비극적 뉴스 한두 번 겪어 본 나이가 아니기 때문에 담담해지려 애써도 보았다. 어차피 내 가족 일도 아닌데, 맘속으로 수십 번 욕하다 보면 ‘이 또한...\nThe post 아무도 미워하지 않았던 남자의 죽음: ‘박 부장’의 죽음을 애도하며 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101540",
-          "publishedOn": "2023-12-28T09:00:42.000Z",
-          "wordCount": 5293,
-          "title": "아무도 미워하지 않았던 남자의 죽음: ‘박 부장’의 죽음을 애도하며",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/648.jpg"
         }
       ]
     },
@@ -3421,16 +3361,6 @@
           "publishedOn": "2023-12-31T22:59:37.000Z",
           "wordCount": 2405,
           "title": "[뉴페@스프] 미국의 소극적인 태도가 오히려 중국을 도발할 가능성이 높다 하는 이유",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78134",
-          "author": "veritaholic",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 11월 8일 스프에 쓴 글입니다. 인간의 생존을 위해서는 많은 것들이 필요합니다. 우리는 자신이 가진 것과 남이 가진 것을 교환함으로써 그 필요를 충족해 왔고, 이 교환의 효율은 문명의 발전 속도에 비례했습니다. 아니, 교환을 효율적으로 만드는 → 더 보기",
-          "link": "https://newspeppermint.com/2023/12/28/npsp_onlineshopping/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_onlineshopping",
-          "publishedOn": "2023-12-28T22:59:51.000Z",
-          "wordCount": 1986,
-          "title": "[뉴페@스프] 인류 문명의 단계는 ‘온라인 쇼핑’에 이르렀다",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
