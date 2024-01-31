@@ -2,10 +2,146 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-01-30T20:11:58.634Z</updated>
+    <updated>2024-01-31T20:12:10.798Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] OpenBSD system-call pinning]]></title>
+        <id>https://lwn.net/Articles/959562/</id>
+        <link href="https://lwn.net/Articles/959562/"/>
+        <updated>2024-01-31T19:46:44.000Z</updated>
+        <summary type="html"><![CDATA[(ROP) attacks are hard to defend against.
+Partial mitigations such as address-space layout randomization, stack
+canaries, and other techniques are commonly deployed to try and frustrate
+ROP attacks. Now, OpenBSD is experimenting with a new
+mitigation that makes it harder for attackers to make system
+calls, although some security researchers have expressed doubt that it will
+prove effective at stopping real-world attacks.
+In his
+announcement message, Theo de Raadt said that this work
+"makes some specific low-level attack
+methods unfeasable on OpenBSD, which will force the use of other methods."]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Onboarding bottleneck: final installment]]></title>
+        <id>https://martinfowler.com/articles/bottlenecks-of-scaleups/06-onboarding.html#PairProgrammingAsACriticalOnboardingTechnique</id>
+        <link href="https://martinfowler.com/articles/bottlenecks-of-scaleups/06-onboarding.html#PairProgrammingAsACriticalOnboardingTechnique"/>
+        <updated>2024-01-31T16:57:00.000Z</updated>
+        <summary type="html"><![CDATA[Tim and Prem finish their article on effective
+      onboarding. They discuss the value of pair programming, setting up
+      personal environments, and removing friction from the process.
+more…]]></summary>
+        <author>
+            <name>Martin Fowler</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A locally exploitable glibc vulnerability]]></title>
+        <id>https://lwn.net/Articles/960289/</id>
+        <link href="https://lwn.net/Articles/960289/"/>
+        <updated>2024-01-31T16:25:44.000Z</updated>
+        <summary type="html"><![CDATA[Qualys has disclosed
+a vulnerability in the GNU C Library that can be exploited by a local
+attacker for root access.  It was introduced in the 2.37 release, and also
+backported to 2.36.
+
+
+	For example, we confirmed that Debian 12 and 13, Ubuntu 23.04 and
+	23.10, and Fedora 37 to 39 are vulnerable to this buffer
+	overflow. Furthermore, we successfully exploited an up-to-date,
+	default installation of Fedora 38 (on amd64): a Local Privilege
+	Escalation, from any unprivileged user to full root. Other
+	distributions are probably also exploitable.
+
+
+Vulnerable systems with untrusted users should probably be updated in a
+timely manner.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[포퓰리즘 시대 전쟁이 된 선거, 결국 그들 손에 달렸다]]></title>
+        <id>https://newspeppermint.com/?p=78643</id>
+        <link href="https://newspeppermint.com/2024/01/31/npsp_swatting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_swatting"/>
+        <updated>2024-01-31T16:00:06.000Z</updated>
+        <summary type="html"><![CDATA[스와팅(swatting)이란 말을 아시나요? 긴급 전화에 거짓 내용을 신고해 무장한 특수 경찰이나 병력이 출동하도록 하는 행위를 뜻합니다. 총기 소유가 사실상 자유로운 미국에선 신고를 받고 출동하는 경찰이 보통 중무장한 채로 현장에 가는 경우가 많아 자칫 총기 사고가 날 수 있습니다. 그래서 정적이나 정치적인 견해가 다른 사람들을 향한 스와팅이 새로운 형태의 정치 폭력으로 분류됩니다. 스와팅의 부상이 민주주의에 얼마나 큰 위협인지 지적한 칼럼을 번역하고, 해설을 썼습니다. 전문 번역: 공직자를 겨냥한 ‘거짓 신고'(Swatting)와 정치 폭력의 위험한 부상 → 더 보기]]></summary>
+        <author>
+            <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/960248/</id>
+        <link href="https://lwn.net/Articles/960248/"/>
+        <updated>2024-01-31T14:33:12.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (bind9 and glibc), Fedora (ncurses), Gentoo (containerd, libaom, and xorg-server, xwayland), Mageia (python-pillow and zlib), Oracle (grub2 and tomcat), Red Hat (avahi, c-ares, container-tools:3.0, curl, firefox, frr, kernel, kernel-rt, kpatch-patch, libfastjson, libmicrohttpd, linux-firmware, oniguruma, openssh, perl-HTTP-Tiny, python-pip, python-urllib3, python3, rpm, samba, sqlite, tcpdump, thunderbird, tigervnc, and virt:rhel and virt-devel:rhel modules), SUSE (python-Pillow, slurm, slurm_20_02, slurm_20_11, slurm_22_05, slurm_23_02, and xen), and Ubuntu (libde265, linux-nvidia, mysql-8.0, openldap, pillow, postfix, and xorg-server, xwayland).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Debugging Open vSwitch logs: long poll interval, blocked waiting]]></title>
+        <id>f3fe1348-96cc-4f35-920c-ebbfd3443563</id>
+        <link href="https://developers.redhat.com/articles/2024/01/31/debugging-open-vswitch-logs-long-poll-interval-blocked-waiting"/>
+        <updated>2024-01-31T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Unfortunately, we often receive reports of users escalating the "long poll interval" and "blocked waiting" log messages as issues with Open vSwitch (OVS). Regrettably, in most cases, the problems are tied to system resource issues. Because OVS raises alerts about them, it ends up being wrongly identified as the culprit.
+Before delving into the debugging process, let's first clarify the meaning of these messages.
+Within its internal operations, OVS employs a mechanism known as a poll loop to handle various events. Its function is similar to more advanced solutions like libevent or glib. In essence, it comprises a set of APIs enabling the registration of events, such as a timeout or the availability of data on a socket. After registering these events, your process can enter a sleep state, aw…]]></summary>
+        <author>
+            <name>Eelco Chaudron</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using Gemini models in Go with LangChainGo]]></title>
+        <id>https://eli.thegreenplace.net/2024/using-gemini-models-in-go-with-langchaingo/</id>
+        <link href="https://eli.thegreenplace.net/2024/using-gemini-models-in-go-with-langchaingo/"/>
+        <updated>2024-01-31T02:23:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>In <a class="reference external" href="https://eli.thegreenplace.net/2023/using-gemini-models-from-go/">a previous post</a> I've
+discussed how to access Google's multimodal Gemini models from Go (with a nice
+free tier!)</p>
+<p>Recently, Google's SDKs were added as providers for <a class="reference external" href="https://github.com/tmc/langchaingo">LangChainGo</a>; this makes it possible to use the
+capabilities of the LangChain framework with Google's Gemini models as LLM
+providers.</p>
+<p>This post …</p>]]></summary>
+        <author>
+            <name>Eli Bendersky's website</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[“한국 출산율 낮은 이유 알겠더라.”: 슬로우레터 1월31일.]]></title>
+        <id>https://slownews.kr/?p=103223</id>
+        <link href="https://slownews.kr/103223"/>
+        <updated>2024-01-30T22:04:36.000Z</updated>
+        <summary type="html"><![CDATA[위로도 없이 돈을 내밀었다. 이태원 특별법, 재협상 가능할까. 쟁점과 현안. 그 많던 친윤은 어디로 갔을까. 권역별 비례로 가면 제3지대 궤멸. 이재명이 공천 룰의 기준. “사직구장에서 야구를 봤다고 한 것 아니다.” 더 깊게 읽기. 빚은 전염된다. 다르게 읽기. 철도 지하화, 사업성이 있나. 65세 이상=노인 맞나. 오늘의 TMI. 징역형 받고 도주, 6000명 넘는다. 인감증명 사라진다. 한국 성장률...
+The post “한국 출산율 낮은 이유 알겠더라.”: 슬로우레터 1월31일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Looking ahead to Emacs 30]]></title>
+        <id>https://lwn.net/Articles/959931/</id>
+        <link href="https://lwn.net/Articles/959931/"/>
+        <updated>2024-01-30T21:29:34.000Z</updated>
+        <summary type="html"><![CDATA[EmacsConf 2023 was, like its
+recent predecessors, an online conference with lots of talks about various
+aspects of the Emacs
+editor—though, of course, it is way more than just an editor.  Last year's
+edition was held in early December.  One of the
+talks that looked interesting was on Emacs
+development, which was given live by John Wiegley.  In it, he briefly
+described some 
+of the biggest features coming in Emacs 30, which is the next major version
+coming for the tool.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The state of eBPF]]></title>
         <id>https://lwn.net/Articles/960036/</id>
@@ -330,6 +466,16 @@ The post 옷, 이제 더 사지 않기로 하다 appeared first on 슬로우뉴�
 "So go out and test. It's safe now. You trust me, right?"]]></summary>
         <author>
             <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Notes on Cruise's pedestrian accident]]></title>
+        <id>https://danluu.com/cruise-report/</id>
+        <link href="https://danluu.com/cruise-report/"/>
+        <updated>2024-01-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is a set of notes on the Quinn Emanuel report on Cruise's handling of the 2023-10-02 accident where a Cruise autonomous vehicle (AV) hit a pedestrian, stopped, and then started moving again with the pedestrian stuck under the bottom of the AV, dragging the pedestrian 20 feet. After seeing some comments about this report, I read five stories on this report and then skimmed the report and my feeling is that the authors of four of the stories probably didn't read the report, and that people who were commenting had generally read stories by journalists who did not appear to read the source material, so the comments were generally way off base. As we previously discussed, it's common for summaries to be wildly wrong, even when they're summarizing a short paper that's easily read by laypeop…]]></summary>
+        <author>
+            <name>danluu.com</name>
         </author>
     </entry>
     <entry>
@@ -4044,155 +4190,6 @@ The post 3 trends for 2024: AI drives more edge intelligence, RISC-V, & chiplets
         <id>https://happist.com/?p=593216</id>
         <link href="https://happist.com/593216/2024%eb%85%84-%ea%b3%a0%ea%b0%9d-%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%8a%b8%eb%a0%8c%eb%93%9c"/>
         <updated>2024-01-02T10:56:21.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Exploring x86-64-v3 for Red Hat Enterprise Linux 10]]></title>
-        <id>22437bbb-f952-4417-b426-1e8d6c17164b</id>
-        <link href="https://developers.redhat.com/articles/2024/01/02/exploring-x86-64-v3-red-hat-enterprise-linux-10"/>
-        <updated>2024-01-02T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In Red Hat Enterprise Linux (RHEL) 9, we upgraded the instruction set architecture (ISA) baseline to the x86-64-v2 microarchitecture level. For RHEL 10, we are exploring whether we can go a step further, to the x86-64-v3 level.
-New CPU capabilities in x86-64-v3
-The x86-64-v3 x86-64 microarchitecture level primarily benefits numerical applications (for data science, for example) which do not include specialized implementations for modern CPU microarchitectures. Overall, the x86-64-v3 change brings the following improvements:
-The AVX and AVX2 instruction sets increase the width of the vector registers from 128 bits to 256 bits and add many new vector operations. 
-The fused multiply-add (FMA) instruction is supported, combining multiplication and addition into a single operation that computes…]]></summary>
-        <author>
-            <name>Florian Weimer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How lazy debuginfo loading improves GDB and Valgrind]]></title>
-        <id>2df095f0-07b1-42ad-9457-cf280b7769b9</id>
-        <link href="https://developers.redhat.com/articles/2024/01/02/how-lazy-debuginfo-loading-improves-gdb-and-valgrind"/>
-        <updated>2024-01-02T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Debugging information, a.k.a debuginfo, relates the machine instructions in an executable or shared library with human-readable information from the binary's source files. This information includes the names of functions and variables as well as the source file and line numbers where these symbols are declared and referenced. Debuggers such as GDB, the GNU debugger, and profilers such as Valgrind use debuginfo to provide developers with richly detailed views into the occurrence of memory errors in a running process or the exact cause of a crash recorded in a core file. To learn more about debuginfo, check out the following articles: Debuginfo is not just for debugging programs and The GDB developer’s GNU Debugger tutorial Part 2.
-Debuginfod
-Debuginfo is very useful for developers but it ca…]]></summary>
-        <author>
-            <name>Aaron Merey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[골든걸스]의 미학: 솔리스트 디바의 성장, 공감, 어울림… 우리도 도전할 수 있을까]]></title>
-        <id>https://slownews.kr/?p=101692</id>
-        <link href="https://slownews.kr/101692"/>
-        <updated>2024-01-02T04:56:41.000Z</updated>
-        <summary type="html"><![CDATA[[박미숙의 새 필드] 한국학이 활발한 영국 셰필드에서 대중문화를 공부한 박미숙 박사와 함께 TV, 드라마, 영화 등을 이야기합니다. 오늘 추가할 새 필드는 ‘골든걸스’입니다. 텔레비전만큼 ‘지금, 여기’를 즉각적으로 반영하는 것은 없다. 텔레비전을 통해 웃고 울으며 몸과 마음을 튜닝한다. 한편 텔레비전은 항상 천덕꾸러기였다. 잉여와 시간 낭비의 상징이자 바보상자이며, 길티 플레저(guilty pleasure: 죄의식과 쾌락을 동시에 느끼는 심리)의 대상이다. 그런...
-The post [골든걸스]의 미학: 솔리스트 디바의 성장, 공감, 어울림… 우리도 도전할 수 있을까 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>박미숙</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[한글 맞춤법 최대의 난제, 사이시옷을 없앨 때가 됐다.]]></title>
-        <id>https://slownews.kr/?p=101699</id>
-        <link href="https://slownews.kr/101699"/>
-        <updated>2024-01-02T04:47:03.000Z</updated>
-        <summary type="html"><![CDATA[사이시옷은 논쟁적인 맞춤법 규칙이다. 이게 왜 중요한가. 기본 원칙. 사이시옷의 두 가지 조건. 사이시옷이 붙지 않는 세 가지 경우. 한자어+한자어인데도 사이시옷을 붙이는 여섯 가지 예외. 발음에 따라 다르다. 헷갈리는 경우. ‘값’도 붙여쓴다. 문제는 원칙이 없다는 것. 생각해 볼 부분. 한글 표기법의 최대 난제, 대안은?
-The post 한글 맞춤법 최대의 난제, 사이시옷을 없앨 때가 됐다. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AI or ain't: Markov Chains]]></title>
-        <id>https://zserge.com/posts/ai-markov/</id>
-        <link href="https://zserge.com/posts/ai-markov/"/>
-        <updated>2024-01-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Eliza was an impressive chatbot of its era. But all its success was hidden in a carefully crafted set of rules that made it sound like a therapist. Markov chains are more flexible, as they don’t rely on strict guidelines, but rather use patterns and statistics to generate responses. Let’s explore how Markov chains work and how to build one yourself.
-Markov chains A Markov chain is a mathematical model that describes a sequence of events where the outcome of each event depends solely on the state of the system at the previous event.]]></summary>
-        <author>
-            <name>zserge's blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[이념 패거리 카르텔? 윤석열은 지금 초조하다: 슬로우레터 1월2일.]]></title>
-        <id>https://slownews.kr/?p=101670</id>
-        <link href="https://slownews.kr/101670"/>
-        <updated>2024-01-01T22:07:45.000Z</updated>
-        <summary type="html"><![CDATA[국민의힘 33% Vs. 민주당 33%. 일본에서 진도 7.6 강진. 이번에는 이념 패거리 카르텔? 김건희 특검, 조선일보가 내놓은 출구 전략은. 신년 기자회견은 건너 뛰나. 쟁점과 현안. “두 개의 조선”. ‘동료 시민’과 ‘단결’. 더 깊게 읽기. 민주당 200석 만들면 12월 대선 가능할까. 젖은 나뭇가지? 혼돈의 부동산 시장. 해법과 대안. 인구 3만 단양군, 생활인구는 27만 명. 오늘의 TMI....
-The post 이념 패거리 카르텔? 윤석열은 지금 초조하다: 슬로우레터 1월2일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2023 in Review]]></title>
-        <id>https://embeddedartistry.com/?p=39537</id>
-        <link href="https://embeddedartistry.com/blog/2024/01/01/2023-in-review/"/>
-        <updated>2024-01-01T17:00:00.000Z</updated>
-        <summary type="html"><![CDATA[1 January 2024 by Phillip JohnstonThe end of one year (or the beginning of the next) is always a great time to check in. In review, 2023 was quite a productive one: Published a total of 123 new items on the website: 26 blog posts, 23 Glossary entries, 42 Field Atlas entries, and 32 lessons … 
-Continue reading "2023 in Review"
-The post 2023 in Review appeared first on Embedded Artistry.]]></summary>
-        <author>
-            <name>Phillip Johnston</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stable kernels 6.6.9 and 6.1.70]]></title>
-        <id>https://lwn.net/Articles/956524/</id>
-        <link href="https://lwn.net/Articles/956524/"/>
-        <updated>2024-01-01T16:16:30.000Z</updated>
-        <summary type="html"><![CDATA[Greg Kroah-Hartman has announced the release of the 6.6.9 and 6.1.70 stable kernels.  As usual, they contain
-important fixes throughout the kernel tree.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The trouble with MAX_ORDER]]></title>
-        <id>https://lwn.net/Articles/956321/</id>
-        <link href="https://lwn.net/Articles/956321/"/>
-        <updated>2024-01-01T16:14:41.000Z</updated>
-        <summary type="html"><![CDATA[One might not think that much could be said about a simple macro defining a
-constant integer value.  But the kernel is special, it seems.  A change to
-the definition of MAX_ORDER has had a number of follow-on effects,
-and the task of cleaning up after this change is not done yet.  So perhaps
-a look at MAX_ORDER is in order.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Scribus 1.6.0 released]]></title>
-        <id>https://lwn.net/Articles/956522/</id>
-        <link href="https://lwn.net/Articles/956522/"/>
-        <updated>2024-01-01T15:46:04.000Z</updated>
-        <summary type="html"><![CDATA[Version 1.6.0 of the Scribus
-desktop-publishing application has been released.  The
-list of new features is rather long and includes a user interface overhaul,
-improvements for HiDPI screens, new scripting commands, lots of
-typographical improvements and features, a new picture browser for
-graphical asset management, support for more gradient types, and much more.
-
-
-Scribus 1.6.0 is the long awaited release in the next stable series,
-replacing 1.4.8 and development versions in the 1.5.x series. This version
-has been in development for some years and contains thousands of
-enhancements and fixes across all areas of the program. It has more
-features, is faster, and is more stable.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/956521/</id>
-        <link href="https://lwn.net/Articles/956521/"/>
-        <updated>2024-01-01T15:30:05.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (ansible, asterisk, cjson, firefox-esr, kernel, libde265, libreoffice, libspreadsheet-parseexcel-perl, php-guzzlehttp-psr7, thunderbird, tinyxml, and xerces-c), Fedora (podman-tui, proftpd, python-asyncssh, squid, and xerces-c), Mageia (libssh and proftpd), and SUSE (deepin-compressor, gnutls, gstreamer, libreoffice, opera, proftpd, and python-pip).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[레버리지 ETF 투자 유의점]]></title>
-        <id>https://happist.com/?p=593213</id>
-        <link href="https://happist.com/593213/%eb%a0%88%eb%b2%84%eb%a6%ac%ec%a7%80-etf-%ed%88%ac%ec%9e%90"/>
-        <updated>2024-01-01T08:43:28.000Z</updated>
         <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
         <author>
             <name>happist</name>
