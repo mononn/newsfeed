@@ -248,16 +248,6 @@
           "wordCount": 749,
           "title": "2023 회고 및 2024 계획",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/02/12/42/6234db235b04ce8889e1b8d6eb579ea0.png?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/9084973",
-          "author": "CPUU",
-          "description": "2002년 12월 28일 발간된 Phrack 매거진 60호에서 Basic integer overflows 라는 제목으로 정수 오버플로우 취약점의 위험성 및 악용 가능성에 대해 언급되었다. 이 취약점은 2023 CWE Top 25에서 여전히 14위를 기록하고 있다(CWE-190: Integer Overflow or Wraparound). 이 취약점에 대해 CERT-C Secure coding 가이드에서도 아래와 같이 안내하고 있다.\n\nCERT-C : INT30-C. Ensure that unsigned integer operations do not wrap\nCERT-C : INT32-C. Ensure that operations on signed integers do not result in overflow\n\n이 포스팅에서는 다음 논문의 내용을 기반으로 정리해본다.\nDietz, Will, et al. \"Understanding integer overflow in C/C++.\" ACM Transactions on Software Engineering and Methodology (TOSEM) 25.1 (2015): 1-29.\n\n1. 개요\n이 논문의 취지는 C/C++ 언어로 작성된 프로그램에서 정수 오버플로우(Integer Overflow)는 치명적인 오류나 악용 가능한 취약점을 초래할 수 있으며, 이를 추적하는 것은 상당히 어렵다는 것을 강조한다.\n이러한 버그를 자동으로 찾아주는 도구가 있다면 편리할 텐데, 모든 정수 오버플로우가 반드시 버그로 재현되는 것은 아니기 때문에 판정 기준을 만들 때 고려해야 할 사항이…",
-          "link": "https://cpuu.postype.com/post/9084973",
-          "publishedOn": "2024-01-03T02:57:40.000Z",
-          "wordCount": 761,
-          "title": "메모리 취약점:과거, 현재, 미래 (8) Integer Overflow",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/02/17/10/ebe96d60abaf9d1787f2a55187ffbd6f.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -299,6 +289,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "08a6220d-2337-477e-90eb-ebf455edffbd",
+          "author": "Ilya Buziuk",
+          "description": "Even though the current trend is to split an infrastructure into a number of \"fit-for-purpose\" clusters instead of having a gigantic monolith Red Hat OpenShift cluster, administrators still want to provide granular access and restrict certain functionality for particular users.\n \nInfo alert: Info alert titleNote\nA \"fit-for-purpose\" OpenShift cluster refers to a cluster that is specifically designed and configured to meet the requirements and goals of a particular use case or workload, tailored to optimize performance, resource utilization, and other factors based on the characteristics of the workloads it will be managing. For Red Hat OpenShift Dev Spaces, it is recommended to have this type of cluster provisioned.\nPreviously, all users provisioned on an OpenShift cluster had access to Ope…",
+          "link": "https://developers.redhat.com/articles/2024/02/01/how-configure-granular-access-openshift-dev-spaces",
+          "publishedOn": "2024-02-01T14:00:00.000Z",
+          "wordCount": 3309,
+          "title": "How to configure granular access in OpenShift Dev Spaces",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
+        },
+        {
+          "id": "67dfddaf-e149-46cc-9ae8-fbb7c7b58314",
+          "author": "Yashwanth Maheshwaram",
+          "description": "Red Hat OpenShift is a unified platform to build, modernize, and deploy applications at scale. OpenShift offers a great developer experience in shipping your applications to the cloud. \nJavaScript is the most popular programming language in the world and is used by millions of developers around the world. While it’s one programming language, there are many popular frameworks within JavaScript that need different approaches.\nIn this series of articles, we are providing step-by-step guides to help you get up and running with JavaScript applications on OpenShift. For this tutorial, we expect you to have some familiarity with Meteor.js and Red Hat OpenShift. If you need a quick recap, check out these resources: \nVideo: Developer Sandbox for Red Hat OpenShift \nDeveloper Sandbox for Red Hat Open…",
+          "link": "https://developers.redhat.com/articles/2024/02/01/how-deploy-meteorjs-applications-openshift",
+          "publishedOn": "2024-02-01T14:00:00.000Z",
+          "wordCount": 3532,
+          "title": "How to deploy Meteor.js applications to OpenShift",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
+        },
         {
           "id": "f3fe1348-96cc-4f35-920c-ebbfd3443563",
           "author": "Eelco Chaudron",
@@ -538,16 +548,6 @@
           "wordCount": 3409,
           "title": "An update on packet drop reasons in Linux",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_A%20%282%29.png?itok=zmrEAEN1"
-        },
-        {
-          "id": "4649f433-4575-46da-84f9-76cc2af4688a",
-          "author": "Lucas Holmquist",
-          "description": "Welcome back to the Node.js reference architecture series. This post will serve as a wrap-up for the Node.js series and offer a look at what is coming next from our reference architecture team.\nCatch up on the rest of the series:\nPart 1: Overview of the Node.js reference architecture\nPart 2: Logging in Node.js\nPart 3: Code consistency in Node.js\nPart 4: GraphQL in Node.js\nPart 5: Building good containers\nPart 6: Choosing web frameworks\nPart 7: Code coverage\nPart 8: TypeScript\nPart 9: Securing Node.js applications\nPart 10: Accessibility\nPart 11: Typical development workflows\nPart 12: npm development\nPart 13: Problem determination\nPart 14: Testing\nPart 15: Transaction handling\nPart 16: Load balancing, threading, and scaling\nPart 17: CI/CD\nPart 18: Wrap-up\nWhere we started\nWhen we started thi…",
-          "link": "https://developers.redhat.com/articles/2024/01/03/introduction-nodejs-reference-architecture-wrapping",
-          "publishedOn": "2024-01-03T07:00:00.000Z",
-          "wordCount": 2950,
-          "title": "Introduction to the Node.js reference architecture: Wrapping up",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok=rToXkOcY"
         }
       ]
     },
@@ -846,26 +846,6 @@
           "wordCount": null,
           "title": "Programming embedded systems: automatic code generation",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481150",
-          "author": "Jacob Beningo",
-          "description": "There are somewhere around seven major Git strategies that teams use to manage their version control but Gitflow and TBD tend to be the most...\nThe post Simplifying Git: choosing between Gitflow and Trunk-Based Development appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/simplifying-git-choosing-between-gitflow-and-trunk-based-development/",
-          "publishedOn": "2024-01-02T17:33:31.000Z",
-          "wordCount": null,
-          "title": "Simplifying Git: choosing between Gitflow and Trunk-Based Development",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481139",
-          "author": "Nitin Dahad",
-          "description": "With the rise of AI, once “simple” devices are becoming increasingly intelligent, leading to more computing devices than ever before.\nThe post 3 trends for 2024: AI drives more edge intelligence, RISC-V, & chiplets appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/3-trends-for-2024-ai-drives-more-edge-intelligence-risc-v-chiplets/",
-          "publishedOn": "2024-01-02T17:07:13.000Z",
-          "wordCount": null,
-          "title": "3 trends for 2024: AI drives more edge intelligence, RISC-V, & chiplets",
-          "imageUrl": null
         }
       ]
     },
@@ -1081,6 +1061,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1099/",
+          "author": null,
+          "description": "Strange things happen: for almost a year, PVS-Studio has a plugin for Qt Creator. However, we haven't yet published a good old article with the IDE check. We've made amends and invite you to see how...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1099/",
+          "publishedOn": "2024-01-31T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Qt Creator* in search of Qt Creator bugs",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1098/",
           "author": null,
           "description": "As Yuri Gagarin once said, \"In the future, we will fly, we will fly a lot\". To some extent, Gaijin's Dagor Engine makes these flights possible. Let's get a glimpse of the engine's innards and talk...",
@@ -1135,6 +1125,16 @@
       "feedUrl": "https://interrupt.memfault.com/feed.xml",
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
+        {
+          "id": "https://interrupt.memfault.com/blog/practical_zephyr_dt",
+          "author": null,
+          "description": "In this third article of the “Practical Zephyr” series, we’ll see how we configure and use hardware. For this, Zephyr borrows another tool from the Linux kernel: Devicetree.\nIn contrast to Kconfig, the Devicetree syntax and its use are more intricate. Therefore, we’ll cover Devicetree in two articles. In this article, we’ll see what Devicetree is and how we can write our own Devicetree source files. In the next article, we’ll look at so-called Devicetree bindings, which add semantics to our Devicetree. Be prepared for a fair bit of theory, but as usual, we’ll use an example project to follow along.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/practical_zephyr_dt",
+          "publishedOn": "2024-02-01T00:00:00.000Z",
+          "wordCount": 11417,
+          "title": "Practical Zephyr - Devicetree basics (Part 3)",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
         {
           "id": "https://interrupt.memfault.com/blog/practical_zephyr_kconfig",
           "author": null,
@@ -1223,6 +1223,76 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/960088/",
+          "author": "corbet",
+          "description": "Filesystem development is not an easy task; the performance demands are\ntypically high, and the consequences for mistakes usually involve lost data\nand irate users.  The implementation of a virtual (or \"pseudo\") filesystem\n— a filesystem implemented within the kernel and lacking a normal backing\nstore — can also be challenging, but for different reasons.  A series of\nconversations around the eventfs virtual filesystem has turned a spotlight\non the difficulty of creating a virtual filesystem for Linux.",
+          "link": "https://lwn.net/Articles/960088/",
+          "publishedOn": "2024-02-01T16:56:19.000Z",
+          "wordCount": null,
+          "title": "[$] The hard life of a virtual-filesystem developer",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960446/",
+          "author": "corbet",
+          "description": "A new version of the Damn Small\nLinux distribution has come out with an updated definition of \"damn\nsmall\":\n\n\n\tThe new goal of DSL is to pack as much usable desktop distribution\n\tinto an image small enough to fit on a single CD, or a hard limit\n\tof 700MB. This project is meant to service older computers and have\n\tthem continue to be useful far into the future. Such a notion sits\n\twell with my values. I think of this project as my way of keeping\n\totherwise usable hardware out of landfills.",
+          "link": "https://lwn.net/Articles/960446/",
+          "publishedOn": "2024-02-01T14:53:40.000Z",
+          "wordCount": 209,
+          "title": "Damn Small Linux 2024 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960439/",
+          "author": "jake",
+          "description": "The 6.7.3, 6.6.15, and 6.1.76 stable kernels have been released.\nThese contain a large number of important fixes throughout the tree, as is\nthe norm.",
+          "link": "https://lwn.net/Articles/960439/",
+          "publishedOn": "2024-02-01T14:08:19.000Z",
+          "wordCount": 144,
+          "title": "Stable kernels 6.7.3, 6.6.15, and 6.1.76",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960436/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (debian-security-support, firefox-esr, openjdk-11, and python-asyncssh), Fedora (glibc, python-templated-dictionary, thunderbird, and xorg-x11-server-Xwayland), Gentoo (Chromium, Google Chrome, Microsoft Edge and WebKitGTK+), Red Hat (firefox, gnutls, libssh, thunderbird, and tigervnc), SUSE (mbedtls, rear116, rear1172a, runc, squid, and tinyssh), and Ubuntu (glibc and runc).",
+          "link": "https://lwn.net/Articles/960436/",
+          "publishedOn": "2024-02-01T13:57:14.000Z",
+          "wordCount": 277,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/959457/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for February 1, 2024 is available.",
+          "link": "https://lwn.net/Articles/959457/",
+          "publishedOn": "2024-02-01T00:57:16.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for February 1, 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960357/",
+          "author": "corbet",
+          "description": "Version 2.39\nof the GNU C Library has been released.  Changes include integration with\nthe x86 shadow-stack mechanism, a couple of\nnew posix_spawn() variants for working with control groups, pidfd_spawn() and\npidfd_spawnp(), the C2X stdbit.h header, the removal\nof the libcrypt library, and more.  See the release notes\nfor details.",
+          "link": "https://lwn.net/Articles/960357/",
+          "publishedOn": "2024-01-31T23:41:37.000Z",
+          "wordCount": 386,
+          "title": "GNU C Library 2.39 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960344/",
+          "author": "corbet",
+          "description": "Version\n24.2 of the LibreOffice office suite is available.  Changes include\nAutoRecovery enabled by default, styling of comments, better floating-table\nsupport, improved accessibility, and more.  See the release\nnotes for details.",
+          "link": "https://lwn.net/Articles/960344/",
+          "publishedOn": "2024-01-31T20:41:23.000Z",
+          "wordCount": 561,
+          "title": "LibreOffice 24.2 Community released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/959562/",
           "author": "daroc",
@@ -2042,26 +2112,6 @@
           "wordCount": 301,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/954544/",
-          "author": "corbet",
-          "description": "The calendar has flipped over into 2024 — another year has begun.  Here at\nLWN, we do not have a better idea of what this year will bring than anybody\nelse does, but that doesn't keep us from going out on a shaky limb and\nmaking predictions anyway.  Here, for the curious, are a few things that we\nthink may be in store for 2024.",
-          "link": "https://lwn.net/Articles/954544/",
-          "publishedOn": "2024-01-02T22:40:28.000Z",
-          "wordCount": null,
-          "title": "[$] LWN's guide to 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956568/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Gentoo (Joblib), Red Hat (firefox and thunderbird), SUSE (gstreamer-plugins-bad, libssh2_org, and webkit2gtk3), and Ubuntu (firefox and thunderbird).",
-          "link": "https://lwn.net/Articles/956568/",
-          "publishedOn": "2024-01-02T15:09:33.000Z",
-          "wordCount": 218,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2156,16 +2206,6 @@
           "wordCount": 1156,
           "title": "Bliki: Legacy Seam",
           "imageUrl": "https://martinfowler.com/logo-sq.png"
-        },
-        {
-          "id": "https://martinfowler.com/articles/2023-music.html",
-          "author": null,
-          "description": "Another year, another time to pick six favorite musical\n     discoveries. 2023 includes ambient bluegrass, Afro-Andean funk, Northumbrian\n     smallpipes, dancing kora, and Ukrainian folk jazz.\nmore…",
-          "link": "https://martinfowler.com/articles/2023-music.html",
-          "publishedOn": "2024-01-02T23:42:00.000Z",
-          "wordCount": 854,
-          "title": "My favorite musical discoveries of 2023",
-          "imageUrl": "https://martinfowler.com/articles/2023-music/card.png"
         }
       ]
     },
@@ -2386,16 +2426,6 @@
           "wordCount": 3123,
           "title": "AI or ain't: LLMs",
           "imageUrl": "https://zserge.com/logo.png"
-        },
-        {
-          "id": "https://zserge.com/posts/ai-nn/",
-          "author": null,
-          "description": "Previously we explored early “intelligent” software based on rules and Markov chains, but the results were not too convincing. Modern AI is all about neural networks, so let’s fast-forward to the time when neural networks have been invented, which is… 1944? Correct, the idea of an artificial neuron dates many decades back, and it’s a very simple one, really.\nneural network in 6 lines of code A neural network is nothing but a few multiplications and additions.",
-          "link": "https://zserge.com/posts/ai-nn/",
-          "publishedOn": "2024-01-03T00:00:00.000Z",
-          "wordCount": 2233,
-          "title": "AI or ain't: Neural Networks",
-          "imageUrl": "https://zserge.com/logo.png"
         }
       ]
     },
@@ -2453,6 +2483,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=103286",
+          "author": "북극여우",
+          "description": "“나는 아무 일도 하지 않았지만, 큰 돈과 그에 따르는 힘을 상속받았다. 하지만 국가는 여기에 세금도 매기지 않는다. 불공평하다고 생각한다. 정치인들이 제 역할을 못 하고 부의 재분배에 힘쓰지 않으니, 나 스스로 내가 가진 것을 재분배해야겠다.” 마를렌 엥겔호른. 이런 신선한 부자를 보았나?! 360억 상속에 분노한 마를렌 만약 360억 원이 생기면 어떻게 하시겠어요? 이렇게 행복한(?) 고민을 하는 사람이 있습니다....\nThe post 나에게 세금을 매겨라, 360억 상속받고 분노한 이유 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103286",
+          "publishedOn": "2024-02-01T02:54:30.000Z",
+          "wordCount": 6045,
+          "title": "나에게 세금을 매겨라, 360억 상속받고 분노한 이유",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/418498861_333864739516322_267903141137682105_n.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=103258",
+          "author": "이정환",
+          "description": "아직도 결정 못했다. 당원들이 원한다면. 이재명의 히든카드는 ‘출생 기본소득’. 고발 사주, 윤석열이 몰랐을까. 쟁점과 현안. “정치 초짜들이 총선 판을 불태울 뻔했다.” ‘돈봉투’ 윤관석 징역 2년. 더 깊게 읽기. 아낌없이 풀어주는 노후 도시 특별법. 지난해 세수 펑크 56조 원. 제조업 생산지수 급락, 외환위기 이후 최대폭. 유승민 역할론? 윤석열이 불편해한다. 오늘의 TMI. 신혼부부 42%가 7000만 원 이상...\nThe post “윤석열 주변 정치 초짜들이 총선 불태울 뻔”, 조선일보가 분노한 이유: 슬로우레터 2월1일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103258",
+          "publishedOn": "2024-01-31T22:09:14.000Z",
+          "wordCount": 6876,
+          "title": "“윤석열 주변 정치 초짜들이 총선 불태울 뻔”, 조선일보가 분노한 이유: 슬로우레터 2월1일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/45820568.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=103223",
           "author": "이정환",
@@ -2962,26 +3012,6 @@
           "wordCount": 5195,
           "title": "사이시옷, 없애기보다 더 많이 쓰자",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/GettyImages-a12240760.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101796",
-          "author": "참여연대 사법감시센터",
-          "description": "[참여연대 사법감시센터 ‘광장에 나온 판결’] 김용균 5주기 코앞에 두고, 대법원 결국 김용균 원청업체 경영진 무죄 판결을 확정했다. 더 큰 문제는 김용균법(개정 산안법)과 중대재해처벌법(중처법)의 후퇴. 여기엔 민주당 책임도 작지 않다. 그날, 2018년 12월의 밤 그는 1994년에 태어났다. 외동아들이었다. 부모님의 속을 썩이는 일이 크게 없이 잘 자라서 군대까지 다녀오고, 대학 졸업 후에 서부발전이 운영하는 태안화력발전소(이하 ‘태안화력’)에 입사했다....\nThe post 대법원 면죄부보다 중요한 것, 김용균의 죽음으로 만든 법이 후퇴하고 있다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101796",
-          "publishedOn": "2024-01-03T06:05:36.000Z",
-          "wordCount": 5407,
-          "title": "대법원 면죄부보다 중요한 것, 김용균의 죽음으로 만든 법이 후퇴하고 있다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/pic_005.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101762",
-          "author": "이정환",
-          "description": "이재명 피습, 죽을 뻔 했다. 사고 5시간 만에 수술. 혐오의 정치를 혐오하는 방식. 쟁점과 현안. 한동훈은 또 대구로. 금융투자소득세 폐지, “조세 정의를 걷어찼다.” 90초만에 승객 379명 전원 탈출. 더 깊게 읽기. 태영건설과 SBS 가운데 고른다면? 태영건설 다음은 어딜까. 다르게 읽기. 출산 때문에 경제활동 참여 낮다는 건 거짓말. 노인들이 살기 좋은 세상을 만들어야 한다. 해법과 대안....\nThe post 혐오의 정치를 혐오하면서 혐오를 부추기는 조선일보의 방식: 슬로우레터 1월3일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101762",
-          "publishedOn": "2024-01-02T22:03:22.000Z",
-          "wordCount": 6356,
-          "title": "혐오의 정치를 혐오하면서 혐오를 부추기는 조선일보의 방식: 슬로우레터 1월3일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/Hate-written-with-scrabble-39442-pixahive-1000x667.jpg"
         }
       ]
     },
@@ -2990,6 +3020,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=593675",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593675/23%eb%85%84-4%eb%b6%84%ea%b8%b0-amd-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-01-31T20:52:26.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 AMD 실적을 읽는 월가의 시선, 데이타센터는 훌륭하나 나머지는 실망스럽다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593672",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593672/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ea%b5%ac%ea%b8%80-%ec%95%8c%ed%8c%8c%eb%b2%b3-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-01-31T20:42:13.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 구글 알파벳 실적을 읽는 월가의 시선, 우려를 벗지 못하다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593669",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593669/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-01-31T20:33:58.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 마이크로소프트 실적을 읽는 월가의 시선, 여전히 긍정적",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=593663",
           "author": "happist",
@@ -3379,26 +3439,6 @@
           "wordCount": 6480,
           "title": "WSJ, 미국인들의 스트리밍 서비스 해지율이 급증하고 있다",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593218",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593218/1-3-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-01-03T03:46:33.000Z",
-          "wordCount": 6935,
-          "title": "1/3, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593216",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593216/2024%eb%85%84-%ea%b3%a0%ea%b0%9d-%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%8a%b8%eb%a0%8c%eb%93%9c",
-          "publishedOn": "2024-01-02T10:56:21.000Z",
-          "wordCount": 7291,
-          "title": "’24년 고객 서비스 트렌드 & CX 트렌드  10가지",
-          "imageUrl": null
         }
       ]
     },
@@ -3407,6 +3447,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78296",
+          "author": "rukahs",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 6일 스프에 쓴 글입니다. “대한민국은 ‘집단 자살 사회’다(South Korea is a collective suicide society).” 지난 2017년, 크리스틴 라가르드 IMF 총재가 방한했을 때 한국의 저출생 문제에 관해 한 말입니다. 현재 유럽중앙은행(ECB) 총재인 라가르드 박사는 → 더 보기",
+          "link": "https://newspeppermint.com/2024/01/31/npsp_koreadissapearing/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_koreadissapearing",
+          "publishedOn": "2024-01-31T22:59:17.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 전쟁 중인 나라보다 낮은 출생률, 우리가 해야 할 고민은",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=78643",
           "author": "NewsPeppermint",
@@ -3515,16 +3565,6 @@
           "publishedOn": "2024-01-08T02:05:57.000Z",
           "wordCount": 1430,
           "title": "“작심삼일 그만” 균형 잡힌 새해 결심을 위하여",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78458",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 11월 13일 스프에 쓴 글입니다. 전쟁은 서로 생각과 의견이 다른 인류가 벌일 수 있는 가장 잔인한 집단 폭력 행위입니다. 이미 전쟁이 벌어진 상황에서 총칼을 거두는 휴전이나 평화를 논의하는 건 소용없는 일이 될 가능성이 커 → 더 보기",
-          "link": "https://newspeppermint.com/2024/01/02/npsp_discoursetoxic/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_discoursetoxic",
-          "publishedOn": "2024-01-02T22:59:54.000Z",
-          "wordCount": 2422,
-          "title": "[뉴페@스프] 어쩌면 세상에서 가장 어려운 ‘공통분모 찾기’",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
