@@ -105,7 +105,18 @@
       "title": "공간주의",
       "feedUrl": "https://attention2.space/feed/",
       "siteUrl": "https://attention2.space",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://attention2.space/?p=3406",
+          "author": "attention2space",
+          "description": "하지만 망각은 문제 해결을 원천적으로 불가능하게 만든다. 문제 자체를 잊어버리기 때문이다. 모든 변화의 가능성은 망각과의 싸움에서 싹튼다. 위기의 망각은 위기를 심화시킨다. 망각이 ‘지구 생태계의 위기’, ‘사회경제적 위기’와 맞물린 ‘인간생태학적 위기’의 결과이면서 동시에 조건인 이유다.",
+          "link": "https://attention2.space/2024/esquecer/",
+          "publishedOn": "2024-02-02T07:06:38.000Z",
+          "wordCount": 5670,
+          "title": "망각이란 무엇인가?",
+          "imageUrl": "https://i0.wp.com/attention2.space/wp-content/uploads/2024/02/art_162395780996_5e64f5.jpg?fit=650%2C331&ssl=1"
+        }
+      ]
     },
     {
       "title": "The Clean Code Blog",
@@ -118,6 +129,16 @@
       "feedUrl": "https://www.cppstories.com/index.xml",
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
+        {
+          "id": "https://www.cppstories.com/2024/expected-cpp23/",
+          "author": null,
+          "description": "In this article, we’ll go through a new vocabulary type introduced in C++23. std::expected is a type specifically designed to return results from a function, along with the extra error information.\n\n\n\n     \n    \n\n\nImagine you’re expecting a certain result from a function, but oops… things don’t always go as planned:\n/*RESULT*/ findRecord(Database& db, int recordId) {\n    if (!db.connected())\n        return /*??*/\n    \n    auto record = db.query(recordId);\n    if (record.valid) {\n        return record;\n\n    return /*??*/\n}\n\n\nWhat can you do? What should you return or output through /*RESULT*/ ?\nHere are a few options:\nThrow an exception,\nTerminate the application,\nUse std::optional to return a value or “nothing” to indicate an error,\nUse a separate struct like my_func_result that would stor…",
+          "link": "https://www.cppstories.com/2024/expected-cpp23/",
+          "publishedOn": "2024-02-05T00:00:00.000Z",
+          "wordCount": 2490,
+          "title": "Using std::expected from C++23",
+          "imageUrl": "https://www.cppstories.com/2024/images/expected.png"
+        },
         {
           "id": "https://www.cppstories.com/2024/constexpr-number-parsing-cpp23/",
           "author": null,
@@ -289,6 +310,46 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "2f1a577f-f5c0-4c99-af1f-543854ea1d13",
+          "author": "Siddhesh Poyarekar",
+          "description": "The open source community saw a number of new advances in security processes in the last year. One of those advances was the GNU toolchain community rallying around the idea of adopting security policies, with GCC and binutils already adopting one, guided by the precedent set by the glibc project as early as in 2014. The idea of a security policy in the context of software is not new; many large open source projects understand the need to define policies and procedures for reporting security issues. Some even have dedicated teams to handle security issues. Forges like GitHub actively promote the idea of adding a SECURITY.md file in the code repository that explains how to report security issues.\nHowever, while the idea is not new, the usage of the security policy across open source communi…",
+          "link": "https://developers.redhat.com/articles/2024/02/06/security-policies-open-source-software",
+          "publishedOn": "2024-02-06T07:00:00.000Z",
+          "wordCount": 4365,
+          "title": "Security policies in open source software",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/GC-security_1x_0.png?itok=TMotZfv4"
+        },
+        {
+          "id": "b242953f-63a0-40a5-be48-a16d40567e85",
+          "author": "Clement Escoffier, Georgios Andrianakis",
+          "description": "The Quarkus community recently released the first version of the Red Hat OpenShift AI integration with Quarkus. You can now invoke large-language models (LLMs) served by OpenShift AI from Quarkus applications (as illustrated in Figure 1). And that’s the topic of this article.\n\n\n  Figure 1: Invoking LLMs served by OpenShift AI from Quarkus.\nA brief history: Quarkus and Quarkus LangChain4J\nQuarkus is a Java framework designed to build truly cloud-native applications. It offers a faster startup time and reduces the memory footprint, making it highly efficient. Tailored specifically for the cloud, containers, and Kubernetes, Quarkus has become a go-to framework for many sectors, including banking, logistics, and Software-as-a-Service (SaaS). Despite being under five years old, its impact is si…",
+          "link": "https://developers.redhat.com/articles/2024/02/06/how-integrate-quarkus-applications-openshift-ai",
+          "publishedOn": "2024-02-06T07:00:00.000Z",
+          "wordCount": 3980,
+          "title": "How to integrate Quarkus applications with OpenShift AI",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2020_Quarkus_Shared_image_B.png?itok=-2XNIpPL"
+        },
+        {
+          "id": "45c0a195-69f8-4b22-a8f4-620ca81b6251",
+          "author": "Philip Hayes",
+          "description": "Red Hat recently announced the latest release of their Jakarta EE compliant platform, JBoss EAP 8.0. With this release, companies will be able to take advantage of the latest Jakarta EE APIs and significantly extend the life cycle of their enterprise Java applications.\nJBoss EAP 8.0 introduces improvements across many areas of the platform, including the management console and CLI, security, clustering, datasource and EJB subsystems. For a more detailed list of the new features and enhancements, as well as the removed and deprecated features, refer to the JBoss EAP 8.0 release notes.\nIn this article, we will describe the new JBoss EAP 8.0 features and the tools provided by Red Hat to help customers migrate from older versions of JBoss EAP.\nLong-life support for Jakarta EE applications\nJBos…",
+          "link": "https://developers.redhat.com/articles/2024/02/05/whats-new-jboss-enterprise-application-platform-8",
+          "publishedOn": "2024-02-05T14:00:00.000Z",
+          "wordCount": 3957,
+          "title": "What's new in JBoss Enterprise Application Platform 8.0",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
+        },
+        {
+          "id": "51ad72dd-271e-422e-91a6-0855584412e1",
+          "author": "Andrew Burgess",
+          "description": "The GNU Debugger (GDB) has an extensive, and growing Python API which can be used to customize and extend GDB as needed. Different object types exist within the Python API to represent different parts of GDB and the processes being debugged. \nOften when writing extensions using the Python API is is useful to cache information about the objects with which you are working. This information might be temporal; it needs to be recorded at a precise moment in time, and can't be re-calculated later; or the information might be expensive to calculate, so computing once and caching gives a significant performance boost.\nThis article describes how information can be cached for different object types within GDB's Python API; some object types provide special support for data caching, while for other o…",
+          "link": "https://developers.redhat.com/articles/2024/02/05/how-cache-data-using-gdbs-python-api",
+          "publishedOn": "2024-02-05T07:00:00.000Z",
+          "wordCount": 4623,
+          "title": "How to cache data using GDB's Python API",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2021_GNU_GDB-Developer_tutorial_Featured_Article__A-1.png?itok=uV-N2sMd"
+        },
         {
           "id": "08a6220d-2337-477e-90eb-ebf455edffbd",
           "author": "Ilya Buziuk",
@@ -498,56 +559,6 @@
           "wordCount": 6323,
           "title": "A fully automated setup of a JBoss EAP cluster using Ansible",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
-        },
-        {
-          "id": "3c472135-0dbb-4455-a231-6792b5c3fd05",
-          "author": "Himanshu Yadav",
-          "description": "In the fast-paced world of application development and deployment, monitoring plays a crucial role in ensuring the reliability and performance of applications. Red Hat OpenShift, a Kubernetes-based container platform, provides a robust environment for deploying and managing containerized applications. In this post, we'll explore how to set up effective application monitoring using Event-Driven Ansible automation and Alertmanager on OpenShift.\nThe process includes the following steps:\nAccess the OpenShift cluster.\nDeploy the Quarkus application, Event-Driven Ansible, Prometheus, and Alertmanager.\nTest the Event-Driven Ansible functionality.\nWhy Event-Driven Ansible matters\nTraditional Ansible playbooks are typically executed on a schedule or triggered manually. In contrast, an event-driven …",
-          "link": "https://developers.redhat.com/articles/2024/01/08/openshift-application-monitoring-event-driven-ansible-alertmanager",
-          "publishedOn": "2024-01-08T07:00:00.000Z",
-          "wordCount": 3369,
-          "title": "OpenShift application monitoring with Event-Driven Ansible & Alertmanager",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Event-driven%20architecture_0.png?itok=0vQIKhev"
-        },
-        {
-          "id": "b7388570-4b29-4bfc-971e-ddd586448abc",
-          "author": "Mohit Suman",
-          "description": "In the fast-paced world of cloud-native application development, having the right tools at your fingertips can make all the difference. Enter the OpenShift Toolkit IDE extension for Visual Studio Code (VS Code), a game-changer for developers diving into the Red Hat OpenShift ecosystem. One standout feature that elevates your development experience is the robust Helm support integrated into this extension. In this article, we'll explore the advantages Helm brings to cloud-native application development on OpenShift and how its seamless integration into the IDE can supercharge your workflow.\nHarnessing the power of Helm charts: Browse and install from OpenShift Toolkit\nHelm, the Kubernetes package manager, simplifies and accelerates the deployment of applications on OpenShift. With the OpenS…",
-          "link": "https://developers.redhat.com/articles/2024/01/08/supercharge-helm-workflows-openshift-toolkit-vs-code",
-          "publishedOn": "2024-01-08T07:00:00.000Z",
-          "wordCount": 3048,
-          "title": "Supercharge Helm workflows with OpenShift Toolkit in VS Code",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift.png?itok=9HrphxKh"
-        },
-        {
-          "id": "bd3b4727-2870-448c-80e6-ed688af465af",
-          "author": "Abdelhamid Soliman",
-          "description": "Applying fine-grained access control to APIs is a common enterprise requirement that can be challenging to implement. Encapsulating authorization decisions into the API gateway can quickly become difficult to manage in complex APIs with many resources and access control rules. However, you can externalize API authorization decisions from the API gateway and from your microservices by leveraging Keycloak Authorization Services as a centralized authorization component. Keycloak Authorization Services acts as a policy decision point integrated with 3scale API gateway, which is the central enforcement place to access your APIs. \nIntegrating Keycloak Authorization Services into your API architecture has many benefits:\nCentralized control with simplified administration: Organizations have a sing…",
-          "link": "https://developers.redhat.com/articles/2024/01/05/enable-fine-grained-api-authorization-using-keycloak-and-3scale",
-          "publishedOn": "2024-01-05T07:00:00.000Z",
-          "wordCount": 4521,
-          "title": "Enable fine-grained API authorization using Keycloak and 3scale",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP_3scale_api_1x%20%282%29.png?itok=2xlqSTOU"
-        },
-        {
-          "id": "a8b59903-ea85-44ab-be14-0b3158d5b74e",
-          "author": "Radu Domnu, Etienne Dubois",
-          "description": "In our previous article, we discussed the basics of Apache Kafka MirrorMaker 2, and how it improves data replication between Kafka clusters. This article will focus more on the practical side of things. We'll dive into how to deploy MirrorMaker 2 when using Red Hat AMQ Streams and how to fine-tune MirrorMaker 2 settings for better performance, a crucial step for anyone using this tool. We will also focus on Kafka migration use-cases and describe how the consumer-first Kafka migration strategy can be beneficial in many scenarios.\nPrerequisites\nRed Hat AMQ Streams, which leverages the open source project Strimzi, provides a way to deploy Apache Kafka to Kubernetes using the operator pattern. The deployment of MirrorMaker 2 is supported with the creation of a custom resource of type KafkaMirr…",
-          "link": "https://developers.redhat.com/articles/2024/01/04/mastering-kafka-migration-mirrormaker-2",
-          "publishedOn": "2024-01-04T07:00:00.000Z",
-          "wordCount": 5616,
-          "title": "Mastering Kafka migration with MirrorMaker 2",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/kafka-event-driven_2x.png?itok=lizTGq2t"
-        },
-        {
-          "id": "20dc445e-b01b-4176-96bf-b23234aa78f3",
-          "author": "Antoine Tenart",
-          "description": "Since our first blog post on how to retrieve packet drop reasons in the Linux kernel, upstream development of the feature has continued and new additions have been made. Drop reasons can be retrieved manually, but they are also used by an increasing number of utilities such as the Network Observability operator for Red Hat OpenShift Container Platform, which can report packets being dropped with their reasons.\nLet's see what happened recently in the drop reason space of the Linux kernel and how to avoid pitfalls, especially between kernel versions. It's worth noting tools designed on top of drop reasons, like the above operator, are already doing the right thing and do not need special care. But as we saw in the previous article, drop reasons can be retrieved manually when debugging networ…",
-          "link": "https://developers.redhat.com/articles/2024/01/04/update-packet-drop-reasons-linux",
-          "publishedOn": "2024-01-04T07:00:00.000Z",
-          "wordCount": 3409,
-          "title": "An update on packet drop reasons in Linux",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_Linux_Topic_image_A%20%282%29.png?itok=zmrEAEN1"
         }
       ]
     },
@@ -555,18 +566,7 @@
       "title": "edykim.com 블로그 RSS 피드",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com",
-      "articles": [
-        {
-          "id": "https://edykim.com/ko/post/replace-google-chrome-pdf-viewer-with-pdf-js/",
-          "author": null,
-          "description": "Google Chrome를 주로 사용하고 있는데 언제부터인지 브라우저 내 PDF 뷰어가 엄청 느려졌다. Mozilla의 pdf.js가 Chromium 확장을 제공하고 있어서 설치해봤는데 만족스럽다. Manifest V…",
-          "link": "https://edykim.com/ko/post/replace-google-chrome-pdf-viewer-with-pdf-js/",
-          "publishedOn": "2024-01-05T15:01:47.000Z",
-          "wordCount": 594,
-          "title": "Google Chrome PDF 뷰어를 Mozilla PDF.js로 교체하기",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Eli Bendersky's website",
@@ -609,16 +609,6 @@
           "wordCount": 5693,
           "title": "Exploring Serverless CI/CD for Embedded Devices",
           "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2024/01/serverless-cicd-iot-main-image.jpg"
-        },
-        {
-          "id": "https://embeddedartistry.com/?p=39925",
-          "author": "Phillip Johnston",
-          "description": "5 January 2024 by Phillip JohnstonI ran into a situation recently where I wanted to perform a git cherry-pick operation, but I only wanted to pull specific files from the commit. The reasons for this itself aren’t so important – I just wantEr to use git show to generate a diff involving the desired files, … \nContinue reading \"How to cherry-pick Specific Files from a Commit\"\nThe post How to cherry-pick Specific Files from a Commit appeared first on Embedded Artistry.",
-          "link": "https://embeddedartistry.com/blog/2024/01/05/how-to-cherry-pick-specific-files-from-a-commit/",
-          "publishedOn": "2024-01-05T21:23:52.000Z",
-          "wordCount": 3612,
-          "title": "How to cherry-pick Specific Files from a Commit",
-          "imageUrl": "https://c2y6x2t8.rocketcdn.me/wp-content/uploads/2021/05/cropped-embedded_artistry_transparent_with_mark_half.png"
         }
       ]
     },
@@ -627,6 +617,66 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4481425",
+          "author": "Boris Radonic",
+          "description": "In this installment of the motor control series, we explore feedback sensors, analog-to-digital converters, and measurement methods. As previously mentioned, the feedback sensors include position...\nThe post Mastering motor control: measurements sensors and parameters appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/mastering-motor-control-measurements-sensors-and-parameters/",
+          "publishedOn": "2024-02-06T17:04:05.000Z",
+          "wordCount": null,
+          "title": "Mastering motor control: measurements sensors and parameters",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481422",
+          "author": "Jacob Beningo",
+          "description": "While it will take a little bit of time to get used to, simulating code will help you to modernize how you develop embedded software...\nThe post 3 reasons embedded teams need to embrace simulation appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/3-reasons-embedded-teams-need-to-embrace-simulation/",
+          "publishedOn": "2024-02-06T16:36:16.000Z",
+          "wordCount": null,
+          "title": "3 reasons embedded teams need to embrace simulation",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481412",
+          "author": "Nitin Dahad",
+          "description": "Cadence said its new Millenium platform combines digital twin, AI and HPC technology to provide best multiphysics simulation solution for automotive, A&D, energy, turbomachinery and data center markets.\nThe post Cadence launches digital twin CFD multiphysics analysis platform appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/cadence-launches-digital-twin-cfd-multiphysics-analysis-platform/",
+          "publishedOn": "2024-02-05T17:10:17.000Z",
+          "wordCount": null,
+          "title": "Cadence launches digital twin CFD multiphysics analysis platform",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481407",
+          "author": "Nitin Dahad",
+          "description": "Six new features added to NECTO Studio 6.0 include enhanced graphics library with new UI designer, enabling users to bring circuits to life with algorithmic precision and graphical creativity.\nThe post Latest MIKROE IDE has increased graphics and Clang for Arm and RISC-V appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/latest-mikroe-ide-has-increased-graphics-and-clang-for-arm-and-risc-v/",
+          "publishedOn": "2024-02-05T16:55:15.000Z",
+          "wordCount": null,
+          "title": "Latest MIKROE IDE has increased graphics and Clang for Arm and RISC-V",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481402",
+          "author": "Nitin Dahad",
+          "description": "PCAN-GPS FD has a satellite receiver, a magnetic field sensor, an accelerometer, and a gyroscope, providing position and orientation via CAN FD connection.\nThe post Programmable position sensor module connects with CAN FD appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/programmable-position-sensor-module-connects-with-can-fd/",
+          "publishedOn": "2024-02-05T04:32:03.000Z",
+          "wordCount": null,
+          "title": "Programmable position sensor module connects with CAN FD",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481396",
+          "author": "Nitin Dahad",
+          "description": "The iNoCulator NoC EDA tool is processor agnostic and can connect many other on-chip IP blocks such as PCIe, CXL, and AI acceleration.\nThe post NoC configuration tool takes makes complex SoC design easier appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/noc-configuration-tool-takes-makes-complex-soc-design-easier/",
+          "publishedOn": "2024-02-05T03:18:06.000Z",
+          "wordCount": null,
+          "title": "NoC configuration tool takes makes complex SoC design easier",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4481390",
           "author": "Jacob Beningo",
@@ -806,46 +856,6 @@
           "wordCount": null,
           "title": "CES 2024: Automotive software, AI, and autonomous aerial robots",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481186",
-          "author": "Nitin Dahad",
-          "description": "NXP Platform Accelerator, co-developed with MicroEJ, leverages software containers with standard APIs to bring smartphone-like software design flexibility to the industrial and IoT edge.\nThe post NXP and MicroEJ use containers for software portability across MCUs appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/nxp-and-microej-use-containers-for-software-portability-across-mcus/",
-          "publishedOn": "2024-01-03T15:37:57.000Z",
-          "wordCount": null,
-          "title": "NXP and MicroEJ use containers for software portability across MCUs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481178",
-          "author": "Boris Radonic",
-          "description": "The fundamental working principle of brush-type DC motors has largely remained consistent for decades, but there have been dramatic advancements in technology, materials, and design....\nThe post Mastering motor control: motor control 101 appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/mastering-motor-control-motor-control-101/",
-          "publishedOn": "2024-01-03T14:27:19.000Z",
-          "wordCount": null,
-          "title": "Mastering motor control: motor control 101",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481162",
-          "author": "Nitin Dahad",
-          "description": "RivieraWaves Wi-Fi 7 IP platform helps developers implement latest high throughput Wi-Fi 7 features in SoCs targeting high-end consumer and industrial applications.\nThe post Ceva releases Wi-Fi 7 IP appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/ceva-releases-wi-fi-7-ip/",
-          "publishedOn": "2024-01-03T14:07:40.000Z",
-          "wordCount": null,
-          "title": "Ceva releases Wi-Fi 7 IP",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481154",
-          "author": "Miro Samek",
-          "description": "The automatically generated code tends to be the most solid part of the project, while the manually written parts are typically more problematic due to...\nThe post Programming embedded systems: automatic code generation appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/programming-embedded-systems-automatic-code-generation/",
-          "publishedOn": "2024-01-03T13:25:10.000Z",
-          "wordCount": null,
-          "title": "Programming embedded systems: automatic code generation",
-          "imageUrl": null
         }
       ]
     },
@@ -854,6 +864,26 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1625.php",
+          "author": null,
+          "description": "Hardly you can find a concept so powerful yet so simple as the State Machine. It shouldn't come as a surprise that State Machines are so widespread, what may came as a surprise is how many bad implementations of this concept  I found over the years.\nIn this post, I'll try to go through the basics, present a simple state machine, and evolve its design until you get a basic minimal, but sound...",
+          "link": "https://www.embeddedrelated.com/showarticle/1625.php",
+          "publishedOn": "2024-02-05T08:00:09.000Z",
+          "wordCount": null,
+          "title": "There's a State in This Machine!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1614.php",
+          "author": null,
+          "description": "How Embedded Linux is used in outer space ! EP1: SpacecraftsSeries introduction :\nWe will take a technical dive with Tux around the galaxy to see how Embedded Linux is used in outer space, fasten your seat belt and let the journey begin.\nTen years ago, the mainstream embedded systems consisted of just a Microcontroller with a few kilobytes of memory and either a bare-metal...",
+          "link": "https://www.embeddedrelated.com/showarticle/1614.php",
+          "publishedOn": "2024-02-01T17:19:18.000Z",
+          "wordCount": null,
+          "title": "How Embedded Linux is used in Spacecrafts !",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1630.php",
           "author": null,
@@ -903,16 +933,6 @@
           "wordCount": 3423,
           "title": "Optimizing Real-Time Operating Systems for Efficient Edge Devices",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1619.php",
-          "author": null,
-          "description": "While the Internet is choke-full of explanations of basic data communication protocols, very little is said about the higher levels of packing, formatting, and exchanging information in a useful and practical way. This less-charted land is still fraught with strange problems, whose solutions may be found in strange places – in this example, a very short, 60 years old Science Fiction...",
-          "link": "https://www.embeddedrelated.com/showarticle/1619.php",
-          "publishedOn": "2024-01-04T05:41:05.000Z",
-          "wordCount": 3425,
-          "title": "The Asimov Protocol",
-          "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
         }
       ]
     },
@@ -921,6 +941,16 @@
       "feedUrl": "https://evan-moon.github.io/feed.xml",
       "siteUrl": "https://evan-moon.github.io",
       "articles": [
+        {
+          "id": "20240206-category-theory-for-programmers-2-types-and-functions",
+          "author": null,
+          "description": "타입과 함수로 이루어진 카테고리는 프로그래밍에서 꽤나 중요한 역할을 한다. 자 이제 타입이라는 것이 무엇이며 왜 이런 개념이 필요한지에 대해 이야기를 해보자.",
+          "link": "https://evan-moon.github.io/2024/02/06/category-theory-for-programmers-2-types-and-functions/",
+          "publishedOn": "2024-02-06T02:12:42.000Z",
+          "wordCount": null,
+          "title": "[번역] 프로그래머를 위한 카테고리 이론 - 2. 타입과 함수",
+          "imageUrl": null
+        },
         {
           "id": "20240130-category-theory-for-programmers-1-category",
           "author": null,
@@ -954,6 +984,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2024/02/carbon-limits-concrete-technology-saving-the-environment-using-ai.html",
+          "author": null,
+          "description": "Posted by Lillian Chen – Global Brand and Content Marketing Manager, Google Accelerator Programs\n\n\n\n\n\n\n\nLocated in Boca Raton, Carbon Limit aims to decarbonize the industry and take part in  saving, protecting, and healing the environment. Cofounder Tim Sperry explains that for him and his cofounders Oro Padron, and Christina Stavridi, the mission is personal. “I’ve lost family members [to polluted air]. Oro has his own story, Christina has her own story, and our other core team member Angel just had kids. All of us have our own connection to our mission. And with that, we've developed a really strong company culture,” he says.\nToday, Carbon Limit is evolving to create sustainable solutions for the built environment. Their flagship product, CaptureCrete, is an additive that gives concrete …",
+          "link": "http://developers.googleblog.com/2024/02/carbon-limits-concrete-technology-saving-the-environment-using-ai.html",
+          "publishedOn": "2024-02-01T22:00:00.000Z",
+          "wordCount": null,
+          "title": "Carbon Limit’s concrete technology is saving the environment using AI",
+          "imageUrl": null
+        },
         {
           "id": "http://developers.googleblog.com/2024/01/project-idx-product-updates.html",
           "author": null,
@@ -1061,6 +1101,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1100/",
+          "author": null,
+          "description": "The short answer is no. However, since this question keeps popping up on Reddit, Stack Overflow, and other websites, it's time to address the topic. There are a lot of interesting things to ponder...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1100/",
+          "publishedOn": "2024-02-05T21:00:00.000Z",
+          "wordCount": 6532,
+          "title": "Shall we check pointer for NULL before calling free function?",
+          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1100_check_before_free/image1_thm_intoblank_1200x630.png?ver=02-06-2024-10-25-14"
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1099/",
           "author": null,
           "description": "Strange things happen: for almost a year, PVS-Studio has a plugin for Qt Creator. However, we haven't yet published a good old article with the IDE check. We've made amends and invite you to see how...",
@@ -1164,16 +1214,6 @@
           "wordCount": 6132,
           "title": "Practical Zephyr - Zephyr Basics (Part 1)",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/december-2023-roundup",
-          "author": null,
-          "description": "🎉 Happy New Year! 🎉 Here’s to making 2024 the best year yet.\n2023 was an exciting year for Interrupt, with 36 new articles, 13 new external contributors, 12 community Meetups, and a partridge in a pear tree. Thanks for being a part of it.\nHere are the articles, videos, and tools that we’ve been excited about this\nDecember.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/december-2023-roundup",
-          "publishedOn": "2024-01-04T00:00:00.000Z",
-          "wordCount": 960,
-          "title": "What we've been reading in December (2023)",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
     },
@@ -1223,6 +1263,86 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/961083/",
+          "author": "corbet",
+          "description": "Security updates have been issued by CentOS (firefox, gstreamer1-plugins-bad-free, and tigervnc), Debian (ruby-sanitize), Fedora (kernel, kernel-headers, qt5-qtwebengine, and runc), Oracle (gnutls, kernel, libssh, rpm, runc, and tigervnc), Red Hat (runc), and SUSE (bouncycastle, jsch, python, and runc).",
+          "link": "https://lwn.net/Articles/961083/",
+          "publishedOn": "2024-02-06T14:34:25.000Z",
+          "wordCount": 240,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/961009/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of the 6.7.4, 6.6.16,\nand 6.1.77 stable kernels.  As usual, they\ncontain important fixes all over the kernel tree.",
+          "link": "https://lwn.net/Articles/961009/",
+          "publishedOn": "2024-02-05T20:37:25.000Z",
+          "wordCount": 140,
+          "title": "Three new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960041/",
+          "author": "corbet",
+          "description": "A common problem in kernel development is controlling when a\nspecific task should be done.  Kernel code often executes in contexts where\nsome actions (sleeping, for example, or calling into filesystems) are not\npossible.  Other actions, while possible, may prevent the kernel from\ntaking care of a more important task in a timely manner.  The kernel\ncommunity has developed a number of deferred-execution mechanisms designed\nto ensure that every task is handled at the right time.  One of those\nmechanisms, tasklets, has been eyed for removal for years; that removal\nmight just happen in the near future.",
+          "link": "https://lwn.net/Articles/960041/",
+          "publishedOn": "2024-02-05T15:36:21.000Z",
+          "wordCount": null,
+          "title": "[$] The end of tasklets",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960952/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (rear, runc, sudo, and zbar), Fedora (chromium, grub2, libebml, mingw-python-pygments, and python-aiohttp), Gentoo (FreeType, GNAT Ada Suite, Microsoft Edge, NBD Tools, OpenSSL, QtGui, SDDM, Wireshark, and Xen), Mageia (dracut, glibc, nss and firefox, openssl, packages, perl, and thunderbird), Slackware (libxml2), SUSE (java-11-openjdk, java-17-openjdk, perl, python-uamqp, slurm, and xerces-c), and Ubuntu (libssh and openssl).",
+          "link": "https://lwn.net/Articles/960952/",
+          "publishedOn": "2024-02-05T15:04:15.000Z",
+          "wordCount": 323,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960842/",
+          "author": "corbet",
+          "description": "The 6.8-rc3 kernel prepatch is out for\ntesting.  \"A slightly larger rc3 that I'd have hoped for, although at\nthis stage in the release process it's not something that really worries me\nyet.\"",
+          "link": "https://lwn.net/Articles/960842/",
+          "publishedOn": "2024-02-04T15:46:39.000Z",
+          "wordCount": 146,
+          "title": "Kernel prepatch 6.8-rc3",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/959915/",
+          "author": "daroc",
+          "description": "Zig language\n2024 roadmap\nwas presented in a talk last week on\nZig Showtime (a show covering\nZig news). Andrew Kelley, the benevolent dictator for life of the Zig project,\npresented his goals\nfor the language, largely focusing on compiler performance and continuing\nprogress toward stabilization for the language. He discussed details of his plan\nfor incremental compilation, and addressed the sustainability of the project in\nterms of both code contributions and financial support.",
+          "link": "https://lwn.net/Articles/959915/",
+          "publishedOn": "2024-02-02T15:12:43.000Z",
+          "wordCount": null,
+          "title": "[$] Zig 2024 roadmap",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960606/",
+          "author": "corbet",
+          "description": "Simon Phipps writes\non the Open Source Initiative blog that the latest version of the\nEuropean Cyber Resilience Act is much improved: \"As a result of all this\neffort from so many people, the final text of the CRA mitigated pretty much\nall the risks we had identified to individual developers and to Open Source\nfoundations.\"",
+          "link": "https://lwn.net/Articles/960606/",
+          "publishedOn": "2024-02-02T14:14:30.000Z",
+          "wordCount": 4507,
+          "title": "Phipps: The European regulators listened to the Open Source communities",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960604/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (chromium, man-db, and openjdk-17), Fedora (chromium, indent, jupyterlab, kernel, and python-notebook), Gentoo (glibc), Oracle (firefox, thunderbird, and tigervnc), Red Hat (rpm), SUSE (cpio, gdb, gstreamer, openconnect, slurm, slurm_18_08, slurm_20_02, slurm_20_11, slurm_22_05, slurm_23_02, squid, webkit2gtk3, and xerces-c), and Ubuntu (imagemagick and xorg-server, xwayland).",
+          "link": "https://lwn.net/Articles/960604/",
+          "publishedOn": "2024-02-02T14:09:35.000Z",
+          "wordCount": 323,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/960088/",
           "author": "corbet",
@@ -1992,126 +2112,6 @@
           "wordCount": 217,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/957098/",
-          "author": "corbet",
-          "description": "Linus has released the 6.7 kernel.\n\n\n\tEnd result: 6.7 is (in number of commits: over 17k non-merge\n\tcommits, with 1k+ merges) one of the largest kernel releases we've\n\tever had, but the extra rc8 week was purely due to timing with the\n\tholidays, not about any difficulties with the larger release.\n\n\n\nSome of the headline features in this release are:\nthe removal of support for the Itanium\narchitecture,\nthe first part of the futex2 API,\nfutex\nsupport in io_uring,\nthe BPF exceptions mechanism,\nthe bcachefs filesystem,\nthe TCP\nauthentication option,\nthe kernel samepage merging smart\nscan mode, and\nnetworking\nsupport for the Landlock security module.\nSee the LWN merge-window summaries (part 1,\npart 2) and the (in-progress) KernelNewbies 6.7 page for\nmore information.",
-          "link": "https://lwn.net/Articles/957098/",
-          "publishedOn": "2024-01-07T20:48:56.000Z",
-          "wordCount": 399,
-          "title": "The 6.7 kernel has been released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956900/",
-          "author": "corbet",
-          "description": "Kernel developers often go out of their way to reduce the memory used by\nthe kernel itself; that memory is not available for the workloads that\npeople are actually interested in running on their systems.  Lower memory\nusage also tends to lead to better performance overall.  But there are\ntimes when the expenditure of some extra memory can make the system faster.\nThe replication of the kernel's text (executable code) and read-only data\nacross a NUMA system may be a case in point; patch sets have been posted\nadding that capability to two architectures.",
-          "link": "https://lwn.net/Articles/956900/",
-          "publishedOn": "2024-01-05T15:41:27.000Z",
-          "wordCount": null,
-          "title": "[$] Kernel-text replication on NUMA systems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/957007/",
-          "author": "jake",
-          "description": "The 6.6.10, 6.1.71, 5.15.146, and 5.10.206 stable kernels have been released.\nThey contain numerous important fixes, as usual.",
-          "link": "https://lwn.net/Articles/957007/",
-          "publishedOn": "2024-01-05T14:57:34.000Z",
-          "wordCount": 133,
-          "title": "Four stable kernels released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/957005/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (asterisk, chromium, exim4, netatalk, and tomcat9), Fedora (chromium), Gentoo (BlueZ, c-ares, CUPS filters, RDoc, and WebKitGTK+), Oracle (firefox, squid:4, thunderbird, and tigervnc), SUSE (python-aiohttp and python-paramiko), and Ubuntu (linux-intel-iotg).",
-          "link": "https://lwn.net/Articles/957005/",
-          "publishedOn": "2024-01-05T14:45:41.000Z",
-          "wordCount": 229,
-          "title": "Security updates for Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956862/",
-          "author": "jake",
-          "description": "The saga of the  None-aware (or null-coalescing) operators for Python\ncontinues.  We last looked in on the topic\na little over a year ago and noted that either adoption or a clear\nrejection of the idea might help tamp down its regular recurrence.  That\nhas not happened, so, predictably, it was raised again—and does not look\nany closer to resolution this time around.",
-          "link": "https://lwn.net/Articles/956862/",
-          "publishedOn": "2024-01-05T00:24:06.000Z",
-          "wordCount": null,
-          "title": "[$] The return of None-aware operators for Python",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956864/",
-          "author": "corbet",
-          "description": "ITWire covers\nthe passing of Niklaus Wirth.\n\n\n\tWirth is well-remembered for his pioneering work in programming\n\tlanguages and algorithms. For these achievements, he received the\n\tACM Turing Award in 1984, inducted as a Fellow of the ACM in 1994,\n\tand a Fellow of the Computer History Museum in 2004.\n\n\tThey include, among many, being chief designer for the programming\n\tlanguages Euler (1965), PL360 (1966), ALGOL W (1968), Pascal\n\t(1970), Modula (1975), Modula-2 (1978), Oberon (1987), Oberon-2\n\t(1991), and Oberon-07 (2007).",
-          "link": "https://lwn.net/Articles/956864/",
-          "publishedOn": "2024-01-04T15:30:08.000Z",
-          "wordCount": 302,
-          "title": "Computer science pioneer Niklaus Wirth passes away (ITWire)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956855/",
-          "author": "jake",
-          "description": "Security updates have been issued by Oracle (firefox, gstreamer1-plugins-bad-free, thunderbird, tigervnc, and xorg-x11-server), Red Hat (squid:4), SUSE (exim, libcryptopp, and proftpd), and Ubuntu (openssh and sqlite3).",
-          "link": "https://lwn.net/Articles/956855/",
-          "publishedOn": "2024-01-04T14:29:13.000Z",
-          "wordCount": 203,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/955921/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for January 4, 2024 is available.",
-          "link": "https://lwn.net/Articles/955921/",
-          "publishedOn": "2024-01-04T01:40:06.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for January 4, 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956533/",
-          "author": "jake",
-          "description": "Normally, when a new vulnerability is discovered and releases are\ncoordinated with those affected, the announcement is done at\na convenient time—not generally right before the end-of-year holidays, for\nexample. The SMTP\nSmuggling vulnerability has taken a different path, however, with its\nannouncement landing on December 18.  That may well have been\nunpleasant for some administrators that had not yet updated, but it was\nparticularly problematic for \nsome projects that had not been made aware of the vulnerability at\nall—though it was known to affect several open-source mailers.",
-          "link": "https://lwn.net/Articles/956533/",
-          "publishedOn": "2024-01-03T22:42:12.000Z",
-          "wordCount": null,
-          "title": "[$] Smuggling email inside of email",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956699/",
-          "author": "jake",
-          "description": "On his blog, \nLuc Lenôtre introduces\nMaestro, \"a Unix-like kernel and operating system written from\nscratch in Rust\". Maestro is intended to be\n\"lightweight and compatible-enough with Linux to be usable in everyday\nlife\".  The project began, in C, back in 2018, but switched over to\nRust after a year-and-a-half.  The current status:\n\nMaestro is a monolithic kernel, supporting only the x86 (in 32 bits)\narchitecture for now. \n\nAt the time of writing, 135 out of 437 Linux system calls\n(roughly 31%) are \nmore or less implemented. The project has 48 800 lines of code\nacross 615 \nfiles (all repositories combined, counted using the cloc command). \n\n\nThere is a Hacker\nNews discussion of the project as well.",
-          "link": "https://lwn.net/Articles/956699/",
-          "publishedOn": "2024-01-03T16:05:57.000Z",
-          "wordCount": 259,
-          "title": "Lenôtre: Maestro - Introduction",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956696/",
-          "author": "corbet",
-          "description": "Version 9.1 of the\nVim editor has been released.  \"This release is dedicated to Bram\nMoolenaar, Vims lead developer for more than 30 years, who passed away half\na year ago. The Vim project wouldn't exist without his work\".  Changes\ninclude new support for classes and objects in the scripting language,\nsmooth scrolling support, an EditorConfig plugin, and more.",
-          "link": "https://lwn.net/Articles/956696/",
-          "publishedOn": "2024-01-03T15:36:25.000Z",
-          "wordCount": 172,
-          "title": "Vim 9.1 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/956694/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (kernel), Fedora (slurm), Oracle (kernel and postgresql:15), Red Hat (firefox, gstreamer1-plugins-bad-free, thunderbird, tigervnc, and xorg-x11-server), SUSE (polkit, postfix, putty, w3m, and webkit2gtk3), and Ubuntu (nodejs).",
-          "link": "https://lwn.net/Articles/956694/",
-          "publishedOn": "2024-01-03T15:21:20.000Z",
-          "wordCount": 301,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2119,18 +2119,7 @@
       "title": "M0AGX / LB9MG",
       "feedUrl": "https://m0agx.eu/feeds/all.rss.xml",
       "siteUrl": "https://m0agx.eu/",
-      "articles": [
-        {
-          "id": "tag:m0agx.eu,2024-01-05:/listing-python-threads.html",
-          "author": null,
-          "description": "More than once I have been in the situation where a multithreaded Python application (eventually 😁)\nruns fine, all the threads cooperate nicely, but do not shut down cleanly.\nThis for example happens after closing GUI windows where the GUI goes away but\nsome worker threads do not. A Ctrl+C might help to shut down the stuck application only if the\nmain thread is stuck.\nStill, every application should shut down cleanly so that it can be correctly monitored\nand restarted by init / systemd / wrapper script etc.",
-          "link": "https://m0agx.eu/listing-python-threads.html",
-          "publishedOn": "2024-01-05T00:00:00.000Z",
-          "wordCount": 397,
-          "title": "Listing stuck Python threads",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Martin Fowler",
@@ -2196,16 +2185,6 @@
           "wordCount": 14492,
           "title": "A major revision of Continuous Integration",
           "imageUrl": "https://martinfowler.com/articles/continuousIntegration/card.png"
-        },
-        {
-          "id": "https://martinfowler.com/bliki/LegacySeam.html",
-          "author": null,
-          "description": "When working with a legacy system it is valuable to identify and create seams:\n  places where we can alter the behavior of the system without editing\n  source code. Once we've found a seam, we can use it to break dependencies to\n  simplify testing, insert probes to gain observability, and redirect program\n  flow to new modules as part of legacy displacement.\nMicheal Feathers coined the term “seam” in the context of legacy systems in\n  his book Working Effectively with Legacy Code. His definition: “a seam is a place\n  where you can alter behavior in your program without editing in that place”.\nHere's an example of where a seam would be handy. Imagine some code to\n  calculate the price of an order.\n// TypeScript\nexport async function calculatePrice(order:Order) {\n  const itemPrices = order.i…",
-          "link": "https://martinfowler.com/bliki/LegacySeam.html",
-          "publishedOn": "2024-01-04T14:13:00.000Z",
-          "wordCount": 1156,
-          "title": "Bliki: Legacy Seam",
-          "imageUrl": "https://martinfowler.com/logo-sq.png"
         }
       ]
     },
@@ -2267,6 +2246,16 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2024/02/05/",
+          "author": null,
+          "description": "If you’ve spent much time developing with Mingw-w64 you’ve likely seen the\nsymbol ___chkstk_ms, perhaps in an error message. It’s a little piece of\nruntime provided by GCC via libgcc which ensures enough of the stack is\ncommitted for the caller’s stack frame. The “function” uses a custom ABI\nand is implemented in assembly. So is the subject of this article, a\nslightly improved implementation soon to be included in w64devkit as\nlibchkstk (-lchkstk).\nThe MSVC toolchain has an identical (x64) or similar (x86) function named\n__chkstk. We’ll discuss that as well, and w64devkit will include x86 and\nx64 implementations, useful when linking with MSVC object files. The new\nx86 __chkstk in particular is also better than the MSVC definition.\nA note on spelling: ___chkstk_ms is spelled with three unde…",
+          "link": "https://nullprogram.com/blog/2024/02/05/",
+          "publishedOn": "2024-02-05T17:56:05.000Z",
+          "wordCount": null,
+          "title": "An improved chkstk function on Windows",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2024/01/28/",
           "author": null,
           "description": "Over the past couple months I’ve discovered a couple of handy tricks for\nworking with GDB breakpoints. I figured these out on my own, and I’ve not\nseen either discussed elsewhere, so I really ought to share them.\nContinuable assertions\nThe assert macro in typical C implementations leaves a lot to be\ndesired, as does raise and abort, so I’ve suggested\nalternative definitions that behave better under debuggers:\n\n#define assert(c)  while (!(c)) __builtin_trap()\n#define assert(c)  while (!(c)) __builtin_unreachable()\n#define assert(c)  while (!(c)) *(volatile int *)0 = 0\n\n\nEach serves a slightly different purpose but still has the most\nimportant property: Immediately halt the program directly on the defect.\nNone have an occasionally useful secondary property: Optionally allow the\nprogram to co…",
@@ -2314,6 +2303,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8548",
+          "author": "Derek Jones",
+          "description": "What were the events that drove organizations to fund the creation of the first computers? I suspect that many readers do not appreciate how long scientific/engineering calculations took before electronic computers became available, or the huge number of clerical staff employed to process the paperwork associated with running any sizeable business. If somebody wanted to […]",
+          "link": "https://shape-of-code.com/2024/02/04/why-did-organizations-fund-the-creation-of-the-first-computers/",
+          "publishedOn": "2024-02-04T22:43:51.000Z",
+          "wordCount": null,
+          "title": "Why did organizations fund the creation of the first computers?",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8535",
           "author": "Derek Jones",
           "description": "While rapidly evolving computer hardware has been a topic of frequent public discussion since the first electronic computer, it has taken over 40 years for the issue of rapidly evolving customer requirements to become a frequent topic of public discussion (thanks to the Internet). The following quote is from the Opening Address, by Andrew Booth, […]",
@@ -2342,16 +2341,6 @@
           "wordCount": 1469,
           "title": "Median system cpu clock frequency over last 15 years",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8495",
-          "author": "socadmin",
-          "description": "Developers and researchers invariably measure program size in lines of code, while senior managers measure by resources consumed per accounting period, e.g., money and people. What size signals are visible to the users of a program? Before CDs became generally available at the start of the 1990s, software for desktop computers was delivered on floppy […]",
-          "link": "https://shape-of-code.com/2024/01/07/documentation-as-a-signal-of-program-size/",
-          "publishedOn": "2024-01-07T22:47:45.000Z",
-          "wordCount": 1500,
-          "title": "Documentation as a signal of program size",
-          "imageUrl": null
         }
       ]
     },
@@ -2372,6 +2361,16 @@
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
       "articles": [
+        {
+          "id": "http://subokim.wordpress.com/?p=13285",
+          "author": "subokim",
+          "description": "SI 산업, IT서비스 산업.이렇게 말하니까 초보자들은 헷갈려 합니다. 그냥 남의 허드렛일 하는 노예시장처럼 치부하기도 합니다.실제로 SI를 하고 있는 적지 않은 개발자들이 이렇게 생각하기도 합니다.하지만, 그거 아닙니다. SI 산업의 정체 이 시장의 정체는 B2B 마켓,즉, 기업이 IT를 사주는 시장, 기업시장입니다.물론 정부가 물건을 사주는 B2G 시장도 있습니다.하지만, 편의상 다 “기업시장”이라고 하겠습니다. 네비어, 직방 같은 서비스는 “일반 사용자”가... Continue Reading →",
+          "link": "https://subokim.wordpress.com/2024/02/04/definition-of-si/",
+          "publishedOn": "2024-02-04T07:10:28.000Z",
+          "wordCount": null,
+          "title": "SI 산업의 정체는 “기업시장”",
+          "imageUrl": null
+        },
         {
           "id": "http://subokim.wordpress.com/?p=13228",
           "author": "subokim",
@@ -2416,18 +2415,7 @@
       "title": "zserge's blog",
       "feedUrl": "https://zserge.com/rss.xml",
       "siteUrl": "https://zserge.com/",
-      "articles": [
-        {
-          "id": "https://zserge.com/posts/ai-llm/",
-          "author": null,
-          "description": "Previously we covered early chatbots, bots talking gibberish, and self-taught number crunchers.\nBut what we got so far is still boring. AI was promised to overthrow the world order and not just classify arrays of floats. Can we have a chat?\nGPT As unimpressive as it is, neural networks take arrays of numbers and return arrays of numbers. Just like our brain takes electric signals and emits electric signals. It’s only a matter of how we encode such inputs and outputs.",
-          "link": "https://zserge.com/posts/ai-llm/",
-          "publishedOn": "2024-01-04T00:00:00.000Z",
-          "wordCount": 3123,
-          "title": "AI or ain't: LLMs",
-          "imageUrl": "https://zserge.com/logo.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "The Boston Globe",
@@ -2447,6 +2435,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=84977",
+          "author": "sticky",
+          "description": "때때로 정치경제학에서 정식화된 어떤 법칙을 이에 대응하는 구체적인 경제 과정의 규칙성과 실천적으로 동정하는 것이 곤란할 때가 있다. 상품가격과 판매량을 시계열 형태로 파악한 통계자료에 기초하여 가격과 수요 또는 공급 사이의 함수적 상관관계를 결정하려고 할 때, 얻어진 경험적 관련이 수요함수를 표시하고 있는지 공급함수를 표시하고 있는지, 혹은 그 어느 것도 아닌지 알 수 없는 경우가 잘 알려진 예이다. […]",
+          "link": "http://economicview.net/84977/",
+          "publishedOn": "2024-02-05T22:24:54.000Z",
+          "wordCount": null,
+          "title": "사회주의에 있어서 개량경제학의 유용성",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=84922",
           "author": "sticky",
           "description": "가나정부가 주산품인 코코넛을 운반하기 위해 1만6천톤급 다목적 화물선 4척을 구입하고 싶다고 요청해왔다. 借主는 블랙스타라인이라는 기선회사였다. 現代重工業이 체결한 계약서를 고문변호사인 金永茂, 申雄植 씨에게 보였더니 “계약의 절대요건조차 충족되지 못하고 있어 융자가 어렵겠다”는 견해였다. 그러나 외무부는 가나가 미수교국이므로 대 UN관계를 고려해서라도 융자해주어야만 공관설치가 가능하다는 이유로 적극 협조를 요청해왔다. 북한은 대사관을 설치했다가 철수한 상태였다. [중략] 이 융자계약의 미비점을 보완키 […]",
@@ -2465,16 +2463,6 @@
           "wordCount": 1798,
           "title": "레드룰렛 讀後感",
           "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/85/Red_Roulette_cover.jpg"
-        },
-        {
-          "id": "http://economicview.net/?p=84884",
-          "author": "sticky",
-          "description": "먼저 다울링 대사가 환율의 현실화를 미국식의 접근방식으로 설명했고, 이어서 데커 장군이 한국에 와 있는 수많은 미국 장병들이 500대 1의 고정환율에 따라 봉급을 환화로 바꾸어 한국시장에서 물건을 사려고 하면, 실제로는 그 가치의 절반도 안되기 때문에 사령관의 입장으로서도 고충이 많다고 거듭 설명드렸다. 그 자리에서 李대통령은 해방 후 1달러당 15환부터 시작된 환율이 500환까지 치솟게 된 아픈 역사를 되새기고 […]",
-          "link": "http://economicview.net/84884/",
-          "publishedOn": "2024-01-05T05:37:47.000Z",
-          "wordCount": 1298,
-          "title": "觀光弗",
-          "imageUrl": "https://s0.wp.com/i/blank.jpg"
         }
       ]
     },
@@ -2483,6 +2471,86 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=103552",
+          "author": "노동인권저널리즘센터",
+          "description": "노동인권저널리즘센터는 2024년 ‘1월의 나쁜 사설’로 조선일보와 서울신문 사설을 선정했다. 심사위원단은 ‘인간 존중’과 ‘진실 추구’ 보도 의무를 외면한 채, 사실 왜곡과 상징조작을 통해 이태원 참사 특별법의 공적 담론을 훼손하고 진상 규명 목소리를 축소·생략하고 정치 쟁점화했다고 평가했다. 조선일보가 1월 10일 “민주당 ‘핼러윈 특조위’ 강행, 제2의 ‘세월호 특조위’ 불 보듯”이란 제목의 사설을 내보낸 다음날 서울신문은 “야(野) 핼러윈 특조위...\nThe post ‘핼러윈 특조위’라고? 조선일보의 상징조작과 서울신문의 표절. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103552",
+          "publishedOn": "2024-02-06T11:48:07.000Z",
+          "wordCount": null,
+          "title": "‘핼러윈 특조위’라고? 조선일보의 상징조작과 서울신문의 표절.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103542",
+          "author": "정지우",
+          "description": "우리 시대에 결혼하고 아이를 낳아 키우겠다는 것은 너무도 매력 없는 선택지가 되었다. 당장 SNS만 켜더라도, 온갖 쇼츠와 릴스, 각종 광고는 우리에게 매일 ‘버킷리스트’를 쌓아 올린다. 그리스 산토리니에 가서 하룻밤을 보내는 것, 치앙마이에서 한 달 살기 하는 것, 몽골의 은하수나 노르웨이의 오로라를 보는 것. 돈은 그런 데 쓰라고 있는 것이지, 결혼하고 아이 낳고 키우는 데 쓰는...\nThe post 우리 시대의 결혼 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103542",
+          "publishedOn": "2024-02-06T08:39:14.000Z",
+          "wordCount": null,
+          "title": "우리 시대의 결혼",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103514",
+          "author": "이정환",
+          "description": "오늘 아침 신문, 엇갈린 논조와 기사 가치 판단. 쟁점과 현안. 뇌물 준 사건은 유죄, 뇌물 줘서 합병한 사건은 무죄. 이재용의 승리는 윤석열의 완패다. 엘리엇 소송에 미칠 영향은? 가장 욕먹지 않을 선택, 연합 위성정당이란 출구 전략. 더 깊게 읽기. 새로운 게임의 룰, 누가 웃을까. 의원 꿔주기? 정의당이 1번? 해법과 대안. 야쿠르트 아줌마의 노인 돌봄 30년. 무상...\nThe post 악어가 입을 벌리면 그때는 이미 너무 늦다: 슬로우레터 2월6일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103514",
+          "publishedOn": "2024-02-05T22:05:20.000Z",
+          "wordCount": null,
+          "title": "악어가 입을 벌리면 그때는 이미 너무 늦다: 슬로우레터 2월6일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103490",
+          "author": "최병천",
+          "description": "가장 욕먹지 않는 선택… 군소 정당 다당제 본격화할 듯 이재명 민주당 대표가 연동형 선거제를 유지하고 비례 위성정당을 만들겠다고 밝혔다. 큰 틀에서 용혜인 기본소득당 의원의 제안을 수용한 셈이다. 용혜인 의원은 ‘연합비례당’이라고 표현했지만 내용적으로 보면 ‘연합 위성정당’을 만들기로 했다. 모양새만 보면, 2020년 총선 시기에는 위성정당을 만들면 비난을 받았는데, 2024년 총선에서는 위성정당을 만들면서도 박수받는 상황이 됐다. 연합 위성정당을...\nThe post 민주당의 연합 위성정당 꼼수, 정의당이 가장 큰 피해를 본다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103490",
+          "publishedOn": "2024-02-05T08:03:06.000Z",
+          "wordCount": null,
+          "title": "민주당의 연합 위성정당 꼼수, 정의당이 가장 큰 피해를 본다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103458",
+          "author": "이정환",
+          "description": "기자회견 없이 단독 대담만. ‘한핵관’ 김경율의 출마 포기가 의미하는 것. 윤석열 지지율 29%로 추락. ‘용핵관’ 공천이 변수. 쟁점과 현안. 윤석열-한동훈 갈등 끝나지 않았다. 반쪽으로 출발한 ‘새로운미래’. 더 깊게 읽기. 물고 물리는 프레임 전쟁. 스윙 선거구 62곳에 달렸다. 다르게 읽기. “아무도 나서지 않았다.” 해법과 대안. 범죄 피해 보상을 월급 기준으로? 의대 정원 1700명 늘린다. 병원 자주...\nThe post 한동훈의 거짓말, 목련 피어도 김포가 서울 될 일 없다: 슬로우레터 2월5일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103458",
+          "publishedOn": "2024-02-04T22:09:17.000Z",
+          "wordCount": null,
+          "title": "한동훈의 거짓말, 목련 피어도 김포가 서울 될 일 없다: 슬로우레터 2월5일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103421",
+          "author": "이정환",
+          "description": "다음주 월요일 5일 이재용(삼성전자 회장)의 불법 승계 재판 1심 결과가 나온다. 이게 왜 중요한가. 핵심은 이것이다. 30년에 걸쳐 완성된 이재용의 후계구도. 이번 재판의 쟁점은. 좀 더 깊이 들어가 보자. 2100배 수익률, 이재용 왕국의 기반. 어떻게 될까.\nThe post 이재용 재판, 한국 사회의 공정과 상식을 묻는다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103421",
+          "publishedOn": "2024-02-03T22:43:23.000Z",
+          "wordCount": null,
+          "title": "이재용 재판, 한국 사회의 공정과 상식을 묻는다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103360",
+          "author": "이정환",
+          "description": "이준석(개혁신당 대표)이 노인 지하철 무임승차를 폐지하자는 정책을 내놔서 논란이 됐다. 이게 왜 중요한가. 지속가능성과 형평성, 두 가지 이슈가 있다. 이준석은 월 1만 원 교통카드을 지급하자고 했다. 이준석은 대중교통 패스가 보편적 복지라고 주장한다. 지하철 적자, 구조적인 원인이 뭔가. 노인들 때문에 적자? 오해와 진실. 누적 적자가 17조 원이나 된다. 무임승차가 지하철 누적 적자에 미치는 영향이 어느 정도일까....\nThe post 노인 무임승차 폐지? 오히려 전 국민 대중교통 무료를  이야기해야 할 때다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103360",
+          "publishedOn": "2024-02-02T04:56:04.000Z",
+          "wordCount": null,
+          "title": "노인 무임승차 폐지? 오히려 전 국민 대중교통 무료를  이야기해야 할 때다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103317",
+          "author": "이정환",
+          "description": "소방관의 죽음. 정답 정해놓고 당원 투표. 이재명의 선택. 쟁점과 현안. 의석 5석이면 보조금이 23억 원. 필수 의료 패키지, 10조 원 쏟아붓는다. 다르게 읽기. 중대재해법 유예 외면? 더 깊게 읽기. “사람 죽이는 제품 만들고 있다.” 기후 의제에 30석 달렸다. 오늘의 TMI. 트럼프가 비행기 타고 재판 다니는 이유. 국가대표 해병대 캠프라는 도시 전설. 결국 KBS만 찍어 신년...\nThe post 이재명의 선택, “명분도 리더십도 다 잃었다”는 비판을 받는 이유: 슬로우레터 2월2일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103317",
+          "publishedOn": "2024-02-01T22:10:39.000Z",
+          "wordCount": null,
+          "title": "이재명의 선택, “명분도 리더십도 다 잃었다”는 비판을 받는 이유: 슬로우레터 2월2일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=103286",
           "author": "북극여우",
@@ -2942,76 +3010,6 @@
           "wordCount": 12408,
           "title": "증오의 게임을 넘어서: 2024년에 제안하는 36가지 미디어 테제",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/animals-1782431_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=102003",
-          "author": "이정환",
-          "description": "쌍특검에 거부권 행사. 옷 잘 입고 술 안 먹는 윤석열. 제2부속실 이제서야 만든다고? 다르게 읽기. 말 안 듣는 대통령, 조중동의 불만이 커져간다. 조선일보와 중앙일보가 제안하는 출구 전략. 쟁점과 현안. 이재명 습격 피의자가 남긴 말. 문제의 핵심은. “행동하는 양심”은 어디로. “왜 둘 밖에 없나.” 북한 사흘 연속 포격. 더 깊게 읽기. 부산 민심이 요동을 친다. SBS...\nThe post ‘술 안 먹는 윤석열’, 한동훈이 조선일보가 제안한 출구전략을 걷어찼다: 슬로우레터 1월8일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/102003",
-          "publishedOn": "2024-01-07T22:06:38.000Z",
-          "wordCount": 6126,
-          "title": "‘술 안 먹는 윤석열’, 한동훈이 조선일보가 제안한 출구전략을 걷어찼다: 슬로우레터 1월8일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/01_CJK_1527-복사-2.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101989",
-          "author": "조용수",
-          "description": "아무리 중요한 일도 때와 장소를 가려야 하는 법. 초상집 가서 옳다 그르다를 따지면 쫓겨나기 십상이다. 애도를 표하는 게 먼저다. 칼에 목이 찔렸다 칼에 목을 찔리면 위험하다. 두개골이나 갈비뼈와 같은 단단한 물체가 지켜주지 못하는 공간이기 때문이다. 일단 흉기가 피부라는 방어막을 뚫고 들어가면 그 즉시 응급이다. 겉으로 보이는 상처만으로 중증도를 평가해선 안 된다. 사고기전만으로 중증외상 성립이다. 목...\nThe post 응급의학과 교수가 본 이재명 전원 논란 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101989",
-          "publishedOn": "2024-01-07T07:40:54.000Z",
-          "wordCount": 5679,
-          "title": "응급의학과 교수가 본 이재명 전원 논란",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/238073852_3630803567144747_287890983380994894_n.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101948",
-          "author": "이정환",
-          "description": "[슬로우데이터] 보도자료에서 숫자를 이야기하는 방법. 서울시가 지방세 체납을 카카오톡 메시지로 알려주는 서비스를 한 달 동안 테스트했는데 결과가 흥미롭다. TMI. ‘쓸고퀄’이지만 정확한 설명은 다음과 같다. 아쉬운 대목.\nThe post 체납 알림 카톡 열어본 사람 66%가 세금을 냈다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101948",
-          "publishedOn": "2024-01-05T02:01:45.000Z",
-          "wordCount": 4294,
-          "title": "체납 알림 카톡 열어본 사람 66%가 세금을 냈다.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/kakaotalk-app.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101914",
-          "author": "이정환",
-          "description": "‘어느 쪽 사람인가’가 중요한가. 이슈 블랙홀. 이준석과 이낙연 신당, 각각 10%와 6%. “전두환 ‘씨’ 말고 ‘전 대통령’이라고 불러라.” 30가지 감세 선물? 더 깊게 읽기. 10년 불매 운동의 승리? 남양유업 ‘오너 경영’ 끝났다. 이 개가 그 개 맞나, 1억 원 들여 반려견 복제 논란. 다르게 읽기. 사실을 말했다는 이유로 유죄? 오늘의 TMI. 테트리스 끝까지 가봤다. 상장기업...\nThe post 전두환‘씨’ 말고 ‘전 대통령’이라고 불러라? 지금 KBS에서 벌어지고 있는 일: 슬로우레터 1월5일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101914",
-          "publishedOn": "2024-01-04T22:04:21.000Z",
-          "wordCount": 5815,
-          "title": "전두환‘씨’ 말고 ‘전 대통령’이라고 불러라? 지금 KBS에서 벌어지고 있는 일: 슬로우레터 1월5일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/12/img1.daumcdn-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101888",
-          "author": "정혜승",
-          "description": "[마냐의 북라이딩] 대학원생 연구로 시작해 어느새 데모꾼이 된 500일 체험의 기록… 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, ‘홍보가 아니라 소통입니다’ 저자 정혜승의 종횡무진 독서 탐험기. 오늘 ‘마냐의 북라이딩’이 소개하는 책은 [장애시민 불복종] 변재원 지음, 창비: 2023.입니다. 전장연(전국장애인차별철폐연대)의 투쟁은 많은 비장애인에게는 폭력적이고 낯설며 기이하게 느껴지기까지 합니다. 하지만 편하고 우아하고 보기 좋은 투쟁이라는 건 세상에...\nThe post 장애인의 지하철 투쟁이 징글징글한 당신에게: 데모꾼이 된 대학원생의 500일 기록 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101888",
-          "publishedOn": "2024-01-04T10:42:33.000Z",
-          "wordCount": 5654,
-          "title": "장애인의 지하철 투쟁이 징글징글한 당신에게: 데모꾼이 된 대학원생의 500일 기록",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/pic_003-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101850",
-          "author": "이정환",
-          "description": "누가 음모론을 말하는가. 이재명 공격한 피의자는 미래통합당 당원 출신. 민주당의 이재명 구심력이 강해졌다. 증오정치와 분노투표, 이대로는 안 된다. 윤석열이 병문안을 가야 한다. 쟁점과 현안. 피할 수 있었던 논란. 기자회견 대신 민생 토론회? “류호정처럼 되지 말자.” 더 깊게 읽기. 윤세영의 눈물? 협박? 제2의 레고랜드 사태? 금투세 폐지하면 세수 1조3000억 원 증발. 한국의 중도는. 해법과 대안. 90초...\nThe post “한동훈에게 총선 주연 넘겨라”, 조선일보의 조언: 슬로우레터 1월4일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101850",
-          "publishedOn": "2024-01-03T22:08:23.000Z",
-          "wordCount": 6851,
-          "title": "“한동훈에게 총선 주연 넘겨라”, 조선일보의 조언: 슬로우레터 1월4일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/fFL5s1GfZpSG6594e7aea317b1.37661026-1000x666.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=101807",
-          "author": "권영전",
-          "description": "사이시옷은 발음 문제다 사이시옷 문제는 알고 보면 발음 문제다. 사실 모든 표기 문제는 발음 문제다. 글자는 결국 말을 담는 그릇일 뿐이니까. 그래서 한글 맞춤법은 들머리 제1항부터 “한글 맞춤법은 표준어를 소리대로 적”는다고 밝히고 있는 것이다. 만약 어떤 말을 사람마다 제각기 달리 발음한다면, 적을 때도 제각기 달리 적게 될 것이다. 그러니 ‘소리’, 즉 표준 발음이 없으면 맞춤법은...\nThe post 사이시옷, 없애기보다 더 많이 쓰자 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/101807",
-          "publishedOn": "2024-01-03T13:41:02.000Z",
-          "wordCount": 5195,
-          "title": "사이시옷, 없애기보다 더 많이 쓰자",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/GettyImages-a12240760.jpg"
         }
       ]
     },
@@ -3020,6 +3018,86 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=593745",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593745/%ea%b3%a8%eb%93%9c%eb%a7%8c%ec%82%ad%ec%8a%a4-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%aa%a9%ed%91%9c%ec%a3%bc%ea%b0%80",
+          "publishedOn": "2024-02-05T15:56:46.000Z",
+          "wordCount": null,
+          "title": "골드만삭스, AI붐으로 엔비디아 매출의 대폭적인 증가 예상, 골드만삭스 엔비디아 목표주가를 800달러 상향",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593728",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593728/%eb%b9%85%ed%85%8c%ed%81%ac-%ec%8b%a4%ec%a0%81-%ec%8b%9c%ec%82%ac%ec%a0%90",
+          "publishedOn": "2024-02-05T09:00:13.000Z",
+          "wordCount": null,
+          "title": "배런스, 23년 4분기 빅테크 실적 시사점 7가지",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593722",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593722/2-5-it-%ed%8a%b8%eb%a0%8c%eb%93%9c",
+          "publishedOn": "2024-02-05T05:02:03.000Z",
+          "wordCount": null,
+          "title": "2/5, 주요 기업 움직짐으로 살펴본 IT 트렌드",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593706",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593706/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%eb%a9%94%ed%83%80-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-02-04T01:25:17.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 메타 실적을 읽는 월가의 시선, 강력한 기존 비즈니스와메타버스의 강력한 성장",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593705",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593705/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ec%95%84%eb%a7%88%ec%a1%b4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-02-04T01:16:32.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 아마존 실적을 읽는 월가의 시선, 모든 부문에서 만족스럽다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593704",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593704/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ec%95%a0%ed%94%8c-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-02-04T01:06:08.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 애플 실적을 읽는 월가의 시선은 차갑다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593700",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593700/23%eb%85%84-%eb%b0%b1%ed%99%94%ec%a0%90-%eb%a7%a4%ec%b6%9c-%ec%88%9c%ec%9c%84",
+          "publishedOn": "2024-02-02T13:40:50.000Z",
+          "wordCount": null,
+          "title": "2023년 백화점 매출 순위",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593690",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593690/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ed%80%84%ec%bb%b4-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-02-01T16:28:28.000Z",
+          "wordCount": null,
+          "title": "23년 4분기 퀄컴 실적을 읽는 월가의 시선",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=593675",
           "author": "happist",
@@ -3319,126 +3397,6 @@
           "wordCount": 6353,
           "title": "1/9,  월가의 투자의견 및 주가 전망 보고서",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593344",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593344/sp-500-%ec%b2%ab-5%ea%b1%b0%eb%9e%98%ec%9d%bc-%ec%8b%a4%ec%a0%81%ea%b3%bc-%ec%97%b0%ea%b0%84-%ec%8b%a4%ec%a0%81%ea%b0%84-%ec%83%81%ea%b4%80%ea%b4%80%ea%b3%84",
-          "publishedOn": "2024-01-07T21:46:34.000Z",
-          "wordCount": 5892,
-          "title": "S&P 500의 첫 5거래일은 연간 실적과 상관관계는 68%로 높다. 2024년 S&P 500 전망은 부정적",
-          "imageUrl": "https://happist.com/wp-content/uploads/2024/01/Screenshot_20240108_062543_Chrome.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=593342",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593342/24%eb%85%84-%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5-%ec%a3%bc%ec%8b%9d-%ec%b6%94%ec%b2%9c%ec%a3%bc",
-          "publishedOn": "2024-01-06T12:40:30.000Z",
-          "wordCount": 6058,
-          "title": "The Motley Fool, 24년 투자해야할 인공지능 주식 추천주 3가지",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593337",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593337/%ec%8b%9c%ea%b0%80%ec%b4%9d%ec%95%a1-1%ec%9c%84-%ea%b8%b0%ec%97%85-%eb%b3%80%ea%b2%bd",
-          "publishedOn": "2024-01-06T03:54:17.000Z",
-          "wordCount": 5894,
-          "title": "블룸버그, 연초 애플 주가 하락으로 시가총액 1위 기업 자리를 위협받고 있다고 보도",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593332",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593332/%eb%8d%b0%ec%9d%b4%ed%83%80%eb%8f%85-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%eb%8d%b0%ec%9d%b4%ed%83%80%eb%8f%85-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2024-01-06T02:51:51.000Z",
-          "wordCount": 5738,
-          "title": "월가의 데이타독 투자의견 및 데이타독 주가 전망",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/07/호수위의-평안-kalen-emsley-unsplash_Featured.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=593330",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593330/%ec%8a%a4%eb%85%b8%ec%9a%b0%ed%94%8c%eb%a0%88%ec%9d%b4%ed%81%ac-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%8a%a4%eb%85%b8%ec%9a%b0%ed%94%8c%eb%a0%88%ec%9d%b4%ed%81%ac-%ec%a3%bc%ea%b0%80",
-          "publishedOn": "2024-01-06T02:40:15.000Z",
-          "wordCount": 5827,
-          "title": "월가의 스노우플레이크 투자의견 및 스노우플레이크 주가 전망",
-          "imageUrl": "https://happist.com/wp-content/uploads/2018/02/평창올림픽-스노우보드-금메달리스트-레드-제라드Red-Gerard-red-gerard-gold03.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=593306",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593306/1-6-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-01-06T02:15:54.000Z",
-          "wordCount": 7742,
-          "title": "1/6, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": "https://happist.com/wp-content/uploads/2024/01/세계-시가총액-Top-10-2024-1-6.png"
-        },
-        {
-          "id": "https://happist.com/?p=593280",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593280/1-5-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-01-04T22:28:00.000Z",
-          "wordCount": 7416,
-          "title": "1/5,  월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593275",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593275/%ec%95%a0%ed%94%8c-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac%ea%b3%bc-%ec%95%a0%ed%94%8c-%ec%a3%bc%ea%b0%80-%ed%8f%ad%eb%9d%bd",
-          "publishedOn": "2024-01-04T18:20:58.000Z",
-          "wordCount": 5875,
-          "title": "배런스, 24년 애플 투자의견 다운그레이드로 애플 주가 폭락",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593264",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593264/1-4-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-01-04T03:50:45.000Z",
-          "wordCount": 6716,
-          "title": "1/4,  월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593246",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593246/%ec%95%a0%ed%94%8c-%ec%a3%bc%ea%b0%80-%ec%83%81%ec%8a%b9-%ec%9a%94%ec%9d%b8",
-          "publishedOn": "2024-01-03T12:52:25.000Z",
-          "wordCount": 6095,
-          "title": "배런스, 애플 주가 하락, 애플 주가 상승 요인은 혁신에 달려 있다",
-          "imageUrl": "https://happist.com/wp-content/uploads/2022/08/애플-캠퍼스-애플-파크-Apple-park-Photo-by-Carles-Rrabada-1024x576.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=593244",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593244/%ec%9d%80%ed%87%b4%ec%83%9d%ed%99%9c-%ec%97%b0%ea%b8%88-%ec%9d%b8%ec%b6%9c",
-          "publishedOn": "2024-01-03T10:59:16.000Z",
-          "wordCount": 5846,
-          "title": "슬기로운 은퇴생활, 연금 인출 팁",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593233",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593233/%ec%8a%a4%ed%8a%b8%eb%a6%ac%eb%b0%8d-%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%95%b4%ec%a7%80%ec%9c%a8-%ec%a6%9d%ea%b0%80",
-          "publishedOn": "2024-01-03T10:13:57.000Z",
-          "wordCount": 6480,
-          "title": "WSJ, 미국인들의 스트리밍 서비스 해지율이 급증하고 있다",
-          "imageUrl": null
         }
       ]
     },
@@ -3447,6 +3405,26 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78341",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 13일 스프에 쓴 글입니다. “아메리칸 드림” 하면 뭐가 가장 먼저 떠오르시나요? 기회의 땅 미국을 상징하는 이 말의 정의는 사람마다 조금씩 다를 수 있겠지만, 옥스퍼드 사전이 정의한 범주를 크게 벗어나는 독특한 정의는 없을 것 같습니다. → 더 보기",
+          "link": "https://newspeppermint.com/2024/02/05/npsp_collegeamericandream/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_collegeamericandream",
+          "publishedOn": "2024-02-05T22:59:12.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] ‘기회의 평등’에 기반했던 아메리칸 드림에 빨간 불이 켜진 까닭은",
+          "imageUrl": null
+        },
+        {
+          "id": "https://newspeppermint.com/?p=78319",
+          "author": "veritaholic",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 11일 스프에 쓴 글입니다. 인간이 합리적인 존재인지에 대한 논쟁의 역사는 무척 깁니다. 소크라테스가 남긴 ‘너 자신을 알라’는 말은 인간의 무지, 곧 비합리성을 지적한 것입니다. 반면 플라톤은 인간의 이성, 곧 합리성이 인간을 다른 동물과 → 더 보기",
+          "link": "https://newspeppermint.com/2024/02/03/npsp_nudge/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_nudge",
+          "publishedOn": "2024-02-03T22:59:33.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 인간은 합리적이지만 또 비합리적인데요…",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=78296",
           "author": "rukahs",
@@ -3555,16 +3533,6 @@
           "publishedOn": "2024-01-08T22:59:18.000Z",
           "wordCount": 1950,
           "title": "[뉴페@스프] 2029년 화성으로 간다는 계획에 앞서 해야 할 것들",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78492",
-          "author": "NewsPeppermint",
-          "description": "새해 결심의 계절입니다. 운동과 식단 조절을 통해 더 건강해지겠다는 다짐은 새해 결심의 단골 메뉴죠. 그 가운데 체중을 감량하겠다는 구체적인 목표도 자주 포함되곤 합니다. 그런데 체중 감량에 너무 집착하다 보면 문제가 되기도 하는데요, 최근 소셜미디어에서 자주 등장한 신조어 가운데 음식 소음(food noise)이란 말이 있습니다. 배가 고파서 무언가를 먹고 싶어지고 음식 생각이 나는 본능적인 식욕에 따른 반응을 지워내야 할 부정적인 의미를 담은 소음으로 표현한 것이죠. 비만 공포증을 비판하는 글을 써 온 철학자 → 더 보기",
-          "link": "https://newspeppermint.com/2024/01/07/npsp_foodnoise/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_foodnoise",
-          "publishedOn": "2024-01-08T02:05:57.000Z",
-          "wordCount": 1430,
-          "title": "“작심삼일 그만” 균형 잡힌 새해 결심을 위하여",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
