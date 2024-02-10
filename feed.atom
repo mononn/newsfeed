@@ -2,10 +2,54 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-02-09T20:12:18.678Z</updated>
+    <updated>2024-02-10T20:11:35.974Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Introducing Fedora Atomic Desktops (Fedora Magazine)]]></title>
+        <id>https://lwn.net/Articles/961653/</id>
+        <link href="https://lwn.net/Articles/961653/"/>
+        <updated>2024-02-09T22:19:34.000Z</updated>
+        <summary type="html"><![CDATA[Fedora Magazine has announced the creation of Fedora Atomic Desktops: a way of branding Fedora's growing set of rpm-ostree spins. Joseph Gayso wrote "we’ve seen more of our mainline Fedora Linux spins make the jump to offer a version that implements rpm-ostree. It’s reached the point where it can be hard to talk about all of them at the same time. Therefore we’ve introduced a new brand that will serve to simplify how we discuss rpm-ostree and how we name future atomic spins." LWN covered Project Bluefin, which is based on Fedora's rpm-ostree work, in December 2023.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DRM-CI: A GitLab-CI pipeline for Linux kernel testing (Collabora Blog)]]></title>
+        <id>https://lwn.net/Articles/961655/</id>
+        <link href="https://lwn.net/Articles/961655/"/>
+        <updated>2024-02-09T22:15:56.000Z</updated>
+        <summary type="html"><![CDATA[Over on the Collabora blog, Helen Koike writes
+about the DRM-CI project for running automated continuous integration (CI)
+tests on multiple graphics devices in several different labs.  It uses the
+IGT GPU
+tools for testing, though there are plans to expand:
+
+The roadmap for DRM-CI includes enabling other devices, incorporating
+additional tests like kselftests, adding support for vgem driver, and
+implementing further automations. DRM-CI builds upon the groundwork laid by
+Mesa3D CI,
+including its GitLab YAML files and most of its setup, fostering 
+collaboration and mutual strengthening.
+
+[...] Adapting the DRM-CI pipeline to other subsystems is feasible with a
+few modifications. The primary consideration is setting up dedicated
+GitLab-CI runners since Freedesktop's infrastructure is meant only for
+graphics. 
+
+In light of this, our team is developing a versatile and user-friendly
+GitLab-CI pipeline. This new pipeline is envisioned to function as a
+flexible interface for kernel maintainers and developers that can be
+evolved to connect with different test environments that can also be hooked
+with CI systems such as KernelCI. This approach aims to simplify the
+integration process, making GitLab-CI more accessible and beneficial to a
+broader range of developers.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] Gnuplot 6 comes with pie]]></title>
         <id>https://lwn.net/Articles/961003/</id>
@@ -4064,155 +4108,6 @@ The post Nuvoton endpoint AI platform with dev boards and IDE appeared first on 
 The post 이태원 참사 특별법 통과, 상인에는 공감해도 유족에는 비정한 ‘핼러윈’ 조선일보 appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2023 회고 및 2024 계획]]></title>
-        <id>https://cpuu.postype.com/post/15942777</id>
-        <link href="https://cpuu.postype.com/post/15942777"/>
-        <updated>2024-01-12T06:10:37.000Z</updated>
-        <summary type="html"><![CDATA[2023
-지난해 회고 글을 찾아보니, 2022년을 마무리하며 2023년에는 아래와 같은 것을 하겠다고 다짐했었다. 항목별 근황을 업데이트해 본다. 
-1) CPPG 취득
-개인정보보호 분야의 중요성이 강조되고 있는 시점이라고 생각한다. 그래서 가장 입문 단계라고 할 수 있는 CPPG 자격증을 도전하기로 했다. 2023년에 CPPG는 4월, 8월, 12월에 시행되었는데 나는 4월에 첫 시험을 도전했다. 그 결과는 안타깝게도 불합격이었다(후기글 참고). 60점 합격인 시험에 59점으로 아쉬운 상황이었다. 원래 계획대로라면 8월이나 12월에 재도전을 하려 했으나, 안타깝게도 개인적인 이유로 응시 자체를 할 수 있는 일정이 나오지 않아서 포기하게 되었다. 하여, 2024년에 재도전하려고 한다.
-2) SW보안약점 진단원 취득
-앞서 합격 후기를 올렸듯이, 4수 만에 합격을 했다.
-개인적으로는 2023년의 가장 뿌듯한 성취였다.
-
-
-3) Go언어 공부
-파이썬을 실무에서 가장 많이 사용하고는 있지만, 무엇인가 새로운 언어에 대한 갈증을 느껴서 Go를 조금씩 배우고 있었다. 그러던 중 좋은 기회로 Go 언어 책 번역에 도전하게 되었다. 그런데 아뿔싸. 입문자용이 아니라 상급 수준의 내용이었다. 그때부터 고통이 시작되었다. 몇 달간 인고의 세월을 거치고 나니 저는 어느새 golang 개발자가 되어버렸다.
-https://www.decoding.co.kr/product/go성능최적화가이드/
-이 책의 내용은 Go 언어 프로그래밍에서 성능을 최적화하기 위해 필요한 고급 기술들을 다룬다. 저자인 Bartlomiej Plotka는 이 분야에…]]></summary>
-        <author>
-            <name>CPUU</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[책 “오늘날 우리는 컴퓨터라 부른다” 소개 만화]]></title>
-        <id>https://joone.net/?p=4888</id>
-        <link href="https://joone.net/2024/01/11/%ec%b1%85-%ec%98%a4%eb%8a%98%eb%82%a0-%ec%9a%b0%eb%a6%ac%eb%8a%94-%ec%bb%b4%ed%93%a8%ed%84%b0%eb%9d%bc-%eb%b6%80%eb%a5%b8%eb%8b%a4-%ec%86%8c%ea%b0%9c-%eb%a7%8c%ed%99%94/"/>
-        <updated>2024-01-12T05:50:16.000Z</updated>
-        <summary type="html"><![CDATA[지난 여름에 인사이트 출판사 의뢰로 그렸던 “오늘날 우리는 컴퓨터라 부른다” 소개 만화를 이제야 공유해봅니다. 제가 트위터에 본격적으로 여기 만화에 소개한 컴퓨터에 대한 역사를 연재하고 있었는데, 그 트위터를 보고 출판사에서 연락이 와서 우연한 기회이 이 만화를 그렸습니다. 우선 제가 만화를 그리는데 참고한 책의 번역본 이라서 반가웠고, 당시 전체를 다 읽어보지는 않고 필요한 부분만 읽어봤었는데, 이번 만화를 […]]]></summary>
-        <author>
-            <name>joone</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1/12, 월가의 투자의견 및 주가 전망 보고서]]></title>
-        <id>https://happist.com/?p=593416</id>
-        <link href="https://happist.com/593416/1-12-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
-        <updated>2024-01-12T02:53:22.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[‘윤적윤’의 딜레마, “특검을 왜 거부합니까”: 슬로우레터 1월12일.]]></title>
-        <id>https://slownews.kr/?p=102264</id>
-        <link href="https://slownews.kr/102264"/>
-        <updated>2024-01-11T22:04:31.000Z</updated>
-        <summary type="html"><![CDATA[“이낙연-이준석, 김대중-김종필보다 가깝다.” 공천 혈투가 시작됐다. 쟁점과 현안. “팔도 사나이.” 한동훈 효과 크지 않았다. 옥시에 이어 SK케미칼과 애경도 가습기 살균제 유죄. 더 깊게 읽기. 지금 방통심의위에서 벌어지고 있는 일. 코인의 봄이 왔다? 비트코인도 주식처럼 거래한다. 다르게 읽기. 교실에서 몰래 녹음, 아동학대 증거 안 된다. 신용사면, 최대 290만 명 연체기록 없애준다. 1일 1포퓰리즘. 해법과 대안. 외국인...
-The post ‘윤적윤’의 딜레마, “특검을 왜 거부합니까”: 슬로우레터 1월12일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PVS-Studio in 2023]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/1096/</id>
-        <link href="https://pvs-studio.com/en/blog/posts/1096/"/>
-        <updated>2024-01-11T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[It's January 2024, so it's time to look back on 2023. In this article, we will not only discuss all the new features that have appeared in 2023, but also go over the main functions of the PVS-Studio...]]></summary>
-        <author>
-            <name>from pvs-studio.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenSSH announces DSA-removal timeline]]></title>
-        <id>https://lwn.net/Articles/958048/</id>
-        <link href="https://lwn.net/Articles/958048/"/>
-        <updated>2024-01-11T15:20:23.000Z</updated>
-        <summary type="html"><![CDATA[For those of you still using DSA keys with SSH: the project has announced
-its plans to remove support for that algorithm around the beginning of
-2025.
-
-
-	The only remaining use of DSA at this point should be deeply legacy
-	devices. As such, we no longer consider the costs of maintaining
-	DSA in OpenSSH to be justified. Moreover, we hope that OpenSSH's
-	final removal of this insecure algorithm accelerates its
-	deprecation in other SSH implementations and allows maintainers of
-	cryptography libraries to remove it too.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The kernel "closure" API]]></title>
-        <id>https://lwn.net/Articles/957187/</id>
-        <link href="https://lwn.net/Articles/957187/"/>
-        <updated>2024-01-11T15:09:58.000Z</updated>
-        <summary type="html"><![CDATA[The data structure known as a "closure" first found its way into the
-mainline kernel with the addition of bcache in the 3.10 development
-cycle.  With the advent of bcachefs in
-6.7, though, it acquired a second user and was moved to the kernel's
-lib directory, making it available to other kernel users as well.
-The documentation of closures in the source is better than that of many
-things in the kernel, but there is still room for a gentler introduction.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Thursday]]></title>
-        <id>https://lwn.net/Articles/958029/</id>
-        <link href="https://lwn.net/Articles/958029/"/>
-        <updated>2024-01-11T14:29:40.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium), Fedora (chromium, python-paramiko, tigervnc, and xorg-x11-server), Oracle (ipa, libxml2, python-urllib3, python3, and squid), Red Hat (.NET 6.0, .NET 7.0, .NET 8.0, container-tools:4.0, fence-agents, frr, gnutls, idm:DL1, ipa, kernel, kernel-rt, libarchive, libxml2, nss, openssl, pixman, python-urllib3, python3, tigervnc, tomcat, and virt:rhel and virt-devel:rhel modules), SUSE (gstreamer-plugins-bad), and Ubuntu (firefox, Go, linux-aws, linux-gcp-5.15, linux-intel-iotg-5.15, linux-iot, linux-oem-6.1, and twisted).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to Design an ISA]]></title>
-        <id>3639445</id>
-        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3639445"/>
-        <updated>2024-01-11T14:26:25.000Z</updated>
-        <author>
-            <name>ACM Queue - All Queue Content</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1/11, 월가의 투자의견 및 주가 전망 보고서]]></title>
-        <id>https://happist.com/?p=593412</id>
-        <link href="https://happist.com/593412/1-11-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
-        <updated>2024-01-11T11:47:52.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[타인의 고통에 우리는 어떻게 대처해야 할까]]></title>
-        <id>https://newspeppermint.com/?p=78521</id>
-        <link href="https://newspeppermint.com/2024/01/11/npsp_compassion/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_compassion"/>
-        <updated>2024-01-11T10:40:45.000Z</updated>
-        <summary type="html"><![CDATA[‘공감’, ‘공감 능력’이 화두로 떠오른 시대입니다. 그런데 우리는 타인의 고통에 얼마나 공감할 수 있을까요? 심리학자 애덤 그랜트는 우리가 지구 반대편의 참상, 사회적 거악의 존재에 무덤덤해지는 것이 무관심이나 냉혹함 때문이 아니라, 그런 현실을 바꾸기 위해 할 수 있는 일이 아무것도 없다는 좌절감에서 오는 무력감 때문이라고 말하며, 이 감정을 ‘공감성 고통(empathic distress)’이라고 설명합니다. 고통받는 다른 사람을 돕기 위해 우리가 할 수 있는 것들에 관해 생각해 봤습니다. 전문 번역: 무기력하고 아무런 감정이 느껴지지 않는다고요? → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[세상 쓸모 없는 게 애플 걱정이라는데…]]></title>
-        <id>https://slownews.kr/?p=102234</id>
-        <link href="https://slownews.kr/102234"/>
-        <updated>2024-01-11T08:39:57.000Z</updated>
-        <summary type="html"><![CDATA[[슬로우리포트] MZ 세대가 열광하는 아이폰 부진한 이유는? 애플 주가가 새해 들어 폭락하다가 반등했다. 폭락했던 이유는 세 가지다. 투자 은행 바클레이스가 애플의 투자 등급을 ‘중립’에서 ‘비중 축소’로 변경하면서 위기감이 확산됐다. 하지만 모건스탠리는 지금이야말로 애플 주식을 살 때라는 보고서를 내놨다. S&P 마켓인텔리전스 조사에서는 45명의 애널리스트 가운데 20명이 강력 매수(Strong Buy), 7명이 매수(Buy) 의견을 냈다. 중립이 14명, 매도와...
-The post 세상 쓸모 없는 게 애플 걱정이라는데… appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
         </author>
     </entry>
     <entry>
