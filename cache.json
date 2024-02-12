@@ -276,6 +276,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "240e1e75-deaf-4d35-844d-65eb86deac6d",
+          "author": "Ani Sinha, Igor Mammedov",
+          "description": "Red Hat Enterprise Linux (RHEL) 8/9 provides virtualization functionality, which enables a machine running RHEL to host multiple virtual machines (VMs), also referred to as guests. The basis of creating VMs on RHEL is the hypervisor software stack that controls hardware and enables running multiple operating systems on a host machine. The hypervisor stack consists of the kernel based virtual machine module (KVM) and virtualization kernel drivers, the QEMU emulator that simulates a complete virtualized hardware platform and manages how resources are allocated on the host and presented to the guest and the libvirt software suite that serves as a management and communication layer, making QEMU easier to interact with, enforcing security rules.\nThis article will describe how to set up an ACPI …",
+          "link": "https://developers.redhat.com/articles/2024/02/12/debug-acpi-issues-windows-virtual-machines-rhel",
+          "publishedOn": "2024-02-12T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Debug ACPI issues in Windows virtual machines on RHEL",
+          "imageUrl": null
+        },
+        {
+          "id": "3e03d834-e04b-4c65-ad55-cc92dff4a79e",
+          "author": "Andrew Munro",
+          "description": "The Red Hat build of Keycloak offers a new era of identity and access management. This product is based on the Keycloak project, which enables you to secure your web applications by providing web single sign-on (SSO) capabilities based on OpenID Connect, OAuth 2.0, and SAML 2.0. The release of this product replaces any plans for a future single sign-on (8.0 or higher) feature release. \nWhile preserving the power and functionality of single sign-on, the Red Hat build of Keycloak is faster, more flexible, and efficient. For example:\nThis product uses a streamlined distribution model based on Red Hat build of Quarkus.\nGetting started is simpler than with single sign-on; you choose from multiple configuration source instead of editing XML files.\nInteractive command-line help supplements documentation for quick answers to questions.\nVideo demo\nWatch this two-minute getting started video, which shows the initial steps to use the product.\nTry out Red Hat build of Keycloak\nThe documentation and software are available so you can try it out for yourself.\nLog on to the Red Hat customer portal to download the Red Hat build of Keycloak and try the Getting Started Guide.\nCheck out more Red Hat build of Keycloak articles at Red Hat Developer.\nGetting started with the Red Hat build of Keycloak 22 appeared first on Red Hat Developer.",
+          "link": "https://developers.redhat.com/articles/2024/02/12/getting-started-red-hat-build-keycloak-22",
+          "publishedOn": "2024-02-12T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Getting started with the Red Hat build of Keycloak 22",
+          "imageUrl": null
+        },
+        {
           "id": "b16327bf-57a7-462e-a4bd-2069dbfacfe1",
           "author": "Juerg Ritter",
           "description": "Keeping your systems safe and secure is something that every organization and every individual should be concerned about, and there are many aspects to that topic. One of them is to harden systems according to a standard and also assess the systems against these standards. OpenSCAP is an open standard that lets you achieve exactly that. You can use it to check Linux-based systems as well as Red Hat OpenShift clusters against industry standards such as CIS, ACSC E8, or NIST.\nThe basics of creating a compliance report\nThe simplest way to run evaluate the compliance status of a system is to use the oscap tool and run it against a profile such as ACSC E8. Here an example on a Red Hat Enterprise Linux 9 system:\n$ oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_e8 --results-arf a…",
@@ -516,16 +536,6 @@
           "publishedOn": "2024-01-31T02:23:00.000Z",
           "wordCount": null,
           "title": "Using Gemini models in Go with LangChainGo",
-          "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2024/sign-in-with-google-in-go/",
-          "author": null,
-          "description": "<p>This post provides some code samples for implementing a &quot;Sign-in with Google&quot;\nflow for your web application in Go. For an overview of auth/authz and the OAuth\nprotocol, please refer to my earlier post about\n<a class=\"reference external\" href=\"https://eli.thegreenplace.net/2023/sign-in-with-github-in-go/\">Sign-in with GitHub</a>.</p>\n<p>Sign-in with Google has existed in one form or another for …</p>",
-          "link": "https://eli.thegreenplace.net/2024/sign-in-with-google-in-go/",
-          "publishedOn": "2024-01-13T14:33:00.000Z",
-          "wordCount": 961,
-          "title": "Sign in with Google in Go",
           "imageUrl": null
         }
       ]
@@ -1157,6 +1167,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/961871/",
+          "author": "jzb",
+          "description": "The FreeBSD Project has announced that it intends to deprecate 32-bit platforms \"over the next couple of major releases\". \n\n\nWe anticipate FreeBSD 15.0 will not include the armv6, i386, and powerpc platforms, and FreeBSD 16.0 will not include armv7. Support for executing 32-bit binaries on 64-bit kernels will be retained through at least the lifetime of the stable/16 branch if not longer.\n\n\nThe announcement notes that support for some 32-bit platforms \"may be extended if there is both demand and commitment to increased developer resources\". More details about the current plans for 32-bit platforms are available in the FreeBSD 14.0-RELEASE Release Notes.",
+          "link": "https://lwn.net/Articles/961871/",
+          "publishedOn": "2024-02-12T19:27:17.000Z",
+          "wordCount": null,
+          "title": "FreeBSD phasing out 32-bit platforms",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/961086/",
+          "author": "jzb",
+          "description": "Once again, runc—a tool\nfor spawning and running OCI containers—is drawing attention due to a high\nseverity container breakout attack. This vulnerability is interesting for\nseveral reasons: its potential for widespread impact, the continued difficulty\nin actually containing containers, the dangers of running containers\nas a privileged user, and the fact that this vulnerability is made possible\nin part by a response to a previous\ncontainer breakout flaw in runc.",
+          "link": "https://lwn.net/Articles/961086/",
+          "publishedOn": "2024-02-12T15:57:00.000Z",
+          "wordCount": null,
+          "title": "[$] Another runc container breakout",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/961842/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (libgit2), Fedora (chromium, firecracker, libkrun, openssh, python-nikola, runc, rust-event-manager, rust-kvm-bindings, rust-kvm-ioctls, rust-linux-loader, rust-userfaultfd, rust-versionize, rust-vhost, rust-vhost-user-backend, rust-virtio-queue, rust-vm-memory, rust-vm-superio, rust-vmm-sys-util, virtiofsd, webkitgtk, and wireshark), Mageia (filezilla and xpdf), Oracle (gimp), Red Hat (libmaxminddb, linux-firmware, squid:4, and tcpdump), Slackware (xpdf), SUSE (cdi-apiserver-container, cdi-cloner-container, cdi- controller-container, cdi-importer-container, cdi-operator-container, cdi- uploadproxy-container, cdi-uploadserver-container, cont and suse-build-key), and Ubuntu (python-glance-store and webkit2gtk).",
+          "link": "https://lwn.net/Articles/961842/",
+          "publishedOn": "2024-02-12T14:42:38.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/961764/",
+          "author": "corbet",
+          "description": "The 6.8-rc4 kernel prepatch is out for\ntesting.  \"Commit counts and contents look normal for this phase of the\nrelease, nothing here really stands out.\"",
+          "link": "https://lwn.net/Articles/961764/",
+          "publishedOn": "2024-02-11T20:43:26.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.8-rc4",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/961653/",
           "author": "jzb",
@@ -2177,6 +2227,16 @@
       "feedUrl": "https://shape-of-code.com/feed/",
       "siteUrl": "https://shape-of-code.com",
       "articles": [
+        {
+          "id": "https://shape-of-code.com/?p=8572",
+          "author": "Derek Jones",
+          "description": "Issues in Jira repositories sometimes include an estimate, in story points, but no information on time to complete (an opening/closing date is usually available; in some projects issues pass through various phases, and enter/exit date/time may be available). Evidence-based software engineering is a data driven approach to figuring out software development processes. At the practical […]",
+          "link": "https://shape-of-code.com/2024/02/11/some-information-on-story-point-estimates-for-16-projects/",
+          "publishedOn": "2024-02-11T23:14:27.000Z",
+          "wordCount": null,
+          "title": "Some information on story point estimates for 16 projects",
+          "imageUrl": null
+        },
         {
           "id": "https://shape-of-code.com/?p=8548",
           "author": "Derek Jones",
@@ -3200,6 +3260,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78695",
+          "author": "NewsPeppermint",
+          "description": "오늘날 돈만 있으면 뭐든지 할 수 있는 것처럼 보이는 자본주의 사회에서 부자들이 돈을 쓰는 새로운 용처 가운데 하나가 바로 영향력을 사는 일입니다. 특히 소셜미디어를 통해 주목받게 되면 그렇게 쌓은 명성과 영향력을 이용해 다시 돈을 벌 수 있는 선순환이 일어날 수 있는데, 부자들에겐 진입장벽이 상대적으로 낮다고 할 수 있습니다. 소셜미디어의 영향력을 십분 활용해 권력을 누리는 대표적인 인물로 보통 도널드 트럼프나 일론 머스크를 떠올리는데, 뉴욕타임스에 월스트리트의 헤지펀드 매니저 빌 애크먼을 예로 든 → 더 보기",
+          "link": "https://newspeppermint.com/2024/02/12/npsp_wealthpower/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_wealthpower",
+          "publishedOn": "2024-02-12T05:00:38.000Z",
+          "wordCount": null,
+          "title": "부자들에게 더욱 더 보장된 ‘표현의 자유’는 괜찮을까",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=78667",
           "author": "NewsPeppermint",
