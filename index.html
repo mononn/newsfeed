@@ -22,11 +22,437 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-12 datetime="2024-02-12T19:27:17.000Z">2024-02-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-12 datetime="2024-02-12T19:27:17.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-13 datetime="2024-02-13T19:13:10.000Z">2024-02-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-13 datetime="2024-02-13T19:13:10.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/961961/"
+                        open
+                      >
+                        <summary class="article-expander__title">The kernel becomes its own CNA</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/961961/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Greg Kroah-Hartman has announced
+that the kernel project has been accepted as a CVE numbering authority
+(CNA).  The way that CVE numbers will be handled by the kernel is described
+in this
+documentation patch:
+
+
+	As part of the normal stable release process, kernel changes that
+	are potentially security issues are identified by the developers
+	responsible for CVE number assignments and have CVE numbers
+	automatically assigned to them.  These assignments are published on
+	the linux-cve mailing list as announcements on a frequent basis.
+
+	Note, due to the layer at which the Linux kernel is in a system,
+	almost any bug might be exploitable to compromise the security of
+	the kernel, but the possibility of exploitation is often not
+	evident when the bug is fixed.  Because of this, the CVE assignment
+	team are overly cautious and assign CVE numbers to any bugfix that
+	they identify.  This explains the seemingly large number of CVEs
+	that are issued by the Linux kernel team.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/961117/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] A look at dynamic linking</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/961117/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The dynamic linker is a critical component of modern Linux systems, being
+responsible for setting up the address space of most processes. While statically
+linked binaries have become more popular over time as the tradeoffs that
+originally led to dynamic linking become less relevant, dynamic linking is still
+the default. This article looks at what steps the dynamic linker takes to
+prepare a program for execution.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/961937/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/961937/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Fedora (clamav and virtiofsd), Oracle (gimp), Red Hat (gnutls and nss), SUSE (kubevirt, virt-api-container, virt-controller-container, virt-exportproxy-container, virt-exportserver-container, virt-handler-container, virt-launcher-container, virt-libguestfs-t and squid), and Ubuntu (openssl).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Google for Developers Blog - News about Web, Mobile, AI and Cloud</button>
+                  <a class="source-heading__link" href="http://developers.googleblog.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://developers.googleblog.com/2024/02/federated-credential-management-migration-for-google-identity-services.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Federated Credential Management (FedCM) Migration for Google Identity Services</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://developers.googleblog.com/2024/02/federated-credential-management-migration-for-google-identity-services.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Posted by Gina Biernacki, Product Manager
+
+
+
+
+
+
+
+Chrome is phasing out support for third-party cookies this year, subject to addressing any remaining concerns of the CMA. A relatively new web API, Federated Credential Management (FedCM), will enable sign-in for the Google Identity Services (GIS) library after the phase out of third-party cookies. Starting in April, GIS developers will be automatically migrated to the FedCM API. For most developers, this migration will occur seamlessly through backwards-compatible updates to the GIS library. However, some websites with custom integrations may require minor changes. We encourage all developers to experiment with FedCM, as previously announced through the beta program, to ensure flows will not be interrupted. Developers have the ability to te…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Martin Fowler</button>
+                  <a class="source-heading__link" href="https://martinfowler.com/feed.atom">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://martinfowler.com/articles/engineering-practices-llm.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Engineering Practices for LLM Application Development</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://martinfowler.com/articles/engineering-practices-llm.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>LLM engineering involves much more than just prompt design or prompt
+       engineering. Here David Tan and Jessie
+       Wang reflect on how regular engineering practices such as
+       testing and refactoring helped them deliver a prototype LLM
+       application rapidly and reliably.
+more…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Evans Library</button>
+                  <a class="source-heading__link" href="https://evan-moon.github.io">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="20240213-category-theory-for-programmers-3-categories-great-and-small"
+                        open
+                      >
+                        <summary class="article-expander__title">[번역] 프로그래머를 위한 카테고리 이론 - 3. 다양한 카테고리들</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://evan-moon.github.io/2024/02/13/category-theory-for-programmers-3-categories-great-and-small/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>우리는 다양한 예시들을 연구해보면서 카테고리에 대한 진정한 이해에 한발짝 더 다가갈 수 있다. 카테고리는 매우 다양한 형태와 크기를 가지고 있기 때문에 종종 전혀 예상하지 못 했던 곳에서 나타나기도 한다. 일단 가장 간단한 것부터 한번 시작해보도록 하자.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="01b77d2d-6db2-47fe-bd18-17fe3b79b62a"
+                        open
+                      >
+                        <summary class="article-expander__title">Connect a Quarkus app to an external SQL Server database</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/02/13/connect-quarkus-app-external-sql-server-database">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Quarkus is a full-stack, Java-based framework for building, deploying, and running applications, including building and deploying applications in containers without manually creating YAML files. It offers a zero-configuration database container using its dev services feature, enabling rapid development and testing. However, having an external database for your application is vital for regulatory compliance. It brings benefits such as isolation, a simplified development workflow, and independence from the development environment. 
+This article refers to a fictitious company called Pedal. Pedal is a commerce application platform with a microservices architecture for listing and selling bicycles. 
+In this tutorial, you’ll build the Pedal bike service, using Quarkus to retrieve all listed bike…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >CPUU의 Daydreamin&amp;#039;</button>
+                  <a class="source-heading__link" href="https://cpuu.postype.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://cpuu.postype.com/post/16247669"
+                        open
+                      >
+                        <summary class="article-expander__title">백트래킹과 n-Queens 문제</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://cpuu.postype.com/post/16247669">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>n-Queens 문제
+N퀸 문제는 1848년 막스 베첼이 처음으로 제안한 퍼즐 문제로, 수학과 컴퓨터 과학에서 알고리즘 문제로 많이 거론된다.
+예를들어 8×8 체스판에 8개의 퀸을 배치하는데, 이 때 어떤 퀸도 다른 퀸을 위협해서는 안된다는 조건이 있다. 체스에서 퀸은 상하좌우, 대각선 4방향으로 거리 제한 없이 이동할 수 있다. 위협하지 못한다는 것은 결국 특정 퀸이 다른 퀸의 움직이는 경로에 존재하지 않도록 모든 퀸들을 적절하게 배치하는 것이다.
+위와 같이 8퀸 문제의 경우 12개의 unique 형태가 있으며, 이를 근본해라고 한다. 
+대칭인 마지막 패턴(4개, 180도 회전과 상하대칭이 겹침)을 제외하고, 나머지 8개를 회전(4개) 및 대칭이동(4개) 으로 만들 수 있으므로, 여덟 퀸의 경우 총 92개의 해가 있다.
+n개의 퀸을 n × n 판에 나타내는 해의 수는 다음 사이트에 공개되어 있다. 
+예를들어 N&#x3D;8이면 92, N&#x3D;9이면 352, N&#x3D;10이면 724, N&#x3D;11 이면 2,680이고 N&#x3D;12이면 14,200이다.
+https://oeis.org/A000170
+
+백트래킹
+문제 해결 알고리즘 중 백트래킹(Backtracking)은 해결책으로 가능한 모든 경로를 탐색하면서, 각 단계에서 현재의 선택이 문제의 조건을 만족하지 않을 경우 이전 단계(또는 여러 단계)로 &quot;되돌아가서&quot;(backtrack) 다른 가능한 선택을 시도하는 방식의 알고리즘이다. 이 과정은 모든 가능한 경우의 수를 시험하지만, 불필요한 경로의 탐색을 최소화하여 시간과 자원을 절약할 수 있게 해준다. 백트래킹은 주로 결정 문제(예/아니오로…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Blog – Modern Embedded Software | Quantum Leaps</button>
+                  <a class="source-heading__link" href="https://www.state-machine.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.state-machine.com/?p&#x3D;16129"
+                        open
+                      >
+                        <summary class="article-expander__title">How Big Should Active Objects Get?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.state-machine.com/how-big-should-active-objects-get">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Q: How big should active objects get?
+A: As big as possible, but not bigger.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-12 datetime="2024-02-12T22:59:17.000Z">2024-02-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-12 datetime="2024-02-12T22:59:17.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78366"
+                        open
+                      >
+                        <summary class="article-expander__title">[뉴페@스프] 사람들 착각이 아니라 그들이 ‘진짜 현실’을 못 보는 것 아닐까요</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/02/12/npsp_vibecession/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_vibecession">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 18일 스프에 쓴 글입니다. 미국 언론의 사명 가운데 “기계적인 정치적 중립”은 없습니다. 이번에 공화당을 비판하는 기사를 썼으니, 다음에는 민주당을 비판하는 기사를 써야 한다는 원칙 같은 건 없다는 말입니다. 할 수 있는 최대한의 팩트체크를 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78695"
+                        open
+                      >
+                        <summary class="article-expander__title">부자들에게 더욱 더 보장된 ‘표현의 자유’는 괜찮을까</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/02/12/npsp_wealthpower/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_wealthpower">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>오늘날 돈만 있으면 뭐든지 할 수 있는 것처럼 보이는 자본주의 사회에서 부자들이 돈을 쓰는 새로운 용처 가운데 하나가 바로 영향력을 사는 일입니다. 특히 소셜미디어를 통해 주목받게 되면 그렇게 쌓은 명성과 영향력을 이용해 다시 돈을 벌 수 있는 선순환이 일어날 수 있는데, 부자들에겐 진입장벽이 상대적으로 낮다고 할 수 있습니다. 소셜미디어의 영향력을 십분 활용해 권력을 누리는 대표적인 인물로 보통 도널드 트럼프나 일론 머스크를 떠올리는데, 뉴욕타임스에 월스트리트의 헤지펀드 매니저 빌 애크먼을 예로 든 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;103872"
+                        open
+                      >
+                        <summary class="article-expander__title">‘좋빠가’가 민주주의 좀 먹는다: 슬로우레터 2월13일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/103872">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>김건희 이슈가 설 민심 뒤흔들었나. 우리에겐 왜 박절한가. “아들이 맞으면서 간다.” 쟁점과 현안. 조국, 오늘 출마 선언한다. “정부는 의사를 이길 수 없다.” 개혁신당 빅 텐트의 후폭풍. 더 깊게 읽기. 미국인 86%, “바이든, 너무 늙었다”. 오픈AI의 1경 프로젝트. 다르게 읽기. ‘밸류업’이 만병통치약이 될 수는 없다. ‘밸류업’의 전제조건. 해법과 대안. 죽음의 선택권을 묻는다. 대학 투자 가장 적은...
+The post ‘좋빠가’가 민주주의 좀 먹는다: 슬로우레터 2월13일. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >from pvs-studio.com</button>
+                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pvs-studio.com/en/blog/posts/1102/"
+                        open
+                      >
+                        <summary class="article-expander__title">PVS-Studio 7.29: Java code check in VS Code, Boost smart pointers, and plugin for Qt Creator on macOS</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/1102/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>PVS-Studio 7.29 has been released. Now you can analyze Java projects in a plugin for VS Code, check Boost smart pointers, use the PVS-Studio plugin for Qt Creator 12 on macOS, and that&#x27;s not all! See...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -157,37 +583,6 @@ The documentation and software are available so you can try it out for yourself.
 Log on to the Red Hat customer portal to download the Red Hat build of Keycloak and try the Getting Started Guide.
 Check out more Red Hat build of Keycloak articles at Red Hat Developer.
 Getting started with the Red Hat build of Keycloak 22 appeared first on Red Hat Developer.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78695"
-                        open
-                      >
-                        <summary class="article-expander__title">부자들에게 더욱 더 보장된 ‘표현의 자유’는 괜찮을까</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/02/12/npsp_wealthpower/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_wealthpower">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>오늘날 돈만 있으면 뭐든지 할 수 있는 것처럼 보이는 자본주의 사회에서 부자들이 돈을 쓰는 새로운 용처 가운데 하나가 바로 영향력을 사는 일입니다. 특히 소셜미디어를 통해 주목받게 되면 그렇게 쌓은 명성과 영향력을 이용해 다시 돈을 벌 수 있는 선순환이 일어날 수 있는데, 부자들에겐 진입장벽이 상대적으로 낮다고 할 수 있습니다. 소셜미디어의 영향력을 십분 활용해 권력을 누리는 대표적인 인물로 보통 도널드 트럼프나 일론 머스크를 떠올리는데, 뉴욕타임스에 월스트리트의 헤지펀드 매니저 빌 애크먼을 예로 든 → 더 보기</span>
                             </span>
                           </div>
                         </a>
@@ -9126,217 +9521,6 @@ The post Embedded Expertise: Beyond Fixed-Size Integers; Exploring Fast and Leas
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;593458"
-                        open
-                      >
-                        <summary class="article-expander__title">1/15,  월가의 투자의견 및 주가 전망 보고서</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/593458/1-15-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;22
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-14 datetime="2024-01-14T23:14:59.000Z">2024-01-14</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-14 datetime="2024-01-14T23:14:59.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >The Shape of Code</button>
-                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shape-of-code.com/?p&#x3D;8509"
-                        open
-                      >
-                        <summary class="article-expander__title">Median system cpu clock frequency over last 15 years</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2024/01/14/median-system-cpu-clock-frequency-over-last-15-years/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>We are all familiar with graphs showing the growth of cpu clock frequency over time. The data for these plots is based on vendor announcements listing the characteristics of their latest products, and invariably focuses on the product which is the fastest or contains the most transistors or the lowest power consumption. Some customers buy […]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;102393"
-                        open
-                      >
-                        <summary class="article-expander__title">이재명에게 “죽음을 상상해 보라”고 조언하는 이유: 슬로우레터 1월15일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/102393">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2024/01/397160050_24072814909000345_1381801994027827964_n.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>김건희 실종 한 달째. 왜 사과를 안 할까. 쟁점과 현안. 대만은 반중을 선택했다. 홍해 리스크. 낙준 연대? 미묘한 신경전. 버티던 류호정, 정의당 탈당한다. 다르게 읽기. 시험 다가오는데 공부한 게 없는 상황. “쪽팔려서 어떡하나.” 더 깊게 읽기. 혼자 힘으로는 빠져 나올 수 없다. ‘칼 졸업’이 줄어드는 이유. 홍콩 ELS 반토막은 시작일 뿐. 해법과 대안. 중대재해처벌법, 로펌들만...
-The post 이재명에게 “죽음을 상상해 보라”고 조언하는 이유: 슬로우레터 1월15일. appeared first on 슬로우뉴스..</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;21
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >ACM Queue - All Queue Content</button>
-                  <a class="source-heading__link" href="http://queue.acm.org/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="3639443"
-                        open
-                      >
-                        <summary class="article-expander__title">DevEx in Action</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://queue.acm.org/detail.cfm?ref&#x3D;rss&amp;id&#x3D;3639443">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="3639452"
-                        open
-                      >
-                        <summary class="article-expander__title">Resolving the Human-subjects Status of Machine Learning&#x27;s Crowdworkers</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="http://queue.acm.org/detail.cfm?ref&#x3D;rss&amp;id&#x3D;3639452">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >CPUU의 Daydreamin&amp;#039;</button>
-                  <a class="source-heading__link" href="https://cpuu.postype.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://cpuu.postype.com/post/3438449"
-                        open
-                      >
-                        <summary class="article-expander__title">중고나라 사기 대응 일지</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://cpuu.postype.com/post/3438449">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://d3mcojo3jv0dbr.cloudfront.net/2019/06/05/13/33/6b3631b0b12e7fd04114d124752e1788.jpeg?w&#x3D;600&amp;h&#x3D;300&amp;q&#x3D;65" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>개요
-중고로운 평화 나라를 이용하면서 그동안 별다른 사건사고가 없었기에 큰 의심을 하지 않았다. 안전거래를 굳이 이용하지 않고 선입금하여도 물건이 잘 도착했었기 때문이다. 하지만 2019년 3월 1일을 기점으로 나의 신뢰는 깨졌고 이제부터는 철저한 법의 응징만이 기다리고 있을 뿐이다. 인터넷을 통해 몇 가지 사례를 찾아보니 평소에 경찰서 한번 가본 적 없는 평범한 민간인이라면 형사 재판이니 민사소송이니 이런 것들을 진행하는 과정이 이 과정이 결코 쉽지 않다는 뼈아픈 조언이 많이 있다. 하지만 이번만큼은 사기꾼 개 XX가 정말로 사람 잘못 골랐다는 것을 나는 보여줄 것이다. 인터넷에 이미 많은 자료가 있지만 그 모든 걸 취합하여 이번에 내가 한번 제대로 &quot;실전! 중고나라 사기범 박살내기&quot;를 보여주려 한다.
-관련 사례를 찾아보면 빠르게는 2달, 길게는 1년 가까이 걸린다고도 한다. 이 글은 분쟁 종료 시까지 계속 업데이트할 예정이다.
-
-타임라인 요약
-
-
-
-발생시간내용
-기타
-
-2019/03/01 19:57네이버 카페 ‘중고나라(https://cafe.naver.com/joonggonara)’에서 태블릿 PC(Xiaomi Mi Pad 4) 판매 글 게재됨현재는 해당 게시물 삭제된 상태
-2019/03/01 19:59판매자는 안심번호(0505 668 0887)를 이용하였으며, 해당 번호로 SMS 문자메시지를 통해 &#x27;팔렸나요&#x27;라고 보냄
-
-2019/03/01 20:00판매자가 자신의 번호로 추정되는(010-7586-7157)으로 &#x27;아직 있어요&#x27;라는 답장을 보냄. 이후 약 10분간 제품에 관한 의견을 교환하였으며, 자신이 부…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -9390,8 +9574,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/7877340895">
-        <time id="build-timestamp" datetime="2024-02-12T20:12:44.290Z">2024-02-12T20:12:44.290Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/7892205302">
+        <time id="build-timestamp" datetime="2024-02-13T20:14:49.495Z">2024-02-13T20:14:49.495Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
