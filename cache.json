@@ -179,16 +179,6 @@
           "wordCount": 774,
           "title": "F# 모듈러 연산과 합동(congruence)",
           "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/25/11/05/9c90f4d2ddd4319b2d285aaf3c6feb25.png?w=600&h=300&q=65"
-        },
-        {
-          "id": "https://cpuu.postype.com/post/16054457",
-          "author": "CPUU",
-          "description": "개요\n앞서, 유클리드 호제법(Euclidean algorithm) 이용한 최대공약수, 최소공배수 계산 하는 방법을 배웠다. 유클리드 알고리즘을 이용하면 최대공약수(gcd)를 빠르게 구할 수 있다.\n한편, a와 b가 0이 아닌 정수이고, g = gcd(a, b)에 대하여\nax + by = g를 만족하는 정수해(x1, y1)이 항상 존재한다. \n이때의 x1, y1을 찾기 위한 방법에서 유클리드 알고리즘을 거꾸로 활용할 수 있으며 이를 확장된 유클리드 호제법(Extended Euclidean) 이라고 한다.\n\n\n\n설명\n가장 이해가 쉬운 예시는 한빛수학교재연구소에서 번역한 Kuldeep Singh의 정수론 첫걸음(Number Theory step by step)의 49페이지 설명인 것 같아서 첨부해둔다.\n5291x + 3108y = gcd(5291, 3108)의 정수해를 찾는 과정이다. \n우선 5291과 3108의 최대공약수를 찾기 위해 다음과 같이 유클리드 알고리즘을 사용한다. 뒤에 설명할 편의를 위해 식에 번호를 붙였다.\n(6)을 통해 얻은 결과 0이 아닌 마지막 나머지인 37이 두 수(5291, 3108)의 최대공약수가 된다.\n이때 5291x + 3108y = 37 을 만족하는 두 수 x, y 를 찾아야 한다.\n이 과정은 (1) ~ (6) 을 거꾸로 활용하여 찾아간다. 기본적으로 값을 치환한 뒤 항을 넘겨서 동류항끼리 정리하는 과정이다.\n이를 통해 최종적으로 63 * 3108 - 37 * 5291 이라는 식을 계산하면 37으로 만들 수 있다. \n그러면 5201x + 3108y = 37이었으므로, x = -37, y = 63 이라는 것을 알 수 있다. \n기타 다른 해로는 (-121,206), (47, -80) 도 있다. \n이러한 해를 더 찾을 때는 다음 공식에 정수값 k를 대입하여 찾을 수 있다.\n즉, a, b에 대하여 gcd는 37임을 알았고, x1 = -37, y1 = 63 을 찾았으므로 \n( -37 + k*3108/37 , 63 - k*5291/37) =  (-37 + 84k, 63 - 143k)라는 것을 알게 된다. k에 임의의 정수를 넣게 되면 모든 해 쌍을 찾아갈 수 있다. \n참고로 37은 5291x + 3108y가 될 수 있는 양의 정수 중에서 가장 작은 값, 즉 최솟값이다. 만약 5291x + 3108y = 36이라는 방정식의 해를 구하라고 묻는다면, 이 식의 최솟값이 37이므로 36을 만족하는 해는 없다고 볼 수 있다.\nF# 구현\nextenedGCD 함수를 반복문을 사용하는 구조로 간단하게 구현할 수 있다. \n// 확장된 유클리드 알고리즘 함수\nlet extendedGCD a b =\n    let rec loop a b x0 y0 x1 y1 =\n        if b = 0 then (a, x0, y0)\n        else loop b (a % b) x1 y1 (x0 - (a / b) * x1) (y0 - (a / b) * y1)\n    loop a b 1 0 0 1\n\n// 테스트\nlet a = 5291\nlet b = 3108\nlet (gcd, x, y) = extendedGCD a b\n\n// 결과 출력\nprintfn \"GCD: %d, x: %d, y: %d\" gcd x y\n실행결과\n$ dotnet run\nGCD: 37, x: -37, y: 63\n\n\n다음 시간에..\n만약 x와 y가 서로소인 경우 gcd가 1이 되며 이때는 ax + by = 1을 만족하는 형태의 답을 찾는 문제가 된다. 이런 것을 합동식이라던지 모듈러 역원 등으로 설명할 수 있는데 다음 시간에..",
-          "link": "https://cpuu.postype.com/post/16054457",
-          "publishedOn": "2024-01-18T07:56:30.000Z",
-          "wordCount": 757,
-          "title": "F# 확장된 유클리드(Extended Euclidean) 알고리즘 이용한 선형방정식 풀이",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/18/16/04/dcd89be88627537628b8f66ef0d011f1.jpeg?w=600&h=300&q=65"
         }
       ]
     },
@@ -517,6 +507,16 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4481484",
+          "author": "Nitin Dahad",
+          "description": "Two new Arm initiatives could boost chiplets: an ecosystem around the Arm chiplet system architecture, and updated AMBA specification.\nThe post Arm CSA and AMBA release provide boost for chiplet ecosystem appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/arm-csa-and-amba-release-provide-boost-for-chiplet-ecosystem/",
+          "publishedOn": "2024-02-16T16:11:02.000Z",
+          "wordCount": null,
+          "title": "Arm CSA and AMBA release provide boost for chiplet ecosystem",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embedded.com/?p=4481480",
           "author": "Miro Samek",
           "description": "In this video tutorial, we show how to manage interactions based on mutable events and how this event-driven approach improves real-time performance over traditional resource...\nThe post Programming embedded systems: active objects and mutable events appeared first on Embedded.com.",
@@ -684,16 +684,6 @@
           "publishedOn": "2024-01-20T12:53:58.000Z",
           "wordCount": null,
           "title": "embedded diary: Synopsys to acquire Ansys for $35 billion",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481324",
-          "author": "Nitin Dahad",
-          "description": "“A holistic approach is needed to create future computing systems that genuinely meet social needs while keeping people safe and respecting planetary boundaries.”\nThe post HiPEAC Vision 2024: what’s the next computing paradigm? appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/hipeac-vision-2024-whats-the-next-computing-paradigm/",
-          "publishedOn": "2024-01-17T20:19:43.000Z",
-          "wordCount": null,
-          "title": "HiPEAC Vision 2024: what’s the next computing paradigm?",
           "imageUrl": null
         }
       ]
@@ -962,26 +952,6 @@
           "wordCount": 3155,
           "title": "HealthPulse AI Leverages MediaPipe to Increase Health Equity",
           "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjshYPRMbqYEiJBNAjcxjt1Uo_zT7Mh-CWI0lWFovnQ6cuOLtyfaq-z7qxd9a2txxKQNGkuGtzJct0X5h0OfFbyC8D7gu5Ekhjz8nx5NPNmzgUN-kMQvOyaKadwcNQgFLUCZMsfvQIkr5tFM4HRHnbi0_3vDf4fd8yITPCuxkN5AQH30KdAC3rwwFGyZbs/w1200-h630-p-k-no-nu/Social-Audere-HealthAI-MaediaPipe.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2024/01/accelerating-startup-growth-through-technology-expertise-community.html",
-          "author": null,
-          "description": "Posted by Nivedita Kumari – Technical Anchor Mentor, Accelerator Program, and Prabhu Thiagarajan – Accelerator Success Mentor, Accelerator Program\n\n\n\n\n\n\nThis International Mentoring Day, we recognize that mentorship is a critical part of the startup journey. Google for Startups Accelerator programs provide founders and teams with the technology, expertise, and mentorship they need to grow and succeed. As program mentors, we had the opportunity to engage with and empower many early stage startups helping them scale and grow.\n\n\nThe Startup Challenge \nAlthough the startup ecosystem is rapidly expanding, success is rarely a smooth journey. On an average, it takes startups two to three years years to turn a profit, and fewer than 10% of startups that raise a seed round successfully raise a Seri…",
-          "link": "http://developers.googleblog.com/2024/01/accelerating-startup-growth-through-technology-expertise-community.html",
-          "publishedOn": "2024-01-18T00:00:00.000Z",
-          "wordCount": 2170,
-          "title": "Accelerating startup growth through technology, expertise, and community",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsl-v5SUQfhQj5WQyVDBfGlE8Vr3hdoTPoEdmpgOJ4l8Z_P8e2qT283JktonenLe_wENApIfrNmjav6ZLElwOxXJRbJrM9R82hJ2KHGFG_DrfRXozfoeEAr2nKauUcGFcvdhote-nyt_mWjBTiLSQWtffLCENug3ubR8fA7d9ZZasUgrzmCkxzoKK8jSM/w1200-h630-p-k-no-nu/Social-Accelerator-International-Mentor-Day.png"
-        },
-        {
-          "id": "http://developers.googleblog.com/2024/01/weareplay-how-a-childhood-experience-shaped-alvaros-entrepreneurial-journey.html",
-          "author": null,
-          "description": "Posted by Leticia Lago – Developer Marketing\n\n\n\n\n\n\n\n\nBeing trapped inside a house following a major earthquake as a child motivated Álvaro to research and improve the outcomes of destructive, large-scale quakes in Mexico. Using SkyAlert technology, sensors detect and report warnings of incoming earthquakes, giving people valuable time to prepare and get to safety.\nÁlvaro shared his story in our latest film for #WeArePlay, which spotlights the founders and creatives behind inspiring apps and games on Google Play. We caught up with him to find out his motivations for SkyAlert, the impact the app’s had and what his future plans are.\n\n\nWhat was the inspiration behind SkyAlert?\nBeing in Colima near the epicenter of a massive earthquake as a kid had a huge impact on me. I remember feeling powerl…",
-          "link": "http://developers.googleblog.com/2024/01/weareplay-how-a-childhood-experience-shaped-alvaros-entrepreneurial-journey.html",
-          "publishedOn": "2024-01-17T17:00:00.000Z",
-          "wordCount": 2231,
-          "title": "#WeArePlay | Learn how a childhood experience with an earthquake shaped Álvaro's entrepreneurial journey",
-          "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu218W2RyLDMAvOEcTDjLxA2tjNEFk6822pJCEX1uklhlS4xpUn4A5pQbmDLsnUgOC_Vfzy1stegKYeBgy0jdWOCimNm_I9eTkUg1l5lJRk0ASIaaZxda23M1MU6HvxT5yLhxzdzNMCRU3j457Tn6g7RLBLWs7sAvwCa3u0ytAAt_WUpmpGRM-HCmzGjA/w1200-h630-p-k-no-nu/%23WeArePlay%20Social%20.png"
         }
       ]
     },
@@ -1003,6 +973,16 @@
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
         {
+          "id": "https://pythoninsider.blogspot.com/2024/02/python-3130-alpha-4-is-now-available.html",
+          "author": null,
+          "description": "Python 3.13.0 alpha 4 is now available:\n\n\n  \nhttps://www.python.org/downloads/release/python-3130a4/\n\n\n\n\nThis is an early developer preview of Python 3.13\nMajor new features of the 3.13 series, compared to 3.12\nPython 3.13 is still in development. This release, 3.13.0a4, is the fourth of six planned alpha releases.\nAlpha releases are intended to make it easier to test the current \nstate of new features and bug fixes and to test the release process.\nDuring the alpha phase, features may be added up until the start of \nthe beta phase (2024-05-07) and, if necessary, may be modified or \ndeleted up until the release candidate phase (2024-07-30). Please keep \nin mind that this is a preview release and its use is not recommended for production environments.\nMany new features for Python 3.13 are st…",
+          "link": "https://pythoninsider.blogspot.com/2024/02/python-3130-alpha-4-is-now-available.html",
+          "publishedOn": "2024-02-15T21:09:00.001Z",
+          "wordCount": null,
+          "title": "Python 3.13.0 alpha 4 is now available",
+          "imageUrl": null
+        },
+        {
           "id": "https://pythoninsider.blogspot.com/2024/02/python-3122-and-3118-are-now-available.html",
           "author": null,
           "description": "Python 3.12.2 and 3.11.8 are now available. In addition to all the usual bugfixes, these releases contain a small security fix: hidden .pth files are no longer automatically read and executed as part of Python startup. (New releases of 3.8, 3.9 and 3.10 containing the same fix are expected next week.)\n \nPython 3.12.2\nhttps://www.python.org/downloads/release/python-3122/\n\nPython 3.12’s second bugfix release. In addition to the mentioned \nsecurity fix and the usual slew of bug fixes, build changes and \ndocumentation updates (more than 350 commits), this is also the first \nrelease to include a Software Bill-of-Materials for the source packages (Python-3.12.2.tgz and Python-3.12.2.tar.xz). Full changelog.\n \nPython 3.11.8\nhttps://www.python.org/downloads/release/python-3118/\n\nMore than 300 commits of bug fixes, build changes and documentation updates. Full changelog.\n \nWe hope you enjoy the new releases!\n \nThanks to all of the many volunteers who help make Python Development\n and these releases possible! Please consider supporting our efforts by \nvolunteering yourself, or through contributions to the Python Software Foundation  or CPython itself.\n \nThomas Wouters\n \nNed Deily\nSteve Dower\nŁukasz Langa",
@@ -1010,16 +990,6 @@
           "publishedOn": "2024-02-07T15:07:00.000Z",
           "wordCount": 1576,
           "title": "Python 3.12.2 and 3.11.8 are now available.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://pythoninsider.blogspot.com/2024/01/python-3130-alpha-3-is-now-available.html",
-          "author": null,
-          "description": "We silently skipped releasing in December (it was too close to the \nholidays, a lot of people were away) so by date you may have been \nexpecting alpha 4, but instead it’s alpha 3:\nhttps://www.python.org/downloads/release/python-3130a3/\n\n\n\n\nThis is an early developer preview of Python 3.13\nMajor new features of the 3.13 series, compared to 3.12\nPython 3.13 is still in development. This release, 3.13.0a3, is the third of six planned alpha releases.\nAlpha releases are intended to make it easier to test the current \nstate of new features and bug fixes and to test the release process.\nDuring the alpha phase, features may be added up until the start of \nthe beta phase (2024-05-07) and, if necessary, may be modified or \ndeleted up until the release candidate phase (2024-07-30). Please keep \nin mi…",
-          "link": "https://pythoninsider.blogspot.com/2024/01/python-3130-alpha-3-is-now-available.html",
-          "publishedOn": "2024-01-18T00:30:00.002Z",
-          "wordCount": 1809,
-          "title": "Python 3.13.0 alpha 3 is now available.",
           "imageUrl": null
         }
       ]
@@ -1163,16 +1133,6 @@
           "wordCount": null,
           "title": "Practical Zephyr - Kconfig (Part 2)",
           "imageUrl": null
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/ncs-github-actions",
-          "author": null,
-          "description": "Recently we ran through a re-vamp of our CI builds targeting the Nordic\nnRF-Connect SDK, and I wanted to share some of the things we learned along the\nway! This article walks through setting up a GitHub Actions workflow for\nbuilding nRF-Connect SDK projects.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/ncs-github-actions",
-          "publishedOn": "2024-01-18T00:00:00.000Z",
-          "wordCount": 4388,
-          "title": "Building Nordic nRF-Connect SDK Projects with GitHub Actions",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
     },
@@ -1211,6 +1171,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/962556/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of the 6.7.5, 6.6.17,\nand 6.1.78 stable kernels. As is the norm,\nthey contain important fixes throughout the kernel tree. So far, there are no\nnew CVEs reported on\nthe linux-cve-announce mailing list, which means that the new kernel CVE numbering authority (CNA)\npowers have not yet been used.",
+          "link": "https://lwn.net/Articles/962556/",
+          "publishedOn": "2024-02-16T18:50:25.000Z",
+          "wordCount": 174,
+          "title": "Stable kernels 6.7.5, 6.6.17, and 6.1.78",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/961884/",
+          "author": "corbet",
+          "description": "The futex\nmechanism provided by the kernel allows for the creation of efficient and\nflexible locking primitives in user space.  Futexes work well for many\napplications, but not all.  One of the exceptions, it seems, is that\nperennially difficult-to-support use case: Windows games.  With \nthis\npatch series, Elizabeth Figura seeks to provide the sort of locking\nthat those games need, by way of a special-purpose virtual device.",
+          "link": "https://lwn.net/Articles/961884/",
+          "publishedOn": "2024-02-16T16:14:26.000Z",
+          "wordCount": null,
+          "title": "[$] Windows NT synchronization primitives for Linux",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/962506/",
+          "author": "jake",
+          "description": "Security updates have been issued by Mageia (bind), Red Hat (.NET 8.0 and kpatch-patch), SUSE (golang-github-prometheus-alertmanager, java-1_8_0-openj9, kernel, libaom, openssl-3, postgresql15, salt, SUSE Manager Client Tools, SUSE Manager Server 4.3, and webkit2gtk3), and Ubuntu (shadow).",
+          "link": "https://lwn.net/Articles/962506/",
+          "publishedOn": "2024-02-16T14:24:40.000Z",
+          "wordCount": 302,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/961868/",
           "author": null,
@@ -2020,56 +2010,6 @@
           "wordCount": 435,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/958030/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for January 18, 2024 is available.",
-          "link": "https://lwn.net/Articles/958030/",
-          "publishedOn": "2024-01-18T00:55:05.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for January 18, 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/958326/",
-          "author": "jake",
-          "description": "Python's static-typing feature has come a long way since it was introduced in 2014.  Adding type\ninformation to functions has always been—and will remain—optional, but typing\nstill remains somewhat contentious.  There are multiple kinds of\nconsumers of the information, each with their own needs and\nwishes, as well as users of the feature with expectations of their own.  That has\nled to the formation of a Python typing council\nto govern the type system for the language, though, as might be guessed,\nthere are still grumblings from various quarters.",
-          "link": "https://lwn.net/Articles/958326/",
-          "publishedOn": "2024-01-17T20:32:28.000Z",
-          "wordCount": null,
-          "title": "[$] Growing pains for typing in Python",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/958444/",
-          "author": "corbet",
-          "description": "When, at the beginning of November, we posted an open position at LWN, we were only so\nhopeful; experience has shown that finding writers who are both capable of\nand interested in writing our sort of material is a challenging task.  This\ntime, though, hope was justified: we got a surprising number of\napplications from highly qualified applicants.  The hardest part of the\ntask has, instead, been narrowing down the choice to a hiring decision.\n\nWe are pleased to announce that Daroc Alden has just joined LWN's staff.\n\nDaroc is a programmer from New England, where they live with their\nspouse and their cat. They graduated with a Master's degree in Computer\nScience from the University of New Hampshire. In their spare time, they\nenjoy fiction writing and musicals. They are especially interested in \nprogramming language theory and implementation.\n\n\nDaroc will be taking on some of the load of keeping LWN interesting while\nhelping us to expand our content mix in the areas that our readers are\ninterested in.  Please give them your support as they come up to speed\nwithin our operation.  We are looking forward to having Daroc as part of a\nreinforced and more energetic LWN going forward.",
-          "link": "https://lwn.net/Articles/958444/",
-          "publishedOn": "2024-01-17T20:13:24.000Z",
-          "wordCount": 1079,
-          "title": "Please welcome Daroc Alden",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/958518/",
-          "author": "corbet",
-          "description": "Networking maintainer Jakub Kicinski (along with several collaborators) has\nput up a summary of\nwhat happened in the kernel's network stack during 2023.\n\n\n\tThroughout those releases netdev patch handlers (DaveM, Jakub,\n\tPaolo) applied 7243 patches, and the resulting pull requests to\n\tLinus described the changes in 6398 words. Given the volume of work\n\twe cannot go over every improvement, or even cover networking\n\tsub-trees in much detail (BPF enhancements… wireless work on WiFi\n\t7…). We instead try to focus on major themes, and developments we\n\tsubjectively find interesting.",
-          "link": "https://lwn.net/Articles/958518/",
-          "publishedOn": "2024-01-17T19:52:19.000Z",
-          "wordCount": 203,
-          "title": "Kicinski: netdev in 2023",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/958497/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (zabbix), Gentoo (OpenJDK), Red Hat (kernel), Slackware (gnutls and xorg), SUSE (cloud-init, kernel, xorg-x11-server, and xwayland), and Ubuntu (freeimage, postgresql-10, and xorg-server, xwayland).",
-          "link": "https://lwn.net/Articles/958497/",
-          "publishedOn": "2024-01-17T15:00:23.000Z",
-          "wordCount": 263,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2441,6 +2381,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=104147",
+          "author": "이정환",
+          "description": "폴리코노미(선거와 경제를 합친 말)의 해라고 불리는 올해는 AI 기반의 허위 조작 정보가 글로벌 화두다. 지난 1월 미국 뉴햄프셔주 예비 선거에서는 조 바이든(미국 대통령)의 ‘딥 보이스’를 이용한 자동 녹음 전화가 논란이 됐다. 바이든의 목소리였지만 조작된 메시지였다. 리사 모나코(미국 법무부 차관)는 BBC와 인터뷰에서 “허위 조작 정보는 사람들이 정보의 출처를 불신하게 만들 고, 투표권 행사에 관해 설득하거나 혼란스럽게...\nThe post AI 시대 총선 보도, 네 가지 팩트 체크 포인트. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/104147",
+          "publishedOn": "2024-02-16T08:19:27.000Z",
+          "wordCount": null,
+          "title": "AI 시대 총선 보도, 네 가지 팩트 체크 포인트.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=103417",
+          "author": "민노씨",
+          "description": "[캡:콜드케이스] 미디어를 통해 반영·증폭·구성되는 문제적 현상과 사고방식을 ‘캡콜드’ 김낙호 교수가 명쾌하게 분석합니다. 오늘의 캡:콜드케이스는 ‘웹툰’ 특히 ‘회빙환’. “회빙환의 핵심은 그거거든요. 어떤 새로운 특수 능력이나 초능력이 생기는 게 아니에요. 그냥 답을 알고 있는 거죠. 마치 그 시험 문제 답안을 알고 있고, 똑같은 문제를 다시 푸는 격이거든요. 그 다시 시험을 푸는 과정에서 쾌감이 생긴다는 거죠.” “그리고 표현을...\nThe post 회빙환 전성시대, 핵심은 초능력이 아니라 ‘답’을 미리 알고 있는 것 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/103417",
+          "publishedOn": "2024-02-16T06:43:40.000Z",
+          "wordCount": null,
+          "title": "회빙환 전성시대, 핵심은 초능력이 아니라 ‘답’을 미리 알고 있는 것",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=104074",
+          "author": "이정환",
+          "description": "김혜경 기소했는데 김건희는? 검찰의 답변은. 윤석열 앞에 펼쳐질 악몽의 시나리오. 국민의힘 말고 ‘사랑의힘’으로. 쟁점과 현안. 한강과 낙동강, 두 개의 전투. 김무성은 공천 포기, 계양을은 ‘명룡대전’. 민주당 영입인재들은 험지로. 이준석과 류호정의 예고된 균열. KBS 세월호 10주기 다큐 안 내보낸다. 다르게 읽기. 밸류업과 미래 가치, 행동주의 펀드의 이중성. 영화 ‘건국전쟁’의 거짓말. 더 깊게 읽기. ‘시성비’의 시대. 미국인...\nThe post 총선까지 가는 김건희 리스크, 윤석열 앞에 펼쳐질 악몽의 시나리오: 슬로우레터 2월16일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/104074",
+          "publishedOn": "2024-02-15T22:00:17.000Z",
+          "wordCount": null,
+          "title": "총선까지 가는 김건희 리스크, 윤석열 앞에 펼쳐질 악몽의 시나리오: 슬로우레터 2월16일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=104015",
           "author": "이정환",
@@ -2960,16 +2930,6 @@
           "wordCount": 7051,
           "title": "윤석열과 악수하다 끌려나간 국회의원, 신문 1면에는 없다: 슬로우레터 1월19일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/u20240118-03.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=102527",
-          "author": "이정환",
-          "description": "10조 원 감세, 총선 끝나고 감당할 수 있겠나. 쟁점과 현안. 시스템 공천한다더니 김경율을 꽂았다. “3선 이상 하기가 얼마나 어려운데.” “법으로, 펜으로, 칼로 죽이려 해도.” 탈당 막으려 뭐 한 게 있나. 한동훈의 정치 혐오, 뼈 때린 이준석. 다르게 읽기. “민주당 과반, 당연한 거 아니다.” 진영 정치를 끊는 쪽이 이긴다. 더 깊게 읽기. ‘김정은 선언’을 이해하는 다섯...\nThe post 김부겸과 이철희, 이탄희의 절박한 호소, 이재명에 닿을까: 슬로우레터 1월18일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/102527",
-          "publishedOn": "2024-01-17T22:06:02.000Z",
-          "wordCount": 6810,
-          "title": "김부겸과 이철희, 이탄희의 절박한 호소, 이재명에 닿을까: 슬로우레터 1월18일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/GettyImages-1394144667.jpg"
         }
       ]
     },
@@ -3297,16 +3257,6 @@
           "wordCount": 7241,
           "title": "WSJ, 오디오 스트리밍을 장악한 스포티파이, 이익은 낼 수 있을까?",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593524",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593524/1-18-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-01-18T05:22:49.000Z",
-          "wordCount": 7506,
-          "title": "1/18, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
         }
       ]
     },
@@ -3315,6 +3265,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78715",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 25일 스프에 쓴 글입니다. 소비자들은 누구나 값싼 물건을 찾습니다. 값이 같다면 당연히 품질이 더 좋은 제품과 서비스를 선호할 겁니다. 만약 값도, 품질도 비슷한 제품들이 여러 개 있다면 소비자들은 어떤 제품을 고를까요? 각자 기준이 → 더 보기",
+          "link": "https://newspeppermint.com/2024/02/15/npsp_cashmerecost/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_cashmerecost",
+          "publishedOn": "2024-02-15T22:59:05.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 그저 ‘착한 소비’만으로는 부족할 수 있습니다",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=78366",
           "author": "ingppoo",
