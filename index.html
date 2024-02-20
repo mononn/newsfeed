@@ -22,11 +22,210 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-20 datetime="2024-02-20T03:48:43.000Z">2024-02-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-20 datetime="2024-02-20T03:48:43.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-20 datetime="2024-02-20T19:01:07.000Z">2024-02-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-20 datetime="2024-02-20T19:01:07.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/962924/"
+                        open
+                      >
+                        <summary class="article-expander__title">The &quot;KeyTrap&quot; DNS vulnerability</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/962924/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>DNS resolvers (those that handle DNSSEC, at least) are almost uniformly
+vulnerable to an exploit
+that has been named &quot;KeyTrap&quot;.  In short, the right type of packet can
+send a DNS system into something close to an infinite loop, taking it out
+of service indefinitely.
+
+
+	With just a single DNS packet, hackers could paralyze all common
+	DNS implementations and public DNS providers. Exploiting this
+	attack would have serious consequences for any application that
+	uses the internet, including the unavailability of technologies
+	such as web browsers, email and instant messaging. This devastating
+	effect prompted major DNS vendors to call KeyTrap &quot;The worst attack
+	on DNS ever discovered&quot;
+
+
+Some more information and pointers to updates can be found on the
+CVE-2023-50387 page; some distributors have been faster to get updates
+out than others.
+
+(Thanks to Dave Täht).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/962787/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] A modest update to Qubes OS</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/962787/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Qubes OS is a security-focused desktop Linux distribution built on Fedora Linux and the Xen hypervisor. Qubes uses virtualization to run applications, system services, and devices access via virtual machines called &quot;qubes&quot; that have varying levels of trust and persistence to provide an open-source &quot;reasonably secure&quot; operating system with &quot;serious privacy&quot;. The Qubes 4.2.0 release, from December 2023, brings a number of refinements to make Qubes OS easier to manage and use.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/962897/"
+                        open
+                      >
+                        <summary class="article-expander__title">Righi: Writing a scheduler for Linux in Rust that runs in user-space</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/962897/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Andrea Righi has started
+a blog series on writing a user-space CPU scheduler with the BPF-based
+extensible scheduler class:
+
+
+	.select_cpu() implements the logic to assign a target CPU to a task
+	that wants to run, typically you have to decide if you want to keep
+	the task on the same CPU or if it needs to be migrated to a
+	different one (for example if the current CPU is busy); if we can
+	find an idle CPU at this stage there&#x27;s no reason to call the
+	scheduler, the task can be immediately dispatched here.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/962882/"
+                        open
+                      >
+                        <summary class="article-expander__title">Hare programming language 0.24.0 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/962882/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Drew DeVault 
+announced the first numbered release of the 
+Hare programming language on February 16.
+
+
+
+Many Hare users want to ship their Hare projects to users, and as such, software written in Hare is making its way into Linux distributions and the like. However, due to Hare&#x27;s unstable nature, we have not provided any versioned releases, forcing any distributions who want to package Hare to package Hare&#x27;s master branch, which is less than ideal.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/962881/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/962881/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Fedora (freeglut, hugin, libmodsecurity, qemu, rust-asyncgit, rust-bat, rust-cargo-c, rust-eza, rust-git-absorb, rust-git-delta, rust-git2, rust-gitui, rust-libgit2-sys, rust-lsd, rust-pore, rust-pretty-git-prompt, rust-shadow-rs, rust-silver, rust-tokei, and rust-vergen), Mageia (packages, radare2, ruby-rack, and wireshark), Oracle (.NET 8.0 and python-pillow), Red Hat (gimp:2.8, java-1.8.0-ibm, and kpatch-patch), SUSE (dpdk and opera), and Ubuntu (bind9, curl, linux-raspi, linux-raspi-5.4, node-ip, and tiff).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;593886"
+                        open
+                      >
+                        <summary class="article-expander__title">연도별 TV 점유율 추이와 삼성 TV 점유율 사례 분석</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/593886/%ec%97%b0%eb%8f%84%eb%b3%84-tv-%ec%a0%90%ec%9c%a0%ec%9c%a8">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="2e3ccc79-6f88-4bee-8292-186b68328af9"
+                        open
+                      >
+                        <summary class="article-expander__title">mass-prebuild: An open source journey of improvement and growth</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/02/20/mass-prebuild-open-source-journey-improvement-and-growth">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Welcome back to our blog series about the evolution of mass-prebuild. In our first post in 2022, we introduced this powerful open source tool designed for streamlining package builds across multiple architectures and Linux distributions. This article continues that journey, exploring how mass-prebuild has been continually refined, improved, and grown in response to user feedback and technological advancements. We will dive into specific updates that have shaped the tool over time, highlight its significant role in improving the stability of essential packages like Autoconf and GCC, and showcase its impact on the open source community. Fasten your seat belts for a comprehensive look at mass-prebuild&#x27;s progress and future prospects!
+Recap: What is mass-prebuild?
+Need a summary of the previou…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -67,11 +266,158 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-19 datetime="2024-02-19T17:34:42.000Z">2024-02-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-19 datetime="2024-02-19T17:34:42.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-19 datetime="2024-02-19T22:59:17.000Z">2024-02-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-19 datetime="2024-02-19T22:59:17.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78422"
+                        open
+                      >
+                        <summary class="article-expander__title">[뉴페@스프] ‘법치’와 ‘민주주의’ 기로에 선 미국?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/02/19/npsp_coloradotrump/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_coloradotrump">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 27일 스프에 쓴 글입니다. 콜로라도주 대법원 판결에 관해선 아메리카노에서도 다뤘습니다. 미국에는 ‘공식 선거운동 기간’이라는 개념이 없습니다. 한 차례 선거가 끝나면 곧바로 다음 선거가 시작됩니다. 호들갑처럼 보이기도 하지만, 실제로 대선이 끝난 직후에는 4년 뒤 후보가 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78731"
+                        open
+                      >
+                        <summary class="article-expander__title">‘대통령 건강 문제’ 외면하는 민주당은 금기를 깰 수 있을까?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/02/19/npsp_bidenage/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_bidenage">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>바이든 대통령의 기밀문서 유출을 수사해 온 로버트 허 특검의 수사 보고서가 불러온 논란이 쉬이 가라앉지 않고 있습니다. 허 특검은 오랜 수사 끝에 기밀문서를 고의로 유출한 정황이 있지만, 바이든 대통령을 기소하지 않기로 했다고 밝혔는데요, 불기소 이유가 큰 논란을 불러왔습니다. 바이든이 사람 좋은 할아버지인데, 기억력이 오락가락해서 피고로 법정에 서도 제대로 진술을 못 할 것 같다고 써놓았기 때문입니다. 이를 둘러싸고 논란이 계속되자, 신경과학자 차란 랑가나스 박사가 “건망증과 치매는 엄연히 다르다”는 내용의 칼럼을 썼습니다. 일리 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;104228"
+                        open
+                      >
+                        <summary class="article-expander__title">의사들은 국민을 이길 수 없다? 누가 전쟁을 만드나: 슬로우레터 2월20일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104228">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>오늘 아침 신문 1면은 ‘의료 대란. “의사들은 국민을 이길 수 없다.” “총선용 포퓰리즘이다.” 해법과 대안. 의사들이 말하는 갈등 해법. 진작 했어야 할 일. 공정위가 미적댄다? 쟁점과 현안. “모멸감을 느꼈다”, 김영주 탈당 파문. “전두환과 뭐가 다른가.” ‘한낙수’ 잡아야 이긴다. 더 깊게 읽기. 이런 사람 안 된다. 2030의 심판 냉소증, 40%가 무당층. 다르게 읽기. 역대 최대 고용률의...
+The post 의사들은 국민을 이길 수 없다? 누가 전쟁을 만드나: 슬로우레터 2월20일. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;104211"
+                        open
+                      >
+                        <summary class="article-expander__title">김건희 ‘디올 백’ 폭로는 “여성에 대한 테러”? 뭔 소리인가?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104211">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>2024년 2월 15일 제22대 국회의원선거 제6차 선거방송심의위원회 회의가 열렸습니다. 이날 안건은 총 13건으로 그중 9건은 지난 회의에서 ‘의견진술’을 받기로 한 건이고, 4건은 이번 회의에서 심의할 건입니다. 의견진술이란 방송사에 추가로 확인할 사항이 있거나 ‘법정제재’가 필요하다고 보이는 경우 방송사 관계자를 불러 소명기회를 주는 절차인데요. 이날은 의견진술 9건만 심의하고, 4건에 대한 심의는 차기 회의로 넘겼습니다. 심의한 9건은 다음과...
+The post 김건희 ‘디올 백’ 폭로는 “여성에 대한 테러”? 뭔 소리인가? appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;104171"
+                        open
+                      >
+                        <summary class="article-expander__title">손해가 신앙이 된 사회</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104171">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>사랑은 모든 것을 이긴다고 한다. 그러나 우리 사회에서 사랑이 이길 수 없는 것이 있다. 바로 ‘손해’이다. 사랑은 손해를 이길 수 없다. 우리 시대에 손해보는 사랑이란 그 자체로 모순이다. 우리는 더 이상 무엇보다도 손해를 가장 견딜 수 없게 되었다. 대부분의 것들은 참거나 넘어갈 수 있다. 그러나 손해에 대해서는 그럴 수 없다. 손해 앞에서는 모든 분노와 증오를...
+The post 손해가 신앙이 된 사회 appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >from pvs-studio.com</button>
+                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pvs-studio.com/en/blog/posts/cpp/1104/"
+                        open
+                      >
+                        <summary class="article-expander__title">Why it is bad idea to check result of malloc call with assert</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/cpp/1104/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The pointer returned by malloc needs to be checked before use. Using the assert macro to check the pointer would be wrong. In this article, we&#x27;ll investigate why this is a bad programming tip.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -122,6 +468,59 @@ actor library that Spritely intends to build on.</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>Security updates have been issued by Debian (engrampa, openvswitch, pdns-recursor, and runc), Fedora (caddy, expat, freerdp, libgit2, libgit2_1.6, mbedtls, python-cryptography, qt5-qtbase, and sudo), Gentoo (Apache Log4j, Chromium, Google Chrome, Microsoft Edge, CUPS, e2fsprogs, Exim, firefox, Glade, GNU Tar, intel-microcode, libcaca, QtNetwork, QtWebEngine, Samba, Seamonkey, TACACS+, Thunar, and thunderbird), Mageia (dnsmasq, unbound, and vim), Oracle (container-tools:4.0, container-tools:ol8, dotnet6.0, dotnet7.0, kernel, nss, openssh, and sudo), Red Hat (python-pillow), and SUSE (bitcoin, dpdk, libssh, openvswitch, postgresql12, and postgresql13).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >EmbeddedRelated.com Blogs</button>
+                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1633.php"
+                        open
+                      >
+                        <summary class="article-expander__title">Using (Apache) NuttX USERLED Subsystem</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1633.php">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>In the previous article (https://embeddedrelated.com/showarticle/1623.php) we saw how to use GPIOs on NuttX testing on RaspberryPi Pico as example. In that article we used the GPIO output to control an LED, but there is a better way to do that. Of course, NuttX has an LED subsystem similar to Linux LED subsystem: it is called USERLED. Today we will see how to control LEDs using NuttX&#x27;s USERLED...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1632.php"
+                        open
+                      >
+                        <summary class="article-expander__title">3D printing for embedded development</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1632.php">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Used mostly for creating little plastic objects, the desktop
+3D printer is not an obvious addition to the embedded developer&#x27;s toolbox. However,
+if you&#x27;re looking for more reasons to get one, or already have one that&#x27;s mostly
+gathering dust, here are a couple of embedded-related ways to get more value
+out of it.
+Lens salvaged from an old camera; handle designed and 3D-printed...</span>
                             </span>
                           </div>
                         </a>
@@ -212,105 +611,6 @@ Now, Palo Alto Networks’ CN-Series Container Next-Generation Firewall (NGFW) p
 Red Hat OpenShift Networking&#x27;s OVN-Kubernetes CNI plug-in
 If the ovn-kubernetes CNI plug-in is new to your team, allow us to introduce you to its functionality and some of the ways it differs from the OpenShift-SDN CNI plug-in.
 OVN-Kubernetes is based on the Open Virtual Network (OVN) open source project and leverages OVN, which is vendor-agnost…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >EmbeddedRelated.com Blogs</button>
-                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1632.php"
-                        open
-                      >
-                        <summary class="article-expander__title">3D printing for embedded development</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1632.php">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Used mostly for creating little plastic objects, the desktop
-3D printer is not an obvious addition to the embedded developer&#x27;s toolbox. However,
-if you&#x27;re looking for more reasons to get one, or already have one that&#x27;s mostly
-gathering dust, here are a couple of embedded-related ways to get more value
-out of it.
-Lens salvaged from an old camera; handle designed and 3D-printed...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78731"
-                        open
-                      >
-                        <summary class="article-expander__title">‘대통령 건강 문제’ 외면하는 민주당은 금기를 깰 수 있을까?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/02/19/npsp_bidenage/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_bidenage">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>바이든 대통령의 기밀문서 유출을 수사해 온 로버트 허 특검의 수사 보고서가 불러온 논란이 쉬이 가라앉지 않고 있습니다. 허 특검은 오랜 수사 끝에 기밀문서를 고의로 유출한 정황이 있지만, 바이든 대통령을 기소하지 않기로 했다고 밝혔는데요, 불기소 이유가 큰 논란을 불러왔습니다. 바이든이 사람 좋은 할아버지인데, 기억력이 오락가락해서 피고로 법정에 서도 제대로 진술을 못 할 것 같다고 써놓았기 때문입니다. 이를 둘러싸고 논란이 계속되자, 신경과학자 차란 랑가나스 박사가 “건망증과 치매는 엄연히 다르다”는 내용의 칼럼을 썼습니다. 일리 → 더 보기</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;104171"
-                        open
-                      >
-                        <summary class="article-expander__title">손해가 신앙이 된 사회</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104171">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>사랑은 모든 것을 이긴다고 한다. 그러나 우리 사회에서 사랑이 이길 수 없는 것이 있다. 바로 ‘손해’이다. 사랑은 손해를 이길 수 없다. 우리 시대에 손해보는 사랑이란 그 자체로 모순이다. 우리는 더 이상 무엇보다도 손해를 가장 견딜 수 없게 되었다. 대부분의 것들은 참거나 넘어갈 수 있다. 그러나 손해에 대해서는 그럴 수 없다. 손해 앞에서는 모든 분노와 증오를...
-The post 손해가 신앙이 된 사회 appeared first on 슬로우뉴스..</span>
                             </span>
                           </div>
                         </a>
@@ -8604,27 +8904,6 @@ The post 지주회사의 마법, 윤석민 일가는 어떻게 SBS를 장악했�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;102673"
-                        open
-                      >
-                        <summary class="article-expander__title">고니는요, 사람 하기 나름이에요</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/102673">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2024/01/pic_001-14.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>일본 효고현 도요오카시(인구 7.4만, 2023. 12. 현재)로 여행을 다녀온 적이 있다. 9년 전인 2015년 2월이었다. 도요오카시는 멸종됐던 황새를 민관이 힘을 합해 야생에서 복원해 낸 일본 으뜸 생태도시로 꼽힌다. 황새를 보러 갔던 그 도시에서 나는 고니도 보았다. 도요오카에서 보았던 일본 고니 우리는 이른 아침에 주택가를 걸어서 지나가는 중이었다. 아스콘으로 포장된 도로가 깔끔하게 뻗어 있었다. 우리나라와 달리...
-The post 고니는요, 사람 하기 나름이에요 appeared first on 슬로우뉴스..</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8710,256 +8989,6 @@ were other interesting changes as well.</span>
                             <span class="media-object__text">
                               <span>Security updates have been issued by Debian (keystone and subunit), Fedora (dotnet6.0, golang, kernel, sos, and tigervnc), Mageia (erlang), Red Hat (openssl), SUSE (bluez, python-aiohttp, and seamonkey), and Ubuntu (postfix and xorg-server).</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/958945/"
-                        open
-                      >
-                        <summary class="article-expander__title">Kernel prepatch 6.8-rc1</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/958945/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The 6.8-rc1 kernel prepatch is out for
-testing.
-
-
-	So this wasn&#x27;t the most pleasant merge window, but most of the
-	unpleasantness was entirely unrelated to the code base and almost
-	entirely related to nasty weather. Just a few technical
-	hiccups. And after a very big 6.7 release, 6.8 looks to actually be
-	smaller than average, although not really all that significantly
-	so.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="ff32cd5a-3c01-477d-9ebc-a54847644345"
-                        open
-                      >
-                        <summary class="article-expander__title">Convert CentOS Linux to RHEL using Red Hat Insights</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/01/22/convert-centos-linux-rhel-using-red-hat-insights">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL1_2x.png?itok&#x3D;sH2E700S" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>On June 30, 2024, CentOS Linux 7 will reach its end-of-life (EOL), marking the conclusion of official support and security updates. This development has prompted organizations and users relying on CentOS 7 to seek alternative solutions to ensure ongoing security and support. One prevalent and strategic choice is migrating from CentOS 7 to Red Hat Enterprise Linux (RHEL). The transition to RHEL is advantageous for several reasons, including continued access to regular security patches, extended support, and a robust ecosystem of tools and features. By converting to RHEL, organizations can maintain a stable and secure operating environment while aligning with a long-term, commercially supported Linux distribution.
-Using Red Hat Insights to convert CentOS 7 to RHEL
-In this tutorial, we&#x27;ll use…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78566"
-                        open
-                      >
-                        <summary class="article-expander__title">‘트럼프 대세론’ 굳혀줄 부통령 후보는 누구일까?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/01/22/npsp_trumpveep/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_trumpveep">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>아이오와 코커스에서 낙승을 거둔 도널드 트럼프 전 대통령이 공화당 대통령 후보를 향한 대세론 굳히기에 들어갔습니다. 몇 시간 전 론 드산티스 플로리다 주지사마저 경선에서 사퇴하며, 트럼프를 지지한다고 선언했습니다. 모레 치러지는 뉴햄프셔 프라이머리에서 니키 헤일리 전 UN 대사가 얼마나 선전할지가 변수가 될 수 있겠지만, 2024년 미국 대선은 이변이 없는 한 바이든 대 트럼프의 리턴 매치가 될 가능성이 커 보입니다. 경선에서 후보가 정해지고 나면, 미국에선 대통령과 짝을 이뤄 출마하는 부통령 후보가 누가 될지가 → 더 보기</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-21 datetime="2024-01-21T23:10:37.000Z">2024-01-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-21 datetime="2024-01-21T23:10:37.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >The Shape of Code</button>
-                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://shape-of-code.com/?p&#x3D;8523"
-                        open
-                      >
-                        <summary class="article-expander__title">How did Agile become the product development zeitgeist?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2024/01/21/how-did-agile-become-the-product-development-zeitgeist/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>From the earliest days of computing, people/groups have proposed software development techniques, and claiming them to be effective/productive ways of building software systems. Agile escaped this well of widely unknowns to become the dominant umbrella term for a variety of widely used software development methodologies (I’m talking about the term Agile, not any of the […]</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;102637"
-                        open
-                      >
-                        <summary class="article-expander__title">주말 사이에 벌어진 일, 김건희 지키려 한동훈 버리나: 슬로우레터 1월22일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/102637">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2024/01/dtFXfbn7naz165421af968d281.67957996-1000x650.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>윤석열-한동훈 벌써 갈라서나. 윤석열이 한동훈 지지를 철회했다고? 김건희 사과가 쟁점. 납작 엎드린 김경율. 쟁점과 현안. 김건희 출구 전략이 ‘김치찌개’ 점심? 배짱 튕기는 이준석. 여야 모두 꼼수 위성정당 만드나. 더 깊게 읽기. 총선 전망, ‘족집게’에게 물어봤다. 기업들이 검사를 모셔가는 이유. 재정적자 내년이 더 걱정이다. 다르게 읽기. “위험한 일탈”이라는 한국일보. “정신 바짝 차릴 때”라는 한겨레. “정치 경호‧뒷북...
-The post 주말 사이에 벌어진 일, 김건희 지키려 한동훈 버리나: 슬로우레터 1월22일. appeared first on 슬로우뉴스..</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >EmbeddedRelated.com Blogs</button>
-                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1623.php"
-                        open
-                      >
-                        <summary class="article-expander__title">Using GPIO in (Apache) NuttX RTOS</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1623.php">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://www.embeddedrelated.com/new2/images/blog_generic_image.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>In the previous article (https://embeddedrelated.com/showarticle/1610.php) we saw how to compile and run NuttX on three low cost boards (RaspberryPi Pico, ESP32-Devkit and STM32F4Discovery). Today we will see how to use GPIO pins and read and write logic level signals from/to the MCU pins.
-
-
-Everybody knows that blinking a LED is the &quot;Hello World&quot; program of embedded system engineer....</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;593577"
-                        open
-                      >
-                        <summary class="article-expander__title">은퇴자 배당주 투자, 배당주 선정 체크리스트</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/593577/%eb%b0%b0%eb%8b%b9%ec%a3%bc-%ed%88%ac%ec%9e%90-%eb%b0%b0%eb%8b%b9%ec%a3%bc-%ec%84%a0%ec%a0%95-%ec%b2%b4%ed%81%ac%eb%a6%ac%ec%8a%a4%ed%8a%b8">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;20
                                   min&hairsp;)</span>
                             </span>
                           </div>
@@ -9082,8 +9111,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/7964718271">
-        <time id="build-timestamp" datetime="2024-02-19T20:12:20.006Z">2024-02-19T20:12:20.006Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/7979408056">
+        <time id="build-timestamp" datetime="2024-02-20T20:13:29.788Z">2024-02-20T20:13:29.788Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

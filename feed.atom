@@ -2,10 +2,117 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-02-19T20:12:20.035Z</updated>
+    <updated>2024-02-20T20:13:29.821Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[The "KeyTrap" DNS vulnerability]]></title>
+        <id>https://lwn.net/Articles/962924/</id>
+        <link href="https://lwn.net/Articles/962924/"/>
+        <updated>2024-02-20T19:01:07.000Z</updated>
+        <summary type="html"><![CDATA[DNS resolvers (those that handle DNSSEC, at least) are almost uniformly
+vulnerable to an exploit
+that has been named "KeyTrap".  In short, the right type of packet can
+send a DNS system into something close to an infinite loop, taking it out
+of service indefinitely.
+
+
+	With just a single DNS packet, hackers could paralyze all common
+	DNS implementations and public DNS providers. Exploiting this
+	attack would have serious consequences for any application that
+	uses the internet, including the unavailability of technologies
+	such as web browsers, email and instant messaging. This devastating
+	effect prompted major DNS vendors to call KeyTrap "The worst attack
+	on DNS ever discovered"
+
+
+Some more information and pointers to updates can be found on the
+CVE-2023-50387 page; some distributors have been faster to get updates
+out than others.
+
+(Thanks to Dave Täht).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] A modest update to Qubes OS]]></title>
+        <id>https://lwn.net/Articles/962787/</id>
+        <link href="https://lwn.net/Articles/962787/"/>
+        <updated>2024-02-20T18:58:01.000Z</updated>
+        <summary type="html"><![CDATA[Qubes OS is a security-focused desktop Linux distribution built on Fedora Linux and the Xen hypervisor. Qubes uses virtualization to run applications, system services, and devices access via virtual machines called "qubes" that have varying levels of trust and persistence to provide an open-source "reasonably secure" operating system with "serious privacy". The Qubes 4.2.0 release, from December 2023, brings a number of refinements to make Qubes OS easier to manage and use.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Righi: Writing a scheduler for Linux in Rust that runs in user-space]]></title>
+        <id>https://lwn.net/Articles/962897/</id>
+        <link href="https://lwn.net/Articles/962897/"/>
+        <updated>2024-02-20T14:32:27.000Z</updated>
+        <summary type="html"><![CDATA[Andrea Righi has started
+a blog series on writing a user-space CPU scheduler with the BPF-based
+extensible scheduler class:
+
+
+	.select_cpu() implements the logic to assign a target CPU to a task
+	that wants to run, typically you have to decide if you want to keep
+	the task on the same CPU or if it needs to be migrated to a
+	different one (for example if the current CPU is busy); if we can
+	find an idle CPU at this stage there's no reason to call the
+	scheduler, the task can be immediately dispatched here.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hare programming language 0.24.0 released]]></title>
+        <id>https://lwn.net/Articles/962882/</id>
+        <link href="https://lwn.net/Articles/962882/"/>
+        <updated>2024-02-20T14:13:18.000Z</updated>
+        <summary type="html"><![CDATA[Drew DeVault 
+announced the first numbered release of the 
+Hare programming language on February 16.
+
+
+
+Many Hare users want to ship their Hare projects to users, and as such, software written in Hare is making its way into Linux distributions and the like. However, due to Hare's unstable nature, we have not provided any versioned releases, forcing any distributions who want to package Hare to package Hare's master branch, which is less than ideal.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
+        <id>https://lwn.net/Articles/962881/</id>
+        <link href="https://lwn.net/Articles/962881/"/>
+        <updated>2024-02-20T13:42:38.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Fedora (freeglut, hugin, libmodsecurity, qemu, rust-asyncgit, rust-bat, rust-cargo-c, rust-eza, rust-git-absorb, rust-git-delta, rust-git2, rust-gitui, rust-libgit2-sys, rust-lsd, rust-pore, rust-pretty-git-prompt, rust-shadow-rs, rust-silver, rust-tokei, and rust-vergen), Mageia (packages, radare2, ruby-rack, and wireshark), Oracle (.NET 8.0 and python-pillow), Red Hat (gimp:2.8, java-1.8.0-ibm, and kpatch-patch), SUSE (dpdk and opera), and Ubuntu (bind9, curl, linux-raspi, linux-raspi-5.4, node-ip, and tiff).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[연도별 TV 점유율 추이와 삼성 TV 점유율 사례 분석]]></title>
+        <id>https://happist.com/?p=593886</id>
+        <link href="https://happist.com/593886/%ec%97%b0%eb%8f%84%eb%b3%84-tv-%ec%a0%90%ec%9c%a0%ec%9c%a8"/>
+        <updated>2024-02-20T10:40:14.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mass-prebuild: An open source journey of improvement and growth]]></title>
+        <id>2e3ccc79-6f88-4bee-8292-186b68328af9</id>
+        <link href="https://developers.redhat.com/articles/2024/02/20/mass-prebuild-open-source-journey-improvement-and-growth"/>
+        <updated>2024-02-20T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome back to our blog series about the evolution of mass-prebuild. In our first post in 2022, we introduced this powerful open source tool designed for streamlining package builds across multiple architectures and Linux distributions. This article continues that journey, exploring how mass-prebuild has been continually refined, improved, and grown in response to user feedback and technological advancements. We will dive into specific updates that have shaped the tool over time, highlight its significant role in improving the stability of essential packages like Autoconf and GCC, and showcase its impact on the open source community. Fasten your seat belts for a comprehensive look at mass-prebuild's progress and future prospects!
+Recap: What is mass-prebuild?
+Need a summary of the previou…]]></summary>
+        <author>
+            <name>Frédéric Bérat</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[번역] 프로그래머를 위한 카테고리 이론 - 4. 크라이슬리 카테고리]]></title>
         <id>20240220-category-theory-for-programmers-4-kleisli-category</id>
@@ -14,6 +121,37 @@
         <summary type="html"><![CDATA[우리는 지금까지 타입과 순수 함수들을 카테고리로 모델링하는 방법을 살펴봤다. 앞서 필자는 카테고리 이론에서 사이드 이펙트나 순수하지 않은 함수를 모델링하는 방법이 있다고 이야기했었는데, 어떠한 실행과정을 추적하거나 로깅하는 함수를 예시로 들어 이 방법에 대해 한번 살펴보도록 하자.]]></summary>
         <author>
             <name>Evans Library</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] ‘법치’와 ‘민주주의’ 기로에 선 미국?]]></title>
+        <id>https://newspeppermint.com/?p=78422</id>
+        <link href="https://newspeppermint.com/2024/02/19/npsp_coloradotrump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_coloradotrump"/>
+        <updated>2024-02-19T22:59:17.000Z</updated>
+        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 12월 27일 스프에 쓴 글입니다. 콜로라도주 대법원 판결에 관해선 아메리카노에서도 다뤘습니다. 미국에는 ‘공식 선거운동 기간’이라는 개념이 없습니다. 한 차례 선거가 끝나면 곧바로 다음 선거가 시작됩니다. 호들갑처럼 보이기도 하지만, 실제로 대선이 끝난 직후에는 4년 뒤 후보가 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[의사들은 국민을 이길 수 없다? 누가 전쟁을 만드나: 슬로우레터 2월20일.]]></title>
+        <id>https://slownews.kr/?p=104228</id>
+        <link href="https://slownews.kr/104228"/>
+        <updated>2024-02-19T22:06:09.000Z</updated>
+        <summary type="html"><![CDATA[오늘 아침 신문 1면은 ‘의료 대란. “의사들은 국민을 이길 수 없다.” “총선용 포퓰리즘이다.” 해법과 대안. 의사들이 말하는 갈등 해법. 진작 했어야 할 일. 공정위가 미적댄다? 쟁점과 현안. “모멸감을 느꼈다”, 김영주 탈당 파문. “전두환과 뭐가 다른가.” ‘한낙수’ 잡아야 이긴다. 더 깊게 읽기. 이런 사람 안 된다. 2030의 심판 냉소증, 40%가 무당층. 다르게 읽기. 역대 최대 고용률의...
+The post 의사들은 국민을 이길 수 없다? 누가 전쟁을 만드나: 슬로우레터 2월20일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why it is bad idea to check result of malloc call with assert]]></title>
+        <id>https://pvs-studio.com/en/blog/posts/cpp/1104/</id>
+        <link href="https://pvs-studio.com/en/blog/posts/cpp/1104/"/>
+        <updated>2024-02-19T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The pointer returned by malloc needs to be checked before use. Using the assert macro to check the pointer would be wrong. In this article, we'll investigate why this is a bad programming tip.]]></summary>
+        <author>
+            <name>from pvs-studio.com</name>
         </author>
     </entry>
     <entry>
@@ -37,6 +175,16 @@ actor library that Spritely intends to build on.]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Using (Apache) NuttX USERLED Subsystem]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1633.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1633.php"/>
+        <updated>2024-02-19T14:26:29.000Z</updated>
+        <summary type="html"><![CDATA[In the previous article (https://embeddedrelated.com/showarticle/1623.php) we saw how to use GPIOs on NuttX testing on RaspberryPi Pico as example. In that article we used the GPIO output to control an LED, but there is a better way to do that. Of course, NuttX has an LED subsystem similar to Linux LED subsystem: it is called USERLED. Today we will see how to control LEDs using NuttX's USERLED...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Security updates for Monday]]></title>
         <id>https://lwn.net/Articles/962753/</id>
         <link href="https://lwn.net/Articles/962753/"/>
@@ -44,6 +192,17 @@ actor library that Spritely intends to build on.]]></summary>
         <summary type="html"><![CDATA[Security updates have been issued by Debian (engrampa, openvswitch, pdns-recursor, and runc), Fedora (caddy, expat, freerdp, libgit2, libgit2_1.6, mbedtls, python-cryptography, qt5-qtbase, and sudo), Gentoo (Apache Log4j, Chromium, Google Chrome, Microsoft Edge, CUPS, e2fsprogs, Exim, firefox, Glade, GNU Tar, intel-microcode, libcaca, QtNetwork, QtWebEngine, Samba, Seamonkey, TACACS+, Thunar, and thunderbird), Mageia (dnsmasq, unbound, and vim), Oracle (container-tools:4.0, container-tools:ol8, dotnet6.0, dotnet7.0, kernel, nss, openssh, and sudo), Red Hat (python-pillow), and SUSE (bitcoin, dpdk, libssh, openvswitch, postgresql12, and postgresql13).]]></summary>
         <author>
             <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[김건희 ‘디올 백’ 폭로는 “여성에 대한 테러”? 뭔 소리인가?]]></title>
+        <id>https://slownews.kr/?p=104211</id>
+        <link href="https://slownews.kr/104211"/>
+        <updated>2024-02-19T09:51:55.000Z</updated>
+        <summary type="html"><![CDATA[2024년 2월 15일 제22대 국회의원선거 제6차 선거방송심의위원회 회의가 열렸습니다. 이날 안건은 총 13건으로 그중 9건은 지난 회의에서 ‘의견진술’을 받기로 한 건이고, 4건은 이번 회의에서 심의할 건입니다. 의견진술이란 방송사에 추가로 확인할 사항이 있거나 ‘법정제재’가 필요하다고 보이는 경우 방송사 관계자를 불러 소명기회를 주는 절차인데요. 이날은 의견진술 9건만 심의하고, 4건에 대한 심의는 차기 회의로 넘겼습니다. 심의한 9건은 다음과...
+The post 김건희 ‘디올 백’ 폭로는 “여성에 대한 테러”? 뭔 소리인가? appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>민주언론시민연합</name>
         </author>
     </entry>
     <entry>
@@ -3763,102 +3922,6 @@ The post 강원도형 최저임금, 기업천국? 게토화 위험 크다 appear
 The post 지주회사의 마법, 윤석민 일가는 어떻게 SBS를 장악했나. appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Convert CentOS Linux to RHEL using Red Hat Insights]]></title>
-        <id>ff32cd5a-3c01-477d-9ebc-a54847644345</id>
-        <link href="https://developers.redhat.com/articles/2024/01/22/convert-centos-linux-rhel-using-red-hat-insights"/>
-        <updated>2024-01-22T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[On June 30, 2024, CentOS Linux 7 will reach its end-of-life (EOL), marking the conclusion of official support and security updates. This development has prompted organizations and users relying on CentOS 7 to seek alternative solutions to ensure ongoing security and support. One prevalent and strategic choice is migrating from CentOS 7 to Red Hat Enterprise Linux (RHEL). The transition to RHEL is advantageous for several reasons, including continued access to regular security patches, extended support, and a robust ecosystem of tools and features. By converting to RHEL, organizations can maintain a stable and secure operating environment while aligning with a long-term, commercially supported Linux distribution.
-Using Red Hat Insights to convert CentOS 7 to RHEL
-In this tutorial, we'll use…]]></summary>
-        <author>
-            <name>Nikhil Mungale</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[‘트럼프 대세론’ 굳혀줄 부통령 후보는 누구일까?]]></title>
-        <id>https://newspeppermint.com/?p=78566</id>
-        <link href="https://newspeppermint.com/2024/01/22/npsp_trumpveep/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_trumpveep"/>
-        <updated>2024-01-22T05:00:40.000Z</updated>
-        <summary type="html"><![CDATA[아이오와 코커스에서 낙승을 거둔 도널드 트럼프 전 대통령이 공화당 대통령 후보를 향한 대세론 굳히기에 들어갔습니다. 몇 시간 전 론 드산티스 플로리다 주지사마저 경선에서 사퇴하며, 트럼프를 지지한다고 선언했습니다. 모레 치러지는 뉴햄프셔 프라이머리에서 니키 헤일리 전 UN 대사가 얼마나 선전할지가 변수가 될 수 있겠지만, 2024년 미국 대선은 이변이 없는 한 바이든 대 트럼프의 리턴 매치가 될 가능성이 커 보입니다. 경선에서 후보가 정해지고 나면, 미국에선 대통령과 짝을 이뤄 출마하는 부통령 후보가 누가 될지가 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[고니는요, 사람 하기 나름이에요]]></title>
-        <id>https://slownews.kr/?p=102673</id>
-        <link href="https://slownews.kr/102673"/>
-        <updated>2024-01-22T03:43:59.000Z</updated>
-        <summary type="html"><![CDATA[일본 효고현 도요오카시(인구 7.4만, 2023. 12. 현재)로 여행을 다녀온 적이 있다. 9년 전인 2015년 2월이었다. 도요오카시는 멸종됐던 황새를 민관이 힘을 합해 야생에서 복원해 낸 일본 으뜸 생태도시로 꼽힌다. 황새를 보러 갔던 그 도시에서 나는 고니도 보았다. 도요오카에서 보았던 일본 고니 우리는 이른 아침에 주택가를 걸어서 지나가는 중이었다. 아스콘으로 포장된 도로가 깔끔하게 뻗어 있었다. 우리나라와 달리...
-The post 고니는요, 사람 하기 나름이에요 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>김훤주</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kernel prepatch 6.8-rc1]]></title>
-        <id>https://lwn.net/Articles/958945/</id>
-        <link href="https://lwn.net/Articles/958945/"/>
-        <updated>2024-01-22T00:47:05.000Z</updated>
-        <summary type="html"><![CDATA[The 6.8-rc1 kernel prepatch is out for
-testing.
-
-
-	So this wasn't the most pleasant merge window, but most of the
-	unpleasantness was entirely unrelated to the code base and almost
-	entirely related to nasty weather. Just a few technical
-	hiccups. And after a very big 6.7 release, 6.8 looks to actually be
-	smaller than average, although not really all that significantly
-	so.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How did Agile become the product development zeitgeist?]]></title>
-        <id>https://shape-of-code.com/?p=8523</id>
-        <link href="https://shape-of-code.com/2024/01/21/how-did-agile-become-the-product-development-zeitgeist/"/>
-        <updated>2024-01-21T23:10:37.000Z</updated>
-        <summary type="html"><![CDATA[From the earliest days of computing, people/groups have proposed software development techniques, and claiming them to be effective/productive ways of building software systems. Agile escaped this well of widely unknowns to become the dominant umbrella term for a variety of widely used software development methodologies (I’m talking about the term Agile, not any of the […]]]></summary>
-        <author>
-            <name>Derek Jones</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[주말 사이에 벌어진 일, 김건희 지키려 한동훈 버리나: 슬로우레터 1월22일.]]></title>
-        <id>https://slownews.kr/?p=102637</id>
-        <link href="https://slownews.kr/102637"/>
-        <updated>2024-01-21T22:04:19.000Z</updated>
-        <summary type="html"><![CDATA[윤석열-한동훈 벌써 갈라서나. 윤석열이 한동훈 지지를 철회했다고? 김건희 사과가 쟁점. 납작 엎드린 김경율. 쟁점과 현안. 김건희 출구 전략이 ‘김치찌개’ 점심? 배짱 튕기는 이준석. 여야 모두 꼼수 위성정당 만드나. 더 깊게 읽기. 총선 전망, ‘족집게’에게 물어봤다. 기업들이 검사를 모셔가는 이유. 재정적자 내년이 더 걱정이다. 다르게 읽기. “위험한 일탈”이라는 한국일보. “정신 바짝 차릴 때”라는 한겨레. “정치 경호‧뒷북...
-The post 주말 사이에 벌어진 일, 김건희 지키려 한동훈 버리나: 슬로우레터 1월22일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Using GPIO in (Apache) NuttX RTOS]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1623.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1623.php"/>
-        <updated>2024-01-21T16:34:09.000Z</updated>
-        <summary type="html"><![CDATA[In the previous article (https://embeddedrelated.com/showarticle/1610.php) we saw how to compile and run NuttX on three low cost boards (RaspberryPi Pico, ESP32-Devkit and STM32F4Discovery). Today we will see how to use GPIO pins and read and write logic level signals from/to the MCU pins.
-
-
-Everybody knows that blinking a LED is the "Hello World" program of embedded system engineer....]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[은퇴자 배당주 투자, 배당주 선정 체크리스트]]></title>
-        <id>https://happist.com/?p=593577</id>
-        <link href="https://happist.com/593577/%eb%b0%b0%eb%8b%b9%ec%a3%bc-%ed%88%ac%ec%9e%90-%eb%b0%b0%eb%8b%b9%ec%a3%bc-%ec%84%a0%ec%a0%95-%ec%b2%b4%ed%81%ac%eb%a6%ac%ec%8a%a4%ed%8a%b8"/>
-        <updated>2024-01-21T11:27:11.000Z</updated>
-        <summary type="html"><![CDATA[마케팅 경영 사례 연구 및 트렌드 탐구]]></summary>
-        <author>
-            <name>happist</name>
         </author>
     </entry>
     <entry>
