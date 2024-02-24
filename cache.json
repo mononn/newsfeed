@@ -190,16 +190,6 @@
           "wordCount": null,
           "title": "F# 연립 합동방정식과 중국인 나머지 정리",
           "imageUrl": null
-        },
-        {
-          "id": "https://cpuu.postype.com/post/16105526",
-          "author": "CPUU",
-          "description": "나머지\n양의 정수 a, b가 있고, a를 b로 나눈 몫을 q, 나머지를 r라고 하자.\n이는 곧 a = q*b + r 로 나타낼 수 있다. 초등학교에서는 r을 '나머지'라고 불렀다. 일반적으로 나머지는 나누는 수보다 작은 것으로 간주하여 0≤r<m로 가정했었다. \n초등학교에서는 양수만 고려했지만 이제 음수에 대해서도 생각해볼 수 있다. 예를 들어 -7 mod 12를 구하려면, -7 = 12*q+ r인 꼴로 표현하되 0≤r<12 인 것을 고르면 된다. q= -1, r=5 이면 가능하다. 그러므로 나머지는 5이다. 마찬가지로 -14 mod 5를 구하라고 하면, -14는 (-3) * 5 + 1 이므로 나머지가 1임을 알 수 있다. \n모듈로 연산\n컴퓨터공학에서는 나머지를 구하고 싶을 때 모듈로 연산(modular arithmetic)을 사용한다. 즉, A mod B = R 이 된다. (몫 Q에 대해서는 특별히 신경쓰지 않는다)\n모듈로 연산에는 다음과 같은 성질들이 존재한다.\n\n덧셈: (A+B) mod C = (A mod C + B mod C) mod C\n뺄셈: (A-B) mod C = (A mod C - B mod C) mod C\n곱셈: (A*B) mod C = (A mod C * B mod C) mod C\n거듭제곱: A^B mod C = ( (A mod C)^B ) mod C\n\n특히, 암호학에서는 종종 매우 큰 수를 처리하게 되는데, 모듈러 거듭제곱 연산의 최적화를 통해 큰 수를 효율적으로 계산할 수 있다. 예를 들어 3^4 mod 5 은 3^4 가 81이 되는 것 정도는 쉽게 계산이 되므로 81 mod 5 = 1 …",
-          "link": "https://cpuu.postype.com/post/16105526",
-          "publishedOn": "2024-01-26T05:58:36.000Z",
-          "wordCount": 774,
-          "title": "F# 모듈러 연산과 합동(congruence)",
-          "imageUrl": "https://d3mcojo3jv0dbr.cloudfront.net/2024/01/25/11/05/9c90f4d2ddd4319b2d285aaf3c6feb25.png?w=600&h=300&q=65"
         }
       ]
     },
@@ -511,36 +501,6 @@
           "wordCount": null,
           "title": "The developer's guide to Kubernetes Operators",
           "imageUrl": null
-        },
-        {
-          "id": "07632d41-43d4-4c57-956b-699a7579e2a1",
-          "author": "Shaaf, Syed",
-          "description": "Red Hat OpenShift and Red Hat Enterprise Linux (RHEL) customers deploying Spring Boot applications can now comfortably do so with Red Hat community support for Spring Boot. This is a step to ensure the user experience and adoption of runtimes on the OpenShift platform for the developer community. Red Hat also supports other runtimes such as Quarkus and Node.js, and has for many years provided container images for OpenJDK on RHEL and UBI.\nThe Red Hat product team has designed a new offering that lets customers use the community version of Spring Boot 3 without replacing the individual components with Red Hat supported components. Instead of providing Red Hat components for Spring Boot, which was the case for Red Hat support of Spring Boot 2, the new community support offering will focus on …",
-          "link": "https://developers.redhat.com/articles/2024/01/26/community-support-spring-boot-applications-openshift-and-rhel",
-          "publishedOn": "2024-01-26T07:00:00.000Z",
-          "wordCount": 2936,
-          "title": "Community support for Spring Boot applications on OpenShift and RHEL",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-spring-boot_2x.png?itok=dma5d8t2"
-        },
-        {
-          "id": "a2ae58f5-7c0b-45ea-a76a-91fb30ccd120",
-          "author": "Tarcisio Oliveira",
-          "description": "MLOps, short for machine learning operations, is a set of practices and tools that combines DevOps principles applied to the development cycle of artificial intelligence applications.\nKubeflow Pipelines is an open source platform for implementing MLOps, providing a framework for building, deploying, and managing machine learning workflows in a scalable, repeatable, secure, and cloud-oriented manner on Kubernetes.\nWith the ability to drive agility and efficiency in the development and deployment of machine learning models, MLOps with Kubeflow Pipelines can also improve collaboration between data scientists and machine learning engineers, ensuring consistency and reliability throughout every step of the workflow.\nMLOps\nCreated from the DevOps discipline, MLOps can be defined as a combination…",
-          "link": "https://developers.redhat.com/articles/2024/01/25/implement-mlops-kubeflow-pipelines",
-          "publishedOn": "2024-01-25T20:12:47.418Z",
-          "wordCount": null,
-          "title": "Implement MLOps with Kubeflow Pipelines",
-          "imageUrl": null
-        },
-        {
-          "id": "1255f610-5f17-4953-aff4-1a835c2e879c",
-          "author": "Lazhar Halleb",
-          "description": "The Network Observability Operator is GA (generally available) in Red Hat OpenShift 4.12. You can install it to get metrics about cluster networking, including a network topology graph of all namespaces on that cluster. You can view and monitor the network traffic data in different graphical representations. The Network Observability Operator uses eBPF technology to create the network flows.\nNetwork Observability Operator provides many other metrics and network traffic measurements. You can find more details here.\nThis article demonstrates how to install and configure the Network Observability Operator on a single node OpenShift (SNO) cluster, based on the Red Hat OpenShift documentation. It includes details on configuring and using Red Hat OpenShift Data Foundation storage external to the…",
-          "link": "https://developers.redhat.com/articles/2024/01/25/network-observability-ebpf-single-node-openshift",
-          "publishedOn": "2024-01-25T20:12:47.416Z",
-          "wordCount": null,
-          "title": "Network observability with eBPF on single node OpenShift",
-          "imageUrl": null
         }
       ]
     },
@@ -844,16 +804,6 @@
           "wordCount": null,
           "title": "Getting Started With Zephyr: Bluetooth Low Energy",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1629.php",
-          "author": null,
-          "description": "A facet of the C language that has always appealed to me is its size - it is not a complex sprawling language. A thorough understanding of it can be gleaned quite quickly and many programmers actually use a very significant proportion of the language. Using it well is a challenge. The important thing is to write clear, understandable, maintainable code. Efficiency is very important for many...",
-          "link": "https://www.embeddedrelated.com/showarticle/1629.php",
-          "publishedOn": "2024-01-25T13:08:19.000Z",
-          "wordCount": null,
-          "title": "++i and i++ : what’s the difference?",
-          "imageUrl": null
         }
       ]
     },
@@ -1024,16 +974,6 @@
           "wordCount": null,
           "title": "Carbon Limit’s concrete technology is saving the environment using AI",
           "imageUrl": null
-        },
-        {
-          "id": "http://developers.googleblog.com/2024/01/project-idx-product-updates.html",
-          "author": null,
-          "description": "Posted by the IDX team\n\n\n\n\n\n\nSix months ago, we launched Project IDX, an experimental, cloud-based workspace for full-stack, multiplatform software development. We built Project IDX to simplify and streamline the developer workflow, aiming to reduce the sea of complexities traditionally associated with app development. It certainly seems like we've piqued your interest, and we love seeing what IDX has helped you build.\nFor example, we recently learned about Tanaki, an AI-enhanced content creation app built using Project IDX:\n\n\n\n\n\nPasquale D’Silva one of the developers that built Tanaki, said:\n\"Using the IDX shared workspace to build Tanaki has been so fun. It allows our remote team of imagineers to build together in one place. It is a magic collaboration portal!\"\nDevelopers at Google have …",
-          "link": "http://developers.googleblog.com/2024/01/project-idx-product-updates.html",
-          "publishedOn": "2024-01-25T18:46:00.000Z",
-          "wordCount": null,
-          "title": "Introducing Android emulators, iOS simulators, and other product updates from Project IDX",
-          "imageUrl": null
         }
       ]
     },
@@ -1140,16 +1080,6 @@
           "wordCount": null,
           "title": "Qt Creator* in search of Qt Creator bugs",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1098/",
-          "author": null,
-          "description": "As Yuri Gagarin once said, \"In the future, we will fly, we will fly a lot\". To some extent, Gaijin's Dagor Engine makes these flights possible. Let's get a glimpse of the engine's innards and talk...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1098/",
-          "publishedOn": "2024-01-25T21:00:00.000Z",
-          "wordCount": 7517,
-          "title": "Off we go! Digging into the game engine of War Thunder and interviewing its devs",
-          "imageUrl": "https://cdn.pvs-studio.com/media/docx/blog/1098_Dagor_Engine/image1_thm_intoblank_1200x630.png?ver=01-26-2024-14-15-14"
         }
       ]
     },
@@ -1253,6 +1183,16 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/963444/",
+          "author": "corbet",
+          "description": "Version 2.44.0 of the Git\nsource-code management system has been released.  There is a long list of\nchanges, including the git\nreplay command for faster, server-side rebasing, a number of\ncommand-line completion improvements, and more.",
+          "link": "https://lwn.net/Articles/963444/",
+          "publishedOn": "2024-02-23T21:42:21.000Z",
+          "wordCount": null,
+          "title": "Git 2.44.0 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/963095/",
           "author": "jzb",
@@ -2062,46 +2002,6 @@
           "wordCount": 632,
           "title": "Security updates for Friday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/959509/",
-          "author": "jake",
-          "description": "Greg Kroah-Hartman has announced the release of the 6.7.2, 6.6.14,\n6.1.75, 5.15.148, 5.10.209, 5.4.268, and 4.19.306 stable kernels.  As usual, they\ncontain a long list of fixes throughout the kernel tree.",
-          "link": "https://lwn.net/Articles/959509/",
-          "publishedOn": "2024-01-26T00:22:53.000Z",
-          "wordCount": 146,
-          "title": "Seven new stable kernels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/959069/",
-          "author": "corbet",
-          "description": "The free-software community has managed to build a body of software that is\nworth, by most estimates, many billions of dollars; all of this code is\nfreely available to anybody who wants to use or modify it.  It is an\nunparalleled example of independent actors working cooperatively on a\ncommon resource.  Free software is certainly a success story, but all is\nnot perfect.  One of the community's greatest strengths — convincing\ncompanies to contribute to this common resource — is also part of one of\nits biggest weaknesses.",
-          "link": "https://lwn.net/Articles/959069/",
-          "publishedOn": "2024-01-25T15:53:59.000Z",
-          "wordCount": null,
-          "title": "[$] The things nobody wants to pay for",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/959461/",
-          "author": "corbet",
-          "description": "The AdaCore blog describes\nsome hardening features contributed to GCC for the GCC 14 release.\n\n\n\tWith -fharden-control-flow-redundancy, the compiler now verifies,\n\tat the end of functions, whether the traversed basic blocks align\n\twith a legitimate execution path. The purpose of this protective\n\tmeasure is to detect and thwart attacks attempting to infiltrate\n\tthe middle of functions, thereby enhancing the overall security\n\tposture of the compiled code.",
-          "link": "https://lwn.net/Articles/959461/",
-          "publishedOn": "2024-01-25T15:10:41.000Z",
-          "wordCount": null,
-          "title": "GCC security features from AdaCore",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/959455/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (chromium, firefox-esr, php-phpseclib, phpseclib, thunderbird, and zabbix), Fedora (dotnet7.0, firefox, fonttools, and python-jinja2), Mageia (avahi and chromium-browser-stable), Oracle (java-1.8.0-openjdk, java-11-openjdk, LibRaw, openssl, and python-pillow), Red Hat (gnutls, kpatch-patch, php:8.1, and squid:4), SUSE (apache-parent, apache-sshd, bluez, cacti, cacti-spine, erlang, firefox, java-11-openjdk, opera, python-Pillow, tomcat, tomcat10, and xwayland), and Ubuntu (paramiko and puma).",
-          "link": "https://lwn.net/Articles/959455/",
-          "publishedOn": "2024-01-25T14:18:02.000Z",
-          "wordCount": null,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
         }
       ]
     },
@@ -2165,16 +2065,6 @@
           "publishedOn": "2024-01-30T14:33:00.000Z",
           "wordCount": null,
           "title": "Onboarding bottleneck: more steps for good onboarding",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/2024-emacs-completion.html",
-          "author": null,
-          "description": "I’ve been using Emacs for many years, using it for any writing for my website, writing my books, and most of my programming. (Exceptions have been IntellJ IDEA for Java and RStudio for R.) As such I’ve been happy to see a lot of activity in the last few years to improve Emacs’s capabilities, making it feel rather less than a evolutionary dead end. One of the biggest improvements to my Emacs experience is using regexs for completion lists.\nMany Emacs commands generate lists of things to pick from. I want to visit (open) a file I type the key combination to find a file, and Emacs pops up a list of candidate files in the minibuffer (a special area for to interact with commands). These file lists can be quite long, particularly should I ask for a list of all files in my current project.\nTo spe…",
-          "link": "https://martinfowler.com/articles/2024-emacs-completion.html",
-          "publishedOn": "2024-01-25T18:20:00.000Z",
-          "wordCount": null,
-          "title": "Improving my Emacs experience with completion",
           "imageUrl": null
         }
       ]
@@ -3002,36 +2892,6 @@
           "wordCount": null,
           "title": "국회의원 수 줄이면 오히려 특권만 커진다",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=103017",
-          "author": "민주언론시민연합",
-          "description": "자본주의 체제 속의 대중매체는 제4부라고 호칭될 정도로 그 역할이 중요하다. 대중매체가 제대로 역할을 할 경우 민주주의를 보호, 확대하는 데 크게 기여할 수 있지만 그 역기능도 심각하다는 것을 경계해야 한다. 오늘날 한국 대중매체가 ‘기레기’ 비판을 받는 것은 그 책무를 다하지 못하고 있기 때문이다. 국가적 지표로 보면 한국이 선진국으로 진입해 사회 여러 분야의 민주주의 의식화가 진행되면서 그...\nThe post ‘설마 전쟁 나겠어?’ 불감증 언론의 무심한 받아쓰기 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103017",
-          "publishedOn": "2024-01-26T07:22:45.000Z",
-          "wordCount": 5503,
-          "title": "‘설마 전쟁 나겠어?’ 불감증 언론의 무심한 받아쓰기",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/00957069_0001.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=102551",
-          "author": "민노씨",
-          "description": "[인터뷰] ‘초3 가방 몰래 녹음기'(2024) 사건 판결에 교사단체는 찬성 입장을, 학부모단체는 반대 입장을 표했습니다. 내가 학부모였다면? 교사들께 물었습니다. 교사-학부모 갈등, ‘우리 아이’를 위해서 이제 풀어내야 합니다. “엄마, 선생님이 내가 항상 맛이 가 있대.” 학기 초 어느날, 학교에서 돌아온 초등학교 3학년 자녀가 ‘나에게’ 이렇게 말한다면, 여러분은 어떻게 하시겠습니까? 일단 침착하게… 여러 가능성을 생각해봅시다 나쁜 선생님일 수...\nThe post “엄마, 선생님이 내가 항상 맛이 갔대” 이럴 땐 어떻게 하면 좋을까요 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/102551",
-          "publishedOn": "2024-01-26T05:51:35.000Z",
-          "wordCount": 8542,
-          "title": "“엄마, 선생님이 내가 항상 맛이 갔대” 이럴 땐 어떻게 하면 좋을까요",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/GettyImages-1326564002-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=102977",
-          "author": "이정환",
-          "description": "“사과 요구한 적 없다”고? “한동훈 잘한다”는 평가가 47%. ‘사랑꾼’ 윤석열만 남았다. 가장 큰 패자는 윤석열. 여름부터 낙엽이 진다. 사과하지 않고 선거를 치르면 어떻게 될 것 같은가. 쟁점과 현안. 또 정치 테러, 이번엔 배현진 피습. 외환위기도 아닌데 1.4% 성장률이라니. 다르게 읽기. “빵집 사장도 감옥 간다”는 공포 마케팅. GTX로 원주까지? 빨대 효과로 지방 소멸 앞당길 수도. 공판...\nThe post 빨라진 레임덕 시계, “윤석열의 김건희 사랑은 진심이었다”: 슬로우레터 1월26일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/102977",
-          "publishedOn": "2024-01-25T22:09:51.000Z",
-          "wordCount": 6947,
-          "title": "빨라진 레임덕 시계, “윤석열의 김건희 사랑은 진심이었다”: 슬로우레터 1월26일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/01/fLvkmBJaNtpY65b20618963ae8.21193579-1000x666.jpeg"
         }
       ]
     },
@@ -3040,6 +2900,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=593949",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593949/%eb%b9%84%ed%8b%80%ec%a6%88-%ec%84%b1%ea%b3%b5%ec%9d%98-%eb%b9%84%eb%b0%80",
+          "publishedOn": "2024-02-24T10:55:52.000Z",
+          "wordCount": null,
+          "title": "비틀즈 성공의 비밀, 말콤 글래드웰 “아웃라이어”",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=593934",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/593934/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-02-24T06:09:54.000Z",
+          "wordCount": null,
+          "title": "엔비디아 실적을 읽는 월가의 시선, 훌륭하지만 예전만큼 성장할 수 있을까?",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=593904",
           "author": "happist",
@@ -3298,36 +3178,6 @@
           "publishedOn": "2024-01-29T10:39:37.000Z",
           "wordCount": null,
           "title": "퇴사 전, 퇴사계획서 작성이 중요한 이유",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593630",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593630/4%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2024-01-26T05:41:36.000Z",
-          "wordCount": 5666,
-          "title": "4분기 테슬라 실적",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593641",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593641/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
-          "publishedOn": "2024-01-25T23:25:23.000Z",
-          "wordCount": 7160,
-          "title": "테슬라 실적을 읽는 월가의 시선, 기대한만큼 나쁘나 미래가 안보인다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593632",
-          "author": "happist",
-          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
-          "link": "https://happist.com/593632/4%eb%b6%84%ea%b8%b0-%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%8b%a4%ec%a0%81-3",
-          "publishedOn": "2024-01-25T11:42:15.000Z",
-          "wordCount": 7825,
-          "title": "4분기 넷플릭스 실적을 읽는 월가의 시선, 넷플릭스 목표주가 상향",
           "imageUrl": null
         }
       ]
