@@ -40,18 +40,7 @@
       "title": "C++ Stories",
       "feedUrl": "https://www.cppstories.com/index.xml",
       "siteUrl": "https://www.cppstories.com/",
-      "articles": [
-        {
-          "id": "https://www.cppstories.com/2024/expected-cpp23/",
-          "author": null,
-          "description": "In this article, we’ll go through a new vocabulary type introduced in C++23. std::expected is a type specifically designed to return results from a function, along with the extra error information.\n\n\n\n     \n    \n\n\nImagine you’re expecting a certain result from a function, but oops… things don’t always go as planned:\n/*RESULT*/ findRecord(Database& db, int recordId) {\n    if (!db.connected())\n        return /*??*/\n    \n    auto record = db.query(recordId);\n    if (record.valid) {\n        return record;\n\n    return /*??*/\n}\n\n\nWhat can you do? What should you return or output through /*RESULT*/ ?\nHere are a few options:\nThrow an exception,\nTerminate the application,\nUse std::optional to return a value or “nothing” to indicate an error,\nUse a separate struct like my_func_result that would stor…",
-          "link": "https://www.cppstories.com/2024/expected-cpp23/",
-          "publishedOn": "2024-02-05T00:00:00.000Z",
-          "wordCount": 2490,
-          "title": "Using std::expected from C++23",
-          "imageUrl": "https://www.cppstories.com/2024/images/expected.png"
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Sticky Bits – Powered by Feabhas",
@@ -275,6 +264,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "d2e0b956-fcac-4f7a-b10a-c482a86fcb58",
+          "author": "Philip Hayes",
+          "description": "With the recent release of Red Hat JBoss Enterprise Application Platform (JBoss EAP) 8.0, Red Hat introduced a new set of provisioning tools including a new installation manager (for bare metal and virtual machine installations) and a new Maven plug-in (for Red Hat OpenShift builds).\nFor OpenShift, the JBoss EAP Maven plug-in allows users to specify what they want in their server footprint and configuration, for example to specify a feature pack to include database drivers. The JBoss EAP Maven plug-in uses Galleon trimming capability to reduce the size and memory footprint of the server; it also supports the execution of JBoss EAP CLI script files to customize server configuration. The JBoss EAP Maven plug-in is discussed in the previous article How JBoss EAP 8.0 makes deployment on OpenSh…",
+          "link": "https://developers.redhat.com/articles/2024/03/05/how-use-jboss-eap-80s-new-provisioning-system",
+          "publishedOn": "2024-03-05T07:00:00.000Z",
+          "wordCount": 3717,
+          "title": "How to use JBoss EAP 8.0's new provisioning system",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
+        },
+        {
+          "id": "dbf674f5-9e4c-4430-ab94-75036f6344f0",
+          "author": "Nagesh Rathod",
+          "description": "Ansible, a powerful automation tool, simplifies configuration management, application deployment, and infrastructure provisioning. When it comes to developing Ansible Playbooks and managing infrastructure, having a well-configured development environment can greatly enhance productivity. In this technical blog, we will explore how to set up an Ansible development environment in the popular Visual Studio Code (VS Code) IDE.\nPrerequisites\nInstall Ansible Automation Platform\nInstall ansible-navigator on your system\nInstall Podman or Podman Desktop\nPulled down execution environment using Podman\nInstall Git \nWhy VS Code for Ansible Development Environment?\nThe Ansible Language Server extension:\nProvides syntax highlighting\nAutocompletion (including with FQCN)\nEasy jump to module code/documentat…",
+          "link": "https://developers.redhat.com/articles/2024/03/05/create-efficient-ansible-development-environment-vs-code-ide",
+          "publishedOn": "2024-03-05T07:00:00.000Z",
+          "wordCount": 3859,
+          "title": "Create an efficient Ansible development environment in VS Code IDE",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
+        },
+        {
           "id": "7b388ab2-041a-47ae-a424-9e0b291d2be4",
           "author": "Sai Sindhur Malleni, Vishnu Challa, Raul Sevilla Canavate",
           "description": "Three years ago, we introduced kube-burner to the Kubernetes performance and scale communities. Since then, kube-burner has steadily continued its journey, adding a diverse range of features that help solve unique challenges in performing and analyzing results from performance and scale tests on Kubernetes and Red Hat OpenShift.\nOver the last few years, multiple new features and usability improvements were added to kube-burner. In this article, we will go beyond the basics, exploring some new bells and whistles added to the tool recently and laying out our vision for the future.\nThe story so far\nFor the uninitiated and at a high level, kube-burner is a flexible open source Kubernetes performance and scale testing tool. It’s capable of creating, deleting, and updating Kubernetes resources a…",
@@ -343,6 +352,16 @@
           "wordCount": 5613,
           "title": "How to install RHEL on the Marvell Octeon 10 DPU",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP_RHEL1_2x.png?itok=sH2E700S"
+        },
+        {
+          "id": "307c0a46-bca5-46ee-b300-8a57ea4ef0cd",
+          "author": "Vivien Wang",
+          "description": "VMware Cloud Foundation 5.1 is now available on Red Hat OpenShift Container Platform 4.13 with NVIDIA AI Enterprise, integrating automation within a consistent and replicable infrastructure model along with the latest data science and AI application deployment offered by NVIDIA. Read VMware’s official solution brief here.\nWhat does this mean?\nOpenShift on VMware Cloud Foundation provides you with the advantages of a contemporary private cloud, leveraging the established VMware Software-Defined Data Center architecture:\nA standard, replicable methodology for standardized infrastructure.\nEnhanced automation that reduces manual errors and boosts administrative efficiency.\nCloud flexibility and scalability allowing for rapid expansion in line with business growth.\nIntegration with VMware's pro…",
+          "link": "https://developers.redhat.com/articles/2024/02/22/run-red-hat-openshift-container-platform-413-vmware-cloud-foundation-51-nvidia",
+          "publishedOn": "2024-02-22T07:00:00.000Z",
+          "wordCount": 3942,
+          "title": "Run Red Hat OpenShift Container Platform 4.13 on VMware Cloud Foundation 5.1 with NVIDIA AI Enterprise",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Containers_OpenShift_0.png?itok=fSwtvSOu"
         },
         {
           "id": "307c0a46-bca5-46ee-b300-8a57ea4ef0cd",
@@ -523,16 +542,6 @@
           "wordCount": 3957,
           "title": "What's new in JBoss Enterprise Application Platform 8.0",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
-        },
-        {
-          "id": "51ad72dd-271e-422e-91a6-0855584412e1",
-          "author": "Andrew Burgess",
-          "description": "The GNU Debugger (GDB) has an extensive, and growing Python API which can be used to customize and extend GDB as needed. Different object types exist within the Python API to represent different parts of GDB and the processes being debugged. \nOften when writing extensions using the Python API is is useful to cache information about the objects with which you are working. This information might be temporal; it needs to be recorded at a precise moment in time, and can't be re-calculated later; or the information might be expensive to calculate, so computing once and caching gives a significant performance boost.\nThis article describes how information can be cached for different object types within GDB's Python API; some object types provide special support for data caching, while for other o…",
-          "link": "https://developers.redhat.com/articles/2024/02/05/how-cache-data-using-gdbs-python-api",
-          "publishedOn": "2024-02-05T07:00:00.000Z",
-          "wordCount": 4623,
-          "title": "How to cache data using GDB's Python API",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/2021_GNU_GDB-Developer_tutorial_Featured_Article__A-1.png?itok=uV-N2sMd"
         }
       ]
     },
@@ -789,26 +798,6 @@
           "wordCount": null,
           "title": "Latest MIKROE IDE has increased graphics and Clang for Arm and RISC-V",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481402",
-          "author": "Nitin Dahad",
-          "description": "PCAN-GPS FD has a satellite receiver, a magnetic field sensor, an accelerometer, and a gyroscope, providing position and orientation via CAN FD connection.\nThe post Programmable position sensor module connects with CAN FD appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/programmable-position-sensor-module-connects-with-can-fd/",
-          "publishedOn": "2024-02-05T04:32:03.000Z",
-          "wordCount": null,
-          "title": "Programmable position sensor module connects with CAN FD",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481396",
-          "author": "Nitin Dahad",
-          "description": "The iNoCulator NoC EDA tool is processor agnostic and can connect many other on-chip IP blocks such as PCIe, CXL, and AI acceleration.\nThe post NoC configuration tool takes makes complex SoC design easier appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/noc-configuration-tool-takes-makes-complex-soc-design-easier/",
-          "publishedOn": "2024-02-05T03:18:06.000Z",
-          "wordCount": null,
-          "title": "NoC configuration tool takes makes complex SoC design easier",
-          "imageUrl": null
         }
       ]
     },
@@ -817,6 +806,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1639.php",
+          "author": null,
+          "description": "BusyBox; The Swiss Army Knife of Embedded Linux\nIn today’s article, we are going to cover one of the most used tools in Embedded Linux “BusyBox”, we will cover the following topics.\nWhat is BusyBox ?\nThe design of Busybox.\nHow to configure and build it ?\nLicense and lawsuits\nToyBox the BusyBox alternative\nResources\nSo, Lets get started …\n1. What is...",
+          "link": "https://www.embeddedrelated.com/showarticle/1639.php",
+          "publishedOn": "2024-03-02T09:49:27.000Z",
+          "wordCount": null,
+          "title": "BusyBox; The Swiss Army Knife of Embedded Linux",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1638.php",
           "author": null,
@@ -865,16 +864,6 @@
           "publishedOn": "2024-02-08T13:57:48.000Z",
           "wordCount": null,
           "title": "Unraveling the Enigma: Object Detection in the World of Pixels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1625.php",
-          "author": null,
-          "description": "Hardly you can find a concept so powerful yet so simple as the State Machine. It shouldn't come as a surprise that State Machines are so widespread, what may came as a surprise is how many bad implementations of this concept  I found over the years.\nIn this post, I'll try to go through the basics, present a simple state machine, and evolve its design until you get a basic minimal, but sound...",
-          "link": "https://www.embeddedrelated.com/showarticle/1625.php",
-          "publishedOn": "2024-02-05T08:00:09.000Z",
-          "wordCount": null,
-          "title": "There's a State in This Machine!",
           "imageUrl": null
         }
       ]
@@ -1275,6 +1264,26 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/964239/",
+          "author": "corbet",
+          "description": "The kernel's memory-management subsystem is built on the concept of\n\"zones\", which were initially added to describe the physical\ncharacteristics of the memory pages contained within them.  Over time,\nzones have taken on more of a policy-related role as well.  With a patch\nset called THP\nallocator optimizations, Yu Zhao has set out to better define the role\nof policy-related zones on the path toward adding two more of them, with\nthe ultimate purpose of improving the kernel's support for transparent huge\npages (THPs).",
+          "link": "https://lwn.net/Articles/964239/",
+          "publishedOn": "2024-03-05T12:49:57.000Z",
+          "wordCount": null,
+          "title": "[$] Formalizing policy zones for memory",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/964450/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (yard), Oracle (buildah and kernel), Red Hat (389-ds:1.4, edk2, frr, gnutls, haproxy, libfastjson, libX11, postgresql:12, sqlite, squid, squid:4, tcpdump, and tomcat), SUSE (apache2-mod_auth_openidc and glibc), and Ubuntu (linux-gke, python-cryptography, and python-django).",
+          "link": "https://lwn.net/Articles/964450/",
+          "publishedOn": "2024-03-05T12:48:58.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/963512/",
           "author": "daroc",
@@ -2114,16 +2123,6 @@
           "wordCount": 323,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/960842/",
-          "author": "corbet",
-          "description": "The 6.8-rc3 kernel prepatch is out for\ntesting.  \"A slightly larger rc3 that I'd have hoped for, although at\nthis stage in the release process it's not something that really worries me\nyet.\"",
-          "link": "https://lwn.net/Articles/960842/",
-          "publishedOn": "2024-02-04T15:46:39.000Z",
-          "wordCount": 146,
-          "title": "Kernel prepatch 6.8-rc3",
-          "imageUrl": null
         }
       ]
     },
@@ -2169,6 +2168,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/patterns-legacy-displacement/event-interception.html",
+          "author": null,
+          "description": "When we gradually replace a legacy system, we have plenty of cases\n       where the legacy system and its replacement need to interact. Since these\n       legacy systems are often difficult, and costly, to change, we need a\n       mechanism that can integrate elements of the replacement while minimizing\n       the impact to the legacy system. Ian Cartwright, Rob Horn, and\n       James Lewis explain how we can use Event Interception on\n       state-changing events, allowing us to forward them to the\n       replacement.\nmore…",
+          "link": "https://martinfowler.com/articles/patterns-legacy-displacement/event-interception.html",
+          "publishedOn": "2024-03-05T15:03:00.000Z",
+          "wordCount": null,
+          "title": "Patterns of Legacy Displacement: Event Interception",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/bliki/PeriodicFaceToFace.html",
           "author": null,
@@ -2258,6 +2267,16 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2024/03/05/",
+          "author": null,
+          "description": "After a year I’ve finally came up with an elegant solution to a vexing\nu-config problem. The pkg-config format uses macros to generate build\nflags through recursive expansion. Some flags embed file system paths, but\nto the macro system it’s all strings. The output is also ultimately just\none big string, which the receiving shell splits into fields. If\na path contains spaces, or shell metacharacters, u-config must escape them\nso that shells treat them as part of a token. But how can u-config itself\ndistinguish incidental spaces in paths from deliberate spaces between\nflags? What about other shell metacharacters in paths? My solution is to\nextend UTF-8 to encode metadata that survives macro expansion.\nAs usual, it helps to begin with a concrete example of the problem. The\nfollowing is a conv…",
+          "link": "https://nullprogram.com/blog/2024/03/05/",
+          "publishedOn": "2024-03-05T03:15:12.000Z",
+          "wordCount": 1101,
+          "title": "Protecting paths in macro expansions by extending UTF-8",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2024/02/05/",
           "author": null,
           "description": "If you’ve spent much time developing with Mingw-w64 you’ve likely seen the\nsymbol ___chkstk_ms, perhaps in an error message. It’s a little piece of\nruntime provided by GCC via libgcc which ensures enough of the stack is\ncommitted for the caller’s stack frame. The “function” uses a custom ABI\nand is implemented in assembly. So is the subject of this article, a\nslightly improved implementation soon to be included in w64devkit as\nlibchkstk (-lchkstk).\nThe MSVC toolchain has an identical (x64) or similar (x86) function named\n__chkstk. We’ll discuss that as well, and w64devkit will include x86 and\nx64 implementations, useful when linking with MSVC object files. The new\nx86 __chkstk in particular is also better than the MSVC definition.\nA note on spelling: ___chkstk_ms is spelled with three unde…",
@@ -2342,16 +2361,6 @@
           "publishedOn": "2024-02-11T23:14:27.000Z",
           "wordCount": null,
           "title": "Some information on story point estimates for 16 projects",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8548",
-          "author": "Derek Jones",
-          "description": "What were the events that drove organizations to fund the creation of the first computers? I suspect that many readers do not appreciate how long scientific/engineering calculations took before electronic computers became available, or the huge number of clerical staff employed to process the paperwork associated with running any sizeable business. If somebody wanted to […]",
-          "link": "https://shape-of-code.com/2024/02/04/why-did-organizations-fund-the-creation-of-the-first-computers/",
-          "publishedOn": "2024-02-04T22:43:51.000Z",
-          "wordCount": null,
-          "title": "Why did organizations fund the creation of the first computers?",
           "imageUrl": null
         }
       ]
@@ -2443,6 +2452,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=104984",
+          "author": "참여연대 의정감시센터",
+          "description": "곧 22대 국회의원 선거가 다가온다. 정부여당인 국민의힘의 공천은 다소 조용한 상태에서 진행되고 있는데, 일부 현역들이 스스로 물러나고 야심을 드러낸 후보들도 교통 정리에 순응하는 분위기이다. 반면 야당인 민주당은 공천으로 내홍을 넘어 역대급 분열과 역사적 위기를 겪고 있다. 1999년 김대중 ‘젊은 피 수혈론’에서 ‘이재명의 민주당’으로 민주당은 원래 1950년대 이승만 독재에 대항한 지주층과 교육받은 지사들의 정당이었으나 1999년 김대중의...\nThe post 한국 정치가 잔인해진 이유 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/104984",
+          "publishedOn": "2024-03-05T07:30:34.000Z",
+          "wordCount": null,
+          "title": "한국 정치가 잔인해진 이유",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=104980",
+          "author": "정지우",
+          "description": "우리 사회 자기계발 시장이 작동하는 방식은 매우 교활한 데가 있었다. 가장 흔한 방법은 ‘박탈감’을 불러일으키는 것이었다. 가령, 매일 지옥철에 시달리며 출퇴근하는 당신은 가만히 앉아서 월 1000만 원씩 버는 나에 비하면 어리석기 짝이 없다는 식이다. 타인의 삶, 노동, 라이프스타일을 비하하면서, 그와 다른 ‘천국’이 있는데 당신만 모른다는 식으로 ‘조롱’하는 게 이 시장의 흔한 특성이었던 것이다.  이런 식의...\nThe post 박탈감 조장 문화와 교활한 자기계발 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/104980",
+          "publishedOn": "2024-03-05T01:44:09.000Z",
+          "wordCount": null,
+          "title": "박탈감 조장 문화와 교활한 자기계발",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=104948",
+          "author": "이정환",
+          "description": "“김어준이 사회 봐도 좋다.” 임종석의 결단. 쟁점과 현안. “진짜 진다고 나왔나.” 비주류 이재명의 민주당 점령. 한동훈의 틱톡 화법. 더 깊게 읽기. 12:88, 비정규직 격차를 깨자. 트럼프 출마 자격 있다. 의대 증원 감당할 수 있나. 의대생 80%가 소득 상위 20%. 오늘의 TMI. 프로야구 돈 내고 봐야 한다. 지난해 한국 사람이 먹은 고기 61kg. 아프리카에서 한국 고등어를...\nThe post “진짜 진다고 나왔나”, 뒤숭숭한 민주당: 슬로우레터 3월5일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/104948",
+          "publishedOn": "2024-03-04T22:03:20.000Z",
+          "wordCount": null,
+          "title": "“진짜 진다고 나왔나”, 뒤숭숭한 민주당: 슬로우레터 3월5일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=104936",
           "author": "민주언론시민연합",
@@ -3012,26 +3051,6 @@
           "wordCount": null,
           "title": "악어가 입을 벌리면 그때는 이미 너무 늦다: 슬로우레터 2월6일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=103490",
-          "author": "최병천",
-          "description": "가장 욕먹지 않는 선택… 군소 정당 다당제 본격화할 듯 이재명 민주당 대표가 연동형 선거제를 유지하고 비례 위성정당을 만들겠다고 밝혔다. 큰 틀에서 용혜인 기본소득당 의원의 제안을 수용한 셈이다. 용혜인 의원은 ‘연합비례당’이라고 표현했지만 내용적으로 보면 ‘연합 위성정당’을 만들기로 했다. 모양새만 보면, 2020년 총선 시기에는 위성정당을 만들면 비난을 받았는데, 2024년 총선에서는 위성정당을 만들면서도 박수받는 상황이 됐다. 연합 위성정당을...\nThe post 민주당의 연합 위성정당 꼼수, 정의당이 가장 큰 피해를 본다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103490",
-          "publishedOn": "2024-02-05T08:03:06.000Z",
-          "wordCount": null,
-          "title": "민주당의 연합 위성정당 꼼수, 정의당이 가장 큰 피해를 본다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=103458",
-          "author": "이정환",
-          "description": "기자회견 없이 단독 대담만. ‘한핵관’ 김경율의 출마 포기가 의미하는 것. 윤석열 지지율 29%로 추락. ‘용핵관’ 공천이 변수. 쟁점과 현안. 윤석열-한동훈 갈등 끝나지 않았다. 반쪽으로 출발한 ‘새로운미래’. 더 깊게 읽기. 물고 물리는 프레임 전쟁. 스윙 선거구 62곳에 달렸다. 다르게 읽기. “아무도 나서지 않았다.” 해법과 대안. 범죄 피해 보상을 월급 기준으로? 의대 정원 1700명 늘린다. 병원 자주...\nThe post 한동훈의 거짓말, 목련 피어도 김포가 서울 될 일 없다: 슬로우레터 2월5일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103458",
-          "publishedOn": "2024-02-04T22:09:17.000Z",
-          "wordCount": null,
-          "title": "한동훈의 거짓말, 목련 피어도 김포가 서울 될 일 없다: 슬로우레터 2월5일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3040,6 +3059,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=594088",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594088/amd-%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5-%ec%b9%a9-%eb%a7%a4%ec%b6%9c",
+          "publishedOn": "2024-03-05T12:03:16.000Z",
+          "wordCount": null,
+          "title": "바클레이즈, AMD가 엔비디아를 추격하면서 인공지능 칩 매출이 크게 증가 전망",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594084",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594084/%eb%82%98%ec%8a%a4%eb%8b%a5-%ec%a1%b0%ec%a0%95-%ea%b0%80%eb%8a%a5%ec%84%b1",
+          "publishedOn": "2024-03-05T06:36:38.000Z",
+          "wordCount": null,
+          "title": "Market watch, 300일 이상 상승한 나스닥, 나스닥 조정 가능성은 없을까?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594069",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594069/3-5-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-03-05T01:26:29.000Z",
+          "wordCount": null,
+          "title": "3/5, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=594065",
           "author": "happist",
@@ -3359,16 +3408,6 @@
           "wordCount": null,
           "title": "배런스, 23년 4분기 빅테크 실적 시사점 7가지",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593722",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/593722/2-5-it-%ed%8a%b8%eb%a0%8c%eb%93%9c",
-          "publishedOn": "2024-02-05T05:02:03.000Z",
-          "wordCount": null,
-          "title": "2/5, 주요 기업 움직짐으로 살펴본 IT 트렌드",
-          "imageUrl": null
         }
       ]
     },
@@ -3377,6 +3416,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78521",
+          "author": "eyesopen1",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 1월 10일 스프에 쓴 글입니다. ‘공감’, ‘공감 능력’이 화두로 떠오른 시대입니다. 엽기적이고 폭력적인 범죄의 원인을 공감 능력 결여에서 꼽는 범죄 전문가들도 있고, 4차 산업과 AI 시대의 도래와 함께 공감 능력이야말로 기계가 대체할 수 없는 → 더 보기",
+          "link": "https://newspeppermint.com/2024/03/04/npsp_compassion/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_compassion",
+          "publishedOn": "2024-03-04T22:59:45.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 타인의 고통에 우리는 어떻게 대처해야 할까",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=78805",
           "author": "NewsPeppermint",
