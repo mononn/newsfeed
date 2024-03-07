@@ -123,6 +123,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/16411090",
+          "author": "CPUU",
+          "description": "서론(러스트를 써야하는 이유)\n나는 기본적으로 다양한 프로그래밍 언어에 대해 열려있는 편이다. 대학에서 처음 접한 언어는 C언어였고 2학년때는 C++ 객체지향 프로그래밍을 배웠다. 교양(?) 과목으로 기계과 포트란 프로그래밍도 들었다. 학부를 졸업하고 군에서는 주로 C 및 Java 프로그래밍을 했고, 웹개발(php, javascript)도 병행했다. 군 전역 후에는 보안 분야로 뛰어들면서 주로 파이썬을 사용한 도구 개발을 업무로 하고 있다. 파이썬은 편리함 때문에 여전히 가장 많이 사용하고 있지만, 솔직히 우아한(?) 언어라고는 생각되지 않는다. 나는 개인적으로 컴파일 언어를 더 선호하는 것 같다. \n다른 언어를 더 배우고 싶은 욕심에 2022년에는 Golang을 공부하면서 관련 도서도 번역을 했다. 2023년에는 회사 업무로 iOS 관련 도구를 만들기 위해 Swift를 사용했으나 솔직히 완전한 적응이 어려웠다. 스위프트는 아무래도 앱개발을 주된 목적으로 하기 때문에 내가 하는 시스템 프로그래밍이나 보안 분석 도구 개발에서는 적합한 느낌이 아니었다. \n그러던 중 최근 아래와 같은 기사가 나오고 있다.\nhttps://www.ciokorea.com/news/327256\n요약하면, 미국 백악관 국가사이버책임자실(ONCD)은 소프트웨어 개발자들이 C와 C++와 같은 취약한 프로그래밍 언어의 사용을 중단하고, 대신 메모리 안전 프로그래밍 언어(memory-safe programming languages )를 사용하라는 권고를 내린 것이다. 실제로 C/C++ 언어는 언어 설계적으로 해킹에 취약할 수밖에 없는데, 레거시 …",
+          "link": "https://cpuu.postype.com/post/16411090",
+          "publishedOn": "2024-03-07T08:00:00.000Z",
+          "wordCount": null,
+          "title": "[북리뷰] 러스트 프로그래밍 공식 가이드(제2판)",
+          "imageUrl": null
+        },
+        {
           "id": "https://cpuu.postype.com/post/16395053",
           "author": "CPUU",
           "description": "개요\n행정안전부 <소프트웨어 보안약점 진단가이드>에 따르면, 암호키 관리에 대한 부분이 나온다. 이때 코드 내부에서 암호화 키를 하드코딩하여 사용하면, 해당 소스코드가 git 같은 코드 저장소에 올라갔을 때 외부에 유출될 가능성이 높아진다.\n이를 방지하기 위해서 구체적으로 어떻게 수행해야 하는지 파이썬 코드를 예시로 살펴보자.\n\n\n토큰을 처리하는 파이썬 코드\n\n 다음의 코드는 파이썬으로 텔레그램 bot API를 제어하는 내용의 일부이다.\ndef main() -> None:\n    \"\"\"Start the bot.\"\"\"\n    # Create the Application and pass it your bot's token.\n    application = Application.builder().token(\"500:AAGbjq2WTsicid8wZuY\").build()\n\n    # on different commands - answer in Telegram\n    application.add_handler(CommandHandler(\"start\", start))\n    application.add_handler(CommandHandler(\"help\", help_command))\n\n    # on non command i.e message - echo the message on Telegram\n    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))\n\n    # Run the bot until the user presses Ct…",
@@ -191,16 +201,6 @@
           "wordCount": null,
           "title": "[북리뷰] 처음 읽는 헌법",
           "imageUrl": null
-        },
-        {
-          "id": "https://cpuu.postype.com/post/16202411",
-          "author": "CPUU",
-          "description": "서론\n우리나라에서는 과거에 개인정보에 대한 인식이 다소 부족하였던 것 같다. 어렸을 때 초등학교 졸업 앨범의 뒷장에는 전교생의 이름과 집 주소, 전화번호 등이 버젓이 기록되어 있었는데 그것이 큰 문제라고 생각하지 않았다. 인터넷이 활성화 된 이후부터 많은 개인정보 유출 침해 사건 사고가 있었으나, 대다수의 국민들은 \"약간 기분 나쁜\" 정도에서 일상을 살아왔다. 그나마 개인정보에 대한 인식이 과거보다는 많이 개선되고 있다. 개인정보 유출은 이제 범죄로 처벌받고 있다. \n\n\n헌법재판소 주요 결정\n1) 주민등록시 지문날인제도 사건\n대한민국의 헌법재판소가 '개인정보자기결정권'을 인정한 것은 2005.5.26. 99헌마513 으로 알려져있다. 요약하면, 주민등록법상 열 손가락 지문을 날인하는 관례에 대해 이의를 제기하여 그 위헌확인을 구하는 이 사건 헌법소원심판을 청구한 것이다. 결과적으로 이 사건 자체는 기각되었지만, 개인정보자기결정권에 대한 헌법상 근거를 최초로 언급했다는 점에서 의미가 있다.\n\n개인정보자기결정권은 자신에 관한 정보가 언제 누구에게 어느 범위까지 알려지고 또 이용되도록 할 것인지를 그 정보주체가 스스로 결정할 수 있는 권리, 즉 정보주체가 개인정보의 공개와 이용에 관하여 스스로 결정할 권리를 말하는바, 개인의 고유성, 동일성을 나타내는 지문은 그 정보주체를 타인으로부터 식별가능하게 하는 개인정보이므로, 시장·군수 또는 구청장이 개인의 지문정보를 수집하고, 경찰청장이 이를 보관·전산화하여 범죄수사목적에 이용하는 것은 모두 개인정보자기결정권을 제한하는 것이다.\n\n개인정보자기결정권을 처음으로 인정한 이 …",
-          "link": "https://cpuu.postype.com/post/16202411",
-          "publishedOn": "2024-02-07T07:07:47.000Z",
-          "wordCount": 893,
-          "title": "개인정보자기결정권의 헌법상 근거",
-          "imageUrl": "https://d33pksfia2a94m.cloudfront.net/assets/img/empty/empty_thumbnail_seo.png"
         }
       ]
     },
@@ -227,16 +227,6 @@
           "publishedOn": "2024-02-18T00:00:00.000Z",
           "wordCount": null,
           "title": "Diseconomies of scale in fraud, spam, support, and moderation",
-          "imageUrl": null
-        },
-        {
-          "id": "https://danluu.com/impossible-agree/",
-          "author": null,
-          "description": "On large platforms, it's impossible to have policies on things like moderation, spam, fraud, and sexual content that people agree on. David Turner made a simple game to illustrate how difficult this is even in a trivial case, No Vehicles in the Park. If you haven't played it yet, I recommend playing it now before continuing to read this document.\nThe idea behind the site is that it's very difficult to get people to agree on what moderation rules should apply to a platform. Even if you take a much simpler example, what vehicles should be allowed in a park given a rule and some instructions for how to interpret the rule, and then ask a small set of questions, people won't be able to agree. On doing the survey myself, one of the first reactions I had was that the questions aren't chosen to be…",
-          "link": "https://danluu.com/impossible-agree/",
-          "publishedOn": "2024-02-07T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Why it's impossible to agree on what's allowed",
           "imageUrl": null
         }
       ]
@@ -512,16 +502,6 @@
           "wordCount": null,
           "title": "How to visualize your OpenSCAP compliance reports",
           "imageUrl": null
-        },
-        {
-          "id": "67865431-234a-488f-a811-5f1e4679940b",
-          "author": "Helber Belmiro",
-          "description": "In the ever-evolving landscape of artificial intelligence (AI), large language models (LLMs) have emerged as a game-changer, transforming how we interact with and derive insights from textual data. As a Java developer, diving into the world of AI might seem intimidating, but it's not! This tutorial is your gateway to use the power of LLMs through the integration of LangChain4j and Quarkus.\nExploring the capabilities of LangChain4j and Quarkus\nLangChain4j, a Java library specializing in natural language processing (NLP), will play a crucial role in this tutorial. Using LangChain4j with Quarkus, a cloud-native, container-first framework, we will develop a tool proficient in analyzing and summarizing the content of blog posts. \nThe objective here is not just to create a tool, but rather to pr…",
-          "link": "https://developers.redhat.com/articles/2024/02/07/how-use-llms-java-langchain4j-and-quarkus",
-          "publishedOn": "2024-02-07T07:00:00.000Z",
-          "wordCount": 4449,
-          "title": "How to use LLMs in Java with LangChain4j and Quarkus",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/java%2Bquarkus_2x.png?itok=saprke5a"
         }
       ]
     },
@@ -768,26 +748,6 @@
           "wordCount": null,
           "title": "What’s involved in simulation of a complex SoC FPGA like Versal ACAP?",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481425",
-          "author": "Boris Radonic",
-          "description": "In this installment of the motor control series, we explore feedback sensors, analog-to-digital converters, and measurement methods. As previously mentioned, the feedback sensors include position...\nThe post Mastering motor control: measurements sensors and parameters appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/mastering-motor-control-measurements-sensors-and-parameters/",
-          "publishedOn": "2024-02-06T17:04:05.000Z",
-          "wordCount": null,
-          "title": "Mastering motor control: measurements sensors and parameters",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481422",
-          "author": "Jacob Beningo",
-          "description": "While it will take a little bit of time to get used to, simulating code will help you to modernize how you develop embedded software...\nThe post 3 reasons embedded teams need to embrace simulation appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/3-reasons-embedded-teams-need-to-embrace-simulation/",
-          "publishedOn": "2024-02-06T16:36:16.000Z",
-          "wordCount": null,
-          "title": "3 reasons embedded teams need to embrace simulation",
-          "imageUrl": null
         }
       ]
     },
@@ -825,6 +785,16 @@
           "wordCount": 3030,
           "title": "The RTOS minefield",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1635.php",
+          "author": null,
+          "description": "I just realized (probably very belatedly) that all (most?) of the talks from last year's Teardown Conference in Portland, Oregon, are now freely available online! This includes a talk I gave about designing your own breakout board or development board for a microcontroller, which is embedded below. Enjoy!\r\n\r\n\r\nReferences:\r\n\r\n\t\nPresentation...",
+          "link": "https://www.embeddedrelated.com/showarticle/1635.php",
+          "publishedOn": "2024-02-20T22:17:43.000Z",
+          "wordCount": null,
+          "title": "Make Your Own MCU Boards (2023 Teardown Conference)",
+          "imageUrl": null
         },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1633.php",
@@ -916,6 +886,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "http://developers.googleblog.com/",
       "articles": [
+        {
+          "id": "http://developers.googleblog.com/2024/03/running-large-language-models-on-device-with-mediapipe-andtensorflow-lite.html",
+          "author": null,
+          "description": "Posted by Mark Sherwood – Senior Product Manager and Juhyun Lee – Staff Software Engineer\n\n\n\n\n\n\nTensorFlow Lite has been a powerful tool for on-device machine learning since its release in 2017, and MediaPipe further extended that power in 2019 by supporting complete ML pipelines. While these tools initially focused on smaller on-device models, today marks a dramatic shift with the experimental MediaPipe LLM Inference API.\n \n\nThis new release enables Large Language Models (LLMs) to run fully on-device across platforms. This new capability is particularly transformative considering the memory and compute demands of LLMs, which are over a hundred times larger than traditional on-device models. Optimizations across the on-device stack make this possible, including new ops, quantization, cachi…",
+          "link": "http://developers.googleblog.com/2024/03/running-large-language-models-on-device-with-mediapipe-andtensorflow-lite.html",
+          "publishedOn": "2024-03-07T12:30:00.000Z",
+          "wordCount": null,
+          "title": "Large Language Models On-Device with MediaPipe and TensorFlow Lite",
+          "imageUrl": null
+        },
         {
           "id": "http://developers.googleblog.com/2024/02/google-cloud-next-24-session-library-now-available.html",
           "author": null,
@@ -1073,6 +1053,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1107/",
+          "author": null,
+          "description": "I agree that a memory allocation error with malloc is quite rare case, and after such an error it's most likely that the program can't fully function. But I'm bewildered how programmers persistently...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1107/",
+          "publishedOn": "2024-03-06T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Parable of null pointer for indolent C programmers",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1106/",
           "author": null,
           "description": "The PVS-Studio headquarters: \"Time flies by so fast... This year, on January 2, Blender turned 30 years old! It feels like just yesterday we published an article on checking the project... What do...",
@@ -1158,6 +1148,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/february-2024-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nFebruary.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/february-2024-roundup",
+          "publishedOn": "2024-03-07T00:00:00.000Z",
+          "wordCount": null,
+          "title": "What we've been reading in February (2024)",
+          "imageUrl": null
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/diving-into-jtag-part-2",
           "author": null,
           "description": "In this second part of a JTAG deep-dive series, we take an in-depth look at interacting with a microcontroller’s memory and engaging with the processor core and debug registers. While the use of JTAG in testing is fairly standardized when it comes to debugging, each processor architecture has its unique nuances. With that in mind, this article will focus on debugging using JTAG on the ARM Cortex-M architecture, specifically with the STM32F407VG microcontroller.\nContinue reading…",
@@ -1185,16 +1185,6 @@
           "publishedOn": "2024-02-15T00:00:00.000Z",
           "wordCount": null,
           "title": "Practical Zephyr - Devicetree semantics (Part 4)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/january-2024-roundup",
-          "author": null,
-          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nJanuary.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/january-2024-roundup",
-          "publishedOn": "2024-02-07T00:00:00.000Z",
-          "wordCount": null,
-          "title": "What we've been reading in January (2024)",
           "imageUrl": null
         }
       ]
@@ -1234,6 +1224,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/964075/",
+          "author": "jake",
+          "description": "While programmers are used to having tools to check their code for\nstylistic problems, writers often limit automatic checks of their texts to\nspelling and, sometimes, grammar, because there are not a lot of options\nfor further checking. If that is the case, Vale, an \nopen-source, command-line tool to enforce editorial-style guidelines, would\nmake a\nuseful addition to their toolbox. The recent release of\nVale 3.0 \nwarrants a look at this versatile tool, which assists writers by\nidentifying common errors and helping them maintain a consistent voice in their\nprose.",
+          "link": "https://lwn.net/Articles/964075/",
+          "publishedOn": "2024-03-07T15:46:36.000Z",
+          "wordCount": null,
+          "title": "[$] Vale: enforcing style guidelines for text",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/964725/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (chromium and yard), Fedora (cpp-jwt, golang-github-tdewolff-argp, golang-github-tdewolff-minify, golang-github-tdewolff-parse, and suricata), Mageia (wpa_supplicant), Oracle (curl, edk2, golang, haproxy, keylime, mysql, openssh, and rear), Red Hat (kernel and postgresql:12), SUSE (containerd, giflib, go1.21, gstreamer-plugins-bad, java-1_8_0-openjdk, python3, python311, python39, sudo, and vim), and Ubuntu (frr, linux, linux-gcp, linux-gcp-5.4, linux-gkeop, linux-hwe-5.4, linux-iot,\n linux-kvm, linux-raspi, and linux, linux-gcp, linux-gcp-6.5, linux-laptop, linux-lowlatency,\n linux-lowlatency-hwe-6.5, linux-oem-6.5, linux-oracle, linux-raspi,\n linux-starfive, linux-starfive-6.5).",
+          "link": "https://lwn.net/Articles/964725/",
+          "publishedOn": "2024-03-07T15:05:42.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/964042/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for March 7, 2024 is available.",
+          "link": "https://lwn.net/Articles/964042/",
+          "publishedOn": "2024-03-07T00:07:39.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for March 7, 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/960630/",
+          "author": "jzb",
+          "description": "The Fedora Project switched\nto MariaDB as the default implementation of MySQL in Fedora 19 in 2013. Once a drop-in\nreplacement for MySQL, MariaDB has diverged enough that this is no longer\nthe case—and, despite concerns about Oracle\nand optimism that MariaDB would supplant MySQL, the reality is that MySQL\nand MariaDB seem to be here to stay. With that in mind, Fedora developer\nMichal Schorm\nproposed that the project revise the way MySQL and MariaDB\nare packaged in Fedora starting with Fedora 40.",
+          "link": "https://lwn.net/Articles/960630/",
+          "publishedOn": "2024-03-06T21:02:53.000Z",
+          "wordCount": null,
+          "title": "[$] MySQL and MariaDB changes coming in Fedora 40",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/964574/",
+          "author": "jzb",
+          "description": "The postmarketOS project, which produces\na Linux distribution for phones and mobile devices,\nhas announced\nthat it is in the early stages of adding systemd to make it easier to support GNOME and KDE.\nUsers who prefer the OpenRC\ninit system are assured they will still have that option when building their own\nimages \"as long as OpenRC is in Alpine Linux (on which postmarketOS is \nbased)\":\n \n\n\nAs with text editors, some people are really passionate about their favorite init\nsystems. When discussing this announcement, please keep a friendly tone. Remember\nthat we all share the love for free and open source software, and that our\ncommunities work best if we focus on shared values instead of fighting over what\nimplementations to use.\n\n\nProof-of-concept images\nare available now for a limited set of devices. Users are warned these images are \"buggy, \nunreliable, and NOT suitable for use on a device you rely on\". Those interested\nin helping with testing and development are encouraged to follow along and report\nbugs on the systemd\nissue at GitLab.",
+          "link": "https://lwn.net/Articles/964574/",
+          "publishedOn": "2024-03-06T20:11:32.000Z",
+          "wordCount": null,
+          "title": "Adding systemd to postmarketOS",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/964377/",
           "author": "daroc",
@@ -2073,26 +2113,6 @@
           "wordCount": 140,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/960309/",
-          "author": "daroc",
-          "description": "on January 31, including\nseveral new features. Notable highlights include new functions for spawning\nchild processes, support for shadow stacks on x86_64, new security features, and\nthe removal of libcrypt. The glibc maintainers had also hoped to include\nimprovements to qsort(), which ended up not making it into this\nrelease. Glibc releases are made every six months.",
-          "link": "https://lwn.net/Articles/960309/",
-          "publishedOn": "2024-02-06T21:32:37.000Z",
-          "wordCount": null,
-          "title": "[$] GNU C Library version 2.39",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/961083/",
-          "author": "corbet",
-          "description": "Security updates have been issued by CentOS (firefox, gstreamer1-plugins-bad-free, and tigervnc), Debian (ruby-sanitize), Fedora (kernel, kernel-headers, qt5-qtwebengine, and runc), Oracle (gnutls, kernel, libssh, rpm, runc, and tigervnc), Red Hat (runc), and SUSE (bouncycastle, jsch, python, and runc).",
-          "link": "https://lwn.net/Articles/961083/",
-          "publishedOn": "2024-02-06T14:34:25.000Z",
-          "wordCount": 240,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2119,16 +2139,6 @@
           "publishedOn": "2024-02-23T00:00:00.000Z",
           "wordCount": null,
           "title": "Abusing reserved interrupt vectors on Cortex-M for metadata",
-          "imageUrl": null
-        },
-        {
-          "id": "tag:m0agx.eu,2024-02-07:/w7500-flash-programming.html",
-          "author": null,
-          "description": "W7500 is a nice little MCU from Wiznet with a built-in hardware TCP/IP stack and Ethernet MAC. You can get quite far with your IoT application on a Cortex-M0\nrunning at 48 MHz when the networking is offloaded in hardware.\nThe device begins to show its age in 2023 (it was released around 2016). There is no crypto acceleration\nwhatsoever, no AES. Only an RNG is available. I think that modern TLS is practically impossible but some lighter\ncryptography should be possible. Nevertheless, if you can put the device on an isolated VLAN the chip can still\nbe useful today.",
-          "link": "https://m0agx.eu/w7500-flash-programming.html",
-          "publishedOn": "2024-02-07T00:00:00.000Z",
-          "wordCount": 712,
-          "title": "Wiznet W7500 flash programming",
           "imageUrl": null
         }
       ]
@@ -2204,16 +2214,6 @@
           "wordCount": null,
           "title": "CNC + Laser = Personalized Cutting Board",
           "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=40130",
-          "author": "Erich Styger",
-          "description": "At HSLU IET we have developed an Open Source Hardware (OSHW) CMSIS-DAP debug probe in KiCad for versatile use in hardware development. The probe offers multiple integration options, USB-C connectivity, and a 3D printable enclosure, making it a compact and cost-effective solution. The project is available on GitHub. Continue reading →",
-          "link": "https://mcuoneclipse.com/2024/02/06/versatile-oshw-mini-mcu-link-debug-probe-external-on-board-or-embedded/",
-          "publishedOn": "2024-02-06T22:49:00.000Z",
-          "wordCount": 4511,
-          "title": "Versatile OSHW Mini MCU-Link Debug Probe: External, On-Board, or Embedded",
-          "imageUrl": "https://mcuoneclipse.files.wordpress.com/2024/02/top-and-bottom-side-1.jpg"
         }
       ]
     },
@@ -2422,6 +2422,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=105066",
+          "author": "이정환",
+          "description": "박광온과 윤영찬, ‘친명 자객’에 당했다. 감점이 갈랐다. 쟁점과 현안. 국민의힘 공천은 문제 없나. 친윤의 98%가 공천, 보이지 않는 손 있다. 다르게 읽기. 4명 지키던 응급실, 교수 혼자 지킨다. 총선용 의료 대란. 의사들을 굴복시켜서 얻는 게 뭔가. 해법과 대안. 출구전략을 찾아보자. 제주도는 일회용 컵 보증금제 안 버린다. 레지던스를 집이라 해주세요. 더 깊게 읽기. 니키 헤일리 경선...\nThe post 대통령의 선거 개입, 노무현은 탄핵까지 당했다: 슬로우레터 3월7일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/105066",
+          "publishedOn": "2024-03-06T21:51:36.000Z",
+          "wordCount": null,
+          "title": "대통령의 선거 개입, 노무현은 탄핵까지 당했다: 슬로우레터 3월7일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=105050",
           "author": "참여연대 사법감시센터",
@@ -2991,56 +3001,6 @@
           "wordCount": 12420,
           "title": "윤석열 신년 대담 전문. (2023년 2월7일)",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/2024-02-08-01.18.30.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=103623",
-          "author": "조귀동",
-          "description": "이재명 민주당 대표가 현행 준연동형 비례대표제를 유지하기로 결단하고, 민주당 외부의 다른 여러 세력을 참가시켜 통합형 비례 정당을 만들겠다고 선언했다. “안타깝지만 여당의 위성정당을 막을 방법은 없다”면서 “서생의 문제의식과 상인적 현실 감각으로, 이상을 추구하되 현실을 인정하겠다”고 말했다. 민주당은 세 가지 옵션이 있었다. 세 가지 옵션의 이해득실을 따져보자. 서생의 문제의식과 상인의 현실 감각. 위성정당, 네가 만들면 나도 만든다....\nThe post 민주-진보 빅텐트라는 달콤한 거짓말: 선거법 개정만으로 세상 안 바뀝니다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103623",
-          "publishedOn": "2024-02-07T08:08:07.000Z",
-          "wordCount": 5852,
-          "title": "민주-진보 빅텐트라는 달콤한 거짓말: 선거법 개정만으로 세상 안 바뀝니다.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2023/10/298961762_7880376378670789_7654727218122154314_n.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=103617",
-          "author": "민주언론시민연합",
-          "description": "개혁신당이 총선 공약으로 ‘노인 지하철 무임승차 폐지’를 들고 나오자, 대한노인회가 반발하는 등 논쟁이 뜨겁다. 여권 내 볼썽사나운 권력투쟁이 언론을 도배하고 있을 때 교통정책 공론화를 시도한 일은 반가운 일이다. 김호일 대한노인회장과 이준석 개혁신당 대표의 라디오 공개토론도 성사됐지만 각 주장만 나열할 뿐 논리의 모순점을 비판하는 보도는 찾기 어렵다. 이준석, 정책 목표와 주장의 불일치 이준석 대표의 주장은 1984년...\nThe post 무임승차 논쟁의 맹점, 노인과 철도노조는 적이 아니라 협력자다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103617",
-          "publishedOn": "2024-02-07T05:39:26.000Z",
-          "wordCount": 5412,
-          "title": "무임승차 논쟁의 맹점, 노인과 철도노조는 적이 아니라 협력자다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/GettyImages-187839124.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=103576",
-          "author": "이정환",
-          "description": "“기소할 때 내가 관여한 사건 아니다.” 수사 이렇게 해놓고 큰소리쳤나. 쟁점과 현안. 빅 텐트? 서로 다른 꿈을 꾸는 이유. 조국 신당도 같이 탈 수 있나. 산토끼 쫓는 한동훈과 집토끼 지키는 이재명. 설날 특사 선물, 미리 흘렸나. 최은순도 가석방? MBC와 법무부 공방. 김장겸‧안광한도 사면. 더 깊게 읽기. 트럼프의 네 가지 인기 비결. 의대 2000명 증원, 의사...\nThe post ‘조선제일검’ 맞나, 검사 윤석열과 한동훈의 실력에 대한 의문: 슬로우레터 2월7일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103576",
-          "publishedOn": "2024-02-06T22:04:51.000Z",
-          "wordCount": 7244,
-          "title": "‘조선제일검’ 맞나, 검사 윤석열과 한동훈의 실력에 대한 의문: 슬로우레터 2월7일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/download.jpeg"
-        },
-        {
-          "id": "https://slownews.kr/?p=103552",
-          "author": "노동인권저널리즘센터",
-          "description": "노동인권저널리즘센터는 2024년 ‘1월의 나쁜 사설’로 조선일보와 서울신문 사설을 선정했다. 심사위원단은 ‘인간 존중’과 ‘진실 추구’ 보도 의무를 외면한 채, 사실 왜곡과 상징조작을 통해 이태원 참사 특별법의 공적 담론을 훼손하고 진상 규명 목소리를 축소·생략하고 정치 쟁점화했다고 평가했다. 조선일보가 1월 10일 “민주당 ‘핼러윈 특조위’ 강행, 제2의 ‘세월호 특조위’ 불 보듯”이란 제목의 사설을 내보낸 다음날 서울신문은 “야(野) 핼러윈 특조위...\nThe post ‘핼러윈 특조위’라고? 조선일보의 상징조작과 서울신문의 표절. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103552",
-          "publishedOn": "2024-02-06T11:48:07.000Z",
-          "wordCount": null,
-          "title": "‘핼러윈 특조위’라고? 조선일보의 상징조작과 서울신문의 표절.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=103542",
-          "author": "정지우",
-          "description": "우리 시대에 결혼하고 아이를 낳아 키우겠다는 것은 너무도 매력 없는 선택지가 되었다. 당장 SNS만 켜더라도, 온갖 쇼츠와 릴스, 각종 광고는 우리에게 매일 ‘버킷리스트’를 쌓아 올린다. 그리스 산토리니에 가서 하룻밤을 보내는 것, 치앙마이에서 한 달 살기 하는 것, 몽골의 은하수나 노르웨이의 오로라를 보는 것. 돈은 그런 데 쓰라고 있는 것이지, 결혼하고 아이 낳고 키우는 데 쓰는...\nThe post 우리 시대의 결혼 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/103542",
-          "publishedOn": "2024-02-06T08:39:14.000Z",
-          "wordCount": null,
-          "title": "우리 시대의 결혼",
-          "imageUrl": null
         }
       ]
     },
@@ -3505,16 +3465,6 @@
           "wordCount": null,
           "title": "부자들에게 더욱 더 보장된 ‘표현의 자유’는 괜찮을까",
           "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78667",
-          "author": "NewsPeppermint",
-          "description": "보통 “플랫폼 노동자”로 번역되는 단어가 영어로는 “gig workers”라서 “긱 노동자”로 번역되기도 합니다. 우버 기사, 앱 기반 배달원 등이죠. 예전에는 “공유경제”라고 불리던 이런 형태의 노동에 관해 많은 논의가 있었습니다. 특히 플랫폼 업체들이 노동자들을 직접 고용하지 않고 개인사업자와 계약을 맺는 형태로 파견 근무를 보내 비용과 책임은 지지 않고 막대한 이윤만 챙기며, 그 과정에서 수많은 부작용이 발생한다는 비판이 끊이지 않았습니다. 최근 미국 콜로라도주 덴버시 노동국이 비슷한 이유로 플랫폼 업체 두 곳에 과태료 처분을 내렸습니다. → 더 보기",
-          "link": "https://newspeppermint.com/2024/02/06/npsp_gigworkers/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_gigworkers",
-          "publishedOn": "2024-02-07T00:30:09.000Z",
-          "wordCount": 1403,
-          "title": "이것은 “혁신의 탈을 쓴 불평등”인가 아닌가",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
