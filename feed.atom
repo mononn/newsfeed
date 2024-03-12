@@ -2,10 +2,211 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-03-11T20:13:58.690Z</updated>
+    <updated>2024-03-12T20:12:51.436Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Herb Sutter on increasing safety in C++]]></title>
+        <id>https://lwn.net/Articles/965147/</id>
+        <link href="https://lwn.net/Articles/965147/"/>
+        <updated>2024-03-12T19:21:16.000Z</updated>
+        <summary type="html"><![CDATA[Herb Sutter, chair of the ISO C++ standards committee,
+
+writes about the current problems with writing secure C++,
+and his personal opinion on next steps to address this while maintaining
+backward compatibility.
+
+
+
+If there were 90-98% fewer C++ type/bounds/initialization/lifetime
+vulnerabilities we wouldn't be having this discussion. All languages have CVEs,
+C++ just has more (and C still more); so far in 2024,
+
+Rust has 6 CVEs, and
+
+C and C++ combined have 61 CVEs. So zero isn't the goal; something like a 90%
+reduction is necessary, and a 98% reduction is sufficient, to achieve security
+parity with the levels of language safety provided by MSLs [memory-safe languages]… and has the strong
+benefit that I believe it can be achieved with perfect backward link
+compatibility (i.e., without changing C++'s object model, and its lifetime
+model which does not depend on universal tracing garbage collection and is not
+limited to tree-based data structures) which is essential to our being able to
+adopt the improvements in existing C++ projects as easily as we can adopt other
+new editions of C++. — After that, we can pursue additional improvements to
+other buckets, such as thread safety and overflow safety.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google for Games is coming to GDC 2024]]></title>
+        <id>http://developers.googleblog.com/2024/03/google-for-games-is-coming-to-gdc-2024.html</id>
+        <link href="http://developers.googleblog.com/2024/03/google-for-games-is-coming-to-gdc-2024.html"/>
+        <updated>2024-03-12T15:45:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Aurash Mahbod – General Manager, Games on Google Play
+
+
+
+
+
+
+Google for Games is coming to GDC in San Francisco! Join us on March 19 for the Game Developers Conference (GDC) at the Moscone Center, where game developers from across the world will gather to learn, network, problem-solve, and help shape the future of the industry. From March 18 to March 22, experience our comprehensive suite of multi-platform game development tools and explore the new features from Play Pass at the West Hall, Level 2 Lobby.
+This year, we’re proud to host eight sessions for developers, designers, business and marketing teams, and everyone else in the gaming community with an interest to grow their game business. Take a look at this year’s sessions below and if you’re interested in learning more about …]]></summary>
+        <author>
+            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Insecurity and Python pickles]]></title>
+        <id>https://lwn.net/Articles/964392/</id>
+        <link href="https://lwn.net/Articles/964392/"/>
+        <updated>2024-03-12T15:35:34.000Z</updated>
+        <summary type="html"><![CDATA[Serialization is the process of transforming Python objects into a sequence of
+bytes which can be used to recreate a copy of the object later — or on another
+machine.
+
+pickle is Python's native serialization module. It can store complex Python
+objects,
+making it an appealing prospect for moving data without having to write
+custom serialization code. For example, pickle is an integral component of
+several file
+formats used for machine learning. However, using pickle to deserialize
+untrusted files is a major security risk, because doing so can invoke arbitrary
+Python functions. Consequently, the machine-learning community is working to address the
+security issues caused by widespread use of pickle.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
+        <id>https://lwn.net/Articles/965113/</id>
+        <link href="https://lwn.net/Articles/965113/"/>
+        <updated>2024-03-12T14:50:11.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (qemu), Mageia (libtiff and thunderbird), Red Hat (kernel, kpatch-patch, postgresql, and rhc-worker-script), SUSE (compat-openssl098, openssl, openssl1, python-Django, python-Django1, and wpa_supplicant), and Ubuntu (accountsservice, libxml2, linux-bluefield, linux-raspi-5.4, linux-xilinx-zynqmp, linux-oem-6.1, openvswitch, postgresql-9.5, and ruby-rack).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Measuring Developer Productivity via Humans]]></title>
+        <id>https://martinfowler.com/articles/measuring-developer-productivity-humans.html</id>
+        <link href="https://martinfowler.com/articles/measuring-developer-productivity-humans.html"/>
+        <updated>2024-03-12T13:36:00.000Z</updated>
+        <summary type="html"><![CDATA[Measuring developer productivity is a difficult challenge.
+       Conventional metrics focused on development cycle time and throughput are
+       limited, and there aren't obvious answers for where else to turn.
+       Qualitative metrics offer a powerful way to measure and understand
+       developer productivity using data derived from developers themselves.
+       Abi Noda and Tim Cochran begin their
+       discussion by explaining what a qualitative metric is and
+       why we shouldn't reject them for being subjective or unreliable. 
+more…]]></summary>
+        <author>
+            <name>Martin Fowler</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Huston: KeyTrap!]]></title>
+        <id>https://lwn.net/Articles/965067/</id>
+        <link href="https://lwn.net/Articles/965067/"/>
+        <updated>2024-03-12T08:46:40.000Z</updated>
+        <summary type="html"><![CDATA[Geoff Huston digs into the
+details of the KeyTrap DNS vulnerability, which was disclosed in February.
+
+
+	It's by no means "[devastating]" for the DNS, and the fix is much the
+	same as the previous fix. As well as limiting the number of queries
+	that a resolver can generate to resolve a queried name, a careful
+	resolver will limit both the elapsed time and perhaps the amount of
+	the resolver's processing resources that are used to resolve any
+	single query name.
+
+	It's also not a novel discovery by the ATHENE folk. The
+	vulnerability was described five years ago by a student at the
+	University of Twente. I guess the issue was that the student failed
+	to use a sufficient number of hysterical adjectives in describing
+	this DNS vulnerability in the paper!]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Understanding Templates in Stakater's Multi Tenancy Operator]]></title>
+        <id>0824d6b5-31bf-409a-b757-a9441b94b703</id>
+        <link href="https://developers.redhat.com/articles/2024/03/12/understanding-templates-stakaters-multi-tenancy-operator"/>
+        <updated>2024-03-12T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As a Technology Partner within the Red Hat OpenShift ecosystem, Stakater's Multi Tenant Operator has been officially certified by Red Hat since March 2022, with the latest release certified in November 2023. With Red Hat OpenShift Certified Operators, customers can benefit from validated, verified, mature and supported Operators from Red Hat and partner ISVs in their hybrid cloud environments.
+Learn more about Red Hat OpenShift Operator certification here. To learn more about becoming a Red Hat Partner see this link.
+This is the third part in a series featuring the exploration of Multi Tenant Operator (MTO) by Stakater, an operator designed to streamline and secure multi-tenancy in OpenShift and Kubernetes environments. In our two previous blogs (1) (2), we described MTO fundamentals. In t…]]></summary>
+        <author>
+            <name>Vivien Wang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Achieve more with less using Red Hat Developer Hub's self-service features]]></title>
+        <id>721f8a8a-c6e1-4104-b201-c0a229e5aeb4</id>
+        <link href="https://developers.redhat.com/articles/2024/03/12/achieve-more-less-using-red-hat-developer-hubs-self-service-features"/>
+        <updated>2024-03-12T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A client company’s Red Hat OpenShift team was facing a common issue: engineering teams had to allocate time to handle repetitive and manual tasks, such as addressing a high volume of service desk tickets. Many of these tickets stemmed from misconfigurations and unclear documentation, which not only consume valuable time and effort from the engineering team but also hinder the productivity and satisfaction of end-users.
+The client wanted to improve the developer experience by introducing more self-service and automation. To achieve this, the client tested out Red Hat Developer Hub as a unified access point to tools and resources.
+Background
+Toil, as defined by Google’s site reliability engineering (SRE) framework, is work that doesn’t drive long-term value. In this case, answering recurring…]]></summary>
+        <author>
+            <name>Josephine Pfeiffer</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Z세대 가치관에 문제 있다? 그런데 부모인 X세대가 더 문제다?]]></title>
+        <id>https://newspeppermint.com/?p=78860</id>
+        <link href="https://newspeppermint.com/2024/03/12/npsp_gendergapgeneration/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_gendergapgeneration"/>
+        <updated>2024-03-12T04:00:11.000Z</updated>
+        <summary type="html"><![CDATA[현재 성인 가운데 가장 젊은이들은 Z세대에 속합니다. 최근 미국 Z세대 안에서 남녀 간에, 성별에 따라 정치적인 성향 차이가 두드러진다는 조사 결과가 있었습니다. 성별에 따라 어려서부터 경험하는 것이 달라서 가치관에도 차이가 벌어진 데는 부모들의 교육 방침이 적잖은 영향을 미쳤다고 할 수 있습니다. 이에 관해 Z세대의 부모들인 X세대의 과보호를 지적한 칼럼이 뉴욕타임스에 올라왔습니다. 칼럼을 번역하고, 단지 성향 차이를 넘어 젠더 갈등 양상까지 보이고 있는 한국 사회에 주는 함의가 무엇인지 짚어봤습니다. 전문 번역: 점점 → 더 보기]]></summary>
+        <author>
+            <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[우리가 저들을 이길 수 있다면 민주주의쯤이야? … 공동체 망치는 ‘정서적 양극화’]]></title>
+        <id>https://slownews.kr/?p=105292</id>
+        <link href="https://slownews.kr/105292"/>
+        <updated>2024-03-12T03:17:10.000Z</updated>
+        <summary type="html"><![CDATA[최근 우리 사회의 정치적 진영 대립과 갈등 정도가 이만저만이 아니다. 정파적 대립과 양극화는 비단 정치 영역에만 국한된 것이 아니라 경계를 넘어 비정치적 영역의 일상까지도 파고들고 있다. 양극 정치 갈등…대한민국 역시나 1등 한국 사회의 이념 대립과 정치 양극화가 심각하다는 사실은 일반 국민의 인식 속에서도 잘 드러나고 있다. 지난 2022년에 미국의 대표적 조사기관인 퓨리서치 센터(Pew Research Center)가...
+The post 우리가 저들을 이길 수 있다면 민주주의쯤이야? … 공동체 망치는 ‘정서적 양극화’ appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>참여연대 의정감시센터</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[3/12, 월가의 투자의견 및 주가 전망 보고서]]></title>
+        <id>https://happist.com/?p=594121</id>
+        <link href="https://happist.com/594121/3-12-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
+        <updated>2024-03-12T00:06:25.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[모건스탠리, 테슬라 주가 하락 4가지 요인]]></title>
+        <id>https://happist.com/?p=594119</id>
+        <link href="https://happist.com/594119/%eb%aa%a8%ea%b1%b4%ec%8a%a4%ed%83%a0%eb%a6%ac-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ec%a3%bc%ea%b0%80-%ed%95%98%eb%9d%bd-4%ea%b0%80%ec%a7%80-%ec%9a%94%ec%9d%b8"/>
+        <updated>2024-03-11T22:20:33.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[제로섬 게임일까, 반윤 결집일까, 조국 돌풍에 조선일보가 긴장하는 이유: 슬로우레터 3월12일.]]></title>
+        <id>https://slownews.kr/?p=105268</id>
+        <link href="https://slownews.kr/105268"/>
+        <updated>2024-03-11T22:04:28.000Z</updated>
+        <summary type="html"><![CDATA[조국혁신당 돌풍, 조선일보의 불안. 사이다에 목말랐던 민주당 지지층이 흔들린다. 반윤 포위 구도. 박용진의 좌절. 쟁점과 현안. 종북횡재? 이재명의 선택은? 서울대 의대 교수들도 18일 사직 예고. 다르게 읽기. 공보의 차출하면 농어촌은 어떻게 하나. 69cm 잘라냈는데 다른 3647개 건물은? 더 깊게 읽기. “이해했다고 말하세요.” 해법과 대안. 폐지 줍는 노인 수입은 월 15만 원. 집 한 채에 1유로....
+The post 제로섬 게임일까, 반윤 결집일까, 조국 돌풍에 조선일보가 긴장하는 이유: 슬로우레터 3월12일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] Development statistics for 6.8]]></title>
         <id>https://lwn.net/Articles/964106/</id>
@@ -19,6 +220,18 @@ developers participating since the 6.5 release.  Still, there was
 a lot going on during this cycle; read on for some of the details.]]></summary>
         <author>
             <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Getting Started with the Microchip PIC® Microcontroller]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1622.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1622.php"/>
+        <updated>2024-03-11T15:14:09.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the first of five posts focusing on getting started with Microchip's 8-bit PIC® microcontrollers. The series of posts introduce successive topics culminating in a final project implementing a simple 4-bit counter with a "UI" of four external LEDs connected to GPIO pins counting up at a one second interval via an internal timer.
+
+This post introduces the...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
         </author>
     </entry>
     <entry>
@@ -3778,102 +3991,6 @@ container breakout flaw in runc.]]></summary>
         <summary type="html"><![CDATA[Security updates have been issued by Debian (libgit2), Fedora (chromium, firecracker, libkrun, openssh, python-nikola, runc, rust-event-manager, rust-kvm-bindings, rust-kvm-ioctls, rust-linux-loader, rust-userfaultfd, rust-versionize, rust-vhost, rust-vhost-user-backend, rust-virtio-queue, rust-vm-memory, rust-vm-superio, rust-vmm-sys-util, virtiofsd, webkitgtk, and wireshark), Mageia (filezilla and xpdf), Oracle (gimp), Red Hat (libmaxminddb, linux-firmware, squid:4, and tcpdump), Slackware (xpdf), SUSE (cdi-apiserver-container, cdi-cloner-container, cdi- controller-container, cdi-importer-container, cdi-operator-container, cdi- uploadproxy-container, cdi-uploadserver-container, cont and suse-build-key), and Ubuntu (python-glance-store and webkit2gtk).]]></summary>
         <author>
             <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Debug ACPI issues in Windows virtual machines on RHEL]]></title>
-        <id>240e1e75-deaf-4d35-844d-65eb86deac6d</id>
-        <link href="https://developers.redhat.com/articles/2024/02/12/debug-acpi-issues-windows-virtual-machines-rhel"/>
-        <updated>2024-02-12T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Red Hat Enterprise Linux (RHEL) 8/9 provides virtualization functionality, which enables a machine running RHEL to host multiple virtual machines (VMs), also referred to as guests. The basis of creating VMs on RHEL is the hypervisor software stack that controls hardware and enables running multiple operating systems on a host machine. The hypervisor stack consists of the kernel based virtual machine module (KVM) and virtualization kernel drivers, the QEMU emulator that simulates a complete virtualized hardware platform and manages how resources are allocated on the host and presented to the guest and the libvirt software suite that serves as a management and communication layer, making QEMU easier to interact with, enforcing security rules.
-This article will describe how to set up an ACPI …]]></summary>
-        <author>
-            <name>Ani Sinha, Igor Mammedov</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Getting started with the Red Hat build of Keycloak 22]]></title>
-        <id>3e03d834-e04b-4c65-ad55-cc92dff4a79e</id>
-        <link href="https://developers.redhat.com/articles/2024/02/12/getting-started-red-hat-build-keycloak-22"/>
-        <updated>2024-02-12T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The Red Hat build of Keycloak offers a new era of identity and access management. This product is based on the Keycloak project, which enables you to secure your web applications by providing web single sign-on (SSO) capabilities based on OpenID Connect, OAuth 2.0, and SAML 2.0. The release of this product replaces any plans for a future single sign-on (8.0 or higher) feature release. 
-While preserving the power and functionality of single sign-on, the Red Hat build of Keycloak is faster, more flexible, and efficient. For example:
-This product uses a streamlined distribution model based on Red Hat build of Quarkus.
-Getting started is simpler than with single sign-on; you choose from multiple configuration source instead of editing XML files.
-Interactive command-line help supplements documentation for quick answers to questions.
-Video demo
-Watch this two-minute getting started video, which shows the initial steps to use the product.
-Try out Red Hat build of Keycloak
-The documentation and software are available so you can try it out for yourself.
-Log on to the Red Hat customer portal to download the Red Hat build of Keycloak and try the Getting Started Guide.
-Check out more Red Hat build of Keycloak articles at Red Hat Developer.
-Getting started with the Red Hat build of Keycloak 22 appeared first on Red Hat Developer.]]></summary>
-        <author>
-            <name>Andrew Munro</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[부자들에게 더욱 더 보장된 ‘표현의 자유’는 괜찮을까]]></title>
-        <id>https://newspeppermint.com/?p=78695</id>
-        <link href="https://newspeppermint.com/2024/02/12/npsp_wealthpower/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_wealthpower"/>
-        <updated>2024-02-12T05:00:38.000Z</updated>
-        <summary type="html"><![CDATA[오늘날 돈만 있으면 뭐든지 할 수 있는 것처럼 보이는 자본주의 사회에서 부자들이 돈을 쓰는 새로운 용처 가운데 하나가 바로 영향력을 사는 일입니다. 특히 소셜미디어를 통해 주목받게 되면 그렇게 쌓은 명성과 영향력을 이용해 다시 돈을 벌 수 있는 선순환이 일어날 수 있는데, 부자들에겐 진입장벽이 상대적으로 낮다고 할 수 있습니다. 소셜미디어의 영향력을 십분 활용해 권력을 누리는 대표적인 인물로 보통 도널드 트럼프나 일론 머스크를 떠올리는데, 뉴욕타임스에 월스트리트의 헤지펀드 매니저 빌 애크먼을 예로 든 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Some information on story point estimates for 16 projects]]></title>
-        <id>https://shape-of-code.com/?p=8572</id>
-        <link href="https://shape-of-code.com/2024/02/11/some-information-on-story-point-estimates-for-16-projects/"/>
-        <updated>2024-02-11T23:14:27.000Z</updated>
-        <summary type="html"><![CDATA[Issues in Jira repositories sometimes include an estimate, in story points, but no information on time to complete (an opening/closing date is usually available; in some projects issues pass through various phases, and enter/exit date/time may be available). Evidence-based software engineering is a data driven approach to figuring out software development processes. At the practical […]]]></summary>
-        <author>
-            <name>Derek Jones</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kernel prepatch 6.8-rc4]]></title>
-        <id>https://lwn.net/Articles/961764/</id>
-        <link href="https://lwn.net/Articles/961764/"/>
-        <updated>2024-02-11T20:43:26.000Z</updated>
-        <summary type="html"><![CDATA[The 6.8-rc4 kernel prepatch is out for
-testing.  "Commit counts and contents look normal for this phase of the
-release, nothing here really stands out."]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[공정과 상식의 붕괴, 이재용 무죄 판결이 말하는 것.]]></title>
-        <id>https://slownews.kr/?p=103806</id>
-        <link href="https://slownews.kr/103806"/>
-        <updated>2024-02-11T16:15:50.000Z</updated>
-        <summary type="html"><![CDATA[이재용(삼성전자 회장)의 불법 승계 재판은 여러 가지 쟁점을 남겼다. 이재용이 박근혜(전 대통령)에게 뇌물을 준(국정농단) 사건은 대법원까지 가서 유죄가 확정됐는데 뇌물을 주고 합병을 밀어붙인(불법승계) 사건은 무죄로 1심 선고가 났다. 두 재판 결과가 충돌한다. 이게 왜 중요한가. 핵심은 이것이다. 무죄가 나올 거라고 예상한 사람은 많지 않았던 것 같다. 간단히 판결 요지를 정리해 보자. 두 사건이 충돌한다. 그러니까...
-The post 공정과 상식의 붕괴, 이재용 무죄 판결이 말하는 것. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CNC + Laser = Personalized Cutting Board]]></title>
-        <id>http://mcuoneclipse.com/?p=40173</id>
-        <link href="https://mcuoneclipse.com/2024/02/11/cnc-laser-personalized-cutting-board/"/>
-        <updated>2024-02-11T14:55:15.000Z</updated>
-        <summary type="html"><![CDATA[The post showcases recent designs for cutting boards made from 20 mm oak sheets using a desktop CNC and laser cutter. The simple design takes 5-6 minutes to cut and results in a raw cutting board, which can be produced in different sizes. The boards are treated with olive oil for a personalized finish. Links to related projects are provided. Continue reading →]]></summary>
-        <author>
-            <name>Erich Styger</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[멋지게 지고도 이기는 방법, 이재명은 다른 선택을 할 수 있었다.]]></title>
-        <id>https://slownews.kr/?p=103787</id>
-        <link href="https://slownews.kr/103787"/>
-        <updated>2024-02-11T09:01:46.000Z</updated>
-        <summary type="html"><![CDATA[“민주-진보 빅텐트라는 달콤한 거짓말”이라는 조귀동(‘이탈리아로 가는 길’ 저자)의 글과 “민주당의 연합 위성정당 꼼수, 정의당이 가장 큰 피해를 본다”는 최병천(신성장경제연구소 소장)의 글을 읽으면서 이런 생각을 해봤다. 만약 이재명(민주당 대표)이 준연동형을 유지하되 위성정당을 만들지 않겠다고 선언했다면 어떻게 됐을까. 시뮬레이션을 해보자. 멋지게 지는 방법. 멋지게 졌을 때 얻을 수 있는 정치적 효과. 이것은 간단한 산수다. 핵심은 이것이다. 지난...
-The post 멋지게 지고도 이기는 방법, 이재명은 다른 선택을 할 수 있었다. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
         </author>
     </entry>
     <entry>
