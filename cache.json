@@ -238,16 +238,6 @@
           "wordCount": null,
           "title": "[북리뷰] 문제 해결을 위한 알고리즘 with 수학",
           "imageUrl": null
-        },
-        {
-          "id": "https://cpuu.postype.com/post/15979710",
-          "author": "CPUU",
-          "description": "기호실행(Symbolic Execution)에 대하여 아래와 같은 좋은 논문들이 있다. 특히 [\"All you ever wanted to know about dynamic taint analysis and forward symbolic execution (but might have been afraid to ask).\" 2010 IEEE symposium on Security and privacy. IEEE, 2010.] 은 반드시 읽고 넘어가야 할 명저로 꼽히는데, 아쉽게도 수식이 난무하여 이 분야를 처음 접하는 사람에게는 어렵지 않을 수 없다. 나의 경우 추가적으로 아래와 같은 논문들을 참고하였고, 본 블로그 포스팅은 어디까지나 내가 이해한 것 까지만을 다룬다.\n\nKing, James C. \"Symbolic execution and program testing.\" Communications of the ACM 19.7 (1976): 385-394.\nGodefroid, Patrice, et al. \"Automating software testing using program analysis.\" IEEE software 25.5 (2008): 30-37.\nPăsăreanu, Corina S., and Willem Visser. \"A survey of new trends in symbolic execution for software testing and analysis.\" International journal on software tools for technology transfer 11.4 (2009): 33…",
-          "link": "https://cpuu.postype.com/post/15979710",
-          "publishedOn": "2024-02-21T07:07:21.000Z",
-          "wordCount": null,
-          "title": "[논문리뷰] Symbolic Execution for Software Testing: Three Decades Later",
-          "imageUrl": null
         }
       ]
     },
@@ -300,6 +290,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "393c0a78-a4d0-423e-ad01-f704b54d989e",
+          "author": "Matias Ezequiel Vara Larsen, Alexander Lougovski, Marcelo Tosatti",
+          "description": "When users have to choose a middleware technology to communicate different software components, they often pick Robot Operating System 2 (ROS 2) due to its features like efficiency and reliability. These components can be deployed locally (i.e., same host, or remotely, different hosts), and they communicate by following a service-oriented pattern.\nFor example, a software component that reads data from a sensor would publish the sensor values whereas another software component that processes that data would subscribe to it. ROS 2 takes care of sending the data between the components and ensures that data arrives on time. ROS 2 relies on a DDS as its middleware, which is a specification that is implemented by different vendors, e.g., Eclipse Cyclone DDS, OpenDDS. DDS is used in a wide variet…",
+          "link": "https://developers.redhat.com/articles/2024/03/21/benchmark-cyclone-dds-centos-stream-9-vms-low-latency",
+          "publishedOn": "2024-03-21T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Benchmark Cyclone DDS in CentOS Stream 9 VMs for low latency",
+          "imageUrl": null
+        },
+        {
+          "id": "06c32f8b-1ca8-484a-bfb7-e06f2af8285c",
+          "author": "Kevin Chung, Amr Abualrub",
+          "description": "The advent of cloud technologies brings many benefits to the enterprise, such as provisioning at scale and a cloud-native DevOps approach. However, it also brings new challenges for developers and infrastructure engineers who wish to migrate from their datacenter to the public cloud. Among those challenges are integrating existing development methodologies with tool sets provided by the cloud provider as on-premise and cloud environments can each differ greatly. In this article, we explore a real-world implementation of a complete CI/CD pipeline using Source-to-Image builds deployed in Microsoft Azure Red Hat OpenShift with Azure tooling (see Figure 1).\n\n\n        Figure 1: This logical workflow highlights the pipeline that will be built in this article.\nThe tools that will be leveraged in …",
+          "link": "https://developers.redhat.com/articles/2024/03/21/implement-source-image-builds-azure-devops-pipeline",
+          "publishedOn": "2024-03-21T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Implement Source-to-Image builds in an Azure DevOps pipeline",
+          "imageUrl": null
+        },
         {
           "id": "1edc2259-2997-4963-89d7-11658ec714a8",
           "author": "Steven Lee",
@@ -569,26 +579,6 @@
           "wordCount": null,
           "title": "Best practices for OpenShift Data Foundation disaster recovery resource planning",
           "imageUrl": null
-        },
-        {
-          "id": "9caba004-251f-4030-92ba-bcc85a832992",
-          "author": "Eugenio Pérez Martín",
-          "description": "Do you need to move a virtual machine (VM) from one hypervisor to another or update the hypervisor version without stopping the VM? Live migration has you covered. The virtio-net failover blog explains how to migrate a virtual machine with a passthrough device via Virtual Function I/O (VFIO) using a standard virtio-net device to redirect the traffic during the migration. However, how does that virtio-net device migrate? What steps does it take to continue the operation on the destination platform transparently to the guest?\nThis article explores the live migration steps QEMU performs and how it tracks the information it needs to make the process transparent. It explains how QEMU coordinates with vhost-kernel, the device already described in the vhost-net deep dive. I will show how the devi…",
-          "link": "https://developers.redhat.com/articles/2024/02/21/virtio-live-migration-technical-deep-dive",
-          "publishedOn": "2024-02-21T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Virtio live migration technical deep dive",
-          "imageUrl": null
-        },
-        {
-          "id": "b9ba8cc3-36ba-4e26-808d-3058ffb18edb",
-          "author": "Michael Dawson",
-          "description": "As the cost to performance ratio of small computer systems improves, more and more enterprises are moving from simpler IoT systems to deploying devices that can do more processing at the edge. As part of this transition, these edge devices start looking a lot more like servers in existing IT infrastructure. As a result, managing them as such becomes not only feasible but more cost effective.\nThis post is the first in a three-part series that will include:\nRunning Node.js applications on the edge with Red Hat Enterprise Linux (RHEL)/Fedora (this post)\nContainerizing your Node.js applications at the edge on RHEL/Fedora\nAdvanced container management at the edge for Node.js applications  \nWhy Node.js at the edge?\nOne question before we dive in might be “Why Node.js at the edge?” We’ve heard fr…",
-          "link": "https://developers.redhat.com/articles/2024/02/21/run-nodejs-applications-edge-rhel-and-fedora",
-          "publishedOn": "2024-02-21T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Run Node.js applications on the edge with RHEL and Fedora",
-          "imageUrl": null
         }
       ]
     },
@@ -856,26 +846,6 @@
           "wordCount": null,
           "title": "Three ways in which the video revolution impacts IoT",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481505",
-          "author": "Jacob Beningo",
-          "description": "Will the release of embedded-hal 1.0 be the spark that causes more embedded software teams to seriously consider Rust? If you’re developing an embedded system,...\nThe post Will Rust’s embedded-hal crate open Rust to embedded? appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/will-rusts-embedded-hal-crate-open-rust-to-embedded/",
-          "publishedOn": "2024-02-20T20:53:56.000Z",
-          "wordCount": null,
-          "title": "Will Rust’s embedded-hal crate open Rust to embedded?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481502",
-          "author": "Emily Newton",
-          "description": "What steps should designers take to achieve good power management in embedded systems while ensuring they meet or exceed customers’ needs and expectations? Many customers...\nThe post Balancing power vs. performance in embedded systems appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/balancing-power-vs-performance-in-embedded-systems/",
-          "publishedOn": "2024-02-20T20:41:14.000Z",
-          "wordCount": null,
-          "title": "Balancing power vs. performance in embedded systems",
-          "imageUrl": null
         }
       ]
     },
@@ -953,16 +923,6 @@
           "wordCount": 3030,
           "title": "The RTOS minefield",
           "imageUrl": "https://www.embeddedrelated.com/new2/images/blog_generic_image.png"
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1635.php",
-          "author": null,
-          "description": "I just realized (probably very belatedly) that all (most?) of the talks from last year's Teardown Conference in Portland, Oregon, are now freely available online! This includes a talk I gave about designing your own breakout board or development board for a microcontroller, which is embedded below. Enjoy!\r\n\r\n\r\nReferences:\r\n\r\n\t\nPresentation...",
-          "link": "https://www.embeddedrelated.com/showarticle/1635.php",
-          "publishedOn": "2024-02-20T22:17:43.000Z",
-          "wordCount": null,
-          "title": "Make Your Own MCU Boards (2023 Teardown Conference)",
-          "imageUrl": null
         }
       ]
     },
@@ -1121,6 +1081,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1109/",
+          "author": null,
+          "description": "The nopCommerce project is a free open-source platform on ASP.NET Core to create online stores. Today we'll find out what ambiguities lurk in its code.",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1109/",
+          "publishedOn": "2024-03-20T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Invincible null: digging into nopCommerce source code",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/1108/",
           "author": null,
           "description": "Many psychologists recommend cultivating acceptance. That is, accepting one's mistakes, for example. Some game developers have taken this quite seriously. They decided, \"Why not?\" and made errors...",
@@ -1273,6 +1243,86 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/965837/",
+          "author": "corbet",
+          "description": "While a programming error in the kernel may be subject to direct\nexploitation, usually a more roundabout approach is required to take\nadvantage of a security bug.  One popular approach for those wishing to\ntake advantage of vulnerabilities  is heap spraying, and\nit has often been employed to compromise the kernel.  In the future,\nthough, heap-spraying attacks may be a bit harder to pull off, thanks to the\n\"dedicated bucket allocator\" proposed by Kees Cook.",
+          "link": "https://lwn.net/Articles/965837/",
+          "publishedOn": "2024-03-21T15:07:29.000Z",
+          "wordCount": null,
+          "title": "[$] Hardening the kernel against heap-spraying attacks",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966246/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (pdns-recursor and php-dompdf-svg-lib), Fedora (grub2, libreswan, rubygem-yard, and thunderbird), Mageia (libtiff and python-scipy), Red Hat (golang, nodejs, and nodejs:16), Slackware (python3), and Ubuntu (linux, linux-azure, linux-azure-5.15, linux-azure-fde,\n linux-azure-fde-5.15, linux-gcp, linux-gcp-5.15, linux-gke, linux-gkeop,\n linux-gkeop-5.15, linux-hwe-5.15, linux-ibm, linux-ibm-5.15, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-5.15, linux-nvidia, linux, linux-azure, linux-gcp, linux-gcp-6.5, linux-hwe-6.5,\n linux-lowlatency, linux-lowlatency-hwe-6.5, linux-oem-6.5, linux-oracle,\n linux-oracle-6.5, linux-raspi, linux-starfive, linux-starfive-6.5, linux-aws, linux-aws-5.15, linux-aws, linux-aws-5.4, linux-gcp-5.4, linux-raspi, linux-raspi-5.4,\n linux-xilinx-zynqmp, linux-gcp, linux-gcp-4.15, linux-kvm, linux-laptop, linux-oem-6.1, and linux-raspi).",
+          "link": "https://lwn.net/Articles/966246/",
+          "publishedOn": "2024-03-21T14:57:19.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966205/",
+          "author": "corbet",
+          "description": "Version\n1.77.0 of the Rust language has been released.  Changes include support\nfor NUL-terminated C-string literals, the ability for async\nfunctions to call themselves recursively, the stabilization of the\noffset_of!() macro, and more.",
+          "link": "https://lwn.net/Articles/966205/",
+          "publishedOn": "2024-03-21T13:48:04.000Z",
+          "wordCount": null,
+          "title": "Rust 1.77.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966181/",
+          "author": "corbet",
+          "description": "Verson 5.39.9 of the Perl language has been released.  Changes this time\ninclude a new \"medium-precedence\" logical exclusive-or operator, a number\nof updated modules, and more; see this\npage for details.",
+          "link": "https://lwn.net/Articles/966181/",
+          "publishedOn": "2024-03-21T11:16:57.000Z",
+          "wordCount": null,
+          "title": "Perl 5.39.9 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966133/",
+          "author": "corbet",
+          "description": "The Redis in-memory database system has had\nits license changed to either the Redis Source Available\nLicense or the Server Side\nPublic License (covered here in 2018);\nneither license qualifies as free software.\n\n\n\tUnder the new license, cloud service providers hosting Redis\n\tofferings will no longer be permitted to use the source code of\n\tRedis free of charge. For example, cloud service providers will be\n\table to deliver Redis 7.4 only after agreeing to licensing terms\n\twith Redis, the maintainers of the Redis code.\n\n\nDistributors like Fedora are already looking\nat removing Redis as a consequence.  (Thanks to  Emmanuel Seyman).",
+          "link": "https://lwn.net/Articles/966133/",
+          "publishedOn": "2024-03-21T07:33:03.000Z",
+          "wordCount": null,
+          "title": "Redis is no longer free software",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966129/",
+          "author": "corbet",
+          "description": "Danilo Krummrich has announced the\nexistence of the \"Nova\" project within Red Hat.\n\n\n\tWe just started to work on Nova, a Rust-based GSP-only driver for\n\tNvidia GPUs. Nova, in the long term, is intended to serve as the\n\tsuccessor of Nouveau for GSP-firmware-based GPUs.\n\n\tWith Nova we see the chance to significantly decrease the\n\tcomplexity of the driver compared to Nouveau for mainly two\n\treasons. First, Nouveau's historic architecture, especially around\n\tnvif/nvkm, is rather complicated and inflexible and requires major\n\trework to solve certain problems (such as locking hierarchy in VMM\n\t/ MMU code for VM_BIND currently being solved with a workaround)\n\tand second, with a GSP-only driver there is no need to maintain\n\tcompatibility with pre-GSP code.\n\n\tBesides that, we also want to take the chance to contribute to the\n\tRust efforts in the kernel and benefit from from more memory safety\n\toffered by the Rust programming language.\n\n\nGiven that the effort has just begun, it will be a while before this driver\nshows up in a distribution release.",
+          "link": "https://lwn.net/Articles/966129/",
+          "publishedOn": "2024-03-21T07:10:14.000Z",
+          "wordCount": null,
+          "title": "The \"Nova\" driver for NVIDIA chipsets",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/965368/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for March 21, 2024 is available.",
+          "link": "https://lwn.net/Articles/965368/",
+          "publishedOn": "2024-03-21T00:50:37.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for March 21, 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966096/",
+          "author": "corbet",
+          "description": "Version 46 of the GNOME desktop\nhas been released.  \"GNOME 46 is code-named 'Kathmandu', in recognition\nof the amazing work done by the organizers of GNOME.Asia 2023.\"\nSignificant changes include a new global search feature, enhancements to\nthe Files app, improved remote login support, and more.",
+          "link": "https://lwn.net/Articles/966096/",
+          "publishedOn": "2024-03-20T21:07:55.000Z",
+          "wordCount": null,
+          "title": "GNOME 46 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/965434/",
           "author": "jzb",
@@ -2042,56 +2092,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/962924/",
-          "author": "corbet",
-          "description": "DNS resolvers (those that handle DNSSEC, at least) are almost uniformly\nvulnerable to an exploit\nthat has been named \"KeyTrap\".  In short, the right type of packet can\nsend a DNS system into something close to an infinite loop, taking it out\nof service indefinitely.\n\n\n\tWith just a single DNS packet, hackers could paralyze all common\n\tDNS implementations and public DNS providers. Exploiting this\n\tattack would have serious consequences for any application that\n\tuses the internet, including the unavailability of technologies\n\tsuch as web browsers, email and instant messaging. This devastating\n\teffect prompted major DNS vendors to call KeyTrap \"The worst attack\n\ton DNS ever discovered\"\n\n\nSome more information and pointers to updates can be found on the\nCVE-2023-50387 page; some distributors have been faster to get updates\nout than others.\n\n(Thanks to Dave Täht).",
-          "link": "https://lwn.net/Articles/962924/",
-          "publishedOn": "2024-02-20T19:01:07.000Z",
-          "wordCount": null,
-          "title": "The \"KeyTrap\" DNS vulnerability",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/962787/",
-          "author": "jzb",
-          "description": "Qubes OS is a security-focused desktop Linux distribution built on Fedora Linux and the Xen hypervisor. Qubes uses virtualization to run applications, system services, and devices access via virtual machines called \"qubes\" that have varying levels of trust and persistence to provide an open-source \"reasonably secure\" operating system with \"serious privacy\". The Qubes 4.2.0 release, from December 2023, brings a number of refinements to make Qubes OS easier to manage and use.",
-          "link": "https://lwn.net/Articles/962787/",
-          "publishedOn": "2024-02-20T18:58:01.000Z",
-          "wordCount": null,
-          "title": "[$] A modest update to Qubes OS",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/962897/",
-          "author": "corbet",
-          "description": "Andrea Righi has started\na blog series on writing a user-space CPU scheduler with the BPF-based\nextensible scheduler class:\n\n\n\t.select_cpu() implements the logic to assign a target CPU to a task\n\tthat wants to run, typically you have to decide if you want to keep\n\tthe task on the same CPU or if it needs to be migrated to a\n\tdifferent one (for example if the current CPU is busy); if we can\n\tfind an idle CPU at this stage there's no reason to call the\n\tscheduler, the task can be immediately dispatched here.",
-          "link": "https://lwn.net/Articles/962897/",
-          "publishedOn": "2024-02-20T14:32:27.000Z",
-          "wordCount": null,
-          "title": "Righi: Writing a scheduler for Linux in Rust that runs in user-space",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/962882/",
-          "author": "daroc",
-          "description": "Drew DeVault \nannounced the first numbered release of the \nHare programming language on February 16.\n\n\n\nMany Hare users want to ship their Hare projects to users, and as such, software written in Hare is making its way into Linux distributions and the like. However, due to Hare's unstable nature, we have not provided any versioned releases, forcing any distributions who want to package Hare to package Hare's master branch, which is less than ideal.",
-          "link": "https://lwn.net/Articles/962882/",
-          "publishedOn": "2024-02-20T14:13:18.000Z",
-          "wordCount": null,
-          "title": "Hare programming language 0.24.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/962881/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (freeglut, hugin, libmodsecurity, qemu, rust-asyncgit, rust-bat, rust-cargo-c, rust-eza, rust-git-absorb, rust-git-delta, rust-git2, rust-gitui, rust-libgit2-sys, rust-lsd, rust-pore, rust-pretty-git-prompt, rust-shadow-rs, rust-silver, rust-tokei, and rust-vergen), Mageia (packages, radare2, ruby-rack, and wireshark), Oracle (.NET 8.0 and python-pillow), Red Hat (gimp:2.8, java-1.8.0-ibm, and kpatch-patch), SUSE (dpdk and opera), and Ubuntu (bind9, curl, linux-raspi, linux-raspi-5.4, node-ip, and tiff).",
-          "link": "https://lwn.net/Articles/962881/",
-          "publishedOn": "2024-02-20T13:42:38.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2440,6 +2440,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=105850",
+          "author": "참여연대 사법감시센터",
+          "description": "[참여연대 사법감시센터 ‘광장에 나온 판결’] 손연재 선수 명예훼손 댓글 단 혐의로 기소유예처분을 받은 신 모 씨에 대해서, 헌법재판소가 기소유예처분 취소를 결정했습니다! 언론과 대중의 관심을 받는 것은 늘 자극적인 사건들이다. 충격적인 범죄, 대대적인 압수·수색, 피의자의 구속, 유무죄 판결들. 우리가 접하는 형사사건은 대부분 이렇게 다가온다. 복잡한 사회, 바쁜 일상 속에 평범한 사람의 속상한 이야기 정도는 주목을 끌기...\nThe post 내 글은 절대 악플이 아니야: 리듬체조 선수 명예훼손 댓글 기소유예 취소 사건 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/105850",
+          "publishedOn": "2024-03-21T08:40:18.000Z",
+          "wordCount": null,
+          "title": "내 글은 절대 악플이 아니야: 리듬체조 선수 명예훼손 댓글 기소유예 취소 사건",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=105825",
+          "author": "슬로우뉴스",
+          "description": "조수진은 자신의 성범죄자 변호 이력이 논란이 되자 말도 안 되는 해명을 내놓았다. MBC 라디오에 출연해서는 “변호사로서 직업윤리와 법에 근거해 변론했다”면서 “공직자에게 바라는 국민 눈높이가 다르다는 걸 느꼈다”고 한다. 기자들에게 보낸 메시지에서는 “성범죄자 변론을 맡은 것과 블로그를 통해 이런 사실을 홍보한 것은 변호사로서 윤리 규범을 준수해 이뤄진 활동”이었다면서 앞으로 “국민 눈높이를 가치의 척도로 삼겠다”고 밝혔다. 즉,...\nThe post 조수진의 직업윤리는 틀렸다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/105825",
+          "publishedOn": "2024-03-21T06:32:46.000Z",
+          "wordCount": null,
+          "title": "조수진의 직업윤리는 틀렸다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=105801",
+          "author": "이정환",
+          "description": "황상무 사퇴와 이종섭 귀국, 예상보다 빨랐다. 다 해결된 것 맞나. 쟁점과 현안. 의대 2000명 증원 강행. 지역 의료 강화 맞나. 조국혁신당 지지율 30%도 넘었다. “길에서 배지 주웠다.” 이재명의 자신감. 친윤-친한, 건널 수 없는 강을 건넜다. ‘한동훈의 시간’이 다시 올까. 다르게 읽기. 삼성이 삼성 같지 않다. “한국에서 RE100 하기 어렵다.” 더 깊게 읽기. 행동대장 윤석열, 게도...\nThe post “다 해결됐다”던 한동훈이 “내가 관둘게요”했던 이유: 슬로우레터 3월21일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/105801",
+          "publishedOn": "2024-03-20T22:04:14.000Z",
+          "wordCount": null,
+          "title": "“다 해결됐다”던 한동훈이 “내가 관둘게요”했던 이유: 슬로우레터 3월21일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=105789",
           "author": "민주언론시민연합",
@@ -3079,46 +3109,6 @@
           "wordCount": 8354,
           "title": "초과근로에 관한 한국식 해법? 비정규직!",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/business-man-6719390_1280.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=104319",
-          "author": "이정환",
-          "description": "[슬로우리포트] 낮은 PBR의 근본 원인은 열악한 지배구조와 낮은 주주 환원율, 관치와 주주 자본주의를 극복해야 진짜 ‘밸류업’이다. 코리아 디스카운트라는 말이 계속 나온다. 전쟁 중인 이스라엘보다 시장 가치가 더 낮다는 말도 나오고 40% 이상 디스카운트 됐다는 분석도 있었다. 금융위원회가 밸류업 프로그램을 도입하겠다고 하면서 일부 기업들 주가가 뛰었는데 오히려 관치가 코리아 디스카운트를 부른다는 말도 나온다. 얼마 전 삼성물산...\nThe post 코리아 디스카운트와 밸류업 프로젝트, 윤석열과 이복현이 말하지 않는 것. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104319",
-          "publishedOn": "2024-02-21T06:02:51.000Z",
-          "wordCount": 7229,
-          "title": "코리아 디스카운트와 밸류업 프로젝트, 윤석열과 이복현이 말하지 않는 것.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/1-TeNLWxK0hqiU-ahZqFcIgw.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=104303",
-          "author": "김훤주",
-          "description": "우리가 국가에 세금을 낼 때는 ‘납입(納入)’이라 한다. 반면 국가가 우리에게 무엇인가를 준다면 그때는 ‘지급(支給)’이라 한다. 국가뿐만 아니다. 예컨대 근로복지공단도 우리가 고용보험료를 낼 때는 납입이고, 공단이 우리한테 실업급여를 줄 때는 지급이다. 또 학부모가 학교에 등록금을 낼 때는 납입·납부한다고 하고 거꾸로 학교에서 학생한테 장학금을 줄 때는 지급한다고 한다. 우리가 다달이 받는 고지서에는 납입·납부·납세 등 ‘납’ 글자가 들어가지...\nThe post 납(納), 여전히 남아있는 권력과 순종 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104303",
-          "publishedOn": "2024-02-21T05:02:20.000Z",
-          "wordCount": 5077,
-          "title": "납(納), 여전히 남아있는 권력과 순종",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/korean-4762343_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=104294",
-          "author": "이정환",
-          "description": "[슬로우리포트] 유책주의 vs. 파탄주의, 핵심은 재산 형성 기여도… “여성의 역할과 가정의 가치가 전면 부인됐다.” 역대급 이혼 소송이라는 최태원(SK회장)과 노소영(아트센터나비 관장)의 이혼 소송과 재산 분할 관련 이슈를 살펴보자. 단순히 재벌가의 사적인 이슈를 넘어 공적인 쟁점이 많다. 이혼 소송 항소심이 진행 중이다. 부부의 재산 형성에 기여도가 어느 정도 되느냐가 쟁점이다. 하지만 노소영이 재산 형성에 실질적으로 무슨 기여를...\nThe post SK 이혼 소송, 노소영은 왜 1.2%밖에 받지 못했을까. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104294",
-          "publishedOn": "2024-02-21T03:41:26.000Z",
-          "wordCount": 6331,
-          "title": "SK 이혼 소송, 노소영은 왜 1.2%밖에 받지 못했을까.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/51958349899_1bd0ed0c1f_b.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=104265",
-          "author": "이정환",
-          "description": "이재명이 바뀔까. 김건희 리스크는 사라졌나. “박용진도 공천 걱정하지 않는 당을 만들겠다.” 쟁점과 현안. 설까지 앞서다 뒤집어진 4월 총선이 두 번 있었다. “김영주가 하위 20%면 이재명은 1%.” 818호와 1004호의 갈등. 11일 만에 무너진 ‘빅 텐트’. 개혁신당의 6억 원 ‘먹튀’. 민주당에 더 큰 악재. “민주당보다는 낫지” 할 상황인가. “이사 온 사람이 조두순이라면?” 더 깊게 읽기. 바이든-날리면 보도,...\nThe post 프레임 뒤집기, 김건희 리스크와 이재명 리스크가 같나: 슬로우레터 2월21일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104265",
-          "publishedOn": "2024-02-20T21:59:57.000Z",
-          "wordCount": 7025,
-          "title": "프레임 뒤집기, 김건희 리스크와 이재명 리스크가 같나: 슬로우레터 2월21일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/02/52319_1161_4124.jpg"
         }
       ]
     },
@@ -3465,16 +3455,6 @@
           "publishedOn": "2024-02-22T01:20:52.000Z",
           "wordCount": null,
           "title": "2/22, 월마트 실적을 읽는 월가의 시선, 훌륭하다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=593886",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/593886/%ec%97%b0%eb%8f%84%eb%b3%84-tv-%ec%a0%90%ec%9c%a0%ec%9c%a8",
-          "publishedOn": "2024-02-20T10:40:14.000Z",
-          "wordCount": null,
-          "title": "연도별 TV 점유율 추이와 삼성 TV 점유율 사례 분석",
           "imageUrl": null
         }
       ]
