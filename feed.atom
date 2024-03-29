@@ -2,10 +2,174 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-03-28T20:13:45.121Z</updated>
+    <updated>2024-03-29T20:13:20.427Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[A backdoor in xz]]></title>
+        <id>https://lwn.net/Articles/967180/</id>
+        <link href="https://lwn.net/Articles/967180/"/>
+        <updated>2024-03-29T17:33:57.000Z</updated>
+        <summary type="html"><![CDATA[Andres Freund has posted a
+detailed investigation into a backdoor that was shipped with versions
+5.6.0 and 5.6.1 of the xz compression utility.  It appears that the
+malicious code may be aimed at allowing SSH authentication to be bypassed.
+
+
+	I have not yet analyzed precisely what is being checked for in the
+	injected code, to allow unauthorized access. Since this is running
+	in a pre-authentication context, it seems likely to allow some form
+	of access or other form of remote code execution.
+
+
+The affected versions are not yet widely shipped, but checking systems for
+the bad version would be a good idea.
+
+Update: there are advisories out now from
+Arch,
+Debian,
+Red
+Hat, and
+openSUSE.
+
+A further
+update from openSUSE:
+
+
+	For our openSUSE Tumbleweed users where SSH is exposed to the
+	internet we recommend installing fresh, as it’s unknown if the
+	backdoor has been exploited. Due to the sophisticated nature of the
+	backdoor an on-system detection of a breach is likely not
+	possible. Also rotation of any credentials that could have been
+	fetched from the system is highly recommended.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Radicle: peer-to-peer collaboration with Git]]></title>
+        <id>https://lwn.net/Articles/966869/</id>
+        <link href="https://lwn.net/Articles/966869/"/>
+        <updated>2024-03-29T13:40:35.000Z</updated>
+        <summary type="html"><![CDATA[Radicle is a new, peer-to-peer,
+MIT/Apache-licensed collaboration platform written in Rust and built on top
+of Git. It adds support for issues and pull requests (which Radicle calls
+"patches") on top of core Git, which are stored in the Git repository
+itself. Unlike GitHub, GitLab, and similar forges, Radicle is distributed;
+it doesn't rely on having everyone use the same server. Instead, Radicle
+instances form a network that synchronizes changes between nodes.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Friday]]></title>
+        <id>https://lwn.net/Articles/967134/</id>
+        <link href="https://lwn.net/Articles/967134/"/>
+        <updated>2024-03-29T13:11:27.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium), Fedora (apache-commons-configuration, chromium, csmock, ofono, onnx, php-tcpdf, and podman-tui), Mageia (curl), Oracle (libreoffice), Slackware (coreutils, seamonkey, and util), SUSE (minidlna, PackageKit, and podman), and Ubuntu (linux-azure-6.5 and linux-intel-iotg, linux-intel-iotg-5.15).]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Schaller: Fedora Workstation 40 – what are we working on]]></title>
+        <id>https://lwn.net/Articles/967107/</id>
+        <link href="https://lwn.net/Articles/967107/"/>
+        <updated>2024-03-29T12:56:12.000Z</updated>
+        <summary type="html"><![CDATA[Christian Schaller writes
+about the desktop-oriented work aimed at the upcoming Fedora 40
+release.
+
+
+	Another major feature landing in Fedora Workstation 40 that Jonas
+	Ådahl and Ray Strode has spent a lot of effort on is finalizing the
+	remote desktop support for GNOME on Wayland. So there has been
+	support for remote connections for already logged in sessions
+	already, but with these updates you can do the login remotely too
+	and thus the session do not need to be started already on the
+	remote machine. This work will also enable 3rd party solutions to
+	do remote logins on Wayland systems, so while I am not at liberty
+	to mention names, be on the lookout for more 3rd party Wayland
+	remoting software becoming available this year.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[부적격 후보는 유권자가 걸러내라? 그건 정당과 언론이 해야죠!]]></title>
+        <id>https://slownews.kr/?p=106226</id>
+        <link href="https://slownews.kr/106226"/>
+        <updated>2024-03-29T03:39:25.000Z</updated>
+        <summary type="html"><![CDATA[제22대 국회의원 선거가 다가온다. 정치권에 대한 냉소가 하루 이틀 일은 아니지만 이쯤 되면 정말 정치권이 국민의 정치 혐오 정서를 부추겨 그들만의 왕국을 꾸려가고 있다는 음모론에 신뢰가 갈 지경이다. 기초적 검증도 제대로 하지 못해 제1야당이 후보 등록 이후 공천을 취소하고 후보를 제명한 일이 벌어졌다. 여야를 가리지 않고 후보로 확정된 인물들이 이런저런 과거의 부적절한 언행으로 공천이 취소되는...
+The post 부적격 후보는 유권자가 걸러내라? 그건 정당과 언론이 해야죠! appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>민주언론시민연합</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[3/29, 월가의 투자의견 및 주가 전망 보고서]]></title>
+        <id>https://happist.com/?p=594241</id>
+        <link href="https://happist.com/594241/3-29-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
+        <updated>2024-03-29T00:04:00.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Diving into JTAG — BSDL (Part 4)]]></title>
+        <id>https://interrupt.memfault.com/blog/diving-into-jtag-part-4</id>
+        <link href="https://interrupt.memfault.com/blog/diving-into-jtag-part-4"/>
+        <updated>2024-03-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In the previous article of this series, we briefly touched on how .bsd files
+written in Boundary Scan Description Language (BSDL) describe the structure of
+the boundary scan chain and the instruction set. In this article, we will
+examine this language’s syntax more closely before seeing how .bsd files are leveraged
+in JTAG testing in the next article.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rohde & Schwarz to show measurements on novel Bluetooth Channel Sounding signals]]></title>
+        <id>https://www.embedded.com/?p=4481763</id>
+        <link href="https://www.embedded.com/rohde-schwarz-to-show-measurements-on-novel-bluetooth-channel-sounding-signals/"/>
+        <updated>2024-03-28T23:08:23.000Z</updated>
+        <summary type="html"><![CDATA[The Bluetooth Channel Sounding feature will enable unprecedented positioning accuracy for consumer and commercial applications. Rohde & Schwarz will demonstrate signal measurement capabilities to support chip and device development.
+The post Rohde & Schwarz to show measurements on novel Bluetooth Channel Sounding signals appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[양심을 찌른 사건, 그들에게 채수근은 2등 시민이었다: 슬로우레터 3월29일.]]></title>
+        <id>https://slownews.kr/?p=106176</id>
+        <link href="https://slownews.kr/106176"/>
+        <updated>2024-03-28T21:59:13.000Z</updated>
+        <summary type="html"><![CDATA[출근길 대란, 퇴근길에 끝났다. 사전투표, 국민의힘에도 좋다? 쟁점과 현안. 의대 정원, 의-정 갈등에서 의-윤 갈등으로. “정치를 개같이 한다.” 민생 토론회에 세 가지가 없다. 다르게 읽기. 열흘 동안 판세가 바뀔 수도 있을까. 윤석열과 한동훈의 패착. ‘역내로남불’. 더 깊게 읽기. 금지팡이와 흙지팡이. 그들에게 채수근은 2등 시민이었다. 김앤장 네트워크. 재판받겠습니까. 오늘의 TMI. ‘노담’ 청소년 늘었다. 트럼프 500대 부자...
+The post 양심을 찌른 사건, 그들에게 채수근은 2등 시민이었다: 슬로우레터 3월29일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] The race to replace Redis]]></title>
+        <id>https://lwn.net/Articles/966631/</id>
+        <link href="https://lwn.net/Articles/966631/"/>
+        <updated>2024-03-28T20:31:35.000Z</updated>
+        <summary type="html"><![CDATA[On March 21, Redis Ltd. announced that the Redis "in-memory data store" project would now be
+released under non-free, source-available licenses, starting with Redis 7.4. The
+news is unwelcome, but not entirely unexpected. What is unusual with this situation is
+the number of Redis alternatives to choose from; there are at least
+four options to choose as a replacement for those who wish to stay
+with free software, including a pre-existing fork called KeyDB and the Linux Foundation's newly-announced Valkey project. The question now is which one(s)
+Linux distributions, users, and providers will choose to take its place.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Joining LinkedIn]]></title>
         <id>https://martinfowler.com/articles/2024-joining-linkedin.html</id>
@@ -3794,220 +3958,6 @@ Red Hat OpenShift is an enterprise-grade Kubernetes container application platfo
 The post ‘고발 사주’ 손준성 징역 1년, 공수처의 첫 성과… 이제 남은 건 공소유지 appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>참여연대 사법감시센터</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CodeShift hackathon winners]]></title>
-        <id>e569e33b-5863-428f-a19c-1d6f8756e3d7</id>
-        <link href="https://developers.redhat.com/articles/2024/02/29/codeshift-hackathon-winners"/>
-        <updated>2024-02-29T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The CodeShift hackathon has come to a thrilling conclusion. We are excited to announce and celebrate the brilliant minds behind the winning projects that showcased the capabilities of the Red Hat OpenShift application development platform and Intel’s AI/ML technologies.
-About the hackathon
-The CodeShift hackathon brought together developers worldwide to demonstrate their skills to create intelligent, cloud-native applications. Red Hat and Intel collaborated on this event to promote innovation and push the boundaries of cloud-native and AI/ML application development.
-The hackathon explored cloud-native development with Red Hat's OpenShift application platform which includes Java runtimes (Quarkus, Spring Boot), event-driven architecture with Apache Kafka, integration with Apache Camel, Red …]]></summary>
-        <author>
-            <name>Jeff Beck</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[북리뷰] 쉽고 빠르게 익히는 실전 LLM]]></title>
-        <id>https://cpuu.postype.com/post/16366187</id>
-        <link href="https://cpuu.postype.com/post/16366187"/>
-        <updated>2024-02-29T05:07:05.000Z</updated>
-        <summary type="html"><![CDATA[존스 홉킨스 대학에서 강의를 했었던 Sinan Ozdemir 가  Quick Start Guide to LLMs 라는 책을 출간했다.
-이 책이 2023년 9월에 출시되었는데, 불과 4개월만에 한국어판 번역서가 출시되었다. 역시 한빛미디어다. IT기술 트렌드에 빠르게 발맞추어 관련 서적들을 출시하고 있다. 한국어판 제목은 쉽고 빠르게 익히는 실전 LLM이다. 
-인공지능 분야가 떠오르기 시작하면서, 사람의 언어로 작성된 텍스트를 분석하는 기술에 대한 연구는 계속 이어져왔다. 주로 자연어 처리 혹은 자연어 이해 등으로 분류가 되는데, LLM은 그 하위 분야의 일종이라고 할 수 있다. 그렇지만 최근에는 사실상 LLM이 거의 대세이기 때문에 자연어 처리를 직접 연구하는 사람이 많이 줄어든 것 같기도 하다. 왜냐하면 OpenAI의 ChatGPT라는 생성형 AI가 상용화 수준의 좋은 품질을 나타내고 있기 때문이다.
-이 책은 먼저 초반부에서 LLM이란 무엇이며 '의미 기반' 검색을 수행하는 것이 무엇인지를 소개한다. 
-최근의 LLM은 단순히 주어진 텍스트를 이해하는 것(BERT 계열)을 넘어서, 대답을 생성하는 작업(GPT 계열)을 굉장히 잘 수행한다. 
-예를 들어, 파이썬(Python)이라는 단어가 주어졌을 때 문맥을 함께 읽어서 상황에 따라 이것이 뱀을 뜻하는 단어인지, 프로그래밍 언어를 의미하는지를 파악할 수 있고, 그에 알맞은 대답을 할 수 있다.
-현재 널리 사용되고 있는 LLM으로는 BERT, T5, GPT 등이 있다. 그리고 그 밖에 도메인 특화 LLM들이 개발되고 있고, 오픈소스로 공개되어 있는 것들도 있다. …]]></summary>
-        <author>
-            <name>CPUU</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for February 29, 2024]]></title>
-        <id>https://lwn.net/Articles/963168/</id>
-        <link href="https://lwn.net/Articles/963168/"/>
-        <updated>2024-02-29T01:13:09.000Z</updated>
-        <summary type="html"><![CDATA[The LWN.net Weekly Edition for February 29, 2024 is available.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Creating a GPIO HAL and Driver in C]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1638.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1638.php"/>
-        <updated>2024-02-29T00:52:20.000Z</updated>
-        <summary type="html"><![CDATA[Creating a GPIO HAL, a hardware abstraction layer, in C is a fairly simple process. Yet, you’ll often find standards shy away from including them. For example, CMSIS does not include a GPIO HAL. If you read the documentation carefully, they’ll state that the GPIO configurations from one silicon vendor to the next are too different to create a HAL for. I beg to differ. In today’s post, we...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Diving into JTAG — Debugging (Part 2)]]></title>
-        <id>https://interrupt.memfault.com/blog/diving-into-jtag-part-2</id>
-        <link href="https://interrupt.memfault.com/blog/diving-into-jtag-part-2"/>
-        <updated>2024-02-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In this second part of a JTAG deep-dive series, we take an in-depth look at interacting with a microcontroller’s memory and engaging with the processor core and debug registers. While the use of JTAG in testing is fairly standardized when it comes to debugging, each processor architecture has its unique nuances. With that in mind, this article will focus on debugging using JTAG on the ARM Cortex-M architecture, specifically with the STM32F407VG microcontroller.
-Continue reading…]]></summary>
-        <author>
-            <name>Interrupt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[친문‧운동권 청산, 이재명과 한동훈이 같은 이야기를 하는 것처럼 보이는 이유: 슬로우레터 2월 29일.]]></title>
-        <id>https://slownews.kr/?p=104769</id>
-        <link href="https://slownews.kr/104769"/>
-        <updated>2024-02-28T22:11:45.000Z</updated>
-        <summary type="html"><![CDATA[출산율 0.65명 쇼크. “10년 지나야 성과 나더라.” 강진군의 ‘애기 월급’. 쟁점과 현안. 한동훈과 이재명이 함께 말하는 전임 정부 책임론. “운동권 청산”도 한동훈과 이재명의 프레임. 윤석열의 자신감. “탈당은 자유.” 장제원밖에 없다. 더 깊게 읽기. 포퓰리즘이 잘 팔리는 이유. 다르게 읽기. “나는 우매한 의사입니다.” 자사주 소각이라는 가보지 않은 길. 태아 성별 고지해도 된다. 해법과 대안. 자살이 왜...
-The post 친문‧운동권 청산, 이재명과 한동훈이 같은 이야기를 하는 것처럼 보이는 이유: 슬로우레터 2월 29일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tails 6.0 released]]></title>
-        <id>https://lwn.net/Articles/963986/</id>
-        <link href="https://lwn.net/Articles/963986/"/>
-        <updated>2024-02-28T19:24:11.000Z</updated>
-        <summary type="html"><![CDATA[Tails 6.0 is now available. Based on Debian, Tails is a portable operating system designed to run from a USB stick and help users avoid surveillance and censorship. This release updates most Tails applications, and includes important security and usability improvements.
-One major new feature in 6.0 is to provide warnings to users about 
-errors when reading or
-writing to persistent storage. This release now ignores USB devices plugged in while the screen is locked, and removes some file and disk-wiping features from the Files application that are "not reliable enough" on USB sticks and SSDs to continue offering to users.
-Users of Tails prior to 6.0~rc1 will need to do a manual
-upgrade to retain persistent storage. New users can download Tails for
-USB, or as
-an ISO
-to create a DVD or run Tails in a virtual machine.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The KDE desktop gets an overhaul with Plasma 6]]></title>
-        <id>https://lwn.net/Articles/963851/</id>
-        <link href="https://lwn.net/Articles/963851/"/>
-        <updated>2024-02-28T18:25:11.000Z</updated>
-        <summary type="html"><![CDATA[It's been nearly 10 years since
-KDE Plasma 5,
-which is the last major release of the desktop.
-On February 28 the project announced its "mega release" of KDE
-Plasma 6, KDE Frameworks 6, and KDE Gear 24.02 — all based on the Qt 6 development framework. This
-release focuses heavily on migrating to Wayland, and aspires to be a seamless
-upgrade for the user while improving performance, security, and support
-for newer hardware. For developers, a lot of work has gone into removing
-deprecated frameworks and decreasing dependencies to make it easier to write
-applications targeting KDE.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Open Collective Foundation is shutting down]]></title>
-        <id>https://lwn.net/Articles/963958/</id>
-        <link href="https://lwn.net/Articles/963958/"/>
-        <updated>2024-02-28T16:32:40.000Z</updated>
-        <summary type="html"><![CDATA[The Open Collective
-Foundation is an organization created to provide legal and financial
-services for non-profit projects, many of which are associated with free
-software.  Projects hosted there are now beginning
-to report that the Open Collective Foundation will be shutting down at
-the end of the year, with an unwinding process over that time.
-
-
-	Unfortunately, over the past year, we have learned that Open
-	Collective Foundation's business model is not sustainable with the
-	number of complex services we have offered and the fees we pay to
-	the Open Collective Inc. tech platform.
-
-	In late 2023, we made the decision to pause accepting new
-	collectives in order to create space for us to address the
-	issues. Unfortunately, it became clear that it would not be
-	financially feasible to make the necessary corrections, and we
-	determined that OCF is not viable.
-
-
-Some more information can be found in the Dissolution FAQ.  Note
-that the Open Collective Foundation is distinct from Open Source Collective, which has hastened
-to point out that it remains in operation as before, and both are
-distinct from the Open Collective
-platform.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
-        <id>https://lwn.net/Articles/963957/</id>
-        <link href="https://lwn.net/Articles/963957/"/>
-        <updated>2024-02-28T14:33:09.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (knot-resolver and wpa), Fedora (chromium, kernel, thunderbird, and yarnpkg), Mageia (c-ares), Oracle (firefox, kernel, opensc, postgresql:13, postgresql:15, and thunderbird), Red Hat (edk2, gimp:2.8, and kernel), SUSE (bind, bluez, container-suseconnect, dnsdist, freerdp, gcc12, gcc7, glib2, gnutls, kernel, kubevirt, virt-api-container, virt-controller-container, virt-exportproxy-container, virt-exportserver-container, virt-handler-container, virt-launcher-container, virt-libguestfs-t, libqt5-qtbase, libqt5-qtsvg, nodejs18, nodejs20, openssl, openssl-1_0_0, poppler, python-crcmod, python-cryptography, python-cryptography- vectors, python-pip, python-requests, python3-requests, python311, python39, rabbitmq-c, samba, sccache, shim, SUSE Manager 4.2, SUSE Manager Server 4.2, the Linux-RT Kernel, and thunderbird), and Ubuntu (less, openssl, php7.0, php7.2, php7.4, and tiff).]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Practical steps to security for IoT devices]]></title>
-        <id>https://www.embedded.com/?p=4481554</id>
-        <link href="https://www.embedded.com/practical-steps-to-security-for-iot-devices/"/>
-        <updated>2024-02-28T13:59:29.000Z</updated>
-        <summary type="html"><![CDATA[There is concern in our industry over the vulnerability of IoT devices, yet little seems to be getting done. Background The software in most embedded...
-The post Practical steps to security for IoT devices appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Ralph Moore</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Programming embedded systems: software tracing with printf()]]></title>
-        <id>https://www.embedded.com/?p=4481551</id>
-        <link href="https://www.embedded.com/programming-embedded-systems-software-tracing-with-printf/"/>
-        <updated>2024-02-28T13:38:24.000Z</updated>
-        <summary type="html"><![CDATA[The biggest debugging question is often: “How did I get there?” Unfortunately, the single-step debugger is not the best tool to answer that because it...
-The post Programming embedded systems: software tracing with printf() appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Miro Samek</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[월마트가 TV 제조사 비지오를 인수한 진짜 이유]]></title>
-        <id>https://happist.com/?p=594015</id>
-        <link href="https://happist.com/594015/%ec%9b%94%eb%a7%88%ed%8a%b8-%eb%b9%84%ec%a7%80%ec%98%a4-%ec%9d%b8%ec%88%98-%ec%9d%b4%ec%9c%a0"/>
-        <updated>2024-02-28T10:50:14.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2/27, 바클레이즈, S&P 500 전망을 5,300으로 상향]]></title>
-        <id>https://happist.com/?p=594010</id>
-        <link href="https://happist.com/594010/%eb%b0%94%ed%81%b4%eb%a0%88%ec%9d%b4%ec%a6%88-sp-500-%ec%a0%84%eb%a7%9d"/>
-        <updated>2024-02-28T10:40:57.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[엉망진창 총선 보도… 그래도 좋은 기사는 있고, 현명한 유권자가 필요하다]]></title>
-        <id>https://slownews.kr/?p=104750</id>
-        <link href="https://slownews.kr/104750"/>
-        <updated>2024-02-28T09:08:23.000Z</updated>
-        <summary type="html"><![CDATA[민주주의가 유지되는 중요한 기제는 선거다. 주권자인 시민이 자신의 권리를 행사하는 중요한 장치이기 때문이다. 유권자가 소중한 한 표를 행사하기 위해서는 충분한 정보와 지식이 필요하다. 이를 도와주는 언론의 역할이 정말 중요한 이유다. 그런데 언론은 그런 책무를 잘 수행하고 있을까? 권력에 빌붙은 언론의 선거 편파왜곡보도 1987년 민주화운동의 힘으로 이뤄낸 대통령 직선제 쟁취, 이어진 1987년 대통령 선거는 군부 독재를...
-The post 엉망진창 총선 보도… 그래도 좋은 기사는 있고, 현명한 유권자가 필요하다 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[조선·동아·채널A, 민주당 ‘공천 논란’ 집중 보도: 2024 총선 포털뉴스 분석 (2월 셋째 주)]]></title>
-        <id>https://slownews.kr/?p=104737</id>
-        <link href="https://slownews.kr/104737"/>
-        <updated>2024-02-28T08:24:00.000Z</updated>
-        <summary type="html"><![CDATA[요약 주요 이슈 1. 주요 정당 공천 ‘중계보도’ 급증 2. 국민의힘 공천 단순중계 VS 민주당 공천 ‘논란’ 보도 3. 용산, 총선 이슈로 지속 부상 4. 개혁신당 결별과 김종인 공관위원장 등장 5. 선거 판세 및 소수 정당 총선 준비 6. 기타 언론사별 총선보도 특성 1. 조선일보·동아일보·채널A, 더불어민주당 공천 비판 주도  2. KBS 총선 회피 보도, 선거...
-The post 조선·동아·채널A, 민주당 ‘공천 논란’ 집중 보도: 2024 총선 포털뉴스 분석 (2월 셋째 주) appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
         </author>
     </entry>
     <entry>
