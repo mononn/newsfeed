@@ -178,6 +178,16 @@
       "siteUrl": "https://cpuu.postype.com",
       "articles": [
         {
+          "id": "https://cpuu.postype.com/post/16559829",
+          "author": "CPUU",
+          "description": "아래 논문은 USENIX 2019에서 발표되었다.\n\nLiljestrand, Hans, et al. \"{PAC} it up: Towards pointer integrity using {ARM} pointer authentication.\" 28th USENIX Security Symposium (USENIX Security 19). 2019.\n\n출처: https://www.usenix.org/conference/usenixsecurity19/presentation/liljestrand\n\n\nAbstract:\nC나 C++ 등 메모리 취약점으로부터 안전하지 않은 언어로 작성된 프로그램에 대한 런타임 공격이 컴퓨터 시스템을 위협하고 있다. 실제로 ROP 등의 공격이 발전하면서 프로세서 주요 제조사들은 이를 하드웨어적으로 방어할 수 있는 방법을 고안하고 있다. 특히 스마트폰과 같은 장치에서 흔히 사용되는 ARMv8-A 프로세서 아키텍처에 최근 추가된 포인터 인증(PA) 지원이 있다. PA는 메모리 취약점에 저항하기 위해 포인터를 인증하는 저비용 기술이다. 이는 반환 주소나 함수 포인터를 변조하는 메모리 취약점에 대한 실용적인 보호를 가능하게 한다. 글나 지금까지 PA를 활용한 구체적인 사례들이 많지는 않았다. 이에 본 논문에서는 ARM 환경에서 PA를 활용하여 보호를 강화하는 방법을 다루고, LLVM 컴파일러에 이를 통합하는 도구인 PARTS 를 제안하고자 한다. 실제 실험 결과 PARTS를 사용하면 기존의 유사 솔루션에 비해 합리적인 성능으로 보안성을 강화할 수 있었다.\n\n\n1. 서론 및 본 연구의 목적:\n이 연구에서는…",
+          "link": "https://cpuu.postype.com/post/16559829",
+          "publishedOn": "2024-04-02T02:46:21.000Z",
+          "wordCount": null,
+          "title": "[논문리뷰] PAC it up (ARM Pointer Authentication)",
+          "imageUrl": null
+        },
+        {
           "id": "https://cpuu.postype.com/post/16411090",
           "author": "CPUU",
           "description": "서론(러스트를 써야하는 이유)\n나는 기본적으로 다양한 프로그래밍 언어에 대해 열려있는 편이다. 대학에서 처음 접한 언어는 C언어였고 2학년때는 C++ 객체지향 프로그래밍을 배웠다. 교양(?) 과목으로 기계과 포트란 프로그래밍도 들었다. 학부를 졸업하고 군에서는 주로 C 및 Java 프로그래밍을 했고, 웹개발(php, javascript)도 병행했다. 군 전역 후에는 보안 분야로 뛰어들면서 주로 파이썬을 사용한 도구 개발을 업무로 하고 있다. 파이썬은 편리함 때문에 여전히 가장 많이 사용하고 있지만, 솔직히 우아한(?) 언어라고는 생각되지 않는다. 나는 개인적으로 컴파일 언어를 더 선호하는 것 같다. \n다른 언어를 더 배우고 싶은 욕심에 2022년에는 Golang을 공부하면서 관련 도서도 번역을 했다. 2023년에는 회사 업무로 iOS 관련 도구를 만들기 위해 Swift를 사용했으나 솔직히 완전한 적응이 어려웠다. 스위프트는 아무래도 앱개발을 주된 목적으로 하기 때문에 내가 하는 시스템 프로그래밍이나 보안 분석 도구 개발에서는 적합한 느낌이 아니었다. \n그러던 중 최근 아래와 같은 기사가 나오고 있다.\nhttps://www.ciokorea.com/news/327256\n요약하면, 미국 백악관 국가사이버책임자실(ONCD)은 소프트웨어 개발자들이 C와 C++와 같은 취약한 프로그래밍 언어의 사용을 중단하고, 대신 메모리 안전 프로그래밍 언어(memory-safe programming languages )를 사용하라는 권고를 내린 것이다. 실제로 C/C++ 언어는 언어 설계적으로 해킹에 취약할 수밖에 없는데, 레거시 …",
@@ -185,16 +195,6 @@
           "publishedOn": "2024-03-07T08:00:00.000Z",
           "wordCount": null,
           "title": "[북리뷰] 러스트 프로그래밍 공식 가이드(제2판)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://cpuu.postype.com/post/16395053",
-          "author": "CPUU",
-          "description": "개요\n행정안전부 <소프트웨어 보안약점 진단가이드>에 따르면, 암호키 관리에 대한 부분이 나온다. 이때 코드 내부에서 암호화 키를 하드코딩하여 사용하면, 해당 소스코드가 git 같은 코드 저장소에 올라갔을 때 외부에 유출될 가능성이 높아진다.\n이를 방지하기 위해서 구체적으로 어떻게 수행해야 하는지 파이썬 코드를 예시로 살펴보자.\n\n\n토큰을 처리하는 파이썬 코드\n\n 다음의 코드는 파이썬으로 텔레그램 bot API를 제어하는 내용의 일부이다.\ndef main() -> None:\n    \"\"\"Start the bot.\"\"\"\n    # Create the Application and pass it your bot's token.\n    application = Application.builder().token(\"500:AAGbjq2WTsicid8wZuY\").build()\n\n    # on different commands - answer in Telegram\n    application.add_handler(CommandHandler(\"start\", start))\n    application.add_handler(CommandHandler(\"help\", help_command))\n\n    # on non command i.e message - echo the message on Telegram\n    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))\n\n    # Run the bot until the user presses Ct…",
-          "link": "https://cpuu.postype.com/post/16395053",
-          "publishedOn": "2024-03-04T01:17:39.000Z",
-          "wordCount": null,
-          "title": "파이썬에서 하드코드 된 중요정보 별도 파일로 분리하기",
           "imageUrl": null
         }
       ]
@@ -227,6 +227,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "9b61fb1e-9012-4216-9fc3-b1bf45d85f07",
+          "author": "Maja Massarini",
+          "description": "Have you ever wanted to bring your pull request changes in a cloud image easily?\nCurious about how easy it can be? With Packit, it can be just a matter of commenting on your pull request with the following command:\n/packit vm-image-build\nWith the above command, Packit automates all the manual steps needed to create an RPM package with your pull request changes and asks the Red Hat Enterprise Linux image builder (RHEL image builder) to install it inside a brand new cloud image.\nLet's have a look at the prerequisites for this.\nJoin the Red Hat Developer program\nIf you don't already have a business account, you can create a Red Hat Developer account at no cost.\nYou need a subscription in order to use the RHEL image builder service and launch the builded images in the Amazon Web Services (AWS)…",
+          "link": "https://developers.redhat.com/articles/2024/04/02/customize-aws-cloud-images-rhel-image-builder-and-packit",
+          "publishedOn": "2024-04-02T14:00:00.000Z",
+          "wordCount": null,
+          "title": "Customize AWS cloud images with RHEL image builder and Packit",
+          "imageUrl": null
+        },
         {
           "id": "f152e694-10b2-45c8-8ee2-ca166ca5c93d",
           "author": "Philip Hayes",
@@ -466,16 +476,6 @@
           "wordCount": 3859,
           "title": "Create an efficient Ansible development environment in VS Code IDE",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
-        },
-        {
-          "id": "7b388ab2-041a-47ae-a424-9e0b291d2be4",
-          "author": "Sai Sindhur Malleni, Vishnu Challa, Raul Sevilla Canavate",
-          "description": "Three years ago, we introduced kube-burner to the Kubernetes performance and scale communities. Since then, kube-burner has steadily continued its journey, adding a diverse range of features that help solve unique challenges in performing and analyzing results from performance and scale tests on Kubernetes and Red Hat OpenShift.\nOver the last few years, multiple new features and usability improvements were added to kube-burner. In this article, we will go beyond the basics, exploring some new bells and whistles added to the tool recently and laying out our vision for the future.\nThe story so far\nFor the uninitiated and at a high level, kube-burner is a flexible open source Kubernetes performance and scale testing tool. It’s capable of creating, deleting, and updating Kubernetes resources a…",
-          "link": "https://developers.redhat.com/articles/2024/03/04/test-kubernetes-performance-and-scale-kube-burner",
-          "publishedOn": "2024-03-04T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Test Kubernetes performance and scale with kube-burner",
-          "imageUrl": null
         }
       ]
     },
@@ -554,6 +554,56 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4481826",
+          "author": "Nitin Dahad",
+          "description": "Platform is designed to provide OEMs and Tier 1s with a safe, secure processing platform to develop domain and zonal controllers as well as drivetrains for electric vehicles for next-generation software-defined vehicle architectures.\nThe post Infineon and Green Hills combine MCU and RTOS for EVs and SDVs appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/infineon-and-green-hills-combine-mcu-and-rtos-for-evs-and-sdvs/",
+          "publishedOn": "2024-04-02T17:40:23.000Z",
+          "wordCount": null,
+          "title": "Infineon and Green Hills combine MCU and RTOS for EVs and SDVs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481821",
+          "author": "Nitin Dahad",
+          "description": "The solution includes full Altium design files and all required software and firmware, along with an environmental sensor measuring temperature, humidity, air quality, and air pressure.\nThe post embedded world: Synzen brings first free-to download OS IoT design appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/embedded-world-synzen-brings-first-free-to-download-os-iot-design/",
+          "publishedOn": "2024-04-02T13:01:00.000Z",
+          "wordCount": null,
+          "title": "embedded world: Synzen brings first free-to download OS IoT design",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481814",
+          "author": "Nitin Dahad",
+          "description": "The “Rust Fundamentals” course serves as a general introduction to Rust programming for building embedded systems and can be delivered in four days of in-person training or five interactive sessions of six hours each of live online training.\nThe post HighTec and Doulos offer Rust training including use with legacy C/C++ code appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/hightec-and-doulos-offer-rust-training-including-use-with-legacy-c-c-code/",
+          "publishedOn": "2024-04-02T12:31:32.000Z",
+          "wordCount": null,
+          "title": "HighTec and Doulos offer Rust training including use with legacy C/C++ code",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481808",
+          "author": "Nitin Dahad",
+          "description": "Microchip said its new 2Mb and 4 Mb serial SRAM devices are intended to replace expensive parallel SRAM with an easy and cost-effective alternative.\nThe post embedded world: Microchip adds 2 Mb and 4 Mb serial SRAM devices appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/embedded-world-microchip-adds-2-mb-and-4-mb-serial-sram-devices/",
+          "publishedOn": "2024-04-02T11:19:15.000Z",
+          "wordCount": null,
+          "title": "embedded world: Microchip adds 2 Mb and 4 Mb serial SRAM devices",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481800",
+          "author": "Nitin Dahad",
+          "description": "Among its x86/ARM portfolio for emerging markets such as EV charging and AI-integrated robotics, Advantech will be launching new OSM modules based on Qualcomm and NXP.\nThe post embedded world: Advantech to show new OSM modules targeting edge AI appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/embedded-world-advantech-to-show-new-osm-modules-targeting-edge-ai/",
+          "publishedOn": "2024-04-02T10:52:45.000Z",
+          "wordCount": null,
+          "title": "embedded world: Advantech to show new OSM modules targeting edge AI",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4481788",
           "author": "Nitin Dahad",
@@ -801,6 +851,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1650.php",
+          "author": null,
+          "description": "I have often talked and written about my thoughts on programming languages. In particular, the fact that there really is no language that was designed with embedded programming specifically in mind. Historically, there was assembly language, but that is rarely used for large scale coding nowadays. Intel promoted PL/M many years ago, but that has long since fallen by the wayside.\nC and C++ are...",
+          "link": "https://www.embeddedrelated.com/showarticle/1650.php",
+          "publishedOn": "2024-04-01T16:38:34.000Z",
+          "wordCount": null,
+          "title": "The volatile keyword",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1649.php",
           "author": null,
@@ -1076,16 +1136,6 @@
           "wordCount": null,
           "title": "Parable of null pointer for indolent C programmers",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1106/",
-          "author": null,
-          "description": "The PVS-Studio headquarters: \"Time flies by so fast... This year, on January 2, Blender turned 30 years old! It feels like just yesterday we published an article on checking the project... What do...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1106/",
-          "publishedOn": "2024-03-03T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Let's check Blender",
-          "imageUrl": null
         }
       ]
     },
@@ -1200,6 +1250,26 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/967866/",
+          "author": "corbet",
+          "description": "A common theme in early-days anti-Linux FUD was that, since anybody can\ncontribute to the code, it cannot be trusted.  Over two decades later, one\nrarely hears that line anymore; experience has shown that free-software\ncommunities are not prone to shipping overtly hostile code.  But, as the backdooring of XZ has reminded us, the\nembedding of malicious code is, unfortunately, not limited to the\nproprietary realm.  Our community will be busy analyzing this incident for\nsome time to come, but clear conclusions may be hard to come by.",
+          "link": "https://lwn.net/Articles/967866/",
+          "publishedOn": "2024-04-02T16:22:13.000Z",
+          "wordCount": null,
+          "title": "[$] Free software's not-so-eXZellent adventure",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/967959/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Fedora (kernel and webkitgtk), Mageia (unixODBC and w3m), and SUSE (libvirt, netty, netty-tcnative, and perl-DBD-SQLite).",
+          "link": "https://lwn.net/Articles/967959/",
+          "publishedOn": "2024-04-02T13:41:40.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/966618/",
           "author": "daroc",
@@ -1969,26 +2039,6 @@
           "wordCount": null,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/964337/",
-          "author": "corbet",
-          "description": "The 6.8-rc7 kernel prepatch is out for\ntesting.\n\n\n\tSo we finally have a week where things have calmed down, and in\n\tfact 6.8-rc7 is smaller than usual at this point in time. So if\n\tthat keeps up (but that's a fairly notable \"if\") I won't feel like\n\tI need to do an rc8 this release after all.\n\n\tSo no guarantees, but assuming no bad surprises, we'll have the\n\tfinal 6.8 next weekend.",
-          "link": "https://lwn.net/Articles/964337/",
-          "publishedOn": "2024-03-03T23:03:01.000Z",
-          "wordCount": null,
-          "title": "Kernel prepatch 6.8-rc7",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/964305/",
-          "author": "corbet",
-          "description": "The\n6.7.8 and\n6.6.20\nstable kernel updates have been released.  They contain a single patch\naddressing an ntfs3 filesystem build error introduced in the previous\nround of updates.",
-          "link": "https://lwn.net/Articles/964305/",
-          "publishedOn": "2024-03-03T13:39:41.000Z",
-          "wordCount": null,
-          "title": "Stable kernels 6.7.8 and 6.6.20",
-          "imageUrl": null
         }
       ]
     },
@@ -2024,6 +2074,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/uncovering-mainframe-seams.html#InternalInterfaces",
+          "author": null,
+          "description": "Alessio Ferri and Tom Coggrave move\n       on to analyzing the internal seams of the application by treating\n       the database as a coarse-grained seam. They describe how they introduced\n       seams into the database readers and writers.\n       \nmore…",
+          "link": "https://martinfowler.com/articles/uncovering-mainframe-seams.html#InternalInterfaces",
+          "publishedOn": "2024-04-02T13:46:00.000Z",
+          "wordCount": null,
+          "title": "Uncovering Seams in a Mainframe's external interfaces",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/articles/2024-joining-linkedin.html",
           "author": null,
@@ -2221,7 +2281,28 @@
       "title": "research!rsc",
       "feedUrl": "https://research.swtch.com/feed.atom",
       "siteUrl": "http://research.swtch.com/feed.atom",
-      "articles": []
+      "articles": [
+        {
+          "id": "http://research.swtch.com/xz-script",
+          "author": null,
+          "description": "A detailed walkthrough of the xz attack shell script.",
+          "link": "http://research.swtch.com/xz-script",
+          "publishedOn": "2024-04-02T08:00:00.000Z",
+          "wordCount": null,
+          "title": "The xz attack shell script",
+          "imageUrl": null
+        },
+        {
+          "id": "http://research.swtch.com/xz-timeline",
+          "author": null,
+          "description": "A detailed timeline of the xz open source attack, from 2021 to 2024.",
+          "link": "http://research.swtch.com/xz-timeline",
+          "publishedOn": "2024-04-02T03:23:00.000Z",
+          "wordCount": null,
+          "title": "Timeline of the xz open source attack",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "AEP코리아네트",
@@ -2278,16 +2359,6 @@
           "publishedOn": "2024-03-10T23:18:40.000Z",
           "wordCount": 1320,
           "title": "What is known about software effort estimation in 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8626",
-          "author": "Derek Jones",
-          "description": "Last month’s Whitehouse report: BACK TO THE BUILDING BLOCKS: A Path Towards Secure and Measurable Software “… outlines two fundamental shifts: the need to both rebalance the responsibility to defend cyberspace and realign incentives to favor long-term cybersecurity investments.” From the abstract: “First, in order to reduce memory safety vulnerabilities at scale, … This report […]",
-          "link": "https://shape-of-code.com/2024/03/03/the-whitehouse-report-on-adopting-memory-safety/",
-          "publishedOn": "2024-03-03T22:55:33.000Z",
-          "wordCount": null,
-          "title": "The Whitehouse report on adopting memory safety",
           "imageUrl": null
         }
       ]
@@ -2368,6 +2439,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=106379",
+          "author": "민주언론시민연합",
+          "description": "요약 주요 이슈 1. 박은정 후보 등 야권 후보 의혹 제기 본격화 2. 용산 촉발 의대 2천명 증원 논란 지속 3. 야, 지도부 유세… 여, 한동훈 개인 유세 4. 조국혁신당, 검찰 ‘디지털 캐비닛’ 국정조사 이슈화 5. 여야 총선 공약 보도량 증가 ① 공약 이슈, 보도량 5위 ② 논란 일으킨 공약 이슈는 급소멸 6. 판세-여론조사 보도...\nThe post 조선일보, 박은정에 집중 포화: 2024 총선 포털뉴스 (3월 넷째 주) appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106379",
+          "publishedOn": "2024-04-02T15:22:27.000Z",
+          "wordCount": null,
+          "title": "조선일보, 박은정에 집중 포화: 2024 총선 포털뉴스 (3월 넷째 주)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=106346",
+          "author": "이정환",
+          "description": "“2000명은 그냥 나온 숫자가 아니다.” 꿈보다 해몽, 신문마다 포인트가 다르다. “의사들을 악마화했다.” 윤석열은 달라지지 않을 것이다. “날아오는 혜성 보며 멸종 예감하는 공룡들의 심정.” “쇠귀에 경읽기, 탈당해 달라.” “70 평생에 이렇게 못 하는 정부는 처음.” 쟁점과 현안. 양문석, “아파트 팔겠다.” 옷 색깔이 달라졌다. “제 책임이 아니지 않습니까.” 다르게 읽기. 아낌없이 주는 한동훈. 자영업자 육아휴직 가능할까. 더...\nThe post 국민의힘 의원들이 “멸종 예감하는 공룡들 심정”이라고 말한 이유: 슬로우레터 4월2일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106346",
+          "publishedOn": "2024-04-01T22:07:00.000Z",
+          "wordCount": null,
+          "title": "국민의힘 의원들이 “멸종 예감하는 공룡들 심정”이라고 말한 이유: 슬로우레터 4월2일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=106318",
           "author": "민노씨",
@@ -2967,36 +3058,6 @@
           "wordCount": null,
           "title": "미세먼지 농도 ‘1’은 민주당 총선 기호라 상징조작 가능? 이분 진심인 듯!",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104923",
-          "author": "김훤주",
-          "description": "[김훤주의 지역에서 본 세상] 베테랑 기자 김훤주가 잘 드러나지 않은 세상 이야기를 따뜻하고 담백한 시선으로 전합니다. 국립진주박물관에서 하는 화력조선 두 번째 이야기 조선무기특별전을 보았다. 국립진주박물관은 임진왜란 전문으로 이미 명성이 높은데 이런 재미있고 알토란 같은 기획 전시를 곧잘 보여주곤 한다. 이번 기획 전시도 대체로 그럴듯했다. 무기에 관심 있는 이른바 ‘밀덕'(군대 마니아)들은 다들 한 번씩은 가서 보았을...\nThe post 화력조선 특별전, 다 좋은데… 누구의 대항해인가? appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104923",
-          "publishedOn": "2024-03-04T06:41:23.000Z",
-          "wordCount": null,
-          "title": "화력조선 특별전, 다 좋은데… 누구의 대항해인가?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104911",
-          "author": "민주언론시민연합",
-          "description": "제22대 국회의원 선거는 준연동형 비례대표 제도로 치러진다. 2월 23일 국민의힘 비례대표 위성정당인 국민의미래가 출범했고, 3월 3일 더불어민주당을 중심으로 소수정당과 시민사회 등이 참여한 비례대표 위성정당인 민주개혁진보연합(가칭)’이 창당할 예정이다. 국민의힘, 왜 이렇게 당당한가? 연동형 비례대표제 취지는 정당에 대한 지지를 의회 구성에 제대로 반영하자는 것이다. 지역구에서 충분한 의석을 얻기 어려운 작은 정당도 유권자의 정치적 의사를 왜곡 없이 반영하여...\nThe post 위성정당, 민주당만 잘못했나? 국민의힘은 뭐가 그리 당당한가? appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104911",
-          "publishedOn": "2024-03-04T02:25:31.000Z",
-          "wordCount": null,
-          "title": "위성정당, 민주당만 잘못했나? 국민의힘은 뭐가 그리 당당한가?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104874",
-          "author": "이정환",
-          "description": "조국혁신당 9% 지지율이 의미하는 것. 민주당 위성정당은 더불어민주연합. 쟁점과 현안. 김영주 탈락은 채용 비리 때문. 불출마 거론되던 조정식도 단수 공천. “국민의힘도 감동과 쇄신 없기는 마찬가지.” 이재명-원희룡은 오차 범위 안. 이준석은 화성을로. 더 깊게 읽기. 한 번에 2000명은 지나치다. 바이든의 적은 바이든. 다르게 읽기. 조선일보도 경고하는 국민의힘의 방송 때리기. 해법과 대안. 축제를 포기하지 못하는 이유. 한...\nThe post “사회적 연대의 붕괴, 우리는 심각한 위험에 빠졌다”: 슬로우레터 3월4일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104874",
-          "publishedOn": "2024-03-03T21:52:38.000Z",
-          "wordCount": null,
-          "title": "“사회적 연대의 붕괴, 우리는 심각한 위험에 빠졌다”: 슬로우레터 3월4일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3244,16 +3305,6 @@
           "wordCount": null,
           "title": "월가의 인플레이션 재상승 우려가 커지고 있다..",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594058",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594058/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ea%b8%89%eb%93%b1%ea%b3%bc-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%b2%84%eb%b8%94-%ea%b0%80%eb%8a%a5%ec%84%b1",
-          "publishedOn": "2024-03-04T07:15:35.000Z",
-          "wordCount": null,
-          "title": "WSJ, 엔비디아 주가 급등으로 엔비디아 버블 논란이 일고 있다.",
-          "imageUrl": null
         }
       ]
     },
@@ -3262,6 +3313,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79039",
+          "author": "NewsPeppermint",
+          "description": "실리콘 밸리 테크 기업들이 코로나19 때 ‘재미를 본’ 대량 해고를 통한 단기적인 주가 극대화 전략을 계속해서 사용하고 있습니다. 주가가 올라 주주들에게 이익이 돌아가면 모두가 좋은 이상적인 상황처럼 보일 수 있지만, 이러한 과정에서 철저히 배제되는 집단을 생각하면 마냥 좋은 일이라고 부르기 어렵습니다. 그 대표적인 이해관계자가 회사를 위해 일하는 임금 노동자들입니다. 전문 번역: 인간을 ‘믹서기 속의 삶’으로 몰아넣는 테크업계의 또 다른 유행 해설: 자본주의가 가장 마지막에 줄여야 하는 비용은 이것",
+          "link": "https://newspeppermint.com/2024/04/01/npsp_techlayoffs/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_techlayoffs",
+          "publishedOn": "2024-04-01T22:59:25.000Z",
+          "wordCount": null,
+          "title": "자본주의가 가장 마지막에 줄여야 하는 비용은 이것",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=78667",
           "author": "ingppoo",
@@ -3400,16 +3461,6 @@
           "publishedOn": "2024-03-04T22:59:45.000Z",
           "wordCount": null,
           "title": "[뉴페@스프] 타인의 고통에 우리는 어떻게 대처해야 할까",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78805",
-          "author": "NewsPeppermint",
-          "description": "인류는 수없이 많은 문제를 안고 살아갑니다. 그런데 언젠가부터 끔찍한 문제를 제대로 문제로 인식하지도 못하는 것처럼 보입니다. 어쩌다 우리는 이토록 주변의 문제에 둔감해진 걸까요? 신경과학자 탈리 샤롯과 “넛지”를 쓴 법학자 캐스 선스타인이 우리 뇌가 작동하는 원리를 바탕으로 설득력 있는 가설을 제기했습니다. 때로는 무언가에 너무 쉽게 익숙해지고 길들여지기를 거부할 수 있어야 문제를 풀어내는 실마리를 발견할 수 있습니다. 전문 번역: 사람들은 왜 눈앞에서 벌어지는 끔찍한 일에 둔감한 걸까? 해설: 습관처럼 익숙한 것 너머를 쳐다볼 때 → 더 보기",
-          "link": "https://newspeppermint.com/2024/03/04/npsp_failtonotice/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_failtonotice",
-          "publishedOn": "2024-03-04T04:10:24.000Z",
-          "wordCount": null,
-          "title": "습관처럼 익숙한 것 너머를 쳐다볼 때 비로소 보이는 것",
           "imageUrl": null
         }
       ]
