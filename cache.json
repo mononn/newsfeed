@@ -228,6 +228,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "37e9b438-8c34-4fae-a57c-e1ddb61ab500",
+          "author": "David Malcolm",
+          "description": "I work at Red Hat on GCC, the GNU Compiler Collection. For the last five releases of GCC, I've been working on -fanalyzer, a static analysis pass that tries to identify various problems at compile-time, rather than at runtime. It performs \"symbolic execution\" of C source code—effectively simulating the behavior of the code along the various possible paths of execution through it.\nThis article summarizes what's new with -fanalyzer in GCC 14, which I hope will be officially released sometime in April 2024.\nSolving the halting problem?\nObviously I'm kidding with the title here, but for GCC 14 I've implemented a new warning: -Wanalyzer-infinite-loop that's able to detect some simple cases of infinite loops.\nFor example, consider the following C code:\nvoid test (int m, int n)\n{\n  float arr[m][n…",
+          "link": "https://developers.redhat.com/articles/2024/04/03/improvements-static-analysis-gcc-14-compiler",
+          "publishedOn": "2024-04-03T07:00:00.000Z",
+          "wordCount": 4328,
+          "title": "Improvements to static analysis in the GCC 14 compiler",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/gcc_1x.png?itok=6l1b8Lo9"
+        },
+        {
+          "id": "29f06dce-0a8a-4c3d-b2b0-e5952a359a10",
+          "author": "Derek Parker, Archana Ravindar",
+          "description": "A stripped binary is generally devoid of symbol and debug information. There could be many reasons why one would need to generate a stripped binary. Symbol information takes up a lot of storage space, so when there are space constraints, it makes sense to work with stripped binaries.\nIn the case of Go, we can create a stripped binary either by using go build ldflags=\"-s -w\" or by using the strip command. Debugging is the other side of development, and debugging a stripped binary can be challenging. Go is unique, and unlike other languages, we can still hack our way around to obtain some amount of symbol information from the binaries. This article focuses on how we support stripped binaries in Delve, the Go debugger. \nFinding symbols in stripped binaries\nGo retains some information on symbo…",
+          "link": "https://developers.redhat.com/articles/2024/04/03/how-add-debug-support-go-stripped-binaries",
+          "publishedOn": "2024-04-03T07:00:00.000Z",
+          "wordCount": 4252,
+          "title": "How to add debug support for Go stripped binaries",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/delve-debug_2x.png?itok=F-0v2qbw"
+        },
+        {
           "id": "9b61fb1e-9012-4216-9fc3-b1bf45d85f07",
           "author": "Maja Massarini",
           "description": "Have you ever wanted to bring your pull request changes in a cloud image easily?\nCurious about how easy it can be? With Packit, it can be just a matter of commenting on your pull request with the following command:\n/packit vm-image-build\nWith the above command, Packit automates all the manual steps needed to create an RPM package with your pull request changes and asks the Red Hat Enterprise Linux image builder (RHEL image builder) to install it inside a brand new cloud image.\nLet's have a look at the prerequisites for this.\nJoin the Red Hat Developer program\nIf you don't already have a business account, you can create a Red Hat Developer account at no cost.\nYou need a subscription in order to use the RHEL image builder service and launch the builded images in the Amazon Web Services (AWS)…",
@@ -456,26 +476,6 @@
           "wordCount": null,
           "title": "How to use Helm charts to deploy Data Grid on OpenShift",
           "imageUrl": null
-        },
-        {
-          "id": "d2e0b956-fcac-4f7a-b10a-c482a86fcb58",
-          "author": "Philip Hayes",
-          "description": "With the recent release of Red Hat JBoss Enterprise Application Platform (JBoss EAP) 8.0, Red Hat introduced a new set of provisioning tools including a new installation manager (for bare metal and virtual machine installations) and a new Maven plug-in (for Red Hat OpenShift builds).\nFor OpenShift, the JBoss EAP Maven plug-in allows users to specify what they want in their server footprint and configuration, for example to specify a feature pack to include database drivers. The JBoss EAP Maven plug-in uses Galleon trimming capability to reduce the size and memory footprint of the server; it also supports the execution of JBoss EAP CLI script files to customize server configuration. The JBoss EAP Maven plug-in is discussed in the previous article How JBoss EAP 8.0 makes deployment on OpenSh…",
-          "link": "https://developers.redhat.com/articles/2024/03/05/how-use-jboss-eap-80s-new-provisioning-system",
-          "publishedOn": "2024-03-05T07:00:00.000Z",
-          "wordCount": 3717,
-          "title": "How to use JBoss EAP 8.0's new provisioning system",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok=WLLeSXKn"
-        },
-        {
-          "id": "dbf674f5-9e4c-4430-ab94-75036f6344f0",
-          "author": "Nagesh Rathod",
-          "description": "Ansible, a powerful automation tool, simplifies configuration management, application deployment, and infrastructure provisioning. When it comes to developing Ansible Playbooks and managing infrastructure, having a well-configured development environment can greatly enhance productivity. In this technical blog, we will explore how to set up an Ansible development environment in the popular Visual Studio Code (VS Code) IDE.\nPrerequisites\nInstall Ansible Automation Platform\nInstall ansible-navigator on your system\nInstall Podman or Podman Desktop\nPulled down execution environment using Podman\nInstall Git \nWhy VS Code for Ansible Development Environment?\nThe Ansible Language Server extension:\nProvides syntax highlighting\nAutocompletion (including with FQCN)\nEasy jump to module code/documentat…",
-          "link": "https://developers.redhat.com/articles/2024/03/05/create-efficient-ansible-development-environment-vs-code-ide",
-          "publishedOn": "2024-03-05T07:00:00.000Z",
-          "wordCount": 3859,
-          "title": "Create an efficient Ansible development environment in VS Code IDE",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok=StIQEumS"
         }
       ]
     },
@@ -554,6 +554,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4481835",
+          "author": "Stewart Merkel",
+          "description": "1-Wire networks with many 1-Wire nodes can require dedicated 1-Wire channels. This article discusses a method for using only one 1-Wire host in a network...\nThe post Multiplexing a 1-Wire host across multiple channels appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/multiplexing-a-1-wire-host-across-multiple-channels/",
+          "publishedOn": "2024-04-03T13:31:20.000Z",
+          "wordCount": null,
+          "title": "Multiplexing a 1-Wire host across multiple channels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4481837",
+          "author": "Emily Newton",
+          "description": "Smaller device form factors often bring PCB design challenges that can subsequently affect inspection. Making printed circuit boards (PCBs) progressively smaller is an ongoing trend...\nThe post How miniaturization impacts PCB inspection appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/how-miniaturization-impacts-pcb-inspection/",
+          "publishedOn": "2024-04-03T13:03:00.000Z",
+          "wordCount": null,
+          "title": "How miniaturization impacts PCB inspection",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4481826",
           "author": "Nitin Dahad",
@@ -803,46 +823,6 @@
           "wordCount": null,
           "title": "How to monetize the IoT",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481594",
-          "author": "Nitin Dahad",
-          "description": "Cadence launches two new single DSPs plus radar accelerator designed for sensor fusion processing in multi-sensor automotive, drone, robotics and autonomous vehicle systems.\nThe post Cadence adds radar accelerator and automotive-optimized DSPs appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/cadence-adds-radar-accelerator-and-automotive-optimized-dsps/",
-          "publishedOn": "2024-03-04T15:25:24.000Z",
-          "wordCount": null,
-          "title": "Cadence adds radar accelerator and automotive-optimized DSPs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481588",
-          "author": "Nitin Dahad",
-          "description": "Infineon and Qt collaboration brings Qt's lightweight, graphics to Infineon's TRAVEO T2G cluster microcontrollers. \nThe post Infineon integrates Qt GUI into its MCUs appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/infineon-integrates-qt-gui-into-its-mcus/",
-          "publishedOn": "2024-03-04T14:07:02.000Z",
-          "wordCount": null,
-          "title": "Infineon integrates Qt GUI into its MCUs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481580",
-          "author": "Nitin Dahad",
-          "description": "“The RZ/V2H will facilitate the development of next-generation autonomous robots with vision AI capabilities, that have the ability to think independently and control movements in real time.\"\nThe post Renesas RZ MPU targets robotics with vision AI and real-time control appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/renesas-rz-mpu-targets-robotics-with-vision-ai-and-real-time-control/",
-          "publishedOn": "2024-03-04T11:33:55.000Z",
-          "wordCount": null,
-          "title": "Renesas RZ MPU targets robotics with vision AI and real-time control",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4481572",
-          "author": "Nitin Dahad",
-          "description": "New multi-channel/multi-rate Ethernet controllers offer 1.6T support with up to 40% latency reduction and up to 50% area reduction compared to existing multi-rate 800G IP solutions.\nThe post Synopsys 1.6T Ethernet IP reduces interconnect power use by 50% appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/synopsys-1-6t-ethernet-ip-reduces-interconnect-power-use-by-50/",
-          "publishedOn": "2024-03-04T11:00:36.000Z",
-          "wordCount": null,
-          "title": "Synopsys 1.6T Ethernet IP reduces interconnect power use by 50%",
-          "imageUrl": null
         }
       ]
     },
@@ -987,16 +967,6 @@
           "wordCount": null,
           "title": "[번역] 프로그래머를 위한 카테고리 이론 - 7. 펑터",
           "imageUrl": null
-        },
-        {
-          "id": "20240305-category-theory-for-programmers-6-simple-algebraic-data-types",
-          "author": null,
-          "description": "앞서 우리는 곱과 합이라는 두 가지 기본적인 방법을 통해 타입을 결합하는 것을 보았다. 사실 우리가 일상적인 프로그래밍에서 자주 접하는 데이터 구조는 이 두 가지 메커니즘만으로도 충분히 표현할 수 있다.",
-          "link": "https://evan-moon.github.io/2024/03/05/category-theory-for-programmers-6-simple-algebraic-data-types/",
-          "publishedOn": "2024-03-05T01:35:40.000Z",
-          "wordCount": 4521,
-          "title": "[번역] 프로그래머를 위한 카테고리 이론 - 6. 단순한 대수적 타입",
-          "imageUrl": "/static/eea67acfacfc20db2c9d3f6b3a3a786d/47498/thumbnail.jpg"
         }
       ]
     },
@@ -1097,6 +1067,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1111/",
+          "author": null,
+          "description": "Each of us encounters game bugs, and some games have more of them than others. Many games suffer from bugs caused by errors in code. Today, we'll see how static analysis can help easily detect errors...",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1111/",
+          "publishedOn": "2024-04-02T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Simple & quick search for bugs in Unity games (for C# developers)",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/1110/",
           "author": null,
@@ -1250,6 +1230,86 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/968299/",
+          "author": "jzb",
+          "description": "AlmaLinux has announced\nupdated kernels for AlmaLinux 8 and 9 to address CVE-2024-1086, a\nuse-after-free vulnerability in the kernel that could be exploited to\ngain local privilege escalation. This is notable because the fix\nmarks a divergence between AlmaLinux and Red Hat Enterprise Linux (RHEL):\nIn January of this year, a kernel flaw was disclosed and named CVE-2024-1086.\nThis flaw is trivially exploitable on most RHEL-equivalent\nsystems. There are many proof-of-concept posts available now,\nincluding one from our Infrastructure team lead, Jonathan Wright (Dealing\nwith CVE-2024-1086). In multi-user scenarios, this flaw is\nespecially problematic.\n\n\nThough this was flagged as something to be fixed in Red Hat\nEnterprise Linux, Red Hat has only rated this as a moderate\nimpact.\nThe AlmaLinux project would also like to note that it is not\nimpacted by the XZ backdoor. \"Because enterprise Linux takes a bit\nlonger to adopt those updates (sometimes to the chagrin of our users),\nthe version of XZ that had the back door inserted hadn't made it\nfurther than Fedora in our ecosystem.\"",
+          "link": "https://lwn.net/Articles/968299/",
+          "publishedOn": "2024-04-03T18:39:45.000Z",
+          "wordCount": null,
+          "title": "AlmaLinux OS - CVE-2024-1086 and XZ (AlmaLinux blog)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968297/",
+          "author": "corbet",
+          "description": "David Malcolm writes\nabout some static-analyzer features that are coming in the GCC 14\nrelease.\n\n\n\tSolving the halting problem?\n\n\tObviously I'm kidding with the title here, but for GCC 14 I've\n\timplemented a new warning: -Wanalyzer-infinite-loop that's able to\n\tdetect some simple cases of infinite loops.\n\n\nSee also: this report from the 2023 GNU\nTools Cauldron.",
+          "link": "https://lwn.net/Articles/968297/",
+          "publishedOn": "2024-04-03T16:44:48.000Z",
+          "wordCount": null,
+          "title": "Malcolm: Improvements to static analysis in the GCC 14 compiler",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968250/",
+          "author": "jzb",
+          "description": "The 6.8.3, 6.7.12, 6.6.24, and 6.1.84 stable kernel updates have been\nreleased. Each contains an important set of fixes. Note that 6.7.12 is\nthe final release for the 6.7.y series, and that branch is now\nend-of-life. Users should move to the 6.8.y branch.",
+          "link": "https://lwn.net/Articles/968250/",
+          "publishedOn": "2024-04-03T14:53:12.000Z",
+          "wordCount": null,
+          "title": "Four stable kernel updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/967049/",
+          "author": "corbet",
+          "description": "The Rust programming language differs from C in many ways; those\ndifferences tend to be what users admire in the language.  But those\ndifferences can also lead to an impedance mismatch when Rust code is\nintegrated into a C-dominated system, and it can be even worse in the\nkernel, which is not a typical C program.  Memory models are a case in\npoint.  A programming language's view of memory is sufficiently fundamental\nand arcane that many developers never have to learn much about it.  It is\nhard to maintain that sort of blissful ignorance while working in the\nkernel, though, so a recent discussion of how to choose a memory model for\nkernel code in Rust is of interest.",
+          "link": "https://lwn.net/Articles/967049/",
+          "publishedOn": "2024-04-03T14:36:13.000Z",
+          "wordCount": null,
+          "title": "[$] A memory model for Rust code in the kernel",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968220/",
+          "author": "corbet",
+          "description": "The SUSE Security Team Blog is carrying a\ndetailed article on SUSE's review of the KDE6 release.\n\n\n\tThe SUSE security team restricts the installation of system wide\n\tD-Bus services and Polkit policies in openSUSE distributions and\n\tderived SUSE products. Any package that ships these features needs\n\tto be reviewed by us first, before it can be added to production\n\trepositories.\n\n\tIn November, openSUSE KDE packagers approached us with a long list\n\tof KDE components for an upcoming KDE6 major release. The packages\n\tneeded adjusted D-Bus and Polkit whitelistings due to renamed\n\tinterfaces or other breaking changes. Looking into this many\n\tcomponents at once was a unique experience that also led to new\n\tinsights, which will be discussed in this article.",
+          "link": "https://lwn.net/Articles/968220/",
+          "publishedOn": "2024-04-03T13:45:43.000Z",
+          "wordCount": null,
+          "title": "KDE6 release: D-Bus and Polkit Galore (SUSE security team blog)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968218/",
+          "author": "jzb",
+          "description": "Security updates have been issued by Debian (py7zr), Fedora (biosig4c++ and podman), Oracle (kernel, kernel-container, and ruby:3.1), Red Hat (.NET 7.0, bind9.16, curl, expat, grafana, grafana-pcp, kernel, kernel-rt, kpatch-patch, less, opencryptoki, and postgresql-jdbc), and Ubuntu (cacti).",
+          "link": "https://lwn.net/Articles/968218/",
+          "publishedOn": "2024-04-03T13:41:17.000Z",
+          "wordCount": null,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968183/",
+          "author": "corbet",
+          "description": "The first stable release of Redict, a fork of the Redis in-memory database\nunder a copyleft license, has been announced.\n\n\n\tYou may be wondering why Redict would be of interest to you,\n\tparticularly when compared with Valkey,\n\tanother Redis fork that was announced on Thursday.\n\n\tIn technical terms, we are focusing on stability and long-term\n\tmaintenance, and on achieving excellence within our current\n\tscope. We believe that Redict is near feature-complete and that it\n\tis more valuable to our users if we take a conservative stance to\n\tinnovation and focus on long-term reliability instead. This is in\n\tpart a choice we've made to distinguish ourselves from Valkey,\n\twhose commercial interests are able to invest more resources into\n\tdeveloping more radical innovations, but also an acknowledgement of\n\ta cultural difference between our projects, in that the folks\n\tbehind Redict place greater emphasis on software with a finite\n\tscope and ambitions towards long-term stability rather than\n\tfocusing on long-term growth in scope and complexity.",
+          "link": "https://lwn.net/Articles/968183/",
+          "publishedOn": "2024-04-03T13:24:22.000Z",
+          "wordCount": null,
+          "title": "Redict 7.3.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/967192/",
+          "author": "daroc",
+          "description": "Versions 5.6.0 and 5.6.1 of the\nXZ\ncompression utility and library\nwere shipped with a backdoor that targeted\nOpenSSH.\nAndres Freund\n\ndiscovered the backdoor by\nnoticing that failed SSH logins were taking a lot of\nCPU time while doing some\nmicro-benchmarking, and tracking down the backdoor from there. It was introduced\nby XZ co-maintainer \"Jia Tan\" — a probable alias for person or persons unknown.\nThe backdoor is a sophisticated attack with multiple parts, from the build\nsystem, to link time, to run time.",
+          "link": "https://lwn.net/Articles/967192/",
+          "publishedOn": "2024-04-02T20:41:41.000Z",
+          "wordCount": null,
+          "title": "[$] How the XZ backdoor works",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/967866/",
           "author": "corbet",
@@ -2019,26 +2079,6 @@
           "wordCount": null,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/963512/",
-          "author": "daroc",
-          "description": "It has long been possible to run multiple Python interpreters in the same\nprocess — via the C API, but not within the language itself.\nEric Snow has been working to make this ability\navailable in the language for many years.\nNow, Snow has published\nPEP 734 (\"Multiple Interpreters\nin the Stdlib\"), the latest work in his\nquest, and\nsubmitted\nit to the Python steering council for a decision.\nIf the PEP is approved, users will have\nan additional option for writing performant parallel Python code.",
-          "link": "https://lwn.net/Articles/963512/",
-          "publishedOn": "2024-03-04T15:38:35.000Z",
-          "wordCount": null,
-          "title": "[$] Making multiple interpreters available to Python code",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/964376/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (firefox-esr and thunderbird), Fedora (dotnet6.0, dotnet8.0, and mod_auth_openidc), Gentoo (Blender, Tox, and UltraJSON), Oracle (kernel), Red Hat (edk2), SUSE (sendmail and zabbix), and Ubuntu (nodejs and thunderbird).",
-          "link": "https://lwn.net/Articles/964376/",
-          "publishedOn": "2024-03-04T14:33:42.000Z",
-          "wordCount": null,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2241,18 +2281,7 @@
       "title": "null program",
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
-      "articles": [
-        {
-          "id": "https://nullprogram.com/blog/2024/03/05/",
-          "author": null,
-          "description": "After a year I’ve finally came up with an elegant solution to a vexing\nu-config problem. The pkg-config format uses macros to generate build\nflags through recursive expansion. Some flags embed file system paths, but\nto the macro system it’s all strings. The output is also ultimately just\none big string, which the receiving shell splits into fields. If\na path contains spaces, or shell metacharacters, u-config must escape them\nso that shells treat them as part of a token. But how can u-config itself\ndistinguish incidental spaces in paths from deliberate spaces between\nflags? What about other shell metacharacters in paths? My solution is to\nextend UTF-8 to encode metadata that survives macro expansion.\nAs usual, it helps to begin with a concrete example of the problem. The\nfollowing is a conv…",
-          "link": "https://nullprogram.com/blog/2024/03/05/",
-          "publishedOn": "2024-03-05T03:15:12.000Z",
-          "wordCount": 1101,
-          "title": "Protecting paths in macro expansions by extending UTF-8",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Almost Secure",
@@ -2439,6 +2468,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=106395",
+          "author": "이정환",
+          "description": "“49곳이 1000표 이내로 결판.” 민주당은 ‘부자 몸조심’, 국민의힘은 ‘언더독’ 전략. 200석이 되면 할 수 있는 것. “전공의들 만나겠다.” 쟁점과 현안. “이대생 성 상납” 발언 논란, 김준혁도 버티기. “제가 이렇게 사라지게 두실 겁니까.” 다르게 읽기. 내일부터 여론조사 블랙아웃. 돈 풀어도 물가 안 잡히는 이유. 875원 대파 총선 끝나면 끝? 더 깊게 읽기. “다단계는 이종근이 전문.” 오늘의...\nThe post 선거 공보물에 윤석열과 이재명 사진이 사라진 이유: 슬로우레터 4월3일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106395",
+          "publishedOn": "2024-04-02T22:02:22.000Z",
+          "wordCount": 6814,
+          "title": "선거 공보물에 윤석열과 이재명 사진이 사라진 이유: 슬로우레터 4월3일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/04/dGjH0WXqGKpg660bf2587ee591.05140533-1000x666.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=106379",
           "author": "민주언론시민연합",
@@ -3018,46 +3057,6 @@
           "wordCount": null,
           "title": "건생구팽, 김건희 특검법 끝나자 컷오프가 시작됐다: 슬로우레터 3월6일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104984",
-          "author": "참여연대 의정감시센터",
-          "description": "곧 22대 국회의원 선거가 다가온다. 정부여당인 국민의힘의 공천은 다소 조용한 상태에서 진행되고 있는데, 일부 현역들이 스스로 물러나고 야심을 드러낸 후보들도 교통 정리에 순응하는 분위기이다. 반면 야당인 민주당은 공천으로 내홍을 넘어 역대급 분열과 역사적 위기를 겪고 있다. 1999년 김대중 ‘젊은 피 수혈론’에서 ‘이재명의 민주당’으로 민주당은 원래 1950년대 이승만 독재에 대항한 지주층과 교육받은 지사들의 정당이었으나 1999년 김대중의...\nThe post 한국 정치가 잔인해진 이유 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104984",
-          "publishedOn": "2024-03-05T07:30:34.000Z",
-          "wordCount": null,
-          "title": "한국 정치가 잔인해진 이유",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104980",
-          "author": "정지우",
-          "description": "우리 사회 자기계발 시장이 작동하는 방식은 매우 교활한 데가 있었다. 가장 흔한 방법은 ‘박탈감’을 불러일으키는 것이었다. 가령, 매일 지옥철에 시달리며 출퇴근하는 당신은 가만히 앉아서 월 1000만 원씩 버는 나에 비하면 어리석기 짝이 없다는 식이다. 타인의 삶, 노동, 라이프스타일을 비하하면서, 그와 다른 ‘천국’이 있는데 당신만 모른다는 식으로 ‘조롱’하는 게 이 시장의 흔한 특성이었던 것이다.  이런 식의...\nThe post 박탈감 조장 문화와 교활한 자기계발 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104980",
-          "publishedOn": "2024-03-05T01:44:09.000Z",
-          "wordCount": null,
-          "title": "박탈감 조장 문화와 교활한 자기계발",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104948",
-          "author": "이정환",
-          "description": "“김어준이 사회 봐도 좋다.” 임종석의 결단. 쟁점과 현안. “진짜 진다고 나왔나.” 비주류 이재명의 민주당 점령. 한동훈의 틱톡 화법. 더 깊게 읽기. 12:88, 비정규직 격차를 깨자. 트럼프 출마 자격 있다. 의대 증원 감당할 수 있나. 의대생 80%가 소득 상위 20%. 오늘의 TMI. 프로야구 돈 내고 봐야 한다. 지난해 한국 사람이 먹은 고기 61kg. 아프리카에서 한국 고등어를...\nThe post “진짜 진다고 나왔나”, 뒤숭숭한 민주당: 슬로우레터 3월5일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104948",
-          "publishedOn": "2024-03-04T22:03:20.000Z",
-          "wordCount": null,
-          "title": "“진짜 진다고 나왔나”, 뒤숭숭한 민주당: 슬로우레터 3월5일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=104936",
-          "author": "민주언론시민연합",
-          "description": "2024년 2월 29일 제22대 국회의원선거 제8차 선거방송의위원회 회의가 열렸습니다. 이날 안건은 총 15건으로 2건은 ‘의견진술’ 받기로 한 것이고, 3건은 제7차 회의에서 차기 회의로 넘긴 것입니다. 8건은 이번 회의에 올라온 안건이며, 2건은 재심 청구 안건입니다. 일신상 이유로 사퇴를 표명한 최창근 부위원장(한국방송기자클럽 추천)은 이날 불참하여 8명이 의결에 참여했습니다. TV조선 대상 심의 3건은 권재홍 위원(공정언론국민연대 추천), 이미나 위원(한국미디어정책학회...\nThe post 미세먼지 농도 ‘1’은 민주당 총선 기호라 상징조작 가능? 이분 진심인 듯! appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/104936",
-          "publishedOn": "2024-03-04T08:17:20.000Z",
-          "wordCount": null,
-          "title": "미세먼지 농도 ‘1’은 민주당 총선 기호라 상징조작 가능? 이분 진심인 듯!",
-          "imageUrl": null
         }
       ]
     },
@@ -3066,6 +3065,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=594256",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/594256/1%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8c%90%eb%a7%a4%eb%9f%89-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-04-03T07:09:51.000Z",
+          "wordCount": 7489,
+          "title": "1분기 테슬라 판매량을 보는 월가의 시각, 재앙이다. 테슬라 주가는 지속 하락 가능성",
+          "imageUrl": "https://happist.com/wp-content/uploads/2022/12/테슬라-디스플레이를-조작하는-여인-Tesla-Photo-by-jenny-ueberberg.jpg"
+        },
         {
           "id": "https://happist.com/?p=594254",
           "author": "happist",
@@ -3275,36 +3284,6 @@
           "wordCount": null,
           "title": "바클레이즈, AMD가 엔비디아를 추격하면서 인공지능 칩 매출이 크게 증가 전망",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594084",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594084/%eb%82%98%ec%8a%a4%eb%8b%a5-%ec%a1%b0%ec%a0%95-%ea%b0%80%eb%8a%a5%ec%84%b1",
-          "publishedOn": "2024-03-05T06:36:38.000Z",
-          "wordCount": null,
-          "title": "Market watch, 300일 이상 상승한 나스닥, 나스닥 조정 가능성은 없을까?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594069",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594069/3-5-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-03-05T01:26:29.000Z",
-          "wordCount": null,
-          "title": "3/5, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594065",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594065/%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98-%ec%9e%ac%ec%83%81%ec%8a%b9-%ec%9a%b0%eb%a0%a4",
-          "publishedOn": "2024-03-04T12:33:53.000Z",
-          "wordCount": null,
-          "title": "월가의 인플레이션 재상승 우려가 커지고 있다..",
-          "imageUrl": null
         }
       ]
     },
@@ -3452,16 +3431,6 @@
           "wordCount": null,
           "title": "경합지 잡긴 잡아야 하는데… 바이든의 딜레마, 돌파구 있을까",
           "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78521",
-          "author": "eyesopen1",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 1월 10일 스프에 쓴 글입니다. ‘공감’, ‘공감 능력’이 화두로 떠오른 시대입니다. 엽기적이고 폭력적인 범죄의 원인을 공감 능력 결여에서 꼽는 범죄 전문가들도 있고, 4차 산업과 AI 시대의 도래와 함께 공감 능력이야말로 기계가 대체할 수 없는 → 더 보기",
-          "link": "https://newspeppermint.com/2024/03/04/npsp_compassion/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_compassion",
-          "publishedOn": "2024-03-04T22:59:45.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] 타인의 고통에 우리는 어떻게 대처해야 할까",
-          "imageUrl": null
         }
       ]
     },
@@ -3474,14 +3443,25 @@
     {
       "title": "내 마음의 풍경",
       "feedUrl": "https://rss.blog.naver.com/sellars.xml",
-      "siteUrl": "https://blog.naver.com/sellars",
+      "siteUrl": "https://blog.naver.com/sellars?fromRss=true&trackingCode=rss",
       "articles": []
     },
     {
       "title": "The ZipCPU by Gisselquist Technology",
       "feedUrl": "https://zipcpu.com/feed",
       "siteUrl": "https://zipcpu.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://zipcpu.com/blog/2024/04/01/chasing-resets.html",
+          "author": null,
+          "description": "A true story.\n\n\nSome years ago, given a customer’s honest need and request, I proposed a\nchange to a client’s ASIC\nIP.  Specifically, I wanted to add CRC\nchecking,\nbased upon a CRC\nkept in an out-of-band memory\nregion, to verify the ability\nto properly read memory regions error free.  I said the change shouldn’t take\nmore than about two weeks, and I’d clean up some other problems I was aware of\nin the mean time.  This change solved an urgent problem, so he agreed\nto it.\nBy the time I was done, my 80 hr proposal had turned into 270+ hrs of work.\nBuild it well\nI’d like to start my discussion of what went wrong with a list of good\npractices to follow.\nFig 1. Basic test bench components\n\n\nJust as a background, a general test bench follows the format shown in Fig. 1,\non the right.  The “test be…",
+          "link": "https://zipcpu.com/blog/2024/04/01/chasing-resets.html",
+          "publishedOn": "2024-04-01T04:00:00.000Z",
+          "wordCount": 3451,
+          "title": "Chasing resets",
+          "imageUrl": null
+        }
+      ]
     }
   ],
   "cliVersion": "1.15.1"

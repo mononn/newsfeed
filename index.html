@@ -22,11 +22,553 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-04-02 datetime="2024-04-02T17:40:23.000Z">2024-04-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-04-02 datetime="2024-04-02T17:40:23.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-04-03 datetime="2024-04-03T18:39:45.000Z">2024-04-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-04-03 datetime="2024-04-03T18:39:45.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/968299/"
+                        open
+                      >
+                        <summary class="article-expander__title">AlmaLinux OS - CVE-2024-1086 and XZ (AlmaLinux blog)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/968299/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>AlmaLinux has announced
+updated kernels for AlmaLinux 8 and 9 to address CVE-2024-1086, a
+use-after-free vulnerability in the kernel that could be exploited to
+gain local privilege escalation. This is notable because the fix
+marks a divergence between AlmaLinux and Red Hat Enterprise Linux (RHEL):
+In January of this year, a kernel flaw was disclosed and named CVE-2024-1086.
+This flaw is trivially exploitable on most RHEL-equivalent
+systems. There are many proof-of-concept posts available now,
+including one from our Infrastructure team lead, Jonathan Wright (Dealing
+with CVE-2024-1086). In multi-user scenarios, this flaw is
+especially problematic.
+
+
+Though this was flagged as something to be fixed in Red Hat
+Enterprise Linux, Red Hat has only rated this as a moderate
+impact.
+The AlmaLinux project would also like to note that it is not
+impacted by the XZ backdoor. &quot;Because enterprise Linux takes a bit
+longer to adopt those updates (sometimes to the chagrin of our users),
+the version of XZ that had the back door inserted hadn&#x27;t made it
+further than Fedora in our ecosystem.&quot;</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/968297/"
+                        open
+                      >
+                        <summary class="article-expander__title">Malcolm: Improvements to static analysis in the GCC 14 compiler</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/968297/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>David Malcolm writes
+about some static-analyzer features that are coming in the GCC 14
+release.
+
+
+	Solving the halting problem?
+
+	Obviously I&#x27;m kidding with the title here, but for GCC 14 I&#x27;ve
+	implemented a new warning: -Wanalyzer-infinite-loop that&#x27;s able to
+	detect some simple cases of infinite loops.
+
+
+See also: this report from the 2023 GNU
+Tools Cauldron.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/968250/"
+                        open
+                      >
+                        <summary class="article-expander__title">Four stable kernel updates</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/968250/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The 6.8.3, 6.7.12, 6.6.24, and 6.1.84 stable kernel updates have been
+released. Each contains an important set of fixes. Note that 6.7.12 is
+the final release for the 6.7.y series, and that branch is now
+end-of-life. Users should move to the 6.8.y branch.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/967049/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] A memory model for Rust code in the kernel</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/967049/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The Rust programming language differs from C in many ways; those
+differences tend to be what users admire in the language.  But those
+differences can also lead to an impedance mismatch when Rust code is
+integrated into a C-dominated system, and it can be even worse in the
+kernel, which is not a typical C program.  Memory models are a case in
+point.  A programming language&#x27;s view of memory is sufficiently fundamental
+and arcane that many developers never have to learn much about it.  It is
+hard to maintain that sort of blissful ignorance while working in the
+kernel, though, so a recent discussion of how to choose a memory model for
+kernel code in Rust is of interest.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/968220/"
+                        open
+                      >
+                        <summary class="article-expander__title">KDE6 release: D-Bus and Polkit Galore (SUSE security team blog)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/968220/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The SUSE Security Team Blog is carrying a
+detailed article on SUSE&#x27;s review of the KDE6 release.
+
+
+	The SUSE security team restricts the installation of system wide
+	D-Bus services and Polkit policies in openSUSE distributions and
+	derived SUSE products. Any package that ships these features needs
+	to be reviewed by us first, before it can be added to production
+	repositories.
+
+	In November, openSUSE KDE packagers approached us with a long list
+	of KDE components for an upcoming KDE6 major release. The packages
+	needed adjusted D-Bus and Polkit whitelistings due to renamed
+	interfaces or other breaking changes. Looking into this many
+	components at once was a unique experience that also led to new
+	insights, which will be discussed in this article.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/968218/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Wednesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/968218/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (py7zr), Fedora (biosig4c++ and podman), Oracle (kernel, kernel-container, and ruby:3.1), Red Hat (.NET 7.0, bind9.16, curl, expat, grafana, grafana-pcp, kernel, kernel-rt, kpatch-patch, less, opencryptoki, and postgresql-jdbc), and Ubuntu (cacti).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/968183/"
+                        open
+                      >
+                        <summary class="article-expander__title">Redict 7.3.0 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/968183/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The first stable release of Redict, a fork of the Redis in-memory database
+under a copyleft license, has been announced.
+
+
+	You may be wondering why Redict would be of interest to you,
+	particularly when compared with Valkey,
+	another Redis fork that was announced on Thursday.
+
+	In technical terms, we are focusing on stability and long-term
+	maintenance, and on achieving excellence within our current
+	scope. We believe that Redict is near feature-complete and that it
+	is more valuable to our users if we take a conservative stance to
+	innovation and focus on long-term reliability instead. This is in
+	part a choice we&#x27;ve made to distinguish ourselves from Valkey,
+	whose commercial interests are able to invest more resources into
+	developing more radical innovations, but also an acknowledgement of
+	a cultural difference between our projects, in that the folks
+	behind Redict place greater emphasis on software with a finite
+	scope and ambitions towards long-term stability rather than
+	focusing on long-term growth in scope and complexity.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded.com</button>
+                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4481835"
+                        open
+                      >
+                        <summary class="article-expander__title">Multiplexing a 1-Wire host across multiple channels</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/multiplexing-a-1-wire-host-across-multiple-channels/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1-Wire networks with many 1-Wire nodes can require dedicated 1-Wire channels. This article discusses a method for using only one 1-Wire host in a network...
+The post Multiplexing a 1-Wire host across multiple channels appeared first on Embedded.com.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4481837"
+                        open
+                      >
+                        <summary class="article-expander__title">How miniaturization impacts PCB inspection</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/how-miniaturization-impacts-pcb-inspection/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Smaller device form factors often bring PCB design challenges that can subsequently affect inspection. Making printed circuit boards (PCBs) progressively smaller is an ongoing trend...
+The post How miniaturization impacts PCB inspection appeared first on Embedded.com.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;594256"
+                        open
+                      >
+                        <summary class="article-expander__title">1분기 테슬라 판매량을 보는 월가의 시각, 재앙이다. 테슬라 주가는 지속 하락 가능성</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594256/1%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8c%90%eb%a7%a4%eb%9f%89-%ed%8f%89%ea%b0%80">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://happist.com/wp-content/uploads/2022/12/테슬라-디스플레이를-조작하는-여인-Tesla-Photo-by-jenny-ueberberg.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>마케팅 경영 사례 연구 및 트렌드 탐구</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;25
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="37e9b438-8c34-4fae-a57c-e1ddb61ab500"
+                        open
+                      >
+                        <summary class="article-expander__title">Improvements to static analysis in the GCC 14 compiler</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/04/03/improvements-static-analysis-gcc-14-compiler">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/04/gcc_1x.png?itok&#x3D;6l1b8Lo9" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>I work at Red Hat on GCC, the GNU Compiler Collection. For the last five releases of GCC, I&#x27;ve been working on -fanalyzer, a static analysis pass that tries to identify various problems at compile-time, rather than at runtime. It performs &quot;symbolic execution&quot; of C source code—effectively simulating the behavior of the code along the various possible paths of execution through it.
+This article summarizes what&#x27;s new with -fanalyzer in GCC 14, which I hope will be officially released sometime in April 2024.
+Solving the halting problem?
+Obviously I&#x27;m kidding with the title here, but for GCC 14 I&#x27;ve implemented a new warning: -Wanalyzer-infinite-loop that&#x27;s able to detect some simple cases of infinite loops.
+For example, consider the following C code:
+void test (int m, int n)
+{
+  float arr[m][n…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="29f06dce-0a8a-4c3d-b2b0-e5952a359a10"
+                        open
+                      >
+                        <summary class="article-expander__title">How to add debug support for Go stripped binaries</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/04/03/how-add-debug-support-go-stripped-binaries">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/delve-debug_2x.png?itok&#x3D;F-0v2qbw" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>A stripped binary is generally devoid of symbol and debug information. There could be many reasons why one would need to generate a stripped binary. Symbol information takes up a lot of storage space, so when there are space constraints, it makes sense to work with stripped binaries.
+In the case of Go, we can create a stripped binary either by using go build ldflags&#x3D;&quot;-s -w&quot; or by using the strip command. Debugging is the other side of development, and debugging a stripped binary can be challenging. Go is unique, and unlike other languages, we can still hack our way around to obtain some amount of symbol information from the binaries. This article focuses on how we support stripped binaries in Delve, the Go debugger. 
+Finding symbols in stripped binaries
+Go retains some information on symbo…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-04-02 datetime="2024-04-02T22:02:22.000Z">2024-04-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-04-02 datetime="2024-04-02T22:02:22.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;106395"
+                        open
+                      >
+                        <summary class="article-expander__title">선거 공보물에 윤석열과 이재명 사진이 사라진 이유: 슬로우레터 4월3일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/106395">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2024/04/dGjH0WXqGKpg660bf2587ee591.05140533-1000x666.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>“49곳이 1000표 이내로 결판.” 민주당은 ‘부자 몸조심’, 국민의힘은 ‘언더독’ 전략. 200석이 되면 할 수 있는 것. “전공의들 만나겠다.” 쟁점과 현안. “이대생 성 상납” 발언 논란, 김준혁도 버티기. “제가 이렇게 사라지게 두실 겁니까.” 다르게 읽기. 내일부터 여론조사 블랙아웃. 돈 풀어도 물가 안 잡히는 이유. 875원 대파 총선 끝나면 끝? 더 깊게 읽기. “다단계는 이종근이 전문.” 오늘의...
+The post 선거 공보물에 윤석열과 이재명 사진이 사라진 이유: 슬로우레터 4월3일. appeared first on 슬로우뉴스..</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;23
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;106379"
+                        open
+                      >
+                        <summary class="article-expander__title">조선일보, 박은정에 집중 포화: 2024 총선 포털뉴스 (3월 넷째 주)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/106379">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>요약 주요 이슈 1. 박은정 후보 등 야권 후보 의혹 제기 본격화 2. 용산 촉발 의대 2천명 증원 논란 지속 3. 야, 지도부 유세… 여, 한동훈 개인 유세 4. 조국혁신당, 검찰 ‘디지털 캐비닛’ 국정조사 이슈화 5. 여야 총선 공약 보도량 증가 ① 공약 이슈, 보도량 5위 ② 논란 일으킨 공약 이슈는 급소멸 6. 판세-여론조사 보도...
+The post 조선일보, 박은정에 집중 포화: 2024 총선 포털뉴스 (3월 넷째 주) appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >from pvs-studio.com</button>
+                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pvs-studio.com/en/blog/posts/csharp/1111/"
+                        open
+                      >
+                        <summary class="article-expander__title">Simple &amp; quick search for bugs in Unity games (for C# developers)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/csharp/1111/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Each of us encounters game bugs, and some games have more of them than others. Many games suffer from bugs caused by errors in code. Today, we&#x27;ll see how static analysis can help easily detect errors...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/967192/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] How the XZ backdoor works</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/967192/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Versions 5.6.0 and 5.6.1 of the
+XZ
+compression utility and library
+were shipped with a backdoor that targeted
+OpenSSH.
+Andres Freund
+
+discovered the backdoor by
+noticing that failed SSH logins were taking a lot of
+CPU time while doing some
+micro-benchmarking, and tracking down the backdoor from there. It was introduced
+by XZ co-maintainer &quot;Jia Tan&quot; — a probable alias for person or persons unknown.
+The backdoor is a sophisticated attack with multiple parts, from the build
+system, to link time, to run time.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/967866/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Free software&#x27;s not-so-eXZellent adventure</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/967866/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>A common theme in early-days anti-Linux FUD was that, since anybody can
+contribute to the code, it cannot be trusted.  Over two decades later, one
+rarely hears that line anymore; experience has shown that free-software
+communities are not prone to shipping overtly hostile code.  But, as the backdooring of XZ has reminded us, the
+embedding of malicious code is, unfortunately, not limited to the
+proprietary realm.  Our community will be busy analyzing this incident for
+some time to come, but clear conclusions may be hard to come by.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/967959/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Tuesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/967959/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Fedora (kernel and webkitgtk), Mageia (unixODBC and w3m), and SUSE (libvirt, netty, netty-tcnative, and perl-DBD-SQLite).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -123,92 +665,6 @@ The post embedded world: Microchip adds 2 Mb and 4 Mb serial SRAM devices appear
                             <span class="media-object__text">
                               <span>Among its x86/ARM portfolio for emerging markets such as EV charging and AI-integrated robotics, Advantech will be launching new OSM modules based on Qualcomm and NXP.
 The post embedded world: Advantech to show new OSM modules targeting edge AI appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/967866/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Free software&#x27;s not-so-eXZellent adventure</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/967866/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>A common theme in early-days anti-Linux FUD was that, since anybody can
-contribute to the code, it cannot be trusted.  Over two decades later, one
-rarely hears that line anymore; experience has shown that free-software
-communities are not prone to shipping overtly hostile code.  But, as the backdooring of XZ has reminded us, the
-embedding of malicious code is, unfortunately, not limited to the
-proprietary realm.  Our community will be busy analyzing this incident for
-some time to come, but clear conclusions may be hard to come by.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/967959/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Tuesday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/967959/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by Fedora (kernel and webkitgtk), Mageia (unixODBC and w3m), and SUSE (libvirt, netty, netty-tcnative, and perl-DBD-SQLite).</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;106379"
-                        open
-                      >
-                        <summary class="article-expander__title">조선일보, 박은정에 집중 포화: 2024 총선 포털뉴스 (3월 넷째 주)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/106379">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>요약 주요 이슈 1. 박은정 후보 등 야권 후보 의혹 제기 본격화 2. 용산 촉발 의대 2천명 증원 논란 지속 3. 야, 지도부 유세… 여, 한동훈 개인 유세 4. 조국혁신당, 검찰 ‘디지털 캐비닛’ 국정조사 이슈화 5. 여야 총선 공약 보도량 증가 ① 공약 이슈, 보도량 5위 ② 논란 일으킨 공약 이슈는 급소멸 6. 판세-여론조사 보도...
-The post 조선일보, 박은정에 집중 포화: 2024 총선 포털뉴스 (3월 넷째 주) appeared first on 슬로우뉴스..</span>
                             </span>
                           </div>
                         </a>
@@ -858,6 +1314,61 @@ her way in the world following multiple personal tragedies and facing extreme
 gender discrimination. I have some mixed feelings about this book. On one hand
 it&#x27;s original, enternaining, well-written and thought provoking. On the
 other hand it&#x27;s full …</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >The ZipCPU by Gisselquist Technology</button>
+                  <a class="source-heading__link" href="https://zipcpu.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zipcpu.com/blog/2024/04/01/chasing-resets.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Chasing resets</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zipcpu.com/blog/2024/04/01/chasing-resets.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>A true story.
+
+
+Some years ago, given a customer’s honest need and request, I proposed a
+change to a client’s ASIC
+IP.  Specifically, I wanted to add CRC
+checking,
+based upon a CRC
+kept in an out-of-band memory
+region, to verify the ability
+to properly read memory regions error free.  I said the change shouldn’t take
+more than about two weeks, and I’d clean up some other problems I was aware of
+in the mean time.  This change solved an urgent problem, so he agreed
+to it.
+By the time I was done, my 80 hr proposal had turned into 270+ hrs of work.
+Build it well
+I’d like to start my discussion of what went wrong with a list of good
+practices to follow.
+Fig 1. Basic test bench components
+
+
+Just as a background, a general test bench follows the format shown in Fig. 1,
+on the right.  The “test be…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
                             </span>
                           </div>
                         </a>
@@ -8448,42 +8959,6 @@ The post 건생구팽, 김건희 특검법 끝나자 컷오프가 시작됐다: 
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;104984"
-                        open
-                      >
-                        <summary class="article-expander__title">한국 정치가 잔인해진 이유</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104984">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>곧 22대 국회의원 선거가 다가온다. 정부여당인 국민의힘의 공천은 다소 조용한 상태에서 진행되고 있는데, 일부 현역들이 스스로 물러나고 야심을 드러낸 후보들도 교통 정리에 순응하는 분위기이다. 반면 야당인 민주당은 공천으로 내홍을 넘어 역대급 분열과 역사적 위기를 겪고 있다. 1999년 김대중 ‘젊은 피 수혈론’에서 ‘이재명의 민주당’으로 민주당은 원래 1950년대 이승만 독재에 대항한 지주층과 교육받은 지사들의 정당이었으나 1999년 김대중의...
-The post 한국 정치가 잔인해진 이유 appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;104980"
-                        open
-                      >
-                        <summary class="article-expander__title">박탈감 조장 문화와 교활한 자기계발</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104980">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>우리 사회 자기계발 시장이 작동하는 방식은 매우 교활한 데가 있었다. 가장 흔한 방법은 ‘박탈감’을 불러일으키는 것이었다. 가령, 매일 지옥철에 시달리며 출퇴근하는 당신은 가만히 앉아서 월 1000만 원씩 버는 나에 비하면 어리석기 짝이 없다는 식이다. 타인의 삶, 노동, 라이프스타일을 비하하면서, 그와 다른 ‘천국’이 있는데 당신만 모른다는 식으로 ‘조롱’하는 게 이 시장의 흔한 특성이었던 것이다.  이런 식의...
-The post 박탈감 조장 문화와 교활한 자기계발 appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8610,455 +9085,6 @@ pages (THPs).</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594084"
-                        open
-                      >
-                        <summary class="article-expander__title">Market watch, 300일 이상 상승한 나스닥, 나스닥 조정 가능성은 없을까?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594084/%eb%82%98%ec%8a%a4%eb%8b%a5-%ec%a1%b0%ec%a0%95-%ea%b0%80%eb%8a%a5%ec%84%b1">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594069"
-                        open
-                      >
-                        <summary class="article-expander__title">3/5, 월가의 투자의견 및 주가 전망 보고서</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594069/3-5-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="d2e0b956-fcac-4f7a-b10a-c482a86fcb58"
-                        open
-                      >
-                        <summary class="article-expander__title">How to use JBoss EAP 8.0&#x27;s new provisioning system</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/03/05/how-use-jboss-eap-80s-new-provisioning-system">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/2021_JbossEAP_A.png?itok&#x3D;WLLeSXKn" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>With the recent release of Red Hat JBoss Enterprise Application Platform (JBoss EAP) 8.0, Red Hat introduced a new set of provisioning tools including a new installation manager (for bare metal and virtual machine installations) and a new Maven plug-in (for Red Hat OpenShift builds).
-For OpenShift, the JBoss EAP Maven plug-in allows users to specify what they want in their server footprint and configuration, for example to specify a feature pack to include database drivers. The JBoss EAP Maven plug-in uses Galleon trimming capability to reduce the size and memory footprint of the server; it also supports the execution of JBoss EAP CLI script files to customize server configuration. The JBoss EAP Maven plug-in is discussed in the previous article How JBoss EAP 8.0 makes deployment on OpenSh…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="dbf674f5-9e4c-4430-ab94-75036f6344f0"
-                        open
-                      >
-                        <summary class="article-expander__title">Create an efficient Ansible development environment in VS Code IDE</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/03/05/create-efficient-ansible-development-environment-vs-code-ide">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/SP-ansible1_2x.png?itok&#x3D;StIQEumS" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Ansible, a powerful automation tool, simplifies configuration management, application deployment, and infrastructure provisioning. When it comes to developing Ansible Playbooks and managing infrastructure, having a well-configured development environment can greatly enhance productivity. In this technical blog, we will explore how to set up an Ansible development environment in the popular Visual Studio Code (VS Code) IDE.
-Prerequisites
-Install Ansible Automation Platform
-Install ansible-navigator on your system
-Install Podman or Podman Desktop
-Pulled down execution environment using Podman
-Install Git 
-Why VS Code for Ansible Development Environment?
-The Ansible Language Server extension:
-Provides syntax highlighting
-Autocompletion (including with FQCN)
-Easy jump to module code/documentat…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >null program</button>
-                  <a class="source-heading__link" href="https://nullprogram.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://nullprogram.com/blog/2024/03/05/"
-                        open
-                      >
-                        <summary class="article-expander__title">Protecting paths in macro expansions by extending UTF-8</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://nullprogram.com/blog/2024/03/05/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>After a year I’ve finally came up with an elegant solution to a vexing
-u-config problem. The pkg-config format uses macros to generate build
-flags through recursive expansion. Some flags embed file system paths, but
-to the macro system it’s all strings. The output is also ultimately just
-one big string, which the receiving shell splits into fields. If
-a path contains spaces, or shell metacharacters, u-config must escape them
-so that shells treat them as part of a token. But how can u-config itself
-distinguish incidental spaces in paths from deliberate spaces between
-flags? What about other shell metacharacters in paths? My solution is to
-extend UTF-8 to encode metadata that survives macro expansion.
-As usual, it helps to begin with a concrete example of the problem. The
-following is a conv…</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Evans Library</button>
-                  <a class="source-heading__link" href="https://evan-moon.github.io">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="20240305-category-theory-for-programmers-6-simple-algebraic-data-types"
-                        open
-                      >
-                        <summary class="article-expander__title">[번역] 프로그래머를 위한 카테고리 이론 - 6. 단순한 대수적 타입</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://evan-moon.github.io/2024/03/05/category-theory-for-programmers-6-simple-algebraic-data-types/">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="/static/eea67acfacfc20db2c9d3f6b3a3a786d/47498/thumbnail.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>앞서 우리는 곱과 합이라는 두 가지 기본적인 방법을 통해 타입을 결합하는 것을 보았다. 사실 우리가 일상적인 프로그래밍에서 자주 접하는 데이터 구조는 이 두 가지 메커니즘만으로도 충분히 표현할 수 있다.</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-04 datetime="2024-03-04T22:59:45.000Z">2024-03-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-04 datetime="2024-03-04T22:59:45.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78521"
-                        open
-                      >
-                        <summary class="article-expander__title">[뉴페@스프] 타인의 고통에 우리는 어떻게 대처해야 할까</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/03/04/npsp_compassion/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_compassion">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 1월 10일 스프에 쓴 글입니다. ‘공감’, ‘공감 능력’이 화두로 떠오른 시대입니다. 엽기적이고 폭력적인 범죄의 원인을 공감 능력 결여에서 꼽는 범죄 전문가들도 있고, 4차 산업과 AI 시대의 도래와 함께 공감 능력이야말로 기계가 대체할 수 없는 → 더 보기</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;104948"
-                        open
-                      >
-                        <summary class="article-expander__title">“진짜 진다고 나왔나”, 뒤숭숭한 민주당: 슬로우레터 3월5일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104948">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>“김어준이 사회 봐도 좋다.” 임종석의 결단. 쟁점과 현안. “진짜 진다고 나왔나.” 비주류 이재명의 민주당 점령. 한동훈의 틱톡 화법. 더 깊게 읽기. 12:88, 비정규직 격차를 깨자. 트럼프 출마 자격 있다. 의대 증원 감당할 수 있나. 의대생 80%가 소득 상위 20%. 오늘의 TMI. 프로야구 돈 내고 봐야 한다. 지난해 한국 사람이 먹은 고기 61kg. 아프리카에서 한국 고등어를...
-The post “진짜 진다고 나왔나”, 뒤숭숭한 민주당: 슬로우레터 3월5일. appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;104936"
-                        open
-                      >
-                        <summary class="article-expander__title">미세먼지 농도 ‘1’은 민주당 총선 기호라 상징조작 가능? 이분 진심인 듯!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/104936">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>2024년 2월 29일 제22대 국회의원선거 제8차 선거방송의위원회 회의가 열렸습니다. 이날 안건은 총 15건으로 2건은 ‘의견진술’ 받기로 한 것이고, 3건은 제7차 회의에서 차기 회의로 넘긴 것입니다. 8건은 이번 회의에 올라온 안건이며, 2건은 재심 청구 안건입니다. 일신상 이유로 사퇴를 표명한 최창근 부위원장(한국방송기자클럽 추천)은 이날 불참하여 8명이 의결에 참여했습니다. TV조선 대상 심의 3건은 권재홍 위원(공정언론국민연대 추천), 이미나 위원(한국미디어정책학회...
-The post 미세먼지 농도 ‘1’은 민주당 총선 기호라 상징조작 가능? 이분 진심인 듯! appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/963512/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Making multiple interpreters available to Python code</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/963512/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>It has long been possible to run multiple Python interpreters in the same
-process — via the C API, but not within the language itself.
-Eric Snow has been working to make this ability
-available in the language for many years.
-Now, Snow has published
-PEP 734 (&quot;Multiple Interpreters
-in the Stdlib&quot;), the latest work in his
-quest, and
-submitted
-it to the Python steering council for a decision.
-If the PEP is approved, users will have
-an additional option for writing performant parallel Python code.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/964376/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Monday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/964376/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by Debian (firefox-esr and thunderbird), Fedora (dotnet6.0, dotnet8.0, and mod_auth_openidc), Gentoo (Blender, Tox, and UltraJSON), Oracle (kernel), Red Hat (edk2), SUSE (sendmail and zabbix), and Ubuntu (nodejs and thunderbird).</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded.com</button>
-                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4481594"
-                        open
-                      >
-                        <summary class="article-expander__title">Cadence adds radar accelerator and automotive-optimized DSPs</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/cadence-adds-radar-accelerator-and-automotive-optimized-dsps/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Cadence launches two new single DSPs plus radar accelerator designed for sensor fusion processing in multi-sensor automotive, drone, robotics and autonomous vehicle systems.
-The post Cadence adds radar accelerator and automotive-optimized DSPs appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4481588"
-                        open
-                      >
-                        <summary class="article-expander__title">Infineon integrates Qt GUI into its MCUs</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/infineon-integrates-qt-gui-into-its-mcus/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Infineon and Qt collaboration brings Qt&#x27;s lightweight, graphics to Infineon&#x27;s TRAVEO T2G cluster microcontrollers. 
-The post Infineon integrates Qt GUI into its MCUs appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4481580"
-                        open
-                      >
-                        <summary class="article-expander__title">Renesas RZ MPU targets robotics with vision AI and real-time control</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/renesas-rz-mpu-targets-robotics-with-vision-ai-and-real-time-control/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>“The RZ/V2H will facilitate the development of next-generation autonomous robots with vision AI capabilities, that have the ability to think independently and control movements in real time.&quot;
-The post Renesas RZ MPU targets robotics with vision AI and real-time control appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4481572"
-                        open
-                      >
-                        <summary class="article-expander__title">Synopsys 1.6T Ethernet IP reduces interconnect power use by 50%</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/synopsys-1-6t-ethernet-ip-reduces-interconnect-power-use-by-50/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>New multi-channel/multi-rate Ethernet controllers offer 1.6T support with up to 40% latency reduction and up to 50% area reduction compared to existing multi-rate 800G IP solutions.
-The post Synopsys 1.6T Ethernet IP reduces interconnect power use by 50% appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594065"
-                        open
-                      >
-                        <summary class="article-expander__title">월가의 인플레이션 재상승 우려가 커지고 있다..</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594065/%ec%9d%b8%ed%94%8c%eb%a0%88%ec%9d%b4%ec%85%98-%ec%9e%ac%ec%83%81%ec%8a%b9-%ec%9a%b0%eb%a0%a4">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9115,8 +9141,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/8528840432">
-        <time id="build-timestamp" datetime="2024-04-02T20:12:46.891Z">2024-04-02T20:12:46.891Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/8544915773">
+        <time id="build-timestamp" datetime="2024-04-03T20:14:11.324Z">2024-04-03T20:14:11.324Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
