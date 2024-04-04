@@ -228,6 +228,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "a72ac10e-05c5-453a-ad0c-654bd49ce2a3",
+          "author": "Hans-Peter Grahsl",
+          "description": "In the first article in this series, you learned how to leverage MongoDB from within your cloud-native applications written in Quarkus. While developing a sample application from scratch, you've been introduced to a few selected Quarkus extensions that speed up the development process and remove friction when it comes to deploying the containerized application to Kubernetes.\nThis second article will allow you to seamlessly continue your Quarkus and MongoDB development journey. Based on where you left off in part 1, in this article we will continue iterating the same example application. We will walk through the steps to carrying out the following tasks:\nPerform a Quarkus version upgrade for your application.\nAdd Entity <=> DTO (data transfer object) mapping.\nIntroduce a service layer.\nSwit…",
+          "link": "https://developers.redhat.com/articles/2024/04/04/getting-started-mongodb-and-quarkus-beyond-basics",
+          "publishedOn": "2024-04-04T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Getting started with MongoDB and Quarkus: Beyond the basics",
+          "imageUrl": null
+        },
+        {
           "id": "37e9b438-8c34-4fae-a57c-e1ddb61ab500",
           "author": "David Malcolm",
           "description": "I work at Red Hat on GCC, the GNU Compiler Collection. For the last five releases of GCC, I've been working on -fanalyzer, a static analysis pass that tries to identify various problems at compile-time, rather than at runtime. It performs \"symbolic execution\" of C source code—effectively simulating the behavior of the code along the various possible paths of execution through it.\nThis article summarizes what's new with -fanalyzer in GCC 14, which I hope will be officially released sometime in April 2024.\nSolving the halting problem?\nObviously I'm kidding with the title here, but for GCC 14 I've implemented a new warning: -Wanalyzer-infinite-loop that's able to detect some simple cases of infinite loops.\nFor example, consider the following C code:\nvoid test (int m, int n)\n{\n  float arr[m][n…",
@@ -466,16 +476,6 @@
           "wordCount": null,
           "title": "Achieve more with less using Red Hat Developer Hub's self-service features",
           "imageUrl": null
-        },
-        {
-          "id": "943a04bc-c495-44d4-8d18-f5a5117198d6",
-          "author": "Francisco De Melo Junior, Alexander Barbosa Ayala",
-          "description": "In Red Hat OpenShift 4.x, the Operator framework became a fundamental part of the daily cluster operations, and we explain the Data Grid Operator in this Data Grid Operator installation article.\nThe Data Grid Operator provides an easy and straightforward method for deploying a Red Hat Data Grid server. Once the Data Grid is deployed it can include features such as cross-site and JVM settings, which are set via the Custom Resources (CRs) consumed by the Data Grid Operator to build the Data Grid server.\n[ Learning path: Cross site and cross applications with Red Hat OpenShift and Red Hat Data Grid ]\nAnother supported approach for deploying Data Grid in Red Hat OpenShift Container Platform (RHOCP) 4 is via the use of Helm charts, where the user installs the charts and passes a value YAML file…",
-          "link": "https://developers.redhat.com/articles/2024/03/06/how-use-helm-charts-deploy-data-grid-openshift",
-          "publishedOn": "2024-03-06T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to use Helm charts to deploy Data Grid on OpenShift",
-          "imageUrl": null
         }
       ]
     },
@@ -554,6 +554,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4481842",
+          "author": "Alexander Lenz",
+          "description": "In this article, we delve deeper into the multifaceted security features of e.MMC 5.1 devices.\nThe post Exploring e.MMC security: protecting embedded storage appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/exploring-e-mmc-security-protecting-embedded-storage/",
+          "publishedOn": "2024-04-04T20:03:00.000Z",
+          "wordCount": null,
+          "title": "Exploring e.MMC security: protecting embedded storage",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4481835",
           "author": "Stewart Merkel",
@@ -1143,6 +1153,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/march-2024-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nMarch.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/march-2024-roundup",
+          "publishedOn": "2024-04-04T00:00:00.000Z",
+          "wordCount": null,
+          "title": "What we've been reading in March (2024)",
+          "imageUrl": null
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/diving-into-jtag-part-4",
           "author": null,
           "description": "In the previous article of this series, we briefly touched on how .bsd files\nwritten in Boundary Scan Description Language (BSDL) describe the structure of\nthe boundary scan chain and the instruction set. In this article, we will\nexamine this language’s syntax more closely before seeing how .bsd files are leveraged\nin JTAG testing in the next article.\nContinue reading…",
@@ -1230,6 +1250,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/968468/",
+          "author": "jake",
+          "description": "The 6.8.4 and 6.6.25 stable kernels have been released.\nThey both contain 11 reversions of workqueue patches.",
+          "link": "https://lwn.net/Articles/968468/",
+          "publishedOn": "2024-04-04T19:13:44.000Z",
+          "wordCount": null,
+          "title": "Stable kernels 6.8.4 and 6.6.25",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968429/",
+          "author": "daroc",
+          "description": "V8, the JavaScript engine used in Chrome,\nannounced\nthat its memory sandbox is no longer experimental.\n\n\n\nChrome 123 could therefore be considered to be a sort of \"beta\"\nrelease for the sandbox. This blog post uses this opportunity to\ndiscuss the motivation behind the sandbox, show how it prevents\nmemory corruption in V8 from spreading within the host process, and\nultimately explain why it is a necessary step towards memory safety.",
+          "link": "https://lwn.net/Articles/968429/",
+          "publishedOn": "2024-04-04T17:46:56.000Z",
+          "wordCount": null,
+          "title": "V8 incorporates new sandbox",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/967001/",
+          "author": "jzb",
+          "description": "Among the numerous approaches to funding the development and advancement of\nopen-source software, corporate sponsorship in the form of donations to umbrella\norganizations is perhaps the most visible. At SCALE21x in Pasadena, California, Duane O'Brien\npresented\na slice of his recent research into the landscape of such sponsorship arrangements,\nwith an overview of the identifiable trends of the past ten years and some initial\ninsights he hopes are valuable for sponsors and community members alike.",
+          "link": "https://lwn.net/Articles/967001/",
+          "publishedOn": "2024-04-04T17:38:16.000Z",
+          "wordCount": null,
+          "title": "[$] A focus on FOSS funding",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968421/",
+          "author": "corbet",
+          "description": "Version\n6.0 LTS of the Incus container management system has been released.\n\"This is a major milestone for Incus as it marks our first release with\nextended support, suitable for use in production environments where monthly\nfeature releases aren't suitable.\"  Changes include swap limits for\ncontainers, a new shell completion mechanism, support for the creation of\nVLAN interfaces, improved live migration, and more.",
+          "link": "https://lwn.net/Articles/968421/",
+          "publishedOn": "2024-04-04T15:38:14.000Z",
+          "wordCount": null,
+          "title": "Incus 6.0 LTS released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/968395/",
+          "author": "jake",
+          "description": "Security updates have been issued by CentOS (firefox and thunderbird), Debian (chromium and gtkwave), Fedora (micropython), Slackware (xorg), SUSE (util-linux and xen), and Ubuntu (firefox).",
+          "link": "https://lwn.net/Articles/968395/",
+          "publishedOn": "2024-04-04T14:21:52.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/966925/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for April 4, 2024 is available.",
+          "link": "https://lwn.net/Articles/966925/",
+          "publishedOn": "2024-04-04T00:01:07.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for April 4, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/968299/",
           "author": "jzb",
@@ -2059,26 +2139,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/964239/",
-          "author": "corbet",
-          "description": "The kernel's memory-management subsystem is built on the concept of\n\"zones\", which were initially added to describe the physical\ncharacteristics of the memory pages contained within them.  Over time,\nzones have taken on more of a policy-related role as well.  With a patch\nset called THP\nallocator optimizations, Yu Zhao has set out to better define the role\nof policy-related zones on the path toward adding two more of them, with\nthe ultimate purpose of improving the kernel's support for transparent huge\npages (THPs).",
-          "link": "https://lwn.net/Articles/964239/",
-          "publishedOn": "2024-03-05T12:49:57.000Z",
-          "wordCount": null,
-          "title": "[$] Formalizing policy zones for memory",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/964450/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (yard), Oracle (buildah and kernel), Red Hat (389-ds:1.4, edk2, frr, gnutls, haproxy, libfastjson, libX11, postgresql:12, sqlite, squid, squid:4, tcpdump, and tomcat), SUSE (apache2-mod_auth_openidc and glibc), and Ubuntu (linux-gke, python-cryptography, and python-django).",
-          "link": "https://lwn.net/Articles/964450/",
-          "publishedOn": "2024-03-05T12:48:58.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2114,6 +2174,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/uncovering-mainframe-seams.html#batch-pipeline",
+          "author": null,
+          "description": "Mainframe processing is often organized into pipelines of batch\n       processes consuming and creating data files. Alessio\n       Ferri and Tom Coggrave show a couple of ways\n       they found to introduce seams into these pipelines, so that processing\n       could be replaced by steps in a replacement platform.\nmore…",
+          "link": "https://martinfowler.com/articles/uncovering-mainframe-seams.html#batch-pipeline",
+          "publishedOn": "2024-04-04T13:39:00.000Z",
+          "wordCount": 5792,
+          "title": "Creating Seams in a Mainframe's Batch Pipelines",
+          "imageUrl": "https://martinfowler.com/articles/uncovering-mainframe-seams/card.png"
+        },
         {
           "id": "https://martinfowler.com/articles/uncovering-mainframe-seams.html#InternalInterfaces",
           "author": null,
@@ -2212,16 +2282,6 @@
           "publishedOn": "2024-03-06T15:33:00.000Z",
           "wordCount": null,
           "title": "What if we rotate pairs every day?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/patterns-legacy-displacement/event-interception.html",
-          "author": null,
-          "description": "When we gradually replace a legacy system, we have plenty of cases\n       where the legacy system and its replacement need to interact. Since these\n       legacy systems are often difficult, and costly, to change, we need a\n       mechanism that can integrate elements of the replacement while minimizing\n       the impact to the legacy system. Ian Cartwright, Rob Horn, and\n       James Lewis explain how we can use Event Interception on\n       state-changing events, allowing us to forward them to the\n       replacement.\nmore…",
-          "link": "https://martinfowler.com/articles/patterns-legacy-displacement/event-interception.html",
-          "publishedOn": "2024-03-05T15:03:00.000Z",
-          "wordCount": null,
-          "title": "Patterns of Legacy Displacement: Event Interception",
           "imageUrl": null
         }
       ]
@@ -2468,6 +2528,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=106491",
+          "author": "민노씨",
+          "description": "며칠 전 60대 중반의 전 논설위원이 “젊은이들이 망친 나라, 노인이 구한다. (이렇게) 호소를 해서 60대 이상의 투표율을 극적으로 높이는 방법밖에는 없다”고 공개방송에서 발언했다. 사실, 60대 이상 유권자의 투표율은 이미 아주 높다. 지난 제20대 대통령 선거에서 60~70대 유권자의 투표율은 87%에 가까웠으며, 제21대 총선에서도 80%를 넘겼다. 60대 이상 유권자의 투표율을 높이는 것은 그만큼 어려운 일이다. 그럼 ‘나라를...\nThe post 총선 결정하는 2030의 정치 무관심, 그런데 그게 누구 책임인데? appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106491",
+          "publishedOn": "2024-04-04T09:13:03.000Z",
+          "wordCount": null,
+          "title": "총선 결정하는 2030의 정치 무관심, 그런데 그게 누구 책임인데?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=106470",
+          "author": "이정환",
+          "description": "[슬로우리포트] 정권 심판을 넘어, 조국혁신당 돌풍과 세대별 편향이 의미하는 것. 다음주 이 시간이면 완전히 다른 세상이 돼 있을 것 같다. 투표율이 관건이라는 이야기 많이 하지 않나. 첫 번째 질문: 왜 4050 세대에서 민주당 지지율이 높게 나타나나. 두 번째 질문: 나이가 들면 이들도 국민의힘을 지지하게 될까. 세 번째 질문: 386 세대는 보수화된 건가. 네 번째 질문:...\nThe post 젊은이가 망친 나라, 노인이 구한다고? appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106470",
+          "publishedOn": "2024-04-04T08:19:11.000Z",
+          "wordCount": null,
+          "title": "젊은이가 망친 나라, 노인이 구한다고?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=106426",
+          "author": "이정환",
+          "description": "“예측은 늘 빗나갔다”, 조선일보의 마지막 기대. “쿨한 사과로 전화위복을”, 중앙일보의 조언. “그건 알겠고, 그래서 어떻게 풀려고?” 2030 무당층 30%가 변수. 젊은이가 망친 나라, 노인이 구한다? “투표율 71%면 세상 바뀐다.” “더 무서운 건 패배주의다.” 조국혁신당 지지율 25%. 부울경도 뒤집히나. 쟁점과 현안. 양문석 딸 대출 11억 원 회수한다. 재외 투표율 62.8%. 다르게 읽기. 여론 조사에 잡히지 않는...\nThe post “예측은 늘 빗나갔다”, D-6 총선에 거는 조선일보의 마지막 기대: 슬로우레터 4월4일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106426",
+          "publishedOn": "2024-04-03T22:18:44.000Z",
+          "wordCount": null,
+          "title": "“예측은 늘 빗나갔다”, D-6 총선에 거는 조선일보의 마지막 기대: 슬로우레터 4월4일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=106417",
+          "author": "민주언론시민연합",
+          "description": "위기는 곧 기회다!!!  전쟁 삐라 같은 제목의 문건이 세상에 드러났다. “對外祕”(대외비)라는 글자가 뚜렷이 찍힌 문건이다. 한 마디로 표현하자면 이 문건은 공영방송 KBS 장악 계획이라고 할 수 있다. 대통령과 관련된 사안에 대한 정당한 의혹 제기와 비판 보도뿐만 아니라 대통령 발언과 심지어는 대통령 부인에 대한 호칭까지도 심의 기구를 동원해 제재하는 언론 탄압을 보며 윤석열 정권은 그야말로 비판...\nThe post KBS 장악 시나리오: [위기는 곧 기회다] 문건 “우파 중심으로 조직 장악하라” appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/106417",
+          "publishedOn": "2024-04-03T07:54:13.000Z",
+          "wordCount": null,
+          "title": "KBS 장악 시나리오: [위기는 곧 기회다] 문건 “우파 중심으로 조직 장악하라”",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=106395",
           "author": "이정환",
@@ -3037,26 +3137,6 @@
           "wordCount": null,
           "title": "한국 사법의 흑역사 추가요! 바이든/날리면 1심 판결",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=105028",
-          "author": "민노씨",
-          "description": "요약 주요 이슈 1. 총선보도 3건 중 1건은 민주당 공천 논란 2. 민주당 공천보도, 노출시간 보도건수 앞질러 3. 민주당 ‘공천 파동’ 프레임 4. 국민의힘 공천 결과 단순중계 방식 ※재명당: 한동훈 비대위원장이 이재명 더불어민주당 대표의 이름을 빌려 ‘재명당’으로 언급하자 언론이 이를 받아쓰기하면서 이슈로 부상함. 5. 윤석열 대통령 총선용 활동 부각 6. 기타 언론사별 주요 이슈 1....\nThe post 민주당 ‘공천’ 보도 국힘보다 2.5배 많았다: 2024 총선 포털뉴스 분석 (2월 넷째 주) appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/105028",
-          "publishedOn": "2024-03-06T02:34:03.000Z",
-          "wordCount": null,
-          "title": "민주당 ‘공천’ 보도 국힘보다 2.5배 많았다: 2024 총선 포털뉴스 분석 (2월 넷째 주)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=105001",
-          "author": "이정환",
-          "description": "건생구팽, 김건희 특검법 끝나자 컷오프가 시작됐다. 조국혁신당 돌풍, 10석 이상도 가능하다. 이재명과 조국의 선거연대. 위성정당 비례만 두 번째, 용혜인 논란. 쟁점과 현안. 의대 증원 신청 3401명. 청년도 여성도 없었다. 다르게 읽기. “내 측근 누가 공천을 받았나.” 수도권과 충청이 스윙 보터. 민주당 호남 민심 이탈도 심상찮다. 더 깊게 읽기. 30대 그룹 사외이사 10명 중 4명이 전관....\nThe post 건생구팽, 김건희 특검법 끝나자 컷오프가 시작됐다: 슬로우레터 3월6일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/105001",
-          "publishedOn": "2024-03-05T21:53:41.000Z",
-          "wordCount": null,
-          "title": "건생구팽, 김건희 특검법 끝나자 컷오프가 시작됐다: 슬로우레터 3월6일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3065,6 +3145,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=594290",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594290/%ea%b8%88%eb%a6%ac-%ec%9d%b8%ed%95%98-%ec%8b%9c%ea%b8%b0",
+          "publishedOn": "2024-04-04T13:09:51.000Z",
+          "wordCount": null,
+          "title": "배런스, 연준 관계자들은 금리 인하 시기를 놓고 긴밀한 줄타기를 하고 있다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594279",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594279/%ed%94%bc%ec%94%a8%eb%94%94%eb%a0%89%ed%8a%b8",
+          "publishedOn": "2024-04-04T09:49:11.000Z",
+          "wordCount": null,
+          "title": "피씨디렉트",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594272",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594272/4-4-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-04-04T03:01:58.000Z",
+          "wordCount": null,
+          "title": "4/4, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=594256",
           "author": "happist",
@@ -3254,36 +3364,6 @@
           "wordCount": null,
           "title": "4분기 크라우드스트라이크 실적을 읽는 월가의 시선",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594098",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594098/23%eb%85%84-4%eb%b6%84%ea%b8%b0-%ec%8b%a4%ec%a0%81-%ec%8b%9c%ec%a6%8c-%ea%b2%b0%ec%82%b0",
-          "publishedOn": "2024-03-06T01:36:38.000Z",
-          "wordCount": null,
-          "title": "배런스,차트로 살펴본 23년 4분기 실적 시즌 결산",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594093",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594093/3-6-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-03-06T00:46:12.000Z",
-          "wordCount": null,
-          "title": "3/6, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=594088",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594088/amd-%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5-%ec%b9%a9-%eb%a7%a4%ec%b6%9c",
-          "publishedOn": "2024-03-05T12:03:16.000Z",
-          "wordCount": null,
-          "title": "바클레이즈, AMD가 엔비디아를 추격하면서 인공지능 칩 매출이 크게 증가 전망",
-          "imageUrl": null
         }
       ]
     },
@@ -3292,6 +3372,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79059",
+          "author": "NewsPeppermint",
+          "description": "얼마 전 아르헨티나에 다녀올 일이 있었습니다. 처음 가보는 나라에 오래 머물지도 않았지만, 현지 화폐로 환전할 때부터 색다른 경험의 연속이었습니다. 아르헨티나 국민은 지난해 말 대선에서 정치 신인인 하비에르 밀레이를 대통령으로 뽑았는데요, 오랫동안 집권한 페론주의 계열 포퓰리즘 정당에 이골이 난 결과라는 분석이 많았습니다. 고질병이라고 부르기도 머쓱할 만큼 만성적인 심각한 인플레이션을 잠재우겠다며, 밀레이 대통령은 강도 높은 개혁안을 앞세워 취임했습니다. 종종 과격하고 극단적인 언사로 ‘아르헨티나의 트럼프’로 불리기도 하는 밀레이 대통령의 취임 첫 100일을 분석한 → 더 보기",
+          "link": "https://newspeppermint.com/2024/04/03/npsp_javiermilei/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_javiermilei",
+          "publishedOn": "2024-04-03T22:59:29.000Z",
+          "wordCount": null,
+          "title": "환율도 제각각, 음식값도 매일 달라지는 ‘메시의 나라’, “다시 위대”해질 수 있을까",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=79039",
           "author": "NewsPeppermint",
