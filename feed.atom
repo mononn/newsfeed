@@ -2,10 +2,261 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-04-08T20:14:48.749Z</updated>
+    <updated>2024-04-09T20:12:28.800Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[The "branch history injection" hardware vulnerability]]></title>
+        <id>https://lwn.net/Articles/969210/</id>
+        <link href="https://lwn.net/Articles/969210/"/>
+        <updated>2024-04-09T19:22:50.000Z</updated>
+        <summary type="html"><![CDATA[The mainline kernel has just received a set of commits mitigating the
+latest x86 hardware vulnerability, known as "branch history injection".
+From this commit:
+
+
+	Branch History Injection (BHI) attacks may allow a malicious
+	application to influence indirect branch prediction in kernel by
+	poisoning the branch history. eIBRS isolates indirect branch
+	targets in ring0.  The BHB can still influence the choice of
+	indirect branch predictor entry, and although branch predictor
+	entries are isolated between modes when eIBRS is enabled, the BHB
+	itself is not isolated between modes.
+
+
+See this commit for
+documentation on the command-line parameter that controls this mitigation.
+There are stable kernel releases (6.8.5,
+6.6.26,
+6.1.85,
+and 5.15.154)
+in the works that also contain the mitigations.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 3.12.3 and 3.13.0a6 released]]></title>
+        <id>https://pythoninsider.blogspot.com/2024/04/python-3123-and-3130a6-released.html</id>
+        <link href="https://pythoninsider.blogspot.com/2024/04/python-3123-and-3130a6-released.html"/>
+        <updated>2024-04-09T19:14:00.003Z</updated>
+        <summary type="html"><![CDATA[It’s time to eclipse the Python 3.11.9 release with two releases, one of which is the very last alpha release of Python 3.13:
+
+ 
+Python 3.12.3
+300+ of the finest commits went into this latest maintenance release 
+of the latest Python version, the most stablest, securest, bugfreeest we
+ could make it.
+
+https://www.python.org/downloads/release/python-3123/
+ 
+
+
+
+Python 3.13.0a6
+What’s that? The last alpha release? Just one more month until 
+feature freeze! Get your features done, get your bugs fixed, let’s get 
+3.13.0 ready for people to actually use! Until then, let’s test with 
+alpha 6. The highlights of 3.13 you ask? Well:
+In the interactive interpreter, exception tracebacks are now colorized by default.
+A preliminary, experimental JIT was added, providing the ground work for significant p…]]></summary>
+        <author>
+            <name>Python Insider</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gemini 1.5 Pro Now Available in 180+ Countries; With Native Audio Understanding, System Instructions, JSON Mode and More]]></title>
+        <id>http://developers.googleblog.com/2024/04/gemini-15-pro-in-public-preview-with-new-features.html</id>
+        <link href="http://developers.googleblog.com/2024/04/gemini-15-pro-in-public-preview-with-new-features.html"/>
+        <updated>2024-04-09T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Jaclyn Konzelmann and Megan Li - Google Labs
+
+
+
+
+
+
+Grab an API key in Google AI Studio, and get started with the Gemini API Cookbook
+Less than two months ago, we made our next-generation Gemini 1.5 Pro model available in Google AI Studio for developers to try out. We’ve been amazed by what the community has been able to debug, create and learn using our groundbreaking 1 million context window.
+Today, we’re making Gemini 1.5 Pro available in 180+ countries via the Gemini API in public preview, with a first-ever native audio (speech) understanding capability and a new File API to make it easy to handle files. We’re also launching new features like system instructions and JSON mode to give developers more control over the model’s output. Lastly, we’re releasing our next generation t…]]></summary>
+        <author>
+            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] The first Linaro Forum for Arm Linux kernel topics]]></title>
+        <id>https://lwn.net/Articles/969031/</id>
+        <link href="https://lwn.net/Articles/969031/"/>
+        <updated>2024-04-09T14:50:28.000Z</updated>
+        <summary type="html"><![CDATA[On February 20, Linaro held the initial
+get-together for what is intended to be a regular Linux Kernel Forum for
+the Arm-focused kernel community. This gathering aims to convene
+approximately a few weeks prior to the merge window opening and prior to
+the release of the current kernel version under development.  Topics
+covered in the first gathering include preparing 64-bit Arm kernels for
+low-end embedded systems, memory errors and Compute Express
+Link (CXL), devlink objectives, and scheduler integration.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenSSL 3.3.0 released]]></title>
+        <id>https://lwn.net/Articles/969172/</id>
+        <link href="https://lwn.net/Articles/969172/"/>
+        <updated>2024-04-09T14:18:38.000Z</updated>
+        <summary type="html"><![CDATA[Version 3.3.0 of the OpenSSL SSL/TLS implementation has been released.
+Changes include a number of additions to its QUIC protocol support, some
+year-2038 improvements for 32-bit systems, and a lot of cryptographic
+features with descriptions like "Added a new EVP_DigestSqueeze()
+API. This allows SHAKE to squeeze multiple times with different output
+sizes."  See the release
+notes for details.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Diagnosing workqueues]]></title>
+        <id>https://lwn.net/Articles/967016/</id>
+        <link href="https://lwn.net/Articles/967016/"/>
+        <updated>2024-04-09T13:51:46.000Z</updated>
+        <summary type="html"><![CDATA[There are many mechanisms for deferred work in the Linux kernel. One of them,
+
+workqueues, has seen increasing use as part of
+the move away from software interrupts. Alison Chaiken gave a talk
+at SCALE
+about how they compare to software interrupts, the new challenges they pose for
+system administrators, and what tools are available to
+kernel developers wishing to diagnose problems with workqueues as they become
+increasingly prevalent.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Tuesday]]></title>
+        <id>https://lwn.net/Articles/969141/</id>
+        <link href="https://lwn.net/Articles/969141/"/>
+        <updated>2024-04-09T13:25:51.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (expat), Oracle (less and nodejs:20), Slackware (libarchive), SUSE (kubernetes1.23, nghttp2, qt6-base, and util-linux), and Ubuntu (python-django).]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Meet the inaugural cohort of our Google for Startups Accelerator: AI First North America]]></title>
+        <id>http://developers.googleblog.com/2024/04/meet-google-for-startups-accelerator-inaugural-cohort-ai-first-north-america.html</id>
+        <link href="http://developers.googleblog.com/2024/04/meet-google-for-startups-accelerator-inaugural-cohort-ai-first-north-america.html"/>
+        <updated>2024-04-09T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Matt Ridenour, Head of Startup Developer Ecosystem - USA
+
+
+
+
+
+
+Startups are at the forefront of developing solutions for some of humanity's most pressing challenges by using AI, driving breakthroughs across industries from healthcare to cybersecurity.
+To help AI-focused startups scale quickly while building responsibly, we’re thrilled to introduce the inaugural class of the Google for Startups Accelerator: AI-First program in North America. This new program is for startups building AI solutions based in the U.S. and Canada. This is the first of several AI-focused programs we'll offer throughout the year in Europe, India and Brazil.
+This equity-free program provides 10 weeks of hands-on mentorship and technical project support to startups using AI in their core service or product.…]]></summary>
+        <author>
+            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gemma Family Expands with Models Tailored for Developers and Researchers]]></title>
+        <id>http://developers.googleblog.com/2024/04/gemma-family-expands.html</id>
+        <link href="http://developers.googleblog.com/2024/04/gemma-family-expands.html"/>
+        <updated>2024-04-09T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Posted by Tris Warkentin – Director, Product Management and Jane Fine - Senior Product Manager
+
+
+
+
+
+
+In February we announced Gemma, our family of lightweight, state-of-the-art open models built from the same research and technology used to create the Gemini models. The community's incredible response – including impressive fine-tuned variants, Kaggle notebooks, integration into tools and services, recipes for RAG using databases like MongoDB, and lots more – has been truly inspiring.
+Today, we're excited to announce our first round of additions to the Gemma family, expanding the possibilities for ML developers to innovate responsibly: CodeGemma for code completion and generation tasks as well as instruction following, and RecurrentGemma, an efficiency-optimized architecture for research e…]]></summary>
+        <author>
+            <name>Google for Developers Blog - News about Web, Mobile, AI and Cloud</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Green Hills Software, ST & Cetitec offer platform for SDVs]]></title>
+        <id>https://www.embedded.com/?p=4481903</id>
+        <link href="https://www.embedded.com/green-hills-software-st-cetitec-offer-platform-for-sdvs/"/>
+        <updated>2024-04-09T06:31:09.000Z</updated>
+        <summary type="html"><![CDATA[Collaboration enables integrated solution to manage communication for ECU consolidation in zonal controllers for software-defined vehicle (SDV) architectures.
+The post Green Hills Software, ST & Cetitec offer platform for SDVs appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[“비싼 게 정확하다”, 김어준의 여론조사 실험은 성공할까.]]></title>
+        <id>https://slownews.kr/?p=106684</id>
+        <link href="https://slownews.kr/106684"/>
+        <updated>2024-04-09T06:16:29.000Z</updated>
+        <summary type="html"><![CDATA[[슬로우리포트] “통계는 물량이 깡패”, 여론조사꽃의 389번 조사가 의미하는 것. “비싼 게 정확하다.” 김어준(딴지일보 총수)이 만든 여론조사 업체 여론조사꽃은 물량 공세로 선거 판을 주도하고 있다. 이게 왜 중요한가. 관전 포인트. 어떻게 다른가. 질문이 달랐다. 진보-보수 비중도 달랐다. “이길 수가 없다.” “비싼 게 정확하다”, 물량이 깡패”라는 주장은 맞을까. 여론조사꽃의 강점. 서울 동작을과 부산 사하을의 경우. 더 깊게...
+The post “비싼 게 정확하다”, 김어준의 여론조사 실험은 성공할까. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[embedded world: Altera optimizes FPGAs for edge AI]]></title>
+        <id>https://www.embedded.com/?p=4481898</id>
+        <link href="https://www.embedded.com/embedded-world-altera-optimizes-fpgas-for-edge-ai/"/>
+        <updated>2024-04-09T06:05:46.000Z</updated>
+        <summary type="html"><![CDATA[Agilex 5 FPGAs with AI infused into the fabric offer a high level of integration, low latency and improved computing capabilities for intelligent edge applications, according to Intel.
+The post embedded world: Altera optimizes FPGAs for edge AI appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Nitin Dahad</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[홀로코스트, 야만의 시대를 만난 우정]]></title>
+        <id>https://slownews.kr/?p=106667</id>
+        <link href="https://slownews.kr/106667"/>
+        <updated>2024-04-09T03:34:46.000Z</updated>
+        <summary type="html"><![CDATA[[마냐의 북라이딩] 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, ‘정부가 없다’ 저자 정혜승의 종횡무진 독서 탐험기. 사람에게 반하고, 사귀어 가는 것은 잊지 못할 순간들의 연속이다. 유대인 소년 한스가 귀족 전학생 콘라딘과 우정을 쌓기 시작하는 순간이 가장 설레는 대목이다. 오랜만에 마음을 흔드는 소설이다. 우정, 광채로 세상을 감싸다 “나는 그날 콘라딘이 내게 무슨 말을 했고 내가...
+The post 홀로코스트, 야만의 시대를 만난 우정 appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>정혜승</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] ‘대통령 건강 문제’ 외면하는 민주당은 금기를 깰 수 있을까?]]></title>
+        <id>https://newspeppermint.com/?p=78731</id>
+        <link href="https://newspeppermint.com/2024/04/08/npsp_bidenage/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_bidenage"/>
+        <updated>2024-04-08T22:59:04.000Z</updated>
+        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 2월 19일 스프에 쓴 글입니다. 백악관 기밀문서를 불법으로 유출해 가지고 있던 혐의로 검찰의 수사를 받은 미국 대통령은 도널드 트럼프뿐이 아닙니다. 조 바이든 대통령도 부통령 시절 접근할 수 있던 문서 가운데 들고 나오지 말았어야 할 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[역대급 총선, 3가지 시나리오와 4명의 운명: 슬로우레터 4월9일.]]></title>
+        <id>https://slownews.kr/?p=106636</id>
+        <link href="https://slownews.kr/106636"/>
+        <updated>2024-04-08T22:07:42.000Z</updated>
+        <summary type="html"><![CDATA[의대 증원, 말이 안 맞는다. 역대급 부자감세 성적표, 총선 뒤로 미뤘나. 키워드는 민주당 단독 과반. 3가지 시나리오. 쟁점과 현안. 네 명의 운명. 차기 대권이 걸렸다. 삼겹살 대신 한우를. “역사적 진실”, 이재명의 페이스북 글 논란. 의사들이 희생하라, 조선일보의 프레임. ‘이대남’과 ‘육대남’이 가른다. 더 깊게 읽기. 선거 보조금 두 번 받는 이유. 대통령실의 매파와 비둘기파. 다르게 읽기....
+The post 역대급 총선, 3가지 시나리오와 4명의 운명: 슬로우레터 4월9일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DIY Wood RFID Business Cards]]></title>
+        <id>http://mcuoneclipse.com/?p=40340</id>
+        <link href="https://mcuoneclipse.com/2024/04/08/diy-wood-rfid-business-cards/"/>
+        <updated>2024-04-08T21:33:00.000Z</updated>
+        <summary type="html"><![CDATA[This post discusses creating custom wood business cards with integrated RFID chips using a laser cutter, plywood, veneer, and NXP NTAG213 RFID stickers. It explains the components, programming the RFID, and provides links to necessary resources. The writer presents it as an easy and customizable option, suitable for modern smartphones. Continue reading →]]></summary>
+        <author>
+            <name>Erich Styger</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Rivendell v4.2.0 released]]></title>
         <id>https://lwn.net/Articles/969046/</id>
@@ -4127,142 +4378,6 @@ This post introduces the...]]></summary>
         <updated>2024-03-11T12:09:55.000Z</updated>
         <author>
             <name>ACM Queue - All Queue Content</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[이 정도면 되었다: 욕먹을 줄 알면서 [파묘] 칼럼 쓴 이유]]></title>
-        <id>https://slownews.kr/?p=105193</id>
-        <link href="https://slownews.kr/105193"/>
-        <updated>2024-03-11T03:49:15.000Z</updated>
-        <summary type="html"><![CDATA[‘나는 영화 파묘가 불편했다’(슬로우뉴스 제목 ‘쇠말뚝은 없다’)는 글을 개인 소셜미디어에 올리고 나서 욕을 많이 먹었다. 물론 공감과 격려도 조금은 있었다. 이쪽저쪽 모두에게 고맙다는 말씀을 올린다. 돌이켜보니 좀더 정확하게 쓸 수도 있었는데 마음이 급하다 보니 그렇게 하지 못한 구석도 있었다. 다 내 잘못이고 내 탓이다. 반성(反省)이라는 말뜻 그대로 많이 돌아보며 살펴보고 있다. 731부대는? 기록 없는 지배는...
-The post 이 정도면 되었다: 욕먹을 줄 알면서 [파묘] 칼럼 쓴 이유 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>김훤주</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sendbird is hiring Interns for AI Business Strategy team]]></title>
-        <id>https://kimchihill.com/?p=2761</id>
-        <link href="https://kimchihill.com/2024/03/11/sendbird-is-hiring-interns-for-ai-business-strategy-team/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=sendbird-is-hiring-interns-for-ai-business-strategy-team"/>
-        <updated>2024-03-11T02:51:07.000Z</updated>
-        <summary type="html"><![CDATA[Silicon Valley unicorn startup Sendbird is looking for 2 positions: 1) short-term (3 month) part-time intern and 2) full-time (3 month) intern, for its AI Business Strategy. This is an opportunity to experience firsthand how a global unicorn captures and executes opportunities in the Gen AI trend. What You Will Do Who You Are Bonus PointsContinue reading "Sendbird is hiring Interns for AI Business Strategy team"
-Sendbird is hiring Interns for AI Business Strategy team appeared first on Kimchi hill.]]></summary>
-        <author>
-            <name>kimchihill</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“이태원 특별법? 나는 핼러윈 특별법이라고 말할 것” 손형기 선거방송심의위원(TV조선 추천)의 뚝심?]]></title>
-        <id>https://slownews.kr/?p=105234</id>
-        <link href="https://slownews.kr/105234"/>
-        <updated>2024-03-11T02:50:07.000Z</updated>
-        <summary type="html"><![CDATA[2024년 3월 7일 제22대 국회의원선거 제9차 선거방송심의위원회 회의가 열렸습니다. 이날 안건은 총 9건으로 별도 의견진술, 재심청구 등은 없었습니다. 일신상 이유로 사퇴를 표명한 최창근 부위원장(한국방송기자클럽 추천)은 제8차 회의와 마찬가지로 불참하여 이날도 8명이 의결에 참여했습니다. 심의한 9건 대상과 결과는 아래 표와 같습니다. 9건 중 1건(대전MBC)은 의결보류, 2건은 법정제재를 전제로 한 ‘의견진술’이 결정되었습니다. 나머지 6건 중 각 3건씩...
-The post “이태원 특별법? 나는 핼러윈 특별법이라고 말할 것” 손형기 선거방송심의위원(TV조선 추천)의 뚝심? appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What is known about software effort estimation in 2024]]></title>
-        <id>https://shape-of-code.com/?p=8636</id>
-        <link href="https://shape-of-code.com/2024/03/10/what-is-known-about-software-effort-estimation-in-2024/"/>
-        <updated>2024-03-10T23:18:40.000Z</updated>
-        <summary type="html"><![CDATA[It’s three years since my 2021 post summarizing what I knew about estimating software tasks. While no major new public datasets have appeared (there have been smaller finds), I have talked to lots of developers/managers about the findings from the 2019/2021 data avalanche, and some data dots have been connected. A common response from managers, […]]]></summary>
-        <author>
-            <name>Derek Jones</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“박근혜 이전 수준, 한국의 민주주의가 후퇴하고 있다”: 슬로우레터 3월11일.]]></title>
-        <id>https://slownews.kr/?p=105210</id>
-        <link href="https://slownews.kr/105210"/>
-        <updated>2024-03-10T22:08:28.000Z</updated>
-        <summary type="html"><![CDATA[한 달 전 여론조사 잘 안 맞는 이유는? 보수 과표집 논란, 어떻게 볼까. 서울과 경기도는 달랐다. 언더독이 승부 가른다. ‘스윙보터’의 전쟁이다. 쟁점과 현안. 세 가지가 없는 선거. 민주당 위성정당 시민사회 비례 확정. 민주당 선대위는 이재명+이해찬+김부겸. 권은희의 양보. 다르게 읽기. 0명과 2000명 사이. 수가 타령으로 신뢰 얻겠나. 더 깊게 읽기. “한국의 민주주의가 후퇴하고 있다.” 피의자 이종섭...
-The post “박근혜 이전 수준, 한국의 민주주의가 후퇴하고 있다”: 슬로우레터 3월11일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The 6.8 kernel has been released]]></title>
-        <id>https://lwn.net/Articles/964784/</id>
-        <link href="https://lwn.net/Articles/964784/"/>
-        <updated>2024-03-10T21:37:11.000Z</updated>
-        <summary type="html"><![CDATA[Linus has released the 6.8 kernel.
-
-
-	So it took a bit longer for the commit counts to come down this
-	release than I tend to prefer, but a lot of that seemed to be about
-	various selftest updates (networking in particular) rather than any
-	actual real sign of problems. And the last two weeks have been
-	pretty quiet, so I feel there's no real reason to delay 6.8.
-
-
-Significant changes in this release include
-the deadline servers scheduling feature,
-support for memory-management
-auto-tuning in DAMON,
-the large anonymous folios feature,
-the kernel
-samepage merging advisor,
-the ability to prevent writes to block
-devices containing mounted filesystems,
-the listmount() and
-statmount() system calls,
-the first
-device driver written in Rust,
-the removal
-of the (never finished) bpfilter
-packet-filtering system,
-three new system calls for managing Linux
-security modules,
-the BPF token mechanism for fine-grained
-control over BPF permissions,
-support for data-type profiling in the
-perf tool,
-guest-first memory for KVM virtualization,
-the Intel Xe graphics driver,
-and a lot more.  See the LWN merge-window summaries
-(part 1,
-part 2) for more information.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Chiplets are the latest buzz, but many challenges lie ahead]]></title>
-        <id>https://www.embedded.com/?p=4481613</id>
-        <link href="https://www.embedded.com/chiplets-are-the-latest-buzz-but-many-challenges-lie-ahead/"/>
-        <updated>2024-03-10T18:52:42.000Z</updated>
-        <summary type="html"><![CDATA[With lots of hype on chiplets, we look at the state of play through interviews with several players in the ecosystem: Synopsys, Anysys, Intel, Samsung, and Bosch, to understand the opportunities, the status and the challenges ahead.
-The post Chiplets are the latest buzz, but many challenges lie ahead appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Huang: IRIS (Infra-Red, in situ) Project Updates]]></title>
-        <id>https://lwn.net/Articles/964956/</id>
-        <link href="https://lwn.net/Articles/964956/"/>
-        <updated>2024-03-10T10:24:53.000Z</updated>
-        <summary type="html"><![CDATA[Andrew 'bunnie' Huang provides an update on
-his IRIS infrared chip-scanning project as the starting point for a
-detailed summary on how chip customers can detect forgeries and
-modifications in general.
-
-
-	The technique works because although silicon looks opaque at
-	visible light, it is transparent starting at near-infrared
-	wavelengths (roughly 1000 nm and longer). Today's commodity optics
-	and CMOS cameras are actually capable of working with lights at
-	this wavelength; thus, IRIS is a low-cost and effective technique
-	for confirming the construction of chips down to block level. For
-	example, IRIS can readily help determine if a chip has the correct
-	amount of RAM, number of CPU cores, peripherals, bond pads,
-	etc. This level of verification would be sufficient to deter most
-	counterfeits or substitutions.]]></summary>
-        <author>
-            <name>corbet</name>
         </author>
     </entry>
     <entry>
