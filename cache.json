@@ -112,7 +112,18 @@
       "title": "Architectures and Processors blog",
       "feedUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/rss",
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
-      "articles": []
+      "articles": [
+        {
+          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:eb3ed8eb-6707-4bc1-8c1e-fb84f93c38a4",
+          "author": "Ker Liu",
+          "description": "In-depth analysis of what the PMU of L2D_CACHE_WR counts on the Neoverse N2 server.(read more)",
+          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/deep-dive-pmu-value-l2d-cache-wr-neoverse-n2-server",
+          "publishedOn": "2024-04-15T09:00:00.000Z",
+          "wordCount": null,
+          "title": "Deep dive into the PMU value of L2D_CACHE_WR on the Neoverse N2 server",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "CPUU의 Daydreamin&#039;",
@@ -148,6 +159,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "87f48fb2-1046-45cd-9a0a-862a19513c5a",
+          "author": "Mohammad Ahmad",
+          "description": "As of Red Hat build of Keycloak 22, creating a highly available Keycloak solution can introduce operational complexity, as well as performance issues. \nFor example, to have multiple instances of Keycloak that share the same session information, a common cache that is available to all Keycloak instances is a must (in this case, Red Hat Data Grid common to two Red Hat OpenShift clusters) as well a common database (that is highly available and/or fault tolerant).\nInstead, this solution avoids a common cache or database and utilizes multiple single instances that all use the same source for user authentication (Active Directory as LDAP). To maintain session information, the load balancer will only point to the first server in the list. Should there be a failover, all sessions get terminated, a…",
+          "link": "https://developers.redhat.com/articles/2024/04/15/red-hat-build-keycloak-high-availability-simplified-approach",
+          "publishedOn": "2024-04-15T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Red Hat build of Keycloak high availability: A simplified approach",
+          "imageUrl": null
+        },
+        {
+          "id": "5a535088-5c6e-485d-b978-b368d3ba9679",
+          "author": "Himanshu Yadav",
+          "description": "In today's dynamic IT landscape, efficient management of server infrastructure is paramount. Regular patching is essential for maintaining security, stability, and compliance across enterprise environments. Red Hat Enterprise Linux (RHEL) servers are widely used in business-critical operations, making timely patching a crucial task. Manual patching can be time-consuming and error-prone, especially for large server deployments. In this technical blog, we'll explore how to streamline patch updates of SELinux on RHEL servers using Red Hat Ansible Automation Platform 2.4.\nPrerequisites\nThis article requires the following prerequisites:\nInstalled Ansible Automation Platform.\nOne or more RHEL machines. \nBasic knowledge of RHEL.\nBasic knowledge of Ansible.\nA no-cost Red Hat Developer Subscription…",
+          "link": "https://developers.redhat.com/articles/2024/04/15/patch-updates-rhel-servers-ansible-automation-platform-24",
+          "publishedOn": "2024-04-15T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Patch updates on RHEL servers with Ansible Automation Platform 2.4",
+          "imageUrl": null
+        },
         {
           "id": "b91f5368-3214-4dbb-9122-d40b8287c1cc",
           "author": "Yashwanth Maheshwaram",
@@ -1170,6 +1201,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/969919/",
+          "author": "corbet",
+          "description": "The Open Source Security Foundation and the OpenJS Foundation have jointly\nposted a\nwarning about XZ-like social-engineering attacks after OpenJS was\nseemingly targeted.\n\n\n\tThe OpenJS Foundation Cross Project Council received a suspicious\n\tseries of emails with similar messages, bearing different names and\n\toverlapping GitHub-associated emails. These emails implored OpenJS\n\tto take action to update one of its popular JavaScript projects to\n\t\"address any critical vulnerabilities,\" yet cited no specifics. The\n\temail author(s) wanted OpenJS to designate them as a new maintainer\n\tof the project despite having little prior involvement.",
+          "link": "https://lwn.net/Articles/969919/",
+          "publishedOn": "2024-04-15T16:48:17.000Z",
+          "wordCount": 334,
+          "title": "OpenSSF and OpenJS warn about social-engineering attacks",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/969185/",
+          "author": "daroc",
+          "description": "Kumar Kartikeya Dwivedi has been working to add support for exceptions to BPF\nsince mid-2023. In July, Dwivedi posted\n\nthe first patch set in this effort, which adds support for basic stack unwinding.\nIn February 2024, he posted\n\nthe second patch set\naimed at letting the kernel release resources held by the BPF program when an\nexception occurs. This makes exceptions usable in many more contexts.",
+          "link": "https://lwn.net/Articles/969185/",
+          "publishedOn": "2024-04-15T14:56:31.000Z",
+          "wordCount": null,
+          "title": "[$] Cleaning up after BPF exceptions",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/969873/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (bind, bind and dhcp, bind9.16, gnutls, httpd:2.4/mod_http2, squid:4, and unbound), Debian (kernel, trafficserver, and xorg-server), Fedora (chromium, kernel, libopenmpt, and rust-h2), Mageia (apache-mod_jk, golang, indent, openssl, perl-HTTP-Body, php, rear, ruby-rack, squid, varnish, and xfig), Oracle (bind, squid, unbound, and X.Org server), Red Hat (bind and dhcp and unbound), Slackware (less and php), SUSE (gnutls, python-Pillow, webkit2gtk3, xen, xorg-x11-server, and xwayland), and Ubuntu (yard).",
+          "link": "https://lwn.net/Articles/969873/",
+          "publishedOn": "2024-04-15T13:42:42.000Z",
+          "wordCount": 439,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/969791/",
           "author": "corbet",
@@ -2997,6 +3058,36 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=594414",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594414/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ed%95%98%eb%9d%bd%ea%b3%bc-sp-500-%ec%a7%80%ec%88%98-%ed%8f%ad%eb%9d%bd",
+          "publishedOn": "2024-04-15T12:22:18.000Z",
+          "wordCount": null,
+          "title": "엔비디아 주가 하락은 S&P 500 지수 폭락으로 이어질 가능성",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594408",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594408/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ea%b1%b0%ed%92%88",
+          "publishedOn": "2024-04-15T11:30:46.000Z",
+          "wordCount": null,
+          "title": "Motley Fool, 엔비디아 주가가 거품이 아닌 이유",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594395",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594395/%ea%b8%b0%ec%97%85%ec%9d%80%ed%96%89-%eb%ac%b8%ed%99%94%ec%bd%98%ed%85%90%ec%b8%a0-%ea%b8%88%ec%9c%b5%eb%b6%80-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%84%b1%ea%b3%b5-%ec%9a%94%ec%9d%b8",
+          "publishedOn": "2024-04-15T03:27:08.000Z",
+          "wordCount": null,
+          "title": "영화 파묘 투자 성공한 기업은행 문화콘텐츠 금융부의 콘텐츠 성공 요인을 살펴 보자",
+          "imageUrl": null
+        },
+        {
           "id": "https://happist.com/?p=594383",
           "author": "happist",
           "description": "",
@@ -3224,6 +3315,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=79136",
+          "author": "NewsPeppermint",
+          "description": "로스 더우댓(Ross Douthat)은 지난해 말 대한민국은 사라지고 있는가?라는 칼럼을 쓴 뉴욕타임스 칼럼니스트입니다. 저출생 현상이 서구 사회를 비롯한 많은 선진국에서 나타나다 보니, 기저에 자리한 문화적, 구조적인 원인을 분석하고 해법을 모색하는 글이 종종 올라오는데, 지난 5일에 더우댓이 새로 칼럼을 한 편 썼습니다. 그보다 나흘 전에 뉴욕타임스가 이탈리아 북부의 모범 사례를 소개하며 쓴 기사를 소재로 삼아 쓴 칼럼입니다. 더우댓은 스마트폰이 “실전 육아”에 도움이 될 수 있는 효과를 인정하면서도 더 중요한 건 아이를 낳고 기르기 쉽게 여기게 장려하는 → 더 보기",
+          "link": "https://newspeppermint.com/2024/04/14/npsp_birthdearth/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_birthdearth",
+          "publishedOn": "2024-04-15T03:45:38.000Z",
+          "wordCount": null,
+          "title": "계속 심각하니 어느새 간과하는 걸까, 저출생 문제",
+          "imageUrl": null
+        },
+        {
           "id": "https://newspeppermint.com/?p=79102",
           "author": "NewsPeppermint",
           "description": "한국의 총선을 맞아 정치에서, 특히 요즘처럼 정치적 양극화가 심한 상황에서 상대방을 비판하기 전에 나와 우리 편의 한계와 흠결을 성찰하는 자기 객관화가 가능할까 짚어본 뉴욕타임스 칼럼이 올라왔습니다. 칼럼을 번역하고, 선거에 임하는 민주 시민의 자세라는 좀 거창한 주제에 관해 살을 붙여 해설을 썼습니다. 인종에 따라, 출신 국가에 따라, 학력 수준이나 거주 지역(도시냐 시골이냐)에 따라 지지 정당과 정치 성향이 어느 정도 정해졌다고 해도 과언이 아닌 미국에 비해 우리나라는 이른바 정체성 정치가 잘 작동하지 → 더 보기",
@@ -3352,16 +3453,6 @@
           "wordCount": null,
           "title": "여긴 굶주리고 저긴 식량 남고…이 또한 ‘정치의 실패’다",
           "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78582",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 1월 24일 스프에 쓴 글입니다. “미국은 이민자의 나라”라는 말은 식상하지만, 엄연한 사실이기도 합니다. ‘원래 미국인’이란 표현은 아메리카 원주민이 아닌 한 성립하지 않습니다. 당장 조 바이든 대통령이 아일랜드계 가톨릭 집안에서 태어났고, 도널드 트럼프 전 대통령도 → 더 보기",
-          "link": "https://newspeppermint.com/2024/03/16/npsp_2024electionimmigration/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_2024electionimmigration",
-          "publishedOn": "2024-03-16T22:59:59.000Z",
-          "wordCount": 2521,
-          "title": "[뉴페@스프] 몰려드는 이민자들, 미국 정치권이 해결할 수 있을까",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },
