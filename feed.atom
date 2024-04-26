@@ -2,10 +2,143 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-04-25T20:12:41.646Z</updated>
+    <updated>2024-04-26T20:13:43.369Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Giving Rust a chance for in-kernel codecs]]></title>
+        <id>https://lwn.net/Articles/970565/</id>
+        <link href="https://lwn.net/Articles/970565/"/>
+        <updated>2024-04-26T15:34:01.000Z</updated>
+        <summary type="html"><![CDATA[Video playback is undeniably one of the most important features in modern
+consumer devices. Yet, surprisingly, users are by and large unaware of the
+intricate engineering involved in the compression and decompression of
+video data, with codecs being left to find a delicate balance between image
+quality, bandwidth, and power consumption. In response to constant
+performance pressure, video codecs have become complex and hardware
+implementations are now common, but programming these devices is becoming
+increasingly difficult and fraught with opportunities for exploitation. I
+hope to convey how Rust can help fix this problem.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Support for the TSO memory model on Arm CPUs]]></title>
+        <id>https://lwn.net/Articles/970907/</id>
+        <link href="https://lwn.net/Articles/970907/"/>
+        <updated>2024-04-26T13:59:48.000Z</updated>
+        <summary type="html"><![CDATA[At the CPU level, a memory model describes, among other things, the amount
+of freedom the processor has to reorder memory operations.  If low-level
+code does not take the memory model into account, unpleasant surprises are
+likely to follow.  Naturally, different CPUs offer different memory models,
+complicating the portability of certain types of concurrent software.  To
+make life easier, some Arm CPUs offer the ability to emulate the x86 memory
+model, but efforts to make that feature available in the kernel are running
+into opposition.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Friday]]></title>
+        <id>https://lwn.net/Articles/971289/</id>
+        <link href="https://lwn.net/Articles/971289/"/>
+        <updated>2024-04-26T13:52:54.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (knot-resolver, pdns-recursor, and putty), Fedora (xen), Mageia (editorconfig-core-c, glibc, mbedtls, webkit2, and wireshark), Oracle (buildah), Red Hat (buildah and yajl), Slackware (libarchive), SUSE (dcmtk, openCryptoki, php7, php74, php8, python-gunicorn, python-idna, qemu, and thunderbird), and Ubuntu (cryptojs, freerdp2, nghttp2, and zabbix).]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[뉴진스 쟁탈전: 엄마 매니저 vs. 거대 IP 비즈니스]]></title>
+        <id>https://slownews.kr/?p=107845</id>
+        <link href="https://slownews.kr/107845"/>
+        <updated>2024-04-26T12:11:44.000Z</updated>
+        <summary type="html"><![CDATA[기자회견이라는 ‘쇼’ 기자회견장에 자주 가본 사람은 대충 알 수 있는데, 기자 회견 자체가 한편의 잘 기획된 ‘쇼’에 가깝다는 사실 말이다. 아주 잘 정리된 보도자료는 일종의 ‘기본 시나리오’이고, 발표자는 그 틀 안에서 최대한 정중하게 행동하는 게 프로토콜이다. 보통 ‘홍보 전문가’라고 하면 이 과정을 매끄럽게 정리하고 진행하는 게 바로 전문성의 바로미터다. 대기업에 가까워질수록 그 쇼의 강도가 세지고...
+The post 뉴진스 쟁탈전: 엄마 매니저 vs. 거대 IP 비즈니스 appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>정호재</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Create a Red Hat OpenShift AI environment]]></title>
+        <id>58c8c5ed-8551-4c77-a9d5-f348390db450</id>
+        <link href="https://developers.redhat.com/articles/2024/04/26/create-red-hat-openshift-ai-environment"/>
+        <updated>2024-04-26T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Red Hat OpenShift AI combines the scalability and flexibility of containerization with the capabilities of machine learning and data analytics. With Red Hat OpenShift AI, data scientists and developers can efficiently collaborate, deploy, and manage their models and applications in a secure and streamlined environment. Snorkel is an open source Python library for programmatically building training datasets without manual labeling. It was created in 2017 to support reproducibility of early research papers on programmatic labeling and weak supervision.  
+In this tutorial, you will learn how to create an OpenShift AI environment and walk through 2 Snorkel tutorials provided by the Snorkel open source library, one for data labeling and for information extraction. This tutorial uses the Snorkel…]]></summary>
+        <author>
+            <name>Kaitlyn Abdo, Nicholas Schuetz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to share secrets across Red Hat OpenShift projects]]></title>
+        <id>130c8280-e342-447d-9398-87d0da97d07e</id>
+        <link href="https://developers.redhat.com/articles/2024/04/26/how-share-secrets-across-red-hat-openshift-projects"/>
+        <updated>2024-04-26T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[With the Red Hat OpenShift 4.15 release, the shared resource CSI Driver operator feature (in Tech Preview) allows for sharing secrets across namespaces. This addresses a common developer request, enabling the creation of secrets in one place and seamless sharing across projects. This is particularly handy for efficiently managing frequently accessed services like Messaging layer, Databases, and Registries.
+In this article, we'll dive into the technical aspects of leveraging this feature, optimizing your OpenShift workflow for enhanced secret management. We will walk through a simple Spring Boot example, which will read a secret from a mount, and display the contents. This secret will be created as a sharedSecret on another namespace.
+Prerequisites
+As a cluster admin, to enable Tech Preview…]]></summary>
+        <author>
+            <name>Bharathi Tenneti</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1분기 메타 실적을 읽는 월가의 시선, 테타투자 급증은 리더쉽 강화화할 것, 하락시 매수]]></title>
+        <id>https://happist.com/?p=594620</id>
+        <link href="https://happist.com/594620/1%eb%b6%84%ea%b8%b0-%eb%a9%94%ed%83%80-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80"/>
+        <updated>2024-04-26T01:44:45.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Secure Connected Motion Control with Analog Devices]]></title>
+        <id>https://www.embedded.com/?p=4482148</id>
+        <link href="https://www.embedded.com/secure-connected-motion-control-with-analog-devices/"/>
+        <updated>2024-04-26T00:54:52.000Z</updated>
+        <summary type="html"><![CDATA[The Secure Connection Motion Control Platform leverages Lattice Semiconductor’s CertusPro-NX FPGA for closed-loop motor control. Analog Devices’ Industrial Ethernet connectivity ICs complement this by enabling...
+The post Secure Connected Motion Control with Analog Devices appeared first on Embedded.com.]]></summary>
+        <author>
+            <name>Analog Devices</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] 경합지 잡긴 잡아야 하는데… 바이든의 딜레마, 돌파구 있을까]]></title>
+        <id>https://newspeppermint.com/?p=78823</id>
+        <link href="https://newspeppermint.com/2024/04/25/npsp_michiganevchina/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_michiganevchina"/>
+        <updated>2024-04-25T22:59:00.000Z</updated>
+        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 3월 6일 스프에 쓴 글입니다. 오는 11월 미국 대선에서는 경합주의 표심이 승패를 가르는 분수령이 될 거란 이야기를 여러 매체를 통해 많이 접하셨을 겁니다. 미국 대선은 주별로 표를 집계해 한 표라도 더 많이 받은 후보가 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[어차피 질 선거, 한동훈의 셀카 놀이가 의도된 전략이었다면?: 슬로우레터 4월26일.]]></title>
+        <id>https://slownews.kr/?p=107797</id>
+        <link href="https://slownews.kr/107797"/>
+        <updated>2024-04-25T22:07:05.000Z</updated>
+        <summary type="html"><![CDATA[윤석열-이재명 면담 한 발짝도 못 나갔다. 국민의힘에 반격이 있을까. “이게 다 기자회견을 안 해서다.” 불효자는 상속 못 받는다. 맥락과 통찰. 돈 풀기 없이 성장했다고? 3고 위기는 이제부터다. 쟁점과 현안. 대통령 격노? 국민들이 어떻게 봤겠나. 이재명과 조국의 고량주 회동. 더 깊게 읽기. ‘입틀막’ 방송심의, 망치를 들면 모든 게 못으로 보인다. 다르게 읽기. 국민연금 개혁, 다음 국회로...
+The post 어차피 질 선거, 한동훈의 셀카 놀이가 의도된 전략이었다면?: 슬로우레터 4월26일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2024 Embedded Online Conference's Schedule]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1660.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1660.php"/>
+        <updated>2024-04-25T18:47:54.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the 2024 Embedded Online Conference! Like with previous years, this year's event will be a mix of pre-recorded on-demand sessions and live Zoom sessions. We've carefully curated the schedule to ensure that you have access to a wealth of valuable content throughout the week.
+
+Most talks will be released on-demand, while most workshops and keynotes will be done live on Zoom....]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] Python JIT stabilization]]></title>
         <id>https://lwn.net/Articles/970397/</id>
@@ -153,6 +286,20 @@ There was a young...]]></summary>
         <summary type="html"><![CDATA[The LWN.net Weekly Edition for April 25, 2024 is available.]]></summary>
         <author>
             <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Standout Exhibits at Embedded World 2024]]></title>
+        <id>https://interrupt.memfault.com/blog/embedded-world-2024</id>
+        <link href="https://interrupt.memfault.com/blog/embedded-world-2024"/>
+        <updated>2024-04-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this post, I will share the technologies I saw at Embedded World 2024 that I
+was most impressed by. I was lucky to have plenty of time to walk from booth to
+booth, and had some fantastic conversations that I hope you will find
+interesting.
+Continue reading…]]></summary>
+        <author>
+            <name>Interrupt</name>
         </author>
     </entry>
     <entry>
@@ -4315,157 +4462,6 @@ In the previous blog post (Getting Started With CUDA C on Jetson Nvidia: Hello C
 The post 갑작스러운 버스 파업이요? 실은 총선에 밀려 구석에 처박혔죠 appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>강형철</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AI 개발자 Devin 소개를 보고 느낀 점]]></title>
-        <id>http://subokim.wordpress.com/?p=13359</id>
-        <link href="https://subokim.wordpress.com/2024/03/28/devins/"/>
-        <updated>2024-03-28T03:17:00.000Z</updated>
-        <summary type="html"><![CDATA[※ 아직 써보진 않았습니다. 써보면 의견이 어떻게 달라질지 모르겠네요. 작년 : “ChatGPT야, Java Spring 코드 만들어 줘”올해 : “Devin, 이런 거 이렇게 짜 줘” Cognition labs 라는 회사에서 세계 최초의 AI 개발자 “Devin”을 만들었습니다.Engineer 와 Developer는 다른데 그냥 “개발자”라고 의역을 하겠습니다. 회사 홈페이지를 가보았습니다. “왜 만들었나…” 궁금하더라고요.달랑 두 개의 블로그 글만 올라와 있습니다. 회사 이야기... Continue Reading →]]></summary>
-        <author>
-            <name>subokim</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for March 28, 2024]]></title>
-        <id>https://lwn.net/Articles/966118/</id>
-        <link href="https://lwn.net/Articles/966118/"/>
-        <updated>2024-03-28T00:22:04.000Z</updated>
-        <summary type="html"><![CDATA[The LWN.net Weekly Edition for March 28, 2024 is available.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[뉴페@스프] 이것은 “혁신의 탈을 쓴 불평등”인가 아닌가]]></title>
-        <id>https://newspeppermint.com/?p=78667</id>
-        <link href="https://newspeppermint.com/2024/03/27/npsp_gigworkers/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_gigworkers"/>
-        <updated>2024-03-27T22:59:09.000Z</updated>
-        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 2월 7일 스프에 쓴 글입니다. 긱(gig)이란 영어 단어의 첫 번째 뜻은 크지 않은 규모로, 때론 즉흥적으로 진행하는 음악 연주나 코미디 공연입니다. 이어 두 번째 뜻이 일 또는 직장인데, 정규직보다는 임시로, 부정기적으로 하는 계약직 일자리나 → 더 보기]]></summary>
-        <author>
-            <name>ingppoo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Renesas launches first general-purpose 32-bit RISC-V based MCUs]]></title>
-        <id>https://www.embedded.com/?p=4481758</id>
-        <link href="https://www.embedded.com/renesas-launches-first-general-purpose-32-bit-risc-v-based-mcus/"/>
-        <updated>2024-03-27T22:54:04.000Z</updated>
-        <summary type="html"><![CDATA[While many MCU providers have recently joined investment alliances to advance the development of RISC-V products, Renesas said it has already designed and tested a new RISC-V core independently.
-The post Renesas launches first general-purpose 32-bit RISC-V based MCUs appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[보수 진영의 때늦은 후회, 완전 연동형이라면 어땠을까: 슬로우레터 3월28일.]]></title>
-        <id>https://slownews.kr/?p=106126</id>
-        <link href="https://slownews.kr/106126"/>
-        <updated>2024-03-27T22:10:30.000Z</updated>
-        <summary type="html"><![CDATA[8일 동안의 전쟁. 윤석열의 급식 봉사. 혐오 vs. 혐오. 국회를 세종으로. 쟁점과 현안. “대통령이 우리한테 쓴 약 먹여도.” 비동의 강간죄, 공약집에 넣었다 뺐다. 2000명=윤석열의 불통. 더 깊게 읽기. 한동훈의 화법. 삼성 노조 와해, 항소 포기. 다르게 읽기. 수업 시간 몰래 녹음, 크게 늘었다. 독점의 개념을 다시 써야 한다. 소선거구제의 모순, 보수의 자승자박. 해법과 대안. ‘더...
-The post 보수 진영의 때늦은 후회, 완전 연동형이라면 어땠을까: 슬로우레터 3월28일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Farewell, John Kordyback]]></title>
-        <id>https://martinfowler.com/articles/kordyback-tribute.html</id>
-        <link href="https://martinfowler.com/articles/kordyback-tribute.html"/>
-        <updated>2024-03-27T16:48:00.000Z</updated>
-        <summary type="html"><![CDATA[John Kordyback, a treasured colleague and friend, died last week, aged 64.
-more…]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The PostgreSQL community mourns Simon Riggs]]></title>
-        <id>https://lwn.net/Articles/966868/</id>
-        <link href="https://lwn.net/Articles/966868/"/>
-        <updated>2024-03-27T15:51:25.000Z</updated>
-        <summary type="html"><![CDATA[The PostgreSQL community is dealing with the loss of Simon Riggs, who
-passed away on March 26:
-
-
-	Simon was responsible for many of the enterprise features we find
-	in PostgreSQL today, including point in time recovery, hot standby,
-	and synchronous replication. He was the founder of 2ndQuadrant
-	which employed many of the PostgreSQL developers, later becoming
-	part of EDB where he worked as a Postgres Fellow until his
-	retirement. He was responsible for the UK PostgreSQL conferences
-	for many years until he passed that responsibility to PostgreSQL
-	Europe last year.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] High-performance computing with Ubuntu]]></title>
-        <id>https://lwn.net/Articles/965516/</id>
-        <link href="https://lwn.net/Articles/965516/"/>
-        <updated>2024-03-27T15:36:15.000Z</updated>
-        <summary type="html"><![CDATA[Jason Nucciarone and Felipe Reyes gave back-to-back talks
-about high-performance computing (HPC) using Ubuntu at
-SCALE this
-year. Nucciarone talked about ongoing work packaging
-
-Open OnDemand — a web-based HPC cluster interface —
-to make high-performance-computing clusters
-more user friendly. Reyes presented on using
-OpenStack — a cloud-computing platform
-— to pass the performance benefits of one's hardware through
-to virtual machines (VMs) running on a cluster.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Uncovering Seams in a Mainframe's external interfaces]]></title>
-        <id>https://martinfowler.com/articles/uncovering-mainframe-seams.html#Seams</id>
-        <link href="https://martinfowler.com/articles/uncovering-mainframe-seams.html#Seams"/>
-        <updated>2024-03-27T14:36:00.000Z</updated>
-        <summary type="html"><![CDATA[Alessio Ferri and Tom Coggrave start
-       detailing the seams they explored with two areas of external interfaces.
-       Batch input of files are copied to new implementations while comparing the output of the
-       processing pipelines. API access points can be covered with a proxy and
-       traffic gradually directed to the new implementation.
-more…]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
-        <id>https://lwn.net/Articles/966835/</id>
-        <link href="https://lwn.net/Articles/966835/"/>
-        <updated>2024-03-27T13:18:26.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (composer and nodejs), Fedora (w3m), Mageia (tomcat), Oracle (expat, firefox, go-toolset:ol8, grafana, grafana-pcp, nodejs:18, and thunderbird), Red Hat (dnsmasq, expat, kernel, kernel-rt, libreoffice, and squid), and SUSE (firefox, krb5, libvirt, and shadow).]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[‘런종섭’이 지배한 한 주: 2024 총선 포털뉴스 (3월 셋째 주)]]></title>
-        <id>https://slownews.kr/?p=106105</id>
-        <link href="https://slownews.kr/106105"/>
-        <updated>2024-03-27T11:03:35.000Z</updated>
-        <summary type="html"><![CDATA[요약 주요 이슈 1. ‘이종섭 호주 대사 논란’ 보도건수‧노출시간이 모두 1위 2. 윤석열-한동훈 갈등이 주요 이슈로 부상 3. 더불어민주당 강북을 공천 논란, 국민의힘 비례공천 논란 보도 압도 4. 한동훈 위원장 지원 유세 발언, 이재명 대표보다 많아 5. 판세-여론조사 보도 본격화 6. 공약-의제 이슈 10위권 밖 7. 조국혁신당 지속 보도 언론사별 주요 이슈 1. KBS 이종섭...
-The post ‘런종섭’이 지배한 한 주: 2024 총선 포털뉴스 (3월 셋째 주) appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[한국에서 여성으로 노동한다는 것: 비혼과 저출산이라는 개인적 합리성과 사회적 실패]]></title>
-        <id>https://slownews.kr/?p=105650</id>
-        <link href="https://slownews.kr/105650"/>
-        <updated>2024-03-27T08:25:21.000Z</updated>
-        <summary type="html"><![CDATA[[제네바 오전 8시] 이상헌(ILO 고용정책국장)이 전하는 노동과 세계 그리고 인간에 관한 이야기… 지난 3월 8일은 세계 여성의 날. 연례행사처럼 발표된 유리천장 지수는 12년째 꼴찌, 성별 임금 격차는 OECD 1위. 꼴찌와 1등: 유리천장 지수 꼴찌, 성별 임금 격차 1등 지난 3월 8일은 세계 여성의 날이었다. 이코노미스트가 유리천장 지수를 발표했다. 한국은 12년째 꼴찌다. 이제는 익숙한 연례행사. 거기에...
-The post 한국에서 여성으로 노동한다는 것: 비혼과 저출산이라는 개인적 합리성과 사회적 실패 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민노씨</name>
         </author>
     </entry>
     <entry>
