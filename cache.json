@@ -46,16 +46,6 @@
           "wordCount": null,
           "title": "[소식] 전시 – 텍스트 뷔페 VOL.3",
           "imageUrl": null
-        },
-        {
-          "id": "https://attention2.space/?p=3550",
-          "author": "attention2space",
-          "description": "헤르만 슈미츠의 『사랑의 현상학』에서도, 파트너 간의 사랑을 다룬다는 것은 나에게 있어서 수치스럽기 까지 한 감정을 느끼게 만들지만 그래도 그의 논의에서 건질 점은 있다. 이른바 감정은 공간적이라는 것이다. 나는 그를 짝사랑한다. 이러한 감정은 나를 쓸쓸하게 만든다. 그와 나는 공간적으로 가까울 수 도 있지만 기본적으로는 무한히 멀리 떨어져 있다. 감정적으로든, 공간적으로든 둘다든. 또는 수 천 키로미터 바깥일 수도 있다. 하지만 우리는 가까이 있기도 하다.",
-          "link": "https://attention2.space/2024/fade-into-you/",
-          "publishedOn": "2024-03-30T04:19:12.000Z",
-          "wordCount": null,
-          "title": "[쇼트] 짝사랑의 정신증적 기제에 관해서",
-          "imageUrl": null
         }
       ]
     },
@@ -497,6 +487,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4482152",
+          "author": "Nitin Dahad",
+          "description": "Synopsys announces collaboration with TSMC on AI-driven design flows, silicon photonics IC integration, and IP portfolio for TSMC 2nm technology.\nThe post Synopsys collaborates with TSMC on 2nm IP portfolio and photonics ICs appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/synopsys-collaborates-with-tsmc-on-2nm-ip-portfolio-and-photonics-ics/",
+          "publishedOn": "2024-04-28T13:34:06.000Z",
+          "wordCount": null,
+          "title": "Synopsys collaborates with TSMC on 2nm IP portfolio and photonics ICs",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4482148",
           "author": "Analog Devices",
@@ -2242,46 +2242,6 @@
           "wordCount": null,
           "title": "A few relevant quotes",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/967180/",
-          "author": "corbet",
-          "description": "Andres Freund has posted a\ndetailed investigation into a backdoor that was shipped with versions\n5.6.0 and 5.6.1 of the xz compression utility.  It appears that the\nmalicious code may be aimed at allowing SSH authentication to be bypassed.\n\n\n\tI have not yet analyzed precisely what is being checked for in the\n\tinjected code, to allow unauthorized access. Since this is running\n\tin a pre-authentication context, it seems likely to allow some form\n\tof access or other form of remote code execution.\n\n\nThe affected versions are not yet widely shipped, but checking systems for\nthe bad version would be a good idea.\n\nUpdate: there are advisories out now from\nArch,\nDebian,\nRed\nHat, and\nopenSUSE.\n\nA further\nupdate from openSUSE:\n\n\n\tFor our openSUSE Tumbleweed users where SSH is exposed to the\n\tinternet we recommend installing fresh, as it’s unknown if the\n\tbackdoor has been exploited. Due to the sophisticated nature of the\n\tbackdoor an on-system detection of a breach is likely not\n\tpossible. Also rotation of any credentials that could have been\n\tfetched from the system is highly recommended.",
-          "link": "https://lwn.net/Articles/967180/",
-          "publishedOn": "2024-03-29T17:33:57.000Z",
-          "wordCount": null,
-          "title": "A backdoor in xz",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/966869/",
-          "author": "corbet",
-          "description": "Radicle is a new, peer-to-peer,\nMIT/Apache-licensed collaboration platform written in Rust and built on top\nof Git. It adds support for issues and pull requests (which Radicle calls\n\"patches\") on top of core Git, which are stored in the Git repository\nitself. Unlike GitHub, GitLab, and similar forges, Radicle is distributed;\nit doesn't rely on having everyone use the same server. Instead, Radicle\ninstances form a network that synchronizes changes between nodes.",
-          "link": "https://lwn.net/Articles/966869/",
-          "publishedOn": "2024-03-29T13:40:35.000Z",
-          "wordCount": null,
-          "title": "[$] Radicle: peer-to-peer collaboration with Git",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/967134/",
-          "author": "daroc",
-          "description": "Security updates have been issued by Debian (chromium), Fedora (apache-commons-configuration, chromium, csmock, ofono, onnx, php-tcpdf, and podman-tui), Mageia (curl), Oracle (libreoffice), Slackware (coreutils, seamonkey, and util), SUSE (minidlna, PackageKit, and podman), and Ubuntu (linux-azure-6.5 and linux-intel-iotg, linux-intel-iotg-5.15).",
-          "link": "https://lwn.net/Articles/967134/",
-          "publishedOn": "2024-03-29T13:11:27.000Z",
-          "wordCount": null,
-          "title": "Security updates for Friday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/967107/",
-          "author": "corbet",
-          "description": "Christian Schaller writes\nabout the desktop-oriented work aimed at the upcoming Fedora 40\nrelease.\n\n\n\tAnother major feature landing in Fedora Workstation 40 that Jonas\n\tÅdahl and Ray Strode has spent a lot of effort on is finalizing the\n\tremote desktop support for GNOME on Wayland. So there has been\n\tsupport for remote connections for already logged in sessions\n\talready, but with these updates you can do the login remotely too\n\tand thus the session do not need to be started already on the\n\tremote machine. This work will also enable 3rd party solutions to\n\tdo remote logins on Wayland systems, so while I am not at liberty\n\tto mention names, be on the lookout for more 3rd party Wayland\n\tremoting software becoming available this year.",
-          "link": "https://lwn.net/Articles/967107/",
-          "publishedOn": "2024-03-29T12:56:12.000Z",
-          "wordCount": null,
-          "title": "Schaller: Fedora Workstation 40 – what are we working on",
-          "imageUrl": null
         }
       ]
     },
@@ -2591,6 +2551,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=107864",
+          "author": "이정환",
+          "description": "[슬로우리포트] 문제는 예측 정확도가 아니라 여론조사 정치의 근본적 한계. “비싼 게 정확하다”고 했던 김어준(딴지일보 총수)은 최근 방송에서 “그동안 선거를 분석하던 틀로는 이해가 안 되는 일이 벌어졌다”면서 “거대한 민심의 흐름을 조사 기법이 잡아내지 못한 건지 다른 요인이 있는 건지 조사해 봐야 한다”고 말했다. 선거가 끝났으니 차분하게 분석해 볼 필요가 있다. 결론부터 정리하면. 이게 왜 중요한가. 비싼...\nThe post 비싼 게 정확한 게 아니었나: 김어준과 여론조사꽃이 놓친 것. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/107864",
+          "publishedOn": "2024-04-27T19:47:39.000Z",
+          "wordCount": null,
+          "title": "비싼 게 정확한 게 아니었나: 김어준과 여론조사꽃이 놓친 것.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=107845",
           "author": "정호재",
