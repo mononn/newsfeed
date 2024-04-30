@@ -59,7 +59,18 @@
       "title": "C++ Stories",
       "feedUrl": "https://www.cppstories.com/index.xml",
       "siteUrl": "https://www.cppstories.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://www.cppstories.com/2024/expected-cpp23-internals/",
+          "author": null,
+          "description": "In the article about std::expected, I introduced the type and showed some basic examples, and in this text, you’ll learn how it is implemented.\nstruct \n  \n\n\n\n\n     \n    \n\n\nIn short, std::expected should contain two data members: the actual expected value and the unexpected error object. So, in theory, we could use a simple structure:\ntemplate <class _Ty, class _Err>\nstruct expected {\n    /*... lots of code ... */\n    _Ty _Value;\n    _Err _Unexpected;\n};\n\n\nHowever, there are better solutions than this. Here are some obvious issues for our “struct” approach.\nThe size of the object is the sum of the Value type and the Error type (plus padding if needed).\nTwo data members are “active” and initialized, which might not be possible - for example, what if the Value type has no default constructor?…",
+          "link": "https://www.cppstories.com/2024/expected-cpp23-internals/",
+          "publishedOn": "2024-04-30T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Understand internals of std::expected",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Sticky Bits – Powered by Feabhas",
@@ -190,6 +201,36 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "6ea16f17-34d2-4c93-9540-f41051c28a88",
+          "author": "Yashwanth Maheshwaram, Ian Lawson",
+          "description": "Rehosting, a cornerstone in the evolution of software development and deployment, has traditionally enabled the concurrent operation of multiple operating systems and applications on the same physical hardware. This approach, often employed through virtual machines (VMs), enhances efficiency, scalability, and resource utilization. \nHowever, in contemporary software development, the focus is shifting towards containerization, as exemplified by orchestration platforms like Kubernetes. While Kubernetes excels in abstracting the deployment environment from the host system, offering superior flexibility and resource management, it’s noteworthy that not many Kubernetes platforms currently support running VMs directly on Kubernetes. \nThis limitation is particularly relevant for traditional applic…",
+          "link": "https://developers.redhat.com/articles/2024/04/30/modernization-rehost-openshift-using-argocd-pedal-based-guide",
+          "publishedOn": "2024-04-30T16:27:06.000Z",
+          "wordCount": null,
+          "title": "Modernization - Rehost to OpenShift using ArgoCD - Pedal based guide",
+          "imageUrl": null
+        },
+        {
+          "id": "618e4cde-f678-4c57-b88d-66f650de3eb5",
+          "author": "Tom Deseyn",
+          "description": "In the previous article on C# 12, you learned about collection expressions and primary constructors. In this article, we’ll take a look at some advanced features that part of the latest C# version: inline arrays, optional params and params in lambda expressions, ref readonly parameters, aliasing any type, and the UnsafeAccessorAttribute.\nInline arrays\nA regular C# array is a reference type that lives on the heap. Like other reference types, the garbage collector (GC) keeps track whether the array is still referenced, and it frees up memory when the array is no longer in use.\nTo avoid the GC overhead in performance sensitive code, when a small array is needed that is local to a function, it can be allocated on the stack using stackalloc. Thanks to the Span<T> type introduced in .NET Core 2.…",
+          "link": "https://developers.redhat.com/articles/2024/04/30/some-more-c-12",
+          "publishedOn": "2024-04-30T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Some more C# 12",
+          "imageUrl": null
+        },
+        {
+          "id": "663be67c-4825-4c93-9895-4acee6e5d197",
+          "author": "David Kwon",
+          "description": "With the fuse-overlayfs storage driver, you can enable faster builds and more optimized storage usage for podman build and buildah within your Red Hat OpenShift Dev Spaces cloud development environment (CDE). Before diving into its advantages, let’s first discuss some prerequisite details about container image layers and storage drivers.\nContainer images consist of layers which are stored and used for building and running containers. A huge benefit of this layer structure is that, assuming that each image layer stores only the differences compared to the previous layer (i.e., the delta), each layer is small which generally allows time and space savings when building and running containers. This is because small layers promotes re-usability allowing layer sharing between images and containe…",
+          "link": "https://developers.redhat.com/articles/2024/04/30/efficient-image-builds-fuse-red-hat-openshift-dev-spaces",
+          "publishedOn": "2024-04-30T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Efficient image builds with FUSE in Red Hat OpenShift Dev Spaces",
+          "imageUrl": null
+        },
         {
           "id": "be6d693a-0df4-4f38-b54c-2defb39e727d",
           "author": "Diego Alvarez Ponce",
@@ -419,16 +460,6 @@
           "wordCount": null,
           "title": "Customize AWS cloud images with RHEL image builder and Packit",
           "imageUrl": null
-        },
-        {
-          "id": "f152e694-10b2-45c8-8ee2-ca166ca5c93d",
-          "author": "Philip Hayes",
-          "description": "The recent release of Red Hat JBoss EAP 8.0 includes native support for OpenID Connect (OIDC) via the elytron-oidc-client subsystem. OIDC is an identity layer that enables clients, such as JBoss EAP, to verify a user’s identity based on authentication performed by an OpenID provider. For example, you can secure your JBoss EAP applications using the Red Hat build of Keycloak as the OpenID provider.\nIn this article, we will use the elytron-oidc-subsystem to secure a simple web application using Microsoft Entra ID (formerly Azure Active Directory) as the OpenID provider.\nFor more information about JBoss EAP 8.0's native OpenID Connect support, refer to the product documentation.\nPrerequisites\nA local installation of JBoss EAP 8.0. Download the installation manager from Red Hat Developer.\nJBOS…",
-          "link": "https://developers.redhat.com/articles/2024/04/01/secure-jboss-eap-apps-microsoft-entra-id-openid-connect",
-          "publishedOn": "2024-04-01T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Secure JBoss EAP apps with Microsoft Entra ID & OpenID Connect",
-          "imageUrl": null
         }
       ]
     },
@@ -483,16 +514,6 @@
           "wordCount": null,
           "title": "Method of differences and Newton polynomials",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2024/summary-of-reading-january-march-2024/",
-          "author": null,
-          "description": "<ul class=\"simple\">\n<li>&quot;Lessons in Chemistry: A Novel&quot; by Bonnie Garmus - a research chemist finds\nher way in the world following multiple personal tragedies and facing extreme\ngender discrimination. I have some mixed feelings about this book. On one hand\nit's original, enternaining, well-written and thought provoking. On the\nother hand it's full …</li></ul>",
-          "link": "https://eli.thegreenplace.net/2024/summary-of-reading-january-march-2024/",
-          "publishedOn": "2024-04-01T05:02:00.000Z",
-          "wordCount": null,
-          "title": "Summary of reading: January - March 2024",
-          "imageUrl": null
         }
       ]
     },
@@ -507,6 +528,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4482191",
+          "author": "Jacob Beningo",
+          "description": "It’s very common for developers to pay attention to the interrupts they are using. However, what about those interrupts that your toolchain automatically populates for...\nThe post Do you know what your default ISRs are doing? appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/do-you-know-what-your-default-isrs-are-doing/",
+          "publishedOn": "2024-04-30T16:07:48.000Z",
+          "wordCount": null,
+          "title": "Do you know what your default ISRs are doing?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4482185",
+          "author": "Valerie Hamilton",
+          "description": "This article presents a software configurable input/output (I/O) device and its dedicated isolated power and data solution that helps solve the design challenges in system-level...\nThe post How to simplify design of isolated software configurable I/O channels appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/how-to-simplify-design-of-isolated-software-configurable-i-o-channels/",
+          "publishedOn": "2024-04-30T15:42:01.000Z",
+          "wordCount": null,
+          "title": "How to simplify design of isolated software configurable I/O channels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4482173",
+          "author": "Microchip",
+          "description": "Accessible and affordable performance/Watt on FPGA. Saving you pain of having to design in heatsinks avoiding you cost. PolarFire® FPGA and SoC in action at...\nThe post PolarFire® devices at EW24: Accessible and Affordable appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/polarfire-devices-at-ew24-accessible-and-affordable/",
+          "publishedOn": "2024-04-30T00:05:44.000Z",
+          "wordCount": null,
+          "title": "PolarFire® devices at EW24: Accessible and Affordable",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4482159",
           "author": "Nitin Dahad",
@@ -1033,16 +1084,6 @@
           "wordCount": null,
           "title": "The volatile keyword",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1649.php",
-          "author": null,
-          "description": "Mongooses and very small pythons can coexist, and even be friends.\r\n\r\nThis is more a framework than an actual application, with it you can integrate MicroPython and Cesanta's Mongoose. Mongoose runs when called by MicroPython and is able to run Python functions as callbacks for the events you decide in your event handler. The code is completely written in C, except for the example Python...",
-          "link": "https://www.embeddedrelated.com/showarticle/1649.php",
-          "publishedOn": "2024-03-31T20:31:40.000Z",
-          "wordCount": null,
-          "title": "When a Mongoose met a MicroPython",
-          "imageUrl": null
         }
       ]
     },
@@ -1383,6 +1424,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/970818/",
+          "author": "jzb",
+          "description": "When it comes to security, telling developers to do (or not do)\nsomething can be ineffective. Helping them understand the why behind\ninstructions, by illustrating good and bad practices using stories, can be\nmuch more effective. With several such stories Marta\nRybczyńska fashioned an interesting talk\nabout patterns and anti-patterns in embedded Linux security at the\nEmbedded\nOpen Source Summit (EOSS), co-located with Open\nSource Summit North America (OSSNA), on April 16 in Seattle, Washington.",
+          "link": "https://lwn.net/Articles/970818/",
+          "publishedOn": "2024-04-30T15:11:17.000Z",
+          "wordCount": null,
+          "title": "[$] Security patterns and anti-patterns in embedded development",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/971785/",
+          "author": "corbet",
+          "description": "Version\n5.0 of the Yocto Project\ndistribution builder has been released.  The list of new features is long;\nsee the\nrelease notes for the details.",
+          "link": "https://lwn.net/Articles/971785/",
+          "publishedOn": "2024-04-30T14:53:04.000Z",
+          "wordCount": null,
+          "title": "Yocto Project 5.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/971745/",
+          "author": "corbet",
+          "description": "This\nMastodon stream from Lennart Poettering describes a sudo\nreplacement — called run0 — that will be part of the upcoming\nsystemd 256 release.  It takes a rather different approach to the execution\nof privileged commands, avoiding the use of setuid (which he calls \"SUID\")\npermissions entirely.\n\n\n\tSo, in my ideal world, we'd have an OS entirely without SUID. Let's\n\tthrow out the concept of SUID on the dump of UNIX' bad ideas. An\n\texecution context for privileged code that is half under the\n\tcontrol of unprivileged code and that needs careful manual clean-up\n\tis just not how security engineering should be done in 2024\n\tanymore.",
+          "link": "https://lwn.net/Articles/971745/",
+          "publishedOn": "2024-04-30T14:01:29.000Z",
+          "wordCount": null,
+          "title": "\"run0\" as a sudo replacement",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/971742/",
+          "author": "corbet",
+          "description": "Version 2.45.0 of the Git\nsource-code management system has been released.  Changes include a new\nlist command for git reflog, a couple of new\nconfiguration variables for git diff, the ability to drop\nredundant commits while cherry-picking, a number of performance\nimprovements, and more.",
+          "link": "https://lwn.net/Articles/971742/",
+          "publishedOn": "2024-04-30T13:41:28.000Z",
+          "wordCount": null,
+          "title": "Git 2.45.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/971740/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (org-mode), Oracle (shim and tigervnc), Red Hat (ansible-core, avahi, buildah, container-tools:4.0, containernetworking-plugins, edk2, exfatprogs, fence-agents, file, freeglut, freerdp, frr, grub2, gstreamer1-plugins-bad-free, gstreamer1-plugins-base, gstreamer1-plugins-good, harfbuzz, httpd, ipa, kernel, libjpeg-turbo, libnbd, LibRaw, libsndfile, libssh, libtiff, libvirt, libX11, libXpm, mingw components, mingw-glib2, mingw-pixman, mod_http2, mod_jk and mod_proxy_cluster, motif, mutt, openssl and openssl-fips-provider, osbuild and osbuild-composer, pam, pcp, pcs, perl, pmix, podman, python-jinja2, python3.11, python3.11-cryptography, python3.11-urllib3, qemu-kvm, qt5-qtbase, runc, skopeo, squashfs-tools, systemd, tcpdump, tigervnc, toolbox, traceroute, webkit2gtk3, wpa_supplicant, xorg-x11-server, xorg-x11-server-Xwayland, and zziplib), SUSE (docker, ffmpeg, ffmpeg-4, frr, and kernel), and Ubuntu (anope, freerdp3, and php7.0, php7.2, php7.4, php8.1).",
+          "link": "https://lwn.net/Articles/971740/",
+          "publishedOn": "2024-04-30T13:35:21.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/971568/",
+          "author": "jake",
+          "description": "The Amarok music player project\nhas announced\nthe release of version 3.0, which is codenamed \"Castaway\".  It is the first\nstable version using Qt 5 and KDE Frameworks 5, and the first stable\nrelease since the final Qt-4-based 2.9.0 in 2018.\n\nThe road to 3.0 has not been a short one. Much of the Qt5/KF5 porting was done in 2015 already, but finishing and polishing everything up has been a slow, sometimes ongoing and sometimes stalled process ever since. 3.0 Alpha was released in February 2021 and has been since used by many people, as have been nightly builds of git master available for various distributions. Now in the past few months, an effort was made to get everything ready for a proper 3.0 release.\n\nCommon usecases should work quite well, and in addition to fixing KF5 port\nrelated regressions reported in pre-releases, 3.0 features many bugfixes\nand implemented features for longstanding issues, the oldest such\ndocumented being from 2009. However, with more than 20 years of development\nhistory, it is likely that not every feature Amarok has been tested\nthoroughly in the new release, and specifically some Internet services that\nhave changed their API in recent years are not available, at least for\nnow. It might well be that getting them in better state wouldn't require\nhuge effort, however, so if you know your way with Qt and KDE Frameworks\nand your favourite Internet music service does not work with Amarok 3.0,\nyou are extremely welcome to join in and help!",
+          "link": "https://lwn.net/Articles/971568/",
+          "publishedOn": "2024-04-29T20:30:03.000Z",
+          "wordCount": null,
+          "title": "Amarok 3.0 \"Castaway\" released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/970824/",
           "author": "daroc",
@@ -2573,16 +2674,6 @@
           "wordCount": null,
           "title": "Software companies in the UK",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8670",
-          "author": "Derek Jones",
-          "description": "In the 1960s a small number of computer manufacturers sold a relatively small number of general purpose computers (IBM dominated the market). Between 1962 and 1974 the magazine Computers and Automation published a monthly census listing the total number of installed, and unfilled orders for, general purpose computers. A pdf of all the scanned census […]",
-          "link": "https://shape-of-code.com/2024/03/31/census-of-general-purpose-computers-installed-in-the-1960s/",
-          "publishedOn": "2024-03-31T22:06:02.000Z",
-          "wordCount": null,
-          "title": "Census of general purpose computers installed in the 1960s",
-          "imageUrl": null
         }
       ]
     },
@@ -2651,6 +2742,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=108020",
+          "author": "노동인권저널리즘센터",
+          "description": "조선일보와 한겨레, KBS가 쟁점 선도… 부실 검증이 초래한 대형 언론 참사 2024년 22대 국회의원 선거(총선)에서 ‘조수진 오보’ 사태가 발생했다. 지난 4월 초부터 조수진 변호사 관련 정정보도문이 몇몇 신문과 통신사에서 나오고 있다. 이와 대조적으로, 조수진 논란 쟁점을 이끌었던 언론사들은 정정보도문을 내지 않고 있다. 만약 ‘조수진 오보’의 정정보도 내용이 진실이라면, 이번 총선에서 서울 강북을 유권자들과 후보직을 사퇴한...\nThe post 저널리즘 관점에서 조수진 오보 톺아보기 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/108020",
+          "publishedOn": "2024-04-30T09:13:07.000Z",
+          "wordCount": null,
+          "title": "저널리즘 관점에서 조수진 오보 톺아보기",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=107406",
+          "author": "민노씨",
+          "description": "* 위 목차 링크를 누르면 해당 항목으로 이동합니다. 오른쪽 아래 화살표(↑)를 누르면 다시 최상단으로 올라옵니다. 홍세화를 추모하며 “홍세화 선생님은 ‘똘레랑스'(tolérence: 나와는 다른 타자의 ‘다름과 차이’를 관용)로 유명해지긴 했지만, 홍세화 선생을 가장 잘 표현하는 게 똘레랑스일까 싶어요. 생각과 말과 행동을 일치시키려고 노력한 삶의 태도가 존경받아야 하지 않나 싶어요. 제가 주목한 건 그런 삶의 태도예요. 홍세화 선생님의...\nThe post 세계화의 열매, 대도시 엘리트 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/107406",
+          "publishedOn": "2024-04-30T03:42:38.000Z",
+          "wordCount": null,
+          "title": "세계화의 열매, 대도시 엘리트",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=107961",
+          "author": "이정환",
+          "description": "윤석열-이재명 발언 시간은 85:15. 하고 싶은 말만 했다. 허심탄회한 대화? 하나도 안 맞았다. 쟁점과 현안. 황우여로 혁신 가능한가. “가정주부에 웬 뇌물 따지냐.” 다르게 읽기. 성장률 서프라이즈의 그림자. 한국 GDP, 멕시코에 추월당했다. 윤희숙이 말하는 보수의 참패 요인. 국민의힘이 갇힌 동굴의 우상. 더 깊게 읽기. 산재 가장 많은 기업은 배달의민족. 원전 지원금 3.5조원, 쌈짓돈처럼 쓰고 쇠고랑. 엔달러...\nThe post “가정 주부에 웬 뇌물 따지나”, 선거방송심의위가 MBC에 중징계 때린 이유: 슬로우레터 4월30일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/107961",
+          "publishedOn": "2024-04-29T22:06:43.000Z",
+          "wordCount": null,
+          "title": "“가정 주부에 웬 뇌물 따지나”, 선거방송심의위가 MBC에 중징계 때린 이유: 슬로우레터 4월30일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=107928",
           "author": "이정환",
@@ -3190,26 +3311,6 @@
           "wordCount": null,
           "title": "거짓말에 관한 다섯 가지 이야기",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=106306",
-          "author": "정혜승",
-          "description": "[마냐의 북라이딩] 북살롱 목요일 언니, 청와대 국민청원 기획자, 얼룩소 설립자, [정부가 없다] 저자 정혜승의 종횡무진 독서 탐험기…오늘 달려갈 책은 ‘가난한 아이들은 어떻게 어른이 되는가?’ 가난한 아이들에 대한 기억이 별로 없다. 어릴 적 살던 은마아파트는 31평, 34평 다들 비슷비슷 고만고만한 중산층 동네였다. 대학 졸업 후 나는 분명 사회적 약자의 목소리를 대변해야 할 기자가 됐는데, 만나는 이는 대부분 사회의...\nThe post 생존은 필수품, 꿈은 사치품: 가난한 아이들은 어떻게 어른이 되는가 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/106306",
-          "publishedOn": "2024-04-01T06:59:17.000Z",
-          "wordCount": null,
-          "title": "생존은 필수품, 꿈은 사치품: 가난한 아이들은 어떻게 어른이 되는가",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=106276",
-          "author": "이정환",
-          "description": "사전 투표하겠단 사람 3분의 2가 민주당. “이대로 가면 대한민국 망한다.” 윤석열 오늘 대국민 담화. 2000명 증원 찬성은 29%뿐. 쟁점과 현안. 양문석 리스크, 10석 날아간다? ‘작업 대출’ 맞나. 공영운도 부동산 리스크. “전관예우라면 160억 원은 벌었어야.” 더 깊게 읽기. 2년은 너무 길었다. 이재명은 ‘경제’를, 한동훈은 ‘범죄’를 말했다. 세 살 아기의 죽음. 보수 과표집 아니라 진보 과표집? 오늘의...\nThe post 투표율 65%가 민주당의 ‘매직 넘버’? 과연 그럴까: 슬로우레터 4월1일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/106276",
-          "publishedOn": "2024-03-31T22:16:37.000Z",
-          "wordCount": null,
-          "title": "투표율 65%가 민주당의 ‘매직 넘버’? 과연 그럴까: 슬로우레터 4월1일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3607,16 +3708,6 @@
           "wordCount": 7489,
           "title": "1분기 테슬라 판매량을 보는 월가의 시각, 재앙이다. 테슬라 주가는 지속 하락 가능성",
           "imageUrl": "https://happist.com/wp-content/uploads/2022/12/테슬라-디스플레이를-조작하는-여인-Tesla-Photo-by-jenny-ueberberg.jpg"
-        },
-        {
-          "id": "https://happist.com/?p=594254",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/594254/1%eb%b6%84%ea%b8%b0-%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8c%90%eb%a7%a4%eb%9f%89",
-          "publishedOn": "2024-04-01T06:24:47.000Z",
-          "wordCount": null,
-          "title": "배런스, 1분기 테슬라 판매량은 예상보다 나을 수 있다.",
-          "imageUrl": null
         }
       ]
     },
@@ -3625,6 +3716,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=78860",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 3월 11일 스프에 쓴 글입니다. 정치적인 성향은 어떻게 형성될까요? 정치적인 성향이 세부적인 변수라서 다소 좁은 의미로 정의하게 돼 문제라면, 좀 더 넓은 의미에서 한 사람의 가치관은 어떻게 형성되는지를 생각해 볼 수 있을 겁니다. 삶을 → 더 보기",
+          "link": "https://newspeppermint.com/2024/04/29/npsp_gendergapgeneration/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_gendergapgeneration",
+          "publishedOn": "2024-04-29T22:59:11.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] Z세대 가치관에 문제 있다? 그런데 부모인 X세대가 더 문제다?",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=79227",
           "author": "NewsPeppermint",
