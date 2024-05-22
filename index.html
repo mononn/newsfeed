@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-21 datetime="2024-05-21T20:14:29.963Z">2024-05-21</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-21 datetime="2024-05-21T20:14:29.963Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-22 datetime="2024-05-22T20:10:22.000Z">2024-05-22</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-22 datetime="2024-05-22T20:10:22.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -34,22 +34,299 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Google Developers Blog</button>
-                  <a class="source-heading__link" href="https://developers.googleblog.com/rss/">Open</a>
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://developers.googleblog.com/en/whats-new-in-android-development-tools-io-2024/"
+                        data-accordion-key="https://lwn.net/Articles/974219/"
                         open
                       >
-                        <summary class="article-expander__title">Google I/O 2024: What’s new in Android Development Tools</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/whats-new-in-android-development-tools-io-2024/">
+                        <summary class="article-expander__title">[$] Supporting larger block sizes in filesystems</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974219/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>Android Studio Koala feature drop (2024.1.2) is now available in the Android Studio canary channel, with productivity enhancements, and more.</span>
+                              <span>In a 
+combined storage and filesystem session at the 2024
+Linux Storage,
+Filesystem, Memory Management, and BPF Summit, Luis Chamberlain led a
+discussion on filesystem support for block sizes larger than the usual 4KB
+page size, 
+which followed up on  discussion from last year.  While the
+session was meant to look at the intersection of larger block sizes
+with atomic block writes  that avoid torn
+(partial) writes (which was also discussed last year), it mostly focused on the
+filesystem side.  Over time, the
+block sizes offered by storage devices have risen from the original
+512 bytes; Chamberlain
+wanted to discuss filesystem support for block sizes larger than 4KB.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974517/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] The path to deprecating SPARSEMEM</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974517/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The term &quot;memory model&quot; is used in a couple of ways within the kernel.
+Perhaps the more obscure meaning is the memory-management subsystem&#x27;s view
+of how physical memory is organized on a given system.  A proper
+representation of physical memory will be more efficient in terms of memory
+and CPU use.  Since hardware comes in numerous variations, the kernel
+supports a number of memory models to match; see this article for details.  At the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, Oscar Salvador,
+presenting remotely, made the case for removing one of those models.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974518/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Two sessions on CXL memory</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974518/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Compute
+Express Link (CXL) is a data-center-oriented memory solution that,
+according to some in the industry, will yield large cost savings and
+performance improvements.  Others are more skeptical.  At the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, two sessions covered CXL
+and how it will be supported in future kernels.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974515/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Documenting page flags by committee</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974515/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>For every page of memory in the system, the kernel maintains a set of page
+flags describing how the page is used and various aspects of its current
+state.  Space for page flags has been in chronic short supply, leading to a desire to
+eliminate or consolidate them whenever possible.  That objective, though,
+is hampered by the fact that the purpose of many page flags is not well
+understood.  In a memory-management-track session at the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, Matthew Wilcox set out to
+cooperatively update the page-flag documentation to improve that situation.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974512/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Merging msharefs</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974512/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The problem of sharing page tables across processes has been discussed
+numerous times over the years, Khaled Aziz said at the beginning of his 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit session on the topic.  He
+was there to, once again, talk about the proposed mshare() system call (which, in its
+current form, is no longer actually a system call but the feature still
+goes by that name) and to see what can be done to finally get it into the
+mainline.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974491/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Toward the unification of hugetlbfs</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974491/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The kernel&#x27;s hugetlbfs
+subsystem was the first mechanism by which the kernel made huge pages
+available to user space; it was added to the 2.5.46 development kernel in
+2002.  While hugetlbfs remains useful, it is also viewed as a sort of
+second memory-management subsystem that would be best unified with the rest
+of the kernel.  At the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, Peter Xu raised the
+question of what that unification would involve and what the first steps
+might be.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/973782/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] The KeePassXC kerfuffle</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/973782/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>KeePassXC is an open-source (GPLv3),
+cross-platform password manager with local-only data storage. The
+project comes with a number of build
+options that can be used to toggle optional features, such as browser
+integration and password
+database sharing. However, controversy ensued when Debian Developer Julian Klode decided to
+make use of these compile flags to disable these features to improve security in the
+keepassxc package uploaded to Debian unstable for the
+upcoming Debian 13 (&quot;Trixie&quot;) release.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974487/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] The interaction between memory reclaim and RCU</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974487/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The 2024 Linux
+Storage, Filesystem, Memory-Management and BPF Summit was a development
+conference, where discussion was prioritized and presentations with a lot
+of slides were discouraged.  Paul McKenney seemingly flouted this
+convention in a joint session of the storage, filesystem, and
+memory-management tracks where he presented about 50 slides — in five
+minutes, twice.  The subject was the use of the read-copy-update (RCU)
+mechanism in the memory-reclaim process, and whether changes to RCU would
+be needed for that purpose.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974576/"
+                        open
+                      >
+                        <summary class="article-expander__title">Alpine Linux 3.20.0 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974576/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version
+3.20.0 of the Alpine Linux
+distribution has been released with initial support for 64-bit
+RISC-V. Other important changes include updates to GNOME 46, 
+KDE Plasma 6, and replacing Redis with Valkey due to Redis&#x27;s
+adoption of a non-free
+license model. See the release
+notes for more on this release.</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974392/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Faster page faults with RCU-protected VMA walks</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974392/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Looking up a virtual memory area (VMA) in a process&#x27;s address space, for
+the handling of page faults or any of a number of other tasks, in
+multi-threaded processes has long been bedeviled by lock contention in the
+kernel.  As a result, developer gatherings have been subjected to many
+sessions on how to improve the situation.  At the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, developers in the
+memory-management track met, in a session led by Liam Howlett, to talk
+about a situation that has improved considerably in recent times, but which
+still offers opportunities for optimization.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974572/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Wednesday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974572/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by Debian (webkit2gtk), Fedora (kernel), Mageia (chromium-browser-stable, djvulibre, gdk-pixbuf2.0, nss &amp; firefox, postgresql15 &amp; postgresql13, python-pymongo, python-sqlparse, stb, thunderbird, and vim), Red Hat (go-toolset:rhel8, nodejs, and varnish:6), SUSE (gitui, glibc, and kernel), and Ubuntu (libspreadsheet-parseexcel-perl, linux-aws, linux-aws-5.15, linux-gke, linux-gcp, python-idna, and thunderbird).</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974363/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Virtual machine scheduling with BPF</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974363/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Vineeth Pillai gave a remote talk at the 2024
+Linux Storage,
+Filesystem, Memory Management, and BPF Summit explaining how BPF could be
+used to improve the performance of virtual machines (VMs). Pillai has
+
+a patch
+set designed to let guest and host machines share scheduling information in
+order to eliminate some of the overhead of running in a VM. The assembled
+developers had several comments on the design, but seemed overall to approve of
+the prospect.</span>
                             </span>
                           </div>
                         </a>
@@ -65,10 +342,339 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Martin Fowler</button>
+                  <a class="source-heading__link" href="https://martinfowler.com/feed.atom">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://martinfowler.com/articles/2024-footnote-rendering.html"
+                        open
+                      >
+                        <summary class="article-expander__title">A short note on how I use and render footnotes</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://martinfowler.com/articles/2024-footnote-rendering.html">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://martinfowler.com/logo-sq.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Last week I added a small feature to this website, changing the way it
+       renders footnotes. That prompted me to write this quick note about how I
+       use footnotes, and how that influences the best way to render them.
+more…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://martinfowler.com/articles/tdd-html-templates.html#Level2TestingHtmlStructure"
+                        open
+                      >
+                        <summary class="article-expander__title">Testing the contents of generated HTML</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://martinfowler.com/articles/tdd-html-templates.html#Level2TestingHtmlStructure">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://martinfowler.com/articles/tdd-html-templates/card.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Matteo Vaccari continues his testing of
+       template-generated HTML by describing tests for the contents of that
+       HTML. He shows how to gradually build up the template, using Test-Driven
+       Development in Go and Java. 
+more…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;594772"
+                        open
+                      >
+                        <summary class="article-expander__title">엔비디아 실적에서 살펴볼 5가지 요소</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594772/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="5ddfc0f2-1d39-4049-975f-c17b04bdd828"
+                        open
+                      >
+                        <summary class="article-expander__title">Advanced container management at the edge for Node.js apps</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/05/22/advanced-container-management-edge-nodejs-apps">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/nodejs-reference-architecture_2x.png?itok&#x3D;rToXkOcY" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This is part three in our series on running Node.js applications on the edge with Red Hat Enterprise Linux (RHEL)/Fedora, which includes: 
+
+Running Node.js applications on the edge with RHEL/Fedora
+Containerizing your Node.js applications at the edge on RHEL/Fedora
+Advanced container management at the edge for Node.js applications (this post)  
+
+In the first part, we introduced you to the hardware and software for our Node.js-based edge example as well as some of the details on laying the foundation for deploying the application by building and installing the operating system using Fedora IoT.
+In the second part we dug a bit deeper into the application itself, and how to build, bundle, deploy, and update the Node.js application using Podman and containers.
+In this third and final part, we&#x27;…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;21
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="57067f3e-06d2-47e8-ad3f-71028d587598"
+                        open
+                      >
+                        <summary class="article-expander__title">Configure SOAP web services with Apache Camel on Quarkus</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/05/22/configure-soap-web-services-apache-camel-quarkus">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/camel_quarkus.png?itok&#x3D;r6IekvEe" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>This article explores how to integrate SOAP and REST services using Quarkus and Apache Camel. Through practical examples, we will learn how to create a Quarkus project, configure and consume SOAP services, and expose RESTful endpoints. Additionally, we will see how to manage JSON data serialization and deserialization using Camel Quarkus.
+Quarkus project creation
+For project configuration, it is required to create the application named code-with-quarkus-camel-soap, which will be using Quarkus 3.2 with Apache Camel version 4.0.
+
+
+Review the compatibility matrix.
+There are two options to carry out this configuration, detailed below.
+
+
+Creation through the web interface
+Access the link https://code.quarkus.redhat.com and fill in the required information as shown in Figure 1. Then, click the G…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="df098c45-b3b3-4179-9e8a-3392e93fb731"
+                        open
+                      >
+                        <summary class="article-expander__title">The road toward AI: Fundamentals</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/05/22/ai-fundamentals">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/AI-ML%20%281%29.png?itok&#x3D;QPfkfRfC" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>There&#x27;s no question that artificial intelligence (AI) is the talk of the town these days, overshadowing almost everything else in the world of technology. In this series of articles, we&#x27;ll explore the road toward AI (Figure 1 ) and how your organization can smoothly transition toward incorporating AI into its platforms and applications. 
+Clean architecture isn&#x27;t the only topic I cover, you know! So, welcome aboard as we steer our focus toward artificial intelligence and machine learning (for now, at least, as these principles will map on the domain of AI/ML as well). 
+
+
+  
+      
+        
+  
+
+
+  
+
+Figure 1: A visualization of a technical road / learning path toward AI. Created by Maarten Vandeperre. License under Apache 2.0.
+
+Don&#x27;t worry if AI is still a bit of a mystery to you—we&#x27;ll start…</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79391"
+                        open
+                      >
+                        <summary class="article-expander__title">둘이 같은 목소리 낼 때도 있네? ‘두 번째 차이나 쇼크’ 어떻게 될까</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/05/21/npsp_chinashock/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_chinashock">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>오는 11월 미국 대선에서 맞붙을 바이든과 트럼프가 의외로 같은 목소리를 내는 분야가 몇 가지 있는데, 그중 하나가 대중국 무역정책입니다. 물론 세부적인 방침은 다를 수 있지만, 기본적으로 중국이 미국을 상대로 불공정 무역을 하고 있으므로, 이를 바로잡겠다는 의지는 같으며, 이를 숨기지 않고 오히려 적극적으로 드러낸다는 점도 비슷합니다. 다만 트럼프가 직접적으로 관세를 매기고, 중국과 전면적인 관세 전쟁을 매겼다면, 바이든의 정책은 미국이 전략적으로 중국에 뒤처져선 안 되는 분야를 정해놓고 미국의 동맹국을 동원해 중국을 압박하는 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >MCU on Eclipse</button>
+                  <a class="source-heading__link" href="https://mcuoneclipse.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://mcuoneclipse.com/?p&#x3D;40522"
+                        open
+                      >
+                        <summary class="article-expander__title">Low-Power Optimization Techniques for ARM Cortex-M Microcontrollers</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://mcuoneclipse.com/2024/05/22/low-power-optimization-techniques-for-arm-cortex-m0-microcontrollers/">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://mcuoneclipse.com/wp-content/uploads/2024/05/freertos-with-wfi.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>In Europe, companies are focusing on sustainability due to the ongoing energy crisis. Embedded engineers are taking action to minimize energy consumption from electronic devices. This article demonstrates the possibility of reducing energy consumption by factor 100 or more and provides insights on low power optimizations using the ARM Cortex microcontroller. It uses tools such as NXP MCUXpresso IDE and MCU-Link Pro for measurements and demonstrations. The article explores low power optimization steps such as reducing voltage, frequency, and using low power modes, achieving significant energy savings. It provides a comprehensive overview of the concepts and practical techniques for reducing energy consumption. The project is shared on GitHub for reference. Continue reading →</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;27
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-21 datetime="2024-05-21T22:35:12.000Z">2024-05-21</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-21 datetime="2024-05-21T22:35:12.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >LWN.net</button>
                   <a class="source-heading__link" href="https://lwn.net">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974390/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Another try for address-space isolation</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974390/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Brendan Jackman started his memory-management-track session at the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit by saying that, for some
+years now, the kernel community has been stuck in a reactive posture with
+regard to hardware vulnerabilities.  Each problem shows up with its own
+scary name, and kernel developers find a way to mitigate it, usually losing
+performance in the process.  Jackman said that it is time to take back the
+initiative against these vulnerabilities by reconsidering the more
+general use of address-space isolation.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/974380/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Memory-allocation profiling for the kernel</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/974380/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Optimizing the kernel&#x27;s memory use is made much easier if developers have
+an accurate idea of how memory is being used, but the kernel&#x27;s
+instrumentation is not as good as it could be.  When Suren Baghdasaryan and
+Kent Overstreet presented their
+memory-allocation profiling work, which is meant to address this
+shortcoming, at the 2023 Linux Storage, Filesystem, Memory Management, and
+BPF Summit, their objective was uncontroversial but the proposed solution
+ran into opposition that played out at length on the mailing lists (example)
+over the last year.  So it may be a bit surprising that, when the two
+returned to the memory-management track in the 2024 gathering, the
+controversy was gone and the discussion focused on improving details of the
+implementation.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -154,6 +760,168 @@ field, but the situation will hopefully get better over time.</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>Security updates have been issued by AlmaLinux (firefox, nodejs, and thunderbird), Fedora (uriparser), Oracle (firefox and thunderbird), Slackware (mariadb), SUSE (cairo, gdk-pixbuf, krb5, libosinfo, postgresql14, and python310), and Ubuntu (firefox, linux-aws, linux-aws-5.15, and linux-azure).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;594751"
+                        open
+                      >
+                        <summary class="article-expander__title">5/22, 월가의 투자의견 및 주가 전망 보고서</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594751/5-22-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;594737"
+                        open
+                      >
+                        <summary class="article-expander__title">[베런스]점점 다가오는 금리인하. 금리인하 수혜자는 누구일까</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594737/%ea%b8%88%eb%a6%ac%ec%9d%b8%ed%95%98-%ec%88%98%ed%98%9c%ec%9e%90">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;594726"
+                        open
+                      >
+                        <summary class="article-expander__title">5/21, 월가의 투자의견 및 주가 전망 보고서</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594726/5-21-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;108917"
+                        open
+                      >
+                        <summary class="article-expander__title">책은 버리고 디올 백은 남겼다? 김건희의 결정적 실수: 슬로우레터 5월22일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/108917">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://slownews.kr/wp-content/uploads/2024/05/KgzQYY3hq2Zv664c66a785f394.37422791-1000x640.jpeg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>결국 채 상병 특검법에 거부권 행사. 조선일보도 ‘쉴드’가 안 된다. “국민에게도 불행한 일.” 핵심은 윤석열의 ‘격노’. 벌써 3명 이탈. 국회 입법조사처가 못을 박았다. 쟁점과 현안. 책을 함부로 버리면 벌어지는 일. 책은 버리고 디올 백만 보관했다고? 김건희는 오랜만에 단독 행보. 윤석열 탈당설을 흘리는 이유. 다르게 읽기. 이명박은 어떻게 지지율을 끌어올렸을까. 더 깊게 읽기. “굳이 읽을 필요...
+The post 책은 버리고 디올 백은 남겼다? 김건희의 결정적 실수: 슬로우레터 5월22일. appeared first on 슬로우뉴스..</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;24
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >from pvs-studio.com</button>
+                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pvs-studio.com/en/blog/posts/csharp/1124/"
+                        open
+                      >
+                        <summary class="article-expander__title">Garnet. Does Microsoft&#x27;s cache -store also store bugs?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/csharp/1124/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Microsoft has introduced Garnet, an open-source, cross-platform, fast cache-store project written in C#. Let&#x27;s equip ourselves with a static analyzer to see what bugs and oddities hide in the project...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Google Developers Blog</button>
+                  <a class="source-heading__link" href="https://developers.googleblog.com/rss/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://developers.googleblog.com/en/whats-new-in-android-development-tools-io-2024/"
+                        open
+                      >
+                        <summary class="article-expander__title">Google I/O 2024: What’s new in Android Development Tools</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/whats-new-in-android-development-tools-io-2024/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Android Studio Koala feature drop (2024.1.2) is now available in the Android Studio canary channel, with productivity enhancements, and more.</span>
                             </span>
                           </div>
                         </a>
@@ -267,54 +1035,6 @@ The post Where should you put the { ? appeared first on Embedded.com.</span>
                             <span class="media-object__text">
                               <span>Law enforcement agencies are increasingly turning to cutting-edge connectivity and IoT solutions to improve operational efficiencies, increase transparency and safety, and enhance collaboration. Under mounting...
 The post How IoT serves public safety and security services appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594737"
-                        open
-                      >
-                        <summary class="article-expander__title">[베런스]점점 다가오는 금리인하. 금리인하 수혜자는 누구일까</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594737/%ea%b8%88%eb%a6%ac%ec%9d%b8%ed%95%98-%ec%88%98%ed%98%9c%ec%9e%90">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594726"
-                        open
-                      >
-                        <summary class="article-expander__title">5/21, 월가의 투자의견 및 주가 전망 보고서</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594726/5-21-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
                             </span>
                           </div>
                         </a>
@@ -1036,6 +1756,68 @@ handle today&#x27;s more-complex systems.</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="7622980d-b48e-4b2f-a84b-1cc7c946794c"
+                        open
+                      >
+                        <summary class="article-expander__title">What&#x27;s new in the Red Hat build of Quarkus 3.8</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/05/17/whats-new-red-hat-build-quarkus-38">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://developers.redhat.com/sites/default/files/styles/share/public/Red%20Hat%20Build%20of%20Quarkus.png?itok&#x3D;v5Twgs4F" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Continuing the mission of supporting enterprise developers to build cloud-native and Kubernetes-native Java applications, Red Hat has released version 3.8 of the Red Hat build of Quarkus. The latest release has some great features and performance improvements including tools to improve developer productivity.
+Let’s take a look at some highlights of this release. For a complete list of new features, check out the official Red Hat build of Quarkus 3.8 release notes.
+Improved developer productivity
+One of the founding principles of Quarkus is to provide joy to Java developers by creating a frictionless experience with a combination of tools, libraries, extensions, and more. In this release, developers can access local development and testing services easily using new tools and services, such …</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="eb85c8e1-8ec7-4295-b52e-0540a373140d"
+                        open
+                      >
+                        <summary class="article-expander__title">How we used Java Flight Recorder to resolve authentication issues</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/05/17/how-we-used-java-flight-recorder-resolve-authentication-issues">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Imagine one of the following scenarios: 
+
+Your kids are going on vacation with their grandparents; you want to increase their cell phone plan with more bandwidth and gigabytes so you can see them enjoy the beach through a video call with your parents.
+You’re on a business trip and you&#x27;re relying on your company’s telco provider for roaming.
+
+But you can’t do either of those things, because there’s an issue with the mobile application provider. Enter Red Hat Technical Account Management to assist in this situation. 
+Diagnosing the problem
+Let’s add a little more context. A telecommunications service provider (telco) provides a mobile application whose front end targets Red Hat&#x27;s single-sign on (SSO) tool to authenticate and authorize users to either pay plans or enlarge plans. 
+The issue oc…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >LWN.net</button>
                   <a class="source-heading__link" href="https://lwn.net">Open</a>
                 </h3>
@@ -1275,45 +2057,6 @@ The post Device Authority: 10 key principles to ensure connected car security ap
                             <span class="media-object__text">
                               <span>최근 미국 주식시장에서 상장 주식 시가 총액 2조 달러를 넘어섰던 엔비디아. 반도체 기업으로 AI 붐의 대표 수혜 기업이다. 그래픽카드 제조 시장 진입에서 AI 연산 장치 제조의 선두가 되기까지 놀라운 성장을 거듭해 온 엔비디아는 이제 기업 가치상으로는 애플과 마이크로소프트를 넘보는 거대 기술기업으로 각인되고 있는 오늘이다. 엔비디아는 어떻게 이런 성공을 거둘 수 있었을까? 성공의 화려한 조명 뒤에는...
 The post 엔비디아, NV1의 실패로 시작하다 appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="eb85c8e1-8ec7-4295-b52e-0540a373140d"
-                        open
-                      >
-                        <summary class="article-expander__title">How we used Java Flight Recorder to resolve authentication issues</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/05/17/how-we-used-java-flight-recorder-resolve-authentication-issues">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Imagine one of the following scenarios: 
-
-Your kids are going on vacation with their grandparents; you want to increase their cell phone plan with more bandwidth and gigabytes so you can see them enjoy the beach through a video call with your parents.
-You’re on a business trip and you&#x27;re relying on your company’s telco provider for roaming.
-
-But you can’t do either of those things, because there’s an issue with the mobile application provider. Enter Red Hat Technical Account Management to assist in this situation. 
-Diagnosing the problem
-Let’s add a little more context. A telecommunications service provider (telco) provides a mobile application whose front end targets Red Hat&#x27;s single-sign on (SSO) tool to authenticate and authorize users to either pay plans or enlarge plans. 
-The issue oc…</span>
                             </span>
                           </div>
                         </a>
@@ -8985,23 +9728,6 @@ The post Enabling sustainable building management systems with 10BASE-T1L appear
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594549"
-                        open
-                      >
-                        <summary class="article-expander__title">고려대 경영대 재학생 김예슬 자퇴선언서</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594549/%ea%b9%80%ec%98%88%ec%8a%ac-%ec%9e%90%ed%87%b4%ec%84%a0%ec%96%b8%ec%84%9c">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9065,24 +9791,6 @@ The post 하이브 방시혁 v. 어도어 민희진, 몇 가지 흥미로운 지
                             <span class="media-object__text">
                               <span>제22대 국회의원선거가 4월 10일 막을 내렸다. 여당은 108석을 얻은 데 그친 반면, 야당인 더불어민주당(더불어민주연합 포함)은 175석을 차지해 여소야대 정국이 이어질 전망이다. 4월 11일 조간신문은 총선 결과와 해석을 전하는 제목으로 가득했다. 지난 제21대 총선에서 더불어민주당은 여당으로서 180석(더불어시민당 포함)을 차지했다. 이번엔 야당의 입장임에도 175석을 얻었다. 제21대 총선에서 야당이었던 국민의힘(당시는 미래통합당)은 103석(미래한국당 포함)을 차지했고, 여당으로 치른 이번 총선에서는...
 The post 일본이 본 여당 총선 참패 원인: 윤 불통과 지도부 리더십 부재 appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;107309"
-                        open
-                      >
-                        <summary class="article-expander__title">세계화의 황혼, 포퓰리즘</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/107309">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[제네바 오전 8시] 이상헌(ILO 고용정책국장)의 노동과 세계 그리고 인간에 관한 이야기. 사회적 모성주의 사회적 가부장주의 / 사회적 모성주의 (…) 사회적 가부장주의는 실패를 되풀이했다. 좌파는 국가가 가장 잘 안다고 간주했지만, 불행히도 그러지 못했다. 그들은 전위대가 지휘하는 국가가 윤리적으로 행동하는 유일한 주체라고 간주했다. 그러나 이는 국가의 윤리적 능력을 터무니없이 과장했고, 덩달아 가족과 기업의 윤리도 무시했다. 우파는 정부...
-The post 세계화의 황혼, 포퓰리즘 appeared first on 슬로우뉴스..</span>
                             </span>
                           </div>
                         </a>
@@ -9199,420 +9907,6 @@ done.</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-04-22 datetime="2024-04-22T23:03:13.000Z">2024-04-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-04-22 datetime="2024-04-22T23:03:13.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594535"
-                        open
-                      >
-                        <summary class="article-expander__title">4/23, 월가의 투자의견 및 주가전망 보고서</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594535/4-23-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;594526"
-                        open
-                      >
-                        <summary class="article-expander__title">합천 황매산 철쭉 출사 가이드</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/594526/%ed%99%a9%eb%a7%a4%ec%82%b0-%ec%b2%a0%ec%ad%89-%ec%b6%9c%ec%82%ac">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;78805"
-                        open
-                      >
-                        <summary class="article-expander__title">[뉴페@스프] 습관처럼 익숙한 것 너머를 쳐다볼 때 비로소 보이는 것</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/04/22/npsp_failtonotice/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_failtonotice">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 3월 4일 스프에 쓴 글입니다. 고대 로마에서 전쟁과 평화를 관장하던 신 야누스의 신전에 얽힌 이야기는 잘 알려져 있습니다. 신전 문이 열려 있으면 로마가 전쟁 중이라는 뜻이고, 문이 닫혀 있으면 로마 전역에 전쟁이 없는, 평화로운 → 더 보기</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79168"
-                        open
-                      >
-                        <summary class="article-expander__title">‘사이다 발언’에 박수 갈채? 그에 앞서 생각해 볼 두 가지 용기</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/04/22/npsp_openletters/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_openletters">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>하마스가 이스라엘을 상대로 테러 공격을 벌인 뒤 그에 대한 반격으로 시작된 이스라엘의 가자지구 군사 작전 혹은 이스라엘과 팔레스타인의 전쟁이 벌써 반년이 더 지났습니다. 평화적인 해결책을 찾으려는 시도는 번번이 무산되는 가운데 상대방의 잘못을 지적하고 비판하며 상대방의 사과와 굴복을 요구하는 목소리만 서로 팽팽히 맞서고 있습니다. 특히 이번 전쟁 국면에서는 공개 서한(open letters)의 형식을 빌린 주장이 많이 나왔습니다. 사람들의 주목을 받고 입에 오르내리는 것이 목표라면 공개 서한 중에 목표를 달성한 편지가 더러 있겠지만, → 더 보기</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Embedded.com</button>
-                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4482108"
-                        open
-                      >
-                        <summary class="article-expander__title">UDE – All-in-One Tool for Debug, Trace &amp; Test demonstrated by PLS at embedded world 2024</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/ude-all-in-one-tool-for-debug-trace-test-demonstrated-by-pls-at-embedded-world-2024/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Jens Braunes from PLS gives an exclusive overview of the features of the new version UDE 2024 of the Universal Debug Engine. UDE is the...
-The post UDE – All-in-One Tool for Debug, Trace &amp; Test demonstrated by PLS at embedded world 2024 appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4482098"
-                        open
-                      >
-                        <summary class="article-expander__title">Cadence emulator and prototyping duo can handle up to 48 billion gate SoCs</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/cadence-emulator-and-prototyping-duo-can-handle-up-to-48-billion-gate-socs/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The new Cadence Palladium Z3 emulation and Protium X3 FPGA prototyping systems provide a digital twin platform where large SoCs can be tested as a whole rather than just partial models.
-The post Cadence emulator and prototyping duo can handle up to 48 billion gate SoCs appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embedded.com/?p&#x3D;4482092"
-                        open
-                      >
-                        <summary class="article-expander__title">Programming embedded systems: embedded unit testing</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/programming-embedded-systems-embedded-unit-testing/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>This installment explains the role of testing in the broader context of creating and managing complexity. Testing is critical in software development, but not necessarily...
-The post Programming embedded systems: embedded unit testing appeared first on Embedded.com.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/970835/"
-                        open
-                      >
-                        <summary class="article-expander__title">The Open Home Foundation launches</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/970835/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The Open Home Foundation has announced
-its existence as a home and support resource for free home-automation
-projects.
-
-
-	 We created the Open Home Foundation to fight for the fundamental
-	 principles of privacy, choice, and sustainability for smart
-	 homes. And every person who lives in one.
-
-	 Ahead of today, we&#x27;ve transferred over 240 projects, standards,
-	 drivers, and libraries—Home Assistant, ESPHome, Zigpy, Piper,
-	 Improv Wi-Fi, Wyoming, and so many more—to the Open Home
-	 Foundation. This is all about looking into the future. We&#x27;ve done
-	 this to create a bulwark against surveillance capitalism, the risk
-	 of buyout, and open-source projects becoming abandonware. To an
-	 extent, this protection extends even against our future selves—so
-	 that smart home users can continue to benefit for years, if not
-	 decades. No matter what comes.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/970814/"
-                        open
-                      >
-                        <summary class="article-expander__title">Andreas Tille elected as Debian project leader</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/970814/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The Debian project leader
-
-election results are in and Andreas Tille
-has been elected.
-In a fairly competitive vote, Tille beat Sruthi Chandran to fill the
-position for 
-the coming year. We looked at the election and the
-candidates a few weeks back.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/970293/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Linus and Dirk chat about AI, XZ, hardware, and more</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/970293/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>One of the mainstays of the the Linux Foundation&#x27;s Open Source Summit is the &quot;fireside chat&quot;
-(sans fire) between Linus Torvalds and Dirk Hohndel to discuss open source and
-Linux kernel topics of the day. On April 17, at Open Source Summit
-North America (OSSNA) in Seattle, Washington, they held with tradition
-and discussed a range of topics including proper whitespace parsing,
-security, and the current AI craze.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/970702/"
-                        open
-                      >
-                        <summary class="article-expander__title">Hutterer: udev-hid-bpf: quickstart tooling to fix your HID devices with eBPF</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/970702/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Peter Hutterer announces
-udev-hid-bpf, a tool to facilitate the loading of BPF programs that
-make human-input devices work correctly.
-
-
-	eBPF was originally written for network packet filters but as of
-	kernel v6.3 and thanks to Benjamin, we have BPF in the HID
-	subsystem. HID actually lends itself really well to BPF because,
-	well, we have a byte array and to fix our devices we need to do
-	complicated things like &quot;toggle that bit to zero&quot; or &quot;swap those
-	two values&quot;.
-
-
-See this article for more information on
-the BPF-HID mechanism.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/970793/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Monday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/970793/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by AlmaLinux (firefox and java-1.8.0-openjdk), Debian (chromium, flatpak, guix, openjdk-11, openjdk-17, thunderbird, and tomcat9), Fedora (chromium, firefox, glibc, nghttp2, nodejs18, python-aiohttp, python-django3, python-pip, and uxplay), Mageia (putty &amp; filezilla), Red Hat (Firefox, firefox, java-1.8.0-openjdk, java-21-openjdk, nodejs:18, shim, and thunderbird), Slackware (freerdp), SUSE (apache-commons-configuration2, nodejs14, perl-CryptX, putty, shim, and wireshark), and Ubuntu (linux, linux-aws, linux-aws-5.15, linux-azure-5.15, linux-azure-fde,
- linux-azure-fde-5.15, linux-gcp, linux-gcp-5.15, linux-gke, linux-gkeop,
- linux-gkeop-5.15, linux-hwe-5.15, linux-ibm, linux-ibm-5.15,
- linux-intel-iotg, linux-intel-iotg-5.15, linux-kvm,
- linux-lowlatency-hwe-5.15, linux-oracle, linux-oracle-5.15, linux-raspi, linux, linux-aws, linux-aws-5.4, linux-azure, linux-azure-5.4,
- linux-bluefield, linux-gcp, linux-gcp-5.4, linux-gkeop, linux-hwe-5.4,
- linux-ibm, linux-ibm-5.4, linux-iot, linux-kvm, linux-oracle,
- linux-oracle-5.4, linux-raspi, linux-raspi-5.4, linux-xilinx-zynqmp, linux, linux-aws, linux-aws-6.5, linux-azure, linux-gcp, linux-gcp-6.5,
- linux-hwe-6.5, linux-laptop, linux-lowlatency, linux-nvidia-6.5,
- linux-oem-6.5, linux-oracle, linux-oracle-6.5, linux-raspi,
- linux-starfive, linux-starfive-6.5, linux, linux-aws, linux-aws-hwe, linux-azure, linux-azure-4.15, linux-gcp,
- linux-gcp-4.15, linux-hwe, linux-kvm, linux-oracle, linux, linux-aws, linux-kvm, linux-lts-xenial, lxd, percona-xtrabackup, and pillow).</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;107526"
-                        open
-                      >
-                        <summary class="article-expander__title">“노무현 부부싸움”, 그 정진석이 비서실장으로 돌아왔다: 슬로우레터 4월23일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/107526">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>돌고 돌아 정진석, 싸우자는 건가? 17개월 만에 질문을 받았다. 더 깊게 읽기. “국민연금 더 내고 더 받자.” 예정된 결론, 정보가 부족했다. 중도가 없는 아령형 사회. 40대가 고용 취약계층. 한국 경제의 기적은 끝났나. 다르게 읽기. 삼성전자 법인세 0원. 5500억 원 누가 줄 건가. 오늘의 TMI. 학교에서 한국어 배우는 외국 학생 20만 명. 정치 뉴스가 밈으로 대체되고...
-The post “노무현 부부싸움”, 그 정진석이 비서실장으로 돌아왔다: 슬로우레터 4월23일. appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >EmbeddedRelated.com Blogs</button>
-                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1656.php"
-                        open
-                      >
-                        <summary class="article-expander__title">How to use I2C devices in (Apache) NuttX: Scanning for Devices</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1656.php">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Previously in this EmbeddedRelated article,
- we saw how to use Buttons Subsystem on NuttX using a RaspberryPi Pico board. Now we will change from user input device (buttons) for something more generic: I2C protocol. NuttX supports a lot of I2C devices (sensors, displays, EEPROMs, I/O Expanders, I2C multiplexers, and many more). And most important: because NuttX is a Linux-like RTOS you...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1657.php"
-                        open
-                      >
-                        <summary class="article-expander__title">EOC 2024 - I Will Attend Giveaways!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1657.php">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>With the Embedded Online Conference just around the corner, we are very excited to announce an opportunity for you to win one of many amazing prizes, thanks to the generous contributions of DigiKey, Jetperch and Saleae!
-
-For a chance to win one of the following prizes, all you have to do is help us with spreading the word about the...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-04 datetime="2024-01-04T15:14:19.000Z">2024-01-04</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-04 datetime="2024-01-04T15:14:19.000Z"></time>
           </button>
@@ -9657,8 +9951,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/9180867010">
-        <time id="build-timestamp" datetime="2024-05-21T20:14:32.277Z">2024-05-21T20:14:32.277Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/9197780024">
+        <time id="build-timestamp" datetime="2024-05-22T20:13:57.347Z">2024-05-22T20:13:57.347Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
