@@ -2,10 +2,110 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-05-24T20:13:56.419Z</updated>
+    <updated>2024-05-25T20:12:59.312Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Two talks on multi-size transparent huge page performance]]></title>
+        <id>https://lwn.net/Articles/974826/</id>
+        <link href="https://lwn.net/Articles/974826/"/>
+        <updated>2024-05-25T16:38:04.000Z</updated>
+        <summary type="html"><![CDATA[Using huge pages has been known for years to improve the performance of
+many workloads.  But traditional huge pages, often sized by the CPU at 2MB,
+can be difficult to allocate and can waste memory due to internal
+fragmentation.  Driven by both the folio transition and hardware
+improvements, attention to smaller, multi-size transparent huge pages
+(mTHPs) has been on the rise.  In two memory-management-track sessions at
+the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, developers discussed the
+kernel's ability to reliably allocate mTHPs and the performance gains that
+result.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Arenas and the almighty concatenation operator]]></title>
+        <id>https://nullprogram.com/blog/2024/05/25/</id>
+        <link href="https://nullprogram.com/blog/2024/05/25/"/>
+        <updated>2024-05-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I continue to streamline an arena-based paradigm, and stumbled
+upon a concise technique for dynamic growth — an efficient, generic
+“concatenate anything to anything” within an arena built atop a core of
+9-ish lines of code. The key insight originated from a reader suggestion
+about dynamic arrays. The subject of concatenation can be a string,
+dynamic array, or even something else. The “system” is extensible, and
+especially useful for path handling.
+Continuing from last time, the examples are in light, C-style C++.
+I chose it because templates and function overloading express the concepts
+succinctly. It uses no standard library functionality, so converting to C,
+or similar, should be straightforward. The core concatenation “operator”:
+
+template<typename T>
+T concat(arena *a, T head, T tail)
+…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Guidelines for computing sizes and subscripts]]></title>
+        <id>https://nullprogram.com/blog/2024/05/24/</id>
+        <link href="https://nullprogram.com/blog/2024/05/24/"/>
+        <updated>2024-05-24T22:25:10.000Z</updated>
+        <summary type="html"><![CDATA[Occasionally we need to compute the size of an object that does not yet
+exist, or a subscript that may fall out of bounds. It’s easy to miss
+the edge cases where results overflow, creating a nasty, subtle bug, even
+in the presence of type safety. Ideally such computations happen in
+specialized code, such as inside an allocator (calloc, reallocarray)
+and not outside by the allocatee (i.e. malloc). Mitigations exist with
+different trade-offs: arbitrary precision, or using a wider fixed integer
+— i.e. 128-bit integers on 64-bit hosts. In the typical case, working only
+with fixed size-type integers, I’ve come up with a set of guidelines to
+avoid overflows in the edge cases.
+Range check before computing a result. No exceptions.
+Do not cast unless you know a priori the operand is in range.
+Never…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Atomic writes without tears]]></title>
+        <id>https://lwn.net/Articles/974578/</id>
+        <link href="https://lwn.net/Articles/974578/"/>
+        <updated>2024-05-24T21:33:35.000Z</updated>
+        <summary type="html"><![CDATA[John Garry and Ted Ts'o led a discussion about supporting atomic writes for buffered
+I/O, without any torn (or partial) writes to the device, at the 2024 Linux Storage,
+Filesystem, Memory Management, and BPF Summit.  It is something of a
+continuation of a discussion at last year's
+summit. The goal is to help PostgreSQL, which writes its data using
+16KB buffered I/O; it currently has to do a lot of extra work to ensure
+that its data is safe on disk.  A promise of non-torn, 16KB buffered writes
+would allow the database 
+to avoid doing double writes.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Allocator optimizations for transparent huge pages]]></title>
+        <id>https://lwn.net/Articles/974636/</id>
+        <link href="https://lwn.net/Articles/974636/"/>
+        <updated>2024-05-24T20:42:27.000Z</updated>
+        <summary type="html"><![CDATA[The original Linux kernel, posted in 1991, ran on a system with a 4KB page
+size.  Over 30 years later, most of us are still running on systems
+with 4KB pages, even though the amount of installed memory has grown by a
+few orders of magnitude.  It is generally accepted that using large page
+sizes results in better performance for most applications, but allocating
+larger pages is often difficult.  During a memory-management session at the 2024 Linux Storage,
+Filesystem, Memory-Management and BPF Summit, Yu Zhao presented his
+ideas on improving the allocation of huge pages in the kernel.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Google @ KotlinConf 2024: A Look Inside Multiplatform Development with KMP and more]]></title>
         <id>https://developers.googleblog.com/en/google-kotlinconf-2024-a-look-inside-multiplatform-development-with-kmp-and-more/</id>
@@ -149,6 +249,15 @@ from the time might be of interest too, including:
         <summary type="html"><![CDATA[Security updates have been issued by Fedora (chromium, libreoffice, and thunderbird), Red Hat (.NET 7.0, .NET 8.0, gdk-pixbuf2, git-lfs, glibc, python3, and xorg-x11-server-Xwayland), SUSE (firefox, opensc, and ucode-intel), and Ubuntu (cjson and gnome-remote-desktop).]]></summary>
         <author>
             <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trustworthy AI using Confidential Federated Learning]]></title>
+        <id>3665220</id>
+        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3665220"/>
+        <updated>2024-05-24T12:34:31.000Z</updated>
+        <author>
+            <name>ACM Queue - All Queue Content</name>
         </author>
     </entry>
     <entry>
@@ -335,6 +444,15 @@ Shakeel Butt and (participating remotely) Roman Gushchin.]]></summary>
         <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium), Fedora (chromium, libxml2, pgadmin4, and python-libgravatar), Mageia (ghostscript), Red Hat (389-ds:1.4, ansible-core, bind and dhcp, container-tools:rhel8, edk2, exempi, fence-agents, freeglut, frr, ghostscript, glibc, gmp, go-toolset:rhel8, grafana, grub2, gstreamer1-plugins-bad-free, gstreamer1-plugins-base, gstreamer1-plugins-good, harfbuzz, httpd:2.4, idm:DL1, idm:DL1 and idm:client modules, kernel, kernel-rt, krb5, LibRaw, libreoffice, libsndfile, libssh, libtiff, libX11, libxml2, libXpm, linux-firmware, motif, mutt, openssh, osbuild and osbuild-composer, pam, pcp, pcs, perl-Convert-ASN1, perl-CPAN, perl:5.32, pki-core:10.6 and pki-deps:10.6 modules, pmix, poppler, postgresql-jdbc, python-dns, python-jinja2, python-pillow, python27:2.7, python3.11, python3.11-cryptography, python3.11-urllib3, python39:3.9 and python39-devel:3.9 modules, qt5-qtbase, resource-agents, squashfs-tools, sssd, systemd, tigervnc, tomcat, traceroute, varnish:6, virt:rhel and virt-devel:rhel modules, vorbis-tools, webkit2gtk3, xorg-x11-server, xorg-x11-server-Xwayland, and zziplib), SUSE (chromium, perl, postgresql14, and python-sqlparse), and Ubuntu (klibc, linux-aws-hwe, openssl, and vlc).]]></summary>
         <author>
             <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Confidential Computing or Cryptographic Computing?]]></title>
+        <id>3664295</id>
+        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3664295"/>
+        <updated>2024-05-23T12:27:12.000Z</updated>
+        <author>
+            <name>ACM Queue - All Queue Content</name>
         </author>
     </entry>
     <entry>
@@ -591,6 +709,15 @@ keepassxc package uploaded to Debian unstable for the
 upcoming Debian 13 ("Trixie") release.]]></summary>
         <author>
             <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Confidential Container Groups]]></title>
+        <id>3664293</id>
+        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3664293"/>
+        <updated>2024-05-22T15:59:04.000Z</updated>
+        <author>
+            <name>ACM Queue - All Queue Content</name>
         </author>
     </entry>
     <entry>
@@ -1023,6 +1150,16 @@ A service pro…]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Why Not Just Do Simple C++ RAII in C?]]></title>
+        <id>https://thephd.dev/just-put-raii-in-c-bro-please-bro-just-one-more-destructor-bro-cmon-im-good-for-it</id>
+        <link href="https://thephd.dev/just-put-raii-in-c-bro-please-bro-just-one-more-destructor-bro-cmon-im-good-for-it"/>
+        <updated>2024-05-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ever since I finished publishing the “defer” paper and successfully defended it on its first go-around (it now has tentative approval to go to a Technical Specification, I just need to obtain the necessary written boilerplate to do so), an old criticism]]></summary>
+        <author>
+            <name>The Pasture</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[[뉴페@스프] 자본주의가 가장 마지막에 줄여야 하는 비용은 이것]]></title>
         <id>https://newspeppermint.com/?p=79039</id>
         <link href="https://newspeppermint.com/2024/05/20/npsp_techlayoffs/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_techlayoffs"/>
@@ -1134,6 +1271,15 @@ on April 28. TDE does deliver a usable retro desktop, but with
 some limitations that hamper its usability on modern systems.]]></summary>
         <author>
             <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Make Two Trips]]></title>
+        <id>3664275</id>
+        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3664275"/>
+        <updated>2024-05-20T14:01:26.000Z</updated>
+        <author>
+            <name>ACM Queue - All Queue Content</name>
         </author>
     </entry>
     <entry>
@@ -4404,199 +4550,6 @@ into opposition.]]></summary>
 The post 뉴진스 쟁탈전: 엄마 매니저 vs. 거대 IP 비즈니스 appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>정호재</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Create a Red Hat OpenShift AI environment]]></title>
-        <id>58c8c5ed-8551-4c77-a9d5-f348390db450</id>
-        <link href="https://developers.redhat.com/articles/2024/04/26/create-red-hat-openshift-ai-environment"/>
-        <updated>2024-04-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Red Hat OpenShift AI combines the scalability and flexibility of containerization with the capabilities of machine learning and data analytics. With Red Hat OpenShift AI, data scientists and developers can efficiently collaborate, deploy, and manage their models and applications in a secure and streamlined environment. Snorkel is an open source Python library for programmatically building training datasets without manual labeling. It was created in 2017 to support reproducibility of early research papers on programmatic labeling and weak supervision.  
-In this tutorial, you will learn how to create an OpenShift AI environment and walk through 2 Snorkel tutorials provided by the Snorkel open source library, one for data labeling and for information extraction. This tutorial uses the Snorkel…]]></summary>
-        <author>
-            <name>Kaitlyn Abdo, Nicholas Schuetz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to share secrets across Red Hat OpenShift projects]]></title>
-        <id>130c8280-e342-447d-9398-87d0da97d07e</id>
-        <link href="https://developers.redhat.com/articles/2024/04/26/how-share-secrets-across-red-hat-openshift-projects"/>
-        <updated>2024-04-26T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[With the Red Hat OpenShift 4.15 release, the shared resource CSI Driver operator feature (in Tech Preview) allows for sharing secrets across namespaces. This addresses a common developer request, enabling the creation of secrets in one place and seamless sharing across projects. This is particularly handy for efficiently managing frequently accessed services like Messaging layer, Databases, and Registries.
-In this article, we'll dive into the technical aspects of leveraging this feature, optimizing your OpenShift workflow for enhanced secret management. We will walk through a simple Spring Boot example, which will read a secret from a mount, and display the contents. This secret will be created as a sharedSecret on another namespace.
-Prerequisites
-As a cluster admin, to enable Tech Preview…]]></summary>
-        <author>
-            <name>Bharathi Tenneti</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1분기 메타 실적을 읽는 월가의 시선, 테타투자 급증은 리더쉽 강화화할 것, 하락시 매수]]></title>
-        <id>https://happist.com/?p=594620</id>
-        <link href="https://happist.com/594620/1%eb%b6%84%ea%b8%b0-%eb%a9%94%ed%83%80-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80"/>
-        <updated>2024-04-26T01:44:45.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Secure Connected Motion Control with Analog Devices]]></title>
-        <id>https://www.embedded.com/?p=4482148</id>
-        <link href="https://www.embedded.com/secure-connected-motion-control-with-analog-devices/"/>
-        <updated>2024-04-26T00:54:52.000Z</updated>
-        <summary type="html"><![CDATA[The Secure Connection Motion Control Platform leverages Lattice Semiconductor’s CertusPro-NX FPGA for closed-loop motor control. Analog Devices’ Industrial Ethernet connectivity ICs complement this by enabling...
-The post Secure Connected Motion Control with Analog Devices appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Analog Devices</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[뉴페@스프] 경합지 잡긴 잡아야 하는데… 바이든의 딜레마, 돌파구 있을까]]></title>
-        <id>https://newspeppermint.com/?p=78823</id>
-        <link href="https://newspeppermint.com/2024/04/25/npsp_michiganevchina/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_michiganevchina"/>
-        <updated>2024-04-25T22:59:00.000Z</updated>
-        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 3월 6일 스프에 쓴 글입니다. 오는 11월 미국 대선에서는 경합주의 표심이 승패를 가르는 분수령이 될 거란 이야기를 여러 매체를 통해 많이 접하셨을 겁니다. 미국 대선은 주별로 표를 집계해 한 표라도 더 많이 받은 후보가 → 더 보기]]></summary>
-        <author>
-            <name>ingppoo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[어차피 질 선거, 한동훈의 셀카 놀이가 의도된 전략이었다면?: 슬로우레터 4월26일.]]></title>
-        <id>https://slownews.kr/?p=107797</id>
-        <link href="https://slownews.kr/107797"/>
-        <updated>2024-04-25T22:07:05.000Z</updated>
-        <summary type="html"><![CDATA[윤석열-이재명 면담 한 발짝도 못 나갔다. 국민의힘에 반격이 있을까. “이게 다 기자회견을 안 해서다.” 불효자는 상속 못 받는다. 맥락과 통찰. 돈 풀기 없이 성장했다고? 3고 위기는 이제부터다. 쟁점과 현안. 대통령 격노? 국민들이 어떻게 봤겠나. 이재명과 조국의 고량주 회동. 더 깊게 읽기. ‘입틀막’ 방송심의, 망치를 들면 모든 게 못으로 보인다. 다르게 읽기. 국민연금 개혁, 다음 국회로...
-The post 어차피 질 선거, 한동훈의 셀카 놀이가 의도된 전략이었다면?: 슬로우레터 4월26일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2024 Embedded Online Conference's Schedule]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1660.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1660.php"/>
-        <updated>2024-04-25T18:47:54.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to the 2024 Embedded Online Conference! Like with previous years, this year's event will be a mix of pre-recorded on-demand sessions and live Zoom sessions. We've carefully curated the schedule to ensure that you have access to a wealth of valuable content throughout the week.
-
-Most talks will be released on-demand, while most workshops and keynotes will be done live on Zoom....]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Python JIT stabilization]]></title>
-        <id>https://lwn.net/Articles/970397/</id>
-        <link href="https://lwn.net/Articles/970397/"/>
-        <updated>2024-04-25T17:57:46.000Z</updated>
-        <summary type="html"><![CDATA[On April 11, Brandt Bucher posted
-PEP 744 ("JIT Compilation"),
-which summarizes the current state of Python's new 
-copy-and-patch just-in-time (JIT) compiler. The JIT is currently
-experimental, but the PEP proposes some criteria for the circumstances under which it
-should become a non-experimental part of Python.
-
-The discussion of the PEP hasn't
-reached a conclusion, but
-several members of the community have already raised questions
-about how the JIT would fit into future iterations of the Python language.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ubuntu 24.04 LTS (Noble Numbat) released]]></title>
-        <id>https://lwn.net/Articles/971175/</id>
-        <link href="https://lwn.net/Articles/971175/"/>
-        <updated>2024-04-25T15:42:09.000Z</updated>
-        <summary type="html"><![CDATA[Version 24.04 LTS of the Ubuntu distribution is out.
-
-
-	This release continues Ubuntu's proud tradition of integrating the
-	latest and greatest open source technologies into a high-quality,
-	easy-to-use Linux distribution. The team has been hard at work
-	through this cycle, together with the community and our partners,
-	to introduce new features and fix bugs.
-
-
-The list of changes and enhancements is long; click below for some details.
-More information can be found in the
-release notes;  see also this
-page for a summary of security-related changes.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[엔비디아, 인공지능 스타트업 2개사(Deci, Run:ai) 인수로 칩 시장 지배력 강화  추진]]></title>
-        <id>https://happist.com/?p=594608</id>
-        <link href="https://happist.com/594608/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5-%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85-2%ea%b0%9c%ec%82%acdeci-runai-%ec%9d%b8%ec%88%98%eb%a1%9c-%ec%b9%a9-%ec%8b%9c"/>
-        <updated>2024-04-25T15:27:37.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The state of realtime and embedded Linux]]></title>
-        <id>https://lwn.net/Articles/970555/</id>
-        <link href="https://lwn.net/Articles/970555/"/>
-        <updated>2024-04-25T14:25:09.000Z</updated>
-        <summary type="html"><![CDATA[Linux, famously, appears in a wide range of systems.  While servers and
-large data centers get a lot of the attention, and this year will always be
-the year of the Linux desktop, there is also a great deal of Linux to be
-found in realtime and embedded applications.  Two talks held in the
-realtime and embedded tracks of the 2024 Open
-Source Summit North America provided listeners with an update on how
-Linux is doing in those areas.  Work on realtime Linux appears to be nearing
-completion, while the embedded community is still pushing forward at full
-speed.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Thursday]]></title>
-        <id>https://lwn.net/Articles/971140/</id>
-        <link href="https://lwn.net/Articles/971140/"/>
-        <updated>2024-04-25T14:14:13.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Fedora (curl, filezilla, flatpak, kubernetes, libfilezilla, thunderbird, and xen), Oracle (go-toolset:ol8, kernel, libreswan, shim, and tigervnc), Red Hat (buildah, gnutls, libreswan, tigervnc, and unbound), SUSE (cockpit-wicked, nrpe, and python-idna), and Ubuntu (dnsmasq, freerdp2, linux-azure-6.5, and thunderbird).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tokens for LLMs: Byte Pair Encoding in Go]]></title>
-        <id>https://eli.thegreenplace.net/2024/tokens-for-llms-byte-pair-encoding-in-go/</id>
-        <link href="https://eli.thegreenplace.net/2024/tokens-for-llms-byte-pair-encoding-in-go/"/>
-        <updated>2024-04-25T13:34:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>A basic unit of currency in modern LLMs is the <em>token</em>; <a class="reference external" href="https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/">exciting new models</a>
-have long context windows of millions of <em>tokens</em>. API pricing for the large
-providers is <em>per-token</em>. We're even seeing the invention of new, derived units
-like TPM (<a class="reference external" href="https://ai.google.dev/pricing">tokens per minute</a>).</p>
-<p>But what are tokens?</p>
-<p><a class="reference external" href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them">This OpenAI …</a></p>]]></summary>
-        <author>
-            <name>Eli Bendersky's website</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[데이트 상대로 ‘심리 상담’ 받는 사람을 선호한다고? 운동만 자기 관리가 아니다]]></title>
-        <id>https://newspeppermint.com/?p=79211</id>
-        <link href="https://newspeppermint.com/2024/04/25/npsp_mindsos/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_mindsos"/>
-        <updated>2024-04-25T10:40:59.000Z</updated>
-        <summary type="html"><![CDATA[보스턴 대학에서 일하는 정신과 의사가 ‘자녀의 정신 건강에 과몰입하는 미국 부모들’에 대한 칼럼을 기고 했습니다. 마틸드 로스 박사는 대학생 자녀를 둔 학부모들이 아이 걱정에 대학교에 찾아와 교수를 만나거나 심리 상담소에 문의하는, 미국에선 정말 드물던 일이 최근 들어 잦아졌다고 지적합니다. 그런데 생활과 학업 환경이 급격하게 변하는 대학교에 처음 들어와서는 모든 게 낯설고 불확실할 수 있으므로, 어느 정도 불안감이 드는 건 당연한 일입니다. 이 칼럼을 읽고, 반대로 한국에선 정신 건강 문제가 더 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[‘입틀막’ 방송심의, 망치를 들면 모든 게 못으로 보인다.]]></title>
-        <id>https://slownews.kr/?p=107733</id>
-        <link href="https://slownews.kr/107733"/>
-        <updated>2024-04-25T08:31:16.000Z</updated>
-        <summary type="html"><![CDATA[[슬로우리포트] 사상 최악의 선거 심의, 결국 지배구조의 문제다. 방송심의 문제, 정권 바뀌어도 논란 반복… 왜 손을 못 대나. 용어 정리부터 해볼까. 올해 총선은 특히 심의 이슈가 많았다. 대표적 쟁점을 살펴보자. 징계가 많으면 불이익을 받나. 실제로 허가나 승인 취소가 되는 경우도 있나. 올해 선거방송심의위, 어떤 기사들이 문제가 됐나. 단정적으로 보도해서는 안 된다면 어떻게 보도해야 하나. 특히...
-The post ‘입틀막’ 방송심의, 망치를 들면 모든 게 못으로 보인다. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
         </author>
     </entry>
     <entry>
