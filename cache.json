@@ -125,16 +125,6 @@
           "wordCount": null,
           "title": "std::expected - Monadic Extensions",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2024/expected-cpp23-internals/",
-          "author": null,
-          "description": "In the article about std::expected, I introduced the type and showed some basic examples, and in this text, you’ll learn how it is implemented.\nstruct \n  \n\n\n\n\n     \n    \n\n\nIn short, std::expected should contain two data members: the actual expected value and the unexpected error object. So, in theory, we could use a simple structure:\ntemplate <class _Ty, class _Err>\nstruct expected {\n    /*... lots of code ... */\n    _Ty _Value;\n    _Err _Unexpected;\n};\n\n\nHowever, there are better solutions than this. Here are some obvious issues for our “struct” approach.\nThe size of the object is the sum of the Value type and the Error type (plus padding if needed).\nTwo data members are “active” and initialized, which might not be possible - for example, what if the Value type has no default constructor?…",
-          "link": "https://www.cppstories.com/2024/expected-cpp23-internals/",
-          "publishedOn": "2024-04-30T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Understand internals of std::expected",
-          "imageUrl": null
         }
       ]
     },
@@ -664,26 +654,6 @@
           "wordCount": null,
           "title": "Modernization - Rehost to OpenShift using ArgoCD - Pedal based guide",
           "imageUrl": null
-        },
-        {
-          "id": "618e4cde-f678-4c57-b88d-66f650de3eb5",
-          "author": "Tom Deseyn",
-          "description": "In the previous article on C# 12, you learned about collection expressions and primary constructors. In this article, we’ll take a look at some advanced features that part of the latest C# version: inline arrays, optional params and params in lambda expressions, ref readonly parameters, aliasing any type, and the UnsafeAccessorAttribute.\nInline arrays\nA regular C# array is a reference type that lives on the heap. Like other reference types, the garbage collector (GC) keeps track whether the array is still referenced, and it frees up memory when the array is no longer in use.\nTo avoid the GC overhead in performance sensitive code, when a small array is needed that is local to a function, it can be allocated on the stack using stackalloc. Thanks to the Span<T> type introduced in .NET Core 2.…",
-          "link": "https://developers.redhat.com/articles/2024/04/30/some-more-c-12",
-          "publishedOn": "2024-04-30T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Some more C# 12",
-          "imageUrl": null
-        },
-        {
-          "id": "663be67c-4825-4c93-9895-4acee6e5d197",
-          "author": "David Kwon",
-          "description": "With the fuse-overlayfs storage driver, you can enable faster builds and more optimized storage usage for podman build and buildah within your Red Hat OpenShift Dev Spaces cloud development environment (CDE). Before diving into its advantages, let’s first discuss some prerequisite details about container image layers and storage drivers.\nContainer images consist of layers which are stored and used for building and running containers. A huge benefit of this layer structure is that, assuming that each image layer stores only the differences compared to the previous layer (i.e., the delta), each layer is small which generally allows time and space savings when building and running containers. This is because small layers promotes re-usability allowing layer sharing between images and containe…",
-          "link": "https://developers.redhat.com/articles/2024/04/30/efficient-image-builds-fuse-red-hat-openshift-dev-spaces",
-          "publishedOn": "2024-04-30T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Efficient image builds with FUSE in Red Hat OpenShift Dev Spaces",
-          "imageUrl": null
         }
       ]
     },
@@ -731,6 +701,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4482404",
+          "author": "Jim Olsen",
+          "description": "There is a menu of options and technologies available to provide timing services in GNSS/GPS-denied environments for extended periods of wide-area outages. Critical infrastructure and...\nThe post Timing alternatives for critical applications in GNSS-denied environments appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/timing-alternatives-for-critical-applications-in-gnss-denied-environments/",
+          "publishedOn": "2024-05-29T13:31:52.000Z",
+          "wordCount": null,
+          "title": "Timing alternatives for critical applications in GNSS-denied environments",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4482399",
+          "author": "Jacob Beningo",
+          "description": "Vendor-supplied IDEs will generate makefiles for you, but if you want to leverage modern development practices, you need a tool that can help simplify your...\nThe post 3 tips for using CMake with embedded software appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/3-tips-for-using-cmake-with-embedded-software/",
+          "publishedOn": "2024-05-29T12:39:10.000Z",
+          "wordCount": null,
+          "title": "3 tips for using CMake with embedded software",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4482396",
+          "author": "Gilad David Maayan",
+          "description": "Almost all Internet of Medical Things (IoMT) devices are subject to some government regulation and require a compliance effort by manufacturers. The Internet of Medical...\nThe post A 13-step compliance checklist for IoMT regulations appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/a-13-step-compliance-checklist-for-iomt-regulations/",
+          "publishedOn": "2024-05-29T12:10:16.000Z",
+          "wordCount": null,
+          "title": "A 13-step compliance checklist for IoMT regulations",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4482387",
           "author": "Nitin Dahad",
@@ -970,16 +970,6 @@
           "wordCount": null,
           "title": "How to simplify design of isolated software configurable I/O channels",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4482173",
-          "author": "Microchip",
-          "description": "Accessible and affordable performance/Watt on FPGA. Saving you pain of having to design in heatsinks avoiding you cost. PolarFire® FPGA and SoC in action at...\nThe post PolarFire® devices at EW24: Accessible and Affordable appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/polarfire-devices-at-ew24-accessible-and-affordable/",
-          "publishedOn": "2024-04-30T00:05:44.000Z",
-          "wordCount": null,
-          "title": "PolarFire® devices at EW24: Accessible and Affordable",
-          "imageUrl": null
         }
       ]
     },
@@ -988,6 +978,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1668.php",
+          "author": null,
+          "description": "Previously in this EmbeddedRelated article,\r\n we saw how to\r\nfind an I2C device connected to your board using the i2ctool that is very familiar for people with previous experience with embedded Linux. \r\nToday we will see how to add support to an I2C device (i.e. BMP280 sensor) in your board. So, lets to get started!\r\nNuttX uses a very simple approach to interface with devices connected to the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1668.php",
+          "publishedOn": "2024-05-28T22:30:04.000Z",
+          "wordCount": null,
+          "title": "How to use I2C devices in (Apache) NuttX: Adding support for an I2C device in your board",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1666.php",
           "author": null,
@@ -1047,16 +1047,6 @@
           "wordCount": null,
           "title": "Unuglify C++ FSM with DSL",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1661.php",
-          "author": null,
-          "description": "This is a short article explaining how to analyze part of the behavior of a power MOSFET during turn-on, and how it is influenced by the parasitic inductance at the source terminal. Parasitic inductance is not a good thing — the word parasite in biology refers to an external thing that feeds off a host organism; while <a...",
-          "link": "https://www.embeddedrelated.com/showarticle/1661.php",
-          "publishedOn": "2024-04-29T10:49:46.000Z",
-          "wordCount": null,
-          "title": "Turn It On Again: Modeling Power MOSFET Turn-On Dependence on Source Inductance",
-          "imageUrl": null
         }
       ]
     },
@@ -1088,6 +1078,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/whats-new-in-google-pay-io-2024/",
+          "author": null,
+          "description": "We’re adding new features to Google Pay so you can offer richer and more accessible payment experiences for your customers, and improved APIs to simplify your payments integrations.",
+          "link": "https://developers.googleblog.com/en/whats-new-in-google-pay-io-2024/",
+          "publishedOn": "2024-05-29T20:14:29.081Z",
+          "wordCount": null,
+          "title": "What’s new in Google Pay at I/O 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/ai-edge-torch-generative-api-for-custom-llms-on-device/",
+          "author": null,
+          "description": "AI Edge Torch Generative API enables developers to bring powerful new capabilities on-device, such as summarization, content generation, and more.",
+          "link": "https://developers.googleblog.com/en/ai-edge-torch-generative-api-for-custom-llms-on-device/",
+          "publishedOn": "2024-05-29T20:14:29.078Z",
+          "wordCount": null,
+          "title": "AI Edge Torch Generative API for Custom LLMs on Device",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/google-kotlinconf-2024-a-look-inside-multiplatform-development-with-kmp-and-more/",
           "author": null,
@@ -1495,6 +1505,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1126/",
+          "author": null,
+          "description": "LLVM is an open-source project with a pretty large code base. The acme in terms of code quality, considering its size and open-source nature. After all, it's the developers of compiler tools who know...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1126/",
+          "publishedOn": "2024-05-28T21:00:00.000Z",
+          "wordCount": null,
+          "title": "What errors are lurking in LLVM code?",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1125/",
           "author": null,
           "description": "In this article, we'll look at how to correctly destroy objects in the OOP-based C++ program without redundant operations. This is the final article in the series about the bugs in qdEngine.",
@@ -1646,6 +1666,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/975445/",
+          "author": "jzb",
+          "description": "The Asahi Linux project works\nto support Linux on Apple Silicon hardware. The\nproject's flagship\ndistribution is the Fedora\nAsahi Remix, which has its own installer (rather than Anaconda) to\naccommodate the unique requirements of installing on Apple's\nhardware. Previously the installer was built by the Asahi project, but it has asked for (and received) an exception\nfrom the Fedora\nEngineering Steering Committee (FESCo) to include two binaries\nfrom upstream open-source projects so that the installer can be built on Fedora\ninfrastructure.",
+          "link": "https://lwn.net/Articles/975445/",
+          "publishedOn": "2024-05-29T18:15:38.000Z",
+          "wordCount": null,
+          "title": "[$] Fedora approves shipping pre-built macOS binaries",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/975807/",
+          "author": "jzb",
+          "description": "The FreeBSD Foundation has announced\nthe 2024\nFreeBSD Community Survey Report. The report provides a summary of\n1,446 responses to an anonymous online survey of FreeBSD users. It\nprovides insights into user profiles, typical usage, how the FreeBSD\nproject is viewed, as well as recommendations for expanding the\nFreeBSD community and contributor base:\nThe raw\ndata for the survey is available as well.",
+          "link": "https://lwn.net/Articles/975807/",
+          "publishedOn": "2024-05-29T17:41:25.000Z",
+          "wordCount": null,
+          "title": "Results from the 2024 FreeBSD Community Survey Report",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/975597/",
+          "author": "corbet",
+          "description": "When redesigning the LWN site in 2002, we thought long and hard about\nwhether the ability to post comments should be part of it; LWN had not\noffered that feature for the first four years of its existence.  There were\nalready plenty of examples of how comments can go bad by then, but we\ndecided to trust our readers to keep things under control.  Much of the\ntime, that trust has proved justified, but there have been times where\nthings have not gone so well.  This time is quickly becoming one of those\nothers.",
+          "link": "https://lwn.net/Articles/975597/",
+          "publishedOn": "2024-05-29T16:28:02.000Z",
+          "wordCount": null,
+          "title": "A plea for more thoughtful comments",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/975737/",
+          "author": "jzb",
+          "description": "Security updates have been issued by AlmaLinux (glibc and tomcat), Fedora (chromium, fcitx5-qt, python-pyqt6, qadwaitadecorations, qgnomeplatform, qt6, qt6-qt3d, qt6-qt5compat, qt6-qtbase, qt6-qtcharts, qt6-qtcoap, qt6-qtconnectivity, qt6-qtdatavis3d, qt6-qtdeclarative, qt6-qtgraphs, qt6-qtgrpc, qt6-qthttpserver, qt6-qtimageformats, qt6-qtlanguageserver, qt6-qtlocation, qt6-qtlottie, qt6-qtmqtt, qt6-qtmultimedia, qt6-qtnetworkauth, qt6-qtopcua, qt6-qtpositioning, qt6-qtquick3d, qt6-qtquick3dphysics, qt6-qtquicktimeline, qt6-qtremoteobjects, qt6-qtscxml, qt6-qtsensors, qt6-qtserialbus, qt6-qtserialport, qt6-qtshadertools, qt6-qtspeech, qt6-qtsvg, qt6-qttools, qt6-qttranslations, qt6-qtvirtualkeyboard, qt6-qtwayland, qt6-qtwebchannel, qt6-qtwebengine, qt6-qtwebsockets, qt6-qtwebview, and zeal), Red Hat (glibc, kernel, kernel-rt, kpatch-patch, linux-firmware, mod_http2, pcp, pcs, protobuf, python3, rpm-ostree, and rust), SUSE (git, glibc-livepatches, kernel, libxml2, openssl-1_1, SUSE Manager Client Tools, SUSE Manager Client Tools, salt, and xdg-desktop-portal), and Ubuntu (amavisd-new, firefox, flask-security, frr, git, intel-microcode, jinja2, libreoffice, linux-intel-iotg, unbound, and webkit2gtk).",
+          "link": "https://lwn.net/Articles/975737/",
+          "publishedOn": "2024-05-29T13:20:17.000Z",
+          "wordCount": null,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/975412/",
           "author": "daroc",
@@ -2725,46 +2785,6 @@
           "wordCount": null,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971568/",
-          "author": "jake",
-          "description": "The Amarok music player project\nhas announced\nthe release of version 3.0, which is codenamed \"Castaway\".  It is the first\nstable version using Qt 5 and KDE Frameworks 5, and the first stable\nrelease since the final Qt-4-based 2.9.0 in 2018.\n\nThe road to 3.0 has not been a short one. Much of the Qt5/KF5 porting was done in 2015 already, but finishing and polishing everything up has been a slow, sometimes ongoing and sometimes stalled process ever since. 3.0 Alpha was released in February 2021 and has been since used by many people, as have been nightly builds of git master available for various distributions. Now in the past few months, an effort was made to get everything ready for a proper 3.0 release.\n\nCommon usecases should work quite well, and in addition to fixing KF5 port\nrelated regressions reported in pre-releases, 3.0 features many bugfixes\nand implemented features for longstanding issues, the oldest such\ndocumented being from 2009. However, with more than 20 years of development\nhistory, it is likely that not every feature Amarok has been tested\nthoroughly in the new release, and specifically some Internet services that\nhave changed their API in recent years are not available, at least for\nnow. It might well be that getting them in better state wouldn't require\nhuge effort, however, so if you know your way with Qt and KDE Frameworks\nand your favourite Internet music service does not work with Amarok 3.0,\nyou are extremely welcome to join in and help!",
-          "link": "https://lwn.net/Articles/971568/",
-          "publishedOn": "2024-04-29T20:30:03.000Z",
-          "wordCount": null,
-          "title": "Amarok 3.0 \"Castaway\" released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/970824/",
-          "author": "daroc",
-          "description": "On April 21, a group of anonymous authors and non-anonymous signatories published\na lengthy open letter to the\n\nNix community\nand Nix founder Eelco Dolstra calling for his resignation from the project. They\nclaimed ongoing problems with the project's leadership, primarily focusing on the\nway his actions have allegedly\nundermined people nominally empowered to perform various\nmoderation and governance tasks. Since its release, the letter has gained\nmore than 100 signatures.",
-          "link": "https://lwn.net/Articles/970824/",
-          "publishedOn": "2024-04-29T14:04:21.000Z",
-          "wordCount": null,
-          "title": "[$] A leadership crisis in the Nix community",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971487/",
-          "author": "jake",
-          "description": "Security updates have been issued by AlmaLinux (buildah, go-toolset:rhel8, golang, java-11-openjdk, java-21-openjdk, libreswan, thunderbird, and tigervnc), Debian (chromium, emacs, frr, mediawiki, ruby-rack, trafficserver, and zabbix), Fedora (chromium, grub2, python-idna, and python-reportlab), Mageia (chromium-browser-stable, firefox, opencryptoki, and thunderbird), Red Hat (container-tools:4.0, container-tools:rhel8, git-lfs, and shim), SUSE (frr, java-11-openjdk, java-1_8_0-openjdk, kernel, pdns-recursor, and shim), and Ubuntu (apache2, cpio, curl, glibc, gnutls28, less, libvirt, and pillow).",
-          "link": "https://lwn.net/Articles/971487/",
-          "publishedOn": "2024-04-29T13:44:05.000Z",
-          "wordCount": null,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971436/",
-          "author": "corbet",
-          "description": "Robert McQueen has posted a message\nfrom the GNOME Foundation board describing the current financial\nsituation, plans to improve it, and an increase in the size of the board.\n\n\n\tThe Foundation has a reserves policy which specifies a minimum\n\tamount of money we have to keep in our accounts. This is so that if\n\tthere is a significant interruption to our usual income, we can\n\tpreserve our core operations while we work on new funding\n\tsources. We've now \"hit the buffers\" of this reserves policy,\n\tmeaning the Board can't approve any more deficit budgets – to keep\n\tspending at the same level we must increase our income.",
-          "link": "https://lwn.net/Articles/971436/",
-          "publishedOn": "2024-04-29T13:17:44.000Z",
-          "wordCount": null,
-          "title": "McQueen: Update from the GNOME board",
-          "imageUrl": null
         }
       ]
     },
@@ -2790,6 +2810,26 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/tdd-html-templates.html#MakeItEasyToAddNewTests",
+          "author": null,
+          "description": "Testing templates for generating HTML leads to tests that are very\n        similar. Matteo Vaccari wisely likes to separate the\n        common elements of tests from those that vary. He continues\n        his article to show how he does this by\n        parameterizing the tests. The resulting tests are\n        easier to write, and more importantly, faster to understand and modify.\nmore…",
+          "link": "https://martinfowler.com/articles/tdd-html-templates.html#MakeItEasyToAddNewTests",
+          "publishedOn": "2024-05-29T14:44:00.000Z",
+          "wordCount": null,
+          "title": "Parameterizing HTML template tests",
+          "imageUrl": null
+        },
+        {
+          "id": "https://martinfowler.com/articles/data-fetch-spa.html#prefetching",
+          "author": null,
+          "description": "Juntao Qiu's completes his set of data fetching\n      patterns for single-page applications. Prefetching involves fetching data\n      before it's called for in the application flow. Although this can mean\n      data is fetched unnecessarily, it reduces latency should the data be needed.\nmore…",
+          "link": "https://martinfowler.com/articles/data-fetch-spa.html#prefetching",
+          "publishedOn": "2024-05-29T14:24:00.000Z",
+          "wordCount": null,
+          "title": "Prefetching in Single-Page Applications",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/articles/data-fetch-spa.html#IntroducingUserdetailcardComponent",
           "author": null,
@@ -2933,18 +2973,7 @@
       "title": "The ESP Journal - Medium",
       "feedUrl": "https://medium.com/feed/the-esp-journal",
       "siteUrl": "https://blog.espressif.com?source=rss----d5414d5dee73---4",
-      "articles": [
-        {
-          "id": "https://medium.com/p/1199e0c577fc",
-          "author": "Kedar Sovani",
-          "description": "",
-          "link": "https://blog.espressif.com/whats-new-with-esp-zerocode-1199e0c577fc?source=rss----d5414d5dee73---4",
-          "publishedOn": "2024-04-29T09:12:56.000Z",
-          "wordCount": null,
-          "title": "What’s New with ESP ZeroCode",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "/* the devil is in the detail */",
@@ -3144,6 +3173,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=109284",
+          "author": "이정환",
+          "description": "특검법 부결, 여기서 끝이 아니다. 22대 국회에서 다시 간다. 쟁점과 현안. 윤석열-이종섭 통화 기록도 나왔다. 또 거부권? “민생 법안 날렸다.” 다르게 읽기. 윤석열을 지킬 수 있을까. 더 깊게 읽기. 30년 뒤 서울 중위 연령은 56세. 생성형 AI는 ‘돈 먹는 하마’. “뭉개면서 가겠죠.” 오늘의 TMI. 수도권 거주자, 서울 출근에 평균 71분. 성심당, “임대료 1억 넘으면 대전역점...\nThe post 일찍 찾아온 조중동의 ‘헤어질 결심’, 손절 타이밍은 언제일까: 슬로우레터 5월29일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/109284",
+          "publishedOn": "2024-05-28T22:05:25.000Z",
+          "wordCount": null,
+          "title": "일찍 찾아온 조중동의 ‘헤어질 결심’, 손절 타이밍은 언제일까: 슬로우레터 5월29일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=109254",
           "author": "이정환",
@@ -3523,26 +3562,6 @@
           "wordCount": null,
           "title": "저널리즘 관점에서 조수진 오보 톺아보기",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=107406",
-          "author": "민노씨",
-          "description": "* 위 목차 링크를 누르면 해당 항목으로 이동합니다. 오른쪽 아래 화살표(↑)를 누르면 다시 최상단으로 올라옵니다. 홍세화를 추모하며 “홍세화 선생님은 ‘똘레랑스'(tolérence: 나와는 다른 타자의 ‘다름과 차이’를 관용)로 유명해지긴 했지만, 홍세화 선생을 가장 잘 표현하는 게 똘레랑스일까 싶어요. 생각과 말과 행동을 일치시키려고 노력한 삶의 태도가 존경받아야 하지 않나 싶어요. 제가 주목한 건 그런 삶의 태도예요. 홍세화 선생님의...\nThe post 세계화의 열매, 대도시 엘리트 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/107406",
-          "publishedOn": "2024-04-30T03:42:38.000Z",
-          "wordCount": null,
-          "title": "세계화의 열매, 대도시 엘리트",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=107961",
-          "author": "이정환",
-          "description": "윤석열-이재명 발언 시간은 85:15. 하고 싶은 말만 했다. 허심탄회한 대화? 하나도 안 맞았다. 쟁점과 현안. 황우여로 혁신 가능한가. “가정주부에 웬 뇌물 따지냐.” 다르게 읽기. 성장률 서프라이즈의 그림자. 한국 GDP, 멕시코에 추월당했다. 윤희숙이 말하는 보수의 참패 요인. 국민의힘이 갇힌 동굴의 우상. 더 깊게 읽기. 산재 가장 많은 기업은 배달의민족. 원전 지원금 3.5조원, 쌈짓돈처럼 쓰고 쇠고랑. 엔달러...\nThe post “가정 주부에 웬 뇌물 따지나”, 선거방송심의위가 MBC에 중징계 때린 이유: 슬로우레터 4월30일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/107961",
-          "publishedOn": "2024-04-29T22:06:43.000Z",
-          "wordCount": null,
-          "title": "“가정 주부에 웬 뇌물 따지나”, 선거방송심의위가 MBC에 중징계 때린 이유: 슬로우레터 4월30일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3551,6 +3570,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=594811",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594811/ubs-sp-500-%ec%a0%84%eb%a7%9d%ec%b9%98",
+          "publishedOn": "2024-05-29T01:59:16.000Z",
+          "wordCount": null,
+          "title": "UBS, S&P 500 전망치를 5,600으로 상향 조정",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594808",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594808/amd-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2024-05-29T01:44:05.000Z",
+          "wordCount": null,
+          "title": "배런스, 만년 2등이었던 AMD, AMD 주가는 승자가 될 수 있다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594799",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594799/5-29-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-05-29T01:21:02.000Z",
+          "wordCount": null,
+          "title": "5/29, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=594796",
           "author": "happist",
@@ -3749,6 +3798,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=79434",
+          "author": "NewsPeppermint",
+          "description": "요즘 미국 스포츠의 아이콘으로 떠오른 인물 가운데 대학을 갓 졸업한 프로 1년차 농구 선수 케이틀린 클락(Caitlin Clark)이 있습니다. NCAA 통산 득점 3,951점으로 역대 1위, 각종 기록은 물론 엄청난 인기로 흥행 측면에서도 전대미문이라 할 만한 기록을 세운 살아 있는 레전드지만, 그의 프로 첫 시즌 연봉은 76,535달러. 우리돈 약 1억 원입니다. 이름에서 추측할 수 있는 그는 여자 농구선수이기 때문입니다. 명시적인 차별이 있다기보다는 여자 프로농구리그(WNBA) 시장이 미국을 넘어 전 세계적으로 인기를 구가하는 NBA에 → 더 보기",
+          "link": "https://newspeppermint.com/2024/05/28/npsp_caitlinclark/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_caitlinclark",
+          "publishedOn": "2024-05-28T23:15:01.000Z",
+          "wordCount": null,
+          "title": "전례 없는 흥행 돌풍의 벌써 ‘레전드’…그런데 프로 되니까 수익 증발했다?",
+          "imageUrl": null
+        },
+        {
           "id": "https://newspeppermint.com/?p=79082",
           "author": "ingppoo",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 4월 8일 스프에 쓴 글입니다. 인공지능(AI), 범용 인공지능(AGI) 같은 단어가 더는 낯설지 않은 용어가 된 요즘입니다. 인류의 삶을 근본적으로 바꿔놓을 수 있는 잠재력을 지닌 강력하고 새로운 기술인 만큼 인공지능 시대를 맞아 논의하고 대비해야 할 → 더 보기",
@@ -3906,16 +3965,6 @@
           "publishedOn": "2024-05-01T15:30:56.000Z",
           "wordCount": null,
           "title": "“숨 쉬는 건 범죄가 아니다”…노숙도 마찬가지? 간단치 않은 사정들",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=78860",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 3월 11일 스프에 쓴 글입니다. 정치적인 성향은 어떻게 형성될까요? 정치적인 성향이 세부적인 변수라서 다소 좁은 의미로 정의하게 돼 문제라면, 좀 더 넓은 의미에서 한 사람의 가치관은 어떻게 형성되는지를 생각해 볼 수 있을 겁니다. 삶을 → 더 보기",
-          "link": "https://newspeppermint.com/2024/04/29/npsp_gendergapgeneration/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_gendergapgeneration",
-          "publishedOn": "2024-04-29T22:59:11.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] Z세대 가치관에 문제 있다? 그런데 부모인 X세대가 더 문제다?",
           "imageUrl": null
         }
       ]
