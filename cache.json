@@ -216,6 +216,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "00c73331-0dfc-460c-8020-a23d38867975",
+          "author": "asherman@redhat.com",
+          "description": "Managing environments efficiently has become a significant challenge for DevOps engineers, platform engineers, and developers. The concept of Environment as a Service (EaaS) promises agility and scalability but is often challenged with the complexities of provisioning, de-provisioning, applying consistent configurations across namespaces, and managing Day 2 operations. Some of the challenges include ensuring isolation between teams, managing access controls and automating the environment life cycles to support CI/CD (continuous integration/continuous deployment). As organizations strive to streamline these processes, the need for a product that can offer simple, efficient, flexible and expandable solutions is very important. \nIn this article, we will explore how the Multi Tenant Operator b…",
+          "link": "https://developers.redhat.com/articles/2024/05/31/simplify-tenant-service-multi-tenant-operator",
+          "publishedOn": "2024-05-31T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Simplify Tenant as a Service with the Multi Tenant Operator",
+          "imageUrl": null
+        },
+        {
           "id": "66991237-1821-4b2c-bf71-14788227dcdf",
           "author": "Russell Zaleski",
           "description": "Red Hat OpenShift Service on AWS (ROSA) is a turn-key and performant solution to run managed Red Hat OpenShift on Amazon Web Services (AWS). It lets users to focus more on their applications and less on the infrastructure or platform it runs on, helping drive developer innovation. \nEnsuring that OpenShift is performant and scalable is a core tenant of the OpenShift Performance and Scale team at Red Hat. Prior to its release (and still to this day), ROSA undergoes a vast array of performance and scale testing to ensure that it delivers industry leading performance. These tests run the gamut from control plane and data path focus, to upgrades, to network performance. These tests have been used to help measure and better the performance of “classic” ROSA, but what happens when we move to host…",
@@ -604,36 +614,6 @@
           "wordCount": null,
           "title": "Modernizing Pedal: API management for modern system design and administration",
           "imageUrl": null
-        },
-        {
-          "id": "211b46b0-1367-455c-8842-74b41ef77d16",
-          "author": "Diego Alvarez Ponce",
-          "description": "This is the fifth chapter in our “computer vision at the edge” series, in which we will dive into the preparation of a custom dataset. Below you can see all the different episodes in this series:\n\nHow to install single node OpenShift on AWS\nHow to install single node OpenShift on bare metal\nRed Hat OpenShift AI installation and set up\nModel training in Red Hat OpenShift AI\nPrepare and label custom datasets with Label Studio\nSafari application deployment on MicroShift  \n\nData labeling with Label Studio\nData labeling is the practice of accurately labeling data for the purpose of correct identification by training models, algorithms, etc. It is crucial for training models because it provides the necessary annotations and context for algorithms to learn effectively. Machine learning models und…",
-          "link": "https://developers.redhat.com/articles/2024/05/02/prepare-and-label-custom-datasets-label-studio",
-          "publishedOn": "2024-05-02T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Prepare and label custom datasets with Label Studio",
-          "imageUrl": null
-        },
-        {
-          "id": "629e04a1-0abc-431f-95e1-eea557232858",
-          "author": "Diego Alvarez Ponce",
-          "description": "This is the fourth episode of our series that dives into training and deploying computer vision models at the edge. And I have some good news: we're already past the halfway point. Have a look at the series outline and the remainder of the fascicles:\n\nHow to install single node OpenShift on AWS\nHow to install single node OpenShift on bare metal\nRed Hat OpenShift AI installation and set up\nModel training in Red Hat OpenShift AI\nPrepare and label custom datasets with Label Studio\nDeploy computer vision applications at the edge with MicroShift \n\nIntroduction\nTraining artificial intelligence (AI) models is a pivotal process in the development of AI systems, demanding significant time and resources. The importance of this training phase cannot be overstated, as it is during this stage that the …",
-          "link": "https://developers.redhat.com/articles/2024/05/02/model-training-red-hat-openshift-ai",
-          "publishedOn": "2024-05-02T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Model training in Red Hat OpenShift AI",
-          "imageUrl": null
-        },
-        {
-          "id": "02fe2c2a-c77c-4765-bbab-1482c2b7b62f",
-          "author": "Nikhil Mungale",
-          "description": "Red Hat Enterprise Linux (RHEL) 9.4 is now generally available (GA). This release provides a flexible, reliable, secure, and stable foundation for innovative applications. It also provides a platform for faster and more efficient development of critical workloads with a consistent experience across physical, virtual, private, public cloud, and edge deployments.\n You can download RHEL 9.4 at no cost as part of the Red Hat Developer program subscription. \nIn this article, you'll learn about enhancements in RHEL 9.4 that improve the developer experience.\nLatest language runtimes, databases, and tools\nRed Hat Enterprise Linux 9.4 has been updated with many developers' favorite programming languages. Notable changes include: \n\nPython 3.12 is the latest version of Python programming language inc…",
-          "link": "https://developers.redhat.com/articles/2024/05/01/whats-new-red-hat-enterprise-linux-94",
-          "publishedOn": "2024-05-01T13:45:00.000Z",
-          "wordCount": null,
-          "title": "What's new in Red Hat Enterprise Linux 9.4?",
-          "imageUrl": null
         }
       ]
     },
@@ -1020,18 +1000,7 @@
       "title": "Better Embedded System SW",
       "feedUrl": "https://feeds.feedburner.com/BetterEmbeddedSystemSw",
       "siteUrl": "http://betterembsw.blogspot.com/",
-      "articles": [
-        {
-          "id": "http://betterembsw.blogspot.com/2024/05/static-analysis-ranked-defect-list.html",
-          "author": null,
-          "description": "Crazy idea of the day: Static Analysis Ranked Defect List.\n\n\n\nHere is a software analysis tool feature request/product idea: So many times we see the problem that a static analysis tool or other way of automatically finding bugs inundates developers with so many possible bugs they turn it off in frustration. Or maybe they have a requirement to ship only \"clean\" code so they don't run the tool because then there is nothing to clean up.  Put your favorite head-in-the-sand organizational dysfunction here.\n\n\nI'd love to be able to recommend a static analysis or other tool that has a feature that reports that top 10 defects currently in the code base, ranked by likely risk. Go ahead and use machine learning for the ranking; fine with me. Regardless of methodology, fixing only some is a guess after all.\n\n\nUltimately, all the static analysis warnings should be cleaned up. Having a \"top K warnings\" feature would allow a team to make progress over time instead of simply sweeping the entire mess under the carpet and ignoring what is often very valuable information that predicts defect escapes to deployment.\n\n\nFor tools with many warnings an approximation can be to gradually turn on a series of warning flags over time and/or just run the warnings on a subset of modules. But a global \"these are the 10 scariest warnings\" would be a nice feature.\n\n\nThoughts?  Does some tool already do this?",
-          "link": "http://betterembsw.blogspot.com/2024/05/static-analysis-ranked-defect-list.html",
-          "publishedOn": "2024-05-01T13:04:00.005Z",
-          "wordCount": null,
-          "title": "Static Analysis Ranked Defect List",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Google Developers Blog",
@@ -1543,16 +1512,6 @@
           "wordCount": null,
           "title": "Let's check the qdEngine game engine, part two: simplifying C++ code",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/1120/",
-          "author": null,
-          "description": "A new conference season is on its way, so we'd like to invite you to read some of the best C++ talks from the last season. You can learn more about C++ and get inspired in this compilation of the...",
-          "link": "https://pvs-studio.com/en/blog/posts/1120/",
-          "publishedOn": "2024-05-01T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Compilation of gripping C++ conference talks from 2023",
-          "imageUrl": null
         }
       ]
     },
@@ -1636,6 +1595,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/976176/",
+          "author": "jzb",
+          "description": "KDE Eco, a KDE project focused\non reducing software's environmental impact, has announced its Opt\nGreen campaign to reduce e-waste:\nOver the next two years, the \"Opt Green\" initiative will bring what\nKDE Eco has been doing for sustainable software directly to end\nusers. A particular target group for the project is those whose\nconsumer behavior is driven by principles related to the environment,\nand not just price or convenience: the \"eco-consumers\".\nThrough online and offline campaigns as well as installation\nworkshops, we will demonstrate the power of Free Software to drive\ndown resource and energy consumption, and keep devices in use for the\nlifespan of the hardware, not the software.\nOur motto: The most environmentally-friendly device is the\none you already own.\nSee the KDE Eco Get\nInvolved page for more information on how to participate.",
+          "link": "https://lwn.net/Articles/976176/",
+          "publishedOn": "2024-05-31T19:24:05.000Z",
+          "wordCount": null,
+          "title": "Opt Green: KDE Eco's New Sustainable Software Project",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/976125/",
+          "author": "corbet",
+          "description": "The \"pidfdfs\" virtual filesystem was added to the 6.9 kernel release as a\nway to export better information about running processes to user space.  It\nreplaced a previous implementation in a way that was, on its surface, fully\ncompatible while adding a number of new capabilities.  This transition,\nwhich was intended to be entirely invisible to existing applications,\nalready ran into trouble in March, when a\nmisunderstanding with SELinux caused systems with pidfdfs to fail to boot\nproperly.  That problem was quickly fixed, but it turns out that there was\none more surprise in store, showing just how hard ABI compatibility can be\nat times.",
+          "link": "https://lwn.net/Articles/976125/",
+          "publishedOn": "2024-05-31T18:08:05.000Z",
+          "wordCount": null,
+          "title": "[$] One more pidfdfs surprise",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/976319/",
+          "author": "corbet",
+          "description": "The 2024 Kernel Maintainers Summit will happen on September 17 in\nVienna, Austria; it is an invitation-only event for a small group to\ndiscuss important kernel-development problems.  The call for\nproposals for this gathering has now been posted.  One of the best ways\nto be invited to the event is to propose a topic that needs discussion in\nthat forum.  The deadline for proposals is June 18.",
+          "link": "https://lwn.net/Articles/976319/",
+          "publishedOn": "2024-05-31T15:37:03.000Z",
+          "wordCount": null,
+          "title": "CFP: the 2024 Kernel Maintainers Summit",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/976211/",
+          "author": "corbet",
+          "description": "The developers of the Krita painting\napplication are celebrating\n25 years of development with a detailed history of the project.\n\n\n\tA quarter century. That's how long we've been working on\n\tKrita. Well, what would become Krita. It started out as KImageShop,\n\tbut that name was nuked by a now long-dead German lawyer. Then it\n\twas renamed to Krayon, and that name was also nuked. Then it was\n\trenamed to Krita, and that name stuck.",
+          "link": "https://lwn.net/Articles/976211/",
+          "publishedOn": "2024-05-31T13:31:36.000Z",
+          "wordCount": null,
+          "title": "25 Years of Krita",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/976209/",
+          "author": "daroc",
+          "description": "Security updates have been issued by AlmaLinux (.NET 7.0, .NET 8.0, 389-ds:1.4, ansible-core bug fix, enhancement, and, bind and dhcp, container-tools:rhel8, edk2, exempi, fence-agents, freeglut, frr, gdk-pixbuf2, ghostscript, git-lfs, glibc, gmp, go-toolset:rhel8, grafana, grub2, gstreamer1-plugins-bad-free, gstreamer1-plugins-base, gstreamer1-plugins-good, harfbuzz, httpd:2.4, Image builder components bug fix, enhancement and, kernel, kernel-rt, krb5, less, LibRaw, libsndfile, libssh, libtiff, libX11, libXpm, linux-firmware, motif, mutt, nghttp2, openssh, pam, pcp, pcs, perl-Convert-ASN1, perl-CPAN, perl:5.32, pki-core:10.6 and pki-deps:10.6, pmix, poppler, python-dns, python-jinja2, python-pillow, python27:2.7, python3, python3.11, python3.11-cryptography, python3.11-urllib3, python39:3.9 and python39-devel:3.9, qt5-qtbase, resource-agents, squashfs-tools, sssd, systemd, tigervnc, traceroute, vorbis-tools, webkit2gtk3, xorg-x11-server, xorg-x11-server-Xwayland, and zziplib), Debian (gst-plugins-base1.0), Fedora (cacti, cacti-spine, roundcubemail, and wireshark), Oracle (.NET 7.0, .NET 8.0, bind and dhcp, gdk-pixbuf2, git-lfs, glibc, grafana, krb5, pcp, python-dns, python3, sssd, tigervnc, xorg-x11-server, and xorg-x11-server-Xwayland), Red Hat (edk2, less, nghttp2, and ruby:3.0), SUSE (gstreamer-plugins-base, Java, kernel, and python-requests), and Ubuntu (ffmpeg, node-browserify-sign, postgresql-14, postgresql-15, postgresql-16, and python-pymysql).",
+          "link": "https://lwn.net/Articles/976209/",
+          "publishedOn": "2024-05-31T13:05:45.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/975830/",
+          "author": "daroc",
+          "description": "While BPF may be most famous for its use in the Linux kernel, there is actually\na growing effort to standardize BPF for use on other systems. These include\n\neBPF for Windows, but also\n\nuBPF,\n\nrBPF,\n\nhBPF,\n\nbpftime, and\nothers. Some hardware manufacturers are even\nconsidering integrating BPF directly into networking hardware. Dave Thaler\nled two sessions about all of the problems that cross-platform use inevitably\nbrings and the current status of the standardization work at the 2024\nLinux Storage,\nFilesystem, Memory Management, and BPF Summit.",
+          "link": "https://lwn.net/Articles/975830/",
+          "publishedOn": "2024-05-30T20:19:28.000Z",
+          "wordCount": null,
+          "title": "[$] Standardizing the BPF ISA",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/975444/",
           "author": "jake",
@@ -2695,56 +2714,6 @@
           "wordCount": null,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971093/",
-          "author": "daroc",
-          "description": "The LWN.net Weekly Edition for May 2, 2024 is available.",
-          "link": "https://lwn.net/Articles/971093/",
-          "publishedOn": "2024-05-02T01:11:26.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for May 2, 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971980/",
-          "author": "jzb",
-          "description": "Version 8.0 of the terminal text editor GNU nano has been\nreleased. This update includes several changes to keybindings to be\nmore newcomer-friendly, such as remapping Ctrl-F to forward-search and\nadding an option for modern bindings:\nThe release also provides access to 14 levels of gray scale in xterm (up\nfrom four), as well as many bug fixes.",
-          "link": "https://lwn.net/Articles/971980/",
-          "publishedOn": "2024-05-01T17:54:21.000Z",
-          "wordCount": null,
-          "title": "GNU nano 8.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971143/",
-          "author": "jzb",
-          "description": "Ubuntu 24.04 LTS, code-named \"Noble Numbat\", was released on April 25. This release includes GNOME 46, installer updates,\nsecurity enhancements, a lot of updated packages, and a new App Center\nthat puts a heavy emphasis on using Snaps to install software. It is not an ambitious release, but it brings enough to the table that it's a worthwhile update.",
-          "link": "https://lwn.net/Articles/971143/",
-          "publishedOn": "2024-05-01T17:00:28.000Z",
-          "wordCount": null,
-          "title": "[$] A look at Ubuntu Desktop LTS 24.04",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971973/",
-          "author": "daroc",
-          "description": "The NixOS Foundation board\n\nannounced on April 30 that Eelco Dolstra is stepping down from the board\nfollowing the recent calls for his resignation.\n\n\n\nEelco is the principal author of Nix and undoubtedly a central figure in the\necosystem that grew around it. We confirm that Eelco showed no intention to be\nperceived as or act like the BDFL [Benevolent Dictator for Life]\nof the Nix ecosystem, or the Nix code base. To\ncommit to that in a timely manner, he has decided to formally step down from the\nboard.\n\n\n\nThe board also announced its intent to set up new, explicit governance for the\nproject, answerable to the community:\n\n\n\nWe will appoint a constitutional assembly within the next 14 days.\nIts task will be to set up a new governance structure, run by the\ncommunity, that is capable of serving the community's needs. Once\nestablished, we will delegate our power to institutions within that\nnew structure. This entire process will take place in a public space,\nsuch that it's traceable for anyone concerned. We are committed to\nlistening to everyone who may help with solving the problems the\ncommunity is facing.",
-          "link": "https://lwn.net/Articles/971973/",
-          "publishedOn": "2024-05-01T14:19:36.000Z",
-          "wordCount": null,
-          "title": "Eelco Dolstra steps down from NixOS Foundation board",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/972029/",
-          "author": "jzb",
-          "description": "Security updates have been issued by Debian (nghttp2 and qtbase-opensource-src), Mageia (cjson, freerdp, guava, krb5, libarchive, and mediawiki), Oracle (container-tools:4.0 and container-tools:ol8), Red Hat (bind, buildah, container-tools:3.0, container-tools:rhel8, expat, gnutls, golang, grafana, kernel, kernel-rt, libreswan, libvirt, linux-firmware, mod_http2, pcp, pcs, podman, python-jwcrypto, rhc-worker-script, shadow-utils, skopeo, sssd, tigervnc, unbound, and yajl), SUSE (kernel and python311), and Ubuntu (gerbv and node-json5).",
-          "link": "https://lwn.net/Articles/972029/",
-          "publishedOn": "2024-05-01T13:36:56.000Z",
-          "wordCount": null,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -3144,6 +3113,26 @@
       "siteUrl": "https://slownews.kr",
       "articles": [
         {
+          "id": "https://slownews.kr/?p=109388",
+          "author": "이정환",
+          "description": "[토론회 지상 중계] 혐오와 차별을 넘어: 대구 이슬람 사원 논란이 드러낸 한국의 갈등 구조. 대구 이슬람 사원은 아직도 공사를 시작하지 못하고 있다. 대한변호사협회가 조사단을 꾸려서 무슬림 학생들과 지역 주민, 대구 북구청 관계자 등을 면담하고 보고서를 냈다. 다음은 5월31일 대한변협 주최 토론회 내용을 정리한 것이다. 이게 왜 중요한가. 생각해 볼 부분. 조사단 보고서의 핵심 제안. 주민들은...\nThe post 이슬람 사원 앞 바베큐 파티, 누가 이들을 극단으로 내모는가. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/109388",
+          "publishedOn": "2024-05-31T08:42:33.000Z",
+          "wordCount": 5835,
+          "title": "이슬람 사원 앞 바베큐 파티, 누가 이들을 극단으로 내모는가.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/05/4134487052_55dbfa765a_b.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=109356",
+          "author": "이정환",
+          "description": "성 추문 은폐, 트럼프 34건 유죄. 최태원 노소영에게 1조3808억 원 분할. SK 경영권 위협에 주가는 폭등. 노태우 비자금 300억 원. 배신 맞지만 배임 아니다, 민희진 해임 금지. 쟁점과 현안. 민주당 1호 법안은 채 상병 특검법. 이재명 대권 맞춤당 된다. “뼈가 빠지게 뛰겠다.” 다르게 읽기. 대통령 개인 폰 괜찮나. 1분기 성장률 1.3%의 비밀. ‘즉강끝’의 한계. 더...\nThe post 민희진의 반전, “배신 맞지만 배임 아니다”: 슬로우레터 5월31일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/109356",
+          "publishedOn": "2024-05-30T22:29:07.000Z",
+          "wordCount": 6109,
+          "title": "민희진의 반전, “배신 맞지만 배임 아니다”: 슬로우레터 5월31일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/05/20240425050006_0.jpg"
+        },
+        {
           "id": "https://slownews.kr/?p=109330",
           "author": "이정환",
           "description": "거부, 거부, 거부, 거부. 22대 국회 첫날 1호 법안은 채 상병 특검법. 윤석열-이종섭 통화기록, 탄핵 태블릿될까. 공수처의 고민. 군 사망 사고의 구멍. 쟁점과 현안. 김건희 수사 검사들 모두 남았다. 북한에서 넘어온 ‘오물 풍선’. 더 깊게 읽기. 지난해보다 더 적다. 지역은 솔로 지옥. 다르게 읽기. 충주 사과 미국에서 반값에 팔리는 이유. 호미로 막을 걸 가래로 막아야...\nThe post 식물 정권의 세 가지 무기, ‘레임덕’ 막으려다 ‘데드덕’ 간다: 슬로우레터 5월30일. appeared first on 슬로우뉴스..",
@@ -3511,16 +3500,6 @@
           "publishedOn": "2024-05-02T22:11:57.000Z",
           "wordCount": null,
           "title": "조선일보 너마저, “국민들 의구심 커진다” 거부권에 반대: 슬로우레터 5월3일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=108080",
-          "author": "이정환",
-          "description": "일본의 네이버 퇴출, “적대국에나 할 법한 일”. 쟁점과 현안. 이태원 특별법 오늘 합의 처리한다. 평화누리특별자치도? “한국은 잘 사는 나라, 왜 돈을 안 내나.” 전쟁 반대 집회 컬럼비아대 학생 282명 체포. 더 깊게 읽기. 이재명 싫어서 국민의힘 찍는다는 가설. 자산 상위는 국민의힘 지지율이 63%. 다르게 읽기. 기계가 심판을 보니 판이 달라졌다. ‘기후 유권자’들은 어디로 갔나. 해법과...\nThe post “보따리 내주고 뺨 맞나”, 일본의 네이버 퇴출에 윤석열이 침묵하는 이유는?: 슬로우레터 5월2일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/108080",
-          "publishedOn": "2024-05-01T22:08:25.000Z",
-          "wordCount": null,
-          "title": "“보따리 내주고 뺨 맞나”, 일본의 네이버 퇴출에 윤석열이 침묵하는 이유는?: 슬로우레터 5월2일.",
           "imageUrl": null
         }
       ]
@@ -3925,16 +3904,6 @@
           "publishedOn": "2024-05-02T22:59:28.000Z",
           "wordCount": null,
           "title": "[뉴페@스프] 곧 닥칠 ‘고령 사회’, 우리가 던져야 할 질문은 따로 있다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79247",
-          "author": "NewsPeppermint",
-          "description": "미국 연방대법원이 노숙을 불법으로 규정하고 노숙자를 처벌한 지방 정부(시 정부)의 행동이 위헌이라는 사건에 관해 이번 회기 판결을 앞두고 구두 변론을 진행했습니다. 이에 관해 UC 버클리 로스쿨의 로라 라일리 임상 디렉터가 노숙자의 인권을 옹호하는 칼럼을 썼습니다. 칼럼을 번역하고, 해설에서 시 정부들은 왜 노숙자를 처벌하는 게 과도하다고 본 항소법원(고등법원)의 판결에 반발했는지 짚어봤습니다. 전문 번역: “길에서 자면 불법”…그들을 더는 벼랑 끝으로 내몰지 말라 해설: “숨 쉬는 건 범죄가 아니다”…노숙도 마찬가지? 간단치 않은 사정들",
-          "link": "https://newspeppermint.com/2024/05/01/npsbs_scotushomeless/?utm_source=rss&utm_medium=rss&utm_campaign=npsbs_scotushomeless",
-          "publishedOn": "2024-05-01T15:30:56.000Z",
-          "wordCount": null,
-          "title": "“숨 쉬는 건 범죄가 아니다”…노숙도 마찬가지? 간단치 않은 사정들",
           "imageUrl": null
         }
       ]
