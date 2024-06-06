@@ -249,6 +249,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "3bed29c8-4504-4367-8f96-46bc979c418c",
+          "author": "Andriana Theodorakopoulou",
+          "description": "RStudio Server is a powerful open source integrated development environment (IDE) that offers a graphical interface for the R programming language, significantly enhancing data analysis and visualization capabilities. With the rise of data-driven decision-making, having a robust tool like RStudio Server becomes crucial for data scientists and analysts. This guide will walk you through the process of setting up RStudio Server on Red Hat OpenShift AI and getting started with its extensive features.\nSetting Up RStudio Server on OpenShift AI\nThe integration of RStudio Server with OpenShift AI provides a scalable and secure environment for data analysis.\nHere’s a step-by-step guide to get you started.\n\nLog in to the cluster. First, access your OpenShift cluster by logging in through the termina…",
+          "link": "https://developers.redhat.com/articles/2024/06/06/how-integrate-and-use-rstudio-server-openshift-ai",
+          "publishedOn": "2024-06-06T07:00:00.000Z",
+          "wordCount": 3686,
+          "title": "How to integrate and use RStudio Server on OpenShift AI",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Red%20Hat%20Openshift%20AI_0.png?itok=EGHltugp"
+        },
+        {
+          "id": "a7dfda04-861d-4593-b806-f4945c3ab857",
+          "author": "Luis Falero Otiniano",
+          "description": "Using Argo CD to manage your Kubernetes ecosystem is an excellent GitOps approach to continuous deployment (CD). However, it can pose challenges when trying to manage multiple Kubernetes manifests for deployments, services, secrets, configurations, and other files within your Git repository.\nUnlike an Argo CD Application resource that deploys resources from a single Git repository in a single cluster or namespace, ApplicationSet expands upon this use case. An ApplicationSet utilizes template-based automation to create, modify, and manage multiple Argo CD applications simultaneously, targeting multiple clusters and namespaces.\nIn what situations is it more convenient to use an ApplicationSet?\n\n\n\nIt is convenient to use an ApplicationSet when a user or team has too many applications to manag…",
+          "link": "https://developers.redhat.com/articles/2024/06/06/enhance-kubernetes-deployment-efficiency-argo-cd-and-applicationset",
+          "publishedOn": "2024-06-06T07:00:00.000Z",
+          "wordCount": 4175,
+          "title": "Enhance Kubernetes deployment efficiency with Argo CD and ApplicationSet",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST_argocd_2xpng.png?itok=lh9rIudN"
+        },
+        {
           "id": "a7bd3f0f-f8f9-4b69-a4e7-b575cbcd0921",
           "author": "Tom Bentley",
           "description": "Over the past decade Apache Kafka has become a commonly deployed piece of data infrastructure. It is considered by many to be the de facto standard for low latency, high throughput, scale out message processing, and data streaming. Kafka is also a data store and therefore subject to many of the same security and compliance obligations as databases, such as encryption at rest.\nEncrypting Kafka data at rest \nApache Kafka does not provide a facility for encrypting sensitive data at rest. Infrastructure providers usually compensate for this by deploying file system or volume encryption. However, encrypting at this level has drawbacks. First, operations personnel and services with file system permissions may view data content. Secondly, file system and volume encryption is not differentiated wi…",
@@ -537,106 +557,6 @@
           "wordCount": 4221,
           "title": "Use OperatorPolicy to manage Kubernetes-native applications",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2020_OS_Shared_image_A_3.png?itok=96qQ_zu-"
-        },
-        {
-          "id": "412fb258-691e-42bc-bade-a3e4f97bf082",
-          "author": "JP Jung",
-          "description": "So far in this series, we oversaw the required Red Hat OpenShift Container Platform operators, their roles, and the format used to create the Red Hat OpenStack Services on OpenShift (RHOSO) control plane. Then, we walked through control plane deployment and data plane configuration. \nWe’re now ready to add OpenStack compute nodes to the control plane to run virtual machines. The deployment, unsurprisingly, relies on another YAML file. \nWhen released, you can either join an already deployed Red Hat Enterprise Linux (RHEL) 9.4 node or pilot bare metal deployment from scratch. For the scope of this article, we are going with the first option. The RHEL compute server has two network cards (eth0 and eth1). Details about the exact process can be found here; we will focus on the YAML files used t…",
-          "link": "https://developers.redhat.com/articles/2024/05/08/red-hat-openshift-101-openstack-admins-data-plane-deployment",
-          "publishedOn": "2024-05-08T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Red Hat OpenShift 101 for OpenStack admins: Data plane deployment",
-          "imageUrl": null
-        },
-        {
-          "id": "d0cc3216-c93b-486e-be44-1676b31c2701",
-          "author": "JP Jung",
-          "description": "In the previous post, we oversaw the required Red Hat OpenShift Container Platform operators, their roles, and the format used to create the Red Hat OpenStack Services on OpenShift (RHOSO) control plane. In this article, let’s review the deployment process.\nWe’ll base our observations on the Development Preview 3 code from https://github.com/rh-osp-demo/dp-demo/.\nLet’s begin with the OpenStack Operator.\nThe OpenStack Operator\nThe OpenStack Operator consists of three parts (a CatalogSource, an OperatorGroup, and a Subscription), each defining a different resource for managing Operators within an OpenShift/Kubernetes cluster using the Operator Lifecycle Manager (OLM). The resources aim to set up an Operator for OpenStack, likely for managing OpenStack services within the cluster, are as foll…",
-          "link": "https://developers.redhat.com/articles/2024/05/08/red-hat-openshift-101-openstack-admins-configuration",
-          "publishedOn": "2024-05-08T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Red Hat OpenShift 101 for OpenStack admins: Configuration",
-          "imageUrl": null
-        },
-        {
-          "id": "56ff36af-898c-42cf-ac51-7c94e65c50e8",
-          "author": "Alina Ryan",
-          "description": "While large language models (LLMs) offer incredible potential, they also come with their share of challenges. Working with LLMs demands high-quality training data, specialized skills and knowledge, and extensive computing resources. The process of forking and retraining a model is also time consuming and expensive.\nThe InstructLab project offers an open source approach to generative AI, sourcing community contributions to support regular builds of an enhanced version of an LLM. This approach is designed to lower costs, remove barriers to testing and experimentation, and improve alignment—that is, ensuring the model's answers are accurate, unbiased, and consistent with the values and goals of its users and creators. \nWhat is InstructLab?\nInitiated by IBM and Red Hat, the InstructLab project…",
-          "link": "https://developers.redhat.com/articles/2024/05/07/instructlab-open-source-generative-ai",
-          "publishedOn": "2024-05-07T14:00:00.000Z",
-          "wordCount": null,
-          "title": "InstructLab: Advancing generative AI through open source",
-          "imageUrl": null
-        },
-        {
-          "id": "4d2c2efd-c82c-47f7-b58d-858c7e654153",
-          "author": "Syed M Shaaf, John Matthews",
-          "description": "The Konveyor community has developed Konveyor AI (Kai), a tool that uses generative AI to accelerate application modernization. Kai integrates large language models (LLMs) with static code analysis to facilitate code modifications within a developer's IDE, helping transition to other modern programming languages and frameworks efficiently. \nUsing a retrieval-augmented generation (RAG) approach, Kai enhances LLM outputs with historical code changes and analysis data, ensuring context-specific guidance. This method is model agnostic and does not require model fine-tuning, making Kai a versatile tool for large-scale modernization projects, demonstrated by updating a Java EE application to Quarkus using a Visual Studio Code (VS Code) plug-in. This unique approach will enable organizations to s…",
-          "link": "https://developers.redhat.com/articles/2024/05/07/modernize-apps-konveyor-ai",
-          "publishedOn": "2024-05-07T14:00:00.000Z",
-          "wordCount": null,
-          "title": "Apply generative AI to app modernization with Konveyor AI",
-          "imageUrl": null
-        },
-        {
-          "id": "2050f7db-7445-468e-a70d-578c6ab393c4",
-          "author": "Sally O'Malley, Michael Clifford",
-          "description": "What if we told you there's a GitHub repository that makes building, running, and developing AI-powered applications from your laptop as easy as making toast? No cloud-based AI platform required, no specialized hardware accelerators needed, and with the most up-to-date open source models? If you like what’s cooking, dig in to explore AI Lab Recipes. \nWhat is AI Lab Recipes?\nThe ai-lab-recipes repository is a collaboration of data scientists and application developers that brings together best practices from both worlds. The result is a set of containerized AI-powered applications and tools that are fun to build, easy to run, and convenient to fork and make your own.\nAI Lab recipes started as the home for the Podman Desktop AI Lab extension’s sample applications, or recipes. There’s an exce…",
-          "link": "https://developers.redhat.com/articles/2024/05/07/podman-ai-lab-recipes",
-          "publishedOn": "2024-05-07T13:30:00.000Z",
-          "wordCount": null,
-          "title": "AI Lab Recipes",
-          "imageUrl": null
-        },
-        {
-          "id": "df0bb59e-3a11-47ac-8d05-6a97bf98b99a",
-          "author": "Matt Micene",
-          "description": "At Red Hat, we work on a wide range of technologies and sit at the crossroads of our communities, customers, and partners. We believe our best work is done when we work together to find new solutions. So we asked, what if an operating system could be updated via image-based transactions, and what if those images could be built and shipped like a container? What if we could use the same tools, skills, and patterns as today’s containerized applications, closing the gaps between pipeline and production? The result is a way to think differently about how to build, deploy, and manage Red Hat Enterprise Linux (RHEL).\nIntroducing image mode for Red Hat Enterprise Linux\nImage mode for Red Hat Enterprise Linux is a new deployment method that takes a container-native approach to deliver the OS as a …",
-          "link": "https://developers.redhat.com/articles/2024/05/07/announcing-image-mode-red-hat-enterprise-linux",
-          "publishedOn": "2024-05-07T13:30:00.000Z",
-          "wordCount": null,
-          "title": "Announcing image mode for Red Hat Enterprise Linux",
-          "imageUrl": null
-        },
-        {
-          "id": "03c90bf3-7769-470e-8a6a-f8f37ad2dfb5",
-          "author": "Tim deBoer, Charlie Drage",
-          "description": "Containers have used Linux since the start. But there have always been two different types of Linux: the host operating system, and the one inside each container. Each one operates independently and requires a completely different set of tools for building, managing, and configuring.\nBut no more! Image mode for Red Hat Enterprise Linux (RHEL) allows you to build and manage a full operating system just like a container image.\nWhat are bootable containers?\nApplication container base images are Open Container Initiative (OCI) container images that are usually trimmed down as far as possible, to exclude the OS kernel, hardware support, and anything else that application containers do not need when running inside of a host OS.\nBootable containers use this same OCI image format, but contain the …",
-          "link": "https://developers.redhat.com/articles/2024/05/07/image-mode-rhel-bootable-containers",
-          "publishedOn": "2024-05-07T13:30:00.000Z",
-          "wordCount": null,
-          "title": "Introducing image mode for RHEL and bootable containers in Podman Desktop",
-          "imageUrl": null
-        },
-        {
-          "id": "f77dd167-f7f8-482b-bc02-c5cb2326789f",
-          "author": "Philippe Martin",
-          "description": "Podman Desktop is the central place to work with containers as a developer. Podman Desktop uses the Docker, Podman, and Kubernetes APIs to communicate with container engines and Kubernetes clusters to provide users with a unified graphical interface across all these resources. It also provides extensions to help you manage these resources: install the Podman engine and Kubernetes clusters locally, configure access to remote Kubernetes clusters, configure access to images registries, install various commnd-line interfaces (CLIs), and more.\nArchitecture\nThe containers technology is a Linux kernel technology. On a Linux system, you can run Docker and/or Podman directly. On other systems like Windows and macOS, you will need to run a Linux instance inside a virtual machine and run Docker or Po…",
-          "link": "https://developers.redhat.com/articles/2024/05/07/manage-containers-podman-desktop",
-          "publishedOn": "2024-05-07T13:30:00.000Z",
-          "wordCount": null,
-          "title": "Discover Podman Desktop for containers and Kubernetes",
-          "imageUrl": null
-        },
-        {
-          "id": "2d88ce7a-84ae-428a-8915-a7a29d519ddf",
-          "author": "Stevan Le Meur, Jeff Maury",
-          "description": "The rapid proliferation of generative AI (gen AI) and open source large language models (LLMs) is revolutionizing computing, and AI-enabled applications are now becoming the norm. As a result, application developers now have to learn best practices and how to build applications taking advantage of AI in their solutions. Hence, the need for tools and technologies that make AI more accessible and approachable, enabling developers to tap into its vast potential. \nHowever, this shift also underscores the importance of ensuring data privacy and security, as sensitive information is being processed and stored in these new AI-powered systems. To address this growing demand, it is essential to develop and deploy solutions that not only simplify AI development, but also safeguard user data, fosteri…",
-          "link": "https://developers.redhat.com/articles/2024/05/07/introducing-podman-ai-lab",
-          "publishedOn": "2024-05-07T13:30:00.000Z",
-          "wordCount": null,
-          "title": "Introducing Podman AI Lab: Developer tooling for working with LLMs",
-          "imageUrl": null
-        },
-        {
-          "id": "a27d0a2f-06c6-42b7-83b8-8f1ca7c79921",
-          "author": "Valentin Rothberg, Stevan Le Meur",
-          "description": "The Red Hat Developer Subscription for Individuals is a no-cost benefit of the Red Hat Developer program that includes access to Red Hat Enterprise Linux (RHEL) and other Red Hat products for development use. It is an offering designed for individual developers. You can no-cost subscription by joining the Red Hat Developer program.\nAs announced at Red Hat Summit 2024, you can now easily consume the Red Hat Developer Subscription for Individuals on your desktop. Whether you are using macOS, Windows, or Linux, the Podman Desktop Red Hat Account Extension puts the Developer Subscription and the Red Hat ecosystem right at your fingertips. In just a few clicks, you can sign into your Red Hat account or create a new one with a custom email address or social login via your Google, Microsoft, or G…",
-          "link": "https://developers.redhat.com/articles/2024/05/07/podman-desktop-red-hat-developer-subscription",
-          "publishedOn": "2024-05-07T13:30:00.000Z",
-          "wordCount": null,
-          "title": "Podman Desktop brings the Red Hat Developer Subscription to your fingertips",
-          "imageUrl": null
         }
       ]
     },
@@ -653,16 +573,6 @@
           "publishedOn": "2024-05-08T17:13:25.000Z",
           "wordCount": 419,
           "title": "마트가서 우유 하나 사고 아보카도 있으면 6개 사와",
-          "imageUrl": null
-        },
-        {
-          "id": "https://edykim.com/ko/post/xiaomi-mi-band-8/",
-          "author": null,
-          "description": "애플워치를 한동안 사용했지만 도무지 매일 충전하는 일이 익숙해지지 않았다. 온갖\n알림 덕분에 모든 것을 놓치지 않고 살게 하지만 눈 앞에...",
-          "link": "https://edykim.com/ko/post/xiaomi-mi-band-8/",
-          "publishedOn": "2024-05-07T11:43:41.000Z",
-          "wordCount": null,
-          "title": "샤오미 미밴드 8 구입기",
           "imageUrl": null
         }
       ]
@@ -943,6 +853,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1653.php",
+          "author": null,
+          "description": "At least, probably not as often as you think you do. Using a preemptive RTOS can help make a system schedulable (i.e. help all of its tasks meet their deadlines) but it comes at a cost: \"concurrently\" running tasks can interact in unforeseen ways that cause system failures, that dreaded class of errors known as \"race conditions\". In part, this is because humans have difficulty thinking...",
+          "link": "https://www.embeddedrelated.com/showarticle/1653.php",
+          "publishedOn": "2024-06-03T17:05:04.000Z",
+          "wordCount": null,
+          "title": "You Don't Need an RTOS (Part 3)",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1668.php",
           "author": null,
           "description": "Previously in this EmbeddedRelated article,\r\n we saw how to\r\nfind an I2C device connected to your board using the i2ctool that is very familiar for people with previous experience with embedded Linux. \r\nToday we will see how to add support to an I2C device (i.e. BMP280 sensor) in your board. So, lets to get started!\r\nNuttX uses a very simple approach to interface with devices connected to the...",
@@ -960,6 +880,16 @@
           "publishedOn": "2024-05-27T07:35:20.000Z",
           "wordCount": null,
           "title": "Core competencies",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1665.php",
+          "author": null,
+          "description": "Welcome to the fourth part of my two-part article on state machines (1). This post topic has been suggested by\r\n\tMiro Samek, who, in a comment to my first post, wrote: \"The biggest issues are not so much with the state machine implementations [...]. Instead, the biggest issues are with the code surrounding state machines.\".\r\n\r\nIndeed Miro is right, many\r\nproblems come from outside state...",
+          "link": "https://www.embeddedrelated.com/showarticle/1665.php",
+          "publishedOn": "2024-05-22T12:48:33.000Z",
+          "wordCount": null,
+          "title": "FSM - Let 'em talk",
           "imageUrl": null
         },
         {
@@ -990,26 +920,6 @@
           "publishedOn": "2024-05-08T13:49:50.000Z",
           "wordCount": null,
           "title": "Introduction to PIC Timers",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1652.php",
-          "author": null,
-          "description": "At least, probably not as often as you think you do. Using a preemptive RTOS can help make a system schedulable (i.e. help all of its tasks meet their deadlines) but it comes at a cost: \"concurrently\" running tasks can interact in unforeseen ways that cause system failures, that dreaded class of errors known as \"race conditions\". In part, this is because humans have difficulty thinking...",
-          "link": "https://www.embeddedrelated.com/showarticle/1652.php",
-          "publishedOn": "2024-05-08T00:37:44.000Z",
-          "wordCount": null,
-          "title": "You Don't Need an RTOS (Part 2)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1645.php",
-          "author": null,
-          "description": "This is the third installment of my finite state machine in C++ series. In the first post, I introduced the subject of a state machine and how to go from a trivial but poor implementation to a more robust and better scalable one.\r\n\r\nIn the second article, I showed how to decouple the implementation of the state machine engine (for reuse) and the specific part (that can't be...",
-          "link": "https://www.embeddedrelated.com/showarticle/1645.php",
-          "publishedOn": "2024-05-07T19:50:57.000Z",
-          "wordCount": null,
-          "title": "Unuglify C++ FSM with DSL",
           "imageUrl": null
         }
       ]
@@ -1241,16 +1151,6 @@
           "wordCount": null,
           "title": "Project Gameface launches on Android",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/publish-your-keras-models-on-kaggle-and-hugging-face/",
-          "author": null,
-          "description": "Now you can publish your fine-tuned models directly from the Keras API to either Kaggle or Hugging Face",
-          "link": "https://developers.googleblog.com/en/publish-your-keras-models-on-kaggle-and-hugging-face/",
-          "publishedOn": "2024-05-07T20:11:19.896Z",
-          "wordCount": null,
-          "title": "Publish your Keras models on Kaggle and Hugging Face",
-          "imageUrl": null
         }
       ]
     },
@@ -1384,6 +1284,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/may-2024-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this May.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/may-2024-roundup",
+          "publishedOn": "2024-06-05T00:00:00.000Z",
+          "wordCount": 775,
+          "title": "What we've been reading in May (2024)",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/practical_zephyr_west",
           "author": null,
           "description": "In the previous articles, we used freestanding applications and relied on a global Zephyr installation. In this article, we’ll see how we can use West to resolve global dependencies by using workspace applications. We first explore West without even including Zephyr and then recreate the modified Blinky application from the previous article in a West workspace.\nContinue reading…",
@@ -1391,16 +1301,6 @@
           "publishedOn": "2024-05-16T00:00:00.000Z",
           "wordCount": 8189,
           "title": "Practical Zephyr - West workspaces (Part 6)",
-          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/eoss-recap",
-          "author": null,
-          "description": "We cover the talks I was able to see in person, as well as some talks seen by\nmy colleagues since they were posted. Obviously this is just our little biased\nselection, we have not been able to see everything, let us know in the comments\nwhat we missed!\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/eoss-recap",
-          "publishedOn": "2024-05-08T00:00:00.000Z",
-          "wordCount": 2648,
-          "title": "Embedded Open Source Summit 2024 Recap",
           "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
         }
       ]
@@ -1440,6 +1340,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/976836/",
+          "author": "corbet",
+          "description": "The kernel's user-space ABI does not lack for ring buffers; they have been\ndefined for subsystems like BPF, io_uring, perf,\nand tracing, for\nexample.  Naturally, each of those ring buffers is unique, with no common\ninterface between them.  The natural response to this ABI proliferation is,\nof course, to add yet another ring buffer as the generic option; that is\nthe intent of this\npatch series from Kent Overstreet adding a new set of system calls for\nring buffers.",
+          "link": "https://lwn.net/Articles/976836/",
+          "publishedOn": "2024-06-06T16:05:29.000Z",
+          "wordCount": null,
+          "title": "[$] A generic ring buffer for the kernel",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/977442/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (cockpit, kernel, kernel-rt, libxml2, ruby:3.1, and tomcat), Debian (libarchive, pillow, and tinyproxy), Fedora (apptainer), Mageia (amavisd-new and libxml2), Oracle (edk2), Red Hat (booth, cockpit, kernel-rt, less, libxml2, nghttp2, ruby:3.1, ruby:3.3, and tomcat), Slackware (kernel), and Ubuntu (atril, bluez, frr, gdk-pixbuf, openjdk-17, openjdk-21, openjdk-8, openjdk-lts, qemu, and unixodbc).",
+          "link": "https://lwn.net/Articles/977442/",
+          "publishedOn": "2024-06-06T16:03:58.000Z",
+          "wordCount": 352,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/975974/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for June 6, 2024 is available.",
+          "link": "https://lwn.net/Articles/975974/",
+          "publishedOn": "2024-06-06T01:12:50.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for June 6, 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/976856/",
+          "author": "jake",
+          "description": "There are two types of file I/O on Linux, buffered I/O, which goes through\nthe page cache, and direct I/O, which goes directly to the storage device.\nThe performance of buffered I/O was reported to be a lot worse than direct\nI/O, especially for one specific test, in Luis Chamberlain's \ntopic\nproposal for a session at the 2024 Linux Storage,\nFilesystem, Memory Management, and BPF Summit.\nThe proposal resulted in a lengthy mailing-list discussion, \nwhich also came up in Paul McKenney's RCU session the next\nday; Chamberlain led a \ncombined storage and filesystem session to discuss those results with an\neye toward improving buffered I/O performance.",
+          "link": "https://lwn.net/Articles/976856/",
+          "publishedOn": "2024-06-05T20:22:41.000Z",
+          "wordCount": null,
+          "title": "[$] Measuring and improving buffered I/O",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/977303/",
           "author": "jzb",
@@ -2569,56 +2509,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/970929/",
-          "author": "jake",
-          "description": "A proposal to switch the default desktop for Fedora Workstation from GNOME\nto KDE Plasma largely went over like the proverbial lead balloon—unsurprisingly.\nBut the \nconversation about the proposal did surface some areas where the\ndistribution could \nperhaps be more inclusive with regard to the other desktop choices\navailable.  The project believes that it\nbenefits from being opinionated and not requiring users to make\nmultiple decisions before they can even install the distribution, but there\nis a balance \nto be found.",
-          "link": "https://lwn.net/Articles/970929/",
-          "publishedOn": "2024-05-07T21:46:35.000Z",
-          "wordCount": null,
-          "title": "[$] A proposal to switch Fedora Workstation's desktop",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/971866/",
-          "author": "daroc",
-          "description": "The\n\nsystemd project is preparing for a new release.\n\nVersion 256-rc1 was released\non April 25 with a large number of changes and new features. Most of the\nchanges relate to security, easier configuration, unprivileged access to system\nresources, or all three of these. Users of systemd will find setting up\ncontainers — even without root access — much simpler and more secure.",
-          "link": "https://lwn.net/Articles/971866/",
-          "publishedOn": "2024-05-07T15:50:48.000Z",
-          "wordCount": null,
-          "title": "[$] Systemd heads for a big round-number release",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/972683/",
-          "author": "corbet",
-          "description": "Version\n14.1 of the GCC compiler suite has been released.  The list of changes\nis long; it includes support for more C++26 features, preparation for\nFortran 2023 support, a new -fhardened flag to enable\nsecurity-hardening features, vectorizer improvements, and a number of static-analyzer improvements.  See the release notes for\ndetails.",
-          "link": "https://lwn.net/Articles/972683/",
-          "publishedOn": "2024-05-07T12:57:19.000Z",
-          "wordCount": null,
-          "title": "GCC 14.1 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/972680/",
-          "author": "corbet",
-          "description": "The Go Blog has a detailed\narticle on the new, more secure random-number generator implemented for\nthe 1.22 release.\n\n\n\tFor example, when Go 1.20 deprecated math/rand's Read, we heard\n\tfrom developers who discovered (thanks to tooling pointing out use\n\tof deprecated functionality) they had been using it in places where\n\tcrypto/rand's Read was definitely needed, like generating key\n\tmaterial. Using Go 1.20, that mistake is a serious security problem\n\tthat merits a detailed investigation to understand the\n\tdamage. Where were the keys used? How were the keys exposed? Were\n\tother random outputs exposed that might allow an attacker to derive\n\tthe keys? And so on. Using Go 1.22, that mistake is just a mistake.",
-          "link": "https://lwn.net/Articles/972680/",
-          "publishedOn": "2024-05-07T12:46:53.000Z",
-          "wordCount": null,
-          "title": "Secure Randomness in Go 1.22 (Go Blog)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/972679/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (kernel), Gentoo (libjpeg-turbo, xar, and Xpdf), Red Hat (bind, dhcp and glibc), and SUSE (bouncycastle, curl, flatpak, less, and xen).",
-          "link": "https://lwn.net/Articles/972679/",
-          "publishedOn": "2024-05-07T12:29:11.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -3006,6 +2896,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=109322",
+          "author": "민노씨",
+          "description": "[홍윤희 스토리] 잘 다니던 회사 그만두고 지금은 장애인 이동권을 위한 사단법인 ‘무의’ 이사장. 지민이 엄마로, 활동가로, 자유기고가에서 이사장까지. 대체로 바쁘고 힘겹고 지겹지만 가끔씩 찬란한 ‘홍윤희의 그 길’에 관한 이야기. 홍윤희? 근데 누구세요? 장애가 ‘무의미’해지는 세상을 꿈꾸는, 아니 계획하고 실행하며 그걸 알리는 ‘무의’라는 단체가 있습니다. 처음에는 ‘진짜’ 직업 따로인 자원봉사 1인 활동가 단체였지만, 협동조합의 테두리를 갖추고,...\nThe post 홍윤희 스토리 1. 이제 회사 가서 좀 쉬어 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/109322",
+          "publishedOn": "2024-06-06T05:23:35.000Z",
+          "wordCount": null,
+          "title": "홍윤희 스토리 1. 이제 회사 가서 좀 쉬어",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=109706",
+          "author": "이정환",
+          "description": "“더 이상 가망이 없다고 생각한다.” S&P도 “희망과 꿈일 뿐.” 쟁점과 현안. 헌정사상 첫 야당 단독 국회 개원. 국민의힘이 법사위에 목매는 이유. 법사위 기피증. 더 깊게 읽기. “다른 국정 운영도 이렇게 하는 것 같아 걱정.” 국가채무 비율 딜레마. “이런 사건은 범인 못 잡아요.” 언더커버를 합법 수사로. 다르게 읽기. 종부세와 재산세 통합하자는 주장 따져보니. 한국 사람들이 돈을...\nThe post “내가 해봐서 아는데”, 백종원과 윤석열의 차이: 슬로우레터 6월6일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/109706",
+          "publishedOn": "2024-06-05T22:06:14.000Z",
+          "wordCount": null,
+          "title": "“내가 해봐서 아는데”, 백종원과 윤석열의 차이: 슬로우레터 6월6일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=109641",
           "author": "오병일",
@@ -3415,16 +3325,6 @@
           "wordCount": 8173,
           "title": "장모 가석방 다음날, 윤석열 기자회견에서 나올 불편한 질문들: 슬로우레터 5월9일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/05/pic_002-2.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=108264",
-          "author": "이정환",
-          "description": "대선 공약 깨고 민정수석을 내세웠다. 캐비닛 정치가 시작된다. 채 상병 사건 생존 병사들의 편지. 쟁점과 현안. 연금 특위 이대로 끝내나. 25만 원 지원금, 민주당 1호 법안으로 간다. 윤석열 장모 풀려나나. 2000명 근거, 제출 안 하는 게 아니라 없는 거 아닐까. 다르게 읽기. 멀티플렉스가 아니라 모노플렉스. 예쁜 쓰레기 만드는 일회용 매장. 더 깊게 읽기. ‘30년 차르’...\nThe post 지지율 바닥 윤석열의 ‘캐비닛 정치’가 시작됐다: 슬로우레터 5월8일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/108264",
-          "publishedOn": "2024-05-07T22:09:09.000Z",
-          "wordCount": null,
-          "title": "지지율 바닥 윤석열의 ‘캐비닛 정치’가 시작됐다: 슬로우레터 5월8일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3433,6 +3333,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=594863",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594863/%ed%81%ac%eb%9d%bc%ec%9a%b0%eb%93%9c%ec%8a%a4%ed%8a%b8%eb%9d%bc%ec%9d%b4%ed%81%ac-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80",
+          "publishedOn": "2024-06-06T06:14:20.000Z",
+          "wordCount": null,
+          "title": "크라우드스트라이크 실적을 읽는 월가의 시선",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=594859",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/594859/6-6-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-06-06T06:02:35.000Z",
+          "wordCount": null,
+          "title": "6/6, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=594849",
           "author": "happist",
@@ -3651,6 +3571,16 @@
       "siteUrl": "https://newspeppermint.com",
       "articles": [
         {
+          "id": "https://newspeppermint.com/?p=79483",
+          "author": "NewsPeppermint",
+          "description": "불로초를 찾으려 했던 진시황의 이야기는 다들 잘 아실 겁니다. 굳이 진시황이 아니라도 인류 역사에 이름을 남긴 권력자 가운데는 다시 젊어지려고 애쓴 사람이 많습니다. 오늘날 우리는 돈이 곧 권력의 중요한 원천이 되거나 아예 그 자체로 권력이 되는 자본주의 사회를 살고 있습니다. 자본주의의 첨단을 달린다는 미국의 부자들은 불로초와 비슷한 효과를 내는 비법을 독점적으로 터득했습니다. 비결이 뭘까요? 이번에도 역시 돈입니다. 전문 번역: 젊어지려고 아들 피 수혈한 백만장자…돈으로 ‘불로장생’을 사다 해설: ‘억만장자들만의 세상’, 이제는 대놓고 펼쳐진다",
+          "link": "https://newspeppermint.com/2024/06/05/npsp_buylongerlife/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_buylongerlife",
+          "publishedOn": "2024-06-05T22:00:07.000Z",
+          "wordCount": null,
+          "title": "‘억만장자들만의 세상’, 이제는 대놓고 펼쳐진다",
+          "imageUrl": null
+        },
+        {
           "id": "https://newspeppermint.com/?p=79136",
           "author": "ingppoo",
           "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 4월 15일 스프에 쓴 글입니다. 로스 더우댓(Ross Douthat)은 지난해 말 대한민국은 사라지고 있는가?라는 칼럼을 쓴 뉴욕타임스 칼럼니스트입니다. 제목만으로도 당연히 한국에서 큰 관심을 받을 수밖에 없던 글인데, 많은 선진국에서 공통으로 나타나는 저출생 경향이 유난히 두드러지는 나라가 → 더 보기",
@@ -3788,16 +3718,6 @@
           "publishedOn": "2024-05-10T22:59:21.000Z",
           "wordCount": null,
           "title": "[뉴페@스프] 영어 아닌 외국어 사용이 문제라고? ‘효율적 소통’ 이면에도 문제가 있다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79313",
-          "author": "NewsPeppermint",
-          "description": "청소년 정신건강과 스마트폰, 소셜미디어의 관계는 최근 들어 자주 논의되는 주제입니다. 청소년기가 스마트폰과 소셜미디어를 빼놓고 얘기할 수 없는 세상이 된 뒤로 청소년들의 정신건강이 ‘위기’라고 불러야 할 만큼 나빠졌다는 주장을 해온 대표적인 학자가 조너선 하이트입니다. 반대로 정신건강이 어느 정도 나빠졌을 수 있지만, 이를 위기라고 단정 짓기엔 아직 일러 보이며, 그 원인이 스마트폰과 소셜미디어에만 있는지도 신중하게 살펴야 한다고 주장하는 학자들도 있습니다. 뉴욕타임스 데이비드 월러스웰스가 양측의 의견을 두루 살핀 칼럼을 번역하고 해설을 썼습니다. 전문 번역: → 더 보기",
-          "link": "https://newspeppermint.com/2024/05/08/npsp_mentalhealthsmartphone/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_mentalhealthsmartphone",
-          "publishedOn": "2024-05-08T07:00:23.000Z",
-          "wordCount": null,
-          "title": "“스마트폰이 정신건강에 문제야”…그렇긴 한데 다른 이유가 더 있다면?",
           "imageUrl": null
         }
       ]
