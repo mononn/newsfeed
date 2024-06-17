@@ -97,6 +97,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2024/file-time-cpp20/",
+          "author": null,
+          "description": "In this blog post, we’ll examine the potentially simple task of getting and displaying file time. Usually, we can depend on some library or OS-specific code to get that file property. Fortunately, since C++20, we have a reliable and simple technique from the std::filesystem and std::chrono components.\nLet’s jump in.\n\n\n\n     \n    \n\n\nIn C++, working with files was usually reserved for OS APIs and third-party libraries. Here are two examples of such an approach:\n\n\n\n     \n    \n\n\nIn Linux or any POSIX-compliant system, you can use the stat function to get file times.\n#include <iostream>\n#include <fstream>\n#include <sys/stat.h>\n#include <ctime>\n\nint main() {\n    const char* file_path = \"example.txt\";\n    std::ofstream(file_path) << \"Hello, World!\";\n\n    struct stat file_stat;\n\n    if (stat(file_…",
+          "link": "https://www.cppstories.com/2024/file-time-cpp20/",
+          "publishedOn": "2024-06-17T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Displaying File Time in C++: Finally fixed in C++20",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.cppstories.com/2017/08/cpp17-details-filesystem/",
           "author": null,
           "description": "Although C++ is an old programming language, its Standard Library misses a few basic things. Features that Java or .NET had for years were/are not available in STL. With C++17 there’s a nice improvement: for example, we now have the standard filesystem!\nTraversing a path, even recursively, is so simple now!\n\n\n\n     \n    \n\n\nFor the last five episodes/articles, I’ve covered most of the language features. Now it’s time for the Standard Library. I’ve planned three posts on that: Filesystem, Parallel STL and Concurrency, Utils.\nMaybe I was a bit harsh in the introduction. Although the Standard Library lacks some important features, you could always use Boost with its thousands of sub-libraries and do the work. The C++ Committee and the Community decided that the Boost libraries are so important…",
@@ -226,6 +236,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "291150c5-b1a4-454e-b94c-727611e85178",
+          "author": "Cedric Clyburn, Legare Kerrison",
+          "description": "Experimenting with AI models and testing different prompts is a key part of developing AI-enabled applications. However, setting up the right environment and managing model dependencies can be challenging. Podman AI Lab's Playground feature solves this by providing an intuitive, containerized environment for exploring open-source machine learning models locally. Let’s explore the Playground feature in-depth and show how it can accelerate your application development workflow when working with generative AI.\nWhat is Podman AI Lab?\nPodman AI Lab is an extension for Podman Desktop, the graphical tool for managing containers and Kubernetes, and enables developers to work with large language models (LLMs) and other AI models locally on their machine. It provides an intuitive interface to discov…",
+          "link": "https://developers.redhat.com/articles/2024/06/17/experiment-and-test-ai-models-podman-ai-lab",
+          "publishedOn": "2024-06-17T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Experiment and test AI models with Podman AI Lab",
+          "imageUrl": null
+        },
+        {
+          "id": "d4d4d891-84f4-467b-b90d-81c8dd8a1d5d",
+          "author": "Torbjorn Dahlen",
+          "description": "In Active Directory Federation Services (AD FS) terminology, Red Hat build of Keycloak will be set up as a Resource Federation Server and AD FS as an Account Federation Server. This means that users will reside in Active Directory (AD) on Windows Server, while the protected web app will reside within the realm protected by Red Hat build of Keycloak on Red Hat OpenShift. With this, we want AD FS to authenticate users to give them access to web apps on OpenShift. Hence, when a user with an account in AD tries to access a web app on OpenShift, the user will be redirected to Red Hat build of Keycloak where they can choose to authenticate with AD FS. The user doesn't need to have an account in Red Hat build of Keycloak or in OpenShift for this to work.\nIn Red Hat build of Keycloak terminology, …",
+          "link": "https://developers.redhat.com/articles/2024/06/17/protect-apps-red-hat-build-keycloak-and-active-directory-federation-services",
+          "publishedOn": "2024-06-17T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Protect apps with Red Hat build of Keycloak and Active Directory Federation Services",
+          "imageUrl": null
+        },
         {
           "id": "7bcfd2ee-c9d8-4c8e-91d0-d0178b32e01a",
           "author": "Anshul Behl",
@@ -552,7 +582,18 @@
       "title": "edykim.com 블로그 RSS 피드: undefined",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://edykim.com/ko/post/father-in-law/",
+          "author": null,
+          "description": "올해 초 장인어른께서 야속하게도 소천하셨다.\n장인어른은 정말 평생 일만 하셨다. 차량정비를 하셨는데, 주6일 출근하시고도 주말...",
+          "link": "https://edykim.com/ko/post/father-in-law/",
+          "publishedOn": "2024-06-16T22:24:35.000Z",
+          "wordCount": null,
+          "title": "장인어른",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Eli Bendersky's website",
@@ -1126,6 +1167,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/java/1132/",
+          "author": null,
+          "description": "OOP is wonderful. Programmers usually criticize those who don't follow this paradigm, while the knowledge of patterns is often a must. However, even the right approach doesn't completely protect from...",
+          "link": "https://pvs-studio.com/en/blog/posts/java/1132/",
+          "publishedOn": "2024-06-16T21:00:00.000Z",
+          "wordCount": null,
+          "title": "How template method can ruin your Java code",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1131/",
           "author": null,
           "description": "Many times, we've written about bugs in games, in space flight software, etc. Now we'd like to honor the tradition. This time, we'll take a look at the bugs that have crept into some of the biggest...",
@@ -1298,6 +1349,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/977993/",
+          "author": "daroc",
+          "description": "The kernel has a lot of code paths that are normally disabled: debugging print\nstatements, tracepoints, etc. To support these efficiently, there\nis a common mechanism called\n\nstatic keys that provides a way to enable or disable a\ncode path at run time, with effectively no overhead for disabled\nbranches. BPF programs have not been able to take advantage of static keys so far,\nbecause they aren't compiled into the kernel.\nNow, it looks like BPF may be getting support for a similar mechanism —\nand the design could also provide one of the components needed to support\n\njump tables, another missing feature.\nAnton Protopovov presented his plans to add static keys to BPF at the 2024\nLinux Storage,\nFilesystem, Memory Management, and BPF Summit.",
+          "link": "https://lwn.net/Articles/977993/",
+          "publishedOn": "2024-06-17T19:58:01.000Z",
+          "wordCount": null,
+          "title": "[$] Static keys for BPF",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978733/",
+          "author": "corbet",
+          "description": "PostmarketOS is an Alpine Linux\nderivative distribution aimed at mobile devices; the v24.06\nrelease claims support for over 250 devices, though the level of that\nsupport varies widely.  \"This release is geared mainly towards Linux\nenthusiasts. We are working hard on stability improvements and automated\ntesting, but if you expect Android or iOS levels of polish, then this is\nnot for you yet.\"  Changes include an upgrade to Alpine Linux 3.20,\nnewer GNOME and KDE versions, and more.",
+          "link": "https://lwn.net/Articles/978733/",
+          "publishedOn": "2024-06-17T18:45:21.000Z",
+          "wordCount": null,
+          "title": "PostmarketOS v24.06 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978189/",
+          "author": "corbet",
+          "description": "Software-interrupt handlers (also called \"bottom halves\") have a long\nhistory in the Linux kernel; for much of that history, developers have\nwished that they could go away.  One of their unfortunate characteristics\nis that they can add unexpected latency to the execution of unrelated\nprocesses; this problem is felt especially acutely in the\nrealtime-preemption community.  The solution adopted there has created\nproblems of its own, though; in response Sebastian Andrzej Siewior is proposing\na new locking mechanism for realtime builds of the kernel that may have\nbenefits for non-realtime users as well.",
+          "link": "https://lwn.net/Articles/978189/",
+          "publishedOn": "2024-06-17T14:27:11.000Z",
+          "wordCount": null,
+          "title": "[$] Nested bottom-half locking for realtime kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978709/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (389-ds-base, buildah, c-ares, cockpit, containernetworking-plugins, fence-agents, gdk-pixbuf2, gvisor-tap-vsock, libreoffice, podman, python-idna, rpm-ostree, and ruby), Debian (atril, chromium, ffmpeg, libndp, libvpx, nano, plasma-workspace, pymongo, roundcube, sendmail, and thunderbird), Fedora (booth and thunderbird), Mageia (aom, atril, libvpx, nano, nss, firefox, and vte), Red Hat (linux-firmware), SUSE (bind, booth, mariadb, openssl-1_1, php7, php8, and webkit2gtk3), and Ubuntu (linux-azure, linux-azure-fde, linux-azure, linux-gke, and linux-nvidia-6.5).",
+          "link": "https://lwn.net/Articles/978709/",
+          "publishedOn": "2024-06-17T14:14:16.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978629/",
+          "author": "corbet",
+          "description": "Linus has released 6.10-rc4 for testing.\n\"Apart from a rather unusual spike in the diffstat due to a parisc fix,\nthings look normal and pretty small.\"",
+          "link": "https://lwn.net/Articles/978629/",
+          "publishedOn": "2024-06-16T22:28:16.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.10-rc4",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/978591/",
           "author": "corbet",
@@ -2497,16 +2598,6 @@
           "wordCount": null,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/973964/",
-          "author": "corbet",
-          "description": "Non-uniform memory access (NUMA) systems are organized with their CPUs\ngrouped into nodes, each of which has memory attached to it.  All memory in\nthe system is accessible from all CPUs, but memory attached to the local\nnode is faster.  The kernel's memory-policy\n(\"mempolicy\") interface allows threads to inform the kernel about how\nthey would like their memory placed to get the best performance.  In recent\nyears, the NUMA concept has been extended to support the management of\ndifferent types of memory in a system, pushing the limits of the mempolicy\nsubsystem.  In a remotely presented session at the 2024 Linux Storage,\nFilesystem, Memory Management, and BPF Summit, Gregory Price discussed\nthe ways in which the kernel's memory-policy support should evolve to\nhandle today's more-complex systems.",
-          "link": "https://lwn.net/Articles/973964/",
-          "publishedOn": "2024-05-18T14:10:29.000Z",
-          "wordCount": null,
-          "title": "[$] Extending the mempolicy interface for heterogeneous systems",
-          "imageUrl": null
         }
       ]
     },
@@ -2758,6 +2849,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=8866",
+          "author": "Derek Jones",
+          "description": "Program size, in lines of code (LOC), used to be a topic of conversation among developers and managers. Program size is an issue when computer memory is measured in kilobytes. Large programs would be organized into overlays such that only small subsets needed to be held in memory at any time, i.e., programmer defined memory […]",
+          "link": "https://shape-of-code.com/2024/06/16/distribution-of-program-sizes/",
+          "publishedOn": "2024-06-16T21:43:14.000Z",
+          "wordCount": null,
+          "title": "Distribution of program sizes",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=8852",
           "author": "Derek Jones",
           "description": "How much source code exists in a particular language? Traditionally, indicators of the quantity of source in a language is the number of people making a living working on software written in the language. Job adverts are a proxy for the number of people employed to write/support programs implemented in a language (i.e., number of […]",
@@ -2829,6 +2930,16 @@
       "siteUrl": "https://thephd.dev/",
       "articles": [
         {
+          "id": "https://thephd.dev/constant-integers-are-actually-constant-wow-finally-someones-writing-the-goddamn-paper-%F0%9F%99%84",
+          "author": null,
+          "description": "Constant integer-typed (including enumeration-typed) object declarations in C that are immediately initialized with an integer constant expression should just be constant expressions. That’s it.",
+          "link": "https://thephd.dev/constant-integers-are-actually-constant-wow-finally-someones-writing-the-goddamn-paper-%F0%9F%99%84",
+          "publishedOn": "2024-06-16T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Constant Integer Type Declarations Initialized With Constant Expressions Should Be Constants",
+          "imageUrl": null
+        },
+        {
           "id": "https://thephd.dev/just-put-raii-in-c-bro-please-bro-just-one-more-destructor-bro-cmon-im-good-for-it",
           "author": null,
           "description": "Ever since I finished publishing the “defer” paper and successfully defended it on its first go-around (it now has tentative approval to go to a Technical Specification, I just need to obtain the necessary written boilerplate to do so), an old criticism",
@@ -2875,6 +2986,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=110290",
+          "author": "정혜승",
+          "description": "낙수효과의 유래 낙수효과. 이 단어는 어느 무능한 대통령을 비판할 때 처음 등장했다. 92년 전 미국 대공황 시절 코미디언이자 사회평론가 윌 로저스가 원조다. 물과 달리 돈은 오히려 아래에서 위로 흐르는 사실을 모른다며, 허버트 후버 대통령을 풍자했다. 낙수효과 따위 없다는 얘기다. 그런데 낙수효과는 1980년대 이후 신자유주의 핵심 키워드가 됐다. [경제신문이 말하지 않는 경제 이야기], 1장의 에피소드다. 경제...\nThe post 밥 먹여주는 정치: 경제를 알아야 선동에 흔들리지 않는다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/110290",
+          "publishedOn": "2024-06-17T10:43:31.000Z",
+          "wordCount": null,
+          "title": "밥 먹여주는 정치: 경제를 알아야 선동에 흔들리지 않는다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=110251",
+          "author": "이정환",
+          "description": "“언론은 검찰의 애완견.” 안부수와 이화영 판결 달랐다. 쟁점과 현안. 동해 유전 탐사는 이미 1월에 결정됐다. 한 다리 건너 모두 아는 사람들. 오늘부터 서울대병원 휴진. 더 깊게 읽기. 용산발 감세 드라이브. 지금 이 시점에 부자 감세 맞나. 윤석열의 남은 3년. 다르게 읽기. 권익위가 김영란법을 모르나. 검사 시절과 입장이 달라진 건가. 독일의 한국 정치사 수업. 해법과 대안....\nThe post “언론은 검찰의 애완견”, 이재명이 화난 이유는?: 슬로우레터 6월17일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/110251",
+          "publishedOn": "2024-06-16T22:09:53.000Z",
+          "wordCount": null,
+          "title": "“언론은 검찰의 애완견”, 이재명이 화난 이유는?: 슬로우레터 6월17일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=110180",
           "author": "이정환",
@@ -3284,16 +3415,6 @@
           "wordCount": null,
           "title": "‘빼박’ 탄핵 사유, 윤석열이 모를 리 없다: 슬로우레터 5월20일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=108807",
-          "author": "이정환",
-          "description": "[슬로우리포트] 언론의 객관성을 둘러싼 오래된 고민: 바이든이 뉴욕타임스와 인터뷰하지 않는 이유. 진실과 정의 가운데 무엇을 선택할 것인가. 누군가는 정의가 곧 진실이라고 말할 것이다. 애초에 정의가 아닌 진실에 관심이 없는 사람들도 있고 진실 역시 상대적인 개념 아니냐고 말하는 사람들도 있다. 세마포(Semafor)의 벤 스미스(Ben Smith)가 뉴욕타임스 편집국장 조셉 칸(Joseph Kahn)을 인터뷰했다. 벤 스미스의 질문은 “왜 뉴욕타임스는 조...\nThe post 왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질문. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/108807",
-          "publishedOn": "2024-05-19T06:45:30.000Z",
-          "wordCount": 8019,
-          "title": "왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질문.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/05/5964358212_4685b11293_k-1000x750.jpg"
         }
       ]
     },
@@ -3302,6 +3423,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595035",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595035/%ec%bb%b4%ed%8f%ac%ec%a6%88%ec%bb%a4%ed%94%bc-%ec%98%81%ec%9e%85%ec%9d%b4%ec%9d%b5%eb%a5%a0-%eb%b9%84%ea%b2%b0",
+          "publishedOn": "2024-06-17T11:15:35.000Z",
+          "wordCount": null,
+          "title": "컴포즈커피 사례, 컴포즈커피의 놀라운 영입이익률 비결은?",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595028",
           "author": "happist",
@@ -3669,6 +3800,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79227",
+          "author": "eyesopen1",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 4월 29일 스프에 쓴 글입니다. 주말 내내 세계 각지의 이상기후 소식이 전해졌습니다. 에콰도르에서는 극심한 가뭄으로 에너지 비상사태가 선포되었고, 파키스탄과 두바이, 카자흐스탄에서는 이례적인 폭우가 쏟아졌습니다. 하지만 해수면 상승으로 삶의 터전이 눈앞에서 사라지는 바닷가나 폭우로 매년 여름 → 더 보기",
+          "link": "https://newspeppermint.com/2024/06/16/npsp_climatechangeimpact/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_climatechangeimpact",
+          "publishedOn": "2024-06-16T22:59:52.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 기후변화로 인한 ‘변화’가 이 정도였어? 뜻밖의 결과들",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=79516",
           "author": "NewsPeppermint",

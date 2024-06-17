@@ -22,11 +22,543 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-06-16 datetime="2024-06-16T20:13:20.573Z">2024-06-16</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-06-16 datetime="2024-06-16T20:13:20.573Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-06-17 datetime="2024-06-17T19:58:01.000Z">2024-06-17</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-06-17 datetime="2024-06-17T19:58:01.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/977993/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Static keys for BPF</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/977993/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The kernel has a lot of code paths that are normally disabled: debugging print
+statements, tracepoints, etc. To support these efficiently, there
+is a common mechanism called
+
+static keys that provides a way to enable or disable a
+code path at run time, with effectively no overhead for disabled
+branches. BPF programs have not been able to take advantage of static keys so far,
+because they aren&#x27;t compiled into the kernel.
+Now, it looks like BPF may be getting support for a similar mechanism —
+and the design could also provide one of the components needed to support
+
+jump tables, another missing feature.
+Anton Protopovov presented his plans to add static keys to BPF at the 2024
+Linux Storage,
+Filesystem, Memory Management, and BPF Summit.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/978733/"
+                        open
+                      >
+                        <summary class="article-expander__title">PostmarketOS v24.06 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/978733/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>PostmarketOS is an Alpine Linux
+derivative distribution aimed at mobile devices; the v24.06
+release claims support for over 250 devices, though the level of that
+support varies widely.  &quot;This release is geared mainly towards Linux
+enthusiasts. We are working hard on stability improvements and automated
+testing, but if you expect Android or iOS levels of polish, then this is
+not for you yet.&quot;  Changes include an upgrade to Alpine Linux 3.20,
+newer GNOME and KDE versions, and more.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/978189/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Nested bottom-half locking for realtime kernels</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/978189/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Software-interrupt handlers (also called &quot;bottom halves&quot;) have a long
+history in the Linux kernel; for much of that history, developers have
+wished that they could go away.  One of their unfortunate characteristics
+is that they can add unexpected latency to the execution of unrelated
+processes; this problem is felt especially acutely in the
+realtime-preemption community.  The solution adopted there has created
+problems of its own, though; in response Sebastian Andrzej Siewior is proposing
+a new locking mechanism for realtime builds of the kernel that may have
+benefits for non-realtime users as well.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/978709/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Monday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/978709/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by AlmaLinux (389-ds-base, buildah, c-ares, cockpit, containernetworking-plugins, fence-agents, gdk-pixbuf2, gvisor-tap-vsock, libreoffice, podman, python-idna, rpm-ostree, and ruby), Debian (atril, chromium, ffmpeg, libndp, libvpx, nano, plasma-workspace, pymongo, roundcube, sendmail, and thunderbird), Fedora (booth and thunderbird), Mageia (aom, atril, libvpx, nano, nss, firefox, and vte), Red Hat (linux-firmware), SUSE (bind, booth, mariadb, openssl-1_1, php7, php8, and webkit2gtk3), and Ubuntu (linux-azure, linux-azure-fde, linux-azure, linux-gke, and linux-nvidia-6.5).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;595035"
+                        open
+                      >
+                        <summary class="article-expander__title">컴포즈커피 사례, 컴포즈커피의 놀라운 영입이익률 비결은?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/595035/%ec%bb%b4%ed%8f%ac%ec%a6%88%ec%bb%a4%ed%94%bc-%ec%98%81%ec%9e%85%ec%9d%b4%ec%9d%b5%eb%a5%a0-%eb%b9%84%ea%b2%b0">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;110290"
+                        open
+                      >
+                        <summary class="article-expander__title">밥 먹여주는 정치: 경제를 알아야 선동에 흔들리지 않는다</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/110290">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>낙수효과의 유래 낙수효과. 이 단어는 어느 무능한 대통령을 비판할 때 처음 등장했다. 92년 전 미국 대공황 시절 코미디언이자 사회평론가 윌 로저스가 원조다. 물과 달리 돈은 오히려 아래에서 위로 흐르는 사실을 모른다며, 허버트 후버 대통령을 풍자했다. 낙수효과 따위 없다는 얘기다. 그런데 낙수효과는 1980년대 이후 신자유주의 핵심 키워드가 됐다. [경제신문이 말하지 않는 경제 이야기], 1장의 에피소드다. 경제...
+The post 밥 먹여주는 정치: 경제를 알아야 선동에 흔들리지 않는다 appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="291150c5-b1a4-454e-b94c-727611e85178"
+                        open
+                      >
+                        <summary class="article-expander__title">Experiment and test AI models with Podman AI Lab</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/06/17/experiment-and-test-ai-models-podman-ai-lab">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Experimenting with AI models and testing different prompts is a key part of developing AI-enabled applications. However, setting up the right environment and managing model dependencies can be challenging. Podman AI Lab&#x27;s Playground feature solves this by providing an intuitive, containerized environment for exploring open-source machine learning models locally. Let’s explore the Playground feature in-depth and show how it can accelerate your application development workflow when working with generative AI.
+What is Podman AI Lab?
+Podman AI Lab is an extension for Podman Desktop, the graphical tool for managing containers and Kubernetes, and enables developers to work with large language models (LLMs) and other AI models locally on their machine. It provides an intuitive interface to discov…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="d4d4d891-84f4-467b-b90d-81c8dd8a1d5d"
+                        open
+                      >
+                        <summary class="article-expander__title">Protect apps with Red Hat build of Keycloak and Active Directory Federation Services</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/06/17/protect-apps-red-hat-build-keycloak-and-active-directory-federation-services">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>In Active Directory Federation Services (AD FS) terminology, Red Hat build of Keycloak will be set up as a Resource Federation Server and AD FS as an Account Federation Server. This means that users will reside in Active Directory (AD) on Windows Server, while the protected web app will reside within the realm protected by Red Hat build of Keycloak on Red Hat OpenShift. With this, we want AD FS to authenticate users to give them access to web apps on OpenShift. Hence, when a user with an account in AD tries to access a web app on OpenShift, the user will be redirected to Red Hat build of Keycloak where they can choose to authenticate with AD FS. The user doesn&#x27;t need to have an account in Red Hat build of Keycloak or in OpenShift for this to work.
+In Red Hat build of Keycloak terminology, …</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >C++ Stories</button>
+                  <a class="source-heading__link" href="https://www.cppstories.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.cppstories.com/2024/file-time-cpp20/"
+                        open
+                      >
+                        <summary class="article-expander__title">Displaying File Time in C++: Finally fixed in C++20</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.cppstories.com/2024/file-time-cpp20/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>In this blog post, we’ll examine the potentially simple task of getting and displaying file time. Usually, we can depend on some library or OS-specific code to get that file property. Fortunately, since C++20, we have a reliable and simple technique from the std::filesystem and std::chrono components.
+Let’s jump in.
+
+
+
+     
+    
+
+
+In C++, working with files was usually reserved for OS APIs and third-party libraries. Here are two examples of such an approach:
+
+
+
+     
+    
+
+
+In Linux or any POSIX-compliant system, you can use the stat function to get file times.
+#include 
+#include 
+#include 
+#include 
+
+int main() {
+    const char* file_path &#x3D; &quot;example.txt&quot;;
+    std::ofstream(file_path) &lt;&lt; &quot;Hello, World!&quot;;
+
+    struct stat file_stat;
+
+    if (stat(file_…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-06-16 datetime="2024-06-16T22:59:52.000Z">2024-06-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-06-16 datetime="2024-06-16T22:59:52.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >NewsPeppermint</button>
+                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79227"
+                        open
+                      >
+                        <summary class="article-expander__title">[뉴페@스프] 기후변화로 인한 ‘변화’가 이 정도였어? 뜻밖의 결과들</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/06/16/npsp_climatechangeimpact/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_climatechangeimpact">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 4월 29일 스프에 쓴 글입니다. 주말 내내 세계 각지의 이상기후 소식이 전해졌습니다. 에콰도르에서는 극심한 가뭄으로 에너지 비상사태가 선포되었고, 파키스탄과 두바이, 카자흐스탄에서는 이례적인 폭우가 쏟아졌습니다. 하지만 해수면 상승으로 삶의 터전이 눈앞에서 사라지는 바닷가나 폭우로 매년 여름 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79516"
+                        open
+                      >
+                        <summary class="article-expander__title">‘인구소멸’ 한국을 위해 할 수 있는 일</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/06/15/npsp_aging/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_aging">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>이미 고령화 사회를 지나 초고령화 사회를 향해 빠르게 나아가는 한국 사회에서 나타나는 문제의 많은 부분을 풀 수 있는 열쇠는 나이 든 기성세대가 쥐고 있다고 할 수 있습니다. 노화를 우아하게 수용하는 법에 관해 찰스 블로우가 쓴 글을 번역하고, 해설을 썼습니다. 기성세대가 세상이 바뀌었다는 걸 이해하고, 바뀐 세상에서 살아가야 할 다음 세대의 어려움을 함부로 재단하지 않는 모습을 보여줬으면 좋겠습니다. 전문 번역: 눈가 주름이 지혜와 우아함의 대가라니! – 우아하게 노화를 수용한다는 것 해설: “라떼는 → 더 보기</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/978629/"
+                        open
+                      >
+                        <summary class="article-expander__title">Kernel prepatch 6.10-rc4</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/978629/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Linus has released 6.10-rc4 for testing.
+&quot;Apart from a rather unusual spike in the diffstat due to a parisc fix,
+things look normal and pretty small.&quot;</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/978591/"
+                        open
+                      >
+                        <summary class="article-expander__title">Some weekend stable kernel updates</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/978591/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The
+6.9.5,
+6.6.34,
+6.1.94,
+5.15.161,
+5.10.219,
+5.4.278, and
+4.19.316
+stable kernels have all been released; each contains another set of
+important fixes.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >edykim.com 블로그 RSS 피드: undefined</button>
+                  <a class="source-heading__link" href="https://edykim.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://edykim.com/ko/post/father-in-law/"
+                        open
+                      >
+                        <summary class="article-expander__title">장인어른</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://edykim.com/ko/post/father-in-law/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>올해 초 장인어른께서 야속하게도 소천하셨다.
+장인어른은 정말 평생 일만 하셨다. 차량정비를 하셨는데, 주6일 출근하시고도 주말...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;110251"
+                        open
+                      >
+                        <summary class="article-expander__title">“언론은 검찰의 애완견”, 이재명이 화난 이유는?: 슬로우레터 6월17일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/110251">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>“언론은 검찰의 애완견.” 안부수와 이화영 판결 달랐다. 쟁점과 현안. 동해 유전 탐사는 이미 1월에 결정됐다. 한 다리 건너 모두 아는 사람들. 오늘부터 서울대병원 휴진. 더 깊게 읽기. 용산발 감세 드라이브. 지금 이 시점에 부자 감세 맞나. 윤석열의 남은 3년. 다르게 읽기. 권익위가 김영란법을 모르나. 검사 시절과 입장이 달라진 건가. 독일의 한국 정치사 수업. 해법과 대안....
+The post “언론은 검찰의 애완견”, 이재명이 화난 이유는?: 슬로우레터 6월17일. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >The Shape of Code</button>
+                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://shape-of-code.com/?p&#x3D;8866"
+                        open
+                      >
+                        <summary class="article-expander__title">Distribution of program sizes</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2024/06/16/distribution-of-program-sizes/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Program size, in lines of code (LOC), used to be a topic of conversation among developers and managers. Program size is an issue when computer memory is measured in kilobytes. Large programs would be organized into overlays such that only small subsets needed to be held in memory at any time, i.e., programmer defined memory […]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >from pvs-studio.com</button>
+                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pvs-studio.com/en/blog/posts/java/1132/"
+                        open
+                      >
+                        <summary class="article-expander__title">How template method can ruin your Java code</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/java/1132/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>OOP is wonderful. Programmers usually criticize those who don&#x27;t follow this paradigm, while the knowledge of patterns is often a must. However, even the right approach doesn&#x27;t completely protect from...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -82,46 +614,6 @@
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/978591/"
-                        open
-                      >
-                        <summary class="article-expander__title">Some weekend stable kernel updates</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/978591/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The
-6.9.5,
-6.6.34,
-6.1.94,
-5.15.161,
-5.10.219,
-5.4.278, and
-4.19.316
-stable kernels have all been released; each contains another set of
-important fixes.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >꿈꾸는섬</button>
                   <a class="source-heading__link" href="https://happist.com">Open</a>
                 </h3>
@@ -153,22 +645,22 @@ important fixes.</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
+                  >The Pasture</button>
+                  <a class="source-heading__link" href="https://thephd.dev/">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79516"
+                        data-accordion-key="https://thephd.dev/constant-integers-are-actually-constant-wow-finally-someones-writing-the-goddamn-paper-%F0%9F%99%84"
                         open
                       >
-                        <summary class="article-expander__title">‘인구소멸’ 한국을 위해 할 수 있는 일</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/06/15/npsp_aging/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_aging">
+                        <summary class="article-expander__title">Constant Integer Type Declarations Initialized With Constant Expressions Should Be Constants</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://thephd.dev/constant-integers-are-actually-constant-wow-finally-someones-writing-the-goddamn-paper-%F0%9F%99%84">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>이미 고령화 사회를 지나 초고령화 사회를 향해 빠르게 나아가는 한국 사회에서 나타나는 문제의 많은 부분을 풀 수 있는 열쇠는 나이 든 기성세대가 쥐고 있다고 할 수 있습니다. 노화를 우아하게 수용하는 법에 관해 찰스 블로우가 쓴 글을 번역하고, 해설을 썼습니다. 기성세대가 세상이 바뀌었다는 걸 이해하고, 바뀐 세상에서 살아가야 할 다음 세대의 어려움을 함부로 재단하지 않는 모습을 보여줬으면 좋겠습니다. 전문 번역: 눈가 주름이 지혜와 우아함의 대가라니! – 우아하게 노화를 수용한다는 것 해설: “라떼는 → 더 보기</span>
+                              <span>Constant integer-typed (including enumeration-typed) object declarations in C that are immediately initialized with an integer constant expression should just be constant expressions. That’s it.</span>
                             </span>
                           </div>
                         </a>
@@ -9623,27 +10115,6 @@ The post ‘빼박’ 탄핵 사유, 윤석열이 모를 리 없다: 슬로우�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;108807"
-                        open
-                      >
-                        <summary class="article-expander__title">왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질문.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/108807">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://slownews.kr/wp-content/uploads/2024/05/5964358212_4685b11293_k-1000x750.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>[슬로우리포트] 언론의 객관성을 둘러싼 오래된 고민: 바이든이 뉴욕타임스와 인터뷰하지 않는 이유. 진실과 정의 가운데 무엇을 선택할 것인가. 누군가는 정의가 곧 진실이라고 말할 것이다. 애초에 정의가 아닌 진실에 관심이 없는 사람들도 있고 진실 역시 상대적인 개념 아니냐고 말하는 사람들도 있다. 세마포(Semafor)의 벤 스미스(Ben Smith)가 뉴욕타임스 편집국장 조셉 칸(Joseph Kahn)을 인터뷰했다. 벤 스미스의 질문은 “왜 뉴욕타임스는 조...
-The post 왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질문. appeared first on 슬로우뉴스..</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;27
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9718,62 +10189,6 @@ The post 왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질�
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-18 datetime="2024-05-18T14:10:29.000Z">2024-05-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-18 datetime="2024-05-18T14:10:29.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/973964/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Extending the mempolicy interface for heterogeneous systems</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/973964/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Non-uniform memory access (NUMA) systems are organized with their CPUs
-grouped into nodes, each of which has memory attached to it.  All memory in
-the system is accessible from all CPUs, but memory attached to the local
-node is faster.  The kernel&#x27;s memory-policy
-(&quot;mempolicy&quot;) interface allows threads to inform the kernel about how
-they would like their memory placed to get the best performance.  In recent
-years, the NUMA concept has been extended to support the management of
-different types of memory in a system, pushing the limits of the mempolicy
-subsystem.  In a remotely presented session at the 2024 Linux Storage,
-Filesystem, Memory Management, and BPF Summit, Gregory Price discussed
-the ways in which the kernel&#x27;s memory-policy support should evolve to
-handle today&#x27;s more-complex systems.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-04 datetime="2024-01-04T15:14:19.000Z">2024-01-04</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-04 datetime="2024-01-04T15:14:19.000Z"></time>
           </button>
@@ -9818,8 +10233,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/9538608525">
-        <time id="build-timestamp" datetime="2024-06-16T20:13:23.733Z">2024-06-16T20:13:23.733Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/9554102498">
+        <time id="build-timestamp" datetime="2024-06-17T20:12:19.098Z">2024-06-17T20:12:19.098Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

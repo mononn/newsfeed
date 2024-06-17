@@ -2,10 +2,225 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-06-16T20:13:23.760Z</updated>
+    <updated>2024-06-17T20:12:19.126Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] Static keys for BPF]]></title>
+        <id>https://lwn.net/Articles/977993/</id>
+        <link href="https://lwn.net/Articles/977993/"/>
+        <updated>2024-06-17T19:58:01.000Z</updated>
+        <summary type="html"><![CDATA[The kernel has a lot of code paths that are normally disabled: debugging print
+statements, tracepoints, etc. To support these efficiently, there
+is a common mechanism called
+
+static keys that provides a way to enable or disable a
+code path at run time, with effectively no overhead for disabled
+branches. BPF programs have not been able to take advantage of static keys so far,
+because they aren't compiled into the kernel.
+Now, it looks like BPF may be getting support for a similar mechanism —
+and the design could also provide one of the components needed to support
+
+jump tables, another missing feature.
+Anton Protopovov presented his plans to add static keys to BPF at the 2024
+Linux Storage,
+Filesystem, Memory Management, and BPF Summit.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PostmarketOS v24.06 released]]></title>
+        <id>https://lwn.net/Articles/978733/</id>
+        <link href="https://lwn.net/Articles/978733/"/>
+        <updated>2024-06-17T18:45:21.000Z</updated>
+        <summary type="html"><![CDATA[PostmarketOS is an Alpine Linux
+derivative distribution aimed at mobile devices; the v24.06
+release claims support for over 250 devices, though the level of that
+support varies widely.  "This release is geared mainly towards Linux
+enthusiasts. We are working hard on stability improvements and automated
+testing, but if you expect Android or iOS levels of polish, then this is
+not for you yet."  Changes include an upgrade to Alpine Linux 3.20,
+newer GNOME and KDE versions, and more.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Nested bottom-half locking for realtime kernels]]></title>
+        <id>https://lwn.net/Articles/978189/</id>
+        <link href="https://lwn.net/Articles/978189/"/>
+        <updated>2024-06-17T14:27:11.000Z</updated>
+        <summary type="html"><![CDATA[Software-interrupt handlers (also called "bottom halves") have a long
+history in the Linux kernel; for much of that history, developers have
+wished that they could go away.  One of their unfortunate characteristics
+is that they can add unexpected latency to the execution of unrelated
+processes; this problem is felt especially acutely in the
+realtime-preemption community.  The solution adopted there has created
+problems of its own, though; in response Sebastian Andrzej Siewior is proposing
+a new locking mechanism for realtime builds of the kernel that may have
+benefits for non-realtime users as well.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Monday]]></title>
+        <id>https://lwn.net/Articles/978709/</id>
+        <link href="https://lwn.net/Articles/978709/"/>
+        <updated>2024-06-17T14:14:16.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by AlmaLinux (389-ds-base, buildah, c-ares, cockpit, containernetworking-plugins, fence-agents, gdk-pixbuf2, gvisor-tap-vsock, libreoffice, podman, python-idna, rpm-ostree, and ruby), Debian (atril, chromium, ffmpeg, libndp, libvpx, nano, plasma-workspace, pymongo, roundcube, sendmail, and thunderbird), Fedora (booth and thunderbird), Mageia (aom, atril, libvpx, nano, nss, firefox, and vte), Red Hat (linux-firmware), SUSE (bind, booth, mariadb, openssl-1_1, php7, php8, and webkit2gtk3), and Ubuntu (linux-azure, linux-azure-fde, linux-azure, linux-gke, and linux-nvidia-6.5).]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[컴포즈커피 사례, 컴포즈커피의 놀라운 영입이익률 비결은?]]></title>
+        <id>https://happist.com/?p=595035</id>
+        <link href="https://happist.com/595035/%ec%bb%b4%ed%8f%ac%ec%a6%88%ec%bb%a4%ed%94%bc-%ec%98%81%ec%9e%85%ec%9d%b4%ec%9d%b5%eb%a5%a0-%eb%b9%84%ea%b2%b0"/>
+        <updated>2024-06-17T11:15:35.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[밥 먹여주는 정치: 경제를 알아야 선동에 흔들리지 않는다]]></title>
+        <id>https://slownews.kr/?p=110290</id>
+        <link href="https://slownews.kr/110290"/>
+        <updated>2024-06-17T10:43:31.000Z</updated>
+        <summary type="html"><![CDATA[낙수효과의 유래 낙수효과. 이 단어는 어느 무능한 대통령을 비판할 때 처음 등장했다. 92년 전 미국 대공황 시절 코미디언이자 사회평론가 윌 로저스가 원조다. 물과 달리 돈은 오히려 아래에서 위로 흐르는 사실을 모른다며, 허버트 후버 대통령을 풍자했다. 낙수효과 따위 없다는 얘기다. 그런데 낙수효과는 1980년대 이후 신자유주의 핵심 키워드가 됐다. [경제신문이 말하지 않는 경제 이야기], 1장의 에피소드다. 경제...
+The post 밥 먹여주는 정치: 경제를 알아야 선동에 흔들리지 않는다 appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>정혜승</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Experiment and test AI models with Podman AI Lab]]></title>
+        <id>291150c5-b1a4-454e-b94c-727611e85178</id>
+        <link href="https://developers.redhat.com/articles/2024/06/17/experiment-and-test-ai-models-podman-ai-lab"/>
+        <updated>2024-06-17T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Experimenting with AI models and testing different prompts is a key part of developing AI-enabled applications. However, setting up the right environment and managing model dependencies can be challenging. Podman AI Lab's Playground feature solves this by providing an intuitive, containerized environment for exploring open-source machine learning models locally. Let’s explore the Playground feature in-depth and show how it can accelerate your application development workflow when working with generative AI.
+What is Podman AI Lab?
+Podman AI Lab is an extension for Podman Desktop, the graphical tool for managing containers and Kubernetes, and enables developers to work with large language models (LLMs) and other AI models locally on their machine. It provides an intuitive interface to discov…]]></summary>
+        <author>
+            <name>Cedric Clyburn, Legare Kerrison</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Protect apps with Red Hat build of Keycloak and Active Directory Federation Services]]></title>
+        <id>d4d4d891-84f4-467b-b90d-81c8dd8a1d5d</id>
+        <link href="https://developers.redhat.com/articles/2024/06/17/protect-apps-red-hat-build-keycloak-and-active-directory-federation-services"/>
+        <updated>2024-06-17T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In Active Directory Federation Services (AD FS) terminology, Red Hat build of Keycloak will be set up as a Resource Federation Server and AD FS as an Account Federation Server. This means that users will reside in Active Directory (AD) on Windows Server, while the protected web app will reside within the realm protected by Red Hat build of Keycloak on Red Hat OpenShift. With this, we want AD FS to authenticate users to give them access to web apps on OpenShift. Hence, when a user with an account in AD tries to access a web app on OpenShift, the user will be redirected to Red Hat build of Keycloak where they can choose to authenticate with AD FS. The user doesn't need to have an account in Red Hat build of Keycloak or in OpenShift for this to work.
+In Red Hat build of Keycloak terminology, …]]></summary>
+        <author>
+            <name>Torbjorn Dahlen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Displaying File Time in C++: Finally fixed in C++20]]></title>
+        <id>https://www.cppstories.com/2024/file-time-cpp20/</id>
+        <link href="https://www.cppstories.com/2024/file-time-cpp20/"/>
+        <updated>2024-06-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this blog post, we’ll examine the potentially simple task of getting and displaying file time. Usually, we can depend on some library or OS-specific code to get that file property. Fortunately, since C++20, we have a reliable and simple technique from the std::filesystem and std::chrono components.
+Let’s jump in.
+
+
+
+     
+    
+
+
+In C++, working with files was usually reserved for OS APIs and third-party libraries. Here are two examples of such an approach:
+
+
+
+     
+    
+
+
+In Linux or any POSIX-compliant system, you can use the stat function to get file times.
+#include <iostream>
+#include <fstream>
+#include <sys/stat.h>
+#include <ctime>
+
+int main() {
+    const char* file_path = "example.txt";
+    std::ofstream(file_path) << "Hello, World!";
+
+    struct stat file_stat;
+
+    if (stat(file_…]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] 기후변화로 인한 ‘변화’가 이 정도였어? 뜻밖의 결과들]]></title>
+        <id>https://newspeppermint.com/?p=79227</id>
+        <link href="https://newspeppermint.com/2024/06/16/npsp_climatechangeimpact/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_climatechangeimpact"/>
+        <updated>2024-06-16T22:59:52.000Z</updated>
+        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 4월 29일 스프에 쓴 글입니다. 주말 내내 세계 각지의 이상기후 소식이 전해졌습니다. 에콰도르에서는 극심한 가뭄으로 에너지 비상사태가 선포되었고, 파키스탄과 두바이, 카자흐스탄에서는 이례적인 폭우가 쏟아졌습니다. 하지만 해수면 상승으로 삶의 터전이 눈앞에서 사라지는 바닷가나 폭우로 매년 여름 → 더 보기]]></summary>
+        <author>
+            <name>eyesopen1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel prepatch 6.10-rc4]]></title>
+        <id>https://lwn.net/Articles/978629/</id>
+        <link href="https://lwn.net/Articles/978629/"/>
+        <updated>2024-06-16T22:28:16.000Z</updated>
+        <summary type="html"><![CDATA[Linus has released 6.10-rc4 for testing.
+"Apart from a rather unusual spike in the diffstat due to a parisc fix,
+things look normal and pretty small."]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[장인어른]]></title>
+        <id>https://edykim.com/ko/post/father-in-law/</id>
+        <link href="https://edykim.com/ko/post/father-in-law/"/>
+        <updated>2024-06-16T22:24:35.000Z</updated>
+        <summary type="html"><![CDATA[올해 초 장인어른께서 야속하게도 소천하셨다.
+장인어른은 정말 평생 일만 하셨다. 차량정비를 하셨는데, 주6일 출근하시고도 주말...]]></summary>
+        <author>
+            <name>edykim.com 블로그 RSS 피드: undefined</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[“언론은 검찰의 애완견”, 이재명이 화난 이유는?: 슬로우레터 6월17일.]]></title>
+        <id>https://slownews.kr/?p=110251</id>
+        <link href="https://slownews.kr/110251"/>
+        <updated>2024-06-16T22:09:53.000Z</updated>
+        <summary type="html"><![CDATA[“언론은 검찰의 애완견.” 안부수와 이화영 판결 달랐다. 쟁점과 현안. 동해 유전 탐사는 이미 1월에 결정됐다. 한 다리 건너 모두 아는 사람들. 오늘부터 서울대병원 휴진. 더 깊게 읽기. 용산발 감세 드라이브. 지금 이 시점에 부자 감세 맞나. 윤석열의 남은 3년. 다르게 읽기. 권익위가 김영란법을 모르나. 검사 시절과 입장이 달라진 건가. 독일의 한국 정치사 수업. 해법과 대안....
+The post “언론은 검찰의 애완견”, 이재명이 화난 이유는?: 슬로우레터 6월17일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Distribution of program sizes]]></title>
+        <id>https://shape-of-code.com/?p=8866</id>
+        <link href="https://shape-of-code.com/2024/06/16/distribution-of-program-sizes/"/>
+        <updated>2024-06-16T21:43:14.000Z</updated>
+        <summary type="html"><![CDATA[Program size, in lines of code (LOC), used to be a topic of conversation among developers and managers. Program size is an issue when computer memory is measured in kilobytes. Large programs would be organized into overlays such that only small subsets needed to be held in memory at any time, i.e., programmer defined memory […]]]></summary>
+        <author>
+            <name>Derek Jones</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How template method can ruin your Java code]]></title>
+        <id>https://pvs-studio.com/en/blog/posts/java/1132/</id>
+        <link href="https://pvs-studio.com/en/blog/posts/java/1132/"/>
+        <updated>2024-06-16T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[OOP is wonderful. Programmers usually criticize those who don't follow this paradigm, while the knowledge of patterns is often a must. However, even the right approach doesn't completely protect from...]]></summary>
+        <author>
+            <name>from pvs-studio.com</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome India to the Google Wallet API]]></title>
         <id>https://developers.googleblog.com/en/welcome-india-google-wallet-api/</id>
@@ -62,6 +277,16 @@ important fixes.]]></summary>
         <summary type="html"><![CDATA[이미 고령화 사회를 지나 초고령화 사회를 향해 빠르게 나아가는 한국 사회에서 나타나는 문제의 많은 부분을 풀 수 있는 열쇠는 나이 든 기성세대가 쥐고 있다고 할 수 있습니다. 노화를 우아하게 수용하는 법에 관해 찰스 블로우가 쓴 글을 번역하고, 해설을 썼습니다. 기성세대가 세상이 바뀌었다는 걸 이해하고, 바뀐 세상에서 살아가야 할 다음 세대의 어려움을 함부로 재단하지 않는 모습을 보여줬으면 좋겠습니다. 전문 번역: 눈가 주름이 지혜와 우아함의 대가라니! – 우아하게 노화를 수용한다는 것 해설: “라떼는 → 더 보기]]></summary>
         <author>
             <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Constant Integer Type Declarations Initialized With Constant Expressions Should Be Constants]]></title>
+        <id>https://thephd.dev/constant-integers-are-actually-constant-wow-finally-someones-writing-the-goddamn-paper-%F0%9F%99%84</id>
+        <link href="https://thephd.dev/constant-integers-are-actually-constant-wow-finally-someones-writing-the-goddamn-paper-%F0%9F%99%84"/>
+        <updated>2024-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Constant integer-typed (including enumeration-typed) object declarations in C that are immediately initialized with an integer constant expression should just be constant expressions. That’s it.]]></summary>
+        <author>
+            <name>The Pasture</name>
         </author>
     </entry>
     <entry>
@@ -4505,38 +4730,6 @@ The post ‘빼박’ 탄핵 사유, 윤석열이 모를 리 없다: 슬로우�
         <summary type="html"><![CDATA[The new PCBs for the MCU-Link MR for drones and robots have arrived. With the parts populated, it serves as a UART bridge and debug probe for the PixHawk. The main improvement was fixing the UART connection, and changes include a new PCB color and a push button replacing the ISP firmware update jumper. Files and BOM on GitHub have been updated.  Continue reading →]]></summary>
         <author>
             <name>Erich Styger</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질문.]]></title>
-        <id>https://slownews.kr/?p=108807</id>
-        <link href="https://slownews.kr/108807"/>
-        <updated>2024-05-19T06:45:30.000Z</updated>
-        <summary type="html"><![CDATA[[슬로우리포트] 언론의 객관성을 둘러싼 오래된 고민: 바이든이 뉴욕타임스와 인터뷰하지 않는 이유. 진실과 정의 가운데 무엇을 선택할 것인가. 누군가는 정의가 곧 진실이라고 말할 것이다. 애초에 정의가 아닌 진실에 관심이 없는 사람들도 있고 진실 역시 상대적인 개념 아니냐고 말하는 사람들도 있다. 세마포(Semafor)의 벤 스미스(Ben Smith)가 뉴욕타임스 편집국장 조셉 칸(Joseph Kahn)을 인터뷰했다. 벤 스미스의 질문은 “왜 뉴욕타임스는 조...
-The post 왜 행동하지 않나, 뉴욕타임스가 맞닥뜨린 복잡한 질문. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Extending the mempolicy interface for heterogeneous systems]]></title>
-        <id>https://lwn.net/Articles/973964/</id>
-        <link href="https://lwn.net/Articles/973964/"/>
-        <updated>2024-05-18T14:10:29.000Z</updated>
-        <summary type="html"><![CDATA[Non-uniform memory access (NUMA) systems are organized with their CPUs
-grouped into nodes, each of which has memory attached to it.  All memory in
-the system is accessible from all CPUs, but memory attached to the local
-node is faster.  The kernel's memory-policy
-("mempolicy") interface allows threads to inform the kernel about how
-they would like their memory placed to get the best performance.  In recent
-years, the NUMA concept has been extended to support the management of
-different types of memory in a system, pushing the limits of the mempolicy
-subsystem.  In a remotely presented session at the 2024 Linux Storage,
-Filesystem, Memory Management, and BPF Summit, Gregory Price discussed
-the ways in which the kernel's memory-policy support should evolve to
-handle today's more-complex systems.]]></summary>
-        <author>
-            <name>corbet</name>
         </author>
     </entry>
     <entry>
