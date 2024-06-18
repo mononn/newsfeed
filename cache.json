@@ -237,6 +237,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "a42ea76d-fc6e-4a7b-b799-779a62bed8de",
+          "author": "Michael Dawson, Ozzy Osborne, Costas Papastathis",
+          "description": "With the growth in the use of containers, the need to bundle your application into a container has never been stronger. Many Red Hat customers will be familiar with Source-to-Image (S2I) as an easy way to build container images from application source code. While S2I is a convenient way to build images on Red Hat OpenShift, Red Hat works to support our customers when using a variety of approaches, and we’ve recently seen an increasing interest in building applications using Cloud Native Computing Foundation (CNCF) Buildpacks.  \nThis is the first in a 5-part series of articles on building your applications with C and UBI. The series will include:\n\nBuilding applications with Paketo Buildpacks and Red Hat UBI container images (this post)\nRunning applications with Paketo Buildpacks and Red Hat…",
+          "link": "https://developers.redhat.com/articles/2024/06/18/build-applications-paketo-buildpacks-and-red-hat-ubi-container-images",
+          "publishedOn": "2024-06-18T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Build applications with Paketo Buildpacks and Red Hat UBI container images",
+          "imageUrl": null
+        },
+        {
+          "id": "0dbb476d-69f9-44cf-b4a6-9481dff86734",
+          "author": "Tulio Magno Quites Machado Filho",
+          "description": "LLD is a linker developed by the LLVM project. It is a drop-in replacement for the system linker and aims to consume less resources than them.\nLLD provides production-quality support for the following architectures:\n\nAArch64 and ARM\nLoongArch\nMIPS\nPowerPC and PowerPC64\nRISC-V\nx86-32 and x86-64\n\nDespite this list, there is still one architecture supported by Fedora that was missing: s390x. This absence impacts how Fedora packages are built on s390x, either by prohibiting packages that require LLD or by requiring that the s390x package is linked with a different linker than other architectures. This difference is known to increase the maintenance burden because different linkers can behave differently.\nThe support for s390x was added to LLD 18.1. In this article, we explore the work involved…",
+          "link": "https://developers.redhat.com/articles/2024/06/18/adding-support-s390x-lld-llvm-linker",
+          "publishedOn": "2024-06-18T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Adding support for s390x in LLD, the LLVM linker",
+          "imageUrl": null
+        },
+        {
           "id": "291150c5-b1a4-454e-b94c-727611e85178",
           "author": "Cedric Clyburn, Legare Kerrison",
           "description": "Experimenting with AI models and testing different prompts is a key part of developing AI-enabled applications. However, setting up the right environment and managing model dependencies can be challenging. Podman AI Lab's Playground feature solves this by providing an intuitive, containerized environment for exploring open-source machine learning models locally. Let’s explore the Playground feature in-depth and show how it can accelerate your application development workflow when working with generative AI.\nWhat is Podman AI Lab?\nPodman AI Lab is an extension for Podman Desktop, the graphical tool for managing containers and Kubernetes, and enables developers to work with large language models (LLMs) and other AI models locally on their machine. It provides an intuitive interface to discov…",
@@ -545,36 +565,6 @@
           "wordCount": null,
           "title": "Improve basic programming safety with Rust lang",
           "imageUrl": null
-        },
-        {
-          "id": "11adf510-3ef9-4090-9b93-5e930f22613e",
-          "author": "Frank Eigler",
-          "description": "This article explores how you can leverage application binary interface (ABI) compatibility testing with libabigail to determine the functionality of binaries running on older distributions or versions.\nSoftware evolution and compatibility\nLinux distributions are a living thing. During their lifetime, they are born at release, receive updates, and eventually \"die\" when support ends. They spawn descendant distributions. They sometimes even fight! The whole point of the distribution is to make an interdependent, cohesive whole, so there are many shared components. When those shared components are changed within a distribution, the question of compatibility is imminent.\nApplication binary interface (ABI) compatibility is a specific type of dependency: between separately compiled binaries and …",
-          "link": "https://developers.redhat.com/articles/2024/05/20/application-binary-interface-compatibility-testing-libabigail",
-          "publishedOn": "2024-05-20T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Application binary interface compatibility testing with libabigail",
-          "imageUrl": null
-        },
-        {
-          "id": "1d5f945e-262d-44f1-b8da-7c6d91e561ce",
-          "author": "Jerome Marc",
-          "description": "Red Hat Insights is a Software-as-a-Service offering that enables users to obtain actionable intelligence regarding their Red Hat Enterprise Linux environments, helping to identify and address operational and vulnerability risks before an issue occurs. Red Hat Insights requires a client tool to run on the system to collect data and perform necessary analytics to proactively detect misconfiguration and alert system administrators. This article explores how one can leverage the client’s existing functionality to run its own automation using a simple shell script.\nIn its default configuration, Insights client runs daily on each registered Red Hat Enterprise Linux (RHEL) system. For RHEL 7.5 and above, the execution is triggered by a scheduled systemd daemon. The insights-client configuration …",
-          "link": "https://developers.redhat.com/articles/2024/05/20/extend-red-hat-insights-client-execute-custom-automation",
-          "publishedOn": "2024-05-20T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Extend Red Hat Insights client to execute custom automation",
-          "imageUrl": null
-        },
-        {
-          "id": "f3f4031d-3e05-42c1-b6ad-49b83fee322f",
-          "author": "Alan Cowles",
-          "description": "For the second entry in our series introducing Red Hat OpenShift Virtualization to VMware vSphere administrators, we are going to discuss storage. In our previous article, we compared OpenShift Virtualization network configurations to how networks are often laid out in most general deployments of VMware vSphere. With this article, we will focus on how a containerized virtualization solution presents an entirely new storage paradigm when compared to what traditional virtualization administrators are used to. \nThe traditional view of hypervisor storage\nIn traditional hypervisor storage paradigms, the anchorpoint is the shared datastore. A datastore is a single large volume presented to our hypervisor as either a block storage device (LUN) through a SAN protocol (iSCSI, FCP, FC-NVMe), or a re…",
-          "link": "https://developers.redhat.com/articles/2024/05/20/openshift-virtualization-vsphere-admins-change-traditional-storage-paradigm",
-          "publishedOn": "2024-05-20T07:00:00.000Z",
-          "wordCount": null,
-          "title": "OpenShift Virtualization for vSphere admins: A change in the traditional storage paradigm",
-          "imageUrl": null
         }
       ]
     },
@@ -623,6 +613,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4482512",
+          "author": "Nitin Dahad",
+          "description": "Arbe SDR architecture is said to offer OEMs and Tier 1s full control over key radar parameters and operation modes, enabling customized performance and optimized operations in various driving scenarios.\nThe post Software-defined radar enables hardware to be customized for ADAS appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/software-defined-radar-enables-hardware-to-be-customized-for-adas/",
+          "publishedOn": "2024-06-18T17:58:25.000Z",
+          "wordCount": null,
+          "title": "Software-defined radar enables hardware to be customized for ADAS",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4482507",
+          "author": "Boris Radonic",
+          "description": "By integrating robust safety measures and compliance with established safety standards, we can ensure that motor control systems not only perform efficiently but also uphold...\nThe post Mastering motor control: functional safety appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/mastering-motor-control-functional-safety/",
+          "publishedOn": "2024-06-18T11:53:30.000Z",
+          "wordCount": null,
+          "title": "Mastering motor control: functional safety",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4482500",
           "author": "Qualcomm",
@@ -921,6 +931,16 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/how-its-made-ai-roadtrip-a-pixel-campaign-powered-by-generative-ai-and-fans/",
+          "author": null,
+          "description": "Best Phones Forever: AI Roadtrip is our first experiment in using generative AI to put fans in the driver's seat and bring characters to life.",
+          "link": "https://developers.googleblog.com/en/how-its-made-ai-roadtrip-a-pixel-campaign-powered-by-generative-ai-and-fans/",
+          "publishedOn": "2024-06-18T20:14:31.967Z",
+          "wordCount": null,
+          "title": "How It’s Made: AI Roadtrip, a Pixel Campaign Powered by Generative AI and Fans",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/welcome-india-google-wallet-api/",
           "author": null,
           "description": "To all developers in India: Welcome to the Google Wallet API! Now you can create digital assets like boarding passes, event tickets, gift cards, loyalty cards, and more.",
@@ -1167,6 +1187,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/1133/",
+          "author": null,
+          "description": "PVS-Studio 7.31 has been released. We have so much news to share with you! We've enhanced the user annotation system, the mode to analyze individual files, and much more! Learn more release details...",
+          "link": "https://pvs-studio.com/en/blog/posts/1133/",
+          "publishedOn": "2024-06-17T21:00:00.000Z",
+          "wordCount": null,
+          "title": "PVS-Studio 7.31: new C++ analyzer features, enhanced user annotations, and more",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/java/1132/",
           "author": null,
           "description": "OOP is wonderful. Programmers usually criticize those who don't follow this paradigm, while the knowledge of patterns is often a must. However, even the right approach doesn't completely protect from...",
@@ -1349,6 +1379,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/977855/",
+          "author": "jake",
+          "description": "One of the big-ticket items for the upcoming Python 3.13 release is an experimental just-in-time (JIT) compiler for the language;\nthe other is, of course, the removal of the \nglobal interpreter lock (GIL), which is also an experiment.  Brandt\nBucher is a member of the Faster CPython project, which is\nworking on making the reference implementation of the language faster via a\nvariety of techniques.  Last year at PyCon, he gave a talk about the specializing adaptive\ninterpreter; at PyCon 2024 in Pittsburgh, he described the work he and others have been doing\nto add a copy-and-patch JIT compiler to CPython.",
+          "link": "https://lwn.net/Articles/977855/",
+          "publishedOn": "2024-06-18T17:14:58.000Z",
+          "wordCount": null,
+          "title": "[$] Adding a JIT compiler to CPython",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978335/",
+          "author": "daroc",
+          "description": "On the final day of the 2024\nLinux Storage,\nFilesystem, Memory Management, and BPF Summit, the BPF track\nopened with a series of sessions on improving the performance and\nflexibility of probes and other performance-monitoring tools, in the kernel and in\nuser space. Jiri Olsa led two sessions about different aspects of probes:\nmaking the API for BPF programs attached to a probe more flexible, and making\nuser-space probes more efficient.",
+          "link": "https://lwn.net/Articles/978335/",
+          "publishedOn": "2024-06-18T13:55:03.000Z",
+          "wordCount": null,
+          "title": "[$] BPF tracing performance",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978806/",
+          "author": "corbet",
+          "description": "Version 6.1 of\nthe Plasma desktop environment has been released.\n\n\n\tPlasma 6 hits its stride with version 6.1. While Plasma 6.0 was all\n\tabout getting the migration to the underlying Qt 6 frameworks\n\tcorrect (and what a massive job that was), 6.1 is where developers\n\tstart implementing the features that will take you desktop to a new\n\tlevel.\n\n\nEnhancements include better remote-desktop support, improved customization,\npersistent apps, smoother animation under Wayland, and more; see the\nchangelog for the full list.",
+          "link": "https://lwn.net/Articles/978806/",
+          "publishedOn": "2024-06-18T13:26:32.000Z",
+          "wordCount": null,
+          "title": "Plasma 6.1 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/978804/",
+          "author": "corbet",
+          "description": "Security updates have been issued by Debian (php7.3), Fedora (galera, ghostscript, and mariadb), Mageia (cups, iperf, and libndp), Oracle (firefox and flatpak), Red Hat (container-tools:rhel8, Firefox, firefox, and flatpak), SUSE (booth, bouncycastle, firefox, ghostscript, less, libaom, openssl-1_1, openssl-3, podman, python-Authlib, python-requests, python-Werkzeug, webkit2gtk3, and xdg-desktop-portal), and Ubuntu (ghostscript, ruby-rack, ruby2.7, ruby3.0, ruby3.1, ruby3.2, and sssd).",
+          "link": "https://lwn.net/Articles/978804/",
+          "publishedOn": "2024-06-18T13:03:49.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/977993/",
           "author": "daroc",
@@ -2749,16 +2819,6 @@
           "wordCount": null,
           "title": "Building Eclipse Projects with custom external Shell Scripts",
           "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=40503",
-          "author": "Erich Styger",
-          "description": "The new PCBs for the MCU-Link MR for drones and robots have arrived. With the parts populated, it serves as a UART bridge and debug probe for the PixHawk. The main improvement was fixing the UART connection, and changes include a new PCB color and a push button replacing the ISP firmware update jumper. Files and BOM on GitHub have been updated.  Continue reading →",
-          "link": "https://mcuoneclipse.com/2024/05/19/mcu-link-mr-v0-2-drone-and-robot-debug-probe-with-uart-2-usb-bridge/",
-          "publishedOn": "2024-05-19T08:17:00.000Z",
-          "wordCount": null,
-          "title": "MCU-Link-MR v0.2 Drone and Robot Debug Probe with UART-2-USB Bridge",
-          "imageUrl": null
         }
       ]
     },
@@ -2887,16 +2947,6 @@
           "wordCount": null,
           "title": "Sampling error in software engineering",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=8779",
-          "author": "Derek Jones",
-          "description": "When estimating the time needed to implement a task, the time previously needed to implement similar tasks provides useful guidance. The implementation time for these previous tasks may itself be estimated, because the actual time was not measured or this information is currently unavailable. How accurate are developer time estimates of previously completed tasks? I […]",
-          "link": "https://shape-of-code.com/2024/05/19/a-surprising-retrospective-task-estimation-dataset/",
-          "publishedOn": "2024-05-19T21:22:07.000Z",
-          "wordCount": null,
-          "title": "A surprising retrospective task estimation dataset",
-          "imageUrl": null
         }
       ]
     },
@@ -2986,6 +3036,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=110322",
+          "author": "이정환",
+          "description": "푸틴-김정은 만난다. 환자들 분통? 예상보다 적었다? 쟁점과 현안. 다시 등장한 언론 징벌적 손배 카드. 대왕고래 20% 확률, 공개 검증하자. 더 깊게 읽기. 420억 원 상속받는 상위 0.27% 세금 깎아주기. 최태원 판결문 오류. 다르게 읽기. 민주주의에 대한 세 가지 오해. 한국은 왜 징역 100년 안 되나. 해법과 대안. 소득대체율 인상이 개혁 맞나. 종부세 없앨 수 있나....\nThe post 대왕고래 20% 확률, 공개 검증해야 한다: 슬로우레터 6월18일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/110322",
+          "publishedOn": "2024-06-17T22:18:29.000Z",
+          "wordCount": 6988,
+          "title": "대왕고래 20% 확률, 공개 검증해야 한다: 슬로우레터 6월18일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/06/pexels-photo-3207536.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=110290",
           "author": "정혜승",
@@ -3405,16 +3465,6 @@
           "wordCount": null,
           "title": "차갑게 식은 조중동, 이제는 아무도 신경쓰지 않는 윤석열의 격노: 슬로우레터 5월21일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=108860",
-          "author": "이정환",
-          "description": "직구 금지, 사흘 만에 없던 일로. 6조8000억 원. 할 말은 한다. 쟁점과 현안. R&D 예타 폐지? 민주당은 반대. 국민이 실험 대상인가. 다르게 읽기. “‘빼박’ 탄핵 사유다.” “임계점을 넘는 순간이 온다.” 채 상병 특검법, 내일 거부권 쓴다. 더 깊게 읽기. “김 여사 공이 컸다.” 전공의 복귀 시한 한 달 늦추나. 전직 검사 전성시대. 늙어가는 한국, 정부...\nThe post ‘빼박’ 탄핵 사유, 윤석열이 모를 리 없다: 슬로우레터 5월20일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/108860",
-          "publishedOn": "2024-05-19T22:03:20.000Z",
-          "wordCount": null,
-          "title": "‘빼박’ 탄핵 사유, 윤석열이 모를 리 없다: 슬로우레터 5월20일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3423,6 +3473,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595064",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595064/23%eb%85%84-%ec%bb%a4%ed%94%bc-%ed%94%84%eb%9e%9c%ec%b0%a8%eb%8b%88%ec%a6%88-%eb%a7%a4%ec%b6%9c-%eb%b0%91-%ec%98%81%ec%97%85%ec%9d%b4%ec%9d%b5",
+          "publishedOn": "2024-06-18T06:09:23.000Z",
+          "wordCount": null,
+          "title": "23년 커피 프랜차이즈 매출 및 영업이익 비교",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=595047",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595047/6-18-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-06-18T01:56:59.000Z",
+          "wordCount": null,
+          "title": "6/18, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595035",
           "author": "happist",
@@ -3800,6 +3870,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79531",
+          "author": "NewsPeppermint",
+          "description": "테슬라 주주들이 창업자이자 CEO 일론 머스크에게 스톡 옵션으로 3억 주를 (할인된 가격에) 지급하는 전례를 찾기 힘든 대형 급여안을 승인했습니다. 첫 번째도 아니고 6년 전에 이미 한 번 승인했던 걸 법원이 무효로 하자 마치 법원에 시위라도 하듯 그대로 다시 승인한 겁니다. 테슬라의 주가에 따라 정확한 가치가 달라지겠지만, 460억 달러, 우리돈 64조 원에 이르는 전례 없는 급여입니다. 이번 급여안을 둘러싼 논란의 배경과 맥락을 분석했습니다. 전문 번역: ‘어그로꾼’이 된 머스크, 그의 급여 460억 → 더 보기",
+          "link": "https://newspeppermint.com/2024/06/17/npsp_muskpaypackage/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_muskpaypackage",
+          "publishedOn": "2024-06-18T01:15:57.000Z",
+          "wordCount": 1433,
+          "title": "일론 머스크의 관심 값이 64조 원… 인류의 희망을 거는 대가, 맞나요?",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=79227",
           "author": "eyesopen1",
