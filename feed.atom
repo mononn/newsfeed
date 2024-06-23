@@ -2,10 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-06-22T20:13:03.854Z</updated>
+    <updated>2024-06-23T20:14:04.280Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Larry Finger RIP]]></title>
+        <id>https://lwn.net/Articles/979419/</id>
+        <link href="https://lwn.net/Articles/979419/"/>
+        <updated>2024-06-23T14:28:20.000Z</updated>
+        <summary type="html"><![CDATA[The linux-wireless mailing list carries the terse
+notice that longtime networking developer Larry Finger passed away on
+June 21.  The LWN Kernel
+Source Database shows that Finger contributed to 94 releases in
+the (Git era) kernel history, starting with 2.6.16 — 1,464 commits in
+total.  He will be missed.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[영월 단종 유배지 근처, 붉은 매자나무 언덕, 영월 용마루나무 출사]]></title>
+        <id>https://happist.com/?p=595127</id>
+        <link href="https://happist.com/595127/%ec%98%81%ec%9b%94-%ec%9a%a9%eb%a7%88%eb%a3%a8%eb%82%98%eb%ac%b4-%ec%b6%9c%ec%82%ac"/>
+        <updated>2024-06-23T04:02:43.000Z</updated>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[When a Mongoose met a MicroPython, part II]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1670.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1670.php"/>
+        <updated>2024-06-22T18:34:13.000Z</updated>
+        <summary type="html"><![CDATA[Mongooses and very small pythons develop their established friendship.
+
+In the first part of this blog, we introduced this little framework to integrate MicroPython and Cesanta's Mongoose; where Mongoose runs when called by MicroPython and is able to run Python functions as callbacks for the events you decide in your event handler.
+Now we add MQTT to the equation, so we can subscribe to...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Google I/O 2024: What’s new in Android Development Tools]]></title>
         <id>https://developers.googleblog.com/en/whats-new-in-android-development-tools-io-2024/</id>
@@ -4099,259 +4136,6 @@ kernel's ability to reliably allocate mTHPs and the performance gains that
 result.]]></summary>
         <author>
             <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Arenas and the almighty concatenation operator]]></title>
-        <id>https://nullprogram.com/blog/2024/05/25/</id>
-        <link href="https://nullprogram.com/blog/2024/05/25/"/>
-        <updated>2024-05-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[I continue to streamline an arena-based paradigm, and stumbled
-upon a concise technique for dynamic growth — an efficient, generic
-“concatenate anything to anything” within an arena built atop a core of
-9-ish lines of code. The key insight originated from a reader suggestion
-about dynamic arrays. The subject of concatenation can be a string,
-dynamic array, or even something else. The “system” is extensible, and
-especially useful for path handling.
-Continuing from last time, the examples are in light, C-style C++.
-I chose it because templates and function overloading express the concepts
-succinctly. It uses no standard library functionality, so converting to C,
-or similar, should be straightforward. The core concatenation “operator”:
-
-template<typename T>
-T concat(arena *a, T head, T tail)
-…]]></summary>
-        <author>
-            <name>null program</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Guidelines for computing sizes and subscripts]]></title>
-        <id>https://nullprogram.com/blog/2024/05/24/</id>
-        <link href="https://nullprogram.com/blog/2024/05/24/"/>
-        <updated>2024-05-24T22:25:10.000Z</updated>
-        <summary type="html"><![CDATA[Occasionally we need to compute the size of an object that does not yet
-exist, or a subscript that may fall out of bounds. It’s easy to miss
-the edge cases where results overflow, creating a nasty, subtle bug, even
-in the presence of type safety. Ideally such computations happen in
-specialized code, such as inside an allocator (calloc, reallocarray)
-and not outside by the allocatee (i.e. malloc). Mitigations exist with
-different trade-offs: arbitrary precision, or using a wider fixed integer
-— i.e. 128-bit integers on 64-bit hosts. In the typical case, working only
-with fixed size-type integers, I’ve come up with a set of guidelines to
-avoid overflows in the edge cases.
-Range check before computing a result. No exceptions.
-Do not cast unless you know a priori the operand is in range.
-Never…]]></summary>
-        <author>
-            <name>null program</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Atomic writes without tears]]></title>
-        <id>https://lwn.net/Articles/974578/</id>
-        <link href="https://lwn.net/Articles/974578/"/>
-        <updated>2024-05-24T21:33:35.000Z</updated>
-        <summary type="html"><![CDATA[John Garry and Ted Ts'o led a discussion about supporting atomic writes for buffered
-I/O, without any torn (or partial) writes to the device, at the 2024 Linux Storage,
-Filesystem, Memory Management, and BPF Summit.  It is something of a
-continuation of a discussion at last year's
-summit. The goal is to help PostgreSQL, which writes its data using
-16KB buffered I/O; it currently has to do a lot of extra work to ensure
-that its data is safe on disk.  A promise of non-torn, 16KB buffered writes
-would allow the database 
-to avoid doing double writes.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Allocator optimizations for transparent huge pages]]></title>
-        <id>https://lwn.net/Articles/974636/</id>
-        <link href="https://lwn.net/Articles/974636/"/>
-        <updated>2024-05-24T20:42:27.000Z</updated>
-        <summary type="html"><![CDATA[The original Linux kernel, posted in 1991, ran on a system with a 4KB page
-size.  Over 30 years later, most of us are still running on systems
-with 4KB pages, even though the amount of installed memory has grown by a
-few orders of magnitude.  It is generally accepted that using large page
-sizes results in better performance for most applications, but allocating
-larger pages is often difficult.  During a memory-management session at the 2024 Linux Storage,
-Filesystem, Memory-Management and BPF Summit, Yu Zhao presented his
-ideas on improving the allocation of huge pages in the kernel.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google @ KotlinConf 2024: A Look Inside Multiplatform Development with KMP and more]]></title>
-        <id>https://developers.googleblog.com/en/google-kotlinconf-2024-a-look-inside-multiplatform-development-with-kmp-and-more/</id>
-        <link href="https://developers.googleblog.com/en/google-kotlinconf-2024-a-look-inside-multiplatform-development-with-kmp-and-more/"/>
-        <updated>2024-05-24T20:13:52.290Z</updated>
-        <summary type="html"><![CDATA[Following our recent Google I/O announcement recommending Kotlin Multiplatform (KMP) for sharing business logic across mobile, web, server, and desktop platforms, and our move to use KMP in Google Workspace, KotlinConf 2024 was the next moment to share the highlights and connect with the Kotlin community.]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Recent improvements to BPF's struct_ops mechanism]]></title>
-        <id>https://lwn.net/Articles/974848/</id>
-        <link href="https://lwn.net/Articles/974848/"/>
-        <updated>2024-05-24T19:37:18.000Z</updated>
-        <summary type="html"><![CDATA[Kui-Feng Lee spoke early in the BPF track at the 2024
-Linux Storage,
-Filesystem, Memory Management, and BPF Summit about some of the
-recent improvements to BPF. These changes were largely driven by the
-sched_ext work that David Vernet had covered in
-the previous talk. Lee focused on changes relevant to struct_ops
-programs, but several of those changes apply to all BPF programs.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Readying DNF5 for Fedora 41]]></title>
-        <id>https://lwn.net/Articles/969640/</id>
-        <link href="https://lwn.net/Articles/969640/"/>
-        <updated>2024-05-24T16:51:04.000Z</updated>
-        <summary type="html"><![CDATA[With the release of Fedora 40 it's time to
-start looking ahead to what Fedora 41 has in store. One of the largest
-changes planned for the next release is a switch to
-DNF5, a C++ rewrite of the DNF
-package manager. A previous attempt to make the switch, during the Fedora 39 cycle, was called off, and
-deferred to Fedora 41. The developers have had nearly a year to address
-compatibility problems and bring DNF5 to a state suitable to replace DNF4. Signs point to a successful switch in
-the upcoming release, though there may be a few surprises lurking for Fedora users.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Podcast: a look at the implications of the Cyber Resilience Act (CRA)]]></title>
-        <id>https://www.embedded.com/?p=4482387</id>
-        <link href="https://www.embedded.com/podcast-a-look-at-the-implications-of-the-cyber-resilience-act-cra/"/>
-        <updated>2024-05-24T16:11:48.000Z</updated>
-        <summary type="html"><![CDATA[The European Parliament approved the CRA in March 2024, which means companies will now need to step up their preparations or be prepared to pay fines for non-compliance.
-The post Podcast: a look at the implications of the Cyber Resilience Act (CRA) appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NFC I2C bridge tag enables secure contactless IoT device authentication]]></title>
-        <id>https://www.embedded.com/?p=4482382</id>
-        <link href="https://www.embedded.com/nfc-i2c-bridge-tag-enables-secure-contactless-iot-device-authentication/"/>
-        <updated>2024-05-24T15:07:50.000Z</updated>
-        <summary type="html"><![CDATA[Infineon Technologies has launched a high-performance NFC I2C bridge tag for single-tap authentication and secured configuration of IoT devices. 
-The post NFC I2C bridge tag enables secure contactless IoT device authentication appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Automated parking replaces ultrasonic with vision cameras]]></title>
-        <id>https://www.embedded.com/?p=4482377</id>
-        <link href="https://www.embedded.com/automated-parking-replaces-ultrasonic-with-vision-cameras/"/>
-        <updated>2024-05-24T14:40:17.000Z</updated>
-        <summary type="html"><![CDATA[Nodar said its solution is able to combine different independently mounted stereo pairs of cameras around the vehicle to generate high-resolution 3D point clouds.
-The post Automated parking replaces ultrasonic with vision cameras appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Large-folio support for shmem and tmpfs]]></title>
-        <id>https://lwn.net/Articles/974630/</id>
-        <link href="https://lwn.net/Articles/974630/"/>
-        <updated>2024-05-24T14:02:20.000Z</updated>
-        <summary type="html"><![CDATA[The kernel contains a pair of related filesystems that, among other things,
-can be used for shared-memory applications; shmem is an internal mechanism
-used within the kernel, while the tmpfs filesystem is mounted and
-accessible from user space.  As is the case elsewhere in the kernel, these
-subsystems would benefit from the addition of large-folio support.  During
-a joint storage, filesystem, and memory-management session at the 2024 Linux Storage,
-Filesystem, Memory-Management and BPF Summit, Daniel Gomez talked about
-the work he is doing to add that support.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BitKeeper, Linux, and licensing disputes: How Linus wrote Git in 14 days 
-(Graphite blog)]]></title>
-        <id>https://lwn.net/Articles/974914/</id>
-        <link href="https://lwn.net/Articles/974914/"/>
-        <updated>2024-05-24T13:34:17.000Z</updated>
-        <summary type="html"><![CDATA[This
-Graphite blog post retells the history of the BitKeeper fiasco and the
-dawn of the Git era.
-
-
-	When we think of history, we often romanticize it as being born of
-	a sudden stroke of inspiration. But the creation of git shows the
-	far harsher reality of invention: a slowly escalating disagreement
-	over a license; the need for a scrappy backup solution to unblock
-	work; and then continued polishing and iteration through years and
-	years, led not by the inventor, but rather a community.
-
-
-For those who weren't around in those days, a perusal of the LWN coverage
-from the time might be of interest too, including:
-
-
- Our first mention of BitKeeper
-     in October 1998
- Not quite open source,
-     1999
- Linus tries out BitKeeper, 2002
- The free software community and proprietary
-     packages, 2002
- The kernel and BitKeeper part ways,
-     2005
- How Tridge reverse engineered
-     BitKeeper, 2005
- The guts of Git, 2005
-
-
-...and a lot more for those who care to search for it.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/974913/</id>
-        <link href="https://lwn.net/Articles/974913/"/>
-        <updated>2024-05-24T13:16:45.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Fedora (chromium, libreoffice, and thunderbird), Red Hat (.NET 7.0, .NET 8.0, gdk-pixbuf2, git-lfs, glibc, python3, and xorg-x11-server-Xwayland), SUSE (firefox, opensc, and ucode-intel), and Ubuntu (cjson and gnome-remote-desktop).]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Trustworthy AI using Confidential Federated Learning]]></title>
-        <id>3665220</id>
-        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3665220"/>
-        <updated>2024-05-24T12:34:31.000Z</updated>
-        <author>
-            <name>ACM Queue - All Queue Content</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[스노우플레이크 실적을 읽는월가의 시선]]></title>
-        <id>https://happist.com/?p=594786</id>
-        <link href="https://happist.com/594786/1%eb%b6%84%ea%b8%b0-%ec%8a%a4%eb%85%b8%ec%9a%b0%ed%94%8c%eb%a0%88%ec%9d%b4%ed%81%ac-%ec%8b%a4%ec%a0%81-%ed%8f%89%ea%b0%80"/>
-        <updated>2024-05-24T08:22:48.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[5/24, 월가의 투자의견 및 주가 전망 보고서]]></title>
-        <id>https://happist.com/?p=594784</id>
-        <link href="https://happist.com/594784/5-24-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
-        <updated>2024-05-24T08:17:26.000Z</updated>
-        <author>
-            <name>happist</name>
         </author>
     </entry>
     <entry>
