@@ -2,10 +2,226 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-07-09T20:14:45.412Z</updated>
+    <updated>2024-07-10T20:14:10.099Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[3 fun Gemma project ideas]]></title>
+        <id>https://developers.googleblog.com/en/3-fun-gemma-project-ideas/</id>
+        <link href="https://developers.googleblog.com/en/3-fun-gemma-project-ideas/"/>
+        <updated>2024-07-10T20:14:05.637Z</updated>
+        <summary type="html"><![CDATA[Use Gemma models to translate an old language, brainstorm game design ideas, and write a letter to Santa.]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Brown: Fixing a 6-year-old bug in Ubuntu MATE and Xubuntu]]></title>
+        <id>https://lwn.net/Articles/981565/</id>
+        <link href="https://lwn.net/Articles/981565/"/>
+        <updated>2024-07-10T18:04:52.000Z</updated>
+        <summary type="html"><![CDATA[Doug Brown documents
+the long journey to fixing a bug in the GDebi utility for
+installing Debian packages. He first encountered the bug in
+Ubuntu MATE 18.04: "at the time I just ignored this
+issue. I didn't want to deal with it. I went off to the trusty Linux
+terminal and installed Chrome that way instead".
+Two and a half years ago, I committed to doing more open-source
+contributions in my free time and was finally irritated enough about
+this problem to look into it. I searched around for more info. Lo and
+behold, lots
+of people
+were also
+affected and there was already an
+issue from 2019 on Ubuntu's bug tracker about it.
+[...] As is commonly the case in software development, the difficult part of
+this fix had nothing to do with the code itself. All of my effort was
+spent figuring out Ubuntu's patch submission processes and advocating
+for my merge request. Nobody else seemed to be interested in doing the
+work to actually fix this bug that has been plaguing Ubuntu MATE and
+Xubuntu, not to mention some Debian users, for over 6 years. After
+dealing with the long process of getting my merge request approved, I
+think I'm starting to understand why!
+
+
+Brown notes that the fix is
+now packaged for the upcoming Ubuntu 24.10 release, and should be
+backported to 22.04 and 24.04 eventually.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fix for Fedora Atomic Desktop and Fedora IoT boot failure]]></title>
+        <id>https://lwn.net/Articles/981561/</id>
+        <link href="https://lwn.net/Articles/981561/"/>
+        <updated>2024-07-10T17:20:24.000Z</updated>
+        <summary type="html"><![CDATA[Fedora Atomic Desktop
+and Fedora IoT systems installed
+before Fedora 40 may fail to boot after an update if secure boot
+is enabled. Fedora Magazine has a
+post by Timothée Ravier about the problem, how users can work
+around it, and what the project is doing to avoid the similar problems
+in the future:
+On Fedora Atomic Desktops and Fedora IoT systems, the components
+that are part of the boot chain (Shim, GRUB) are not (yet)
+automatically updated alongside the rest of the system. Thus, if you
+have installed a Fedora Atomic Desktop or a Fedora IoT system before
+Fedora 40, it uses an old versions of the Shim and bootloader binaries
+to boot your system.
+When Secure Boot is enabled, the EFI firmware loads Shim
+first. Shim is signed by the Microsoft Third Party Certificate
+Authority so that it can be verified on most hardware out of the
+box. The Shim binary includes the Fedora certificates used to verify
+binaries signed by Fedora. Then Shim loads GRUB, which in turn loads
+the Linux kernel. Both are signed by Fedora.
+Until recently, the kernel binaries where signed two times, with an
+older key and a newer one. With the 6.9 kernel update, the kernel is
+no longer signed with the old key. If GRUB or Shim is old enough and
+does not know about the new key, the signature verification fails.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Improving pseudo filesystems]]></title>
+        <id>https://lwn.net/Articles/981155/</id>
+        <link href="https://lwn.net/Articles/981155/"/>
+        <updated>2024-07-10T15:33:35.000Z</updated>
+        <summary type="html"><![CDATA[The eventfs filesystem provides an interface to the tracepoints that are available
+to be used by various Linux tracing tools (e.g. ftrace, perf, uprobes,
+etc.); it is meant to be a version of the tracefs filesystem that
+dynamically allocates its entries as needed.  The goal is to reduce the memory
+required for multiple instances of tracefs, as Steven Rostedt described in
+a session at the 2022
+Linux Storage,
+Filesystem, Memory Management, and BPF Summit.  He returned to the 2024
+edition of the summit to talk further about how to make pseudo (or virtual)
+filesystems, such as tracefs/eventfs, more like regular Linux filesystems,
+where the directory entries (dentries) and inodes are only created (and
+cached) as needed.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Sxmo: a text-centric mobile user interface]]></title>
+        <id>https://lwn.net/Articles/981320/</id>
+        <link href="https://lwn.net/Articles/981320/"/>
+        <updated>2024-07-10T14:54:46.000Z</updated>
+        <summary type="html"><![CDATA[Sxmo, short for "Simple X Mobile", is described on its web site as "a
+minimalist environment for Linux mobile devices"; it offers a menu-driven
+interface that is controlled with the phone's hardware buttons. Sxmo enables the user
+to send SMS messages from a text editor and is entirely customizable with
+shell scripts. This peculiar mobile user interface significantly differs
+from the prevailing approach—but it works.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/981508/</id>
+        <link href="https://lwn.net/Articles/981508/"/>
+        <updated>2024-07-10T13:15:02.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by AlmaLinux (buildah, gvisor-tap-vsock, kernel-rt, libreswan, linux-firmware, pki-core, and podman), Fedora (firefox and jpegxl), Gentoo (Buildah, HarfBuzz, and LIVE555 Media Server), Oracle (buildah, gvisor-tap-vsock, kernel, libreswan, and podman), Red Hat (containernetworking-plugins, dotnet6.0, dotnet8.0, fence-agents, kernel, libreswan, libvirt, perl-HTTP-Tiny, python39:3.9, toolbox, and virt:rhel and virt-devel:rhel modules), SUSE (firefox, freeradius-server, haproxy, jbigkit, kernel, kernel-firmware, pam, ppp, python3-cryptography, skopeo, and tar), and Ubuntu (dotnet6, dotnet8, exim4, firefox, golang-1.21, golang-1.22, openssh, and python-django).]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Here Comes The Noise!]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1674.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1674.php"/>
+        <updated>2024-07-10T11:58:24.000Z</updated>
+        <summary type="html"><![CDATA[Noise. That wiggle or apparent fuzziness you see riding on top your pristine signal which you automatically turn a blind eye to until you enter the world of precision where that wiggle now causes supreme headaches/stress for your company at large.
+
+
+
+Imagine you've found yourself embedded within a company (working as an embedded systems engineer if you'll pardon the terrible...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the new Traces UI in the Red Hat OpenShift Web Console]]></title>
+        <id>b13a3bfc-c066-4de8-8ede-539b128626a0</id>
+        <link href="https://developers.redhat.com/articles/2024/07/10/introducing-new-traces-ui-red-hat-openshift-web-console"/>
+        <updated>2024-07-10T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[With the latest Cluster Observability Operator 0.3.0 release, you can deploy a brand new Traces UI plug-in as part of the Red Hat OpenShift Container Platform web console experience. This is a great step forward as we continue to work on our mission to provide Observability as one. After releasing a Metrics UI and Logs UI, we enhance the overall Observability journey for our OpenShift users by providing the opportunity to visualize the third pillar of Observability: distributed tracing. This is a Developer Preview feature, as additional enhancements are currently being worked on. 
+The OpenShift distributed tracing platform is evolving. A few months back, we announced general availability of Tempo as part of the distributed tracing platform 3.0 release. While making this change, we decided …]]></summary>
+        <author>
+            <name>Vanessa Martini, Jose Gomez-Selles</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Improved observability signal correlation for Red Hat OpenShift]]></title>
+        <id>ecff2cce-0242-4d44-a34f-12bd303cb80a</id>
+        <link href="https://developers.redhat.com/articles/2024/07/10/improved-observability-signal-correlation-red-hat-openshift"/>
+        <updated>2024-07-10T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Observability signal correlation for Red Hat OpenShift has exponentially evolved over the past few months. A developer preview was made available to OpenShift users in December 2023 as part of the Logging 5.8 release. But since then, our team has worked to provide you with a series of great new features!
+Observability signal correlation for Red Hat OpenShift continues to be powered by Korrel8r—an open source observability project founded within Red Hat—aimed at providing a set of rules for easily correlating metrics, logs, alerts, and additional observability signals across different data stores. Key enhancements include 1) expanded signal support, as you can now correlate netflows, 2) brand new troubleshooting panel in the OpenShift web console that simplifies the overall observability si…]]></summary>
+        <author>
+            <name>Vanessa Martini, Alan Conway</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[부산에 먼저 도착한 인구 소멸, 20대 여성이 탈출하는 이유를 봐야 한다.]]></title>
+        <id>https://slownews.kr/?p=111636</id>
+        <link href="https://slownews.kr/111636"/>
+        <updated>2024-07-10T05:02:07.000Z</updated>
+        <summary type="html"><![CDATA[부산이 광역시 가운데 처음으로 소멸 위험 단계에 진입했다. 부산에는 노인과 바다밖에 없다는 말이 나올 정도다. 부산은 서울 다음으로 큰 도시지만 가까운 미래에 인천에 따라잡힐 가능성이 크다. 지난해 기준으로 부산은 328만 명, 인천은 301만 명이다. 이게 왜 중요한가. ‘지역 소멸’의 개념 정의. ‘소멸 위험’은 광역시 가운데 처음. 합계 출산율 0.72. 부산이 특히 더 심각한 이유. 여성...
+The post 부산에 먼저 도착한 인구 소멸, 20대 여성이 탈출하는 이유를 봐야 한다. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Asking an LLM to build a simple web tool]]></title>
+        <id>https://eli.thegreenplace.net/2024/asking-an-llm-to-build-a-simple-web-tool/</id>
+        <link href="https://eli.thegreenplace.net/2024/asking-an-llm-to-build-a-simple-web-tool/"/>
+        <updated>2024-07-10T03:09:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>I've been really enjoying following <a class="reference external" href="https://simonwillison.net/">Simon Willison's blog posts</a> recently. Simon shows other
+programmers the way LLMs will be used for code assistance in the future, and
+posts full interactions with LLMs to build small tools or parts of larger
+applications.</p>
+<p>A <a class="reference external" href="https://simonwillison.net/2024/Jul/8/box-shadow-css-generator/">recent post</a>
+caught my attention; here Simon got …</p>]]></summary>
+        <author>
+            <name>Eli Bendersky's website</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[윤석열이 임성근을 싸고 돌았던 이유, 결국 김건희가 연결고리였다: 슬로우레터 7월10일.]]></title>
+        <id>https://slownews.kr/?p=111594</id>
+        <link href="https://slownews.kr/111594"/>
+        <updated>2024-07-09T22:11:35.000Z</updated>
+        <summary type="html"><![CDATA[“VIP에게 내가 이야기하겠다.” 증거가 수두룩하다. 쟁점과 현안. 채 상병 특검법 또 거부권 행사. 거부권 행사로 끝 아니다. 김건희와 최은순, 국회 온다. “다 공개하면 정부가 위험해진다.” “둘 다 이해 안 된다.” “다 망했다.” 더 깊게 읽기. 문재인에게 있고 윤석열에게 없는 것. “지금 그럴 때가 아니다.” 가장 약한 곳을 때렸다. 다르게 읽기. 잘 해야 할 것과 하지...
+The post 윤석열이 임성근을 싸고 돌았던 이유, 결국 김건희가 연결고리였다: 슬로우레터 7월10일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] A new API for tree-in-dcache filesystems]]></title>
+        <id>https://lwn.net/Articles/980558/</id>
+        <link href="https://lwn.net/Articles/980558/"/>
+        <updated>2024-07-09T21:17:35.000Z</updated>
+        <summary type="html"><![CDATA[There are a number of kernel filesystems that store their directory entries
+directly in the directory-entry cache (dcache) without having any permanent
+storage for those objects. It started out as a "neat hack" for ramfs,
+Al Viro said, at the start of his filesystem-track session at
+the
+2024 Linux Storage,
+Filesystem, Memory Management, and BPF Summit.  Unfortunately, as the use
+of this technique has grown into other filesystems, there has been a lot of
+scope creep that has gotten out of control.  He wanted to discuss some new
+infrastructure that he is working on to try to clean some of that up.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Get started with Gemma on Ray on Vertex AI]]></title>
         <id>https://developers.googleblog.com/en/get-started-with-gemma-on-ray-on-vertex-ai/</id>
@@ -4661,164 +4877,6 @@ In this blog post, we will take...]]></summary>
 The post How developers can leverage RTOS functional safety certification appeared first on Embedded.com.]]></summary>
         <author>
             <name>Bill Lamie</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Get system-wide profiles of binaries without frame pointers]]></title>
-        <id>c9890276-935c-42b8-aae6-8c44a9326f08</id>
-        <link href="https://developers.redhat.com/articles/2024/06/11/get-system-wide-profiles-binaries-without-frame-pointers"/>
-        <updated>2024-06-11T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Many profiling tools on Linux have previously been limited by their reliance on stack unwinding algorithms that require commonly-used frame pointer optimizations to be disabled. This article introduces eu-stacktrace, a prototype tool that uses the elfutils toolkit’s unwinding libraries to support a sampling profiler to unwind frame pointer-less stack sample data.
-Background
-Developers and customers find benefit in profiling the performance of their applications in both development and production environments. A typical requirement for useful profile data is an accurate stack trace listing the active functions at every sample in the profile. Commonly used profiling tools try to fulfill this requirement with basic unwinder implementations that assume programs to have been compiled with a sta…]]></summary>
-        <author>
-            <name>Serhei Makarov</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[동의도 영장도 없는 방역 만능주의? 절차와 사생활 보호도 중요하다]]></title>
-        <id>https://slownews.kr/?p=109996</id>
-        <link href="https://slownews.kr/109996"/>
-        <updated>2024-06-11T05:34:51.000Z</updated>
-        <summary type="html"><![CDATA[동의도, 영장도 없이 국가가 내 위치를 추적한다면? 나의 중요한 권리인 사생활의 비밀과 자유는 침해될 수밖에 없습니다. 2020년 5월, 코로나19 팬데믹 당시 정부는 이태원 일대에 있었던 약 1만 명의 위치 정보를 동의 없이 수집했습니다. 수집의 근거가 된 감염병예방법 제76조의2에는 누구를 감염의심자로 볼지, 어떤 정보까지 추적할지, 과도한 사생활 침해는 없는지 제어할 수 있는 보호장치조차 없었습니다. 이에 시민사회단체들은...
-The post 동의도 영장도 없는 방역 만능주의? 절차와 사생활 보호도 중요하다 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>참여연대 사법감시센터</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[세월호 10년: 세 번의 조사, 가려진 진실, 책임 없는 정부]]></title>
-        <id>https://slownews.kr/?p=109989</id>
-        <link href="https://slownews.kr/109989"/>
-        <updated>2024-06-11T03:15:43.000Z</updated>
-        <summary type="html"><![CDATA[[민언련 이달의 좋은 보도상 인터뷰] 한국일보 세월호 10주기 ‘산 자들의 10년’ 특별기획팀 (2024년 5월 수상자) 2014년 4월 16일. 우리 모두의 아픔으로 남은 세월호 참사가 일어났다. 그러나 정부, 언론, 수사기관 등은 제 역할을 하지 못했다. 가려진 진실, 정부의 책임 회피, 미흡한 책임자 처벌, 유족과 생존자를 향한 왜곡된 비난 속에 온전한 진상규명은 지금도 현재진행형이다. 세 번의 공적...
-The post 세월호 10년: 세 번의 조사, 가려진 진실, 책임 없는 정부 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[뉴페@스프] ‘사이다 발언’에 박수 갈채? 그에 앞서 생각해 볼 두 가지 용기]]></title>
-        <id>https://newspeppermint.com/?p=79168</id>
-        <link href="https://newspeppermint.com/2024/06/10/npsp_openletters/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_openletters"/>
-        <updated>2024-06-10T22:59:32.000Z</updated>
-        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 4월 22일 스프에 쓴 글입니다. 하마스가 이스라엘을 상대로 테러 공격을 벌인 뒤 그에 대한 반격으로 시작된 이스라엘의 가자지구 군사 작전 혹은 이스라엘과 팔레스타인의 전쟁이 벌써 반년이 더 지났습니다. 평화적인 해결은커녕 잠시 총을 내려놓고 민간인들의 → 더 보기]]></summary>
-        <author>
-            <name>ingppoo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[디올 백 대신 에코백, 김건희의 발걸음이 가벼웠던 이유: 슬로우레터 6월11일.]]></title>
-        <id>https://slownews.kr/?p=109953</id>
-        <link href="https://slownews.kr/109953"/>
-        <updated>2024-06-10T22:11:03.000Z</updated>
-        <summary type="html"><![CDATA[‘배우자’는 받아도 되나. 권익위는 왜 그랬을까. 에코백을 들었다. 쟁점과 현안. 국민의힘이 깔아준 판, 민주당이 상임위 싹쓸이. “법사위만 달라”, 국민의힘 마지막 제안도 거부. 이재명 맞춤형 당헌 개정. 더 깊게 읽기. 대북 전단 왜 안 막나. 대북 확성기 일단 중지. 바이든-트럼프 초박빙 판세. 유럽에서는 극우의 약진. 다르게 읽기. 헌법 84조 논란, 현직 대통령을 법정에 세울 수 있나....
-The post 디올 백 대신 에코백, 김건희의 발걸음이 가벼웠던 이유: 슬로우레터 6월11일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How much UB is in my compiler?]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/cpp/1130/</id>
-        <link href="https://pvs-studio.com/en/blog/posts/cpp/1130/"/>
-        <updated>2024-06-10T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[C and C++ developers have two bug-related headaches: memory leaks and undefined behavior. As you can guess, I'll talk about undefined behavior—and about "my" compiler. To be more precise, I'll talk...]]></summary>
-        <author>
-            <name>from pvs-studio.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Microcontroller operations in an OCP ORV3 smart battery backup unit]]></title>
-        <id>https://www.embedded.com/?p=4482477</id>
-        <link href="https://www.embedded.com/microcontroller-operations-in-an-ocp-orv3-smart-battery-backup-unit/"/>
-        <updated>2024-06-10T18:59:21.000Z</updated>
-        <summary type="html"><![CDATA[In a smart battery backup unit, the microcontroller’s software is responsible for guaranteeing the smooth functioning of processes, hence ensuring the unit’s high efficiency and...
-The post Microcontroller operations in an OCP ORV3 smart battery backup unit appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Christian Cruz and Marvin Neil Cabueñas</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Computex 2024: a video roundup from Taiwan]]></title>
-        <id>https://www.embedded.com/?p=4482473</id>
-        <link href="https://www.embedded.com/computex-2024-a-video-roundup-from-taiwan/"/>
-        <updated>2024-06-10T18:52:12.000Z</updated>
-        <summary type="html"><![CDATA[Get a taste of the happenings at Computex 2024 in Taiwan covered through my daily video roundups at the show – summarized here.
-The post Computex 2024: a video roundup from Taiwan appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Computex 2024 keynotes focus on data centers and AI PCs]]></title>
-        <id>https://www.embedded.com/?p=4482457</id>
-        <link href="https://www.embedded.com/computex-2024-keynotes-focus-on-data-centers-and-ai-pcs/"/>
-        <updated>2024-06-10T17:33:51.000Z</updated>
-        <summary type="html"><![CDATA[A look at the announcements in the keynotes at Computex 2024 in Taiwan from Nvidia, AMD, Intel and Qualcomm Technologies.
-The post Computex 2024 keynotes focus on data centers and AI PCs appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] P4TC hits a brick wall]]></title>
-        <id>https://lwn.net/Articles/977310/</id>
-        <link href="https://lwn.net/Articles/977310/"/>
-        <updated>2024-06-10T15:11:07.000Z</updated>
-        <summary type="html"><![CDATA[P4, short for "Programming
-Protocol-independent Packet Processors", is a programming language aimed at
-networking devices; it is useful for the configuration of firewalls and
-complicated routing architectures.  Since a lot of advanced networking is
-done with Linux systems, it stands to reason that there would be value in
-supporting P4 and, indeed, an
-implementation of P4 in the kernel's traffic-control subsystem was
-first posted by Jamal Hadi Salim at the beginning of 2023.  After nearly
-18 months, though, this feature has not been merged, and the chances
-of that happening would appear to be getting worse.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[perl v5.40.0 released]]></title>
-        <id>https://lwn.net/Articles/977765/</id>
-        <link href="https://lwn.net/Articles/977765/"/>
-        <updated>2024-06-10T15:08:28.000Z</updated>
-        <summary type="html"><![CDATA[Version 5.40.0 of the Perl language has been released.  "Perl 5.40.0
-represents approximately 11 months of development since Perl 5.38.0 and
-contains approximately 160,000 lines of changes across 1,500 files from 75
-authors".  Significant changes include a new __CLASS__
-keyword, a :reader: attribute for field variables, a new
-"^^" logical-XOR operator (because two of those were not enough),
-moving "try/catch" out of the experimental category, and more; see
-this
-page for lots of details.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/977789/</id>
-        <link href="https://lwn.net/Articles/977789/"/>
-        <updated>2024-06-10T14:45:23.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Fedora (galera and mariadb10.11), Mageia (0-plugins-base and plasma-workspace), Oracle (ruby:3.1 and ruby:3.3), Red Hat (bind, bind-dyndb-ldap, and dhcp), SUSE (apache2, glib2, libvirt, openssl-1_1, openssl-3, opera, python-Jinja2, python-requests, and squid), and Ubuntu (linux, linux-gcp, linux-gcp-5.15, linux-lowlatency,
- linux-lowlatency-hwe-5.15, linux-xilinx-zynqmp, linux, linux-gcp, linux-gcp-6.5, linux-lowlatency,
- linux-lowlatency-hwe-6.5, linux-raspi, linux, linux-ibm, linux-lowlatency, linux-raspi, linux-aws, linux-gcp, linux-azure, linux-azure-6.5, linux-starfive, linux-starfive-6.5, and linux-gke, linux-ibm, linux-intel-iotg, linux-oracle).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Synthara gets $11m to bring in-memory computing to embedded AI]]></title>
-        <id>https://www.embedded.com/?p=4482448</id>
-        <link href="https://www.embedded.com/synthara-gets-11m-to-bring-in-memory-computing-to-embedded-ai/"/>
-        <updated>2024-06-10T11:26:13.000Z</updated>
-        <summary type="html"><![CDATA[Seamless integration of in-memory computing into existing chip designs is a game-changer, particularly for AI applications, says Hermann Hauser.
-The post Synthara gets $11m to bring in-memory computing to embedded AI appeared first on Embedded.com.]]></summary>
-        <author>
-            <name>Nitin Dahad</name>
         </author>
     </entry>
     <entry>
