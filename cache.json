@@ -196,6 +196,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "3b7cde7e-16cd-4bea-ac57-0d2cfed15d76",
+          "author": "Francisco De Melo Junior",
+          "description": "Since JDK 8, including upper versions, Metaspace has been set apart from the main heap section of memory and set via MetaspaceSize and MaxMetaspace flags. Objectively, this means metadata of loading classes in Java are set in the non-heap region also known as the native region of the memory (again, not inside the heap).\nThis Metaspace region is a change from previous versions, which had Java Metaspace as part of the heap in the so-called \"Permanent Generation\" and was set using the Java Virtual Machine (JVM) flag: PermSize and MaxPermSize. \nAlthough this discussion is very well settled, this article aims to review Metaspace, its tuning, and the consequences for container and non-container usage. It also adds troubleshooting steps in case those are needed.\nMetaspace explanation\nAs briefly m…",
+          "link": "https://developers.redhat.com/articles/2024/07/19/metaspace-setting-and-tuning-jdk-8-applications-and-outside-containers",
+          "publishedOn": "2024-07-19T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Metaspace setting and tuning in JDK 8+ Applications (in and outside containers)",
+          "imageUrl": null
+        },
+        {
           "id": "9317d845-0592-43a8-9e20-87ddf3af6bf6",
           "author": "Francisco De Melo Junior",
           "description": "Red Hat Data Grid is a stable product for in-memory distributing caching solutions. In Red Hat OpenShift Container Platform, Data Grid can be installed via Data Grid Operator or Helm Charts can be used to deploy Data Grid 8 and have containers deployed running Data Grid. Those pods can then join together in a cluster—therefore having clustering capabilities.\nGiven the deployment of the Data Grid cluster as described above and with the pods deployed, the next step is to access the Data Grid cluster. \nWhen accessing the clustering within the OpenShift Container Platform cluster—i.e., when the application access is done inside OpenShift Container Platform—the communication can be via internal service. However, if the application is outside OpenShift Container Platform, Data Grid must expose a…",
@@ -514,26 +524,6 @@
           "wordCount": null,
           "title": "Leverage Red Hat Satellite for Insights reporting and automation",
           "imageUrl": null
-        },
-        {
-          "id": "c4289561-6575-449d-8709-a47336231e6a",
-          "author": "Hans-Peter Grahsl",
-          "description": "In this in-depth article, you're going to learn how to build an end-to-end reactive stream processing application using Apache Kafka as an event streaming platform, Quarkus for your backend, and a frontend written in Angular. In the end, you'll deploy all three containerized applications on the Developer Sandbox for Red Hat OpenShift.\nA first look at the final result—a colorful live dashboard tracking the usage of emojis in public 🐘 Mastodon 🐘 posts (a.k.a., toots)—should give you a rough idea of what you may expect throughout this article. See Figure 1.\n\n\n\n  \n        \n\n\n        Fig. 1 - Emoji Tracker Live Dashboard\n  \n\nFigure 1: Emoji tracker live dashboard.\n\nLet's dive right in.\nDeveloper Sandbox for Red Hat OpenShift\nAll applications which are part of the complete demo scenario are su…",
-          "link": "https://developers.redhat.com/articles/2024/06/20/stateful-and-reactive-stream-processing-applications-apache-kafka-quarkus-and",
-          "publishedOn": "2024-06-20T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Stateful and reactive stream processing applications with Apache Kafka, Quarkus, and Angular on OpenShift",
-          "imageUrl": null
-        },
-        {
-          "id": "81b44d70-0b3f-40d6-8083-d64f28ab4fb9",
-          "author": "Bill Dettelback",
-          "description": "Red Hat Quay.io was the first private container registry on the internet and began serving images back in 2013. Today, it hosts millions of images for hundreds of thousands of critical customer workloads, including Red Hat’s own product catalog.\nOne of the marquee features of Quay.io is free security scanning for any image that we host. This happens automatically as soon as you push an image to Quay.io. Not only does it scan your image at upload time, it also provides an up-to-date view of your vulnerabilities, no matter how long ago you pushed it. There is no need to ask Quay.io to rescan your image—that information is available whenever you request it. \nThis is critical, as container images typically only gather more and more vulnerabilities as they age. An old container image isn’t alwa…",
-          "link": "https://developers.redhat.com/articles/2024/06/20/how-find-vulnerabilities-across-millions-quayio-images",
-          "publishedOn": "2024-06-20T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to find vulnerabilities across millions of Quay.io images",
-          "imageUrl": null
         }
       ]
     },
@@ -541,18 +531,7 @@
       "title": "edykim.com 블로그 RSS 피드",
       "feedUrl": "https://edykim.com/ko/feed.xml",
       "siteUrl": "https://edykim.com/",
-      "articles": [
-        {
-          "id": "https://edykim.com/ko/post/2024-06-19/",
-          "author": null,
-          "description": "이런저런 글을 올리는 공간입니다.\n\nRSS 피드\n사는...",
-          "link": "https://edykim.com/ko/post/2024-06-19/",
-          "publishedOn": "2024-06-19T23:30:18.000Z",
-          "wordCount": null,
-          "title": "블로그 안내",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Eli Bendersky's website",
@@ -612,6 +591,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4482844",
+          "author": "Marco Ghibaudi",
+          "description": "We can build quantum computers in a way that can help tackle climate change-related problems without releasing excessive additional CO2 into the atmosphere. Any other...\nThe post Designing quantum computers with energy-efficiency in mind appeared first on Embedded.com.",
+          "link": "https://www.embedded.com/designing-quantum-computers-with-energy-efficiency-in-mind/",
+          "publishedOn": "2024-07-19T11:45:37.000Z",
+          "wordCount": null,
+          "title": "Designing quantum computers with energy-efficiency in mind",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4482839",
           "author": "Nitin Dahad",
@@ -941,16 +930,6 @@
           "wordCount": null,
           "title": "Federated simulation working group addresses systems-of-systems",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4482525",
-          "author": "Bernard Ang",
-          "description": "The benefits of optimizing sensors are enormous and include improving their accuracy, range, and sensitivity. Characterizing and linearizing sensors can help integrate them into larger...\nThe post Optimizing sensor capabilities: test characterization and linearization appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/optimizing-sensor-capabilities-test-characterization-and-linearization/",
-          "publishedOn": "2024-06-19T10:53:27.000Z",
-          "wordCount": null,
-          "title": "Optimizing sensor capabilities: test characterization and linearization",
-          "imageUrl": null
         }
       ]
     },
@@ -1059,6 +1038,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/how-its-made-ai-roadtrip-a-pixel-campaign-powered-by-generative-ai-and-fans/",
+          "author": null,
+          "description": "Best Phones Forever: AI Roadtrip is our first experiment in using generative AI to put fans in the driver's seat and bring characters to life.",
+          "link": "https://developers.googleblog.com/en/how-its-made-ai-roadtrip-a-pixel-campaign-powered-by-generative-ai-and-fans/",
+          "publishedOn": "2024-07-19T20:15:53.264Z",
+          "wordCount": null,
+          "title": "How It’s Made: AI Roadtrip, a Pixel Campaign Powered by Generative AI and Fans",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/google-url-shortener-links-will-no-longer-be-available/",
           "author": null,
@@ -1326,6 +1315,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/1144/",
+          "author": null,
+          "description": "Has your little hamster forgotten how to write C# code? Is it trying to get back into programming, but time has flown by so fast that C# 12 has already come out? Or maybe your kitty can't plan an...",
+          "link": "https://pvs-studio.com/en/blog/posts/1144/",
+          "publishedOn": "2024-07-18T21:00:00.000Z",
+          "wordCount": null,
+          "title": "How to train your cat to code: bizarre learning approaches",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/1143/",
           "author": null,
           "description": "Have you ever wondered if you could fully write code using only the #define directive in C? It's well-known that the C++ templates are Turing-complete—developers write ray tracers that do all...",
@@ -1462,6 +1461,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/schematic-review-checklist",
+          "author": null,
+          "description": "Schematic reviews are a part of the hardware development cycle in many if not\nmost, hardware development companies. Typically led by the electrical\nengineering team, it is easy to overlook design issues that will be important to\nthe firmware team. This post tells of a few stories of design misses that I have\nmade and puts some common lessons learned into a checklist for other firmware\nengineers. It is not meant to be an exhaustive list, but rather a starting point\nfor a firmware engineer to build their own checklist with the goal of helping\nteams catch software/hardware interaction bugs earlier in the design cycle when\nthey’re cheaper to fix.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/schematic-review-checklist",
+          "publishedOn": "2024-07-18T00:00:00.000Z",
+          "wordCount": null,
+          "title": "A Schematic Review Checklist for Firmware Engineers",
+          "imageUrl": null
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/june-2024-roundup",
           "author": null,
           "description": "Here are the articles, videos, and tools that we’ve been excited about this June.\nContinue reading…",
@@ -1518,6 +1527,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/982585/",
+          "author": "daroc",
+          "description": "The Next Generation Internet\n(NGI) project, an initiative of the EU's European Commission (EC),\nprovides funding in the form of grants for a wide variety of\nopen-source software,\nincluding\nRedox,\nBriar,\nSourceHut, and many more.\nBut the NGI project is not among those that would be funded under the current draft budget for 2025,\n\nas The Register reports. More than 60 organizations have signed on to an open letter asking the\nEC to reconsider:\n\n\n\nWe find this transformation incomprehensible, moreover when NGI has proven efficient and economical to support free software as a whole, from the smallest to the most established initiatives. This ecosystem diversity backs the strength of European technological innovation, and maintaining the NGI initiative to provide structural support to software projects at the heart of worldwide innovation is key to enforce the sovereignty of a European infrastructure.\nContrary to common perception, technical innovations often originate from European rather than North American programming communities, and are mostly initiated by small-scaled organizations.",
+          "link": "https://lwn.net/Articles/982585/",
+          "publishedOn": "2024-07-19T17:48:29.000Z",
+          "wordCount": null,
+          "title": "NGI project may lose funding",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/981663/",
+          "author": "daroc",
+          "description": "The \nNumPy project \nreleased version 2.0.0 on\nJune 16, the first major release of the widely\nused Python-based numeric-computing library since 2006. The release has been planned for some\ntime, as an opportunity to clean up NumPy's API. As with most NumPy updates,\nthere are performance improvements to several individual functions. There are only a few new\nfeatures, but several backward-incompatible changes, including a change to\nNumPy's numeric-promotion rules. Changes to the Python API require relatively minor changes to\nPython code using the library, but the changes to the C API may be more\ndifficult to adapt to. In\nboth cases, the official\n\nmigration guide describes what needs to be adapted to the new version.",
+          "link": "https://lwn.net/Articles/981663/",
+          "publishedOn": "2024-07-19T16:41:11.000Z",
+          "wordCount": null,
+          "title": "[$] A new major version of NumPy",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/982085/",
+          "author": "corbet",
+          "description": "The kernel will not consent to execute just any file that happens to be\nsitting in a filesystem; there are formalities, such as the checking of\nexecute permission and consulting security policies, to get through first.\nOn some systems, security policies have been established to limit execution\nto specifically approved programs.  But there are files that are not\nexecuted directly by the kernel; these include scripts fed to language\ninterpreters like Python, Perl, or a shell.  An attacker who is able to get\nan interpreter to execute a file may be able to bypass a system's security\npolicies.  Mickaël Salaün has been working on closing this hole for years;\nthe latest\nattempt takes the form of a new flag to the execveat()\nsystem call.",
+          "link": "https://lwn.net/Articles/982085/",
+          "publishedOn": "2024-07-19T14:05:43.000Z",
+          "wordCount": null,
+          "title": "[$] Restricting execution of scripts — the third approach",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/982559/",
+          "author": "daroc",
+          "description": "Security updates have been issued by AlmaLinux (firefox, java-1.8.0-openjdk, java-17-openjdk, java-21-openjdk, libndp, openssh, qt5-qtbase, ruby, skopeo, and thunderbird), Debian (thunderbird), Fedora (dotnet6.0, httpd, python-django, python-django4.2, qt6-qtbase, rapidjson, and ruby), Red Hat (389-ds-base, firefox, java-1.8.0-openjdk, java-11-openjdk, libndp, qt5-qtbase, and thunderbird), Slackware (httpd), SUSE (apache2, chromium, and kernel), and Ubuntu (apache2, linux-aws, linux-azure-fde, linux-azure-fde-5.15, linux-hwe-5.15, linux-aws-6.5, linux-lowlatency-hwe-6.5, linux-oracle-6.5, linux-starfive-6.5, and linux-raspi, linux-raspi-5.4).",
+          "link": "https://lwn.net/Articles/982559/",
+          "publishedOn": "2024-07-19T13:19:22.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/982470/",
+          "author": "jake",
+          "description": "The sad news that Peter de Schrijver has passed away has just reached us.  An obituary in Dutch relates that he passed in a Helsinki hospital on July 12.  Mind Software Consulting, which he founded, has a message of condolences as well.\nDe Schrijver was a Debian Developer and a Linux kernel contributor; he will be missed.",
+          "link": "https://lwn.net/Articles/982470/",
+          "publishedOn": "2024-07-18T21:39:00.000Z",
+          "wordCount": null,
+          "title": "Peter de Schrijver RIP",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/982392/",
           "author": "jake",
@@ -2527,76 +2586,6 @@
           "wordCount": null,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978238/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for June 20, 2024 is available.",
-          "link": "https://lwn.net/Articles/978238/",
-          "publishedOn": "2024-06-20T03:42:23.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for June 20, 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978463/",
-          "author": "jzb",
-          "description": "Philip Hazel was 51 when he began the Exim message transfer agent (MTA)\nproject in 1995, which\nled to the Perl-Compatible Regular\nExpressions (PRCE) project in 1998. At 80,\nhe's maintained PCRE, and its successor PCRE2, for more than 27\nyears. For those doing the math, that's a year longer than LWN has\nbeen in publication. Exim maintenance was handed off around the time\nof his retirement in 2007. Now, he is ready to hand off PCRE2 as well,\nif a successor can be found.",
-          "link": "https://lwn.net/Articles/978463/",
-          "publishedOn": "2024-06-19T18:17:14.000Z",
-          "wordCount": null,
-          "title": "[$] How free software hijacked Philip Hazel's life",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978946/",
-          "author": "jzb",
-          "description": "Version\n1.28 of the MATE Desktop\nhas been released.\nSee the announcement for a full list of improvements and bug fixes.",
-          "link": "https://lwn.net/Articles/978946/",
-          "publishedOn": "2024-06-19T16:45:31.000Z",
-          "wordCount": 218,
-          "title": "Mate 1.28 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978939/",
-          "author": "jzb",
-          "description": "Version 1.11.0 of Libgcrypt, a general-purpose library of\ncryptographic building blocks, has been released by the GnuPG project:\n\n\nThis release starts a new stable branch of Libgcrypt with full API and\nABI compatibility to the 1.10 series.  Over the last years Jussi\nKivilinna put again a lot of work into speeding up the algorithms for\nmany commonly used CPUs.  Niibe-san implemented new APIs and algorithms\nand also integrated quantum-resistant encryption algorithms.",
-          "link": "https://lwn.net/Articles/978939/",
-          "publishedOn": "2024-06-19T15:26:47.000Z",
-          "wordCount": 1866,
-          "title": "Libgcrypt 1.11.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978736/",
-          "author": "daroc",
-          "description": "Andrii Nakryiko led a session at\nthe 2024\nLinux Storage,\nFilesystem, Memory Management, and BPF Summit giving\na look into the APIs for capturing stack traces\nusing BPF, and how the APIs could be made more useful. BPF programs can capture the\ncurrent stack trace of a running process, including the portion in the kernel\nduring execution of a system call, which can be useful for diagnosing\nperformance problems, among other things. But there are substantial problems with\nthe existing API.",
-          "link": "https://lwn.net/Articles/978736/",
-          "publishedOn": "2024-06-19T14:15:03.000Z",
-          "wordCount": null,
-          "title": "[$] Capturing stack traces asynchronously with BPF",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978711/",
-          "author": "corbet",
-          "description": "It has been four months since Greg\nKroah-Hartman and MITRE\nannounced that the Linux kernel project had become its own CVE Numbering\nAuthority (CNA).  Since then, the Linux CNA Team has developed workflows\nand mechanisms to help manage the various tasks associated with this\nchallenge.  There does however, appear to be a lack of understanding among\ncommunity members of the processes and rules the team have been working\nwithin.  The principal aim of this article, written by a member of the\nLinux kernel CNA team, is to clarify how the team works and how kernel CVE\nnumbers are assigned.",
-          "link": "https://lwn.net/Articles/978711/",
-          "publishedOn": "2024-06-19T13:48:11.000Z",
-          "wordCount": null,
-          "title": "[$] How kernel CVE numbers are assigned",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/978907/",
-          "author": "jzb",
-          "description": "Security updates have been issued by AlmaLinux (container-tools, firefox, and flatpak), Debian (composer, roundcube, and thunderbird), Fedora (kitty and webkitgtk), Oracle (container-tools and flatpak), Red Hat (flatpak and java-1.8.0-ibm), SUSE (gdcm, gdk-pixbuf, libarchive, libzypp, zypper, ntfs-3g_ntfsprogs, openssl-1_1, openssl-3, podman, python-Werkzeug, and thunderbird), and Ubuntu (git, linux-hwe-6.5, mariadb, mariadb-10.6, and thunderbird).",
-          "link": "https://lwn.net/Articles/978907/",
-          "publishedOn": "2024-06-19T13:13:56.000Z",
-          "wordCount": 325,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2866,6 +2855,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=112468",
+          "author": "최명진",
+          "description": "육수를 먼저 만들도록 하자. 아니 파스타 말건데 웬 국물이냐고? 세상에 존재하는 모든 육수는 졸이면 소스가 된다. 그게 맛이 좋냐, 나쁘냐의 문제일 뿐이다. 토마토나 크림파스타의 맛이 소스 맛이듯, 봉골레나 알리오 올리오 같은 오일 베이스 파스타의 경우도 맛을 결정짓는 것은 소스다. 아무도 그렇게 부르지 않지만, 알리오 올리오를 만들기 위해 넉넉한 올리브 오일에 마늘과 페퍼론치노와 파슬리를 넣고 나중에...\nThe post 봄쑥 봉골레 파스타 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/112468",
+          "publishedOn": "2024-07-19T08:36:32.000Z",
+          "wordCount": null,
+          "title": "봄쑥 봉골레 파스타",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=112405",
+          "author": "이정환",
+          "description": "대법원이 동성 부부를 인정했다. “사랑이 이겼다.” 쟁점과 현안. 채 상병 1주기. “신중하지 못했다.” 주워 담을 수 있겠나. 25만 원 민생지원법 행안위 통과. 더 깊게 읽기. “모두 문재인 정권에서 일어난 일.” 결국 상속세도 손댄다. 상속세 부담 OECD 최고라는 착각. 부동산 서울 쏠림. 다르게 읽기. 체코 원전 덤핑? 9조 원 더 받았다. “국가 경사, 두 신문만 1면에...\nThe post 윤석열 딜레마, 배신자일수록 배신을 두려워한다: 슬로우레터 7월19일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/112405",
+          "publishedOn": "2024-07-18T22:09:38.000Z",
+          "wordCount": null,
+          "title": "윤석열 딜레마, 배신자일수록 배신을 두려워한다: 슬로우레터 7월19일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=112357",
           "author": "이정환",
@@ -3405,36 +3414,6 @@
           "wordCount": null,
           "title": "김건희 스모킹건, 디올 백보다 큰 것 나오나: 슬로우레터 6월21일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=110519",
-          "author": "이정환",
-          "description": "대전하면 성심당 떠올리는 사람들 많다. 오늘은 두 가지 이야기를 해보자. 코레일이 성심당 대전역사점 임대료를 현재 1억 원에서 4억 원으로 올려 받겠다고 해서 논란이다. 코레일 임대사업자 입찰, 지금까지 5차 유찰. 성심당 대전역에서 나갈까? 지금도 월 1억씩 내는데, 왜 이렇게 임대료 올랐나. 원칙이라고 해도… 돈 벌수록 버티기 어렵다. 부산역 입점했던 삼진어묵도 방 뺐다. 매출과 월세가 비례: 다른...\nThe post 성심당 코레일 월세 4억 원의 비밀. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/110519",
-          "publishedOn": "2024-06-20T06:47:28.000Z",
-          "wordCount": null,
-          "title": "성심당 코레일 월세 4억 원의 비밀.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=110486",
-          "author": "이정환",
-          "description": "북한과 러시아의 밀착, “침략당하면 상호 지원.” ‘지각 대장’ 푸틴. 쟁점과 현안. “인구 비상사태.” 복지가 부족해서 애 안 낳을까. 무기한 휴진? “처음 듣는 이야기.” 대통령 거부권 포기할 수 있나. 더 깊게 읽기. 한국이 가장 먹고 살기 힘들다. 쿠팡의 네 가지 거짓말. 다르게 읽기. 김건희가 변수다. 선을 넘는 이복현. 당원 중심 정당의 함정. 해법과 대안. 지역 대도시에...\nThe post 출구전략 없는 갈등, 이것은 민주주의가 아니다: 슬로우레터 6월20일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/110486",
-          "publishedOn": "2024-06-19T22:15:35.000Z",
-          "wordCount": null,
-          "title": "출구전략 없는 갈등, 이것은 민주주의가 아니다: 슬로우레터 6월20일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=110411",
-          "author": "권호현",
-          "description": "0. 극단적 요약 (1분) “쿠팡은 모험가의 도전과 성공을 훔친다” (권호현) 온라인플랫폼공정화법(온플법) 제정이 필요한 이유다. 1. PB상품으로 물가 안정에 기여? 쿠팡이 PB 상품으로 물가 안정에 기여했다고요? 거짓말입니다. 쿠팡은 내부 보고 문건에서 자체 분석하고 있습니다. (쿠팡이 랭킹 조작이나 리뷰 조작 등을 중단할 경우) “1) 소비자 1인당 지출 2) 입점업체 평균 판매가 3) 쿠팡 PB 등 자체 상품...\nThe post 쿠팡의 거짓말 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/110411",
-          "publishedOn": "2024-06-19T08:23:24.000Z",
-          "wordCount": null,
-          "title": "쿠팡의 거짓말",
-          "imageUrl": null
         }
       ]
     },
@@ -3951,16 +3930,6 @@
           "publishedOn": "2024-06-21T01:33:46.000Z",
           "wordCount": null,
           "title": "구글 플레이 앱 자동 업데이트 설정 방법",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595087",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595087/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%9c%ec%b4%9d-1%ec%9c%84-%eb%93%b1%ea%b7%b9",
-          "publishedOn": "2024-06-19T08:22:41.000Z",
-          "wordCount": null,
-          "title": "6/19, 엔비디아 시총 1위 등극을 보며",
           "imageUrl": null
         }
       ]
