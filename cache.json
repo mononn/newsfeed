@@ -59,17 +59,6 @@
           "title": "Working Models for Tackling Tech Debt",
           "itunes": {},
           "imageUrl": null
-        },
-        {
-          "id": "3674985",
-          "author": null,
-          "description": "",
-          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3674985",
-          "publishedOn": "2024-07-01T20:50:16.000Z",
-          "wordCount": null,
-          "title": "The Expense of Unprotected Free Software",
-          "itunes": {},
-          "imageUrl": null
         }
       ]
     },
@@ -184,6 +173,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "e6d51a6d-803f-45f4-bfec-27f5d25a97bb",
+          "author": "Ramon Acedo Rodriguez",
+          "description": "Adding nodes to Red Hat OpenShift clusters on-premises is a laborious and sometimes complex endeavor. With various methods available, each with different levels of automation, users often find themselves navigating through complex and even unsupported solutions, leading to a less-than-ideal user experience. \nA new feature is now available as a Developer Preview in OpenShift 4.16, that makes cluster expansions faster, simpler, and more user-friendly than ever before.\nThis new method leverages the Agent Based Installer technology under the hood, but doesn’t need the cluster to have been installed by it, it will work on any cluster where its nodes can be installed from an ISO image.\nIt first gets information of the cluster to be expanded, then it provides a bootable ISO image, and after booti…",
+          "link": "https://developers.redhat.com/articles/2024/07/31/easily-expanding-red-hat-openshift-clusters",
+          "publishedOn": "2024-07-31T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Easily expanding Red Hat OpenShift clusters",
+          "imageUrl": null
+        },
+        {
+          "id": "11ed32d2-2b95-4194-aa59-1f3bb41441b5",
+          "author": "Fernando Lozano",
+          "description": "If you develop applications with a cloud-first mindset, you probably use (or plan to use) object storage with the S3 API from Amazon Web Services (AWS). Even if you do not use AWS, all large and smaller public cloud providers offer object storage compatible with the S3 API.\nIf you plan to work with artificial intelligence (AI), most AI tools require S3 storage to store data from models, training, and tuning, besides the raw data on which AI models make inferences and the results of such inferences.\nBut, if you have to work on premises, or have to create applications which must work both on premises and on cloud, you require something that provides an S3-compatible API outside of cloud providers. Red Hat OpenShift Data Foundation is a nice alternative proven to support large scale deploymen…",
+          "link": "https://developers.redhat.com/articles/2024/07/31/red-hat-openshift-data-foundation-developers-and-data-scientists",
+          "publishedOn": "2024-07-31T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Red Hat OpenShift Data Foundation for developers and data scientists",
+          "imageUrl": null
+        },
         {
           "id": "1ef09165-659e-4bc1-81e6-09ab9d398e39",
           "author": "Himanshu Yadav",
@@ -533,26 +542,6 @@
           "wordCount": null,
           "title": "Manage deep learning models with OpenVINO Model Server",
           "imageUrl": null
-        },
-        {
-          "id": "22677509-f46d-4a26-8648-5af3f0378b5e",
-          "author": "Bruno Meseguer",
-          "description": "As the internet evolves and technologies and trends emerge, so do the ways people and organizations connect. Not only is digitalization transforming and automating processes, but social changes and events are also making an impact that shapes how we interact.\nNot so long ago, email and SMS messages started to replace phone conversations, and soon after, instant messaging platforms gained popularity over the tools that came before it. Today, there is a big landscape of messaging platforms, and often people feel divided on which one to use to communicate with friends and family.\nIn the professional field, organizations usually mandate one common communication platform, but often more than one survives, fragmenting work discussions between them.\nFigure 1 illustrates an employee using multiple…",
-          "link": "https://developers.redhat.com/articles/2024/07/02/build-extendable-multichannel-messaging-platform",
-          "publishedOn": "2024-07-02T07:00:00.000Z",
-          "wordCount": 3375,
-          "title": "Build an extendable multichannel messaging platform",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2020/11/CPevent-drivenserverless_2x.png?itok=Bo4V1I99"
-        },
-        {
-          "id": "7e21e94e-7124-46da-8b03-5a5b161a3123",
-          "author": "Eoin Fennessy, Jacek Ewertowski",
-          "description": "Istio’s multi-cluster features will be generally available in Red Hat OpenShift Service Mesh 3. To help users prepare for these new features and assess potential use cases, the multi-primary deployment model has been made available for developer preview in OpenShift Service Mesh (OSSM) 2.6.\nIn addition to detailing how to enable multi-primary in OSSM 2.6, this article will provide an overview of multi-cluster topologies, touch on some security considerations, compare multi-cluster and mesh federation, and outline some key features and potential use cases of multi-cluster with OSSM.\nMulti-cluster topologies and multi-primary\nIstio’s multi-cluster service mesh topologies can be deployed using the multi-primary model, wherein multiple clusters contain a deployment of the Istiod control plane …",
-          "link": "https://developers.redhat.com/articles/2024/07/02/multi-primary-multi-cluster-setup-openshift-service-mesh",
-          "publishedOn": "2024-07-02T07:00:00.000Z",
-          "wordCount": 5180,
-          "title": "Multi-primary multi-cluster setup in OpenShift Service Mesh",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2021_ServiceMesh_Topic_Image_A_1.jpg?itok=OW7hjVcD"
         }
       ]
     },
@@ -567,6 +556,16 @@
       "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml",
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
+        {
+          "id": "https://eli.thegreenplace.net/2024/building-static-binaries-with-go-on-linux/",
+          "author": null,
+          "description": "<p>One of Go's advantages is being able to produce statically-linked\nbinaries <a class=\"footnote-reference\" href=\"#footnote-1\" id=\"footnote-reference-1\">[1]</a>. This doesn't mean that Go always produces such binaries by default,\nhowever; in some scenarios it requires extra work to make this happen.\nSpecifics here are OS-dependent; here we focus on Unix systems.</p>\n<div class=\"section\" id=\"basics-hello-world\">\n<h2>Basics - hello world</h2>\n<p>This post …</p></div>",
+          "link": "https://eli.thegreenplace.net/2024/building-static-binaries-with-go-on-linux/",
+          "publishedOn": "2024-07-30T21:35:00.000Z",
+          "wordCount": null,
+          "title": "Building static binaries with Go on Linux",
+          "imageUrl": null
+        },
         {
           "id": "https://eli.thegreenplace.net/2024/notes-on-taylor-and-maclaurin-series/",
           "author": null,
@@ -603,13 +602,64 @@
       "title": "Embedded Artistry",
       "feedUrl": "https://embeddedartistry.com/feed/",
       "siteUrl": "https://embeddedartistry.com/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://embeddedartistry.com/?p=42412",
+          "author": "Phillip Johnston",
+          "description": "31 July 2024 by Phillip JohnstonDuring 2022-2023, Embedded Artistry and Memfault teamed up to run a series of embedded-focused discussion panels. These discussion panels were rich with insight and advice for embedded teams. Even if you missed the live broadcasts, we hope you will take time to watch the recordings. Building Embedded Systems at Scale … \nContinue reading \"2022-2023 Quarterly Discussion Panel Archives\"\nThe post 2022-2023 Quarterly Discussion Panel Archives appeared first on Embedded Artistry.",
+          "link": "https://embeddedartistry.com/blog/2024/07/31/2022-2023-quarterly-discussion-panel-archives/",
+          "publishedOn": "2024-07-31T19:07:47.000Z",
+          "wordCount": null,
+          "title": "2022-2023 Quarterly Discussion Panel Archives",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Embedded",
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4490505",
+          "author": "Nitin Dahad",
+          "description": "The flying taxis with smart assistants from the Fifth Element, a stunning Audi RSQ, custom built by Audi for I, Robot, and the Lexus 2054 with advanced biometric systems and automatic driving mode from Minority Report: it seems automakers from around the world are racing to be the first to make these dreams come true. While such advanced hi-tech vehicles have […]\nThe post Poor roads, money, and cybercriminals: why sci-fi cars are not here yet appeared first on Embedded.",
+          "link": "https://www.embedded.com/poor-roads-money-and-cybercriminals-why-sci-fi-cars-are-not-here-yet/",
+          "publishedOn": "2024-07-31T17:27:25.000Z",
+          "wordCount": null,
+          "title": "Poor roads, money, and cybercriminals: why sci-fi cars are not here yet",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490486",
+          "author": "Nitin Dahad",
+          "description": "Amidst the many disruptions faced by the global semiconductor industry, the relentless pursuit of higher performance silicon to power the ever-evolving landscape of modern technology has only increased. While Covid-19 underscored the vulnerability of the semiconductor supply chain, the demand for innovative silicon remains steadfast, driving continual advancements in product development . For semiconductor organizations […]\nThe post A software-connected approach to automated post-silicon device validation appeared first on Embedded.",
+          "link": "https://www.embedded.com/a-software-connected-approach-to-automated-post-silicon-device-validation/",
+          "publishedOn": "2024-07-31T12:50:55.000Z",
+          "wordCount": null,
+          "title": "A software-connected approach to automated post-silicon device validation",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490482",
+          "author": "Nitin Dahad",
+          "description": "Alphawave Semi said it has launched the industry’s first successful silicon bring-up of Universal Chiplet Interconnect Express (UCIe) die-to-die (D2D) IP with TSMC’s 3nm chip-on-wafer-on-substrate (CoWoS) advanced packaging technology. The complete PHY and controller subsystem was developed in collaboration with TSMC and targets applications such as hyperscaler, high-performance computing (HPC) and artificial intelligence (AI). Using […]\nThe post Alphawave Semi launches 3nm UCIe IP for chiplet ecosystem appeared first on Embedded.",
+          "link": "https://www.embedded.com/alphawave-semi-launches-3nm-ucie-ip-for-chiplet-ecosystem/",
+          "publishedOn": "2024-07-31T11:32:12.000Z",
+          "wordCount": null,
+          "title": "Alphawave Semi launches 3nm UCIe IP for chiplet ecosystem",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490476",
+          "author": "Nitin Dahad",
+          "description": "A new community-driven open source project based on a derivative of Debian and designed to deliver enterprise-grade Linux for edge-to-cloud deployments has launched its first release. The eLxr project, spearheaded by Wind River and supported by AWS, Intel, Supermicro, SAIC, and Capgemini, is an enterprise-grade Linux distribution that addresses the challenges of near-edge networks and […]\nThe post Debian derivative eLxr addresses simplifies and enhance edge-to-cloud appeared first on Embedded.",
+          "link": "https://www.embedded.com/debian-derivative-elxr-addresses-simplifies-and-enhance-edge-to-cloud/",
+          "publishedOn": "2024-07-31T10:36:10.000Z",
+          "wordCount": null,
+          "title": "Debian derivative eLxr addresses simplifies and enhance edge-to-cloud",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4490453",
           "author": "Nitin Dahad",
@@ -927,6 +977,26 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/gemini-15-pro-and-15-flash-now-available/",
+          "author": null,
+          "description": "We’re incredibly excited to see what you build with these new models. Get started with Gemini 1.5 Flash and 1.5 Pro free of charge in Google AI Studio.",
+          "link": "https://developers.googleblog.com/en/gemini-15-pro-and-15-flash-now-available/",
+          "publishedOn": "2024-07-31T20:14:19.665Z",
+          "wordCount": null,
+          "title": "Gemini 1.5 Pro and 1.5 Flash GA, 1.5 Flash tuning support, higher rate limits, and more API updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/",
+          "author": null,
+          "description": "ShieldGemma is a suite of safety content classifiers models built upon Gemma2 designed to keep users safe. GemmaScope is a new model interpretability tool that offers unparalleled insight into our models' inner workings.",
+          "link": "https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/",
+          "publishedOn": "2024-07-31T20:14:19.664Z",
+          "wordCount": null,
+          "title": "Smaller, Safer, More Transparent: Advancing Responsible AI with Gemma",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/ai-edge-torch-generative-api-for-custom-llms-on-device/",
           "author": null,
           "description": "AI Edge Torch Generative API enables developers to bring powerful new capabilities on-device, such as summarization, content generation, and more.",
@@ -1173,6 +1243,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/java/1147/",
+          "author": null,
+          "description": "Once again, we're checking the Apache product. This time we chose Solr, an open-source search server platform. Solr enables you quickly and efficiently search for information in databases and online...",
+          "link": "https://pvs-studio.com/en/blog/posts/java/1147/",
+          "publishedOn": "2024-07-30T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Search query for bugs in Apache Solr",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1146/",
           "author": null,
           "description": "We can't develop programs without debugging. Modern IDEs have a built-in debugger, but there are cases when using IDE for debugging is superfluous or impossible. So, standalone debuggers come to the...",
@@ -1344,6 +1424,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/984117/",
+          "author": "jzb",
+          "description": "Version 2.0 of the Vanilla OS image-based Linux distribution has\nbeen released. Dubbed\n\"Orchid\", Vanilla OS is now based on Debian Sid (prior versions were Ubuntu-based),\nallows creation\nof customized Linux environments, support for running Android\napplications using Waydroid, and many other improvements.",
+          "link": "https://lwn.net/Articles/984117/",
+          "publishedOn": "2024-07-31T18:13:38.000Z",
+          "wordCount": null,
+          "title": "Vanilla OS 2 \"Orchid\" released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/983897/",
+          "author": "jzb",
+          "description": "A few years ago, PyGObject—the Python\npackage that provides bindings for GTK and GNOME applications—was not\nfaring particularly well. Several maintainers had left the project and its\ndevelopment was not keeping pace with changes in GTK. At this year's\nGUADEC, Dan Yeaw presented a talk\nabout the project's decline, improvements in the last year, and his\nexperience getting involved in an undermaintained project.",
+          "link": "https://lwn.net/Articles/983897/",
+          "publishedOn": "2024-07-31T17:39:43.000Z",
+          "wordCount": null,
+          "title": "[$] Showing up for Python in GNOME",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/984116/",
+          "author": "jzb",
+          "description": "Version 8.0 of the Forgejo\nsoftware-development platform has been released. Notable\nchanges include the removal\nof non-free software found in the codebase, improved stability, and a\nreduction\nin \"seemingly random User Interface changes\":\nSee the release\nnotes for a full list of changes.",
+          "link": "https://lwn.net/Articles/984116/",
+          "publishedOn": "2024-07-31T15:58:08.000Z",
+          "wordCount": null,
+          "title": "Forgejo v8.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/983340/",
+          "author": "daroc",
+          "description": "A \nbootstrappable build is one that builds existing\nsoftware from scratch — for example, building GCC without relying on an existing\ncopy of GCC. In 2023, the Guix project\nannounced that the project had reduced the size\nof the binary bootstrap seed needed to build its operating system to just 357-bytes —\nnot counting the Linux kernel required to run the build process. Now, the\nlive-bootstrap project\nhas gone a step further and removed the need for an existing kernel at all.",
+          "link": "https://lwn.net/Articles/983340/",
+          "publishedOn": "2024-07-31T13:18:13.000Z",
+          "wordCount": null,
+          "title": "[$] Pulling Linux up by its bootstraps",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/984080/",
+          "author": "jzb",
+          "description": "Security updates have been issued by Fedora (xdg-desktop-portal-hyprland), Red Hat (freeradius, freeradius:3.0, git-lfs, httpd, kernel, openssh, and varnish:6), SUSE (cdi-apiserver-container, cdi-cloner-container, cdi- controller-container, cdi-importer-container, cdi-operator-container, cdi- uploadproxy-container, cdi-uploadserver-container, cont, git, gtk2, gtk3, kubevirt, virt-api-container, virt-controller-container, virt-exportproxy-container, virt-exportserver-container, virt-handler-container, virt-launcher-container, virt-libguestfs-t, orc, postgresql14, python-dnspython, python-urllib3, shadow, and xen), and Ubuntu (openjdk-17, openjdk-21, openjdk-8, openjdk-lts, and python3.10, python3.8).",
+          "link": "https://lwn.net/Articles/984080/",
+          "publishedOn": "2024-07-31T13:09:32.000Z",
+          "wordCount": null,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/983105/",
+          "author": "jake",
+          "description": "At the 2024 Linux\nStorage, Filesystem, Memory Management, and BPF Summit, John Groves led\na session on famfs, which is a filesystem he has developed that uses the\nkernel's direct-access (DAX)\nmechanism to access memory that is shareable between hosts.  The discussion\nwas aimed at whether a different approach should be taken and, in\nparticular, whether FUSE should be used instead of implementing as an\nin-kernel filesystem.  As noted in the thread about his\nproposal for an LSFMM+BPF session, and the mailing-list discussions on the first and second\nversion of his patch set, there is some skepticism that a new in-kernel\nfilesystem is warranted for the use case.",
+          "link": "https://lwn.net/Articles/983105/",
+          "publishedOn": "2024-07-30T21:28:16.000Z",
+          "wordCount": null,
+          "title": "[$] Famfs: a filesystem interface to shareable memory",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/983977/",
           "author": "jzb",
@@ -2313,46 +2453,6 @@
           "wordCount": 272,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/980312/",
-          "author": "corbet",
-          "description": "While the end of support for CentOS 7, which happened on June 30, is\nsignificant, it is also worth taking a moment to reflect on the end of\nScientific Linux 7, which has also just occurred.  Scientific Linux\nwas once a popular RHEL rebuild supported by Fermilab, CERN, DESY, and ETH\nZurich.  Development of Scientific Linux stopped with SL7, with the labs\nswitching to CentOS thereafter, but the SL7 release was supported through\nto the bitter end.  Thanks are due to all who built and supported\nScientific Linux; you provided a useful and stable platform for many years.",
-          "link": "https://lwn.net/Articles/980312/",
-          "publishedOn": "2024-07-01T21:02:46.000Z",
-          "wordCount": 380,
-          "title": "Scientific Linux 7 reaches end of life",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/979747/",
-          "author": "daroc",
-          "description": "On May 7, Kees Cook sent\n\na proposal to the linux-kernel mailing list, asking for the kernel\ndevelopers to start\nworking on a way to mitigate unintentional arithmetic overflow, which has been a\nsource of many bugs. This is not the first time Cook has made a request along\nthese lines; he sent a related patch set in\nJanuary 2024.\nSeveral core developers objected to the plan for different\nreasons. After receiving their feedback,\nCook modified his approach to tackle the problem\nin a series of smaller steps.",
-          "link": "https://lwn.net/Articles/979747/",
-          "publishedOn": "2024-07-01T13:27:04.000Z",
-          "wordCount": null,
-          "title": "[$] Arithmetic overflow mitigation in the kernel",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/980252/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (dcmtk, edk2, emacs, glibc, gunicorn, libmojolicious-perl, openssh, org-mode, pdns-recursor, tryton-client, and tryton-server), Fedora (freeipa, kitty, libreswan, mingw-gstreamer1, mingw-gstreamer1-plugins-bad-free, mingw-gstreamer1-plugins-base, mingw-gstreamer1-plugins-good, mingw-poppler, and mingw-python-urllib3), Gentoo (cpio, cryptography, GNU Emacs, Org Mode, GStreamer, GStreamer Plugins, Liferea, Pixman, SDL_ttf, SSSD, and Zsh), Oracle (pki-core), Red Hat (httpd:2.4, libreswan, and pki-core), SUSE (glib2 and kubevirt, virt-api-container, virt-controller-container, virt-exportproxy-container, virt-exportserver-container, virt-handler-container, virt-launcher-container, virt-libguestfs-t), and Ubuntu (espeak-ng, libcdio, and openssh).",
-          "link": "https://lwn.net/Articles/980252/",
-          "publishedOn": "2024-07-01T12:56:30.000Z",
-          "wordCount": null,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/980211/",
-          "author": "corbet",
-          "description": "OpenSSH 9.8 has been\nreleased, fixing an ugly vulnerability:\n\n\n\tSuccessful exploitation has been demonstrated on 32-bit Linux/glibc\n\tsystems with ASLR. Under lab conditions, the attack requires on\n\taverage 6-8 hours of continuous connections up to the maximum the\n\tserver will accept. Exploitation on 64-bit systems is believed to\n\tbe possible but has not been demonstrated at this time. It's likely\n\tthat these attacks will be improved upon.\n\n\tExploitation on non-glibc systems is conceivable but has not been\n\texamined.\n\n\nThere is a\nconfiguration workaround for systems that cannot be updated, though it\nhas its own problems.  See this Qualys\nadvisory for more details.",
-          "link": "https://lwn.net/Articles/980211/",
-          "publishedOn": "2024-07-01T12:53:18.000Z",
-          "wordCount": null,
-          "title": "Serious vulnerability fixed with OpenSSH 9.8",
-          "imageUrl": null
         }
       ]
     },
@@ -2456,7 +2556,18 @@
       "title": "null program",
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://nullprogram.com/blog/2024/07/31/",
+          "author": null,
+          "description": "I recently came across a take-home C programming test which had more depth\nand complexity than I suspect the interviewer intended. While considering\nit, I also came up with a novel, or at least unconventional, solution. The\nproblem is to deep copy a linked list where each node references a random\nlist element in addition to usual linkage — similar to LeetCode problem\n138. This reference is one of identity rather than value, which has\nmurky consequences.\n\ntypedef struct node node;\nstruct node {\n    node *next;\n    node *ref;   // arbitrary node in the list, or null\n};\n\nnode *deepcopy(node *);\n\n\nIn the copy, nodes have individual lifetimes allocated using malloc\nwhich the caller is responsible for freeing. While thickheaded, this\nis conventional, and I cannot blame the test’s designer for st…",
+          "link": "https://nullprogram.com/blog/2024/07/31/",
+          "publishedOn": "2024-07-31T18:49:57.000Z",
+          "wordCount": null,
+          "title": "Deep list copy: More than meets the eye",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Almost Secure",
@@ -2643,6 +2754,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=113137",
+          "author": "이정환",
+          "description": "디올 백 알고도 신고 안 했다. 김건희 벙커? 제2부속실로 생색내기. 쟁점과 현안. 800억 원밖에 없다. 공정위는 몰랐다. 얼마가 부족한지도 몰랐다. 더 깊게 읽기. 5박6일 필리버스터 종료, 방송4법 국회 통과. 이진숙 프로젝트 속도전. 필리버스터+거부권+재의결 부결 3종 세트. “용산이 괘씸하게 보고 있다.” 다르게 읽기. 도청‧미행 당할 거 몰랐나. 댐 만들어 기후 대응한다고? 골칫덩어리 영주댐 잊었나. 해법과 대안....\nThe post “용산이 괘씸하게 보고 있다”, 마약 수사 외압 사건 또 터진다: 슬로우레터 7월31일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/113137",
+          "publishedOn": "2024-07-30T22:27:51.000Z",
+          "wordCount": null,
+          "title": "“용산이 괘씸하게 보고 있다”, 마약 수사 외압 사건 또 터진다: 슬로우레터 7월31일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=113098",
           "author": "이정환",
@@ -3092,26 +3213,6 @@
           "wordCount": 6372,
           "title": "내 차가 급발진을 한다면? 차라리 앞 차 트렁크를 들이받자: 슬로우레터 7월3일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/07/car-2942982_1280.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=111256",
-          "author": "참여연대 의정감시센터",
-          "description": "22대 국회가 개원했습니다. 유권자의 소중한 한 표, 한 표를 읍소하며 당선된 300명의 국회의원이 과연 유권자를 위해 제대로 일하는지 지켜보고 감시해야 할 때입니다. 이들이 어떤 일을 하는지, 어떤 일을 해야 하는데 안하는지에 따라 우리의 삶이 달라지니까요. 참여연대 의정감시센터는 칼럼을 통해 유권자의 시각에서 22대 국회와 정치를 비평합니다. 무엇보다 ‘중’요한 건 ‘꺾’이지 않는 ‘정’치개혁이니까요. 이번 칼럼의 필자는 유성진(이화여자대학교 스크랜튼학부...\nThe post 민주당 당헌·당규 개정의 세 가지 문제점 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/111256",
-          "publishedOn": "2024-07-02T01:41:14.000Z",
-          "wordCount": null,
-          "title": "민주당 당헌·당규 개정의 세 가지 문제점",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=111211",
-          "author": "이정환",
-          "description": "특검법 D데이. 쟁점과 현안. 디올 백은? “대통령실에 보관 중.” 02-800-7070은 누구 번호? 김홍일 오늘 사퇴한다. 탄핵 청원 90만 명 육박, 누가 역풍을 이야기하나. 친윤 반윤 창윤 업윤 절윤. 인구전략기획부 만든다. 더 깊게 읽기. 도박? 자충수? 마크롱은 왜 그랬을까. 다르게 읽기. 누가 북한을 잃었는가. ‘사설 감옥’ 정신병원, 보호입원제가 함정. 해법과 대안. 부산의 인구 소멸 위험. 수도권...\nThe post 디올 백은 대통령실에 보관 중이었다: 슬로우레터 7월2일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/111211",
-          "publishedOn": "2024-07-01T22:10:29.000Z",
-          "wordCount": null,
-          "title": "디올 백은 대통령실에 보관 중이었다: 슬로우레터 7월2일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3120,6 +3221,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595796",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595796/%eb%b0%80%ec%96%91-%ed%91%9c%ec%b6%a9%ec%82%ac-%eb%b0%b0%eb%a1%b1%eb%82%98%eb%ac%b4",
+          "publishedOn": "2024-07-31T14:53:15.000Z",
+          "wordCount": null,
+          "title": "배롱나무 명소, 물놀이 계곡을 즐기기 좋은 밀양 표충사 베롱나무",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=595782",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595782/%ea%b0%95%eb%a6%89%ec%97%ac%ed%96%89-%ed%99%9c%eb%9e%98%ec%a0%95%ea%b3%bc-%eb%91%98%eb%a0%88%ea%b8%b8%ec%9d%b4-%ec%95%84%eb%a6%84%eb%8b%a4%ec%9b%9f%eb%8d%98-%ea%b0%95%eb%a6%89-%ec%84%a0%ea%b5%90",
+          "publishedOn": "2024-07-31T06:18:25.000Z",
+          "wordCount": null,
+          "title": "강릉여행, 활래정과 둘레길이 아름다웟던 강릉 선교장 방문기",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=595784",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595784/7-31-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
+          "publishedOn": "2024-07-31T06:04:13.000Z",
+          "wordCount": null,
+          "title": "7/31, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595747",
           "author": "happist",
@@ -3559,26 +3690,6 @@
           "wordCount": null,
           "title": "트럼프 당선 영향, 트럼프 당선 時 사회 경제적 영향 分析",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595291",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595291/7-2-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-07-02T05:20:50.000Z",
-          "wordCount": null,
-          "title": "7/2, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595289",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595289/%ed%85%8c%ec%8a%ac%eb%9d%bc-%ed%8c%90%eb%a7%a4%eb%9f%89-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2024-07-02T04:56:42.000Z",
-          "wordCount": null,
-          "title": "7/1, 로이터, 올해 테슬라 판매량 및 매출 감소 전망",
-          "imageUrl": null
         }
       ]
     },
@@ -3587,6 +3698,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79483",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 6월 5일 스프에 쓴 글입니다. 불로초를 찾으려 했던 진시황의 이야기는 다들 잘 아실 겁니다. 굳이 진시황이 아니라도 인류 역사에 이름을 남긴 권력자 가운데는 다시 젊어지려고 애쓴 사람이 많습니다. 그게 어렵다면 늙지 않는 비결을 찾아 → 더 보기",
+          "link": "https://newspeppermint.com/2024/07/30/npsp_buylongerlife/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_buylongerlife",
+          "publishedOn": "2024-07-30T22:59:07.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] ‘억만장자들만의 세상’, 이제는 대놓고 펼쳐진다",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=79736",
           "author": "NewsPeppermint",
@@ -3705,16 +3826,6 @@
           "publishedOn": "2024-07-03T22:59:59.000Z",
           "wordCount": null,
           "title": "[뉴페@스프] 드래곤볼의 ‘원기옥’처럼? 억만장자에게 세금을 걷자는 “증세 동맹” 가능할까",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79603",
-          "author": "NewsPeppermint",
-          "description": "지난주 목요일 미국 대선 첫 TV 토론이 열렸습니다. 조 바이든과 도널드 트럼프는 이례적으로 전당대회도 열리기 전인 6월에 TV 토론을 갖기로 합의했죠. 결과는 민주당에는 재앙과도 같았습니다. 조 바이든 대통령은 시종일관 말실수에 논리적으로 문장을 끝맺지 못하는 모습도 여러 차례 보이며, 81세의 고령에 대한 우려를 잠재우기는커녕 증폭시켰습니다. 민주당 내에서도 서둘러 바이든을 교체해야 한다는 목소리가 터져나왔고, 선거 때마다 민주당 지지를 표명해 온 언론들도 마찬가지였습니다. 뉴욕타임스는 아예 사설로 바이든 대통령이 재선에 도전하지 말아야 한다고 촉구했습니다. → 더 보기",
-          "link": "https://newspeppermint.com/2024/07/02/npsp_openconvention/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_openconvention",
-          "publishedOn": "2024-07-02T07:45:42.000Z",
-          "wordCount": null,
-          "title": "만약 바이든이 후보 사퇴한다면? 이렇게 진행될 겁니다",
           "imageUrl": null
         }
       ]
