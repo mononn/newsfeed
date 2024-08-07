@@ -2,10 +2,159 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-08-06T20:12:41.396Z</updated>
+    <updated>2024-08-07T20:14:54.922Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Firefox support added to Puppeteer]]></title>
+        <id>https://lwn.net/Articles/984733/</id>
+        <link href="https://lwn.net/Articles/984733/"/>
+        <updated>2024-08-07T19:20:19.000Z</updated>
+        <summary type="html"><![CDATA[Mozilla has announced that Puppeteer, a browser automation and testing library, now has first-class support for Firefox using the
+WebDriver BiDi protocol. Puppeteer can be used to drive headless browser instances, and is commonly used for automated end-to-end web site tests.
+
+
+
+Whilst the features offered by Puppeteer won't be a surprise,
+bringing support to multiple browsers has been a significant
+undertaking. The Firefox support is not based on a Firefox-specific
+automation protocol, but on WebDriver BiDi, a cross browser protocol
+that's undergoing standardization at the W3C, and currently has
+implementation in both Gecko and Chromium. This use of a
+cross-browser protocol should make it much easier to support many
+different browsers going forward.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] CRIB: checkpoint/restore in BPF]]></title>
+        <id>https://lwn.net/Articles/984313/</id>
+        <link href="https://lwn.net/Articles/984313/"/>
+        <updated>2024-08-07T15:35:18.000Z</updated>
+        <summary type="html"><![CDATA[The desire for the ability to checkpoint a process — to record its state in
+a form that can be restarted at a future time — on Linux is almost as old as
+Linux itself.  See, for example, this announcement of a checkpoint
+project that appeared in LWN in 1998.  While working solutions exist, they
+can be somewhat fragile and difficult to use; it is not surprising that
+some people are interested in finding a better alternative.  A current
+effort goes by the name CRIB,
+for Checkpoint/Restore in (naturally) BPF.  It is far from clear that CRIB
+will replace the existing solutions, but it is an interesting look at a
+different way of solving the problem.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Tracing the source of filesystem errors]]></title>
+        <id>https://lwn.net/Articles/984556/</id>
+        <link href="https://lwn.net/Articles/984556/"/>
+        <updated>2024-08-07T14:18:21.000Z</updated>
+        <summary type="html"><![CDATA[There are lots of places in the kernel where an EINVAL can be
+returned to user space, but it is often unclear what the actual underlying
+problem is because the errno
+error codes are too generic.  That is the problem that Miklos Szeredi
+wanted to discuss in a filesystem session that he led remotely at the 2024 Linux Storage,
+Filesystem, Memory Management, and BPF Summit.  He would like to help
+those who are trying to debug problems trace where in the kernel a
+particular error code is being generated.]]></summary>
+        <author>
+            <name>jake</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 3.12.5 released]]></title>
+        <id>https://pythoninsider.blogspot.com/2024/08/python-3125-released.html</id>
+        <link href="https://pythoninsider.blogspot.com/2024/08/python-3125-released.html"/>
+        <updated>2024-08-07T13:17:00.001Z</updated>
+        <summary type="html"><![CDATA[I'm pleased to announce the release of Python 3.12.5:
+https://www.python.org/downloads/release/python-3125/
+
+ 
+This is the fifth maintenance release of Python 3.12
+Python 3.12 is the newest major release of the Python programming 
+language, and it contains many new features and optimizations. 3.12.5 is
+ the latest maintenance release, containing more than 250 bugfixes, 
+build improvements and documentation changes since 3.12.4.
+This version of Python 3.12 also comes with pip 24.2 by default. However,
+ due to an incompatibility with older macOS versions, macOS 10.9 through
+ 10.12 will downgrade their version of pip to 24.1.2 during the 
+installation process (in the Install Certificates step). See the installer ReadMe and the pip issue on the matter
+ for more information. Versions of macOS o…]]></summary>
+        <author>
+            <name>Python Insider</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/984702/</id>
+        <link href="https://lwn.net/Articles/984702/"/>
+        <updated>2024-08-07T13:14:08.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (firefox-esr, openjdk-17, and wpa), Gentoo (aiohttp, Bitcoin, Cairo, Go, json-c, Levenshtein, libXpm, nghttp2, PostgreSQL, and Redis), Red Hat (kernel, kernel-rt, python-setuptools, python-urllib3, python3.11-setuptools, and wget), Slackware (mozilla), SUSE (bind, curl, docker, ffmpeg, ffmpeg-4, kernel, kernel-firmware, libnbd, patch, shadow, and thunderbird), and Ubuntu (python-django and wpa).]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is GPU programming]]></title>
+        <id>f773cd03-dec8-4c51-bffd-04599a174f03</id>
+        <link href="https://developers.redhat.com/articles/2024/08/07/what-gpu-programming"/>
+        <updated>2024-08-07T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome! This guide will help you get started with general purpose graphics processing unit (GPU) programming, otherwise known as GPGPU. It is intended to:
+
+Teach you the basics of parallel GPU programming, such as the SIMD model.
+Walk you through some key algorithms, such as scan/prefix sum, quicksort, and game of life.
+Show you working examples of code from OpenAI’s Triton, CUDA, OpenCL, torch.compile, Numba, and HIP/HCC.
+Help you determine which framework to use, and go over any common pitfalls.
+
+This guide focuses more on the algorithms and architecture, with a heavy emphasis on how to effectively use the computational model. In my personal experience, I found GPU programming to be a fascinating concept, although many of the existing resources seemed to be focused primarily on system-l…]]></summary>
+        <author>
+            <name>Kenny Ge</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[사람을 귀하게 여겨야 하는 이유]]></title>
+        <id>http://subokim.wordpress.com/?p=13437</id>
+        <link href="https://subokim.wordpress.com/2024/08/07/why-value-developer/"/>
+        <updated>2024-08-07T03:41:49.000Z</updated>
+        <summary type="html"><![CDATA[자기 꿈이 있는 사람은 사람을 귀하게 여깁니다.누가 언제 어떻게 나를 도와줄지 모르기 때문입니다.이렇게 도와달라고 말을 합니다. 자기 꿈에 도취된 사람은 사람을 허투루 여깁니다.내 꿈을 위해 희생시킬 사람이 필요하거든요.이렇게 하라고 부추깁니다. 전자는 옆에 있는 사람이 자꾸 불어납니다.후자는 옆에 있는 사람이 자꾸 사라지죠. 전자는 자꾸 자기 실력을 기릅니다.일은 자기가 하는 거고, 다른 사람은 나를 도와줄 뿐이니까요. 후자는... Continue Reading →]]></summary>
+        <author>
+            <name>subokim</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] ‘인구소멸’ 한국을 위해 할 수 있는 일]]></title>
+        <id>https://newspeppermint.com/?p=79516</id>
+        <link href="https://newspeppermint.com/2024/08/06/npsp_aging/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_aging"/>
+        <updated>2024-08-06T22:59:31.000Z</updated>
+        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 6월 14일 스프에 쓴 글입니다. 대한민국 모든 시·도의 고령 인구 비중이 7%를 넘어서면서 본격적인 고령화 사회에 진입했다는 뉴스가 나온 게 어느덧 13년 전의 일입니다. 이후 한국 사회의 인구 구조가 어떻게 바뀌었는지는 모두 아실 겁니다. 통계를 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[사도광산 외교 참사, 알고도 속고 국민들도 속였다: 슬로우레터 8월7일.]]></title>
+        <id>https://slownews.kr/?p=113610</id>
+        <link href="https://slownews.kr/113610"/>
+        <updated>2024-08-06T22:19:01.000Z</updated>
+        <summary type="html"><![CDATA[“강제 동원 명시” 요구했다가 거절당했다. 외교를 포기하고 외교를 했다는 거짓말. 코스피 하루 만에 반등. 알고리즘 매매가 변동성 키웠다. 쟁점과 현안. 원전 3기만큼 전력 수요 늘었다. 독립기념관장도 뉴라이트. 더 깊게 읽기. 영향력 1위면서 불신하는 언론사 1위는? 한국판 셔먼법 가능할까. 해리스 러닝메이트는 팀 월즈. 다르게 읽기. 1억 전기차에 왜 중국 배터리 넣었을까. 전기차는 주차장 출입 금지? 자살이...
+The post 사도광산 외교 참사, 알고도 속고 국민들도 속였다: 슬로우레터 8월7일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to find job for Rescue Rangers: analyzing Godot Engine]]></title>
+        <id>https://pvs-studio.com/en/blog/posts/cpp/1150/</id>
+        <link href="https://pvs-studio.com/en/blog/posts/cpp/1150/"/>
+        <updated>2024-08-06T21:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Developing and playing games can be an incredibly engaging, addictive, and satisfying activity. But nothing spoils the gameplay experience like a tricky hidden bug. So, today we'll be looking at an...]]></summary>
+        <author>
+            <name>from pvs-studio.com</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[7 lessons every developer should learn from CrowdStrike’s Doomsday update]]></title>
         <id>https://www.embedded.com/?p=4490592</id>
@@ -4182,156 +4331,6 @@ at least).  "All powerpc and arm64 users of the 6.6 kernel series must
 upgrade.  Everyone else probably should as well to be safe."]]></summary>
         <author>
             <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[뉴진스 하니 푸른산호초 그리고 러브레터]]></title>
-        <id>https://happist.com/?p=595457</id>
-        <link href="https://happist.com/595457/%eb%89%b4%ec%a7%84%ec%8a%a4-%ed%95%98%eb%8b%88-%ed%91%b8%eb%a5%b8%ec%82%b0%ed%98%b8%ec%b4%88%ec%99%80-%eb%9f%ac%eb%b8%8c%eb%a0%88%ed%84%b0"/>
-        <updated>2024-07-09T08:12:57.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Deploying SQL Server on Linux using an Ansible playbook]]></title>
-        <id>78b261d7-71f7-48bc-a468-395bf429e3b6</id>
-        <link href="https://developers.redhat.com/articles/2024/07/09/deploying-sql-server-linux-using-ansible-playbook"/>
-        <updated>2024-07-09T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Why deploy SQL Server on Linux using an Ansible playbook? The answer is that automation is a key aspect of modern IT operations, which is why we at Red Hat are delighted to announce that the deployment and configuration of Microsoft SQL Server on Red Hat Enterprise Linux (RHEL) can be easily automated using Ansible and corresponding RHEL system roles for SQL Server. You can deploy high availability (HA) solutions, including configuring Always On availability groups. Ansible scripts can automate the entire deployment process, reducing manual intervention and minimizing errors.
-Sounds good—what do I need to do?
-First off, you’ll need an Azure subscription to get this set up. If you don't have an Azure subscription, you can easily create a free account here. You will also need to create a new…]]></summary>
-        <author>
-            <name>Vivien Wang, Arne Arnold</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Get started with the OpenShift Cluster Observability Operator]]></title>
-        <id>61bd0b74-7f73-4d35-ace0-4ba4a0782e25</id>
-        <link href="https://developers.redhat.com/articles/2024/07/09/get-started-openshift-cluster-observability-operator"/>
-        <updated>2024-07-09T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[There are cases in which a Red Hat OpenShift team supporting a central monitoring stack can struggle to fulfill application teams' requests or demands for Prometheus metrics and configuration changes. For instance:
-
-One department would like metrics retention for a period of 3 months whereas another department requested metrics retention for 6 months.
-One department requested remote_writes to an external server for metrics matching one pattern and to a different server for metrics matching another pattern. This group changes their requirements every few weeks.
-One department uses a Prometheus exporter to dump all their data to Prometheus for easy viewing in Grafana and is overloading the Prometheus server causing it to use many G-bytes of RAM which results in poor Prometheus query response…]]></summary>
-        <author>
-            <name>Michael Greenberg</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[파이퍼샌들러가 S&P 500 전망치 제시를 포기한 이유]]></title>
-        <id>https://happist.com/?p=595451</id>
-        <link href="https://happist.com/595451/%ed%8c%8c%ec%9d%b4%ed%8d%bc-%ec%83%8c%eb%93%a4%eb%9f%ac-sp-500-%ec%a0%84%eb%a7%9d%ec%b9%98"/>
-        <updated>2024-07-09T06:38:17.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Esfahbod: State of Text Rendering 2024]]></title>
-        <id>https://lwn.net/Articles/981178/</id>
-        <link href="https://lwn.net/Articles/981178/"/>
-        <updated>2024-07-09T03:48:57.000Z</updated>
-        <summary type="html"><![CDATA[On his blog, Behdad Esfahbod has published a lengthy and detailed look at the state of open-source text rendering.  It looks at the libraries available, application support, future directions, and gives a summary analysis of the ecosystem. 
-
-
-In broad strokes, OpenType added support for color fonts, variable fonts, and the Universal Shaping Engine. The Free & Open Source stack supports all of these advances at the lower level, but application UI support has been slower to arrive. The Open Source text stack also gained enormous market-share when Android and Google Chrome fully embraced it.
-
-Looking forward, there is a Rust migration of the text stack underway, which will unify font compilation and consumption under a safe programming language. Incremental Font Transfer will enable streaming fonts to web browsers. And my proposed Wasm-fonts will enable more expressive fonts.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[엔비디아주가, AI 반도체 시장규모는 얼마나 큰가요?]]></title>
-        <id>https://happist.com/?p=595443</id>
-        <link href="https://happist.com/595443/ai-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%8b%9c%ec%9e%a5%ea%b7%9c%eb%aa%a8"/>
-        <updated>2024-07-09T03:31:52.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[7/9, UBS, 엔비디아 블랙웰 수요 견조 → 목표주가 150달러로 상향 조정]]></title>
-        <id>https://happist.com/?p=595435</id>
-        <link href="https://happist.com/595435/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%b8%94%eb%9e%99%ec%9b%b0-%ec%88%98%ec%9a%94-%ea%b2%ac%ec%a1%b0"/>
-        <updated>2024-07-09T01:45:59.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[7/9, 월가의 투자의견 및 주가 전망 보고서]]></title>
-        <id>https://happist.com/?p=595426</id>
-        <link href="https://happist.com/595426/7-9-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac"/>
-        <updated>2024-07-09T00:54:27.000Z</updated>
-        <author>
-            <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[임성근 무혐의? 윤석열의 외압이란 본질은 달라진 게 없다: 슬로우레터 7월9일.]]></title>
-        <id>https://slownews.kr/?p=111553</id>
-        <link href="https://slownews.kr/111553"/>
-        <updated>2024-07-08T22:11:47.000Z</updated>
-        <summary type="html"><![CDATA[김건희 메시지가 공개됐다. 국민의힘이 빠진 ‘읽씹’ 함정. 윤석열이냐 한동훈이냐. 윤석열 탄핵 청원 청문회, 김건희도 부를까. 쟁점과 현안. 임성근 무혐의? 특검 가야 할 이유. 이첩은 잘못된 게 없다. 민주당 최고위원 후보는 모두 친명. 더 깊게 읽기. 선명성과 팬덤의 상관관계. 이재명 위증교사 재판 9월30일 결심. 다시 집값이 뛴다. 미복귀 전공의 처벌하지 않는다. 다르게 읽기. 이참에 파견법 완화하자고?...
-The post 임성근 무혐의? 윤석열의 외압이란 본질은 달라진 게 없다: 슬로우레터 7월9일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Giving bootloaders the boot with nmbl]]></title>
-        <id>https://lwn.net/Articles/979789/</id>
-        <link href="https://lwn.net/Articles/979789/"/>
-        <updated>2024-07-08T18:10:09.000Z</updated>
-        <summary type="html"><![CDATA[At DevConf.cz 2024,
-Marta Lewandowska gave a talk to discuss a
-new approach for booting Linux systems, "No more boot
-loader: Please use the kernel instead". The talk, available on
-YouTube, introduced a new project called nmbl (for "no more bootloader",
-pronounced "nimble"). The idea is to get rid of bootloaders (e.g., 
-GNU GRUB) with a
-Unified
-Kernel Image (UKI) that removes the need for a separate bootloader
-altogether. It is early days for nmbl, currently the project is only
-being tested for use with virtual machines, but the idea is
-compelling. If successful, nmbl could offer security, performance, and
-maintenance benefits compared to GRUB and other separate bootloaders.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GDB 15.1 released]]></title>
-        <id>https://lwn.net/Articles/981080/</id>
-        <link href="https://lwn.net/Articles/981080/"/>
-        <updated>2024-07-08T14:35:25.000Z</updated>
-        <summary type="html"><![CDATA[Version 15.1 of the GNU debugger has been released.  Changes include a
-number of enhancements to GDB's Python support, some Debugger Adapter
-Protocol additions, some new GDBserver options, and more.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/981119/</id>
-        <link href="https://lwn.net/Articles/981119/"/>
-        <updated>2024-07-08T14:09:40.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by AlmaLinux (openssh), Debian (krb5), Fedora (yt-dlp), Gentoo (firefox, KDE Plasma Workspaces, Stellarium, thunderbird, and X.Org X11 library), Mageia (python-js2py and znc), Oracle (389-ds, c-ares, container-tools, cups, go-toolset, httpd:2.4/httpd, iperf3, kernel, less, libreoffice, libuv, nghttp2, openldap, openssh, python-idna, python-jinja2, python-pillow, python3, python3.11-PyMySQL, and xmlrpc-c), Red Hat (kernel, kernel-rt, openssh, and virt:rhel and virt-devel:rhel modules), and SUSE (go1.21, go1.22, krb5, kubevirt, virt-api-container, virt-controller-container, virt-exportproxy-container, virt-exportserver-container, virt-handler-container, virt-launcher-container, virt-libguestfs-t, netty3, opera, and python-urllib3).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[You Don't Know Jack about Bandwidth]]></title>
-        <id>3674953</id>
-        <link href="http://queue.acm.org/detail.cfm?ref=rss&amp;id=3674953"/>
-        <updated>2024-07-08T13:35:25.000Z</updated>
-        <author>
-            <name>ACM Queue - All Queue Content</name>
         </author>
     </entry>
     <entry>
