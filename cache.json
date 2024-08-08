@@ -162,6 +162,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "928f76cf-1c65-4c3e-8c9f-097b04ddfabf",
+          "author": "Guinevere Larsen",
+          "description": "Time traveling is an extremely useful tool for developers that found a bug in their code. Beyond wanting to travel to a future where the bug is fixed, developers will usually try to slow down time with a debugger, so they can examine where things go wrong. But what if even with a debugger, it is still too late and the bug has already happened? Wouldn’t it be nice to be able to go back in time and see it happening in real time?\nLet’s talk about time travel debugging. In this post, I’ll go over the following commands:\n\nrecord\nrecord stop\nrecord save\nrecord full restore\nreverse-next (rn)\nreverse-step (rs)\nset exec-direction\nreverse-continue (rc)\n\nAs a final note, there are many implementations on many different debuggers, but this post will be focusing on GNU Debugger’s (GDB) record-full impl…",
+          "link": "https://developers.redhat.com/articles/2024/08/08/using-gdb-time-travel",
+          "publishedOn": "2024-08-08T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Using GDB to time travel",
+          "imageUrl": null
+        },
+        {
+          "id": "c2913360-d3d6-403e-9695-1b5b0ed59b57",
+          "author": "Justin Kulikauskas",
+          "description": "We introduced OperatorPolicy as a tech preview feature in Red Hat Advanced Cluster Management for Kubernetes (RHACM) version 2.10 to improve the management of Kubernetes-native applications packaged with the Operator Lifecycle Manager (OLM) across a fleet of clusters. With the RHACM 2.11 release, this feature is now ready for you to try, with improvements in the following scenarios:\n\nGetting started: you have fewer required fields, lowering your barrier to entry.\nControlling upgrades: an initial installation is treated separately from later upgrades, and you can have either restricted to specific versions of the operator.\nAlert control: you can configure which situations are considered as violations, or are just informational for your specific needs.\nUninstallation: you have new tools to a…",
+          "link": "https://developers.redhat.com/articles/2024/08/08/getting-started-operatorpolicy",
+          "publishedOn": "2024-08-08T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Getting started with OperatorPolicy",
+          "imageUrl": null
+        },
+        {
           "id": "f773cd03-dec8-4c51-bffd-04599a174f03",
           "author": "Kenny Ge",
           "description": "Welcome! This guide will help you get started with general purpose graphics processing unit (GPU) programming, otherwise known as GPGPU. It is intended to:\n\nTeach you the basics of parallel GPU programming, such as the SIMD model.\nWalk you through some key algorithms, such as scan/prefix sum, quicksort, and game of life.\nShow you working examples of code from OpenAI’s Triton, CUDA, OpenCL, torch.compile, Numba, and HIP/HCC.\nHelp you determine which framework to use, and go over any common pitfalls.\n\nThis guide focuses more on the algorithms and architecture, with a heavy emphasis on how to effectively use the computational model. In my personal experience, I found GPU programming to be a fascinating concept, although many of the existing resources seemed to be focused primarily on system-l…",
@@ -510,26 +530,6 @@
           "wordCount": null,
           "title": "MySQL replication between VMs in OpenShift through external network",
           "imageUrl": null
-        },
-        {
-          "id": "b13a3bfc-c066-4de8-8ede-539b128626a0",
-          "author": "Vanessa Martini, Jose Gomez-Selles",
-          "description": "With the latest Cluster Observability Operator 0.3.0 release, you can deploy a brand new Traces UI plug-in as part of the Red Hat OpenShift Container Platform web console experience. This is a great step forward as we continue to work on our mission to provide Observability as one. After releasing a Metrics UI and Logs UI, we enhance the overall Observability journey for our OpenShift users by providing the opportunity to visualize the third pillar of Observability: distributed tracing. This is a Developer Preview feature, as additional enhancements are currently being worked on. \nThe OpenShift distributed tracing platform is evolving. A few months back, we announced general availability of Tempo as part of the distributed tracing platform 3.0 release. While making this change, we decided …",
-          "link": "https://developers.redhat.com/articles/2024/07/10/introducing-new-traces-ui-red-hat-openshift-web-console",
-          "publishedOn": "2024-07-10T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Introducing the new Traces UI in the Red Hat OpenShift Web Console",
-          "imageUrl": null
-        },
-        {
-          "id": "ecff2cce-0242-4d44-a34f-12bd303cb80a",
-          "author": "Vanessa Martini, Alan Conway",
-          "description": "Observability signal correlation for Red Hat OpenShift has exponentially evolved over the past few months. A developer preview was made available to OpenShift users in December 2023 as part of the Logging 5.8 release. But since then, our team has worked to provide you with a series of great new features!\nObservability signal correlation for Red Hat OpenShift continues to be powered by Korrel8r—an open source observability project founded within Red Hat—aimed at providing a set of rules for easily correlating metrics, logs, alerts, and additional observability signals across different data stores. Key enhancements include 1) expanded signal support, as you can now correlate netflows, 2) brand new troubleshooting panel in the OpenShift web console that simplifies the overall observability si…",
-          "link": "https://developers.redhat.com/articles/2024/07/10/improved-observability-signal-correlation-red-hat-openshift",
-          "publishedOn": "2024-07-10T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Improved observability signal correlation for Red Hat OpenShift",
-          "imageUrl": null
         }
       ]
     },
@@ -562,16 +562,6 @@
           "publishedOn": "2024-07-24T01:55:00.000Z",
           "wordCount": null,
           "title": "Notes on Taylor and Maclaurin series",
-          "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2024/asking-an-llm-to-build-a-simple-web-tool/",
-          "author": null,
-          "description": "<p>I've been really enjoying following <a class=\"reference external\" href=\"https://simonwillison.net/\">Simon Willison's blog posts</a> recently. Simon shows other\nprogrammers the way LLMs will be used for code assistance in the future, and\nposts full interactions with LLMs to build small tools or parts of larger\napplications.</p>\n<p>A <a class=\"reference external\" href=\"https://simonwillison.net/2024/Jul/8/box-shadow-css-generator/\">recent post</a>\ncaught my attention; here Simon got …</p>",
-          "link": "https://eli.thegreenplace.net/2024/asking-an-llm-to-build-a-simple-web-tool/",
-          "publishedOn": "2024-07-10T03:09:00.000Z",
-          "wordCount": null,
-          "title": "Asking an LLM to build a simple web tool",
           "imageUrl": null
         }
       ]
@@ -807,36 +797,6 @@
           "wordCount": null,
           "title": "Continuous observability for debugging RTOS-based firmware",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4482729",
-          "author": "Jacob Beningo",
-          "description": "If you use look-up tables (LUTs) strategically, you’ll find that your code will be more configurable and scalable, which might help you write higher-quality software...\nThe post Use LUTs to ease your development burden appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/use-luts-to-ease-your-development-burden/",
-          "publishedOn": "2024-07-09T15:46:12.000Z",
-          "wordCount": null,
-          "title": "Use LUTs to ease your development burden",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4482726",
-          "author": "Sanjay Murthi",
-          "description": "Emerging embedded technologies can simplify how companies approach the maintenance of smart manufacturing systems. The implementation of autonomous systems across industries is taking shape, placing...\nThe post Emerging technologies address smart factory maintenance challenges appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/emerging-technologies-address-smart-factory-maintenance-challenges/",
-          "publishedOn": "2024-07-09T15:26:20.000Z",
-          "wordCount": null,
-          "title": "Emerging technologies address smart factory maintenance challenges",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4482723",
-          "author": "Dustin Seetoo",
-          "description": "One multinational intelligent transport systems company is leveraging the potential of modular industrial edge computing to enhance multi-lane free-flow toll solutions essential for traffic safety....\nThe post How rugged edge computing drives better transportation options appeared first on Embedded.com.",
-          "link": "https://www.embedded.com/how-rugged-edge-computing-drives-better-transportation-options/",
-          "publishedOn": "2024-07-09T14:55:05.000Z",
-          "wordCount": null,
-          "title": "How rugged edge computing drives better transportation options",
-          "imageUrl": null
         }
       ]
     },
@@ -845,6 +805,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1688.php",
+          "author": null,
+          "description": "Like most people nowadays, I have a selection of electronic devices that have become part of the fabric of my life. I have certain expectations: I want a device to do what it is supposed to do. I want it to be easy to use. I am after reliability. I want it to consume the minimum amount of power – either to conserve battery life or to simply be environmentally friendly. Lastly, I want the...",
+          "link": "https://www.embeddedrelated.com/showarticle/1688.php",
+          "publishedOn": "2024-08-08T06:49:41.000Z",
+          "wordCount": null,
+          "title": "Stand-by or boot-up",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1685.php",
           "author": null,
@@ -904,6 +874,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/how-we-built-purrfect-code/",
+          "author": null,
+          "description": "Purrfect Code is a sokoban style box pushing puzzler Purrfect based on Google tech (Flutter, IDX, FLAME, Firebase) and designed to be playable on web browsers. Open the game in Project IDX, earn badges for each level, and showcase your badges on your Developer Profile.",
+          "link": "https://developers.googleblog.com/en/how-we-built-purrfect-code/",
+          "publishedOn": "2024-08-08T20:15:27.158Z",
+          "wordCount": null,
+          "title": "How We Built Purrfect Code: A Puzzle Game for Developers",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/",
+          "author": null,
+          "description": "Gemini 1.5 Flash is now available to developers at more than 70% lower prices. Set up billing for Gemini API in Google AI Studio and access other new features like 1.5 Flash tuning.",
+          "link": "https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/",
+          "publishedOn": "2024-08-08T20:15:27.157Z",
+          "wordCount": null,
+          "title": "Gemini 1.5 Flash price drop with tuning rollout complete, and more",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/introducing-the-google-developer-program/",
           "author": null,
@@ -1123,16 +1113,6 @@
           "wordCount": null,
           "title": "3 fun Gemma project ideas",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/get-started-with-gemma-on-ray-on-vertex-ai/",
-          "author": null,
-          "description": "Use Gemma Supervised tuning on Ray on Vertex AI to train and serve machine learning models efficiently and effectively.",
-          "link": "https://developers.googleblog.com/en/get-started-with-gemma-on-ray-on-vertex-ai/",
-          "publishedOn": "2024-07-09T20:14:41.518Z",
-          "wordCount": null,
-          "title": "Get started with Gemma on Ray on Vertex AI",
-          "imageUrl": null
         }
       ]
     },
@@ -1306,6 +1286,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/july-2024-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nJuly.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/july-2024-roundup",
+          "publishedOn": "2024-08-08T00:00:00.000Z",
+          "wordCount": 920,
+          "title": "What we've been reading in July (2024)",
+          "imageUrl": "https://interrupt.memfault.com/img/interrupt-cover-1200px.png"
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/github-actions-for-stm32cubeide",
           "author": null,
           "description": "In this article, we will explore how to use GitHub Actions to automate building\nSTM32CubeIDE projects. Eclipse-based IDEs like STM32CubeIDE are often used for\ndeveloping embedded systems but can be a little tricky to build in a headless\nenvironment.\nContinue reading…",
@@ -1382,6 +1372,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/984838/",
+          "author": "corbet",
+          "description": "The Oligo Security blog discloses\na web-browser vulnerability that has been named \"0.0.0.0 day\".  In short,\nbrowsers will allow JavaScript code to open connections to the all-zeroes\nIPv4 address; the result is that any port that is open on the local host\ncan be accessed by a remote site.  \"When services use localhost, they\nassume a constrained environment. This assumption, which can (as in the\ncase of this vulnerability) be faulty, results in insecure server\nimplementations.\"",
+          "link": "https://lwn.net/Articles/984838/",
+          "publishedOn": "2024-08-08T17:15:20.000Z",
+          "wordCount": null,
+          "title": "0.0.0.0 Day: Exploiting Localhost APIs From the Browser (Oligo Security)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/984086/",
+          "author": "daroc",
+          "description": "Endless OS is a Linux distribution with a focus on improving access to\neducational tools by providing a simple-to-manage, full-featured desktop for\neducators and students — one that works offline, with minimal maintenance. The\ndistribution also aims to be suitable for older devices, in order to promote access to\ncomputers by ensuring those systems remain usable.\nIn pursuit of those goals, it makes some unusual technical\nchoices. But what makes the distribution really shine is its curated collection\nof software and educational resources.",
+          "link": "https://lwn.net/Articles/984086/",
+          "publishedOn": "2024-08-08T13:56:26.000Z",
+          "wordCount": null,
+          "title": "[$] Endless OS aimed at educational and offline environments",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/984807/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (freeradius and freeradius:3.0), Debian (chromium, odoo, and roundcube), Fedora (microcode_ctl, mingw-qt5-qtbase, mingw-qt6-qtbase, opentofu, orc, python-setuptools, and vim), Gentoo (Nokogiri), Oracle (kernel), Red Hat (go-toolset:rhel8, golang, kernel, krb5, libtiff, python-setuptools, and python39:3.9 and python39-devel:3.9), SUSE (python-Django), and Ubuntu (krb5).",
+          "link": "https://lwn.net/Articles/984807/",
+          "publishedOn": "2024-08-08T13:51:35.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/984216/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for August 8, 2024 is available.",
+          "link": "https://lwn.net/Articles/984216/",
+          "publishedOn": "2024-08-08T01:37:30.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for August 8, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/984733/",
           "author": "daroc",
@@ -2361,66 +2391,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/980558/",
-          "author": "jake",
-          "description": "There are a number of kernel filesystems that store their directory entries\ndirectly in the directory-entry cache (dcache) without having any permanent\nstorage for those objects. It started out as a \"neat hack\" for ramfs,\nAl Viro said, at the start of his filesystem-track session at\nthe\n2024 Linux Storage,\nFilesystem, Memory Management, and BPF Summit.  Unfortunately, as the use\nof this technique has grown into other filesystems, there has been a lot of\nscope creep that has gotten out of control.  He wanted to discuss some new\ninfrastructure that he is working on to try to clean some of that up.",
-          "link": "https://lwn.net/Articles/980558/",
-          "publishedOn": "2024-07-09T21:17:35.000Z",
-          "wordCount": null,
-          "title": "[$] A new API for tree-in-dcache filesystems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/981334/",
-          "author": "corbet",
-          "description": "Version\n128.0 of the Firefox browser has been released.  Changes this time\ninclude the ability to translate highlighted phrases from the context menu,\ndisplay of recent searches on opening the address bar (US/Canada only), a\nstreamlined dialog for clearing user data, and more.",
-          "link": "https://lwn.net/Articles/981334/",
-          "publishedOn": "2024-07-09T15:54:07.000Z",
-          "wordCount": null,
-          "title": "Firefox 128.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/980430/",
-          "author": "daroc",
-          "description": "The\n\nPSP security protocol (PSP) is a way to transparently encrypt packets by\nefficiently offloading encryption and decryption to the network\ninterface cards (NICs) that Google uses for connections inside its data centers. The\nprotocol is similar to\n\nIPsec, in that it allows for wrapping arbitrary traffic\nin a layer of encryption. The difference is that PSP is encapsulated in UDP, and\ndesigned from the beginning to reduce the amount of state that NICs\nhave to track in order to send and receive encrypted traffic, allowing for more\nsimultaneous connections. Jakub Kicinski\n\nwants to add support for the protocol to the Linux kernel.",
-          "link": "https://lwn.net/Articles/980430/",
-          "publishedOn": "2024-07-09T14:18:50.000Z",
-          "wordCount": null,
-          "title": "[$] Offload-friendly network encryption in the kernel",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/981287/",
-          "author": "corbet",
-          "description": "Alexander \"Solar Designer\" Peslyak has disclosed another OpenSSH\nvulnerability that can be exploited for remote code execution, but only\non distributions that have applied a patch to add auditing support.\nSpecifically, RHEL 9 and derivatives are affected, as are\nFedora 36 and 37 (but not later releases).\n\n\n\tThe main difference from CVE-2024-6387 is that the race condition\n\tand RCE potential are triggered in the privsep child process, which\n\truns with reduced privileges compared to the parent server process.\n\tSo immediate impact is lower.  However, there may be differences in\n\texploitability of these vulnerabilities in a particular scenario,\n\twhich could make either one of these a more attractive choice for\n\tan attacker, and if only one of these is fixed or mitigated then\n\tthe other becomes more relevant.",
-          "link": "https://lwn.net/Articles/981287/",
-          "publishedOn": "2024-07-09T13:36:19.000Z",
-          "wordCount": null,
-          "title": "Another OpenSSH remote code execution vulnerability",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/981285/",
-          "author": "corbet",
-          "description": "Security updates have been issued by AlmaLinux (virt:rhel and virt-devel:rhel), Fedora (ghostscript, golang, httpd, libnbd, netatalk, rust-sequoia-chameleon-gnupg, rust-sequoia-gpg-agent, rust-sequoia-keystore, rust-sequoia-openpgp, and rust-sequoia-sq), Mageia (apache), Red Hat (booth, buildah, edk2, fence-agents, git, gvisor-tap-vsock, kernel, kernel-rt, less, libreswan, linux-firmware, openssh, pki-core, podman, postgresql-jdbc, python3, tpm2-tss, virt:rhel, and virt:rhel and virt-devel:rhel modules), SUSE (krb5, poppler, and python-docker), and Ubuntu (apache2, cinder, glance, nova, and Tomcat).",
-          "link": "https://lwn.net/Articles/981285/",
-          "publishedOn": "2024-07-09T13:01:03.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/981256/",
-          "author": "corbet",
-          "description": "The 6.6.38 stable kernel update has been\nreleased, without the benefit of the usual review process.  It reverts some\nBPF changes with patches that do not appear in the mainline (in this form,\nat least).  \"All powerpc and arm64 users of the 6.6 kernel series must\nupgrade.  Everyone else probably should as well to be safe.\"",
-          "link": "https://lwn.net/Articles/981256/",
-          "publishedOn": "2024-07-09T12:58:21.000Z",
-          "wordCount": null,
-          "title": "Stable kernel update 6.6.38",
-          "imageUrl": null
         }
       ]
     },
@@ -2753,6 +2723,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=113733",
+          "author": "이정환",
+          "description": "“얼마나 잘하나 보자.” 윤석열의 꿀 휴가. 쟁점과 현안. “다시는 사과하지 않겠다.” “친일을 넘어 숭일.” 통신 조회도 영장 받아야 한다. 다르게 읽기. 한국 주식 시장은 왜 찔끔 올랐을까. 일본은 “당분간 금리 인상 없다.” 세 번째 채 상병 특검법 발의. 더 깊게 읽기. 월즈와 밴스, 중간이 없다. “걔들 좀 이상하지 않아요?” 해리스-트럼프 초접전 양상. 해법과 대안. 가입...\nThe post “한동훈은 바보 아니면 사기꾼, 자기 돈이어도 그랬을까”: 슬로우레터 8월8일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/113733",
+          "publishedOn": "2024-08-07T22:12:03.000Z",
+          "wordCount": 6537,
+          "title": "“한동훈은 바보 아니면 사기꾼, 자기 돈이어도 그랬을까”: 슬로우레터 8월8일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/08/11_CJK_9907.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=113610",
           "author": "이정환",
@@ -3211,26 +3191,6 @@
           "publishedOn": "2024-07-10T22:17:20.000Z",
           "wordCount": null,
           "title": "윤석열을 상습적인 거짓말쟁이로 만든 건 질문 없는 언론: 슬로우레터 7월11일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=111636",
-          "author": "이정환",
-          "description": "부산이 광역시 가운데 처음으로 소멸 위험 단계에 진입했다. 부산에는 노인과 바다밖에 없다는 말이 나올 정도다. 부산은 서울 다음으로 큰 도시지만 가까운 미래에 인천에 따라잡힐 가능성이 크다. 지난해 기준으로 부산은 328만 명, 인천은 301만 명이다. 이게 왜 중요한가. ‘지역 소멸’의 개념 정의. ‘소멸 위험’은 광역시 가운데 처음. 합계 출산율 0.72. 부산이 특히 더 심각한 이유. 여성...\nThe post 부산에 먼저 도착한 인구 소멸, 20대 여성이 탈출하는 이유를 봐야 한다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/111636",
-          "publishedOn": "2024-07-10T05:02:07.000Z",
-          "wordCount": null,
-          "title": "부산에 먼저 도착한 인구 소멸, 20대 여성이 탈출하는 이유를 봐야 한다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=111594",
-          "author": "이정환",
-          "description": "“VIP에게 내가 이야기하겠다.” 증거가 수두룩하다. 쟁점과 현안. 채 상병 특검법 또 거부권 행사. 거부권 행사로 끝 아니다. 김건희와 최은순, 국회 온다. “다 공개하면 정부가 위험해진다.” “둘 다 이해 안 된다.” “다 망했다.” 더 깊게 읽기. 문재인에게 있고 윤석열에게 없는 것. “지금 그럴 때가 아니다.” 가장 약한 곳을 때렸다. 다르게 읽기. 잘 해야 할 것과 하지...\nThe post 윤석열이 임성근을 싸고 돌았던 이유, 결국 김건희가 연결고리였다: 슬로우레터 7월10일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/111594",
-          "publishedOn": "2024-07-09T22:11:35.000Z",
-          "wordCount": null,
-          "title": "윤석열이 임성근을 싸고 돌았던 이유, 결국 김건희가 연결고리였다: 슬로우레터 7월10일.",
           "imageUrl": null
         }
       ]
