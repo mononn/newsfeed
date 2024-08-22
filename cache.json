@@ -161,6 +161,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "9238ff3b-7314-45b2-9436-902d19ef618a",
+          "author": "Kenny Ge",
+          "description": "Using the algorithm for prefix sum/scan, covered in the previous module, we’re going to now write an algorithm for quicksort.\nThis is part 3 of a 4-part series. Catch up on the previous articles:\n\nWhat is GPU programming\n\nYour first GPU algorithm: Scan/prefix sum\n\nThe quicksort algorithm\nThe reason we’re doing quicksort, rather than something like merge sort, is that it’s very easy to parallelize– once you partition the array, each partition can be sorted completely independently. Plus, it is efficient in the average case, especially if you use randomness to select your pivot. \nRecall that the pseudocode for quicksort is as follows:\ndef quicksort(array, BLOCK_SIZE):\n\tp = randomly select pivot from array\n\tlet below_arr = global, reused array that stores the number of items in each block les…",
+          "link": "https://developers.redhat.com/articles/2024/08/22/write-gpu-algorithm-quicksort",
+          "publishedOn": "2024-08-22T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Your second GPU algorithm: Quicksort",
+          "imageUrl": null
+        },
+        {
+          "id": "e8daa423-226f-44f0-947e-74711bd17892",
+          "author": "Benjamin Schmeling, Andrea Peruffo",
+          "description": "Operators are the standard way to package software and to automate day 1 and 2 operations for applications running on Red Hat OpenShift. Even the platform itself is based on cluster operators that encapsulate a single aspect of the OpenShift platform (e.g., how to deploy and update the DNS, API server, etc.), database or the internal registry. There is also a huge ecosystem of third party providers that are delivering their software via an operator. \nThe general idea behind the concept of operators is to automate installation, updates, backups, configuration, and many other operational tasks that are specific to the application the operator is managing. A concept that will also be useful for managing your own applications on the OpenShift platform. But how to start writing your own operato…",
+          "link": "https://developers.redhat.com/articles/2024/08/21/design-kubernetes-operator-rest-resources",
+          "publishedOn": "2024-08-22T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Designing K8s operators for managing REST resources",
+          "imageUrl": null
+        },
+        {
           "id": "788ec1d5-4de5-422f-ad23-e7ff2de65d40",
           "author": "Matthew Arnold",
           "description": "If you are planning a move to Red Hat OpenShift Virtualization, you may have a list of features that need to be checked to demonstrate similar capabilities to more established virtualization platforms. This article will guide you through one such feature: backing up and restoring virtual machines. There are several partner products that can simplify this operation, but these steps show a quick way to get started directly with the OpenShift APIs for Data Protection, provided by Red Hat.\nPreparation\nThese instructions assume you have administrative access to an OpenShift cluster. On this cluster, install and configure the following three Operators:\n\nRed Hat OpenShift Virtualization: Refer to these instructions to install OpenShift Virtualization and create a HyperConverged Operator instance.…",
@@ -469,16 +489,6 @@
           "wordCount": null,
           "title": "Managing Sensitive Assets Within Image Mode for Red Hat Enterprise Linux",
           "imageUrl": null
-        },
-        {
-          "id": "83141155-8d9c-45f5-8fa1-65df103952d1",
-          "author": "Syed M Shaaf",
-          "description": "Cryostat has been at the forefront of providing advanced monitoring and management tools for Java applications on Red Hat OpenShift. With the release of Red Hat build of Cryostat 3.0, a list of new features and enhancements are now available, designed to streamline operations, enhance security, and improve overall functionality. Here’s an in-depth look at what’s new and how these updates can benefit users.\nCryostat database (DB)\nOne of the most significant additions in Cryostat 3.0 is the introduction of the Cryostat database (DB) container image (cryostat-db). This container, which is deployed automatically when you install Cryostat via the Cryostat Operator or a Helm chart, provides a customized Postgres database. Centralizing data storage in a robust Postgres database enhances data inte…",
-          "link": "https://developers.redhat.com/articles/2024/07/24/new-features-cryostat-30-monitoring-java-applications-openshift",
-          "publishedOn": "2024-07-24T07:00:00.000Z",
-          "wordCount": null,
-          "title": "New features in Cryostat 3.0 for monitoring Java applications on OpenShift",
-          "imageUrl": null
         }
       ]
     },
@@ -501,16 +511,6 @@
           "publishedOn": "2024-07-30T21:35:00.000Z",
           "wordCount": null,
           "title": "Building static binaries with Go on Linux",
-          "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2024/notes-on-taylor-and-maclaurin-series/",
-          "author": null,
-          "description": "<p>A Maclaurin series is a power series - a polynomial with carefully selected\ncoefficients and an infinite number of terms - used to approximate arbitrary\nfunctions with some conditions (e.g. differentiability). The Maclaurin series\ndoes this for input values close to 0, and is a special case of the Taylor\nseries …</p>",
-          "link": "https://eli.thegreenplace.net/2024/notes-on-taylor-and-maclaurin-series/",
-          "publishedOn": "2024-07-24T01:55:00.000Z",
-          "wordCount": null,
-          "title": "Notes on Taylor and Maclaurin series",
           "imageUrl": null
         }
       ]
@@ -763,16 +763,6 @@
           "wordCount": null,
           "title": "Memory Mapped I/O in C",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1680.php",
-          "author": null,
-          "description": "I recently received a message from an embedded systems engineer in England asking about a good resource for embedded system software design and easing debugging difficulties.\r\n\r\nThat's challenging because embedded systems cover such a wide range. There are many possible run-time environments and architectures.\r\n\r\nThus there's no single resource that covers all ground. However, the resources...",
-          "link": "https://www.embeddedrelated.com/showarticle/1680.php",
-          "publishedOn": "2024-07-23T15:54:23.000Z",
-          "wordCount": null,
-          "title": "Some Embedded System Software Design Resources",
-          "imageUrl": null
         }
       ]
     },
@@ -793,6 +783,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/gemma-explained-new-in-gemma-2/",
+          "author": null,
+          "description": "Gemma 2 is a new suite of open models that sets a new standard for performance and accessibility, outperforming popular models more than twice its size.",
+          "link": "https://developers.googleblog.com/en/gemma-explained-new-in-gemma-2/",
+          "publishedOn": "2024-08-22T20:15:18.792Z",
+          "wordCount": 1310,
+          "title": "Gemma explained: What’s new in Gemma 2",
+          "imageUrl": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Untitled_1600_x_873_px.2e16d0ba.fill-1200x600.png"
+        },
         {
           "id": "https://developers.googleblog.com/en/5-years-of-innovation-student-developers-solving-real-world-problems-using-google-tech/",
           "author": null,
@@ -1198,16 +1198,6 @@
           "wordCount": null,
           "title": "Debugging bugs in x64dbg debugger. No debugger",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1145/",
-          "author": null,
-          "description": "Fellow developers, we invite you to continue our exciting journey through the depths of Intel OpenVINO code! Equipped with a static analyzer, just like detectives, we'll uncover the most insidious...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1145/",
-          "publishedOn": "2024-07-23T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Fixing bugs in your AI: let's analyze bugs in OpenVINO",
-          "imageUrl": null
         }
       ]
     },
@@ -1263,16 +1253,6 @@
           "wordCount": null,
           "title": "GitHub Actions for STM32CubeIDE",
           "imageUrl": null
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/choosing-or-building-an-embedded-db",
-          "author": null,
-          "description": "Persisting to flash is a necessary evil for many embedded devices. Let’s take a\nlook at some of the pitfalls and how they may be avoided.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/choosing-or-building-an-embedded-db",
-          "publishedOn": "2024-07-24T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Considerations when Building Embedded Databases",
-          "imageUrl": null
         }
       ]
     },
@@ -1311,6 +1291,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/986906/",
+          "author": "corbet",
+          "description": "Version\n24.8 of the LibreOffice office suite has been released.  Changes\ninclude the ability to filter identifying information from exported files,\neasier creation of cross reference, better control over hyphenation, a\nnumber of new spreadsheet functions, accessibility improvements, and more.",
+          "link": "https://lwn.net/Articles/986906/",
+          "publishedOn": "2024-08-22T18:51:48.000Z",
+          "wordCount": null,
+          "title": "LibreOffice 24.8 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/985853/",
+          "author": "daroc",
+          "description": "On July 30, Al Viro sent\n\na patch set to the linux-fsdevel mailing list with a\ncomprehensive cover letter explaining his\nrecent work on ensuring that the kernel's internal representation of\nfile descriptors are used correctly in the kernel.\nFile descriptors are ubiquitous; many system calls\nneed to handle them. Viro's review\nidentified a few existing bugs, and may prevent more in the future. He also had\nsuggestions for ways to keep uses consistent throughout the kernel.",
+          "link": "https://lwn.net/Articles/985853/",
+          "publishedOn": "2024-08-22T15:19:56.000Z",
+          "wordCount": null,
+          "title": "[$] A review of file descriptor memory safety in the kernel",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/986844/",
+          "author": "corbet",
+          "description": "Matthew Garrett describes\nthe role of the Secure Boot Advanced Targeting mechanism and how it\nplayed into the recent Windows upgrade problems.\n\n\n\tSo why is this suddenly relevant? SBAT was developed\n\tcollaboratively between the Linux community and Microsoft, and\n\tMicrosoft chose to push a Windows update that told systems not to\n\ttrust versions of grub with a security generation below a certain\n\tlevel. This was because those versions of grub had genuine security\n\tvulnerabilities that would allow an attacker to compromise the\n\tWindows secure boot chain, and we've seen real world examples of\n\tmalware wanting to do that.",
+          "link": "https://lwn.net/Articles/986844/",
+          "publishedOn": "2024-08-22T14:25:01.000Z",
+          "wordCount": null,
+          "title": "Garrett: What is an SBAT and why does everyone suddenly care",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/986841/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (.NET 8.0, bind, bind9.16, curl, edk2, firefox, gnome-shell, grafana, jose, krb5, libreoffice, mod_auth_openidc:2.3, orc, pcs, poppler, python-setuptools, python-urllib3, python3.11-setuptools, python3.12-setuptools, thunderbird, tomcat, and wget), Fedora (webkitgtk), SUSE (apache2, glib2, and roundcubemail), and Ubuntu (kernel, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15,\n linux-azure-fde, linux-azure-fde-5.15, linux-gcp, linux-gcp-5.15,\n linux-gke, linux-gkeop, linux-gkeop-5.15, linux-hwe-5.15, linux-ibm,\n linux-ibm-5.15, linux-intel-iotg, linux-intel-iotg-5.15, linux-kvm,\n linux-lowlatency, linux-lowlatency-hwe-5.15, linux-nvidia, linux-oracle,\n linux-raspi, linux, linux-aws, linux-azure, linux-bluefield, linux-gcp, linux-gcp-5.4,\n linux-gkeop, linux-hwe-5.4, linux-ibm, linux-ibm-5.4, linux-kvm,\n linux-oracle, linux-oracle-5.4, linux-raspi, linux-xilinx-zynqmp, linux, linux-aws, linux-azure, linux-gcp, linux-gke, linux-ibm,\n linux-lowlatency, linux-nvidia, linux-nvidia-6.8, linux-nvidia-lowlatency,\n linux-oem-6.8, linux-oracle, linux-raspi, linux, linux-aws, linux-kvm, linux-lts-xenial, linux, linux-gcp, linux-gcp-4.15, linux-hwe, linux-kvm, linux-aws, linux-aws-hwe, linux-bluefield, linux-hwe-5.15, linux-raspi-5.4, and qemu).",
+          "link": "https://lwn.net/Articles/986841/",
+          "publishedOn": "2024-08-22T14:07:33.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/985783/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for August 22, 2024 is available.",
+          "link": "https://lwn.net/Articles/985783/",
+          "publishedOn": "2024-08-22T01:51:50.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for August 22, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/986659/",
           "author": "jzb",
@@ -2240,66 +2270,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/982289/",
-          "author": "jake",
-          "description": "Simon Willison, co-creator of the popular Django web framework for Python,\ngave a keynote presentation at PyCon 2024 on a topic that is\nunrelated to that work: large language models (LLMs).\nThe topic grew out of some other work that he is doing on Datasette, which is a Python-based\n\"tool for exploring and publishing data\".  The talk was a look\nbeyond the hype to try to discover what useful things you can actually do\ntoday using these models.  Unsurprisingly, there were some\ncautionary notes from Willison, as well.",
-          "link": "https://lwn.net/Articles/982289/",
-          "publishedOn": "2024-07-23T20:58:58.000Z",
-          "wordCount": null,
-          "title": "[$] Imitation, not artificial, intelligence",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/982967/",
-          "author": "jzb",
-          "description": "The Python Software Foundation (PSF) board has announced\nimprovements to its grants program that have been enacted as a\nresponse to \"concerns and frustrations\" with the program:\nopen letter from the pan-African delegation\nseriously, and we began to draft a plan to address everything in the\nletter. We also set up improved two-way communications so that we can\ncontinue the conversation with the community. The writers of the open\nletter have now met several times with members of the PSF board. We\nare thankful for their insight and guidance on how we can work\ntogether and be thoroughly and consistently supportive of the\npan-African Python community.\n\n\nSo far the PSF has set up office\nhours to improve communications, published\na retrospective on the DjangoCon Africa review, and put out a transparency\nreport on grants from the past two years. The PSF board has also\nvoted to \"use the same criteria for all grant requests, no matter\ntheir country of origin\".",
-          "link": "https://lwn.net/Articles/982967/",
-          "publishedOn": "2024-07-23T19:40:22.000Z",
-          "wordCount": null,
-          "title": "Improvements to the PSF Grants program",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/982954/",
-          "author": "corbet",
-          "description": "Mark Zuckerberg has posted\nan article announcing some new releases of the Llama large language\nmodel and going on at length about why open-source models are important:\n\n\n\tAI has more potential than any other modern technology to increase\n\thuman productivity, creativity, and quality of life – and to\n\taccelerate economic growth while unlocking progress in medical and\n\tscientific research. Open source will ensure that more people\n\taround the world have access to the benefits and opportunities of\n\tAI, that power isn't concentrated in the hands of a small number of\n\tcompanies, and that the technology can be deployed more evenly and\n\tsafely across society.\n\n\tThere is an ongoing debate about the safety of open source AI\n\tmodels, and my view is that open source AI will be safer than the\n\talternatives. I think governments will conclude it's in their\n\tinterest to support open source because it will make the world more\n\tprosperous and safer.\n\n\nOf course, whether Llama is truly open source is debatable at best, but it\nis more open than many of the alternatives.",
-          "link": "https://lwn.net/Articles/982954/",
-          "publishedOn": "2024-07-23T16:18:27.000Z",
-          "wordCount": null,
-          "title": "Zuckerberg: Open Source AI Is the Path Forward",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/982077/",
-          "author": "daroc",
-          "description": "LWN has covered BPF\n\nsince its initial introduction to Linux, usually through the lens of the newest\ndevelopments; this can make it hard to view the whole picture. BPF provides\na way to extend a running kernel, without having to recompile and reboot.\nIt does this in a safe way, so that malicious BPF\nprograms cannot crash a running kernel, thanks to the BPF verifier. So how does\nthe verifier actually work, what are its limits, and how has it changed since\nthe early days of BPF?",
-          "link": "https://lwn.net/Articles/982077/",
-          "publishedOn": "2024-07-23T14:57:47.000Z",
-          "wordCount": null,
-          "title": "[$] A look inside the BPF verifier",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/982940/",
-          "author": "corbet",
-          "description": "Version 2.40 of the GNU C\nLibrary has been released.  Changes include partial support for the ISO C23\nstandard, a new tunable for the testing of setuid programs, improved 64-bit\nArm vector support, and a handful of security fixes.  See the release notes\nfor details.",
-          "link": "https://lwn.net/Articles/982940/",
-          "publishedOn": "2024-07-23T13:37:28.000Z",
-          "wordCount": null,
-          "title": "GNU C Library 2.40 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/982939/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (gtk3 and jpegxl), Red Hat (kpatch-patch and thunderbird), SUSE (apache2, git, gnome-shell, java-11-openjdk, java-21-openjdk, kernel, kernel-firmware, kernel-firmware-nvidia-gspx-G06, libgit2, mozilla-nss, nodejs20, python-Django, and python312), and Ubuntu (linux-aws, linux-aws, linux-aws-5.4, linux-iot, linux-aws-5.15, pymongo, and ruby-rack).",
-          "link": "https://lwn.net/Articles/982939/",
-          "publishedOn": "2024-07-23T13:32:39.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2325,6 +2295,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/2024-strangler-fig-rewrite.html",
+          "author": null,
+          "description": "Two decades ago, I posted that I found that the strangler fig plant was an interesting metaphor for the gradual replacement of a legacy system. I didn’t refer to the metaphor since, but meanwhile it grew a life of its own. Other people increasingly referred to the strangler fig approach to modernization, and traffic to that post steadily increased: currently it gets about 5000 page views a month, one of the more popular pages on this site. So I decided I needed to update that page, and have rewritten it, focusing on the core activities we need to do to make a success of such a venture.\n(This summarizes more detailed writing from Ian Cartwright, Rob Horn, and James Lewis.)",
+          "link": "https://martinfowler.com/articles/2024-strangler-fig-rewrite.html",
+          "publishedOn": "2024-08-22T15:51:00.000Z",
+          "wordCount": null,
+          "title": "Rewriting Strangler Fig",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-09",
           "author": null,
@@ -2620,6 +2600,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=114783",
+          "author": "홍윤희",
+          "description": "팀 월즈 미네소타주지사가 카멀라 해리스 부통령의 러닝메이트로 발표된 지 몇 시간 만에 펜실베이니아주 필라델피아에서 14,000명이 운집한 미 민주당 첫 정∙부통령 후보 공동 유세를 본 몇 가지 느낌을 공유한다. 대학 부전공(커뮤니케이션)과 20년 회사 경력(홍보)에 의거한 지극히 개인적 평가이며 반박 시 반박하는 분이 맞는 걸로. 😉 월즈 주지사. 민주당 역대 대선후보 중 케네디 이후 연설(stump speech) 가장...\nThe post 민주당 부통령 후보 월즈의 일곱 가지 연설 전략: 역대 최고(🐐) 인정! appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/114783",
+          "publishedOn": "2024-08-22T02:20:41.000Z",
+          "wordCount": null,
+          "title": "민주당 부통령 후보 월즈의 일곱 가지 연설 전략: 역대 최고(🐐) 인정!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=114744",
+          "author": "이정환",
+          "description": "김건희 디올 백 무혐의. 윤석열 검사라면 어땠을까. 총장 패싱? 이원석의 시간이 됐다. 쟁점과 현안. 한동훈-이재명 회담 생중계가 변수. 윤석열 정부 경제가 빠진 세 가지 함정. 세수 56조 원 펑크, 순방비는 예비비로. 민주당 방통위원 2명 추천한다. “이게 나라냐”, 중앙일보 논설위원의 한숨. 더 깊게 읽기. 이재명표 감세 법안. 뜬금없이 문재인 사위 털기. 재일동포 학교 교토국제고, 고시엔 결승...\nThe post “이게 나라냐”, 디올 백은 무혐의, 경제는 엉망, 보수 언론도 ‘부글부글’:슬로우레터 8월22일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/114744",
+          "publishedOn": "2024-08-21T22:18:14.000Z",
+          "wordCount": null,
+          "title": "“이게 나라냐”, 디올 백은 무혐의, 경제는 엉망, 보수 언론도 ‘부글부글’:슬로우레터 8월22일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=114701",
+          "author": "민주언론시민연합",
+          "description": "2022년 8월 서울엔 시간당 최대 141.5㎜의 기록적인 폭우가 쏟아졌다. 극한호우 기준인 시간당 72㎜의 두 배가량으로 신림동과 상도동 반지하 주택에서는 다수의 사망자가 발생했다. 문제는 역대급 폭우가 더 새로운 일이 아니라는 것이다. 기후위기로 ‘더 자주, 더 세게’ 폭우가 발생할 가능성이 높아지고 있다. 앞으로 50년 이내 시간당 200㎜의 비가 내릴 수 있다니, 이제 폭우는 여름철 일상이 되었다. 변화된...\nThe post 빗물에 세금을? 도쿄∙베를린에서 ‘힌트’ 얻는 극한호우 대책 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/114701",
+          "publishedOn": "2024-08-21T09:12:29.000Z",
+          "wordCount": null,
+          "title": "빗물에 세금을? 도쿄∙베를린에서 ‘힌트’ 얻는 극한호우 대책",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=114654",
           "author": "이정환",
@@ -3089,26 +3099,6 @@
           "wordCount": null,
           "title": "조선일보의 한동훈 평가, “1점도 안 깎이려는 앞뒤 꽉막힌 범생이”: 슬로우레터 7월25일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=112776",
-          "author": "민주언론시민연합",
-          "description": "한국수력원자력(한수원)이 7월 17일 체코 원전 건설 우선협상자로 선정됐습니다. 성태윤 대통령실 정책실장은 “윤석열 대통령은 ‘팀코리아 정신으로 최종계약을 위해 최선을 다해달라’고 당부했다”, “2009년 아랍에미리트(UAE) 바라카 원전 수주 이후 15년 만의 쾌거”, “상업용 원자로를 최초로 건설한 원전의 본산 유럽에 수출하는 교두보가 마련됐다”고 기쁨을 표했습니다. 윤석열 대통령이 “최종계약을 위해 최선을 다해달라”고 당부했듯 한국수력원자력은 체코 신규원전 건설사업 우선협상대상자로 선정된 것으로...\nThe post 체코 원전, 확정 아닌가요? KBS와 TV조선의 호들갑 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/112776",
-          "publishedOn": "2024-07-24T06:07:28.000Z",
-          "wordCount": null,
-          "title": "체코 원전, 확정 아닌가요? KBS와 TV조선의 호들갑",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=112713",
-          "author": "이정환",
-          "description": "한동훈 당 대표가 의미하는 것. ‘윤심’이 안 통했다. 당심과 민심의 미묘한 격차. 다시 8표에 달렸다. 쟁점과 현안. 이창수의 반격, “나만 조사하라”. 4년째 수사 배제, 이게 말이 되나. “양주는 폐기했다.” 더 깊게 읽기. 문 걸어 잠그고 류희림 연임. 다르게 읽기. 사교육 카르텔? 때릴수록 더 커졌다. 주 1시간도 취업? 고용률 63.5%의 비밀. 해법과 대안. 목 졸린 적...\nThe post 달라진 권력과 위상, 폴더 인사도 어퍼컷 세리머니도 없었다: 슬로우레터 7월24일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/112713",
-          "publishedOn": "2024-07-23T22:13:04.000Z",
-          "wordCount": null,
-          "title": "달라진 권력과 위상, 폴더 인사도 어퍼컷 세리머니도 없었다: 슬로우레터 7월24일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3117,6 +3107,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595828",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595828/2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81-%ec%a0%84%eb%a7%9d-%ea%b8%b0%eb%8c%80%eb%b3%b4%eb%8b%a4-%ec%a2%8b%ec%9d%84-%ea%b2%83",
+          "publishedOn": "2024-08-22T14:31:43.000Z",
+          "wordCount": null,
+          "title": "2분기 엔비디아 실적 전망, 기대보다 좋을 것",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595822",
           "author": "happist",
@@ -3266,26 +3266,6 @@
           "wordCount": null,
           "title": "2분기 테슬라 실적을 읽는 월가의 시선",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595628",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595628/%ec%9e%90%eb%8f%99%ec%b0%a8-%eb%93%b1%ec%82%b0",
-          "publishedOn": "2024-07-24T06:59:00.000Z",
-          "wordCount": null,
-          "title": "자동차로 정상까지, 자동차 등산이 가능한 풍경 맛집을 알아보자",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595631",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595631/7-24-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-07-24T02:11:26.000Z",
-          "wordCount": null,
-          "title": "7/24, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
         }
       ]
     },
@@ -3294,6 +3274,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79588",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 6월 28일 스프에 쓴 글입니다. *** 파리 올림픽에서 실제로 XY 염색체를 지닌 복싱 선수 이마네 칼리프(알제리)와 린위팅(대만)의 여성 종목 출전이 논란을 낳기도 했습니다. 이에 관해 언론에도 많은 기사가 소개됐습니다. 연합뉴스: IOC, XY염색체 여자 복싱선수 논란에 → 더 보기",
+          "link": "https://newspeppermint.com/2024/08/21/npsp_sextestingolympics/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_sextestingolympics",
+          "publishedOn": "2024-08-21T22:59:40.000Z",
+          "wordCount": 2478,
+          "title": "[뉴페@스프] “그렇게만 할 거면… 올림픽 왜 하니?” 배제와 포용, 답은 정해져 있다",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=79845",
           "author": "NewsPeppermint",
