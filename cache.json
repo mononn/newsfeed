@@ -95,7 +95,18 @@
       "title": "Siemens Blog Network",
       "feedUrl": "https://blogs.sw.siemens.com/feed/",
       "siteUrl": "https://blogs.sw.siemens.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://blogs.sw.siemens.com/?p=636",
+          "author": "Bianca Ward",
+          "description": "Embracing Digital Innovation for Enhanced Sustainability In a recent interview on “Manufacturing Sustainability: Twenty Minute Talks,” Dr. Wolfgang Schlögl, Vice…",
+          "link": "https://blogs.sw.siemens.com/sustainable-manufacturing-insights-from-an-interview-with-dr-wolfgang-schlogl/",
+          "publishedOn": "2024-08-29T12:15:24.000Z",
+          "wordCount": null,
+          "title": "Sustainable Manufacturing: Insights from an Interview with Dr. Wolfgang Schlögl",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Embedded Software Insights | Latest Embedded Technology News",
@@ -171,6 +182,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "37090af1-57e2-46a6-baaa-e3a67a66c6b4",
+          "author": "Kenny Ge",
+          "description": "This is the final installment of our 4-part series on GPU programming. Catch up on the previous articles:\n\nWhat is GPU programming\n\nYour first GPU algorithm: Scan/prefix sum\n\nYour second GPU algorithm: Quicksort\n\nWith those topics covered, we can now move on to the subject of this article: how to choose a GPU framework/library.\nHow to choose a GPU framework\nGenerally, when you’re benchmarking some GPU code, you want to make sure to do the following:\n\nRun the algorithm more than once, and get the median/quartiles, or mean/stdev of each of the running times.\nSynchronize your CUDA kernels, to make sure the program has fully finished executing—by default CUDA will launch kernels asynchronously (in the background) so that the host can continue processing things.\nClear the L2 cache, usually by r…",
+          "link": "https://developers.redhat.com/articles/2024/08/29/gpu-benchmarking-and-how-choose-gpu-framework",
+          "publishedOn": "2024-08-29T07:00:00.000Z",
+          "wordCount": null,
+          "title": "GPU benchmarking and how to choose a GPU framework",
+          "imageUrl": null
+        },
+        {
+          "id": "5eeffc5a-0755-4fc2-b5cc-d4f8d49e5489",
+          "author": "Marcelo Daniel Sales",
+          "description": "The idea for writing this article came about after a conversation with colleagues in the architect community reporting the difficulty of implementing a distributed transaction solution. The complaints were basically due to the complexity of implementing all the components necessary to deal with standards such as Saga, for example.\nIt is important to note that it is not the purpose of this article to make a comparison between distributed transaction handling models, especially the Saga pattern. Likewise, this article should not be taken as a criticism of the Saga pattern or the non-recommendation of its adoption. \nMy father was an excellent auto mechanic, and one of the things he taught us was that \"to deal with every screw there is an appropriate tool.\" To paraphrase a more famous saying t…",
+          "link": "https://developers.redhat.com/articles/2024/08/29/distributed-transactions-jakarta-ee-10-and-wildfly",
+          "publishedOn": "2024-08-29T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Distributed transactions with Jakarta EE 10 and WildFly",
+          "imageUrl": null
+        },
         {
           "id": "1693156d-7bfa-4f89-842c-6e590b116261",
           "author": "Leonardo Araujo",
@@ -440,36 +471,6 @@
           "wordCount": null,
           "title": "Minimize downtime when migrating from VMware to OpenShift Virtualization",
           "imageUrl": null
-        },
-        {
-          "id": "e6d51a6d-803f-45f4-bfec-27f5d25a97bb",
-          "author": "Ramon Acedo Rodriguez",
-          "description": "Adding nodes to Red Hat OpenShift clusters on-premises is a laborious and sometimes complex endeavor. With various methods available, each with different levels of automation, users often find themselves navigating through complex and even unsupported solutions, leading to a less-than-ideal user experience. \nA new feature is now available as a Developer Preview in OpenShift 4.16, that makes cluster expansions faster, simpler, and more user-friendly than ever before.\nThis new method leverages the Agent Based Installer technology under the hood, but doesn’t need the cluster to have been installed by it, it will work on any cluster where its nodes can be installed from an ISO image.\nIt first gets information of the cluster to be expanded, then it provides a bootable ISO image, and after booti…",
-          "link": "https://developers.redhat.com/articles/2024/07/31/easily-expanding-red-hat-openshift-clusters",
-          "publishedOn": "2024-07-31T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Easily expanding Red Hat OpenShift clusters",
-          "imageUrl": null
-        },
-        {
-          "id": "11ed32d2-2b95-4194-aa59-1f3bb41441b5",
-          "author": "Fernando Lozano",
-          "description": "If you develop applications with a cloud-first mindset, you probably use (or plan to use) object storage with the S3 API from Amazon Web Services (AWS). Even if you do not use AWS, all large and smaller public cloud providers offer object storage compatible with the S3 API.\nIf you plan to work with artificial intelligence (AI), most AI tools require S3 storage to store data from models, training, and tuning, besides the raw data on which AI models make inferences and the results of such inferences.\nBut, if you have to work on premises, or have to create applications which must work both on premises and on cloud, you require something that provides an S3-compatible API outside of cloud providers. Red Hat OpenShift Data Foundation is a nice alternative proven to support large scale deploymen…",
-          "link": "https://developers.redhat.com/articles/2024/07/31/red-hat-openshift-data-foundation-developers-and-data-scientists",
-          "publishedOn": "2024-07-31T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Red Hat OpenShift Data Foundation for developers and data scientists",
-          "imageUrl": null
-        },
-        {
-          "id": "1ef09165-659e-4bc1-81e6-09ab9d398e39",
-          "author": "Himanshu Yadav",
-          "description": "Red Hat Developer Hub is an enterprise-grade internal developer portal (IDP). It allows platform engineering teams to offer software templates based on your best practices to maximize developer skills, ease onboarding, increase development productivity, and focus on writing great code by reducing friction and frustration for development teams.\nRed Hat is constantly curating a set of plug-ins and ensuring the best experience on Red Hat Developer Hub. Red Hat supported and validated  plug-ins let you extend the Red Hat Developer Hub environment with confidence, eliminating compatibility and operational issues.\nAs part of these efforts, we are pleased to announce Technology Preview of Ansible plug-ins for Red Hat Developer Hub. With Ansible plug-ins, organizations using Red Hat Developer Hub …",
-          "link": "https://developers.redhat.com/articles/2024/07/30/announcing-ansible-plug-ins-red-hat-developer-hub",
-          "publishedOn": "2024-07-30T16:04:11.000Z",
-          "wordCount": null,
-          "title": "Announcing Ansible plug-ins for Red Hat Developer Hub",
-          "imageUrl": null
         }
       ]
     },
@@ -492,16 +493,6 @@
           "publishedOn": "2024-08-23T17:35:00.000Z",
           "wordCount": null,
           "title": "SentencePiece BPE Tokenizer in Go",
-          "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2024/building-static-binaries-with-go-on-linux/",
-          "author": null,
-          "description": "<p>One of Go's advantages is being able to produce statically-linked\nbinaries <a class=\"footnote-reference\" href=\"#footnote-1\" id=\"footnote-reference-1\">[1]</a>. This doesn't mean that Go always produces such binaries by default,\nhowever; in some scenarios it requires extra work to make this happen.\nSpecifics here are OS-dependent; here we focus on Unix systems.</p>\n<div class=\"section\" id=\"basics-hello-world\">\n<h2>Basics - hello world</h2>\n<p>This post …</p></div>",
-          "link": "https://eli.thegreenplace.net/2024/building-static-binaries-with-go-on-linux/",
-          "publishedOn": "2024-07-30T21:35:00.000Z",
-          "wordCount": null,
-          "title": "Building static binaries with Go on Linux",
           "imageUrl": null
         }
       ]
@@ -528,6 +519,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4490741",
+          "author": "Nitin Dahad",
+          "description": "I am pleased to announce that my colleague Maurizio Di Paolo Emilio is taking on the role of Editor-in-Chief of embedded.com as of today. Maurizio is highly respected in the worlds of science, technology and industry, who with his Ph.D. in physics is recognized for his contributions to the electronics engineering community through his writing, […]\nThe post Welcome to Maurizio Di Paolo Emilio, new Editor-in-Chief of embedded.com appeared first on Embedded.",
+          "link": "https://www.embedded.com/welcome-to-maurizio-di-paolo-emilio-new-editor-in-chief-of-embedded-com/",
+          "publishedOn": "2024-08-29T13:00:15.000Z",
+          "wordCount": null,
+          "title": "Welcome to Maurizio Di Paolo Emilio, new Editor-in-Chief of embedded.com",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490751",
+          "author": "Nitin Dahad",
+          "description": "Imagine using a natural language prompt to specify a design or function and have a software tool that automatically generates a bill of materials (BOM), the corresponding schematics of a fully functional design, and a PCB floor plan in native EDA formats. This is what Munich-based startup Celus claims to do with its design platform, […]\nThe post Software matches components to design and generates BOM and schematics in hours appeared first on Embedded.",
+          "link": "https://www.embedded.com/software-matches-components-to-design-and-generates-bom-and-schematics-in-hours/",
+          "publishedOn": "2024-08-29T10:08:29.000Z",
+          "wordCount": null,
+          "title": "Software matches components to design and generates BOM and schematics in hours",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490754",
+          "author": "Nitin Dahad",
+          "description": "Hybrid edge cloud computing solution developer mimik has launched an operating environment that allows AI agents to run on any computing node, enabling them to discover, interact, and collaborate seamlessly—offline-first, with support for multi-cloud and multi-LLM environments.  Its new mimik ai platform introduces a cloud-native operating environment featuring a generative AI runtime and a comprehensive suite […]\nThe post Platform enables AI agents and on-device microservices on any computing node appeared first on Embedded.",
+          "link": "https://www.embedded.com/platform-enables-ai-agents-and-on-device-microservices-on-any-computing-node/",
+          "publishedOn": "2024-08-29T10:00:24.000Z",
+          "wordCount": null,
+          "title": "Platform enables AI agents and on-device microservices on any computing node",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4490732",
           "author": "Stephen Evanczuk",
@@ -727,16 +748,6 @@
           "wordCount": null,
           "title": "Debian derivative eLxr addresses simplifies and enhance edge-to-cloud",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4490453",
-          "author": "Nitin Dahad",
-          "description": "As cars have become intelligent, manufacturers have focused on implementing certain smart features at the expense of others. Sensors tied to rear view cameras and blind spot warnings are now nearly ubiquitous, but other safety tools have lagged behind. This is delaying the progress of advanced driver assistance systems (ADAS), a suite of technologies that […]\nThe post How multi-sensory data enhances advanced driver assistance systems (ADAS) appeared first on Embedded.",
-          "link": "https://www.embedded.com/how-multi-sensory-data-enhances-advanced-driver-assistance-systems-adas/",
-          "publishedOn": "2024-07-30T09:37:58.000Z",
-          "wordCount": null,
-          "title": "How multi-sensory data enhances advanced driver assistance systems (ADAS)",
-          "imageUrl": null
         }
       ]
     },
@@ -784,6 +795,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/",
+          "author": null,
+          "description": "RecurrentGemma architecture showcases a hybrid model that mixes gated linear recurrences with local sliding window attention; a highly valuable feature when you're concerned about exhausting your LLM's context window.",
+          "link": "https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/",
+          "publishedOn": "2024-08-29T20:15:19.554Z",
+          "wordCount": null,
+          "title": "Gemma explained: RecurrentGemma architecture",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/fine-tuning-gemma-2-with-keras-hugging-face-update/",
           "author": null,
@@ -1023,26 +1044,6 @@
           "wordCount": null,
           "title": "Smaller, Safer, More Transparent: Advancing Responsible AI with Gemma",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/ai-edge-torch-generative-api-for-custom-llms-on-device/",
-          "author": null,
-          "description": "AI Edge Torch Generative API enables developers to bring powerful new capabilities on-device, such as summarization, content generation, and more.",
-          "link": "https://developers.googleblog.com/en/ai-edge-torch-generative-api-for-custom-llms-on-device/",
-          "publishedOn": "2024-07-30T20:13:36.471Z",
-          "wordCount": null,
-          "title": "AI Edge Torch Generative API for Custom LLMs on Device",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/whats-new-in-google-pay-io-2024/",
-          "author": null,
-          "description": "We’re adding new features to Google Pay so you can offer richer and more accessible payment experiences for your customers, and improved APIs to simplify your payments integrations.",
-          "link": "https://developers.googleblog.com/en/whats-new-in-google-pay-io-2024/",
-          "publishedOn": "2024-07-30T20:13:36.471Z",
-          "wordCount": null,
-          "title": "What’s new in Google Pay at I/O 2024",
-          "imageUrl": null
         }
       ]
     },
@@ -1189,16 +1190,6 @@
           "wordCount": null,
           "title": ".NET Digest #2",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/java/1147/",
-          "author": null,
-          "description": "Once again, we're checking the Apache product. This time we chose Solr, an open-source search server platform. Solr enables you quickly and efficiently search for information in databases and online...",
-          "link": "https://pvs-studio.com/en/blog/posts/java/1147/",
-          "publishedOn": "2024-07-30T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Search query for bugs in Apache Solr",
-          "imageUrl": null
         }
       ]
     },
@@ -1225,6 +1216,16 @@
       "feedUrl": "https://interrupt.memfault.com/feed.xml",
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
+        {
+          "id": "https://interrupt.memfault.com/blog/memory-debugging",
+          "author": null,
+          "description": "In this article, we will learn how memory usage patterns can affect the\nreal-time performance of an embedded application, drawing from a recent\nexperience tracing an audio DSP application running on an embedded Linux\nplatform. First, I will introduce the product in question and the real-time\naudio software I developed for it. Then, I’ll describe the issues I encountered\nwith audio callbacks and the strategy I followed to determine the cause of the\nissues, ending with my solution and lessons learned.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/memory-debugging",
+          "publishedOn": "2024-08-29T00:00:00.000Z",
+          "wordCount": null,
+          "title": "How Memory Usage Patterns Can Derail Real-time Performance",
+          "imageUrl": null
+        },
         {
           "id": "https://interrupt.memfault.com/blog/diving-into-jtag-part-6",
           "author": null,
@@ -1292,6 +1293,76 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/987715/",
+          "author": "jzb",
+          "description": "The KDE project plans to directly\nask for donations in the Plasma desktop starting with version\n6.2. According to this\nblog post by Nate Graham, users will see a\nsystem notification once per year (in December) asking for a\ndonation to the non-profit KDE e.V.:\n\n\nNow, I know that messages like this can be controversial! The\nchange was carefully considered, and we tried our best to minimize\nthe annoying-ness factor: It's small and unobtrusive, and no matter\nwhat you do with it (click any button, close it, etc) it'll go away\nuntil next year. It's implemented as a KDE Daemon (KDED) module,\nwhich allows users and distributors to permanently disable it if they\nlike.",
+          "link": "https://lwn.net/Articles/987715/",
+          "publishedOn": "2024-08-29T19:09:35.000Z",
+          "wordCount": null,
+          "title": "Graham: Asking for donations in Plasma",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/987700/",
+          "author": "jzb",
+          "description": "Version 5.0.0 of GNU Screen has\nbeen released. Notable changes in this release include\nnew commands for authentication, input into multiple windows at the\nsame time, and to turn on/off truecolor support.",
+          "link": "https://lwn.net/Articles/987700/",
+          "publishedOn": "2024-08-29T18:11:26.000Z",
+          "wordCount": null,
+          "title": "GNU Screen v.5.0.0 is released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/987677/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of the 6.10.7, 6.6.48, and 6.1.107 stable kernels.  They all contain\nimportant fixes throughout the kernel tree, as is the norm.",
+          "link": "https://lwn.net/Articles/987677/",
+          "publishedOn": "2024-08-29T16:18:31.000Z",
+          "wordCount": null,
+          "title": "Three new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/986899/",
+          "author": "jake",
+          "description": "Plasma Mobile is an open-source\nuser interface for mobile devices, developed by the KDE community. It's\nbuilt on the same foundations as Plasma Desktop, including KDE Frameworks and the KWin window\nmanager. Much like its desktop counterpart, Plasma Mobile caters to\nadvanced users by offering extensive customizability. It is offered as an\noption on phones with various mobile Linux\ndistributions.",
+          "link": "https://lwn.net/Articles/986899/",
+          "publishedOn": "2024-08-29T15:11:39.000Z",
+          "wordCount": null,
+          "title": "[$] Plasma Mobile for highly configurable Linux phones",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/987664/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (bind and bind-dyndb-ldap and postgresql:16), Fedora (less and python3.6), Mageia (nodejs & yarnpkg), Oracle (libvpx and postgresql:16), Red Hat (edk2, git, kernel, openldap, postgresql:15, postgresql:16, python3, and python39:3.9 and python39-devel:3.9), SUSE (apache2, python-setuptools, and python3-setuptools), and Ubuntu (linux-oracle).",
+          "link": "https://lwn.net/Articles/987664/",
+          "publishedOn": "2024-08-29T14:33:29.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/987635/",
+          "author": "corbet",
+          "description": "Wedson Almeida Filho, one of the key developers driving the Rust-for-Linux project, has retired from the\nproject.\n\n\n\t After almost 4 years, I find myself lacking the energy and\n\t enthusiasm I once had to respond to some of the nontechnical\n\t nonsense, so it's best to leave it up to those who still have it\n\t in them.\n\n\nAs an example of the sort of \"nonsense\" he referred to, he provided a link to the video from the\nRust for filesystems discussion at the 2024\nLinux Storage, Filesystem, Memory-Management, and BPF Summit.  His work was\nfundamental to getting the project as far as it has come; he will be missed.",
+          "link": "https://lwn.net/Articles/987635/",
+          "publishedOn": "2024-08-29T14:07:26.000Z",
+          "wordCount": null,
+          "title": "Rust-for-Linux developer Wedson Almeida Filho drops out",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/986853/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for August 29, 2024 is available.",
+          "link": "https://lwn.net/Articles/986853/",
+          "publishedOn": "2024-08-29T01:41:41.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for August 29, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/987238/",
           "author": "jake",
@@ -2181,46 +2252,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/983105/",
-          "author": "jake",
-          "description": "At the 2024 Linux\nStorage, Filesystem, Memory Management, and BPF Summit, John Groves led\na session on famfs, which is a filesystem he has developed that uses the\nkernel's direct-access (DAX)\nmechanism to access memory that is shareable between hosts.  The discussion\nwas aimed at whether a different approach should be taken and, in\nparticular, whether FUSE should be used instead of implementing as an\nin-kernel filesystem.  As noted in the thread about his\nproposal for an LSFMM+BPF session, and the mailing-list discussions on the first and second\nversion of his patch set, there is some skepticism that a new in-kernel\nfilesystem is warranted for the use case.",
-          "link": "https://lwn.net/Articles/983105/",
-          "publishedOn": "2024-07-30T21:28:16.000Z",
-          "wordCount": null,
-          "title": "[$] Famfs: a filesystem interface to shareable memory",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/983977/",
-          "author": "jzb",
-          "description": "Daniel Robbins, founder of the Gentoo Linux distribution and its\nspinoff Funtoo Linux, has\nannounced\nthat he has decided to end the Funtoo project:\nFuntoo\ncontainer, it will continue to be online through the end of August\nso you have time to find another hosting solution if you need one.",
-          "link": "https://lwn.net/Articles/983977/",
-          "publishedOn": "2024-07-30T17:10:27.000Z",
-          "wordCount": null,
-          "title": "Funtoo Linux is being discontinued",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/983203/",
-          "author": "jzb",
-          "description": "At GUADEC\nin Denver, Colorado on July 21, the GNOME Foundation held its annual\ngeneral meeting (AGM) to provide updates from the foundation's board and committees.\nTopics included work accomplished in the past year, challenges\nfacing the GNOME Foundation–including fundraising and finding a new\nexecutive director–and some insight into plans for the next year. And\nlast, but not least, the awarding of the Pants of Thanks.",
-          "link": "https://lwn.net/Articles/983203/",
-          "publishedOn": "2024-07-30T13:51:09.000Z",
-          "wordCount": null,
-          "title": "[$] Report from the annual general meeting at GUADEC",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/983935/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Fedora (curl), Mageia (virtualbox), Oracle (squid), Red Hat (kernel), SUSE (apache2, bind, cdi-apiserver-container, cdi-cloner-container, cdi- controller-container, cdi-importer-container, cdi-operator-container, cdi- uploadproxy-container, cdi-uploadserver-container, devscripts, espeak-ng, freerdp, ghostscript, gnome-shell, gtk2, gtk3, java-11-openjdk, java-17-openjdk, kubevirt, libgit2, openssl-3, orc, p7zip, python-dnspython, and shadow), and Ubuntu (kernel, linux, linux-aws, linux-aws-hwe, linux-gcp, linux-gcp-4.15, linux-hwe, linux-kvm, linux-oracle, linux, linux-aws, linux-gcp, linux-gke, linux-ibm, linux-nvidia, linux-oem-6.8, linux-raspi, linux, linux-azure, linux-azure-5.4, linux-bluefield, linux-gcp, linux-gcp-5.4, linux-gkeop, linux-hwe-5.4, linux-ibm, linux-ibm-5.4, linux-iot, linux-kvm, linux-raspi, linux-xilinx-zynqmp, linux-aws, linux-aws-5.4, linux-aws-5.15, linux-ibm, linux-ibm-5.15, linux-raspi, linux-gcp-5.15, and linux-lowlatency).",
-          "link": "https://lwn.net/Articles/983935/",
-          "publishedOn": "2024-07-30T13:49:03.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2274,16 +2305,6 @@
           "publishedOn": "2024-07-31T20:11:00.000Z",
           "wordCount": null,
           "title": "Refresh of the PoEAA catalog page",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/2024-restrict-algorithm.html",
-          "author": null,
-          "description": "The steady increase in deployment of AI tools has led a lot of people concerned about how software makes decisions that affect our lives. In one example, its about “algorithmic” feeds in social media that promote posts that drive engagement. A more serious impact can come from business decisions, such as how much premium to charge in car insurance. This can extend to affecting legal decisions, such as suggesting sentencing guidelines to judges.\nFaced with these concerns, there is often a movement to restrict the use of algorithms, such as a recent activity in New York to restrict how social media networks generate feeds for children. Should we draw up more laws to fence in the rampaging algorithms?\nIn my view, the restricting the use of algorithms and AI here isn’t the right target. A regu…",
-          "link": "https://martinfowler.com/articles/2024-restrict-algorithm.html",
-          "publishedOn": "2024-07-30T15:57:00.000Z",
-          "wordCount": null,
-          "title": "Instead of restricting AI and algorithms, make them explainable",
           "imageUrl": null
         }
       ]
@@ -2358,16 +2379,6 @@
           "publishedOn": "2024-08-01T10:19:04.000Z",
           "wordCount": null,
           "title": "Command — Response Framework in ESP RainMaker",
-          "imageUrl": null
-        },
-        {
-          "id": "https://medium.com/p/d1a2e1161059",
-          "author": "Piyush Shah",
-          "description": "",
-          "link": "https://blog.espressif.com/secure-boot-with-auto-signing-in-esp-rainmaker-ota-d1a2e1161059?source=rss----d5414d5dee73---4",
-          "publishedOn": "2024-07-30T10:58:38.000Z",
-          "wordCount": null,
-          "title": "Secure boot with auto-signing in ESP RainMaker OTA",
           "imageUrl": null
         }
       ]
@@ -2571,6 +2582,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=115652",
+          "author": "이정환",
+          "description": "[슬로우리포트] 오래된 질문과 지극히 상식적인 답변, 대한민국은 언제 건국됐나. “Is it weird? Absolutely.” 팀 월즈(미국 민주당 부통령 후보)가 한 말이다. 도널드 트럼프(미국 공화당 후보)와 그 지지자들을 두고 하는 말이지만 요즘 한국에서 광복절을 두고 벌어지는 논란을 보면 이 말이 떠오른다. 장면 1. 8월26일, 국회 정무위원회 회의. 장면 2. 8월26일, 고용노동부 장관 인사 청문회. 이게 왜 중요한가. 사실....\nThe post 저 사람들 정말 이상하지 않아요? appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/115652",
+          "publishedOn": "2024-08-29T08:28:48.000Z",
+          "wordCount": 4897,
+          "title": "저 사람들 정말 이상하지 않아요?",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/08/desk_20240827_195934_1_6_Large.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=115405",
+          "author": "민노씨",
+          "description": "미 대선 어떻게 볼 것인가. 어떻게 봐야 하나. 몇 가지 ‘힌트’를 얻고자 미국 최대의 경합 주 중 하나인 펜실베이니아 주 필라델피아에 사는 캡콜드(김낙호 교수, 드렉셀대학교 커뮤니케이션과)에게 미 대선의 프레임 전쟁, 그 현재 스코어를 물었다. 1. 해리스, 공화당의 ‘자유’를 영리하게 탈취하다 이번 미 대선 최대 이슈는 낙태와 이민이다. 해리스는 직접 ‘낙태’라는 표현을 쓰기보다는 “당신 몸에 관해...\nThe post 해리스는 어떻게 공화당으로부터 ‘자유’를 되찾아 왔나 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/115405",
+          "publishedOn": "2024-08-29T08:23:52.000Z",
+          "wordCount": 7080,
+          "title": "해리스는 어떻게 공화당으로부터 ‘자유’를 되찾아 왔나",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/08/53030024773_e5a273350b_k.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=115613",
+          "author": "민주언론시민연합",
+          "description": "방송통신위원회가 위기에 빠졌다. 위기 원인은 분명하다. 공영방송 이사진을 교체할 수 있는 권한 때문에 중요한 정치 격변기마다 방송통신위원회는 항상 시끄러웠다. 그러나 최근 같은 파행은 없었다. 드러난 방송통신위원회의 한계 윤석열 정부는 이동관, 김홍일에 이어 이진숙 전 대전MBC 사장을 세 번째 방송통신위원장으로 임명했다. 이진숙 방송통신위원장은 2024년 7월 31일 취임 당일, 100분 만에 MBC 대주주 방송문화진흥회 이사 지원자 80여...\nThe post 2인 체제 ‘위법 파행’ 방통위, 독립적 미디어위원회로 개편하자 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/115613",
+          "publishedOn": "2024-08-29T01:57:31.000Z",
+          "wordCount": 4539,
+          "title": "2인 체제 ‘위법 파행’ 방통위, 독립적 미디어위원회로 개편하자",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/08/art_648849_1722409287.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=115567",
+          "author": "이정환",
+          "description": "“굴복하면 정상적인 나라 아니다.” “응급실을 너무 만만하게 본다.” “병원장 아버지도 뺑뺑이 돌다 돌아가셨다.” 윤석열-한동훈, 밥 안 먹는다. 쟁점과 현안. 모처럼 국회가 일했다. 피해학교 500여 곳, 중학생이 만든 딥페이크 지도. “세상이 무너졌다.” 재판 넘겨져도 절반이 집행유예. 미국은 제작만 해도 처벌한다. 더 깊게 읽기. 중대재해 처벌법 위반, 아리셀 대표 구속. 관치가 왜곡한 금리. 부모 소득과 거주 지역이...\nThe post “굴복하면 정상적인 나라 아니다”, 윤석열은 남은 임기를 버틸 수 있을까: 슬로우레터 8월29일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/115567",
+          "publishedOn": "2024-08-28T22:23:14.000Z",
+          "wordCount": 6339,
+          "title": "“굴복하면 정상적인 나라 아니다”, 윤석열은 남은 임기를 버틸 수 있을까: 슬로우레터 8월29일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/08/sCEnTAwr2wpR66cd983f4baf20.01914641-1000x652.jpeg"
+        },
         {
           "id": "https://slownews.kr/?p=115424",
           "author": "이정환",
@@ -3070,16 +3121,6 @@
           "wordCount": null,
           "title": "“한동훈 나오면 이재명이 된다”는 말이 나오는 이유: 슬로우레터 8월1일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=113137",
-          "author": "이정환",
-          "description": "디올 백 알고도 신고 안 했다. 김건희 벙커? 제2부속실로 생색내기. 쟁점과 현안. 800억 원밖에 없다. 공정위는 몰랐다. 얼마가 부족한지도 몰랐다. 더 깊게 읽기. 5박6일 필리버스터 종료, 방송4법 국회 통과. 이진숙 프로젝트 속도전. 필리버스터+거부권+재의결 부결 3종 세트. “용산이 괘씸하게 보고 있다.” 다르게 읽기. 도청‧미행 당할 거 몰랐나. 댐 만들어 기후 대응한다고? 골칫덩어리 영주댐 잊었나. 해법과 대안....\nThe post “용산이 괘씸하게 보고 있다”, 마약 수사 외압 사건 또 터진다: 슬로우레터 7월31일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/113137",
-          "publishedOn": "2024-07-30T22:27:51.000Z",
-          "wordCount": null,
-          "title": "“용산이 괘씸하게 보고 있다”, 마약 수사 외압 사건 또 터진다: 슬로우레터 7월31일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3088,6 +3129,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595835",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/595835/2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81%ec%9d%84-%ec%9d%bd%eb%8a%94-%ec%9b%94%ea%b0%80%ec%9d%98-%ec%8b%9c%ec%84%a0-%eb%a7%a4%eb%8f%84%ec%97%90-%eb%a7%a4%ec%88%98",
+          "publishedOn": "2024-08-29T10:04:09.000Z",
+          "wordCount": 6339,
+          "title": "2분기 엔비디아 실적을 읽는 월가의 시선 : 매도에 매수하라",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=595833",
+          "author": "happist",
+          "description": "마케팅 경영 사례 연구 및 트렌드 탐구",
+          "link": "https://happist.com/595833/2%eb%b6%84%ea%b8%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%8b%a4%ec%a0%81-%ec%9a%94%ec%95%bd",
+          "publishedOn": "2024-08-28T21:59:33.000Z",
+          "wordCount": 6021,
+          "title": "2분기 엔비디아 실적 요약",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595828",
           "author": "happist",
@@ -3137,26 +3198,6 @@
           "wordCount": null,
           "title": "배롱나무 명소, 물놀이 계곡을 즐기기 좋은 밀양 표충사 베롱나무",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595782",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595782/%ea%b0%95%eb%a6%89%ec%97%ac%ed%96%89-%ed%99%9c%eb%9e%98%ec%a0%95%ea%b3%bc-%eb%91%98%eb%a0%88%ea%b8%b8%ec%9d%b4-%ec%95%84%eb%a6%84%eb%8b%a4%ec%9b%9f%eb%8d%98-%ea%b0%95%eb%a6%89-%ec%84%a0%ea%b5%90",
-          "publishedOn": "2024-07-31T06:18:25.000Z",
-          "wordCount": null,
-          "title": "강릉여행, 활래정과 둘레길이 아름다웟던 강릉 선교장 방문기",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595784",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595784/7-31-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac",
-          "publishedOn": "2024-07-31T06:04:13.000Z",
-          "wordCount": null,
-          "title": "7/31, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
         }
       ]
     },
@@ -3165,6 +3206,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79900",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 9일 스프에 쓴 글입니다. 지난달 말 대통령 후보 TV 토론에서 바이든이 참패했고, 이어 지난주 미국 대법원이 대통령이 재임 중에 한 일에 대해 상당 부분 면책특권을 인정해 줬다는 소식도 전해드렸습니다. 두 가지 사건 모두 오는 11월 → 더 보기",
+          "link": "https://newspeppermint.com/2024/08/28/npsp_trumptariffs/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumptariffs",
+          "publishedOn": "2024-08-28T22:59:50.000Z",
+          "wordCount": 2176,
+          "title": "[뉴페@스프] “수입품에 10% 일괄 관세를” 트럼프의 이토록 허술한 공약이 먹히는 이유",
+          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
+        },
         {
           "id": "https://newspeppermint.com/?p=79898",
           "author": "NewsPeppermint",
@@ -3313,16 +3364,6 @@
           "publishedOn": "2024-08-02T01:00:09.000Z",
           "wordCount": null,
           "title": "지금 민주당과 해리스의 최우선 과제?… “두 마리 토끼 쫓는 셈”",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79483",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 6월 5일 스프에 쓴 글입니다. 불로초를 찾으려 했던 진시황의 이야기는 다들 잘 아실 겁니다. 굳이 진시황이 아니라도 인류 역사에 이름을 남긴 권력자 가운데는 다시 젊어지려고 애쓴 사람이 많습니다. 그게 어렵다면 늙지 않는 비결을 찾아 → 더 보기",
-          "link": "https://newspeppermint.com/2024/07/30/npsp_buylongerlife/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_buylongerlife",
-          "publishedOn": "2024-07-30T22:59:07.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] ‘억만장자들만의 세상’, 이제는 대놓고 펼쳐진다",
           "imageUrl": null
         }
       ]
