@@ -146,18 +146,7 @@
       "title": "Architectures and Processors blog",
       "feedUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/rss",
       "siteUrl": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog",
-      "articles": [
-        {
-          "id": "dd9e70c8-6d3c-4c71-b136-2456382a7b5c:56463e5b-511a-4cf0-9b93-3559823e3980",
-          "author": "Khalid Saadi",
-          "description": "This blog post describes how to implement the same matrix-matrix multiplication algorithm using three different Arm technologies: Neon, SVE, and SME.(read more)",
-          "link": "https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/matrix-matrix-multiplication-neon-sve-and-sme-compared",
-          "publishedOn": "2024-08-06T14:00:00.000Z",
-          "wordCount": null,
-          "title": "Part 3: Matrix-matrix multiplication. Neon, SVE, and SME compared",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "CPUU의 Daydreamin&#039;",
@@ -194,6 +183,36 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "fe32a381-802e-4a34-be19-a0b44dd6f57b",
+          "author": "Ian Lawson",
+          "description": "This article offers a quick overview of various Red Hat technologies that you can use to provide a composite solution for the inner and outer loops of the DevSecOps cycle. First, I'll introduce the concepts of the inner and outer loop in simple English, and then explain the use of specific products for realization of the platform engineer’s tasks within this cycle.\nFrom DevOps to platform engineering\nSince people started writing software, there has always been a divide between those who create and those who maintain. In the old days (and I’m old, so bear with me), teams were small and the job of maintaining the software in \"production\" was often part of the developer’s role. However, as software solutions truly took off, the scale became too large for the devs, and the sys admins who were …",
+          "link": "https://developers.redhat.com/articles/2024/09/05/platform-engineers-role-devsecops-inner-and-outer-loops",
+          "publishedOn": "2024-09-05T13:30:00.000Z",
+          "wordCount": null,
+          "title": "The platform engineer's role in the DevSecOps inner and outer loops",
+          "imageUrl": null
+        },
+        {
+          "id": "256ce03a-985e-46d2-8764-912492ff4bf6",
+          "author": "Jose Gomez-Selles",
+          "description": "This article covers new features in the latest release of both the Red Hat build of OpenTelemetry and Red Hat OpenShift distributed tracing.\nFirst of all, apart from all the features shared below, let’s start by sharing that both releases come with support for certificate rotation. By automatically reloading the new certificates, the process of certificate renewal is made transparent to users in Tempo and OpenTelemetry pods.\nWhat’s new in OpenTelemetry?\nThe Red Hat build of OpenTelemetry 3.3 is based on the open source OpenTelemetry operator release 0.107.0.\nAs usual, there’s a lot going on in the OpenTelemetry space, and this release continues expanding the capabilities of this observability component. Let’s start with something that we believe will help users in their application observa…",
+          "link": "https://developers.redhat.com/articles/2024/09/05/red-hat-build-opentelemetry-and-openshift-distributed-tracing-33-new-features",
+          "publishedOn": "2024-09-05T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Red Hat build of OpenTelemetry and OpenShift distributed tracing 3.3: New features for developers",
+          "imageUrl": null
+        },
+        {
+          "id": "f6295aab-7da1-4bbe-9848-6234dcb3adef",
+          "author": "Stefan Hajnoczi",
+          "description": "This article covers the IOThread Virtqueue Mapping feature for Kernel-based virtual machine (KVM) guests that was introduced in Red Hat Enterprise Linux (RHEL) 9.4.\nThe problem\nModern storage evolved to keep pace with growing numbers of CPUs by providing multiple queues through which I/O requests can be submitted. This allows CPUs to submit I/O requests and handle completion interrupts locally. The result is good performance and scalability on machines with many CPUs.\nAlthough virtio-blk devices in KVM guests have multiple queues by default, they do not take advantage of multi-queue on the host. I/O requests from all queues are processed in a single thread on the host for guests with the <driver io=native …> libvirt domain XML setting. This single thread can become a bottleneck for I/O bou…",
+          "link": "https://developers.redhat.com/articles/2024/09/05/scaling-virtio-blk-disk-io-iothread-virtqueue-mapping",
+          "publishedOn": "2024-09-05T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Scaling virtio-blk disk I/O with IOThread Virtqueue Mapping",
+          "imageUrl": null
+        },
+        {
           "id": "696e9c50-a7dc-4714-860f-bc81f3c073ba",
           "author": "Diana Sari",
           "description": "Stable Diffusion is an AI model to generate images from text description. It uses a diffusion process to iteratively de-noise random Gaussian noise into coherent images. This is a simple tutorial for creating images using Stable Diffusion model using Red Hat OpenShift AI (RHOAI) (formerly Red Hat OpenShift Data Science), which is our OpenShift platform for AI/ML projects lifecycle management, running on a Red Hat OpenShift Services on AWS (ROSA) cluster, which is our managed service OpenShift platform on AWS, with NVIDIA GPU enabled. \nWhat you'll be doing\nOnce we logged in to the cluster as cluster admin, we will first set up the GPU environment by first creating the machine pools and installing Node Feature Discovery (NFD) operator, which will detect hardware and system configuration of t…",
@@ -211,6 +230,16 @@
           "publishedOn": "2024-09-04T07:00:00.000Z",
           "wordCount": null,
           "title": "Use kube-burner to measure Red Hat OpenShift VM and storage deployment at scale",
+          "imageUrl": null
+        },
+        {
+          "id": "0c947ac2-2974-4757-8c11-0a132f4873d1",
+          "author": "David Kwon",
+          "description": "The Web Terminal Operator is a useful tool that provides users with a shell environment from the Red Hat OpenShift web console. Within the shell environment, preinstalled tools such as oc and kubectl help you manage your OpenShift resources without leaving the web console. Figure 1 shows an instance of the web terminal.\n\n\n\n  \n        \n\n\n\n        Figure 1. A web terminal instance open in the OpenShift web console\n  \n\nFigure 1: A web terminal instance open in the OpenShift web console.\n\nIn this introductory article, we will go through noteworthy nuances within the web terminal lifecycle, as well as how to further customize your web terminal to your liking using the built-in wtoctl tool.\nThis article is an overview of the web terminal from a user’s perspective. For an article introducing the …",
+          "link": "https://developers.redhat.com/articles/2024/09/02/explore-full-capabilities-web-terminal-operator",
+          "publishedOn": "2024-09-02T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Explore the full capabilities of the Web Terminal Operator",
           "imageUrl": null
         },
         {
@@ -462,16 +491,6 @@
           "wordCount": null,
           "title": "Getting started with OperatorPolicy",
           "imageUrl": null
-        },
-        {
-          "id": "f773cd03-dec8-4c51-bffd-04599a174f03",
-          "author": "Kenny Ge",
-          "description": "Welcome! This guide will help you get started with general purpose graphics processing unit (GPU) programming, otherwise known as GPGPU. It is intended to:\n\nTeach you the basics of parallel GPU programming, such as the SIMD model.\nWalk you through some key algorithms, such as scan/prefix sum, quicksort, and game of life.\nShow you working examples of code from OpenAI’s Triton, CUDA, OpenCL, torch.compile, Numba, and HIP/HCC.\nHelp you determine which framework to use, and go over any common pitfalls.\n\nThis guide focuses more on the algorithms and architecture, with a heavy emphasis on how to effectively use the computational model. In my personal experience, I found GPU programming to be a fascinating concept, although many of the existing resources seemed to be focused primarily on system-l…",
-          "link": "https://developers.redhat.com/articles/2024/08/07/what-gpu-programming",
-          "publishedOn": "2024-08-07T07:00:00.000Z",
-          "wordCount": null,
-          "title": "What is GPU programming",
-          "imageUrl": null
         }
       ]
     },
@@ -509,6 +528,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4490911",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "The U.S. Department of Commerce’s National Institute of Standards and Technology (NIST) has finalized a set of encryption algorithms designed to withstand cyberattacks from quantum computers. These algorithms are part of the first completed standards from NIST’s post-quantum cryptography (PQC) standardization project and are ready for immediate use. The standards encompass three post-quantum cryptography algorithms: […]\nThe post First Four Quantum-Resistant Cryptographic Algorithms appeared first on Embedded.",
+          "link": "https://www.embedded.com/first-four-quantum-resistant-cryptographic-algorithms/",
+          "publishedOn": "2024-09-05T11:08:00.000Z",
+          "wordCount": null,
+          "title": "First Four Quantum-Resistant Cryptographic Algorithms",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490892",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "The theory now posits that neutrino particles have a very small mass and come in three distinct “flavors” that can be switched between. Previously, it was believed that they had no mass. Studying these particles, which are frequently referred to as “ghost particles,” is exceedingly challenging due to their ability to travel through most of […]\nThe post Spectrum Instrumentation’s liquid scintillator digitizer cards used in JUNO’s neutrino detector appeared first on Embedded.",
+          "link": "https://www.embedded.com/spectrum-instrumentations-liquid-scintillator-digitizer-cards-used-in-junos-neutrino-detector/",
+          "publishedOn": "2024-09-05T08:00:00.000Z",
+          "wordCount": null,
+          "title": "Spectrum Instrumentation’s liquid scintillator digitizer cards used in JUNO’s neutrino detector",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4490896",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "Vanguard International Semiconductor Corporation and NXP Semiconductors have announced their intention to establish a manufacturing joint venture, VisionPower Semiconductor Manufacturing Company Pte Ltd (“VSMC”), which will construct a new 300mm semiconductor wafer manufacturing facility in Singapore. The joint-venture fab will cater to the automotive, industrial, consumer, and mobile end markets by providing support for mixed-signal, […]\nThe post VIS and NXP will establish a joint venture to build and operate a 300mm fab appeared first on Embedded.",
+          "link": "https://www.embedded.com/vis-and-nxp-will-establish-a-joint-venture-to-build-and-operate-a-300mm-fab/",
+          "publishedOn": "2024-09-05T08:00:00.000Z",
+          "wordCount": null,
+          "title": "VIS and NXP will establish a joint venture to build and operate a 300mm fab",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4490814",
           "author": "Maurizio Di Paolo Emilio",
@@ -748,26 +797,6 @@
           "wordCount": null,
           "title": "Embedded Rust: The Cortex-M QuickStart Template",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4490592",
-          "author": "Stephen Evanczuk",
-          "description": "Once again, opening social media or your favorite news application is impossible without hearing about the latest security incident. This time, it wasn’t a security breach that caught headlines; it was a security company that rolled out an update that crashed Windows computers, causing a massive IT outage that affected 8.5 million computers. Those customers […]\nThe post 7 lessons every developer should learn from CrowdStrike’s Doomsday update appeared first on Embedded.",
-          "link": "https://www.embedded.com/lessons-every-developer-should-learn-from-crowdstrikes-doomsday-update/",
-          "publishedOn": "2024-08-06T16:46:15.000Z",
-          "wordCount": null,
-          "title": "7 lessons every developer should learn from CrowdStrike’s Doomsday update",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4490572",
-          "author": "Stephen Evanczuk",
-          "description": "The backup battery shelf is an important feature of power management systems in an Open Compute Project (OCP) Open Rack V3 (ORV3) battery backup unit (BBU) architecture and data center application, especially in the field of uninterruptible power supplies (UPSs). These shelves, with a precise design focused on housing and organizing backup batteries, emerge as […]\nThe post Shelf operation of an OCP ORV3 smart battery backup unit appeared first on Embedded.",
-          "link": "https://www.embedded.com/shelf-operation-of-an-ocp-orv3-smart-battery-backup-unit/",
-          "publishedOn": "2024-08-06T12:04:36.000Z",
-          "wordCount": null,
-          "title": "Shelf operation of an OCP ORV3 smart battery backup unit",
-          "imageUrl": null
         }
       ]
     },
@@ -784,6 +813,16 @@
           "publishedOn": "2024-09-04T15:30:14.000Z",
           "wordCount": null,
           "title": "What I Learned From Crashing and Burning in Grad School",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1690.php",
+          "author": null,
+          "description": "Life is often about compromise, but embedded developers really are not good at that. Code generation is a context in which compromise is somewhat inevitable and we call it “optimization”. All modern compilers perform optimization, of course. Some do a better job than others. A lot of the time, the compiler simply guesses which optimization will produce the best result without knowing what...",
+          "link": "https://www.embeddedrelated.com/showarticle/1690.php",
+          "publishedOn": "2024-08-26T10:18:51.000Z",
+          "wordCount": null,
+          "title": "Small or fast?",
           "imageUrl": null
         },
         {
@@ -815,6 +854,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/",
+          "author": null,
+          "description": "PaliGemma, a lightweight open vision-language model (VLM), is able to take both image and text inputs and produce a text response, adding an additional vision model to the BaseGemma model.",
+          "link": "https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/",
+          "publishedOn": "2024-09-05T20:15:48.744Z",
+          "wordCount": null,
+          "title": "Gemma explained: PaliGemma architecture",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/tensorflow-lite-is-now-litert/",
           "author": null,
@@ -1180,16 +1229,6 @@
           "wordCount": null,
           "title": "Even great mathematicians make mistakes",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1150/",
-          "author": null,
-          "description": "Developing and playing games can be an incredibly engaging, addictive, and satisfying activity. But nothing spoils the gameplay experience like a tricky hidden bug. So, today we'll be looking at an...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1150/",
-          "publishedOn": "2024-08-06T21:00:00.000Z",
-          "wordCount": null,
-          "title": "How to find job for Rescue Rangers: analyzing Godot Engine",
-          "imageUrl": null
         }
       ]
     },
@@ -1216,6 +1255,16 @@
       "feedUrl": "https://interrupt.memfault.com/feed.xml",
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
+        {
+          "id": "https://interrupt.memfault.com/blog/august-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nAugust.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/august-roundup",
+          "publishedOn": "2024-09-04T00:00:00.000Z",
+          "wordCount": null,
+          "title": "What we've been reading in August (2024)",
+          "imageUrl": null
+        },
         {
           "id": "https://interrupt.memfault.com/blog/memory-debugging",
           "author": null,
@@ -1283,6 +1332,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/989106/",
+          "author": "corbet",
+          "description": "Version\n1.81.0 of the Rust language has been released.  Changes include the\nstabilization of the Error trait in core, some new sort\nalgorithms, some linting improvements, and more.",
+          "link": "https://lwn.net/Articles/989106/",
+          "publishedOn": "2024-09-05T17:48:50.000Z",
+          "wordCount": 247,
+          "title": "Rust 1.81.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/988401/",
+          "author": "daroc",
+          "description": "OpenSnitch is an\n\"interactive application firewall\". Like other firewalls, it uses a\nseries of rules to decide what network traffic should be permitted. Unlike\nmany other firewalls, though, OpenSnitch does not ask the user to create a list of rules\nahead of time. Instead, the list of rules can be built up\nincrementally as applications make connections — and the user can peruse both\nthe rules that have built up over time, and statistics on the connections that\nhave been attempted.",
+          "link": "https://lwn.net/Articles/988401/",
+          "publishedOn": "2024-09-05T15:23:02.000Z",
+          "wordCount": null,
+          "title": "[$] Application monitoring with OpenSnitch",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989047/",
+          "author": "corbet",
+          "description": "Version 4.21.0 of the Samba Windows interoperability suite has been\nreleased.  Changes include some authentication hardening, a number of LDAP\nimprovements, per-user and per-group veto and hide files, group-managed\nservice accounts, and quite a bit more.",
+          "link": "https://lwn.net/Articles/989047/",
+          "publishedOn": "2024-09-05T14:19:35.000Z",
+          "wordCount": 3099,
+          "title": "Samba 4.21.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989046/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (bubblewrap and flatpak, containernetworking-plugins, fence-agents, ghostscript, krb5, orc, podman, python3.11, python3.9, resource-agents, runc, and wget), Debian (chromium, cinder, glance, gnutls28, nova, nsis, python-oslo.utils, ruby-sinatra, and setuptools), Fedora (kernel), Oracle (bubblewrap and flatpak, buildah, containernetworking-plugins, fence-agents, ghostscript, gvisor-tap-vsock, kernel, krb5, libndp, nodejs:18, orc, podman, postgresql, python-urllib3, python3.11, python3.12, python3.9, runc, skopeo, and wget), SUSE (hdf5, netcdf, trilinos), and Ubuntu (firefox, imagemagick, ironic, openssl, python-django, vim, and znc).",
+          "link": "https://lwn.net/Articles/989046/",
+          "publishedOn": "2024-09-05T14:11:29.000Z",
+          "wordCount": 399,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/987605/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for September 5, 2024 is available.",
+          "link": "https://lwn.net/Articles/987605/",
+          "publishedOn": "2024-09-05T00:48:55.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for September 5, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/988862/",
           "author": "corbet",
@@ -2192,36 +2291,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/983870/",
-          "author": "jake",
-          "description": "CircuitPython is an open-source\nimplementation of the Python programming language for microcontroller\nboards.  The project, which is sponsored by Adafruit Industries, is designed with\nnew programmers in mind, but it also has many features that may be of\ninterest to more-experienced developers. The recent 9.1.0 release\nadds a few minor features, but it follows just a few months after CircuitPython 9.0.0,\nwhich brings some more significant changes, including improved graphics and\nUSB support.",
-          "link": "https://lwn.net/Articles/983870/",
-          "publishedOn": "2024-08-06T14:35:25.000Z",
-          "wordCount": null,
-          "title": "[$] CircuitPython: Python for microcontrollers, simplified",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/984617/",
-          "author": "corbet",
-          "description": "Version\n129.0 of the Firefox browser has been released.  Changes include some\nimprovements to the reader mode, tab previews, and use of HTTPS by default.",
-          "link": "https://lwn.net/Articles/984617/",
-          "publishedOn": "2024-08-06T14:28:06.000Z",
-          "wordCount": null,
-          "title": "Firefox 129.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/984598/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (libreoffice), Gentoo (containerd and firefox), Red Hat (httpd), SUSE (ca-certificates-mozilla, ksh, openssl-3-livepatches, podman, python-Twisted, and skopeo), and Ubuntu (imagemagick).",
-          "link": "https://lwn.net/Articles/984598/",
-          "publishedOn": "2024-08-06T13:30:16.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2247,6 +2316,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/fitness-functions-data-products.html",
+          "author": null,
+          "description": "Decentralized data management requires automation to scale governance\n       effectively. Fitness functions are a powerful automated governance\n       technique my colleagues have applied to data products within the context\n       of a Data Mesh. Since data products serve as the foundational building\n       blocks of a data strategy, ensuring robust governance around them\n       significantly increases the chances of success. Kiran\n       Prakash explains how to do this, starting with simple tests for\n       key architectural characteristics and moving on to leveraging metadata\n       and Large Language Models.\nmore…",
+          "link": "https://martinfowler.com/articles/fitness-functions-data-products.html",
+          "publishedOn": "2024-09-05T13:37:00.000Z",
+          "wordCount": 3085,
+          "title": "Governing data products using fitness functions",
+          "imageUrl": "https://martinfowler.com/articles/fitness-functions-data-products/card.png"
+        },
         {
           "id": "https://martinfowler.com/bliki/CycleTime.html",
           "author": null,
@@ -2461,18 +2540,7 @@
       "title": "IT의 중심에서",
       "feedUrl": "https://subokim.wordpress.com/feed/",
       "siteUrl": "https://subokim.wordpress.com",
-      "articles": [
-        {
-          "id": "http://subokim.wordpress.com/?p=13437",
-          "author": "subokim",
-          "description": "자기 꿈이 있는 사람은 사람을 귀하게 여깁니다.누가 언제 어떻게 나를 도와줄지 모르기 때문입니다.이렇게 도와달라고 말을 합니다. 자기 꿈에 도취된 사람은 사람을 허투루 여깁니다.내 꿈을 위해 희생시킬 사람이 필요하거든요.이렇게 하라고 부추깁니다. 전자는 옆에 있는 사람이 자꾸 불어납니다.후자는 옆에 있는 사람이 자꾸 사라지죠. 전자는 자꾸 자기 실력을 기릅니다.일은 자기가 하는 거고, 다른 사람은 나를 도와줄 뿐이니까요. 후자는... Continue Reading →",
-          "link": "https://subokim.wordpress.com/2024/08/07/why-value-developer/",
-          "publishedOn": "2024-08-07T03:41:49.000Z",
-          "wordCount": null,
-          "title": "사람을 귀하게 여겨야 하는 이유",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "코드쓰는사람",
@@ -2521,6 +2589,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=116056",
+          "author": "민노씨",
+          "description": "샤넬, 랑콤, 시세이도, 클라랑스, 록시땅, 에스티로더, 디올 등 백화점과 면세점에서 화장품 등을 판매하는 직원들이 열악한 노동환경을 개선하기 위해 노동조합을 결성한 지 벌써 10여 년이 흘렀다. (중략) 2024년 노사 교섭의 핵심은 감정노동 수당(월 2만 원)과 감정노동 휴가(연 1일 확대)였다. (중략) 감정노동의 심각성을 고려한다면 노동조합의 요구는 소박하기 짝이 없을 정도다. (중략) 2024년 3월 첫 7개 회사와 노동조합과의...\nThe post 배당금 3000억 샤넬, 감정노동수당 2만 원은 거부 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116056",
+          "publishedOn": "2024-09-05T07:08:12.000Z",
+          "wordCount": null,
+          "title": "배당금 3000억 샤넬, 감정노동수당 2만 원은 거부",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=116150",
+          "author": "이정환",
+          "description": "한국 정부가 엘리엇매니지먼트와 투자자-국가 소송에서 패소한 뒤 취소 소송을 냈는데 패소했다. 원래 손해배상 금액이 5359만 달러였는데 그 사이에 이자가 붙어 1500억 원 정도로 불어났다. 송기호(수륜아시아 변호사)는 한국 정부가 이재용(삼성전자 회장)에게 구상권을 청구해야 한다고 주장하고 있다. 제일모직과 삼성물산 합병은 2015년 9월1일이다. 불법 행위로 인한 손해배상의 공소시효가 10년이니 구상권을 행사할 수 있는 시간이 이제 1년도 채 남지...\nThe post 이재용에게 5000억 원 청구할 공소시효 1년 남았다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116150",
+          "publishedOn": "2024-09-05T06:59:26.000Z",
+          "wordCount": null,
+          "title": "이재용에게 5000억 원 청구할 공소시효 1년 남았다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=116105",
+          "author": "이정환",
+          "description": "4%포인트 더 내고 2%포인트 더 받는다. 50대는 빠르게, 정부 연금 개혁안 초안. 국민연금 자동 조정장치. 더 깊게 읽기. 모수 개혁과 구조 개혁. 갈라치기? 전문가들 평가는. 쟁점과 현안. 공보의 투입? “의료 사고 겁난다.” 다시 찾아온 R의 공포. “전화할 수 있으면 찢어져 피 많이 나도 경증.” 적자성 국가 채무 1000조 원 넘을 수도. 한동훈이 발뺌도 발의도 못...\nThe post 국민연금 갈라치기? 미래 위한 빅 스텝?: 슬로우레터 9월5일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116105",
+          "publishedOn": "2024-09-04T22:23:57.000Z",
+          "wordCount": null,
+          "title": "국민연금 갈라치기? 미래 위한 빅 스텝?: 슬로우레터 9월5일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=116044",
+          "author": "민주언론시민연합",
+          "description": "‘광부엄마’ 취재를 총괄한 최기영 기자에게 지역언론의 어려움을 묻자 “다양한 플랫폼을 통해 강원일보 기사와 영상을 선보일 수 있는 최근 상황은 긍정적”이라고 말했다. “AI가 대체할 직업에 기자가 빠지지 않고 등장하지만 사람 체온이 필요한 보도는 AI가 할 수 없다”며 “깊숙이 사람 속으로 들어가는 보도는 지역언론이 잘할 수 있는 것이니 오히려 지역언론에겐 지금이 기회”라고 확신했다. 강원일보 ‘광부엄마’는 여성을 터부시하는...\nThe post 광부엄마, 태백시의 현실을 비추는 여성 광부의 삶 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116044",
+          "publishedOn": "2024-09-04T04:00:10.000Z",
+          "wordCount": null,
+          "title": "광부엄마, 태백시의 현실을 비추는 여성 광부의 삶",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=116007",
           "author": "이정환",
@@ -3050,16 +3158,6 @@
           "wordCount": 6537,
           "title": "“한동훈은 바보 아니면 사기꾼, 자기 돈이어도 그랬을까”: 슬로우레터 8월8일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/08/11_CJK_9907.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=113610",
-          "author": "이정환",
-          "description": "“강제 동원 명시” 요구했다가 거절당했다. 외교를 포기하고 외교를 했다는 거짓말. 코스피 하루 만에 반등. 알고리즘 매매가 변동성 키웠다. 쟁점과 현안. 원전 3기만큼 전력 수요 늘었다. 독립기념관장도 뉴라이트. 더 깊게 읽기. 영향력 1위면서 불신하는 언론사 1위는? 한국판 셔먼법 가능할까. 해리스 러닝메이트는 팀 월즈. 다르게 읽기. 1억 전기차에 왜 중국 배터리 넣었을까. 전기차는 주차장 출입 금지? 자살이...\nThe post 사도광산 외교 참사, 알고도 속고 국민들도 속였다: 슬로우레터 8월7일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/113610",
-          "publishedOn": "2024-08-06T22:19:01.000Z",
-          "wordCount": null,
-          "title": "사도광산 외교 참사, 알고도 속고 국민들도 속였다: 슬로우레터 8월7일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3068,6 +3166,26 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595886",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595886/%eb%b0%b0%eb%9f%b0%ec%8a%a4-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ed%8f%ad%eb%9d%bd-%ed%9b%84-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d",
+          "publishedOn": "2024-09-05T03:09:20.000Z",
+          "wordCount": null,
+          "title": "[배런스] 엔비디아 주가 폭락 후 엔비디아 주가 전망",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=595882",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595882/9-5-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-%eb%b3%b4%ea%b3%a0%ec%84%9c",
+          "publishedOn": "2024-09-04T22:34:52.000Z",
+          "wordCount": null,
+          "title": "9/5, 월가의 투자의견 및 주가 전망 보고서",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595878",
           "author": "happist",
@@ -3155,6 +3273,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79679",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 19일 스프에 쓴 글입니다. 현지시각 17일 밤, J.D. 밴스 오하이오주 상원의원이 부통령 후보직 제안을 공식 수락하며, 공화당 전당대회 사흘째 프로그램의 대미를 장식했습니다. 밴스 의원은 지난 중간선거에서 처음 당선돼 상원의원이 된 지 2년이 채 → 더 보기",
+          "link": "https://newspeppermint.com/2024/09/04/npsp_jdvance/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_jdvance",
+          "publishedOn": "2024-09-04T22:59:12.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 트럼프의 픽은 ‘리틀 트럼프’… 그가 그리는 더 큰 그림은",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=79926",
           "author": "NewsPeppermint",
@@ -3303,16 +3431,6 @@
           "publishedOn": "2024-08-13T19:30:09.000Z",
           "wordCount": 1389,
           "title": "“여론조사 믿기 어렵다”는 반응까지… 8월을 해리스의 시간이라 하는 이유",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79516",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 6월 14일 스프에 쓴 글입니다. 대한민국 모든 시·도의 고령 인구 비중이 7%를 넘어서면서 본격적인 고령화 사회에 진입했다는 뉴스가 나온 게 어느덧 13년 전의 일입니다. 이후 한국 사회의 인구 구조가 어떻게 바뀌었는지는 모두 아실 겁니다. 통계를 → 더 보기",
-          "link": "https://newspeppermint.com/2024/08/06/npsp_aging/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_aging",
-          "publishedOn": "2024-08-06T22:59:31.000Z",
-          "wordCount": 2438,
-          "title": "[뉴페@스프] ‘인구소멸’ 한국을 위해 할 수 있는 일",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
