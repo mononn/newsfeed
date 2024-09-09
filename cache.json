@@ -39,18 +39,7 @@
       "title": "C++ Stories",
       "feedUrl": "https://www.cppstories.com/index.xml",
       "siteUrl": "https://www.cppstories.com/",
-      "articles": [
-        {
-          "id": "https://www.cppstories.com/2024/cpp-query-file-attribs-faster/",
-          "author": null,
-          "description": "Imagine you’re developing a tool that needs to scan for file changes across thousands of project files. Retrieving file attributes efficiently becomes critical for such scenarios. In this article, I’ll demonstrate a technique to get file attributes that can achieve a surprising speedup of over 50+ times compared to standard Windows methods.\nLet’s dive in and explore how we can achieve this.\n\n\n\n     \n    \n\n\nThe inspiration for this article came from a recent update for Visual Assist - a tool that heavily improves Visual Studio experience and productivity for C# and C++ developers.\nIn one of their blog post, they shared:\nThe initial parse is 10..15x faster!\nWhat’s New in Visual Assist 2024—Featuring lightning fast parser performance [Webinar] - Tomato Soup\nAfter watching the webinar, I notic…",
-          "link": "https://www.cppstories.com/2024/cpp-query-file-attribs-faster/",
-          "publishedOn": "2024-08-11T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Boost File Scanning Speed: Query File Attributes on Windows 50x Faster",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Sticky Bits – Powered by Feabhas",
@@ -63,6 +52,16 @@
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2024-08-29-gsoc-opencl-c-support-for-clangir/",
+          "author": null,
+          "description": "Hello everyone! I’m 7mile. My GSoC project this summer is Compile GPU kernels using ClangIR. It’s been an exciting journey in compiler development, and I’m thrilled to share the progress and insights gained along the way here.\nBackground\nThe ClangIR project aims to establish a new IR for Clang, built on top of MLIR. As part of the ongoing effort to support heterogeneous programming models, this project focuses on integrating OpenCL C language support into ClangIR. The ultimate goal is to enable the compilation of GPU kernels written in OpenCL C into LLVM IR targeting the SPIR-V architecture, laying the groundwork for future enhancements in SYCL and CUDA support.\nWhat We Did\nOur work involved several key areas:\n\nAddress Space Support: One of the fundamental tasks was teaching ClangIR to han…",
+          "link": "https://blog.llvm.org/posts/2024-08-29-gsoc-opencl-c-support-for-clangir/",
+          "publishedOn": "2024-09-09T00:00:00.000Z",
+          "wordCount": null,
+          "title": "GSoC 2024: Compile GPU kernels using ClangIR",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/",
           "author": null,
@@ -148,18 +147,7 @@
       "title": null,
       "feedUrl": "https://danluu.com/atom.xml",
       "siteUrl": "https://danluu.com/atom/index.xml",
-      "articles": [
-        {
-          "id": "https://danluu.com/codenames/",
-          "author": null,
-          "description": "About eight years ago, I was playing a game of Codenames where the game state was such that our team would almost certainly lose if we didn't correctly guess all of our remaining words on our turn. From the given clue, we were unable to do this. Although the game is meant to be a word guessing game based on word clues, a teammate suggested that, based on the physical layout of the words that had been selected, most of the possibilities we were considering would result in patterns that were \"too weird\" and that we should pick the final word based on the location. This worked and we won.\n\n[Click to expand explanation of Codenames if you're not familiar with the game]\nCodenames is played in two teams. The game has a 5x5 grid of words, where each word is secretly owned by one of {blue team, re…",
-          "link": "https://danluu.com/codenames/",
-          "publishedOn": "2024-08-11T00:00:00.000Z",
-          "wordCount": null,
-          "title": "How good can you be at Codenames without knowing any words?",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Dave Cheney",
@@ -172,6 +160,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "c8dfd9ec-dd2e-4f64-bc4d-b9525c81d763",
+          "author": "Florian Weimer",
+          "description": "Over the years, the GNU C library (glibc) has collected library of helper functions in its upstream source tree, for writing in-tree glibc tests that run as part of its test suite. Like the test suite itself, this part of glibc is not installed, and is not available for general application development. This means that test development usually has to happen within the glibc source tree, which poses some challenges. However, there is an alternative, the glibc-support repository, which allows out-of-tree development of glibc test cases. Often, this simplifies development of test cases (particularly debugging), allows quicker iteration, and more efficient test case creation. Test cases produced this way can be integrated easily into the upstream test suite.\nWhat is available in the glibc suppo…",
+          "link": "https://developers.redhat.com/articles/2024/09/09/glibc-test-development-support-repository",
+          "publishedOn": "2024-09-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Accelerate glibc test development with the glibc-support repository",
+          "imageUrl": null
+        },
+        {
+          "id": "2c0805f1-dc2c-48ce-a89e-8bd7888eaaea",
+          "author": "Javier Cano Cano",
+          "description": "Creating virtual machines (VMs) from golden images is a common practice. It minimizes the deployment time for new VMs, and it provides a familiar environment for the VM's owner. The admin gets an automated and consistent way to create golden images that can encapsulate all environment requirements, reducing the manual work and frictions, leading to a more secure environment. This article will show how to utilize the Red Hat OpenShift Virtualization Windows UEFI installer pipeline to prepare a golden image of Windows 11 in an automated, repeatable and deterministic manner.\nThe pipeline downloads the official Windows ISO from Microsoft download website, modifies it to enable an unattended installation, triggers the installation of Windows operating systems, installs the guest agent and the d…",
+          "link": "https://developers.redhat.com/articles/2024/09/09/create-windows-golden-image-openshift-virtualization",
+          "publishedOn": "2024-09-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Create a Windows golden image for OpenShift Virtualization",
+          "imageUrl": null
+        },
         {
           "id": "fe32a381-802e-4a34-be19-a0b44dd6f57b",
           "author": "Ian Lawson",
@@ -499,6 +507,16 @@
       "siteUrl": "https://www.embedded.com/",
       "articles": [
         {
+          "id": "https://www.embedded.com/?p=4490902",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "In a recent development, NTT Corporation unveiled the “first” gigahertz ultrasonic circuit that utilizes topological insulator principles, indicating a new era in ultrasonic communication technology. This innovative approach represents a significant leap forward in the field of nanomechanics and advanced applied physical science. The core of this advancement lies in developing topological ultrasonic circuits, which […]\nThe post NTT Announces Breakthrough in Ultrasonic Circuit Technology appeared first on Embedded.",
+          "link": "https://www.embedded.com/ntt-announces-breakthrough-in-ultrasonic-circuit-technology/",
+          "publishedOn": "2024-09-09T08:54:00.000Z",
+          "wordCount": null,
+          "title": "NTT Announces Breakthrough in Ultrasonic Circuit Technology",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embedded.com/?p=4490859",
           "author": "Stephen Evanczuk",
           "description": "It is common for Internet of Things (IoT) devices, industrial sensors, meters, precision, and medical equipment to require both a positive and negative voltage. Often, these voltages must be symmetrical and sourced from a single power supply. Various electronic designs require one or more negative voltages in the power supply, often coming together with a […]\nThe post Generating negative voltages from a positive voltage supply appeared first on Embedded.",
@@ -825,6 +843,16 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/get-started-with-gemma-on-ray-on-vertex-ai/",
+          "author": null,
+          "description": "Use Gemma Supervised tuning on Ray on Vertex AI to train and serve machine learning models efficiently and effectively.",
+          "link": "https://developers.googleblog.com/en/get-started-with-gemma-on-ray-on-vertex-ai/",
+          "publishedOn": "2024-09-09T20:15:43.369Z",
+          "wordCount": null,
+          "title": "Get started with Gemma on Ray on Vertex AI",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/",
           "author": null,
           "description": "Gemini 1.5 Flash is now available to developers at more than 70% lower prices. Set up billing for Gemini API in Google AI Studio and access other new features like 1.5 Flash tuning.",
@@ -1063,16 +1091,6 @@
           "wordCount": null,
           "title": "Enabling more private generative AI",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/3-fun-gemma-project-ideas/",
-          "author": null,
-          "description": "Use Gemma models to translate an old language, brainstorm game design ideas, and write a letter to Santa.",
-          "link": "https://developers.googleblog.com/en/3-fun-gemma-project-ideas/",
-          "publishedOn": "2024-08-10T20:14:10.811Z",
-          "wordCount": null,
-          "title": "3 fun Gemma project ideas",
-          "imageUrl": null
         }
       ]
     },
@@ -1272,6 +1290,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/989517/",
+          "author": "jzb",
+          "description": "Version\n0.9.0 of Redox OS,\nan open-source, Unix-like operating system written in\nRust, has been released. Notable changes in this release include\nperformance and stability improvements, better management of physical\nand virtual memory, bootloader improvements, and more. It also brings\nsupport for RustPython, Perl 5, Simple HTTP Server, the addition of\nseveral applications including GNU Nano, Helix, and the COSMIC\nFiles, Editor, and Terminal applications. See the changelog\nsection of the announcement for a full list of changes in the release.",
+          "link": "https://lwn.net/Articles/989517/",
+          "publishedOn": "2024-09-09T19:09:33.000Z",
+          "wordCount": null,
+          "title": "Redox OS 0.9.0",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/987548/",
+          "author": "jake",
+          "description": "Many projects struggle with attracting and retaining contributors; Debian\nis no different in that regard.  At DebConf24, Carlos Henrique Lima\nMelara and Lucas Kanashiro gave a presentation about efforts that the\nBrazilian Debian community has made to increase participation.  Their ideas\nand the lessons\nlearned can be applied more widely, both for other Debian communities and\nfor other projects.",
+          "link": "https://lwn.net/Articles/987548/",
+          "publishedOn": "2024-09-09T16:31:25.000Z",
+          "wordCount": null,
+          "title": "[$] Attracting and retaining Debian contributors",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989489/",
+          "author": "corbet",
+          "description": "Jacob Adams wanders into\nthe kernel's hibernation code:\n\n\n\tHow does Linux move from an awake machine to a hibernating one? How\n\tdoes it then manage to restore all state? These questions led me to\n\tread way too much C in trying to figure out how this particular\n\thardware/software boundary is navigated.",
+          "link": "https://lwn.net/Articles/989489/",
+          "publishedOn": "2024-09-09T14:20:52.000Z",
+          "wordCount": null,
+          "title": "Adams: Linux's bedtime routine",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989488/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (amanda, aom, bluez, python-jwcrypto, and thunderbird), Fedora (chromium, firefox, and thunderbird), Red Hat (bubblewrap and flatpak, containernetworking-plugins, flatpak, and runc), Slackware (python3), SUSE (apache2, bubblewrap and flatpak, postgresql16, and wireshark), and Ubuntu (thunderbird).",
+          "link": "https://lwn.net/Articles/989488/",
+          "publishedOn": "2024-09-09T14:17:33.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989426/",
+          "author": "corbet",
+          "description": "Linus has released 6.11-rc7 for testing.\n\n\n\tAnd I wish I could say that things have calmed down, but I can't\n\treally say that. In fact, rc7 is slightly bigger than both rc6 and\n\trc5 were, both in number of commits, and in actual diff\n\tsize. That's not really how it should work out.\n\n\tThat said, there's nothing *scary* in here. \n\n\nHe is apparently \"still waffling\" about whether to release 6.11 next\nweekend, which would cause the 6.12 merge window to land on top of the\nMaintainers Summit, Linux Plumbers Conference, and Open Source Summit.",
+          "link": "https://lwn.net/Articles/989426/",
+          "publishedOn": "2024-09-08T22:33:28.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.11-rc7",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/989409/",
           "author": "corbet",
@@ -2353,6 +2421,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=9334",
+          "author": "Derek Jones",
+          "description": "Developers often assume that it’s possible to predict the execution path a program will take, for a given set of input values, i.e., program behavior is deterministic. The execution path may be very complicated, and may depend on the contents of certain files (e.g., database…), but it’s deterministic. There is one kind of program where […]",
+          "link": "https://shape-of-code.com/2024/09/08/measuring-non-determinism-in-the-linux-kernel/",
+          "publishedOn": "2024-09-08T21:31:40.000Z",
+          "wordCount": null,
+          "title": "Measuring non-determinism in the Linux kernel",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=9321",
           "author": "Derek Jones",
           "description": "Software contained in safety related applications has to have a very low probability of failure. How is a failure rate for software calculated? The people who calculate these probabilities, or at least claim that some program has a suitably low probability, don’t publish the details or make their data publicly available. People have been talking […]",
@@ -2459,6 +2537,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=116402",
+          "author": "이정환",
+          "description": "옆자리 동료에게 운동화를 새로 사야겠어, 이렇게 이야기했더니 갑자기 페이스북에 운동화 광고가 뜬다든가 하는 기묘한 경험 해본 적 있나. 페이스북이 내 말을 엿듣는 것 아니냐는 음모론이 있었는데 이런 음모론을 뒷받침하는 주장이 나왔다. 오늘은 ‘액티브 리스닝’이라는 일탈적인 광고 마케팅 기법과 개인 정보 보호 이슈를 살펴본다. 이게 왜 중요한가. 새롭게 제기된 의혹. 구체적으로 내용을 살펴볼까. 불법은 아닌가. 페이스북과...\nThe post 도청을 허용하시겠습니까: 약관을 제대로 안 읽으면 벌어지는일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116402",
+          "publishedOn": "2024-09-09T09:14:24.000Z",
+          "wordCount": null,
+          "title": "도청을 허용하시겠습니까: 약관을 제대로 안 읽으면 벌어지는일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=116302",
+          "author": "이정환",
+          "description": "이제 절반? 두 달 더 남았다. 쟁점과 현안. 의대 증원, 윤석열이 고집을 꺾었나. 2027년부터 vs. 2027년부터. 내년 증원 백지화는 불가능. 중재자 한동훈 역할론. “잘못하고 있다”, 64%. 윤석열이 나서야 한다. 추석 연휴, 중증 환자 진료 수가 3배. 다르게 읽기. 예정된 면죄부, 수사심의위 김건희 불기소 의견. 조선일보의 제안, “사과로 마무리 짓자”. 아낌없이 주는 윤석열. 더 깊게 읽기....\nThe post 조선일보의 출구전략, “이제라도 김건희 사과로 마무리짓자”: 슬로우레터 9월9일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116302",
+          "publishedOn": "2024-09-08T22:17:39.000Z",
+          "wordCount": null,
+          "title": "조선일보의 출구전략, “이제라도 김건희 사과로 마무리짓자”: 슬로우레터 9월9일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=116269",
           "author": "최명진",
@@ -3026,6 +3124,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=595890",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/595890/%ec%8b%9c%ed%8b%b0-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80%eb%8a%94-%ec%83%81%ec%8a%b9%ed%95%98%ec%a7%80%eb%a7%8c-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a7%80%eb%b0%b0%eb%a0%a5",
+          "publishedOn": "2024-09-09T13:47:50.000Z",
+          "wordCount": null,
+          "title": "시티, 엔비디아 주가는 상승하지만, 엔비디아 지배력 끝나고 엔비디아 주가 상승은 끝나고 있다.",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=595888",
           "author": "happist",
