@@ -76,6 +76,16 @@
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
         {
+          "id": "https://blog.llvm.org/posts/2024-09-01-reviving-newgvn/",
+          "author": null,
+          "description": "This summer I participated in GSoC under the LLVM Compiler Infrastructure. The goal of the project was to improve the NewGVN pass so that it can replace GVN as the main value numbering pass in LLVM.\nBackground\nGlobal Value Numbering (GVN) consists of assigning value numbers such that instructions with the same value number are equivalent. NewGVN was introduced in 2016 to replace GVN. We now highlight a few aspects in which NewGVN is better than GVN.\nA key advantage of NewGVN over GVN is that it is complete for loops, while GVN is only complete for acyclical code. NewGVN is complete for loops because when it first processes loops, it assumes that only the first iteration will be executed, later corroborating these assumptions—this is known as the optimistic assumption. In practice, the opti…",
+          "link": "https://blog.llvm.org/posts/2024-09-01-reviving-newgvn/",
+          "publishedOn": "2024-09-16T00:00:00.000Z",
+          "wordCount": null,
+          "title": "GSoC 2024: Reviving NewGVN",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.llvm.org/posts/2024-08-29-gsoc-opencl-c-support-for-clangir/",
           "author": null,
           "description": "Hello everyone! I’m 7mile. My GSoC project this summer is Compile GPU kernels using ClangIR. It’s been an exciting journey in compiler development, and I’m thrilled to share the progress and insights gained along the way here.\nBackground\nThe ClangIR project aims to establish a new IR for Clang, built on top of MLIR. As part of the ongoing effort to support heterogeneous programming models, this project focuses on integrating OpenCL C language support into ClangIR. The ultimate goal is to enable the compilation of GPU kernels written in OpenCL C into LLVM IR targeting the SPIR-V architecture, laying the groundwork for future enhancements in SYCL and CUDA support.\nWhat We Did\nOur work involved several key areas:\n\nAddress Space Support: One of the fundamental tasks was teaching ClangIR to han…",
@@ -183,6 +193,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "81a1c8c1-02d8-4c1d-a36d-47bd024f057f",
+          "author": "Cedric Clyburn",
+          "description": "The proliferation of publicly available large language models (LLMs) has grown substantially in recent months. Simply browse Hugging Face to see the latest trending models. Furthermore, the quality of LLMs has noticeably improved with newer versions of the models. You may have noticed a recent boom in AI-assisted content generation as well, with increasingly convincing degrees of expertise on a wide range of topics.\nHowever, you also may have encountered limitations in the knowledge or accuracy of LLMs. Some very specific or esoteric knowledge that a model was not privy to in its data set during training could be missing or downright incorrect. Also, depending on when the model completed its training, a given LLM may not be up to date on current events.\nWhy is this the case? LLMs can take …",
+          "link": "https://developers.redhat.com/articles/2024/09/16/enhance-llms-instructlab-kitops",
+          "publishedOn": "2024-09-16T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Enhance LLMs and streamline MLOps using InstructLab and KitOps",
+          "imageUrl": null
+        },
+        {
+          "id": "81ca2afc-ad62-430e-a188-43a2d6a0f922",
+          "author": "Prakash Rajendran",
+          "description": "The latest release of Red Hat OpenShift Service Mesh, 2.6, was announced on August 8th, 2024, and it brings notable changes and new features. This blog covers all the new features and changes introduced in OpenShift Service Mesh 2.6. In this article, we will focus on the Kubernetes Gateway API 1.0 feature and how to implement it on Red Hat OpenShift.\nEnable the Gateway API feature\nThis is a technical article covering the steps involved in enabling the Gateway API feature and making use of it for configuring traffic into an application running on OpenShift clusters. For this exercise, a new OpenShift cluster with version 4.16 has been installed on AWS:\n# oc version\nClient Version: 4.16.5\nKustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3\nServer Version: 4.16.5\nKubernetes Version: v1.29…",
+          "link": "https://developers.redhat.com/articles/2024/09/16/how-use-gateway-api-openshift-service-mesh-26",
+          "publishedOn": "2024-09-16T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to use Gateway API with OpenShift Service Mesh 2.6",
+          "imageUrl": null
+        },
         {
           "id": "e5ea1701-b483-4b22-aa57-6027cb4e9dce",
           "author": "DJ Delorie",
@@ -519,6 +549,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4491057",
+          "author": "Stephen Evanczuk",
+          "description": "While four-wheeled EVs seem to hog the limelight in countless future mobility articles, many countries including India, Malaysia, Thailand and Indonesia rely more heavily on economical two-wheeled vehicles – motor scooters, motorcycles, electric motorbikes, electric mopeds and electric bicycles – for transportation. Keeping pace with the trend established by four-wheel EV designers, these e-Scooters and […]\nThe post Touch Controllers Face Unique Demands in Two-Wheeled Vehicle Touchscreens appeared first on Embedded.",
+          "link": "https://www.embedded.com/touch-controllers-face-unique-demands-in-two-wheeled-vehicle-touchscreens/",
+          "publishedOn": "2024-09-16T14:31:41.000Z",
+          "wordCount": null,
+          "title": "Touch Controllers Face Unique Demands in Two-Wheeled Vehicle Touchscreens",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4491002",
           "author": "Stephen Evanczuk",
@@ -877,6 +917,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1693.php",
+          "author": null,
+          "description": "In the world of embedded systems, flexibility and modularity are key to managing complex projects efficiently. The Yocto Project, a powerful build system for creating custom Linux distributions, embraces this philosophy through the use of layers. These layers are essentially sets of repositories that contain the instructions and metadata required to build a specific target image. By leveraging...",
+          "link": "https://www.embeddedrelated.com/showarticle/1693.php",
+          "publishedOn": "2024-09-16T13:07:18.000Z",
+          "wordCount": null,
+          "title": "Understanding Yocto Project Layers: A Modular Approach to  Embedded Systems Development",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1692.php",
           "author": null,
           "description": "This was supposed to be a story of heroism; of using brain power, lookup tables and various other means to overcome strict hardware limitations. Instead, it turned out to be just a little reminder to look closely at all of the aspects of the toolchain, because someone else might have already solved the problem for you.\n  \nAs I have mentioned in this blog before, I enjoy tackling programming...",
@@ -925,6 +975,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/indie-games-fund-google-plays-2m-fund-in-latin-america-is-back/",
+          "author": null,
+          "description": "Google Play's Indie Games Fund is back in Latin America for 2024, offering up to $2 million in funding and hands-on support to small game studios.",
+          "link": "https://developers.googleblog.com/en/indie-games-fund-google-plays-2m-fund-in-latin-america-is-back/",
+          "publishedOn": "2024-09-16T20:15:50.298Z",
+          "wordCount": null,
+          "title": "Indie Games Fund: Google Play’s $2m fund in Latin America is back",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/gemma-explained-overview-gemma-model-family-architectures/",
           "author": null,
@@ -1134,36 +1194,6 @@
           "wordCount": null,
           "title": "Google URL Shortener links will no longer be available",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/the-io-journey-continues-in-bengaluru/",
-          "author": null,
-          "description": "Google's I/O Connect event in Bengaluru highlighted India's contributions to AI and introduced new tools for app development, including AI agents for coding and testing.",
-          "link": "https://developers.googleblog.com/en/the-io-journey-continues-in-bengaluru/",
-          "publishedOn": "2024-08-17T20:14:16.968Z",
-          "wordCount": null,
-          "title": "The I/O journey continues in Bengaluru",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/gemma-for-streaming-ml-with-dataflow/",
-          "author": null,
-          "description": "Use the Gemma language model to gauge customer sentiment, summarize conversations, and assist with crafting responses in near real-time with minimal latency.",
-          "link": "https://developers.googleblog.com/en/gemma-for-streaming-ml-with-dataflow/",
-          "publishedOn": "2024-08-17T20:14:16.966Z",
-          "wordCount": null,
-          "title": "Gemma for Streaming ML with Dataflow",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/introducing-genkit-for-go-build-scalable-ai-powered-apps-in-go/",
-          "author": null,
-          "description": "Genkit for Go is an open source framework for building AI-powered applications in Go. It leverages Go's simplicity, scalability, and security, and is currently in alpha.",
-          "link": "https://developers.googleblog.com/en/introducing-genkit-for-go-build-scalable-ai-powered-apps-in-go/",
-          "publishedOn": "2024-08-17T20:14:16.966Z",
-          "wordCount": null,
-          "title": "Introducing Genkit for Go: Build scalable AI-powered apps in Go",
-          "imageUrl": null
         }
       ]
     },
@@ -1354,6 +1384,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/989687/",
+          "author": "jzb",
+          "description": "The Fedora\nEngineering Steering Committee (FESCo) has voted to\nimmediately remove the WolfSSL package from all of Fedora's\nrepositories due to its maintainer failing to gain approval to package\na new cryptography library for Fedora. Its brief travels through\nFedora's package system highlights gaps in documentation, as well as\nin the package‑review process. The good news is that this may stir\nFedora to improve its documentation and revive a formal security\nteam.",
+          "link": "https://lwn.net/Articles/989687/",
+          "publishedOn": "2024-09-16T16:40:35.000Z",
+          "wordCount": null,
+          "title": "[$] Fedora evicts WolfSSL",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/990490/",
+          "author": "jzb",
+          "description": "Version 8.0.0 of\nthe Valkey open-source in-memory data\nstore is now available. This is the first major release of Valkey\nsince the project forked from Redis in March of this year:\nread\nthe release notes. Additionally, because this version makes changes in how the\nsoftware uses threading, you may want to re-evaluate your cluster's\ninfrastructure to achieve the highest performance.",
+          "link": "https://lwn.net/Articles/990490/",
+          "publishedOn": "2024-09-16T15:19:21.000Z",
+          "wordCount": null,
+          "title": "Valkey 8.0.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989528/",
+          "author": "corbet",
+          "description": "The 6.11 kernel was released\non September 15 after a typical nine-week development cycle.  This\nrelease integrates 13,890 non-merge changesets, so it was a moderately busy\ncycle, slightly more so that 6.10 was.  With a new release comes a new round\nof development statistics; read on for the details.",
+          "link": "https://lwn.net/Articles/989528/",
+          "publishedOn": "2024-09-16T14:24:12.000Z",
+          "wordCount": null,
+          "title": "[$] Some 6.11 development statistics",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/990455/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (git, nodejs, and ring), Fedora (apr, bubblewrap, chromium, clamav, flatpak, mingw-expat, python3-docs, python3.12, and thunderbird), Mageia (assimp, botan2, python-tqdm, and radare2), Slackware (libarchive), and SUSE (curl).",
+          "link": "https://lwn.net/Articles/990455/",
+          "publishedOn": "2024-09-16T09:50:38.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/990307/",
           "author": "corbet",
@@ -2334,16 +2404,6 @@
           "wordCount": null,
           "title": "How to Use SystemView Data Plot Feature for Real-time Data Visualization",
           "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=41100",
-          "author": "Erich Styger",
-          "description": "In an earlier article I explained how to generate GNU coverage information, for an embedded application written in C. In this article, I show the steps and configuration needed to use GNU gcov targeting an embedded application with C++. Outline … Continue reading →",
-          "link": "https://mcuoneclipse.com/2024/08/17/tutorial-gnu-coverage-with-c-for-embedded-applications/",
-          "publishedOn": "2024-08-17T13:39:38.000Z",
-          "wordCount": null,
-          "title": "Tutorial: GNU Coverage with C++ for Embedded Applications",
-          "imageUrl": null
         }
       ]
     },
@@ -2434,6 +2494,16 @@
       "feedUrl": "https://shape-of-code.com/feed/",
       "siteUrl": "https://shape-of-code.com",
       "articles": [
+        {
+          "id": "https://shape-of-code.com/?p=9391",
+          "author": "Derek Jones",
+          "description": "I recently read a post by Terence Tao describing how he experimented with using ChatGPT to solve a challenging mathematical problem. A few of my posts contain mathematical problems I could not solve; I assumed that solving them was beyond my maths pay grade. Perhaps ChatGPT could help me solve some of them. To my […]",
+          "link": "https://shape-of-code.com/2024/09/15/number-of-statement-sequences-possible-using-n-if-statements/",
+          "publishedOn": "2024-09-15T22:16:40.000Z",
+          "wordCount": null,
+          "title": "Number of statement sequences possible using N if-statements",
+          "imageUrl": null
+        },
         {
           "id": "https://shape-of-code.com/?p=9334",
           "author": "Derek Jones",
@@ -2592,6 +2662,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=117073",
+          "author": "김윤지",
+          "description": "[김윤지 칼럼] 위기의 한국 영화, ‘베테랑 2’와 ‘하얼빈’이 망하지 않기를 간절히 바라는 이유. 아마도 추석연휴 극장가를 살핀 사람이라면 적잖이 놀랐을 터다. 8월 여름과 추석명절, 설명절, 연말이 극장가의 가장 큰 대목 시즌인데 제대로 사람 모으자고 내건 영화가 ‘베테랑2’밖에 없다. 인터넷엔 ‘베테랑2’ 흥행세가 좋다는 기사들이 솔솔 올라오지만 이럴 수밖에 없다. 가서 볼 영화가 이것 뿐이다. 사흘만에 누적...\nThe post ‘베테랑 2’ 실패하면 CJ가 영화 접는다는 소문. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/117073",
+          "publishedOn": "2024-09-16T11:17:38.000Z",
+          "wordCount": null,
+          "title": "‘베테랑 2’ 실패하면 CJ가 영화 접는다는 소문.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=117034",
+          "author": "조용수",
+          "description": "“이날 광주 지역 대학병원과 종합병원에는 접합수술을 할 수 있는 의사가 없거나 휴무인 탓에 이 환자를 받지 못한 것으로 전해졌다.” – 다수 언론에서 발췌 인용 응급실이 이슈이긴 한가보다. 절단환자를 수용하지 못한 뒤, 불과 3시간 만에 기사가 떴으니까. 그 시간이면 아직 접합수술이 끝나지도 않았을 텐데. 뭐가 이리 급한 걸까? 특보 전쟁인가? 응급실에 프락치가 숨어있나? 구급차로 이동하는 환자마다...\nThe post ‘착한’ 응급실 뺑뺑이: 무엇이 환자를 위한 길인가 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/117034",
+          "publishedOn": "2024-09-16T06:57:19.000Z",
+          "wordCount": null,
+          "title": "‘착한’ 응급실 뺑뺑이: 무엇이 환자를 위한 길인가",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=116953",
+          "author": "한상기",
+          "description": "1. 복잡한 추론이 가능한 오픈AI-o1 공개 오픈AI, 9월 12일 지난주 가장 많은 사람이 이야기한 화제 중 하나는 오픈AI의 새로운 LLM인 o1(‘오원‘으로 읽음)일 것이다. 그동안 ‘스트로베리’라고 불렀던 프로젝트의 결과인데 ‘데이터 효율성이 높은 학습 과정에서 사고 사슬(CoT)을 이용해 생산적으로 사고하는 방법을 가르치는 대규모 강화 학습(RL) 알고리듬을 적용’했다는 게 공식 블로그 내용이다. 이번에 발표한 것은 o1-프리뷰와 o1-미니이며, 유료...\nThe post 음모론 탈출 도우미 챗봇! appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116953",
+          "publishedOn": "2024-09-16T03:35:27.000Z",
+          "wordCount": null,
+          "title": "음모론 탈출 도우미 챗봇!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=116966",
+          "author": "이정환",
+          "description": "주요 일간 신문이 18일까지 휴간한다. 추석 연휴 여론의 주요 쟁점을 살펴본다. 민주화 이후 처음으로 국회 개원식에 안 갔던 날. 김건희 리스크 다섯 가지. 특검으로 간다. 조용해질까. 쟁점과 현안. 병원 75곳에서 거절당했다. 지지율 20% 충격. 20%가 무너지면? 지지율 반등 계기가 있나. 문제는 경제다. 더 깊게 읽기. 왜 한국 주식만 안 올랐을까. 금리 인하 타이밍? 한국은 아직...\nThe post 국민 기억력 테스트, ‘권력 서열 1위’ 김건희를 잊어서는 안 되는 이유: 슬로우레터 9월16일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/116966",
+          "publishedOn": "2024-09-16T02:43:58.000Z",
+          "wordCount": null,
+          "title": "국민 기억력 테스트, ‘권력 서열 1위’ 김건희를 잊어서는 안 되는 이유: 슬로우레터 9월16일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=116877",
           "author": "선정수",
@@ -3180,16 +3290,6 @@
           "publishedOn": "2024-08-18T22:10:25.000Z",
           "wordCount": null,
           "title": "“중요한 건 일본의 마음”? 어느 나라 정부인가: 슬로우레터 8월19일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=114422",
-          "author": "이정환",
-          "description": "[슬로우리포트] 바이오로직스 과징금 처분은 취소, 제일모직 분식회계는 인정… 이재용 편법 승계 항소심 뒤집힐 수도 있다. 분식회계 의혹 승소? 이게 왜 중요한가. 이재용의 복잡한 사연. 이재용의 세 가지 꼼수. 4조8085억 원, 바이오로직스의 마법. 세 가지 범죄 의혹. 2015년 9월15일 무슨 일이 있었나. 결국 이재용 지분 늘려주기 프로젝트였다. TMI지만 결정적인 변수. 두 가지 충돌하는 재판 결과. 이것이...\nThe post 삼바 승소? 이재용이 떨고 있는 이유. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/114422",
-          "publishedOn": "2024-08-18T07:04:31.000Z",
-          "wordCount": null,
-          "title": "삼바 승소? 이재용이 떨고 있는 이유.",
           "imageUrl": null
         }
       ]
