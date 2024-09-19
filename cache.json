@@ -194,6 +194,46 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "6641ba50-cbde-4870-9877-6b3a4c391a9b",
+          "author": "Vanessa Martini, Jose Gomez-Selles",
+          "description": "With the latest release of the Cluster Observability Operator version 0.4.0 a technology preview of the OpenShift web console Tracing plug-in has been made available to users. In addition to the ScatterPlot provided with the developer preview release in July, you can now make use of a Gantt chart to explore trace details. This is a great enhancement, as we are driven by the mission to provide Red Hat OpenShift users with an \"observability as one\" experience (see Figure 1), allowing you to easily analyze metrics, alerts, logs, network traffic, and now traces under one console. \n\n\n\n  \n        \n\n\n\n        Figure 1: Overview of Modern Observability.\n  \n\nFigure 1: Overview of Modern Observability.\n\nNote that—as highlighted in our previous article (see developer preview link above)—Perses is the…",
+          "link": "https://developers.redhat.com/articles/2024/09/19/enhancements-traces-ui-openshift-web-console-technology-preview-release",
+          "publishedOn": "2024-09-19T14:30:00.000Z",
+          "wordCount": null,
+          "title": "Enhancements to the Traces UI in the OpenShift web console: Technology preview release",
+          "imageUrl": null
+        },
+        {
+          "id": "ab5caebd-a4ca-4439-964c-bdeaffef9225",
+          "author": "Vanessa Martini, Alan Conway",
+          "description": "Observability signal correlation for Red Hat OpenShift has now been released as a technology preview and is available as part of the latest Cluster Observability Operator 0.4.0 release. The backend of observability signal correlation is powered by Korrel8r—open source observability project founded within Red Hat—aimed at providing a set of rules for easily correlating metrics, logs, alerts, netflows, and additional observability signals and resources across different data stores. \nThe output of Korrel8r is displayed in the form of a node graph in a dedicated troubleshooting panel that Red Hat OpenShift users can trigger within the OpenShift web console. The panel is interactive, which allows users—by clicking each node—to be automatically redirected to the relevant web console UI that disp…",
+          "link": "https://developers.redhat.com/articles/2024/09/19/observability-signal-correlation-red-hat-openshift-technology-preview",
+          "publishedOn": "2024-09-19T10:30:00.000Z",
+          "wordCount": null,
+          "title": "Observability signal correlation for Red Hat OpenShift: Technology preview",
+          "imageUrl": null
+        },
+        {
+          "id": "bd96d1d8-60ee-4f7c-84d6-fcbb90083f44",
+          "author": "Mehul Modi, Steven Lee",
+          "description": "Recently, the Network Observability Operator released version 1.6, which added a major enhancement to provide network insights for your Red Hat OpenShift cluster without the Loki log aggregation system. This enhancement was described in What's new in Network Observability 1.6 article, providing a quick overview of the feature. Until this release, Loki was required to be deployed alongside Network Observability to store the network flows data. \nIn this article, let's look at some of the advantages and trade-offs users would have when deploying the Network Observability Operator with Loki disabled. As more metrics are enabled by default with this feature, we'll also demonstrate a use case on how those metrics can benefit users for real world scenarios.\nConfigure Network Observability without…",
+          "link": "https://developers.redhat.com/articles/2024/09/19/lightweight-network-observability-operator-without-loki",
+          "publishedOn": "2024-09-19T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Lightweight Network Observability Operator without Loki",
+          "imageUrl": null
+        },
+        {
+          "id": "99ec5ff8-feef-4312-84ba-f4bbad67394d",
+          "author": "Ahmed Bessifi",
+          "description": "The logging for Red Hat OpenShift 5.9 release introduced support for forwarding logs to Azure Monitor using Vector. By supporting this functionality, Red Hat OpenShift users are able to seamlessly integrate their cluster infra services and application logs with Azure Monitor Logs, leveraging its powerful analytics and monitoring capabilities.\nThis integration empowers users to streamline their monitoring and troubleshooting processes, leading to better operational insights, faster issue resolution, and improved overall performance of their cluster services and applications.\nLogging for OpenShift\nAs a cluster administrator, you can deploy logging for Red Hat OpenShift on a Red Hat OpenShift Container Platform cluster and use it to collect and aggregate node system audit logs, application co…",
+          "link": "https://developers.redhat.com/articles/2024/09/19/how-forward-openshift-logs-azure-monitor",
+          "publishedOn": "2024-09-19T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to forward OpenShift logs to Azure Monitor",
+          "imageUrl": null
+        },
+        {
           "id": "d4c8dbf9-4966-4ee0-8aa0-08267287768c",
           "author": "Mohit Suman, Angelo Zerr",
           "description": "It's been a while since we last updated our Quarkus support with Quarkus Tools for IntelliJ and Quarkus Tools for Visual Studio Code. Recently, we've been focused on separating our free LSP support from the IntelliJ Quarkus project into a standalone extension, LSP4IJ, which now supports various language servers.\nWith the LSP4IJ project now established and increasingly integrated into other IntelliJ plugins, we can shift our focus back to enhancing our Quarkus support. This support offers consistent features across both VS Code and IntelliJ, thanks to the MicroProfile language server augmented with Quarkus-specific capabilities and Qute language servers.\nIt took us a year to develop the new LSP4IJ IntelliJ plugin from our LSP support, but it has proven to be a worthwhile investment. This mo…",
@@ -492,16 +532,6 @@
           "wordCount": null,
           "title": "Designing K8s operators for managing REST resources",
           "imageUrl": null
-        },
-        {
-          "id": "788ec1d5-4de5-422f-ad23-e7ff2de65d40",
-          "author": "Matthew Arnold",
-          "description": "If you are planning a move to Red Hat OpenShift Virtualization, you may have a list of features that need to be checked to demonstrate similar capabilities to more established virtualization platforms. This article will guide you through one such feature: backing up and restoring virtual machines. There are several partner products that can simplify this operation, but these steps show a quick way to get started directly with the OpenShift APIs for Data Protection, provided by Red Hat.\nPreparation\nThese instructions assume you have administrative access to an OpenShift cluster. On this cluster, install and configure the following three Operators:\n\nRed Hat OpenShift Virtualization: Refer to these instructions to install OpenShift Virtualization and create a HyperConverged Operator instance.…",
-          "link": "https://developers.redhat.com/articles/2024/08/21/how-back-and-restore-virtual-machines-openshift",
-          "publishedOn": "2024-08-21T07:00:00.000Z",
-          "wordCount": 4787,
-          "title": "How to back up and restore virtual machines with OpenShift",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Secure_Coding_B_A.png?itok=8NSmwUJu"
         }
       ]
     },
@@ -917,26 +947,6 @@
           "publishedOn": "2024-08-21T14:45:00.000Z",
           "wordCount": null,
           "title": "The RTOS renaissance: closing the OS gap with Linux in IoT",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4490671",
-          "author": "Stephen Evanczuk",
-          "description": "As someone who has spent over two decades in the embedded systems industry, I’ve seen the vast evolution of technology—from 8-bit microcontrollers to today’s sophisticated, multicore systems. Yet, one thing remains constant: pointers in C and C++. They are a double-edged sword that can lead to incredible flexibility in memory management but can also wreak […]\nThe post Best practices to safely navigate pointers in C/C++ appeared first on Embedded.",
-          "link": "https://www.embedded.com/best-practices-to-safely-navigate-pointers-in-c-c/",
-          "publishedOn": "2024-08-20T22:36:52.000Z",
-          "wordCount": null,
-          "title": "Best practices to safely navigate pointers in C/C++",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4490665",
-          "author": "Stephen Evanczuk",
-          "description": "Electronics are expected to comprise roughly half the cost of a new car by 2030, which ups the ante for automotive engineers tasked with “designing in” more features and functionality in the same or less space while meeting rigorous demands for enhanced reliability. Fueling this challenge are four transformational trends: connectivity, autonomous driving, in-vehicle experience […]\nThe post Optimizing vehicle design through rugged, miniaturized connectors appeared first on Embedded.",
-          "link": "https://www.embedded.com/optimizing-vehicle-design-through-rugged-miniaturized-connectors/",
-          "publishedOn": "2024-08-20T22:10:09.000Z",
-          "wordCount": null,
-          "title": "Optimizing vehicle design through rugged, miniaturized connectors",
           "imageUrl": null
         }
       ]
@@ -1464,6 +1474,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/990489/",
+          "author": "daroc",
+          "description": "Dirk Behme led a session discussing the use of Rust's question-mark operator in\nthe kernel at Kangrejos 2024. He was particularly concerned with the concept of\n\"silent\" errors that don't print any messages to the console.\nOther attendees were less convinced that this was a problem, but his presentation\nsparked a lot of discussion about whether the Rust-for-Linux project could\nimprove error handling in kernel Rust code.",
+          "link": "https://lwn.net/Articles/990489/",
+          "publishedOn": "2024-09-19T15:54:01.000Z",
+          "wordCount": null,
+          "title": "[$] Best practices for error handling in kernel Rust",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/988927/",
+          "author": "jzb",
+          "description": "The RPM Package Manager (RPM) project is\nnearing the release of RPM 4.20, the last major planned update for the RPM 4.x\nseries. It has few user-facing changes, but\nseveral additions and enhancements for developers—as well as\nsome small incompatibilities that will likely require RPM packagers to\nrevise their spec\nfiles. 4.20 will be rolling out to many users soon, in\nFedora 41, which is scheduled for October. RPM 6.0 is\nalready in the works, with a new package format and opening the door\nto enabling C++ use in the RPM codebase.",
+          "link": "https://lwn.net/Articles/988927/",
+          "publishedOn": "2024-09-19T13:31:16.000Z",
+          "wordCount": null,
+          "title": "[$] RPM 4.20 is coming",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/990877/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (expat and tinyproxy), Fedora (frr, microcode_ctl, python3.10, python3.12, python3.6, and ruby), Oracle (expat, fence-agents, firefox, ghostscript, java-1.8.0-openjdk, kernel, and thunderbird), Red Hat (firefox, openssl, ruby:3.3, and thunderbird), SUSE (clamav, ffmpeg-4, kernel, libmfx, python3, python312, runc, ucode-intel, and wireshark), and Ubuntu (apache2, git, linux, linux-aws, linux-aws-5.15, linux-azure, linux-azure-5.15, linux-gcp, linux-gcp-5.15, linux-gke, linux-gkeop, linux-gkeop-5.15, linux-hwe-5.15, linux-ibm, linux-intel-iotg, linux-intel-iotg-5.15, linux-kvm, linux-nvidia, linux-oracle, linux-raspi, linux, linux-aws, linux-aws-5.4, linux-azure, linux-azure-5.4, linux-bluefield, linux-gcp, linux-gcp-5.4, linux-gkeop, linux-hwe-5.4, linux-ibm, linux-ibm-5.4, linux-kvm, linux-oracle, linux-oracle-5.4, linux-xilinx-zynqmp, and linux, linux-aws, linux-gcp, linux-gke, linux-ibm, linux-lowlatency, linux-lowlatency-hwe-6.8, linux-nvidia, linux-nvidia-6.8, linux-nvidia-lowlatency, linux-oem-6.8, linux-oracle).",
+          "link": "https://lwn.net/Articles/990877/",
+          "publishedOn": "2024-09-19T12:36:47.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/990599/",
+          "author": "corbet",
+          "description": "Tracking of regressions seems like an important task for any project; there\nis no other way to ensure that known problems are fixed.  At the 2024\nMaintainers Summit, though, Thorsten Leemhuis, who has been doing that work\nfor the kernel, expressed some doubts about whether it is worth continuing.\nThe result was an energetic session on how regression tracking should be\ndone better, and how this work should be supported.",
+          "link": "https://lwn.net/Articles/990599/",
+          "publishedOn": "2024-09-19T06:23:55.000Z",
+          "wordCount": null,
+          "title": "[$] The uncertain future of kernel regression tracking",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/990788/",
+          "author": "corbet",
+          "description": "Version 47 of the GNOME desktop\nhas been released.  Changes include configurable accent colors, better\nsmall-screen support, some performance improvements, new file open and save\ndialogs, and more.",
+          "link": "https://lwn.net/Articles/990788/",
+          "publishedOn": "2024-09-19T05:48:54.000Z",
+          "wordCount": null,
+          "title": "GNOME 47 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/989982/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for September 19, 2024 is available.",
+          "link": "https://lwn.net/Articles/989982/",
+          "publishedOn": "2024-09-19T05:04:57.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for September 19, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/990766/",
           "author": "jzb",
@@ -2433,46 +2503,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/985041/",
-          "author": "jake",
-          "description": "At\nPyCon 2024 in Pittsburgh,\nPennsylvania, Anthony Shaw looked at the various kinds of parallelism\navailable to Python programs.  There have been two major developments on\nthe parallel-execution front over the last few years, with the effort to\nprovide subinterpreters, each with its own\nglobal interpreter lock (GIL), along with the work to remove the GIL entirely.  In the talk, he\nexplored the two approaches to try to give attendees a sense of how to make\nthe right choice for their applications.",
-          "link": "https://lwn.net/Articles/985041/",
-          "publishedOn": "2024-08-20T22:24:01.000Z",
-          "wordCount": null,
-          "title": "[$] Python subinterpreters and free-threading",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/986528/",
-          "author": "jzb",
-          "description": "Version 0.3.0 of the uv\nPython package and project manager has been released. Introduced in\nFebruary, uv is written in Rust and aims to be \"Cargo for\nPython\".  Notable changes in this release include the addition of\ninterfaces for managing projects, installing\nPython, and running scripts,\nalong with adding new documentation. See the\naccompanying blog post for more information.",
-          "link": "https://lwn.net/Articles/986528/",
-          "publishedOn": "2024-08-20T21:31:09.000Z",
-          "wordCount": null,
-          "title": "uv 0.3.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/986174/",
-          "author": "corbet",
-          "description": "One tactic often used by attackers set on compromising a system is heap spraying; in\nshort, the attacker fills as much of the heap as possible with crafted data\nin the hope of getting the target system to use that data in a bad way.  If\nheap spraying can be blocked, attackers will lose an important tool.  The\nkernel has some heap-spraying defenses now, including the dedicated bucket allocator merged for the\nupcoming 6.11 release, but its author, Kees Cook, thinks that more can be\ndone.",
-          "link": "https://lwn.net/Articles/986174/",
-          "publishedOn": "2024-08-20T13:29:07.000Z",
-          "wordCount": null,
-          "title": "[$] Per-call-site slab caches for heap-spraying protection",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/986450/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (squid), Fedora (putty), Mageia (quictls), Oracle (bind, curl, python-setuptools, python3.11-setuptools, and python3.12-setuptools), Red Hat (kernel, kpatch-patch-4_18_0-305_120_1, kpatch-patch-4_18_0-372_87_1 and kpatch-patch-4_18_0-372_91_1, kpatch-patch-4_18_0-477_43_1, kpatch-patch-4_18_0-553, kpatch-patch-5_14_0-284_48_1 and kpatch-patch-5_14_0-284_52_1, kpatch-patch-5_14_0-427_13_1, and libreoffice), SUSE (cosign, dri3proto, presentproto, wayland-protocols, xwayland, freerdp, fwupdate, git, gnome-settings-daemon, hdf5, jasper, java-17-openjdk, java-1_8_0-ibm, java-1_8_0-openjdk, kernel, kernel-firmware, libaom, libqt5-qt3d, libqt5-qtquick3d, ntfs-3g_ntfsprogs, osc, python, python-aiohttp, python-azure-core, python-azure-storage-blob, python- azure-storage-queue, python-typing, python-typing_extensions, python-Jinja2, python-PyMySQL, python-requests, python-tqdm, python-WebOb, python3-sqlparse, python310, python311, qemu, sssd, thunderbird, tiff, unixODBC, uriparser, and wireshark), and Ubuntu (intel-microcode, linux-azure-5.4, and postgresql-12, postgresql-14, postgresql-16).",
-          "link": "https://lwn.net/Articles/986450/",
-          "publishedOn": "2024-08-20T13:22:37.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2821,6 +2851,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=117159",
+          "author": "이정환",
+          "description": "미국 기준 금리 ‘빅컷’. 미국 금리 인하로 벌어질 일. 다음은 한은 차례. 쟁점과 현안. 고비를 넘겼다. 한동훈 중재 안 먹히네. 지지율 10%대까지 떨어지면? 오늘 쌍특검법 처리 간다. 더 깊게 읽기. 인스타그램 청소년 계정 비공개로 돌린다. 삐삐 폭발 테러. 다르게 읽기. 쌍끌이 부채 폭탄. ‘나 홀로 사장’이 줄어든다는 위기 신호. 해법과 대안. 꼴찌 한국에 1등 신안군....\nThe post 연준의 예고된 ‘빅컷’, 부동산과 가계부채에 스텝 꼬인 한은: 슬로우레터 9월19일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/117159",
+          "publishedOn": "2024-09-18T22:13:57.000Z",
+          "wordCount": null,
+          "title": "연준의 예고된 ‘빅컷’, 부동산과 가계부채에 스텝 꼬인 한은: 슬로우레터 9월19일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=117132",
           "author": "이정환",
@@ -3410,16 +3450,6 @@
           "wordCount": null,
           "title": "빗물에 세금을? 도쿄∙베를린에서 ‘힌트’ 얻는 극한호우 대책",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=114654",
-          "author": "이정환",
-          "description": "“용산에서 심각하게 보고 있다고, 머리가 하얘지는 느낌이었다.” 채 상병 사건 경찰판? 여기도 김건희의 그림자. 쟁점과 현안. 가계부채 1896조 원, 골든타임 놓쳤나. 윤석열 거부권 행사한 전세사기법 여야 합의로 통과. 추석이 두렵다. 의대생 1년 유급, 감당할 수 있나. 더 깊게 읽기. 이재명 앞의 세 가지 태풍. ‘임대 문의’ 늘어나는 이유. “나는 내 일을 사랑했지만 미국을 더 사랑했다.”...\nThe post 마약 외압 사건에 김건희 개입 의혹이 나오는 이유: 슬로우레터 8월21일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/114654",
-          "publishedOn": "2024-08-20T22:33:45.000Z",
-          "wordCount": null,
-          "title": "마약 외압 사건에 김건희 개입 의혹이 나오는 이유: 슬로우레터 8월21일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3804,16 +3834,6 @@
           "wordCount": 2478,
           "title": "[뉴페@스프] “그렇게만 할 거면… 올림픽 왜 하니?” 배제와 포용, 답은 정해져 있다",
           "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79845",
-          "author": "NewsPeppermint",
-          "description": "이번 미국 대선의 중요한 이슈 가운데 하나가 이민 문제입니다. 얼핏 보기엔 이민 문제에 있어서 주로 공세를 펴는 쪽은 트럼프와 공화당이고, 반대로 민주당은 정책을 방어하는 경우가 많아 보입니다. 그러나 자세히 뜯어 보면, 이민 문제가 지금처럼 심각해진 데는 공화당과 민주당, 진보와 보수 할 것 없이 현실에 한참 뒤처진 이민 제도를 방치한 정치권 전반의 책임이 큽니다. 실제로 미국에 합법적으로 정착하기 위해 비자를 받거나 영주권을 얻는 일은 굉장히 어렵습니다. 전문 번역: 미국에 ‘합법 이민’이 → 더 보기",
-          "link": "https://newspeppermint.com/2024/08/20/npsp_usimmigrationelection/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_usimmigrationelection",
-          "publishedOn": "2024-08-20T20:00:08.000Z",
-          "wordCount": null,
-          "title": "“이민자들이 몰려온다”는데… 문제 못 풀게 발목 잡은 건 누구였나",
-          "imageUrl": null
         }
       ]
     },
