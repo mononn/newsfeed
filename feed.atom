@@ -2,10 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-09-21T20:14:41.912Z</updated>
+    <updated>2024-09-22T20:15:13.849Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Gemma explained: What’s new in Gemma 2]]></title>
+        <id>https://developers.googleblog.com/en/gemma-explained-new-in-gemma-2/</id>
+        <link href="https://developers.googleblog.com/en/gemma-explained-new-in-gemma-2/"/>
+        <updated>2024-09-22T20:15:07.749Z</updated>
+        <summary type="html"><![CDATA[Gemma 2 is a new suite of open models that sets a new standard for performance and accessibility, outperforming popular models more than twice its size.]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Practical C++17: Loop Unrolling with Lambdas and Fold Expressions]]></title>
+        <id>https://www.cppstories.com/2024/unroll-templates-lambdas-and-fold/</id>
+        <link href="https://www.cppstories.com/2024/unroll-templates-lambdas-and-fold/"/>
+        <updated>2024-09-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this blog post, we’ll delve into the unroll<N>() template function for template unrolling, understand its mechanics, and see how it can improve your code. We’ll look at lambdas, fold expressions, and integer sequences.
+Let’s get started!
+
+
+
+     
+    
+
+
+In a recent article Vector math library codegen in Debug · Aras’ website - Aras Pranckevičius discusses some coding techniques that help with performance of debug code… and I came across an intriguing technique utilized in the Blender Math library that he used in his text.
+One interesting example was this one:
+friend VecBase operator+(const VecBase &a, const VecBase &b)
+{
+    VecBase result;
+    unroll<Size>([&](auto i) { result[i] = a[i] + b[i]; });
+    return result;
+}
+
+
+And I’m curious how this unroll<Size>() function works under the …]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to use analog input (ADC) on NuttX RTOS]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1689.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1689.php"/>
+        <updated>2024-09-21T19:58:31.000Z</updated>
+        <summary type="html"><![CDATA[In all previous tutorial about NuttX we used some type of digital interface (I2C, SPI, etc), so today we will see how to use an analog interface to read some analog sensor or other analog device. In fact we live in an analog world and sometimes we need to read some analog voltage to make sense of some external analog signal. Today we will see how to use the ADC (Analog Digital Converter) from...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[뉴페@스프] 지금 민주당과 해리스의 최우선 과제?… “두 마리 토끼 쫓는 셈”]]></title>
         <id>https://newspeppermint.com/?p=79766</id>
@@ -4277,77 +4326,6 @@ announcement; "A third of a century. And it *still* isn't ready".]]></summary>
 The post 지역 기반 솔루션 저널리즘 네트워크 모델을 만들자. appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SentencePiece BPE Tokenizer in Go]]></title>
-        <id>https://eli.thegreenplace.net/2024/sentencepiece-bpe-tokenizer-in-go/</id>
-        <link href="https://eli.thegreenplace.net/2024/sentencepiece-bpe-tokenizer-in-go/"/>
-        <updated>2024-08-23T17:35:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>Earlier this year I wrote a <a class="reference external" href="https://eli.thegreenplace.net/2024/tokens-for-llms-byte-pair-encoding-in-go/">post about implementing BPE tokenization in Go</a>,
-which made it possible to reproduce OpenAI's tokenizer.</p>
-<p>Today I want to mention a new project I've been hacking on recently:
-<a class="reference external" href="https://github.com/eliben/go-sentencepiece">go-sentencepiece</a>
-- a pure Go implementation of the <a class="reference external" href="https://github.com/google/sentencepiece">SentencePiece</a> tokenizer
-that's used for Google AI's models like …</p>]]></summary>
-        <author>
-            <name>Eli Bendersky's website</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] The history, status, and plans for reproducible builds]]></title>
-        <id>https://lwn.net/Articles/985739/</id>
-        <link href="https://lwn.net/Articles/985739/"/>
-        <updated>2024-08-23T13:47:20.000Z</updated>
-        <summary type="html"><![CDATA[On the second day of DebConf24
-in Busan, South Korea, Holger Levsen provided a history lesson on the
-"first 11 years" of the Reproducible Builds project.
-He has been involved in the project for most of that time and has been a
-Debian user since the mid-1990s, contributor since 2001, and a Debian
-member since 2007; "I love Debian".  Meanwhile, his aim is to make all free
-software be reproducible, so that anyone can check that a binary program
-comes from the source code it purports to.]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Forgejo changes license to GPLv3+]]></title>
-        <id>https://lwn.net/Articles/986998/</id>
-        <link href="https://lwn.net/Articles/986998/"/>
-        <updated>2024-08-23T13:39:33.000Z</updated>
-        <summary type="html"><![CDATA[The 
-
-Forgejo project has announced that, starting from version 9.0, Forgejo will be released under the GPLv3 license (or a later version). Older versions of the software forge remain MIT-licensed.
-
-
-
-A copyleft license makes reusing other copyleft software easier. Recently, we discovered that 
-
-some of the dependencies we used were incompatible with the license Forgejo was distributed with, and they had to be removed for now. Choosing copyleft licenses enables us to reuse more work, and saves us precious time to focus on improving Forgejo itself.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/986997/</id>
-        <link href="https://lwn.net/Articles/986997/"/>
-        <updated>2024-08-23T13:03:10.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Fedora (community-mysql, iaito, and radare2), Oracle (python3.12-setuptools and tomcat), Red Hat (krb5 and podman), Slackware (ffmpeg), SUSE (apache2, expat, firefox, webkit2gtk3, and xen), and Ubuntu (imagemagick and libxstream-java).]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“조선인 강제노동 사실무근” 사도광산의 역사적 진실 부정하는 일본의 극우 언론]]></title>
-        <id>https://slownews.kr/?p=114983</id>
-        <link href="https://slownews.kr/114983"/>
-        <updated>2024-08-23T08:35:34.000Z</updated>
-        <summary type="html"><![CDATA[7월 27일, 일본 니가타현의 ‘사도광산’이 유네스코 세계문화유산으로 등재되었다. 2010년 일본 정부가 사도광산을 유네스코 세계 유산 추천 잠정 목록에 등재한 이후 14년 만의 일이다. 한국에서는 사도광산의 세계 유산 등재에 대한 비판적인 목소리가 끊이지 않고 있다. 사도광산이 일제 강점기 당시 조선인을 강제 동원해 가혹한 노동을 시켰던 아픈 역사의 현장이기 때문이다. 한국 정부는 등재 과정에서 역사적 사실이 충분히...
-The post “조선인 강제노동 사실무근” 사도광산의 역사적 진실 부정하는 일본의 극우 언론 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
         </author>
     </entry>
     <entry>
