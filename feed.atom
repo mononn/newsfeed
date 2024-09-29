@@ -2,10 +2,76 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2024-09-28T20:15:39.594Z</updated>
+    <updated>2024-09-29T20:15:19.248Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Gemma explained: RecurrentGemma architecture]]></title>
+        <id>https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/</id>
+        <link href="https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/"/>
+        <updated>2024-09-29T20:15:14.603Z</updated>
+        <summary type="html"><![CDATA[RecurrentGemma architecture showcases a hybrid model that mixes gated linear recurrences with local sliding window attention; a highly valuable feature when you're concerned about exhausting your LLM's context window.]]></summary>
+        <author>
+            <name>Google Developers Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Górny: The perils of transition to 64-bit time_t]]></title>
+        <id>https://lwn.net/Articles/992120/</id>
+        <link href="https://lwn.net/Articles/992120/"/>
+        <updated>2024-09-29T07:23:16.000Z</updated>
+        <summary type="html"><![CDATA[Michał Górny describes
+the challenges involved in transitioning Gentoo to year-2038-safe time
+representations:
+
+
+	There is a general agreement that the way forward is to change
+	time_t to a 64-bit type. Musl has already switched to that, glibc
+	supports it as an option. A number of other distributions such as
+	Debian have taken the leap and switched. Unfortunately,
+	source-based distributions such as Gentoo don't have it that
+	easy. So we are still debating the issue and experimenting, trying
+	to figure out a maximally safe upgrade path for our users.
+
+	Unfortunately, that's nowhere near trivial. Above all, we are
+	talking about a breaking ABI change.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[std::initializer_list in C++ 2/2 - Caveats and Improvements]]></title>
+        <id>https://www.cppstories.com/2023/initializer_list_improvements/</id>
+        <link href="https://www.cppstories.com/2023/initializer_list_improvements/"/>
+        <updated>2024-09-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In this article, you’ll learn why std::initializer_list has a bad reputation in C++. Is passing values using is as efficient as “emplace”, how can we use non-copyable types? You’ll also see how to fix some of the problems.
+Let’s start with the issues first:
+Updated in Sept 2024: Added note about stack overflow and C++26 fixes.
+
+
+
+     
+    
+
+
+If you recall from the previous article, std::initializer_list expands to some unnamed local array of const objects. So the following code might be super unsafe:
+std::initializer_list<int> wrong() { // for illustration only!
+    return { 1, 2, 3, 4};
+}
+int main() {
+    std::initializer_list<int> x = wrong();
+}
+
+
+The above code is equivalent to the following:
+std::initializer_list<int> wrong() {
+    const int arr[] { 1, 2, 3, 4}
+    return std::initial…]]></summary>
+        <author>
+            <name>C++ Stories</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Korean Chipmakers’ Reliance on Chinese Raw Materials Intensifies]]></title>
         <id>https://www.embedded.com/?p=4491380</id>
@@ -4398,146 +4464,6 @@ The post Handling temperature management in wearable tech appeared first on Embe
         <updated>2024-08-31T11:16:32.000Z</updated>
         <author>
             <name>happist</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GSoC 2024: Half-precision in LLVM libc]]></title>
-        <id>https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/</id>
-        <link href="https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/"/>
-        <updated>2024-08-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[C23 defines new floating-point types, such as _Float16, which corresponds tothe binary16 format from IEEE Std 754, also known as “half-precision,” or FP16.C23 also defines new variants of the C standard library’s math functionsaccordingly, such as fabsf16 to get the absolute value of a _Float16.
-The “Half-precision in LLVM libc” Google Summer of Code 2024 project aimed toimplement these new _Float16 math functions in LLVM libc, making it the firstknown C standard library implementation to implement these C23 functions.
-We split math functions into two categories: basic operations and higher mathfunctions. The current implementation status of math functions in LLVM libc canbe viewed at https://libc.llvm.org/math/index.html#implementation-status.
-The exact goals of this project were to:
-
-Set…]]></summary>
-        <author>
-            <name>The LLVM Project Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[뉴페@스프] ‘조지 클루니, 너마저…’ 바이든의 속내가 어떻든 지금은 ‘트럼프의 시간’]]></title>
-        <id>https://newspeppermint.com/?p=79657</id>
-        <link href="https://newspeppermint.com/2024/08/30/npsp_rnctrump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_rnctrump"/>
-        <updated>2024-08-30T22:59:54.000Z</updated>
-        <summary type="html"><![CDATA[* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 16일 스프에 쓴 글입니다. *** 45일 전만 해도 “지금은 트럼프의 시간”이라고 말할 만큼 선거 구도는 한쪽으로 쏠려 있는 듯했습니다. 구사일생으로 암살 시도를 피한 트럼프 전 대통령은 바이든을 상대로 압승을 거둘 것이란 전망 속에 → 더 보기]]></summary>
-        <author>
-            <name>ingppoo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Understanding the Postgres Hackers Mailing List Language]]></title>
-        <id>https://lwn.net/Articles/987892/</id>
-        <link href="https://lwn.net/Articles/987892/"/>
-        <updated>2024-08-30T15:38:07.000Z</updated>
-        <summary type="html"><![CDATA[Reading an established open-source project's developer mailing list
-may leave new contributors wishing they had a decoder ring. Greg
-Sabino Mullane has written up a valuable explainer
-for those new to the PostgreSQL hackers (pgsql-hackers)
-mailing list that may also be useful for decoding other lists as well:
-The mailing lists are full of acronyms and jargon that might not be
-familiar to younger people who did not grow up on email (although text
-messages have inherited many of the abbreviations). If you are a
-non-native English speaker, or under the age of 30, or not steeped in
-the world of tech, I offer some solutions below.
-To do this, I downloaded the last year's worth of hackers email,
-wrote a program to strip out all the non-human stuff (headers, code
-blocks, attachments, etc.), and then did some data analysis on the
-results.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] A SpamAssassin surprise]]></title>
-        <id>https://lwn.net/Articles/987566/</id>
-        <link href="https://lwn.net/Articles/987566/"/>
-        <updated>2024-08-30T14:48:21.000Z</updated>
-        <summary type="html"><![CDATA[Here is a piece of advice for anybody wanting an easy and frustration-free
-life: do not run your own email system.  While there numerous advantages to
-keeping some control over your communications, there is also a long list of
-things that can go wrong.  A recent failure of spam filtering on the LWN
-email system illustrated one of those ways, as well as shining a light on
-how even a seemingly independent email system is tied to other services
-across the net.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ElasticSearch and Kibana become free software (again)]]></title>
-        <id>https://lwn.net/Articles/987850/</id>
-        <link href="https://lwn.net/Articles/987850/"/>
-        <updated>2024-08-30T14:07:55.000Z</updated>
-        <summary type="html"><![CDATA[Back in 2021, the ElasticSearch search engine and Kibana visualization
-platform were relicensed under the non-free
-Server Side Public License (SSPL).  Now, Elastic (the company owning those
-projects) has announced
-that those projects will also be distributable under the Affero GPL license.
-
-
-	We never stopped believing and behaving like an open source
-	community after we changed the license. But being able to use the
-	term Open Source, by using AGPL, an OSI approved license, removes
-	any questions, or fud, people might have.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Airlie: On Rust, Linux, developers, maintainers]]></title>
-        <id>https://lwn.net/Articles/987849/</id>
-        <link href="https://lwn.net/Articles/987849/"/>
-        <updated>2024-08-30T13:55:30.000Z</updated>
-        <summary type="html"><![CDATA[Dave Airlie makes
-an analogy between the stages of road building and those of adding Rust
-to the Linux kernel.
-
-
-	For the wayfinders the process of interacting with maintainers is
-	frustrating and slow, and they don't enjoy it as much as
-	wayfinding, and because they still only care about the hotel at the
-	end, when a maintainer gets into the details of their particular
-	intersection they don't want to do anything but go stay in their
-	hotel. 
-
-	The road will get built, it will get traffic on it. There will be
-	tunnels where we should have intersections, there will be bridges
-	that need to be built from both sides, but I do think it will get
-	built.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AnandTech shuts down]]></title>
-        <id>https://lwn.net/Articles/987847/</id>
-        <link href="https://lwn.net/Articles/987847/"/>
-        <updated>2024-08-30T13:50:20.000Z</updated>
-        <summary type="html"><![CDATA[The venerable AnandTech site has announced
-its closing after 27 years of technology-industry coverage.
-
-
-	Still, few things last forever, and the market for written tech
-	journalism is not what it once was – nor will it ever be again. So,
-	the time has come for AnandTech to wrap up its work, and let the
-	next generation of tech journalists take their place within the
-	zeitgeist.
-
-
-The site will surely be missed.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Friday]]></title>
-        <id>https://lwn.net/Articles/987836/</id>
-        <link href="https://lwn.net/Articles/987836/"/>
-        <updated>2024-08-30T12:43:20.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by AlmaLinux (libvpx, postgresql, postgresql:12, postgresql:13, postgresql:15, and python39:3.9 and python39-devel:3.9), Debian (chromium and ghostscript), Fedora (python3.13), and SUSE (chromium and podman).]]></summary>
-        <author>
-            <name>jzb</name>
         </author>
     </entry>
     <entry>

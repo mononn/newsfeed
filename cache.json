@@ -119,6 +119,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2023/initializer_list_improvements/",
+          "author": null,
+          "description": "In this article, you’ll learn why std::initializer_list has a bad reputation in C++. Is passing values using is as efficient as “emplace”, how can we use non-copyable types? You’ll also see how to fix some of the problems.\nLet’s start with the issues first:\nUpdated in Sept 2024: Added note about stack overflow and C++26 fixes.\n\n\n\n     \n    \n\n\nIf you recall from the previous article, std::initializer_list expands to some unnamed local array of const objects. So the following code might be super unsafe:\nstd::initializer_list<int> wrong() { // for illustration only!\n    return { 1, 2, 3, 4};\n}\nint main() {\n    std::initializer_list<int> x = wrong();\n}\n\n\nThe above code is equivalent to the following:\nstd::initializer_list<int> wrong() {\n    const int arr[] { 1, 2, 3, 4}\n    return std::initial…",
+          "link": "https://www.cppstories.com/2023/initializer_list_improvements/",
+          "publishedOn": "2024-09-29T00:00:00.000Z",
+          "wordCount": null,
+          "title": "std::initializer_list in C++ 2/2 - Caveats and Improvements",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.cppstories.com/2024/unroll-templates-lambdas-and-fold/",
           "author": null,
           "description": "In this blog post, we’ll delve into the unroll<N>() template function for template unrolling, understand its mechanics, and see how it can improve your code. We’ll look at lambdas, fold expressions, and integer sequences.\nLet’s get started!\n\n\n\n     \n    \n\n\nIn a recent article Vector math library codegen in Debug · Aras’ website - Aras Pranckevičius discusses some coding techniques that help with performance of debug code… and I came across an intriguing technique utilized in the Blender Math library that he used in his text.\nOne interesting example was this one:\nfriend VecBase operator+(const VecBase &a, const VecBase &b)\n{\n    VecBase result;\n    unroll<Size>([&](auto i) { result[i] = a[i] + b[i]; });\n    return result;\n}\n\n\nAnd I’m curious how this unroll<Size>() function works under the …",
@@ -169,16 +179,6 @@
           "publishedOn": "2024-09-09T00:00:00.000Z",
           "wordCount": null,
           "title": "GSoC 2024: Compile GPU kernels using ClangIR",
-          "imageUrl": null
-        },
-        {
-          "id": "https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/",
-          "author": null,
-          "description": "C23 defines new floating-point types, such as _Float16, which corresponds tothe binary16 format from IEEE Std 754, also known as “half-precision,” or FP16.C23 also defines new variants of the C standard library’s math functionsaccordingly, such as fabsf16 to get the absolute value of a _Float16.\nThe “Half-precision in LLVM libc” Google Summer of Code 2024 project aimed toimplement these new _Float16 math functions in LLVM libc, making it the firstknown C standard library implementation to implement these C23 functions.\nWe split math functions into two categories: basic operations and higher mathfunctions. The current implementation status of math functions in LLVM libc canbe viewed at https://libc.llvm.org/math/index.html#implementation-status.\nThe exact goals of this project were to:\n\nSet…",
-          "link": "https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/",
-          "publishedOn": "2024-08-31T00:00:00.000Z",
-          "wordCount": null,
-          "title": "GSoC 2024: Half-precision in LLVM libc",
           "imageUrl": null
         }
       ]
@@ -1233,6 +1233,16 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/",
+          "author": null,
+          "description": "RecurrentGemma architecture showcases a hybrid model that mixes gated linear recurrences with local sliding window attention; a highly valuable feature when you're concerned about exhausting your LLM's context window.",
+          "link": "https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/",
+          "publishedOn": "2024-09-29T20:15:14.603Z",
+          "wordCount": null,
+          "title": "Gemma explained: RecurrentGemma architecture",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/enhance-your-prompts-with-vertex-ai-prompt-optimizer/",
           "author": null,
           "description": "Vertex AI Prompt Optimizer, a new managed automated prompt engineering service, can help save time and effort in prompt engineering while ensuring performing prompts ready for your generative AI applications.",
@@ -1651,6 +1661,16 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/992120/",
+          "author": "corbet",
+          "description": "Michał Górny describes\nthe challenges involved in transitioning Gentoo to year-2038-safe time\nrepresentations:\n\n\n\tThere is a general agreement that the way forward is to change\n\ttime_t to a 64-bit type. Musl has already switched to that, glibc\n\tsupports it as an option. A number of other distributions such as\n\tDebian have taken the leap and switched. Unfortunately,\n\tsource-based distributions such as Gentoo don't have it that\n\teasy. So we are still debating the issue and experimenting, trying\n\tto figure out a maximally safe upgrade path for our users.\n\n\tUnfortunately, that's nowhere near trivial. Above all, we are\n\ttalking about a breaking ABI change.",
+          "link": "https://lwn.net/Articles/992120/",
+          "publishedOn": "2024-09-29T07:23:16.000Z",
+          "wordCount": null,
+          "title": "Górny: The perils of transition to 64-bit time_t",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/991088/",
           "author": "jzb",
@@ -2579,66 +2599,6 @@
           "publishedOn": "2024-09-01T14:09:12.000Z",
           "wordCount": null,
           "title": "Kernel prepatch 6.11-rc6",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/987892/",
-          "author": "jzb",
-          "description": "Reading an established open-source project's developer mailing list\nmay leave new contributors wishing they had a decoder ring. Greg\nSabino Mullane has written up a valuable explainer\nfor those new to the PostgreSQL hackers (pgsql-hackers)\nmailing list that may also be useful for decoding other lists as well:\nThe mailing lists are full of acronyms and jargon that might not be\nfamiliar to younger people who did not grow up on email (although text\nmessages have inherited many of the abbreviations). If you are a\nnon-native English speaker, or under the age of 30, or not steeped in\nthe world of tech, I offer some solutions below.\nTo do this, I downloaded the last year's worth of hackers email,\nwrote a program to strip out all the non-human stuff (headers, code\nblocks, attachments, etc.), and then did some data analysis on the\nresults.",
-          "link": "https://lwn.net/Articles/987892/",
-          "publishedOn": "2024-08-30T15:38:07.000Z",
-          "wordCount": null,
-          "title": "Understanding the Postgres Hackers Mailing List Language",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/987566/",
-          "author": "corbet",
-          "description": "Here is a piece of advice for anybody wanting an easy and frustration-free\nlife: do not run your own email system.  While there numerous advantages to\nkeeping some control over your communications, there is also a long list of\nthings that can go wrong.  A recent failure of spam filtering on the LWN\nemail system illustrated one of those ways, as well as shining a light on\nhow even a seemingly independent email system is tied to other services\nacross the net.",
-          "link": "https://lwn.net/Articles/987566/",
-          "publishedOn": "2024-08-30T14:48:21.000Z",
-          "wordCount": null,
-          "title": "[$] A SpamAssassin surprise",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/987850/",
-          "author": "corbet",
-          "description": "Back in 2021, the ElasticSearch search engine and Kibana visualization\nplatform were relicensed under the non-free\nServer Side Public License (SSPL).  Now, Elastic (the company owning those\nprojects) has announced\nthat those projects will also be distributable under the Affero GPL license.\n\n\n\tWe never stopped believing and behaving like an open source\n\tcommunity after we changed the license. But being able to use the\n\tterm Open Source, by using AGPL, an OSI approved license, removes\n\tany questions, or fud, people might have.",
-          "link": "https://lwn.net/Articles/987850/",
-          "publishedOn": "2024-08-30T14:07:55.000Z",
-          "wordCount": null,
-          "title": "ElasticSearch and Kibana become free software (again)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/987849/",
-          "author": "corbet",
-          "description": "Dave Airlie makes\nan analogy between the stages of road building and those of adding Rust\nto the Linux kernel.\n\n\n\tFor the wayfinders the process of interacting with maintainers is\n\tfrustrating and slow, and they don't enjoy it as much as\n\twayfinding, and because they still only care about the hotel at the\n\tend, when a maintainer gets into the details of their particular\n\tintersection they don't want to do anything but go stay in their\n\thotel. \n\n\tThe road will get built, it will get traffic on it. There will be\n\ttunnels where we should have intersections, there will be bridges\n\tthat need to be built from both sides, but I do think it will get\n\tbuilt.",
-          "link": "https://lwn.net/Articles/987849/",
-          "publishedOn": "2024-08-30T13:55:30.000Z",
-          "wordCount": null,
-          "title": "Airlie: On Rust, Linux, developers, maintainers",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/987847/",
-          "author": "corbet",
-          "description": "The venerable AnandTech site has announced\nits closing after 27 years of technology-industry coverage.\n\n\n\tStill, few things last forever, and the market for written tech\n\tjournalism is not what it once was – nor will it ever be again. So,\n\tthe time has come for AnandTech to wrap up its work, and let the\n\tnext generation of tech journalists take their place within the\n\tzeitgeist.\n\n\nThe site will surely be missed.",
-          "link": "https://lwn.net/Articles/987847/",
-          "publishedOn": "2024-08-30T13:50:20.000Z",
-          "wordCount": null,
-          "title": "AnandTech shuts down",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/987836/",
-          "author": "jzb",
-          "description": "Security updates have been issued by AlmaLinux (libvpx, postgresql, postgresql:12, postgresql:13, postgresql:15, and python39:3.9 and python39-devel:3.9), Debian (chromium and ghostscript), Fedora (python3.13), and SUSE (chromium and podman).",
-          "link": "https://lwn.net/Articles/987836/",
-          "publishedOn": "2024-08-30T12:43:20.000Z",
-          "wordCount": null,
-          "title": "Security updates for Friday",
           "imageUrl": null
         }
       ]
@@ -3951,16 +3911,6 @@
           "wordCount": null,
           "title": "스벅 주문법이 3천8백억 개? 창업자 호소까지 불러온 뜻밖의 악순환",
           "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79657",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 16일 스프에 쓴 글입니다. *** 45일 전만 해도 “지금은 트럼프의 시간”이라고 말할 만큼 선거 구도는 한쪽으로 쏠려 있는 듯했습니다. 구사일생으로 암살 시도를 피한 트럼프 전 대통령은 바이든을 상대로 압승을 거둘 것이란 전망 속에 → 더 보기",
-          "link": "https://newspeppermint.com/2024/08/30/npsp_rnctrump/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_rnctrump",
-          "publishedOn": "2024-08-30T22:59:54.000Z",
-          "wordCount": 2139,
-          "title": "[뉴페@스프] ‘조지 클루니, 너마저…’ 바이든의 속내가 어떻든 지금은 ‘트럼프의 시간’",
-          "imageUrl": "https://newspeppermint.com/wp-content/uploads/fb_header_img.png"
         }
       ]
     },

@@ -22,6 +22,149 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-09-29 datetime="2024-09-29T20:15:14.603Z">2024-09-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-09-29 datetime="2024-09-29T20:15:14.603Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Google Developers Blog</button>
+                  <a class="source-heading__link" href="https://developers.googleblog.com/rss/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/"
+                        open
+                      >
+                        <summary class="article-expander__title">Gemma explained: RecurrentGemma architecture</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/gemma-explained-recurrentgemma-architecture/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>RecurrentGemma architecture showcases a hybrid model that mixes gated linear recurrences with local sliding window attention; a highly valuable feature when you&#x27;re concerned about exhausting your LLM&#x27;s context window.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/992120/"
+                        open
+                      >
+                        <summary class="article-expander__title">Górny: The perils of transition to 64-bit time_t</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/992120/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Michał Górny describes
+the challenges involved in transitioning Gentoo to year-2038-safe time
+representations:
+
+
+	There is a general agreement that the way forward is to change
+	time_t to a 64-bit type. Musl has already switched to that, glibc
+	supports it as an option. A number of other distributions such as
+	Debian have taken the leap and switched. Unfortunately,
+	source-based distributions such as Gentoo don&#x27;t have it that
+	easy. So we are still debating the issue and experimenting, trying
+	to figure out a maximally safe upgrade path for our users.
+
+	Unfortunately, that&#x27;s nowhere near trivial. Above all, we are
+	talking about a breaking ABI change.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >C++ Stories</button>
+                  <a class="source-heading__link" href="https://www.cppstories.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.cppstories.com/2023/initializer_list_improvements/"
+                        open
+                      >
+                        <summary class="article-expander__title">std::initializer_list in C++ 2/2 - Caveats and Improvements</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.cppstories.com/2023/initializer_list_improvements/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>In this article, you’ll learn why std::initializer_list has a bad reputation in C++. Is passing values using is as efficient as “emplace”, how can we use non-copyable types? You’ll also see how to fix some of the problems.
+Let’s start with the issues first:
+Updated in Sept 2024: Added note about stack overflow and C++26 fixes.
+
+
+
+     
+    
+
+
+If you recall from the previous article, std::initializer_list expands to some unnamed local array of const objects. So the following code might be super unsafe:
+std::initializer_list wrong() { // for illustration only!
+    return { 1, 2, 3, 4};
+}
+int main() {
+    std::initializer_list x &#x3D; wrong();
+}
+
+
+The above code is equivalent to the following:
+std::initializer_list wrong() {
+    const int arr[] { 1, 2, 3, 4}
+    return std::initial…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-09-28 datetime="2024-09-28T17:30:00.000Z">2024-09-28</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-09-28 datetime="2024-09-28T17:30:00.000Z"></time>
           </button>
@@ -9796,261 +9939,6 @@ The post Handling temperature management in wearable tech appeared first on Embe
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >The LLVM Project Blog</button>
-                  <a class="source-heading__link" href="https://blog.llvm.org/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/"
-                        open
-                      >
-                        <summary class="article-expander__title">GSoC 2024: Half-precision in LLVM libc</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://blog.llvm.org/posts/2024-08-31-half-precision-in-llvm-libc/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>C23 defines new floating-point types, such as _Float16, which corresponds tothe binary16 format from IEEE Std 754, also known as “half-precision,” or FP16.C23 also defines new variants of the C standard library’s math functionsaccordingly, such as fabsf16 to get the absolute value of a _Float16.
-The “Half-precision in LLVM libc” Google Summer of Code 2024 project aimed toimplement these new _Float16 math functions in LLVM libc, making it the firstknown C standard library implementation to implement these C23 functions.
-We split math functions into two categories: basic operations and higher mathfunctions. The current implementation status of math functions in LLVM libc canbe viewed at https://libc.llvm.org/math/index.html#implementation-status.
-The exact goals of this project were to:
-
-Set…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-08-30 datetime="2024-08-30T22:59:54.000Z">2024-08-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-08-30 datetime="2024-08-30T22:59:54.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79657"
-                        open
-                      >
-                        <summary class="article-expander__title">[뉴페@스프] ‘조지 클루니, 너마저…’ 바이든의 속내가 어떻든 지금은 ‘트럼프의 시간’</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/08/30/npsp_rnctrump/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_rnctrump">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://newspeppermint.com/wp-content/uploads/fb_header_img.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 16일 스프에 쓴 글입니다. *** 45일 전만 해도 “지금은 트럼프의 시간”이라고 말할 만큼 선거 구도는 한쪽으로 쏠려 있는 듯했습니다. 구사일생으로 암살 시도를 피한 트럼프 전 대통령은 바이든을 상대로 압승을 거둘 것이란 전망 속에 → 더 보기</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/987892/"
-                        open
-                      >
-                        <summary class="article-expander__title">Understanding the Postgres Hackers Mailing List Language</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/987892/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Reading an established open-source project&#x27;s developer mailing list
-may leave new contributors wishing they had a decoder ring. Greg
-Sabino Mullane has written up a valuable explainer
-for those new to the PostgreSQL hackers (pgsql-hackers)
-mailing list that may also be useful for decoding other lists as well:
-The mailing lists are full of acronyms and jargon that might not be
-familiar to younger people who did not grow up on email (although text
-messages have inherited many of the abbreviations). If you are a
-non-native English speaker, or under the age of 30, or not steeped in
-the world of tech, I offer some solutions below.
-To do this, I downloaded the last year&#x27;s worth of hackers email,
-wrote a program to strip out all the non-human stuff (headers, code
-blocks, attachments, etc.), and then did some data analysis on the
-results.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/987566/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] A SpamAssassin surprise</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/987566/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Here is a piece of advice for anybody wanting an easy and frustration-free
-life: do not run your own email system.  While there numerous advantages to
-keeping some control over your communications, there is also a long list of
-things that can go wrong.  A recent failure of spam filtering on the LWN
-email system illustrated one of those ways, as well as shining a light on
-how even a seemingly independent email system is tied to other services
-across the net.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/987850/"
-                        open
-                      >
-                        <summary class="article-expander__title">ElasticSearch and Kibana become free software (again)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/987850/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Back in 2021, the ElasticSearch search engine and Kibana visualization
-platform were relicensed under the non-free
-Server Side Public License (SSPL).  Now, Elastic (the company owning those
-projects) has announced
-that those projects will also be distributable under the Affero GPL license.
-
-
-	We never stopped believing and behaving like an open source
-	community after we changed the license. But being able to use the
-	term Open Source, by using AGPL, an OSI approved license, removes
-	any questions, or fud, people might have.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/987849/"
-                        open
-                      >
-                        <summary class="article-expander__title">Airlie: On Rust, Linux, developers, maintainers</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/987849/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Dave Airlie makes
-an analogy between the stages of road building and those of adding Rust
-to the Linux kernel.
-
-
-	For the wayfinders the process of interacting with maintainers is
-	frustrating and slow, and they don&#x27;t enjoy it as much as
-	wayfinding, and because they still only care about the hotel at the
-	end, when a maintainer gets into the details of their particular
-	intersection they don&#x27;t want to do anything but go stay in their
-	hotel. 
-
-	The road will get built, it will get traffic on it. There will be
-	tunnels where we should have intersections, there will be bridges
-	that need to be built from both sides, but I do think it will get
-	built.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/987847/"
-                        open
-                      >
-                        <summary class="article-expander__title">AnandTech shuts down</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/987847/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The venerable AnandTech site has announced
-its closing after 27 years of technology-industry coverage.
-
-
-	Still, few things last forever, and the market for written tech
-	journalism is not what it once was – nor will it ever be again. So,
-	the time has come for AnandTech to wrap up its work, and let the
-	next generation of tech journalists take their place within the
-	zeitgeist.
-
-
-The site will surely be missed.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/987836/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Friday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/987836/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by AlmaLinux (libvpx, postgresql, postgresql:12, postgresql:13, postgresql:15, and python39:3.9 and python39-devel:3.9), Debian (chromium and ghostscript), Fedora (python3.13), and SUSE (chromium and podman).</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -10194,8 +10082,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/11086707256">
-        <time id="build-timestamp" datetime="2024-09-28T20:15:39.557Z">2024-09-28T20:15:39.557Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/11095608452">
+        <time id="build-timestamp" datetime="2024-09-29T20:15:19.217Z">2024-09-29T20:15:19.217Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
