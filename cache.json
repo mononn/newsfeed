@@ -152,6 +152,16 @@
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
         {
+          "id": "https://blog.llvm.org/posts/2024-09-07-abi-lowering-in-clangir/",
+          "author": null,
+          "description": "ClangIR is an ongoing effort to build a high-level intermediate representation(IR) for C/C++ within the LLVM ecosystem. Its key advantage lies in its abilityto retain more source code information. While ClangIR is making progress, itstill lacks certain features, notably ABI handling. Currently, ClangIR lowersmost functions without accounting for ABI-specific calling convention details.\nGoals\nThe “Build & Run SingleSource Benchmarks with ClangIR - Part 2” Google Summer ofCode 2024 builds on my contributions from GSoC 2023 by addressing one of themain issues I encountered: target-specific lowering. It focuses on extendingClangIR’s code generation capabilities, particularly in ABI-lowering for X86-64.Several tests rely on operations and types (e.g., va_arg calls and complexdata types) that re…",
+          "link": "https://blog.llvm.org/posts/2024-09-07-abi-lowering-in-clangir/",
+          "publishedOn": "2024-09-30T00:00:00.000Z",
+          "wordCount": null,
+          "title": "GSoC 2024: ABI Lowering in ClangIR",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.llvm.org/posts/2024-08-29-gsoc-2024-statistical_analysis_of_llvm-ir_compilation/",
           "author": null,
           "description": "Welcome! My name is Andrew and I contributed to LLVM through the 2024 Google Summer of Code Program. My project is called Statistical Analysis of LLVM-IR Compilation. The objective of this project is to provide an analysis of how time is spent in the optimization pipeline. Generally, drastic differences in the percentage of time spent by a pass in the pipeline is considered abnormal.\nBackground\nIn principle, an LLVM IR bitcode file, or module, contains IR features that determine the behavior of the compiler optimization pipeline. By varying these features, the optimization pipeline, opt, can add significantly to the compilation time or marginally. More specifically, optimizations succeed in less or more time; the user can wait for a microsecond or a few minutes. LLVM compiler developers co…",
@@ -279,6 +289,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "e6c8d47f-c168-44f6-a26b-6bbbfcb06f53",
+          "author": "Antonin Stefanutti",
+          "description": "This is the first in a series of articles that demonstrate the OpenShift AI tuning capabilities on a variety of AI accelerators. This post focuses on NVIDIA GPUs.\n\n\nOn July 23, 2024, Meta AI released Llama 3.1 models, their most capable LLMs to date, which are broadly available for a wide variety of use cases, from conversational assistants to agentic systems with APl calling capabilities. These models come in a herd of Llamas (pun intended) of three different sizes (8B, 70B, and 405B parameters), are trained on a corpus of about 15 trillion multilingual tokens, and provide an extended context window of up to 128 thousand tokens (a 250-page book, approximately).\nThese new models close the gap between closed-source and open-weights models (the data for training Llama 3.1 models hasn’t been …",
+          "link": "https://developers.redhat.com/articles/2024/09/30/fine-tune-llama-openshift-ai",
+          "publishedOn": "2024-09-30T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to fine-tune Llama 3.1 with Ray on OpenShift AI",
+          "imageUrl": null
+        },
+        {
+          "id": "3f004468-51dc-48f0-916b-3137703e6a2d",
+          "author": "Jeff Maury",
+          "description": "This article from last year details the steps and actions required to build and run your Red Hat Enterprise Linux (RHEL) Windows Subsystem for Linux (WSL) image.\nThe purpose of this article is to describe the options needed for the RHEL WSL distribution so that it can be used as a Podman machine.\nRequirements\nTo use the RHEL WSL image as a Podman machine, ensure that the following packages are installed:\n\npodman\npodman-docker\nprocps-ng\nopenssh-server\nnet-tools\niproute\ndhcp-client\nsudo\nsystemd-networkd\n\nLuckily, all but the last package are available from the preconfigured RHEL 9 repositories. The last package (systemd-networkd) is available from the EPEL 9 repository and will need to be configured when building the image.\nBuild the image\nNavigate to image builder (Figure 1).\n\n\n  \n      \n  …",
+          "link": "https://developers.redhat.com/articles/2024/09/30/rhel-windows-wsl-podman-machine",
+          "publishedOn": "2024-09-30T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to use RHEL as a WSL Podman machine",
+          "imageUrl": null
+        },
         {
           "id": "7758047b-1c32-45ea-987a-c49de21aed1e",
           "author": "asherman@redhat.com",
@@ -696,6 +726,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4491216",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "This article introduces the sliding discrete period transform (DPT), a novel algorithm designed for processing physiological signals, specifically photoplethysmogram (PPG) signals from pulse oximeters. The algorithm employs period domain analysis with sinusoidal basis functions, addressing challenges like random noise and nonstationary data. Implemented as a sliding transform in MATLAB®, the DPT combines autocorrelation and ensemble […]\nThe post How the New Discrete Period Transform Method Can Process Physiological Signals appeared first on Embedded.",
+          "link": "https://www.embedded.com/how-the-new-discrete-period-transform-method-can-process-physiological-signals/",
+          "publishedOn": "2024-09-30T08:44:00.000Z",
+          "wordCount": null,
+          "title": "How the New Discrete Period Transform Method Can Process Physiological Signals",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4491188",
+          "author": "Stefano Lovati",
+          "description": "A Dutch neuromorphic computing startup, Innatera, is transforming sensor-edge processing with its Spiking Neural Processor (SNP) technology. What started as a spinout from Delft University of Technology is now developing ultra-low-power AI chips that mimic brain activity, bringing new efficiency to edge computing. The flagship product, the T1 chip, leverages spiking neural networks (SNNs) to […]\nThe post Innatera for the Sensor Edge with Brain-Inspired Technology appeared first on Embedded.",
+          "link": "https://www.embedded.com/innatera-for-the-sensor-edge-with-brain-inspired-technology/",
+          "publishedOn": "2024-09-30T05:18:00.000Z",
+          "wordCount": null,
+          "title": "Innatera for the Sensor Edge with Brain-Inspired Technology",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4491380",
           "author": "Maurizio Di Paolo Emilio",
@@ -1155,16 +1205,6 @@
           "wordCount": null,
           "title": "Efficient Computer signs an agreement with GlobalFoundries to build MRAM chips on the GF 22FDX process",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4490779",
-          "author": "Stephen Evanczuk",
-          "description": "Consumers and industry leaders alike are increasingly interested in wearable tech. Devices that remain in contact with the wearer can provide highly accurate and updated statistics about them. Such capabilities remain valuable in settings ranging from health care facilities to military training academies. However, people will only feel safe using the products if they stay […]\nThe post Handling temperature management in wearable tech appeared first on Embedded.",
-          "link": "https://www.embedded.com/tackling-temperature-management-in-wearable-tech/",
-          "publishedOn": "2024-08-31T17:16:05.000Z",
-          "wordCount": null,
-          "title": "Handling temperature management in wearable tech",
-          "imageUrl": null
         }
       ]
     },
@@ -1451,16 +1491,6 @@
           "wordCount": null,
           "title": "Mastering Controlled Generation with Gemini 1.5: Schema Adherence for Developers",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/",
-          "author": null,
-          "description": "ShieldGemma is a suite of safety content classifiers models built upon Gemma2 designed to keep users safe. GemmaScope is a new model interpretability tool that offers unparalleled insight into our models' inner workings.",
-          "link": "https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/",
-          "publishedOn": "2024-08-31T20:16:02.472Z",
-          "wordCount": 1546,
-          "title": "Smaller, Safer, More Transparent: Advancing Responsible AI with Gemma",
-          "imageUrl": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/20240731-Gemma-Blog-ResponsibleAI.2e16d0ba.fill-1200x600.png"
         }
       ]
     },
@@ -1498,6 +1528,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1165/",
+          "author": null,
+          "description": "We're all keen on playing games, but some of us also enjoy creating various mods. Today, let's take a peek at WolvenKit, one of the modding tools for Cyberpunk 2077.",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1165/",
+          "publishedOn": "2024-09-29T21:00:00.000Z",
+          "wordCount": null,
+          "title": "WolvenKit code analysis: things to know before modding Cyberpunk 2077",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1164/",
           "author": null,
@@ -1661,6 +1701,86 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/991399/",
+          "author": "daroc",
+          "description": "Tathagata Roy has been working to make the\n\nCoccinelle tool that is used (among other things)\nto automate the refactoring of C code work on Rust\ncode as well. Roy gave a\npresentation at Kangrejos about that work,\nincluding the creative approaches necessary to work with Rust's more complicated\ncontrol flow and syntax.",
+          "link": "https://lwn.net/Articles/991399/",
+          "publishedOn": "2024-09-30T19:01:44.000Z",
+          "wordCount": null,
+          "title": "[$] Coccinelle for Rust",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/991301/",
+          "author": "corbet",
+          "description": "Linus Torvalds released\n6.12-rc1 and closed the 6.12 merge window on September 29; at that\npoint, 11,260 non-merge change sets had been pulled into the mainline for\nthe 6.12 release.  That is the lowest number of merge-window changes since\n5.17-rc1 in January 2022, which brought in 11,068 changesets.  Nonetheless,\n6.12 brings a number of interesting changes, many of which were included in\nthe roughly 4,500 changes merged since the\nsummary of the first half of the 6.12 merge window was written.",
+          "link": "https://lwn.net/Articles/991301/",
+          "publishedOn": "2024-09-30T17:47:59.000Z",
+          "wordCount": null,
+          "title": "[$] The rest of the 6.12 merge window",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/991906/",
+          "author": "jzb",
+          "description": "WordPress is the world's most\npopular open‑source blogging and content‑management platform. In its\n20‑plus years of existence, WordPress has been something of a poster\nchild for open source, similar to Linux and Firefox. It introduced the\nconcept of open source to millions of bloggers, small‑business owners,\nand others who have deployed WordPress to support their web‑publishing\nneeds. Unfortunately, it is now in the spotlight due to an increasingly\nugly dispute between two companies, Automattic and WP Engine, that has spilled over into\nthe WordPress community.",
+          "link": "https://lwn.net/Articles/991906/",
+          "publishedOn": "2024-09-30T17:01:04.000Z",
+          "wordCount": null,
+          "title": "[$] The WordPress mess",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/992292/",
+          "author": "jake",
+          "description": "The 6.11.1, 6.10.12, 6.6.53, and 6.1.112 stable kernels have been released.\nEach contains important fixes and users of those series should upgrade.",
+          "link": "https://lwn.net/Articles/992292/",
+          "publishedOn": "2024-09-30T16:23:17.000Z",
+          "wordCount": null,
+          "title": "Four new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/992284/",
+          "author": "jake",
+          "description": "The most recent major release of the Tcl/Tk language and graphical-user-interface toolkit, Tcl/Tk 9.0, has been released, a mere 27 years after the 8,0 major release in 1997.  There have been plenty of releases in the interim, though, as can be seen in the Tcl chronology.  The 9.0 release brings 64-bit data values, better Unicode support, the ability to use zip files as filesystems, a switch to use epoll() or kqueue() where they are available, SVG support in Tk, access to notifications and other desktop-platform services in Tk, and lots more.  For more information, see the release notes for Tcl and Tk that can be downloaded as Markdown files from the announcement page. (Thanks to Matt Bradley.)",
+          "link": "https://lwn.net/Articles/992284/",
+          "publishedOn": "2024-09-30T14:56:44.000Z",
+          "wordCount": null,
+          "title": "Tcl/Tk 9.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/992281/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (cups-filters, net-snmp, and osbuild-composer), Debian (booth, cups, cups-filters, python-asyncssh, ruby-httparty, ruby-loofah, ruby-rails-html-sanitizer, tryton-server, unbound, and wireshark), Fedora (chromium, cjson, cups, cups-browsed, libcupsfilters, and libppd), Gentoo (Apache HTTPD, Docker, HashiCorp Consul, IcedTea, nginx, tmux, and yt-dlp), Mageia (java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, & java-latest-openjdk and libreoffice), Red Hat (git-lfs, grafana, and osbuild-composer), and SUSE (chromedriver, chromium, coredns, json-java-20240303, kernel, libmozjs-128-0, maven-archetype, python3, python312, and quagga).",
+          "link": "https://lwn.net/Articles/992281/",
+          "publishedOn": "2024-09-30T14:22:45.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/992194/",
+          "author": "corbet",
+          "description": "The Arch Linux project has announced that Valve will be helping the\ndistribution with a couple of important initiatives:\n\n\nValve is generously providing backing for two \ncritical projects that will have a huge impact on our distribution: a \nbuild service infrastructure and a secure signing enclave. By supporting \nwork on a freelance basis for these topics, Valve enables us to work on \nthem without being limited solely by the free time of our volunteers.",
+          "link": "https://lwn.net/Articles/992194/",
+          "publishedOn": "2024-09-30T07:03:42.000Z",
+          "wordCount": null,
+          "title": "Arch Linux getting support from Valve",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/992185/",
+          "author": "corbet",
+          "description": "Linus has released 6.12-rc1 and closed the\nmerge window for this release.\n\n\n\tDespite conference travel (both for me and several maintainers),\n\tthings seemed to go mostly fairly normally. There's a couple of\n\tnotable new features in here: For one thing, PREEMPT_RT is now\n\tmainlined and enabled as a config option (you do need to enable\n\t\"EXPERT\" to get the question). For another, sched_ext also got\n\tmerged.",
+          "link": "https://lwn.net/Articles/992185/",
+          "publishedOn": "2024-09-30T06:07:34.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.12-rc1",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/992120/",
           "author": "corbet",
@@ -2781,6 +2901,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=9433",
+          "author": "Derek Jones",
+          "description": "Models predicting the growth, in lines of code, of a program are based on the assumption that future growth follows the same pattern of behavior as past growth. One such model is the recurrence relation: , where: is LOC at time , is the LOC carried over from release , and is the LOC added […]",
+          "link": "https://shape-of-code.com/2024/09/29/modeling-program-loc-growth-with-recurrence-equations/",
+          "publishedOn": "2024-09-29T22:07:41.000Z",
+          "wordCount": null,
+          "title": "Modeling program LOC growth with recurrence equations",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=9423",
           "author": "Derek Jones",
           "description": "How often are the features supported by a programming language used by developers in the code that they write? This fundamental question is rarely asked, let alone answered (my contribution). Existing code is what developers spend their time reading, compilers translating to machine code, and LLMs use as training data. Frequently used language features are […]",
@@ -2958,6 +3088,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=117957",
+          "author": "한상기",
+          "description": "1. 조니 아이브, AI 시대의 하드웨어를 디자인하다 와이어드, 9월 28일 어떤 하드웨어가 AI 시대를 이끌어 갈 것인가? 내가 AI 분야에서 가장 흥미진진하게 기대하는 건 AI가 과연 어떤 ‘육체’에 담길 것인가 하는 점이다. AI와 AR를 결합하는 새로운 메타의 스마트 글래스 오라이온도 이번 주에 발표했지만 3년 뒤에 어떤 결과로 나올지는 좀 더 지켜봐야 한다. AI 핀이나 래빗...\nThe post AI의 영혼이 담길 육체: 조니 아이브의 아이폰 속죄 프로젝트 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/117957",
+          "publishedOn": "2024-09-30T03:34:16.000Z",
+          "wordCount": null,
+          "title": "AI의 영혼이 담길 육체: 조니 아이브의 아이폰 속죄 프로젝트",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=117925",
+          "author": "이정환",
+          "description": "헤즈볼라에 폭격, 지도부 모두 사망. 이란 참전하면 미국도 자동 참전. 쟁점과 현안. 윤석열 지지율 반등. 김건희 특검법 10월5일 재표결. 난감한 검찰. 더 깊게 읽기. 국감 최대 키워드는 김건희. 이재명, “금투세 지금하면 안 된다는 정서 고려해야.” 일본 새 총리는 이시바 시게루. 다르게 읽기. “국민께서 이해해 주셔야 하는 거 아닌가.” 여전히 서울은 아파트가 부족하다. 딥페이크 처벌법 ‘알면서’...\nThe post 10일 남은 김건희 공소 시효, 그래서 거부권 행사 미루나: 슬로우레터 9월30일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/117925",
+          "publishedOn": "2024-09-29T22:19:29.000Z",
+          "wordCount": null,
+          "title": "10일 남은 김건희 공소 시효, 그래서 거부권 행사 미루나: 슬로우레터 9월30일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=117890",
           "author": "김훤주",
@@ -3557,16 +3707,6 @@
           "wordCount": null,
           "title": "팔은 안으로 굽었다: 숫자로 확인한 NYT와 WSJ의 당파성.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=115799",
-          "author": "박미숙",
-          "description": "복수란 무엇인가? 사전에 복수란 해를 입은 피해자가 가해자에게 해를 돌려주는 행위다. 하지만 그 사전적 정의는 얼마나 껍데기인가. 얼마나 무의미인가. 현실의 복수는 영원히 채워지지 않는 욕망이다. 왜냐하면 완벽한 복수란 기적에 가깝기 때문이다. 가령 뉴스와 드라마 그리고 영화 속 복수를 보라. 이들이 다루는 복수는 대체로 성공하지만 결국은 처음부터 성공이라는 건 없다. 그 피해가 이미 채워질 수 없는...\nThe post 2024년, 우리에게 복수란 무엇인가 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/115799",
-          "publishedOn": "2024-09-01T00:27:19.000Z",
-          "wordCount": null,
-          "title": "2024년, 우리에게 복수란 무엇인가",
-          "imageUrl": null
         }
       ]
     },
@@ -3754,16 +3894,6 @@
           "wordCount": null,
           "title": "9/4, 월가의 투자의견 및 주가 전망 보고서",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595860",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595860/8-31-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-%eb%b3%b4%ea%b3%a0%ec%84%9c",
-          "publishedOn": "2024-08-31T11:16:32.000Z",
-          "wordCount": null,
-          "title": "8/31, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
         }
       ]
     },
@@ -3772,6 +3902,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79812",
+          "author": "ingppoo",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 8월 13일 스프에 쓴 글입니다. 바이든 대통령이 재선에 도전하지 않겠다고 선언하며, 부통령 카멀라 해리스를 지지한다고 밝힌 7월 21일은 올해 미국 대선에서 가장 큰 변곡점으로 기록될 날입니다. 그때까지 기세등등하던 “트럼프의 시간”은 갑자기 막을 내렸습니다. 트럼프와 트럼프의 러닝메이트인 → 더 보기",
+          "link": "https://newspeppermint.com/2024/09/29/npsp_harristrump/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_harristrump",
+          "publishedOn": "2024-09-29T22:59:09.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] “여론조사 믿기 어렵다”는 반응까지… 8월을 해리스의 시간이라 하는 이유",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80043",
           "author": "NewsPeppermint",
