@@ -152,6 +152,16 @@
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
         {
+          "id": "https://blog.llvm.org/posts/2024-08-29-gsoc-three-way-comparison/",
+          "author": null,
+          "description": "Hello everyone! My name is Volodymyr, and in this post I would like to talk about the project I have been working on for the past couple of months as part of Google Summer of Code 2024. The aim of the project was to introduce 3-way comparison intrinsics to LLVM IR and add a decent level of optimizations for them.\nBackground\nThree-way comparison is an operation present in many high-level languages, such as C++ and its spaceship operator or Rust and the Ord trait. It operates on two values for which there is a defined comparison operation and returns -1 if the first operand is less than the second, 0 if they are equal, and 1 otherwise. At the moment, compilers that use LLVM express this operation using different sequences of instructions which are optimized and lowered individually rather th…",
+          "link": "https://blog.llvm.org/posts/2024-08-29-gsoc-three-way-comparison/",
+          "publishedOn": "2024-10-07T00:00:00.000Z",
+          "wordCount": null,
+          "title": "GSoC 2024: 3-way comparison intrinsics",
+          "imageUrl": null
+        },
+        {
           "id": "https://blog.llvm.org/posts/2024-09-07-abi-lowering-in-clangir/",
           "author": null,
           "description": "ClangIR is an ongoing effort to build a high-level intermediate representation(IR) for C/C++ within the LLVM ecosystem. Its key advantage lies in its abilityto retain more source code information. While ClangIR is making progress, itstill lacks certain features, notably ABI handling. Currently, ClangIR lowersmost functions without accounting for ABI-specific calling convention details.\nGoals\nThe “Build & Run SingleSource Benchmarks with ClangIR - Part 2” Google Summer ofCode 2024 builds on my contributions from GSoC 2023 by addressing one of themain issues I encountered: target-specific lowering. It focuses on extendingClangIR’s code generation capabilities, particularly in ABI-lowering for X86-64.Several tests rely on operations and types (e.g., va_arg calls and complexdata types) that re…",
@@ -288,6 +298,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "6fcd9065-84f7-49f6-9da1-952845668fe9",
+          "author": "Gerald Nunn",
+          "description": "MicroShift is a lightweight Kubernetes distribution derived from Red Hat OpenShift that is intended for edge or embedded use cases in environments where the availability of computing resources is limited. It enables organizations to leverage Kubernetes in these environments to standardize deployments using common Kubernetes paradigms.\nIn this article, we will discuss managing both configuration and application deployment in MicroShift using two different approaches. The first approach is embedding GitOps and other manifests using a Red Hat Enterprise Linux (RHEL) RPM. The second is using Red Hat Advanced Cluster Management (RHACM) to dynamically provision GitOps manifests to manage it remotely. While both approaches are covered there will be an emphasis on the second approach.\nPlease note …",
+          "link": "https://developers.redhat.com/articles/2024/10/07/manage-microshift-red-hat-advanced-cluster-management-and-openshift-gitops",
+          "publishedOn": "2024-10-07T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Manage MicroShift with Red Hat Advanced Cluster Management and OpenShift GitOps",
+          "imageUrl": null
+        },
+        {
+          "id": "0dd1d19e-230f-4109-8895-d3b2838da570",
+          "author": "Haoting Zhao",
+          "description": "Continue.dev is an innovative plug-in for Visual Studio Code designed to enhance the productivity of developers by enabling connections to a variety of providers and models. Recognizing the unique needs of certain projects, there are instances where an isolated environment is essential, particularly when there’s a requirement to deploy a fine-tuned base model that aligns more closely with a team’s specific coding practices. \nRed Hat OpenShift AI\nRed Hat OpenShift AI offers a robust solution for such scenarios, providing a secure and isolated platform that supports model serving in environments with stringent connectivity restrictions. It leverages the power of service mesh and Knative to offer inference APIs, ensuring seamless integration and operation within these specialized setups. This…",
+          "link": "https://developers.redhat.com/articles/2024/10/07/deploy-coding-copilot-model-openshift-ai",
+          "publishedOn": "2024-10-07T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Deploy a coding copilot model with OpenShift AI",
+          "imageUrl": null
+        },
         {
           "id": "1dc0899d-ffa8-4c9b-aeaa-0b121de64f01",
           "author": "Derek Parker",
@@ -711,16 +741,6 @@
           "wordCount": null,
           "title": "Notes on running Go in the browser with WebAssembly",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2024/notes-on-the-euler-formula/",
-          "author": null,
-          "description": "<p>The Euler formula states that for any real <em>x</em>:</p>\n<object class=\"align-center\" data=\"https://eli.thegreenplace.net/images/math/e41e42437950b87591a40b19d5bd68d01bd7786b.svg\" style=\"height: 22px;\" type=\"image/svg+xml\">\\[e^{ix}=cos(x)+i sin(x)\\]</object>\n<p>Where <em>i</em> is the imaginary unit. This formula is extremely important in many\nbranches of mathematics and engineering, but at first glance it's puzzling. What\ndoes a complex exponent even mean, and how can …</p>",
-          "link": "https://eli.thegreenplace.net/2024/notes-on-the-euler-formula/",
-          "publishedOn": "2024-09-07T12:44:00.000Z",
-          "wordCount": null,
-          "title": "Notes on the Euler formula",
-          "imageUrl": null
         }
       ]
     },
@@ -735,6 +755,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4491608",
+          "author": "Stefano Lovati",
+          "description": "Taoglas®, a reputable supplier of antennas and IoT components, has introduced AntJack, a high-efficiency Wi-Fi antenna designed for mounting on a common RJ45 ethernet connector. The FXM100* Wi-Fi antenna may be affixed to Taoglas’ TMJG4926HENL or any conventional 1×1 RJ45 connector, offering a 2-in-1 solution that enhances space efficiency and layout versatility while improving wireless […]\nThe post Taoglas Announces “AntJack”, the Industry-first Wi-Fi Antenna for an RJ45 Jack appeared first on Embedded.",
+          "link": "https://www.embedded.com/taoglas-announces-antjack-the-industry-first-wi-fi-antenna-for-an-rj45-jack/",
+          "publishedOn": "2024-10-07T20:00:00.000Z",
+          "wordCount": null,
+          "title": "Taoglas Announces “AntJack”, the Industry-first Wi-Fi Antenna for an RJ45 Jack",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4491597",
+          "author": "Stefano Lovati",
+          "description": "Analog Devices, Inc. introduced a suite of developer-focused solutions that integrate cross-device and cross-market hardware, software, and services to assist customers in delivering innovations for the Intelligent Edge with improved speed and security. At the core of this launch is CodeFusion Studio™, an innovative and all-encompassing embedded software development environment derived from Microsoft’s Visual Studio […]\nThe post Analog Devices Introduces the Embedded Software Development Environment, CodeFusion Studio™, and Developer Portal appeared first on Embedded.",
+          "link": "https://www.embedded.com/analog-devices-introduces-the-embedded-software-development-environment-codefusion-studio-and-developer-portal/",
+          "publishedOn": "2024-10-07T19:30:00.000Z",
+          "wordCount": null,
+          "title": "Analog Devices Introduces the Embedded Software Development Environment, CodeFusion Studio™, and Developer Portal",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4491387",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "This article seeks to offer a thorough understanding of temporal measurement methodologies and their implementation in engineering systems by examining the characteristics and configurations of various elements used to construct different systems. It explores various techniques for time quantification and links foundational methods for waveform synthesis and manipulation to functional circuits. While transmitters and receivers […]\nThe post Techniques Of Pulse Time Measurements appeared first on Embedded.",
+          "link": "https://www.embedded.com/techniques-of-pulse-time-measurements/",
+          "publishedOn": "2024-10-07T08:55:00.000Z",
+          "wordCount": null,
+          "title": "Techniques Of Pulse Time Measurements",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4491501",
           "author": "Stefano Lovati",
@@ -1183,6 +1233,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1699.php",
+          "author": null,
+          "description": "There are two aspects of any product that give me great pleasure: good design and quality of manufacture. This applies to just about anything: a pair of shoes, a car, a house , a piece of software … Assessing both these parameters can be hard. A pair of shoes must look good, be comfortable to wear and last well; this takes time to evaluate. A car needs to be enjoyable to ride in, drive well...",
+          "link": "https://www.embeddedrelated.com/showarticle/1699.php",
+          "publishedOn": "2024-10-07T10:06:45.000Z",
+          "wordCount": null,
+          "title": "Product quality: belief or proof?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1698.php",
           "author": null,
           "description": "The Raspberry Pi Pico-W meets Mongoose; here's the picodriver explained, with a very small MQTT example.\n\r\nThis example application describes the way to adapt the George Robotics CYW43 driver, present in the Pico-SDK, to work with Cesanta's Mongoose. We are then able to use Mongoose internal TCP/IP stack (with TLS 1.3), instead of lwIP (and MbedTLS). Future improvements will let us run this...",
@@ -1531,6 +1591,16 @@
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
         {
+          "id": "https://pythoninsider.blogspot.com/2024/10/python-3130-final-released.html",
+          "author": null,
+          "description": "Python 3.13.0 is now available\n\n\nhttps://www.python.org/downloads/release/python-3130/\n\n\nThis is the stable release of Python 3.13.0\nPython 3.13.0 is the newest major release of the Python programming language, and it contains many new features and optimizations compared to Python 3.12. (Compared to the last release candidate, 3.13.0rc3, 3.13.0 contains two small bug fixes and some documentation and testing changes.)\nMajor new features of the 3.13 series, compared to 3.12\nSome of the new major new features and changes in Python 3.13 are:\nNew features\n\nA new and improved interactive interpreter, based on PyPy’s, featuring multi-line editing and color support, as well as colorized exception tracebacks.\nAn experimental free-threaded build mode, which disables the Global Interpreter Lock, allo…",
+          "link": "https://pythoninsider.blogspot.com/2024/10/python-3130-final-released.html",
+          "publishedOn": "2024-10-07T18:21:00.004Z",
+          "wordCount": null,
+          "title": "Python 3.13.0 (final) released",
+          "imageUrl": null
+        },
+        {
           "id": "https://pythoninsider.blogspot.com/2024/10/python-3127-released.html",
           "author": null,
           "description": "I'm pleased to announce the release of Python 3.12.7:\nhttps://www.python.org/downloads/release/python-3127/\n\n \nThis is the seventh maintenance release of Python 3.12\nPython 3.12 is the newest major release of the Python programming language, and it contains many new features and optimizations. 3.12.7 is the latest maintenance release, containing more than 100 bugfixes, build improvements and documentation changes since 3.12.6.\n \nMajor new features of the 3.12 series, compared to 3.11\n \nNew features\n\nMore flexible f-string parsing, allowing many things previously disallowed (PEP 701).\nSupport for the buffer protocol in Python code (PEP 688).\nA new debugging/profiling API (PEP 669).\nSupport for isolated subinterpreters with separate Global Interpreter Locks (PEP 684).\nEven more improved erro…",
@@ -1548,16 +1618,6 @@
           "publishedOn": "2024-10-01T16:29:00.000Z",
           "wordCount": null,
           "title": "Python 3.13.0 release candidate 3 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://pythoninsider.blogspot.com/2024/09/python-3130rc2-3126-31110-31015-3920.html",
-          "author": null,
-          "description": "Hi there!\nPython 3.13.0RC2\nFinal opportunity to test and find any show-stopper bugs before we bless and release 3.13.0 final on October 1st.\nGet it here: Python Release Python 3.13.0rc2 | Python.org\nCall to action\nWe strongly encourage maintainers of third-party Python projects to \nprepare their projects for 3.13 compatibilities during this phase, and \nwhere necessary publish Python 3.13 wheels on PyPI to be ready for the \nfinal release of 3.13.0. Any binary wheels built against Python \n3.13.0rc2 will work with future versions of Python 3.13. As always, \nreport any issues to the Python bug tracker.\nPlease keep in mind that this is a preview release and while it’s as close to the final release as we can get it, its use is not recommended for production environments.\nCore developers: time to…",
-          "link": "https://pythoninsider.blogspot.com/2024/09/python-3130rc2-3126-31110-31015-3920.html",
-          "publishedOn": "2024-09-07T14:24:00.004Z",
-          "wordCount": null,
-          "title": "Python 3.13.0RC2, 3.12.6, 3.11.10, 3.10.15, 3.9.20, and 3.8.20 are now available!",
           "imageUrl": null
         }
       ]
@@ -1751,6 +1811,76 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/992219/",
+          "author": "jzb",
+          "description": "The recent WordPress\ncontroversy is not the first time there's been tension between the\nWordPress community, the interests of Automattic as a business, and Matt\nMullenweg's leadership as WordPress's benevolent dictator for\nlife (BDFL). In particular, Mullenweg's focus on pushing WordPress to use a new\n\"editing experience\" called Gutenberg caused significant\nfriction—and led to the ClassicPress fork. Users who\nwant to preserve the \"classic\" WordPress experience without straying\ntoo far from the WordPress fold may want to look into ClassicPress.",
+          "link": "https://lwn.net/Articles/992219/",
+          "publishedOn": "2024-10-07T17:40:29.000Z",
+          "wordCount": null,
+          "title": "[$] ClassicPress: WordPress without the block editor",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993191/",
+          "author": "jzb",
+          "description": "Version 3.13 of the Python programming language has been released. The\n\"What's New\nIn Python 3.13\" page has a summary of all the new features and\nchanges. Highlights of the release include a basic JIT compiler,\nexperimental support for free-threading, and much\nmore. See the changelog\nfor even more details.",
+          "link": "https://lwn.net/Articles/993191/",
+          "publishedOn": "2024-10-07T17:19:42.000Z",
+          "wordCount": null,
+          "title": "Python 3.13 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/992992/",
+          "author": "corbet",
+          "description": "The core of the Android operating system, as represented by the Android Open Source Project (AOSP),\ncan only be considered one of the most successful open-source initiatives\never created; its user count is measured in the billions.  But few would\nconsider it to be a truly community-oriented project.  At the 2024 Linux Plumbers Conference, Chris Simmonds\nasked why the AOSP community is so hard to find, and what might be done\nabout the situation.",
+          "link": "https://lwn.net/Articles/992992/",
+          "publishedOn": "2024-10-07T16:18:28.000Z",
+          "wordCount": null,
+          "title": "[$] In search of the AOSP community",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993180/",
+          "author": "corbet",
+          "description": "Version 2.47.0 of the Git\nsource-code management system has been released.  The changes include a\nlong list of incremental improvements; see the announcement and this\nGitHub blog post for details.",
+          "link": "https://lwn.net/Articles/993180/",
+          "publishedOn": "2024-10-07T16:11:19.000Z",
+          "wordCount": null,
+          "title": "Git 2.47.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993161/",
+          "author": "jzb",
+          "description": "Version 4.20 of\nthe RPM Package Manager (RPM) has been released. Major changes in this\nrelease include a new plugin to prevent filesystem and network access\nby scriptlets, the BuildSystem directive for declaring the\nbuild system to be used by packaged software, and more. LWN covered the development of\nRPM 4.20 in September.",
+          "link": "https://lwn.net/Articles/993161/",
+          "publishedOn": "2024-10-07T14:37:43.000Z",
+          "wordCount": null,
+          "title": "RPM 4.20 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993160/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (go-toolset:rhel8 and linux-firmware), Arch Linux (oath-toolkit), Debian (e2fsprogs, firefox-esr, libgsf, mediawiki, and oath-toolkit), Fedora (aws, chromium, firefox, p7zip, pgadmin4, python-gcsfs, unbound, webkitgtk, znc, znc-clientbuffer, and znc-push), Mageia (ghostscript and rootcerts nss firefox firefox-l10n), Oracle (kernel, oVirt 4.4 ovirt-engine, and thunderbird), SUSE (chromedriver, chromium, cups-filters, ffmpeg-7, frr, Mesa, openssl-3, openvpn, pcp, and redis), and Ubuntu (firefox and ruby-webrick).",
+          "link": "https://lwn.net/Articles/993160/",
+          "publishedOn": "2024-10-07T14:22:38.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993107/",
+          "author": "corbet",
+          "description": "Linus has released 6.12-rc2 for testing.\n\n\n\tAnyway, this isn't one of the small rc2's. But looking at\n\thistorical trends, being a bigger rc2 isn't _that_ unusual, and\n\tnothing in here looks all that odd. Yes, the diffstat may look a\n\tbit unusual, in that we had a global header renaming\n\t(asm/unaligned.h -> linux/unaligned.h) and we had a couple of\n\treverts that stand out as spikes in the stats, but everything else\n\tlooks nice and small.",
+          "link": "https://lwn.net/Articles/993107/",
+          "publishedOn": "2024-10-07T12:07:50.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.12-rc2",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/993044/",
           "author": "daroc",
@@ -2855,6 +2985,16 @@
       "siteUrl": "https://nullprogram.com",
       "articles": [
         {
+          "id": "https://nullprogram.com/blog/2024/10/07/",
+          "author": null,
+          "description": "Windows paths have been WTF-16-encoded for decades, but module names\nin the import tables of Portable Executable are octets.\nIf a name contains values beyond ASCII — technically out of spec — then\nthe dynamic linker must somehow decode those octets into Unicode in order\nto construct a lookup path. There are multiple ways this could be done,\nand the most obvious is the process’s active code page (ACP), which is\nexactly what happens. As a consequence, the specific DLL loaded by the\nlinker may depend on the system code page. In this article I’ll contrive\nsuch a situation.\nLoadLibraryA is a similar situation, and potentially applies the code\npage to a longer portion of the module path. LoadLibraryW is\nunaffected, at least for the directly-named module, because it’s Unicode\nall the way through.…",
+          "link": "https://nullprogram.com/blog/2024/10/07/",
+          "publishedOn": "2024-10-07T19:50:17.000Z",
+          "wordCount": null,
+          "title": "Windows dynamic linking depends on the active code page",
+          "imageUrl": null
+        },
+        {
           "id": "https://nullprogram.com/blog/2024/10/03/",
           "author": null,
           "description": "I’m 18 years late, but Slim Reader/Writer Locks have a fantastic\ninterface: pointer-sized (“slim”), zero-initialized, and non-allocating.\nLacking cleanup, they compose naturally with arena allocation.\nSounds like a futex? That’s because they’re built on futexes introduced at\nthe same time. They’re also complemented by condition variables\nwith the same desirable properties. My only quibble is that slim locks\ncould easily have been 32-bit objects, but it hardly matters. This\narticle, while treating Win32 as a foreign interface, discusses a\npaper-thin C++ wrapper interface around lock and condition variables, in\nmy own style.\nIf you’d like to see/try a complete, working demonstration before diving\ninto the details: demo.cpp. We’re going to build this from the\nground up, so let’s establish a f…",
@@ -2912,6 +3052,16 @@
       "feedUrl": "https://shape-of-code.com/feed/",
       "siteUrl": "https://shape-of-code.com",
       "articles": [
+        {
+          "id": "https://shape-of-code.com/?p=9466",
+          "author": "Derek Jones",
+          "description": "Open source projects and safety critical software are at opposite ends of the development process spectrum. From the user perspective, when an Open source project becomes very widely used within its application domain, there is a huge incentive to run it within safety critical domains. How might software that was not originally developed using a […]",
+          "link": "https://shape-of-code.com/2024/10/06/mc-dc-a-step-towards-safety-critical-open-source-software/",
+          "publishedOn": "2024-10-06T22:30:31.000Z",
+          "wordCount": null,
+          "title": "MC/DC a step towards safety critical Open source software",
+          "imageUrl": null
+        },
         {
           "id": "https://shape-of-code.com/?p=9433",
           "author": "Derek Jones",
@@ -3054,16 +3204,6 @@
           "wordCount": null,
           "title": "Tiny Great Languages: BASIC",
           "imageUrl": null
-        },
-        {
-          "id": "https://zserge.com/posts/langs-asm/",
-          "author": null,
-          "description": "This is part 1 from series “Tiny Great Languages”.\nFinal code is on Github. Part 1: Assembly. Part 2: BASIC. Part 3: Forth/MOUSE. Decades ago, I wrote my first interpreter – a Turtle Graphics IDE designed to help kids at my school learn programming. I built it in Pascal, and to this day, I still wonder how I managed to make it work without any formal knowledge of writing interpreters.",
-          "link": "https://zserge.com/posts/langs-asm/",
-          "publishedOn": "2024-09-08T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Tiny Great Languages: Assembly",
-          "imageUrl": null
         }
       ]
     },
@@ -3090,6 +3230,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=118473",
+          "author": "한상기",
+          "description": "1. 우리는 수학에서 미지의 영역으로 들어가고 있다 디 애틀란틱, 10월 4일 필즈상을 받은 호주 출신 천재 수학자 테렌스 타오와 애틀란틱의 마테오 웡 기자가 줌으로 인터뷰한 내용이다. 오픈AI의 o1(‘오원’)이 나오고 국내 여러 지식인이 o1이 못하는 것을 찾아내는 놀이를 하는 반면, 전문 수학자는 o1이 제공할 새로운 기회에 주목한다. 테렌스 타오는 UCLA 교수이며 ‘수학의 모차르트’라고 불리는 천재다. 기자는...\nThe post 최전선에선 항상 인간과 AI의 ‘상호 보완’이 필요하다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/118473",
+          "publishedOn": "2024-10-07T07:45:23.000Z",
+          "wordCount": null,
+          "title": "최전선에선 항상 인간과 AI의 ‘상호 보완’이 필요하다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=118461",
+          "author": "김훤주",
+          "description": "잘생겼다 가서 보면 그야말로 정말 잘생겼다는 생각이 든다. 자연이 천연(天然)스레 만들어냈는데 어쩌면 저토록 그럴듯하게 자아냈을까 싶은 경탄이 앞선다. 천연 그대로일 따름이라 그런지 어디도 걸리적거리는 구석이 없다. 하늘 아래 하나도 가리거나 숨기지 않은 채로 주변 경관과 썩도 잘 어울린다. 그런 덕분인지 바라보고 있으면 우리 인간이 죄를 모르던 시절도 있었을 것 같고 천둥벌거숭이로 몸을 가리지 않고 원죄...\nThe post 잘생겼다, 남해 가천 암수바위 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/118461",
+          "publishedOn": "2024-10-07T05:14:06.000Z",
+          "wordCount": null,
+          "title": "잘생겼다, 남해 가천 암수바위",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=118399",
+          "author": "이정환",
+          "description": "가자 전쟁 1년. 이스라엘은 이겨도 졌다. 바이든의 실패. 쟁점과 현안. 김건희 특검법 국민의힘 이탈표 최소 4표. 김건희 국감이 시작된다. 명태균 “대통령 부부 앉혀놓고 최재형 총리 제안했다.” 국감 끝나면 한동훈의 시간이 올까. 윤석열 부부와 한동훈 부부. 친한계만 불러서 결의대회. “끌어내려야 한다.” 더 깊게 읽기. 질질 끌려가는 주한미군 분담금. 조건부 휴학 합의? 그래도 복귀 안 한다. 윤석열...\nThe post 명태균이 아크로비스타에서 윤석열 부부 앉혀놓고 했다는 말: 슬로우레터 10월7일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/118399",
+          "publishedOn": "2024-10-06T22:23:02.000Z",
+          "wordCount": null,
+          "title": "명태균이 아크로비스타에서 윤석열 부부 앉혀놓고 했다는 말: 슬로우레터 10월7일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=118345",
           "author": "이정환",
@@ -3678,6 +3848,16 @@
       "siteUrl": "https://happist.com",
       "articles": [
         {
+          "id": "https://happist.com/?p=596040",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/596040/%ea%b0%80%ec%9d%84-%ec%96%b5%ec%83%88%ec%97%ac%ed%96%89-%ed%8f%ac%ec%b2%9c-%eb%aa%85%ec%84%b1%ec%82%b0-%ec%96%b5%ec%83%88-%ea%b5%b0%eb%9d%bd%ec%a7%80",
+          "publishedOn": "2024-10-07T14:45:52.000Z",
+          "wordCount": null,
+          "title": "가을 억새여행, 포천 명성산 억새 군락지",
+          "imageUrl": null
+        },
+        {
           "id": "https://happist.com/?p=596031",
           "author": "happist",
           "description": "",
@@ -3836,16 +4016,6 @@
           "wordCount": null,
           "title": "시티, 엔비디아 주가는 상승하지만, 엔비디아 지배력 끝나고 엔비디아 주가 상승은 끝나고 있다.",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595888",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595888/9-7-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-%eb%b3%b4%ea%b3%a0%ec%84%9c",
-          "publishedOn": "2024-09-07T11:29:23.000Z",
-          "wordCount": null,
-          "title": "9/7, 월가의 투자의견 및 주가 전망 보고서",
-          "imageUrl": null
         }
       ]
     },
@@ -3992,16 +4162,6 @@
           "publishedOn": "2024-09-10T00:30:46.000Z",
           "wordCount": null,
           "title": "“‘진짜 노동자’의 절망, 내가 누구보다 잘 안다” 미국 대선의 진짜 승부처는 여기",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79699",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 23일 스프에 쓴 글입니다. 조 바이든 대통령이 오는 11월 재선에 도전하지 않겠다고 밝혔습니다. 후보 사퇴 소식은 현지 시각으로 일요일(21일) 오후 전격적으로 알려졌습니다. 바이든 대통령은 X(옛 트위터) 자신의 개인 계정에 오후 1시 46분 “미국인에게 쓰는 → 더 보기",
-          "link": "https://newspeppermint.com/2024/09/07/npsp_bidenharristrumpvance/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_bidenharristrumpvance",
-          "publishedOn": "2024-09-07T22:59:09.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] “구국의 결단” 바이든 그 이후… 절대 놓치면 안 되는 것들이 있다",
           "imageUrl": null
         }
       ]

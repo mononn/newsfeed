@@ -22,11 +22,609 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-10-06 datetime="2024-10-06T20:15:01.003Z">2024-10-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-10-06 datetime="2024-10-06T20:15:01.003Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-10-07 datetime="2024-10-07T20:00:00.000Z">2024-10-07</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-10-07 datetime="2024-10-07T20:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded</button>
+                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4491608"
+                        open
+                      >
+                        <summary class="article-expander__title">Taoglas Announces “AntJack”, the Industry-first Wi-Fi Antenna for an RJ45 Jack</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/taoglas-announces-antjack-the-industry-first-wi-fi-antenna-for-an-rj45-jack/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Taoglas®, a reputable supplier of antennas and IoT components, has introduced AntJack, a high-efficiency Wi-Fi antenna designed for mounting on a common RJ45 ethernet connector. The FXM100* Wi-Fi antenna may be affixed to Taoglas’ TMJG4926HENL or any conventional 1×1 RJ45 connector, offering a 2-in-1 solution that enhances space efficiency and layout versatility while improving wireless […]
+The post Taoglas Announces “AntJack”, the Industry-first Wi-Fi Antenna for an RJ45 Jack appeared first on Embedded.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4491597"
+                        open
+                      >
+                        <summary class="article-expander__title">Analog Devices Introduces the Embedded Software Development Environment, CodeFusion Studio™, and Developer Portal</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/analog-devices-introduces-the-embedded-software-development-environment-codefusion-studio-and-developer-portal/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Analog Devices, Inc. introduced a suite of developer-focused solutions that integrate cross-device and cross-market hardware, software, and services to assist customers in delivering innovations for the Intelligent Edge with improved speed and security. At the core of this launch is CodeFusion Studio™, an innovative and all-encompassing embedded software development environment derived from Microsoft’s Visual Studio […]
+The post Analog Devices Introduces the Embedded Software Development Environment, CodeFusion Studio™, and Developer Portal appeared first on Embedded.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4491387"
+                        open
+                      >
+                        <summary class="article-expander__title">Techniques Of Pulse Time Measurements</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/techniques-of-pulse-time-measurements/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>This article seeks to offer a thorough understanding of temporal measurement methodologies and their implementation in engineering systems by examining the characteristics and configurations of various elements used to construct different systems. It explores various techniques for time quantification and links foundational methods for waveform synthesis and manipulation to functional circuits. While transmitters and receivers […]
+The post Techniques Of Pulse Time Measurements appeared first on Embedded.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >null program</button>
+                  <a class="source-heading__link" href="https://nullprogram.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://nullprogram.com/blog/2024/10/07/"
+                        open
+                      >
+                        <summary class="article-expander__title">Windows dynamic linking depends on the active code page</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://nullprogram.com/blog/2024/10/07/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Windows paths have been WTF-16-encoded for decades, but module names
+in the import tables of Portable Executable are octets.
+If a name contains values beyond ASCII — technically out of spec — then
+the dynamic linker must somehow decode those octets into Unicode in order
+to construct a lookup path. There are multiple ways this could be done,
+and the most obvious is the process’s active code page (ACP), which is
+exactly what happens. As a consequence, the specific DLL loaded by the
+linker may depend on the system code page. In this article I’ll contrive
+such a situation.
+LoadLibraryA is a similar situation, and potentially applies the code
+page to a longer portion of the module path. LoadLibraryW is
+unaffected, at least for the directly-named module, because it’s Unicode
+all the way through.…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Python Insider</button>
+                  <a class="source-heading__link" href="https://pythoninsider.blogspot.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://pythoninsider.blogspot.com/2024/10/python-3130-final-released.html"
+                        open
+                      >
+                        <summary class="article-expander__title">Python 3.13.0 (final) released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2024/10/python-3130-final-released.html">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Python 3.13.0 is now available
+
+
+https://www.python.org/downloads/release/python-3130/
+
+
+This is the stable release of Python 3.13.0
+Python 3.13.0 is the newest major release of the Python programming language, and it contains many new features and optimizations compared to Python 3.12. (Compared to the last release candidate, 3.13.0rc3, 3.13.0 contains two small bug fixes and some documentation and testing changes.)
+Major new features of the 3.13 series, compared to 3.12
+Some of the new major new features and changes in Python 3.13 are:
+New features
+
+A new and improved interactive interpreter, based on PyPy’s, featuring multi-line editing and color support, as well as colorized exception tracebacks.
+An experimental free-threaded build mode, which disables the Global Interpreter Lock, allo…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/992219/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] ClassicPress: WordPress without the block editor</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/992219/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The recent WordPress
+controversy is not the first time there&#x27;s been tension between the
+WordPress community, the interests of Automattic as a business, and Matt
+Mullenweg&#x27;s leadership as WordPress&#x27;s benevolent dictator for
+life (BDFL). In particular, Mullenweg&#x27;s focus on pushing WordPress to use a new
+&quot;editing experience&quot; called Gutenberg caused significant
+friction—and led to the ClassicPress fork. Users who
+want to preserve the &quot;classic&quot; WordPress experience without straying
+too far from the WordPress fold may want to look into ClassicPress.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/993191/"
+                        open
+                      >
+                        <summary class="article-expander__title">Python 3.13 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/993191/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version 3.13 of the Python programming language has been released. The
+&quot;What&#x27;s New
+In Python 3.13&quot; page has a summary of all the new features and
+changes. Highlights of the release include a basic JIT compiler,
+experimental support for free-threading, and much
+more. See the changelog
+for even more details.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/992992/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] In search of the AOSP community</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/992992/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The core of the Android operating system, as represented by the Android Open Source Project (AOSP),
+can only be considered one of the most successful open-source initiatives
+ever created; its user count is measured in the billions.  But few would
+consider it to be a truly community-oriented project.  At the 2024 Linux Plumbers Conference, Chris Simmonds
+asked why the AOSP community is so hard to find, and what might be done
+about the situation.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/993180/"
+                        open
+                      >
+                        <summary class="article-expander__title">Git 2.47.0 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/993180/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version 2.47.0 of the Git
+source-code management system has been released.  The changes include a
+long list of incremental improvements; see the announcement and this
+GitHub blog post for details.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/993161/"
+                        open
+                      >
+                        <summary class="article-expander__title">RPM 4.20 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/993161/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Version 4.20 of
+the RPM Package Manager (RPM) has been released. Major changes in this
+release include a new plugin to prevent filesystem and network access
+by scriptlets, the BuildSystem directive for declaring the
+build system to be used by packaged software, and more. LWN covered the development of
+RPM 4.20 in September.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/993160/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Monday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/993160/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by AlmaLinux (go-toolset:rhel8 and linux-firmware), Arch Linux (oath-toolkit), Debian (e2fsprogs, firefox-esr, libgsf, mediawiki, and oath-toolkit), Fedora (aws, chromium, firefox, p7zip, pgadmin4, python-gcsfs, unbound, webkitgtk, znc, znc-clientbuffer, and znc-push), Mageia (ghostscript and rootcerts nss firefox firefox-l10n), Oracle (kernel, oVirt 4.4 ovirt-engine, and thunderbird), SUSE (chromedriver, chromium, cups-filters, ffmpeg-7, frr, Mesa, openssl-3, openvpn, pcp, and redis), and Ubuntu (firefox and ruby-webrick).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/993107/"
+                        open
+                      >
+                        <summary class="article-expander__title">Kernel prepatch 6.12-rc2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/993107/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Linus has released 6.12-rc2 for testing.
+
+
+	Anyway, this isn&#x27;t one of the small rc2&#x27;s. But looking at
+	historical trends, being a bigger rc2 isn&#x27;t _that_ unusual, and
+	nothing in here looks all that odd. Yes, the diffstat may look a
+	bit unusual, in that we had a global header renaming
+	(asm/unaligned.h -&gt; linux/unaligned.h) and we had a couple of
+	reverts that stand out as spikes in the stats, but everything else
+	looks nice and small.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;596040"
+                        open
+                      >
+                        <summary class="article-expander__title">가을 억새여행, 포천 명성산 억새 군락지</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/596040/%ea%b0%80%ec%9d%84-%ec%96%b5%ec%83%88%ec%97%ac%ed%96%89-%ed%8f%ac%ec%b2%9c-%eb%aa%85%ec%84%b1%ec%82%b0-%ec%96%b5%ec%83%88-%ea%b5%b0%eb%9d%bd%ec%a7%80">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>No content preview</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >EmbeddedRelated.com Blogs</button>
+                  <a class="source-heading__link" href="https://www.embeddedrelated.com/blogs.php">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embeddedrelated.com/showarticle/1699.php"
+                        open
+                      >
+                        <summary class="article-expander__title">Product quality: belief or proof?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embeddedrelated.com/showarticle/1699.php">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>There are two aspects of any product that give me great pleasure: good design and quality of manufacture. This applies to just about anything: a pair of shoes, a car, a house , a piece of software … Assessing both these parameters can be hard. A pair of shoes must look good, be comfortable to wear and last well; this takes time to evaluate. A car needs to be enjoyable to ride in, drive well...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;118473"
+                        open
+                      >
+                        <summary class="article-expander__title">최전선에선 항상 인간과 AI의 ‘상호 보완’이 필요하다</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/118473">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>1. 우리는 수학에서 미지의 영역으로 들어가고 있다 디 애틀란틱, 10월 4일 필즈상을 받은 호주 출신 천재 수학자 테렌스 타오와 애틀란틱의 마테오 웡 기자가 줌으로 인터뷰한 내용이다. 오픈AI의 o1(‘오원’)이 나오고 국내 여러 지식인이 o1이 못하는 것을 찾아내는 놀이를 하는 반면, 전문 수학자는 o1이 제공할 새로운 기회에 주목한다. 테렌스 타오는 UCLA 교수이며 ‘수학의 모차르트’라고 불리는 천재다. 기자는...
+The post 최전선에선 항상 인간과 AI의 ‘상호 보완’이 필요하다 appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;118461"
+                        open
+                      >
+                        <summary class="article-expander__title">잘생겼다, 남해 가천 암수바위</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/118461">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>잘생겼다 가서 보면 그야말로 정말 잘생겼다는 생각이 든다. 자연이 천연(天然)스레 만들어냈는데 어쩌면 저토록 그럴듯하게 자아냈을까 싶은 경탄이 앞선다. 천연 그대로일 따름이라 그런지 어디도 걸리적거리는 구석이 없다. 하늘 아래 하나도 가리거나 숨기지 않은 채로 주변 경관과 썩도 잘 어울린다. 그런 덕분인지 바라보고 있으면 우리 인간이 죄를 모르던 시절도 있었을 것 같고 천둥벌거숭이로 몸을 가리지 않고 원죄...
+The post 잘생겼다, 남해 가천 암수바위 appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Red Hat Developer</button>
+                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="6fcd9065-84f7-49f6-9da1-952845668fe9"
+                        open
+                      >
+                        <summary class="article-expander__title">Manage MicroShift with Red Hat Advanced Cluster Management and OpenShift GitOps</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/10/07/manage-microshift-red-hat-advanced-cluster-management-and-openshift-gitops">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>MicroShift is a lightweight Kubernetes distribution derived from Red Hat OpenShift that is intended for edge or embedded use cases in environments where the availability of computing resources is limited. It enables organizations to leverage Kubernetes in these environments to standardize deployments using common Kubernetes paradigms.
+In this article, we will discuss managing both configuration and application deployment in MicroShift using two different approaches. The first approach is embedding GitOps and other manifests using a Red Hat Enterprise Linux (RHEL) RPM. The second is using Red Hat Advanced Cluster Management (RHACM) to dynamically provision GitOps manifests to manage it remotely. While both approaches are covered there will be an emphasis on the second approach.
+Please note …</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="0dd1d19e-230f-4109-8895-d3b2838da570"
+                        open
+                      >
+                        <summary class="article-expander__title">Deploy a coding copilot model with OpenShift AI</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/10/07/deploy-coding-copilot-model-openshift-ai">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Continue.dev is an innovative plug-in for Visual Studio Code designed to enhance the productivity of developers by enabling connections to a variety of providers and models. Recognizing the unique needs of certain projects, there are instances where an isolated environment is essential, particularly when there’s a requirement to deploy a fine-tuned base model that aligns more closely with a team’s specific coding practices. 
+Red Hat OpenShift AI
+Red Hat OpenShift AI offers a robust solution for such scenarios, providing a secure and isolated platform that supports model serving in environments with stringent connectivity restrictions. It leverages the power of service mesh and Knative to offer inference APIs, ensuring seamless integration and operation within these specialized setups. This…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >The LLVM Project Blog</button>
+                  <a class="source-heading__link" href="https://blog.llvm.org/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://blog.llvm.org/posts/2024-08-29-gsoc-three-way-comparison/"
+                        open
+                      >
+                        <summary class="article-expander__title">GSoC 2024: 3-way comparison intrinsics</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://blog.llvm.org/posts/2024-08-29-gsoc-three-way-comparison/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hello everyone! My name is Volodymyr, and in this post I would like to talk about the project I have been working on for the past couple of months as part of Google Summer of Code 2024. The aim of the project was to introduce 3-way comparison intrinsics to LLVM IR and add a decent level of optimizations for them.
+Background
+Three-way comparison is an operation present in many high-level languages, such as C++ and its spaceship operator or Rust and the Ord trait. It operates on two values for which there is a defined comparison operation and returns -1 if the first operand is less than the second, 0 if they are equal, and 1 otherwise. At the moment, compilers that use LLVM express this operation using different sequences of instructions which are optimized and lowered individually rather th…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-10-06 datetime="2024-10-06T22:30:31.000Z">2024-10-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-10-06 datetime="2024-10-06T22:30:31.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >The Shape of Code</button>
+                  <a class="source-heading__link" href="https://shape-of-code.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://shape-of-code.com/?p&#x3D;9466"
+                        open
+                      >
+                        <summary class="article-expander__title">MC/DC a step towards safety critical Open source software</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://shape-of-code.com/2024/10/06/mc-dc-a-step-towards-safety-critical-open-source-software/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Open source projects and safety critical software are at opposite ends of the development process spectrum. From the user perspective, when an Open source project becomes very widely used within its application domain, there is a huge incentive to run it within safety critical domains. How might software that was not originally developed using a […]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;118399"
+                        open
+                      >
+                        <summary class="article-expander__title">명태균이 아크로비스타에서 윤석열 부부 앉혀놓고 했다는 말: 슬로우레터 10월7일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/118399">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>가자 전쟁 1년. 이스라엘은 이겨도 졌다. 바이든의 실패. 쟁점과 현안. 김건희 특검법 국민의힘 이탈표 최소 4표. 김건희 국감이 시작된다. 명태균 “대통령 부부 앉혀놓고 최재형 총리 제안했다.” 국감 끝나면 한동훈의 시간이 올까. 윤석열 부부와 한동훈 부부. 친한계만 불러서 결의대회. “끌어내려야 한다.” 더 깊게 읽기. 질질 끌려가는 주한미군 분담금. 조건부 휴학 합의? 그래도 복귀 안 한다. 윤석열...
+The post 명태균이 아크로비스타에서 윤석열 부부 앉혀놓고 했다는 말: 슬로우레터 10월7일. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -10052,192 +10650,6 @@ The post 조선일보의 출구전략, “이제라도 김건희 사과로 마�
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >zserge&#x27;s blog</button>
-                  <a class="source-heading__link" href="https://zserge.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zserge.com/posts/langs-asm/"
-                        open
-                      >
-                        <summary class="article-expander__title">Tiny Great Languages: Assembly</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zserge.com/posts/langs-asm/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>This is part 1 from series “Tiny Great Languages”.
-Final code is on Github. Part 1: Assembly. Part 2: BASIC. Part 3: Forth/MOUSE. Decades ago, I wrote my first interpreter – a Turtle Graphics IDE designed to help kids at my school learn programming. I built it in Pascal, and to this day, I still wonder how I managed to make it work without any formal knowledge of writing interpreters.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-09-07 datetime="2024-09-07T22:59:09.000Z">2024-09-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-09-07 datetime="2024-09-07T22:59:09.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >NewsPeppermint</button>
-                  <a class="source-heading__link" href="https://newspeppermint.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://newspeppermint.com/?p&#x3D;79699"
-                        open
-                      >
-                        <summary class="article-expander__title">[뉴페@스프] “구국의 결단” 바이든 그 이후… 절대 놓치면 안 되는 것들이 있다</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://newspeppermint.com/2024/09/07/npsp_bidenharristrumpvance/?utm_source&#x3D;rss&amp;utm_medium&#x3D;rss&amp;utm_campaign&#x3D;npsp_bidenharristrumpvance">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 7월 23일 스프에 쓴 글입니다. 조 바이든 대통령이 오는 11월 재선에 도전하지 않겠다고 밝혔습니다. 후보 사퇴 소식은 현지 시각으로 일요일(21일) 오후 전격적으로 알려졌습니다. 바이든 대통령은 X(옛 트위터) 자신의 개인 계정에 오후 1시 46분 “미국인에게 쓰는 → 더 보기</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Python Insider</button>
-                  <a class="source-heading__link" href="https://pythoninsider.blogspot.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://pythoninsider.blogspot.com/2024/09/python-3130rc2-3126-31110-31015-3920.html"
-                        open
-                      >
-                        <summary class="article-expander__title">Python 3.13.0RC2, 3.12.6, 3.11.10, 3.10.15, 3.9.20, and 3.8.20 are now available!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://pythoninsider.blogspot.com/2024/09/python-3130rc2-3126-31110-31015-3920.html">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Hi there!
-Python 3.13.0RC2
-Final opportunity to test and find any show-stopper bugs before we bless and release 3.13.0 final on October 1st.
-Get it here: Python Release Python 3.13.0rc2 | Python.org
-Call to action
-We strongly encourage maintainers of third-party Python projects to 
-prepare their projects for 3.13 compatibilities during this phase, and 
-where necessary publish Python 3.13 wheels on PyPI to be ready for the 
-final release of 3.13.0. Any binary wheels built against Python 
-3.13.0rc2 will work with future versions of Python 3.13. As always, 
-report any issues to the Python bug tracker.
-Please keep in mind that this is a preview release and while it’s as close to the final release as we can get it, its use is not recommended for production environments.
-Core developers: time to…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Eli Bendersky&#x27;s website</button>
-                  <a class="source-heading__link" href="https://eli.thegreenplace.net/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://eli.thegreenplace.net/2024/notes-on-the-euler-formula/"
-                        open
-                      >
-                        <summary class="article-expander__title">Notes on the Euler formula</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://eli.thegreenplace.net/2024/notes-on-the-euler-formula/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The Euler formula states that for any real x:
-\[e^{ix}&#x3D;cos(x)+i sin(x)\]
-Where i is the imaginary unit. This formula is extremely important in many
-branches of mathematics and engineering, but at first glance it&#x27;s puzzling. What
-does a complex exponent even mean, and how can …</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >꿈꾸는섬</button>
-                  <a class="source-heading__link" href="https://happist.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://happist.com/?p&#x3D;595888"
-                        open
-                      >
-                        <summary class="article-expander__title">9/7, 월가의 투자의견 및 주가 전망 보고서</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/595888/9-7-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-%eb%b3%b4%ea%b3%a0%ec%84%9c">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>No content preview</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -10381,8 +10793,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/11204854438">
-        <time id="build-timestamp" datetime="2024-10-06T20:15:07.415Z">2024-10-06T20:15:07.415Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/11223266906">
+        <time id="build-timestamp" datetime="2024-10-07T20:18:07.062Z">2024-10-07T20:18:07.062Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
