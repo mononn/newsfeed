@@ -86,6 +86,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2018/12/fromchars/",
+          "author": null,
+          "description": "With the introduction of C++17, the C++ Standard Library expanded its capabilities for converting text to numbers with the addition of std::from_chars. This low-level, high-performance API offers significant advantages over previous methods, such as atoi and stringstream. In this article, we will explore the evolution of string conversion routines from C++17 through C++26, highlighting key improvements like constexpr support and enhanced error handling. Let’s dive into the details and see how std::from_chars can transform your approach to string conversion.\nUpdated in Oct 2024: Added notes from constexpr support in C++23, and C++26 improvements, plus more Compiler Explorer examples.\n\n\n\n     \n    \n\n\nC++, before C++17, offered several options when it comes to string conversion:\nsprintf / snp…",
+          "link": "https://www.cppstories.com/2018/12/fromchars/",
+          "publishedOn": "2024-10-13T00:00:00.000Z",
+          "wordCount": null,
+          "title": "C++ String Conversion: Exploring std::from_chars in C++17 to C++26",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.cppstories.com/2023/initializer_list_improvements/",
           "author": null,
           "description": "In this article, you’ll learn why std::initializer_list has a bad reputation in C++. Is passing values using is as efficient as “emplace”, how can we use non-copyable types? You’ll also see how to fix some of the problems.\nLet’s start with the issues first:\nUpdated in Sept 2024: Added note about stack overflow and C++26 fixes.\n\n\n\n     \n    \n\n\nIf you recall from the previous article, std::initializer_list expands to some unnamed local array of const objects. So the following code might be super unsafe:\nstd::initializer_list<int> wrong() { // for illustration only!\n    return { 1, 2, 3, 4};\n}\nint main() {\n    std::initializer_list<int> x = wrong();\n}\n\n\nThe above code is equivalent to the following:\nstd::initializer_list<int> wrong() {\n    const int arr[] { 1, 2, 3, 4}\n    return std::initial…",
@@ -1201,26 +1211,6 @@
           "wordCount": null,
           "title": "Touch Controllers Face Unique Demands in Two-Wheeled Vehicle Touchscreens",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491002",
-          "author": "Stephen Evanczuk",
-          "description": "In the last several posts, we’ve started to explore Embedded Rust. You’ve seen that the Cortex-M QuickStart Template is a great place to start. A generic template, though, isn’t going to help you blink an LED on your target development board. In today’s post, we will look closer at the Cortex-M QuickStart template and how […]\nThe post Embedded Rust: Adding support for your target microcontroller appeared first on Embedded.",
-          "link": "https://www.embedded.com/embedded-rust-adding-support-for-your-target-microcontroller/",
-          "publishedOn": "2024-09-13T14:14:00.000Z",
-          "wordCount": null,
-          "title": "Embedded Rust: Adding support for your target microcontroller",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491068",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "Artificial Intelligence (AI) has revolutionized many industries, enabling applications that seemed unlikely just a few years ago. At the same time, the exponential growth of data and the need for real-time responses have led to the emergence of a new paradigm: edge AI. This type of technology is essential for the implementation of distributed systems, […]\nThe post Edge AI: The Future of Artificial Intelligence in embedded systems appeared first on Embedded.",
-          "link": "https://www.embedded.com/edge-ai-the-future-of-artificial-intelligence-in-embedded-systems/",
-          "publishedOn": "2024-09-13T13:05:09.000Z",
-          "wordCount": null,
-          "title": "Edge AI: The Future of Artificial Intelligence in embedded systems",
-          "imageUrl": null
         }
       ]
     },
@@ -1547,16 +1537,6 @@
           "wordCount": null,
           "title": "Build a text-based adventure game with Gemma 2",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/streamlining-llm-inference-at-the-edge-with-tflite/",
-          "author": null,
-          "description": "XNNPack, the default TensorFlow Lite CPU inference engine, has been updated to improve performance and memory management, allow cross-process collaboration, and simplify the user-facing API.",
-          "link": "https://developers.googleblog.com/en/streamlining-llm-inference-at-the-edge-with-tflite/",
-          "publishedOn": "2024-09-13T20:15:28.648Z",
-          "wordCount": null,
-          "title": "Streamlining LLM Inference at the Edge with TFLite",
-          "imageUrl": null
         }
       ]
     },
@@ -1768,28 +1748,7 @@
       "title": "Kimchi hill",
       "feedUrl": "https://kimchihill.com/feed/",
       "siteUrl": "https://kimchihill.com",
-      "articles": [
-        {
-          "id": "https://kimchihill.com/?p=2773",
-          "author": "kimchihill",
-          "description": "Tomasz Tunguz’s recent article on selling AI and software struck a chord with me. As AI adoption grows, both buyers and sellers are facing new challenges—especially around scaling and discovery. Below are my thoughts on his key points, based on my live experiences selling the AI chatbot at Sendbird, and how they relate to whatContinue reading \"Tomasz Tunguz’s AI Sales Playbook: Insights from the Field\"\nTomasz Tunguz’s AI Sales Playbook: Insights from the Field appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2024/09/13/scaling-gen-ai-sales-insights-from-the-field/?utm_source=rss&utm_medium=rss&utm_campaign=scaling-gen-ai-sales-insights-from-the-field",
-          "publishedOn": "2024-09-13T11:37:42.000Z",
-          "wordCount": null,
-          "title": "Tomasz Tunguz’s AI Sales Playbook: Insights from the Field",
-          "imageUrl": null
-        },
-        {
-          "id": "https://kimchihill.com/?p=2773",
-          "author": "kimchihill",
-          "description": "Tomasz Tunguz’s recent article on selling AI and software struck a chord with me. As AI adoption grows, both buyers and sellers are facing new challenges—especially around scaling and discovery. Below are my thoughts on his key points, based on my live experiences selling the AI chatbot at Sendbird, and how they relate to whatContinue reading \"Tomasz Tunguz’s AI Sales Playbook: Insights from the Field\"\nTomasz Tunguz’s AI Sales Playbook: Insights from the Field appeared first on Kimchi hill.",
-          "link": "https://kimchihill.com/2024/09/13/scaling-gen-ai-sales/?utm_source=rss&utm_medium=rss&utm_campaign=scaling-gen-ai-sales",
-          "publishedOn": "2024-09-13T11:37:42.000Z",
-          "wordCount": null,
-          "title": "Tomasz Tunguz’s AI Sales Playbook: Insights from the Field",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Kwang Yul Seo",
@@ -2787,46 +2746,6 @@
           "wordCount": null,
           "title": "The 6.11 kernel has been released",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/990270/",
-          "author": "jzb",
-          "description": "The GNOME Foundation has announced\nthat it is looking for a new Executive Director following the departure of Holly Million\nin July:\nThe window of opportunity for the job is closing quickly,\napplications are due by September 20.",
-          "link": "https://lwn.net/Articles/990270/",
-          "publishedOn": "2024-09-13T19:08:12.000Z",
-          "wordCount": null,
-          "title": "GNOME Foundation opens search for new Executive Director",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/990264/",
-          "author": "jzb",
-          "description": "Germany's Sovereign\nTech Fund (STF) has agreed to invest €688,800\nto improve the security, stability, and functionality of Samba. The investment will take\nplace over three years and will be managed by SerNet, a company that\nemploys several Samba core developers and offers support for\nSamba. According to its announcement,\nwork has already begun and is expected to complete in 2026:\n\n\nThe project's focus is on areas like transparent failover, SMB3 UNIX\nextensions, and modern security protocols such as SMB over QUIC. These\nimprovements are designed to ensure that Samba remains a robust and\nsecure solution for organizations that rely on a sovereign IT\ninfrastructure that is as independent as possible of proprietary\nsoftware regimes, but including optimal interoperability.",
-          "link": "https://lwn.net/Articles/990264/",
-          "publishedOn": "2024-09-13T17:47:27.000Z",
-          "wordCount": null,
-          "title": "Sovereign Tech Fund (STF) to invest in Samba improvements",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/988638/",
-          "author": "corbet",
-          "description": "Read-copy-update (RCU) is a synchronization mechanism that was added to the\nLinux kernel in October 2002.  RCU is most frequently used as a replacement\nfor reader-writer locking, but is also used in a\nnumber of other ways.  This article covers recent changes to the RCU\nAPI; it was contributed by Paul McKenney, Boqun Feng, Frederic Weisbecker,\nJoel Fernandes, Neeraj Upadhyay, and Uladzislau Rezki.",
-          "link": "https://lwn.net/Articles/988638/",
-          "publishedOn": "2024-09-13T15:50:49.000Z",
-          "wordCount": null,
-          "title": "[$] The RCU API, 2024 edition",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/990202/",
-          "author": "jzb",
-          "description": "Security updates have been issued by Fedora (haproxy, osc, and python3.11), Oracle (389-ds:1.4), Red Hat (kernel), SUSE (clamav, colord, kernel, postgresql16, and qemu), and Ubuntu (linux, linux-aws, linux-aws-5.15, linux-gcp, linux-gcp-5.15, linux-gke, linux-gkeop, linux-gkeop-5.15, linux-hwe-5.15, linux-ibm, linux-intel-iotg, linux-intel-iotg-5.15, linux-kvm, linux-nvidia, linux-oracle, linux-raspi, linux-azure, linux-azure-5.15, linux-azure-fde, linux-lowlatency-hwe-6.8, linux-nvidia-6.8, and linux-xilinx-zynqmp).",
-          "link": "https://lwn.net/Articles/990202/",
-          "publishedOn": "2024-09-13T13:45:36.000Z",
-          "wordCount": null,
-          "title": "Security updates for Friday",
-          "imageUrl": null
         }
       ]
     },
@@ -3737,26 +3656,6 @@
           "wordCount": null,
           "title": "국민 기억력 테스트, ‘권력 서열 1위’ 김건희를 잊어서는 안 되는 이유: 슬로우레터 9월16일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=116877",
-          "author": "선정수",
-          "description": "1. 적당히 살찌면 사망 위험이 더 낮다? (사실이에요) 건강하게 사는 것은 예나 지금이나 남녀노소를 불문하고 가장 큰 관심사 중 하나일 겁니다. 첫 번째 비만 팩트체크 주제는 ‘비만인 사람이 정상 체중인 사람보다 오래 산다’인데요. 절로 고개가 갸웃거리는 내용인데요. 어떻게 나온 말이죠?  2. 비만의 역설 그렇다면 비만 전단계, 1단계와 2단계 비만은 정상체중보다 오히려 사망 위험이 낮다는 이야기인데요. 좀 이상하네요. 이유는 뭘까요? 3. 그럼...\nThe post 비만 팩트체크: 적당히 살찌면 사망 위험 더 낮다? 어릴 적 살은 키로 간다? appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/116877",
-          "publishedOn": "2024-09-13T09:15:56.000Z",
-          "wordCount": null,
-          "title": "비만 팩트체크: 적당히 살찌면 사망 위험 더 낮다? 어릴 적 살은 키로 간다?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=116887",
-          "author": "이정환",
-          "description": "[슬로우리포트] 대통령 관저 공사 12억 원 수의 계약의 비밀… 자격 없는 인테리어 업체, 코바나컨텐츠 후원사였던 게 우연일까. 감사원이 미루고 미루던 감사결과를 발표했는데 별 내용은 없다. 대통령실은 “특혜가 없었던 것으로 확인됐다”고 주장하고 있다. 오마이뉴스가 “김건희가 주무르고 있다”는 첫 보도를 했고 참여연대가 국민 감사를 청구한 사건이다. 이게 왜 중요한가. 이것이 핵심이다. 1년 8개월 걸린 감사 결과. 필요한...\nThe post 감사원의 꼬리 자르기: 누군지 기억 안 난다고? 그 누구가 김건희일 가능성은? appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/116887",
-          "publishedOn": "2024-09-13T08:42:46.000Z",
-          "wordCount": null,
-          "title": "감사원의 꼬리 자르기: 누군지 기억 안 난다고? 그 누구가 김건희일 가능성은?",
-          "imageUrl": null
         }
       ]
     },
@@ -3873,16 +3772,6 @@
           "publishedOn": "2024-09-14T10:01:45.000Z",
           "wordCount": null,
           "title": "S&P Global, 엔비디아 주가 상승은 향후 1년이상 지속될 것",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=595917",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/595917/9-14-%ec%9b%94%ea%b0%80%ec%9d%98-%ed%88%ac%ec%9e%90%ec%9d%98%ea%b2%ac-%eb%b0%8f-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-%eb%b3%b4%ea%b3%a0%ec%84%9c",
-          "publishedOn": "2024-09-14T07:06:51.000Z",
-          "wordCount": null,
-          "title": "9/14, 월가의 투자의견 및 주가 전망 보고서",
           "imageUrl": null
         }
       ]
