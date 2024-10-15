@@ -157,16 +157,6 @@
           "wordCount": null,
           "title": "GSoC 2024: Statistical Analysis of LLVM-IR Compilation",
           "imageUrl": null
-        },
-        {
-          "id": "https://blog.llvm.org/posts/2024-09-01-reviving-newgvn/",
-          "author": null,
-          "description": "This summer I participated in GSoC under the LLVM Compiler Infrastructure. The goal of the project was to improve the NewGVN pass so that it can replace GVN as the main value numbering pass in LLVM.\nBackground\nGlobal Value Numbering (GVN) consists of assigning value numbers such that instructions with the same value number are equivalent. NewGVN was introduced in 2016 to replace GVN. We now highlight a few aspects in which NewGVN is better than GVN.\nA key advantage of NewGVN over GVN is that it is complete for loops, while GVN is only complete for acyclical code. NewGVN is complete for loops because when it first processes loops, it assumes that only the first iteration will be executed, later corroborating these assumptions—this is known as the optimistic assumption. In practice, the opti…",
-          "link": "https://blog.llvm.org/posts/2024-09-01-reviving-newgvn/",
-          "publishedOn": "2024-09-16T00:00:00.000Z",
-          "wordCount": null,
-          "title": "GSoC 2024: Reviving NewGVN",
-          "imageUrl": null
         }
       ]
     },
@@ -265,6 +255,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "296e98b6-74fa-431f-bb2d-eeacafc0db09",
+          "author": "Keith Seitz",
+          "description": "It is with great sadness that I announce the passing of GCC Toolset (GTS) GNU Debugger (GDB), which will no longer be a part of Red Hat Enterprise Linux (RHEL).\nPersiflage aside, I am not actually sad to make this announcement at all, and I suspect many readers will not be upset by this news either.\nTL;DR\nThe last supported version of GTS GDB will be 13.1, available across the RHEL portfolio. Starting with RHEL 9.5 and RHEL 10 beta, GDB will be rebased to the most recent GDB release, bringing the newest features and compiler support to every RHEL user. GTS will still include GDB on RHEL 8 as that product enters EUS.\nWhat is GTS?\nGTS stands for GCC Toolset, an AppStream package set comprising the latest-and-greatest C/C++ toolchain components. It is how Red Hat gives customers access to a t…",
+          "link": "https://developers.redhat.com/articles/2024/10/15/rest-peace-gcc-toolset-and-gnu-debugger",
+          "publishedOn": "2024-10-15T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Rest in peace: GCC Toolset and GNU Debugger",
+          "imageUrl": null
+        },
         {
           "id": "09c59a53-052d-4e66-8dac-8c244fa1925a",
           "author": "Mohammad Ahmad, Stephen Leahy, Kasturi Narra",
@@ -624,26 +624,6 @@
           "wordCount": null,
           "title": "Network observability on demand",
           "imageUrl": null
-        },
-        {
-          "id": "81a1c8c1-02d8-4c1d-a36d-47bd024f057f",
-          "author": "Cedric Clyburn",
-          "description": "The proliferation of publicly available large language models (LLMs) has grown substantially in recent months. Simply browse Hugging Face to see the latest trending models. Furthermore, the quality of LLMs has noticeably improved with newer versions of the models. You may have noticed a recent boom in AI-assisted content generation as well, with increasingly convincing degrees of expertise on a wide range of topics.\nHowever, you also may have encountered limitations in the knowledge or accuracy of LLMs. Some very specific or esoteric knowledge that a model was not privy to in its data set during training could be missing or downright incorrect. Also, depending on when the model completed its training, a given LLM may not be up to date on current events.\nWhy is this the case? LLMs can take …",
-          "link": "https://developers.redhat.com/articles/2024/09/16/enhance-llms-instructlab-kitops",
-          "publishedOn": "2024-09-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Enhance LLMs and streamline MLOps using InstructLab and KitOps",
-          "imageUrl": null
-        },
-        {
-          "id": "81ca2afc-ad62-430e-a188-43a2d6a0f922",
-          "author": "Prakash Rajendran",
-          "description": "The latest release of Red Hat OpenShift Service Mesh, 2.6, was announced on August 8th, 2024, and it brings notable changes and new features. This blog covers all the new features and changes introduced in OpenShift Service Mesh 2.6. In this article, we will focus on the Kubernetes Gateway API 1.0 feature and how to implement it on Red Hat OpenShift.\nEnable the Gateway API feature\nThis is a technical article covering the steps involved in enabling the Gateway API feature and making use of it for configuring traffic into an application running on OpenShift clusters. For this exercise, a new OpenShift cluster with version 4.16 has been installed on AWS:\n# oc version\nClient Version: 4.16.5\nKustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3\nServer Version: 4.16.5\nKubernetes Version: v1.29…",
-          "link": "https://developers.redhat.com/articles/2024/09/16/how-use-gateway-api-openshift-service-mesh-26",
-          "publishedOn": "2024-09-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to use Gateway API with OpenShift Service Mesh 2.6",
-          "imageUrl": null
         }
       ]
     },
@@ -712,6 +692,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4491826",
+          "author": "Stefano Lovati",
+          "description": "Measurements of Radio Frequency (RF) and microwave power are extensively utilized to facilitate applications in space, military, and communication. Exact measurements allow engineers to precisely define waveforms, components, circuits, and systems. Keysight Technologies and the National Physical Laboratory (NPL) engaged in a pioneering research initiative, investigating RF power at cryogenic temperatures. This led to the […]\nThe post Keysight and the National Physical Laboratory Attain Quantum Milestone with Breakthrough in Cryogenic RF Power Measurement appeared first on Embedded.",
+          "link": "https://www.embedded.com/keysight-and-the-national-physical-laboratory-attain-quantum-milestone-with-breakthrough-in-cryogenic-rf-power-measurement/",
+          "publishedOn": "2024-10-15T19:40:00.000Z",
+          "wordCount": null,
+          "title": "Keysight and the National Physical Laboratory Attain Quantum Milestone with Breakthrough in Cryogenic RF Power Measurement",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4491800",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "The first Embedded World North America event marks a significant milestone in the evolution of the embedded systems community. From its modest beginnings, Embedded World has become a prominent global platform for sharing technical information, acting as a central hub for engineers and industry professionals. Embedded World’s scope changed along with the development of the embedded […]\nThe post Embedded World North America 2024: Bridging Global Innovations in Embedded Systems appeared first on Embedded.",
+          "link": "https://www.embedded.com/embedded-world-north-america-2024-bridging-global-innovations-in-embedded-systems/",
+          "publishedOn": "2024-10-15T09:12:00.000Z",
+          "wordCount": null,
+          "title": "Embedded World North America 2024: Bridging Global Innovations in Embedded Systems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4491538",
+          "author": "Stefano Lovati",
+          "description": "It is widely recognized that the quantum mechanics revolution started at the turn of the 20th century when Max Planck solved the black-body radiation conundrum and introduced the idea of quantized energy levels, or quanta. A black body is an ideal physical system—a surface or cavity—that absorbs all the radiant energy falling upon it. At thermal […]\nThe post How the Odd Principles of Quantum Physics Are Fostering a Tech Revolution (Part 1) appeared first on Embedded.",
+          "link": "https://www.embedded.com/how-the-odd-principles-of-quantum-physics-are-fostering-a-tech-revolution-part-1/",
+          "publishedOn": "2024-10-15T05:06:00.000Z",
+          "wordCount": null,
+          "title": "How the Odd Principles of Quantum Physics Are Fostering a Tech Revolution (Part 1)",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4491734",
           "author": "Stefano Lovati",
@@ -1349,6 +1359,16 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/build-a-text-based-adventure-game-with-gemma-2/",
+          "author": null,
+          "description": "Create a text-based adventure game using Gemma 2. Here are code snippets and tips for designing the game world, enhancing interactivity and replayability, and more.",
+          "link": "https://developers.googleblog.com/en/build-a-text-based-adventure-game-with-gemma-2/",
+          "publishedOn": "2024-10-15T20:16:38.002Z",
+          "wordCount": null,
+          "title": "Build a text-based adventure game with Gemma 2",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/streamlining-llm-inference-at-the-edge-with-tflite/",
           "author": null,
           "description": "XNNPack, the default TensorFlow Lite CPU inference engine, has been updated to improve performance and memory management, allow cross-process collaboration, and simplify the user-facing API.",
@@ -1587,16 +1607,6 @@
           "wordCount": null,
           "title": "Indie Games Fund: Google Play’s $2m fund in Latin America is back",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/gemma-explained-overview-gemma-model-family-architectures/",
-          "author": null,
-          "description": "Learn more about the different variations of Gemma models, how they are designed for different use cases, and the core parameters of their architecture.",
-          "link": "https://developers.googleblog.com/en/gemma-explained-overview-gemma-model-family-architectures/",
-          "publishedOn": "2024-09-15T20:14:54.438Z",
-          "wordCount": null,
-          "title": "Gemma explained: An overview of Gemma model family architectures",
-          "imageUrl": null
         }
       ]
     },
@@ -1654,6 +1664,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/1170/",
+          "author": null,
+          "description": "PVS-Studio 7.33 has been released. Check out the latest features, including SN-DBS support, C# user annotations, and other exciting updates! See more details in this note.",
+          "link": "https://pvs-studio.com/en/blog/posts/1170/",
+          "publishedOn": "2024-10-14T21:00:00.000Z",
+          "wordCount": null,
+          "title": "PVS-Studio 7.33: C# user annotations, SN-DBS support, and more",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/1169/",
           "author": null,
@@ -1837,6 +1857,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/994320/",
+          "author": "jzb",
+          "description": "Version 4.0.0 of the LibreSSL TLS/cryptography stack\nhas been released. Changes include a cleanup of the MD4 and MD5\nimplementations, removal of unused DSA methods, changes in libtls\nprotocol parsing to ignore unsupported TLSv1.1 and TLSv1.0 protocols,\nand many more internal changes and bug fixes.",
+          "link": "https://lwn.net/Articles/994320/",
+          "publishedOn": "2024-10-15T16:47:41.000Z",
+          "wordCount": null,
+          "title": "LibreSSL 4.0.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/994268/",
+          "author": "corbet",
+          "description": "Security updates have been issued by AlmaLinux (container-tools:rhel8, firefox, OpenIPMI, podman, and thunderbird), Debian (libapache-mod-jk, php7.4, and webkit2gtk), Fedora (edk2, koji, libgsf, rust-hyper-rustls, rust-reqwest, rust-rustls-native-certs, rust-rustls-native-certs0.7, rust-tonic, rust-tonic-build, rust-tonic-types, rust-tower, rust-tower-http, rust-tower-http0.5, and rust-tower0.4), Mageia (packages and thunderbird), Oracle (bind, container-tools:ol8, kernel, kernel-container, OpenIPMI, podman, and thunderbird), Red Hat (container-tools:rhel8, containernetworking-plugins, podman, and skopeo), SUSE (argocd-cli, bsdtar, keepalived, kernel, kyverno, libmozjs-115-0, libmozjs-128-0, libmozjs-78-0, OpenIPMI, opensc, php8, thunderbird, and xen), and Ubuntu (configobj, haproxy, imagemagick, nginx, and postgresql-10, postgresql-9.3).",
+          "link": "https://lwn.net/Articles/994268/",
+          "publishedOn": "2024-10-15T13:43:08.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993484/",
+          "author": "daroc",
+          "description": "Paul McKenney gave a presentation at Kangrejos this year that wasn't (directly)\nrelated to Rust. Instead, he spoke about the work he has been doing in concert\nwith many other contributors on improving the handling of subtle concurrency\nproblems in C++.\nAlthough he cautioned that his talk was only an overview, and not a\nsubstitute for reading the relevant papers, he hoped that the things the C++\ncommunity is working on would be of interest to the Rust developers present as\nwell, and potentially inform future work on the language. McKenney's talk was,\nas is his style, full of subtle examples of weird multithreaded behavior.\nInterested readers may wish to refer to\n\nhis slides in an attempt to follow along.",
+          "link": "https://lwn.net/Articles/993484/",
+          "publishedOn": "2024-10-15T13:35:14.000Z",
+          "wordCount": null,
+          "title": "[$] Zapping pointers out of thin air",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/994098/",
           "author": "jzb",
@@ -2856,16 +2906,6 @@
           "wordCount": null,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/990307/",
-          "author": "corbet",
-          "description": "Linus has released the 6.11 kernel.\n\"I'm once again on the road and not in my normal timezone, but it's\nSunday afternoon here in Vienna, and 6.11 is out.\"\nSignificant changes in this release include\nnew io_uring operations for bind() and listen(),\nthe nested bottom-half locking patches,\nthe ability to write to busy executable\nfiles,\nsupport for writing block drivers in Rust,\nsupport for atomic write operations in the\nblock layer,\nthe dedicated bucket slab allocator,\nthe vDSO implementation of getrandom(),\nand more.  See the LWN merge-window summaries\n(part 1,\npart 2) for more information.",
-          "link": "https://lwn.net/Articles/990307/",
-          "publishedOn": "2024-09-15T15:32:08.000Z",
-          "wordCount": null,
-          "title": "The 6.11 kernel has been released",
-          "imageUrl": null
         }
       ]
     },
@@ -3127,16 +3167,6 @@
           "wordCount": null,
           "title": "Discussing new language features is more fun than measuring feature usage in code",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=9391",
-          "author": "Derek Jones",
-          "description": "I recently read a post by Terence Tao describing how he experimented with using ChatGPT to solve a challenging mathematical problem. A few of my posts contain mathematical problems I could not solve; I assumed that solving them was beyond my maths pay grade. Perhaps ChatGPT could help me solve some of them. To my […]",
-          "link": "https://shape-of-code.com/2024/09/15/number-of-statement-sequences-possible-using-n-if-statements/",
-          "publishedOn": "2024-09-15T22:16:40.000Z",
-          "wordCount": null,
-          "title": "Number of statement sequences possible using N if-statements",
-          "imageUrl": null
         }
       ]
     },
@@ -3237,6 +3267,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=118860",
+          "author": "이정환",
+          "description": "누가 김건희를 ‘작은엄마’로 불렀나. 양정철-김건희의 연결고리. 쟁점과 현안. 누가 왜 도발을 부추기나. 북한의 반응이 다르다. 경의선 폭파 쇼 임박. 김건희 황제 관람 기획자, 대통령실 비서관으로. 더 깊게 읽기. “비선 조직은 없다.” “윤석열 부부와 날마다 스피커폰으로 통화했다.” 홍준표는 “명태균 여론 조작 알고 있었다.” 재보궐 선거 D-1. 김건희 예산. 155만 명 가운데 단 한 명. 다르게 읽기....\nThe post ‘작은엄마’ 김건희 덮으려 북한에 무인기 보냈나: 슬로우레터 10월15일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/118860",
+          "publishedOn": "2024-10-14T22:22:39.000Z",
+          "wordCount": null,
+          "title": "‘작은엄마’ 김건희 덮으려 북한에 무인기 보냈나: 슬로우레터 10월15일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=118771",
           "author": "한상기",
@@ -3776,36 +3816,6 @@
           "wordCount": null,
           "title": "‘베테랑 2’ 실패하면 CJ가 영화 접는다는 소문.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=117034",
-          "author": "조용수",
-          "description": "“이날 광주 지역 대학병원과 종합병원에는 접합수술을 할 수 있는 의사가 없거나 휴무인 탓에 이 환자를 받지 못한 것으로 전해졌다.” – 다수 언론에서 발췌 인용 응급실이 이슈이긴 한가보다. 절단환자를 수용하지 못한 뒤, 불과 3시간 만에 기사가 떴으니까. 그 시간이면 아직 접합수술이 끝나지도 않았을 텐데. 뭐가 이리 급한 걸까? 특보 전쟁인가? 응급실에 프락치가 숨어있나? 구급차로 이동하는 환자마다...\nThe post ‘착한’ 응급실 뺑뺑이: 무엇이 환자를 위한 길인가 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/117034",
-          "publishedOn": "2024-09-16T06:57:19.000Z",
-          "wordCount": null,
-          "title": "‘착한’ 응급실 뺑뺑이: 무엇이 환자를 위한 길인가",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=116953",
-          "author": "한상기",
-          "description": "1. 복잡한 추론이 가능한 오픈AI-o1 공개 오픈AI, 9월 12일 지난주 가장 많은 사람이 이야기한 화제 중 하나는 오픈AI의 새로운 LLM인 o1(‘오원‘으로 읽음)일 것이다. 그동안 ‘스트로베리’라고 불렀던 프로젝트의 결과인데 ‘데이터 효율성이 높은 학습 과정에서 사고 사슬(CoT)을 이용해 생산적으로 사고하는 방법을 가르치는 대규모 강화 학습(RL) 알고리듬을 적용’했다는 게 공식 블로그 내용이다. 이번에 발표한 것은 o1-프리뷰와 o1-미니이며, 유료...\nThe post 음모론 탈출 도우미 챗봇! appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/116953",
-          "publishedOn": "2024-09-16T03:35:27.000Z",
-          "wordCount": null,
-          "title": "음모론 탈출 도우미 챗봇!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=116966",
-          "author": "이정환",
-          "description": "주요 일간 신문이 18일까지 휴간한다. 추석 연휴 여론의 주요 쟁점을 살펴본다. 민주화 이후 처음으로 국회 개원식에 안 갔던 날. 김건희 리스크 다섯 가지. 특검으로 간다. 조용해질까. 쟁점과 현안. 병원 75곳에서 거절당했다. 지지율 20% 충격. 20%가 무너지면? 지지율 반등 계기가 있나. 문제는 경제다. 더 깊게 읽기. 왜 한국 주식만 안 올랐을까. 금리 인하 타이밍? 한국은 아직...\nThe post 국민 기억력 테스트, ‘권력 서열 1위’ 김건희를 잊어서는 안 되는 이유: 슬로우레터 9월16일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/116966",
-          "publishedOn": "2024-09-16T02:43:58.000Z",
-          "wordCount": null,
-          "title": "국민 기억력 테스트, ‘권력 서열 1위’ 김건희를 잊어서는 안 되는 이유: 슬로우레터 9월16일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3814,6 +3824,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=596060",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/596060/%ed%8c%94%eb%8b%b9-%eb%ac%bc%ec%95%88%ea%b0%9c-%ea%b3%b5%ec%9b%90-%ea%b0%80%ec%9d%84-%eb%a9%94%ed%83%80%ec%84%b8%ec%bd%b0%ec%9d%b4%ec%96%b4%ea%b8%b8-%ed%92%8d%ea%b2%bd",
+          "publishedOn": "2024-10-15T11:47:44.000Z",
+          "wordCount": null,
+          "title": "팔당 물안개 공원 가을 메타세콰이어길 풍경",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=596044",
           "author": "happist",
