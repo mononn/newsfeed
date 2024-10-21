@@ -71,16 +71,6 @@
           "wordCount": null,
           "title": "std::initializer_list in C++ 2/2 - Caveats and Improvements",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2024/unroll-templates-lambdas-and-fold/",
-          "author": null,
-          "description": "In this blog post, we’ll delve into the unroll<N>() template function for template unrolling, understand its mechanics, and see how it can improve your code. We’ll look at lambdas, fold expressions, and integer sequences.\nLet’s get started!\n\n\n\n     \n    \n\n\nIn a recent article Vector math library codegen in Debug · Aras’ website - Aras Pranckevičius discusses some coding techniques that help with performance of debug code… and I came across an intriguing technique utilized in the Blender Math library that he used in his text.\nOne interesting example was this one:\nfriend VecBase operator+(const VecBase &a, const VecBase &b)\n{\n    VecBase result;\n    unroll<Size>([&](auto i) { result[i] = a[i] + b[i]; });\n    return result;\n}\n\n\nAnd I’m curious how this unroll<Size>() function works under the …",
-          "link": "https://www.cppstories.com/2024/unroll-templates-lambdas-and-fold/",
-          "publishedOn": "2024-09-22T00:00:00.000Z",
-          "wordCount": 1503,
-          "title": "Practical C++17: Loop Unrolling with Lambdas and Fold Expressions",
-          "imageUrl": "https://www.cppstories.com/2024/images/unroll_function.png"
         }
       ]
     },
@@ -95,6 +85,16 @@
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2024-08-31-the-1001-thresholds-in-llvm/",
+          "author": null,
+          "description": "Hey everyone! My name is Shourya and I worked on LLVM this summer through GSoC. My project is called The 1001 thresholds in LLVM. The main objective of this project was to study how varying different thresholds in llvm affect performance parameters like compile-time, bitcode-size, execution-time and llvm stats.\nBackground\nLLVM has lots of thresholds and flags to avoid “costly cases”. However, it is unclear if these thresholds are useful, their value is reasonable, and what impact they really have. Since there are a lot, one cannot do a simple exhaustive search. An example of work in this direction includes the introduction of a C++ class that can replace hardcoded values which offers control over the threshold, e.g., one can increase the recursion limit via a command line flag from the har…",
+          "link": "https://blog.llvm.org/posts/2024-08-31-the-1001-thresholds-in-llvm/",
+          "publishedOn": "2024-10-21T00:00:00.000Z",
+          "wordCount": null,
+          "title": "GSoC 2024: The 1001 thresholds in LLVM",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.llvm.org/posts/2024-08-29-gsoc-three-way-comparison/",
           "author": null,
@@ -222,6 +222,36 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "e7ba1f63-a9dc-4adc-9402-60943abd42f3",
+          "author": "Timm Baeder",
+          "description": "Disclaimer\n\nThis piece was originally published on the Red Hat Blog.\n\n\nThis is part 2 of a 3-part series on Clang. Read part 1 here.\nA popular technique modern compilers use to improve the runtime performance of compiled code is to perform computations at compile time instead of at runtime. However, constant expressions need to be evaluated at compile time for a variety of reasons. To help resolve this problem, I've been working on improving the Clang's constant interpreter. Here's a look at just how much work has been done since my previous article in November 2022:\n$ git log --after=2022-11-23 | grep -i \"\\[clang\\]\\[Interp\\]\" | wc -l\n$ 308\nA good chunk of those are NFC (no functional change) commits, which I like to split out from functional changes. All of those patches contain tons of s…",
+          "link": "https://developers.redhat.com/articles/2024/10/21/new-constant-expression-interpreter-clang-part-2",
+          "publishedOn": "2024-10-21T07:00:00.000Z",
+          "wordCount": null,
+          "title": "A new constant expression interpreter for Clang, Part 2",
+          "imageUrl": null
+        },
+        {
+          "id": "74345a46-836b-455f-af99-6f1deac2692a",
+          "author": "Timm Baeder",
+          "description": "Disclaimer\n\nThis piece was originally published on the Red Hat Blog.\n\n\nIn this article, I explain the upstream work I have been doing on a new constant expression interpreter for Clang.\nConstant expressions in C and C++\nOne of the many techniques modern compilers use to improve the runtime performance of the compiled code is to perform computations at compile time instead of runtime, if possible. Nobody expects to actually see two integer literals being added at runtime if the compiler can easily do it at compile time.\nSince C++11, there is a language construct to ensure something is a constant expression, the constexpr keyword. This keyword can be used for variables and functions and makes it possible to require an expression to be evaluable at compile-time. constexpr has been extended wi…",
+          "link": "https://developers.redhat.com/articles/2024/10/21/new-constant-expression-interpreter-clang",
+          "publishedOn": "2024-10-21T07:00:00.000Z",
+          "wordCount": null,
+          "title": "A new constant expression interpreter for Clang",
+          "imageUrl": null
+        },
+        {
+          "id": "04f364f8-8aa8-4b9f-9612-8d849faf8da7",
+          "author": "Philip Hayes",
+          "description": "OCI images are now available on the registries Docker Hub and Quay.io to make it even easier to use the Granite family of large language models (LLMs) and InstructLab, the open-source project designed to enhance LLM capabilities for generative AI applications. \nAbout Granite LLMs\nGranite models are pre-trained LLMs from IBM’s Granite model series, under an apache-2.0 license for community and commercial use. Granite was pre-trained from scratch on IBM-curated data as an open reference implementation of Meta’s Llama-2-7B. For more information about IBM Granite please visit their website. \nAbout InstructLab\nInstructLab is an open-source project co-created by IBM and Red Hat with the goal of improving the alignment and performance of large language models (LLMs) in generative AI workflows. In…",
+          "link": "https://developers.redhat.com/articles/2024/10/21/red-hat-publishes-docker-hub-images-granite-7b-llm-and-instructlab",
+          "publishedOn": "2024-10-21T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Red Hat publishes Docker Hub Images for Granite-7B LLM and InstructLab",
+          "imageUrl": null
+        },
         {
           "id": "24f3f3f9-a47b-4e84-94ed-6fc50b56ab83",
           "author": "Subin Modeel",
@@ -589,6 +619,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4491893",
+          "author": "Loriotoole",
+          "description": "On Oct. 1, IBM unveiled in Ehningen, Germany, the first IBM quantum data center (QDC) built outside of the United States. As the company’s second QDC in the world, it marks an important enlargement of IBM’s family of advanced, utility-scale quantum systems available to worldwide users via the cloud. Modern lifestyle owes a lot to data […]\nThe post Europe Proudly Hosts First IBM Quantum Data Center appeared first on Embedded.",
+          "link": "https://www.embedded.com/europe-proudly-hosts-first-ibm-quantum-data-center/",
+          "publishedOn": "2024-10-21T08:38:00.000Z",
+          "wordCount": null,
+          "title": "Europe Proudly Hosts First IBM Quantum Data Center",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4491852",
           "author": "Stefano Lovati",
@@ -1175,16 +1215,6 @@
           "wordCount": null,
           "title": "Simulating Your Embedded Project on Your Computer (Part 1)",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1689.php",
-          "author": null,
-          "description": "In all previous tutorial about NuttX we used some type of digital interface (I2C, SPI, etc), so today we will see how to use an analog interface to read some analog sensor or other analog device. In fact we live in an analog world and sometimes we need to read some analog voltage to make sense of some external analog signal. Today we will see how to use the ADC (Analog Digital Converter) from...",
-          "link": "https://www.embeddedrelated.com/showarticle/1689.php",
-          "publishedOn": "2024-09-21T19:58:31.000Z",
-          "wordCount": null,
-          "title": "How to use analog input (ADC) on NuttX RTOS",
-          "imageUrl": null
         }
       ]
     },
@@ -1695,7 +1725,28 @@
       "title": "Kimchi hill",
       "feedUrl": "https://kimchihill.com/feed/",
       "siteUrl": "https://kimchihill.com",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://kimchihill.com/?p=2804",
+          "author": "kimchihill",
+          "description": "I recently attended Shoptalk, the largest retail conference in the U.S., held in Chicago. After spending a week there, I wanted to share 10 key takeaways I learned from the event. Over the past decade, I’ve participated in numerous conferences, but this time felt different. Unlike in the past when I introduced Sendbird as theContinue reading \"10 Key Strategies for Success at Retail Conferences: Lessons from Shoptalk 2024\"\n10 Key Strategies for Success at Retail Conferences: Lessons from Shoptalk 2024 appeared first on Kimchi hill.",
+          "link": "https://kimchihill.com/2024/10/21/10-key-strategies-for-success-at-retail-conferences-lessons-from-shoptalk-2024/?utm_source=rss&utm_medium=rss&utm_campaign=10-key-strategies-for-success-at-retail-conferences-lessons-from-shoptalk-2024",
+          "publishedOn": "2024-10-20T22:29:53.000Z",
+          "wordCount": null,
+          "title": "10 Key Strategies for Success at Retail Conferences: Lessons from Shoptalk 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://kimchihill.com/?p=2783",
+          "author": "kimchihill",
+          "description": "지난 일주일 동안 시카고에서 열린 미국 최대의 리테일 컨퍼런스인 Shoptalk에 다녀왔다. 이번 행사에서 느낀 10가지 중요한 점을 정리해 보았다. 지난 10년간 여러 컨퍼런스에 참여했지만, 과거 커뮤니케이션 플랫폼이나 챗 API를 소개하던 때와는 달리, 이번에 AI 챗봇, 특히 생성형 AI 기반 챗봇을 소개할 때 고객의 반응은 훨씬 직관적이고 흥미로웠다. 내가 속한 시장의 크기와 그 시장이 시의성을 가지고Continue reading \"Shoptalk 2024에서 배운 10가지 리테일 컨퍼런스 성공 전략\"\nShoptalk 2024에서 배운 10가지 리테일 컨퍼런스 성공 전략 appeared first on Kimchi hill.",
+          "link": "https://kimchihill.com/2024/10/21/ko-10-lessons-learned-for-winning-retail-conferences-at-shoptalk-2024/?utm_source=rss&utm_medium=rss&utm_campaign=ko-10-lessons-learned-for-winning-retail-conferences-at-shoptalk-2024",
+          "publishedOn": "2024-10-20T22:22:03.000Z",
+          "wordCount": null,
+          "title": "Shoptalk 2024에서 배운 10가지 리테일 컨퍼런스 성공 전략",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Kwang Yul Seo",
@@ -1714,6 +1765,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/994983/",
+          "author": "corbet",
+          "description": "Sasha Levin has announced a\nnew tree that is intended to perform continuous-integration tests of pull\nrequests aimed at the mainline.  The plan is for this tree to hold more\nfinished work than sometimes ends up in linux-next; in a name that seems\ndestined to create typographical confusion, it is called \"linus-next\".\n\n\n\tThe linus-next tree aims to provide a more stable and testable\n\tintegration point compared to linux-next, addressing the runtime\n\tissues that make testing linux-next challenging and focusing on\n\tcode that's about to be pulled by Linus.",
+          "link": "https://lwn.net/Articles/994983/",
+          "publishedOn": "2024-10-21T18:20:33.000Z",
+          "wordCount": null,
+          "title": "A new kernel testing tree",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/994962/",
+          "author": "jzb",
+          "description": "Version 1.1.0 of the bootc utility for\nperforming transactional, in-place operating system updates using Open Container Initative (OCI)\nimages, has been released. This release \"officially stabilizes all\nAPIs\" for bootc and includes a number of bug fixes. LWN covered bootc in June.",
+          "link": "https://lwn.net/Articles/994962/",
+          "publishedOn": "2024-10-21T16:47:54.000Z",
+          "wordCount": null,
+          "title": "Bootc 1.1.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/993787/",
+          "author": "jzb",
+          "description": "Sigstore is a \nproject that is meant to simplify and improve the process of signing,\nverifying, and protecting software. It is a relatively new project, declared\n\"generally available\" in 2022. Python is an early adopter of sigstore; it started providing\nsignatures for CPython artifacts with Python 3.11\nin 2022. This is in addition to the OpenPGP signatures it has been\nproviding since at\nleast 2001. Now, Seth Michael Larson—the Python Software\nFoundation (PSF) security\ndeveloper-in-residence—would like to deprecate the PGP\nsignature and move to sigstore exclusively by next year. If that\nhappens, it will involve some changes in the way that Linux\ndistributions verify Python releases, since none of the major\ndistributions have processes for working with sigstore.",
+          "link": "https://lwn.net/Articles/993787/",
+          "publishedOn": "2024-10-21T15:08:53.000Z",
+          "wordCount": null,
+          "title": "[$] Python PGP proposal poses packaging puzzles",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/994941/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (asterisk, chromium, php-horde-mime-viewer, and php-horde-turba), Fedora (apache-commons-io, buildah, chromium, containers-common, libarchive, libdigidocpp, oath-toolkit, podman, rust-hyper-rustls, rust-reqwest, rust-rustls-native-certs, rust-rustls-native-certs0.7, rust-tonic, rust-tonic-build, rust-tonic-types, rust-tower, rust-tower-http, rust-tower-http0.5, rust-tower0.4, thunderbird, and unbound), SUSE (buildah, chromedriver, chromium, element-desktop, element-web, jetty-annotations, nodejs-electron, php7, php74, php8, podman, python3-virtualbox, qemu, thunderbird, and valkey), and Ubuntu (amd64-microcode).",
+          "link": "https://lwn.net/Articles/994941/",
+          "publishedOn": "2024-10-21T14:16:43.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/994865/",
+          "author": "daroc",
+          "description": "The \n\nGuix project has\n\ndisclosed a security vulnerability in the build daemon that the distribution uses to build and install software locally. The vulnerability allows an existing unprivileged user to get access to a \n\nsetuid binary, and from there potentially interfere with any other software built or installed on the computer. The project recommends upgrading the guix daemon now, to avoid the issue.\n\n\n\nThis exploit requires the ability to start a derivation build and the\nability to run arbitrary code with access to the store in the root PID\nnamespace on the machine the build occurs on. As such, this represents\nan increased risk primarily to multi-user systems and systems using\ndedicated privilege-separation users for various daemons: without\nspecial sandboxing measures, any process of theirs can take advantage\nof this vulnerability.",
+          "link": "https://lwn.net/Articles/994865/",
+          "publishedOn": "2024-10-21T13:40:34.000Z",
+          "wordCount": null,
+          "title": "A vulnerability in the Guix build system",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/994843/",
+          "author": "corbet",
+          "description": "Linus has released 6.12-rc4 for testing.\n\"I'm not happy with how big this is - it's probably far from the biggest\nrc4 ever, but it _is_ the biggest rc4 we've had in the 6.x series at least\nin number of commits.\"",
+          "link": "https://lwn.net/Articles/994843/",
+          "publishedOn": "2024-10-20T22:48:07.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.12-rc4",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/994322/",
           "author": "corbet",
@@ -2646,6 +2757,16 @@
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
         {
+          "id": "http://mcuoneclipse.com/?p=41338",
+          "author": "Erich Styger",
+          "description": "The NXP LinkServer 24.9.75 release introduces a 'runner' feature for automated on-target testing using a debug probe. It enables programming and launching applications while facilitating bidirectional communication with UART or semihosting. This integration supports CI/CD environments, especially with VS Code, enhancing budget-friendly testing capabilities. Continue reading →",
+          "link": "https://mcuoneclipse.com/2024/10/20/on-target-testing-with-linkserver-runner-and-vs-code/",
+          "publishedOn": "2024-10-20T21:50:00.000Z",
+          "wordCount": null,
+          "title": "On-Target Testing with LinkServer Runner and VS Code",
+          "imageUrl": null
+        },
+        {
           "id": "http://mcuoneclipse.com/?p=41281",
           "author": "Erich Styger",
           "description": "NXP has launched an updated LinkServer software version that includes a graphical user interface (GUI) for easy flash programming and device management. The GUI facilitates tasks such as programming, erasing, and verifying device memory, while still supporting command line automation. This enhancement aims to make operations more accessible for both beginners and experienced users. Continue reading →",
@@ -2786,6 +2907,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=9508",
+          "author": "Derek Jones",
+          "description": "What is an effective technique for modelling the relationship between the time estimated to implement a task and the actual time taken to implement that task? A regression model is the obvious approach. However, an important assumption made by the commonly used regression techniques is not met by estimate/actual project data The commonly used regression […]",
+          "link": "https://shape-of-code.com/2024/10/20/modelling-estimate-actual-including-uncertainty-in-the-estimate/",
+          "publishedOn": "2024-10-20T22:07:48.000Z",
+          "wordCount": null,
+          "title": "Modelling estimate/actual including uncertainty in the estimate",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=9484",
           "author": "Derek Jones",
           "description": "The conditions contained in if-statements control all the decisions a program makes, yet relatively little is known about their characteristics. A condition contains one or more clauses, for instance, the condition (a && b) contains two clauses that both need to be true, for the condition to be true. An earlier post modelled the number […]",
@@ -2914,6 +3045,66 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=119268",
+          "author": "참여연대 사법감시센터",
+          "description": "헌법재판소는 ‘기본권 보장의 최후 보루’로 불립니다. 1987년 헌법개정을 통해 법률이나 국가 공권력의 작용이 헌법에 위반되는지 판단하는, 국민 기본권 보호의 역할을 부여받았기 때문입니다. 지난 6년간 유남석·이종석 소장을 거치며 헌법재판소는 다양한 결정을 내려왔습니다. 과연 시민들의 요구와 기대에 부응한 결정이었을까요? 2024년 10월, 헌법재판소에서는 소장을 포함한 3명의 재판관이 교체됩니다. 이에 참여연대 사법감시센터는 헌법재판소의 주요 결정을 선정해 〈2019~2024 헌법재판소 특집...\nThe post 기후소송: 기본권 침해 확인은 성과, 목표량 미심사는 한계 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119268",
+          "publishedOn": "2024-10-21T09:10:11.000Z",
+          "wordCount": null,
+          "title": "기후소송: 기본권 침해 확인은 성과, 목표량 미심사는 한계",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=119248",
+          "author": "이정환",
+          "description": "검사 시절 윤석열은 스스로를 정의의 편에 서서 진실을 재단하는 심판자로 규정하고 언론은 언제나 받아쓰기만 한다고 생각했을 수도 있다. 대통령이 된 뒤에도 윤석열의 언론관은 크게 달라진 것 같지 않다. 두 가지 중요한 포인트가 있다. 첫째, 우리는 검찰 권력을 제대로 비판한 적 없다. 나쁜 놈들 때려잡는 검찰은 과연 늘 옳은가. 검찰이 이렇게 견제받지 않는 권력이 돼도 괜찮은가....\nThe post 윤석열 캠프 줄 섰던 언론인 출신 인사들, 어디로 갔나 살펴보니. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119248",
+          "publishedOn": "2024-10-21T08:05:02.000Z",
+          "wordCount": null,
+          "title": "윤석열 캠프 줄 섰던 언론인 출신 인사들, 어디로 갔나 살펴보니.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=104992",
+          "author": "민노씨",
+          "description": "내가 제이콥의 자위 기계 이야기를 처음 듣고 구역질이 났던 것처럼, 당신도 그의 행동에 구역질이 날 수 있다. 그리고 제이콥의 고백을 당신과 당신의 삶과는 관련이 거의 없거나 아예 없는, 상식을 벗어난 일종의 극단적 도착이라고 여길 수 있다. 하지만 우리가 그렇게 받아들인다면 당신과 나, 즉 우리는 살아가는 방식에 관해서 아주 중요한 무언가를 인식할 기회를 놓치게 된다. 저마다...\nThe post 타락한 자의 지혜: 흥미롭고 따뜻한 ‘도파민’ 이야기 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/104992",
+          "publishedOn": "2024-10-21T07:45:23.000Z",
+          "wordCount": null,
+          "title": "타락한 자의 지혜: 흥미롭고 따뜻한 ‘도파민’ 이야기",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=119215",
+          "author": "신현호",
+          "description": "미국 대통령 선거가 2주 앞으로 다가왔다. 여전히 접전이 펼쳐지는 가운데 많은 사람들이 촉각을 곤두세우고 있다. 선거 결과 예측은 여론조사, 모델링 및 시장평가의 세 가지 방법으로 수행된다. 1. 여론조사 후보 지지율은 선거 예측의 가장 중요한 요소라 매일매일 여론 조사 결과가 쏟아지고 있다. 일부 기관은 발표된 모든 여론조사를 취합하여 평균값을 산정하여 발표하는데, 여론조사의 범위와 질 등을 고려하여...\nThe post 트럼프와 해리스, 누가 이길 것인가: 여론조사, 모델링, 시장평가 관점에서 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119215",
+          "publishedOn": "2024-10-21T01:27:37.000Z",
+          "wordCount": null,
+          "title": "트럼프와 해리스, 누가 이길 것인가: 여론조사, 모델링, 시장평가 관점에서",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=119178",
+          "author": "이정환",
+          "description": "하마스 지도자 사망. “조선 군복 치수 써내라.” 한반도 ‘신냉전’으로 간다. 쟁점과 현안. 오늘 윤석열-한동훈 면담. 김건희 사과로 안 된다면, 윤석열의 선택은? 의대 증원 고집에 의사 배출 절벽. 무인기 복제품 진실은? 이혼이 안 되면 냉각기간이라도. 더 깊게 읽기. 조선일보가 김건희 무혐의를 보는 방법. 검찰의 선택적 판단. 늙어가는 한국, 잠재성장률 2.0%. 주술적 여론조사. 언론사 끼고 여론조사, 사실상...\nThe post 한동훈이 들고 올 세 가지 카드, 윤석열이 격노하지 않을 수 있을까: 슬로우레터 10월21일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119178",
+          "publishedOn": "2024-10-20T22:22:52.000Z",
+          "wordCount": null,
+          "title": "한동훈이 들고 올 세 가지 카드, 윤석열이 격노하지 않을 수 있을까: 슬로우레터 10월21일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=119153",
+          "author": "한상기",
+          "description": "1. 빠른 ‘생성’에서 느린 ‘추론’으로, 차세대 ‘킬러 앱’이 온다. 유명 벤처 캐피탈인 미국의 세콰이어 캐피탈은 종종 매우 의미 있는 에세이를 발행한다. 이번에 나온 글은 지난 2년 동안 생성형 AI 혁명이 응답을 빠르게 생성하는 ‘빠르게 사고하기’에서 추론을 하는 ‘느린 사고’로 발전하고 있다는 것이다. 이 표현은 아마 대니얼 카너만의 책 ‘생각에 관한 생각(Thinking, fast and slow)’에서 따왔을...\nThe post 빠른 ‘생성’에서 느린 ‘추론’으로, 차세대 ‘킬러 앱’이 온다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119153",
+          "publishedOn": "2024-10-20T02:37:33.000Z",
+          "wordCount": null,
+          "title": "빠른 ‘생성’에서 느린 ‘추론’으로, 차세대 ‘킬러 앱’이 온다.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=118747",
           "author": "민노씨",
