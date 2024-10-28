@@ -38,16 +38,6 @@
           "wordCount": null,
           "title": "C++ String Conversion: Exploring std::from_chars in C++17 to C++26",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2023/initializer_list_improvements/",
-          "author": null,
-          "description": "In this article, you’ll learn why std::initializer_list has a bad reputation in C++. Is passing values using is as efficient as “emplace”, how can we use non-copyable types? You’ll also see how to fix some of the problems.\nLet’s start with the issues first:\nUpdated in Sept 2024: Added note about stack overflow and C++26 fixes.\n\n\n\n     \n    \n\n\nIf you recall from the previous article, std::initializer_list expands to some unnamed local array of const objects. So the following code might be super unsafe:\nstd::initializer_list<int> wrong() { // for illustration only!\n    return { 1, 2, 3, 4};\n}\nint main() {\n    std::initializer_list<int> x = wrong();\n}\n\n\nThe above code is equivalent to the following:\nstd::initializer_list<int> wrong() {\n    const int arr[] { 1, 2, 3, 4}\n    return std::initial…",
-          "link": "https://www.cppstories.com/2023/initializer_list_improvements/",
-          "publishedOn": "2024-09-29T00:00:00.000Z",
-          "wordCount": null,
-          "title": "std::initializer_list in C++ 2/2 - Caveats and Improvements",
-          "imageUrl": null
         }
       ]
     },
@@ -169,6 +159,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "168fad35-e86f-435b-b288-352f0d56ef12",
+          "author": "Alex Misstear, Ali Mobrem",
+          "description": "At Red Hat our engineers leverage the capabilities of Konflux-CI to orchestrate and execute integration tests against their applications, services and products. An integral part of testing these offerings involves installing them on a Red Hat OpenShift cluster.\nWhat is Konflux?\nKonflux is a continuous integration/continuous delivery (CI/CD) service that simplifies the adoption of the processes, technologies, and expertise that Red Hat uses to build, test, and release production software. Delivering a secure software supply chain is the primary mission of Konflux. It provides default pipeline definitions and automated security checks to generate Supply chain Levels for Software Artifacts (SLSA) Level 3 build images from application code across a variety of programming languages. Build image…",
+          "link": "https://developers.redhat.com/articles/2024/10/28/ephemeral-openshift-clusters-konflux-ci-using-cluster-service-operator",
+          "publishedOn": "2024-10-28T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Ephemeral OpenShift clusters in Konflux CI using the Cluster-as-a-Service operator",
+          "imageUrl": null
+        },
         {
           "id": "25429493-c3fc-4df6-a15f-541229051516",
           "author": "Mark Wielaard",
@@ -515,6 +515,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492113",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "The semiconductor industry is undergoing rapid transformation, driven by several key trends: the increasing complexity and cost of chip design, the growing need for optimized and specialized solutions, and the escalating demands for compute and power efficiency, particularly in AI applications. In response to these challenges, Arm has positioned itself as a leader by delivering […]\nThe post From AI to Sustainability: Arm Has a Comprehensive Approach to Innovation appeared first on Embedded.",
+          "link": "https://www.embedded.com/from-ai-to-sustainability-arm-has-a-comprehensive-approach-to-innovation/",
+          "publishedOn": "2024-10-28T16:21:00.000Z",
+          "wordCount": null,
+          "title": "From AI to Sustainability: Arm Has a Comprehensive Approach to Innovation",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492007",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "Battery cell monitoring, a critical component of every Battery Management System (BMS), is essential to ensure the safe, efficient, and reliable operation of battery-powered systems. It continuously tracks the voltage, temperature, state of charge (SOC), and state of health (SOH) of each cell within the battery pack. This also involves identifying anomalies, optimizing charging, balancing […]\nThe post Evaluating Error and Latency Impact on Battery Cell SOC and SOH Estimation appeared first on Embedded.",
+          "link": "https://www.embedded.com/evaluating-error-and-latency-impact-on-battery-cell-soc-and-soh-estimation/",
+          "publishedOn": "2024-10-28T08:35:00.000Z",
+          "wordCount": null,
+          "title": "Evaluating Error and Latency Impact on Battery Cell SOC and SOH Estimation",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492041",
           "author": "Stefano Lovati",
@@ -1054,16 +1074,6 @@
           "wordCount": null,
           "title": "Innatera for the Sensor Edge with Brain-Inspired Technology",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491380",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "According to a news published in The Korea Times, Korean chipmakers’ dependence on raw materials imported from China intensified last year. This happened despite the increasing global supply chain uncertainties that were exacerbated by the escalating U.S.-China tensions. Industry officials expressed apprehension regarding the potential hazards of excessive dependence on a single country, underscoring the […]\nThe post Korean Chipmakers’ Reliance on Chinese Raw Materials Intensifies appeared first on Embedded.",
-          "link": "https://www.embedded.com/korean-chipmakers-reliance-on-chinese-raw-materials-intensifies/",
-          "publishedOn": "2024-09-28T17:30:00.000Z",
-          "wordCount": null,
-          "title": "Korean Chipmakers’ Reliance on Chinese Raw Materials Intensifies",
-          "imageUrl": null
         }
       ]
     },
@@ -1151,6 +1161,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/enhance-your-prompts-with-vertex-ai-prompt-optimizer/",
+          "author": null,
+          "description": "Vertex AI Prompt Optimizer, a new managed automated prompt engineering service, can help save time and effort in prompt engineering while ensuring performing prompts ready for your generative AI applications.",
+          "link": "https://developers.googleblog.com/en/enhance-your-prompts-with-vertex-ai-prompt-optimizer/",
+          "publishedOn": "2024-10-28T20:16:49.708Z",
+          "wordCount": null,
+          "title": "Enhance your prompts with Vertex AI Prompt Optimizer",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/updated-gemini-models-reduced-15-pro-pricing-increased-rate-limits-and-more/",
           "author": null,
@@ -1478,6 +1498,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1176/",
+          "author": null,
+          "description": "Listen, my tastes are very...singular. The beauty of this error is one does not simply find it. I don't believe that developers can spot it in code reviews. Unless if they know beforehand that...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1176/",
+          "publishedOn": "2024-10-27T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Most striking error I found with PVS-Studio in 2024",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/csharp/1175/",
           "author": null,
           "description": "We think everyone knows that vulnerabilities can negatively affect a project. There are a number of ways to tackle vulnerabilities, from manual searches to customized tools. The article will discuss...",
@@ -1741,6 +1771,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/995125/",
+          "author": "daroc",
+          "description": "Sparrow Li presented virtually at\n\nRustConf 2024 about the current state of and\nfuture plans for the Rust compiler's performance. The compiler is relatively slow to compile\nlarge programs, although it has been getting better over time. The next big\nperformance improvement to come will be parallelizing the compiler's parsing,\ntype-checking, and related operations, but even after that, the project has\nseveral avenues left to explore.",
+          "link": "https://lwn.net/Articles/995125/",
+          "publishedOn": "2024-10-28T16:10:27.000Z",
+          "wordCount": null,
+          "title": "[$] The performance of the Rust compiler",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/995397/",
+          "author": "jake",
+          "description": "Rong Xu and\nHan Shen described the kernel-optimization techniques that Google uses in the toolchains\ntrack at the 2024 Linux\nPlumbers Conference.\nThey talked about automatic\nfeedback-directed optimization (AutoFDO), which can be used with the Propeller\noptimizer to produce kernels with better performance using profile\ninformation gathered from real workloads.  There is a fair amount of\noverlap between these tools and the BOLT\npost-link optimizer, which was the subject of a talk that directly preceded this session.",
+          "link": "https://lwn.net/Articles/995397/",
+          "publishedOn": "2024-10-28T15:15:19.000Z",
+          "wordCount": null,
+          "title": "[$] AutoFDO and Propeller",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/996085/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (kernel, python3.12, and python3.9), Debian (activemq, chromium, libheif, nss, and twisted), Fedora (chromium, dnsdist, dotnet8.0, edk2, glibc, libdigidocpp, mbedtls3.6, NetworkManager-libreswan, oath-toolkit, podman-tui, prometheus-podman-exporter, python-fastapi, python-openapi-core, python-platformio, python-rpyc, python-starlette, rust-pyo3, rust-pyo3-build-config, rust-pyo3-ffi, rust-pyo3-macros, rust-pyo3-macros-backend, suricata, thunderbird, and yarnpkg), Mageia (cpanminus, libgsf, mozjs78, redis, and thunderbird), Oracle (firefox, python3.12, python3.9, and python39:3.9 and python39-devel:3.9), Red Hat (edk2, grafana, httpd, httpd:2.4, and mod_jk), and SUSE (nodejs-electron, python3, python310, and python39).",
+          "link": "https://lwn.net/Articles/996085/",
+          "publishedOn": "2024-10-28T14:13:45.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/995981/",
+          "author": "corbet",
+          "description": "Linus has released 6.12-rc5 for testing.\n\n\n\trc5 looks perfectly normal, and maybe even on the small side of\n\tnormal. The diffstat looks nice and flat too, with the exception of\n\tthe removal of the da8xx fbdev driver due to it having been\n\treplaced by the tilcdc driver. And I'm sure we're all thinking the\n\tsame thing: \"What lovely descriptive driver names we have\".",
+          "link": "https://lwn.net/Articles/995981/",
+          "publishedOn": "2024-10-28T00:01:13.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.12-rc5",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/995159/",
           "author": "jzb",
@@ -2620,16 +2690,6 @@
           "wordCount": null,
           "title": "Kernel prepatch 6.12-rc1",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/992120/",
-          "author": "corbet",
-          "description": "Michał Górny describes\nthe challenges involved in transitioning Gentoo to year-2038-safe time\nrepresentations:\n\n\n\tThere is a general agreement that the way forward is to change\n\ttime_t to a 64-bit type. Musl has already switched to that, glibc\n\tsupports it as an option. A number of other distributions such as\n\tDebian have taken the leap and switched. Unfortunately,\n\tsource-based distributions such as Gentoo don't have it that\n\teasy. So we are still debating the issue and experimenting, trying\n\tto figure out a maximally safe upgrade path for our users.\n\n\tUnfortunately, that's nowhere near trivial. Above all, we are\n\ttalking about a breaking ABI change.",
-          "link": "https://lwn.net/Articles/992120/",
-          "publishedOn": "2024-09-29T07:23:16.000Z",
-          "wordCount": null,
-          "title": "Górny: The perils of transition to 64-bit time_t",
-          "imageUrl": null
         }
       ]
     },
@@ -2803,6 +2863,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=9532",
+          "author": "Derek Jones",
+          "description": "How can developers check that a compiler correctly implements all the behavior requirements contained in the corresponding language specification? An obvious approach is to write lots of test cases for each distinct behavior; such a collection of tests is known as a validation suite, when used by a standard’s organization to test compilers/OS interfaces/etc. The […]",
+          "link": "https://shape-of-code.com/2024/10/27/c-compiler-conformance-testing-with-chatgpt-assistance/",
+          "publishedOn": "2024-10-27T23:14:58.000Z",
+          "wordCount": null,
+          "title": "C compiler conformance testing: with ChatGPT assistance",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=9508",
           "author": "Derek Jones",
           "description": "What is an effective technique for modelling the relationship between the time estimated to implement a task and the actual time taken to implement that task? A regression model is the obvious approach. However, an important assumption made by the commonly used regression techniques is not met by estimate/actual project data The commonly used regression […]",
@@ -2942,6 +3012,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=119871",
+          "author": "이정환",
+          "description": "한때 잘 나갔던 그들. 해리스의 위험 신호. 이민자들이 살리는 미국 경제. 변수는 ‘소환 투표’. 1표의 가치. 최대 격전지는 펜실베이니아. 큰 그림. 세계 경제 키워드는 스태그네이션과 미국 예외주의. 미국만 잘 나가는 이유 세 가지. 다르게 생각하기. 인류는 진보하고 있나. 높은 기대 수준이 비관론을 만든다. 나쁜 것이 좋은 것보다 강하다. 나쁜 뉴스의 딜레마. 둠 스크롤링(Doomscrolling). 2050년의 아이들....\nThe post 삼성전자 바닥이 아직 멀었다고 보는 네 가지 이유. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119871",
+          "publishedOn": "2024-10-28T07:01:10.000Z",
+          "wordCount": null,
+          "title": "삼성전자 바닥이 아직 멀었다고 보는 네 가지 이유.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=119800",
+          "author": "한상기",
+          "description": "지난주에도 AI 관련 기술, 정책, 보고서들이 쏟아져 나와서 AI 관련 흐름을 추적하는 사람들은 편히 지내지 못했다. 이런 자료들이 갖는 의미에 관한 토론이 여러 온라인 그룹에서 이루어졌고, 국내 언론에서도 다루어졌다. 하지만 보는 시각은 외국 언론과 조금 다른 면이 있었다. 1. 미 바이든 행정부, AI 국가안보각서(NSM) 발표 백악관, 10월 24일 미 행정부가 최초로 AI를 국가 안보 수준에서...\nThe post 미 정부, “AI는 전략자산”: AI 거버넌스와 위험 관리 위한 포석 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119800",
+          "publishedOn": "2024-10-28T04:25:58.000Z",
+          "wordCount": null,
+          "title": "미 정부, “AI는 전략자산”: AI 거버넌스와 위험 관리 위한 포석",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=119768",
+          "author": "이정환",
+          "description": "일본 자민당 과반 붕괴. 윤석열 지지율 다시 20%. 쟁점과 현안. 대선 날도 명태균 보고서로 회의했다. 두 사람의 11월 위기설. “대통령 개인에게 반대하는 것 아니다.” 이명박의 조언. 더 깊게 읽기. 경기 후퇴 경고음 외면했다. 처절한 반성이 필요하다. 금리 또 내릴까. 건설업 임금체불, 지난해 4363억 원. 이재용 10년, 삼성전자 ROE 5.8%포인트 줄었다. 다르게 읽기. 한반도가 다음 전쟁터가...\nThe post 과도한 칭찬을 받을 때는 내가 호구가 아니었나 돌아보자: 슬로우레터 10월28일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/119768",
+          "publishedOn": "2024-10-27T22:24:17.000Z",
+          "wordCount": null,
+          "title": "과도한 칭찬을 받을 때는 내가 호구가 아니었나 돌아보자: 슬로우레터 10월28일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=119736",
           "author": "참여연대 사법감시센터",
@@ -3576,6 +3676,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=79948",
+          "author": "eyesopen1",
+          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 9월 5일 스프에 쓴 글입니다. ‘가십’, 그러니까 자리에 없는 사람에 대해 뒤에서 이야기하는 것이 바람직한 행동이 아님을 언제쯤 알게 되었는지 기억하시나요? 아주 어린 나이라도 집단생활을 시작한 순간 우리는 모두 어렴풋이 그것을 깨닫게 됩니다. “A가 → 더 보기",
+          "link": "https://newspeppermint.com/2024/10/27/npsp_gossip/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_gossip",
+          "publishedOn": "2024-10-27T22:59:20.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 이야기꽃 피우다 뜨끔했던 친구의 말… “조금씩 내 삶이 달라졌다”",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=79926",
           "author": "ingppoo",
