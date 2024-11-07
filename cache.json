@@ -192,6 +192,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "a9b95a09-f63d-48b9-b29e-802929b39f07",
+          "author": "Alexandra Petlanova Hajkova",
+          "description": "This article describes the new file descriptor related features recently added to Valgrind and explains how to use them to track the file descriptors that your program is using or, more importantly, misusing. \nValgrind was able to track file descriptors for a while. But my colleague Mark Wielaard and I improved this feature and turned all file descriptor operations into events, which allowed Valgrind to create errors on misuse that can show where the operation occurred, made them suppressible, and can be reported in different formats.\nWhat is Valgrind?\nValgrind is an instrumentation framework for building dynamic analysis tools. The tool can detect various memory management and threading bugs. To be able to detect the bugs, Valgrind decompiles, instruments, and recompiles your code to inte…",
+          "link": "https://developers.redhat.com/articles/2024/11/07/track-file-descriptors-valgrind",
+          "publishedOn": "2024-11-07T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to track file descriptors with Valgrind",
+          "imageUrl": null
+        },
+        {
+          "id": "76a016dd-e6ef-4d49-a207-92e35bd265e0",
+          "author": "Chris Kyrouac",
+          "description": "Logically bound images are a recently added feature in bootc that allows any container image to be managed directly by bootc. One of the many benefits this provides is simplified system management. An application image can be \"bound\" to a bootc operating system image as part of the bootc container build.\nThis simplified system management would have been useful for a project I previously worked on. The project was a large web application composed of dozens of microservices running in a Kubernetes cluster. These microservices primarily used Kafka to communicate. Our Kafka instance was also deployed in a Kubernetes cluster using the amq-streams operator.\nThe operator made the deployment and management of the Kafka cluster simple; however, keeping the cluster stable was a constant battle. One …",
+          "link": "https://developers.redhat.com/articles/2024/11/07/use-bootc-logically-bound-images-deploy-kafka-cluster",
+          "publishedOn": "2024-11-07T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Use bootc logically bound images to deploy a Kafka cluster",
+          "imageUrl": null
+        },
+        {
           "id": "81d6c5c4-8530-4287-9f25-50111382b1ff",
           "author": "Dan Manor",
           "description": "Red Hat Advanced Cluster Management for Kubernetes (RHACM) facilitates the management of Red Hat OpenShift clusters at scale. The multicluster global hub, an RHACM component, allows users to manage multiple Red Hat Advanced Cluster Management clusters from a single interface. With this architecture, the clusters managed directly by the global hub cluster are referred to as \"managed hub clusters\", while the clusters managed by these \"hub clusters\" are called \"managed clusters\". This setup is especially useful when a single hub cluster cannot manage the large number of clusters in a high-scale environment. In such cases, you divide the clusters into smaller groups of clusters and configure a managed hub cluster for each group. \nRed Hat Advanced Cluster Security for Kubernetes provides robust…",
@@ -400,26 +420,6 @@
           "wordCount": null,
           "title": "Get started with the Keycloak Collection",
           "imageUrl": null
-        },
-        {
-          "id": "ec5add8e-1a1b-40c9-b37c-88d7106a7bb8",
-          "author": "Kris Verlaenen, Ricardo Zanini",
-          "description": "Cloud-native applications are often composed of different services and can communicate in an event-driven manner. Red Hat OpenShift Serverless already enables developers to easily create and deploy stateless functions, and supports event-driven communication through eventing. \nWith serverless logic, you can now also define and deploy workflows to orchestrate functions, events, and other services. Not only does this give developers a declarative way to build applications using workflows (YAML or JSON format), it also provides the necessary features, services, and tools to simplify development, deployment, and runtime management. Serverless logic has now reached general availability in OpenShift Serverless 1.33.\nA first look\nIf you're wondering what this looks like: Imagine you want to build…",
-          "link": "https://developers.redhat.com/articles/2024/10/09/openshift-serverless-logic-ga",
-          "publishedOn": "2024-10-09T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Function and event orchestration with OpenShift serverless logic",
-          "imageUrl": null
-        },
-        {
-          "id": "32e73562-d12a-4111-b6b0-abbead9f0cbc",
-          "author": "Sandipan Roy",
-          "description": "Whether working on open source or closed-source projects, software development teams frequently split into groups that oversee various components. For instance, the group working on database applications can be distinct from the group managing SSH or HTTP services. Usually, each organization chooses its own cryptography suppliers, libraries, languages, and tools. Although this specialization might improve the product's overall quality, it also makes it more difficult to establish a uniform cryptographic policy throughout the system.\nThis is why it's critical to build up a system with globally applicable cryptographic parameters that have been carefully tested. To guarantee that new components are installed appropriately, setting up a system of this kind in a heterogeneous environment is di…",
-          "link": "https://developers.redhat.com/articles/2024/10/09/enhance-security-system-wide-crypto-policies-rhel-9",
-          "publishedOn": "2024-10-09T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Enhance security with system-wide crypto policies in RHEL 9",
-          "imageUrl": null
         }
       ]
     },
@@ -498,6 +498,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492307",
+          "author": "Stefano Lovati",
+          "description": "Taoglas®, a supplier of IoT components and antennas, has launched AntennaXpert, a collection of digital tools that are user-friendly and designed to simplify, expedite, and personalize the process of antenna design and integration. Included in the Taoglas Antenna Integrator, Antenna Builder, and Cable Builder toolset, which is accessible via the Taoglas website. The Taoglas Antenna […]\nThe post Taoglas Launches AntennaXpert, a Tool To Help Engineers to Select the Most Appropriate Antenna Solution appeared first on Embedded.",
+          "link": "https://www.embedded.com/taoglas-launches-antennaxpert-a-tool-to-help-engineers-to-select-the-most-appropriate-antenna-solution/",
+          "publishedOn": "2024-11-07T20:15:00.000Z",
+          "wordCount": null,
+          "title": "Taoglas Launches AntennaXpert, a Tool To Help Engineers to Select the Most Appropriate Antenna Solution",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492221",
+          "author": "Stefano Lovati",
+          "description": "Power semiconductor testing and debugging equipment are essential in the production flow of power devices as they assure components’ performance and reliability in a number of modern applications, spanning from transportation to renewable energy, factory automation, and data centers. Testing at the wafer level helps intercept and remove defective components early in the manufacturing process […]\nThe post Keysight Provides Advanced 3kV Wafer Test Solutions for Power Devices appeared first on Embedded.",
+          "link": "https://www.embedded.com/keysight-provides-advanced-3kv-wafer-test-solutions-for-power-devices/",
+          "publishedOn": "2024-11-07T10:20:00.000Z",
+          "wordCount": null,
+          "title": "Keysight Provides Advanced 3kV Wafer Test Solutions for Power Devices",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4491723",
           "author": "Maurizio Di Paolo Emilio",
@@ -1007,66 +1027,6 @@
           "wordCount": null,
           "title": "Q.ANT Launches Cloud Access to First Photonic Chip for AI Inference",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491647",
-          "author": "Stefano Lovati",
-          "description": "LDRA has announced that its LDRA tool suite now supports the BlackBerry QNX Software Development Platform 8.0 (SDP 8.0), reinforcing its leadership in facilitating developers to ensure compliance with software quality, safety, and security standards. The amalgamation of these tools provides optimal safety and security for various embedded applications, encompassing automotive, industrial controls, robotic systems, […]\nThe post LDRA Provides Support for BlackBerry QNX Software Development Platform 8.0 (SDP 8.0) appeared first on Embedded.",
-          "link": "https://www.embedded.com/ldra-provide-support-for-blackberry-qnx-software-development-platform-8-0-sdp-8-0/",
-          "publishedOn": "2024-10-08T20:30:00.000Z",
-          "wordCount": null,
-          "title": "LDRA Provides Support for BlackBerry QNX Software Development Platform 8.0 (SDP 8.0)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491645",
-          "author": "Stefano Lovati",
-          "description": "Silicon Labs presented the opening keynote at the inaugural Embedded World North America, featuring CEO Matt Johnson and CTO Daniel Cooley, who addressed the transformative impact of AI on IoT and highlighted the ongoing success of the company’s expanding Series 2 platform and the forthcoming Series 3 platform. Silicon Labs asserts that AI is swiftly […]\nThe post Silicon Labs Series 3 Platform Leads the Evolution of IoT appeared first on Embedded.",
-          "link": "https://www.embedded.com/silicon-labs-series-3-platform-leads-the-evolution-of-iot/",
-          "publishedOn": "2024-10-08T20:15:00.000Z",
-          "wordCount": null,
-          "title": "Silicon Labs Series 3 Platform Leads the Evolution of IoT",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491642",
-          "author": "Stefano Lovati",
-          "description": "Silicon Labs, in collaboration with Kudelski IoT, unveiled a novel way to expedite the market entry of Matter-certified IoT products. The partnership incorporates Kudelski IoT’s Matter Device Attestation Certificates (DAC) into Silicon Labs’ Custom Part Manufacturing Service (CPMS), allowing device manufacturers to establish Zero Trust security from production to delivery, hence reducing time and expenses. […]\nThe post Silicon Labs and Kudelski IoT Collaborate to Expedite Matter Device Certification appeared first on Embedded.",
-          "link": "https://www.embedded.com/silicon-labs-and-kudelski-iot-collaborate-to-expedite-matter-device-certification/",
-          "publishedOn": "2024-10-08T20:00:00.000Z",
-          "wordCount": null,
-          "title": "Silicon Labs and Kudelski IoT Collaborate to Expedite Matter Device Certification",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491639",
-          "author": "Stefano Lovati",
-          "description": "u-blox enhances the accessibility of its PointPerfect GNSS correction service by incorporating the Radio Technical Commission for Maritime Services (RTCM) data format standard, hence enabling compatibility with all GNSS and real-time kinematics (RTK) receiver hardware. PointPerfect has thus far solely provided correction data in the SPARTN data format. The use of RTCM enhances flexibility, reduces […]\nThe post u-blox Expands the Accessibility of its PointPerfect GNSS Correction Solution Through the RTCM RTK Data Format appeared first on Embedded.",
-          "link": "https://www.embedded.com/u-blox-expands-the-accessibility-of-its-pointperfect-gnss-correction-solution-through-the-rtcm-rtk-data-format/",
-          "publishedOn": "2024-10-08T19:45:00.000Z",
-          "wordCount": null,
-          "title": "u-blox Expands the Accessibility of its PointPerfect GNSS Correction Solution Through the RTCM RTK Data Format",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491635",
-          "author": "Stefano Lovati",
-          "description": "Parasoft has obtained the esteemed TÜV SÜD accreditation for developing its C/C++test CT (continuous testing) software. Launched in April, Parasoft’s C/C++test CT enables extensive development teams to optimize test automation while maintaining adherence to industry-specific safety standards, including ISO 26262 for automotive, DO-178B/C for aerospace, IEC 62304 for medical devices, EN 50128 for rail systems, […]\nThe post Parasoft Achieves TÜV SÜD Certification for C/C++test CT for Best Practices in Development and Verification of Safety-Critical Applications appeared first on Embedded.",
-          "link": "https://www.embedded.com/parasoft-achieves-tuv-sud-certification-for-c-ctest-ct-for-best-practices-in-development-and-verification-of-safety-critical-applications/",
-          "publishedOn": "2024-10-08T19:30:00.000Z",
-          "wordCount": null,
-          "title": "Parasoft Achieves TÜV SÜD Certification for C/C++test CT for Best Practices in Development and Verification of Safety-Critical Applications",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491628",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "Securing devices at a hardware level has become a top concern in the ever-changing field of IoT, particularly as attacks become more complex. Since 2016, Crypto Quantique has been at the forefront of tackling these issues. In a recent interview with Embedded, Crypto Quantique‘s CEO and co-founder, Shahram Mossayebi, underlined the crucial need for device […]\nThe post Quantum Tunneling and PUFs: The Future of IoT Security appeared first on Embedded.",
-          "link": "https://www.embedded.com/quantum-tunneling-and-pufs-the-future-of-iot-security/",
-          "publishedOn": "2024-10-08T11:45:00.000Z",
-          "wordCount": null,
-          "title": "Quantum Tunneling and PUFs: The Future of IoT Security",
-          "imageUrl": null
         }
       ]
     },
@@ -1075,6 +1035,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1706.php",
+          "author": null,
+          "description": "The term “real time” is widely used nowadays. Although it is a technical term, it finds its way into quite normal conversation. I might be heard to say “I do not watch much real-time TV”, meaning that I use streaming services to watch what I want when I want. So, colloquially, real time means “immediate” or “occurring now”. How does this align with its precise meaning when we...",
+          "link": "https://www.embeddedrelated.com/showarticle/1706.php",
+          "publishedOn": "2024-11-07T13:03:02.000Z",
+          "wordCount": null,
+          "title": "What is “real time”?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1697.php",
           "author": null,
@@ -1134,6 +1104,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/supercharging-ai-coding-assistants-with-massive-context/",
+          "author": null,
+          "description": "Sourcegraph's Cody AI assistant, integrated with Google's Gemini 1.5 Flash, can evaluate the advantages of using long-context windows in AI models for code generation and understanding.",
+          "link": "https://developers.googleblog.com/en/supercharging-ai-coding-assistants-with-massive-context/",
+          "publishedOn": "2024-11-07T20:16:03.340Z",
+          "wordCount": null,
+          "title": "Supercharging AI Coding Assistants with Gemini Models' Long Context",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/",
           "author": null,
@@ -1461,6 +1441,26 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1180/",
+          "author": null,
+          "description": "Welcome to the fourth part of our digest on news and events in the .NET world! We've got a lot of updates this time. The PVS-Studio team is happy to present you a selection of the most exciting and...",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1180/",
+          "publishedOn": "2024-11-06T21:00:00.000Z",
+          "wordCount": null,
+          "title": ".NET Digest #4",
+          "imageUrl": null
+        },
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1179/",
+          "author": null,
+          "description": "We have long wanted to write an article with the idea that unit tests are cool. But we shouldn't forget that they can also contain errors. Recently we have checked the DPDK project, whose tests...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1179/",
+          "publishedOn": "2024-11-04T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Finding errors in unit tests",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1178/",
           "author": null,
           "description": "Your attention is invited to the eighth part of an e-book on undefined behavior. This is not a textbook, as it's intended for those who are already familiar with C++ programming. It's a kind of C...",
@@ -1569,16 +1569,6 @@
           "wordCount": null,
           "title": "What's new in PVS-Studio for Unreal Engine?",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1167/",
-          "author": null,
-          "description": "Many of us get a sense of warm nostalgia when it comes to the PSP. Released in 2004, this portable console was a real breakthrough for its time. It introduced us to the possibility of enjoying...",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1167/",
-          "publishedOn": "2024-10-08T21:00:00.000Z",
-          "wordCount": null,
-          "title": "PPSSPP or PSP?",
-          "imageUrl": null
         }
       ]
     },
@@ -1626,6 +1616,16 @@
       "feedUrl": "https://interrupt.memfault.com/feed.xml",
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
+        {
+          "id": "https://interrupt.memfault.com/blog/october-2024-roundup",
+          "author": null,
+          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nOctober.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/october-2024-roundup",
+          "publishedOn": "2024-11-07T00:00:00.000Z",
+          "wordCount": null,
+          "title": "What we've been reading in October (2024)",
+          "imageUrl": null
+        },
         {
           "id": "https://interrupt.memfault.com/blog/memfault-esp-component",
           "author": null,
@@ -1724,6 +1724,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/997094/",
+          "author": "corbet",
+          "description": "Flexible arrays — arrays that are declared as the final member of a\nstructure and which have a size determined at run time — have long drawn\nthe attention of developers seeking to harden the kernel against\nbuffer-overflow vulnerabilities.  These arrays have reliably been a source\nof bugs, so anything that can be done to ensure that operations on them\nstay within bounds is a welcome improvement.  While many improvements,\nincluding the recent counted-by work, have\nbeen made, one of the most difficult cases remains.  Now, however,\ndevelopers who are interested in using recent compiler bounds-checking\nfeatures are trying to get a handle on struct sockaddr.",
+          "link": "https://lwn.net/Articles/997094/",
+          "publishedOn": "2024-11-07T16:34:08.000Z",
+          "wordCount": null,
+          "title": "[$] The trouble with struct sockaddr's fake flexible array",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/997378/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (bcc, bpftrace, bzip2, container-tools:rhel8, grafana-pcp, haproxy, kernel, kernel-rt, krb5, libtiff, python-gevent, python3.11, python3.11-urllib3, python3.12, python3.12-urllib3, xmlrpc-c, and xorg-x11-server and xorg-x11-server-Xwayland), Debian (puma and pypy3), Fedora (firefox), Gentoo (libgit2), Mageia (libarchive), SUSE (ghostscript, go1.22-openssl, go1.23-openssl, htmldoc, kmail-account-wizard, libarchive, libgsf, libmozjs-128-0, openssl-3, python-jupyterlab, python-mysql-connector-python, python36, and ruby2.1), and Ubuntu (cinder, linux-aws, linux-aws-6.8, linux-oracle, linux-oracle-6.8, linux-aws, linux-azure-5.4, linux-kvm, linux-oracle, linux-xilinx-zynqmp, and linux-nvidia, linux-nvidia-6.8, linux-nvidia-lowlatency).",
+          "link": "https://lwn.net/Articles/997378/",
+          "publishedOn": "2024-11-07T16:14:36.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/996377/",
+          "author": "corbet",
+          "description": "The LWN.net Weekly Edition for November 7, 2024 is available.",
+          "link": "https://lwn.net/Articles/996377/",
+          "publishedOn": "2024-11-07T02:57:15.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for November 7, 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/996329/",
           "author": "daroc",
@@ -2583,36 +2613,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/993073/",
-          "author": "jzb",
-          "description": "In the early days of open source, it was a struggle to get companies\nto accept the concept and trust its development model.\nNow, companies have few qualms about using it, but do tend to take open source and\nthose who maintain it for granted. The struggle now is to find ways\nto compensate producers of the software, sustain the open‑source\ncommons, and avoid burning out maintainers. The Open Source Pledge project is\nan effort to persuade companies to pay maintainers by making it a social\nnorm. On October 8, the project is launching a marketing campaign to raise\nawareness and try to get a larger conversation started around paying\nmaintainers.",
-          "link": "https://lwn.net/Articles/993073/",
-          "publishedOn": "2024-10-08T20:47:31.000Z",
-          "wordCount": null,
-          "title": "[$] The Open Source Pledge: peer pressure to pay maintainers",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/992455/",
-          "author": "daroc",
-          "description": "Alice Ryhl has been working to enable\n\ntracepoints — which are widely used\nthroughout the kernel — to be seamlessly placed in Rust code as well. She spoke\nabout her approach at Kangrejos. Her\n\npatch set\nenables efficient use of static\ntracepoints, but supporting dynamic tracepoints will take some additional effort.",
-          "link": "https://lwn.net/Articles/992455/",
-          "publishedOn": "2024-10-08T13:26:56.000Z",
-          "wordCount": null,
-          "title": "[$] Efficient Rust tracepoints",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/993276/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (kernel), Fedora (webkitgtk), Mageia (cups), Oracle (e2fsprogs, kernel, and kernel-container), Red Hat (buildah, container-tools:rhel8, containernetworking-plugins, git-lfs, go-toolset:rhel8, golang, grafana-pcp, podman, and skopeo), SUSE (Mesa, mozjs115, podofo, and redis7), and Ubuntu (cups and cups-filters).",
-          "link": "https://lwn.net/Articles/993276/",
-          "publishedOn": "2024-10-08T13:14:18.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2933,6 +2933,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=120732",
+          "author": "이정환",
+          "description": "임기 전반을 며칠 남겨둔 시점에서 오늘 대국민 담화는 윤석열 정부의 남은 2년 반을 결정할 중요한 이벤트였다. 언론의 요구는 크게 세 가지였다. 최악의 선택. 거짓말을 덮는 거짓말. 윤석열이 자백한 국정농단 정황. 부산일보 기자의 질문. 무엇을 사과한다는 건가. 다음은 오늘 기자회견의 주요 발언을 정리한 것이다. 모두 발언. 나와 정부의 부족했던 부분을 잘 알고 있다. 고쳐야 할 부분들을...\nThe post “순진한 아내를 악마화”, 마지막 반전 기회를 걷어찼다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/120732",
+          "publishedOn": "2024-11-07T07:33:28.000Z",
+          "wordCount": null,
+          "title": "“순진한 아내를 악마화”, 마지막 반전 기회를 걷어찼다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=113278",
+          "author": "소셜코리아",
+          "description": "지난 2년 동안 오픈AI가 불러일으킨 생성형 인공지능 열풍이 드디어 기후 대응 영역에서도 파란을 일으키기 시작했다. 사회경제적으로 온갖 낙관과 기대를 불러일으켜 온 인공지능 붐이 온실가스 감축과 기후 재난 대비에도 획기적으로 기여할 수 있다는 전망이 쏟아지는 것이다. 온실가스 감축 vs. 전기 먹는 하마 인공지능 단백질 구조 예측 모델 ‘알파폴드’를 개발해 노벨 화학상을 받은 데미스 허사비스(Demis Hassabis)는 이미...\nThe post AI와 기후위기: 온실가스 감축 vs. 전기 먹는 하마 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/113278",
+          "publishedOn": "2024-11-07T06:01:40.000Z",
+          "wordCount": null,
+          "title": "AI와 기후위기: 온실가스 감축 vs. 전기 먹는 하마",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=120667",
+          "author": "이정환",
+          "description": "더 늙고 더 위험한 트럼프가 돌아왔다. 트럼프의 부활. 트럼프가 어떻게 이겼나. 출구 조사를 살펴보니. 여론조사는 왜 틀렸나. “독재자를 고용했다.” 네이트 실버가 말하는 트럼프가 이긴 이유 24가지. 해리스는 왜 졌을까. 쟁점과 현안. 트럼프 충격, 원-달러 환율 1400원 돌파. 음주운전 논란, ‘7상시’ 행정관 복귀. 더 깊게 읽기. “집에 물어보고.” 마지막 기회. “유배나 귀양이라도 보내야 한다.” 다르게 읽기....\nThe post 더 늙고 더 위험한 트럼프가 돌아왔다: 슬로우레터 11월7일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/120667",
+          "publishedOn": "2024-11-06T22:18:53.000Z",
+          "wordCount": null,
+          "title": "더 늙고 더 위험한 트럼프가 돌아왔다: 슬로우레터 11월7일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=120640",
           "author": "이승주",
@@ -3522,16 +3552,6 @@
           "wordCount": 6364,
           "title": "명태균 받아쓰기? 엇갈리는 주장과 실체적 진실, 언론의 역할: 슬로우레터 10월10일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/10/47450_90748_4039.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=118574",
-          "author": "이정환",
-          "description": "“십상시가 김건희와 네트워킹한다.” “집에서 명태균 두 번 만났다.” 대통령실이 말하지 않은 것. “내가 들어가면 한 달 안에 정권 무너진다.” 쟁점과 현안. “김건희 계좌 내가 관리했다.” 김건희 상설 특검으로 가나. 이재명 코나아이 특혜로 맞불. 더 깊게 읽기. 검사의 접대 술값 계산법. 검사1과 검사2는 무죄가 맞나. 우리가 알던 그 삼성전자 어디로 갔나. 주주 중심 거버넌스, 세 가지가...\nThe post “십상시가 김건희와 네트워킹한다”는데 대통령실 해명이 없다: 슬로우레터 10월9일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/118574",
-          "publishedOn": "2024-10-08T21:21:26.000Z",
-          "wordCount": null,
-          "title": "“십상시가 김건희와 네트워킹한다”는데 대통령실 해명이 없다: 슬로우레터 10월9일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3540,6 +3560,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=596231",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/596231/%eb%82%a0%ec%a2%8b%ec%9d%80-%ea%b0%80%ec%9d%84-%eb%82%a0-%ec%b2%ad%ec%99%80%eb%8c%80-%ea%b4%80%eb%9e%8c%ea%b8%b0",
+          "publishedOn": "2024-11-07T12:51:10.000Z",
+          "wordCount": null,
+          "title": "날좋은 가을 날 청와대 관람기",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=596210",
           "author": "happist",
@@ -3795,16 +3825,6 @@
           "publishedOn": "2024-10-10T23:50:40.000Z",
           "wordCount": null,
           "title": "‘전력상 압도적인 우위인데…’ 1년째 전쟁 중인 이스라엘의 속사정",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=79845",
-          "author": "ingppoo",
-          "description": "* 뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. **오늘 소개하는 글은 8월 20일 스프에 쓴 글입니다. 도널드 트럼프는 백악관을 되찾아 오겠다는 도전자로 2024년 대선을 치르고 있습니다. 현직 대통령인 조 바이든이 재선에 도전하지 않기로 하면서 김이 좀 샜지만, 트럼프가 민주당 행정부의 실정을 공격할 때 전가의 보도처럼 → 더 보기",
-          "link": "https://newspeppermint.com/2024/10/08/npsp_usimmigrationelection/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_usimmigrationelection",
-          "publishedOn": "2024-10-08T22:59:08.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] “이민자들이 몰려온다”는데… 문제 못 풀게 발목 잡은 건 누구였나",
           "imageUrl": null
         }
       ]
