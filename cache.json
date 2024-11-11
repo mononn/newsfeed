@@ -51,6 +51,16 @@
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
         {
+          "id": "https://www.cppstories.com/2024/zones_around_world_chrono/",
+          "author": null,
+          "description": "While most time zones use simple hour offsets from UTC, some regions have chosen unusual time differences. In this blog post, we’ll explore how we can discover such zones using C++20’s chrono library.\nWe’ll use GCC 14.2 as it fully supports C++20 chrono and also std::print from C++23.\n\n\n\n     \n    \n\n\nC++20 introduced comprehensive time zone support through the <chrono> library. The implementation relies on the IANA Time Zone Database (also known as the “tz database” or “zoneinfo”), which is the de facto standard for time zone information used by most operating systems and programming languages.\n\n\n\n     \n    \n\n\nIn C++20, the time zone database is represented by the tzdb class:\nnamespace std::chrono {\n    struct tzdb {\n        string version;           // IANA time zone database version\n    …",
+          "link": "https://www.cppstories.com/2024/zones_around_world_chrono/",
+          "publishedOn": "2024-11-10T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Around the World in C++: Exploring Time Zones with std::chrono",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.cppstories.com/2024/chrono_dates_zones/",
           "author": null,
           "description": "In this blog post, we will explore handling dates using std::chrono, including time zones. We’ll utilize the latest features of the library to retrieve the current time across various time zones, taking into account daylight saving time changes as well. Additionally, we will incorporate new capabilities introduced in C++23, such as enhanced printing functions and more.\nLet’s start with the following code that prints the current date and time:\n#include <chrono>\n#include <print>\n\nint main() {\n    auto now = std::chrono::system_clock::now();\n    std::print(\"now is {}\", now);\n}\n\n\nYou can run it through Compiler Explorer\nIn my session, I’m getting the following results:\nNow is 2024-11-01 11:44:06.374573703\n\n\nIt’s simple, but what time zone are we in? Can we print it in a shorter form? How can w…",
@@ -58,16 +68,6 @@
           "publishedOn": "2024-11-03T00:00:00.000Z",
           "wordCount": null,
           "title": "What is the current time around the world? Utilizing std::chrono with time zones in C++23",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2018/12/fromchars/",
-          "author": null,
-          "description": "With the introduction of C++17, the C++ Standard Library expanded its capabilities for converting text to numbers with the addition of std::from_chars. This low-level, high-performance API offers significant advantages over previous methods, such as atoi and stringstream. In this article, we will explore the evolution of string conversion routines from C++17 through C++26, highlighting key improvements like constexpr support and enhanced error handling. Let’s dive into the details and see how std::from_chars can transform your approach to string conversion.\nUpdated in Oct 2024: Added notes from constexpr support in C++23, and C++26 improvements, plus more Compiler Explorer examples.\n\n\n\n     \n    \n\n\nC++, before C++17, offered several options when it comes to string conversion:\nsprintf / snp…",
-          "link": "https://www.cppstories.com/2018/12/fromchars/",
-          "publishedOn": "2024-10-13T00:00:00.000Z",
-          "wordCount": null,
-          "title": "C++ String Conversion: Exploring std::from_chars in C++17 to C++26",
           "imageUrl": null
         }
       ]
@@ -191,6 +191,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "0f3e8e18-acb8-4204-8259-cab130134144",
+          "author": "Alessandro Rossi",
+          "description": "Image mode for Red Hat Enterprise Linux (RHEL), introduced as a tech preview in RHEL 9.4, offers a streamlined way to build, deploy, and maintain your operating system using container images. In this article, we will explore how to create and deploy a RHEL image mode web server on Red Hat OpenShift Virtualization.\nBuild your web server\nFirst, we will build the RHEL image to provide access to an Apache httpd webserver based on a Containerfile that contains the following customizations:\n\nA bootc-user with password redhat\nThe Apache httpd package installed\nThe Apache httpd service enabled\nA custom index.html file serving our home page\n\nThe final Containerfile is as follows:\nFROM registry.redhat.io/rhel9/rhel-bootc:9.4\nRUN dnf -y update && dnf -y install tmux mkpasswd\nRUN pass=$(mkpasswd --met…",
+          "link": "https://developers.redhat.com/articles/2024/11/11/deploy-image-mode-rhel-openshift-virtualization",
+          "publishedOn": "2024-11-11T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Build and deploy image mode for RHEL on OpenShift Virtualization",
+          "imageUrl": null
+        },
         {
           "id": "edbcca46-9b8a-4daf-8b48-a89b8e5cece7",
           "author": "Francisco De Melo Junior",
@@ -425,6 +435,16 @@
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
         {
+          "id": "https://eli.thegreenplace.net/2024/ml-in-go-with-a-python-sidecar/",
+          "author": null,
+          "description": "<p>Machine learning models are rapidly becoming more capable; how can we make\nuse of these powerful new tools in our Go applications?</p>\n<p>For top-of-the-line commercial LLMs like ChatGPT, Gemini or Claude, the models\nare exposed as language agnostic REST APIs. We can hand-craft\nHTTP requests or use client libraries (SDKs …</p>",
+          "link": "https://eli.thegreenplace.net/2024/ml-in-go-with-a-python-sidecar/",
+          "publishedOn": "2024-11-11T14:13:00.000Z",
+          "wordCount": null,
+          "title": "ML in Go with a Python sidecar",
+          "imageUrl": null
+        },
+        {
           "id": "https://eli.thegreenplace.net/2024/ranging-over-functions-in-go-123/",
           "author": null,
           "description": "<p>Go 1.23 shipped with a new major feature: ranging over functions (also known\nas &quot;iterators&quot;), per <a class=\"reference external\" href=\"https://github.com/golang/go/issues/61405\">this proposal</a>.\nThis feature is nicely covered in the official <a class=\"reference external\" href=\"https://go.dev/blog/range-functions\">Go blog post from August</a>.</p>\n<p>This article is a rewrite of <a class=\"reference external\" href=\"https://eli.thegreenplace.net/2023/preview-ranging-over-functions-in-go/\">my older post</a>\nthat described this feature when it was still in …</p>",
@@ -478,6 +498,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492360",
+          "author": "Stefano Lovati",
+          "description": "Texas Instruments launched two new series of real-time microcontrollers that provide enhancements to facilitate more intelligent and secure processing in automotive and industrial applications. Texas Instruments TMS320F28P55x line of C2000™ microcontrollers represents the industry’s inaugural collection of real-time microcontrollers featuring an embedded neural processing unit (NPU), facilitating precise fault detection with minimal delay. The F29H85x […]\nThe post TI Introduces Two New Series of Real-Time MCUs for Automotive and Industrial Applications appeared first on Embedded.",
+          "link": "https://www.embedded.com/ti-introduces-two-new-series-of-real-time-mcus-for-automotive-and-industrial-applications/",
+          "publishedOn": "2024-11-11T16:59:00.000Z",
+          "wordCount": null,
+          "title": "TI Introduces Two New Series of Real-Time MCUs for Automotive and Industrial Applications",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492356",
+          "author": "Stefano Lovati",
+          "description": "onsemi unveiled the Treo Platform, an analog and mixed-signal platform built using Bipolar-CMOS-DMOS (BCD) process technology on a sophisticated 65nm node. This platform underpins a diverse array of power and sensing solutions from onsemi, encompassing high-performance and low-power sensors, high-efficiency power management, and specialized communications devices. This singular, scalable solution enables clients to streamline and […]\nThe post onsemi Unveils the Industry’s Most Advanced Analog and Mixed-Signal Platform appeared first on Embedded.",
+          "link": "https://www.embedded.com/onsemi-unveils-the-industrys-most-advanced-analog-and-mixed-signal-platform/",
+          "publishedOn": "2024-11-11T13:00:00.000Z",
+          "wordCount": null,
+          "title": "onsemi Unveils the Industry’s Most Advanced Analog and Mixed-Signal Platform",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4491970",
+          "author": "Loriotoole",
+          "description": "Maintaining PCB signal integrity is an increasingly challenging task in modern electronics design. The growth of the internet of things and artificial intelligence has pushed seemingly competing demands for miniaturization and high performance. Consequently, chips are getting smaller while their activity rises—a perfect recipe for interference. While addressing this obstacle may be difficult, it’s not […]\nThe post Designing PCBs to Protect Signal Integrity in Challenging Environments appeared first on Embedded.",
+          "link": "https://www.embedded.com/designing-pcbs-to-protect-signal-integrity-in-challenging-environments/",
+          "publishedOn": "2024-11-11T07:49:40.000Z",
+          "wordCount": null,
+          "title": "Designing PCBs to Protect Signal Integrity in Challenging Environments",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492331",
           "author": "Stefano Lovati",
@@ -1035,6 +1085,16 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/web-ai-summit-2024-recap/",
+          "author": null,
+          "description": "The first Web AI Summit, hosted by Google on October 18, 2024, brought together experts in machine learning models for web browsers.",
+          "link": "https://developers.googleblog.com/en/web-ai-summit-2024-recap/",
+          "publishedOn": "2024-11-11T20:15:54.961Z",
+          "wordCount": null,
+          "title": "Web AI Summit 2024 Recap: Client-Side AI for Developers",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/configure-google-pay-payment-options/",
           "author": null,
           "description": "Configure accepted payment methods for Google Pay, with options for authentication methods, card networks, and card types, and upcoming features for enhanced control and customization.",
@@ -1361,6 +1421,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1182/",
+          "author": null,
+          "description": "Your attention is invited to the ninth part of an e-book on undefined behavior. This is not a textbook, as it's intended for those who are already familiar with C++ programming. It's a kind of C...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1182/",
+          "publishedOn": "2024-11-10T21:00:00.000Z",
+          "wordCount": null,
+          "title": "C++ programmer's guide to undefined behavior: part 9 of 11",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/1181/",
           "author": null,
           "description": "Any fruit of our creativity doesn't last forever. Conference swag is a mutable thing. So, any brainchild of managers and designers will have to be redesigned sooner or later. My colleagues once...",
@@ -1634,6 +1704,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/996955/",
+          "author": "corbet",
+          "description": "What have been the most significant security-related incidents for the\nopen-source community in 2024 (so far)?  Marta Rybczyńska recently ran a\npoll and got some interesting results.  At the 2024 Open\nSource Summit Japan, she presented those results along with some\ncommentary of her own.  The events in question are unlikely to be a\nsurprise to LWN readers, but the overall picture that was presented was\nworth a look.",
+          "link": "https://lwn.net/Articles/996955/",
+          "publishedOn": "2024-11-11T15:24:29.000Z",
+          "wordCount": null,
+          "title": "[$] The top open-source security events in 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/997775/",
+          "author": "jake",
+          "description": "Longtime Debian and Tor developer, Jérémy Bobbio—perhaps better known as\n\"Lunar\"—died\non November 8. Lunar was one of the founders of the reproducible\nbuilds movement and more recently had been working with Software Heritage.  More\ninformation and tributes in French can be found at this site.  They will be missed.",
+          "link": "https://lwn.net/Articles/997775/",
+          "publishedOn": "2024-11-11T14:44:14.000Z",
+          "wordCount": null,
+          "title": "RIP Jérémy Bobbio (Lunar)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/997774/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (podman), Debian (guix, libarchive, and nss), Fedora (expat, iaito, opendmarc, python-werkzeug, radare2, squid, and xorg-x11-server), Mageia (htmldoc, libheif, nspr, nss, firefox & rust, python-urllib3, python-werkzeug, quictls, ruby-webrick, and thunderbird), Oracle (firefox and NetworkManager-libreswan), SUSE (apache2, chromedriver, chromium, coredns, expat, govulncheck-vulndb, httpcomponents-client, java-17-openjdk, java-21-openjdk, libheif, python-wxPython, python311, python312, qbittorrent, ruby3.3-rubygem-actionmailer, ruby3.3-rubygem-actiontext, ruby3.3-rubygem-puma, ruby3.3-rubygem-rails, and virtualbox), and Ubuntu (openjdk-17, openjdk-21, openjdk-8, openjdk-lts, and qemu).",
+          "link": "https://lwn.net/Articles/997774/",
+          "publishedOn": "2024-11-11T14:20:05.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/997678/",
+          "author": "corbet",
+          "description": "Linus has released 6.12-rc7 for testing.\n\"No big surprises, and I think everything is on track for a final 6.12\nrelease next weekend.\"",
+          "link": "https://lwn.net/Articles/997678/",
+          "publishedOn": "2024-11-11T03:00:41.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.12-rc7",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/996720/",
           "author": "daroc",
@@ -2625,6 +2735,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=9575",
+          "author": "socadmin",
+          "description": "To non-developers discussions about the visual layout of source code can seem somewhat inconsequential. Layout probably ought to be inconsequential, being based on experimental studies that discovered how source should be visually organised to minimise the cognitive effort consumed by developers while processing it. In practice software engineering is not evidence-based. There are two kinds […]",
+          "link": "https://shape-of-code.com/2024/11/10/indented-vs-non-indented-if-statements-performance-difference/",
+          "publishedOn": "2024-11-10T23:20:27.000Z",
+          "wordCount": null,
+          "title": "Indented vs non-indented if-statements: performance difference",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=9559",
           "author": "Derek Jones",
           "description": "Tens of millions of people get paid to work on the creation and maintenance of software systems, by companies employing thousands of developers to those employing a single developer (in the UK there are almost 300K registered software companies; 5% of registered companies). This huge ecosystem is almost completely ignored by the software engineering research […]",
@@ -2784,6 +2904,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=120949",
+          "author": "신현호",
+          "description": "들어가며: 민주당 참배 원인 지난 주 미국 대선에서 민주당은 예상보다 더 큰 패배를 당했다. 양당의 텃밭을 제외한 7개 경합주에서 트럼프 후보는 전승을 거두어 선거인단 수에서 312대 226으로 압승했다. 지역, 인종, 계층의 거의 모든 유권자 집단에서 트럼프 지지율은 2020년에 비해 상승해서 전체 유권자 득표에서도 해리스를 앞섰다. 대선과 동시에 치루어진 의회 선거에서도 공화당은 상원 다수당이 되었고, 하원...\nThe post 미국 대선, 민주당은 인플레이션에 참패했다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/120949",
+          "publishedOn": "2024-11-11T08:20:59.000Z",
+          "wordCount": null,
+          "title": "미국 대선, 민주당은 인플레이션에 참패했다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=120947",
+          "author": "구정은",
+          "description": "[구정은 칼럼] 데면데면 했던 메르켈과 황금 골프채 들고 갔던 아베, 윤석열의 전략은? 트럼프 2기 행정부는 ‘보복 인사’가 될 거라는 미국 언론 보도가 많다. 1기 인사들 가운데 트럼프에 등 돌린 사람들이 많았던 게 사실이다. 참모총장과 국방부 장관, 국가안보보좌관 등등 트럼프 1기 인사들이 줄줄이 트럼프의 인격과 능력을 비난하면서 트럼프를 버렸다. 심지어 비서실장 했던 사람이 최근 트럼프를 “파시스트의...\nThe post 작정하고 돌아온 갑질 외교, 트럼프와 맞장 뜰 사람이 없다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/120947",
+          "publishedOn": "2024-11-11T08:02:00.000Z",
+          "wordCount": 5405,
+          "title": "작정하고 돌아온 갑질 외교, 트럼프와 맞장 뜰 사람이 없다.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/11/image-from-rawpixel-id-6111735-jpeg-1000x666.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=120287",
+          "author": "민노씨",
+          "description": "K-팝과 K-드라마의 나라, 영화보다 더 영화 같은 초고도 성장을 이룩한 다이내믹 코리아, 그 ‘꿈의 나라’에 와서 스스로 목숨을 끊는 이주노동자(이하 ‘이노자’와 함께 씀). 이미 잃은 이노자의 생명을 찬찬히 돌아보며, 미래의 이노자는 더는 허망하게 떠나보내선 안 된다는 심포지엄이 있었다. 한국이주민건강협회 ‘위프렌즈’와 서미화(민주당 의원)이 함께 마련한 자리였다. 위프렌즈에 심포지엄 자료를 요청해 제공받았다. 그 자료집을 바탕으로 ‘이주노동자의 자살,...\nThe post 2024 이주노동자, 이제 두 번째 단계 넘었다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/120287",
+          "publishedOn": "2024-11-11T07:17:39.000Z",
+          "wordCount": null,
+          "title": "2024 이주노동자, 이제 두 번째 단계 넘었다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=120884",
+          "author": "이정환",
+          "description": "오늘부터 윤석열 집권 하반기. 윤석열 정부 ‘작은 재정’의 실패. 결정적인 패착은 선거연합 해체. 쟁점과 현안. “청와대 가면 뒈진다 했는데 가겠나.” 지지율 17% 충격, 바닥이 안 보인다. “국민의힘 안 받을 수 없게”, 김건희 특검법 고친다. “김건희 유일하게 개입된 게 김영선.” 국정농단 규탄 집회 20만 명. 검찰 특활비+특경비 586억 원 전액 삭감. 창원 산단, 명태균 기획이었다. “문재인·노무현...\nThe post ‘김건희 추천’ 꼬리표 달고 다니는 사람이 너무 많다: 슬로우레터 11월11일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/120884",
+          "publishedOn": "2024-11-10T22:23:54.000Z",
+          "wordCount": null,
+          "title": "‘김건희 추천’ 꼬리표 달고 다니는 사람이 너무 많다: 슬로우레터 11월11일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=120860",
           "author": "한상기",
@@ -3391,6 +3551,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=596267",
+          "author": "happist",
+          "description": "",
+          "link": "https://happist.com/596267/%ec%9d%b8%ec%b2%9c%ec%9d%84-%ec%83%88%eb%a1%ad%ea%b2%8c-%eb%b0%9c%ea%b2%ac%ed%95%98%eb%8b%a4-%ec%9d%b8%ec%b2%9c%ec%b0%a8%ec%9d%b4%eb%82%98%ed%83%80%ec%9a%b4-%eb%b0%a9%eb%ac%b8%ea%b8%b0",
+          "publishedOn": "2024-11-11T14:18:48.000Z",
+          "wordCount": null,
+          "title": "새로운 인천의 발견, 인천차이나타운 방문기",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=596258",
           "author": "happist",
