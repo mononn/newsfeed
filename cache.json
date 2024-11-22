@@ -232,6 +232,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "62affe74-e270-4422-a7c6-62122e2d1133",
+          "author": "Daniel Walsh",
+          "description": "Over the last few months, our team has been working on a new AI project called RamaLama (Figure 1). Yes, another name that contains lama.\n\n\n\n\n  \nWhat does RamaLama do?\nRamaLama facilitates local management and serving of AI models.\nRamaLama's goal is to make it easy for developers and administrators to run and serve AI models. RamaLama merges the world of AI inferencing with the world of containers as designed by Podman and Docker, and eventually, Kubernetes.\nWhen you first launch RamaLama, it inspects your system for GPU support, falling back to CPU support if no GPUs are present. It then uses a container engine like Podman or Docker to download a container image from quay.io/ramalama. The container image contains all the software necessary to run an AI model for your systems setup. Curre…",
+          "link": "https://developers.redhat.com/articles/2024/11/22/how-ramalama-makes-working-ai-models-boring",
+          "publishedOn": "2024-11-22T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How RamaLama makes working with AI models boring",
+          "imageUrl": null
+        },
+        {
           "id": "3d60e9bc-a669-4d1c-b912-d66dc6fd4194",
           "author": "Charalampos Stratakis",
           "description": "As Python continues playing a central role in diverse fields, such as web development, data science, artificial intelligence and machine learning (AI/ML), performance optimizations in the language are critical to meet the growing demand of modern applications and workloads. In order to meet the growing needs of users and customers, and address bottlenecks across the Red Hat Enterprise Linux (RHEL) ecosystem, Red Hat constantly analyzes data and tests new features in order to provide an enhanced experience while maintaining the same stability guarantees that RHEL is known and trusted for. \nNew performance optimizations in RHEL 9.5 and more\nWith the release of RHEL 9.5, Python 3.9 (the default system version Python) and the alternative stacks of Python 3.11 and Python 3.12 were compiled with…",
@@ -470,26 +480,6 @@
           "wordCount": null,
           "title": "5 ways to leverage Event-Driven Ansible for your platform",
           "imageUrl": null
-        },
-        {
-          "id": "25429493-c3fc-4df6-a15f-541229051516",
-          "author": "Mark Wielaard",
-          "description": "Various distributions have been experimenting with generating x86-64-v3 instructions for all compiled code. Although Valgrind already supported emulation of those instructions, there was still work to do to make the memcheck tool produce correct diagnostics for memory issues.\nWhat is Valgrind?\nValgrind is an instrumentation framework for building dynamic analysis tools that check C and C++ programs for errors. Memcheck is the default tool Valgrind uses when you don't ask for another tool (using --tool=). Memcheck keeps track of the validity and addressability of all memory a program uses. This means Memcheck can warn for usage of unaddressable memory or when program execution depends on values which were never defined. It also reports on memory leaks and allocated memory which is never fre…",
-          "link": "https://developers.redhat.com/articles/2024/10/24/preparing-valgrind-memcheck-x86-64-v3",
-          "publishedOn": "2024-10-24T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Preparing Valgrind Memcheck for x86-64-v3",
-          "imageUrl": null
-        },
-        {
-          "id": "65ddda43-f0f2-4e85-9e1b-83552dc5efe1",
-          "author": "Julio Faerman",
-          "description": "For many customers, running Red Hat OpenShift on Alibaba Cloud can be the architecture of choice for efficient hybrid cloud solutions. However, automating the deployment of clusters can be troublesome, as there are many alternatives to consider and some development required. This article offers a reference implementation to help you deploy Red Hat OpenShift clusters on Alibaba Cloud infrastructure using the Assisted Installer. \nAll code referenced in this article may be found here. Please review the code and configuration before executing, as described in this document. \nDisclaimer\nThis repository is maintained exclusively by its contributors as a community effort. It is not supported by Red Hat or Alibaba.\nDeployment guide\nFollow this process to provision your cloud resources and install …",
-          "link": "https://developers.redhat.com/articles/2024/10/24/automate-red-hat-openshift-alibaba-cloud",
-          "publishedOn": "2024-10-24T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Automate Red Hat OpenShift on Alibaba Cloud",
-          "imageUrl": null
         }
       ]
     },
@@ -504,6 +494,16 @@
       "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml",
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
+        {
+          "id": "https://eli.thegreenplace.net/2024/gomlx-ml-in-go-without-python/",
+          "author": null,
+          "description": "<p>In the <a class=\"reference external\" href=\"https://eli.thegreenplace.net/2024/ml-in-go-with-a-python-sidecar/\">previous post</a>\nI talked about running ML inference in Go through a Python sidecar process. In\nthis post, let's see how we can accomplish the same tasks without using Python\nat all.</p>\n<div class=\"section\" id=\"how-ml-models-are-implemented\">\n<h2>How ML models are implemented</h2>\n<p>Let's start with a brief overview of how ML models are …</p></div>",
+          "link": "https://eli.thegreenplace.net/2024/gomlx-ml-in-go-without-python/",
+          "publishedOn": "2024-11-22T15:00:00.000Z",
+          "wordCount": null,
+          "title": "GoMLX: ML in Go without Python",
+          "imageUrl": null
+        },
         {
           "id": "https://eli.thegreenplace.net/2024/ml-in-go-with-a-python-sidecar/",
           "author": null,
@@ -558,6 +558,46 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492631",
+          "author": "Stefano Lovati",
+          "description": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on Arduino Platform, Battery Module and Pack Testing, EV Chargers! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS indie Semiconductor Extends its Photonics Offering with Advanced Optical Component […]\nThe post Arduino Platform, Battery Module and Pack Testing, EV Chargers: Embedded Week Insights appeared first on Embedded.",
+          "link": "https://www.embedded.com/arduino-platform-battery-module-and-pack-testing-ev-chargers-embedded-week-insights/",
+          "publishedOn": "2024-11-22T16:00:00.000Z",
+          "wordCount": null,
+          "title": "Arduino Platform, Battery Module and Pack Testing, EV Chargers: Embedded Week Insights",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492248",
+          "author": "Loriotoole",
+          "description": "Embedded systems are exponentially finding applications in critical sectors. Often built using Yocto, these systems are prone to cyberattacks. As embedded solutions enhance industrial processes, manage healthcare systems and operate autonomous vehicles, the emphasis on security is even more imminent. The open and customizable nature of Yocto, while offering flexibility for developers, also introduces potential […]\nThe post Securing a Yocto-Linux Implementation in Embedded Systems appeared first on Embedded.",
+          "link": "https://www.embedded.com/securing-a-yocto-linux-implementation-in-embedded-systems/",
+          "publishedOn": "2024-11-22T14:34:58.000Z",
+          "wordCount": null,
+          "title": "Securing a Yocto-Linux Implementation in Embedded Systems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492574",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "At electronica 2024 in Munich, Roland Sperlich, VP and general manager for processor products at Texas Instruments (TI), shared exciting insights into the company’s latest advancements. TI is showcasing cutting-edge technologies in power delivery, edge AI, and real-time microcontrollers for industrial and automotive applications. Sperlich highlighted TI’s focus on integrating AI with real-time control systems […]\nThe post TI’s Roland Sperlich Discusses Innovations in Advancing Real-Time Control and Edge AI appeared first on Embedded.",
+          "link": "https://www.embedded.com/tis-roland-sperlich-discusses-innovations-in-advancing-real-time-control-and-edge-ai/",
+          "publishedOn": "2024-11-22T10:00:00.000Z",
+          "wordCount": null,
+          "title": "TI’s Roland Sperlich Discusses Innovations in Advancing Real-Time Control and Edge AI",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492627",
+          "author": "Stefano Lovati",
+          "description": "indie Semiconductor, a pioneer in automotive solutions, has expanded its photonics portfolio by incorporating in-house capabilities for system testing, packaging, and photonics integration. indie can now provide customers with comprehensive photonics subsystems for rapid solution evaluation, pre-production validation, and low-volume production by integrating a class-leading optical component portfolio from its previous acquisitions of TeraXion and […]\nThe post indie Semiconductor Extends its Photonics Offering with Advanced Optical Component Integration Capabilities appeared first on Embedded.",
+          "link": "https://www.embedded.com/indie-semiconductor-extends-its-photonics-offering-with-advanced-optical-component-integration-capabilities/",
+          "publishedOn": "2024-11-21T21:01:00.000Z",
+          "wordCount": null,
+          "title": "indie Semiconductor Extends its Photonics Offering with Advanced Optical Component Integration Capabilities",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492567",
           "author": "Maurizio Di Paolo Emilio",
@@ -1137,16 +1177,6 @@
           "wordCount": null,
           "title": "The Role of Edge Computing in Evolving Software-Defined Vehicle Architectures",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4491923",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "The path towards totally autonomous cars depends on their capacity to precisely identify and categorize things in different surroundings, particularly under demanding lighting and weather. Combining many sensor technologies—such as camera sensors and imaging radar—has turned into a revolutionary way to increase this capacity. Jae-Eun Lee, CEO and founder of bitsensing underlined in an interview […]\nThe post Fusion of Imaging Radar and Camera Sensors: Elevating Autonomous Vehicle Reliability appeared first on Embedded.",
-          "link": "https://www.embedded.com/fusion-of-imaging-radar-and-camera-sensors-elevating-autonomous-vehicle-reliability/",
-          "publishedOn": "2024-10-23T09:30:00.000Z",
-          "wordCount": null,
-          "title": "Fusion of Imaging Radar and Camera Sensors: Elevating Autonomous Vehicle Reliability",
-          "imageUrl": null
         }
       ]
     },
@@ -1204,6 +1234,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/introducing-keras-hub-for-pretrained-models/",
+          "author": null,
+          "description": "KerasHub is a new unified library for pretrained models fostering a more cohesive ecosystem for developers.",
+          "link": "https://developers.googleblog.com/en/introducing-keras-hub-for-pretrained-models/",
+          "publishedOn": "2024-11-22T20:17:03.364Z",
+          "wordCount": null,
+          "title": "Introducing Keras Hub: Your one-stop shop for pretrained models",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/save-the-date-for-firebase-demo-day-2024/",
+          "author": null,
+          "description": "Firebase Demo Day is back! Join us virtually on November 19, 2024 for a showcase of cutting-edge Firebase technology.",
+          "link": "https://developers.googleblog.com/en/save-the-date-for-firebase-demo-day-2024/",
+          "publishedOn": "2024-11-22T20:17:03.364Z",
+          "wordCount": null,
+          "title": "Save the date for Firebase Demo Day 2024!",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/opusclip-achieves-30-percent-cost-savings-in-visual-description-processing-with-gemini-flash/",
           "author": null,
@@ -1463,26 +1513,6 @@
           "wordCount": null,
           "title": "Chrome on Android to support third-party autofill services natively",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/gemma-explained-new-in-gemma-2/",
-          "author": null,
-          "description": "Gemma 2 is a new suite of open models that sets a new standard for performance and accessibility, outperforming popular models more than twice its size.",
-          "link": "https://developers.googleblog.com/en/gemma-explained-new-in-gemma-2/",
-          "publishedOn": "2024-10-23T20:17:21.614Z",
-          "wordCount": null,
-          "title": "Gemma explained: What’s new in Gemma 2",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/evolving-the-responsible-generative-ai-toolkit-with-new-tools-for-every-llm/",
-          "author": null,
-          "description": "The Responsible Generative AI Toolkit is being expanded with new features to support responsible AI development across all LLMs, including SynthID Text for watermarking.",
-          "link": "https://developers.googleblog.com/en/evolving-the-responsible-generative-ai-toolkit-with-new-tools-for-every-llm/",
-          "publishedOn": "2024-10-23T20:17:21.612Z",
-          "wordCount": null,
-          "title": "Evolving the Responsible Generative AI Toolkit with new tools for every LLM",
-          "imageUrl": null
         }
       ]
     },
@@ -1520,6 +1550,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/java/1190/",
+          "author": null,
+          "description": "Java equips developers with convenient tools for serializing objects. Although they seem primitive at first glance, their internal implementation contains a wealth of interesting insights. In this...",
+          "link": "https://pvs-studio.com/en/blog/posts/java/1190/",
+          "publishedOn": "2024-11-21T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Java serialization: let's dig it up",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1189/",
           "author": null,
@@ -1745,16 +1785,6 @@
           "wordCount": null,
           "title": "What we've been reading in October (2024)",
           "imageUrl": null
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/memfault-esp-component",
-          "author": null,
-          "description": "In this very Memfault-centric post, I’ll be talking about how we shipped our SDK\nas an ESP-IDF component. This is a continuation of our efforts to make it easier\nto integrate Memfault into your projects, specifically targeting ESP32-based\nprojects.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/memfault-esp-component",
-          "publishedOn": "2024-10-24T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Publishing the Memfault SDK as an ESP-IDF Component",
-          "imageUrl": null
         }
       ]
     },
@@ -1804,6 +1834,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/998115/",
+          "author": "daroc",
+          "description": "The Linux kernel community's discussions about including Rust have\n\ngotten a lot of attention, but the kernel is not the only project wrestling\nwith the question of whether to allow Rust. The Git project\n\ndiscussed the prospect in January, and then\n\nagain at the Git Contributor's Summit in September. Complicating the\ndiscussion is the Git project's lack of a policy on platform\nsupport, and the fact that it does already have tools written in other\nlanguages.\nWhile the project has not committed to using\nor avoiding Rust, it seems like only a matter of time until maintainers will\nhave to make a decision.",
+          "link": "https://lwn.net/Articles/998115/",
+          "publishedOn": "2024-11-22T15:13:38.000Z",
+          "wordCount": null,
+          "title": "[$] NonStop discussion around adding Rust to Git",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/999107/",
+          "author": "daroc",
+          "description": "The\n6.12.1,\n6.11.10,\n6.6.63, and\n6.1.119 stable kernel updates have been released.\nAs always, they contain important fixes.",
+          "link": "https://lwn.net/Articles/999107/",
+          "publishedOn": "2024-11-22T15:01:47.000Z",
+          "wordCount": null,
+          "title": "Four Friday stable kernel updates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/999102/",
+          "author": "daroc",
+          "description": "Security updates have been issued by Debian (postgresql-13, postgresql-15, and webkit2gtk), Fedora (libsndfile, microcode_ctl, and trafficserver), Mageia (kanboard, kernel, kmod-xtables-addons, kmod-virtualbox, and bluez, kernel-linus, opendmarc, and radare2), Oracle (.NET 9.0, bubblewrap and flatpak, buildah, expat, firefox, grafana, grafana-pcp, kernel, krb5, libsoup, libvpx, NetworkManager-libreswan, openexr, pcp, python3.11, python3.11-urllib3, python3.12, python3.9, squid, thunderbird, tigervnc, and webkit2gtk3), Red Hat (.NET 9.0, binutils, expat, grafana-pcp, kernel, libsoup, NetworkManager-libreswan, openexr, python3.11, python3.12, python39:3.9, squid, tigervnc, and webkit2gtk3), SUSE (chromedriver, cobbler, govulncheck-vulndb, and icinga2), and Ubuntu (linux-lowlatency, linux-lowlatency-hwe-6.8, python2.7, and zbar).",
+          "link": "https://lwn.net/Articles/999102/",
+          "publishedOn": "2024-11-22T14:00:38.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/999004/",
+          "author": "corbet",
+          "description": "Version\n8.4.1 of the PHP language has been released.  See this page for details on\nthe new features in this release.  \"PHP 8.4 is a major update of the PHP\nlanguage.  It contains many new features, such as property hooks,\nasymmetric visibility, an updated DOM API, performance improvements, bug\nfixes, and general cleanup.\"",
+          "link": "https://lwn.net/Articles/999004/",
+          "publishedOn": "2024-11-21T23:12:40.000Z",
+          "wordCount": null,
+          "title": "PHP 8.4.1 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/998623/",
           "author": "corbet",
@@ -2623,66 +2693,6 @@
           "wordCount": null,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/994575/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for October 24, 2024 is available.",
-          "link": "https://lwn.net/Articles/994575/",
-          "publishedOn": "2024-10-24T00:42:13.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for October 24, 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/994334/",
-          "author": "daroc",
-          "description": "Currently in Rust, there is no efficient and safe way to turn an array of bytes\ninto a structure that corresponds to the array. Changing that was the topic of\nJack Wrenn's talk this year at\n\nRustConf:\n\n\"Safety Goggles for Alchemists\". The goal is to be able to \"transmute\" —\nRust's name for this kind of conversion — values into arbitrary user-defined\ntypes in a safer way. Wrenn justified the approach that the project has taken to\naccomplish this, and spoke about the future work required to stabilize it.",
-          "link": "https://lwn.net/Articles/994334/",
-          "publishedOn": "2024-10-23T17:40:38.000Z",
-          "wordCount": null,
-          "title": "[$] Toward safe transmutation in Rust",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/995353/",
-          "author": "jzb",
-          "description": "Version\n14.0 of the privacy-focused Tor browser has been released. \n\n\nThis is our first stable release based on Firefox\nESR 128, incorporating a year's worth of changes shipped upstream\nin Firefox. As part of this process we've also completed our annual\nESR transition audit, where we reviewed and addressed over 200 Bugzilla issues for changes in Firefox that\nmay negatively affect the privacy and security of Tor Browser\nusers. Our final reports from this audit are now available in the tor-browser-spec\nrepository on our Gitlab instance.",
-          "link": "https://lwn.net/Articles/995353/",
-          "publishedOn": "2024-10-23T17:19:58.000Z",
-          "wordCount": null,
-          "title": "Tor Browser 14.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/995337/",
-          "author": "jzb",
-          "description": "Jakub Kadlčík announced\non his blog that Fedora's Copr build system will\nbe dropping support for building modules\n(groups of RPM packages that are built, installed, and shipped\ntogether) soon:\nretired\nsince Fedora 39 and will die with RHEL 9.\n\n\nModularity features in Copr are now deprecated, and it will not be\npossible to submit new module builds after April 2025. LWN covered some of the\nproblems with Fedora's modularity initiative in 2019.",
-          "link": "https://lwn.net/Articles/995337/",
-          "publishedOn": "2024-10-23T15:56:13.000Z",
-          "wordCount": null,
-          "title": "Kadlčík: Copr Modularity, the End of an Era",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/993665/",
-          "author": "jzb",
-          "description": "In July, at the GNOME annual general meeting (AGM),\nheld at GUADEC\n2024,\nthe message from the GNOME Foundation board was that all was well,\nfinancially speaking. Not great, but the foundation was on a\nbreak-even budget and expected to go into its next fiscal year with a\nsimilar budget and headcount. On October 7, however, the board announced\nthat it had had to make some cuts, including reducing its staff by\ntwo people. This is not, however, strictly a GNOME problem: similar\norganizations, such as the Python Software Foundation (PSF), KDE e.V., \nand the Free Software Foundation Europe (FSFE) are seeing declines in\nfundraising while also being affected by inflation.",
-          "link": "https://lwn.net/Articles/993665/",
-          "publishedOn": "2024-10-23T14:52:28.000Z",
-          "wordCount": null,
-          "title": "[$] Free-software foundations face fundraising problems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/995293/",
-          "author": "jzb",
-          "description": "Security updates have been issued by Debian (dmitry, libheif, and python-sql), Fedora (suricata and wireshark), SUSE (cargo-c, libeverest, protobuf, and qemu), and Ubuntu (golang-1.22, libheif, unbound, and webkit2gtk).",
-          "link": "https://lwn.net/Articles/995293/",
-          "publishedOn": "2024-10-23T13:19:22.000Z",
-          "wordCount": null,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -3013,6 +3023,16 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=121940",
+          "author": "이정환",
+          "description": "“책임 있는 자를 처벌하는 게 왜 잘못인가.” 다시 읽는 채 상병 사건. 쟁점과 현안. 우크라이나가 미사일 쏘자 러시아는 ICBM 쐈다. “김진태 컷오프 내가 엎은 거다.” “(대통령이) 명태균에게 화내는 녹취는 없나.” 1분 간격으로 등장한 한동훈 가족 게시물. 이재명 무죄 만드는 법 만든다. 김정숙에 소환장. 더 깊게 읽기. “쓸데없는 소리 하고 있다.” 조선일보도 “건전재정 도그마 벗어나야.” 다르게...\nThe post “책임 있는 자를 처벌하는 게 왜 잘못인가”, 윤석열 정부를 흔들 박정훈의 질문: 슬로우뉴스 11월22일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/121940",
+          "publishedOn": "2024-11-21T22:27:12.000Z",
+          "wordCount": null,
+          "title": "“책임 있는 자를 처벌하는 게 왜 잘못인가”, 윤석열 정부를 흔들 박정훈의 질문: 슬로우뉴스 11월22일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=121381",
           "author": "민노씨",
@@ -3622,36 +3642,6 @@
           "wordCount": null,
           "title": "최악의 경제 지표, 진짜 무서운 건 윤석열 정부의 대책없는 낙관론: 슬로우레터 10월25일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=119583",
-          "author": "이정환",
-          "description": "KT가 대규모 구조조정을 밀어붙이고 있다. 자회사 KTOSP와 KTP&M를 떼내서 5700명을 자회사로 전환 배치하거나 특별 희망퇴직을 시행한다는 계획이다. KTOSP는 선로 설계와 시공 사업을 맡고 KTP&M은 전원 시설 설계와 유지 보수 등을 맡게 된다. 전체 직원의 30%를 내보내는 강도 높은 구조조정이다. 지난해 9월 취임한 김영섭(KT 회장)은 LGCNS 시절부터 구조조정 전문가로 불렸지만 통신에 문외한이었다. 비전 제시 없이 손쉽게...\nThe post 회장 바뀔 때마다 사람 잘라 이익 늘리기, 국가기간 통신사업자 KT의 비극. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/119583",
-          "publishedOn": "2024-10-24T02:44:59.000Z",
-          "wordCount": null,
-          "title": "회장 바뀔 때마다 사람 잘라 이익 늘리기, 국가기간 통신사업자 KT의 비극.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=119578",
-          "author": "민주언론시민연합",
-          "description": "“대통령도 국민이 뽑는데 검찰총장, 공영방송 사장을 국민이 왜 못 뽑습니까?국민들이 그들을 뽑을 때, 그들이 국민 눈치를 보게 되어 있습니다.” 고(故) 이용마 기자. 고(故) 이용마의 절규 고(故) 이용마 기자가 2017년 3월 11일 박근혜 탄핵 광장에서 절규하듯 외친 말이다. 이명박 정권의 MBC 침탈에 저항하다 해직된 이용마 기자가 다시는 정치적 후견주의에 의해 공영방송의 근간이 흔들리는 일은 없어야 한다는 고심...\nThe post ‘파우치’ ‘땡윤뉴스’ ‘기미가요’ 출세 가도, 막가는 KBS 사장 선임 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/119578",
-          "publishedOn": "2024-10-24T02:41:47.000Z",
-          "wordCount": null,
-          "title": "‘파우치’ ‘땡윤뉴스’ ‘기미가요’ 출세 가도, 막가는 KBS 사장 선임",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=119536",
-          "author": "이정환",
-          "description": "“그 조그만 파우치”, 박장범이 KBS 사장 된다. 쟁점과 현안. 윤석열 만나고 온 추경호. 한동훈의 번개 만찬, 참석자는 21명. 친한계 21명과 친윤계 25명. 북한군 러시아 파병 미국 정부도 확인. 더 깊게 읽기. 명태균이 여론조사 조작으로 얻은 것. “권오수를 믿고 투자했을 뿐.” 윤석열 테마주였던 희림. 윤석열 탈당 가능성은? “집사람이 많이 힘들어하고 있다.” 윤석열-홍준표 만남. 다르게 읽기. 이준석은...\nThe post “똑똑한 바보들 때문에 국민들만 피곤하다”: 슬로우레터 10월24일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/119536",
-          "publishedOn": "2024-10-23T22:14:28.000Z",
-          "wordCount": null,
-          "title": "“똑똑한 바보들 때문에 국민들만 피곤하다”: 슬로우레터 10월24일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3967,6 +3957,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80349",
+          "author": "NewsPeppermint",
+          "description": "트럼프 2기 행정부를 가장 잘 예측할 수 있는 지표나 역사적 사례, 본보기가 있다면 어떤 게 있을까요? 뉴욕타임스 칼럼니스트 마샤 게센은 헝가리 야당 정치인 발린트 마자르를 인터뷰한 뒤 쓴 칼럼에 따르면, 헝가리의 독재자(strongman) 빅토르 오르반의 행적을 보면 트럼프의 미래가 보입니다. 트럼프가 지난 대선 후보 TV 토론 때 나를 존경한다고 말했던 훌륭한 정치인이 있다며 예로 든 그 오르반 총리입니다. 칼럼을 번역하고, 트럼프가 할 만한 민주주의 제도를 퇴보시키는 ‘선 넘는 행위’는 뭐가 있을지 짚어봤습니다. → 더 보기",
+          "link": "https://newspeppermint.com/2024/11/21/npsp_trumporban/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumporban",
+          "publishedOn": "2024-11-21T22:45:31.000Z",
+          "wordCount": null,
+          "title": "“설마설마했는데 결국?”… 이 사람이 트럼프의 미래일까",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80060",
           "author": "ingppoo",
