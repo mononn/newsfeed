@@ -159,16 +159,6 @@
           "wordCount": null,
           "title": "C++23 Language Features and Reference Cards",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2024/zones_around_world_chrono/",
-          "author": null,
-          "description": "While most time zones use simple hour offsets from UTC, some regions have chosen unusual time differences. In this blog post, we’ll explore how we can discover such zones using C++20’s chrono library.\nWe’ll use GCC 14.2 as it fully supports C++20 chrono and also std::print from C++23.\n\n\n\n     \n    \n\n\nC++20 introduced comprehensive time zone support through the <chrono> library. The implementation relies on the IANA Time Zone Database (also known as the “tz database” or “zoneinfo”), which is the de facto standard for time zone information used by most operating systems and programming languages.\n\n\n\n     \n    \n\n\nIn C++20, the time zone database is represented by the tzdb class:\nnamespace std::chrono {\n    struct tzdb {\n        string version;           // IANA time zone database version\n    …",
-          "link": "https://www.cppstories.com/2024/zones_around_world_chrono/",
-          "publishedOn": "2024-11-10T00:00:00.000Z",
-          "wordCount": null,
-          "title": "Around the World in C++: Exploring Time Zones with std::chrono",
-          "imageUrl": null
         }
       ]
     },
@@ -182,7 +172,18 @@
       "title": "The LLVM Project Blog",
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2024-12-03-minimalistic-ruby-compiler/",
+          "author": null,
+          "description": "Some time ago I was talking about an ahead-of-time Ruby compiler.We started the project with certain goals and hypotheses in mind, and while the original compiler is at nearly 90% completion, there are still those other 90% that needs to be done.\nIn the meantime, we decided to strip it down to a bare minimum and implement just enough features to validate the hypotheses.\nJust like the original compiler we use MLIR to bridge the gap between Ruby VM’s bytecode and the codegen, but instead of targeting LLVM IR directly, we go through EmitC dialect and targeting C language, as it significantly simplifies OS/CPU support. We go into a bit more details later.\nThe source code of our minimalistic Ruby compiler is here: https://github.com/dragonruby/lightstorm.\nThe rest of the article covers why we d…",
+          "link": "https://blog.llvm.org/posts/2024-12-03-minimalistic-ruby-compiler/",
+          "publishedOn": "2024-12-09T00:00:00.000Z",
+          "wordCount": 1368,
+          "title": "Lightstorm: minimalistic Ruby compiler",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "Embedded in Academia",
@@ -289,6 +290,36 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "5cf3260c-a66a-4cea-b125-723069c024bc",
+          "author": "Louis Imershein",
+          "description": "It is no secret that Microsoft SQL Server containers are based on Linux, and that Microsoft has seen millions of SQL Server container downloads. What is less known is that these containers are using the same SQL Server engine you use in your production environments, even if they are deployed and managed through a traditional package-based installation such as the one you might be used to on Windows, or the one Microsoft certifies on Red Hat Enterprise Linux (RHEL). \nSQL Server on RHEL containers are free for development use, which makes this whole process super easy. If you are a Microsoft SQL Server developer, using containers allows you to spin up database instances with minimal overhead, this is ideal for development and testing. When you want to move to production, you can easily just …",
+          "link": "https://developers.redhat.com/articles/2024/12/09/develop-sql-server-databases-rhel-podman-desktop",
+          "publishedOn": "2024-12-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Develop SQL Server databases on RHEL with Podman Desktop",
+          "imageUrl": null
+        },
+        {
+          "id": "5f48a2fb-6ece-48c5-abea-2aeeea4e9c71",
+          "author": "Scott Bush",
+          "description": "I can't believe it's already December and 2024 has almost passed. That means it’s time to take a look back at the articles that Red Hat Developer published this year and showcase a few of the best. \nProgramming languages, frameworks, and application runtimes are usually hot topics for developers, and this year is no exception. Java, JavaScript, and Node.js continue to be dominant forces in web development. Quarkus, the Kubernetes-native Java framework, is also thriving thanks to its strong community support; the project recently celebrated its 1,000 contributor milestone. \nThe 10 most popular languages and runtimes articles of 2024\nMany articles we published this year focused on the impact of AI (artificial intelligence) and LLMs (large language models) on the deployment process. Other pop…",
+          "link": "https://developers.redhat.com/articles/2024/12/09/our-top-languages-and-runtimes-articles-2024",
+          "publishedOn": "2024-12-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Our top languages and runtimes articles of 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "7a7e7064-31f1-47bc-a2d4-6814690e5543",
+          "author": "Samy Zemmouri",
+          "description": "Red Hat OpenShift Pipelines is a component of Red Hat OpenShift Container Platform built on top of the Tekton Pipelines project, which is an open source framework. OpenShift Pipelines provides a way to create and manage CI/CD pipelines natively within OpenShift. \nWhen using OpenShift Pipelines, it's not uncommon to see exited containers on worker nodes after running pipeline tasks. This behavior is often a result of how the OpenShift pipeline executes tasks within its pipelines. Each task in an OpenShift pipeline runs in a separate pod, and these pods are typically ephemeral, which means they complete (terminate) when the task completes, which this will be translated by an exited container on the worker node. This is a fundamental design choice in Tekton in order to achieve isolation and r…",
+          "link": "https://developers.redhat.com/articles/2024/12/09/log-retention-and-pruning-openshift-pipelines",
+          "publishedOn": "2024-12-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Log retention and pruning in OpenShift Pipelines",
+          "imageUrl": null
+        },
         {
           "id": "a6f85807-5a5c-4f29-986a-139e188948ad",
           "author": "Colleen Lobner",
@@ -627,6 +658,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492917",
+          "author": "Stefano Lovati",
+          "description": "This week at the IEEE International Electron Devices Meeting (IEDM), imec showcases groundbreaking findings in the hetero-integration of InP chiplets on a 300mm RF silicon interposer. The integration of the chiplets results in a minimal insertion loss of 0.1dB at 140GHz. Furthermore, no decline in performance is noted following the assembly of a two-stage InP […]\nThe post Imec Achieves Seamless Integration of InP Chiplets on a 300mm RF Silicon Interposer appeared first on Embedded.",
+          "link": "https://www.embedded.com/imec-achieves-seamless-integration-of-inp-chiplets-on-a-300mm-rf-silicon-interposer/",
+          "publishedOn": "2024-12-09T20:16:00.000Z",
+          "wordCount": null,
+          "title": "Imec Achieves Seamless Integration of InP Chiplets on a 300mm RF Silicon Interposer",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492335",
+          "author": "Stefano Lovati",
+          "description": "Many data center power architectures are based on a 48 V system bus that is used to provide power to many sources including the motherboard and DC/DC converters used to drive other system rails. Blade servers with many line cards can be operated from the same back-plane. In this article, we discuss the role of […]\nThe post Hot Swap Controllers Provide Safety in Power Distribution Systems appeared first on Embedded.",
+          "link": "https://www.embedded.com/hot-swap-controllers-provide-safety-in-power-distribution-systems/",
+          "publishedOn": "2024-12-09T06:21:00.000Z",
+          "wordCount": null,
+          "title": "Hot Swap Controllers Provide Safety in Power Distribution Systems",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492846",
           "author": "Stefano Lovati",
@@ -1235,6 +1286,16 @@
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
         {
+          "id": "https://www.embeddedrelated.com/showarticle/1720.php",
+          "author": null,
+          "description": "They say that the difference between 'clever' and 'wise' is that a clever person can get out of situations which a wise person would have avoided in the first place. Being neither wise nor clever, apparently, I found myself facing the task of soldering, by hand, dozens of boards, with dozens of components on each. Yes, soldering is a relaxing activity, but I don't need to relax that much, and...",
+          "link": "https://www.embeddedrelated.com/showarticle/1720.php",
+          "publishedOn": "2024-12-09T08:20:19.000Z",
+          "wordCount": null,
+          "title": "On optimizing manual soldering",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.embeddedrelated.com/showarticle/1719.php",
           "author": null,
           "description": "The working setup in detail, captured by a cyberartist \r\n\r\nHardware state machines are nice, and the RP2040 has two blocks with up to four machines each. Their instruction set is limited, but powerful, and they can execute an instruction per cycle, pushing and popping from their FIFOs and shifting bytes in and out.\n\r\nThe Raspberry Pi Pico does not have an Ethernet connection, but there are...",
@@ -1293,6 +1354,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/unlocking-the-potential-of-quantum-computing-a-developers-guide-to-error-correction/",
+          "author": null,
+          "description": "A free Coursera course on quantum error correction, developed by Google Quantum AI, explains the importance of error correction in quantum computing and provides an overview of quantum errors.",
+          "link": "https://developers.googleblog.com/en/unlocking-the-potential-of-quantum-computing-a-developers-guide-to-error-correction/",
+          "publishedOn": "2024-12-09T20:18:35.614Z",
+          "wordCount": null,
+          "title": "Unlocking the Potential of Quantum Computing: A Developer’s Guide to Error Correction",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/gemini-is-now-accessible-from-the-openai-library/",
+          "author": null,
+          "description": "Developers can now access and build with the latest Gemini models through the OpenAI Library and REST API. Update your code with three lines and get started.",
+          "link": "https://developers.googleblog.com/en/gemini-is-now-accessible-from-the-openai-library/",
+          "publishedOn": "2024-12-09T20:18:35.614Z",
+          "wordCount": null,
+          "title": "Gemini is now accessible from the OpenAI Library",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/supercharging-ai-coding-assistants-with-massive-context/",
           "author": null,
@@ -1822,6 +1903,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1000635/",
+          "author": "daroc",
+          "description": "In 2019, the Python community had a\n\nlengthy discussion about changing the rules (that some find counterintuitive) on\nusing break, continue, or return statements in\nfinally blocks. These are all ways of jumping out of a finally\nblock, which can interrupt the handling of a raised exception.\nAt the time, the Python developers chose not to change\nthings, because the consensus was that the existing behavior was not a problem. Now, after\na\nreport put together by Irit Katriel, the project is once again considering\nchanging the language.",
+          "link": "https://lwn.net/Articles/1000635/",
+          "publishedOn": "2024-12-09T15:33:31.000Z",
+          "wordCount": null,
+          "title": "[$] Finally continuing the discussion over continue in finally",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001441/",
+          "author": "corbet",
+          "description": "The OpenWrt project has issued an\nadvisory regarding a vulnerability found in its Attended Sysupgrade\nServer that could allow compromised packages to be installed on a router by\nan attacker.  No official OpenWrt images were affected, and the\nvulnerability is not known to be exploited, but users who have installed\nimages created with an instance of this server are recommended to\nreinstall.\n\nFor a detailed description of how the exploit works, see this\nblog post.\n\n\n\tThen, as the hash collision occurred, the server returns the\n\toverwritten build artifact to the legitimate request that requests\n\tthe following packages. [...]\n\t\n\tBy abusing this, an attacker could force the user to upgrade to the\n\tmalicious firmware, which could lead to the compromise of the\n\tdevice.",
+          "link": "https://lwn.net/Articles/1001441/",
+          "publishedOn": "2024-12-09T14:48:54.000Z",
+          "wordCount": null,
+          "title": "A vulnerability in the OpenWrt attended sysupgrade server",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001436/",
+          "author": "jake",
+          "description": "The 6.12.4 and 6.6.64 stable kernels have been released,\neach with a set of important fixes throughout the kernel tree, as usual.",
+          "link": "https://lwn.net/Articles/1001436/",
+          "publishedOn": "2024-12-09T14:33:23.000Z",
+          "wordCount": null,
+          "title": "Two new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001435/",
+          "author": "corbet",
+          "description": "The 6.13-rc2 kernel prepatch is out for\ntesting.  \"The diffstat looks a bit unusual with 80%+ drivers, and a lot of it\none-liners, but that's actually just because of a couple of automated\nscripts that got run after -rc1 for some cleanups. Nothing\nparticularly interesting, but it makes for a lot of noise in the diff.\"\nOne of those scripts was the EXPORT_SYMBOL_NS() change (to make it\nuse a quoted string for the namespace name) described in this article.",
+          "link": "https://lwn.net/Articles/1001435/",
+          "publishedOn": "2024-12-09T14:31:25.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.13-rc2",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1001433/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (redis:7, ruby, ruby:2.5, and ruby:3.1), Debian (avahi, ceph, chromium, gsl, jinja2, php7.4, renderdoc, ruby-doorkeeper, and zabbix), Fedora (chromium, python3.11, and uv), Gentoo (Asterisk, Cacti, Chromium, Google Chrome, Microsoft Edge. Opera, Dnsmasq, firefox, HashiCorp Consul, icinga2, OATH Toolkit, OpenJDK, PostgreSQL, R, Salt, Spidermonkey, and thunderbird), Mageia (kubernetes), Red Hat (grafana, grafana-pcp, osbuild-composer, and postgresql), SUSE (ansible-core, firefox, glib2, java-1_8_0-ibm, kernel-firmware, nanopb, netty, python310-django-ckeditor, python310-jupyter-ydoc, radare2, skopeo, and webkit2gtk3), and Ubuntu (tinyproxy).",
+          "link": "https://lwn.net/Articles/1001433/",
+          "publishedOn": "2024-12-09T14:19:15.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1001215/",
           "author": "daroc",
@@ -2681,18 +2812,7 @@
       "title": "null program",
       "feedUrl": "https://nullprogram.com/feed/",
       "siteUrl": "https://nullprogram.com",
-      "articles": [
-        {
-          "id": "https://nullprogram.com/blog/2024/11/10/",
-          "author": null,
-          "description": "This article was discussed on Hacker News.\nOver the past month I’ve been exploring the rapidly evolving world of\nLarge Language Models (LLM). It’s now accessible enough to run a LLM on a\nRaspberry Pi smarter than the original ChatGPT (November 2022). A modest\ndesktop or laptop supports even smarter AI. It’s also private, offline,\nunlimited, and registration-free. The technology is improving at breakneck\nspeed, and information is outdated in a matter of months. This article\nsnapshots my practical, hands-on knowledge and experiences — information I\nwish I had when starting. Keep in mind that I’m a LLM layman, I have no\nnovel insights to share, and it’s likely I’ve misunderstood certain\naspects. In a year this article will mostly be a historical footnote,\nwhich is simultaneously exciting and …",
-          "link": "https://nullprogram.com/blog/2024/11/10/",
-          "publishedOn": "2024-11-10T05:05:20.000Z",
-          "wordCount": null,
-          "title": "Everything I've learned so far about running local LLMs",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Almost Secure",
@@ -2729,6 +2849,16 @@
       "feedUrl": "https://shape-of-code.com/feed/",
       "siteUrl": "https://shape-of-code.com",
       "articles": [
+        {
+          "id": "https://shape-of-code.com/?p=9653",
+          "author": "Derek Jones",
+          "description": "My rate of book reading has picked up significantly this year. The following are the really interesting books I read, as is usually the case, most were not published in this year. I have enjoyed Grayson Perry’s TV programs on the art world, so I bought his book “Playing to the Gallery: Helping Contemporary Art […]",
+          "link": "https://shape-of-code.com/2024/12/08/christmas-books-for-2024/",
+          "publishedOn": "2024-12-08T23:12:20.000Z",
+          "wordCount": 1745,
+          "title": "Christmas books for 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://shape-of-code.com/?p=9639",
           "author": "Derek Jones",
@@ -2878,6 +3008,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=123189",
+          "author": "민주노총",
+          "description": "비상계엄이라는 정신나간 자폭 행위에 가뜩이나 빈사 상태의 한국 경제가 치명타를 맞았다. 윤석열 정부 2년 8개월, 한국 경제의 모든 지표가 무너져 내리고 있다. 성장률이 곤두박질쳤고 양극화는 더욱 확대됐다. 부자 감세를 남발하면서 정부 재정을 틀어쥔 탓에 비가역적인 퇴행이 시작됐다. 환율이 치솟고 물가가 오르고 주가는 폭락하고 경제 전반에 활력을 잃어가고 있다. 노인 자살률은 세계 최고 수준이고 일자리를 잃은...\nThe post 민주주의가 경제다, 윤석열 탄핵을 하루도 미룰 수 없는 이유. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/123189",
+          "publishedOn": "2024-12-09T08:45:19.000Z",
+          "wordCount": 6699,
+          "title": "민주주의가 경제다, 윤석열 탄핵을 하루도 미룰 수 없는 이유.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/12/cvLbdVAL9p7d6710c5d96e2514.36313519-1-1000x666.jpeg"
+        },
+        {
+          "id": "https://slownews.kr/?p=123161",
+          "author": "한상기",
+          "description": "1. 오픈AI o1과 o1 시스템 카드에 나타난 얼라인먼트 문제들 오픈AI, 12월 5일 오픈 AI가 지난 9월에 o1 모델을 발표한 것은 미니와 프리뷰였다. 이번에는 이미지 분석 기능을 포함한 정식 버전을 발표했다. 전보다 더 복잡한 과업을 처리할 수 있고, 이미지 기반 추론과 향상된 정확도를 내세웠다. 예를 들어 어려운 문제에 대한 오류를 34% 줄였다고 한다. 오픈AI는 o1이 학습을...\nThe post 인공지능의 생존 본능? o1 모델 2% 교체 종료 피해 스스로 탈출 시도 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/123161",
+          "publishedOn": "2024-12-09T04:10:28.000Z",
+          "wordCount": 6279,
+          "title": "인공지능의 생존 본능? o1 모델 2% 교체 종료 피해 스스로 탈출 시도",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/12/pic_004-2.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=123092",
+          "author": "이정환",
+          "description": "탄핵안 불발, 주말 사이에 벌어진 일. 쟁점과 현안. 북한에 전쟁 도발 시도 있었다. 방첩사 계엄 문건도 나왔다. 한동훈의 대통령 행세. 한동훈의 착각. 윤석열 직무 배제가 가능한가. 군 통수권도 그대로. 질서 있는 퇴진은 탄핵뿐. 네 가지 가능성. 사퇴 또는 탄핵밖에 없다. 금융시장도 위험. 검찰이 윤석열을 수사할 수 있을까. 검찰이 손을 떼야 하는 세 가지 이유. 이탈표...\nThe post 질서 있는 퇴진? 한동훈의 프레임 조작과 검찰의 출구 전략: 슬로우레터 12월9일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/123092",
+          "publishedOn": "2024-12-08T22:19:48.000Z",
+          "wordCount": 7095,
+          "title": "질서 있는 퇴진? 한동훈의 프레임 조작과 검찰의 출구 전략: 슬로우레터 12월9일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/12/34019852.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=123076",
           "author": "이상헌",
