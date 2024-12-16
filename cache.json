@@ -149,16 +149,6 @@
           "wordCount": null,
           "title": "C++23 Language Features and Reference Cards",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.cppstories.com/2024/cpp23_lang/",
-          "author": null,
-          "description": "C++23 Language Features \n  \n\n\n\n\n     \n    \n\n\nIn this blog post, you’ll see all C++23 language features! Each with short description and additional code example.\nPrepare for a ride!\n\n\n\n     \n    \n\n\nIf you like, I prepared PDF I packed both language and the Standard Library features. Each one has a short description and an example if possible.\n\nAll of the existing subscribers of my mailing list have already got the new document, so If you want to download it just subscribe here:\nDownload a free copy of C++23 Ref Card!\n\n\n\nPlease notice that along with the new ref card you’ll also get C++20 and C++17 language reference card that I initially published three years ago. With this “package” you’ll quickly learn about all of the latest parts that Modern C++ acquired over the last few years.\n\n\n\n    …",
-          "link": "https://www.cppstories.com/2024/cpp23_lang/",
-          "publishedOn": "2024-11-17T00:00:00.000Z",
-          "wordCount": null,
-          "title": "C++23 Language Features and Reference Cards",
-          "imageUrl": null
         }
       ]
     },
@@ -173,6 +163,16 @@
       "feedUrl": "https://blog.llvm.org/index.xml",
       "siteUrl": "https://blog.llvm.org/",
       "articles": [
+        {
+          "id": "https://blog.llvm.org/posts/2024-11-23-gsoc-windows-plugins/",
+          "author": null,
+          "description": "Hello everyone! My name is Thomas and for GSOC I’ve been working on adding plugin support for LLVM and Clang to windows, which mainly involved implementing proper support for building LLVM and Clang as shared libraries (known as DLLs on Windows, dylibs on macOS, or DSOs/SOs on most other Unices) on Windows.\nBackground\nThe LLVM CMake buildsystem had some existing support for building LLVM as a shared library on Windows, but it suffers from two limitations when trying to make code symbol visibility for DLLs work like Linux.Most of the environments that LLVM works on use ELF as the object and executable file format. Windows, however, uses PE as its executable file format and COFF as its object file format. This difference is important to highlight as it impacts how dynamic libraries operate i…",
+          "link": "https://blog.llvm.org/posts/2024-11-23-gsoc-windows-plugins/",
+          "publishedOn": "2024-12-16T00:00:00.000Z",
+          "wordCount": null,
+          "title": "GSoC 2024: Adding LLVM and Clang plugin support for windows",
+          "imageUrl": null
+        },
         {
           "id": "https://blog.llvm.org/posts/2024-12-03-minimalistic-ruby-compiler/",
           "author": null,
@@ -300,6 +300,46 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "bdc1d4ee-b81f-49d8-953b-bd78b5e85c38",
+          "author": "Christina Zhang",
+          "description": "The first installment in this series provided a brief introduction to the Cluster Observability Operator (COO). This article serves as a detailed guide for configuring alerts within the COO namespace. In the following sections, I will present specific examples for two structural configurations within the COO monitoring stack.\nCase 1: One monitoring stack for multiple namespace. \nCreate a namespace to host the COO instance and utilize this monitoring stack to monitor the namespaces coo-ns2, coo-ns3, and coo-ns4 as shown in Figures 1 and 2.\n\n\n\n  \n        \n\n\n\n  \n\nFigure 1: COO Monitoring Stack structure.\n\n\n\n\n  \n        \n\n\n\n  \n\nFigure 2: One Monitoring Stack for multiple namespace structure.\n\nCreate a project to host the COO monitoring stack. Give a label for the namespace monitoring.rhobs: co…",
+          "link": "https://developers.redhat.com/articles/2024/12/16/step-step-guide-configuring-alerts-cluster-observability-operator",
+          "publishedOn": "2024-12-16T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Step-by-step guide to configuring alerts in Cluster Observability Operator",
+          "imageUrl": null
+        },
+        {
+          "id": "5ff907c7-43c4-46ff-82e8-816649ee68f1",
+          "author": "Siamak Sadeghianfar",
+          "description": "Builds for OpenShift provides developers with a consistent and secure way to create container images directly within Red Hat OpenShift clusters. With its foundation built on Shipwright, an open source CNCF project, Builds for OpenShift simplifies the process of creating OCI-compliant images using the image build of your choice while leveraging OpenShift's enterprise-grade capabilities.\nBuilds for OpenShift 1.2 is now generally available! This release introduces new features designed to enhance usability, broaden platform support, and enable developers to use Builds in a wider range of environments.\nWhat’s new in Builds for OpenShift 1.2\nThe 1.2 release of Builds for OpenShift focuses on extending the product’s usability across diverse environments and architectures while continuing to impr…",
+          "link": "https://developers.redhat.com/articles/2024/12/16/introducing-builds-openshift-12",
+          "publishedOn": "2024-12-16T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Introducing Builds for OpenShift 1.2",
+          "imageUrl": null
+        },
+        {
+          "id": "ff3610b5-738a-4a78-8b47-419deb35b38c",
+          "author": "Anna Sherman",
+          "description": "It's that time of year again: we're recapping the highlights from the past year in Red Hat Developer's annual Best of series, showcasing the best of Ansible automation, languages and runtimes, Kubernetes and OpenShift, and more.\nLinux has been a core component of Red Hat's product ecosystem since the very beginning. Red Hat Enterprise Linux (RHEL) continues to add new features and enhancements to support the developer experience, most recently with last month's 9.5 release. This year also brought exciting new capabilities like image mode for Red Hat Enterprise Linux, a new deployment method for RHEL that delivers the platform as a container image.\nOur 10 most popular Linux articles of 2024\nThese top articles cover a variety of topics, from C# 12 to the Go compiler to bootable containers in…",
+          "link": "https://developers.redhat.com/articles/2024/12/16/our-top-linux-articles-2024",
+          "publishedOn": "2024-12-16T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Our top Linux articles of 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "f142ffd6-884e-43eb-9d6f-413c80ef1798",
+          "author": "Shirly Radco, Leonardo Araujo, Luiz Bernardo Levenhagen",
+          "description": "In Part 1 of this series, we discussed two important dashboards—OpenShift Virtualization Clusters Overview and Single Cluster Overview—which, together with three additional dashboards, will be introduced in Red Hat Advanced Cluster Management for Kubernetes (RHACM) 2.12. These dashboards simplify the monitoring of Red Hat OpenShift Virtualization at scale. This second part dives into the additional three dashboards that will also be available in RHACM 2.12: Single Virtual Machine View, Virtual Machines Inventory, and Virtual Machines by Time in Status.\nWe will explore how these dashboards can help system administrators manage virtual machines (VMs) more efficiently, especially in large, distributed Red Hat OpenShift environments.\nWhat are these three new dashboards, and how can they help m…",
+          "link": "https://developers.redhat.com/articles/2024/12/16/monitoring-openshift-virtualization-scale-red-hat-advanced-cluster-management",
+          "publishedOn": "2024-12-16T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Monitoring OpenShift Virtualization at scale with Red Hat Advanced Cluster Management: Part 2",
+          "imageUrl": null
+        },
         {
           "id": "1a1e1f4a-959e-4694-9899-5d03d549026d",
           "author": "Christina Zhang",
@@ -678,6 +718,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4492888",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "The inception of quantum computing (QC) dates back to the practical need to simulate with accuracy the collective behavior of quantum objects like electrons and atoms when they are bound in large numbers. Nobel laureate Richard Feynman, the father of quantum electrodynamics, in the 80s proposed that we look into the most subtle phenomena of […]\nThe post Quantum Revolution: How 2025 Will Set the Stage for a New Computing Era appeared first on Embedded.",
+          "link": "https://www.embedded.com/quantum-revolution-how-2025-will-set-the-stage-for-a-new-computing-era/",
+          "publishedOn": "2024-12-16T08:58:00.000Z",
+          "wordCount": null,
+          "title": "Quantum Revolution: How 2025 Will Set the Stage for a New Computing Era",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492794",
+          "author": "Loriotoole",
+          "description": "2025 promises to be a pivotal year for electronics industries, with a shared goal of accelerating innovation, efficiency and sustainability. The ongoing transformation, which began with the rise of electric and autonomous vehicles, is pushing companies toward increasingly integrated and intelligent solutions, challenging the traditional boundaries of hardware and software. Economic cycles of expansion and […]\nThe post Business Strategies for a Resilient and Sustainable 2025 appeared first on Embedded.",
+          "link": "https://www.embedded.com/business-strategies-for-a-resilient-and-sustainable-2025/",
+          "publishedOn": "2024-12-16T08:35:00.000Z",
+          "wordCount": null,
+          "title": "Business Strategies for a Resilient and Sustainable 2025",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492968",
+          "author": "Barbaradellaporta",
+          "description": "Ultra-Wideband (UWB) is an evolving technology with a growing number of applications in the market, including fine indoor ranging, high data rates, and resistance to interference and jamming. However, use cases related to data transmission, including streaming audio, are becoming more apparent. What are the advantages of UWB in audio?  With the adoption within consumer […]\nThe post A New Era of Sound with UWB Audio: Lossless Quality and Great Possibilities appeared first on Embedded.",
+          "link": "https://www.embedded.com/a-new-era-of-sound-with-uwb-audio-lossless-quality-and-great-possibilities/",
+          "publishedOn": "2024-12-16T08:32:27.000Z",
+          "wordCount": null,
+          "title": "A New Era of Sound with UWB Audio: Lossless Quality and Great Possibilities",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4493048",
           "author": "Stefano Lovati",
@@ -1691,6 +1761,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/java/1198/",
+          "author": null,
+          "description": "We all know the risks that vulnerabilities pose: application crashes, data loss, or privacy breaches. In this article, we'll look at examples that illustrate the core aspects of an approach, where...",
+          "link": "https://pvs-studio.com/en/blog/posts/java/1198/",
+          "publishedOn": "2024-12-15T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Looking for potential vulnerabilities in code, part 1: theory",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/1197/",
           "author": null,
           "description": "CodeChecker is a popular open-source quality control tool on Linux and macOS. In this short post, we will tell you how to use it with the PVS-Studio analyzer.",
@@ -1814,6 +1894,16 @@
       "siteUrl": "https://googleprojectzero.blogspot.com/",
       "articles": [
         {
+          "id": "https://googleprojectzero.blogspot.com/2024/12/qualcomm-dsp-driver-unexpectedly-excavating-exploit.html",
+          "author": null,
+          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=XGMkxXUZTA64h2imyzu79g);.lst-kix_mz24o9o07kqy-1>li{counter-increment:lst-ctn-kix_mz24o9o07kqy-1}.lst-kix_d27lror3sq5g-6>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-6,decimal) \". \"}.lst-kix_d27lror3sq5g-7>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-7,lower-latin) \". \"}ol.lst-kix_d27lror3sq5g-5.start{counter-reset:lst-ctn-kix_d27lror3sq5g-5 0}.lst-kix_d27lror3sq5g-4>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-4,lower-latin) \". \"}.lst-kix_d27lror3sq5g-5>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-5,lower-roman) \". \"}.lst-kix_d27lror3sq5g-8>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-8,lower-roman) \". \"}ul.lst-kix_klp6u7xplfnr-0{list-style-type:none}ul.lst-kix_klp6u7xplfnr-1{list-st…",
+          "link": "https://googleprojectzero.blogspot.com/2024/12/qualcomm-dsp-driver-unexpectedly-excavating-exploit.html",
+          "publishedOn": "2024-12-16T06:11:00.000Z",
+          "wordCount": null,
+          "title": "The Qualcomm DSP Driver - Unexpectedly Excavating an Exploit",
+          "imageUrl": null
+        },
+        {
           "id": "https://googleprojectzero.blogspot.com/2024/12/windows-tooling-updates-oleviewnet.html",
           "author": null,
           "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=XGMkxXUZTA64h2imyzu79g);.lst-kix_cb3mwjmcuxek-7>li:before{content:\"\\0025cb   \"}.lst-kix_cb3mwjmcuxek-4>li:before{content:\"\\0025cb   \"}.lst-kix_cb3mwjmcuxek-8>li:before{content:\"\\0025a0   \"}ol.lst-kix_p89tpxkie3qv-7.start{counter-reset:lst-ctn-kix_p89tpxkie3qv-7 0}.lst-kix_cb3mwjmcuxek-3>li:before{content:\"\\0025cf   \"}ul.lst-kix_cb3mwjmcuxek-3{list-style-type:none}ul.lst-kix_cb3mwjmcuxek-2{list-style-type:none}ul.lst-kix_cb3mwjmcuxek-5{list-style-type:none}.lst-kix_p89tpxkie3qv-1>li{counter-increment:lst-ctn-kix_p89tpxkie3qv-1}ul.lst-kix_cb3mwjmcuxek-4{list-style-type:none}.lst-kix_cb3mwjmcuxek-1>li:before{content:\"\\0025cb   \"}.lst-kix_p9mqotz9vuw2-4>li:before{content:\"\\0025cb   \"}ul.lst-kix_cb3mwjmcuxek-1{list-style-type:none}.…",
@@ -1903,6 +1993,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1001645/",
+          "author": "jake",
+          "description": "Emacs is, famously, an\neditor—perhaps far more—that is extensible using its own\nvariant of the Lisp programming language, Emacs\nLisp (or Elisp).  This year's\nedition of EmacsConf, which is an annual \"gathering\" that has been held\nonline for the past five years, had two separate talks on using a different\nvariant of Lisp, Guile,\nfor Emacs.  Both projects would preserve Elisp compatibility, which is a\nmust, but they would use Guile differently.  The first talk we will cover\nwas given by Robin Templeton, who described the relaunch of the Guile-Emacs project, which would replace\nthe Elisp in Emacs with a compiler using Guile.  A subsequent article will look\nat the other talk, which is about an Emacs clone written\nusing Guile.",
+          "link": "https://lwn.net/Articles/1001645/",
+          "publishedOn": "2024-12-16T14:12:46.000Z",
+          "wordCount": null,
+          "title": "[$] Using Guile for Emacs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1002338/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (gst-plugins-base1.0, gstreamer1.0, and libpgjava), Fedora (bpftool, chromium, golang-x-crypto, kernel, kernel-headers, linux-firmware, pytest, python3.10, subversion, and thunderbird), Gentoo (NVIDIA Drivers), Oracle (kernel, perl-App-cpanminus:1.7044, php:7.4, php:8.1, php:8.2, postgresql, python3.11, python3.12, python3.9:3.9.21, python36:3.6, ruby, and ruby:2.5), SUSE (docker-stable, firefox-esr, gstreamer, gstreamer-plugins-base, gstreamer-plugins-good, kernel, python-Django, python312, and socat), and Ubuntu (mpmath).",
+          "link": "https://lwn.net/Articles/1002338/",
+          "publishedOn": "2024-12-16T14:04:49.000Z",
+          "wordCount": null,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1002251/",
+          "author": "corbet",
+          "description": "Linus has released 6.13-rc3 for testing.\n\"Earlier this week it felt to me like things might have already started\nto quiet down in prep for the holidays, but doing the statistics on rc3\nthat doesn't actually seem to be the case - this looks very regular both in\nnumber of commits and in diff size\".",
+          "link": "https://lwn.net/Articles/1002251/",
+          "publishedOn": "2024-12-16T00:40:18.000Z",
+          "wordCount": null,
+          "title": "Kernel prepatch 6.13-rc3",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1002245/",
+          "author": "corbet",
+          "description": "Version 4.20\nof the Xfce desktop environment has been released.  \"The major focus\nduring this development cycle was the preparation of the codebase to be\nready for Wayland\".  See the Xfce 4.20 tour for an\noverview of the changes in this release.",
+          "link": "https://lwn.net/Articles/1002245/",
+          "publishedOn": "2024-12-15T22:23:22.000Z",
+          "wordCount": null,
+          "title": "Xfce 4.20 released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1002175/",
           "author": "corbet",
@@ -2901,6 +3031,16 @@
       "siteUrl": "https://shape-of-code.com",
       "articles": [
         {
+          "id": "https://shape-of-code.com/?p=9666",
+          "author": "Derek Jones",
+          "description": "Estimating the likelihood that a software system will operate as intended, for some period of time, is one of the big problems within the field of software reliability research. When software does not operate as intended, a fault, or bug, or hallucination is said to have occurred. Three events need to occur for a user […]",
+          "link": "https://shape-of-code.com/2024/12/15/good-enough-reliability-models-still-an-unknown/",
+          "publishedOn": "2024-12-15T23:15:44.000Z",
+          "wordCount": null,
+          "title": "Good enough reliability models: still an unknown",
+          "imageUrl": null
+        },
+        {
           "id": "https://shape-of-code.com/?p=9653",
           "author": "Derek Jones",
           "description": "My rate of book reading has picked up significantly this year. The following are the really interesting books I read, as is usually the case, most were not published in this year. I have enjoyed Grayson Perry’s TV programs on the art world, so I bought his book “Playing to the Gallery: Helping Contemporary Art […]",
@@ -2964,7 +3104,18 @@
       "title": "코드쓰는사람",
       "feedUrl": "https://taegon.kim/feed",
       "siteUrl": "https://taegon.kim",
-      "articles": []
+      "articles": [
+        {
+          "id": "https://taegon.kim/?p=10746",
+          "author": "taggon",
+          "description": "지난 몇 달간 정신없이 바쁜 와중에 번역한, 아니 정확하게 말하면 정신없음에 절반 정도는 기여한 새 번역서가 오늘 드디어 예약 판매를 시작했습니다. 바로 \"전문가를 위한 리액트\"입니다. 제목을 보면 알겠지만 React를 처음 접하는 분들을 위한 책은 아닙니다. 한 번도 React를 사용하지 않은 분들이 보면 무슨 소리야 싶을 React 내부의 깊은 곳을 다루는 책입니다. 예를 들면 파이버 재조정자Fiber […]",
+          "link": "https://taegon.kim/archives/10746",
+          "publishedOn": "2024-12-16T13:08:51.000Z",
+          "wordCount": null,
+          "title": "\"전문가를 위한 리액트\" - 이런 책 기다린 분 없나요?",
+          "imageUrl": null
+        }
+      ]
     },
     {
       "title": "The Pasture",
@@ -3049,6 +3200,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=124139",
+          "author": "한상기",
+          "description": "1. 구글 딥마인드, 제미나이 2.0 발표 구글 블로그, 12월 11일 구글이 에이전트 시대를 열 새로운 AI 모델이라고 주장하는 제미나이 2.0을 발표했다. 작성자가 순다 피차이(구글과 알파벳 CEO), 데미스 하사비스(Koray Kavukcuoglu, 구글 딥마인드 CEO), 코레이 카부크오글루(구글 딥마인드 CTO)이다. 제미나이 1.0이 2023년 12월에 나왔으니 1년 만에 2.0 업그레이드 버전을 발표한 것이다. 이후 제미나이는 20억 명의 사용자를 가진 7개의...\nThe post 구글, 제미나이 2.0 발표: 20억 사용자 업고 튀어! appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/124139",
+          "publishedOn": "2024-12-16T03:56:49.000Z",
+          "wordCount": null,
+          "title": "구글, 제미나이 2.0 발표: 20억 사용자 업고 튀어!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=124100",
+          "author": "이정환",
+          "description": "내란 11일 만에 탄핵, 민주주의의 새로운 역사를 썼다. 쟁점과 현안. 최장 180일의 헌재 심리 기간. 전두환 군사반란 사건 재판에서 확립된 원칙. 인용되지 않을 이유가 없다. “멈춰 서지만 결코 포기하지 않겠다.” 검찰이 불렀는데 안 간다고? “윤석열의 도박은 실패했다.” 쟁점과 현안. 한덕수의 과제. “국정 협의체 만들자.” “한 명씩 일어나 탄핵 찬반 밝혀라.” 한동훈 오늘 사퇴 표명. 다음은...\nThe post 윤석열의 예고된 몰락, 날마다 ‘차지철’들과 술을 마시면 어떻게 되나: 슬로우레터 12월16일.   appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/124100",
+          "publishedOn": "2024-12-15T22:23:23.000Z",
+          "wordCount": null,
+          "title": "윤석열의 예고된 몰락, 날마다 ‘차지철’들과 술을 마시면 어떻게 되나: 슬로우레터 12월16일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=124065",
           "author": "홍윤희",
@@ -3638,16 +3809,6 @@
           "wordCount": null,
           "title": "정치의 사법화 논란, 윤석열 부부 ‘공천 개입’ 의혹도 이재명만큼 털어보자: 슬로우레터 11월18일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=121457",
-          "author": "이정환",
-          "description": "이재명(민주당 대표) 공직선거법 위반 재판 1심에서 법원이 징역 1년에 집행유예 2년을 선고했다. 당선 무효뿐만 아니라 다음 대선 출마 자격을 박탈당할 수 있는 유죄 선고다. 이재명이 받고 있는 네 건의 재판 가운데 가장 가벼운 사건이라는 평가가 많았는데 첫 재판부터 최악의 결과가 나온 상황이다. 이게 왜 중요한가. 발언 1: “시장 재직 때는 몰랐다.” 쟁점 1: 출장도 가고...\nThe post “가장 쉽다”던 재판에서 최악의 결과, 이재명에게 반전이 있을까. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/121457",
-          "publishedOn": "2024-11-16T19:27:36.000Z",
-          "wordCount": null,
-          "title": "“가장 쉽다”던 재판에서 최악의 결과, 이재명에게 반전이 있을까.",
-          "imageUrl": null
         }
       ]
     },
@@ -3656,6 +3817,36 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=597046",
+          "author": "happist",
+          "description": "2025년 미국 주식에 대해 긍정적인 전망이 우세한 가운데, 스티펠은 2025년 미국 주식 조정론을 제기해 15%이상 하락할 것이라고 주장했습니다. 스티펠은 2025년 인플레이션이 재개되고 경제 성장은 약화하면서 연방준비제도(Fed·연준)가 고금리를 유지할 것으로 관측하면서 미국 주식은 하락할 것으로 본 것입니다. 스티펠의 수석 투자 전략가인 배리 배니스터는 인플레이션 고착화와 경기 둔화로 미국 주식 하락으로 S&P 500지수는 5,000 중반으로 하락할 것으로 […]",
+          "link": "https://happist.com/597046/2025%eb%85%84-%eb%af%b8%ea%b5%ad-%ec%a3%bc%ec%8b%9d-%ed%95%98%eb%9d%bd-%ec%8a%a4%ed%8b%b0%ed%8e%a0-sp-500-15-%ed%95%98%eb%9d%bd-%ea%b0%80%eb%8a%a5%ec%84%b1-%ec%a0%9c%ea%b8%b0",
+          "publishedOn": "2024-12-16T12:46:37.000Z",
+          "wordCount": null,
+          "title": "2025년 미국 주식 하락, 스티펠 S&P 500 15% 하락 가능성 제기",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=597043",
+          "author": "happist",
+          "description": "주식 시장 분석 및 전망에서 주가수익비율 지표는 시장 타이밍 도구로서 매우 부적절하다는 주장입니다. 시장예측에서 주가수익비율(P/E비율)이 암시하는 지표는 비효울적이기 대문에 다른 종합적인 지표를 상펴봐야 한다는 주장입니다. 어려운 내용이지만 주가수익비율(P/E비율) 효용성을 차치하고 2025년 미국 주식 전망에 대한 인사이트르 보여준다고 생가해 자료를 공유해 봅니다. 최근 2024년 연말을 맞아 2025년 미국 시장 전망 보고서가 속출하고 있지요. 이러한 미국 시장 […]",
+          "link": "https://happist.com/597043/%ec%a3%bc%ea%b0%80%ec%88%98%ec%9d%b5%eb%b9%84%ec%9c%a8p-e%eb%b9%84%ec%9c%a8",
+          "publishedOn": "2024-12-16T08:20:31.000Z",
+          "wordCount": null,
+          "title": "TKer, 주가수익비율(P/E비율)은 시장 타이밍을 잡는 데 매우 부적합한 도구이다. 2025년 미국 주식 전망은?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=597026",
+          "author": "happist",
+          "description": "마켓인사이더에서 월가의 2025년 미국 주식 전망을 요약해 정리했길래 이 내용을 소개해 봅니다. 이미 대부분 투자은행들의 2025년 미국 주식 전망은 이미 소개했지만 2024년을 마무리하는 시점에서 2025년 투자 전략 수립 시 도움이 될 2025년 미국 지장 전망 요약 관점에서 보시면 좋을 것 같습니다. 다음은 월스트리트의 2025년 주식 시장 예측에 대한 전체 요약입니다. 다음은 월스트리트의 2025년 믹구 시장 […]",
+          "link": "https://happist.com/597026/2025%eb%85%84-%eb%af%b8%ea%b5%ad-%ec%a3%bc%ec%8b%9d-%ec%a0%84%eb%a7%9d-%ec%9a%94%ec%95%bd",
+          "publishedOn": "2024-12-16T00:30:30.000Z",
+          "wordCount": null,
+          "title": "2025년 미국 주식 전망 요약, 강세장과 약세장 어디로 갈것인가?",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=597022",
           "author": "happist",
@@ -4154,26 +4345,6 @@
           "publishedOn": "2024-11-18T06:07:42.000Z",
           "wordCount": null,
           "title": "nginx 재시작 실패 이슈 해결 과정을 정리, 공유",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=596397",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/596397/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-hsbc-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%aa%a9%ed%91%9c%ec%a3%bc%ea%b0%80-200%eb%8b%ac%eb%9f%ac",
-          "publishedOn": "2024-11-16T10:44:57.000Z",
-          "wordCount": null,
-          "title": "엔비디아 주가 200달러는 가능할까? HSBC, 엔비디아 주가전망 200달러 제시, AI 성장이 ‘정상 궤도’에 오르고 있다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=596397",
-          "author": "happist",
-          "description": "",
-          "link": "https://happist.com/596397/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%a3%bc%ea%b0%80-%ec%a0%84%eb%a7%9d-hsbc-ai-%ec%84%b1%ec%9e%a5-%ec%a0%95%ec%83%81-%ea%b6%a4%eb%8f%84%ec%97%90-%ec%98%a4%eb%a5%b4%ea%b3%a0-%ec%9e%88",
-          "publishedOn": "2024-11-16T10:44:57.000Z",
-          "wordCount": null,
-          "title": "엔비디아 주가 전망, HSBC, AI 성장 ‘정상 궤도’에 오르고 있다며 엔비디아 목표주가 200달러로 상향",
           "imageUrl": null
         }
       ]
