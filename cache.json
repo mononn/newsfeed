@@ -182,6 +182,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "ad57cd8c-478d-45d9-8215-d9b2fd9820d8",
+          "author": "Romain Pelisse",
+          "description": "Event-Driven Ansible is a powerful extension to Red Hat Ansible Automation Platform that leverages the automation infrastructure to provide the ability to react to change or problems. In short, Event-Driven Ansible can trigger Ansible playbooks (or Ansible Automation Platform's Job Templates) if a certain event is detected.\nIn this article, we will provide a series of examples on how to use Event-Driven Ansible to implement several remediation strategies based on activities in the environment. We'll use Red Hat JBoss Enterprise Application Platform (JBoss EAP), part of Red Hat Runtimes, as a reference implementation.\nEnvironment set up: Podman\nTo keep it simple and easy to reproduce, we will set up our Ansible controller inside into a Podman container based on the latest Fedora release. As…",
+          "link": "https://developers.redhat.com/articles/2025/01/09/implement-remediation-strategies-event-driven-ansible",
+          "publishedOn": "2025-01-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Implement remediation strategies with Event-Driven Ansible",
+          "imageUrl": null
+        },
+        {
+          "id": "85275640-1854-4a19-a72e-6ef4fc03af8c",
+          "author": "Antoine Tenart",
+          "description": "Dumping traffic on a network interface is one of the most performed steps while debugging networking and connectivity issues. On Linux, tcpdump is probably the most common way to do this, but some use Wireshark too.\nWhere does tcpdump get the packets from?\nInternally, both tcpdump and Wireshark use the Packet Capture (pcap) library. When capturing packets, a socket with the PF_PACKET domain is created (see man packet) which allows you to receive and send packets at the layer 2 from the OSI model.\nFrom libpcap:\nsock_fd = is_any_device ?\n       socket(PF_PACKET, SOCK_DGRAM, 0) :\n       socket(PF_PACKET, SOCK_RAW, 0);\nNote that the last parameter in the socket call is later set to a specific protocol, or ETH_P_ALL if none is explicitly provided. The latter makes all packets to be received by …",
+          "link": "https://developers.redhat.com/articles/2025/01/09/dumping-packets-anywhere-networking-stack",
+          "publishedOn": "2025-01-09T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Dumping packets from anywhere in the networking stack",
+          "imageUrl": null
+        },
+        {
           "id": "1a656bdd-b496-4c52-8450-04cba2eb665b",
           "author": "Antoine Tenart",
           "description": "Virtual routing and forwarding (VRF) is a network virtualization technique allowing traffic isolation at the layer 3 (L3) of the OSI model by creating independent routing and forwarding domains. It is essentially the combination of a separate routing table and associated network interfaces.\nOther networking techniques exist but are operating at a different levels—such as VLAN and network namespaces, respectively at the layer 2 and at the device level. Those techniques can be combined, e.g., a VRF can be part of a network namespace and/or VLANs can be attached to a VRF. Note that a network namespace might look like a way to emulate a VRF but they differ in how traffic is handled, notably VRF does not impact layer 2 (L2) traffic.\nIn the Linux kernel VRF is supported under the CONFIG_NET_VRF …",
@@ -380,36 +400,6 @@
           "wordCount": null,
           "title": "Migration Toolkit for Applications: Report analysis, customization, and troubleshooting",
           "imageUrl": null
-        },
-        {
-          "id": "d572e292-5832-4c78-84cc-f05e19e7c8ac",
-          "author": "Colleen Lobner",
-          "description": "We're revisiting the most popular articles published on Red Hat Developer in 2024, this time taking a look back at the best of Kubernetes and Red Hat OpenShift.\nIn June 2014, the first Kubernetes commit was pushed to GitHub; ten years later, the open source platform has become a cornerstone for developers building, scaling, and managing containerized applications.\nRed Hat OpenShift, which is built on top of Kubernetes, provides an application platform that helps reduce the complexity of creating and modernizing cloud-native applications. Like Kubernetes, OpenShift continues to evolve rapidly to meet new use cases, including support for real-time analytics, virtualized workloads, and AI/ML solutions.\nLearn more: What's new for developers in OpenShift 4.17\nThe 10 most popular Kubernetes and …",
-          "link": "https://developers.redhat.com/articles/2024/12/11/our-top-kubernetes-and-openshift-articles-2024",
-          "publishedOn": "2024-12-11T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Our top Kubernetes and OpenShift articles of 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "07955c1b-4dd5-4344-9cb6-f725e66d2640",
-          "author": "Nikita Popov",
-          "description": "Undefined behavior (UB) in the C programming language is a regular source of heated discussions among programmers. On the one hand, UB can be important for compiler optimizations. On the other hand, it makes is easy to introduce bugs that lead to security issues.\nThe good news is that N3322 has been accepted for C2y, which will remove undefined behavior from one particular corner of the C language, making all of the following well-defined:\nmemcpy(NULL, NULL, 0);\nmemcmp(NULL, NULL, 0);\n(int *)NULL + 0;\n(int *)NULL - 0;\n(int *)NULL - (int *)NULL;\nThis only applies when a null pointer is combined with a \"zero-length\" operation. The following are still undefined:\nmemcpy(NULL, NULL, 4);\n(int *)NULL + 4;\nThe removal of this undefined behavior is not expected to have any negative impact on perfor…",
-          "link": "https://developers.redhat.com/articles/2024/12/11/making-memcpynull-null-0-well-defined",
-          "publishedOn": "2024-12-11T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Making memcpy(NULL, NULL, 0) well-defined",
-          "imageUrl": null
-        },
-        {
-          "id": "a31d55e5-ee0b-476b-ada0-8c0a20d9b3fd",
-          "author": "Valentin Rothberg, Liora Milbaum, Ben Breard, Preethi Thomas",
-          "description": "In prior articles, we introduced a new technology called bootable containers and discussed how we can debug image mode for Red Hat Enterprise Linux (RHEL). This article gives a comprehensive view of how to set up CI/CD pipelines for automating the build process when working with image mode for RHEL. \nToday, many developers use GitHub and GitLab to manage their source code and CI/CD activities, so we will focus on these two environments in this article and present some best practices and tools. In a subsequent article, we will take a closer look at testing image mode for RHEL at scale.\nNote: There is a plethora of resources for diving into the world of image mode for RHEL and bootable containers. The Fedora community provides an excellent getting started guide along with hands-on videos and…",
-          "link": "https://developers.redhat.com/articles/2024/11/22/creating-cicd-pipelines-image-mode-rhel",
-          "publishedOn": "2024-12-11T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to create CI/CD pipelines for image mode for RHEL",
-          "imageUrl": null
         }
       ]
     },
@@ -457,6 +447,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4493503",
+          "author": "Stefano Lovati",
+          "description": "Imec has announced the successful demonstration of electrically-driven GaAs-based multi-quantum-well nano-ridge laser diodes that were entirely, monolithically fabricated on 300 mm silicon wafers in its CMOS pilot prototyping line. This achievement is a significant milestone in the field of silicon photonics. The results, which were detailed in the Nature publication last week, demonstrate the potential […]\nThe post Imec Pioneers Full Wafer-Scale Production of GaAs-Based Nano-Ridge Lasers on 300mm Silicon Wafers appeared first on Embedded.",
+          "link": "https://www.embedded.com/imec-pioneers-full-wafer-scale-production-of-gaas-based-nano-ridge-lasers-on-300mm-silicon-wafers/",
+          "publishedOn": "2025-01-09T17:55:00.000Z",
+          "wordCount": null,
+          "title": "Imec Pioneers Full Wafer-Scale Production of GaAs-Based Nano-Ridge Lasers on 300mm Silicon Wafers",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492851",
+          "author": "Stefano Lovati",
+          "description": "With SPICE simulation, designers can create their custom components using the .MODEL directive. This approach allows users to define behavioral models for electronic components such as diodes, transistors, or switches, adapting them to specific design needs. Introduction The .MODEL directive in SPICE allows users to define the characteristics of a custom electronic component, providing specific […]\nThe post Guide to SPICE Simulation for Circuit Analysis and Design – Part 18: Creating Your Own Component with the .MODEL Directive appeared first on Embedded.",
+          "link": "https://www.embedded.com/guide-to-spice-simulation-for-circuit-analysis-and-design-part-18-creating-your-own-component-with-the-model-directive/",
+          "publishedOn": "2025-01-09T09:03:00.000Z",
+          "wordCount": null,
+          "title": "Guide to SPICE Simulation for Circuit Analysis and Design – Part 18: Creating Your Own Component with the .MODEL Directive",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4493439",
+          "author": "Stefano Lovati",
+          "description": "Qt Group has introduced Qt Accelerate, a streamlined solution for developing applications in digital devices for various use cases, including industrial manufacturing, mobility, and consumer electronics, among others. Developed on the Qt Framework, Qt Accelerate provides customers with readily deployable, industry-standard templates for software-defined products, which may be effortlessly tailored in appearance, usability, and functionality. […]\nThe post Qt Group Boosts Digital Product Development with Low-Code Solution Qt Accelerate appeared first on Embedded.",
+          "link": "https://www.embedded.com/qt-group-boosts-digital-product-development-with-low-code-solution-qt-accelerate/",
+          "publishedOn": "2025-01-08T20:59:00.000Z",
+          "wordCount": null,
+          "title": "Qt Group Boosts Digital Product Development with Low-Code Solution Qt Accelerate",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492434",
           "author": "Maurizio Di Paolo Emilio",
@@ -926,66 +946,6 @@
           "wordCount": null,
           "title": "Global Semiconductor Industry Plans $400B Investment in 300-mm Fab Equipment Over Next Three Years",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492964",
-          "author": "Stefano Lovati",
-          "description": "CEA-Leti research engineers have, for the first time, demonstrated a scalable hafnia-zirconia-based ferroelectric capacitor platform integrated into the back-end-of-line (BEOL) at the 22nm FD-SOI technology node. This advancement, announced today at the IEDM 2024 conference, signifies substantial progress in ferroelectric memory technology, greatly enhancing scalability for embedded applications and establishing ferroelectric RAM (FeRAM) as a […]\nThe post CEA-Leti Showcases an Embedded FeRAM Scalable Platform at IEDM 2024 appeared first on Embedded.",
-          "link": "https://www.embedded.com/cea-leti-showcases-an-embedded-feram-scalable-platform-at-iedm-2024/",
-          "publishedOn": "2024-12-10T21:59:00.000Z",
-          "wordCount": null,
-          "title": "CEA-Leti Showcases an Embedded FeRAM Scalable Platform at IEDM 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492961",
-          "author": "Stefano Lovati",
-          "description": "Anritsu Corporation announced that the National Astronomical Observatory of Japan (NAOJ) has chosen the Anritsu 400G Tester and Optical Spectrum Analyzer MS9740B to assess a new data transmission system (DTS) for the Atacama Large Millimeter/submillimeter Array (ALMA) in Chile. The Network Master Pro MT1040A of the 400G Tester was utilized to assess the DTS communication […]\nThe post NAOJ Selects Anritsu Tester and Optical Spectrum Analyzer to Evaluate a New Data Transmission System for the ALMA Radio Telescope appeared first on Embedded.",
-          "link": "https://www.embedded.com/naoj-selects-anritsu-tester-and-optical-spectrum-analyzer-to-evaluate-a-new-data-transmission-system-for-the-alma-radio-telescope/",
-          "publishedOn": "2024-12-10T21:20:00.000Z",
-          "wordCount": null,
-          "title": "NAOJ Selects Anritsu Tester and Optical Spectrum Analyzer to Evaluate a New Data Transmission System for the ALMA Radio Telescope",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492958",
-          "author": "Stefano Lovati",
-          "description": "Crypto Quantique, a supplier of quantum-based security for the Internet of Things (IoT), has enhanced its QuarkLink IoT device security platform with a hybrid post-quantum cryptographic method. QuarkLink is a cohesive, scalable, cloud-based software platform that diminishes the time and cost of executing essential security activities in embedded devices (IoT) and industrial PCs by as […]\nThe post Crypto Quantique Introduces Post-Quantum Cryptography (PQC) in its QuarkLink IoT Device Security Platform appeared first on Embedded.",
-          "link": "https://www.embedded.com/crypto-quantique-introduces-post-quantum-cryptography-pqc-in-its-quarklink-iot-device-security-platform/",
-          "publishedOn": "2024-12-10T20:59:00.000Z",
-          "wordCount": null,
-          "title": "Crypto Quantique Introduces Post-Quantum Cryptography (PQC) in its QuarkLink IoT Device Security Platform",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492944",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "STMicroelectronics has unveiled the STM32N6 MCU series, the most powerful in the STM32 family, featuring the proprietary Neural-ART Accelerator NPU for embedded inference. With these microcontrollers, devices can now handle tasks like computer vision, audio processing, and sound analysis, which were previously too complex for small systems. This makes it easier for developers to create […]\nThe post STMicroelectronics Unveils STM32N6 with Neural-ART Accelerator NPU for Edge AI appeared first on Embedded.",
-          "link": "https://www.embedded.com/stmicroelectronics-unveils-stm32n6-with-neural-art-accelerator-npu-for-edge-ai/",
-          "publishedOn": "2024-12-10T16:57:19.000Z",
-          "wordCount": null,
-          "title": "STMicroelectronics Unveils STM32N6 with Neural-ART Accelerator NPU for Edge AI",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492378",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "The growing demand from consumers to create, connect, play and learn on the go has processor manufacturers aiming to develop a system with exceptional performance, long battery life, uncompromising application compatibility and enhanced security, and with broad software availability that can take full advantage of AI hardware. In this article, we highlight some features of […]\nThe post Core Ultra 200V Series Processors at the Forefront of AI Performance and Energy Efficiency appeared first on Embedded.",
-          "link": "https://www.embedded.com/core-ultra-200v-series-processors-at-the-forefront-of-ai-performance-and-energy-efficiency/",
-          "publishedOn": "2024-12-10T15:34:00.000Z",
-          "wordCount": null,
-          "title": "Core Ultra 200V Series Processors at the Forefront of AI Performance and Energy Efficiency",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492806",
-          "author": "Stefano Lovati",
-          "description": "In an era of smartphones, smart TVs, and other connected devices, robots are the ultimate smart devices. As innovations, robots have come a long way and they still have a lot of potential. The term “robot” was coined and popularized by science fiction writers about 100 years ago. Today, robots are being developed that can […]\nThe post Innovation Update: MEET THE ROBOTS! appeared first on Embedded.",
-          "link": "https://www.embedded.com/innovation-update-meet-the-robots/",
-          "publishedOn": "2024-12-10T09:42:00.000Z",
-          "wordCount": null,
-          "title": "Innovation Update: MEET THE ROBOTS!",
-          "imageUrl": null
         }
       ]
     },
@@ -1064,6 +1024,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/unlocking-the-potential-of-quantum-computing-a-developers-guide-to-error-correction/",
+          "author": null,
+          "description": "A free Coursera course on quantum error correction, developed by Google Quantum AI, explains the importance of error correction in quantum computing and provides an overview of quantum errors.",
+          "link": "https://developers.googleblog.com/en/unlocking-the-potential-of-quantum-computing-a-developers-guide-to-error-correction/",
+          "publishedOn": "2025-01-09T20:16:46.133Z",
+          "wordCount": null,
+          "title": "Unlocking the Potential of Quantum Computing: A Developer’s Guide to Error Correction",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
           "author": null,
@@ -1555,16 +1525,6 @@
           "wordCount": null,
           "title": "WSL2 for Firmware Development",
           "imageUrl": null
-        },
-        {
-          "id": "https://interrupt.memfault.com/blog/upgrading-from-nrf5-sdk-to-ncs",
-          "author": null,
-          "description": "In this article, we’ll walk you through our journey, the challenges we faced,\nand how this migration is shaping a better future for those who rely on our\ntechnology to improve their health and fitness.\nContinue reading…",
-          "link": "https://interrupt.memfault.com/blog/upgrading-from-nrf5-sdk-to-ncs",
-          "publishedOn": "2024-12-11T00:00:00.000Z",
-          "wordCount": null,
-          "title": "How to Transition from nRF5 SDK to Zephyr NCS － Lessons from Ultrahuman’s Journey",
-          "imageUrl": null
         }
       ]
     },
@@ -1603,6 +1563,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1004614/",
+          "author": "corbet",
+          "description": "Version\n1.84.0 of the Rust language has been released.  Changes include\nimproved version selection for dependencies in Cargo, the beginning of the\nmigration to a new trait solver, and some updated pointer-provenance APIs.\n\n\n\tMost of the time, programmers do not need to worry much about\n\tprovenance, and it is very clear how a pointer got\n\tderived. However, when casting pointers to integers and back, the\n\tprovenance of the resulting pointer is underspecified. With this\n\trelease, Rust is adding a set of APIs that can in many cases\n\treplace the use of integer-pointer-casts, and therefore avoid the\n\tambiguities inherent to such casts. In particular, the pattern of\n\tusing the lowest bits of an aligned pointer to store extra\n\tinformation can now be implemented without ever casting a pointer\n\tto an integer or back. This makes the code easier to reason about,\n\teasier to analyze for the compiler, and also benefits tools like\n\tMiri and architectures like CHERI that aim to detect and diagnose\n\tpointer misuse.",
+          "link": "https://lwn.net/Articles/1004614/",
+          "publishedOn": "2025-01-09T18:29:21.000Z",
+          "wordCount": null,
+          "title": "Rust 1.84.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1004595/",
+          "author": "corbet",
+          "description": "The Software Freedom Conservancy is reporting\nthat AVM has released the full source and installation scripts for its\nrouters in response to a lawsuit, filed by Sebastian Steck, based on Lesser\nGNU Public License rights.\n\n\n\tHistorically, lawsuits have focused on the copyrights licensed\n\tunder GPL (or the GPL and LGPL together). Steck's lawsuit uniquely\n\tfocused exclusively on users' rights under the LGPL. Steck's work\n\tshowed that despite being a \"Lesser\" license than GPL, LGPLv2.1\n\tstill guarantees users the right to repair, modify and reinstall\n\tmodified versions of the software on their device. There is now no\n\tdoubt that both GPL and LGPL mandate the device owner's ability to\n\tmake changes to the software in the flash memory so those changes\n\tpersist across reboots.",
+          "link": "https://lwn.net/Articles/1004595/",
+          "publishedOn": "2025-01-09T15:31:02.000Z",
+          "wordCount": null,
+          "title": "SFC reports a successful (L)GPL suit in Germany",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1004029/",
+          "author": "corbet",
+          "description": "Attacks on the kernel can take many forms; one popular exploitation path is\nto find a way to overwrite some memory with attacker-supplied data.  If the\nright memory can be targeted, one well-targeted stray write is all that is\nneeded to take control of the system.  Since the system's page tables\nregulate access to memory, they are an attractive target for this type of\nattack.  This patch \nset from Kevin Brodsky is an attempt to protect page tables (and,\neventually, other data structures) using the \"memory protection keys\"\nfeature provided by a number of CPU architectures.",
+          "link": "https://lwn.net/Articles/1004029/",
+          "publishedOn": "2025-01-09T15:16:17.000Z",
+          "wordCount": null,
+          "title": "[$] Page-table hardening with memory protection keys",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1004548/",
+          "author": "jake",
+          "description": "The 6.12.9, 6.6.70, 6.1.124, 5.15.176, 5.10.233, and 5.4.289 stable kernels have been released.\nAs usual, they contain important fixes all over the kernel tree.",
+          "link": "https://lwn.net/Articles/1004548/",
+          "publishedOn": "2025-01-09T15:00:05.000Z",
+          "wordCount": null,
+          "title": "Six new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1004543/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (cups, kernel, and kernel-rt), Debian (chromium, firefox-esr, and webkit2gtk), Fedora (curl, firefox, gimp, mupdf, openjpeg2, and valkey), Red Hat (389-ds-base, cups, firefox, iperf3, kernel, kernel-rt, libreswan, python3.11-urllib3, thunderbird, and webkit2gtk3), Slackware (firefox, seamonkey, and thunderbird), SUSE (apptainer, firefox-esr, libopenjp2-7, libruby3_4-3_4, openjpeg2, and tomcat10), and Ubuntu (firefox, linux-azure, linux-azure, linux-azure-4.15, linux-azure, linux-azure-6.8, linux-azure, linux-intel-iotg-5.15, linux-azure-5.15, python2.7, thunderbird, and xfpt).",
+          "link": "https://lwn.net/Articles/1004543/",
+          "publishedOn": "2025-01-09T14:39:46.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1003479/",
+          "author": "corbet",
+          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: What to expect in 2025; Sequoia; Emacs in Scheme; Pony; Homa; 2024 Timeline.\n            \n Briefs: Colliding SHAs; netdev in 2024; Gentoo retrospective; LineageOS 22.1; pkgsrc-2024Q4; RIP Steve Langasek; Firefox 134.0; Algol 68; Ruby 3.4; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
+          "link": "https://lwn.net/Articles/1003479/",
+          "publishedOn": "2025-01-09T00:12:33.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for January 9, 2025",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1003243/",
           "author": "daroc",
@@ -2352,56 +2372,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001657/",
-          "author": "corbet",
-          "description": "Systemd 257 has been released.  As usual, the list of changes is long; it\nincludes support for multipath TCP in socket units, the ability to run\nprocesses as init in their own PID namespace, a new tool for signing EFI\nbinaries for secure boot,\nand a superhero emoji in the run0 shell prompt, among many other things. \nAlso, support for version-1 control groups has been disabled and requires\nan elaborate dance to re-enable; it will be removed entirely in the next\nrelease, along with support for System V service scripts.",
-          "link": "https://lwn.net/Articles/1001657/",
-          "publishedOn": "2024-12-10T22:20:08.000Z",
-          "wordCount": null,
-          "title": "Systemd 257 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001634/",
-          "author": "jzb",
-          "description": "Fedora Project Leader (FPL) Matthew Miller writes that he will soon be hanging up the FPL hat:\nStay tuned for a job posting from Red Hat, and details about all\nthat. I'm hoping we can hire someone awesome early in 2025, and make\nthe official handover on the release of auspiciously-numbered Fedora\nLinux 42.\nI'm not going to leave Fedora, though. As I said above, although it\nmight not always feel like it from the outside, Red Hat support for\nFedora is stronger than ever, and I plan on helping that grow even\nmore. I'm stepping into a full-time management role in the Community\nLinux Engineering organization, so Fedora will still be part of my day\njob, just in a different way.",
-          "link": "https://lwn.net/Articles/1001634/",
-          "publishedOn": "2024-12-10T17:11:01.000Z",
-          "wordCount": null,
-          "title": "A change of hats! (Fedora Magazine)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/998893/",
-          "author": "jake",
-          "description": "In a session at\nOpen Source Summit Europe\n(OSSEU) back in September, Alex Bucknall gave an overview of a camera \"trap\"—a\ndevice to capture images in a non-intrusive way—that he helped develop \nwhich is being used to monitor seagrass.  He works for\nthe Arribada Initiative, which is a\nnon-profit organization\nfocused on creating open-source technology for studying wildlife and ecosystems.\nThe camera system uses the Zephyr\nrealtime operating system (RTOS) on an open platform that is designed to be\ninexpensive and usable for multiple applications.",
-          "link": "https://lwn.net/Articles/998893/",
-          "publishedOn": "2024-12-10T16:38:46.000Z",
-          "wordCount": null,
-          "title": "[$] A Zephyr-based camera trap for seagrass monitoring",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001599/",
-          "author": "corbet",
-          "description": "Version\n1.0.0 of the GNU Shepherd service manager has been released after a\nmere 21 years of development.\n\n\n\tThis 1.0.0 release is published today because we think Shepherd has\n\tbecome a solid tool, meeting user experience standards one has come\n\tto expect since systemd changed the game of free init systems and\n\tservice managers alike. It's also a major milestone for Guix, which\n\thas been relying on the Shepherd from a time when doing so counted\n\tas dogfooding.",
-          "link": "https://lwn.net/Articles/1001599/",
-          "publishedOn": "2024-12-10T14:34:02.000Z",
-          "wordCount": null,
-          "title": "GNU Shepherd 1.0.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1001597/",
-          "author": "corbet",
-          "description": "Security updates have been issued by AlmaLinux (postgresql:15, postgresql:16, and ruby:3.1), Debian (jinja2), Fedora (python-multipart, python-python-multipart, python3.12, retsnoop, rust-rbspy, rust-rustls, and zabbix), Oracle (kernel, libsoup, postgresql:12, postgresql:13, postgresql:15, postgresql:16, redis:7, and ruby:3.1), SUSE (nodejs18, pam, qt6-webengine, and radare2), and Ubuntu (dogtag-pki, linux-intel-iotg, linux-intel-iotg-5.15, ofono, rabbitmq-server, and webkit2gtk).",
-          "link": "https://lwn.net/Articles/1001597/",
-          "publishedOn": "2024-12-10T14:30:05.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2427,6 +2397,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/2024-music.html",
+          "author": null,
+          "description": "I've got into the habit of starting the New Year by sharing six\n      favorite albums I discovered during the last year. This years set includes\n      Celtic jazz, trip-hop neo-fado, jazz-fusion for the 2020's, playful\n      harmonies, and a vibrant collaboration between  Indian classical musicians and a\n      string quartet. (I was also unable to limit myself to six.)\nmore…",
+          "link": "https://martinfowler.com/articles/2024-music.html",
+          "publishedOn": "2025-01-09T14:49:00.000Z",
+          "wordCount": null,
+          "title": "My favorite musical discoveries of 2024",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/articles/codemods-api-refactoring.html#RefactoringAnAvatarComponent",
           "author": null,
@@ -2455,16 +2435,6 @@
           "publishedOn": "2024-12-12T09:36:00.000Z",
           "wordCount": null,
           "title": "Design Token-Based UI Architecture",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/designing-data-products.html#HowBigShouldDataProductsBe",
-          "author": null,
-          "description": "Once we've designed our initial data products, Kiran\n       Prakash finishes his article by leading us through the\n       next steps: identifying common patterns, improving the developer\n       experience, and handling governance.\nmore…",
-          "link": "https://martinfowler.com/articles/designing-data-products.html#HowBigShouldDataProductsBe",
-          "publishedOn": "2024-12-10T14:22:00.000Z",
-          "wordCount": null,
-          "title": "Designing Data Products: next steps",
           "imageUrl": null
         }
       ]
@@ -2735,16 +2705,6 @@
           "wordCount": null,
           "title": "아메리카 대륙은 발견되자마자 잊혀졌다. 유럽은 아직 그것이 필요하지 않았기 때문이다.",
           "imageUrl": null
-        },
-        {
-          "id": "http://economicview.net/?p=85653",
-          "author": "sticky",
-          "description": "이미지 출처 영국은 공학 분야에서 탁월한 역량을 과시했지만 자동차산업은 개발이 더딘 편이었다. 자동차의 등장에 위협을 느낀 철도산업 관계자들이 의회를 압박하여 ‘붉은깃발법(Red Flag Act)’을 통과시킨 탓이었다. ‘붉은깃발법’에 의하면 ‘길 위의 기관차’ 자동차는 시내에서 시속 2마일(약 3.2킬로미터) 이상으로 달릴 수 없었다. 따라서 보행자가 시속 3마일(약 4.8킬로미터)으로 걸으면 자동차보다 빨리 갈 수 있었다. 시골에서는 시속 4마일(6.4킬로미터)까지 가속페달을 밟을 […]",
-          "link": "http://economicview.net/85653/",
-          "publishedOn": "2024-12-10T22:25:46.000Z",
-          "wordCount": null,
-          "title": "‘붉은깃발법’은 어리석은 법인가?",
-          "imageUrl": null
         }
       ]
     },
@@ -2753,6 +2713,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=125845",
+          "author": "신현호",
+          "description": "살레하 모신(블룸버그 기자)은 경제-정치-국제관계라는 삼각 축에서 ‘달러’의 모습을 성공적으로 그려냈다. 역대 미국 재무부 인사들을 광범위하게 인터뷰한 결과물이라 정책의 결정 과정과 정치적 논란까지 접할 수 있다. 이 점에서 실무가들에게 매우 유용하다. 책의 주제는 ‘환율과 관련된 거시경제정책’과 ‘금융 제재 수단으로서의 달러 체제’ 둘로 구분할 수 있다. 두 번째 부분은 대다수 이코노미스트에게 생소할 것이다. 나는 과거 이와 관련된...\nThe post 치명적 무기: 금융 제재 수단으로서의 달러 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/125845",
+          "publishedOn": "2025-01-09T02:27:04.000Z",
+          "wordCount": null,
+          "title": "치명적 무기: 금융 제재 수단으로서의 달러",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=125808",
+          "author": "이정환",
+          "description": "윤석열인가? “술을 몇 주째 입에도 안 대고 있다.” 대통령 관저에 패닉룸 있다. 윤석열의 제안, “구속영장을 청구하면 받겠다.” 쟁점과 현안. 김건희 특검법 4번째 폐기. 한남동 요새, 어떻게 뚫을까. 더 깊게 읽기. 특검으로 넘겨라, 조선일보는 오늘도 프레임 전쟁. 중앙일보와 동아일보는 이미 손절. 명태균-윤석열 카톡 나왔다. 다르게 읽기. 페이스북 팩트체킹 폐지. 재정판 양두구육, 지금이 바로잡을 때. 임시 공휴일,...\nThe post 다급한 윤석열, “구속영장 청구하면 받겠다”는 시간끌기 꼼수: 슬로우레터 1월9일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/125808",
+          "publishedOn": "2025-01-08T22:25:37.000Z",
+          "wordCount": null,
+          "title": "다급한 윤석열, “구속영장 청구하면 받겠다”는 시간끌기 꼼수: 슬로우레터 1월9일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=125433",
           "author": "박미숙",
@@ -3372,26 +3352,6 @@
           "wordCount": null,
           "title": "“함께 폭력에 맞서야죠”: 슬로우레터 12월12일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=122013",
-          "author": "민노씨",
-          "description": "한국은 지금 민주주의와 경제라는 두 날개 가운데 하나를 잃을 위험에 처해 있다. 예전에는 경제 안정을 위해 민주주의를 유보한다는 논리가 통했다. 하지만 이제는 다르다. 민주주의가 날갯짓을 멈추는 순간, 경제라는 다른 날개도 같이 멈춘다.  이상헌, 2024.12.08. 절대 평가와 상대 평가 ESG의 기본적인 논의 틀은 다음과 같다. ESG는 환경(Environmental), 사회(Social) 그리고 거버넌스(Governance)인데, ‘거버넌스’를 ‘지배구조’로 번역하는 건 좀 센...\nThe post ESG, ‘투자 기준’이라는 전략적 지렛대 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/122013",
-          "publishedOn": "2024-12-11T03:13:32.000Z",
-          "wordCount": null,
-          "title": "ESG, ‘투자 기준’이라는 전략적 지렛대",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=123470",
-          "author": "이정환",
-          "description": "윤석열 2차 탄핵안 표결 D-3. 내년 4월 대선 유력. “문 부수고 끄집어내라.” 수방사 B-1 벙커에 의원들 가둘 계획이었다. 쟁점과 현안. 윤석열 내란 상설특검 통과. 윤석열 체포 결의안도 통과. 현직 경찰청장 체포는 처음. 윤석열의 선택은? 박근혜 탄핵과 닮은 꼴 셋. 이재명 불출마 요구, 먹힐까. 윤석열 구속은 시간 문제. “한국의 통치 체제가 마비됐다.” 더 깊게 읽기. 그날...\nThe post 윤석열 ‘가짜 출근’ 의혹도… 술 마신 다음날 빈차만 먼저 보냈나: 슬로우레터 12월11일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/123470",
-          "publishedOn": "2024-12-10T22:34:57.000Z",
-          "wordCount": null,
-          "title": "윤석열 ‘가짜 출근’ 의혹도… 술 마신 다음날 빈차만 먼저 보냈나: 슬로우레터 12월11일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3629,46 +3589,6 @@
           "wordCount": null,
           "title": "12/12, 오펜하이머, 최고의 미국 주식 전망, 25년  “S&P500 지수 7,100까지 오를 것”",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=596929",
-          "author": "happist",
-          "description": "2022년 10월 챗 GPT 등장이후 클라우드 전쟁에는 변화가 생겼는데요. 오픈 AI에 적극 투자한 마이크로소프트가 인공지능 관련 선점을 시작하면서 클라우드도 AI가 강력한 영향을 미치기 시작했습니다. 그러면서 상대적으로 인공지는 투자에 뒤진 아마존 앱 서비스는 시장 지위를 상대적으로 잃고 있다는 분석이 나오고 잇습니다. 인공지능 시대 클라우드 업계 어덯게 움직이고 있는지 살펴봤습니다. 클라우드 AI 전재의 승자는 누구인가? Microsoft 대 […]",
-          "link": "https://happist.com/596929/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-ai-%ec%a0%84%ec%9f%81%ec%9d%98-%ec%8a%b9%ec%9e%90%eb%8a%94-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-vs-%ec%95%84%eb%a7%88%ec%a1%b4-vs",
-          "publishedOn": "2024-12-11T05:29:20.000Z",
-          "wordCount": null,
-          "title": "클라우드 AI 전쟁의 승자는?  마이크로소프트 vs 아마존 vs 구글",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=596925",
-          "author": "happist",
-          "description": "블름버그는 24년 11월 TSMC 매출이 34% 증가했다고 보도하며 일각에서 주장하는 AI 수요 감소에 다른 데이터센터 매출 감소 우려 불식했다고 보도했습니다. 이는 엔비디아 주가에도 긍정적으로 작용할 수 있어 공유해봅니다. TSMC 11월 매출은 31.4% 증가해 일각의 데이터센터 수요가 감소할 것이라는 일각의 우려를 불식시키고 AI 수요의 지속적인 성장을 반영한다고 블름버그가 보도했습니다. 애플과 엔비디아의 주요 칩 제조 메이커인 대만 […]",
-          "link": "https://happist.com/596925/tsmc-%eb%a7%a4%ec%b6%9c-%ec%a6%9d%ea%b0%80%ec%99%80-ai-%ec%88%98%ec%9a%94-%ec%a6%9d%ea%b0%80",
-          "publishedOn": "2024-12-10T17:43:55.000Z",
-          "wordCount": null,
-          "title": "름버그, TSMC 11월 매출 34% 증가, AI 수요 감소 우려 불식",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=596917",
-          "author": "happist",
-          "description": "골드만삭스는 20205년 미국 주식 전망을 통해서 2025년 S&P 500 지수는 10% 상승할 것이라고 예상했습니다. 골드만삭스 리서치에 따르면 미국 주식의 벤치마크 지수는 현재 수준에서 9%의 가격 상승과 배당금을 포함한 총 수익률 10%로 2025년 말까지 6,500까지 상승할 것으로 전망됩니다. 기업들의 수익은 2025년에는 11%, 2026년에는 7% 증가할 것으로 예측됩니다. 또한 기업 매출 성장은 일반적으로 명목 GDP 성장과 함께 […]",
-          "link": "https://happist.com/596917/%ea%b3%a8%eb%93%9c%eb%a7%8c-2025%eb%85%84-%eb%af%b8%ea%b5%ad-%ec%a3%bc%ec%8b%9d-%ec%a0%84%eb%a7%9d",
-          "publishedOn": "2024-12-10T10:21:35.000Z",
-          "wordCount": null,
-          "title": "골드만삭스, 2025년 미국 주식 전망, S&P 500 10% 상승 예상",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=596913",
-          "author": "happist",
-          "description": "페친이신 이종성님이 분석한 현재 엔비디아 차트 분석을 엔비디아 주가 전망 관련해 공유해 봅니다. 개인 투자자의 의견이니 이를 감안해서 참고하시기 바랍니다. 상승추세 하단에 엔비디아 주가 위치해 차주 하락이 나오면 장기 추세가 무너진다 엔비디아는 현재 상승추세선 하단 A에 주가가 붙어있다.다음주에 만약 장대 음봉이 출현한다면 2년만에 처음으로 장기 추세가 무너지는 그림이 된다.A지점에서 장대음봉이 아니라 양봉이 나와야 상승추세가 이어 […]",
-          "link": "https://happist.com/596913/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%ec%b0%a8%ed%8a%b8-%eb%b6%84%ec%84%9d",
-          "publishedOn": "2024-12-10T09:32:11.000Z",
-          "wordCount": null,
-          "title": "엔비디아 차트 분석 – 엔비디아 주가 장기 상승세 유지할 수 있을까?",
-          "imageUrl": null
         }
       ]
     },
@@ -3677,6 +3597,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80291",
+          "author": "ingppoo",
+          "description": "뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 11월 12일 스프에 쓴 글입니다. 미국 선거가 끝난 지 닷새가 지났습니다. 아직 하원 선거구 가운데 여전히 개표가 진행 중인 곳이 있어 과반 의석을 확보한 정당이 공식적으로는 나오지 않았지만, 공화당이 다음 회기에도 아슬아슬한 하원 과반 → 더 보기",
+          "link": "https://newspeppermint.com/2025/01/08/npsp_voterstoelite/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_voterstoelite",
+          "publishedOn": "2025-01-08T22:59:51.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] “뻔한 정답 놓고 고집 부린 결과”… 선거 진 민주당 앞의 갈림길",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80568",
           "author": "NewsPeppermint",
@@ -3815,16 +3745,6 @@
           "publishedOn": "2024-12-13T23:30:01.000Z",
           "wordCount": null,
           "title": "미국도 네 번뿐이었는데 우리는? 잦은 탄핵이 좋은 건 아니지만…",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=80428",
-          "author": "NewsPeppermint",
-          "description": "윤석열 대통령의 계엄령 선포와 해제 이후 미국 언론도 한국에서 일어나는 정치적 사태에 큰 관심을 보이고 있습니다. 특히 민주주의가 공고화된 동맹국 중 하나인 한국에서 2024년에 계엄령이 선포된 데 놀라움을 표한 이들이 많습니다. 다음달 두 번째 임기를 시작하는 트럼프 대통령도 불법 이민자를 추방하는 데 군대를 동원하겠다는 공약을 거듭 확인하고 있는데요, 그렇다면 미국에서도 계엄령이 선포될 수 있을까요? 역사적 사례를 토대로 짚어봤습니다. 전문 번역: “발전한 한국에서 계엄이라니” 놀란 미국인들, “혹시 미국에서도?” 묻는다면 해설: “부정 선거” → 더 보기",
-          "link": "https://newspeppermint.com/2024/12/11/npsp_martiallaw/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_martiallaw",
-          "publishedOn": "2024-12-11T06:00:01.000Z",
-          "wordCount": null,
-          "title": "“부정 선거” 우기던 트럼프가 계엄령이라는 카드는 내쳤던 이유",
           "imageUrl": null
         }
       ]
