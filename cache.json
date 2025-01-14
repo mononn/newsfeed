@@ -92,16 +92,6 @@
           "wordCount": null,
           "title": "GSoC 2024: Improve Clang Doc",
           "imageUrl": null
-        },
-        {
-          "id": "https://blog.llvm.org/posts/2024-11-23-gsoc-windows-plugins/",
-          "author": null,
-          "description": "Hello everyone! My name is Thomas and for GSOC I’ve been working on adding plugin support for LLVM and Clang to windows, which mainly involved implementing proper support for building LLVM and Clang as shared libraries (known as DLLs on Windows, dylibs on macOS, or DSOs/SOs on most other Unices) on Windows.\nBackground\nThe LLVM CMake buildsystem had some existing support for building LLVM as a shared library on Windows, but it suffers from two limitations when trying to make code symbol visibility for DLLs work like Linux.Most of the environments that LLVM works on use ELF as the object and executable file format. Windows, however, uses PE as its executable file format and COFF as its object file format. This difference is important to highlight as it impacts how dynamic libraries operate i…",
-          "link": "https://blog.llvm.org/posts/2024-11-23-gsoc-windows-plugins/",
-          "publishedOn": "2024-12-16T00:00:00.000Z",
-          "wordCount": null,
-          "title": "GSoC 2024: Adding LLVM and Clang plugin support for windows",
-          "imageUrl": null
         }
       ]
     },
@@ -180,6 +170,16 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "8a936bc3-d136-495f-ac12-930a1b053081",
+          "author": "Aaron Merey",
+          "description": "It has been five years since we first introduced debuginfod, a tool for distributing debugging resources such as executables, debug information, and source files. Since then we have continued to improve debuginfod as well as tools that make use of debuginfod, such as GDB and Valgrind.\nIn this article we'll review some of the notable updates and enhancements to debuginfod over the past year as well as the scale at which public debuginfod servers are operating.\nFirst I will briefly describe what debug info is and how debuginfod helps. Debug info is needed for mapping the binary contents of executables, shared libraries, and core files back to source code. Debug info enables tools to provide detailed information such as the function name, source file, and line number corresponding to binary i…",
+          "link": "https://developers.redhat.com/articles/2025/01/14/debuginfod-project-update-2024",
+          "publishedOn": "2025-01-14T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Debuginfod project update 2024",
+          "imageUrl": null
+        },
         {
           "id": "eaf79074-28ce-48f2-a8f2-9c5027a6f920",
           "author": "Valentin Rothberg, Preethi Thomas, Matt Micene",
@@ -329,46 +329,6 @@
           "wordCount": null,
           "title": "Automatic certificate issuing with IdM and cert-manager operator for OpenShift",
           "imageUrl": null
-        },
-        {
-          "id": "bdc1d4ee-b81f-49d8-953b-bd78b5e85c38",
-          "author": "Christina Zhang",
-          "description": "The first installment in this series provided a brief introduction to the Cluster Observability Operator (COO). This article serves as a detailed guide for configuring alerts within the COO namespace. In the following sections, I will present specific examples for two structural configurations within the COO monitoring stack.\nCase 1: One monitoring stack for multiple namespace. \nCreate a namespace to host the COO instance and utilize this monitoring stack to monitor the namespaces coo-ns2, coo-ns3, and coo-ns4 as shown in Figures 1 and 2.\n\n\n\n  \n        \n\n\n\n  \n\nFigure 1: COO Monitoring Stack structure.\n\n\n\n\n  \n        \n\n\n\n  \n\nFigure 2: One Monitoring Stack for multiple namespace structure.\n\nCreate a project to host the COO monitoring stack. Give a label for the namespace monitoring.rhobs: co…",
-          "link": "https://developers.redhat.com/articles/2024/12/16/step-step-guide-configuring-alerts-cluster-observability-operator",
-          "publishedOn": "2024-12-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Step-by-step guide to configuring alerts in Cluster Observability Operator",
-          "imageUrl": null
-        },
-        {
-          "id": "5ff907c7-43c4-46ff-82e8-816649ee68f1",
-          "author": "Siamak Sadeghianfar",
-          "description": "Builds for OpenShift provides developers with a consistent and secure way to create container images directly within Red Hat OpenShift clusters. With its foundation built on Shipwright, an open source CNCF project, Builds for OpenShift simplifies the process of creating OCI-compliant images using the image build of your choice while leveraging OpenShift's enterprise-grade capabilities.\nBuilds for OpenShift 1.2 is now generally available! This release introduces new features designed to enhance usability, broaden platform support, and enable developers to use Builds in a wider range of environments.\nWhat’s new in Builds for OpenShift 1.2\nThe 1.2 release of Builds for OpenShift focuses on extending the product’s usability across diverse environments and architectures while continuing to impr…",
-          "link": "https://developers.redhat.com/articles/2024/12/16/introducing-builds-openshift-12",
-          "publishedOn": "2024-12-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Introducing Builds for OpenShift 1.2",
-          "imageUrl": null
-        },
-        {
-          "id": "ff3610b5-738a-4a78-8b47-419deb35b38c",
-          "author": "Anna Sherman",
-          "description": "It's that time of year again: we're recapping the highlights from the past year in Red Hat Developer's annual Best of series, showcasing the best of Ansible automation, languages and runtimes, Kubernetes and OpenShift, and more.\nLinux has been a core component of Red Hat's product ecosystem since the very beginning. Red Hat Enterprise Linux (RHEL) continues to add new features and enhancements to support the developer experience, most recently with last month's 9.5 release. This year also brought exciting new capabilities like image mode for Red Hat Enterprise Linux, a new deployment method for RHEL that delivers the platform as a container image.\nOur 10 most popular Linux articles of 2024\nThese top articles cover a variety of topics, from C# 12 to the Go compiler to bootable containers in…",
-          "link": "https://developers.redhat.com/articles/2024/12/16/our-top-linux-articles-2024",
-          "publishedOn": "2024-12-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Our top Linux articles of 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "f142ffd6-884e-43eb-9d6f-413c80ef1798",
-          "author": "Shirly Radco, Leonardo Araujo, Luiz Bernardo Levenhagen",
-          "description": "In Part 1 of this series, we discussed two important dashboards—OpenShift Virtualization Clusters Overview and Single Cluster Overview—which, together with three additional dashboards, will be introduced in Red Hat Advanced Cluster Management for Kubernetes (RHACM) 2.12. These dashboards simplify the monitoring of Red Hat OpenShift Virtualization at scale. This second part dives into the additional three dashboards that will also be available in RHACM 2.12: Single Virtual Machine View, Virtual Machines Inventory, and Virtual Machines by Time in Status.\nWe will explore how these dashboards can help system administrators manage virtual machines (VMs) more efficiently, especially in large, distributed Red Hat OpenShift environments.\nWhat are these three new dashboards, and how can they help m…",
-          "link": "https://developers.redhat.com/articles/2024/12/16/monitoring-openshift-virtualization-scale-red-hat-advanced-cluster-management",
-          "publishedOn": "2024-12-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Monitoring OpenShift Virtualization at scale with Red Hat Advanced Cluster Management: Part 2",
-          "imageUrl": null
         }
       ]
     },
@@ -383,6 +343,16 @@
       "feedUrl": "https://eli.thegreenplace.net/feeds/all.atom.xml",
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
+        {
+          "id": "https://eli.thegreenplace.net/2025/reverse-mode-automatic-differentiation/",
+          "author": null,
+          "description": "<p>Automatic Differentiation (AD) is an important algorithm for calculating the\nderivatives of arbitrary functions that can be expressed by a computer program.\nOne of my favorite CS papers is\n<a class=\"reference external\" href=\"https://arxiv.org/abs/1502.05767\">&quot;Automatic differentiation in machine learning: a survey&quot;</a> by\nBaydin, Perlmutter, Radul and Siskind (ADIMLAS from here on).\nWhile this post attempts …</p>",
+          "link": "https://eli.thegreenplace.net/2025/reverse-mode-automatic-differentiation/",
+          "publishedOn": "2025-01-14T03:02:00.000Z",
+          "wordCount": null,
+          "title": "Reverse mode Automatic Differentiation",
+          "imageUrl": null
+        },
         {
           "id": "https://eli.thegreenplace.net/2024/summary-of-reading-october-december-2024/",
           "author": null,
@@ -416,6 +386,36 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4493577",
+          "author": "Stefano Lovati",
+          "description": "Electromagnetic induction, a method for converting energy into electricity in energy harvesters, has been insufficiently investigated in small systems. A recent study conducted by researchers at SeoulTech investigates novel strategies to improve power generation in cylindrical electromagnetic induction-type vibration energy harvesters by examining magnetic flux gradients and suggesting innovative magnet and coil configurations to optimize […]\nThe post SeoulTech’s Groundbreaking Advancement in Vibration Energy Harvesting appeared first on Embedded.",
+          "link": "https://www.embedded.com/seoultechs-groundbreaking-advancement-in-vibration-energy-harvesting/",
+          "publishedOn": "2025-01-14T18:00:00.000Z",
+          "wordCount": null,
+          "title": "SeoulTech’s Groundbreaking Advancement in Vibration Energy Harvesting",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4492774",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "What Is IoT Security? IoT security refers to the protective measures and protocols to safeguard Internet of Things devices and networks. These devices, interconnected via the internet, span a wide range of applications from simple sensors to complex industrial machines. IoT security involves mitigating risks associated with data breaches, unauthorized data access, and malicious attacks […]\nThe post IoT Security: Trends and Best Practices appeared first on Embedded.",
+          "link": "https://www.embedded.com/iot-security-in-2024-trends-and-best-practices/",
+          "publishedOn": "2025-01-14T09:46:00.000Z",
+          "wordCount": null,
+          "title": "IoT Security: Trends and Best Practices",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4493521",
+          "author": "Stefano Lovati",
+          "description": "Sensor Technology Ltd has announced the introduction of its newest product line, the SGR570 TorqSense series. These sophisticated sensors are engineered to deliver accurate and dependable torque measurements for Power Take-Off (PTO) systems, serving diverse applications in agricultural, construction, and industrial machinery. The SGR570 TorqSense series PTO torque transducers are designed to fulfill the increasing […]\nThe post Sensor Technology Ltd introduces the SGR570 TorqSense PTO Torque Transducers for Improved Power Take-Off Monitoring appeared first on Embedded.",
+          "link": "https://www.embedded.com/sensor-technology-ltd-introduces-the-sgr570-torqsense-pto-torque-transducers-for-improved-power-take-off-monitoring/",
+          "publishedOn": "2025-01-13T20:31:00.000Z",
+          "wordCount": null,
+          "title": "Sensor Technology Ltd introduces the SGR570 TorqSense PTO Torque Transducers for Improved Power Take-Off Monitoring",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4492907",
           "author": "Stefano Lovati",
@@ -1112,26 +1112,6 @@
           "wordCount": 1249,
           "title": "Dive Deep into Gemini: Explore  Starter Apps in AI Studio",
           "imageUrl": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Starter_apps_-_metadata-applet-al.2e16d0ba.fill-1200x600.png"
-        },
-        {
-          "id": "https://developers.googleblog.com/en/enhancing-ai-powered-developer-tools-with-gemini-api/",
-          "author": null,
-          "description": "The integration of Gemini's 1.5 models with Sublayer's Ruby-based AI agent framework enables developer teams to automate their documentation process, streamline workflows, and build AI-driven applications.",
-          "link": "https://developers.googleblog.com/en/enhancing-ai-powered-developer-tools-with-gemini-api/",
-          "publishedOn": "2024-12-15T20:16:43.218Z",
-          "wordCount": null,
-          "title": "Enhancing AI Powered Developer Tools with Gemini API",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/farewell-and-thank-you-for-the-continued-partnership-francois-chollet/",
-          "author": null,
-          "description": "Today, we're announcing that Francois Chollet, the creator of Keras and a leading figure in the AI world, is embarking on a new chapter in his career outside of Google.",
-          "link": "https://developers.googleblog.com/en/farewell-and-thank-you-for-the-continued-partnership-francois-chollet/",
-          "publishedOn": "2024-12-15T20:16:43.218Z",
-          "wordCount": null,
-          "title": "Farewell and thank you for the continued partnership, Francois Chollet!",
-          "imageUrl": null
         }
       ]
     },
@@ -1152,6 +1132,16 @@
       "feedUrl": "https://feeds.feedburner.com/PythonInsider",
       "siteUrl": "https://pythoninsider.blogspot.com/",
       "articles": [
+        {
+          "id": "https://pythoninsider.blogspot.com/2025/01/python-3140-alpha-4-is-out.html",
+          "author": null,
+          "description": "Hello, three dot fourteen dot zero alpha four!\nhttps://www.python.org/downloads/release/python-3140a4/\nThis is an early developer preview of Python\n3.14\nMajor\nnew features of the 3.14 series, compared to 3.13\nPython 3.14 is still in development. This release, 3.14.0a4, is the\nfourth of seven planned alpha releases.\nAlpha releases are intended to make it easier to test the current\nstate of new features and bug fixes and to test the release process.\nDuring the alpha phase, features may be added up until the start of\nthe beta phase (2025-05-06) and, if necessary, may be modified or\ndeleted up until the release candidate phase (2025-07-22). Please keep\nin mind that this is a preview release and its use is\nnot recommended for production environments.\nMany new features for Python 3.14 are still …",
+          "link": "https://pythoninsider.blogspot.com/2025/01/python-3140-alpha-4-is-out.html",
+          "publishedOn": "2025-01-14T16:46:00.000Z",
+          "wordCount": null,
+          "title": "Python 3.14.0 alpha 4 is out",
+          "imageUrl": null
+        },
         {
           "id": "https://pythoninsider.blogspot.com/2024/12/python-3140-alpha-3-is-out.html",
           "author": null,
@@ -1268,16 +1258,6 @@
           "wordCount": null,
           "title": "C++ programmer's guide to undefined behavior: part 11 of 11",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/java/1198/",
-          "author": null,
-          "description": "We all know the risks that vulnerabilities pose: application crashes, data loss, or privacy breaches. In this article, we'll look at examples that illustrate the core aspects of an approach, where...",
-          "link": "https://pvs-studio.com/en/blog/posts/java/1198/",
-          "publishedOn": "2024-12-15T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Looking for potential vulnerabilities in code, part 1: theory",
-          "imageUrl": null
         }
       ]
     },
@@ -1300,16 +1280,6 @@
           "publishedOn": "2024-12-19T19:03:00.000Z",
           "wordCount": null,
           "title": "The Windows Registry Adventure #5: The regf file format",
-          "imageUrl": null
-        },
-        {
-          "id": "https://googleprojectzero.blogspot.com/2024/12/qualcomm-dsp-driver-unexpectedly-excavating-exploit.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=XGMkxXUZTA64h2imyzu79g);.lst-kix_mz24o9o07kqy-1>li{counter-increment:lst-ctn-kix_mz24o9o07kqy-1}.lst-kix_d27lror3sq5g-6>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-6,decimal) \". \"}.lst-kix_d27lror3sq5g-7>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-7,lower-latin) \". \"}ol.lst-kix_d27lror3sq5g-5.start{counter-reset:lst-ctn-kix_d27lror3sq5g-5 0}.lst-kix_d27lror3sq5g-4>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-4,lower-latin) \". \"}.lst-kix_d27lror3sq5g-5>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-5,lower-roman) \". \"}.lst-kix_d27lror3sq5g-8>li:before{content:\"\" counter(lst-ctn-kix_d27lror3sq5g-8,lower-roman) \". \"}ul.lst-kix_klp6u7xplfnr-0{list-style-type:none}ul.lst-kix_klp6u7xplfnr-1{list-st…",
-          "link": "https://googleprojectzero.blogspot.com/2024/12/qualcomm-dsp-driver-unexpectedly-excavating-exploit.html",
-          "publishedOn": "2024-12-16T06:11:00.000Z",
-          "wordCount": null,
-          "title": "The Qualcomm DSP Driver - Unexpectedly Excavating an Exploit",
           "imageUrl": null
         }
       ]
@@ -1382,6 +1352,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1005007/",
+          "author": "jzb",
+          "description": "The Mastodon project has announced\nthat founder Eugen Rochko will be transferring \"key Mastodon\necosystem and platform components (including name and copyrights,\namong other assets)\" to a new non-profit organization:\nPractically Mastodon will remain headquartered in and operate from\nEurope primarily. We will continue day-to-day operations through the\nMastodon GmbH for-profit entity, which will become wholly owned by the\nnew European not-for-profit entity. The Mastodon GmbH entity\nautomatically became a for-profit as a result of its charitable status\nbeing stripped\naway in Germany. The existing US-based non-profit entity, the\n501(c)(3), will continue to function as a fundraising hub.\n[...] We are in the process of a phased transition. First we are\nestablishing a new legal home for Mastodon and transferring ownership\nand stewardship. We are taking the time to select the appropriate\njurisdiction and structure in Europe. Then we will determine which\nother (subsidiary) legal structures are needed to support operations\nand sustainability.\nRochko has, naturally, also posted\nabout the transition on Mastodon.social.",
+          "link": "https://lwn.net/Articles/1005007/",
+          "publishedOn": "2025-01-14T19:48:09.000Z",
+          "wordCount": null,
+          "title": "The people should own the town square (Mastodon Blog)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1004988/",
+          "author": "jzb",
+          "description": "TuxFamily is a\nFrench free-software-hosting service that has been in operation since\n1999. It is a non-profit that accepts \"any project\nreleased under a free license\", whether that is a software license\nor a free-content license, such as CC-BY-SA. It is also,\nunfortunately, slowly dying due to hardware failures and lack of\ninterest. For example, the site's download servers are currently\noffline with no plan to restore them.",
+          "link": "https://lwn.net/Articles/1004988/",
+          "publishedOn": "2025-01-14T19:14:27.000Z",
+          "wordCount": null,
+          "title": "[$] The slow death of TuxFamily",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1004455/",
+          "author": "corbet",
+          "description": "The ptrace()\nsystem call allows a suitably privileged process to modify another in a\nlarge number of ways.  Among other things, ptrace() can intercept\nsystem calls and make changes to them, but such operations can be fiddly\nand architecture-dependent.  This patch series from\nDmitry Levin seeks to improve that situation by adding a new\nptrace() operation to make changes to another process's system\ncalls in an architecture-independent manner.",
+          "link": "https://lwn.net/Articles/1004455/",
+          "publishedOn": "2025-01-14T17:47:44.000Z",
+          "wordCount": null,
+          "title": "[$] Modifying another process's system calls",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1005076/",
+          "author": "corbet",
+          "description": "Security updates have been issued by AlmaLinux (kernel, NetworkManager, and thunderbird), Fedora (golang-github-aws-sdk-2, golang-github-aws-smithy, golang-github-ncw-swift-2, rclone, and thunderbird), Mageia (ceph, firefox, and thunderbird), Oracle (kernel, NetworkManager, and thunderbird), Red Hat (fence-agents and raptor2), SUSE (dpdk, firefox, frr, grafana, operator-sdk, perl-Module-ScanDeps, proftpd, python311-mistune, redis, thunderbird, valkey, and yq), and Ubuntu (hplip and webkit2gtk).",
+          "link": "https://lwn.net/Articles/1005076/",
+          "publishedOn": "2025-01-14T16:31:23.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1005031/",
+          "author": "jzb",
+          "description": "Hans de Goede has posted an\nupdate about his work to support IPU6 cameras on Fedora and\nsubmitting fixes upstream.\nThe initial IPU6 camera support landed in Fedora 41 only works on a\nlimited set of laptops. The reason for this is that with MIPI cameras\nevery different sensor and glue-chip like IO-expanders needs to be\nsupported separately.\nI have been working on making the camera work on more laptop\nmodels. After receiving and sending many emails and blog post comments\nabout this I have started filing Fedora bugzilla issues on a per\nsensor and/or laptop-model basis to be able to properly keep track of\nall the work.\nLWN covered the lack\nof IPU6 drivers in 2022.",
+          "link": "https://lwn.net/Articles/1005031/",
+          "publishedOn": "2025-01-14T16:13:45.000Z",
+          "wordCount": null,
+          "title": "IPU6 camera support status update",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1004324/",
           "author": "daroc",
@@ -2131,26 +2151,6 @@
           "wordCount": null,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1002251/",
-          "author": "corbet",
-          "description": "Linus has released 6.13-rc3 for testing.\n\"Earlier this week it felt to me like things might have already started\nto quiet down in prep for the holidays, but doing the statistics on rc3\nthat doesn't actually seem to be the case - this looks very regular both in\nnumber of commits and in diff size\".",
-          "link": "https://lwn.net/Articles/1002251/",
-          "publishedOn": "2024-12-16T00:40:18.000Z",
-          "wordCount": null,
-          "title": "Kernel prepatch 6.13-rc3",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1002245/",
-          "author": "corbet",
-          "description": "Version 4.20\nof the Xfce desktop environment has been released.  \"The major focus\nduring this development cycle was the preparation of the codebase to be\nready for Wayland\".  See the Xfce 4.20 tour for an\noverview of the changes in this release.",
-          "link": "https://lwn.net/Articles/1002245/",
-          "publishedOn": "2024-12-15T22:23:22.000Z",
-          "wordCount": null,
-          "title": "Xfce 4.20 released",
-          "imageUrl": null
         }
       ]
     },
@@ -2380,16 +2380,6 @@
           "wordCount": null,
           "title": "Small business programs: A dataset in the research void",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=9666",
-          "author": "Derek Jones",
-          "description": "Estimating the likelihood that a software system will operate as intended, for some period of time, is one of the big problems within the field of software reliability research. When software does not operate as intended, a fault, or bug, or hallucination is said to have occurred. Three events need to occur for a user […]",
-          "link": "https://shape-of-code.com/2024/12/15/good-enough-reliability-models-still-an-unknown/",
-          "publishedOn": "2024-12-15T23:15:44.000Z",
-          "wordCount": null,
-          "title": "Good enough reliability models: still an unknown",
-          "imageUrl": null
         }
       ]
     },
@@ -2501,6 +2491,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=126159",
+          "author": "소셜코리아",
+          "description": "이해할 수 없다. 해방 이후 힘겹게 민주주의를 쟁취했다고 믿었다. 적어도 87년 민주화 이후 한국 사회에서 민주주의는 되돌릴 수 없는 거대한 흐름이라고 생각했다. 그러나 되돌아보면 한국의 민주주의는 항상 위태로웠다. 급기야 대통령이 주도한 12·3 내란이라는 참극이 벌어지고 말았다. 어쩌다 선진국은 여기까지? 우리가 ‘민주주의’를 쟁취했던 것인가? 산업화는 어떤가? 한국은 놀라운 성장을 거듭하며 식민 지배를 받았던 가장 가난한 나라에서...\nThe post 어쩌다 선진국은 여기까지? 개혁만이 제2의 윤석열 막는다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/126159",
+          "publishedOn": "2025-01-14T08:30:10.000Z",
+          "wordCount": null,
+          "title": "어쩌다 선진국은 여기까지? 개혁만이 제2의 윤석열 막는다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=126157",
+          "author": "김도연",
+          "description": "“삼성이 혁신 역량을 잃어가는 것 같다.” 이게 왜 중요한가. 삼성이 해달라는 것. “정부 지원, 한국만 뒤쳐져 있다.” 그래서 정부가 하겠다는 것. 이재명의 우클릭, 삼성을 끌어안을까. “기획재정부는 빨간펜만 긋고 있다.” 분석과 전망: 아낌없이 주는 민주당, 삼성에 뭘 요구할 건가.\nThe post 엇갈린 진단과 처방, 삼성전자의 위기가 주 52시간 규제 때문일까. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/126157",
+          "publishedOn": "2025-01-14T08:25:21.000Z",
+          "wordCount": null,
+          "title": "엇갈린 진단과 처방, 삼성전자의 위기가 주 52시간 규제 때문일까.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=126036",
+          "author": "녹색전환연구소",
+          "description": "녹색전환연구소의 2025 기후에너지 10대 전망과 제언 보고서를 10회에 걸쳐 연재합니다. 이 글의 필자는 이유진(녹색전환연구소장)입니다. 요약 내란수괴 ‘윤석열 이후’ 기후에너지 정책은 어떻게 전개될 것인가. 기존 계획의 불확실성은 커졌다(‘2050 중장기 원전산업 로드맵’1∙11차 전력수급기본계획). 탄핵 정국에서 기존 정책을 그대로 밀고 나가긴 어려울 것이기 때문이다. 2025년, 위기 혹은 기회 불확실성이 커진 건 우려할 일이다. 하지만 탄소중립과 에너지 전환을 위해...\nThe post 윤석열 이후의 기후 정책: 탈원전과 탈탈원전, 그 다음 기후 정책 있나. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/126036",
+          "publishedOn": "2025-01-14T06:35:57.000Z",
+          "wordCount": null,
+          "title": "윤석열 이후의 기후 정책: 탈원전과 탈탈원전, 그 다음 기후 정책 있나.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=126086",
+          "author": "이정환",
+          "description": "윤석열 체포, 이르면 내일. 쟁점과 현안. “총 안 되면 칼이라도 써라.” “프락치가 있는 것 같다.” “협조하면 선처한다.” 경향신문‧한겨레에 전기 끊어라. 윤석열의 반격, 재판관 기피 신청. “대통령 방어권 보장하라.” 더 깊게 읽기. 표류하는 내란 특검법. 정당 지지율 격차 더 줄었다. 최상목이 경찰에 전화해서 한 말. 다르게 읽기. ‘민주 파출소’와 카톡 검열 논란. 러시아 파병 북한군 사상자...\nThe post 김건희 생일에 경호관들 장기자랑 대회, 마이바흐에 풍선 이벤트까지: 슬로우레터 1월14일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/126086",
+          "publishedOn": "2025-01-13T22:32:49.000Z",
+          "wordCount": null,
+          "title": "김건희 생일에 경호관들 장기자랑 대회, 마이바흐에 풍선 이벤트까지: 슬로우레터 1월14일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=126053",
           "author": "한상기",
@@ -3070,36 +3100,6 @@
           "wordCount": null,
           "title": "윤석열의 ‘뇌썩음’ 정치, 망상보다 더 위험한 건 그의 추종자들: 슬로우레터 12월17일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=124180",
-          "author": "참여연대 의정감시센터",
-          "description": "다이내믹 코리아의 민주주의는 다이내믹하다. 이제 거의 상식 수준이지만 세계는 한국을 불과 한 세대 만에 민주주의를 안착시킨 거의 유례없는 성공 사례로 간주했다. 하지만 그 성공의 뒤에는 엄청난 피와 땀이 서려 있고, 예측하지 못할 정도로 세대와 세대를 구분 짓는 역동적인 민주주의 경험이 전승되어 있다. 한국 민주주의의 회복탄력성 그동안 학생을 가르치는 수업 시간에조차 “계엄”과 “쿠데타”를 21세기 대한민국의 상황에...\nThe post 두려움 없는 참여민주주의, 대의민주주의의 실패를 ‘구원’하다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/124180",
-          "publishedOn": "2024-12-16T07:46:10.000Z",
-          "wordCount": null,
-          "title": "두려움 없는 참여민주주의, 대의민주주의의 실패를 ‘구원’하다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=124139",
-          "author": "한상기",
-          "description": "1. 구글 딥마인드, 제미나이 2.0 발표 구글 블로그, 12월 11일 구글이 에이전트 시대를 열 새로운 AI 모델이라고 주장하는 제미나이 2.0을 발표했다. 작성자가 순다 피차이(구글과 알파벳 CEO), 데미스 하사비스(Koray Kavukcuoglu, 구글 딥마인드 CEO), 코레이 카부크오글루(구글 딥마인드 CTO)이다. 제미나이 1.0이 2023년 12월에 나왔으니 1년 만에 2.0 업그레이드 버전을 발표한 것이다. 이후 제미나이는 20억 명의 사용자를 가진 7개의...\nThe post 구글, 제미나이 2.0 발표: 20억 사용자 업고 튀어! appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/124139",
-          "publishedOn": "2024-12-16T03:56:49.000Z",
-          "wordCount": null,
-          "title": "구글, 제미나이 2.0 발표: 20억 사용자 업고 튀어!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=124100",
-          "author": "이정환",
-          "description": "내란 11일 만에 탄핵, 민주주의의 새로운 역사를 썼다. 쟁점과 현안. 최장 180일의 헌재 심리 기간. 전두환 군사반란 사건 재판에서 확립된 원칙. 인용되지 않을 이유가 없다. “멈춰 서지만 결코 포기하지 않겠다.” 검찰이 불렀는데 안 간다고? “윤석열의 도박은 실패했다.” 쟁점과 현안. 한덕수의 과제. “국정 협의체 만들자.” “한 명씩 일어나 탄핵 찬반 밝혀라.” 한동훈 오늘 사퇴 표명. 다음은...\nThe post 윤석열의 예고된 몰락, 날마다 ‘차지철’들과 술을 마시면 어떻게 되나: 슬로우레터 12월16일.   appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/124100",
-          "publishedOn": "2024-12-15T22:23:23.000Z",
-          "wordCount": null,
-          "title": "윤석열의 예고된 몰락, 날마다 ‘차지철’들과 술을 마시면 어떻게 되나: 슬로우레터 12월16일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3257,26 +3257,6 @@
           "wordCount": null,
           "title": "TKer, 주가수익비율(P/E비율)은 시장 타이밍을 잡는 데 매우 부적합한 도구이다. 2025년 미국 주식 전망은?",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597026",
-          "author": "happist",
-          "description": "마켓인사이더에서 월가의 2025년 미국 주식 전망을 요약해 정리했길래 이 내용을 소개해 봅니다. 이미 대부분 투자은행들의 2025년 미국 주식 전망은 이미 소개했지만 2024년을 마무리하는 시점에서 2025년 투자 전략 수립 시 도움이 될 2025년 미국 지장 전망 요약 관점에서 보시면 좋을 것 같습니다. 다음은 월스트리트의 2025년 주식 시장 예측에 대한 전체 요약입니다. 다음은 월스트리트의 2025년 믹구 시장 […]",
-          "link": "https://happist.com/597026/2025%eb%85%84-%eb%af%b8%ea%b5%ad-%ec%a3%bc%ec%8b%9d-%ec%a0%84%eb%a7%9d-%ec%9a%94%ec%95%bd",
-          "publishedOn": "2024-12-16T00:30:30.000Z",
-          "wordCount": null,
-          "title": "2025년 미국 주식 전망 요약, 강세장과 약세장 어디로 갈것인가?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597022",
-          "author": "happist",
-          "description": "로이터는 더 크고 강력한 반도체 투자를 통한 AI 연구가 한계를 보이고 있으며, 이는 AI 모델 속도 저하로 AI 투자 황금기 종식이 나타날 수 잇다고 보도했습니다. 따라 산업 동향은 보다 전문화되고 저렴한 반도체를 선호하는 방향으로 가고 있으며, 이러한 경향은 엔비디아 주가를 위협할 수 있다고 경고합니다. AI 확장이 멈추면 마이크로소프트 등 기존 AI 강자들은 잠재 시장에서 밀려나는 […]",
-          "link": "https://happist.com/597022/ai-%ed%88%ac%ec%9e%90-%ed%99%a9%ea%b8%88%ea%b8%b0-%ec%a2%85%ec%8b%9d",
-          "publishedOn": "2024-12-15T10:25:13.000Z",
-          "wordCount": null,
-          "title": "로이터, AI 모델 속도 저하로 AI 투자 황금기 종식 → 엔비디아 주가 하락",
-          "imageUrl": null
         }
       ]
     },
@@ -3285,6 +3265,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80604",
+          "author": "NewsPeppermint",
+          "description": "미국 캘리포니아 남부 LA 일대에서 난 산불로 큰 피해가 났습니다. 사망자도 20명을 넘었고, 강풍에 불길이 걷잡을 수 없이 번지면서 아직 불길이 잡히지 않았습니다. 이번 산불의 원인을 한 가지로 명확히 설명하긴 어렵지만, 기후변화를 빼놓고는 제대로 설명할 수 없습니다. 그러나 우려스러운 건 곧 집권할 예정인 트럼프 2기 행정부에는 기후변화 회의론자와 음모론자들이 많다는 점입니다. 몇 년 전 산불이 났을 때 닥칠 위험을 감지하고 LA를 떠난 기후학자의 칼럼을 번역하고, 아직도 기후변화를 믿지 않거나 부정하려는 → 더 보기",
+          "link": "https://newspeppermint.com/2025/01/14/npsp_lafireclimatechange/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_lafireclimatechange",
+          "publishedOn": "2025-01-14T07:15:36.000Z",
+          "wordCount": null,
+          "title": "“LA 산불 반복되는 과학적 이유 있는데… 그게 아니라는 트럼프·머스크”",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80308",
           "author": "ingppoo",
