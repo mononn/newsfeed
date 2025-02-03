@@ -255,6 +255,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "76c9fec4-7c6d-4cf3-9b08-91917f9026ae",
+          "author": "Marcelo Ricardo Leitner",
+          "description": "In the previous article, Linux on Arm (aarch64) servers..., we examined flat networks. That is, we used only bare network interfaces and nothing else. That's a good start, but it is often not the topology used, especially with solutions like OpenStack. So in this installment, let’s evaluate how impactful VXLAN encapsulation can be for throughput and CPU consumption.\nWe’ll reuse the hosts and testing procedures, with only the modifications to add VXLAN. For details on the test environment, please refer to the previously mentioned article.\nVXLAN configuration\nEach host has a VXLAN tunnel to the other host. For reference, the following is the NMState YAML file used for one of the hosts:\ninterfaces:\n- name: vxlan08-09\n  type: vxlan\n  state: up\n  mtu: 1450\n  ipv4:\n    address:\n    - ip: 192.168…",
+          "link": "https://developers.redhat.com/articles/2025/02/03/how-vxlan-encapsulation-affects-arm-aarch64-servers",
+          "publishedOn": "2025-02-03T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How VXLAN encapsulation affects Arm (aarch64) servers",
+          "imageUrl": null
+        },
+        {
           "id": "1eb69a6b-4239-4d1e-9a6a-866ce62dfa5f",
           "author": "Trevor Royer",
           "description": "One challenge of managing models in production environments with Red Hat OpenShift AI and KServe is the dependency on S3-compatible storage. When serving models using KServe in OpenShift AI, users must deploy S3-compatible storage somewhere accessible in their cluster and then upload their model to an S3 bucket. Managing models through S3 creates new challenges for traditional operations teams deploying production services. Teams may need to create new processes to promote model artifacts from development/test environments.\nOpenShift AI 2.14 enabled the ability to serve models directly from a container using KServe's ModelCar capabilities, and OpenShift AI 2.16 has added the ability to deploy a ModelCar image from the OpenShift AI dashboard. This article demonstrates how to build and deplo…",
@@ -468,6 +478,16 @@
       "siteUrl": "https://eli.thegreenplace.net/",
       "articles": [
         {
+          "id": "https://eli.thegreenplace.net/2025/decorator-jits-python-as-a-dsl/",
+          "author": null,
+          "description": "<p>Spend enough time looking at Python programs and packages for machine learning,\nand you'll notice that the &quot;JIT decorator&quot; pattern is pretty popular. For\nexample, this JAX snippet:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">jax.numpy</span> <span class=\"k\">as</span> <span class=\"nn\">jnp</span>\n<span class=\"kn\">import</span> <span class=\"nn\">jax</span>\n\n<span class=\"nd\">@jax</span><span class=\"o\">.</span><span class=\"n\">jit</span>\n<span class=\"k\">def</span> <span class=\"nf\">add</span><span class=\"p\">(</span><span class=\"n\">a</span><span class=\"p\">,</span> <span class=\"n\">b</span><span class=\"p\">):</span>\n  <span class=\"k\">return</span> <span class=\"n\">jnp</span><span class=\"o\">.</span><span class=\"n\">add</span><span class=\"p\">(</span><span class=\"n\">a</span><span class=\"p\">,</span> <span class=\"n\">b</span><span class=\"p\">)</span>\n\n<span class=\"c1\"># Use &quot;add&quot; as a …</span></pre></div>",
+          "link": "https://eli.thegreenplace.net/2025/decorator-jits-python-as-a-dsl/",
+          "publishedOn": "2025-02-03T14:22:00.000Z",
+          "wordCount": 2959,
+          "title": "Decorator JITs - Python as a DSL",
+          "imageUrl": null
+        },
+        {
           "id": "https://eli.thegreenplace.net/2025/reverse-mode-automatic-differentiation/",
           "author": null,
           "description": "<p>Automatic Differentiation (AD) is an important algorithm for calculating the\nderivatives of arbitrary functions that can be expressed by a computer program.\nOne of my favorite CS papers is\n<a class=\"reference external\" href=\"https://arxiv.org/abs/1502.05767\">&quot;Automatic differentiation in machine learning: a survey&quot;</a> by\nBaydin, Perlmutter, Radul and Siskind (ADIMLAS from here on).\nWhile this post attempts …</p>",
@@ -490,6 +510,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4493257",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "Devices that change information from one form to another – specifically digital-to-analog (think of turning computer data into sound) and analog-to-digital (think of recording your voice on your phone) – are used everywhere in the design of gadgets and systems. You’ll find them in all sorts of things, from music and video players to cell phones, to the […]\nThe post Analog-to-Digital and Digital-to-Analog Converters – Some Useful Takeaways appeared first on Embedded.",
+          "link": "https://www.embedded.com/analog-to-digital-and-digital-to-analog-converters-some-useful-takeaways/",
+          "publishedOn": "2025-02-03T09:38:00.000Z",
+          "wordCount": null,
+          "title": "Analog-to-Digital and Digital-to-Analog Converters – Some Useful Takeaways",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4493959",
           "author": "Stefano Lovati",
@@ -1491,6 +1521,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1006378/",
+          "author": "corbet",
+          "description": "By the time that Linus Torvalds released\n6.14-rc1 and closed the merge window for this development cycle, some\n9,307 non-merge changesets had been pulled into the mainline\nrepository — the lowest level of merge-window activity seen in years.\nThere were, nonetheless, a number of interesting changes in the\n5,000 commits pulled since the\nfirst-half merge-window summary was written.",
+          "link": "https://lwn.net/Articles/1006378/",
+          "publishedOn": "2025-02-03T16:45:21.000Z",
+          "wordCount": null,
+          "title": "[$] The rest of the 6.14 merge window",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1007677/",
+          "author": "jzb",
+          "description": "Matthias Clasen has written a short update on a GTK hackfest that\ntook place at FOSDEM and what's\ncoming in GTK 4.18. This includes fixes for pointer sizes in Wayland\nwhen fractional scaling is enabled, removal of the old GL renderer in\nfavor of the GL\nrenderer introduced in GTK\n4.13.6, and deprecation of X11 and Broadway backends with intent\nto remove them in GTK 5.\nThe deprecated backends will remain available until then, and no\naction is required by developers at this time, Clasen wrote: \"There\nis no need to act on deprecations until you are actively porting your\napp to the next major version of GTK, which is not on the horizon\nyet\".",
+          "link": "https://lwn.net/Articles/1007677/",
+          "publishedOn": "2025-02-03T16:27:31.000Z",
+          "wordCount": 321,
+          "title": "What’s new in GTK, winter 2025 edition",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1007646/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (git-lfs, libsoup, and unbound), Debian (dcmtk, ffmpeg, openjdk-11, pam-u2f, and python-aiohttp), Fedora (buku, chromium, jpegxl, nodejs18, nodejs20, and rust-routinator), Mageia (clamav, kernel, kmod-virtualbox, kmod-xtables-addons & dwarves, and kernel-linus), SUSE (apptainer, bind, buildah, chromedriver, clamav, dovecot24, ignition, kubelogin, libjxl, libQt5Bluetooth5-32bit, orc, owasp-modsecurity-crs, python-pydantic, python311-ipython, and stb), and Ubuntu (linux-azure and netdata).",
+          "link": "https://lwn.net/Articles/1007646/",
+          "publishedOn": "2025-02-03T15:21:21.000Z",
+          "wordCount": 335,
+          "title": "Security updates for Monday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1007547/",
+          "author": "corbet",
+          "description": "Linus has released 6.14-rc1 and closed the\nmerge window for this release.\n\n\n\tThis is actually a _tiny_ merge window, and that's ok. The holidays\n\tclearly meant that people did less development than during a normal\n\tcycle, and that then shows up as a much smaller-than-average\n\trelease.  I really felt like this year we got the whole holiday\n\tseason release timing right, and this is just another sign of that.",
+          "link": "https://lwn.net/Articles/1007547/",
+          "publishedOn": "2025-02-03T01:50:01.000Z",
+          "wordCount": 180,
+          "title": "Kernel prepatch 6.14-rc1",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1007541/",
+          "author": "corbet",
+          "description": "Version 2.44 of the GNU Binutils package has been released.  Perhaps the\nmost significant change is the absence of the \"gold\" linker, which is\ndeprecated and about to disappear entirely.  Gold appeared in 2008 with some fanfare as a faster\nlinker, but it has suffered from a lack of maintenance in recent years.\nThis release also includes some architecture-specific assembler\nimprovements, and some (non-gold) linker enhancements.",
+          "link": "https://lwn.net/Articles/1007541/",
+          "publishedOn": "2025-02-02T23:04:01.000Z",
+          "wordCount": 1358,
+          "title": "GNU Binutils 2.44 Released",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1007438/",
           "author": "corbet",
@@ -2523,6 +2603,16 @@
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
         {
+          "id": "http://mcuoneclipse.com/?p=41569",
+          "author": "Erich Styger",
+          "description": "The author is progressing on a split-flap project, with 32 of 64 flaps operational. A smaller unit serves as a clock. Innovative techniques include CNC cutting, laser cutting, and 3D printing for components. A beech wood enclosure enhances aesthetics. The project aims for functional time display and word generation, emphasizing electronic control. Continue reading →",
+          "link": "https://mcuoneclipse.com/2025/02/03/building-a-diy-split-flap-clock/",
+          "publishedOn": "2025-02-03T07:23:02.000Z",
+          "wordCount": 4561,
+          "title": "Building a DIY Split-Flap Clock",
+          "imageUrl": "https://mcuoneclipse.com/wp-content/uploads/2025/02/split-flap-clock.jpg"
+        },
+        {
           "id": "http://mcuoneclipse.com/?p=41520",
           "author": "Erich Styger",
           "description": "NXP has introduced a new version of its LinkServer software that features a Semihosting console for bidirectional communication with embedded targets, enabling on-target testing without extra hardware. This allows for easy command line interface implementations and user input handling, streamlining development and testing processes while maintaining a connection through CMSIS-DAP. Continue reading →",
@@ -2590,6 +2680,16 @@
       "feedUrl": "https://palant.info/rss.xml",
       "siteUrl": "https://palant.info/",
       "articles": [
+        {
+          "id": "https://palant.info/2025/02/03/analysis-of-an-advanced-malicious-chrome-extension/",
+          "author": null,
+          "description": "Two weeks ago I published an article on 63 malicious Chrome extensions. In most cases I could only identify the extensions as malicious. With large parts of their logic being downloaded from some web servers, it wasn’t possible to analyze their functionality in detail.\nHowever, for the Download Manager Integration Checklist extension I have all parts of the puzzle now. This article is a technical discussion of its functionality that somebody tried very hard to hide. I was also able to identify a number of related extensions that were missing from my previous article.\n\n\n\n  \nContents\nThe problematic extensions\n“Remote configuration” functionality\nThe code being executed\nThe “session” handling\nWho is behind these extensions?\nThe problematic extensions\nSince my previous article I found a bunch…",
+          "link": "https://palant.info/2025/02/03/analysis-of-an-advanced-malicious-chrome-extension/",
+          "publishedOn": "2025-02-03T14:05:37.000Z",
+          "wordCount": null,
+          "title": "Analysis of an advanced malicious Chrome extension",
+          "imageUrl": null
+        },
         {
           "id": "https://palant.info/2025/01/20/malicious-extensions-circumvent-googles-remote-code-ban/",
           "author": null,
@@ -2661,6 +2761,16 @@
       "feedUrl": "https://shape-of-code.com/feed/",
       "siteUrl": "https://shape-of-code.com",
       "articles": [
+        {
+          "id": "https://shape-of-code.com/?p=9766",
+          "author": "Derek Jones",
+          "description": "Governments actively promote Standards because following them saves their citizens time and money. The UK and US have contrasting rationales, with the UK focusing on savings achieved through repeated use of standardized items and the US focusing on the repeated use of skills people acquired through using a standardized item (i.e., reduced training costs). Manufacturers […]",
+          "link": "https://shape-of-code.com/2025/02/02/creating-a-global-standard-requires-being-politically-neutral/",
+          "publishedOn": "2025-02-02T22:49:22.000Z",
+          "wordCount": 1602,
+          "title": "Creating a global Standard requires being politically neutral",
+          "imageUrl": null
+        },
         {
           "id": "https://shape-of-code.com/?p=9755",
           "author": "Derek Jones",
@@ -2852,16 +2962,6 @@
           "wordCount": null,
           "title": "“기술산업복합체”의 등장을 경고하는 조 바이든",
           "imageUrl": null
-        },
-        {
-          "id": "http://economicview.net/?p=85710",
-          "author": "sticky",
-          "description": "By Sailko – Own work, CC BY 3.0, Link 현대의 감각으로 보면 시가 전차가 있는 피렌체는 여전히 참아 줄만한 도시였을 것이다. 그러나 거리를 가로막는 양철 뱀(시가 전차/옮긴이)이나, 버스, 총알처럼 거리를 내달리는 그런 것은 안 되었다. 이졸데 쿠르츠만 해도 새로운 교통수단을 통해 초래될 변화를 부담스러운 것이라고 여겼다. 그녀의 말에 따르면, 1880년대만 해도 거리의 교통수단은 낡은 궁전의 […]",
-          "link": "http://economicview.net/85710/",
-          "publishedOn": "2025-01-04T10:41:06.000Z",
-          "wordCount": null,
-          "title": "“누구나 시간을 남아 돌 만큼 가지고 있었다”",
-          "imageUrl": null
         }
       ]
     },
@@ -2870,6 +2970,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=127776",
+          "author": "한상기",
+          "description": "한 주 내내 딥시크에 대한 많은 기사가 쏟아졌다. 미국과 중국의 새로운 경쟁의 입장에서 파악하거나 실제 성능을 분석하거나 문제점을 제시하는 기사들도 많았다. 여러 기업이나 연구 기관에서 새로운 모델을 발표하면서 모두 딥시크와 성능을 비교하는 일도 눈에 띄었다. 또한 몇몇 중요한 연구 보고서를 발표한 한 주이기도 했는데 우리나라에서 나온 눈에 띄는 결과는 거의 없었다. 정치인들은 대책 회의만 했고...\nThe post 딥시크 충격은 과장됐고 중국 수출 통제는 필요하다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/127776",
+          "publishedOn": "2025-02-03T05:42:37.000Z",
+          "wordCount": 7219,
+          "title": "딥시크 충격은 과장됐고 중국 수출 통제는 필요하다",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/GettyImages-2170149177.jpg"
+        },
+        {
+          "id": "https://slownews.kr/?p=127718",
+          "author": "이정환",
+          "description": "트럼프 관세 충격. 콜롬비아의 굴욕. 후폭풍 감당할 수 있나. ‘머니 머신’ 한국은? 쟁점과 현안. 오늘 마은혁 임명 거부 결론 난다. “책상도 치고 욕도 좀 해라.” 내일 탄핵 심판, 결론 가른다. “헌재 재판관 성향 공격 안 된다.” 최상목 또 거부권 행사. 윤석열 내란 사건, 서울중앙지법 형사25부에 배당. 더 깊게 읽기. 김문수 지고 오세훈 뜨나. “추경부터 하자”,...\nThe post 내란 공범들 막말 받아쓰기, 따옴표 저널리즘을 멈춰라: 슬로우레터 2월3일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/127718",
+          "publishedOn": "2025-02-02T22:01:07.000Z",
+          "wordCount": 6798,
+          "title": "내란 공범들 막말 받아쓰기, 따옴표 저널리즘을 멈춰라: 슬로우레터 2월3일.",
+          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/pexels-pressmaster-3851254-1000x667.jpg"
+        },
         {
           "id": "https://slownews.kr/?p=127631",
           "author": "민주언론시민연합",
