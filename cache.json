@@ -254,6 +254,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "20be599c-1193-4681-9841-7c3eb7c64679",
+          "author": "Ido Pal",
+          "description": "Modern data science workloads demand high computational power, and Graphic Processing Units (GPUs) are often at the heart of these operations. However, sharing GPU resources efficiently among multiple users or workloads can be challenging. NVIDIA Multi-Instance GPU (MIG) technology offers a solution. This article explores how I tested MIG on Red Hat OpenShift AI using an NVIDIA Ampere architecture GPU and the benefits for AI and data science teams.\nThe NVIDIA MIG solution and test\nGPUs in a Kubernetes environment are assigned to pods in a 1:1 ratio by default. This means a single GPU is dedicated to one pod, regardless of whether the workload fully utilizes the GPU’s capacity. This limitation can lead to inefficient resource usage, especially for smaller workloads. NVIDIA MIG solves this i…",
+          "link": "https://developers.redhat.com/articles/2025/02/06/how-mig-maximizes-gpu-efficiency-openshift-ai",
+          "publishedOn": "2025-02-06T07:00:00.000Z",
+          "wordCount": 3605,
+          "title": "How MIG maximizes GPU efficiency on OpenShift AI",
+          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/Red%20Hat%20Openshift%20AI_0.png?itok=EGHltugp"
+        },
+        {
           "id": "6899a069-3a51-4196-8d35-8537acfecfb5",
           "author": "Ryan Capra",
           "description": "I have been using VMware Core products for the last fifteen years—nine of those years as a VMware Administrator. I went from building basic virtual machines (VMs) to being a VMware Administrator, starting with vSphere/ESXi then handling the other VMware Core products vRealize Operations (Aria Ops), Aria Logs, Site Recovery Manager, and Network and Security (NSX). \nLast year, I discovered Red Hat OpenShift Virtualization. When I was first introduced to the product, I realized there were many options that would allow me to customize it to my specific environment. OpenShift Virtualization also offered more free rein than VMware. This article explores OpenShift Virtualization as an alternative to VMware.\nInstalling the OpenShift Virtualization Operator\nWhen I set up my first lab environment I …",
@@ -452,16 +462,6 @@
           "wordCount": null,
           "title": "Dumping packets from anywhere in the networking stack",
           "imageUrl": null
-        },
-        {
-          "id": "1a656bdd-b496-4c52-8450-04cba2eb665b",
-          "author": "Antoine Tenart",
-          "description": "Virtual routing and forwarding (VRF) is a network virtualization technique allowing traffic isolation at the layer 3 (L3) of the OSI model by creating independent routing and forwarding domains. It is essentially the combination of a separate routing table and associated network interfaces.\nOther networking techniques exist but are operating at a different levels—such as VLAN and network namespaces, respectively at the layer 2 and at the device level. Those techniques can be combined, e.g., a VRF can be part of a network namespace and/or VLANs can be attached to a VRF. Note that a network namespace might look like a way to emulate a VRF but they differ in how traffic is handled, notably VRF does not impact layer 2 (L2) traffic.\nIn the Linux kernel VRF is supported under the CONFIG_NET_VRF …",
-          "link": "https://developers.redhat.com/articles/2025/01/08/overview-virtual-routing-and-forwarding-vrf-linux",
-          "publishedOn": "2025-01-08T07:00:00.000Z",
-          "wordCount": null,
-          "title": "An overview of virtual routing and forwarding (VRF) in Linux",
-          "imageUrl": null
         }
       ]
     },
@@ -509,6 +509,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4494082",
+          "author": "Stefano Lovati",
+          "description": "Paragraf, a UK-based company leading the way in mass-producing graphene-based electronics using standard semiconductor processes, has been awarded a £419,419 grant from Innovate UK. The funding will support the development of a proof-of-concept prototype for an advanced semiconductor memory technology, which leverages a new class of ferroelectric materials combined with graphene on a silicon platform. […]\nThe post Paragraf and the University of Cambridge Receive Innovate UK Grant for Graphene Memory Device Initiative appeared first on Embedded.",
+          "link": "https://www.embedded.com/paragraf-and-the-university-of-cambridge-receive-innovate-uk-grant-for-graphene-memory-device-initiative/",
+          "publishedOn": "2025-02-06T18:30:00.000Z",
+          "wordCount": null,
+          "title": "Paragraf and the University of Cambridge Receive Innovate UK Grant for Graphene Memory Device Initiative",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4493484",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "This project demonstrates the integration of an I2C SSD1306 1.3″ monochrome OLED display with an STM32F401CCU microcontroller, leveraging LVGL v8.4 for GUI development and FreeRTOS for multitasking. The GUI was designed using EEZ Studio, a user-friendly GUI builder that simplifies the creation and customization of embedded GUIs. The display is interfaced via I2C and configured […]\nThe post Integration of an SSD1306 1.3-inch I2C OLED Display with LVGL and FreeRTOS on an STM32 MCU appeared first on Embedded.",
+          "link": "https://www.embedded.com/integration-of-an-ssd1306-1-3-inch-i2c-oled-display-with-lvgl-and-freertos-on-an-stm32-mcu/",
+          "publishedOn": "2025-02-06T09:49:00.000Z",
+          "wordCount": null,
+          "title": "Integration of an SSD1306 1.3-inch I2C OLED Display with LVGL and FreeRTOS on an STM32 MCU",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4494068",
           "author": "Stefano Lovati",
@@ -1008,56 +1028,6 @@
           "wordCount": null,
           "title": "Optimizing AI for Microcontrollers",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493435",
-          "author": "Stefano Lovati",
-          "description": "Honda Motor Co., Ltd. and Renesas Electronics Corporation have announced the signing of an agreement to create a high-performance system-on-chip (SoC) for software-defined vehicles (SDVs). The new SoC is engineered to provide superior AI performance of 2,000 TOPS alongside exceptional power efficiency of 20 TOPS/W, intended for future iterations of the “Honda 0 (Zero) Series,” […]\nThe post Honda and Renesas Partner to Develop High-Performance SoC for Software-Defined Vehicles appeared first on Embedded.",
-          "link": "https://www.embedded.com/honda-and-renesas-partner-to-develop-high-performance-soc-for-software-defined-vehicles/",
-          "publishedOn": "2025-01-08T00:04:00.000Z",
-          "wordCount": null,
-          "title": "Honda and Renesas Partner to Develop High-Performance SoC for Software-Defined Vehicles",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493317",
-          "author": "Stefano Lovati",
-          "description": "Alif Semiconductor® has solidified its status as the leader in endpoint AI MCUs with the introduction of the second generation of its Ensemble® product line. The E4, E6, and E8 Ensemble MCUs and fusion processors will incorporate Arm®’s latest neural processing unit (NPU), the Ethos™-U85, alongside Alif’s distinctive high bandwidth memory and intelligent power management […]\nThe post Alif Semiconductor Unveils 2nd Gen Low-Power Ensemble MCUs, Driving Generative AI at the Edge appeared first on Embedded.",
-          "link": "https://www.embedded.com/alif-semiconductor-unveils-2nd-gen-low-power-ensemble-mcus-driving-generative-ai-at-the-edge/",
-          "publishedOn": "2025-01-07T21:30:00.000Z",
-          "wordCount": null,
-          "title": "Alif Semiconductor Unveils 2nd Gen Low-Power Ensemble MCUs, Driving Generative AI at the Edge",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493313",
-          "author": "Stefano Lovati",
-          "description": "ROHM has unveiled its latest high-power laser diode, the RLD8BQAB3, designed for use in Advanced Driver Assistance Systems (ADAS) and LiDAR-equipped applications requiring precise distance measurement and spatial recognition. Initially, ROHM will provide samples targeting consumer and industrial devices such as drones, robot vacuum cleaners, AGVs (Automated Guided Vehicles), and service robots. As automation expands […]\nThe post ROHM Unveils 1kW High-Power Infrared Laser Diode appeared first on Embedded.",
-          "link": "https://www.embedded.com/rohm-unveils-1kw-high-power-infrared-laser-diode/",
-          "publishedOn": "2025-01-07T20:45:00.000Z",
-          "wordCount": null,
-          "title": "ROHM Unveils 1kW High-Power Infrared Laser Diode",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493305",
-          "author": "Stefano Lovati",
-          "description": "NXP Semiconductors has announced a definitive agreement to acquire TTTech Auto in an all-cash transaction valued at $625 million. Headquartered in Vienna, Austria, TTTech Auto is a leading innovator in safety-critical systems and middleware for software-defined vehicles (SDVs). The company collaborates with major automotive OEMs to enhance performance, safety, integration, and over-the-air software updates, enabling […]\nThe post NXP Drives Software-Defined Vehicle Evolution with TTTech Auto Acquisition Agreement appeared first on Embedded.",
-          "link": "https://www.embedded.com/nxp-drives-software-defined-vehicle-evolution-with-tttech-auto-acquisition-agreement/",
-          "publishedOn": "2025-01-07T18:30:00.000Z",
-          "wordCount": null,
-          "title": "NXP Drives Software-Defined Vehicle Evolution with TTTech Auto Acquisition Agreement",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492725",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "Artificial intelligence has been studied since the early 20th century but has seen rapid development and widespread use only in recent decades. Today, its integration into many everyday applications has made it a ubiquitous technology. The main drivers of AI’s use are increased hardware capabilities and huge amounts of available data, as well as its […]\nThe post Is Ethics Needed for Artificial Intelligence? appeared first on Embedded.",
-          "link": "https://www.embedded.com/is-ethics-needed-for-artificial-intelligence/",
-          "publishedOn": "2025-01-07T09:24:00.000Z",
-          "wordCount": null,
-          "title": "Is Ethics Needed for Artificial Intelligence?",
-          "imageUrl": null
         }
       ]
     },
@@ -1095,6 +1065,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
+          "author": null,
+          "description": "The range of family of Gemini models has expanded in the past year in response to developer needs, introducing faster and more cost-effective models, and enhancing tools in Google AI Studio.",
+          "link": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
+          "publishedOn": "2025-02-06T20:15:58.763Z",
+          "wordCount": 1151,
+          "title": "Looking back at the first year of the Gemini era",
+          "imageUrl": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Blog-metadata-gemini-anniversary_.2e16d0ba.fill-1200x600.png"
+        },
+        {
+          "id": "https://developers.googleblog.com/en/imagen-3-arrives-in-the-gemini-api/",
+          "author": null,
+          "description": "Imagen 3 – now available in Google AI Studio and the Gemini API – offers developers state-of-the-art image generation with brighter, better-composed images in diverse styles, and simplified image generation through text prompts.",
+          "link": "https://developers.googleblog.com/en/imagen-3-arrives-in-the-gemini-api/",
+          "publishedOn": "2025-02-06T20:15:58.534Z",
+          "wordCount": 741,
+          "title": "Imagen 3 arrives in the Gemini API",
+          "imageUrl": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Imagen_3_7.2e16d0ba.fill-1200x600.png"
+        },
         {
           "id": "https://developers.googleblog.com/en/gemini-2-family-expands/",
           "author": null,
@@ -1273,26 +1263,6 @@
           "publishedOn": "2025-01-08T20:16:31.825Z",
           "wordCount": null,
           "title": "Google AI Developers Community Spotlight Contest",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/building-a-better-smart-home-expanding-access-for-developers-and-users/",
-          "author": null,
-          "description": "The public beta launch of Home APIs for Android allows developers to create better smart home experiences. This launch emphasizes investments in Matter to improve device connectivity and interoperability, and increase smart home accessibility.",
-          "link": "https://developers.googleblog.com/en/building-a-better-smart-home-expanding-access-for-developers-and-users/",
-          "publishedOn": "2025-01-07T20:16:23.556Z",
-          "wordCount": null,
-          "title": "Building a better smart home",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
-          "author": null,
-          "description": "The Google Home APIs are now in public developer beta for Android, allowing developers to build innovative smart home experiences for over 600M devices using Google's hubs, Matter infrastructure, and automation engine.",
-          "link": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
-          "publishedOn": "2025-01-07T20:16:23.556Z",
-          "wordCount": null,
-          "title": "Build the future of home with Google Home APIs",
           "imageUrl": null
         }
       ]
@@ -1550,6 +1520,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1008342/",
+          "author": "corbet",
+          "description": "Version 25.2 of the LibreOffice productivity suite is out.  Changes include\nthe ability to remove all personal information from any document, support\nfor ODF version 1.4, a number of accessibility improvements, and more;\nsee the\nrelease notes for details.",
+          "link": "https://lwn.net/Articles/1008342/",
+          "publishedOn": "2025-02-06T16:44:10.000Z",
+          "wordCount": 1634,
+          "title": "LibreOffice 25.2 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1008339/",
+          "author": "corbet",
+          "description": "Version\n24.10.0 of the OpenWrt router-oriented distribution has been released.\nChanges include an update to the 6.6 kernel, use of access control lists on\nlarger systems, multipath TCP support, better WiFi6 support, the\nbeginning of WiFi7 support, and more.",
+          "link": "https://lwn.net/Articles/1008339/",
+          "publishedOn": "2025-02-06T16:11:21.000Z",
+          "wordCount": 150,
+          "title": "OpenWrt 24.10.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1007426/",
+          "author": "jzb",
+          "description": "Open source is often described as a \"gift economy\"—an\necosystem where contributors are motivated by a desire to make the\nworld a better place. That is, sometimes, true. However, James\nBottomley used his main\ntrack slot at FOSDEM 2025,\non February 1, to make the case that it is better to bank on the\nselfish motivations of individuals to drive community success than to\nrely on their altruism.",
+          "link": "https://lwn.net/Articles/1007426/",
+          "publishedOn": "2025-02-06T15:08:42.000Z",
+          "wordCount": null,
+          "title": "[$] The selfish contributor revisited",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1008275/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (asterisk and chromium), Fedora (FlightGear, java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, java-latest-openjdk, and SimGear), Mageia (bind, chromium-browser-stable, python-django, and vim), Oracle (buildah, bzip2, firefox, keepalived, mariadb:10.11, and podman), Slackware (curl, mariadb, and mozilla), SUSE (cargo-audit-advisory-db-20250204 and python311-scikit-learn), and Ubuntu (ckeditor, krb5, and ruby2.7).",
+          "link": "https://lwn.net/Articles/1008275/",
+          "publishedOn": "2025-02-06T14:36:16.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1007000/",
+          "author": "corbet",
+          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: Finding concurrency bugs with sched_ext; Rust abstractions; 6.14 Merge window; Sealed system mappings; OpenSUSE board; Julia; Site tour.\n            \n Briefs: Binutils 2.44; Firefox 135.0; Freedesktop GitLab; GNU C Library 2.41; GTK; Servo; Thunderbird updates; Sanctions; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
+          "link": "https://lwn.net/Articles/1007000/",
+          "publishedOn": "2025-02-06T00:05:42.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for February 6, 2025",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1008137/",
           "author": "jzb",
@@ -2489,56 +2509,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004376/",
-          "author": "corbet",
-          "description": "Kernel networking maintainer Jakub Kicinski reviews progress in\nthe networking subsystem in 2024.\n\n\n\tWork on relieving the rtnl_lock pressure has continued throughout\n\tthe year. The rtnl_lock is often mentioned as one of the biggest\n\tglobal locks in the kernel, as it protects all of the network\n\tconfiguration and state. The efforts can be divided into two broad\n\tcategories – converting read operations to rely on RCU protection\n\tor other fine grained locking (v6.9, v6.10), and splitting the lock\n\tinto per-network namespace locks (preparations for which started in\n\tv6.13).",
-          "link": "https://lwn.net/Articles/1004376/",
-          "publishedOn": "2025-01-07T21:08:43.000Z",
-          "wordCount": null,
-          "title": "Kicinski: netdev in 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004373/",
-          "author": "jzb",
-          "description": "Gentoo Linux has published a project\nretrospective that looks at the major improvements and news from\n2024, the Gentoo Foundation's finances, and contributions to Gentoo by\nthe numbers.\nThe number of commits to the main ::gentoo\nrepository has remained at an overall high level in 2024, with a\n2.4% increase from 121000 to 123942. The number of commits by external\ncontributors has grown strongly from 10708 to 12812, now across 421\nunique external authors.\nThe importance of GURU, our\nuser-curated repository with a trusted user model, as entry point\nfor potential developers, is clearly increasing as well. We have had\n7517 commits in 2024, a strong growth from 5045 in 2023. The number of\ncontributors to GURU has increased a lot as well, from 158 in 2023 to\n241 in 2024. Please join us there and help packaging the latest and\ngreatest software.",
-          "link": "https://lwn.net/Articles/1004373/",
-          "publishedOn": "2025-01-07T19:48:43.000Z",
-          "wordCount": null,
-          "title": "2024 in retrospect (Gentoo News)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004204/",
-          "author": "jzb",
-          "description": "In the past, LWN had a tradition of publishing a timeline of\nnotable events from the previous year in early January. We thought we\nmight try reviving that tradition in 2025 to see if our readers find\nit useful. While we have covered these events as they\nhappened, it's interesting to see how much has taken place in just\n12 months.",
-          "link": "https://lwn.net/Articles/1004204/",
-          "publishedOn": "2025-01-07T18:17:54.000Z",
-          "wordCount": null,
-          "title": "[$] 2024 Linux and free software timeline",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004368/",
-          "author": "jzb",
-          "description": "Version 134.0 of the Firefox browser has been released. Changes include support for touchpad hold gestures on Linux, a refreshed layout for the New Tab page for users in the US and Canada, and improved support for debugging web extensions.",
-          "link": "https://lwn.net/Articles/1004368/",
-          "publishedOn": "2025-01-07T17:46:51.000Z",
-          "wordCount": null,
-          "title": "Firefox 134.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004339/",
-          "author": "corbet",
-          "description": "Security updates have been issued by AlmaLinux (python-requests), Oracle (python-requests), SUSE (python-Jinja2 and rizin), and Ubuntu (ceph, linux, linux-aws, linux-aws-hwe, linux-gcp, linux-gcp-4.15, linux-hwe,\n linux-kvm, linux-oracle, linux, linux-lts-xenial, linux-aws, linux-aws-5.15, linux-gcp, linux-gcp-5.15, linux-hwe-5.15,\n linux-nvidia, linux-oracle, linux-raspi, linux-aws, linux-kvm, linux-hwe-6.8, linux-intel-iotg, linux-oem-6.11, linux-raspi-5.4, and salt).",
-          "link": "https://lwn.net/Articles/1004339/",
-          "publishedOn": "2025-01-07T15:08:14.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2564,6 +2534,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/deepseek-papers.html",
+          "author": null,
+          "description": "The appearance of DeepSeek Large-Language Models has caused a lot of\n      discussion and angst since their latest versions appeared at the beginning\n      of 2025. But much of the value of DeepSeek's work comes from the papers\n      they have published over the last year. Shayan Mohanty\n      provides an overview of these papers, highlighting three main arcs in this\n      research: a focus on improving cost and memory efficiency, the use of HPC\n      Co-Design to train large models on limited hardware, and the development\n      of emergent reasoning from large-scale reinforcement learning\nmore…",
+          "link": "https://martinfowler.com/articles/deepseek-papers.html",
+          "publishedOn": "2025-02-06T14:17:00.000Z",
+          "wordCount": 3696,
+          "title": "The DeepSeek Series: A Technical Overview",
+          "imageUrl": "https://martinfowler.com/logo-sq.png"
+        },
         {
           "id": "https://martinfowler.com/articles/gen-ai-patterns/#RagInPractice",
           "author": null,
@@ -2672,16 +2652,6 @@
           "publishedOn": "2025-01-08T14:44:00.000Z",
           "wordCount": null,
           "title": "A more complex codemod",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/codemods-api-refactoring.html",
-          "author": null,
-          "description": "As a library developer, you may create a popular utility that hundreds\n      of thousands of developers rely on daily, such as lodash or React. Over\n      time, usage patterns might emerge that go beyond your initial design. When\n      this happens, you may need to extend an API by adding parameters or\n      modifying function signatures to fix edge cases. The challenge lies in\n      rolling out these breaking changes without disrupting your users’\n      workflows. Juntao Qiu begins an article to explain how we\n      can use codemods to tackle this. Codemods are a tool automating\n      large-scale code transformations, allowing developers to introduce\n      breaking API changes, and refactor legacy codebases.\nmore…",
-          "link": "https://martinfowler.com/articles/codemods-api-refactoring.html",
-          "publishedOn": "2025-01-07T14:34:00.000Z",
-          "wordCount": null,
-          "title": "Refactoring with Codemods to Automate API Changes",
           "imageUrl": null
         }
       ]
@@ -2973,6 +2943,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=85936",
+          "author": "sticky",
+          "description": "By Pierre-Selim Huard – Self-photographed, CC BY 4.0, Link 트럼프가 꿈꾸는 새로운 가자 지구의 해안선 20세기 파시즘은 1차 세계대전 이후의 심각한 경제위기의 맥락에서 성장하여 “대공황(Great Depression)”으로 정점에 도달한 반면, 네오파시즘은 특히 2007-08년 금융위기로 인한 “대불황(Great Recession)” 이후 신자유주의의 위기가 심화되는 맥락에서 성장했다. 지난 세기의 파시즘은 식민지 국가에서 발생하고 있던 극악무도한 인종차별적 관행을 배경으로 유럽 대륙 […]",
+          "link": "http://economicview.net/85936/",
+          "publishedOn": "2025-02-06T04:52:07.000Z",
+          "wordCount": null,
+          "title": "현실이 된 네오파시즘",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=85924",
           "author": "sticky",
           "description": "By Viktor Angerer – postcard, Public Domain, Link 리하르트 바그너의 최고의 걸작으로 알려진 ‘니벨룽의 반지’를 영상으로 감상하고 있다. 10시간이 훌쩍 넘는 대작인지라 작년부터인가 ‘한번 완주해봐야지’라고 마음을 먹고 있기는 했는데 엄두가 나지 않았다. 이번에 긴 연휴 기간이라 일단 영상을 틀어놓고 보기 시작했다. 솔직히 엄청난 걸작이라고는 하는데 저 유명한 ‘발퀴레 동기’ 연주가 흐르기 전까지는 그 노래가 그 […]",
@@ -3059,6 +3039,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=128153",
+          "author": "김헌용",
+          "description": "“문서가 열리지 않아요” 얼마 전, 한 단체에서 이메일로 한글문서(HWP) 파일을 보내왔다. 휴대폰으로 열어보려 했지만, 별도의 뷰어 앱을 설치하지 않으면 내용을 확인할 수 없었다. 앱을 새로 깔기도 번거로워 결국 PC에서 확인해야 했는데, 웹 브라우저에서는 바로 열리지 않아 다운로드를 거쳐 로컬 프로그램으로 실행해야만 했다. 비슷한 상황은 내가 함께하는장애인교원노동조합 활동을 하면서 한글문서를 보내야 하는 경우에도 종종 발생한다. 한...\nThe post 문서 작성의 미래: 한글과컴퓨터의 포용적 혁신을 기대한다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128153",
+          "publishedOn": "2025-02-06T07:33:21.000Z",
+          "wordCount": null,
+          "title": "문서 작성의 미래: 한글과컴퓨터의 포용적 혁신을 기대한다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=128125",
+          "author": "민주언론시민연합",
+          "description": "12.3 내란 우두머리 혐의로 구속기소된 윤석열 대통령 법률대리인단이 2월 1일 헌법재판소에 문형배‧이미선‧정계선 재판관에 대한 회피촉구 의견서를 냈습니다. 일부 재판관들의 이념적 편향성이 드러나며 탄핵심판을 심리하는 헌법재판소의 공정성 시비가 커지고 있다는 주장입니다. 그러나 탄핵심판의 쟁점이 이념에 있는 게 아닌 만큼 재판관 성향은 무의미하다는 평가가 일반적입니다. 그럼에도 윤석열 대리인단이나 집권여당 국민의힘이 재판관 성향을 문제 삼는 이유는 ‘헌법재판소 흔들기’를...\nThe post “내전밖에 없다”고? 조선일보∙TV의 헌재 흔들기 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128125",
+          "publishedOn": "2025-02-06T02:28:33.000Z",
+          "wordCount": null,
+          "title": "“내전밖에 없다”고? 조선일보∙TV의 헌재 흔들기",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=128092",
+          "author": "이정환",
+          "description": "“가자지구 우리가 접수하겠다”, 트럼프의 위험한 제국주의. “중동의 판도라 상자를 열었다.” 쟁점과 현안. 체포 명단, 계엄 한 달 전에 작성됐다. 윤석열과 선을 그은 한덕수, “그날 국무회의는 위법.” “트럼프는 윤석열에 관심 없다.” 더 깊게 읽기. 물가 잡기 실패. 외화보유액은 급감. 다르게 읽기. 이재명 시간 끌기, 역공 빌미 줬다. 52시간 예외 민주당 의원들도 반발. 중도는 여전히 정권 교체론이...\nThe post “머리 드는 순서로 날아간다”, 국민의힘에 조기 대선은 ‘비밀연애’ 같은 것: 슬로우레터 2월6일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128092",
+          "publishedOn": "2025-02-05T22:43:53.000Z",
+          "wordCount": null,
+          "title": "“머리 드는 순서로 날아간다”, 국민의힘에 조기 대선은 ‘비밀연애’ 같은 것: 슬로우레터 2월6일.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=128076",
+          "author": "참여연대 사법감시센터",
+          "description": "고(故) 채상병의 사망 사건 해병대 수사단장이었던 박정훈 대령은 사건을 수사하고, 결과를 경찰에 이첩했지만, 군검찰은 수사 결과를 불법적으로 회수했습니다. 그런데 이를 언론에 폭로한 박정훈 대령을 기소했습니다. ‘이첩을 보류하라’는 이종섭 당시 국방부장관의 명령에 따르지 않았고, 상관의 명예를 훼손했다는 주장이었죠. 하지만 군사법원은 1심에서 박정훈 대령에게 ‘무죄’를 선고하며, 군인이라고 할지라도 불의한 명령에 항거할 수 있고, 항거하여야 한다는 당연하지만 어려운...\nThe post 박정훈 대령 1심 무죄, 불의에 항거한 군인의 힘겨운 승리 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128076",
+          "publishedOn": "2025-02-05T08:33:44.000Z",
+          "wordCount": null,
+          "title": "박정훈 대령 1심 무죄, 불의에 항거한 군인의 힘겨운 승리",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=128067",
           "author": "민주언론시민연합",
@@ -3697,26 +3717,6 @@
           "publishedOn": "2025-01-08T09:04:25.000Z",
           "wordCount": null,
           "title": "광장의 여자들: 빠순이에서 탄핵 광장의 주체로",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125726",
-          "author": "이정환",
-          "description": "윤석열 체포영장 다시 받았다. 윤석열이 한남동에 있는 건 맞나? 경호처장부터 체포하나. 쟁점과 현안. 공수처 존폐가 걸렸다. 최상목은 무슨 생각일까. 왜 밥을 같이 안 먹었을까. 조선일보도 우려한 ‘방탄의원단’. 윤적한? “영장 집행 막는 것은 범죄다.” 김건희 숙대 논문 표절로 결론. 오늘 쌍특검법 재의결. 더 깊게 읽기. 80% 빠졌다? 한 글자도 안 바꿨다. 넘칠 정도로 가득, 폭탄주 20잔씩...\nThe post 밥도 같이 안 먹는 사이, 그들이 지키려는 것은 윤석열이 아니다: 슬로우레터 1월8일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125726",
-          "publishedOn": "2025-01-07T22:23:17.000Z",
-          "wordCount": null,
-          "title": "밥도 같이 안 먹는 사이, 그들이 지키려는 것은 윤석열이 아니다: 슬로우레터 1월8일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125680",
-          "author": "민주언론시민연합",
-          "description": "1월 4일부터 온라인 커뮤니티를 중심으로 확산한 ‘가짜뉴스’가 있습니다. 민주노총 조합원이 전날 12.3 내란 수괴 윤석열 체포를 촉구하며 한남동 관저 주변에서 행진을 시도하던 중 이를 막는 경찰 무전기를 빼앗아 폭행하는 바람에 경찰이 혼수상태에 이르렀다는 허위 조작 정보입니다. 국민의힘 미디어특별위원회 산하 ‘진짜뉴스 발굴단’은 1월 5일 [민주노총 공권력 유린에 ‘뒷짐’…경찰 폭행 사건은 ‘쉬쉬’] 보도자료를 냈고, 허위 조작 정보는...\nThe post 민주노총 경찰 때려 혼수상태!(거짓) 국힘 북치고 더퍼블릭∙스카이데일리 장구치고 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125680",
-          "publishedOn": "2025-01-07T08:39:02.000Z",
-          "wordCount": null,
-          "title": "민주노총 경찰 때려 혼수상태!(거짓) 국힘 북치고 더퍼블릭∙스카이데일리 장구치고",
           "imageUrl": null
         }
       ]
