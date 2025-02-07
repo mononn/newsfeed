@@ -254,6 +254,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "daa1c339-fe5c-4c22-9c18-cd95b65fa7fd",
+          "author": "David Elie-Dit-Cosaque",
+          "description": "Red Hat OpenShift 4.16 has a new templating mechanism called Red Hat Advanced Cluster Management for Kubernetes (RHACM) Policy Generator that will eventually replace Policy Generator Template (PGT) as the standard way to generate Red Hat Advanced Cluster Management for Kubernetes policies. The new templates are now available as a technology preview. \nAlthough RHACM Policy Generator has been available for some time, this marks its first availability as part of our zero touch provisioning (ZTP) reference configuration for the radio access network (RAN) distributed unit (DU) use case.\nThe RHACM Policy Generator is similar to PGT and uses a Kustomize-based tool that utilizes the PolicyGenerator Custom Resource to create RHACM policies. Its primary goal is to convert reference Kubernetes manife…",
+          "link": "https://developers.redhat.com/articles/2025/02/07/migrate-rhacm-policy-generator-openshift-416",
+          "publishedOn": "2025-02-07T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Migrate to RHACM Policy Generator with OpenShift 4.16",
+          "imageUrl": null
+        },
+        {
           "id": "20be599c-1193-4681-9841-7c3eb7c64679",
           "author": "Ido Pal",
           "description": "Modern data science workloads demand high computational power, and Graphic Processing Units (GPUs) are often at the heart of these operations. However, sharing GPU resources efficiently among multiple users or workloads can be challenging. NVIDIA Multi-Instance GPU (MIG) technology offers a solution. This article explores how I tested MIG on Red Hat OpenShift AI using an NVIDIA Ampere architecture GPU and the benefits for AI and data science teams.\nThe NVIDIA MIG solution and test\nGPUs in a Kubernetes environment are assigned to pods in a 1:1 ratio by default. This means a single GPU is dedicated to one pod, regardless of whether the workload fully utilizes the GPU’s capacity. This limitation can lead to inefficient resource usage, especially for smaller workloads. NVIDIA MIG solves this i…",
@@ -442,26 +452,6 @@
           "wordCount": 5232,
           "title": "Containerizing workloads on image mode for RHEL",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-containers_2x.png?itok=zN0DnK8F"
-        },
-        {
-          "id": "ad57cd8c-478d-45d9-8215-d9b2fd9820d8",
-          "author": "Romain Pelisse",
-          "description": "Event-Driven Ansible is a powerful extension to Red Hat Ansible Automation Platform that leverages the automation infrastructure to provide the ability to react to change or problems. In short, Event-Driven Ansible can trigger Ansible playbooks (or Ansible Automation Platform's Job Templates) if a certain event is detected.\nIn this article, we will provide a series of examples on how to use Event-Driven Ansible to implement several remediation strategies based on activities in the environment. We'll use Red Hat JBoss Enterprise Application Platform (JBoss EAP), part of Red Hat Runtimes, as a reference implementation.\nEnvironment set up: Podman\nTo keep it simple and easy to reproduce, we will set up our Ansible controller inside into a Podman container based on the latest Fedora release. As…",
-          "link": "https://developers.redhat.com/articles/2025/01/09/implement-remediation-strategies-event-driven-ansible",
-          "publishedOn": "2025-01-09T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Implement remediation strategies with Event-Driven Ansible",
-          "imageUrl": null
-        },
-        {
-          "id": "85275640-1854-4a19-a72e-6ef4fc03af8c",
-          "author": "Antoine Tenart",
-          "description": "Dumping traffic on a network interface is one of the most performed steps while debugging networking and connectivity issues. On Linux, tcpdump is probably the most common way to do this, but some use Wireshark too.\nWhere does tcpdump get the packets from?\nInternally, both tcpdump and Wireshark use the Packet Capture (pcap) library. When capturing packets, a socket with the PF_PACKET domain is created (see man packet) which allows you to receive and send packets at the layer 2 from the OSI model.\nFrom libpcap:\nsock_fd = is_any_device ?\n       socket(PF_PACKET, SOCK_DGRAM, 0) :\n       socket(PF_PACKET, SOCK_RAW, 0);\nNote that the last parameter in the socket call is later set to a specific protocol, or ETH_P_ALL if none is explicitly provided. The latter makes all packets to be received by …",
-          "link": "https://developers.redhat.com/articles/2025/01/09/dumping-packets-anywhere-networking-stack",
-          "publishedOn": "2025-01-09T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Dumping packets from anywhere in the networking stack",
-          "imageUrl": null
         }
       ]
     },
@@ -509,6 +499,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4494086",
+          "author": "Stefano Lovati",
+          "description": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on OLED Display with STM32 and FreeRTOS, ADCs and DACs, and Microstepping! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS Paragraf and the University of Cambridge Receive Innovate […]\nThe post OLED Display with STM32 and FreeRTOS, ADCs and DACs, Microstepping appeared first on Embedded.",
+          "link": "https://www.embedded.com/oled-display-with-stm32-and-freertos-adcs-and-dacs-microstepping/",
+          "publishedOn": "2025-02-07T16:00:00.000Z",
+          "wordCount": null,
+          "title": "OLED Display with STM32 and FreeRTOS, ADCs and DACs, Microstepping",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4494025",
+          "author": "Stefano Lovati",
+          "description": "Chess is a classic game characterized by a lot of strategy and tactics. In other words, you cannot win by playing random moves, but you must follow precise combinations of moves, plans, and projects. For this reason, mathematics is fairly involved in analyzing the game. Introduction The article does not address how to improve your […]\nThe post Mathematical Models for the Chess Game appeared first on Embedded.",
+          "link": "https://www.embedded.com/mathematical-models-for-the-chess-game/",
+          "publishedOn": "2025-02-07T14:51:00.000Z",
+          "wordCount": null,
+          "title": "Mathematical Models for the Chess Game",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4494082",
           "author": "Stefano Lovati",
@@ -1008,26 +1018,6 @@
           "wordCount": null,
           "title": "Guide to SPICE Simulation for Circuit Analysis and Design – Part 18: Creating Your Own Component with the .MODEL Directive",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493439",
-          "author": "Stefano Lovati",
-          "description": "Qt Group has introduced Qt Accelerate, a streamlined solution for developing applications in digital devices for various use cases, including industrial manufacturing, mobility, and consumer electronics, among others. Developed on the Qt Framework, Qt Accelerate provides customers with readily deployable, industry-standard templates for software-defined products, which may be effortlessly tailored in appearance, usability, and functionality. […]\nThe post Qt Group Boosts Digital Product Development with Low-Code Solution Qt Accelerate appeared first on Embedded.",
-          "link": "https://www.embedded.com/qt-group-boosts-digital-product-development-with-low-code-solution-qt-accelerate/",
-          "publishedOn": "2025-01-08T20:59:00.000Z",
-          "wordCount": null,
-          "title": "Qt Group Boosts Digital Product Development with Low-Code Solution Qt Accelerate",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492434",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "Artificial intelligence has radically transformed many sectors, thanks to its ability to analyze large amounts of data, extract complex models and make decisions autonomously. Despite the many advantages, most AI applications to date have been designed to be implemented on high-performance computing platforms, such as cloud servers or computers equipped with powerful GPUs. With the […]\nThe post Optimizing AI for Microcontrollers appeared first on Embedded.",
-          "link": "https://www.embedded.com/optimizing-ai-for-microcontrollers/",
-          "publishedOn": "2025-01-08T08:30:00.000Z",
-          "wordCount": null,
-          "title": "Optimizing AI for Microcontrollers",
-          "imageUrl": null
         }
       ]
     },
@@ -1065,6 +1055,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
+          "author": null,
+          "description": "The Google Home APIs are now in public developer beta for Android, allowing developers to build innovative smart home experiences for over 600M devices using Google's hubs, Matter infrastructure, and automation engine.",
+          "link": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
+          "publishedOn": "2025-02-07T20:16:15.854Z",
+          "wordCount": null,
+          "title": "Build the future of home with Google Home APIs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/building-a-better-smart-home-expanding-access-for-developers-and-users/",
+          "author": null,
+          "description": "The public beta launch of Home APIs for Android allows developers to create better smart home experiences. This launch emphasizes investments in Matter to improve device connectivity and interoperability, and increase smart home accessibility.",
+          "link": "https://developers.googleblog.com/en/building-a-better-smart-home-expanding-access-for-developers-and-users/",
+          "publishedOn": "2025-02-07T20:16:15.854Z",
+          "wordCount": null,
+          "title": "Building a better smart home",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/looking-back-at-the-first-year-of-the-gemini-era/",
           "author": null,
@@ -1254,16 +1264,6 @@
           "wordCount": null,
           "title": "Unlocking the Potential of Quantum Computing: A Developer’s Guide to Error Correction",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
-          "author": null,
-          "description": "The Google AI Developers Community Spotlight Contest is seeking innovative, diverse projects using Google's AI tools like Gemini and Gemma to create code repositories, videos, documentation, and more.",
-          "link": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
-          "publishedOn": "2025-01-08T20:16:31.825Z",
-          "wordCount": null,
-          "title": "Google AI Developers Community Spotlight Contest",
-          "imageUrl": null
         }
       ]
     },
@@ -1311,6 +1311,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/java/1219/",
+          "author": null,
+          "description": "Developing modifications for Minecraft is a fun and enjoyable hobby. In this article, we'll explore errors in mods for our favorite game through the Custom NPC+ project. We'll reproduce them in-game...",
+          "link": "https://pvs-studio.com/en/blog/posts/java/1219/",
+          "publishedOn": "2025-02-06T21:00:00.000Z",
+          "wordCount": null,
+          "title": "How to crash Minecraft with your mod",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/1218/",
           "author": null,
@@ -1458,6 +1468,16 @@
       "siteUrl": "https://interrupt.memfault.com/",
       "articles": [
         {
+          "id": "https://interrupt.memfault.com/blog/january-2025-roundup",
+          "author": null,
+          "description": "We hope your year is off to a great start! January has been an exciting month\nfor Interrupt — we launched Interrupt Live, a new series where our co-founder\nand host, Tyler Hoffman, sits down with Interrupt contributors to share their\ninsights and stories. We’d love for you to tune in — see\nmore details here!\nHere are the articles, videos, and tools that we’ve been excited about this\nJanuary.\nContinue reading…",
+          "link": "https://interrupt.memfault.com/blog/january-2025-roundup",
+          "publishedOn": "2025-02-06T00:00:00.000Z",
+          "wordCount": null,
+          "title": "What we've been reading in January (2025)",
+          "imageUrl": null
+        },
+        {
           "id": "https://interrupt.memfault.com/blog/monitoring-smart-mesh-network",
           "author": null,
           "description": "This blog post provides a practical tutorial demonstrating a simple APM solution\nfor low-power devices. The solution leverages Zephyr RTOS on an nRF52, and\nSmartMesh IP on an Analog LTC5800 which can accommodate an arbitrary number of\nwireless motes. The motes can send a set of performance metrics at certain\nheartbeat intervals via a framework provided by Memfault. The framework is\nscalable and allows the creation of a customized group of metrics.\nContinue reading…",
@@ -1520,6 +1540,36 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1007947/",
+          "author": "corbet",
+          "description": "The BPF verifier is charged with the\nchallenging task of ensuring that a BPF program is safe for the kernel to\nrun before that program is loaded.  Among many other concerns, the verifier\nmust ensure that any kfuncs (kernel functions that have been exported to\nBPF programs) are called with the correct parameters and from the right\ncontext.  The \"context\" part of that enforcement is showing its age in ways\nthat are hurting performance; Juntong Deng has been working on\ninfrastructure to provide finer-grained control over when a kfunc can be\ncalled.",
+          "link": "https://lwn.net/Articles/1007947/",
+          "publishedOn": "2025-02-07T15:30:09.000Z",
+          "wordCount": null,
+          "title": "[$] Improved load-time checking for BPF kfuncs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1008502/",
+          "author": "daroc",
+          "description": "Security updates have been issued by Debian (openjdk-17), Fedora (firefox, FlightGear, java-1.8.0-openjdk, java-11-openjdk, java-latest-openjdk, and SimGear), Mageia (gstreamer), Red Hat (firefox, kernel, kernel-rt, libsoup, and python-jinja2), SUSE (bind, curl, dcmtk, etcd, firefox, google-osconfig-agent, krb5, openssl-1_1, podman, python311-cbor2, thunderbird, wget, and xrdp), and Ubuntu (glibc).",
+          "link": "https://lwn.net/Articles/1008502/",
+          "publishedOn": "2025-02-07T14:16:14.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1008386/",
+          "author": "jzb",
+          "description": "Jonathan Bryce has announced two open community meetings to hear\ninput on the topic of the OpenInfra\nFoundation migrating to the Linux Foundation. Bryce\nwrote that the OpenInfra board has carefully evaluated its options,\nand sees joining the Linux Foundation as the best way forward.\nLike the Linux Foundation, the OpenInfra Foundation is 501(c)(6)\nnonprofit. According to the FAQ,\nOpenInfra \"is in great health, financially and otherwise\" with\na growth in membership of about 15% in the last year. However, its\nneeds in 2025 are different than when it was founded as the OpenStack\nFoundation in 2012.\nThe meetings will be held on February 11 and February 13 as\nZoom calls. The OpenInfra board will schedule a vote after feedback\nhas been collected and draft governance documents have been\npublished.",
+          "link": "https://lwn.net/Articles/1008386/",
+          "publishedOn": "2025-02-06T21:25:22.000Z",
+          "wordCount": null,
+          "title": "OpenInfra board calls for input on joining Linux Foundation",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1008342/",
           "author": "corbet",
@@ -2459,56 +2509,6 @@
           "wordCount": null,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1003479/",
-          "author": "corbet",
-          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: What to expect in 2025; Sequoia; Emacs in Scheme; Pony; Homa; 2024 Timeline.\n            \n Briefs: Colliding SHAs; netdev in 2024; Gentoo retrospective; LineageOS 22.1; pkgsrc-2024Q4; RIP Steve Langasek; Firefox 134.0; Algol 68; Ruby 3.4; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
-          "link": "https://lwn.net/Articles/1003479/",
-          "publishedOn": "2025-01-09T00:12:33.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for January 9, 2025",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1003243/",
-          "author": "daroc",
-          "description": "The\n\nSequoia OpenPGP library has been in development for some time. LWN\ncovered the library in 2020. Now the project's\ncommand-line interface has\nbeen released. The sq tool offers a\npromising alternative to the venerable\n\nGNU Privacy Guard (GPG) tool — albeit one with a\ndifferent interface, set of terminology, and approach to the web of\ntrust. Several distributions are making increasing use of the tool\nbehind the scenes.",
-          "link": "https://lwn.net/Articles/1003243/",
-          "publishedOn": "2025-01-08T19:06:35.000Z",
-          "wordCount": null,
-          "title": "[$] A look at the Sequoia command-line interface",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004460/",
-          "author": "jzb",
-          "description": "The Tor Project has published a\nreview of major milestones from 2024, including merging with\nthe Tails project, work to enable human-friendly .onion\naddresses, and the launch of WebTunnel:",
-          "link": "https://lwn.net/Articles/1004460/",
-          "publishedOn": "2025-01-08T18:11:01.000Z",
-          "wordCount": null,
-          "title": "2024: Year in Review (Tor Blog)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004429/",
-          "author": "jzb",
-          "description": "The pkgsrc developers have\nannounced the 2024Q4 branch of the pkgsrc cross-platform\npackaging system. It is the default package manager for NetBSD, SmartOS, and is available for\nLinux as well. This marks the 85th quarterly release of pkgsrc:\n\n\nSince the pkgsrc-2024Q3 release, 110 packages were added, 1580 packages\nwere updated (with 2399 updates, including language-specific updates:\n24 Go, 3 OCaml, 66 Perl, 5 PHP, 626 Python, 282 Ruby, 44 TeX).  33\npackages were removed.",
-          "link": "https://lwn.net/Articles/1004429/",
-          "publishedOn": "2025-01-08T14:43:01.000Z",
-          "wordCount": null,
-          "title": "Announcing the pkgsrc-2024Q4 branch",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004428/",
-          "author": "jzb",
-          "description": "Security updates have been issued by Fedora (firefox, mupdf, and php-tcpdf), SUSE (etcd, file-roller, gtk3, kernel, python-django-ckeditor, rubygem-json-jwt, and tomcat10), and Ubuntu (ffmpeg, HTMLDOC, linux-aws, linux-raspi, linux-gke, linux-hwe-6.8, linux-lowlatency, linux-lowlatency-hwe-6.8, and tinyproxy).",
-          "link": "https://lwn.net/Articles/1004428/",
-          "publishedOn": "2025-01-08T14:21:36.000Z",
-          "wordCount": null,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -2517,6 +2517,16 @@
       "feedUrl": "https://m0agx.eu/feeds/all.rss.xml",
       "siteUrl": "https://m0agx.eu/",
       "articles": [
+        {
+          "id": "tag:m0agx.eu,2025-02-07:/keeping-lte-connections-alive-in-openwrt.html",
+          "author": null,
+          "description": "Networking equipment installed in places with\ndifficult\naccessibility need some care to keep it operating reliably without human intervention.\nA router running OpenWRT and connected by LTE has many potential points of failure.\nThese include issues with the cellular network,\nthe modem (running its separate OS), \nconnection between the main SoC and the modem, and the router itself.\nIf anything goes wrong, and the hardware does not suffer any obvious damage,\na simple interface restart or whole router restart can bring connectivity back.\nThere are countless approaches to keeping connections alive.\nI based my script on this project and made it slightly simpler.",
+          "link": "https://m0agx.eu/keeping-lte-connections-alive-in-openwrt.html",
+          "publishedOn": "2025-02-07T00:00:00.000Z",
+          "wordCount": null,
+          "title": "Keeping LTE connections alive in OpenWRT",
+          "imageUrl": null
+        },
         {
           "id": "tag:m0agx.eu,2025-01-19:/setting-up-an-lte-link-in-difficult-terrain.html",
           "author": null,
@@ -2642,16 +2652,6 @@
           "publishedOn": "2025-01-09T14:49:00.000Z",
           "wordCount": null,
           "title": "My favorite musical discoveries of 2024",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/codemods-api-refactoring.html#RefactoringAnAvatarComponent",
-          "author": null,
-          "description": "Juntao Qiu moves onto a more complex example of a\n      codemod, one that extracts a tooltip responsibility from a JSX component.\n      This illustrates how to manipulate the AST in several steps.\nmore…",
-          "link": "https://martinfowler.com/articles/codemods-api-refactoring.html#RefactoringAnAvatarComponent",
-          "publishedOn": "2025-01-08T14:44:00.000Z",
-          "wordCount": null,
-          "title": "A more complex codemod",
           "imageUrl": null
         }
       ]
@@ -2788,16 +2788,6 @@
           "wordCount": 2923,
           "title": "BIScience: Collecting browsing history under false pretenses",
           "imageUrl": "https://palant.info/2025/01/13/biscience-collecting-browsing-history-under-false-pretenses/biscience-website.png"
-        },
-        {
-          "id": "https://palant.info/2025/01/08/how-extensions-trick-cws-search/",
-          "author": null,
-          "description": "A few months ago I searched for “Norton Password Manager” in Chrome Web Store and got lots of seemingly unrelated results. Not just that, the actual Norton Password Manager was listed last. These search results are still essentially the same today, only that Norton Password Manager moved to the top of the list:\n\n\nI was stumped how Google managed to mess up search results so badly and even posted the following on Mastodon:\nInteresting. When I search for “Norton Password Manager” on Chrome Web Store, it first lists five completely unrelated extensions, and only the last search result is the actual Norton Password Manager. Somebody told me that website is run by a company specializing in search, so this shouldn’t be due to incompetence, right? What is it then?\nSomebody suggested that the exte…",
-          "link": "https://palant.info/2025/01/08/how-extensions-trick-cws-search/",
-          "publishedOn": "2025-01-08T13:41:17.000Z",
-          "wordCount": null,
-          "title": "How extensions trick CWS search",
-          "imageUrl": null
         }
       ]
     },
@@ -2943,6 +2933,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=85956",
+          "author": "sticky",
+          "description": "By Howard R. Hollem – This image is available from the United States Library of Congress‘s Prints and Photographs divisionunder the digital ID fsac.1a34951.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing., Public Domain, Link 이재명 더불어민주당 대표가 반도체산업에 주 52시간제(연장근로 12시간 포함) […]",
+          "link": "http://economicview.net/85956/",
+          "publishedOn": "2025-02-07T07:22:29.000Z",
+          "wordCount": null,
+          "title": "반도체 산업, 허수아비가 아닌 자본가를 때려야 한다",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=85936",
           "author": "sticky",
           "description": "By Pierre-Selim Huard – Self-photographed, CC BY 4.0, Link 트럼프가 꿈꾸는 새로운 가자 지구의 해안선 20세기 파시즘은 1차 세계대전 이후의 심각한 경제위기의 맥락에서 성장하여 “대공황(Great Depression)”으로 정점에 도달한 반면, 네오파시즘은 특히 2007-08년 금융위기로 인한 “대불황(Great Recession)” 이후 신자유주의의 위기가 심화되는 맥락에서 성장했다. 지난 세기의 파시즘은 식민지 국가에서 발생하고 있던 극악무도한 인종차별적 관행을 배경으로 유럽 대륙 […]",
@@ -3039,6 +3039,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=128235",
+          "author": "소셜코리아",
+          "description": "2025년, 경제 분야에서 오늘날의 시대정신은 정치경제학적 시각이다. 여기서 말하는 정치경제학적 시각은 단순히 정치와 경제가 상호작용한다는 추상적인 개념이 아니다. 이는 정책과 제도가 왜 지금의 형태로 만들어지고 있는지에 대한 날카로운 분석을 요구한다. 이러한 시각은 필연적으로 우파 포퓰리즘(right-wing populism)에 대한 경각심으로 이어진다. 한국의 많은 사람들은 최근 최고 권력자를 포함한 정책 결정자들이 무엇을 목표로 하고 있는지, 왜 이런 정책을...\nThe post 정치경제학의 눈으로 본 우파 포퓰리즘: 가령 윤석열의 경우 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128235",
+          "publishedOn": "2025-02-07T07:01:25.000Z",
+          "wordCount": null,
+          "title": "정치경제학의 눈으로 본 우파 포퓰리즘: 가령 윤석열의 경우",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=128124",
+          "author": "녹색전환연구소",
+          "description": "녹색전환연구소의 2025 기후에너지 10대 전망과 제언 보고서를 10회에 걸쳐 연재합니다. 이 글의 필자는 오선아 녹색전환연구소 경제전환팀 연구원입니다. 1. 윤석열 이후의 기후 정책: 탈원전과 탈탈원전, 그 다음 기후 정책 있나. (이유진)2. 기후대응 후진국 한국, 무역경쟁에서 살아남으려면 이 ‘세 가지’는 하라.(김병권)3. ESG 국제 추세, 트럼프도 못 막는다 (정영주)4. LNG발전 투자가 전환금융? ‘전환워싱’ 막는 법 (최기원)5. 플라스틱 규제와...\nThe post 인허가에만 5년 8개월? 해상풍력·영농형 태양광 늘리는 5가지 정책 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128124",
+          "publishedOn": "2025-02-07T01:26:37.000Z",
+          "wordCount": null,
+          "title": "인허가에만 5년 8개월? 해상풍력·영농형 태양광 늘리는 5가지 정책",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=128180",
+          "author": "이정환",
+          "description": "규모 3.1 지진. 지진이 발생하면 이렇게. 쟁점과 현안. “의원 끌어내라고 이해했다.” 의원과 요원과 인원. “‘150명 넘으면 안 된다던데’란 말 들었다.” “인원이란 말 써본 적 없다” 1분 뒤에… 여인형은 체포 명단을 폐기하라 했다. “홍장원과 곽종근의 공작이다.” 조선일보의 어시스트. “대왕고래 경제성 없다.” 하루 앞도 못 내다본 국민의힘 포스터. ‘대왕고래’ 조선일보는 14면. 더 깊게 읽기. 민주당 52시간 예외...\nThe post 윤석열의 자폭, “인원이란 말 써본 적 없다” 1분 뒤에 ‘인원’ ‘인원’ ‘인원’: 슬로우레터 2월7일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/128180",
+          "publishedOn": "2025-02-06T22:24:24.000Z",
+          "wordCount": null,
+          "title": "윤석열의 자폭, “인원이란 말 써본 적 없다” 1분 뒤에 ‘인원’ ‘인원’ ‘인원’: 슬로우레터 2월7일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=128153",
           "author": "김헌용",
@@ -3688,36 +3718,6 @@
           "wordCount": null,
           "title": "내란은 끝나지 않았고, 내전은 어쩌면 이제 시작됐다",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125845",
-          "author": "신현호",
-          "description": "살레하 모신(블룸버그 기자)은 경제-정치-국제관계라는 삼각 축에서 ‘달러’의 모습을 성공적으로 그려냈다. 역대 미국 재무부 인사들을 광범위하게 인터뷰한 결과물이라 정책의 결정 과정과 정치적 논란까지 접할 수 있다. 이 점에서 실무가들에게 매우 유용하다. 책의 주제는 ‘환율과 관련된 거시경제정책’과 ‘금융 제재 수단으로서의 달러 체제’ 둘로 구분할 수 있다. 두 번째 부분은 대다수 이코노미스트에게 생소할 것이다. 나는 과거 이와 관련된...\nThe post 치명적 무기: 금융 제재 수단으로서의 달러 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125845",
-          "publishedOn": "2025-01-09T02:27:04.000Z",
-          "wordCount": null,
-          "title": "치명적 무기: 금융 제재 수단으로서의 달러",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125808",
-          "author": "이정환",
-          "description": "윤석열인가? “술을 몇 주째 입에도 안 대고 있다.” 대통령 관저에 패닉룸 있다. 윤석열의 제안, “구속영장을 청구하면 받겠다.” 쟁점과 현안. 김건희 특검법 4번째 폐기. 한남동 요새, 어떻게 뚫을까. 더 깊게 읽기. 특검으로 넘겨라, 조선일보는 오늘도 프레임 전쟁. 중앙일보와 동아일보는 이미 손절. 명태균-윤석열 카톡 나왔다. 다르게 읽기. 페이스북 팩트체킹 폐지. 재정판 양두구육, 지금이 바로잡을 때. 임시 공휴일,...\nThe post 다급한 윤석열, “구속영장 청구하면 받겠다”는 시간끌기 꼼수: 슬로우레터 1월9일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125808",
-          "publishedOn": "2025-01-08T22:25:37.000Z",
-          "wordCount": null,
-          "title": "다급한 윤석열, “구속영장 청구하면 받겠다”는 시간끌기 꼼수: 슬로우레터 1월9일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125433",
-          "author": "박미숙",
-          "description": "새삼스러운 일은 아니다. 나라가 휘청거리고 세상이 무너질 것 같은 위기의 순간, 거기 늘 여성이 있었다. 윤석열 탄핵 광장뿐 아니라 그 어떤 역사적 광장에도 여자들이 늘 거기에 존재했다. 오히려 2024년 윤석열 탄핵 광장에 2030 여성이 2030 남성을 압도하고 있다는 호들갑은 마치 과거를 잊은 건망증 환자의 놀라움처럼 느껴지기도 한다. 그리고 광장의 역사를 주도해 온 여성의 역사를 지워...\nThe post 광장의 여자들: 빠순이에서 탄핵 광장의 주체로 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125433",
-          "publishedOn": "2025-01-08T09:04:25.000Z",
-          "wordCount": null,
-          "title": "광장의 여자들: 빠순이에서 탄핵 광장의 주체로",
-          "imageUrl": null
         }
       ]
     },
@@ -3803,6 +3803,26 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80703",
+          "author": "NewsPeppermint",
+          "description": "지난 4일 트럼프 대통령이 이스라엘 네타냐후 총리와의 정상회담 이후 또 한 차례 폭탄 발언을 했습니다. 미국이 가자지구를 점령(take over)해 가자지구에 사는 팔레스타인 사람 200만 명을 주변 국가로 이주시킨 뒤 전쟁으로 폐허가 된 잔해를 싹 치우고 일대를 중동 최고급 휴양지로 개발하겠다고 말한 겁니다. 현실성 없는 제안이자, 대통령보다는 부동산 개발업자가 할 것 같은 발언에 비판이 쏟아지자 트럼프 행정부의 각료들은 수습에 나섰지만, 정작 트럼프는 여전히 뭐가 문제인지 모르겠다며, 국제법이나 규약에 구속받지 않을 거라는 → 더 보기",
+          "link": "https://newspeppermint.com/2025/02/06/npsp_trumpongaza/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumpongaza",
+          "publishedOn": "2025-02-07T02:15:16.000Z",
+          "wordCount": null,
+          "title": "트럼프 또 폭탄 발언… “종잡을 수 없는 트럼프, 움직이게 하는 방법”",
+          "imageUrl": null
+        },
+        {
+          "id": "https://newspeppermint.com/?p=80432",
+          "author": "ingppoo",
+          "description": "뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 12월 13일 스프에 쓴 글입니다. 헌법에 어긋나는 계엄령을 공표하고 헌법기관인 국회와 선관위를, 군경을 앞세워 장악하려 한 ‘내란죄 피의자’ 윤석열 대통령에 대한 두 번째 탄핵 표결 시도가 하루 앞으로 다가왔습니다. 두 번째 탄핵소추안 표결을 앞두고 → 더 보기",
+          "link": "https://newspeppermint.com/2025/02/06/npsp_impeachpresident/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_impeachpresident",
+          "publishedOn": "2025-02-06T22:59:01.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 미국도 네 번뿐이었는데 우리는? 잦은 탄핵이 좋은 건 아니지만…",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80428",
           "author": "ingppoo",
@@ -3951,16 +3971,6 @@
           "publishedOn": "2025-01-11T17:00:09.000Z",
           "wordCount": null,
           "title": "“너만 힘드냐? 나도 힘들어 죽겠다”… 이런 사회에서 필요한 걸 꼽아보자면",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=80291",
-          "author": "ingppoo",
-          "description": "뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 11월 12일 스프에 쓴 글입니다. 미국 선거가 끝난 지 닷새가 지났습니다. 아직 하원 선거구 가운데 여전히 개표가 진행 중인 곳이 있어 과반 의석을 확보한 정당이 공식적으로는 나오지 않았지만, 공화당이 다음 회기에도 아슬아슬한 하원 과반 → 더 보기",
-          "link": "https://newspeppermint.com/2025/01/08/npsp_voterstoelite/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_voterstoelite",
-          "publishedOn": "2025-01-08T22:59:51.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] “뻔한 정답 놓고 고집 부린 결과”… 선거 진 민주당 앞의 갈림길",
           "imageUrl": null
         }
       ]
