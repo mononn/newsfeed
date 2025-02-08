@@ -6,6 +6,39 @@
       "siteUrl": "http://queue.acm.org/",
       "articles": [
         {
+          "id": "3711676",
+          "author": null,
+          "description": "",
+          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3711676",
+          "publishedOn": "2025-02-06T12:54:44.000Z",
+          "wordCount": null,
+          "title": "My Career-limiting Communication",
+          "itunes": {},
+          "imageUrl": null
+        },
+        {
+          "id": "3712057",
+          "author": null,
+          "description": "",
+          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3712057",
+          "publishedOn": "2025-02-04T15:18:05.000Z",
+          "wordCount": null,
+          "title": "Systems Correctness Practices at AWS",
+          "itunes": {},
+          "imageUrl": null
+        },
+        {
+          "id": "3712258",
+          "author": null,
+          "description": "",
+          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3712258",
+          "publishedOn": "2025-02-03T17:14:20.000Z",
+          "wordCount": null,
+          "title": "Intermediate Representations for the Datacenter Computer",
+          "itunes": {},
+          "imageUrl": null
+        },
+        {
           "id": "3711674",
           "author": null,
           "description": "",
@@ -998,26 +1031,6 @@
           "wordCount": null,
           "title": "Authenticate Embedded Systems in a Counterfeit-Prone Market",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493503",
-          "author": "Stefano Lovati",
-          "description": "Imec has announced the successful demonstration of electrically-driven GaAs-based multi-quantum-well nano-ridge laser diodes that were entirely, monolithically fabricated on 300 mm silicon wafers in its CMOS pilot prototyping line. This achievement is a significant milestone in the field of silicon photonics. The results, which were detailed in the Nature publication last week, demonstrate the potential […]\nThe post Imec Pioneers Full Wafer-Scale Production of GaAs-Based Nano-Ridge Lasers on 300mm Silicon Wafers appeared first on Embedded.",
-          "link": "https://www.embedded.com/imec-pioneers-full-wafer-scale-production-of-gaas-based-nano-ridge-lasers-on-300mm-silicon-wafers/",
-          "publishedOn": "2025-01-09T17:55:00.000Z",
-          "wordCount": null,
-          "title": "Imec Pioneers Full Wafer-Scale Production of GaAs-Based Nano-Ridge Lasers on 300mm Silicon Wafers",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4492851",
-          "author": "Stefano Lovati",
-          "description": "With SPICE simulation, designers can create their custom components using the .MODEL directive. This approach allows users to define behavioral models for electronic components such as diodes, transistors, or switches, adapting them to specific design needs. Introduction The .MODEL directive in SPICE allows users to define the characteristics of a custom electronic component, providing specific […]\nThe post Guide to SPICE Simulation for Circuit Analysis and Design – Part 18: Creating Your Own Component with the .MODEL Directive appeared first on Embedded.",
-          "link": "https://www.embedded.com/guide-to-spice-simulation-for-circuit-analysis-and-design-part-18-creating-your-own-component-with-the-model-directive/",
-          "publishedOn": "2025-01-09T09:03:00.000Z",
-          "wordCount": null,
-          "title": "Guide to SPICE Simulation for Circuit Analysis and Design – Part 18: Creating Your Own Component with the .MODEL Directive",
-          "imageUrl": null
         }
       ]
     },
@@ -1055,6 +1068,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
+          "author": null,
+          "description": "The Google AI Developers Community Spotlight Contest is seeking innovative, diverse projects using Google's AI tools like Gemini and Gemma to create code repositories, videos, documentation, and more.",
+          "link": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
+          "publishedOn": "2025-02-08T20:14:41.377Z",
+          "wordCount": null,
+          "title": "Google AI Developers Community Spotlight Contest",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
           "author": null,
@@ -1253,16 +1276,6 @@
           "publishedOn": "2025-01-11T20:15:15.757Z",
           "wordCount": null,
           "title": "The next chapter of the Gemini era for developers",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/unlocking-the-potential-of-quantum-computing-a-developers-guide-to-error-correction/",
-          "author": null,
-          "description": "A free Coursera course on quantum error correction, developed by Google Quantum AI, explains the importance of error correction in quantum computing and provides an overview of quantum errors.",
-          "link": "https://developers.googleblog.com/en/unlocking-the-potential-of-quantum-computing-a-developers-guide-to-error-correction/",
-          "publishedOn": "2025-01-09T20:16:46.133Z",
-          "wordCount": null,
-          "title": "Unlocking the Potential of Quantum Computing: A Developer’s Guide to Error Correction",
           "imageUrl": null
         }
       ]
@@ -2459,56 +2472,6 @@
           "wordCount": null,
           "title": "Security updates for Friday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004614/",
-          "author": "corbet",
-          "description": "Version\n1.84.0 of the Rust language has been released.  Changes include\nimproved version selection for dependencies in Cargo, the beginning of the\nmigration to a new trait solver, and some updated pointer-provenance APIs.\n\n\n\tMost of the time, programmers do not need to worry much about\n\tprovenance, and it is very clear how a pointer got\n\tderived. However, when casting pointers to integers and back, the\n\tprovenance of the resulting pointer is underspecified. With this\n\trelease, Rust is adding a set of APIs that can in many cases\n\treplace the use of integer-pointer-casts, and therefore avoid the\n\tambiguities inherent to such casts. In particular, the pattern of\n\tusing the lowest bits of an aligned pointer to store extra\n\tinformation can now be implemented without ever casting a pointer\n\tto an integer or back. This makes the code easier to reason about,\n\teasier to analyze for the compiler, and also benefits tools like\n\tMiri and architectures like CHERI that aim to detect and diagnose\n\tpointer misuse.",
-          "link": "https://lwn.net/Articles/1004614/",
-          "publishedOn": "2025-01-09T18:29:21.000Z",
-          "wordCount": null,
-          "title": "Rust 1.84.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004595/",
-          "author": "corbet",
-          "description": "The Software Freedom Conservancy is reporting\nthat AVM has released the full source and installation scripts for its\nrouters in response to a lawsuit, filed by Sebastian Steck, based on Lesser\nGNU Public License rights.\n\n\n\tHistorically, lawsuits have focused on the copyrights licensed\n\tunder GPL (or the GPL and LGPL together). Steck's lawsuit uniquely\n\tfocused exclusively on users' rights under the LGPL. Steck's work\n\tshowed that despite being a \"Lesser\" license than GPL, LGPLv2.1\n\tstill guarantees users the right to repair, modify and reinstall\n\tmodified versions of the software on their device. There is now no\n\tdoubt that both GPL and LGPL mandate the device owner's ability to\n\tmake changes to the software in the flash memory so those changes\n\tpersist across reboots.",
-          "link": "https://lwn.net/Articles/1004595/",
-          "publishedOn": "2025-01-09T15:31:02.000Z",
-          "wordCount": null,
-          "title": "SFC reports a successful (L)GPL suit in Germany",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004029/",
-          "author": "corbet",
-          "description": "Attacks on the kernel can take many forms; one popular exploitation path is\nto find a way to overwrite some memory with attacker-supplied data.  If the\nright memory can be targeted, one well-targeted stray write is all that is\nneeded to take control of the system.  Since the system's page tables\nregulate access to memory, they are an attractive target for this type of\nattack.  This patch \nset from Kevin Brodsky is an attempt to protect page tables (and,\neventually, other data structures) using the \"memory protection keys\"\nfeature provided by a number of CPU architectures.",
-          "link": "https://lwn.net/Articles/1004029/",
-          "publishedOn": "2025-01-09T15:16:17.000Z",
-          "wordCount": null,
-          "title": "[$] Page-table hardening with memory protection keys",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004548/",
-          "author": "jake",
-          "description": "The 6.12.9, 6.6.70, 6.1.124, 5.15.176, 5.10.233, and 5.4.289 stable kernels have been released.\nAs usual, they contain important fixes all over the kernel tree.",
-          "link": "https://lwn.net/Articles/1004548/",
-          "publishedOn": "2025-01-09T15:00:05.000Z",
-          "wordCount": null,
-          "title": "Six new stable kernels",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1004543/",
-          "author": "jake",
-          "description": "Security updates have been issued by AlmaLinux (cups, kernel, and kernel-rt), Debian (chromium, firefox-esr, and webkit2gtk), Fedora (curl, firefox, gimp, mupdf, openjpeg2, and valkey), Red Hat (389-ds-base, cups, firefox, iperf3, kernel, kernel-rt, libreswan, python3.11-urllib3, thunderbird, and webkit2gtk3), Slackware (firefox, seamonkey, and thunderbird), SUSE (apptainer, firefox-esr, libopenjp2-7, libruby3_4-3_4, openjpeg2, and tomcat10), and Ubuntu (firefox, linux-azure, linux-azure, linux-azure-4.15, linux-azure, linux-azure-6.8, linux-azure, linux-intel-iotg-5.15, linux-azure-5.15, python2.7, thunderbird, and xfpt).",
-          "link": "https://lwn.net/Articles/1004543/",
-          "publishedOn": "2025-01-09T14:39:46.000Z",
-          "wordCount": null,
-          "title": "Security updates for Thursday",
-          "imageUrl": null
         }
       ]
     },
@@ -2643,16 +2606,6 @@
           "wordCount": null,
           "title": "Fixing Common Pitfalls of Codemods",
           "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/2024-music.html",
-          "author": null,
-          "description": "I've got into the habit of starting the New Year by sharing six\n      favorite albums I discovered during the last year. This years set includes\n      Celtic jazz, trip-hop neo-fado, jazz-fusion for the 2020's, playful\n      harmonies, and a vibrant collaboration between  Indian classical musicians and a\n      string quartet. (I was also unable to limit myself to six.)\nmore…",
-          "link": "https://martinfowler.com/articles/2024-music.html",
-          "publishedOn": "2025-01-09T14:49:00.000Z",
-          "wordCount": null,
-          "title": "My favorite musical discoveries of 2024",
-          "imageUrl": null
         }
       ]
     },
@@ -2661,6 +2614,16 @@
       "feedUrl": "https://mcuoneclipse.com/feed/",
       "siteUrl": "https://mcuoneclipse.com",
       "articles": [
+        {
+          "id": "http://mcuoneclipse.com/?p=41617",
+          "author": "Erich Styger",
+          "description": "This article discusses using Visual Studio Code (VS Code) with Docker containers for embedded system development, specifically focusing on ARM Cortex-M and NXP LPC55S16. It outlines the advantages and disadvantages of this approach, emphasizing the comfort of a local development environment while leveraging container benefits. Advanced topics like debugging will be covered in future articles. Continue reading →",
+          "link": "https://mcuoneclipse.com/2025/02/08/optimizing-embedded-development-with-vs-code-and-devcontainer/",
+          "publishedOn": "2025-02-08T18:55:14.000Z",
+          "wordCount": null,
+          "title": "Optimizing Embedded Development with VS Code and DevContainer",
+          "imageUrl": null
+        },
         {
           "id": "http://mcuoneclipse.com/?p=41569",
           "author": "Erich Styger",
@@ -3687,36 +3650,6 @@
           "publishedOn": "2025-01-12T05:24:15.000Z",
           "wordCount": null,
           "title": "경호원 여러분, 윤석열 지키려다 징계 받고 연금 날아갑니다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125919",
-          "author": "이정환",
-          "description": "3주만에 한국갤럽 여론조사 결과가 나왔다. (원래 연말과 연초에 2주 쉰다.) 비상 계엄 이후 급등했던 민주당 지지율이 급락했다. 12월 셋째주 48%였는데 1월 둘째주 36%를 기록했다. 국민의힘 지지율은 24%에서 34%로 급등했다. 이게 왜 중요한가. 김문수가 2위. 8년 전과 다르다. 최상목 국정 지지도는 31%. 찬탄과 반탄, 64%와 32%. 전망.\nThe post 갤럽 조사도 국민의힘 지지율 급등, 2%포인트 차이. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125919",
-          "publishedOn": "2025-01-10T03:03:40.000Z",
-          "wordCount": null,
-          "title": "갤럽 조사도 국민의힘 지지율 급등, 2%포인트 차이.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125879",
-          "author": "이정환",
-          "description": "박정훈 무죄가 의미하는 것. 박정훈 무죄는 윤석열 유죄. 부당한 명령에 따르지 않을 권리. 오늘 아침 신문 1면. 쟁점과 현안. 윤석열 체포 작전, 1000명 이상 투입한다. 언제 들어가나. 국회에 등장한 ‘반공청년단’. 이래도 안 받을 건가, 내란 특검법 확 고쳤다. 전략의 실패. 탄핵 반대 여론 33%. 더 깊게 읽기. “방향 좀 부탁드립니다.” ARS 여론조사의 3가지 착시효과. 다르게...\nThe post 부당한 명령에 따르지 않을 권리, 박정훈 무죄 선고의 교훈: 슬로우레터 1월10일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125879",
-          "publishedOn": "2025-01-09T22:26:46.000Z",
-          "wordCount": null,
-          "title": "부당한 명령에 따르지 않을 권리, 박정훈 무죄 선고의 교훈: 슬로우레터 1월10일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=125871",
-          "author": "소셜코리아",
-          "description": "2025년을 시작하는 지금 한국 사회가 놓인 시대 상황을 가장 잘 집약하는 단어는 ‘위기’일 것이다. 2024년 12월 3일에 일어난 내란 쿠데타는 무엇보다 ‘민주주의의 위기’였다. 하지만 그것이 전부가 아니다. 한국 사회는 또한 법치, 거버넌스, 경제, 외교·안보, 가치와 규범을 망라하는 총체적 위기에 빠져 있다. 하나의 ‘사회’로서 통합력과 방향성을 잃고 해체되는 중이라는 뜻이다. 1987년 민주화 이후 대한민국이 이 정도로...\nThe post 내란은 끝나지 않았고, 내전은 어쩌면 이제 시작됐다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125871",
-          "publishedOn": "2025-01-09T08:29:03.000Z",
-          "wordCount": null,
-          "title": "내란은 끝나지 않았고, 내전은 어쩌면 이제 시작됐다",
           "imageUrl": null
         }
       ]
