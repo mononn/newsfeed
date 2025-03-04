@@ -141,16 +141,6 @@
           "wordCount": 2038,
           "title": "Adjacency Matrix and std::mdspan, C++23",
           "imageUrl": "https://www.cppstories.com/2025/images/mdspan_adj_mat.png"
-        },
-        {
-          "id": "https://www.cppstories.com/2023/span-cpp20/",
-          "author": null,
-          "description": "In this article, we’ll look at std::span, which has been available since C++20. This “view” type is more generic than string_view and can help work with arbitrary contiguous collections.\n\n\n\n     \n    \n\n\nHere’s an example that illustrates the primary use case for std::span:\nIn traditional C (or low-level C++), you’d pass an array to a function using a pointer and a size like this:\nvoid process_array(int* arr, std::size_t size) {\n  for(std::size_t i = 0; i < size; ++i) {\n    // do something with arr[i]\n  }\n}\n\n\nstd::span simplifies the above code:\nvoid process_array(std::span<int> arr_span) {\n  for(auto& elem : arr_span) {\n    // do something with elem\n  }\n}\n\n\nThe need to pass a separate size variable is eliminated, making your code less error-prone and more expressive.\nAnd in essence: std::s…",
-          "link": "https://www.cppstories.com/2023/span-cpp20/",
-          "publishedOn": "2025-02-03T00:00:00.000Z",
-          "wordCount": null,
-          "title": "How to use std::span from C++20",
-          "imageUrl": null
         }
       ]
     },
@@ -439,16 +429,6 @@
           "wordCount": null,
           "title": "How to analyze changes to enum types using abidiff",
           "imageUrl": null
-        },
-        {
-          "id": "76c9fec4-7c6d-4cf3-9b08-91917f9026ae",
-          "author": "Marcelo Ricardo Leitner",
-          "description": "In the previous article, Linux on Arm (aarch64) servers..., we examined flat networks. That is, we used only bare network interfaces and nothing else. That's a good start, but it is often not the topology used, especially with solutions like OpenStack. So in this installment, let’s evaluate how impactful VXLAN encapsulation can be for throughput and CPU consumption.\nWe’ll reuse the hosts and testing procedures, with only the modifications to add VXLAN. For details on the test environment, please refer to the previously mentioned article.\nVXLAN configuration\nEach host has a VXLAN tunnel to the other host. For reference, the following is the NMState YAML file used for one of the hosts:\ninterfaces:\n- name: vxlan08-09\n  type: vxlan\n  state: up\n  mtu: 1450\n  ipv4:\n    address:\n    - ip: 192.168…",
-          "link": "https://developers.redhat.com/articles/2025/02/03/how-vxlan-encapsulation-affects-arm-aarch64-servers",
-          "publishedOn": "2025-02-03T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How VXLAN encapsulation affects Arm (aarch64) servers",
-          "imageUrl": null
         }
       ]
     },
@@ -517,6 +497,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4493980",
+          "author": "Loriotoole",
+          "description": "Industrial automation relies on proper and reliable communication between machinery, control, and measuring instruments. It is often necessary to transmit signals over relatively long distances, which can result in significant voltage drops on the wires. The presence of environmental interference can also affect the signal negatively. To address these issues, the 4- to 20-mA current-loop […]\nThe post HART Modem Design Implementation appeared first on Embedded.",
+          "link": "https://www.embedded.com/hart-modem-design-implementation/",
+          "publishedOn": "2025-03-04T14:49:03.000Z",
+          "wordCount": null,
+          "title": "HART Modem Design Implementation",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4494609",
+          "author": "Stefano Lovati",
+          "description": "Agile Analog has successfully delivered a robust anti-tamper solution to a prominent fabless semiconductor company in Taiwan. As part of this deployment, the Agile Analog team provided a suite of highly configurable, multi-process analog security IP, including its newly developed Clock Attack Monitor (agileCAM), an enhanced Voltage Glitch Detector (agileVGLITCH), a Digital Temperature Sensor (agileTSENSE_D), […]\nThe post Agile Analog Strengthens its Leadership in Customizable Analog Security IP with the Launch of a New Clock Attack Monitor appeared first on Embedded.",
+          "link": "https://www.embedded.com/agile-analog-strengthens-its-leadership-in-customizable-analog-security-ip-with-the-launch-of-a-new-clock-attack-monitor/",
+          "publishedOn": "2025-03-03T21:30:00.000Z",
+          "wordCount": null,
+          "title": "Agile Analog Strengthens its Leadership in Customizable Analog Security IP with the Launch of a New Clock Attack Monitor",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4493933",
           "author": "Stefano Lovati",
@@ -1104,6 +1104,16 @@
       "feedUrl": "https://www.embeddedrelated.com/blogs_rss.php",
       "siteUrl": "https://www.embeddedrelated.com/blogs.php",
       "articles": [
+        {
+          "id": "https://www.embeddedrelated.com/showarticle/1732.php",
+          "author": null,
+          "description": "Hardware development is rarely straightforward. Between complex interdependencies, long product development cycles, certification requirements, and more, even minor design changes can trigger significant ripple effects. Managing these intricacies efficiently is critical to avoiding costly delays and unnecessary iterations. This article provides a brief introduction to how systems architecture...",
+          "link": "https://www.embeddedrelated.com/showarticle/1732.php",
+          "publishedOn": "2025-03-03T11:02:39.000Z",
+          "wordCount": null,
+          "title": "Optimizing Hardware Design: Reducing Iterations with DSM",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embeddedrelated.com/showarticle/1731.php",
           "author": null,
@@ -1697,6 +1707,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1012453/",
+          "author": "jzb",
+          "description": "Mozilla's actions have been rubbing many Firefox fans the\nwrong way as of late, and inspiring them to look for alternatives.\nThere are many choices for users who are looking for a browser that\nisn't part of the Chrome monoculture but is full-featured and suitable\nfor day-to-day use. For those who are willing to stay in the Firefox\n\"family\" there are a number of good options that have taken vastly\ndifferent approaches. This includes GNU IceCat, Floorp, LibreWolf, and Zen.",
+          "link": "https://lwn.net/Articles/1012453/",
+          "publishedOn": "2025-03-04T19:38:29.000Z",
+          "wordCount": null,
+          "title": "[$] A look at Firefox forks",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1012947/",
+          "author": "corbet",
+          "description": "Version\n136.0 of the Firefox browser has been released.  Changes include a new\nvertical tab layout, an automatic attempt to upgrade HTTP connections to\nHTTPS, support for AMD GPUs on Linux, an Arm64 port for Linux, and more.",
+          "link": "https://lwn.net/Articles/1012947/",
+          "publishedOn": "2025-03-04T15:37:42.000Z",
+          "wordCount": null,
+          "title": "Firefox 136.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1012916/",
+          "author": "corbet",
+          "description": "Version 6.10 of the Incus container-management system has been released.\nNew features include better Let's Encrypt support, API-wide filtering,\nIOMMU support in virtual machines, and more.  See this\nannouncement for details.",
+          "link": "https://lwn.net/Articles/1012916/",
+          "publishedOn": "2025-03-04T14:34:17.000Z",
+          "wordCount": null,
+          "title": "Incus 6.10 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1012915/",
+          "author": "corbet",
+          "description": "Security updates have been issued by AlmaLinux (kernel), Mageia (x11-server), Red Hat (emacs and webkit2gtk3), SUSE (ffmpeg-7, govulncheck-vulndb, kernel, and skopeo), and Ubuntu (cmark-gfm, erlang, krb5, linux-gcp-6.8, linux-raspi, linux-kvm, lucene-solr, postgresql-12, postgresql-14, postgresql-16, raptor2, spip, tomcat7, and wpa).",
+          "link": "https://lwn.net/Articles/1012915/",
+          "publishedOn": "2025-03-04T14:30:33.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1012788/",
           "author": "jzb",
@@ -2636,26 +2686,6 @@
           "wordCount": 335,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1007547/",
-          "author": "corbet",
-          "description": "Linus has released 6.14-rc1 and closed the\nmerge window for this release.\n\n\n\tThis is actually a _tiny_ merge window, and that's ok. The holidays\n\tclearly meant that people did less development than during a normal\n\tcycle, and that then shows up as a much smaller-than-average\n\trelease.  I really felt like this year we got the whole holiday\n\tseason release timing right, and this is just another sign of that.",
-          "link": "https://lwn.net/Articles/1007547/",
-          "publishedOn": "2025-02-03T01:50:01.000Z",
-          "wordCount": 180,
-          "title": "Kernel prepatch 6.14-rc1",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1007541/",
-          "author": "corbet",
-          "description": "Version 2.44 of the GNU Binutils package has been released.  Perhaps the\nmost significant change is the absence of the \"gold\" linker, which is\ndeprecated and about to disappear entirely.  Gold appeared in 2008 with some fanfare as a faster\nlinker, but it has suffered from a lack of maintenance in recent years.\nThis release also includes some architecture-specific assembler\nimprovements, and some (non-gold) linker enhancements.",
-          "link": "https://lwn.net/Articles/1007541/",
-          "publishedOn": "2025-02-02T23:04:01.000Z",
-          "wordCount": 1358,
-          "title": "GNU Binutils 2.44 Released",
-          "imageUrl": null
         }
       ]
     },
@@ -2817,16 +2847,6 @@
           "wordCount": null,
           "title": "Optimizing Embedded Development with VS Code and DevContainer",
           "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=41569",
-          "author": "Erich Styger",
-          "description": "The author is progressing on a split-flap project, with 32 of 64 flaps operational. A smaller unit serves as a clock. Innovative techniques include CNC cutting, laser cutting, and 3D printing for components. A beech wood enclosure enhances aesthetics. The project aims for functional time display and word generation, emphasizing electronic control. Continue reading →",
-          "link": "https://mcuoneclipse.com/2025/02/03/building-a-diy-split-flap-clock/",
-          "publishedOn": "2025-02-03T07:23:02.000Z",
-          "wordCount": 4561,
-          "title": "Building a DIY Split-Flap Clock",
-          "imageUrl": "https://mcuoneclipse.com/wp-content/uploads/2025/02/split-flap-clock.jpg"
         }
       ]
     },
@@ -2976,16 +2996,6 @@
           "wordCount": 1437,
           "title": "Apollo guidance computer software development process",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=9766",
-          "author": "Derek Jones",
-          "description": "Governments actively promote Standards because following them saves their citizens time and money. The UK and US have contrasting rationales, with the UK focusing on savings achieved through repeated use of standardized items and the US focusing on the repeated use of skills people acquired through using a standardized item (i.e., reduced training costs). Manufacturers […]",
-          "link": "https://shape-of-code.com/2025/02/02/creating-a-global-standard-requires-being-politically-neutral/",
-          "publishedOn": "2025-02-02T22:49:22.000Z",
-          "wordCount": 1602,
-          "title": "Creating a global Standard requires being politically neutral",
-          "imageUrl": null
         }
       ]
     },
@@ -3105,6 +3115,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=130241",
+          "author": "한상기",
+          "description": "지난주에는 앤스로픽이 오픈AI보다 먼저 기본 모델과 논증(reasoning) 모델을 통합한 클로드 3.7 소넷을 발표했다. 한편, 오픈AI는 논증이 들어가지 않은 가장 커다란 모델인 GPT-4.5를 발표했다. 앤스로픽은 확장된 사고 모드를 제시하면서 (딥시크 등이 보여준), 사고 과정을 보여주는 모델의 몇 가지 문제점에 관해 명확히 얘기했다. 나는 이 점이 매우 중요하다고 본다. 딥시크는 6일 동안 자사의 중요 기술을 모두 오픈...\nThe post 클로드 3.7 소넷, 응답과 논증을 통합하다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130241",
+          "publishedOn": "2025-03-04T07:57:10.000Z",
+          "wordCount": null,
+          "title": "클로드 3.7 소넷, 응답과 논증을 통합하다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=130038",
+          "author": "김도연",
+          "description": "전세 사기는 개인 부주의나 단순 채무 불이행 문제가 아니다. 허술한 임대차 제도와 등기 시스템, 무분별한 전세 대출과 보증, 부실한 임대 사업자 관리·감독이 빚은 사회적 재난이다. 국가는 세입자 주거 안정을 위한 전세 대출(2008년), 보증 보험(2013년), 임대 사업자 등록 활성화 제도(2017)를 선의로 내놨지만 범죄 조직은 이를 장난감 다루듯 갖고 놀며 임차인 보증금을 먹고 튀었다. 국가입법조사처 보고서에 따르면, 2022년 세상을...\nThe post 전세 사기를 직감하는 세 번의 순간 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130038",
+          "publishedOn": "2025-03-04T04:43:10.000Z",
+          "wordCount": null,
+          "title": "전세 사기를 직감하는 세 번의 순간",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=130134",
+          "author": "이정환",
+          "description": "이르면 이번 주 금요일 선고 가능성도 있다. 윤석열 탄핵 심판 세 가지 변수. 한덕수 탄핵 심판 먼저 나오나. 쟁점과 현안. 중도 이탈이냐 극우 손절이냐. 박근혜를 찾아가서 사과했다. 갈등에 올라탄 정치. 더 깊게 읽기. 한국판 엔비디아 지분 30%. 다르게 읽기. 전광훈은 목사가 아니다. 군인들의 트라우마. “우정은 가치 공유에 기반한다.” 부동산 시장 심상찮다. 지난해 건설업 종사자 근로소득...\nThe post 극우를 무너뜨리는 건 조롱과 비난이 아니라 민주주의 다수 연합: 슬로우레터 3월4일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130134",
+          "publishedOn": "2025-03-03T22:21:28.000Z",
+          "wordCount": null,
+          "title": "극우를 무너뜨리는 건 조롱과 비난이 아니라 민주주의 다수 연합: 슬로우레터 3월4일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=130086",
           "author": "이정환",
@@ -4134,26 +4174,6 @@
           "wordCount": 6281,
           "title": "죄 없는 기업인? 이재용 무죄에 쏟아진 ‘삼비어천가’: 슬로우레터 2월4일.",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/22-1206_이재용_회장_UAE_바라카_원전_건설현장_방문_1-1024x662-1.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=127776",
-          "author": "한상기",
-          "description": "한 주 내내 딥시크에 대한 많은 기사가 쏟아졌다. 미국과 중국의 새로운 경쟁의 입장에서 파악하거나 실제 성능을 분석하거나 문제점을 제시하는 기사들도 많았다. 여러 기업이나 연구 기관에서 새로운 모델을 발표하면서 모두 딥시크와 성능을 비교하는 일도 눈에 띄었다. 또한 몇몇 중요한 연구 보고서를 발표한 한 주이기도 했는데 우리나라에서 나온 눈에 띄는 결과는 거의 없었다. 정치인들은 대책 회의만 했고...\nThe post 딥시크 충격은 과장됐고 중국 수출 통제는 필요하다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/127776",
-          "publishedOn": "2025-02-03T05:42:37.000Z",
-          "wordCount": 7219,
-          "title": "딥시크 충격은 과장됐고 중국 수출 통제는 필요하다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/GettyImages-2170149177.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=127718",
-          "author": "이정환",
-          "description": "트럼프 관세 충격. 콜롬비아의 굴욕. 후폭풍 감당할 수 있나. ‘머니 머신’ 한국은? 쟁점과 현안. 오늘 마은혁 임명 거부 결론 난다. “책상도 치고 욕도 좀 해라.” 내일 탄핵 심판, 결론 가른다. “헌재 재판관 성향 공격 안 된다.” 최상목 또 거부권 행사. 윤석열 내란 사건, 서울중앙지법 형사25부에 배당. 더 깊게 읽기. 김문수 지고 오세훈 뜨나. “추경부터 하자”,...\nThe post 내란 공범들 막말 받아쓰기, 따옴표 저널리즘을 멈춰라: 슬로우레터 2월3일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/127718",
-          "publishedOn": "2025-02-02T22:01:07.000Z",
-          "wordCount": 6798,
-          "title": "내란 공범들 막말 받아쓰기, 따옴표 저널리즘을 멈춰라: 슬로우레터 2월3일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/pexels-pressmaster-3851254-1000x667.jpg"
         }
       ]
     },
@@ -4209,6 +4229,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80809",
+          "author": "NewsPeppermint",
+          "description": "트럼프 대통령이 휘두르는 ‘복수의 칼날’은 지난달 군을 향했습니다. 아직 임기가 반 이상 남은 CQ 브라운 합참의장을 별다른 이유 없이 보직에서 해임했습니다. 미국 언론은 브라운을 공군 참모총장으로 승진시킨 게 트럼프였지만, 조지 플로이드 씨 사망 이후 흑인인 브라운 총장이 “흑인의 목숨도 중요하다” 시위에 동조하는 듯한 영상을 올린 데 분노했었기에 해임은 시간 문제였다고 진단했습니다. 대통령은 군 통수권자이지만, 군은 엄밀히 말하면 대통령 개인이나 대통령의 정당이 아닌, 국가와 국민, 헌법에 충성하는 조직이어야 합니다. 1기 때는 → 더 보기",
+          "link": "https://newspeppermint.com/2025/03/03/npsp_trumpmilitary/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumpmilitary",
+          "publishedOn": "2025-03-04T02:20:52.000Z",
+          "wordCount": null,
+          "title": "격노한 트럼프 ‘금요일 밤의 학살’… “자비 없는 복수”의 전말",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80798",
           "author": "NewsPeppermint",
