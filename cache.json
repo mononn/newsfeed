@@ -26,17 +26,6 @@
           "title": "Systems Correctness Practices at AWS",
           "itunes": {},
           "imageUrl": null
-        },
-        {
-          "id": "3712258",
-          "author": null,
-          "description": "",
-          "link": "http://queue.acm.org/detail.cfm?ref=rss&id=3712258",
-          "publishedOn": "2025-02-03T17:14:20.000Z",
-          "wordCount": null,
-          "title": "Intermediate Representations for the Datacenter Computer",
-          "itunes": {},
-          "imageUrl": null
         }
       ]
     },
@@ -220,6 +209,26 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "49f5faa4-401d-48c8-a287-9c74b9514cbc",
+          "author": "Francisco De Melo Junior",
+          "description": "Spring Boot application deployment in Red Hat OpenShift is beneficial for having stand-alone Spring applications as microservices, given that it provides features such as externalized configuration, health check, circuit breaker, and failover. It is also very simple to containerize it.\nRed Hat OpenShift support for Spring Boot tests and verifies various popular Java development frameworks and technologies running on the Red Hat OpenShift Container Platform. \nUse case deployment\nLet's deploy a Spring Boot application in OpenShift, following the application in Alexander Barbosa's article Integrate a Spring Boot application with Red Hat Data Grid. First, run the following:\n$ git clone -b openshift https://github.com/alexbarbosa1989/hotrodspringboot\n$ oc project springboot-test\n$ mvn clean fab…",
+          "link": "https://developers.redhat.com/articles/2025/03/05/how-troubleshoot-spring-boot-openshift",
+          "publishedOn": "2025-03-05T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to troubleshoot Spring Boot in OpenShift",
+          "imageUrl": null
+        },
+        {
+          "id": "121c80d6-e4e6-4b20-8478-fceeb39a847f",
+          "author": "Francisco De Melo Junior",
+          "description": "Red Hat build of Node.js is a fully supported product within our portfolio and allows the deployment of JavaScript applications outside of a browser. Inside a container, it provides several features including an I/O model based on events and non-blocking operations for performant applications. Red Hat currently provides support for Node.js 20 links for Red Hat build of Node.js 20 LTS Component Details, Red Hat build of Node.js Supported Configurations, and Node.js Runtime Guide, which is an excellent guide. \nThis article discusses how to troubleshoot build or deployment of Node.js in Red Hat OpenShift. However, I will not cover any advanced topics such as FIPS, OpenSSL, garbage collection tuning, or extensive Node.js manipulation.\nI will present examples of Node.js build using a Dockerfile…",
+          "link": "https://developers.redhat.com/articles/2025/03/05/how-troubleshoot-nodejs-images-openshift",
+          "publishedOn": "2025-03-05T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to troubleshoot Node.js images in OpenShift",
+          "imageUrl": null
+        },
         {
           "id": "562bf0aa-fbaf-4b52-b5cd-55abdc19db45",
           "author": "Eldar Kurtić, Alexandre Marques, Mark Kurtz, Dan Alistarh",
@@ -419,16 +428,6 @@
           "wordCount": null,
           "title": "Why I switched from VMware to OpenShift Virtualization",
           "imageUrl": null
-        },
-        {
-          "id": "2226500f-f29e-4cc7-926e-f5478f291411",
-          "author": "Dodji Seketeli",
-          "description": "It is required to have a stable  application binary interface (ABI) when maintaining a stable shared library that is written in C or C++ and shipped as part of a complex software stack. Developers must comply with this requirement. When building a newer version of a shared library, developers may try the following approach:\n\nAnalyze the ABI changes.\nDetect the potential incompatibility of the changes, or ABI breaks.\nFix them before releasing the library.\n\nTo perform the analysis, developers can use the abidiff tool to compare the newer version of the shared library against the previous stable version. The abidiff tool is part of the libabigail framework. It reports the ABI changes to data types and how they impact the functions of variables.\nThis is a tutorial illustrating the changes to e…",
-          "link": "https://developers.redhat.com/articles/2025/02/04/how-analyze-changes-enum-types-using-abidiff",
-          "publishedOn": "2025-02-04T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to analyze changes to enum types using abidiff",
-          "imageUrl": null
         }
       ]
     },
@@ -462,16 +461,6 @@
           "wordCount": 1056,
           "title": "Benchmarking utility for Python",
           "imageUrl": null
-        },
-        {
-          "id": "https://eli.thegreenplace.net/2025/decorator-jits-python-as-a-dsl/",
-          "author": null,
-          "description": "<p>Spend enough time looking at Python programs and packages for machine learning,\nand you'll notice that the &quot;JIT decorator&quot; pattern is pretty popular. For\nexample, this JAX snippet:</p>\n<div class=\"highlight\"><pre><span></span><span class=\"kn\">import</span> <span class=\"nn\">jax.numpy</span> <span class=\"k\">as</span> <span class=\"nn\">jnp</span>\n<span class=\"kn\">import</span> <span class=\"nn\">jax</span>\n\n<span class=\"nd\">@jax</span><span class=\"o\">.</span><span class=\"n\">jit</span>\n<span class=\"k\">def</span> <span class=\"nf\">add</span><span class=\"p\">(</span><span class=\"n\">a</span><span class=\"p\">,</span> <span class=\"n\">b</span><span class=\"p\">):</span>\n  <span class=\"k\">return</span> <span class=\"n\">jnp</span><span class=\"o\">.</span><span class=\"n\">add</span><span class=\"p\">(</span><span class=\"n\">a</span><span class=\"p\">,</span> <span class=\"n\">b</span><span class=\"p\">)</span>\n\n<span class=\"c1\"># Use &quot;add&quot; as a …</span></pre></div>",
-          "link": "https://eli.thegreenplace.net/2025/decorator-jits-python-as-a-dsl/",
-          "publishedOn": "2025-02-03T14:22:00.000Z",
-          "wordCount": 2959,
-          "title": "Decorator JITs - Python as a DSL",
-          "imageUrl": null
         }
       ]
     },
@@ -497,6 +486,56 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4494538",
+          "author": "Barbaradellaporta",
+          "description": "The global volume of generated data is growing at an astonishing rate – forecasts indicate an annual increase of 35–37%, meaning that by 2028, we will surpass the 400 zettabyte threshold. This presents a significant challenge for enterprise IT infrastructure and data centers, which must keep up with performance demands, security requirements, and scalability. A […]\nThe post Data explosion: the new era of storage. How can companies adapt?  appeared first on Embedded.",
+          "link": "https://www.embedded.com/data-explosion-the-new-era-of-storage-how-can-companies-adapt/",
+          "publishedOn": "2025-03-05T15:06:16.000Z",
+          "wordCount": null,
+          "title": "Data explosion: the new era of storage. How can companies adapt?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4494330",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "Single Pair Ethernet (SPE) with Power over Data Lines (PoDL) is revolutionizing industrial networking by simplifying cabling and power delivery. This innovative technology allows both data and power to be transmitted over a single twisted pair of wires, making it ideal for space-constrained applications such as automotive, industrial, and IoT devices. Würth Elektronik’s reference design […]\nThe post ESD eBook March 2025: Pioneering Embedded Solutions: From Single Pair Ethernet to Cryogenic Quantum Computing appeared first on Embedded.",
+          "link": "https://www.embedded.com/esd-ebook-march-2025-pioneering-embedded-solutions-from-single-pair-ethernet-to-cryogenic-quantum-computing/",
+          "publishedOn": "2025-03-05T09:30:00.000Z",
+          "wordCount": null,
+          "title": "ESD eBook March 2025: Pioneering Embedded Solutions: From Single Pair Ethernet to Cryogenic Quantum Computing",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4494645",
+          "author": "Stefano Lovati",
+          "description": "indie Semiconductor has announced a strategic partnership with GlobalFoundries (GF) to advance its portfolio of high-performance radar systems-on-chip (SoC). These SoCs, built on GF’s 22FDX® platform, are designed for 77 GHz and 120 GHz radar applications, catering to advanced driver assistance systems (ADAS) and various industrial use cases. The growing adoption of automotive radar is […]\nThe post indie Semiconductor and GlobalFoundries Form Strategic Partnership to Speed Up Automotive Radar Deployment appeared first on Embedded.",
+          "link": "https://www.embedded.com/indie-semiconductor-and-globalfoundries-form-strategic-partnership-to-speed-up-automotive-radar-deployment/",
+          "publishedOn": "2025-03-04T21:30:00.000Z",
+          "wordCount": null,
+          "title": "indie Semiconductor and GlobalFoundries Form Strategic Partnership to Speed Up Automotive Radar Deployment",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4494642",
+          "author": "Stefano Lovati",
+          "description": "ADLINK Technology Inc. is set to showcase its latest innovations at Embedded World 2025 in Hall 3, Booth 147. This year, the company’s presence, along with numerous live demonstrations, centers around the theme “Greener Tech, Smarter Edge AI,” reinforcing its dedication to sustainability, intelligent Edge computing, AI, and Smart Manufacturing. ADLINK will introduce state-of-the-art products […]\nThe post ADLINK Technology at Embedded World 2025: Presenting Sustainable Computing with Next-Gen Open Standard Modules and Edge AI Advancements appeared first on Embedded.",
+          "link": "https://www.embedded.com/adlink-technology-at-embedded-world-2025-presenting-sustainable-computing-with-next-gen-open-standard-modules-and-edge-ai-advancements/",
+          "publishedOn": "2025-03-04T21:00:00.000Z",
+          "wordCount": null,
+          "title": "ADLINK Technology at Embedded World 2025: Presenting Sustainable Computing with Next-Gen Open Standard Modules and Edge AI Advancements",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4494639",
+          "author": "Stefano Lovati",
+          "description": "STMicroelectronics has introduced two new microcontrollers (MCUs) now available for deployment: the STM32WBA6, a short-range wireless MCU designed to connect industrial devices to the Internet, and the STM32U3, an ultra-low-power MCU engineered for long-term operation with minimal maintenance. The STM32WBA6 series is tailored for use in smart, connected applications such as wearable healthcare and wellness […]\nThe post STMicroelectronics Announces Two New Generations of Microcontrollers (MCUs) for IoT Devices appeared first on Embedded.",
+          "link": "https://www.embedded.com/stmicroelectronics-announces-two-new-generations-of-microcontrollers-mcus-for-iot-devices/",
+          "publishedOn": "2025-03-04T20:30:00.000Z",
+          "wordCount": null,
+          "title": "STMicroelectronics Announces Two New Generations of Microcontrollers (MCUs) for IoT Devices",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4493980",
           "author": "Loriotoole",
@@ -1076,26 +1115,6 @@
           "wordCount": null,
           "title": "ST and HighTec EDV-Systeme Partner to Enhance Safety in Software-Defined Vehicles",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493451",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "The global home medical equipment market is experiencing explosive growth. Smart devices are being used to monitor and treat patients suffering from diabetes, cardiac disorders, and other medical conditions without exposing those patients to the risk of hospital-acquired infections. Numerous organizations, including the World Health Organization and the National Council of Aging, are promoting self-health […]\nThe post Revolutionizing Healthcare with Smart Connectivity appeared first on Embedded.",
-          "link": "https://www.embedded.com/revolutionizing-healthcare-with-smart-connectivity/",
-          "publishedOn": "2025-02-04T07:20:00.000Z",
-          "wordCount": null,
-          "title": "Revolutionizing Healthcare with Smart Connectivity",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493257",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "Devices that change information from one form to another – specifically digital-to-analog (think of turning computer data into sound) and analog-to-digital (think of recording your voice on your phone) – are used everywhere in the design of gadgets and systems. You’ll find them in all sorts of things, from music and video players to cell phones, to the […]\nThe post Analog-to-Digital and Digital-to-Analog Converters – Some Useful Takeaways appeared first on Embedded.",
-          "link": "https://www.embedded.com/analog-to-digital-and-digital-to-analog-converters-some-useful-takeaways/",
-          "publishedOn": "2025-02-03T09:38:00.000Z",
-          "wordCount": null,
-          "title": "Analog-to-Digital and Digital-to-Analog Converters – Some Useful Takeaways",
-          "imageUrl": null
         }
       ]
     },
@@ -1173,6 +1192,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/calcam-transforming-food-tracking-with-the-gemini-api/",
+          "author": null,
+          "description": "CalCam, a calorie-tracking app, uses the Gemini API to analyze meal photos, providing users with fast and accurate nutritional information. Polyverse, CalCam's creator, highlights Gemini API's speed, accuracy, and structured JSON output are crucial for CalCam's seamless user experience and efficient development, allowing for easy integration and detailed food analysis.",
+          "link": "https://developers.googleblog.com/en/calcam-transforming-food-tracking-with-the-gemini-api/",
+          "publishedOn": "2025-03-05T20:17:48.787Z",
+          "wordCount": null,
+          "title": "CalCam: Transforming Food Tracking with the Gemini API",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/data-science-agent-in-colab-with-gemini/",
           "author": null,
@@ -1480,6 +1509,16 @@
       "siteUrl": "https://pvs-studio.com",
       "articles": [
         {
+          "id": "https://pvs-studio.com/en/blog/posts/cpp/1230/",
+          "author": null,
+          "description": "The analysis of the TDengine project code using PVS-Studio reveals classic errors and typos. Developers could've avoided many of them if they had carefully designed the code in the first place, kept...",
+          "link": "https://pvs-studio.com/en/blog/posts/cpp/1230/",
+          "publishedOn": "2025-03-04T21:00:00.000Z",
+          "wordCount": null,
+          "title": "Breaking down bugs in TDengine to master refactoring, part 1: sausage code",
+          "imageUrl": null
+        },
+        {
           "id": "https://pvs-studio.com/en/blog/posts/1229/",
           "author": null,
           "description": "With the release of PVS-Studio 7.35, the analyzer got a ton of new diagnostic rules. You'll find lots of MISRA for C, new Unity diagnostic rules for C#, OWASP Top 10 coverage for Java, and so on. You...",
@@ -1587,16 +1626,6 @@
           "publishedOn": "2025-02-06T21:00:00.000Z",
           "wordCount": null,
           "title": "How to crash Minecraft with your mod",
-          "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/1218/",
-          "author": null,
-          "description": "Static analysis is important to perform regularly, but what if it takes an eternity for a whole project? The article addresses this question and provides step-by-step recipes for handling specific...",
-          "link": "https://pvs-studio.com/en/blog/posts/1218/",
-          "publishedOn": "2025-02-03T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Grandma's recipe for mastering regular static analysis",
           "imageUrl": null
         }
       ]
@@ -1707,6 +1736,66 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1013114/",
+          "author": "jzb",
+          "description": "Version\n2.0.0 of FerretDB has been\nreleased. FerretDB\nis an open-source alternative to MongoDB, which switched to a non-open\nlicense in 2018, built on top of PostgreSQL. This release\nutilizes the DocumentDB\nPostgreSQL extension for better performance, adds vector\nsearch, and replication.",
+          "link": "https://lwn.net/Articles/1013114/",
+          "publishedOn": "2025-03-05T18:28:02.000Z",
+          "wordCount": null,
+          "title": "FerretDB 2.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1011803/",
+          "author": "daroc",
+          "description": "Functional programming languages have a long association with graphs. In the\n1990s, it was even thought that parallel graph-reduction\narchitectures could make functional programming languages much faster than their\nimperative counterparts. Alas, that prediction mostly failed to materialize.\nEven though graphs are still used as a theoretical formalism in order to define\nand optimize functional languages (such as Haskell's\n\nspineless tagless graph-machine), they are still mostly compiled down to the same old\nnon-parallel assembly code that every other language uses. Now, two\nprojects —\n\nBend and\n\nVine — have sprung up attempting to change that, and prove that\nparallel graph reduction can be a useful technique for real programs.",
+          "link": "https://lwn.net/Articles/1011803/",
+          "publishedOn": "2025-03-05T17:44:08.000Z",
+          "wordCount": null,
+          "title": "[$] Two new graph-based functional programming languages",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1013104/",
+          "author": "jzb",
+          "description": "The Xen Project has announced\nthe release of Xen 4.20. This release adds support for\nAMD Zen 5 CPUs, improved compliance with the MISRA C standard,\nwork on PCI-passthrough on Arm, and more. Xen 4.20 also removes\nsupport for Xeon\nPhi CPUs, which were discontinued\nin 2018. See the feature\nlist and release\nnotes for more information.",
+          "link": "https://lwn.net/Articles/1013104/",
+          "publishedOn": "2025-03-05T16:32:36.000Z",
+          "wordCount": null,
+          "title": "Xen 4.20 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1013098/",
+          "author": "jzb",
+          "description": "Version\n136.0 of the Thunderbird Desktop mail client has been\nreleased. The release includes a quick toggle for adapting messages to\ndark mode, and a new \"Appearance\" setting to control message threading\nand sorting order globally, as well as a number of bug fixes. See the\nsecurity\nadvisory for a full list of security vulnerabilities addressed in\nThunderbird 136.0.",
+          "link": "https://lwn.net/Articles/1013098/",
+          "publishedOn": "2025-03-05T15:53:25.000Z",
+          "wordCount": null,
+          "title": "Thunderbird Desktop 136.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1013096/",
+          "author": "jzb",
+          "description": "Version\n12.3 of Linux From\nScratch (LFS) has been released, along with Beyond Linux\nFrom Scratch (BLFS) 12.3. LFS provides step-by-step instructions\non building a customized Linux system entirely from source, and BLFS\nhelps to extend an LFS installation into a more usable system. Notable\nchanges in this release include toolchain updates to GNU Binutils\n2.44, GNU C Library (glibc) 2.41, and Linux 6.13.2. The Changelog\nhas a full list of changes since the previous stable release.",
+          "link": "https://lwn.net/Articles/1013096/",
+          "publishedOn": "2025-03-05T15:46:18.000Z",
+          "wordCount": null,
+          "title": "Linux from Scratch version 12.3 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1013063/",
+          "author": "jzb",
+          "description": "Security updates have been issued by Debian (libreoffice), Fedora (exim and fscrypt), Red Hat (kernel), Slackware (mozilla), SUSE (docker, firefox, and podman), and Ubuntu (linux, linux-lowlatency, linux-lowlatency-hwe-5.15, linux, linux-lowlatency, linux-lowlatency-hwe-6.8, linux, linux-oem-6.11, linux-aws, linux-aws-6.8, linux-oracle, linux-oracle-6.8, linux-raspi, linux-aws, linux-gcp, linux-hwe-6.11, linux-oracle, linux-raspi, linux-realtime, linux-aws, linux-gkeop, linux-ibm, linux-intel-iotg, linux-intel-iotg-5.15, linux-oracle, linux-oracle-5.15, linux-raspi, and linux-gcp, linux-gcp-6.8, linux-gke, linux-gkeop).",
+          "link": "https://lwn.net/Articles/1013063/",
+          "publishedOn": "2025-03-05T14:10:58.000Z",
+          "wordCount": null,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1012453/",
           "author": "jzb",
@@ -2656,36 +2745,6 @@
           "wordCount": 410,
           "title": "Security updates for Tuesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1006378/",
-          "author": "corbet",
-          "description": "By the time that Linus Torvalds released\n6.14-rc1 and closed the merge window for this development cycle, some\n9,307 non-merge changesets had been pulled into the mainline\nrepository — the lowest level of merge-window activity seen in years.\nThere were, nonetheless, a number of interesting changes in the\n5,000 commits pulled since the\nfirst-half merge-window summary was written.",
-          "link": "https://lwn.net/Articles/1006378/",
-          "publishedOn": "2025-02-03T16:45:21.000Z",
-          "wordCount": null,
-          "title": "[$] The rest of the 6.14 merge window",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1007677/",
-          "author": "jzb",
-          "description": "Matthias Clasen has written a short update on a GTK hackfest that\ntook place at FOSDEM and what's\ncoming in GTK 4.18. This includes fixes for pointer sizes in Wayland\nwhen fractional scaling is enabled, removal of the old GL renderer in\nfavor of the GL\nrenderer introduced in GTK\n4.13.6, and deprecation of X11 and Broadway backends with intent\nto remove them in GTK 5.\nThe deprecated backends will remain available until then, and no\naction is required by developers at this time, Clasen wrote: \"There\nis no need to act on deprecations until you are actively porting your\napp to the next major version of GTK, which is not on the horizon\nyet\".",
-          "link": "https://lwn.net/Articles/1007677/",
-          "publishedOn": "2025-02-03T16:27:31.000Z",
-          "wordCount": 321,
-          "title": "What’s new in GTK, winter 2025 edition",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1007646/",
-          "author": "jake",
-          "description": "Security updates have been issued by AlmaLinux (git-lfs, libsoup, and unbound), Debian (dcmtk, ffmpeg, openjdk-11, pam-u2f, and python-aiohttp), Fedora (buku, chromium, jpegxl, nodejs18, nodejs20, and rust-routinator), Mageia (clamav, kernel, kmod-virtualbox, kmod-xtables-addons & dwarves, and kernel-linus), SUSE (apptainer, bind, buildah, chromedriver, clamav, dovecot24, ignition, kubelogin, libjxl, libQt5Bluetooth5-32bit, orc, owasp-modsecurity-crs, python-pydantic, python311-ipython, and stb), and Ubuntu (linux-azure and netdata).",
-          "link": "https://lwn.net/Articles/1007646/",
-          "publishedOn": "2025-02-03T15:21:21.000Z",
-          "wordCount": 335,
-          "title": "Security updates for Monday",
-          "imageUrl": null
         }
       ]
     },
@@ -2915,18 +2974,7 @@
       "title": "Almost Secure",
       "feedUrl": "https://palant.info/rss.xml",
       "siteUrl": "https://palant.info/",
-      "articles": [
-        {
-          "id": "https://palant.info/2025/02/03/analysis-of-an-advanced-malicious-chrome-extension/",
-          "author": null,
-          "description": "Two weeks ago I published an article on 63 malicious Chrome extensions. In most cases I could only identify the extensions as malicious. With large parts of their logic being downloaded from some web servers, it wasn’t possible to analyze their functionality in detail.\nHowever, for the Download Manager Integration Checklist extension I have all parts of the puzzle now. This article is a technical discussion of its functionality that somebody tried very hard to hide. I was also able to identify a number of related extensions that were missing from my previous article.\n\n\n\n  \nContents\nThe problematic extensions\n“Remote configuration” functionality\nThe code being executed\nThe “session” handling\nWho is behind these extensions?\nThe problematic extensions\nSince my previous article I found a bunch…",
-          "link": "https://palant.info/2025/02/03/analysis-of-an-advanced-malicious-chrome-extension/",
-          "publishedOn": "2025-02-03T14:05:37.000Z",
-          "wordCount": null,
-          "title": "Analysis of an advanced malicious Chrome extension",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Preshing on Programming",
@@ -3059,6 +3107,26 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=86036",
+          "author": "sticky",
+          "description": "By Briáxis F. Mendes (孟必思) – Own work, CC BY-SA 4.0, Link Texas Instruments는 대만의 경제를 변화시키고 산업을 건설하고 기술 노하우를 이전할 수 있었다. 한편 전자제품 조립은 다른 투자를 촉진하여 대만이 더 높은 가치의 상품을 더 많이 생산하도록 도울 것이었다. 미국인들이 아시아에서의 군사적 공약에 회의적이 되면서 대만은 미국과의 관계를 절실하게 다각화가 필요했다. 대만을 방어하는 데 […]",
+          "link": "http://economicview.net/86036/",
+          "publishedOn": "2025-03-05T01:06:51.000Z",
+          "wordCount": null,
+          "title": "TSMC의 미국 신규 투자건 단상",
+          "imageUrl": null
+        },
+        {
+          "id": "http://economicview.net/?p=86033",
+          "author": "sticky",
+          "description": "통상적으로 생각하는 개념으로서의 사회에서는 화폐가 절대적으로 필요한 「사회적 삶의 수단」은 아니라고 말할 수도 있다. 하지만 특정사회 형태, 특히 가장 발달한 사회 형태는 화폐 없이는 그 구조와 작동을 상상할 수 없거나 적어도 화폐 없이는 매우 불완전할 것이다. 이 같은 이야기는 「사회교류화」(Vergesellung) 과정 내에서의 경제 영역에 포함되는 것들뿐만 아니라 「경제적인 것」을 훨씬 뛰어넘는, 인간들 사이의 권력 및 […]",
+          "link": "http://economicview.net/86033/",
+          "publishedOn": "2025-03-04T22:52:23.000Z",
+          "wordCount": null,
+          "title": "화폐는 늘 특권적 지위를 누리고 있었다",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=86022",
           "author": "sticky",
           "description": "By Katrina.Tuliao – Flickr, CC BY 2.0, Link 현대 주식회사 제도의 본질적인 특징은 소유와 경영의 분리입니다. 즉 개별 주주는 경영에 직접 관여하지 않고, 주주와 독립적인 위치에 있는 이사들이 회사의 주요 경영을 담당하는 것입니다. 그러나 국내 기업 현실에서는 지배주주가 이사 선임은 물론, 회사 운영 전반에 걸쳐 강력한 영향력을 행사하는 경우가 빈번해 보입니다. [중략] 이는 글로벌 시장에서 […]",
@@ -3115,6 +3183,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=130388",
+          "author": "김도연",
+          "description": "“HD현대중공업 월급날, 원래는 지역 상가가 호황을 이루는데 이제는 그렇지 않다. 울산 동구 14명 가운데 1명은 이주 노동자다. 이들 다수는 급여를 받자마자 본국으로 송금하기 때문에 지역 경제와 연결되지 않는다. 지금은 가장 많이 붐비는 곳이 편의점이다. 고향에 월급을 보내고 나면, 그들은 깡소주에 새우깡을 먹는다.” 민주당 울산 동구 국회의원 김태선이 4일 국회 토론회에서 꺼낸 말이다. 정부가 2022년부터 ‘조선업...\nThe post 현대중공업이 외국인 노동자들 밥값을 따로 받는 이유. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130388",
+          "publishedOn": "2025-03-05T09:48:25.000Z",
+          "wordCount": null,
+          "title": "현대중공업이 외국인 노동자들 밥값을 따로 받는 이유.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=130366",
+          "author": "신진욱",
+          "description": "윤석열 지지자들이 열광하는 독일의 공영방송. 독일 공영방송 ARD와 ZDF가 한국의 비상계엄과 탄핵 찬반 대립에 관해 28분짜리 특별 프로그램을 제작해서 지난 2월25일에 두 방송사의 인터넷 홈페이지 미디어실에 게시했다는 사실을 뒤늦게 알았다. 두 방송사가 운영하는 TV 채널 피닉스(Phoenix)가 두 명의 제작자에게 위탁하여 만든 프로그램이다. 인터넷에 극우 성향 사람들이 독일 공영방송이 한국의 부정선거와 민주당의 종북 실태를 보도해 줬다면서...\nThe post 한국에서 뭘 보고 간 건가… 독일에서 윤석열의 부정선거 음모론이 방송될 예정이다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130366",
+          "publishedOn": "2025-03-05T04:54:04.000Z",
+          "wordCount": null,
+          "title": "한국에서 뭘 보고 간 건가… 독일에서 윤석열의 부정선거 음모론이 방송될 예정이다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=130344",
+          "author": "소셜코리아",
+          "description": "최근 독일 총선에서 네오나치 성향의 극우 정당 AfD(Alternative f r Deutschland, 독일을 위한 대안)가 20% 넘는 지지율로 사회민주당(16.4% 지지율로 3위)을 제치고 제2당으로 부상했다. 4년 전 총선에 비해 무려 2배를 득표했고 더구나 옛 동독 지역에서는 지지율 1위다. 국내외에서 이를 걱정하는 목소리가 높다. 이러다가 1933년 히틀러 나치당의 집권이 재현하는 모습을 이 시대에 목격하는 거 아닌가 하는 걱정과...\nThe post 유럽 극우의 성공 키워드, ‘복지 민족주의’ appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130344",
+          "publishedOn": "2025-03-05T04:51:40.000Z",
+          "wordCount": null,
+          "title": "유럽 극우의 성공 키워드, ‘복지 민족주의’",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=130295",
+          "author": "이정환",
+          "description": "미국, 우크라이나 군사 지원 중단. 멕시코‧캐나다 25% 관세 강행. 쟁점과 현안. “이것이 우리의 정장이다.” “계산된 매복이었다.” 생산과 소비, 투자 다 줄었다. ∙ 최상목의 시간 끌기. 윤석열 선고 8인 체제로 가나. 콘클라베식 평의. 더 깊게 읽기. 검찰이 뒤늦게 명태균 카드를 휘두르는 이유. 상속세 오히려 증세할 때다. 다르게 읽기. 트럼프의 다음 목표는 북한이다. TSMC가 내놓은 1000억 달러....\nThe post 검찰이 뒤늦게 명태균 카드를 휘두르는 이유: 슬로우레터 3월5일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/130295",
+          "publishedOn": "2025-03-04T22:16:10.000Z",
+          "wordCount": null,
+          "title": "검찰이 뒤늦게 명태균 카드를 휘두르는 이유: 슬로우레터 3월5일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=130241",
           "author": "한상기",
@@ -4134,46 +4242,6 @@
           "wordCount": 5951,
           "title": "플라스틱 규제와 중국의 부상을 넘어 순환경제로",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/IE003406887_STD.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=127922",
-          "author": "소셜코리아",
-          "description": "한국 경제와 사회는 ‘3+1’ 위기에 직면해 있다. 경쟁력 상실이 본격적으로 나타나고 있는 제조업 위기, 조기퇴직·자영업 침체·노인 빈곤·청년실업·저출생으로 이어지는 사회 위기, 탄소중립과 디지털 사회로의 전환 위기라는 세 가지 위기에 더해, 미국의 제2기 트럼프 행정부 출범에 따른 대외 위기가 덮치고 있다. 이들 위기에 제대로 대처하지 못하거나 대응에 실기하면, 한국 경제와 사회는 심각한 침체와 쇠락의 길을 걸을 것이다....\nThe post ‘3+1 위기’ 재벌개혁으로 극복하자 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/127922",
-          "publishedOn": "2025-02-04T07:00:21.000Z",
-          "wordCount": 5494,
-          "title": "‘3+1 위기’ 재벌개혁으로 극복하자",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/01/GettyImages-2159479005.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=127882",
-          "author": "김도연",
-          "description": "“주 52시간 이슈가 지난해 11월 갑자기 언론에 한두 번 보도되더니 쟁점으로 등장했다. 반도체 인프라 구축이나 세제·금융 지원 등 칩스법 논의가 뒤로 밀리고 있어 매우 안타깝다.” 반도체 산업을 지원하는 칩스법 등을 발의했던 김태년(민주당 의원)이 3일 국회 토론회에서 짧게 푸념했다. 진짜 중요한 쟁점이 파묻혔다는 이야기다. 이게 왜 중요한가. 삼성 민원으로 시작된 이재명의 우클릭. 찬성 주장: 시간 말고...\nThe post 이재명의 위험한 선택, 주 52시간을 무너뜨릴 때 잃게 될 것들. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/127882",
-          "publishedOn": "2025-02-04T06:00:30.000Z",
-          "wordCount": 5309,
-          "title": "이재명의 위험한 선택, 주 52시간을 무너뜨릴 때 잃게 될 것들.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/img_1738567612_YVKDE.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=125873",
-          "author": "민노씨",
-          "description": "원래는 ‘2025년 세계 노사정 기구의 방향성’을 짚어보려고 했다. 그런데 웬걸. 이제 그런 ‘공식 계획’은 아무런 의미가 없다고 이상헌(ILO 고용정책국장)은 단언했다. 왜? 트럼프 컴백! 트럼프는 지나가는 바람일까? 아니면 새로운 질서의 시작일까. 이상헌은 후자라고 말한다. 트럼프라는 돌연변이의 출현. 그것은 이상헌의 지적처럼 우연이 아니다. 그의 출현은 물적 토대의 축적과 정서적 구조의 폭발로 어느 정도는 경고∙예견된 것이긴 했다. 두...\nThe post 트럼프라는 신질서, 무역부처의 준군사기구화 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/125873",
-          "publishedOn": "2025-02-04T03:34:49.000Z",
-          "wordCount": 7176,
-          "title": "트럼프라는 신질서, 무역부처의 준군사기구화",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2024/11/pic_005-2.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=127823",
-          "author": "이정환",
-          "description": "경향신문 등 전기 끊어라, 윤석열 지시였다. 병력 1000명 투입, “그 정도면 가능하겠다.” “분식회계 근거 없다”, 이재용 항소심도 무죄. 민감한 자료는 바닥에 묻으면 된다. 죄 없는 기업인? 엇갈린 평가. 쟁점과 현안. 이재명, “주 52시간 예외 검토.” 마은혁 임명 보류 사건 선고 연기. 미국, 캐나다‧멕시코 관세는 일단 한 달 유예. “다음은 EU다.” 자동차 3000달러 이상 오른다. 환율...\nThe post 죄 없는 기업인? 이재용 무죄에 쏟아진 ‘삼비어천가’: 슬로우레터 2월4일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/127823",
-          "publishedOn": "2025-02-03T22:33:31.000Z",
-          "wordCount": 6281,
-          "title": "죄 없는 기업인? 이재용 무죄에 쏟아진 ‘삼비어천가’: 슬로우레터 2월4일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/02/22-1206_이재용_회장_UAE_바라카_원전_건설현장_방문_1-1024x662-1.jpg"
         }
       ]
     },
@@ -4229,6 +4297,26 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80816",
+          "author": "ingppoo",
+          "description": "[전문 번역] 제목: 코로나19의 피해를 가장 정확히 예측했던 사람들은 누구일까?   The Covid Alarmists Were Closer to the Truth Than Anyone Else by David Wallace-Wells 데이비드 월러스웰스는 뉴욕타임스 오피니언 칼럼니스트다.   전 세계적으로 2천만 명 넘는 사람의 목숨을 앗아간 코로나19 팬데믹이 창궐한 지 5년이 지났다. 첫 확진 사례는 2019년 12월에 나왔다. 세계보건기구는 2020년 1월, 코로나19 바이러스와 관련해 공중보건 비상사태를 선포했다. 미국 정부는 3월 13일 국가 비상사태를 선포했다. 이어 3월 16일에서 27일 사이 → 더 보기",
+          "link": "https://newspeppermint.com/2025/03/05/npsbs_covidalarmist/?utm_source=rss&utm_medium=rss&utm_campaign=npsbs_covidalarmist",
+          "publishedOn": "2025-03-05T20:00:19.000Z",
+          "wordCount": null,
+          "title": "코로나19의 피해를 가장 정확히 예측했던 사람들은 누구일까?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://newspeppermint.com/?p=80604",
+          "author": "ingppoo",
+          "description": "뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 1월 14일 스프에 쓴 글입니다. 지난 6일 미국 캘리포니아 남부 LA 주변 곳곳에서 동시에 발화한 산불 피해가 걷잡을 수 없이 커지고 있습니다. 글을 쓴 13일 아침 현재 최소 16명이 목숨을 잃었고, 두 곳의 불길은 → 더 보기",
+          "link": "https://newspeppermint.com/2025/03/04/npsp_lafireclimatechange/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_lafireclimatechange",
+          "publishedOn": "2025-03-04T22:59:36.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] “LA 산불 반복되는 과학적 이유 있는데… 그게 아니라는 트럼프·머스크”",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80809",
           "author": "NewsPeppermint",
@@ -4397,16 +4485,6 @@
           "publishedOn": "2025-02-04T22:59:01.000Z",
           "wordCount": null,
           "title": "[뉴페@스프] “부정 선거” 우기던 트럼프가 계엄령이라는 카드는 내쳤던 이유",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=80675",
-          "author": "NewsPeppermint",
-          "description": "취임한 지 이제 2주가 지난 트럼프 2기 행정부의 명확한 특징 가운데 하나는 각 부처 장관과 백악관 주요 보직, 연방 기관 수장들을 업무 적합성이나 전문성, 경력이나 능력보다 트럼프에 얼마나 충성하는지, 트럼프의 정치적 의제를 얼마나 뚝심 있게 수행할 수 있는지를 기준으로 뽑은 인물로 채웠다는 점입니다. 이 점이 고스란히 드러난 장면이 지난주 워싱턴 D.C.에서 일어난 비행기 사고 이후 트럼프 대통령이 직접 나선 기자회견이었습니다. 틈만 나면 좌파들의 DEI (차별금지 조항) 기반 고용 정책이 모든 → 더 보기",
-          "link": "https://newspeppermint.com/2025/02/03/npsp_trumpmeritocracy/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumpmeritocracy",
-          "publishedOn": "2025-02-03T22:59:38.000Z",
-          "wordCount": null,
-          "title": "‘전원 사망’ 참사 브리핑에 나온 그들… “트럼프 말씀이 맞습니다”",
           "imageUrl": null
         }
       ]
