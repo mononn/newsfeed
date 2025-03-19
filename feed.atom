@@ -2,10 +2,200 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2025-03-18T20:16:47.809Z</updated>
+    <updated>2025-03-19T20:17:55.873Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[GNOME 48 released]]></title>
+        <id>https://lwn.net/Articles/1014799/</id>
+        <link href="https://lwn.net/Articles/1014799/"/>
+        <updated>2025-03-19T18:14:05.000Z</updated>
+        <summary type="html"><![CDATA[GNOME 48 ("Bengaluru")
+has been released. As usual, this release includes a number of new
+features and enhancements including support for shortcuts in the Orca
+screen reader on Wayland, new fonts, addition of image editing to
+Image Viewer, and more.
+The GNOME 48 release also adds new applications to the GNOME Circle collection,
+such as Drum Machine
+and the Iotas note-taking
+application. See "What's new
+for developers" a rundown of improvements for developers in
+GNOME 48.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Better CPU vulnerability mitigation configuration]]></title>
+        <id>https://lwn.net/Articles/1013640/</id>
+        <link href="https://lwn.net/Articles/1013640/"/>
+        <updated>2025-03-19T15:45:44.000Z</updated>
+        <summary type="html"><![CDATA[Modern CPUs all have multiple hardware vulnerabilities that the kernel needs to mitigate;
+the 6.13 kernel has workarounds for 14 security-sensitive CPU bugs just on x86_64.
+Several of those have multiple variants,
+or multiple mitigations that apply on different microarchitectures. There are
+different kernel command-line options for each of these mitigations, which leads
+to a confusing situation for users trying to figure out how to configure their
+systems. David Kaplan recently posted
+
+a patch set that adds a single, unified command-line option for controlling
+mitigations and
+simplifies the logic for detecting, configuring, and
+applying them as well.
+If it is merged, the patch set could
+make it much easier for users to navigate the complicated web of CPU
+vulnerabilities and their mitigations.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PeerTube 7.1 released]]></title>
+        <id>https://lwn.net/Articles/1014734/</id>
+        <link href="https://lwn.net/Articles/1014734/"/>
+        <updated>2025-03-19T15:32:13.000Z</updated>
+        <summary type="html"><![CDATA[Version 7.1
+of PeerTube, a tool for
+sharing videos online, has been released. Notable features in this
+release include improved support for the Podcast 2.0 standard, better
+playback stability, and a new view protocol enabled by default to
+allow PeerTube to handle more simultaneous viewers. See the release
+notes for more details.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] A look at /e/OS on tablet hardware]]></title>
+        <id>https://lwn.net/Articles/1006557/</id>
+        <link href="https://lwn.net/Articles/1006557/"/>
+        <updated>2025-03-19T14:59:10.000Z</updated>
+        <summary type="html"><![CDATA[/e⁠/⁠OS is a
+privacy-centric, open-source mobile operating system that
+has primarily been targeted at mobile phones, with only a few
+community supported images available for tablet devices. In December,
+Murena—a company that sells devices with /⁠e⁠/⁠OS
+preinstalled—announced
+that /⁠e⁠/⁠OS now officially supports tablets as well, starting with the
+Pixel tablet. The user experience is close enough to
+mainstream alternatives to make it attractive, but there are some
+under-the-hood problems that may give users pause.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Supply Chain Attacks on Linux distributions (Fenrisk)]]></title>
+        <id>https://lwn.net/Articles/1014741/</id>
+        <link href="https://lwn.net/Articles/1014741/"/>
+        <updated>2025-03-19T14:48:47.000Z</updated>
+        <summary type="html"><![CDATA[A security company called Fenrisk has posted an overview of a pair
+of claimed successful supply-chain attacks on the Fedora and openSUSE
+distributions.
+
+
+	We successfully identified vulnerabilities in the Pagure, the Git
+	forge used by Fedora to store their package definitions. We also
+	compromised Open Build Service, the all-in-one toolchain used and
+	developed by the openSUSE project for compilation and packaging.
+
+	Their exploitation by malicious actors would have led to the
+	compromise of all the packages of the distributions Fedora and
+	openSUSE, as well as their downstream distributions, impacting
+	millions of Linux servers and desktops.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How we optimized vLLM for DeepSeek-R1]]></title>
+        <id>1e8fe029-0957-476b-8633-028bee5bff64</id>
+        <link href="https://developers.redhat.com/articles/2025/03/19/how-we-optimized-vllm-deepseek-r1"/>
+        <updated>2025-03-19T14:17:00.000Z</updated>
+        <summary type="html"><![CDATA[DeepSeek and vLLM optimizations have been a top priority for our team and the vLLM community as a whole, and we are excited to share a deep dive into our work. In this article, we will cover the key inference improvements we have made, detail the integration of DeepSeek’s latest advancements into vLLM, and discuss how we are scaling DeepSeek-R1 for real-world deployment. Additionally, we will review the various open source contributions from DeepSeek and outline our roadmap for integrating them into vLLM.
+Introduction to vLLM
+vLLM is an open source inference server designed for efficient model serving, providing a streamlined, high-performance infrastructure for large language models (LLMs). It is licensed under Apache 2.0 and can be installed via pip or deployed as a Docker image, making …]]></summary>
+        <author>
+            <name>Michael Goin, Robert Shaw, Nick Hill, Tyler Smith, Lucas Wilkinson</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
+        <id>https://lwn.net/Articles/1014722/</id>
+        <link href="https://lwn.net/Articles/1014722/"/>
+        <updated>2025-03-19T13:26:02.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (tzdata), Fedora (expat and tigervnc), Red Hat (kernel, kernel-rt, thunderbird, and webkit2gtk3), SUSE (dcmtk), and Ubuntu (restrictedpython and uriparser).]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stretchable Transistors Enable In-Sensor Edge Computing in Wearable Technology]]></title>
+        <id>https://www.embedded.com/?p=4493685</id>
+        <link href="https://www.embedded.com/stretchable-transistors-enable-in-sensor-edge-computing-in-wearable-technology/"/>
+        <updated>2025-03-19T09:47:31.000Z</updated>
+        <summary type="html"><![CDATA[The advancement of organic electrochemical transistors (OECTs) is opening new frontiers in wearable technology, enabling smarter and more responsive devices that seamlessly integrate into daily life. Developed by researchers at the University of Hong Kong (HKU), these transistors combine flexibility, miniaturization, and real-time computational capabilities. With their ability to stretch, bend, and conform to human […]
+The post Stretchable Transistors Enable In-Sensor Edge Computing in Wearable Technology appeared first on Embedded.]]></summary>
+        <author>
+            <name>Loriotoole</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tips for using templating in governance policies: Part 3]]></title>
+        <id>a92cf56d-cb15-4cd6-9e96-107c8928d2ca</id>
+        <link href="https://developers.redhat.com/articles/2025/03/19/tips-using-templating-governance-policies-part-3"/>
+        <updated>2025-03-19T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Red Hat Advanced Cluster Management for Kubernetes (RHACM) governance provides an extensible framework for enterprises to introduce their own security and configuration policies that can be applied to managed Red Hat OpenShift or Kubernetes clusters. For more information on RHACM policies, I recommend that you read the Applying Policy-Based Governance at Scale Using Templates and Comply to standards using policy based governance blogs.
+In this 3-part series, I will showcase a number of techniques you can use for templates in your RHACM policies. In part one I reviewed practices you can use to make your templates more readable and easier to maintain. Part two of this series took a look at more advanced template functionality and extended use cases for using Policies to manage clusters.
+In t…]]></summary>
+        <author>
+            <name>Brian Jarvis</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Embedded World, Nuremberg: Arm’s Suraj Gajendra on AI, Chiplets, and the Future of Automotive Compute]]></title>
+        <id>https://www.embedded.com/?p=4494921</id>
+        <link href="https://www.embedded.com/embedded-world-nuremberg-arms-suraj-gajendra-on-ai-chiplets-and-the-future-of-automotive-compute/"/>
+        <updated>2025-03-19T06:32:00.000Z</updated>
+        <summary type="html"><![CDATA[At Embedded World in Nuremberg, Maurizio Di Paolo Emilio, Editor-in-Chief of embedded.com, sat down with Suraj Gajendra, Vice President of Automotive Products and Software Solutions at Arm. The conversation focused on Arm’s latest innovations in the automotive sector, including the introduction of Kleidi AI, a suite of software libraries for optimizing AI applications on Arm CPUs, and the critical […]
+The post Embedded World, Nuremberg: Arm’s Suraj Gajendra on AI, Chiplets, and the Future of Automotive Compute appeared first on Embedded.]]></summary>
+        <author>
+            <name>Maurizio Di Paolo Emilio</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[주주 환원이라는 오래된 질문, 한은의 답변은 “늘려야 한다.”]]></title>
+        <id>https://slownews.kr/?p=131399</id>
+        <link href="https://slownews.kr/131399"/>
+        <updated>2025-03-19T05:35:14.000Z</updated>
+        <summary type="html"><![CDATA[주주 가치는 한국 경제의 오랜 쟁점이다. 주주(stockholder)와 이해관계자(stakeholder)의 갈등을 다룬 논쟁이다. 주주들과 이해관계자의 가치는 충돌하기도 하고, 주주 가치가 재벌의 경영권 이슈와 맞물리는 경우도 많다. 주주 가치와 기업 가치는 연동할 수도 있지만 장기적 성장성을 고려하면 자원 배분의 우선 순위를 고려해야 한다. 민주당 주도로 통과한 상법 개정안도 이사회의 충실 의무를 주주까지 확대한다는 내용이라 연장선 위에 있는 이슈라고...
+The post 주주 환원이라는 오래된 질문, 한은의 답변은 “늘려야 한다.” appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>김도연</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[뉴페@스프] 인사 끝나자마자 어색한 침묵?… 이번 명절, 어떤 대화 나누셨나요]]></title>
+        <id>https://newspeppermint.com/?p=80660</id>
+        <link href="https://newspeppermint.com/2025/03/18/npsp_youreperfect/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_youreperfect"/>
+        <updated>2025-03-18T22:59:32.000Z</updated>
+        <summary type="html"><![CDATA[뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 1월 31일 스프에 쓴 글입니다. 미국에 처음 와서 영어를 익혀가며 뉴스페퍼민트를 막 시작했을 무렵의 일입니다. 유학생이든 이민자든 처음 새로운 언어를 배울 때 특히 어려운 점 중 하나가 대화의 뉘앙스를 파악하고 거기에 맞춰 자연스럽게 대처하는 → 더 보기]]></summary>
+        <author>
+            <name>ingppoo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[시신 가방 3000개 구입, 정말 처단할 계획이었나: 슬로우레터 3월19일.]]></title>
+        <id>https://slownews.kr/?p=131462</id>
+        <link href="https://slownews.kr/131462"/>
+        <updated>2025-03-18T22:18:59.000Z</updated>
+        <summary type="html"><![CDATA[3000명 시신 담을 생각이었나. “사망자가 3000개가 필요하다면 어떻겠냐.” 쟁점과 현안. 탄핵 선고 다음 주로 넘어가나. 헌재에 기동대 2만 명 배치. 최상목, 방통위법 개정안도 거부권. 이스라엘, 가자 공습… 사실상 휴전 종료. 더 깊게 읽기. 최근 헌재 선고에 힌트 있다. ‘민감 국가’ 지정, 비상계엄 때문일 수도 있다. 이민자 156만 명 시대. 김성훈 구속영장 청구했다. 개혁신당 대선 후보는...
+The post 시신 가방 3000개 구입, 정말 처단할 계획이었나: 슬로우레터 3월19일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Vertex AI RAG Engine: A developers tool]]></title>
         <id>https://developers.googleblog.com/en/vertex-ai-rag-engine-a-developers-tool/</id>
@@ -5078,216 +5268,6 @@ The post 솔루션 아카이브: 기후위기. appeared first on 슬로우뉴스
 The post 정의로운 전환, 속도 높이려면 노동자·지역주민 참여부터 appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>녹색전환연구소</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[보더 다이내믹스: 우리는 국경으로부터 무엇을 읽을 수 있는가? Border Dynamics: What can we capture from borders?]]></title>
-        <id>https://attention2.space/?p=5127</id>
-        <link href="https://attention2.space/2025/border_dynamics/"/>
-        <updated>2025-02-18T08:07:16.000Z</updated>
-        <summary type="html"><![CDATA[행위자성을 이해하는 것은 복잡한 층위의 경계에 대한 해석을 가능하게 하고, 국경의 경우 때로는 너무나 견고해 보이는 국민국가 체제의 균열을 드러낸다. 다음으로 행위자성의 문제는 개인의 열망과 그로 인해 도래할 수 있는 잠재적 미래에 주목하게 한다. 경계에 주목함으로써, 우리는 이 공간의 과거와 현재뿐 아니라 다가올 미래에 대해서도 감각할 수 있다.]]></summary>
-        <author>
-            <name>attention2space</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[갈등과 증오의 양극화, 균형 국가가 해법이다]]></title>
-        <id>https://slownews.kr/?p=129046</id>
-        <link href="https://slownews.kr/129046"/>
-        <updated>2025-02-18T08:02:01.000Z</updated>
-        <summary type="html"><![CDATA[12.3 내란과 대통령 탄핵, 그리고 그 이후의 수습 과정에서 한국 정치의 민낯이 드러나고 있고, 이는 광범위한 정치개혁의 문제를 제기한다. 대통령의 친위 쿠데타를 허용한 법과 행정 체계의 문제뿐만 아니라, 대통령의 과도한 권력, 5년제 단임 대통령의 무책임함, 정치 양극화, 팬덤 정치, 극우세력의 확산 등 다양한 문제들이 드러났기 때문이다. 12.3 내란이 아니더라도 한국 정치의 수많은 문제가 지적되어 왔다....
-The post 갈등과 증오의 양극화, 균형 국가가 해법이다 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>소셜코리아</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Top-Down Energy Optimized Wafer Fab Design]]></title>
-        <id>https://www.embedded.com/?p=4493697</id>
-        <link href="https://www.embedded.com/top-down-energy-optimized-wafer-fab-design/"/>
-        <updated>2025-02-18T07:55:00.000Z</updated>
-        <summary type="html"><![CDATA[High energy density SiC semiconductor process technologies have been a major force in the transition to electric vehicles. In its wake is the prospect of all-electric, high-volume manufacturing facilities eliminating the need for fossil fuels. For the semiconductor industry, with its terawatt-hour energy needs, this presents an electrification challenge of the highest order. A challenge […]
-The post Top-Down Energy Optimized Wafer Fab Design appeared first on Embedded.]]></summary>
-        <author>
-            <name>Stefano Lovati</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[파국 속 함께-되는 몸, 몸들에 대하여]]></title>
-        <id>https://attention2.space/?p=5120</id>
-        <link href="https://attention2.space/2025/becoming_bodies/"/>
-        <updated>2025-02-18T07:10:01.000Z</updated>
-        <summary type="html"><![CDATA[이와 같은 경험, 그들이 몸으로서 바다, 바닷속 생물들과 함께 얽혀가는 과정과 지식은 소위 말하는 ‘(검증된) 과학적 지식’으로 받아들여지지 않았다. 인간의 세계 바깥에서 혼종적 과정을 거쳐 몸 안에 새겨지는 경험을 기존의 언어로 표현하기란 쉽지 않다. 말해도, 들리지 않는다. 바다의 변화와 생물의 죽음 앞에서 무기력이 반복되고, 그들은 말하기를 멈추었다.]]></summary>
-        <author>
-            <name>attention2space</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“선 넘는 대통령, 저항은 미미”… 트럼프 ‘독재 야망’ 꺾으려면]]></title>
-        <id>https://newspeppermint.com/?p=80746</id>
-        <link href="https://newspeppermint.com/2025/02/18/npsp_anticipatoryobedience/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_anticipatoryobedience"/>
-        <updated>2025-02-18T04:30:47.000Z</updated>
-        <summary type="html"><![CDATA[뉴욕타임스 칼럼니스트 마샤 게센은 트럼프가 법치(rule of law) 대신 권위주의적 통치에 필요한 법(law of rule)을 만드는 ‘독재적 돌파구’에 관해 경고하는 칼럼을 꾸준히 썼습니다. 이번에는 오르반 총리와 헝가리 대신 본인이 나고 자란 소련과 푸틴 대통령 하의 러시아를 비교하며 제왕적 대통령의 길을 가고 있는 트럼프를 향해 미국 사회 곳곳에서 나타나는 “앞서가는 복종(anticipatory obedience)”을 우려하는 글을 썼습니다. “앞서가는 복종”은 예일대학교의 역사학자 티모시 스나이더가 쓴 표현인데, 맥락을 고려하면 ‘권력에 알아서 기는 상황’이라고 풀어 옮길 → 더 보기]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[집단 착각에 빠져 서로 공격하는 대신 ‘왜?’라고 물어보기]]></title>
-        <id>https://slownews.kr/?p=128995</id>
-        <link href="https://slownews.kr/128995"/>
-        <updated>2025-02-18T03:38:36.000Z</updated>
-        <summary type="html"><![CDATA[‘집단 착각’이라는 제목에 나만 꽂혔을 리 없다. 비상계엄을 통한 내란 시도가 너무 명확해서 논란의 여지도 없을 줄 알았다. 이후 거대한 집단 착각을 잇달아 목격하고 있다. 뭔가 잘못되고 있다는 불안이 꿈틀댔다. 서로에 대한 불만과 분노에 휩싸여 신뢰를 잃은 사회. 서로 집단 착각이라고 공격하는 사회가 지속 가능할까? 하버드 교육대학원의 토드 로즈는 집단 지성이 집단 무지성으로 전락하는 시대,...
-The post 집단 착각에 빠져 서로 공격하는 대신 ‘왜?’라고 물어보기 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>정혜승</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 식품.]]></title>
-        <id>https://slownews.kr/?p=111831</id>
-        <link href="https://slownews.kr/111831"/>
-        <updated>2025-02-18T00:24:53.000Z</updated>
-        <summary type="html"><![CDATA[두유는 우유가 아니다 멍게가 대풍이라 녹아 내린다. 밥값은 한국이 세계에서 가장 비싸다? 밀기울, 비지, 맥주박 등 업사이클링 푸드가 뜬다. 감자가 아니라 ‘금자’. 개고기 금지, 대통령 부인이 할 말인가. 런치 플레이션, 구청 식당이 붐빈다. 항정살 1인분이 120g까지 줄었다. 시골 마을 살린 우리밀 빵. 낚싯배 싹쓸이 막아야 한다? 대통령과 중소기업인 만찬 메뉴는 ‘롸버트 치킨’. 흑산도와 군산의 홍어...
-The post 솔루션 아카이브: 식품. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What role does LLM reasoning play for software tasks?]]></title>
-        <id>https://martinfowler.com/articles/exploring-gen-ai.html#memo-12</id>
-        <link href="https://martinfowler.com/articles/exploring-gen-ai.html#memo-12"/>
-        <updated>2025-02-18T00:02:00.000Z</updated>
-        <summary type="html"><![CDATA[Recent LLM models have provided “reasoning” capabilities. Birgitta
-       Böckeler asks what role these play with coding tasks. She
-      doesn't have an answer, but does have questions and thoughts - and has
-      not found such capabilities worthwhile so far. 
-more…]]></summary>
-        <author>
-            <name>Martin Fowler</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[김건희, “아니에요, 선생님, 보수 역사 최다석을 얻을 거라 했어요”: 슬로우레터 2월18일.]]></title>
-        <id>https://slownews.kr/?p=128929</id>
-        <link href="https://slownews.kr/128929"/>
-        <updated>2025-02-17T22:37:05.000Z</updated>
-        <summary type="html"><![CDATA[법인세 ≒ 근로소득세. 쟁점과 현안. 박빙? 중도를 봐야 한다. 중앙일보의 경고, “이렇게 가면 무난히 진다.” 김건희, “김상민 국회의원 되게 도와 달라.” “110석 못 넘는다”, 명태균 말이 맞았다. 명태균 사건 서울로 이송한 이유는? 블랙핑크 백악관 공연, 김건희가 틀었나. 유시민과 홍준표. 더 깊게 읽기. 진급이 미끼였다. 여인형 메모 나왔다. 김현태의 변심? 본질은 달라질 게 없다. 다르게 읽기....
-The post 김건희, “아니에요, 선생님, 보수 역사 최다석을 얻을 거라 했어요”: 슬로우레터 2월18일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[History of C and C++. Part 2. Standardization of C and C++, Qt, Clang, and Unreal Engine]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/cpp/1224/</id>
-        <link href="https://pvs-studio.com/en/blog/posts/cpp/1224/"/>
-        <updated>2025-02-17T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is a second part of the story on how the C and C++ languages came to be as we know them today. Here, we'll cover the official certification of C and C++, as well as the tools released from...]]></summary>
-        <author>
-            <name>from pvs-studio.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VyperCore Unveils Vyperlab, an Evaluation Platform Highlighting Its Advanced Compute Accelerator Technology]]></title>
-        <id>https://www.embedded.com/?p=4494214</id>
-        <link href="https://www.embedded.com/vypercore-unveils-vyperlab-an-evaluation-platform-highlighting-its-advanced-compute-accelerator-technology/"/>
-        <updated>2025-02-17T20:30:00.000Z</updated>
-        <summary type="html"><![CDATA[VyperCore has introduced VyperLab, a cutting-edge cloud-based evaluation platform designed to showcase its breakthrough technology. VyperLab empowers Lead Partners to experience the capabilities of its hardware accelerator innovation, delivering substantial energy efficiency gains, enhanced performance, and robust memory safety for server applications in next-generation data centers. Targeted use cases include large-scale web enterprises, high-volume data […]
-The post VyperCore Unveils Vyperlab, an Evaluation Platform Highlighting Its Advanced Compute Accelerator Technology appeared first on Embedded.]]></summary>
-        <author>
-            <name>Stefano Lovati</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to securely deploy GitHub ARC on OpenShift]]></title>
-        <id>c87cee19-8b2b-46d8-95b5-5679c7a21385</id>
-        <link href="https://developers.redhat.com/articles/2025/02/17/how-securely-deploy-github-arc-openshift"/>
-        <updated>2025-02-17T16:54:25.000Z</updated>
-        <summary type="html"><![CDATA[GitHub Actions is a popular tool for developers and release engineers to run automated pipelines to test, build, and deploy application code on their environments. The extensive number of available third-party integrations with which engineers can easily compose their pipelines into their software configuration management (SCM) creates a seamless user experience.
-There are potential deal breakers for some organizations, such as the shared infrastructure environment in which jobs run. However, GitHub Action Runner Controller (ARC) is available for self-hosted deployments to run CI/CD workloads in your own environment. Out of the box, ARC supports deployment to Docker and Kubernetes, but there is no official support for deploying to Red Hat OpenShift. With a few modifications to the security…]]></summary>
-        <author>
-            <name>Chris Peters, Chris Keller</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] 14 years of systemd]]></title>
-        <id>https://lwn.net/Articles/1008721/</id>
-        <link href="https://lwn.net/Articles/1008721/"/>
-        <updated>2025-02-17T15:25:42.000Z</updated>
-        <summary type="html"><![CDATA[It is a standard practice to use milestones to reflect on the
-achievements of a project, such as the anniversary of its first
-release or first commit. Usually, these are observed at five and
-ten‑year increments; the tenth anniversary of the 1.0 release, or 25
-years since from the first public announcement, etc. Lennart
-Poettering, however, took a different approach at FOSDEM 2025 with a keynote
-commemorating 14 years of systemd,
-and a brief look ahead at his goals and systemd's challenges for the future.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Three stable kernels under the sky]]></title>
-        <id>https://lwn.net/Articles/1010352/</id>
-        <link href="https://lwn.net/Articles/1010352/"/>
-        <updated>2025-02-17T14:55:44.000Z</updated>
-        <summary type="html"><![CDATA[Greg Kroah-Hartman has released three more stable kernels:
-6.13.3,
-6.12.14, and
-6.6.78.
-There was a bit of confusion that resulted in the patch for
-CVE 2025-21687
-getting applied twice — but that doesn't result in any problems for users of the
-kernel, just a bit of extra noise in the CVE database, so Kroah-Hartman has
-decided to leave the releases as-is instead of rushing another point release.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Most Annoying Sound]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1724.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1724.php"/>
-        <updated>2025-02-17T13:37:56.000Z</updated>
-        <summary type="html"><![CDATA["The contacts in these off-the-shelf charger cradles broke, can you replace them?" Asked my client, and immediately continued: "And while you're at it, can you put a speaker in there, to make a very annoying sound if the rechargeable unit is taken away for too long?"
-An Unusual Request
-I was not fazed by this upside-down assignment; that's just this client's style, not an attempt to...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Monday]]></title>
-        <id>https://lwn.net/Articles/1010328/</id>
-        <link href="https://lwn.net/Articles/1010328/"/>
-        <updated>2025-02-17T12:35:59.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by AlmaLinux (container-tools:rhel8, gcc, libxml2, nodejs:18, and nodejs:20), Debian (freerdp2, golang-glog, trafficserver, and tryton-client), Fedora (chromium, krb5, libheif, microcode_ctl, nginx, nginx-mod-fancyindex, nginx-mod-modsecurity, nginx-mod-naxsi, nginx-mod-vts, and webkitgtk), Mageia (ffmpeg, golang, postgresql13 and postgresql15, and python-zipp), Oracle (container-tools:ol8, gcc, gcc-toolset-13-gcc, gcc-toolset-14-gcc, kernel, libxml2, and nodejs:20), Red Hat (gcc, idm:DL1, and ipa), SUSE (buildah, chromium, glibc, kernel, kernel-firmware-all-20250206, libecpg6, postgresql15, python, python3, python311, and ruby3.4-rubygem-rack), and Ubuntu (intel-microcode).]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Quantinuum’s “Reimei”, the World’s First Fully Integrated Hybrid Quantum Supercomputer, is Now Fully Operational at RIKEN]]></title>
-        <id>https://www.embedded.com/?p=4494189</id>
-        <link href="https://www.embedded.com/quantinuums-reimei-the-worlds-first-fully-integrated-hybrid-quantum-supercomputer-is-now-fully-operational-at-riken/"/>
-        <updated>2025-02-17T09:19:20.000Z</updated>
-        <summary type="html"><![CDATA[Quantinuum, the leading integrated quantum computing company globally, and RIKEN, Japan’s largest and most comprehensive research institution, have announced the successful installation of Quantinuum’s “Reimei” quantum computer at RIKEN’s Wako campus in Saitama, Japan. RIKEN has meticulously designed, prepared, and delivered a state-of-the-art facility to house the trapped-ion quantum computer, laying the groundwork for future […]
-The post Quantinuum’s “Reimei”, the World’s First Fully Integrated Hybrid Quantum Supercomputer, is Now Fully Operational at RIKEN appeared first on Embedded.]]></summary>
-        <author>
-            <name>Maurizio Di Paolo Emilio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[이재용의 알리바이: 삼성 노동시간 서사에 담긴 미디어 전략]]></title>
-        <id>https://slownews.kr/?p=127293</id>
-        <link href="https://slownews.kr/127293"/>
-        <updated>2025-02-17T08:27:56.000Z</updated>
-        <summary type="html"><![CDATA[“벽에 걸린 저건 뭔가요?”“아, 저거요? 맥거핀입니다.”“맥거핀이라고요? 어디에 쓰는 건가요?”“스코틀랜드 북부 산악지대에서 사자를 잡는 데 쓴답니다.”“스코틀랜드에는 사자가 없는데요?”“아, 그럼 맥거핀은 아무것도 아닌 거군요.” 영화에는 ‘맥거핀 효과’라는 게 있다. 영화감독 히치콕이 자신의 작품에 도입한 일종의 ‘트릭’이다. 위 대화는 히치콕이 맥거핀을 설명하는 하나의 예시다. 스코틀랜드에 사자가 살지 않는다면, 사자 잡는 데 쓰는 새(鳥) 맥거핀도 소용이 없다. 히치콕은 관객의...
-The post 이재용의 알리바이: 삼성 노동시간 서사에 담긴 미디어 전략 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>민노씨</name>
         </author>
     </entry>
     <entry>
