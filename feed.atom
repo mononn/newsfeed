@@ -2,10 +2,193 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2025-03-20T20:17:45.638Z</updated>
+    <updated>2025-03-21T20:17:27.686Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[$] The guaranteed contiguous memory allocator]]></title>
+        <id>https://lwn.net/Articles/1015000/</id>
+        <link href="https://lwn.net/Articles/1015000/"/>
+        <updated>2025-03-21T17:33:53.000Z</updated>
+        <summary type="html"><![CDATA[As a system runs and its memory becomes fragmented, allocating large,
+physically contiguous regions of memory becomes increasingly difficult.
+Much effort over the years has gone into avoiding the need to make such
+allocations whenever possible, but there are times when they simply cannot
+be avoided.  The kernel's contiguous memory
+allocator (CMA) subsystem attempts to make such allocations possible,
+but it has never been a perfect solution.  Suren Baghdasaryan is is trying
+to improve that situation with the guaranteed
+contiguous memory allocator patch set, which includes work from Minchan
+Kim as well.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Julien Malka proposes method for detecting XZ-like backdoors]]></title>
+        <id>https://lwn.net/Articles/1015095/</id>
+        <link href="https://lwn.net/Articles/1015095/"/>
+        <updated>2025-03-21T16:54:21.000Z</updated>
+        <summary type="html"><![CDATA[Julien Malka has
+
+called for the NixOS project to use build-reproducibility to detect when a program has a maintainer-generated tarball that results in a different artifact than building from source. There are good reasons for projects to release maintainer-generated tarballs, but since the materials included in them are usually documentation, extra build scripts, and so on, it makes sense to check that they don't influence the final build output. While this would not have stopped 
+
+last year's XZ backdoor, it would have made it harder to hide.
+
+
+
+People are often convinced that OSS is more trustworthy than closed-source software because the code can be audited by practitioners and security professionals in order to detect vulnerabilities or backdoors. In this instance, this procedure has been made difficult by the fact that part of the code activating the backdoor was not included in the sources available within the git repository but was instead present in the maintainer-provided tarball. While this was used to hide the backdoor out of sight of most investigating eyes, this is also an opportunity for us to improve our software supply chain security processes.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PCBWay: Advancing Embedded Innovation with High-Quality PCB Solutions]]></title>
+        <id>https://www.embedded.com/?p=4494948</id>
+        <link href="https://www.embedded.com/pcbway-advancing-embedded-innovation-with-high-quality-pcb-solutions/"/>
+        <updated>2025-03-21T16:49:08.000Z</updated>
+        <summary type="html"><![CDATA[PCBWay is committed to empowering engineers and developers with top-tier PCB manufacturing, assembly, CNC machining, and 3D printing solutions. At Embedded World 2025, the company shared insights on how its services help accelerate product development, ensuring high quality, cost-effectiveness, and rapid turnaround times. Watch the interview to learn how PCBWay supports embedded system developers in […]
+The post PCBWay: Advancing Embedded Innovation with High-Quality PCB Solutions appeared first on Embedded.]]></summary>
+        <author>
+            <name>Loriotoole</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[$] Multiple memory classes for address-space isolation]]></title>
+        <id>https://lwn.net/Articles/1014440/</id>
+        <link href="https://lwn.net/Articles/1014440/"/>
+        <updated>2025-03-21T16:24:22.000Z</updated>
+        <summary type="html"><![CDATA[Brendan Jackman has been working to try to get ahead of the next hardware CPU
+vulnerability
+before it gets discovered. In January, he posted the second version of
+
+a patch set that introduces
+
+address-space isolation (ASI) as a way of
+preventing future CPU vulnerabilities from leaking important
+information. The core concept is to ensure that data that is not currently
+needed is not present in memory, so that speculative execution cannot leak it.
+The work is nowhere near ready to be incorporated into the mainline
+kernel — not least of all because it has a large performance impact in its
+current form — but it is likely to once again be a topic of discussion at the
+2025
+
+Linux Filesystem, Memory Management, and BPF Summit.]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stretchable Transistors, AI Chips, Cryogenic Measurement Technology: Embedded Week Insights]]></title>
+        <id>https://www.embedded.com/?p=4494956</id>
+        <link href="https://www.embedded.com/stretchable-transistors-ai-chips-cryogenic-measurement-technology-embedded-week-insights/"/>
+        <updated>2025-03-21T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on Stretchable Transistors, AI Chips, and Cryogenic Measurement Technology! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS Green Hills Software and NXP Partner to Advance Safety-Critical SDV Architectures […]
+The post Stretchable Transistors, AI Chips, Cryogenic Measurement Technology: Embedded Week Insights appeared first on Embedded.]]></summary>
+        <author>
+            <name>Stefano Lovati</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing rpi-image-gen for customized Raspberry Pi images]]></title>
+        <id>https://lwn.net/Articles/1015059/</id>
+        <link href="https://lwn.net/Articles/1015059/"/>
+        <updated>2025-03-21T14:27:33.000Z</updated>
+        <summary type="html"><![CDATA[Raspberry Pi has
+announced rpi-image-gen,
+a tool to create custom software images for its devices.
+The Git repository for rpi-image-gen has a number of examples
+to help users get started making their own custom images.]]></summary>
+        <author>
+            <name>jzb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[An Asahi Linux 6.14 progress report]]></title>
+        <id>https://lwn.net/Articles/1015058/</id>
+        <link href="https://lwn.net/Articles/1015058/"/>
+        <updated>2025-03-21T14:11:46.000Z</updated>
+        <summary type="html"><![CDATA[The Asahi Linux project, working to support Linux on Apple hardware, has
+published a
+progress report to coincide with the 6.14 kernel release.
+
+
+	Now that Rust for Linux abstractions are starting to be merged at a
+	healthy pace, we are faced with an emerging challenge. It is rare
+	for any kernel patch to survive the mailing list without at least a
+	couple of non-trivial changes, and Rust abstractions are no
+	exception. Every time an abstraction used by our driver is merged,
+	we must drop our downstream version and rebase the driver atop the
+	version accepted upstream. This is grueling, menial, and
+	unpleasant work, and Janne has our deepest gratitude for
+	volunteering his time to get through it.]]></summary>
+        <author>
+            <name>corbet</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Security updates for Friday]]></title>
+        <id>https://lwn.net/Articles/1015055/</id>
+        <link href="https://lwn.net/Articles/1015055/"/>
+        <updated>2025-03-21T13:13:26.000Z</updated>
+        <summary type="html"><![CDATA[Security updates have been issued by Debian (chromium), Fedora (fluent-bit, openssh, php, and webkitgtk), Mageia (freerdp), Oracle (libreoffice and webkit2gtk3), Red Hat (kernel-rt), Slackware (libarchive), SUSE (apptainer, gitea-tea, libxml2, tomcat, webkit2gtk3, and wpa_supplicant), and Ubuntu (libxslt and pam-pkcs11).]]></summary>
+        <author>
+            <name>daroc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[짜장면 배달과 뉴스 보도의 세 가지 공통점]]></title>
+        <id>https://slownews.kr/?p=131702</id>
+        <link href="https://slownews.kr/131702"/>
+        <updated>2025-03-21T01:42:23.000Z</updated>
+        <summary type="html"><![CDATA[뉴스 보도와 짜장면 배달은 닮았다. 배달은 ‘신속’해야 한다. 배는 고픈데 배달이 늦으면 다시는 그 집에 음식을 주문하고 싶지 않을 것이다. 배달은 또 ‘정확’해야 한다. 짜장면이 먹고 싶어서 짜장면을 시켰는데 짬뽕이 오면 “헐~ ” 소리가 절로 나올 것이다. 짜장면은 또 ‘맛’이 있어야 한다. 아무리 신속하고 정확하게 배달이 된 짜장면이라도 맛이 없다면 낭패다. 뉴스도 마찬가지다. 뉴스 생산자인 언론 매체가 뉴스 소비자인 일반 국민에게 신속하고 정확하게 뉴스를 전달해야 한다. 뉴스의 신속성이 결여돼 이미 다 알고 있는 뉴스를 전달한다면 이미 뉴스가 아니다. 또 정확한 뉴스도 언론의 생명이다. 악의적 오보는 말할 것도 없고 선의의 오보도 주의해야 한다. ‘신속’과 ‘정확’은 반비례다. 팩트를 확인하고 또 확인하다 보면 뉴스배달이 지체된다. 그렇다고 너무 늦게 배달하면 아무리 정확한 뉴스라도 이미 뉴스의 기능을 잃어버린다.  ‘신속’, ‘정확’과 함께 뉴스는 ‘맛’이 있어야 한다. 즉, 뉴스가 독자들의 눈에, 시청자들의 귀에 쏙쏙 들어와야 한다는 것이다. 몇 번을 읽어봐도 도무지 이해가 가지 않는 기사나 몇 번을 들어도 도대체 무슨 말인지 모를 뉴스는 맛없는 짜장면과 같다. ‘신속’, ‘정확’, ‘맛’ 중에서 우선 순위를 꼽으라면 나는 정확을 꼽고 싶다. 확인되지 않은 뉴스는 차라리 내보내지 말아야 한다. 뉴스의 ‘맛’을 내려고 ‘초’를 쳐서도 곤란하다. ‘초’란 기사를 과장하거나 가공하는 것을 말하는 기자들 사이의 은어다. ‘맛’이 조금 떨어지더라도 과장하거나 가공하지 않은 정확한 뉴스여야 한다.  속보 경쟁…]]></summary>
+        <author>
+            <name>민주언론시민연합</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[“불의를 멈춰달라” 감동의 목소리…이·팔 합작 다큐의 여운]]></title>
+        <id>https://newspeppermint.com/?p=80884</id>
+        <link href="https://newspeppermint.com/2025/03/20/npsp_nootherland/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_nootherland"/>
+        <updated>2025-03-21T01:15:52.000Z</updated>
+        <summary type="html"><![CDATA[제97회 아카데미 시상식에서 장편 다큐멘터리를 수상한 작품 “노 아더 랜드”에 대한 각계의 반응을 둘러싸고 계속 많은 이야기가 나오고 있습니다. 뉴욕타임스에 실린 이스라엘, 팔레스타인 활동가들의 소회를 번역하고, 제가 직접 영화를 본 뒤 감상평을 썼습니다. 전문 번역: 최고의 상 수상 뒤 살해 위협…참혹한 현실에 맞선 영화 해설: “불의를 멈춰달라” 감동의 목소리…이·팔 합작 다큐의 여운]]></summary>
+        <author>
+            <name>NewsPeppermint</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[한덕수‧이재명 먼저? 윤석열 파면에 변수 안 된다: 슬로우레터 3월21일.]]></title>
+        <id>https://slownews.kr/?p=131670</id>
+        <link href="https://slownews.kr/131670"/>
+        <updated>2025-03-20T22:27:53.000Z</updated>
+        <summary type="html"><![CDATA[한덕수 먼저 선고한다. 한덕수는 기각 가능성 크다. 윤석열 파면 예고편일까. 혹시? 설레는 조선일보. 쟁점과 현안. 김건희 상설특검안 통과. 오세훈 압수수색. 이재용 만난 이재명. 더 깊게 읽기. 더 내고 조금 더 받는 연금 개혁 확정. 다음은 연금 구조개혁. 3040 의원들의 반대표. 1경4696조 원, 여전히 큰 부담. 다르게 읽기. 가계와 기업, 정부 빚 합치면 6222조 원. “셔텨...
+The post 한덕수‧이재명 먼저? 윤석열 파면에 변수 안 된다: 슬로우레터 3월21일. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>이정환</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hidden Gems from the Embedded Online Conference Archives - Part 2]]></title>
+        <id>https://www.embeddedrelated.com/showarticle/1733.php</id>
+        <link href="https://www.embeddedrelated.com/showarticle/1733.php"/>
+        <updated>2025-03-20T21:31:23.000Z</updated>
+        <summary type="html"><![CDATA[In the years since its inception, the Embedded Online Conference has hosted hundreds of excellent talks. The topics cover an impressive range, from high level introductions, to tool and framework comparisons, to case studies of really annoying bugs! This is the second talk in a series looking at a different talk from the archives each week, appraising the content and providing some extra...]]></summary>
+        <author>
+            <name>EmbeddedRelated.com Blogs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Green Hills Software and NXP Partner to Advance Safety-Critical SDV Architectures]]></title>
+        <id>https://www.embedded.com/?p=4494954</id>
+        <link href="https://www.embedded.com/green-hills-software-and-nxp-partner-to-advance-safety-critical-sdv-architectures/"/>
+        <updated>2025-03-20T20:50:00.000Z</updated>
+        <summary type="html"><![CDATA[Green Hills Software has announced a collaboration with NXP® Semiconductors to deliver an integrated hardware and software solution for developing and deploying safety-focused, mixed-criticality software-defined vehicle (SDV) zonal architectures. This solution is built on NXP’s new S32K5 microcontroller (MCU) family. It incorporates Green Hills’ ASIL D safety-certified µ-velOSity™ real-time operating system (RTOS), µ-visor® hypervisor, industry-leading […]
+The post Green Hills Software and NXP Partner to Advance Safety-Critical SDV Architectures appeared first on Embedded.]]></summary>
+        <author>
+            <name>Maurizio Di Paolo Emilio</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[$] MM medley: huge page allocation, page promotion, KSM, and BPF]]></title>
         <id>https://lwn.net/Articles/1014220/</id>
@@ -4715,396 +4898,6 @@ The post NI Days: Interviewing CTO Kevin Schultz appeared first on Embedded.]]><
 The post Improving Firmware Quality with Instrumentation, Part 2: The RTEdbg Toolkit appeared first on Embedded.]]></summary>
         <author>
             <name>Maurizio Di Paolo Emilio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why developers should use MicroShift]]></title>
-        <id>dc44a041-5794-4d8b-b43a-63b37fe524e5</id>
-        <link href="https://developers.redhat.com/articles/2025/02/20/why-developers-should-use-microshift"/>
-        <updated>2025-02-20T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[At times developers find that it is not sufficient to test their applications "naked" on their local operating systems or under a local container engine, such as Podman. They need orchestration among multiple containers, network connectivity, dynamic storage, and other capabilities upon which their applications depend.
-Using a lightweight orchestrator such as Docker Compose may not be enough. Maintaining two configuration sets—one for a development/test environment and another for a Kubernetes-based production environment—may be too much work. It also incurs additional risk, as those two configurations drift away from each other. After all, containers are supposed to solve "it runs fine on my machine" issues.
-Those developers will discover that the Red Hat build of MicroShift is a compelli…]]></summary>
-        <author>
-            <name>Fernando Lozano</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] LWN.net Weekly Edition for February 20, 2025]]></title>
-        <id>https://lwn.net/Articles/1009456/</id>
-        <link href="https://lwn.net/Articles/1009456/"/>
-        <updated>2025-02-20T01:57:29.000Z</updated>
-        <summary type="html"><![CDATA[Inside this week's LWN.net Weekly Edition:
-        
- Front: Systemd; AI scraperbots; Time-slice extension; FUSE regression; Multi-size THPs; Memcached; Meshtastic.
-            
- Briefs: Asahi leadership; Debian images; RISC-V Fedora; OpenSUSE; Mesa 25.0.0; Pi-hole v6; Quotes; ...
-            
- Announcements: Newsletters, conferences, security updates, patches, and more.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why std::this_thread::sleep_for() is broken on ESP32]]></title>
-        <id>https://interrupt.memfault.com/blog/why-sleep-for-is-broken-on-esp32</id>
-        <link href="https://interrupt.memfault.com/blog/why-sleep-for-is-broken-on-esp32"/>
-        <updated>2025-02-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A curious bug appearing after upgrading to IDF v5 led me into a deep dive of how
-std::this_thread::sleep_for() is implemented on the ESP32. I discuss how the
-IDF implements pthreads and newlib to provide C++ threading functionality.
-The results are surprising: a simple 10 millisecond sleep was killing
-performance, but only in the new version of IDF due to an interaction between
-libstdc++ and usleep().
-Continue reading…]]></summary>
-        <author>
-            <name>Interrupt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[뉴페@스프] 일상 덮친 참사 트라우마… 슬픔을 제대로 받아들이는 법]]></title>
-        <id>https://newspeppermint.com/?p=80543</id>
-        <link href="https://newspeppermint.com/2025/02/19/npsp_grief-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_grief-2"/>
-        <updated>2025-02-19T22:59:49.000Z</updated>
-        <summary type="html"><![CDATA[뉴스페퍼민트는 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 글에 관한 해설을 쓰고 있습니다. 그 가운데 저희가 쓴 해설을 스프와 시차를 두고 소개합니다. 스브스프리미엄에서는 뉴스페퍼민트의 해설과 함께 칼럼 번역도 읽어보실 수 있습니다. ** 오늘 소개하는 글은 1월 3일 스프에 쓴 글입니다. 국가애도기간입니다. 지난달 29일 발생한 제주항공 여객기 사고로 탑승객 대부분인 179명이 목숨을 잃으면서 한국 사회는 참담하고 슬픈 연말연시를 보내고 있습니다. 기쁨은 나누면 배가 되고, 슬픔은 나누면 반이 된다는 말이 있지만, → 더 보기]]></summary>
-        <author>
-            <name>ingppoo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“김건희 국정 개입, 지지층도 돌아버릴 정도였다”: 슬로우레터 2월20일.]]></title>
-        <id>https://slownews.kr/?p=129151</id>
-        <link href="https://slownews.kr/129151"/>
-        <updated>2025-02-19T22:38:44.000Z</updated>
-        <summary type="html"><![CDATA[12월3일 오후 9시. “권한은 내게 있다.” “하야는 없다.” 쟁점과 현안. 우크라이나 북한 군 포로 한국 온다. 북한 군 인터뷰에서 확인할 수 있는 것. 반도체도 25% 이상 관세. 자동차 관세 25%면 수출 9조 원 줄어든다. ‘트럼프 스톰’ 5가지 키워드. 더 깊게 읽기. 한덕수 탄핵 심판 선고 먼저 나온다. 이재명 당선되면 선거법 재판 중단되나. 이재명 선거법 항소심...
-The post “김건희 국정 개입, 지지층도 돌아버릴 정도였다”: 슬로우레터 2월20일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Renesas Introduces Energy-Efficient RA4L1 MCUs with Capacitive Touch, Segment LCD, and Enhanced Security]]></title>
-        <id>https://www.embedded.com/?p=4494296</id>
-        <link href="https://www.embedded.com/renesas-introduces-energy-efficient-ra4l1-mcus-with-capacitive-touch-segment-lcd-and-enhanced-security/"/>
-        <updated>2025-02-19T22:15:00.000Z</updated>
-        <summary type="html"><![CDATA[Renesas Electronics Corporation has launched the RA4L1 microcontroller (MCU) group, introducing 14 new devices that feature ultra-low power consumption, advanced security capabilities, and segment LCD support. Built on an 80-MHz Arm Cortex-M33 processor with TrustZone support, these MCUs deliver an optimal balance of performance, features, and energy efficiency, enabling developers to address a broad range […]
-The post Renesas Introduces Energy-Efficient RA4L1 MCUs with Capacitive Touch, Segment LCD, and Enhanced Security appeared first on Embedded.]]></summary>
-        <author>
-            <name>Stefano Lovati</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mozilla announces leadership updates and next chapter]]></title>
-        <id>https://lwn.net/Articles/1010922/</id>
-        <link href="https://lwn.net/Articles/1010922/"/>
-        <updated>2025-02-19T21:43:35.000Z</updated>
-        <summary type="html"><![CDATA[Mark Surman, president of the Mozilla Corporation, has announced
-leadership updates for Mozilla. This includes a Mozilla Leadership
-Council made up of executives from each Mozilla organization, and new
-board chairs for the not-for-profit Mozilla Foundation, the
-Mozilla Corporation, and Mozilla.ai. The announcement also
-indicates a desire to further "diversify" Mozilla's focus:]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PVS-Studio 7.35: MISRA C 2023 support, Qt Creator 15 plugin, and more]]></title>
-        <id>https://pvs-studio.com/en/blog/posts/1225/</id>
-        <link href="https://pvs-studio.com/en/blog/posts/1225/"/>
-        <updated>2025-02-19T21:00:00.000Z</updated>
-        <summary type="html"><![CDATA[PVS-Studio 7.35 has been released. Support for the MISRA C standard, the plugin for Qt Creator 15.x, modified file analysis in Visual Studio, and that's not all! See more details in this note.]]></summary>
-        <author>
-            <name>from pvs-studio.com</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Extending time slices for user-space locks]]></title>
-        <id>https://lwn.net/Articles/1009509/</id>
-        <link href="https://lwn.net/Articles/1009509/"/>
-        <updated>2025-02-19T20:17:25.000Z</updated>
-        <summary type="html"><![CDATA[Steven Rostedt recently posted
-
-a patch set that could help improve the performance of certain user-space
-applications by giving the scheduler more context about when they are safe to
-interrupt. The patch set lets programs request a small grace window
-before they can be interrupted so that they can relinquish any locks, decreasing the
-amount of time that other threads have to spend waiting. Rostedt shared
-performance numbers suggesting that the patch might cut the amount of time spent
-acquiring locks in half for some programs — although, since his test was
-specifically tuned for this case, real-world projects should expect a somewhat
-less dramatic improvement. The change received some pushback from scheduler
-maintainer Peter Zijlstra, who objected to the patch set's approach.]]></summary>
-        <author>
-            <name>daroc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Introducing PaliGemma 2 mix: A vision-language model for multiple tasks]]></title>
-        <id>https://developers.googleblog.com/en/introducing-paligemma-2-mix/</id>
-        <link href="https://developers.googleblog.com/en/introducing-paligemma-2-mix/"/>
-        <updated>2025-02-19T20:17:07.989Z</updated>
-        <summary type="html"><![CDATA[PaliGemma 2 mix, an upgraded vision-language model, is now available, offering capabilities like image captioning, OCR, and object detection in various sizes.]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Build Scalable AI Agents: Langbase and the Gemini API]]></title>
-        <id>https://developers.googleblog.com/en/build-scalable-ai-agents-langbase-and-the-gemini-api/</id>
-        <link href="https://developers.googleblog.com/en/build-scalable-ai-agents-langbase-and-the-gemini-api/"/>
-        <updated>2025-02-19T20:17:07.989Z</updated>
-        <summary type="html"><![CDATA[Langbase empowers developers to build and deploy powerful, scalable AI agents by leveraging the Google Gemini API, particularly Gemini 1.5 Flash, unlocking a new era of intelligent applications and streamlined workflows.]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Celebrating innovation: Gemini API Developer Competition]]></title>
-        <id>https://developers.googleblog.com/en/celebrating-innovation-gemini-api-developer-competition/</id>
-        <link href="https://developers.googleblog.com/en/celebrating-innovation-gemini-api-developer-competition/"/>
-        <updated>2025-02-19T20:17:07.989Z</updated>
-        <summary type="html"><![CDATA[Explore innovative projects from the Gemini API Competition, like Omni, EcoTrack, ITMZ, Jana AI, Eagle AI, and AlphaFit, demonstrating the potential of the Gemini API to enhance productivity, promote sustainability, and improve well-being.]]></summary>
-        <author>
-            <name>Google Developers Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Emerson’s Latest Data Acquisition Solutions Simplify Testing for Entry-Level Ethernet Systems]]></title>
-        <id>https://www.embedded.com/?p=4494293</id>
-        <link href="https://www.embedded.com/emersons-latest-data-acquisition-solutions-simplify-testing-for-entry-level-ethernet-systems/"/>
-        <updated>2025-02-19T19:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Emerson has expanded its data acquisition (DAQ) lineup by introducing the NI™ cDAQ-9187 and cDAQ-9183 Ethernet chassis, along with the NI 9204 input module. These new additions, complemented by a GitHub repository for NI FlexLogger™ DAQ software plug-ins, offer cost-effective solutions for deploying high-performance test and measurement systems over Ethernet. The cDAQ-9187 and cDAQ-9183 chassis […]
-The post Emerson’s Latest Data Acquisition Solutions Simplify Testing for Entry-Level Ethernet Systems appeared first on Embedded.]]></summary>
-        <author>
-            <name>Stefano Lovati</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to deploy confidential containers on bare metal]]></title>
-        <id>652df58c-2f56-479f-b477-64fdb604557b</id>
-        <link href="https://developers.redhat.com/articles/2025/02/19/how-deploy-confidential-containers-bare-metal"/>
-        <updated>2025-02-19T18:21:56.000Z</updated>
-        <summary type="html"><![CDATA[In this article, we provide hands-on instructions to deploy confidential containers on bare metal with the Intel Trust Domain Extensions (TDX) and Advanced Micro Devices (AMD) Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP) Trusted Execution Environments (TEEs). 
-The deployment is based on Red Hat OpenShift 4.16 and uses the OpenShift Assisted Installer (offered on Red Hat Hybrid Cloud Console) as well as helper scripts to deploy additional components described in this article. These instructions are targeted for the first preview release (0.1.0) and will be updated with additional capabilities in the following releases. 
-For additional information on this solution, confidential computing, bare-metal clusters, use cases, and demos, we recommend reading our previous articles,…]]></summary>
-        <author>
-            <name>Xiangchun Fu, Pradipta Banerjee, Leonardo Milleri, Niteesh Dubey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mesa 25.0.0 released]]></title>
-        <id>https://lwn.net/Articles/1010898/</id>
-        <link href="https://lwn.net/Articles/1010898/"/>
-        <updated>2025-02-19T17:57:42.000Z</updated>
-        <summary type="html"><![CDATA[Version
-25.0.0 of the Mesa graphics library has been released.  "The flashiest addition is probably the support for Vulkan 1.4 by Anv (Intel),
-Asahi (Apple), Lavapipe (software), NVK (NVIDIA), PanVK (Mali), RADV (AMD),
-and Turnip (Qualcomm).
-
-Users can expect the usual flurry of improvements across all drivers and
-components."]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] Meshtastic: decentralized communication with low-power devices]]></title>
-        <id>https://lwn.net/Articles/1009782/</id>
-        <link href="https://lwn.net/Articles/1009782/"/>
-        <updated>2025-02-19T16:25:02.000Z</updated>
-        <summary type="html"><![CDATA[Many of us enjoy uninterrupted access to mobile networks. However, in
-remote areas or during emergencies, that connectivity may not always be
-available. For such scenarios, Meshtastic offers a decentralized
-wireless mesh network with open-source firmware that runs on affordable,
-low-power devices.
-At FOSDEM 2025, the Meshtastic
-project was represented by one of its core developers, Thomas Göttgens, who
-gave a talk, "Meshtastic
-- off-grid communication for everyone", in the Radio developer
-room (devroom).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RISC-V and Fedora: All Aboard! (Fedora Magazine)]]></title>
-        <id>https://lwn.net/Articles/1010857/</id>
-        <link href="https://lwn.net/Articles/1010857/"/>
-        <updated>2025-02-19T14:53:50.000Z</updated>
-        <summary type="html"><![CDATA[The Fedora Project has announced
-two milestones in its journey to supporting the RISC-V architecture: a
-dedicated RISC-V Koji build system instance is live in the Fedora data
-center, and Fedora
-41-based images are now available for RISC-V. It is also possible
-to run Fedora RISC-V images using QEMU for those without supported
-hardware.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lange: The secret maze of Debian images]]></title>
-        <id>https://lwn.net/Articles/1010855/</id>
-        <link href="https://lwn.net/Articles/1010855/"/>
-        <updated>2025-02-19T14:38:33.000Z</updated>
-        <summary type="html"><![CDATA[Debian Developer Thomas Lange has written a blog post
-in the attempt to help users find the right Debian image for their
-systems.]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Wednesday]]></title>
-        <id>https://lwn.net/Articles/1010853/</id>
-        <link href="https://lwn.net/Articles/1010853/"/>
-        <updated>2025-02-19T14:26:08.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by AlmaLinux (gcc-toolset-14-gcc, nodejs:18, and nodejs:22), Fedora (bootc), Gentoo (OpenSSH), Oracle (doxygen, libxml2, mingw-glib2, and NetworkManager), Red Hat (bind, bind9.16, bind9.18, kernel, kernel-rt, mysql, and mysql:8.0), Slackware (openssh), SUSE (buildah, emacs, glibc, google-osconfig-agent, grub2, java-11-openj9, kernel, netty, netty-tcnative, openssh, openvswitch, podman, and ucode-intel), and Ubuntu (atril, libsndfile, libtasn1-6, openssh, python-virtualenv, and symfony).]]></summary>
-        <author>
-            <name>jzb</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[쇼트] 경계와 공동체의 상호구성: 『경계를 넘는 공동체: 베이징 저장촌 생활사』 서평]]></title>
-        <id>https://attention2.space/?p=5262</id>
-        <link href="https://attention2.space/2025/zhejiangcun/"/>
-        <updated>2025-02-19T12:51:41.000Z</updated>
-        <summary type="html"><![CDATA[경계가 차이를 낳고, 그러한 차이로 인해 사람과 물질의 이동이 발생한다면, 저장촌은 경계에 대한 하나의 투쟁이자 동시에 경계로 인해 발생할 수 있었던 공동체이자 순환체계인 것이다.]]></summary>
-        <author>
-            <name>attention2space</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_기본소득.]]></title>
-        <id>https://slownews.kr/?p=111835</id>
-        <link href="https://slownews.kr/111835"/>
-        <updated>2025-02-19T10:44:36.000Z</updated>
-        <summary type="html"><![CDATA[“기본 없는 기본 대출” 집 있어도 굶어죽는 사람들. 이탈리아는 기본 소득 대폭 축소. 한국의 노인 빈곤율 부풀려져 있다? 이재명의 히든카드는 ‘출생 기본소득’.
-The post 솔루션 아카이브: 경제_기본소득. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_에너지]]></title>
-        <id>https://slownews.kr/?p=114239</id>
-        <link href="https://slownews.kr/114239"/>
-        <updated>2025-02-19T10:44:30.000Z</updated>
-        <summary type="html"><![CDATA[이제 독일에는 원전이 없다 문재인 정부 탄소 감축 목표가 쟁점이다. 후려친 탄소 감축 목표, 이것도 쉽지 않다 탈원전 선언한 독일이 치러야 할 대가. 전선 때문에 산불이 난다. 재생 에너지용 전기, 산업용 보다 50% 비싸다. “문재인 실패, 윤석열 책임 된다”, 조선일보의 경고. 한전 손실은 탈원전 탓이다? 화력발전소인데 탄소 제로. 논 위의 태양광, 쌀 생산 줄이고 농가...
-The post 솔루션 아카이브: 경제_에너지 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_유통]]></title>
-        <id>https://slownews.kr/?p=121251</id>
-        <link href="https://slownews.kr/121251"/>
-        <updated>2025-02-19T10:44:23.000Z</updated>
-        <summary type="html"><![CDATA[지역농협-대형마트 직판, 40%까지 늘었다. 쿠팡 기사들에겐 추석 연휴가 없다. 유커가 안 돌아오는 이유. 해외 직구 46%가 중국. 가격 못 올리게 하니 양을 줄였다. 문구점 해마다 500개씩 문 닫는다. 오줌 맥주 논란, 중국 맥주 수입 43% 줄었다. 라면 수출 1조 원 넘겼다. 중대재해처벌법이 외국에 없는 이유. 알라딘 해킹, 100만 원으로 막았다. 테무의 가격 경쟁력은 소수 민족...
-The post 솔루션 아카이브: 경제_유통 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_부동산.]]></title>
-        <id>https://slownews.kr/?p=113132</id>
-        <link href="https://slownews.kr/113132"/>
-        <updated>2025-02-19T10:44:15.000Z</updated>
-        <summary type="html"><![CDATA[집 비울 방법은 이것 밖에 없었다. 경매 미루는 걸로 일단 땜방. 경매 중단, 이게 끝인가? 깡통 전세 대란, 38%가 위험하다. 전세 사기 피해 보상, 두 가지 선택지가 있다. 전세 사기 공범인데, 공인중개사는 처벌 못하나. 역전세가 시한 폭탄이다. 전세사기 특별법, 누가 선을 넘나. 전세 사기 민간 임대로 풀자. 전세 사기 피해, 6가지 조건 만족해야 지원. 빌라왕...
-The post 솔루션 아카이브: 경제_부동산. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_플랫폼.]]></title>
-        <id>https://slownews.kr/?p=111840</id>
-        <link href="https://slownews.kr/111840"/>
-        <updated>2025-02-19T10:44:09.000Z</updated>
-        <summary type="html"><![CDATA[알리의 공습, 18원짜리 마우스가 무료 배송 갤럭시에 구글 빠지고 빙 들어오나. 무거운 전기차, 사망 위험도 크다? 네이버 웃고 카카오 울었다. “알고리즘이 아니라 속이고리즘.” 뉴욕타임스, 구글에 1억 달러 받는다. 공들인 기사가 읽힌다. 보수 진영의 네이버 때리기. 종이 전단 대신 당근 홍보 7억 건. 카톡 선물하기, 수수료가 최대 10%. 포털 때리기, 좀 심하지 않나. 배달도 구독, 월 9900원에 무제한....
-The post 솔루션 아카이브: 경제_플랫폼. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_금융]]></title>
-        <id>https://slownews.kr/?p=111995</id>
-        <link href="https://slownews.kr/111995"/>
-        <updated>2025-02-19T10:44:02.000Z</updated>
-        <summary type="html"><![CDATA[단기 적금이 뜬다 한국도 뱅크런 폭탄, 자유로울 수 없다 미국 은행 파산 쏟아진다. 금융 시장이 탐욕의 구간에 들어섰다. 아차, 잘못 보냈다. SG 폭락 사태, 석 달 전에 유튜버가 경고했다. 금리 내리는데 연체율 급증. 자사주 강제 소각, 누구에게 좋을까. 은행 가계 대출 4.2조 늘었는데 제2금융권은 1.4조 줄었다. 100만 원에 11만 엔, 엔테크 열풍. 퇴직연금의 두 가지 황당함. 28년째...
-The post 솔루션 아카이브: 경제_금융 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_산업규제]]></title>
-        <id>https://slownews.kr/?p=111849</id>
-        <link href="https://slownews.kr/111849"/>
-        <updated>2025-02-19T10:43:54.000Z</updated>
-        <summary type="html"><![CDATA[가상 자산 대부분은 본질적으로 폰지 사기다 전기차 비율 높이라는 압박, 현대 기아차에 기회일까. 대형 마트 30년, 변신할 때가 됐다. 단독 상장된 코인이 위험. “문재인 실패, 윤석열 책임 된다”, 조선일보의 경고. 산업 재해 방치, 첫 실형. 입국 신고 물품 없으면 세관 신고 없다. 코인 규제, 아직 늦지 않았다. TV 홈쇼핑 매출, 10년 만에 3조 원 붕괴....
-The post 솔루션 아카이브: 경제_산업규제 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_산업.]]></title>
-        <id>https://slownews.kr/?p=111827</id>
-        <link href="https://slownews.kr/111827"/>
-        <updated>2025-02-19T10:43:45.000Z</updated>
-        <summary type="html"><![CDATA[삼성전자 자사주 매입, 주주들에게도 마이너스였다 사회적 책임 투자 펀드에 1조원 몰렸다 대형 마트 30년, 변신할 때가 됐다. 현대차는 왜 생산직에 여성을 안 뽑을까 밀기울, 비지, 맥주박 등 업사이클링 푸드가 뜬다. 오픈런하는 에루샤, 지난해 매출 4조. 대만의 고민. 시진핑이 LG 공장을 찾은 이유. 미국은 한국의 도움이 필요하다. 미국 전기 자동차 보조금은 미국 차에만. 반도체 지원금 신청...
-The post 솔루션 아카이브: 경제_산업. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 경제_나라살림.]]></title>
-        <id>https://slownews.kr/?p=111977</id>
-        <link href="https://slownews.kr/111977"/>
-        <updated>2025-02-19T10:43:35.000Z</updated>
-        <summary type="html"><![CDATA[나라빚 1분에 1억씩 늘어난다 소득 불평등 속도, 한국이 가장 빠르다 두 번 연속 금리를 동결했다 뛰는 금값, 더 뛰는 은값. 밥값은 한국이 세계에서 가장 비싸다? 한국도 뱅크런 폭탄, 자유로울 수 없다 기회의 평등 넘어 결과의 평등이 필요하다. 달러 떨어지는데 원화는 더 떨어진다. 달러 환율 1340원 찍었다. 채권 개미들, 37조 원 쓸어 담았다. 주식 60 +...
-The post 솔루션 아카이브: 경제_나라살림. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 과학.]]></title>
-        <id>https://slownews.kr/?p=121606</id>
-        <link href="https://slownews.kr/121606"/>
-        <updated>2025-02-19T10:43:28.000Z</updated>
-        <summary type="html"><![CDATA[상온 상압 초전도체 만들기 참 쉽죠? “상온초전도체, 큰 실망에 그칠 수도.” 초전도체 증거 못 찾았다. “슬프게도 게임이 끝났다.” 47년 만의 러시아 달 탐사는 실패. 57년 전에 성공한 달 착륙 실패한 이유는? 달의 남극, 얼음이 있을까. 인도 달착륙, 인터스텔라 제작비보다 쌌다. 땅위는 50도, 땅속 8cm는 영하 10도. 다이아몬드 가격 하락 원인은 ‘실험실 다이아몬드’. 기름에 담궈서 서버 식힌다....
-The post 솔루션 아카이브: 과학. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 국방.]]></title>
-        <id>https://slownews.kr/?p=116862</id>
-        <link href="https://slownews.kr/116862"/>
-        <updated>2025-02-19T10:43:14.000Z</updated>
-        <summary type="html"><![CDATA[군인들도 배달 음식, 짬밥을 그냥 버린다. 의대생들이 현역 입대 선호하는 건 복무 기간 때문. 공노비나 마찬가지, 사회복무요원 64%가 “괴롭힘 경험”. 군인 부족해 부사관이 위병소 근무 선다. ROTC 지원율 4분의 1, 부사관 지원율도 역대 최저. 사드 전자파 인체 보호 기준 0.2% 수준. 군인이 줄어든다. 일본엔 인간 어뢰가 있었다. 군인도 부족한데 의경을 다시 뽑는다고? 홍범도·김좌진 치운 자리에 백선엽...
-The post 솔루션 아카이브: 국방. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[솔루션 아카이브: 남북문제.]]></title>
-        <id>https://slownews.kr/?p=112266</id>
-        <link href="https://slownews.kr/112266"/>
-        <updated>2025-02-19T10:41:33.000Z</updated>
-        <summary type="html"><![CDATA[북한 고체연료 ICBM, 이건 또 새로운 위험이다. 김건희가 선을 넘는다. 백신도 안 맞았는데 종식? 북한의 코로나 미스터리. 북한산 프리미엄 가발, 아마존에서 팔린다. 한국에 핵 쏘면 미국이 보복한다. “전쟁나면 꼼짝 없이 죽겠구나 싶었다.” “왜”도 “어떻게”도 없는 문자, 일본은 달랐다. “연락사무소 폭파 배상하라” 북한에 447억 원 청구. 탈북자들 사망 원인 중 자살 15%, 어떻게 설명할 건가. 대북 전단...
-The post 솔루션 아카이브: 남북문제. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>park@slownews.kr</name>
         </author>
     </entry>
     <entry>
