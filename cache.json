@@ -236,6 +236,36 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "6150dc12-2571-49fe-aac5-986418fe01aa",
+          "author": "David Malcolm",
+          "description": "I work at Red Hat on GCC, the GNU Compiler Collection. I spent most of the past year working on how GCC emits diagnostics (errors and warnings) in the hope of making it easier to use. Let's take a look at 6 improvements to look forward to in the upcoming GCC 15.\n1. Prettier execution paths\nI added a static analyzer to GCC in GCC 10 that prints visualizations of predicted paths of execution through the user's code, demonstrating each problem it predicts.\nHere's an example that shows some of the improvements I've made to this in GCC 15:\ninfinite-loop-linked-list.c: In function ‘while_loop_missing_next’:\ninfinite-loop-linked-list.c:30:10: warning: infinite loop [CWE-835] [-Wanalyzer-infinite-loop]\n   30 |   while (n)\n      |          ^\n  ‘while_loop_missing_next’: events 1-3\n   30 |   while (…",
+          "link": "https://developers.redhat.com/articles/2025/04/10/6-usability-improvements-gcc-15",
+          "publishedOn": "2025-04-10T07:00:00.000Z",
+          "wordCount": null,
+          "title": "6 usability improvements in GCC 15",
+          "imageUrl": null
+        },
+        {
+          "id": "1e046f77-0310-461c-9753-3e5210b8661f",
+          "author": "Maarten Vandeperre, Camille Nigon",
+          "description": "Nowadays, everybody talks about artificial intelligence (AI) and machine learning (ML). They have the potential to become essential technologies that drive business growth, foster innovation, and enable you to stand out amongst colleagues and competitors. As C-level executives, software developers, and business analysts, it's crucial to understand what AI/ML models are, how they work, and how algorithms like random forest and linear regression can transform your organization. \nLet’s break it down in simple terms, avoiding the technical complexities while focusing on business impact. This article is a follow-up of the previous article, The road to AI: Fundamentals, which provided a high-level introduction to the concept of AI and marked the beginning of this series. This article will focus …",
+          "link": "https://developers.redhat.com/articles/2025/04/10/road-ai-guide-understanding-aiml-models",
+          "publishedOn": "2025-04-10T07:00:00.000Z",
+          "wordCount": null,
+          "title": "The road to AI: A guide to understanding AI/ML models",
+          "imageUrl": null
+        },
+        {
+          "id": "a8bf340d-a6e1-49c8-8fb8-52b5f500961e",
+          "author": "Valentina Rodriguez Sosa",
+          "description": "In Red Hat Developer Hub, any user (from data scientists to MLOps engineers) can build, train, and deploy AI applications with ready-to-use workbenches from a pre-defined template, using Red Hat OpenShift AI. Platform AI engineers can extend self-service by creating workbenches and other components for any team, using software templates via role-based access control (RBAC). \nRed Hat OpenShift AI is a flexible, scalable artificial intelligence and machine learning (AI/ML) platform that enables enterprises to create and deliver AI-enabled applications at scale across hybrid cloud environments. Built using open source technologies, OpenShift AI provides trusted, operationally consistent capabilities for teams to experiment, serve models, and deliver innovative apps.\nIn this article, I will de…",
+          "link": "https://developers.redhat.com/articles/2025/04/10/how-building-workbenches-accelerates-aiml-development",
+          "publishedOn": "2025-04-10T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How building workbenches accelerates AI/ML development",
+          "imageUrl": null
+        },
+        {
           "id": "809dd3bf-97e0-4117-9e52-244947df2268",
           "author": "Pavol Loffay, Jamie Parker",
           "description": "In this article, we will cover best practices for migrating from Jaeger, the deprecated OpenShift distributed tracing platform, to the OpenShift distributed tracing platform (Tempo). The support for the former product will be dropped towards the end of 2025.\nThese two distributed tracing backends are fundamentally different in how they store data. However, they support similar ingestion protocols—the OpenTelemetry protocol (OTLP) and visualization Jaeger user interface (UI). These capabilities allow us to provide smooth migration. \nTempo\nThe OpenShift distributed tracing platform Tempo is based on the upstream Grafana Tempo project. For persistence, Tempo can use either an object store (e.g., S3) or local storage. For production deployments, we recommend an object store. The OpenShift dist…",
@@ -484,26 +514,6 @@
           "wordCount": 3211,
           "title": "How RHEL provides secure and stable Python streams",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/Python-01.png?itok=zrT9l9Ni"
-        },
-        {
-          "id": "18a41f66-f267-4bdb-bfda-ffa7f2619a5b",
-          "author": "Joerg Kastning",
-          "description": "Image mode for Red Hat Enterprise Linux (RHEL) represents an alternative way to build, configure, install, deploy, and manage RHEL. In this tutorial, I will demonstrate the following:\n\nBuilding a bootc container image containing a Red Hat Enterprise Linux kernel and user space using  container-tools.\nUsing the RHEL 9.5 Boot ISO and a Kickstart file to deploy this RHEL bootc image to a virtual machine (VM).\nManaging image mode for RHEL, including how to update, roll back, and switch the image.\n\nImage mode for RHEL\nBy using container-tools, a container image is created which includes the RHEL kernel, boot loader, firmware, drivers, and ~440 RPM packages. This RHEL container image (also called RHEL bootc image) can be used to deploy RHEL in the data center or in the cloud, on bare-metal serve…",
-          "link": "https://developers.redhat.com/articles/2025/03/12/how-build-deploy-and-manage-image-mode-rhel",
-          "publishedOn": "2025-03-12T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How to build, deploy, and manage image mode for RHEL",
-          "imageUrl": null
-        },
-        {
-          "id": "eda5c15c-b473-4097-a3de-38d231da1c8b",
-          "author": "Sridhar Gaddam",
-          "description": "Istio has long been a popular choice for managing microservices, offering traffic management, security, and observability in Kubernetes. But as powerful as it is, the traditional sidecar-based approach comes with its own challenges, which can be complex and resource intensive. With ambient mode, Istio removes the need for sidecars, making service mesh deployments lighter, more flexible, and easier to manage.\nIn this article, we’ll review the ambient architecture, how it works, and why it’s important. We’ll also look at its benefits, compare it to the traditional sidecar model, and how to deploy ambient mode using the Red Hat OpenShift Service Mesh 3.0 operator.\nIstio ambient mode architecture\nIstio ambient mode introduces a new way to manage service mesh without using traditional sidecar p…",
-          "link": "https://developers.redhat.com/articles/2025/03/12/try-istio-ambient-mode-red-hat-openshift",
-          "publishedOn": "2025-03-12T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Try Istio ambient mode on Red Hat OpenShift",
-          "imageUrl": null
         }
       ]
     },
@@ -582,6 +592,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4494602",
+          "author": "Loriotoole",
+          "description": "Low Earth orbit (LEO) satellites are enabling a wide range of emerging technologies and innovations, including real-time video, IoT, fast GPS, autonomous vehicles and drones, social media, online games, and more. These orbiting satellite networks provide unprecedented speed, security, and direct internet access to the entire world, including the most remote and rural regions where ground-based […]\nThe post Innovation Update: LEO Satellites Are Creating the Internet of Everything appeared first on Embedded.",
+          "link": "https://www.embedded.com/innovation-update-leo-satellites-are-creating-the-internet-of-everything/",
+          "publishedOn": "2025-04-10T06:18:00.000Z",
+          "wordCount": null,
+          "title": "Innovation Update: LEO Satellites Are Creating the Internet of Everything",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4495365",
           "author": "Stefano Lovati",
@@ -1181,136 +1201,6 @@
           "wordCount": null,
           "title": "Secure, Compliant Embedded Software—Even at Scale",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494808",
-          "author": "Stefano Lovati",
-          "description": "Texas Instruments (TI) has unveiled the world’s smallest MCU, further expanding its robust Arm® Cortex®-M0+ MSPM0 MCU portfolio. With a minuscule footprint of just 1.38mm²—comparable to a black pepper flake—the wafer chip-scale package (WCSP) for the MSPM0C1104 MCU allows designers to maximize board space in compact applications like medical wearables and personal electronics, all without […]\nThe post TI Unveils the World’s Most Compact MCU, Unlocking Innovation for The Smallest Applications appeared first on Embedded.",
-          "link": "https://www.embedded.com/ti-unveils-the-worlds-most-compact-mcu-unlocking-innovation-for-the-smallest-applications/",
-          "publishedOn": "2025-03-11T22:30:00.000Z",
-          "wordCount": null,
-          "title": "TI Unveils the World’s Most Compact MCU, Unlocking Innovation for The Smallest Applications",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494805",
-          "author": "Stefano Lovati",
-          "description": "Renesas Electronics Corporation has expanded its RZ/V Series of microprocessors (MPUs) with the introduction of a new device tailored for the high-volume vision AI market. Like its high-end counterpart, the RZ/V2H, the newly launched RZ/V2N features Renesas’ proprietary AI accelerator, DRP (Dynamically Reconfigurable Processor)-AI3. This technology delivers exceptional power efficiency of 10 TOPS/W (Tera Operations […]\nThe post Renesas Broadens its RZ/V Series of Microprocessors (MPUs) with a New Model Designed for the High-Volume Vision AI Market appeared first on Embedded.",
-          "link": "https://www.embedded.com/renesas-broadens-its-rz-v-series-of-microprocessors-mpus-with-a-new-model-designed-for-the-high-volume-vision-ai-market/",
-          "publishedOn": "2025-03-11T22:05:00.000Z",
-          "wordCount": null,
-          "title": "Renesas Broadens its RZ/V Series of Microprocessors (MPUs) with a New Model Designed for the High-Volume Vision AI Market",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494803",
-          "author": "Stefano Lovati",
-          "description": "Green Hills Software has unveiled its latest software platforms designed for microcontrollers (MCUs) in next-generation automotive and industrial electronics. These new platforms offer a comprehensive software environment, aligning with evolving microcontroller trends and industry-specific application requirements. Built on the foundation of the Green Hills µ-velOSity™ real-time operating system (RTOS), these platforms integrate advanced middleware and […]\nThe post Green Hills Software Enhances Its Safety-Certified Solutions for Microcontrollers, Targeting Automotive and Industrial Markets appeared first on Embedded.",
-          "link": "https://www.embedded.com/green-hills-software-enhances-its-safety-certified-solutions-for-microcontrollers-targeting-automotive-and-industrial-markets/",
-          "publishedOn": "2025-03-11T21:55:00.000Z",
-          "wordCount": null,
-          "title": "Green Hills Software Enhances Its Safety-Certified Solutions for Microcontrollers, Targeting Automotive and Industrial Markets",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494800",
-          "author": "Stefano Lovati",
-          "description": "Dukosi Ltd has introduced a new reference design for battery energy storage systems (BESS), showcased at the Arrow Electronics booth during Embedded World this week in Nuremberg, Germany. This proof of concept (PoC) presents a comprehensive solution featuring 54 cells, aligning with standard battery module configurations for 900-1500V BESS racks. The design integrates the Dukosi […]\nThe post Dukosi Unveils New Reference Design for BESS Applications at Embedded World 2025 appeared first on Embedded.",
-          "link": "https://www.embedded.com/dukosi-unveils-new-reference-design-for-bess-applications-at-embedded-world-2025/",
-          "publishedOn": "2025-03-11T21:35:00.000Z",
-          "wordCount": null,
-          "title": "Dukosi Unveils New Reference Design for BESS Applications at Embedded World 2025",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494797",
-          "author": "Stefano Lovati",
-          "description": "Sfera Labs has announced the release of the X2-Series Standard Electrical and Mechanical Specifications, an open standard designed to advance innovation and customization in industrial automation and IoT applications. Alongside this, the company has also introduced the X2-Series Development and Prototyping Expansion Board (X2BDEV10XZ)—a powerful tool that accelerates the design and creation of custom expansion […]\nThe post Sfera Labs Introduces the X2-Series Standard and Development Board to Drive Industrial Automation Innovation appeared first on Embedded.",
-          "link": "https://www.embedded.com/sfera-labs-introduces-the-x2-series-standard-and-development-board-to-drive-industrial-automation-innovation/",
-          "publishedOn": "2025-03-11T21:15:00.000Z",
-          "wordCount": null,
-          "title": "Sfera Labs Introduces the X2-Series Standard and Development Board to Drive Industrial Automation Innovation",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494794",
-          "author": "Stefano Lovati",
-          "description": "To meet the growing demand for high-performance, math-intensive applications across diverse industries, Microchip Technology has introduced the PIC32A family of microcontrollers (MCUs). Expanding the company’s well-established 32-bit MCU lineup, the PIC32A series delivers cost-effective, high-performance solutions for general-purpose applications in automotive, industrial, consumer, Artificial Intelligence/Machine Learning (AI/ML), and medical markets. Engineered to minimize the need […]\nThe post Microchip Expands 32-bit MCU Portfolio with PIC32A Family for High-Performance, Math-Intensive Applications appeared first on Embedded.",
-          "link": "https://www.embedded.com/microchip-expands-32-bit-mcu-portfolio-with-pic32a-family-for-high-performance-math-intensive-applications/",
-          "publishedOn": "2025-03-11T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Microchip Expands 32-bit MCU Portfolio with PIC32A Family for High-Performance, Math-Intensive Applications",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494791",
-          "author": "Stefano Lovati",
-          "description": "NXP Semiconductors has announced the launch of its S32K5 family of automotive microcontrollers (MCUs), marking a significant milestone as the industry’s first 16nm FinFET-based MCU with embedded magnetic RAM (MRAM). Designed to expand the NXP CoreRide platform, the S32K5 series delivers pre-integrated zonal and electrification system solutions, supporting the evolution of scalable software-defined vehicle (SDV) […]\nThe post NXP Introduces S32K5 MCU Family: Pioneering 16nm FinFET with MRAM for Automotive Innovation appeared first on Embedded.",
-          "link": "https://www.embedded.com/nxp-introduces-s32k5-mcu-family-pioneering-16nm-finfet-with-mram-for-automotive-innovation/",
-          "publishedOn": "2025-03-11T20:35:00.000Z",
-          "wordCount": null,
-          "title": "NXP Introduces S32K5 MCU Family: Pioneering 16nm FinFET with MRAM for Automotive Innovation",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494788",
-          "author": "Stefano Lovati",
-          "description": "Microcontrollers (MCUs) serve as the backbone of modern electronics, yet integrating cutting-edge AI development and deployment workflows at the edge remains a significant challenge for developers. By combining a high-performance MCU with NPU hardware acceleration and advanced AI fine-tuning workflows, developers can streamline the deployment of AI models in energy-efficient MCUs. In line with this […]\nThe post Infineon Expands Edge AI Capabilities with NVIDIA TAO Support on PSOC Edge MCUs appeared first on Embedded.",
-          "link": "https://www.embedded.com/infineon-expands-edge-ai-capabilities-with-nvidia-tao-support-on-psoc-edge-mcus/",
-          "publishedOn": "2025-03-11T20:15:00.000Z",
-          "wordCount": null,
-          "title": "Infineon Expands Edge AI Capabilities with NVIDIA TAO Support on PSOC Edge MCUs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494784",
-          "author": "Stefano Lovati",
-          "description": "onsemi has introduced the Hyperlux™ ID family, marking the industry’s first real-time, indirect time-of-flight (iToF) sensor designed for high-precision, long-range measurements and 3D imaging of rapidly moving objects. Leveraging onsemi’s newly developed proprietary global shutter pixel architecture along with onboard storage, the Hyperlux ID family can simultaneously capture an entire scene while processing depth measurements […]\nThe post onsemi Unveils Next-Generation Depth Sensor for Industrial Use appeared first on Embedded.",
-          "link": "https://www.embedded.com/onsemi-unveils-next-generation-depth-sensor-for-industrial-use/",
-          "publishedOn": "2025-03-11T20:00:00.000Z",
-          "wordCount": null,
-          "title": "onsemi Unveils Next-Generation Depth Sensor for Industrial Use",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494781",
-          "author": "Stefano Lovati",
-          "description": "SG Wireless Limited, a provider of IoT technology solutions, has strengthened its collaboration with its parent company, Season Group, to offer customers an all-encompassing, one-stop service for the contract manufacturing of IoT device designs. This reinforced partnership ensures that IoT solutions developed with SG Wireless can be manufactured across Season Group’s global electronics manufacturing services […]\nThe post SG Wireless Strengthens Manufacturing Collaboration to Address OEMs’ Supply Chain and Country-of-Origin Challenges appeared first on Embedded.",
-          "link": "https://www.embedded.com/sg-wireless-strengthens-manufacturing-collaboration-to-address-oems-supply-chain-and-country-of-origin-challenges/",
-          "publishedOn": "2025-03-11T19:40:00.000Z",
-          "wordCount": null,
-          "title": "SG Wireless Strengthens Manufacturing Collaboration to Address OEMs’ Supply Chain and Country-of-Origin Challenges",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494778",
-          "author": "Stefano Lovati",
-          "description": "At embedded world 2025 in Nuremberg, Germany, IAR takes center stage to unveil its latest innovation—a cutting-edge cloud-enabled platform designed to transform embedded software development. This new platform provides embedded developers unparalleled flexibility and freedom in selecting and utilizing their tools. IAR’s highly scalable tool suite includes the full product lineup, featuring the industry-leading IAR […]\nThe post IAR Showcases Its Cloud-Enabled Platform at Embedded World 2025 in Nuremberg appeared first on Embedded.",
-          "link": "https://www.embedded.com/iar-showcases-its-cloud-enabled-platform-at-embedded-world-2025-in-nuremberg/",
-          "publishedOn": "2025-03-11T19:25:00.000Z",
-          "wordCount": null,
-          "title": "IAR Showcases Its Cloud-Enabled Platform at Embedded World 2025 in Nuremberg",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494760",
-          "author": "Barbaradellaporta",
-          "description": "PCBWay has established itself as a leader in the PCB industry, offering exceptional quality, rapid turnaround times, and outstanding customer service. In this article, we explore why PCBWay is the preferred choice for engineers, hobbyists, and businesses worldwide. Superior Quality and Precision Quality is a non-negotiable factor in PCB manufacturing, and PCBWay is committed to […]\nThe post Why PCBWay is the Preferred Choice for High-Quality PCB Manufacturing? appeared first on Embedded.",
-          "link": "https://www.embedded.com/why-pcbway-is-the-preferred-choice-for-high-quality-pcb-manufacturing/",
-          "publishedOn": "2025-03-11T15:40:28.000Z",
-          "wordCount": null,
-          "title": "Why PCBWay is the Preferred Choice for High-Quality PCB Manufacturing?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493784",
-          "author": "Loriotoole",
-          "description": "The emergence of on-device AI marks a revolutionary shift, bringing intelligence directly to the point of interaction. This advancement enables more efficient, private, and secure AI-driven experiences. From smartphones with AI-powered cameras to smart home devices with voice recognition, on-device AI is becoming increasingly ubiquitous in consumer applications. Gartner analysts predicted that 240 million generative […]\nThe post Powering the Future of On-Device AI with FPGAs appeared first on Embedded.",
-          "link": "https://www.embedded.com/powering-the-future-of-on-device-ai-with-fpgas/",
-          "publishedOn": "2025-03-11T09:50:00.000Z",
-          "wordCount": null,
-          "title": "Powering the Future of On-Device AI with FPGAs",
-          "imageUrl": null
         }
       ]
     },
@@ -1378,6 +1268,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/developer-focused-sessions-and-talks-at-google-cloud-next-25/",
+          "author": null,
+          "description": "Google Cloud Next 2025, happening April 9-11 in Las Vegas, will feature expanded developer content, interactive experiences, and opportunities to connect with peers and Google experts.",
+          "link": "https://developers.googleblog.com/en/developer-focused-sessions-and-talks-at-google-cloud-next-25/",
+          "publishedOn": "2025-04-10T20:18:15.521Z",
+          "wordCount": null,
+          "title": "Developer-focused sessions and talks at Google Cloud Next '25",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/gemini-2-5-flash-pro-live-api-veo-2-gemini-api/",
+          "author": null,
+          "description": "Updates to the Gemini API, including the production readiness of Veo 2 for video generation, the preview of the Live API for real-time interactions, and the upcoming Gemini 2.5 Flash model, alongside the existing Gemini 2.5 Pro aim to enhance developer capabilities in building AI applications with improved thinking models, dynamic interactions, and high-quality video generation.",
+          "link": "https://developers.googleblog.com/en/gemini-2-5-flash-pro-live-api-veo-2-gemini-api/",
+          "publishedOn": "2025-04-10T20:18:15.519Z",
+          "wordCount": null,
+          "title": "Gemini 2.5 Flash and Pro, Live API, and Veo 2 in the Gemini API",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/google-developer-program-latest-enhancements/",
           "author": null,
@@ -1597,36 +1507,6 @@
           "wordCount": null,
           "title": "Introducing Gemma 3: The Developer Guide",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
-          "author": null,
-          "description": "The Google AI Developers Community Spotlight Contest is seeking innovative, diverse projects using Google's AI tools like Gemini and Gemma to create code repositories, videos, documentation, and more.",
-          "link": "https://developers.googleblog.com/en/google-ai-developers-community-spotlight-contest/",
-          "publishedOn": "2025-03-11T20:17:35.734Z",
-          "wordCount": null,
-          "title": "Google AI Developers Community Spotlight Contest",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/building-a-better-smart-home-expanding-access-for-developers-and-users/",
-          "author": null,
-          "description": "The public beta launch of Home APIs for Android allows developers to create better smart home experiences. This launch emphasizes investments in Matter to improve device connectivity and interoperability, and increase smart home accessibility.",
-          "link": "https://developers.googleblog.com/en/building-a-better-smart-home-expanding-access-for-developers-and-users/",
-          "publishedOn": "2025-03-11T20:17:35.734Z",
-          "wordCount": null,
-          "title": "Building a better smart home",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
-          "author": null,
-          "description": "The Google Home APIs are now in public developer beta for Android, allowing developers to build innovative smart home experiences for over 600M devices using Google's hubs, Matter infrastructure, and automation engine.",
-          "link": "https://developers.googleblog.com/en/build-the-future-of-home-with-google-home-apis/",
-          "publishedOn": "2025-03-11T20:17:35.734Z",
-          "wordCount": null,
-          "title": "Build the future of home with Google Home APIs",
-          "imageUrl": null
         }
       ]
     },
@@ -1783,16 +1663,6 @@
           "wordCount": 6452,
           "title": ".NET Digest #6",
           "imageUrl": "https://wcdn.pvs-studio.com/media/docx/blog/1234_NET_digest_N6/image1_thm_intoblank_1200x630.png?ver=03-13-2025-16-13-12"
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/java/1233/",
-          "author": null,
-          "description": "On March 18, a new Java version is set to arrive! Let's take a peek at new features, including the long-awaited final implementation of Stream Gatherers!",
-          "link": "https://pvs-studio.com/en/blog/posts/java/1233/",
-          "publishedOn": "2025-03-11T21:00:00.000Z",
-          "wordCount": null,
-          "title": "What's new in Java 24",
-          "imageUrl": null
         }
       ]
     },
@@ -1904,6 +1774,56 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1016718/",
+          "author": "corbet",
+          "description": "Compute\nExpress Link (CXL) memory is not like the ordinary RAM that one might\ninstall into a computer; it can come and go at any time and is often not\npresent when the kernel is booting.  That complicates the management of\nthis memory.  During the memory-management track of the 2025 Linux Storage,\nFilesystem, Memory-Management, and BPF Summit, Gregory Price ran a session\non the challenges posed by CXL and how they might be addressed.",
+          "link": "https://lwn.net/Articles/1016718/",
+          "publishedOn": "2025-04-10T18:18:22.000Z",
+          "wordCount": null,
+          "title": "[$] Management of volatile CXL devices",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1017048/",
+          "author": "jake",
+          "description": "Greg Kroah-Hartman has announced the release of eight stable kernels: 6.14.2, 6.13.11, 6.12.23, 6.6.87, 6.1.134, 5.15.180, 5.10.236, and 5.4.292.  These all contain a large\nassortment of important kernel fixes throughout the tree.",
+          "link": "https://lwn.net/Articles/1017048/",
+          "publishedOn": "2025-04-10T13:45:32.000Z",
+          "wordCount": null,
+          "title": "Eight new stable kernels",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1016525/",
+          "author": "corbet",
+          "description": "The Data Access\nMONitor (DAMON) subsystem provides access to detailed memory-management\nstatistics, along with a set of tools for implementing policies based on\nthose statistics.  An update on DAMON by its primary author, SeongJae Park,\nhas been a fixture of the Linux Storage, Filesystem, Memory-Management, and\nBPF Summit for some years.  The 2025 Summit was no exception; Park led two\nsessions on recent and future DAMON developments, and how DAMON might\nevolve to facilitate a more access-aware memory-management subsystem in the\nfuture.",
+          "link": "https://lwn.net/Articles/1016525/",
+          "publishedOn": "2025-04-10T13:39:04.000Z",
+          "wordCount": null,
+          "title": "[$] Preparing DAMON for future memory-management problems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1017043/",
+          "author": "jake",
+          "description": "Security updates have been issued by AlmaLinux (tomcat and webkit2gtk3), Debian (chromium), Fedora (ghostscript), Mageia (atop, docker-containerd, and xz), Red Hat (go-toolset:rhel8), SUSE (apache2-mod_auth_openidc, apparmor, etcd, expat, firefox, kernel, libmozjs-128-0, and libpoppler-cpp2), and Ubuntu (dino-im, linux, linux-aws, linux-aws-hwe, linux-azure, linux-azure-4.15, linux-gcp,\n linux-gcp-4.15, linux-hwe, linux-kvm, linux-oracle, linux, linux-aws, linux-kvm, linux-lts-xenial, linux-fips, linux-fips, linux-aws-fips, linux-azure-fips, linux-gcp-fips, opensc, and poppler).",
+          "link": "https://lwn.net/Articles/1017043/",
+          "publishedOn": "2025-04-10T13:27:26.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1016366/",
+          "author": "corbet",
+          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: Debian project leader election; 6.15 Merge window; Lots of LSFMM coverage; Joplin.\n            \n Briefs: Firefox hardening; OpenSSH 10.0; Supply chain security; FreeDOS 1.4; OpenSSL 3.5.0; Rust 1.86.0; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
+          "link": "https://lwn.net/Articles/1016366/",
+          "publishedOn": "2025-04-10T00:33:34.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for April 10, 2025",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1016978/",
           "author": "jzb",
@@ -3003,36 +2923,6 @@
           "wordCount": null,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1009932/",
-          "author": "jzb",
-          "description": "Matrix\nprovides an open network for secure, decentralized communication. It\nhas enjoyed some success over the last few years as an IRC replacement\nand real-time chat for a number of open-source projects. But adoption\nby a subset of open-source developers is a far cry from the mainstream\nadoption that Matthew Hodgson, Matrix project lead and CEO of Element (the company that created\nMatrix), would like to see. At FOSDEM 2025, he discussed the\nhistory of Matrix, its missteps in chasing mainstream adoption, its\ncurrent status, as well as some of the wishlist features for taking\nMatrix into the mainstream.",
-          "link": "https://lwn.net/Articles/1009932/",
-          "publishedOn": "2025-03-11T15:27:13.000Z",
-          "wordCount": null,
-          "title": "[$] The road to mainstream Matrix",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013723/",
-          "author": "jzb",
-          "description": "Version 6.14.0 of Framework\nMono has been announced.\nSee the release\nnotes for a full list of new features and plans for future\nreleases.",
-          "link": "https://lwn.net/Articles/1013723/",
-          "publishedOn": "2025-03-11T14:41:20.000Z",
-          "wordCount": null,
-          "title": "Framework Mono 6.14.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013717/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (libaws, ruby2.7, and squid), Fedora (bigloo, emacs, neovim, python-jinja2, rizin, and tree-sitter), Oracle (kernel), Red Hat (grub2, kernel, kernel-rt, and libxml2), SUSE (iniparser, kernel, krb5, libxkbfile, and u-boot), and Ubuntu (gnuchess, openjdk-17-crac, openjdk-21-crac, and openvpn).",
-          "link": "https://lwn.net/Articles/1013717/",
-          "publishedOn": "2025-03-11T13:52:39.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -3295,6 +3185,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=86232",
+          "author": "economicview",
+          "description": "By United States Senate – http://www.warren.senate.gov/?p=biography / https://www.warren.senate.gov/imo/media/image/Official_Portrait.jpg, Public Domain, Link 트럼프 대통령은 1977년 국제비상경제권한법(IEEPA, the International Emergency Economic Powers Act)에 따른 권한을 행사하여 무역 관계에서 상호주의가 부족하고 다른 국가가 저지른 통화 조작 및 과도한 부가가치세(VAT)와 같은 해로운 정책으로 인해 발생한 대규모의 지속적인 무역 적자로 인한 국가 비상사태를 해결하고자 한다. 트럼프 대통령은 IEEPA 권한을 사용해 […]",
+          "link": "http://economicview.net/86232/",
+          "publishedOn": "2025-04-09T23:40:50.000Z",
+          "wordCount": null,
+          "title": "트럼프의 ‘관세폭탄 쇼’의 또 하나의 문제",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=86206",
           "author": "economicview",
           "description": "By LSE Library – https://www.flickr.com/photos/lselibrary/3268711009/, No restrictions, Link 두 번째 임기를 맞이한 트럼프 행정부의 경제정책 목표는 거칠게 두 가지 정도가 관찰된다. 1) 관세1로 중국을 때리겠다 2) 관세로 나머지 나라를 때리겠다. 언뜻 생각해봐도 둘을 각자 추진하기도 벅차거니와 동시에 추진하기에 만만치 않은 목표인데, 임기를 시작하자마자 야심차게 둘을 동시에 추진하고 있다. 처음에 각국의 경제전문가들은 ‘트럼프는 협상의 달인인데 그는 […]",
@@ -3371,6 +3271,46 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=132845",
+          "author": "민노씨",
+          "description": "이상헌(ILO 고용정책국장)과의 인터뷰는 4월 4일, 윤석열이 파면당한 날 오후, 스위스 시각 기준으론 오전 8시, 우리 시각 기준으론 오후 3시에 진행했다. 이상헌은 인터뷰 초입에 평소와 다르게 이메일을 살폈다. 전 세계 여러 곳에서 ‘축전’이 쇄도했다고 했다. ‘축 윤석열 파면’ 이메일이 날아온 국가들은 여러 곳이었겠지만, 그 내용은 대동소이했으리라. 어느 나라라고 밝히긴 좀 그렇지만, 몇몇은 한국이 부럽다고도 했다고 한다....\nThe post 윤석열 이후, 극우와 마주하며 사는 법 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/132845",
+          "publishedOn": "2025-04-10T08:17:18.000Z",
+          "wordCount": null,
+          "title": "윤석열 이후, 극우와 마주하며 사는 법",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=133439",
+          "author": "김훤주",
+          "description": "문형배 이야기 선거법은 장식이 아니다 문형배에게 선거 부정은 주권자인 국민의 의사를 왜곡하는 것이었다. 이는 주권재민을 바탕으로 하는 국가의 존립을 위태롭게 만드는 반민주주의 사범이기도 했다. 그는 표를 사기 위해 돈을 뿌리는 금권선거에 대해서는 더욱 엄정하게 판결했는데 앞서 얘기한 한나라당 당시 국회의원 김정부의 아내에게 내린 징역형 판결을 대표적으로 꼽을 수 있다. 다른 금권선거에서도 문형배의 엄정한 선고는 지위고하를...\nThe post 문형배 이야기: 2. 강강약약 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/133439",
+          "publishedOn": "2025-04-10T06:04:46.000Z",
+          "wordCount": null,
+          "title": "문형배 이야기: 2. 강강약약",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=133425",
+          "author": "소셜코리아",
+          "description": "2024년 12월 3일 이후 4개월여 간 한국 사회를 뒤흔들었던 비상계엄·내란 상황은 헌재가 전원일치 판정으로 대통령 파면을 선고함으로써 외견상 일단락됐다. 하지만 파면으로 위기가 소멸한 것은 아니다. 우리 사회의 극우화라는 위기는 지속할 가능성이 높아졌기 때문이다. 우리 사회의 극우 세력은 계엄 선포 이후 본격적으로 모습을 드러내고, 대통령 탄핵에 반대하는 우파와 결합력을 강화하는 모습을 보였다. 대통령의 선동, 극우 세력과...\nThe post 극우에 맞서, 저널리즘 미워도 다시 한번 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/133425",
+          "publishedOn": "2025-04-10T04:33:40.000Z",
+          "wordCount": null,
+          "title": "극우에 맞서, 저널리즘 미워도 다시 한번",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=133360",
+          "author": "이정환",
+          "description": "트럼프 관세 철회에 미국 주가 급등. “관세 인상 90일 유예, 중국만 빼고.” “존경심이 없어 125%로.” 쟁점과 현안. 내란 피의자 이완규, 재판 맡을 수 있나. 중앙일보도 “스스로 물러나라.” 민주당은 이완규 금지법 발의. 한덕수를 탄핵하라, 한겨레의 제안. 우원식은 대선+개헌 철회. 더 깊게 읽기. 이재명 캠프, 비명계 끌어안았다. 한덕수 대망론 나오는 이유는. 트럼프가 “대선 나갈 건가” 물었다. D램...\nThe post 조선일보가 제안하는 국민의힘 이기는 전략, 최대 걸림돌은 윤석열: 슬로우레터 4월10일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/133360",
+          "publishedOn": "2025-04-09T22:30:55.000Z",
+          "wordCount": null,
+          "title": "조선일보가 제안하는 국민의힘 이기는 전략, 최대 걸림돌은 윤석열: 슬로우레터 4월10일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=133219",
           "author": "김도연",
@@ -4040,26 +3980,6 @@
           "wordCount": null,
           "title": "헌재가 윤석열 탄핵을 기각하면 벌어질 일: 슬로우레터 3월13일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=130913",
-          "author": "민주언론시민연합",
-          "description": "언론은 ‘따옴표 저널리즘’이란 말로 자주 비판받는다. 오래된 비판인데 비상계엄과 내란사태 이후 더 빈번해졌다. ‘누가 ~라고 말했다’며 발언을 받아적고 인용하는 데 몰두한 ‘속기’ 저널리즘은 위험하다. 자칫 거짓을 유포할 수 있다. 이를 공방의 형태로 전하는 경우는 최악이다. 거짓의 지위를 상승시켜 진실과 대결하는 동급으로 대우해 버린다. 따옴표 저널리즘 비판, ‘어떻게’가 중요하다 그런데 나는 따옴표 저널리즘에 대한 비판에서 이따금...\nThe post 따옴표 저널리즘, ‘이렇게’ 고치자 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/130913",
-          "publishedOn": "2025-03-12T02:35:15.000Z",
-          "wordCount": null,
-          "title": "따옴표 저널리즘, ‘이렇게’ 고치자",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=130880",
-          "author": "이정환",
-          "description": "“구속 기간, ‘시간’ 말고 ‘날’로 계산하라.” 미국, 우크라이나 군사 지원 재개. 쟁점과 현안. 최재해‧이창수 탄핵 심판 먼저 선고한다. 두 가지 가능성. 윤석열 선고는 언제? 심우정 탄핵, 일단 미룬다. 더 깊게 읽기. 김건희-명태균 메시지에서 새로 드러난 사실. “명 사장님이 만든 것 알고 있습니다.” “모두가 나한테 속았다.” “이거 합법적인 것 맞습니까.” 다르게 읽기. 고속도로는 왜 휘었나. 상속세...\nThe post 고속도로는 왜 휘었나, 끝내 의문을 풀지 못했다: 슬로우레터 3월12일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/130880",
-          "publishedOn": "2025-03-11T22:18:15.000Z",
-          "wordCount": null,
-          "title": "고속도로는 왜 휘었나, 끝내 의문을 풀지 못했다: 슬로우레터 3월12일.",
-          "imageUrl": null
         }
       ]
     },
@@ -4207,26 +4127,6 @@
           "wordCount": null,
           "title": "25년 봄 매화향을 찾아, 아름다운 매화 명소 리스트",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597341",
-          "author": "happist",
-          "description": "일전에 2024년 자동차 메이커별 자동차 판매량 순위를 정리한 적이 있다. 여기에서는 도요타 판매량이 몇년째 수위를 지키고 있으며 중국 BYD가 빠르게 판매량을 늘리고 잇다는 점이 주목 받았다. 이번에는 프리미엄 럭셔리 자동차 브랜드들의 20204년 판매량 순위를 알아보자 글로벌 럭셔리 브랜드 자동차 판매량 순위, Global sales premium Car brands 2024 24년 럭셔리 브랜드 자동차 판매량 시사점 럭셔리 브랜드 […]",
-          "link": "https://happist.com/597341/24%eb%85%84-%eb%9f%ad%ec%85%94%eb%a6%ac-%eb%b8%8c%eb%9e%9c%eb%93%9c-%ec%9e%90%eb%8f%99%ec%b0%a8-%ed%8c%90%eb%a7%a4%eb%9f%89-%ec%88%9c%ec%9a%b0",
-          "publishedOn": "2025-03-12T01:57:16.000Z",
-          "wordCount": null,
-          "title": "2024년 글로벌 럭셔리 브랜드 자동차 판매량 순위",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597339",
-          "author": "happist",
-          "description": "자동차 여행을 한다면 아름다운 드라이브코스는 필수로 확인해야하는 정보임에는 틀림이 없다. 더우기 탁트이고 아름다운 바다를 바라보면서 달릴 수 있는 아름다운 해안도로라면 금상첨화임에 틀림이 없다. MSN 빙에서 전 세계의 아름다운 해안도로를 소개했는데 이를 받아 아름다운 해안도로를 소개해 보고자 한다. 미국 아름다운 해안도로 퍼시픽 코스트 하이웨이, 미국 세계에서 가장 유명한 도로 여행 하나는 미국 서부 해안의 퍼시픽 코스트 […]",
-          "link": "https://happist.com/597339/%ec%84%b8%ea%b3%84-%ec%95%84%eb%a6%84%eb%8b%a4%ec%9a%b4-%ed%95%b4%ec%95%88%eb%8f%84%eb%a1%9c-%ec%86%8c%ea%b0%9c",
-          "publishedOn": "2025-03-11T21:53:34.000Z",
-          "wordCount": null,
-          "title": "전 세계 아름다운 해안도로 소개",
-          "imageUrl": null
         }
       ]
     },
@@ -4373,16 +4273,6 @@
           "publishedOn": "2025-03-14T02:00:28.000Z",
           "wordCount": null,
           "title": "영어 쓰지 않으면 비정상? 트럼프의 행정명령 사용법",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=80843",
-          "author": "NewsPeppermint",
-          "description": "트럼프 대통령은 지난 4일 의회 국정연설에서 자신이 백악관에 복귀한 뒤 새로 짜고 있는 국제 질서의 핵심적인 주장을 되풀이했습니다. 트럼프의 일방적인 외교관은 미국의 이익을 적극적으로 관철하는 정책으로 보이지만, 동시에 미국의 동맹국들 사이에 균열이 생기고, 미국의 도움을 받던 나라들에선 미국에 대한 반감이 쌓이는 등 힘의 공백을 낳습니다. 이런 공백이 미국과 대등한 위치에 오르려는 강대국에는 기회가 될 수 있습니다. 트럼프 대통령의 외교 정책에 중국이 어떻게 대응하고 있는지 분석해봤습니다. 전문 번역: 군용기에 이민자 실어 → 더 보기",
-          "link": "https://newspeppermint.com/2025/03/11/npsp_usachinaforeignpolicy/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_usachinaforeignpolicy",
-          "publishedOn": "2025-03-12T00:35:22.000Z",
-          "wordCount": null,
-          "title": "“미국 vs 중국, 어느 편에 설 것인가”…중국이 진짜 노리는 것",
           "imageUrl": null
         }
       ]
