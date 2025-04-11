@@ -236,6 +236,16 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "704f104a-7b13-442a-945a-50b178e24718",
+          "author": "Daniel Walsh",
+          "description": "After receiving an email where someone was moving from Docker to Podman and hit some SELinux issues, I decided to write an article about it.\nLeveraging SELinux for container security\nFirst, sadly, while Docker has SELinux support, it is disabled by default. I believe this is a big mistake, since SELinux is the best tool to protect the file system from container breakout. SELinux has blocked most of the container breakout scenarios over the past decade-plus.\nSELinux has had a reputation for being difficult to manage, mainly because it attempts to control communication paths between applications running on a host. These applications can be configured multiple different ways, causing SELinux to block communication paths. These varied configurations require thorough SELinux knowledge to set bo…",
+          "link": "https://developers.redhat.com/articles/2025/04/11/my-advice-selinux-container-labeling",
+          "publishedOn": "2025-04-11T07:00:00.000Z",
+          "wordCount": null,
+          "title": "My advice on SELinux container labeling",
+          "imageUrl": null
+        },
+        {
           "id": "6150dc12-2571-49fe-aac5-986418fe01aa",
           "author": "David Malcolm",
           "description": "I work at Red Hat on GCC, the GNU Compiler Collection. I spent most of the past year working on how GCC emits diagnostics (errors and warnings) in the hope of making it easier to use. Let's take a look at 6 improvements to look forward to in the upcoming GCC 15.\n1. Prettier execution paths\nI added a static analyzer to GCC in GCC 10 that prints visualizations of predicted paths of execution through the user's code, demonstrating each problem it predicts.\nHere's an example that shows some of the improvements I've made to this in GCC 15:\ninfinite-loop-linked-list.c: In function ‘while_loop_missing_next’:\ninfinite-loop-linked-list.c:30:10: warning: infinite loop [CWE-835] [-Wanalyzer-infinite-loop]\n   30 |   while (n)\n      |          ^\n  ‘while_loop_missing_next’: events 1-3\n   30 |   while (…",
@@ -504,16 +514,6 @@
           "wordCount": 4954,
           "title": "10 tips for better Backstage Software Templates",
           "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/2023_Global_Shared_image__A_0.png?itok=wxw-bY7J"
-        },
-        {
-          "id": "4250051d-abfa-41fe-9560-0213166515e9",
-          "author": "Lumír Balhar",
-          "description": "Python is a core component of many enterprise environments. Red Hat Enterprise Linux (RHEL) provides security-compliant Python streams with long life cycles. This commitment applies to Python 3.12 in RHEL 10 and older Python versions that serve as the main interpreters, such as Python 3.6 in RHEL 8 and Python 3.9 in RHEL 9.\nPython in Fedora: The journey to stability\nThe packaging and subsequent availability of Python 3.12 in Fedora followed a structured release cycle with the following milestones:\nPython 3.12 alpha 1\n\nUpstream release: October 24, 2022\nAvailable in all active Fedora releases: October 28, 2022\n\nPython 3.12 beta 1\n\nUpstream release: May 22, 2023\nFedora release: May 26, 2023\n\nPython 3.12.0 (final release)\n\nUpstream release: October 2, 2023\nFedora release: October 2, 2023\n\nDur…",
-          "link": "https://developers.redhat.com/articles/2025/03/13/how-rhel-provides-secure-and-stable-python-streams",
-          "publishedOn": "2025-03-13T07:00:00.000Z",
-          "wordCount": 3211,
-          "title": "How RHEL provides secure and stable Python streams",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/blog/2021/05/Python-01.png?itok=zrT9l9Ni"
         }
       ]
     },
@@ -592,6 +592,26 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4495368",
+          "author": "Stefano Lovati",
+          "description": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on Vibration Testing, Image Sensors, and Amorphous Solar Cells! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS Würth Elektronik Adds Two Variants to Its Robust WL-SMTW LED Series […]\nThe post Vibration Testing, Image Sensors, Amorphous Solar Cells: Embedded Week Insights appeared first on Embedded.",
+          "link": "https://www.embedded.com/vibration-testing-image-sensors-amorphous-solar-cells-embedded-week-insights/",
+          "publishedOn": "2025-04-11T15:00:00.000Z",
+          "wordCount": null,
+          "title": "Vibration Testing, Image Sensors, Amorphous Solar Cells: Embedded Week Insights",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495395",
+          "author": "Stefano Lovati",
+          "description": "OMNIVISION has introduced its latest OV50X CMOS image sensor, boasting the highest dynamic range available in the mobile phone industry for cinematic-quality video capture. The OV50X is a 50-megapixel (MP) sensor featuring a 1.6-micron (µm) pixel size within a 1-inch optical format, specifically engineered for flagship smartphones that demand high dynamic range (HDR) video and […]\nThe post OMNIVISION Unveils 1-Inch Ultra HDR Image Sensor Designed for Cinematic Video in Premium Smartphones appeared first on Embedded.",
+          "link": "https://www.embedded.com/omnivision-unveils-1-inch-ultra-hdr-image-sensor-designed-for-cinematic-video-in-premium-smartphones/",
+          "publishedOn": "2025-04-10T21:00:00.000Z",
+          "wordCount": null,
+          "title": "OMNIVISION Unveils 1-Inch Ultra HDR Image Sensor Designed for Cinematic Video in Premium Smartphones",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4494602",
           "author": "Loriotoole",
@@ -1161,46 +1181,6 @@
           "wordCount": null,
           "title": "Low-Code Platforms: A Revolution for Edge Computing",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494811",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "At Embedded World in Nuremberg, Maurizio Di Paolo Emilio, Editor-in-Chief of embedded.com, sat down with Cecilia Wachtmeister, CEO of IAR, to discuss the company’s strategic vision and innovations. Since taking the helm in August 2024, Wachtmeister has focused on driving growth, flexibility, and functional safety in IAR’s toolchain solutions. In this interview, she reveals IAR’s […]\nThe post Embedded World, Nuremberg: IAR’s Strategy for Functional Safety and Market Expansion appeared first on Embedded.",
-          "link": "https://www.embedded.com/embedded-world-nuremberg-iars-strategy-for-functional-safety-and-market-expansion/",
-          "publishedOn": "2025-03-13T05:49:52.000Z",
-          "wordCount": null,
-          "title": "Embedded World, Nuremberg: IAR’s Strategy for Functional Safety and Market Expansion",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494825",
-          "author": "Stefano Lovati",
-          "description": "Lauterbach’s TRACE32® development tools now support NXP® Semiconductors’ S32K5 family of automotive microcontrollers (MCUs), enhancing vehicle network communication while maintaining low power consumption. TRACE32® enables simultaneous debugging of processor cores and non-intrusive processor trace capture. The S32K5 MCU family extends the S32 automotive processing platform, delivering high-performance computing, expanded memory, and advanced vehicle network communication […]\nThe post Lauterbach Expands TRACE32® Support for NXP S32K5 MCUs, Enhancing Debugging and Trace Capabilities for Automotive Applications appeared first on Embedded.",
-          "link": "https://www.embedded.com/lauterbach-expands-trace32-support-for-nxp-s32k5-mcus-enhancing-debugging-and-trace-capabilities-for-automotive-applications/",
-          "publishedOn": "2025-03-12T20:55:00.000Z",
-          "wordCount": null,
-          "title": "Lauterbach Expands TRACE32® Support for NXP S32K5 MCUs, Enhancing Debugging and Trace Capabilities for Automotive Applications",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494822",
-          "author": "Stefano Lovati",
-          "description": "Red Pitaya has introduced the STEMlab 125-14 Gen 2, a next-generation evolution of its widely embraced test and measurement platform. Developed for engineers, researchers, and industrial innovators, this latest iteration enhances performance, connectivity, and modularity, further cementing Red Pitaya’s position in flexible, software-defined instrumentation. Trusted by industry leaders such as NASA, Apple, Meta, Neuralink, Toyota, […]\nThe post Red Pitaya Releases STEMlab 125-14 Gen 2 with Improved Performance and Connectivity appeared first on Embedded.",
-          "link": "https://www.embedded.com/red-pitaya-releases-stemlab-125-14-gen-2-with-improved-performance-and-connectivity/",
-          "publishedOn": "2025-03-12T20:30:00.000Z",
-          "wordCount": null,
-          "title": "Red Pitaya Releases STEMlab 125-14 Gen 2 with Improved Performance and Connectivity",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4493795",
-          "author": "Loriotoole",
-          "description": "The growing sophistication and connectivity of modern embedded systems means an increasing dependency on software, as well as more complex and much larger codebases. Consequently, checking all this code for security and compliance requirements has become more challenging. However, checking the code is an important requirement for many embedded systems, where interaction with humans could, […]\nThe post Secure, Compliant Embedded Software—Even at Scale appeared first on Embedded.",
-          "link": "https://www.embedded.com/secure-compliant-embedded-softwareeven-at-scale/",
-          "publishedOn": "2025-03-12T09:33:21.000Z",
-          "wordCount": null,
-          "title": "Secure, Compliant Embedded Software—Even at Scale",
-          "imageUrl": null
         }
       ]
     },
@@ -1467,46 +1447,6 @@
           "wordCount": 1713,
           "title": "Unlocking bonus worlds with Gemini for the Google I/O puzzle",
           "imageUrl": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/IO-2025-puzzle-how-its-made.2e16d0ba.fill-1200x600.png"
-        },
-        {
-          "id": "https://developers.googleblog.com/en/experiment-with-gemini-20-flash-native-image-generation/",
-          "author": null,
-          "description": "The experimental native image generation feature of Gemini 2.0 Flash – allowing for the combination of text and images, conversational image editing, and leveraging real-world knowledge for contextual visuals – is now available for developers to test through Google AI Studio and the Gemini API.",
-          "link": "https://developers.googleblog.com/en/experiment-with-gemini-20-flash-native-image-generation/",
-          "publishedOn": "2025-03-12T20:17:44.045Z",
-          "wordCount": null,
-          "title": "Experiment with Gemini 2.0 Flash native image generation",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/gemma-3-on-mobile-and-web-with-google-ai-edge/",
-          "author": null,
-          "description": "Gemma 3 1B, a new small language model for mobile and web applications via Google AI Edge, is now available, with increased efficiency, improved performance, and offline availability.",
-          "link": "https://developers.googleblog.com/en/gemma-3-on-mobile-and-web-with-google-ai-edge/",
-          "publishedOn": "2025-03-12T20:17:44.045Z",
-          "wordCount": null,
-          "title": "Gemma 3 on mobile and web with Google AI Edge",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/safer-and-multimodal-responsible-ai-with-gemma/",
-          "author": null,
-          "description": "ShieldGemma 2, built on Gemma 3, is a 4 billion parameter model that can be used as an input filter for vision language models or an output filter for image generation systems, and is designed to respond to a wide range of diverse and nuanced imagery.",
-          "link": "https://developers.googleblog.com/en/safer-and-multimodal-responsible-ai-with-gemma/",
-          "publishedOn": "2025-03-12T20:17:44.045Z",
-          "wordCount": null,
-          "title": "Safer and Multimodal: Responsible AI with Gemma",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/introducing-gemma3/",
-          "author": null,
-          "description": "Gemma 3 is a new, advanced version of the Gemma open-model family featuring multimodality, longer context windows, and improved language capabilities, with various sizes and deployment options for developers to experiment.",
-          "link": "https://developers.googleblog.com/en/introducing-gemma3/",
-          "publishedOn": "2025-03-12T20:17:44.045Z",
-          "wordCount": null,
-          "title": "Introducing Gemma 3: The Developer Guide",
-          "imageUrl": null
         }
       ]
     },
@@ -1643,26 +1583,6 @@
           "wordCount": null,
           "title": "PVS-Studio in development of Unity projects: new specialized diagnostic rules",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/cpp/1235/",
-          "author": null,
-          "description": "With the upcoming PVS-Studio 7.36 release, we invite you to participate in the beta testing of our C and C++ analyzer featuring an updated parser.",
-          "link": "https://pvs-studio.com/en/blog/posts/cpp/1235/",
-          "publishedOn": "2025-03-12T21:00:00.000Z",
-          "wordCount": null,
-          "title": "Beta testing: updated parser for C and C++ code analysis",
-          "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/csharp/1234/",
-          "author": null,
-          "description": "Welcome to the sixth edition of our .NET news and event digest! This issue is packed with updates, including the release of .NET 10 Preview 1. The PVS-Studio team is happy to present a selection of...",
-          "link": "https://pvs-studio.com/en/blog/posts/csharp/1234/",
-          "publishedOn": "2025-03-12T21:00:00.000Z",
-          "wordCount": 6452,
-          "title": ".NET Digest #6",
-          "imageUrl": "https://wcdn.pvs-studio.com/media/docx/blog/1234_NET_digest_N6/image1_thm_intoblank_1200x630.png?ver=03-13-2025-16-13-12"
         }
       ]
     },
@@ -1774,6 +1694,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1016712/",
+          "author": "daroc",
+          "description": "Eduard Zingerman presented a daring proposal that \"makes sense if you think\nabout it a bit\" at the 2025 Linux Storage, Filesystem,\nMemory-Management, and BPF Summit. He wants to inline\nperformance-sensitive kernel functions\ninto the BPF programs that call them. His\nprototype does not yet address all of the design problems inherent in that idea,\nbut it did spark a lengthy discussion about the feasibility of his proposal.",
+          "link": "https://lwn.net/Articles/1016712/",
+          "publishedOn": "2025-04-11T17:15:10.000Z",
+          "wordCount": null,
+          "title": "[$] Inlining kfuncs into BPF programs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1017197/",
+          "author": "daroc",
+          "description": "Security updates have been issued by AlmaLinux (delve and golang and go-toolset:rhel8), Debian (webkit2gtk), Fedora (openvpn, thunderbird, uboot-tools, and zabbix), SUSE (expat, fontforge, govulncheck-vulndb, and kernel), and Ubuntu (haproxy and libsoup2.4, libsoup3).",
+          "link": "https://lwn.net/Articles/1017197/",
+          "publishedOn": "2025-04-11T13:19:31.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1016879/",
+          "author": "jake",
+          "description": "Building on the discussion in the two previous sessions on untorn (or\natomic) writes, for buffered I/O and for XFS using direct I/O, Ojaswin Mujoo\nremotely led a\nsession on support for the feature on ext4.  That took place in the combined storage and\nfilesystem track at the\n2025 Linux Storage, Filesystem, Memory Management, and BPF Summit.  Part of\nthe support for the feature is already in the upstream kernel, with more\ncoming.  But \nthere are still some challenges that Mujoo wanted to discuss.",
+          "link": "https://lwn.net/Articles/1016879/",
+          "publishedOn": "2025-04-10T20:35:18.000Z",
+          "wordCount": null,
+          "title": "[$] Atomic writes for ext4",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1017132/",
+          "author": "jake",
+          "description": "Over on the Red Hat Developer site, David Malcolm has an article\nabout improvements in GCC 15, specifically focusing on the diagnostic\ninformation that the compiler emits.  This includes ASCII art with a \"⚠️\"\nwarning emoji to display the execution path when it detects a problem (like\nan infinite loop in one of his examples), better C++ template errors,\nmachine-readable diagnostics using Static\nAnalysis Results Interchange Format (SARIF), better messages regarding\nC23 compatibility since that is the default C version for GCC 15, and more.\nSince the changes are focused on messages, there is the inevitable color-scheme update as well:\n\nGCC will use color when emitting its text messages on stderr at a suitably modern terminal, using a few colors that seem to work well in a number of different terminal themes—but the exact rules for choosing which color to use for each aspect of the output have been rather arbitrary.\n\nFor GCC 15, I've gone through C and C++'s errors, looking for places where two different things in the source are being contrasted, such as type mismatches. These diagnostics now use color to visually highlight and distinguish the differences.",
+          "link": "https://lwn.net/Articles/1017132/",
+          "publishedOn": "2025-04-10T20:29:37.000Z",
+          "wordCount": null,
+          "title": "Malcolm: 6 usability improvements in GCC 15",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1016718/",
           "author": "corbet",
@@ -2843,86 +2803,6 @@
           "wordCount": 335,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013184/",
-          "author": "corbet",
-          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: PyPI terms of service; Zig 0.14; Matrix; Timer IDs and ABI; Module integrity checking; Capability analysis.\n            \n Briefs: Path traversal; Below vulnerability; Ubuntu 25.04; Flang; Gstreamer 1.26.0; Framework Mono 6.14.0; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
-          "link": "https://lwn.net/Articles/1013184/",
-          "publishedOn": "2025-03-13T00:15:26.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for March 13, 2025",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1012954/",
-          "author": "jake",
-          "description": "On February 25, the Python\nSoftware Foundation (PSF), which runs the Python Package Index (PyPI), announced\nnew terms\nof service (ToS) for the repository.  That has led to some questions\nabout the new ToS, and the process of coming up with them.  For one thing, the previous terms\nof use for the service were shorter and simpler, but there are other\nconcerns with specific wording in the new agreement.",
-          "link": "https://lwn.net/Articles/1012954/",
-          "publishedOn": "2025-03-12T17:22:35.000Z",
-          "wordCount": null,
-          "title": "[$] New terms of service for PyPI",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013876/",
-          "author": "jzb",
-          "description": "Damien Neil has written an article for the Go Blog about path\ntraversal vulnerabilities and the os.Root API added in Go 1.24 to help prevent\nthem.\nroot.Open(\"a/../b\") is permitted. Filenames are\nresolved using the semantics of the local platform: On Unix systems,\nthis will follow any symlink in \"a\" (so long as that link does not\nescape the root); while on Windows systems this will open \"b\" (even if\n\"a\" does not exist).",
-          "link": "https://lwn.net/Articles/1013876/",
-          "publishedOn": "2025-03-12T17:13:18.000Z",
-          "wordCount": null,
-          "title": "Traversal-resistant file APIs (The Go Blog)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1012809/",
-          "author": "daroc",
-          "description": "The Zig project has\n\nannounced the release of the 0.14 version of the language,\nincluding changes from more than 250 contributors. Zig is a low-level,\nmemory-unsafe programming language that aims to compete with C instead of\ndepending on it. Even though the language has not yet had a stable release,\nthere are a number of projects using it as an alternative to C with better\nmetaprogramming.\nWhile the project's release\nschedule has been a bit inconsistent, with the release of version 0.14 being\n\ndelayed\nseveral times, the release contains a number of new convenience features,\nbroader architecture support, and the next steps toward removing Zig's\ndependency on LLVM.",
-          "link": "https://lwn.net/Articles/1012809/",
-          "publishedOn": "2025-03-12T14:49:19.000Z",
-          "wordCount": null,
-          "title": "[$] Zig's 0.14 release inches the project toward stability",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013842/",
-          "author": "jzb",
-          "description": "The SUSE Security Team blog has a post with a\ndetailed analysis of a vulnerability (CVE-2025-27591)\nin the below\ntool for recording and displaying system data.",
-          "link": "https://lwn.net/Articles/1013842/",
-          "publishedOn": "2025-03-12T14:47:20.000Z",
-          "wordCount": null,
-          "title": "Below: local privilege escalation (SUSE security team blog)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013844/",
-          "author": "daroc",
-          "description": "The LLVM project's Fortran compiler, which has for many years gone by the name \"flang-new\", will now simply be \"flang\", starting from LLVM's 20.1.0 release on March 4. The\n\nannouncement, which includes details about the history of flang, comes after a long period of development and discussion. The community has considered renaming flang several times before now, but has always held off out of a feeling that the compiler was not yet ready. Now, the members of the project believe that flang has become stable and complete enough to earn its name.\n\n\n\nWe are almost 10 years from the first announcement of what would\nbecome LLVM Flang. In the LLVM monorepo alone there have been close\nto 10,000 commits from around 400 different contributors. Undoubtedly\nmore in Classic Flang before that.",
-          "link": "https://lwn.net/Articles/1013844/",
-          "publishedOn": "2025-03-12T14:15:42.000Z",
-          "wordCount": null,
-          "title": "The LLVM project stabilizes its Fortran compiler",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013840/",
-          "author": "jzb",
-          "description": "Version\n1.26.0 of the GStreamer cross-platform multimedia framework has\nbeen released. Notable changes in this release include support for the\nH.266\nVersatile Video Coding (VVC) codec, Low Complexity Enhancement\nVideo Coding (LCEVC) support, closed caption improvements, and JPEG XS image codec\nsupport.",
-          "link": "https://lwn.net/Articles/1013840/",
-          "publishedOn": "2025-03-12T13:38:31.000Z",
-          "wordCount": null,
-          "title": "GStreamer 1.26.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013838/",
-          "author": "jzb",
-          "description": "Security updates have been issued by Debian (libmodbus), Fedora (thunderbird and vyper), Mageia (firefox, nss, python-django, python-jinja2, and thunderbird, thunderbird-l10n), Oracle (bind, kernel, rsync, and tigervnc), Red Hat (.NET 8.0, .NET 9.0, and libxml2), SUSE (iniparser and kernel), and Ubuntu (dotnet8, dotnet9, freerdp2, jinja2, libreoffice, linux, linux-hwe, linux-aws, linux-aws-hwe, linux-gcp, linux-gcp-4.15, linux-kvm, linux-oracle, linux-kvm, and opensc).",
-          "link": "https://lwn.net/Articles/1013838/",
-          "publishedOn": "2025-03-12T13:09:30.000Z",
-          "wordCount": null,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
         }
       ]
     },
@@ -3142,18 +3022,7 @@
       "title": "The Pasture",
       "feedUrl": "https://thephd.dev/feed",
       "siteUrl": "https://thephd.dev/",
-      "articles": [
-        {
-          "id": "https://thephd.dev/c2y-the-defer-technical-specification-its-time-go-go-go",
-          "author": null,
-          "description": "After the Graz, Austria February 2025 WG14 Meeting, I am now confident in the final status of the defer TS, and it is now time.",
-          "link": "https://thephd.dev/c2y-the-defer-technical-specification-its-time-go-go-go",
-          "publishedOn": "2025-03-13T00:00:00.000Z",
-          "wordCount": null,
-          "title": "The Defer Technical Specification: It Is Time",
-          "imageUrl": null
-        }
-      ]
+      "articles": []
     },
     {
       "title": "Vivonomicon's Blog",
@@ -3253,16 +3122,6 @@
           "wordCount": null,
           "title": "트럼프가 촉발한  신(新)군사적 케인즈주의",
           "imageUrl": null
-        },
-        {
-          "id": "http://economicview.net/?p=86057",
-          "author": "sticky",
-          "description": "사무실에 액자를 하나 걸어뒀는데 알프레드 아이젠슈테트(Alfred Eisenstaedt)라는 유명한 사진작가가 1943년에 찍은 뉴욕의 펜실베이니아역의 풍경이 담긴 사진이다. 작품의 제목은 Clock in Pennsylvania Station으로 높은 위치에서 아래를 바라보며 찍은 사진에 역 천장에 걸려 있는 커다란 시계가 하나 보이고 – 약 (필시 오후) 2시 40분가량을 가리키고 있다 – 아래에 많은 사람들이 모여 있는 그런 사진이다. 시계에 무어라 적혀있는데 […]",
-          "link": "http://economicview.net/86057/",
-          "publishedOn": "2025-03-13T00:05:04.000Z",
-          "wordCount": null,
-          "title": "펜실베이니아역의 시계",
-          "imageUrl": null
         }
       ]
     },
@@ -3271,6 +3130,36 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=133541",
+          "author": "이정환",
+          "description": "슬로우뉴스 구독자 여러분, 안녕하세요. 이정환 기자입니다. 오늘은 모처럼 슬로우뉴스 중간 보고입니다. 슬로우레터가 2023년 4월10일 첫 발행 이후 벌써 2년이 됐습니다. 오늘까지 520회, A4 용지로 6000매가 넘는 분량입니다. 비가 오나 눈이 오나 월화수목금 하루도 빠지지 않고 슬로우레터를 발행했습니다. 구독자 여러분의 응원과 격려가 있어서 가열차게 달려올 수 있었습니다. 2년 전 슬로우뉴스주식회사를 설립하면서 전국을 돌면서 잠재적인 투자자 후보를...\nThe post [알림] 슬로우레터 2주년입니다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/133541",
+          "publishedOn": "2025-04-11T09:01:49.000Z",
+          "wordCount": null,
+          "title": "[알림] 슬로우레터 2주년입니다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=133516",
+          "author": "김훤주",
+          "description": "👨‍⚖️문형배 이야기 고법에 가면 구부러지는 기준 내가 아는 문형배는 법원주의자다. 법원을 아끼고 사랑하며 나아가 잘 되기를 바라는 사람이다. 그는 법원이 잘 되려면 무엇보다 주권자인 국민의 믿음과 사랑을 받아야 한다고 생각한다. 정의를 수호하는 마지막 보루인 법원이 공평무사하게 판결해야 하고 여태 그렇지 못했으면 이제라도 바로잡아야 한다고 보았다. 문형배는 열성을 다해 공정한 재판을 위해 애썼고 그에 힘입어 창원지법은...\nThe post 문형배 이야기: 3. 법원주의자 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/133516",
+          "publishedOn": "2025-04-11T05:39:27.000Z",
+          "wordCount": null,
+          "title": "문형배 이야기: 3. 법원주의자",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=133478",
+          "author": "이정환",
+          "description": "“125% 아니고 145%.” 다시 블랙 프라이데이, 주가 급락. 뒷북 치는 종이신문의 비애. 두 초강대국의 분열. 미국 국채 투매가 트럼프를 흔들었다. 중국의 맷집이 세졌다. 쟁점과 현안. “나는 감옥 가고 죽어도 상관없다.” 오늘 오후 관저 비운다. 국민의힘 20룡에서 10룡으로. 윤 어게인? 김건희 출마설? 더 깊게 읽기. 이재명의 대선 키워드는 ‘잘사니즘’. 한덕수 헌법 소원 주심은 마은혁. 박성재 탄핵...\nThe post “김건희를 버려야 보수가 산다”는데 ‘좀비’가 된 윤석열: 슬로우레터 4월11일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/133478",
+          "publishedOn": "2025-04-10T22:35:29.000Z",
+          "wordCount": null,
+          "title": "“김건희를 버려야 보수가 산다”는데 ‘좀비’가 된 윤석열: 슬로우레터 4월11일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=132845",
           "author": "민노씨",
@@ -3950,36 +3839,6 @@
           "wordCount": null,
           "title": "1타 강사라더니… 전한길 국회 특강, 맞는 소리가 하나도 없다: 슬로우레터 3월14일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=130986",
-          "author": "소셜코리아",
-          "description": "나는 지난 3월 6일 야권의 원내외 정당 주요 관계자들이 모인 자리에서 앞으로 민주헌정주의 세력 대선 전략의 큰 줄기를 발표한 바 있다. 정치 일정은 여전히 불확실하다. 하지만 이후 순식간에 조기 대선을 치르게 되면 경마식 보도로 함몰될 가능성이 존재하기에 중요한 대선 목표와 전략을 강조하는 의미에서 다시 그 내용을 제기한다. 발표했던 세 가지 전략은 다음과 같다. 세 가지...\nThe post 차가운 내전: 진보 후보가 나와야 민주당이 이긴다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/130986",
-          "publishedOn": "2025-03-13T04:13:27.000Z",
-          "wordCount": null,
-          "title": "차가운 내전: 진보 후보가 나와야 민주당이 이긴다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=129317",
-          "author": "민노씨",
-          "description": "한 나라의 ‘평균’ 노동시간을 이야기하는 것은 오히려 그 노동시간을 둘러싼 한 인간의 ‘삶’, 그 구체적 진실을 놓치는 일이 되기 쉽다. 우리나라는, 지난 10년 새 연 200시간 정도의 노동시간이 줄었지만, 여전히 OECD에서 꽤 오래 일하는 나라다. ‘저녁이 있는 삶’이라는 정치 슬로건이 있었다. 벌써 십수 년이 지났지만, 여전히 ‘그 저녁’은 많은 노동자가 닿을 수 없는 곳에 있다....\nThe post 평균 노동시간의 함정: 노동법 대신 ‘일법’이 필요한 이유 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/129317",
-          "publishedOn": "2025-03-13T01:39:45.000Z",
-          "wordCount": null,
-          "title": "평균 노동시간의 함정: 노동법 대신 ‘일법’이 필요한 이유",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=130934",
-          "author": "이정환",
-          "description": "즉시항고, 지금도 할 수 있다. 윤석열이 처음이었다. 쟁점과 현안. 그래서 탄핵 심판 선고는 언제? 금요일이 좋은 이유. 만장일치 나올 가능성 크다. 헌재 주변 학교는 선고일 휴교. 오늘 최재해와 이창수 선고. “초조한 민주당”? 오늘 조선일보 1면. 미국산 소고기의 악몽. 철강 관세 25% 충격. 이재명과 비명계의 만남. 더 깊게 읽기. 2030 남성이라는 변수. ‘쉬었음’ 청년 50만 명....\nThe post 헌재가 윤석열 탄핵을 기각하면 벌어질 일: 슬로우레터 3월13일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/130934",
-          "publishedOn": "2025-03-12T22:13:13.000Z",
-          "wordCount": null,
-          "title": "헌재가 윤석열 탄핵을 기각하면 벌어질 일: 슬로우레터 3월13일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3988,6 +3847,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=597854",
+          "author": "happist",
+          "description": "포런어페어스에 올라온 기사 미중 무역전쟁 누가 이길까?를 번역한 글이다.페이스북에 올라온 그로 아직 원문을 직접 읽어보지는 못했습니다. Executive Summary (1) 무역을 중단하면 많이 수입하는 쪽이 많이 수출하는 쪽보다 불리하다.(2) 싸움을 걸기 전에 준비를 안 하고 걸면 이기기 어렵다. 미국이 패배하기 쉬운 무역 전쟁: 미중 관세 전쟁에서 중국이 가진 확전 우위 이 기사는 아담 S. 포센이 2025년 […]",
+          "link": "https://happist.com/597854/%ed%8f%ac%eb%9f%b0%ec%96%b4%ed%8e%98%ec%96%b4%ec%8a%a4-%eb%af%b8%ec%a4%91-%eb%ac%b4%ec%97%ad%ec%a0%84%ec%9f%81%ec%9d%98-%ec%8a%b9%ec%9e%90-%ec%a4%91%ea%b5%ad%ec%9d%b4-%ed%99%95%ec%a0%84-%ec%9a%b0",
+          "publishedOn": "2025-04-11T15:26:59.000Z",
+          "wordCount": null,
+          "title": "[포런어페어스] 미중 무역전쟁의 승자?, 중국이 확전 우위를 가지고 있다.",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=597833",
           "author": "happist",
