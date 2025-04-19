@@ -2,10 +2,52 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://newsfeed.mononn.com/index.html</id>
     <title>News Feed</title>
-    <updated>2025-04-18T20:17:43.351Z</updated>
+    <updated>2025-04-19T20:16:51.860Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://newsfeed.mononn.com/index.html"/>
     <link rel="self" href="https://newsfeed.mononn.com/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[WebAssembly: How to allocate your allocator]]></title>
+        <id>https://nullprogram.com/blog/2025/04/19/</id>
+        <link href="https://nullprogram.com/blog/2025/04/19/"/>
+        <updated>2025-04-19T03:18:20.000Z</updated>
+        <summary type="html"><![CDATA[An early, small hurdle diving into WebAssembly was allocating my
+allocator. On a server or desktop with virtual memory, the allocator asks
+the operating system to map fresh pages into its address space (sbrk,
+anonymous mmap, VirtualAlloc), which it then dynamically allocates to
+different purposes. In an embedded context, dynamic allocation memory is
+typically a fixed, static region chosen at link time. The WASM execution
+environment more resembles an embedded system, but both kinds of obtaining
+raw memory are viable and useful in different situations.
+For the purposes of this discussion, the actual allocator isn’t important.
+It could be a simple arena allocator, or a more general purpose
+buddy allocator. It could even be garbage collected with Boehm
+GC. Though WebAssembly’s linear memory i…]]></summary>
+        <author>
+            <name>null program</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[박근혜 회고록을 보니, 확실히 윤석열과는 달랐다.]]></title>
+        <id>https://slownews.kr/?p=134181</id>
+        <link href="https://slownews.kr/134181"/>
+        <updated>2025-04-19T02:48:08.000Z</updated>
+        <summary type="html"><![CDATA[정치인은 사과를 두려워한다. 섣부르게 잘못을 인정했다가 정치적 공격을 받을 수 있고, 견고한 지지층이 고개 숙인 정치인에 실망하고 떠날 수도 있다. 여러 정치인이 사과 기자회견을 열고도 “죄송하다” 대신 “유감이다”로 어물쩍 넘어가는 이유다. 그러나 정치인의 사과는 중요하다. 무너진 정치의 신뢰를 회복한다는 의미도 있지만 사회 통합의 출발점이 될 수도 있다. 달리 이야기하면, 거듭된 잘못에 진심을 담은 사과가 뒤따르지...
+The post 박근혜 회고록을 보니, 확실히 윤석열과는 달랐다. appeared first on 슬로우뉴스..]]></summary>
+        <author>
+            <name>김도연</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[24년 성심당 실적 분석, 10년을 이어온 꾸준한 박리다매의 위력을 실감하다]]></title>
+        <id>https://happist.com/?p=597958</id>
+        <link href="https://happist.com/597958/24%eb%85%84-%ec%84%b1%ec%8b%ac%eb%8b%b9-%ec%8b%a4%ec%a0%81-%eb%b6%84%ec%84%9d-%ea%be%b8%ec%a4%80%ed%95%9c-%eb%b0%95%eb%a6%ac%eb%8b%a4%eb%a7%a4%ec%9d%98-%ec%9c%84%eb%a0%a5%ec%9d%84-%ec%8b%a4%ea%b0%90"/>
+        <updated>2025-04-19T01:40:28.000Z</updated>
+        <summary type="html"><![CDATA[4월이 지나면서 기업들이 실적을 공개하고 있다. 성심당도 공개된 회사는 아니지만 매년 감사보고서를 공개하고 있다. 이러한 성심당 감사보고서를 기반으로 성싱당 실적 분석을 통해 성심당 사례 분석을 심화해 보자 팬데믹 이후 꾸준히 증가한 매출 성장 근 10년정도의 성심당 매출을 살펴보면, 팬데믹 당시 매출 감소를 격은 후 매출이 안정화되면서 매년 매출 증가율 지속 높아지고 잇다. 성심당 사업이 매우 […]]]></summary>
+        <author>
+            <name>happist</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gemma 3 QAT Models: Bringing state-of-the-Art AI to consumer GPUs]]></title>
         <id>https://developers.googleblog.com/en/gemma-3-quantized-aware-trained-state-of-the-art-ai-to-consumer-gpus/</id>
@@ -5070,170 +5112,6 @@ progress report to coincide with the 6.14 kernel release.
 The post 탄핵 찬성과 이재명 지지율 사이 22%포인트의 간극. appeared first on 슬로우뉴스..]]></summary>
         <author>
             <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[짜장면 배달과 뉴스 보도의 세 가지 공통점]]></title>
-        <id>https://slownews.kr/?p=131702</id>
-        <link href="https://slownews.kr/131702"/>
-        <updated>2025-03-21T01:42:23.000Z</updated>
-        <summary type="html"><![CDATA[뉴스 보도와 짜장면 배달은 닮았다. 배달은 ‘신속’해야 한다. 배는 고픈데 배달이 늦으면 다시는 그 집에 음식을 주문하고 싶지 않을 것이다. 배달은 또 ‘정확’해야 한다. 짜장면이 먹고 싶어서 짜장면을 시켰는데 짬뽕이 오면 “헐~ ” 소리가 절로 나올 것이다. 짜장면은 또 ‘맛’이 있어야 한다. 아무리 신속하고 정확하게 배달이 된 짜장면이라도 맛이 없다면 낭패다. 뉴스도 마찬가지다. 뉴스 생산자인 언론 매체가 뉴스 소비자인 일반 국민에게 신속하고 정확하게 뉴스를 전달해야 한다. 뉴스의 신속성이 결여돼 이미 다 알고 있는 뉴스를 전달한다면 이미 뉴스가 아니다. 또 정확한 뉴스도 언론의 생명이다. 악의적 오보는 말할 것도 없고 선의의 오보도 주의해야 한다. ‘신속’과 ‘정확’은 반비례다. 팩트를 확인하고 또 확인하다 보면 뉴스배달이 지체된다. 그렇다고 너무 늦게 배달하면 아무리 정확한 뉴스라도 이미 뉴스의 기능을 잃어버린다.  ‘신속’, ‘정확’과 함께 뉴스는 ‘맛’이 있어야 한다. 즉, 뉴스가 독자들의 눈에, 시청자들의 귀에 쏙쏙 들어와야 한다는 것이다. 몇 번을 읽어봐도 도무지 이해가 가지 않는 기사나 몇 번을 들어도 도대체 무슨 말인지 모를 뉴스는 맛없는 짜장면과 같다. ‘신속’, ‘정확’, ‘맛’ 중에서 우선 순위를 꼽으라면 나는 정확을 꼽고 싶다. 확인되지 않은 뉴스는 차라리 내보내지 말아야 한다. 뉴스의 ‘맛’을 내려고 ‘초’를 쳐서도 곤란하다. ‘초’란 기사를 과장하거나 가공하는 것을 말하는 기자들 사이의 은어다. ‘맛’이 조금 떨어지더라도 과장하거나 가공하지 않은 정확한 뉴스여야 한다.  속보 경쟁…]]></summary>
-        <author>
-            <name>민주언론시민연합</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[“불의를 멈춰달라” 감동의 목소리…이·팔 합작 다큐의 여운]]></title>
-        <id>https://newspeppermint.com/?p=80884</id>
-        <link href="https://newspeppermint.com/2025/03/20/npsp_nootherland/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=npsp_nootherland"/>
-        <updated>2025-03-21T01:15:52.000Z</updated>
-        <summary type="html"><![CDATA[제97회 아카데미 시상식에서 장편 다큐멘터리를 수상한 작품 “노 아더 랜드”에 대한 각계의 반응을 둘러싸고 계속 많은 이야기가 나오고 있습니다. 뉴욕타임스에 실린 이스라엘, 팔레스타인 활동가들의 소회를 번역하고, 제가 직접 영화를 본 뒤 감상평을 썼습니다. 전문 번역: 최고의 상 수상 뒤 살해 위협…참혹한 현실에 맞선 영화 해설: “불의를 멈춰달라” 감동의 목소리…이·팔 합작 다큐의 여운]]></summary>
-        <author>
-            <name>NewsPeppermint</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[한덕수‧이재명 먼저? 윤석열 파면에 변수 안 된다: 슬로우레터 3월21일.]]></title>
-        <id>https://slownews.kr/?p=131670</id>
-        <link href="https://slownews.kr/131670"/>
-        <updated>2025-03-20T22:27:53.000Z</updated>
-        <summary type="html"><![CDATA[한덕수 먼저 선고한다. 한덕수는 기각 가능성 크다. 윤석열 파면 예고편일까. 혹시? 설레는 조선일보. 쟁점과 현안. 김건희 상설특검안 통과. 오세훈 압수수색. 이재용 만난 이재명. 더 깊게 읽기. 더 내고 조금 더 받는 연금 개혁 확정. 다음은 연금 구조개혁. 3040 의원들의 반대표. 1경4696조 원, 여전히 큰 부담. 다르게 읽기. 가계와 기업, 정부 빚 합치면 6222조 원. “셔텨...
-The post 한덕수‧이재명 먼저? 윤석열 파면에 변수 안 된다: 슬로우레터 3월21일. appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>이정환</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hidden Gems from the Embedded Online Conference Archives - Part 2]]></title>
-        <id>https://www.embeddedrelated.com/showarticle/1733.php</id>
-        <link href="https://www.embeddedrelated.com/showarticle/1733.php"/>
-        <updated>2025-03-20T21:31:23.000Z</updated>
-        <summary type="html"><![CDATA[In the years since its inception, the Embedded Online Conference has hosted hundreds of excellent talks. The topics cover an impressive range, from high level introductions, to tool and framework comparisons, to case studies of really annoying bugs! This is the second talk in a series looking at a different talk from the archives each week, appraising the content and providing some extra...]]></summary>
-        <author>
-            <name>EmbeddedRelated.com Blogs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Green Hills Software and NXP Partner to Advance Safety-Critical SDV Architectures]]></title>
-        <id>https://www.embedded.com/?p=4494954</id>
-        <link href="https://www.embedded.com/green-hills-software-and-nxp-partner-to-advance-safety-critical-sdv-architectures/"/>
-        <updated>2025-03-20T20:50:00.000Z</updated>
-        <summary type="html"><![CDATA[Green Hills Software has announced a collaboration with NXP® Semiconductors to deliver an integrated hardware and software solution for developing and deploying safety-focused, mixed-criticality software-defined vehicle (SDV) zonal architectures. This solution is built on NXP’s new S32K5 microcontroller (MCU) family. It incorporates Green Hills’ ASIL D safety-certified µ-velOSity™ real-time operating system (RTOS), µ-visor® hypervisor, industry-leading […]
-The post Green Hills Software and NXP Partner to Advance Safety-Critical SDV Architectures appeared first on Embedded.]]></summary>
-        <author>
-            <name>Maurizio Di Paolo Emilio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[$] MM medley: huge page allocation, page promotion, KSM, and BPF]]></title>
-        <id>https://lwn.net/Articles/1014220/</id>
-        <link href="https://lwn.net/Articles/1014220/"/>
-        <updated>2025-03-20T14:54:31.000Z</updated>
-        <summary type="html"><![CDATA[As the 2025 Linux
-Storage, Filesystem, Memory-Management, and BPF Summit (LSFMM+BPF)
-approaches, the density of memory-management patches on the mailing lists
-has increased.  Included among those are patches aimed at improving the
-reliability and performance of huge-page allocation, implementing page
-promotion on tiered-memory systems, adding a different approach to
-deduplicating memory, and replacing the BPF memory allocator.  Read on for
-an overview of each.]]></summary>
-        <author>
-            <name>corbet</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Security updates for Thursday]]></title>
-        <id>https://lwn.net/Articles/1014938/</id>
-        <link href="https://lwn.net/Articles/1014938/"/>
-        <updated>2025-03-20T14:15:56.000Z</updated>
-        <summary type="html"><![CDATA[Security updates have been issued by Debian (php7.4, python-django, and python3.9), Fedora (bluez, iwd, libell, and radare2), Mageia (chromium-browser-stable, mosquitto, tomcat, tomcat packages, and vim), Oracle (firefox, grub2, python3, thunderbird, and webkit2gtk3), Red Hat (fence-agents, php:7.4, and python-jinja2), SUSE (assimp-devel, crane, ffmpeg-4, freetype2, helm, kernel, kured, python-Django, python-Jinja2, python311-Django4, and tomcat), and Ubuntu (alpine, djoser, libxslt, postgresql-9.5, and valkey).]]></summary>
-        <author>
-            <name>jake</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Embedded World, Nuremberg: Nordic Semiconductor’s Strategy for Secure and Efficient IoT Connectivity]]></title>
-        <id>https://www.embedded.com/?p=4494933</id>
-        <link href="https://www.embedded.com/embedded-world-nuremberg-nordic-semiconductors-strategy-for-secure-and-efficient-iot-connectivity/"/>
-        <updated>2025-03-20T12:01:00.000Z</updated>
-        <summary type="html"><![CDATA[At Embedded World in Nuremberg, Maurizio Di Paolo Emilio, Editor-in-Chief of embedded.com, sat down with Magnus Pedersen, VP of Sales at Nordic Semiconductor, to discuss the company’s latest advancements. Magnus highlighted Nordic’s reorganization into specialized business units and the transition to 22nm technology for improved power efficiency. He also shared insights on the nRF54 series, […]
-The post Embedded World, Nuremberg: Nordic Semiconductor’s Strategy for Secure and Efficient IoT Connectivity appeared first on Embedded.]]></summary>
-        <author>
-            <name>Maurizio Di Paolo Emilio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Biggest Takeaways from Embedded World 2025]]></title>
-        <id>https://www.beningo.com/?p=17709</id>
-        <link href="https://www.beningo.com/the-biggest-takeaways-from-embedded-world-2025/"/>
-        <updated>2025-03-20T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Last week, embedded developers, managers, and vendors descended upon Nuremberg, Germany, for the annual Embedded World trade show. Despite a German Airline workers strike that wreaked havoc on travel plans, Embedded World was the place to catch up on embedded … Continue reading →
-The Biggest Takeaways from Embedded World 2025 first appeared on Beningo Embedded Group.]]></summary>
-        <author>
-            <name>Jacob Beningo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A demonstration of the Network Observability CLI]]></title>
-        <id>1f8ee102-461e-46bd-b7c4-de26b8baae0b</id>
-        <link href="https://developers.redhat.com/articles/2025/03/20/demonstration-network-observability-cli"/>
-        <updated>2025-03-20T11:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In this article, we will demonstrate a few use cases for Network Observability CLI. We will also explain how to capture and identify traffic, check connectivity between two endpoints, determine the User Defined Networks involved, and display packets payload.
-If you haven't read it yet, take a look at our Network Observability CLI 1.8 update article, to discover seven new features introduced in release 1.8.
-Use cases for Network Observability CLI
-For each of the following use cases, you must have the netobserv CLI installed and must be connected to your cluster using the following command:
-oc login <CLUSTER_API_URL> --username <CLUSTER_ADMIN> --password <PASSWORD>
-To observe what the command line interface (CLI) deploys on your cluster, you can run the oc events -n netobserv-cli -w command …]]></summary>
-        <author>
-            <name>Julien Pinsonneau</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[7 new features in the Network Observability CLI 1.8]]></title>
-        <id>ff636dc4-0f08-4ea3-b61d-272e9d6b1489</id>
-        <link href="https://developers.redhat.com/articles/2025/03/20/7-new-features-network-observability-cli-18"/>
-        <updated>2025-03-20T11:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Last year, we released the Network Observability CLI, a lightweight flow and packet visualization tool. The first version of this tool captured flows or packets by running a simple command and reused NetObserv components without installing and configuring operators.
-Since introducing the Network Observability CLI, we have added numerous features. This article covers seven improvements to the command-line interface (CLI) in version 1.8 and provides examples.
-7 new CLI features
-This update adds seven new features and options to the Network Observability CLI, covering more scenarios and enabling scripting on top of the tool. The following sections describe these improvements in detail.
-1. The new background option
-The --background option allows you to start a flow or packet capture without co…]]></summary>
-        <author>
-            <name>Julien Pinsonneau</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Evolution of AI Chips]]></title>
-        <id>https://www.embedded.com/?p=4493858</id>
-        <link href="https://www.embedded.com/the-evolution-of-ai-chips/"/>
-        <updated>2025-03-20T09:50:00.000Z</updated>
-        <summary type="html"><![CDATA[The advent of AI chips represents one of the most revolutionary advances in recent years. AI chips are advanced devices compared with traditional chips, and they are profoundly transforming the computational sector, opening up new possibilities to face increasingly complex computing challenges. Although still in the development and experimentation phase, AI chips embody a paradigm […]
-The post The Evolution of AI Chips appeared first on Embedded.]]></summary>
-        <author>
-            <name>Maurizio Di Paolo Emilio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Embedded World, Nuremberg: Fabio Violante on Arduino’s Next Frontier]]></title>
-        <id>https://www.embedded.com/?p=4494927</id>
-        <link href="https://www.embedded.com/embedded-world-nuremberg-fabio-violante-on-arduinos-next-frontier/"/>
-        <updated>2025-03-20T09:22:00.000Z</updated>
-        <summary type="html"><![CDATA[At Embedded World, Maurizio Di Paolo Emilio, Editor-in-Chief of Embedded.com, met with Fabio Violante, CEO of Arduino, to discuss the company’s 20-year journey of innovation and its expanding role in automotive, industrial IoT, AI, and robotics. Violante shared insights into Arduino’s latest advancements, including AI-powered edge computing, UWB-based security solutions, and Zephyr OS integration, alongside […]
-The post Embedded World, Nuremberg: Fabio Violante on Arduino’s Next Frontier appeared first on Embedded.]]></summary>
-        <author>
-            <name>Maurizio Di Paolo Emilio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[38년 제6공화국 체제의 종말: 다음 정부의 두 가지 과제]]></title>
-        <id>https://slownews.kr/?p=131651</id>
-        <link href="https://slownews.kr/131651"/>
-        <updated>2025-03-20T08:59:16.000Z</updated>
-        <summary type="html"><![CDATA[최근 12·3 내란 사태를 계기로 개헌론이 점차 부상하고 있다. 대통령에 의한 내란과 이로 인한 대통령 탄핵 추진이라는 극단적인 사태가 전개되면서 현재 우리의 정치체제에 문제가 있는 것이 아닌가, 따라서 개헌을 통해 무언가 새로운 정치 질서를 만들어내야 한다는 절박감이 작용한 탓일 것이다. 물론 여기에는 개헌론 제기를 통해 자신들의 정치적 이해를 반영코자 하는 정략적 발상도 없지는 않다. 아무튼...
-The post 38년 제6공화국 체제의 종말: 다음 정부의 두 가지 과제 appeared first on 슬로우뉴스..]]></summary>
-        <author>
-            <name>소셜코리아</name>
         </author>
     </entry>
     <entry>
