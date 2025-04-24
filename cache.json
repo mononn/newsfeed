@@ -258,6 +258,26 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "2c81c7c6-d630-46a4-a0d2-ba5d778a33dd",
+          "author": "Marek Polacek",
+          "description": "The next major version of the GNU Compiler Collection (GCC), 15.1, is expected to be released in April or May 2025. Like every major GCC release, this version will bring many additions, improvements, bug fixes, and new features. GCC 15 is already the system compiler in Fedora 42. Red Hat Enterprise Linux (RHEL) users will get GCC 15 in the Red Hat GCC Toolset. It's also possible to try GCC 15 on Compiler Explorer and similar pages.\nLike my previous article, New C++ features in GCC 14, this article describes only new features implemented in the C++ front end; it does not discuss developments in the C++ language itself.\nThe default dialect in GCC 15 is still -std=gnu++17. You can use the -std=c++23 or -std=gnu++23 command-line options to enable C++23 features, and similarly for C++26 and oth…",
+          "link": "https://developers.redhat.com/articles/2025/04/24/new-c-features-gcc-15",
+          "publishedOn": "2025-04-24T07:00:00.000Z",
+          "wordCount": null,
+          "title": "New C++ features in GCC 15",
+          "imageUrl": null
+        },
+        {
+          "id": "965fbfcd-4e50-4a4f-ac28-d54c8a8b9067",
+          "author": "Robert Krawitz",
+          "description": "Virtualization is a common technology for workload consolidation. It is provided for Red Hat OpenShift Container Platform by Red Hat OpenShift Virtualization. This platform allows organizations to run and deploy their virtual machine-based workloads, and allows for simple management and migration of virtual machines (VMs) in a cloud environment.\nBy design, Kubernetes, and hence OpenShift and OpenShift Virtualization, does not allow use of swap. Memory oversubscription without use of swap is hazardous because if the amount of memory required by processes running on a node exceeds the amount of RAM available, processes will be killed. That's not desirable in any event, but particularly not for VMs where the workloads running on VMs will be taken down if the VMs are killed. \nRed Hat OpenShift…",
+          "link": "https://developers.redhat.com/articles/2025/04/24/evaluating-memory-overcommitment-openshift-virtualization",
+          "publishedOn": "2025-04-24T06:59:00.000Z",
+          "wordCount": null,
+          "title": "Evaluating memory overcommitment in OpenShift Virtualization",
+          "imageUrl": null
+        },
+        {
           "id": "cd9ec8b4-51ab-4939-8306-607f78b306a4",
           "author": "Nir Shavit, Dan Alistarh",
           "description": "Deep neural networks are achieving the incredible, pushing the boundaries of artificial intelligence in areas from medicine to language. But as these powerful AI systems become more integrated into our lives, a critical challenge looms: we often don’t understand how they arrive at their answers. They operate like inscrutable “black boxes,” making it hard to fully trust them. \nThe field of mechanistic interpretability strives to crack open these boxes. Our recent research paper, described in this post, offers a fresh perspective on this vital mission, introducing a new \"combinatorial\" way to potentially decode AI’s hidden logic. Understanding these systems isn’t just fascinating—it’s fundamental to building the safe, reliable AI of the future.\nThe current view: Looking at shapes in “activat…",
@@ -576,16 +596,6 @@
           "wordCount": null,
           "title": "Deliver generative AI at scale with NVIDIA NIM on OpenShift AI",
           "imageUrl": null
-        },
-        {
-          "id": "24e55360-649f-45ab-98e8-082610082b86",
-          "author": "Dustin Black",
-          "description": "In the automotive industry, safety and compliance requirements demand a level of predictability in compute workloads. In support of this, our Red Hat Performance and Scale team is constantly working with customers and partners to ensure they can rely upon robust real-time capabilities in embedded systems.\nIn a recent study, we found ourselves exploring unexpected periodic latency spikes reported by a partner. This was a puzzling symptom, since every second a low-priority, real-time process briefly affected a high-priority, real-time process on the same CPU. This is explicitly counter to the design of the scheduler's process prioritization. Our team dove in for analysis. With excellent collaboration among various experts, we not only quickly dissected the root cause, but also provided the p…",
-          "link": "https://developers.redhat.com/articles/2025/03/26/rhel-real-time-cpu-throttling-and-risks",
-          "publishedOn": "2025-03-26T07:00:00.000Z",
-          "wordCount": null,
-          "title": "RHEL for Real Time: CPU throttling and risks",
-          "imageUrl": null
         }
       ]
     },
@@ -694,6 +704,16 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4495055",
+          "author": "Stefano Lovati",
+          "description": "The use of Artificial Intelligence (AI) is transforming computational tasks. Large Language Models (LLMs) used in generative AI have created breakthroughs in human-machine interactions, content creation, and data analysis. The immense size of these models demands high energy costs and computing power. In this article, we highlight the development of compression models that can create […]\nThe post Compacting Large Language Models Used in Generative Artificial Intelligence appeared first on Embedded.",
+          "link": "https://www.embedded.com/compacting-large-language-models-used-in-generative-artificial-intelligence/",
+          "publishedOn": "2025-04-24T08:42:00.000Z",
+          "wordCount": null,
+          "title": "Compacting Large Language Models Used in Generative Artificial Intelligence",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4495520",
           "author": "Stefano Lovati",
@@ -1203,46 +1223,6 @@
           "wordCount": null,
           "title": "X-FAB, SMART Photonics, and Epiphany Design Collaborate on Advanced Heterogeneous Photonics Integration Platform",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494155",
-          "author": "Loriotoole",
-          "description": "Accurate timing and synchronization are at the center of any robust data transfer. The use of greater automation in industrial applications, high-bandwidth computing, increased network speeds in data centers, and greater usage of electronics in automobiles are just some examples where precision timing is required under challenging conditions. In this article, we highlight some of […]\nThe post MEMS Resonators Drive Advanced Timing Solutions appeared first on Embedded.",
-          "link": "https://www.embedded.com/mems-resonators-drive-advanced-timing-solutions/",
-          "publishedOn": "2025-03-26T02:37:00.000Z",
-          "wordCount": null,
-          "title": "MEMS Resonators Drive Advanced Timing Solutions",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495078",
-          "author": "Stefano Lovati",
-          "description": "Renesas Electronics Corporation has unveiled an industry-leading Bluetooth chip that integrates a radio transceiver, an Arm® Cortex®-M0+ microcontroller, memory, peripherals, and robust security features within a compact system-on-chip (SoC) architecture. The DA14533 stands as the first automotive-qualified member of Renesas’ Bluetooth® Low Energy SoC lineup, featuring advanced power management capabilities that streamline system integration while […]\nThe post Renesas Unveils DA14533: Industry-Leading Automotive-Qualified Bluetooth LE SoC with Advanced Power Management appeared first on Embedded.",
-          "link": "https://www.embedded.com/renesas-unveils-da14533-industry-leading-automotive-qualified-bluetooth-le-soc-with-advanced-power-management/",
-          "publishedOn": "2025-03-25T21:55:00.000Z",
-          "wordCount": null,
-          "title": "Renesas Unveils DA14533: Industry-Leading Automotive-Qualified Bluetooth LE SoC with Advanced Power Management",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494963",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "At Embedded World in Nuremberg, I had the pleasure of speaking with Alexander Fritsch, Senior Product Sales Manager at Advantech Europe, about the company’s latest innovations in embedded computing. Advantech is making significant strides in edge AI, with a strong focus on industrial, medical, and robotics applications. In this conversation, Alexander shares insights into Advantech’s […]\nThe post Embedded World, Nuremberg: Advantech’s Vision for Edge AI and Embedded Computing appeared first on Embedded.",
-          "link": "https://www.embedded.com/embedded-world-nuremberg-advantechs-vision-for-edge-ai-and-embedded-computing/",
-          "publishedOn": "2025-03-25T09:46:43.000Z",
-          "wordCount": null,
-          "title": "Embedded World, Nuremberg: Advantech’s Vision for Edge AI and Embedded Computing",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494875",
-          "author": "Stefano Lovati",
-          "description": "Italy has a glorious history in computing, marked by the remarkable rise of Olivetti in the mid-20th century. Once the epitome of technological innovation, Olivetti transformed from a mechanical typewriter manufacturer into a pioneer of early computing. In 1965, Olivetti unveiled the Programma 101, often regarded as the world’s first commercial desktop computer. The Programma […]\nThe post Italy Bets Big on Quantum Computing: A Strategy for Tech Sovereignty appeared first on Embedded.",
-          "link": "https://www.embedded.com/italy-bets-big-on-quantum-computing-a-strategy-for-tech-sovereignty/",
-          "publishedOn": "2025-03-25T09:35:00.000Z",
-          "wordCount": null,
-          "title": "Italy Bets Big on Quantum Computing: A Strategy for Tech Sovereignty",
-          "imageUrl": null
         }
       ]
     },
@@ -1330,6 +1310,16 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/achieve-real-time-interaction-build-with-the-live-api/",
+          "author": null,
+          "description": "Explore real world applications for the Live API for Gemini models, now updated to include enhanced features for real-time audio, video, and text processing, improved session management, control over interactions, and richer output options.",
+          "link": "https://developers.googleblog.com/en/achieve-real-time-interaction-build-with-the-live-api/",
+          "publishedOn": "2025-04-24T20:18:47.912Z",
+          "wordCount": null,
+          "title": "Achieve real-time interaction: Build with the Live API",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/google-io-program-lineup-revealed/",
           "author": null,
@@ -1827,6 +1817,46 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1018486/",
+          "author": "corbet",
+          "description": "New compiler releases often bring with them new warnings; those warnings\nare usually welcome, since they help developers find problems before they\nturn into nasty bugs.  Adapting to new warnings can also create disruption\nin the development process, though, especially when an important developer\nupgrades to a new compiler at an unfortunate time.  This is just the\nscenario that played out with the 6.15-rc3\nkernel release and the implementation of\n-Wunterminated-string-initialization in GCC 15.",
+          "link": "https://lwn.net/Articles/1018486/",
+          "publishedOn": "2025-04-24T14:17:29.000Z",
+          "wordCount": null,
+          "title": "[$] Some __nonstring__ turbulence",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1018341/",
+          "author": "jake",
+          "description": "Sometimes worms have a tendency to multiply once their can is opened.\nJames Bottomley recently encountered that situation; he led a session in\nthe filesystem track at the 2025 Linux Storage, Filesystem, Memory\nManagement, and BPF Summit (LSFMM+BPF) to discuss filesystem behavior with\nrespect to suspending and resuming the system.  As he noted in his topic\nproposal, he came at the problem because he needed a way to\nresynchronize the contents of efivarfs\nafter a system resume and thought there should be an API available to use.\nBut, as the resulting thread shows, the filesystem freeze and thaw code had\nnever been used by the system-wide suspend and resume code.  Due to a\nscheduling mixup, though, several of us missed Bottomley's session,\nincluding Luis Chamberlain who has been working on hooking those two pieces\nup; what follows is largely from a second session that Chamberlain led,\nwith some background information from the topic-proposal discussion and an\nemail exchange with Bottomley.",
+          "link": "https://lwn.net/Articles/1018341/",
+          "publishedOn": "2025-04-24T14:08:07.000Z",
+          "wordCount": null,
+          "title": "[$] Freezing filesystems for suspend",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1018717/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (haproxy and openrazer), Fedora (c-ares and mingw-poppler), Red Hat (thunderbird), SUSE (epiphany, ffmpeg-6, gopass, and libsoup-3_0-0), and Ubuntu (erlang, haproxy, libapache2-mod-auth-openidc, libarchive, linux, linux-aws, linux-azure, linux-azure-5.15, linux-azure-fde, linux-azure-fde-5.15, linux-gcp, linux-gke, linux-gkeop, linux-hwe-5.15, linux-ibm, linux-intel-iotg, linux-kvm, linux-lowlatency, linux-lowlatency-hwe-5.15, linux-nvidia, linux-nvidia-tegra, linux-nvidia-tegra-igx, linux-oracle, linux-raspi, linux, linux-aws, linux-azure, linux-azure-6.8, linux-ibm, linux-lowlatency, linux-lowlatency-hwe-6.8, linux-nvidia, linux-nvidia-6.8, linux-nvidia-lowlatency, linux-oem-6.8, linux-oracle, linux-oracle-6.8, linux-aws-6.8, linux-aws-fips, linux-fips, linux-gcp-fips, linux-azure-fips, linux-gcp, linux-gke, linux-gkeop, linux-gcp-6.8, linux-ibm-5.15, linux-intel-iot-realtime, linux-realtime, linux-intel-iotg-5.15, linux-realtime, perl, and yelp, yelp-xsl).",
+          "link": "https://lwn.net/Articles/1018717/",
+          "publishedOn": "2025-04-24T14:00:08.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1017842/",
+          "author": "corbet",
+          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: Owen Le Blanc and MCC; UID/GID drift; DMA for UIO; More LSFMM+BPF 2025 coverage.\n            \n Briefs: EU OS; RISC-V Fedora; Ubuntu 25.04; NLnet funding; Template strings; Tor Browser 14.5; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
+          "link": "https://lwn.net/Articles/1017842/",
+          "publishedOn": "2025-04-24T00:47:45.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for April 24, 2025",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1018082/",
           "author": "jzb",
@@ -2996,36 +3026,6 @@
           "wordCount": 366,
           "title": "Security updates for Wednesday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1015408/",
-          "author": "jzb",
-          "description": "Boudhayan Bhattcharya has posted a lengthy article\nabout the announcement\nthat the Freedesktop project is dropping OpenH264 from the Freedesktop SDK for Flatpak\napplications and runtimes.\nSome Flatpak applications that depend on the Freedesktop runtime\nversion 23.08 will lose H.264 playback support starting with the\nrelease scheduled for April, unless application developers replace it\nwith the ffmpeg-full extension. The 24.08 runtime is\nunaffected, and future releases will include a new\ncodecs-extra extension to replace OpenH264 that includes FFmpeg with support for a number of\npatented codecs.\nConsidering all things, I think and hope we made the correct decision\nand hopefully the new org.freedesktop.Platform.codecs-extra works\nout. libx264, libx265 and others are built from source and there are\nno binaries or extra-data involved. So we should theoretically be able\nto patch and fix any issues that come up in the future.\nApart from all this, I'm slightly worried at the prospects of legal\nissues cropping up with this setup and also that the new extension\ncontains \"too much\", but we will have to see where things flow.",
-          "link": "https://lwn.net/Articles/1015408/",
-          "publishedOn": "2025-03-25T16:20:37.000Z",
-          "wordCount": null,
-          "title": "Bhattcharya: Closing the chapter on OpenH264",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1013892/",
-          "author": "corbet",
-          "description": "By the time that Linus Torvalds released\nthe 6.14 kernel, 11,003 non-merge changesets had been pulled into the\nmainline, making this one of the smallest releases we have seen in some\ntime.  Indeed, one must go back to the 4.0\nrelease, which happened almost exactly ten years ago, to find a release\nwith fewer changesets than 6.14.  Even so, \"small\" is relative, and 6.14\ncontains a lot of significant changes.",
-          "link": "https://lwn.net/Articles/1013892/",
-          "publishedOn": "2025-03-25T12:55:40.000Z",
-          "wordCount": null,
-          "title": "[$] Development statistics for 6.14",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1015377/",
-          "author": "corbet",
-          "description": "Security updates have been issued by Debian (ruby-rack), Fedora (chromium, golang-github-openprinting-ipp-usb, OpenIPMI, and python-jinja2), Mageia (kernel, kernel-linus, and wpa_supplicant, hostapd), Red Hat (fence-agents, kernel, kernel-rt, libxml2, libxslt, and pcs), SUSE (cadvisor, docker, freetype2, nodejs-electron, php8, rsync, u-boot, warewulf4, webkit2gtk3, and zvbi), and Ubuntu (elfutils, python3.5, python3.8, ruby-rack, smartdns, and zvbi).",
-          "link": "https://lwn.net/Articles/1015377/",
-          "publishedOn": "2025-03-25T11:20:40.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
         }
       ]
     },
@@ -3089,16 +3089,6 @@
           "publishedOn": "2025-04-01T21:22:00.000Z",
           "wordCount": null,
           "title": "I've been kidnapped by Robert Caro",
-          "imageUrl": null
-        },
-        {
-          "id": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-13",
-          "author": null,
-          "description": "As agentic coding assistants get more capable, \n      Birgitta Böckeler is trying them to change existing\n      codebases. This has led to some impressive collaboration sessions, but\n      she's needed to intervene, correct and steer all the time. In her latest\n      post, she describes examples of these interventions, giving ideas of the\n      types of skills we currently need to correct the tools' missteps. \nmore…",
-          "link": "https://martinfowler.com/articles/exploring-gen-ai.html#memo-13",
-          "publishedOn": "2025-03-25T14:39:00.000Z",
-          "wordCount": null,
-          "title": "The role of developer skills in agentic coding",
           "imageUrl": null
         }
       ]
@@ -3425,6 +3415,26 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=134604",
+          "author": "이정환",
+          "description": "검찰이 결국 문재인(전 대통령)을 법정에 세운다. 검찰은 2018년 3월 문재인(당시 대통령)이 이상직(당시 전 민주당 의원)을 중소기업진흥공단 이사장으로 임명한 게 서창호(당시 문재인 사위)가 타이이스타젯 전무로 채용된 것과 관련이 있다고 보고 있다. 문다혜(문재인 딸)와 서창호는 불기소 처분(기소 유예)했다. 이상직은 이스타항공 창업자고 타이이스타젯은 이스타항공의 태국 법인이다. 이게 왜 중요한가. 기본적인 사실. 검찰의 주장: 특혜가 아니라 뇌물이다. 쟁점: 뇌물죄가...\nThe post 검찰의 문재인 때리기, 뇌물죄 대가성 입증 쉽지 않을 수도. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/134604",
+          "publishedOn": "2025-04-24T03:10:54.000Z",
+          "wordCount": null,
+          "title": "검찰의 문재인 때리기, 뇌물죄 대가성 입증 쉽지 않을 수도.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=134562",
+          "author": "이정환",
+          "description": "“삼부 체크하고”, 이제서야 검찰 고발. 건진법사 집에서 발견된 한국은행 신권 뭉치. 쟁점과 현안. 이재명 선거법 재판 속도 낸다. “탄핵의 강 건너나”, 조선일보의 조바심. 징계와 알박기 남발, 폭주하는 박성재. 정규재의 칭찬, “중앙선 가까이 오셨네.” 더 깊게 읽기. 안철수가 되고 나경원이 안 된 이유. 이재명이 공공의대+공공병원 카드를 꺼낸 배경. 판사 47%, “외부 압력 받았다.” 이재명 캠프의 세...\nThe post 건진법사 집에서 발견된 한국은행 포장 돈 뭉치, 날짜는 윤석열 취임 사흘 뒤: 슬로우레터 4월24일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/134562",
+          "publishedOn": "2025-04-23T22:29:07.000Z",
+          "wordCount": null,
+          "title": "건진법사 집에서 발견된 한국은행 포장 돈 뭉치, 날짜는 윤석열 취임 사흘 뒤: 슬로우레터 4월24일.",
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=134494",
           "author": "김도연",
@@ -4224,46 +4234,6 @@
           "wordCount": 6723,
           "title": "“감세 아닌 공급망 투자, 정부가 돈을 쓸 때는 써야 한다.”",
           "imageUrl": "https://slownews.kr/wp-content/uploads/2025/03/KakaoTalk_20250325_112800229-scaled-e1742998078679.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=132048",
-          "author": "이경숙",
-          "description": "“의성 산불 발화지 바로 곁에 있는 운람사 산림은 원래 활엽수와 소나무가 함께 자라는 혼효림이었다. 이곳을 2010년부터 산림청이 활엽수만 골라 벌목했다. 숲 가꾸기 명분이었다. 소나무만 남은 숲이 불폭탄이 됐다.” 최병성 대형산불이 일어난 산청, 의성 발화지에 다녀온 최병성 기후재난연구소 상임대표는 슬로우뉴스 전화 인터뷰에서 산불 대형화 문제의 해법으로 “혼효림을 보존하라”라고 말했다. 혼효림(混淆林)이란 침엽수와 활엽수가 혼합되어 있는 산림(mixed forest)을...\nThe post “의성 산불 키운 소나무 불폭탄, 혼효림이 해법이다.” appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/132048",
-          "publishedOn": "2025-03-26T07:14:12.000Z",
-          "wordCount": 5387,
-          "title": "“의성 산불 키운 소나무 불폭탄, 혼효림이 해법이다.”",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/03/51152bd8-9623-4d9a-99ff-b083345c59e4-1000x585.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=132052",
-          "author": "소셜코리아",
-          "description": "국민연금 개혁안이 지난 20일 국회 본회의를 통과했다. 모수개혁, 더 내고 더 받는 방식으로 이에 따라 보험료율은 현행 9%에서 13%로 올라가고, 소득대체율도 내년부터 43%로 상향 조정된다. 소득대체율은 원래 매년 0.5%p씩 인하되어 올해는 41.5%가 됐고 2028년까지 40%로 조정될 예정이었는데 43%로 고정되게 된 것이다. 더 내고 더 받는 방식으로 바뀌는 모수개혁이 2007년 이후 18년 만에 이뤄졌다. 2025년 연금개혁은...\nThe post 2025 연금개혁, 본질은 세대약탈 아니라 노후빈곤 방치다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/132052",
-          "publishedOn": "2025-03-26T06:42:59.000Z",
-          "wordCount": 5125,
-          "title": "2025 연금개혁, 본질은 세대약탈 아니라 노후빈곤 방치다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/01/new_GettyImages-1441455610.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=132059",
-          "author": "이정환",
-          "description": "[컨텍스트] 징역 1년 원심 뒤집고 본격 대선 모드로… “김문기 사진 조작 맞고, 백현동 협박 발언도 거짓 아니다.” (⏳2분) 조기 대선의 최대 변수였던 이재명(민주당 대표)의 선거법 위반 사건 항소심이 뒤집혔다. 김문기(전 성남도시개발공사 본부장)의 사진이 조작됐다는 발언과 백현동 개발과 관련 국토부 협박이 있었다는 발언이 모두 허위 사실이 아니라고 판단했다. 이재명은 항소심 선고 직후 “이 당연한 일을 이끌어...\nThe post 이재명 무죄, 가장 큰 사법 리스크를 털었다. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/132059",
-          "publishedOn": "2025-03-26T06:37:13.000Z",
-          "wordCount": null,
-          "title": "이재명 무죄, 가장 큰 사법 리스크를 털었다.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=132017",
-          "author": "이정환",
-          "description": "오늘 오후 2시 이재명 항소심 선고. 이재명의 세 가지 경우의 수. 윤석열 선고는 이번 주 넘기나. 쟁점과 현안. 괴물 산불, 안동-영덕-포항까지 확산. 싱크홀 피해자는 배달 노동자. 한덕수-최상목, 쌍탄핵 갈 수도 있다. 더 깊게 읽기. “한 줄도 못 쓰겠어요, 빠른 파면 좀”, 작가들의 성명. 이재명이 거짓말을 했나. 윤석열의 거짓말은 제대로 다뤘나. 표현의 자유가 숨 쉴 공간....\nThe post “시장 가서 생선 만져라, 나중에 TV 보니까 내 말대로 다 하더라”: 슬로우레터 3월26일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/132017",
-          "publishedOn": "2025-03-25T22:35:23.000Z",
-          "wordCount": 7348,
-          "title": "“시장 가서 생선 만져라, 나중에 TV 보니까 내 말대로 다 하더라”: 슬로우레터 3월26일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/03/45298206-e1742941905291.png"
         }
       ]
     },
@@ -4579,6 +4549,16 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80834",
+          "author": "ingppoo",
+          "description": "뉴스페퍼민트가 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 함께 쓴 해설을 스프와 시차를 두고 소개합니다. 오늘 소개하는 글은 3월 7일 스프에 쓴 글입니다. 5년 전 이맘때를 기억하십니까? 한국은 ‘신종 코로나바이러스’ 첫 확진자가 나온 지 한 달 반이 지난 시점이었습니다. 바이러스가 급속도로 퍼지면서 마스크와 손소독제 대란이 일어났고, 종교 단체의 예배를 비롯해 여러 사람이 한데 모이는 것이 감염 경로로 지목되기도 했습니다. 5년 전 저는 뉴욕에 살고 있었습니다. 미국에선 원래 마스크를 쓸 → 더 보기",
+          "link": "https://newspeppermint.com/2025/04/23/npsps_pandemic/?utm_source=rss&utm_medium=rss&utm_campaign=npsps_pandemic",
+          "publishedOn": "2025-04-23T22:59:02.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 바이러스에는 국경이 없는데…끝나지 않은 팬데믹의 경고",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80809",
           "author": "ingppoo",
