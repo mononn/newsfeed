@@ -18,6 +18,16 @@
       "siteUrl": "https://attention2.space",
       "articles": [
         {
+          "id": "https://attention2.space/?p=5900",
+          "author": "attention2space",
+          "description": "SETEC에서 열린 아트오앤오 아트페어에서 톰 하우스의 소품 연작을 봤습니다. … 서사적 개연성이 없어 스토리보드로 보기에는 무리가 있었고, 오히려 그 무작위성이 인스타 피드와 닮은 점이 많았습니다. 그런데 스토리보드냐 피드냐 보다 중요한 문제는 이 작품이 내가 알고 있는 하우스의 작업 경향과 무척 달랐다는 점입니다.",
+          "link": "https://attention2.space/2025/tomhowse/",
+          "publishedOn": "2025-05-13T16:51:56.000Z",
+          "wordCount": null,
+          "title": "[쇼트] 보이는 그리드, 안보이는 그리드",
+          "imageUrl": null
+        },
+        {
           "id": "https://attention2.space/?p=5776",
           "author": "attention2space",
           "description": "태양은 순수한 광기이며 또한 광증의 원천이다. 우리는 세 가지 태양광증을 비교하면서 인간의 미친 듯이 맹렬하게 소진되는 에네르게이아, 무한히 자기 자신으로 돌아오는 광기의 변증법을 보여줄 것이다.",
@@ -45,13 +55,13 @@
       "siteUrl": "https://www.beningo.com",
       "articles": [
         {
-          "id": "https://www.beningo.com/?p=17768",
-          "author": "Nicole Sanchez",
-          "description": "Want to watch this episode instead? Check it out on our YouTube channel here! Summary In this episode of the Embedded Frontier podcast, Jacob Beningo explores the evolving role of artificial intelligence (AI) in embedded systems development. He discusses the potential … Continue reading →\nTHE EMBEDDED FRONTIER PODCAST Episode #013 – The Role of AI in Embedded Software Development first appeared on Beningo Embedded Group.",
-          "link": "https://www.beningo.com/the-embedded-frontier-podcast-episode-013-the-role-of-ai-in-embedded-software-development/",
-          "publishedOn": "2025-04-16T12:00:00.000Z",
+          "id": "https://www.beningo.com/?p=17780",
+          "author": "Jacob Beningo",
+          "description": "Want to watch this episode instead? Check it out on our YouTube channel here! Summary In this episode of the Embedded Frontier Podcast, Jacob Beningo introduces a comprehensive framework for modernizing embedded systems development. He discusses the importance of adapting to … Continue reading →\nTHE EMBEDDED FRONTIER PODCAST EPISODE #014 – Modernizing Embedded Systems: A 7-Step Framework first appeared on Beningo Embedded Group.",
+          "link": "https://www.beningo.com/the-embedded-frontier-podcast-episode-014-modernizing-embedded-systems-a-7-step-framework/",
+          "publishedOn": "2025-05-08T01:17:58.000Z",
           "wordCount": null,
-          "title": "THE EMBEDDED FRONTIER PODCAST Episode #013 – The Role of AI in Embedded Software Development",
+          "title": "THE EMBEDDED FRONTIER PODCAST EPISODE #014 – Modernizing Embedded Systems: A 7-Step Framework",
           "itunes": {},
           "imageUrl": null
         }
@@ -68,6 +78,16 @@
       "feedUrl": "https://www.cppstories.com/index.xml",
       "siteUrl": "https://www.cppstories.com/",
       "articles": [
+        {
+          "id": "https://www.cppstories.com/2025/ranges_split_chunk/",
+          "author": null,
+          "description": "In this blog post, we’ll continue looking at ranges and this time explore ways to split them into sub-ranges. So we’ll take a look at views::split, views::chunk, and views::chunk_by.\nWe’ll walk through two examples for each adaptor: one simple and one slightly more advanced, to highlight their practical uses.\nLet’s go.\nviews::split, C++20 \n  \n\n\n\n\n     \n    \n\n\nIf you want to split a range using some “delimeter,” then views::split (or ranges::split_view) will do the job.\ntemplate< ranges::forward_range V, ranges::forward_range Pattern >\n// .. requires...\nclass split_vie  : public ranges::view_interface<split_view<V, Pattern>>\n\n\nBoth of the ranges V and Pattern have to be forward_range.\nNotice that you need to use a pattern; it cannot be a condition.\n\n\n\n     \n    \n\n\n\n#include <print>\n#include…",
+          "link": "https://www.cppstories.com/2025/ranges_split_chunk/",
+          "publishedOn": "2025-05-16T00:00:00.000Z",
+          "wordCount": null,
+          "title": "How to Split Ranges in C++23 and C++26",
+          "imageUrl": null
+        },
         {
           "id": "https://www.cppstories.com/2025/custom_iter_cpp_20_ranges_views/",
           "author": null,
@@ -167,6 +187,66 @@
       "feedUrl": "https://developers.redhat.com/blog/feed",
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
+        {
+          "id": "131e1532-c3f9-48cd-817e-07f14694f35b",
+          "author": "Emanuele Giuseppe Esposito, Li Tian, Lukas Vrabec",
+          "description": "In this article, we will demonstrate how to run the fraud detection model using confidential virtual machines (CVMs) on Red Hat Enterprise Linux (RHEL) running in the Microsoft Azure public cloud. Our goal is to provide the technical aspects and code details to replicate an end-to-end scenario.\nWe will demonstrate how to securely run an AI model for fraud detection on the public cloud without risking the cloud or infrastructure administrator accessing the data, or anyone else that has potential access to the storage, network, and memory that the model will use.\nFraud detection use case\nThe use case in this demo is offline fraud detection analysis of credit card transactions. By analyzing data like geographical distance from a previous transaction and PIN usage, it is possible to determine …",
+          "link": "https://developers.redhat.com/articles/2025/05/15/how-run-fraud-detection-ai-model-rhel-cvms",
+          "publishedOn": "2025-05-15T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to run a fraud detection AI model on RHEL CVMs",
+          "imageUrl": null
+        },
+        {
+          "id": "b94ce5ac-ae95-42b6-adbb-eecb77ed49fb",
+          "author": "Ralph Bean",
+          "description": "At Red Hat, we’re creating a new build system for our community and products. In this article, I will teach you about software provenance and share some of our exciting ideas.\nThe Konflux platform\nThe Konflux platform is an open source, cloud native software factory focused on supply chain security. Let’s start by unpacking some of those terms:\n\nOpen source: Konflux is open source (Apache 2.0), which means you can use it too. You can either set it up locally or stand it up as a platform engineer to provide a place for your peers to build.\nCloud native: Konflux is based on Kubernetes. Everything is modeled as a Custom Resource and you can use familiar command-line interface (CLI) tools like kubectl or oc to work with Konflux resources.\nSoftware factory: Konflux is about more than just build…",
+          "link": "https://developers.redhat.com/articles/2025/05/15/how-we-use-software-provenance-red-hat",
+          "publishedOn": "2025-05-15T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How we use software provenance at Red Hat",
+          "imageUrl": null
+        },
+        {
+          "id": "2066f102-ee75-4339-a2d5-ea2907b5da23",
+          "author": "Ben Breard, Andy Burka",
+          "description": "Image mode for Red Hat Enterprise Linux (RHEL) is a simple, consistent approach to build, deploy, and manage the operating system using container technologies. Similar to building any container, image mode begins with a base image and users can layer components and applications on top of it. \nThe fundamental difference lies in the base image's inclusion of critical lower-level OS components, notably the kernel, bootloader, and bootc. Bootc is the core technology that lies at the heart of image mode. This article focuses on the specifics of creating bootc images from scratch, addressing the reasons for and against this approach.\nDo you need base images from scratch?\nThe goal is not to need this base image from scratch feature in most use cases. This feature, designed to be the \"20\" in the 8…",
+          "link": "https://developers.redhat.com/articles/2025/beyond-default-bootc-images-scratch",
+          "publishedOn": "2025-05-14T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Alternatives to creating bootc images from scratch",
+          "imageUrl": null
+        },
+        {
+          "id": "70386270-46e0-48d3-a315-5e95e2b998f3",
+          "author": "Pedro Navarro Perez",
+          "description": "Red Hat OpenStack Services on OpenShift introduces a modern, cloud-native framework designed to revolutionize how you deploy, manage, monitor, and update your cloud infrastructure.\nIn the context of OpenStack Services on OpenShift, there are three types of releases that could be applicable for an update:\n\nAsync release: Any release that needs to be shipped ASAP without a full cycle or planned cadence.\nBug-fix updates: Periodic updates to resolve bugs or CVEs in the OpenStack Services on OpenShift codebases. These will generally also pick up fixes in the underlying products (i.e., Red Hat Enterprise Linux) and will often resolve container grades as well.\nFeature updates/packages: Periodic releases that incorporate fixes from all types of releases (i.e., CVEs, bugs, grades), allowing feature…",
+          "link": "https://developers.redhat.com/articles/2025/05/14/how-update-openstack-services-openshift",
+          "publishedOn": "2025-05-14T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to update OpenStack Services on OpenShift",
+          "imageUrl": null
+        },
+        {
+          "id": "daf7f8ad-cac1-4f5c-b0fb-b4064c3197cd",
+          "author": "Rich Naszcyniec",
+          "description": "Imagine this scenario: Your company has carefully selected an open source large language model (LLM) as its foundation for generative AI, meticulously aligning and tuning it with proprietary data to meet specific business needs. As a macOS and iOS developer, you’ve just received the green light: the model is ready to integrate with applications. Your first assignment is to harness this finely tuned LLM to create an internal chatbot, bringing its advanced conversational abilities to life for users on macOS and iOS devices your company uses. \nWith the chatbot assignment in hand, you start to think about how you will build the application. You’ll use Swift as your implementation language, SwiftUI to build the user experience, and likely use Swift Data for local storage of data as needed—like …",
+          "link": "https://developers.redhat.com/articles/2025/05/13/how-integrate-vllm-inference-your-macos-and-ios-apps",
+          "publishedOn": "2025-05-13T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How to integrate vLLM inference into your macOS and iOS apps",
+          "imageUrl": null
+        },
+        {
+          "id": "482d1a62-98be-4bcd-a9b9-9a6f4a97cece",
+          "author": "Jerome Marc",
+          "description": "A significant portion of a system administrator's tasks revolves around maintaining system health and ensuring operational efficiency. Red Hat Insights provides proactive monitoring and analytics to help organizations manage their systems effectively. With the recent addition of new inventory events, operations teams can gain even deeper visibility into system life cycles, allowing them to automate responses and reduce manual intervention. By leveraging these events, organizations can trigger automated workflows, such as opening a ServiceNow ticket for new system registrations, escalating stale systems in PagerDuty, or initiating security remediations.\nIn this article, we will explore how event-driven architecture in Red Hat Insights enhances system life cycle management. We will break dow…",
+          "link": "https://developers.redhat.com/articles/2025/05/13/how-insights-events-enhance-system-life-cycle-management",
+          "publishedOn": "2025-05-13T07:00:00.000Z",
+          "wordCount": null,
+          "title": "How Insights events enhance system life cycle management",
+          "imageUrl": null
+        },
         {
           "id": "d965d60a-aeba-49d4-b11c-fe00337c8cf0",
           "author": "Diego Alvarez Ponce",
@@ -456,66 +536,6 @@
           "wordCount": null,
           "title": "Some more C# 13",
           "imageUrl": null
-        },
-        {
-          "id": "b9420a76-5a04-4e18-b054-e9757373b260",
-          "author": "Jonathan Dowland",
-          "description": "We are pleased to announce the first technology preview release of the jlink integration with Red Hat OpenShift for the Red Hat Universal Base Image (UBI) and Red Hat build of OpenJDK containers. We first publicly previewed this technology in a presentation at FOSDEM 2024. We will provide a quick overview of it in this article. For a deeper dive, please refer to the FOSDEM slides and recording.\nBackground\nWe ship two flavors of Universal Base Image and Red Hat build of OpenJDK containers: builder and runtime. The builders support OpenShift source-to-image (S2I). Using S2I, customers can set up automated pipelines to rebuild and deploy their application when their source is updated, or other relevant triggers.\nS2I is conceptually simple, and that simplicity has advantages. But one drawback …",
-          "link": "https://developers.redhat.com/articles/2025/04/17/jlink-integration-openshift-tech-preview-release",
-          "publishedOn": "2025-04-17T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Jlink integration with OpenShift tech preview release",
-          "imageUrl": null
-        },
-        {
-          "id": "a825eec3-26b7-40ae-8571-6f6cef6bad97",
-          "author": "Andrew Block",
-          "description": "The use of long-lived credentials, such as access keys, is a common method for accessing protected resources. However, they represent potential security concerns, especially once a compromise occurs. Assets that have become compromised can continue to be accessed indefinitely, and in many cases, without the owner's knowledge. As a result, many systems and frameworks now support the use of short-lived, or just-in-time (JIT), methods for accessing sensitive resources.\nThis is the first installment of a three-part series that explores how to implement zero-trust methodologies by leveraging short-lived credential support in Quay. This article will provide an overview of the robot account federation feature within Quay and how it can be used to enable secure access to Quay content.\nRed Hat Quay…",
-          "link": "https://developers.redhat.com/articles/2025/04/17/how-short-lived-credentials-quay-improve-security",
-          "publishedOn": "2025-04-17T07:00:00.000Z",
-          "wordCount": 4955,
-          "title": "How short-lived credentials in Quay improve security",
-          "imageUrl": "https://developers.redhat.com/sites/default/files/styles/share/public/ST-cicd-1_2x%20%281%29.png?itok=D5YsiWtT"
-        },
-        {
-          "id": "7fc140dd-e505-4f16-a052-636f8dc5b462",
-          "author": "Benjamin Blasco",
-          "description": "The GNU Compiler Collection, commonly abbreviated as GCC, is a portable compiler suite with support for a wide selection of programming languages.\nRed Hat Enterprise Linux (RHEL) offers the flexibility of choosing from many different versions of GCC, depending on your needs. These different versions have different support life cycles and intended uses. This article breaks down how these work and explains the rationale behind Red Hat's approach.\nSystem GCC (built-in version)\nThe system version of GCC (packaged as the gcc RPM) is the compiler that ships with RHEL at General Availability (GA) of a major release (e.g. RHEL 8, RHEL 9) and is used to build the operating system itself. This compiler receives full support for the entire life cycle of the major version of RHEL:\n\nRHEL 8: GCC 8\nRHEL …",
-          "link": "https://developers.redhat.com/articles/2025/04/16/gcc-and-gcc-toolset-versions-rhel-explainer",
-          "publishedOn": "2025-04-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "GCC and gcc-toolset versions in RHEL: An explainer",
-          "imageUrl": null
-        },
-        {
-          "id": "bc59dc90-06e3-4106-b7fd-0f5713a5ca3b",
-          "author": "Tom Deseyn",
-          "description": "Discover the C# 13 new features in this two-part series. C# 13 is supported by the .NET 9 SDK, which was released in November 2024. The features described in this article are things you’ll find in everyday programs. In the second article, we’ll cover more specialized features.\nParams collections\nThe C# params modifier enables a method to accept an arbitrary number of arguments of a certain type. For example, this code\nConsole.WriteLine(\"{0} + {1} + {2} = {3}\", i, j, k, sum);\ncalls the following WriteLine params overload:\nstatic void WriteLine (string format, params object?[]? arg);\nThe params argument must be the last argument of the method. Previously the compiler required it to be an array type. With C# 13, the compiler allows collection types. This means the type can be a Span<T>, ReadO…",
-          "link": "https://developers.redhat.com/articles/2025/04/16/c-13-new-features",
-          "publishedOn": "2025-04-16T07:00:00.000Z",
-          "wordCount": null,
-          "title": "C# 13",
-          "imageUrl": null
-        },
-        {
-          "id": "d0904489-1549-4ca0-b65a-f1ea626f5243",
-          "author": "Alberto Falossi",
-          "description": "Incident detection is now part of the Red Hat OpenShift web console monitoring UI plug-in, included with the latest release of the cluster observability operator (COO) version 1.1.0. This technology preview release follows last October’s developer preview and integrates the incidents UI into the OpenShift web console under the Observe section. This article presents a step-by-step guide to incident detection for OpenShift and describes how this new feature improves observability and incident analysis.\nWhy you need incident detection \nWhen an issue occurs in a cluster, you rarely receive just one alert. Instead, you get a cascade of related alerts as the error propagates. This phenomenon, known as an alert storm, is a common challenge in distributed systems.\nIncident detection groups related…",
-          "link": "https://developers.redhat.com/articles/2025/04/15/incident-detection-openshift-tech-preview-here",
-          "publishedOn": "2025-04-15T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Incident detection for OpenShift tech preview is here",
-          "imageUrl": null
-        },
-        {
-          "id": "5006e5e7-659b-4b52-a21f-8198da02993a",
-          "author": "Valentina Rodriguez Sosa",
-          "description": "In my previous article, How building workbenches accelerates AI/ML development, I discussed the user's experience building workbenches to accelerate AI/ML development. I also demonstrated how to select a software template and provide additional information as an input, such as namespace and cluster information to create the component. Now let’s explore how Red Hat Developer Hub and Red Hat OpenShift AI work together on top of Red Hat OpenShift.\nA GitOps approach to OpenShift AI\nThe Software Templates are built with Helm charts, which will read from the user inputs and populate this information in a new source code creating a new repository. Thanks to Red Hat OpenShift GitOps, this source code is applied to OpenShift, building new components and ensuring that the desired state is always cur…",
-          "link": "https://developers.redhat.com/articles/2025/04/14/how-developer-hub-and-openshift-ai-work-openshift",
-          "publishedOn": "2025-04-14T07:00:00.000Z",
-          "wordCount": null,
-          "title": "How Developer Hub and OpenShift AI work with OpenShift",
-          "imageUrl": null
         }
       ]
     },
@@ -532,16 +552,6 @@
           "publishedOn": "2025-04-25T14:12:57.000Z",
           "wordCount": null,
           "title": "플레티넘 프레피 만년필",
-          "imageUrl": null
-        },
-        {
-          "id": "https://edykim.com/ko/post/state-of-generics-and-collections/",
-          "author": null,
-          "description": "The PHP Foundationd에서 게시한...",
-          "link": "https://edykim.com/ko/post/state-of-generics-and-collections/",
-          "publishedOn": "2025-04-14T08:07:02.000Z",
-          "wordCount": null,
-          "title": "PHP 제네릭과 컬렉션 논의 현황",
           "imageUrl": null
         }
       ]
@@ -594,6 +604,106 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4495813",
+          "author": "Stefano Lovati",
+          "description": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on CrownPanel ESP32, AI’s Impact on Electronics, and E-Waste! Also, check News Archives – Embedded and Technical Articles Archives – Embedded for the complete list of news and articles from our website. NEWS Infineon Launches the PSOC™ 4100T Plus Multi-Sense-Enabled MCU for Advanced System […]\nThe post CrownPanel ESP32, AI’s Impact on Electronics, E-Waste: Embedded Week Insights appeared first on Embedded.",
+          "link": "https://www.embedded.com/crownpanel-esp32-ais-impact-on-electronics-e-waste-embedded-week-insights/",
+          "publishedOn": "2025-05-16T15:00:00.000Z",
+          "wordCount": null,
+          "title": "CrownPanel ESP32, AI’s Impact on Electronics, E-Waste: Embedded Week Insights",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495809",
+          "author": "Stefano Lovati",
+          "description": "In response to growing cryptographic challenges and the pressing need for stronger cybersecurity, the National Security Agency (NSA) has introduced the Commercial National Security Algorithm Suite 2.0 (CNSA 2.0), a set of standards aimed at establishing quantum-resistant cryptography. As part of this initiative, the NSA is calling on data center and computing sectors to become […]\nThe post Microchip Introduces MEC175xB Controllers with Hardware-Based Post-Quantum Cryptography for CNSA 2.0 Compliance appeared first on Embedded.",
+          "link": "https://www.embedded.com/microchip-introduces-mec175xb-controllers-with-hardware-based-post-quantum-cryptography-for-cnsa-2-0-compliance/",
+          "publishedOn": "2025-05-15T19:30:00.000Z",
+          "wordCount": null,
+          "title": "Microchip Introduces MEC175xB Controllers with Hardware-Based Post-Quantum Cryptography for CNSA 2.0 Compliance",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495806",
+          "author": "Stefano Lovati",
+          "description": "SECO’s Clea platform is now fully integrated into Raspberry Pi OS, a development announced by Raspberry Pi that significantly expands the potential for industrial innovation. As stated on the official Raspberry Pi website, users can now connect to a Clea instance via a simplified setup on Raspberry Pi OS, enabling industrial developers to streamline prototyping, […]\nThe post SECO’s Clea Now Natively Supported on Raspberry Pi OS, Advancing Industrial IoT Integration appeared first on Embedded.",
+          "link": "https://www.embedded.com/secos-clea-now-natively-supported-on-raspberry-pi-os-advancing-industrial-iot-integration/",
+          "publishedOn": "2025-05-15T18:59:00.000Z",
+          "wordCount": null,
+          "title": "SECO’s Clea Now Natively Supported on Raspberry Pi OS, Advancing Industrial IoT Integration",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4493610",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "To ensure clear voice communications during calls or recordings, AI-based noise cancellation technology is used, which consists of a series of algorithms responsible for filtering noise pollution from microphones and headphones. How does the system work? Using artificial intelligence and machine learning, noise cancellation algorithms are developed that digitally analyze and process sound waves in […]\nThe post AI-based Noise Cancellation Technology appeared first on Embedded.",
+          "link": "https://www.embedded.com/ai-based-noise-cancellation-technology/",
+          "publishedOn": "2025-05-15T09:38:00.000Z",
+          "wordCount": null,
+          "title": "AI-based Noise Cancellation Technology",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495284",
+          "author": "Stefano Lovati",
+          "description": "Electronics and the Internet of Things (IoT) constantly evolve with increasingly compact, powerful, and easy-to-use devices. Among these, the CrowPanel ESP32 Display 1.28 inch stands out as an all-in-one solution for projects that require integrated graphic displays, wireless connectivity, and high performance. In this article, we will delve into the features, advantages, and possible applications […]\nThe post CrowPanel ESP32: A Versatile Solution for IoT Projects – Basic Operation (Part 1) appeared first on Embedded.",
+          "link": "https://www.embedded.com/crowpanel-esp32-a-versatile-solution-for-iot-projects-basic-operation-part-1/",
+          "publishedOn": "2025-05-14T07:19:00.000Z",
+          "wordCount": null,
+          "title": "CrowPanel ESP32: A Versatile Solution for IoT Projects – Basic Operation (Part 1)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495761",
+          "author": "Stefano Lovati",
+          "description": "Infineon Technologies AG has unveiled the PSOC™ 4100T Plus, a next-generation Arm® Cortex®-M0+ microcontroller (MCU) enhanced with Multi-Sense technology. This new MCU delivers a powerful combination of analog and digital capabilities, integrating 128KB Flash, 32KB SRAM, and Infineon’s advanced sensing technologies, including CAPSENSE™, inductive sensing, and liquid level detection. With its increased reliability and feature-rich […]\nThe post Infineon Launches the PSOC™ 4100T Plus Multi-Sense-Enabled MCU for Advanced System Control and HMI Applications appeared first on Embedded.",
+          "link": "https://www.embedded.com/infineon-launches-the-psoc-4100t-plus-multi-sense-enabled-mcu-for-advanced-system-control-and-hmi-applications/",
+          "publishedOn": "2025-05-13T20:50:00.000Z",
+          "wordCount": null,
+          "title": "Infineon Launches the PSOC™ 4100T Plus Multi-Sense-Enabled MCU for Advanced System Control and HMI Applications",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495759",
+          "author": "Stefano Lovati",
+          "description": "CELUS, the creator of a leading AI-assisted electronics design platform trusted by developers and engineers worldwide, has announced the launch of its next generation of AI-powered hardware design capabilities. This advancement, part of the CELUS Design Platform, streamlines the development process, reduces time to market, and opens new opportunities to better align with customer requirements. […]\nThe post CELUS Unveils Next-Generation AI-Powered Design Assistant to Revolutionize Electronics Development appeared first on Embedded.",
+          "link": "https://www.embedded.com/celus-unveils-next-generation-ai-powered-design-assistant-to-revolutionize-electronics-development/",
+          "publishedOn": "2025-05-13T20:15:00.000Z",
+          "wordCount": null,
+          "title": "CELUS Unveils Next-Generation AI-Powered Design Assistant to Revolutionize Electronics Development",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495714",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "SIM cards offer several advantages, including portability and the storage of essential information. They also enable access to cellular networks for calls, texts, and data services. However, they are also a way for a service provider to tie the user into their contract. Moreover, they require a physical interface, installer presence at the device location, and associated hardware […]\nThe post What is SGP.32 and How Is It Enabling Remote IoT? appeared first on Embedded.",
+          "link": "https://www.embedded.com/what-is-sgp-32-and-how-is-it-enabling-remote-iot/",
+          "publishedOn": "2025-05-13T10:37:00.000Z",
+          "wordCount": null,
+          "title": "What is SGP.32 and How Is It Enabling Remote IoT?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495292",
+          "author": "Stefano Lovati",
+          "description": "When using a smartphone to surf the Internet or access social platforms—which half a billion people or more are probably doing simultaneously—we rarely think about the materials inside the device that make such everyday operations possible. However, when that smartphone is eventually discarded and sent to a landfill, hazardous substances like cadmium, mercury, beryllium, flame […]\nThe post Turning Electronic Waste (e-waste) into a Clean Business Opportunity appeared first on Embedded.",
+          "link": "https://www.embedded.com/turning-electronic-waste-e-waste-into-a-clean-business-opportunity/",
+          "publishedOn": "2025-05-13T09:10:54.000Z",
+          "wordCount": null,
+          "title": "Turning Electronic Waste (e-waste) into a Clean Business Opportunity",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495747",
+          "author": "Stefano Lovati",
+          "description": "Metis Engineering has introduced its latest innovation—the Analogue to Digital CAN Module—designed to bridge the gap between analogue signal sources and Controller Area Network (CAN) systems. This state-of-the-art module enables accurate digital conversion of analogue inputs, streamlining system integration across a wide spectrum of industries, including automotive, marine, aerospace, marine energy storage, and industrial automation. […]\nThe post Metis Engineering Unveils High-Precision Analogue to Digital CAN Module for Versatile Industrial and Automotive Applications appeared first on Embedded.",
+          "link": "https://www.embedded.com/metis-engineering-unveils-high-precision-analogue-to-digital-can-module-for-versatile-industrial-and-automotive-applications/",
+          "publishedOn": "2025-05-13T09:00:00.000Z",
+          "wordCount": null,
+          "title": "Metis Engineering Unveils High-Precision Analogue to Digital CAN Module for Versatile Industrial and Automotive Applications",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4495744",
           "author": "Stefano Lovati",
@@ -993,76 +1103,6 @@
           "wordCount": null,
           "title": "Security of Embedded Systems for Smart Homes and Industry 4.0",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495484",
-          "author": "Stefano Lovati",
-          "description": "Equal1, a recognized global innovator in silicon-based quantum computing, has reached a pivotal milestone with the successful validation of a commercial CMOS process tailored for quantum technologies. This breakthrough represents a significant step forward in the pursuit of scalable, silicon-based quantum systems for spin qubits, all within the framework of established semiconductor manufacturing practices. The […]\nThe post Equal1 Reaches Quantum Milestone with CMOS Process Validation for Scalable Silicon Spin Qubits appeared first on Embedded.",
-          "link": "https://www.embedded.com/equal1-reaches-quantum-milestone-with-cmos-process-validation-for-scalable-silicon-spin-qubits/",
-          "publishedOn": "2025-04-16T20:20:00.000Z",
-          "wordCount": null,
-          "title": "Equal1 Reaches Quantum Milestone with CMOS Process Validation for Scalable Silicon Spin Qubits",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495031",
-          "author": "Loriotoole",
-          "description": "If you ask most developers if they should use AI to develop embedded systems, you’ll most likely get a resounding “NO!” You’ll hear comments like: I’ve probably heard a thousand other comments from developers and teams about how AI can’t be used to develop embedded systems. But is this really the case? Is there any […]\nThe post Should You Use AI to Develop Embedded Systems? appeared first on Embedded.",
-          "link": "https://www.embedded.com/should-you-use-ai-to-develop-embedded-systems/",
-          "publishedOn": "2025-04-16T14:07:00.000Z",
-          "wordCount": null,
-          "title": "Should You Use AI to Develop Embedded Systems?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495480",
-          "author": "Stefano Lovati",
-          "description": "Vertex Growth, a growth-stage venture capital fund headquartered in Singapore, has announced a €10 million investment in Dolphin Semiconductor, a prominent provider of semiconductor IP solutions with a focus on mixed-signal IP design. This funding aims to bolster and accelerate the execution of Dolphin Semiconductor’s growth roadmap. Backed by Vertex Holdings, a subsidiary of the […]\nThe post Vertex Growth Invests €10M in Dolphin Semiconductor to Accelerate Global Expansion appeared first on Embedded.",
-          "link": "https://www.embedded.com/vertex-growth-invests-e10m-in-dolphin-semiconductor-to-accelerate-global-expansion/",
-          "publishedOn": "2025-04-15T20:52:00.000Z",
-          "wordCount": null,
-          "title": "Vertex Growth Invests €10M in Dolphin Semiconductor to Accelerate Global Expansion",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495476",
-          "author": "Stefano Lovati",
-          "description": "NOVOSENSE Microelectronics, a semiconductor company specializing in high-performance analog and mixed-signal integrated circuits, has introduced the NSUC1500-Q1—an advanced System-on-Chip (SoC) designed to address the evolving needs of modern automotive ambient lighting systems. The NSUC1500-Q1 is engineered for seamless integration with the high-precision NSLxxxxx series of linear LED drivers, which are optimized for various automotive lighting […]\nThe post NOVOSENSE Unveils Compact SoC Solution for RGB/RGBW Automotive Lighting and EV Indicator Modules appeared first on Embedded.",
-          "link": "https://www.embedded.com/novosense-unveils-compact-soc-solution-for-rgb-rgbw-automotive-lighting-and-ev-indicator-modules/",
-          "publishedOn": "2025-04-15T20:30:00.000Z",
-          "wordCount": null,
-          "title": "NOVOSENSE Unveils Compact SoC Solution for RGB/RGBW Automotive Lighting and EV Indicator Modules",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495473",
-          "author": "Stefano Lovati",
-          "description": "TDK Corporation has announced the development of the world’s first “Spin Photo Detector”—an innovative photo-spintronic conversion element that merges optical, electronic, and magnetic components. This novel device achieves ultra-high-speed responsiveness of 20 picoseconds (20 × 10⁻¹² s) using light at a wavelength of 800 nm, making it more than ten times faster than traditional semiconductor-based […]\nThe post TDK Introduces the World’s First ‘Spin Photo Detector’ with 10X Faster Data Transmission for Future AI Systems appeared first on Embedded.",
-          "link": "https://www.embedded.com/tdk-introduces-the-worlds-first-spin-photo-detector-with-10x-faster-data-transmission-for-future-ai-systems/",
-          "publishedOn": "2025-04-15T20:10:00.000Z",
-          "wordCount": null,
-          "title": "TDK Introduces the World’s First ‘Spin Photo Detector’ with 10X Faster Data Transmission for Future AI Systems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495315",
-          "author": "Stefano Lovati",
-          "description": "MIKROE (MikroElektronika) is set to introduce a breakthrough Click board solution, targeting advanced IoT connectivity. The company’s new LTE IoT 10 Click board delivers robust LTE-M and NB-IoT connectivity for industrial and commercial IoT applications. To achieve low power consumption and operate across global frequency bands, solutions for systems with IoT connectivity have been continuously […]\nThe post MIKROE Releases LTE IoT 10 Click Board for Advanced IoT Connectivity appeared first on Embedded.",
-          "link": "https://www.embedded.com/mikroe-releases-lte-iot-10-click-board-for-advanced-iot-connectivity/",
-          "publishedOn": "2025-04-15T09:00:00.000Z",
-          "wordCount": null,
-          "title": "MIKROE Releases LTE IoT 10 Click Board for Advanced IoT Connectivity",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4495304",
-          "author": "Maurizio Di Paolo Emilio",
-          "description": "Autonomous Emergency Braking (AEB) systems are the most important technological change in road safety in many years, allowing cars and trucks to automatically slow down to prevent accidents. The systems ensure that cars are brought to a halt in dangerous situations, and are set to become standard in both the European Union and the United […]\nThe post How AEB Systems Are Paving the Way for Autonomous Cars in the EU and the US appeared first on Embedded.",
-          "link": "https://www.embedded.com/how-aeb-systems-are-paving-the-way-for-autonomous-cars-in-the-eu-and-the-us/",
-          "publishedOn": "2025-04-14T07:35:00.000Z",
-          "wordCount": null,
-          "title": "How AEB Systems Are Paving the Way for Autonomous Cars in the EU and the US",
-          "imageUrl": null
         }
       ]
     },
@@ -1140,6 +1180,26 @@
       "feedUrl": "https://feeds.feedburner.com/GDBcode",
       "siteUrl": "https://developers.googleblog.com/rss/",
       "articles": [
+        {
+          "id": "https://developers.googleblog.com/en/build-train-recommender-system-keras-jax/",
+          "author": null,
+          "description": "Keras Recommenders (KerasRS) is a new library announced to help developers build recommendation systems using APIs with building blocks for ranking and retrieval, and it can be installed via pip with support for JAX, TensorFlow, or PyTorch backends.",
+          "link": "https://developers.googleblog.com/en/build-train-recommender-system-keras-jax/",
+          "publishedOn": "2025-05-16T20:18:43.873Z",
+          "wordCount": null,
+          "title": "Build and train a recommender system in 10 minutes using Keras and JAX",
+          "imageUrl": null
+        },
+        {
+          "id": "https://developers.googleblog.com/en/google-cloud-announces-apim-operator-for-apigee-general-availability/",
+          "author": null,
+          "description": "The Apigee APIM Operator is now generally available, bringing API Management and Gateway capabilities to GKE environments using Kubernetes-like YAML configuration, providing developer-native tooling, reducing friction, and offering policy management comparable to Apigee Hybrid.",
+          "link": "https://developers.googleblog.com/en/google-cloud-announces-apim-operator-for-apigee-general-availability/",
+          "publishedOn": "2025-05-16T20:18:43.873Z",
+          "wordCount": null,
+          "title": "Google Cloud announces general availability of APIM Operator for Apigee",
+          "imageUrl": null
+        },
         {
           "id": "https://developers.googleblog.com/en/agent-development-kit-easy-to-build-multi-agent-applications/",
           "author": null,
@@ -1329,56 +1389,6 @@
           "wordCount": null,
           "title": "Making it easier to build with the Gemini API in Google AI Studio",
           "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/google-martech-solutions-putting-generative-ai-in-marketing/",
-          "author": null,
-          "description": "Three generative AI-powered MarTech solutions from Google designed to help developers streamline marketing material creation, personalize campaigns, and enhance ad performance. Discover ViGenAiR for video ad creation, Adios for image asset management and generation, and Copycat for on-brand ad copy generation.",
-          "link": "https://developers.googleblog.com/en/google-martech-solutions-putting-generative-ai-in-marketing/",
-          "publishedOn": "2025-04-16T20:19:03.504Z",
-          "wordCount": null,
-          "title": "Three MarTech solutions putting generative AI in marketing",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/veo-2-video-generation-now-generally-available/",
-          "author": null,
-          "description": "Generate high-quality videos from text and image prompts with Veo 2, a video generation model, now generally available in the Gemini API and Google AI Studio to enhance your content creation and marketing efforts.",
-          "link": "https://developers.googleblog.com/en/veo-2-video-generation-now-generally-available/",
-          "publishedOn": "2025-04-16T20:19:03.504Z",
-          "wordCount": null,
-          "title": "Bring your ideas to life: Veo 2 video generation available for developers",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/apigee-announces-general-availability-of-apim-extension-processor/",
-          "author": null,
-          "description": "The Apigee Extension Processor enhances Apigee's capabilities by enabling it to manage gRPC streaming and integrate with Google Cloud services through Cloud Load Balancing, allowing for applying Apigee policies to a wider range of backend services, and improving secure access to Google Cloud infrastructure.",
-          "link": "https://developers.googleblog.com/en/apigee-announces-general-availability-of-apim-extension-processor/",
-          "publishedOn": "2025-04-15T20:18:29.236Z",
-          "wordCount": null,
-          "title": "Apigee announces general availability of APIM Extension Processor",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/unlocking-bonus-worlds-with-gemini-for-the-google-io-puzzle/",
-          "author": null,
-          "description": "The Google I/O 2025 puzzle used the Gemini API to generate dynamic riddles for bonus worlds, enhancing player engagement and scalability. Here's what our developers learned on using the Gemini API effectively, including creativity, design, and implementation strategies.",
-          "link": "https://developers.googleblog.com/en/unlocking-bonus-worlds-with-gemini-for-the-google-io-puzzle/",
-          "publishedOn": "2025-04-13T20:16:38.659Z",
-          "wordCount": null,
-          "title": "Unlocking bonus worlds with Gemini for the Google I/O puzzle",
-          "imageUrl": null
-        },
-        {
-          "id": "https://developers.googleblog.com/en/leveraging-bigquery-json-for-optimized-mongodb-dataflow-pipelines/",
-          "author": null,
-          "description": "An enhancement to Google Cloud Dataflow templates for MongoDB Atlas enables direct integration of JSON data into BigQuery, eliminating complex data transformations, reducing operational costs, and enhancing query performance for users.",
-          "link": "https://developers.googleblog.com/en/leveraging-bigquery-json-for-optimized-mongodb-dataflow-pipelines/",
-          "publishedOn": "2025-04-13T20:16:38.659Z",
-          "wordCount": null,
-          "title": "Leveraging BigQuery JSON for Optimized MongoDB Dataflow Pipelines",
-          "imageUrl": null
         }
       ]
     },
@@ -1416,6 +1426,16 @@
       "feedUrl": "http://feeds.feedburner.com/viva64-blog-en",
       "siteUrl": "https://pvs-studio.com",
       "articles": [
+        {
+          "id": "https://pvs-studio.com/en/blog/posts/csharp/1250/",
+          "author": null,
+          "description": "Welcome to the seventh part of our digest of news and events in the .NET world! We've packed in many updates this time from NET 10 Previews 2 and 3, the latest Mono release, lots of curious articles...",
+          "link": "https://pvs-studio.com/en/blog/posts/csharp/1250/",
+          "publishedOn": "2025-05-15T21:00:00.000Z",
+          "wordCount": null,
+          "title": ".NET Digest #7",
+          "imageUrl": null
+        },
         {
           "id": "https://pvs-studio.com/en/blog/posts/cpp/1249/",
           "author": null,
@@ -1455,16 +1475,6 @@
           "wordCount": null,
           "title": "Curling CPython around PVS-Studio",
           "imageUrl": null
-        },
-        {
-          "id": "https://pvs-studio.com/en/blog/posts/1245/",
-          "author": null,
-          "description": "PVS-Studio 7.36 has been released. This version brings exciting updates, including extended MISRA support, a plugin for Qt Creator 16, enhanced user annotations in C#, and more! See more details in...",
-          "link": "https://pvs-studio.com/en/blog/posts/1245/",
-          "publishedOn": "2025-04-16T21:00:00.000Z",
-          "wordCount": null,
-          "title": "PVS-Studio 7.36: expanded MISRA support, plugin for Qt Creator 16, enhanced user annotations for C#, and much more",
-          "imageUrl": null
         }
       ]
     },
@@ -1487,16 +1497,6 @@
           "publishedOn": "2025-05-09T17:38:00.000Z",
           "wordCount": null,
           "title": "Breaking the Sound Barrier Part I: Fuzzing CoreAudio with Mach Messages",
-          "imageUrl": null
-        },
-        {
-          "id": "https://googleprojectzero.blogspot.com/2025/04/the-windows-registry-adventure-6-kernel.html",
-          "author": null,
-          "description": "@import url(https://themes.googleusercontent.com/fonts/css?kit=4mNYFHt_IKFsPe52toizHz0e5qzIIUg9OvSRGeMDk3I);.lst-kix_404916xkl9yq-4>li:before{content:\"\\0025cb   \"}ul.lst-kix_617gqi1nmysw-0{list-style-type:none}.lst-kix_4j4spo1gm828-8>li:before{content:\"\\0025a0   \"}.lst-kix_twe3knjlgokg-1>li:before{content:\"\\0025cb   \"}.lst-kix_twe3knjlgokg-3>li:before{content:\"\\0025cf   \"}.lst-kix_404916xkl9yq-1>li:before{content:\"\\0025cb   \"}.lst-kix_404916xkl9yq-5>li:before{content:\"\\0025a0   \"}.lst-kix_twe3knjlgokg-2>li:before{content:\"\\0025a0   \"}.lst-kix_twe3knjlgokg-6>li:before{content:\"\\0025cf   \"}.lst-kix_404916xkl9yq-0>li:before{content:\"\\0025cf   \"}.lst-kix_404916xkl9yq-8>li:before{content:\"\\0025a0   \"}.lst-kix_4j4spo1gm828-4>li:before{content:\"\\0025cb   \"}.lst-kix_twe3knjlgokg-7>li:before{conten…",
-          "link": "https://googleprojectzero.blogspot.com/2025/04/the-windows-registry-adventure-6-kernel.html",
-          "publishedOn": "2025-04-16T21:19:00.000Z",
-          "wordCount": null,
-          "title": "The Windows Registry Adventure #6: Kernel-mode objects",
           "imageUrl": null
         }
       ]
@@ -1596,6 +1596,156 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1017945/",
+          "author": "corbet",
+          "description": "The first article in this series provided\nan overview of Home Assistant,\nits community, and its capabilities.  It was deliberately short on\ndescriptions of interesting things that can be done with Home Assistant,\nthough — the reasons why one might actually want to use this program.  In\nthis closing article, we'll look at how Home Assistant was used to solve\nsome real problems.",
+          "link": "https://lwn.net/Articles/1017945/",
+          "publishedOn": "2025-05-16T13:29:04.000Z",
+          "wordCount": null,
+          "title": "[$] A kernel developer plays with Home Assistant: case studies",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021484/",
+          "author": "jzb",
+          "description": "The Asahi Linux\nproject, which supports Linux on Apple Silicon Macs, has published a\nprogress report ahead of the 6.15 kernel's release.",
+          "link": "https://lwn.net/Articles/1021484/",
+          "publishedOn": "2025-05-16T13:26:27.000Z",
+          "wordCount": null,
+          "title": "An Asahi Linux 6.15 progress report",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021482/",
+          "author": "jzb",
+          "description": "Security updates have been issued by AlmaLinux (.NET 8.0, .NET 9.0, kernel, kernel-rt, redis:6, and yelp and yelp-xsl), Debian (chromium), Red Hat (compat-openssl11, kernel, and thunderbird), and SUSE (nbdkit, open-vm-tools, and rustup).",
+          "link": "https://lwn.net/Articles/1021482/",
+          "publishedOn": "2025-05-16T13:10:27.000Z",
+          "wordCount": null,
+          "title": "Security updates for Friday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021462/",
+          "author": "corbet",
+          "description": "The Electronic Frontier Foundation has posted a somewhat belated memorial\nfor John Young, the founder of Cryptome.\n\n\n\tJohn was one of the early, under-recognized heroes of the digital\n\tage. He not only saw the promise of digital technology to help\n\tdemocratize access to information, he brought that idea into being\n\tand nurtured it for many years.  We will miss him and his\n\tunswerving commitment to the public's right to know.",
+          "link": "https://lwn.net/Articles/1021462/",
+          "publishedOn": "2025-05-16T08:26:10.000Z",
+          "wordCount": null,
+          "title": "In Memoriam: John L. Young (EFF)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021400/",
+          "author": "jzb",
+          "description": "To commemorate the tenth anniversary of the 1.0 release\nof the Rust language,\nversion\n1.87.0 was announced live today at the 10 Years of Rust\ncelebration in Utrecht, Netherlands. Notable changes\ninclude the addition of anonymous pipes to the standard library and\nthe ability for inline assembly (asm!) to jump to labeled\nblocks within Rust code.",
+          "link": "https://lwn.net/Articles/1021400/",
+          "publishedOn": "2025-05-15T19:26:35.000Z",
+          "wordCount": null,
+          "title": "Rust 1.87.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1020437/",
+          "author": "jake",
+          "description": "Leon Romanovsky began his session at the 2025 Linux Storage, Filesystem,\nMemory Management, and BPF Summit (LSFMM+BPF) by explaining that the improved DMA-mapping API that he has been\nworking on is a group effort.  He, Chaitanya Kulkarni, Christoph Hellwig,\nJason Gunthorpe, and others are proposing to modernize the API and to\n\"make it more suitable for current kernels\".  He told the assembled\nstorage and filesystem developers that the progress on the proposal has\nstalled, but that it was the basis for further work in various areas, so he\nhoped to find a way to move forward with it.",
+          "link": "https://lwn.net/Articles/1020437/",
+          "publishedOn": "2025-05-15T14:26:51.000Z",
+          "wordCount": null,
+          "title": "[$] A new DMA-mapping API",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021354/",
+          "author": "jzb",
+          "description": "The Tor project has announced\nthe oniux utility which provides Tor network isolation, using Linux\nnamespaces, for third-party applications.\nNamespaces are a powerful feature that gives us the ability to\nisolate Tor network access of an arbitrary application. We put each\napplication in a network namespace that doesn't provide access to\nsystem-wide network interfaces (such as eth0), and instead provides a\ncustom network interface onion0.\nThis allows us to isolate an arbitrary application over Tor in the\nmost secure way possible software-wise, namely by relying on a\nsecurity primitive offered by the operating system kernel. Unlike\nSOCKS, the application cannot accidentally leak data by failing to\nmake some connection via the configured SOCKS, which may happen due to\na mistake by the developer.\nThe Tor project cautions that oniux is considered experimental as\nthe software it depends on, such as Arti and\nonionmasq,\nare still new.",
+          "link": "https://lwn.net/Articles/1021354/",
+          "publishedOn": "2025-05-15T14:19:42.000Z",
+          "wordCount": null,
+          "title": "Oniux: kernel-level Tor isolation for Linux applications",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021379/",
+          "author": "jake",
+          "description": "Security updates have been issued by Debian (open-vm-tools), Fedora (dnsdist), Gentoo (Node.js and Tracker miners), Red Hat (kernel and xdg-utils), SUSE (audiofile, go1.22-openssl, go1.24, grub2, kernel-devel, openssl-1_1, openssl-3, and python311-Django), and Ubuntu (ruby-rack).",
+          "link": "https://lwn.net/Articles/1021379/",
+          "publishedOn": "2025-05-15T14:18:07.000Z",
+          "wordCount": null,
+          "title": "Security updates for Thursday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1020448/",
+          "author": "corbet",
+          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: Home Assistant; YaST; bpfilter; Flatpak; More LSFMM+BPF 2025 coverage.\n            \n Briefs: Screen security; Guix on Codeberg; Postgres I/O; GNOME executive director; Nextcloud blog; Podman 5.5.0; OSL sustainability; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
+          "link": "https://lwn.net/Articles/1020448/",
+          "publishedOn": "2025-05-15T00:59:14.000Z",
+          "wordCount": null,
+          "title": "[$] LWN.net Weekly Edition for May 15, 2025",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1020571/",
+          "author": "jzb",
+          "description": "At the Linux Application\nSummit (LAS) in April, Sebastian Wick said that, by many metrics, Flatpak is doing great. The Flatpak\napplication-packaging format is popular with upstream developers, and\nwith many users. More and more applications are being published in the\nFlathub application store, and the\nformat is even being adopted by Linux distributions like\nFedora. However, he worried that work on the Flatpak project itself\nhad stagnated, and that there were too few developers able to review\nand merge code beyond basic maintenance.",
+          "link": "https://lwn.net/Articles/1020571/",
+          "publishedOn": "2025-05-14T19:18:51.000Z",
+          "wordCount": null,
+          "title": "[$] The future of Flatpak",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021217/",
+          "author": "jzb",
+          "description": "Version\n5.5.0 of the Podman container-management tool has been\nreleased. Notable features include the addition of a podman machine cp command to copy files into a running Podman\nVM, a podman artifact extract command to copy\ncontents of an OCI\nartifact to disk, and a --mount=artifact option to mount\nOCI artifacts into containers. See the release announcement for a full\nlist of improvements and bug fixes.",
+          "link": "https://lwn.net/Articles/1021217/",
+          "publishedOn": "2025-05-14T17:37:05.000Z",
+          "wordCount": null,
+          "title": "Podman 5.5.0 released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1017705/",
+          "author": "daroc",
+          "description": "From\nservers in a data center to desktop computers, many devices\ncommunicating on a network will eventually have to filter network\ntraffic, whether it's for security or performance reasons. As a result,\nthis is a domain where a lot of work is put into improving performance:\na tiny performance improvement can have considerable gains.\n\nBpfilter is a\nproject that allows for packet filtering to easily be done with BPF, which can\nbe faster than other mechanisms.",
+          "link": "https://lwn.net/Articles/1017705/",
+          "publishedOn": "2025-05-14T17:22:47.000Z",
+          "wordCount": null,
+          "title": "[$] Faster firewalls with bpfilter",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021199/",
+          "author": "jzb",
+          "description": "Security updates have been issued by AlmaLinux (emacs, firefox, gnutls, java-17-openjdk, java-21-openjdk, osbuild-composer, python39:3.9, and thunderbird), Arch Linux (screen), Debian (varnish), Fedora (chromium), Gentoo (Atop, FreeType, and Spidermonkey), Mageia (java-1.8.0-openjdk, java-11-openjdk, java-17-openjdk, java-latest-openjdk and postgresql15, postgresql13), Oracle (389-ds-base, emacs, firefox, kernel, libsoup, libtiff, mod_auth_openidc:2.3, nodejs:20, nodejs:22, osbuild-composer, python39:3.9, qemu-kvm, ruby, ruby:3.1, ruby:3.3, and thunderbird), Red Hat (.NET 8.0, .NET 9.0, avahi, buildah, corosync, delve and golang, exiv2, expat, firefox, ghostscript, gimp, git, grafana, gvisor-tap-vsock, java-21-openjdk, kernel, kernel-rt, libarchive, libjpeg-turbo, libsoup, libsoup3, libxslt, mod_auth_openidc, nginx, nginx:1.22, nginx:1.24, nodejs22, nodejs:20, nodejs:22, opentelemetry-collector, osbuild-composer, perl, php, php:8.2, php:8.3, podman, python-jinja2, redis, redis:7, rhc, ruby:2.5, skopeo, sqlite, thunderbird, tomcat, tomcat9, valkey, vim, xorg-x11-server-Xwayland, xterm, xz, yelp, and yggdrasil), Slackware (screen), SUSE (apparmor, dirmngr, gimp, golang-github-prometheus-node_exporter, java-11-openj9, java-17-openj9, java-21-openj9, libxmp-devel, python311-Django4, rabbitmq-server313, rke2, and transfig), and Ubuntu (abseil and open-vm-tools).",
+          "link": "https://lwn.net/Articles/1021199/",
+          "publishedOn": "2025-05-14T13:08:26.000Z",
+          "wordCount": null,
+          "title": "Security updates for Wednesday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1019885/",
+          "author": "daroc",
+          "description": "BPF arenas are areas of memory where the verifier can safely relax its checking of\npointers, allowing programmers to write arbitrary data structures in BPF. Emil\nTsalapatis reported on how his team has used arenas in writing\n\nsched_ext schedulers at the 2025 Linux Storage, Filesystem,\nMemory-Management, and BPF Summit. His biggest complaint was about the fact that\nkernel pointers can't be stored in BPF arenas — something that the BPF\ndevelopers hope to address, although there are some implementation problems that\nmust be sorted out first.",
+          "link": "https://lwn.net/Articles/1019885/",
+          "publishedOn": "2025-05-13T20:44:18.000Z",
+          "wordCount": null,
+          "title": "[$] A look at what's possible with BPF arenas",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1021016/",
+          "author": "jzb",
+          "description": "Nextcloud provides an\nopen-source collaboration platform called Nextcloud Hub, which includes file-sharing and syncing\nfeatures. The company has written\na blog post explaining that Google has revoked a critical permission\nfrom the Nextcloud Files app for Android that allows it to sync files\nto Nextcloud Hub.\nGoogle is stating security concerns as a reason for revoking the\npermission. This is hard to believe for us. Nextcloud has had this\nfeature since its inception in 2016, and we have never heard about any\nsecurity concerns from Google about it. Moreover, several Big Tech\napps as well as Google's own still have this. What we think: Google\nowning the platform means they can and are giving themselves\npreferential treatment.\nDespite multiple appeals since mid-2024, Google has refused to\nreinstate the permission, blocking automated Nextcloud file uploads\nfor millions of users.\nThe Nextcloud\napp available via F-Droid does not have this limitation, but the\npost notes that that is not an option for many users.",
+          "link": "https://lwn.net/Articles/1021016/",
+          "publishedOn": "2025-05-13T19:55:29.000Z",
+          "wordCount": null,
+          "title": "Nextcloud claims Google is being anticompetitive",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1020885/",
           "author": "jzb",
@@ -2465,206 +2615,6 @@
           "wordCount": null,
           "title": "Security updates for Thursday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017012/",
-          "author": "corbet",
-          "description": "Inside this week's LWN.net Weekly Edition:\n        \n Front: APT 3.0; Fedora 42; Lots more LSFMM+BPF coverage.\n            \n Briefs: CVE funding; Yelp vulnerability; Fedora 42; Manjaro 25.0; GCC 15; Pinta 3.0; Quotes; ...\n            \n Announcements: Newsletters, conferences, security updates, patches, and more.",
-          "link": "https://lwn.net/Articles/1017012/",
-          "publishedOn": "2025-04-17T01:00:42.000Z",
-          "wordCount": null,
-          "title": "[$] LWN.net Weekly Edition for April 17, 2025",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017315/",
-          "author": "jzb",
-          "description": "Debian's Advanced Package Tool (APT) is the suite of utilities that handle package\nmanagement on Debian and Debian-derived operating systems. APT recently received a\nmajor upgrade to 3.0 just in time for inclusion in Debian 13\n(\"trixie\"), which is planned for release sometime in 2025. The version bump is\nwarranted; the latest APT has user-interface improvements, switches to Sequoia to verify package\nsignatures, and includes solver3—a new solver that is designed to improve\nhow it evaluates and resolves package dependencies.",
-          "link": "https://lwn.net/Articles/1017315/",
-          "publishedOn": "2025-04-16T18:07:18.000Z",
-          "wordCount": null,
-          "title": "[$] What's new in APT 3.0",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017727/",
-          "author": "jzb",
-          "description": "GNOME contributor Michael Catanzaro has written a blog\npost about a noteworthy vulnerability in GNOME's help browser, Yelp.\nThe vulnerability was first reported on December 25, and it\nwas made public on March 26 after the 90-day-disclosure deadline\nwas reached. Patches\nhave been proposed to fix the issue. The bug reporter has published a writeup\ndemonstrating the attack. Catanzaro asks that Linux vendors\n\"please consider applying the provided patches even though they\nhave not yet been accepted upstream\".",
-          "link": "https://lwn.net/Articles/1017727/",
-          "publishedOn": "2025-04-16T17:54:00.000Z",
-          "wordCount": null,
-          "title": "Catanzaro: Dangerous arbitrary file read vulnerability in Yelp",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017477/",
-          "author": "jake",
-          "description": "Allowing directories to be modified in parallel was the topic of Jeff\nLayton's filesystem-track session at the 2025 Linux Storage, Filesystem,\nMemory Management, and BPF Summit (LSFMM+BPF).  There are certain use\ncases, including for the NFS and Lustre filesystems, as mentioned in a patch set\nreferenced in the topic\nproposal, where contention in creating multiple files in a directory is\ncausing noticeable performance problems.  In some testing, Layton has found\nthat the inode read-write semaphore (i_rwsem) for the directory is\nserializing operations; he wanted to discuss alternatives.",
-          "link": "https://lwn.net/Articles/1017477/",
-          "publishedOn": "2025-04-16T17:09:52.000Z",
-          "wordCount": null,
-          "title": "[$] Parallel directory operations",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017116/",
-          "author": "daroc",
-          "description": "The BPF verifier is not magic; it cannot solve the\n\nhalting problem. Therefore,\nit has to err on the side of assuming that a program will run too long if it\ncannot prove that the program will not.\nThe ultimate check on the size of a BPF program is the\none-million-instruction limit — the verifier will refuse to process more than\none-million instructions, no matter what a BPF program does. Alexei Starovoitov gave\na talk at the 2025 Linux Storage, Filesystem,\nMemory-Management, and BPF Summit about that limit,\nwhy correctly written BPF programs shouldn't hit it, and how to make the user\nexperience of large BPF programs better in the future.",
-          "link": "https://lwn.net/Articles/1017116/",
-          "publishedOn": "2025-04-16T16:44:29.000Z",
-          "wordCount": null,
-          "title": "[$] Taking BPF programs beyond one-million instructions",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017704/",
-          "author": "jzb",
-          "description": "Sergiu Gatlan reports\nthat the US government has extended funding for the Common\nVulnerabilities and Exposures (CVE) program, following yesterday's reports that funding\nwould run out as of April 16.\nThe article also mentions the launch of a CVE Foundation, to\ntransition the CVE program to a dedicated foundation and eliminate\n\"a single point of failure in the vulnerability management\necosystem\", as well as a European vulnerability\ndatabase (EUVD) backed by the European Union Agency for\nCybersecurity (ENISA). Details on these initiatives are scant at the\nmoment, and it is unclear whether restoration of funding will have any\nimpact on these efforts.",
-          "link": "https://lwn.net/Articles/1017704/",
-          "publishedOn": "2025-04-16T15:14:09.000Z",
-          "wordCount": null,
-          "title": "CISA extends funding to the CVE program (BleepingComputer)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1016844/",
-          "author": "corbet",
-          "description": "As a system runs, its memory becomes fragmented; it does not take long\nbefore the allocation of large, physically contiguous memory ranges becomes\ndifficult or impossible.  The contiguous memory\nallocator (CMA) is a kernel subsystem that attempts to address this\nproblem, but it has never worked as well as some would like.  Two sessions\nin the memory-management track at the 2025 Linux Storage, Filesystem,\nMemory-Management, and BPF Summit looked at how CMA can be improved; the\nfirst looked at providing guaranteed allocations, while the second\naddressed some inefficiencies in CMA.",
-          "link": "https://lwn.net/Articles/1016844/",
-          "publishedOn": "2025-04-16T15:11:35.000Z",
-          "wordCount": null,
-          "title": "[$] Improvements for the contiguous memory allocator",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017670/",
-          "author": "jzb",
-          "description": "Security updates have been issued by AlmaLinux (gvisor-tap-vsock, kernel, and kernel-rt), Fedora (chromium, dnf, dotnet9.0, golang, lemonldap-ng, mariadb10.11, perl-Crypt-URandom-Token, perl-DBIx-Class-EncodedColumn, php-tcpdf, podman-tui, and trunk), Red Hat (java-17-openjdk and kernel), Slackware (mozilla), SUSE (apache2-mod_auth_openidc, cosign, etcd, expat, flannel, kernel, libsqlite3-0, libvarnishapi3, mozjs52, Multi-Linux Manager 4.3: Server, Multi-Linux Manager 5.0: Server, Proxy and Retail Server, pgadmin4, rekor, rsync, rubygem-bundler, and webkit2gtk3), and Ubuntu (7zip, Docker, and quickjs).",
-          "link": "https://lwn.net/Articles/1017670/",
-          "publishedOn": "2025-04-16T13:10:40.000Z",
-          "wordCount": null,
-          "title": "Security updates for Wednesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017128/",
-          "author": "jake",
-          "description": "In the first filesystem-track session at the 2025 Linux Storage,\nFilesystem, Memory Management, and BPF Summit (LSFMM+BPF), virtual\nfilesystem (VFS) layer co-maintainer Christian Brauner had a few different\ntopics he wanted to talk about.  Issues on the agenda\nincluded iterating through anonymous mount namespaces, a needed feature\nfor ID-mapped mounts, the perennial unprivileged mounts topic, potentially\nusing hazard pointers for file reference counting, and Rust bindings.  He\ndid not expect to get through all of them in the 30 minutes allotted, but\nthe session did move along pretty quickly to at least\nintroduce them to the assembled filesystem developers.",
-          "link": "https://lwn.net/Articles/1017128/",
-          "publishedOn": "2025-04-16T00:01:10.000Z",
-          "wordCount": null,
-          "title": "[$] Topics from the virtual filesystem layer",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017565/",
-          "author": "corbet",
-          "description": "Security Week is one of several outlets reporting\nthat the funding for the CVE program at MITRE disappears as of\nApril 16.\n\n\n\tMaintained by MITRE Corporation, a not-for-profit organization that\n\toperates federal R&D centers, the CVE program is funded through\n\tmultiple channels, including the U.S. government, industry\n\tpartnerships, and international organizations. \n\t\n\tEarlier this month, in anticipation of the US government funding\n\tcuts, MITRE initiated layoffs that affected more than 400 employees\n\tin its Virginia office. The cuts were ordered after the Trump\n\tadministration announced more than $28 million in canceled\n\tcontracts for the company.",
-          "link": "https://lwn.net/Articles/1017565/",
-          "publishedOn": "2025-04-15T21:25:50.000Z",
-          "wordCount": null,
-          "title": "MITRE Warns CVE Program Faces Disruption (Security Week)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017538/",
-          "author": "jzb",
-          "description": "Version\n25.0 (\"Zetar\") of the Arch-based Manjaro Linux\ndistribution is now available. This release includes Linux kernel 6.12,\nGNOME 48, KDE 6.3, Xfce 4.18, and more.",
-          "link": "https://lwn.net/Articles/1017538/",
-          "publishedOn": "2025-04-15T14:36:38.000Z",
-          "wordCount": null,
-          "title": "Manjaro Linux 25.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017537/",
-          "author": "jzb",
-          "description": "The Fedora Project has announced\nthe release of Fedora Linux 42, with \"what's new\" articles for Fedora Workstation\nand Fedora KDE Plasma Desktop. There\nis also a last-minute warning about the live media for the release:\nWe discovered a problem with the Live boot media at the last\nminute, and since the release was already out of the airlock, we can't\ndo much about it. It doesn't damage anything, but is annoying: just\nbooting the Live media adds an unexpected entry to the UEFI boot\nloader even when Fedora Linux 42 is not installed to the local\nsystem.\nThis is primarily a concern when you are dual-booting with a\ndifferent operating system, or if you're just running the Live image\nand not intending to actually install.\nSee the release\nnotes for more information, and LWN's coverage of\nFedora 42.",
-          "link": "https://lwn.net/Articles/1017537/",
-          "publishedOn": "2025-04-15T14:25:11.000Z",
-          "wordCount": null,
-          "title": "Fedora Linux 42 released (Fedora Magazine)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1016845/",
-          "author": "jzb",
-          "description": "Fedora Linux 42 has been released with many\nincremental improvements and updates. In this development cycle, the KDE Plasma Desktop\nhas finally gotten a promotion from a spin to an\nedition, the new web-based\nuser interface for the Anaconda installer makes its debut, and the\nWayland-ification of Fedora continues apace. In all it is a solid\nrelease with lots of polish.",
-          "link": "https://lwn.net/Articles/1016845/",
-          "publishedOn": "2025-04-15T14:05:04.000Z",
-          "wordCount": null,
-          "title": "[$] Don't panic: Fedora 42 is here",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1016842/",
-          "author": "corbet",
-          "description": "It is common, on NUMA systems, to try to allocate all memory on the local\nnode, since it will be the fastest.  That is not the only possible policy,\nthough; another is weighted interleaving,\nwhich seeks to distribute allocations across memory controllers to maximize\nthe bandwidth utilization on each.  Configuring such policies can be\nchallenging, though.  At the 2025 Linux Storage, Filesystem,\nMemory-Management, and BPF Summit, Joshua Hahn ran a session in the\nmemory-management track about how that configuration might be automated.",
-          "link": "https://lwn.net/Articles/1016842/",
-          "publishedOn": "2025-04-15T13:25:49.000Z",
-          "wordCount": null,
-          "title": "[$] Automatic tuning for weighted interleaving",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017514/",
-          "author": "corbet",
-          "description": "Security updates have been issued by AlmaLinux (glibc), Red Hat (kernel and kernel-rt), Slackware (perl), SUSE (haproxy, kernel, and webkit2gtk3), and Ubuntu (cimg, perl, protobuf, and webkit2gtk).",
-          "link": "https://lwn.net/Articles/1017514/",
-          "publishedOn": "2025-04-15T13:22:53.000Z",
-          "wordCount": null,
-          "title": "Security updates for Tuesday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017438/",
-          "author": "jzb",
-          "description": "Version\n3.0 of the Pinta\nimage editor has been released. The most notable change in this\nrelease is that Pinta has been ported to GTK 4.0 and libadwaita. It\nalso includes a number of improvements, new effects, and bug fixes.",
-          "link": "https://lwn.net/Articles/1017438/",
-          "publishedOn": "2025-04-14T15:16:05.000Z",
-          "wordCount": null,
-          "title": "Pinta 3.0 released",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1016853/",
-          "author": "daroc",
-          "description": "BPF is, famously, not part of the kernel's promises of user-space stability. New\nkernels can and do break existing BPF programs; the BPF developers try to\nfix unintentional regressions as they happen, but the whole thing can be something of a bumpy\nride for users trying to deploy BPF programs across multiple kernel versions.\nShung-Hsi Yu and Daniel Xu had two different approaches to fixing the problem\nthat they presented at the 2025 Linux Storage, Filesystem,\nMemory-Management, and BPF Summit.",
-          "link": "https://lwn.net/Articles/1016853/",
-          "publishedOn": "2025-04-14T14:47:53.000Z",
-          "wordCount": null,
-          "title": "[$] In search of a stable BPF verifier",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1016724/",
-          "author": "corbet",
-          "description": "Andrew Morton, the lead maintainer for the kernel's memory-management\nsubsystem, tends to be quiet during the Linux Storage, Filesystem,\nMemory-Management, and BPF Summit, preferring to let the developers work\nthings out on their own.  That changes, though, when he leads the\ntraditional development-process session in the memory-management track.  At\nthe 2025 gathering, this discussion covered a number of ways in which the\nprocess could be improved, but did not unearth any significant problems.",
-          "link": "https://lwn.net/Articles/1016724/",
-          "publishedOn": "2025-04-14T14:42:29.000Z",
-          "wordCount": null,
-          "title": "[$] The state of the memory-management development process, 2025 edition",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017396/",
-          "author": "jake",
-          "description": "Security updates have been issued by Debian (glib2.0, jinja2, kernel, mediawiki, perl, subversion, twitter-bootstrap3, twitter-bootstrap4, and wpa), Fedora (c-ares, chromium, condor, corosync, cri-tools1.29, exim, firefox, matrix-synapse, nextcloud, openvpn, perl-Data-Entropy, suricata, upx, varnish, webkitgtk, yarnpkg, and zabbix), Mageia (giflib, gnupg2, graphicsmagick, and poppler), Oracle (delve and golang, go-toolset:ol8, grub2, and webkit2gtk3), Red Hat (kernel and kernel-rt), SUSE (chromium, fontforge-20230101, govulncheck-vulndb, kernel, liblzma5-32bit, pgadmin4, python311-Django, and python311-PyJWT), and Ubuntu (graphicsmagick).",
-          "link": "https://lwn.net/Articles/1017396/",
-          "publishedOn": "2025-04-14T13:35:33.000Z",
-          "wordCount": null,
-          "title": "Security updates for Monday",
-          "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1017325/",
-          "author": "corbet",
-          "description": "Linus has released 6.15-rc2 for testing.\n\"Nothing particularly stands out to me, but it's early in the release\nyet, so let's see how it goes.\"",
-          "link": "https://lwn.net/Articles/1017325/",
-          "publishedOn": "2025-04-13T22:04:47.000Z",
-          "wordCount": null,
-          "title": "Kernel prepatch 6.15-rc2",
-          "imageUrl": null
         }
       ]
     },
@@ -2679,6 +2629,26 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/exploring-gen-ai/16-building-custom-tooling-with-llms.html",
+          "author": null,
+          "description": "Tools that treat diagrams as code, such as PlantUML, are invaluable\n       for communicating complex system behavior. But Unmesh\n       Joshi often wished for an extension to walk through these\n       diagrams step-by-step. Yet, extending established tools like PlantUML\n       often involves significant initial setup - parsing hooks, build scripts,\n       viewer code, packaging - enough “plumbing” to deter rapid prototyping.\nHe narrates now he used an LLM to build a small extension\n       adding step-wise playback to PlantUML sequence diagrams. This illustrates\n       how syntax design, parsing, SVG generation, build automation, and an HTML\n       viewer were iteratively developed through a conversation with an LLM -\n       turning tedious tasks into manageable steps.\nmore…",
+          "link": "https://martinfowler.com/articles/exploring-gen-ai/16-building-custom-tooling-with-llms.html",
+          "publishedOn": "2025-05-14T14:10:00.000Z",
+          "wordCount": null,
+          "title": "Building Custom Tooling with LLMs",
+          "imageUrl": null
+        },
+        {
+          "id": "https://martinfowler.com/articles/exploring-gen-ai/software-supply-chain-attack-surface.html",
+          "author": null,
+          "description": "We have long recognized that developer environments represent a weak\n       point in the software supply chain. Jim Gumbley and Lilly\n       Ryan explore how agentic coding assistants expand the attack\n       surface of software supply chains and what measures we need to do to\n       safeguard security when using them.\nmore…",
+          "link": "https://martinfowler.com/articles/exploring-gen-ai/software-supply-chain-attack-surface.html",
+          "publishedOn": "2025-05-13T13:11:00.000Z",
+          "wordCount": null,
+          "title": "Coding Assistants Threaten the Software Supply Chain",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/articles/function-call-LLM.html",
           "author": null,
@@ -2734,26 +2704,6 @@
           "publishedOn": "2025-05-05T17:00:05.000Z",
           "wordCount": null,
           "title": "Cppcheck: Enhance C/C++ Code Quality with VS Code",
-          "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=41834",
-          "author": "Erich Styger",
-          "description": "The article discusses integrating semihosting with file I/O in VS Code DevContainers, addressing the challenge of differing file systems during remote debugging. A solution involves modifying file paths to be relative, ensuring compatibility with GNU coverage. By correctly setting the GDB server's directory, the issue is resolved efficiently. Continue reading →",
-          "link": "https://mcuoneclipse.com/2025/04/15/using-semihosting-and-file-i-o-in-devcontainers/",
-          "publishedOn": "2025-04-15T17:07:13.000Z",
-          "wordCount": null,
-          "title": "Using Semihosting and File I/O in DevContainers",
-          "imageUrl": null
-        },
-        {
-          "id": "http://mcuoneclipse.com/?p=41808",
-          "author": "Erich Styger",
-          "description": "The MCU-Link-MR is an affordable CMSIS-DAP debug probe developed by NXP and Lucerne University, designed for mobile robotic systems like Pixhawk drones. Priced under $20, it features enhanced ports for robotics and comes with pre-installed firmware, offering an easy update process and open-source project files for customization. Continue reading →",
-          "link": "https://mcuoneclipse.com/2025/04/13/mcu-link-mr-affordable-cmsis-dap-debug-probe-for-robotics-and-beyond/",
-          "publishedOn": "2025-04-13T09:56:10.000Z",
-          "wordCount": null,
-          "title": "MCU-Link-MR: Affordable CMSIS-DAP Debug Probe for Robotics and beyond",
           "imageUrl": null
         }
       ]
@@ -2884,16 +2834,6 @@
           "wordCount": null,
           "title": "Procedure nesting a once common idiom",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=9961",
-          "author": "Derek Jones",
-          "description": "What, if any, are the benefits of adding bureaucracy to a program by organizing a file’s source code into multiple function/method definitions (rather than a single function)? Having a single copy of a sequence of statements that need to be executed at multiple points in a program reduces implementation effort, and any updates only need […]",
-          "link": "https://shape-of-code.com/2025/04/13/functions-reduce-the-need-to-remember-lots-of-variables/",
-          "publishedOn": "2025-04-13T22:22:38.000Z",
-          "wordCount": null,
-          "title": "Functions reduce the need to remember lots of variables",
-          "imageUrl": null
         }
       ]
     },
@@ -2957,6 +2897,16 @@
       "siteUrl": "http://economicview.net",
       "articles": [
         {
+          "id": "http://economicview.net/?p=86270",
+          "author": "economicview",
+          "description": "By Ancientcointraders – https://www.ancientcointraders.com, CC BY-SA 4.0, Link 화폐의 광범위한 발전과 그 이후의 「화폐의 지속적 발전」을 결정짓는 것은 바로 화폐적 「교환거래」의 필요성들이다. 「원시화폐」는 개인적 상품, 재보 또는 귀중한 용도를 가진 물건 등이었다. 이러한 물건들은 「장신구」, 「무기」, 「도구」등과 같이 그 자체로 즉각적인 「수요충족」을 제공하는 것들이며, 「교환수단」으로서의 서비스는 말하자면 단지 부차적으로만 수행하는 것들이었다. 그러나 화폐로 사용되는 재화는 […]",
+          "link": "http://economicview.net/86270/",
+          "publishedOn": "2025-05-16T07:28:58.000Z",
+          "wordCount": null,
+          "title": "처음에는 교환수단이 부차적 기능이었던 화폐",
+          "imageUrl": null
+        },
+        {
           "id": "http://economicview.net/?p=86257",
           "author": "economicview",
           "description": "최근에 책을 읽으면서 고민 아닌 고민을 하고 있다. 책도 진득하게 읽지 못하는 주제에 – 책을 읽으면서도 늘 옆에 휴대전화를 끼고 있다 – 읽고 싶은 책은 많아서 다른 책을 펼쳐 읽게 되는 것이다. 소위 요즘 유행하는 표현으로 – 아마 트위터에서만 유행하는 듯 하지만 – “병렬독서”. ‘병렬’과 ‘독서’를 조합한 표현이기에 직관적으로 무슨 의미인지는 대략 짐작할 수 있고, […]",
@@ -3003,6 +2953,166 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=136631",
+          "author": "민주언론시민연합",
+          "description": "제21대 대통령선거 공식선거운동이 5월 12일 시작됐습니다. 이재명 더불어민주당 후보, 김문수 국민의힘 후보, 이준석 개혁신당 후보, 권영국 민주노동당 후보, 구주와 자유통일당 후보, 송진호 무소속 후보, 황교안 무소속 후보 7명이 6월 2일까지 대장정에 돌입했습니다. 국민의힘은 주말 내내 후보교체 파동을 겪은 터라 공식선거운동이 시작됐음에도 선거운동원들은 물론 김문수 후보조차 공식 선거운동복을 입지 못하거나 유세차량 투입이 늦어지는 모습이 포착됐습니다. ‘1일...\nThe post 국힘 지도부 “후보 약탈 자폭” 이구동성 비판… 단, KBS·TV조선은 빼고! appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136631",
+          "publishedOn": "2025-05-16T09:50:12.000Z",
+          "wordCount": null,
+          "title": "국힘 지도부 “후보 약탈 자폭” 이구동성 비판… 단, KBS·TV조선은 빼고!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136626",
+          "author": "민노씨",
+          "description": "22대 국회가 개원했습니다. 유권자의 소중한 한 표, 한 표를 읍소하며 당선된 300명의 국회의원이 과연 유권자를 위해 제대로 일하는지 지켜보고 감시해야 할 때입니다. 이들이 어떤 일을 하는지, 어떤 일을 해야 하는데 안하는지에 따라 우리의 삶이 달라지니까요. 참여연대 의정감시센터는 칼럼을 통해 유권자의 시각에서 22대 국회와 정치를 비평합니다. 무엇보다 ‘중’요한 건 ‘꺾’이지 않는 ‘정’치개혁이니까요. 선거 시기 특히 대선은...\nThe post 누가 누굴 속였나: ‘막장’ 국힘 단일화 사태 돌아보기 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136626",
+          "publishedOn": "2025-05-16T08:38:11.000Z",
+          "wordCount": null,
+          "title": "누가 누굴 속였나: ‘막장’ 국힘 단일화 사태 돌아보기",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136619",
+          "author": "소셜코리아",
+          "description": "“노인이 집에서 의료·돌봄서비스를 받는 지역사회 통합 돌봄체계를 구축하겠다.” – 이재명(더불어민주당 대통령 후보) “치매 안심 국가책임제를 강화하고 치매 돌봄 코디네이션을 확대하겠다.” – 김문수(국민의힘 대통령 후보) 제21대 대통령 선거 레이스가 본격화하자 대통령 후보들이 돌봄을 화두로 정책 공약을 쏟아내기 시작했다. 이번 대선은 대한민국의 낡은 돌봄 시스템을 혁파하고, ‘돌봄 복지국가’로 도약할 절호의 기회다. 고령화, 장애, 고립, 자살, 정신건강 위기...\nThe post 돌봄은 권리다: 간병살인 시대…돌봄 복지국가 위한 5가지 제언 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136619",
+          "publishedOn": "2025-05-16T08:08:23.000Z",
+          "wordCount": null,
+          "title": "돌봄은 권리다: 간병살인 시대…돌봄 복지국가 위한 5가지 제언",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136591",
+          "author": "이정환",
+          "description": "국민의힘의 추락에 가속도가 붙었다. 민주당이 5년 만에 최고 지지율을 기록했다. 국민의힘 지지율이 30%까지 빠졌고 민주당 지지율은 48%를 찍었다. 5월 셋째 주 한국갤럽 여론조사 결과다. 이재명(민주당 후보)은 한국갤럽 여론조사에서 51%를 확보, 처음으로 과반을 확보했다. 김문수(국민의힘 후보)도 한국갤럽 기준으로는 가장 높은 지지율이지만 29%에 그쳤다. 이게 왜 중요한가. 김문수의 30% 벽. 이준석은 10%를 넘길까. 진보 결집. 전망: 변수가...\nThe post 자멸하는 김문수, 정당 지지율보다 높은 이재명 지지율. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136591",
+          "publishedOn": "2025-05-16T03:31:19.000Z",
+          "wordCount": null,
+          "title": "자멸하는 김문수, 정당 지지율보다 높은 이재명 지지율.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136547",
+          "author": "이정환",
+          "description": "📻 ‘팟캐스트’로 슬로우레터 듣기 (약 6분) 팟캐스트로 슬로우레터를 들을 수 있습니다. 생성형 인공지능 기반의 리서치 어시스턴트 구글 노트북LM을 이용해서 제작한 팟캐스트입니다. D-18, 콘크리트 지지율. “당선이 아니라 후보가 목표였나.” 김문수가 윤석열에게 “탈당하지 말아달라.” 쟁점과 현안. 노동운동가 출신이라더니. 성장이 먼저, 분배는 나중에. 사다리가 끊겼다. 김상욱, 국민의힘 탈당하고 이재명 지지선언. 홍준표 설득하러 하와이행. 유권자 86%, “반드시 투표한다.” 더...\nThe post 검찰 정권 3년, 벌금 못 내서 감옥 가는 ‘장발장’ 두 배 늘었다: 슬로우레터 5월16일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136547",
+          "publishedOn": "2025-05-15T22:32:14.000Z",
+          "wordCount": null,
+          "title": "검찰 정권 3년, 벌금 못 내서 감옥 가는 ‘장발장’ 두 배 늘었다: 슬로우레터 5월16일.",
+          "enclosure": {
+            "url": "https://slownews.kr/wp-content/uploads/2025/05/letter_2025.05.16.mp3",
+            "length": "1362092",
+            "type": "audio/mpeg"
+          },
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136535",
+          "author": "소셜코리아",
+          "description": "어처구니 없는 비상계엄 선언과 헌법재판소의 대통령 탄핵심판을 통해 당초 일정보다 2년이나 앞당겨 6월 3일 대통령 선거가 실시될 예정이다. 이번 대통령 선거는 단순히 새로운 대통령을 선택하는 데 머물러서는 안된다. 우리 사회의 복합적인 위기를 해소하고 우리나라의 민주주의를 한 단계 발전시킬 수 있도록 국민적 지지를 기반으로 추진력을 확보하는 기회가 되어야 한다. 오늘날 우리 사회는 대외적인 안보 위기, 디지털...\nThe post 4대 ‘지역 초광역권’ 육성이 최우선 과제다 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136535",
+          "publishedOn": "2025-05-15T10:15:25.000Z",
+          "wordCount": null,
+          "title": "4대 ‘지역 초광역권’ 육성이 최우선 과제다",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136504",
+          "author": "김훤주",
+          "description": "고성 둠벙 시말기 (연재) 둠벙이 없는 논은? 둠벙이 없는 논도 있었습니다. 두 가지였습니다. 하나는 물이 좋아서 둠벙이 필요 없는 논이었고 다른 하나는 둠벙이 필요한 천수답인데도 토질이 맞지 않아 파지 못하는 논이었습니다. 둠벙이 필요 없는 논은 이렇습니다. 아래쪽에 있는 논이 위에서 물이 내려오니까 좋을 것 같지만 실제로는 그렇지 않습니다. 산삐알(산비탈) 위쪽 골(골짜기) 안에 있는 논이 물이...\nThe post 둠벙의 있고 없고와 크고 작고는 어떻게 결정될까? appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136504",
+          "publishedOn": "2025-05-15T08:10:29.000Z",
+          "wordCount": null,
+          "title": "둠벙의 있고 없고와 크고 작고는 어떻게 결정될까?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136362",
+          "author": "김도연",
+          "description": "“글로벌 플랫폼 기업은 국내 자산을 이용해 막대한 부를 챙기면서도 세금이나 사회적 책임은 철저히 외면하고 있다.” 가천대 경영학부 교수 전성민의 문제 의식이다. 글로벌 빅테크 기업이 한국에서 수조 원의 매출을 올리고도 법인세는 제대로 내지 않는다는 것이다. 국민의 검색 데이터, 소비 패턴, 위치 정보 등 국내 자산을 이용해 벌어들인 수익이 해외로 이전되어 조세피난처를 경유하면 자금 추적 자체가 어렵다....\nThe post 구글코리아가 21년 동안 떼먹은 세금 최대 18조 원. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136362",
+          "publishedOn": "2025-05-15T02:21:16.000Z",
+          "wordCount": null,
+          "title": "구글코리아가 21년 동안 떼먹은 세금 최대 18조 원.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136439",
+          "author": "이정환",
+          "description": "📻 ‘팟캐스트’로 슬로우레터 듣기 (약 7분) 팟캐스트로 슬로우레터를 들을 수 있습니다. 생성형 인공지능 기반의 리서치 어시스턴트 구글 노트북LM을 이용해서 제작한 팟캐스트입니다. “당에 남아있는 게 도움이 된다는 생각.” “’윤 어게인’ 지지자들도 많다.” 쟁점과 현안. 윤석열 찍었던 유권자 절반만 김문수 지지. 이재명-이준석 양자 대결은 54:32. 이준석 비호감도 67%. 대선 때마다 깨지는 징크스. 지난해 퇴직 교사 9194명. 법원...\nThe post 지지율은 한 번도 뒤집힌 적 없다, 깨진 적 없는 대선 징크스: 슬로우레터 5월15일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136439",
+          "publishedOn": "2025-05-14T22:24:56.000Z",
+          "wordCount": null,
+          "title": "지지율은 한 번도 뒤집힌 적 없다, 깨진 적 없는 대선 징크스: 슬로우레터 5월15일.",
+          "enclosure": {
+            "url": "https://slownews.kr/wp-content/uploads/2025/05/letter_2025.05.15.mp3",
+            "length": "1572812",
+            "type": "audio/mpeg"
+          },
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136428",
+          "author": "정혜승",
+          "description": "지난겨울 이후 마음으로는 내전 상태다. 헌정질서를 파괴하는 내란 시도에 놀란 것보다, 그게 정당하다는 이들이 적지 않다는데 더 놀랐다. 집권 여당은 내란수괴 편에 서서 비상계엄을 옹호했다. 서부법원 폭동 사태는 안전하다고 믿었던 공동체에 대한 신뢰를 무너뜨렸다. 우리는 대선 후보에 대한 테러를 진심으로 걱정하기 시작했다. 우리만 그런가? 외국에서 들려오는 소식도 민주주의 퇴행을 부인할 수 없게 만든다. 세계 대전은...\nThe post 내전의 조건: 내전은 어떻게 일어나는가 appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136428",
+          "publishedOn": "2025-05-14T09:01:04.000Z",
+          "wordCount": null,
+          "title": "내전의 조건: 내전은 어떻게 일어나는가",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136415",
+          "author": "이정환",
+          "description": "바야흐로 생성형 AI의 시대. 기자들은 저널리즘의 본질이 무엇이냐는 오래된 질문을 맞닥뜨리게 된다. 검색이 사라진 시대, 언론은 어떻게 독자들과 만날 것인가. 한국언론진흥재단이 ‘언론의 위기와 혁신 방안’이라는 주제로 진행한 세미나의 주요 발표와 토론을 정리했다. 고품질 뉴스와 저품질 뉴스의 공존. 바닥을 향한 경쟁, 세 가지 원인. 맵고 짠 뉴스의 시대. 어텐션과 문해력의 동시 붕괴. 기획도 좋지만 데일리에서 승부를...\nThe post AI에 질문하는 시대, 저널리즘의 정체성을 다시 정의해야 한다. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136415",
+          "publishedOn": "2025-05-14T07:06:08.000Z",
+          "wordCount": null,
+          "title": "AI에 질문하는 시대, 저널리즘의 정체성을 다시 정의해야 한다.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136368",
+          "author": "이정환",
+          "description": "📻 ‘팟캐스트’로 슬로우레터 듣기 (약 7분) 팟캐스트로 슬로우레터를 들을 수 있습니다. 생성형 인공지능 기반의 리서치 어시스턴트 구글 노트북LM을 이용해서 제작한 팟캐스트입니다. 김건희, 오늘 검찰 출석 안 한다. 쟁점과 현안. 보수의 느린 결집. ARS와 전화면접, 격차도 줄었다. 이재명과 김문수의 박정희 마케팅. “재매이가 남이가” “문수가 불쌍타.” “윤석열 탈당은 본인의 뜻.” 이병태 아웃. 더 깊게 읽기. 근로소득자 면세자...\nThe post 김건희가 검찰 출석 안 하겠다며 내세운 세 가지 이유: 슬로우레터 5월14일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136368",
+          "publishedOn": "2025-05-13T22:31:35.000Z",
+          "wordCount": null,
+          "title": "김건희가 검찰 출석 안 하겠다며 내세운 세 가지 이유: 슬로우레터 5월14일.",
+          "enclosure": {
+            "url": "https://slownews.kr/wp-content/uploads/2025/05/letter_2025.05.14.mp3",
+            "length": "1633772",
+            "type": "audio/mpeg"
+          },
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136330",
+          "author": "김훤주",
+          "description": "고성 둠벙 시말기 (연재) 둠벙이란? 둠벙이란 논에 마련한 작은 웅덩이를 가리키는 말입니다. 오랜 옛날부터 있어 왔는데 조상들이 논농사에 필요한 물을 모아두기 위해 창안한 수리 관개 시설입니다. 옛날에는 논농사를 하는 데라면 전국 어디에나 흔하게 있었지만, 지금은 대부분 사라져서 보기 드문 실정입니다. 저수지와 지하수가 대거 개발되면서 그 필요성이 줄어든 데 따른 현상이라 할 수 있습니다. 그런데 고성군에는...\nThe post 논의 생명줄, ‘둠벙’을 아십니까? appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136330",
+          "publishedOn": "2025-05-13T07:04:55.000Z",
+          "wordCount": null,
+          "title": "논의 생명줄, ‘둠벙’을 아십니까?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://slownews.kr/?p=136235",
+          "author": "이정환",
+          "description": "📻 ‘팟캐스트’로 슬로우레터 듣기 (약 5분) 팟캐스트로 슬로우레터를 들을 수 있습니다. 생성형 인공지능 기반의 리서치 어시스턴트 구글 노트북LM을 이용해서 제작한 팟캐스트입니다. “사과하실 생각이 있나요?” “의원들 끌어내란 말 들었다.” 쟁점과 현안. “나는 비상계엄에 찬성한 적 없다.” 김문수의 빨간 점퍼에 없는 것. 권성동이 선대위원장이라니. 민주당 목표는 58%. “준비된 대통령” vs. “가짜 진보 찢어버리고 싶다.” 공약 1순위는 경제....\nThe post 선거운동 첫날, 김문수 빨간 점퍼에 없었던 것: 슬로우레터 5월13일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/136235",
+          "publishedOn": "2025-05-12T22:18:45.000Z",
+          "wordCount": null,
+          "title": "선거운동 첫날, 김문수 빨간 점퍼에 없었던 것: 슬로우레터 5월13일.",
+          "enclosure": {
+            "url": "https://slownews.kr/wp-content/uploads/2025/05/letter_2025.05.13.mp3",
+            "length": "1302764",
+            "type": "audio/mpeg"
+          },
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=136210",
           "author": "한상기",
@@ -3602,176 +3712,6 @@
           "wordCount": null,
           "title": "“갑자기 어두운 터널로 들어온 느낌”, 한은 총재의 경고: 슬로우레터 4월18일.",
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=134054",
-          "author": "소셜코리아",
-          "description": "12.3 비상계엄과 내란 사태가 일어나고 헌법재판소가 대통령 파면을 선고하기까지 우리는 국가 시스템이 무너지고 극단적 갈등과 폭력이 존재하는 디스토피아적 현실을 경험했다. 물론 이 혼란의 근본 원인은 우리 사회의 근간인 민주주의와 법치주의를 파괴한 비상계엄과 내란행위다. 2024년 12월 3일 비상계엄이 선포된 후 국회에 군인들이 투입되고 시민들이 막아선 장면은 너무도 비현실적이었다. 그러나 지난 1월 19일 새벽 대통령 구속을 반대하는...\nThe post 극우 유튜브, 어떻게 대응할 것인가 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/134054",
-          "publishedOn": "2025-04-17T07:36:05.000Z",
-          "wordCount": null,
-          "title": "극우 유튜브, 어떻게 대응할 것인가",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=134037",
-          "author": "민주언론시민연합",
-          "description": "노종면 등 해고한 극우 유튜버 ‘김백’의 복귀 2024년 2월 유진기업이 최대주주가 된 뒤 보도전문채널 YTN은 아비규환의 시대를 겪고 있다. 이명박 정권 시절 낙하산 사장을 반대했다는 이유로 노종면 등 6명을 해고하고 33명을 중징계해 ‘YTN 5적’으로 지목됐던 김백은 8년 만에 YTN 사장으로 복귀했다. ‘유진강점기’ 신호탄이었다. 윤석열을 떠받드는 극우 유튜버에 불과했던 김백은 사장 취임 직후 김건희 검증 보도...\nThe post YTN을 이대로 둘 것인가 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/134037",
-          "publishedOn": "2025-04-17T05:32:25.000Z",
-          "wordCount": 4896,
-          "title": "YTN을 이대로 둘 것인가",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/04/1fac7b360e2e6030ed2a8a060a145136.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=134028",
-          "author": "김도연",
-          "description": "희망제작소가 임산부 배지를 모으고 있다. 다 쓴 배지를 돌려 받아 다시 나누자는 캠페인이다. 희망제작소는 2006년 당시 임산부 배려 캠페인 일환으로 보건복지부와 함께 임산부 배지와 가방 고리를 제작해 배포했다. 초기 임신부는 겉모습으론 식별이 어려워 버스와 지하철을 이용할 때 자리를 양보 받지 못하는 불편을 줄이기 위한 아이디어였다. 정부는 그해 10월10일 제1회 ‘임산부의 날’을 맞아 전국 보건소와 산부인과에...\nThe post 출산 성공? 임산부 배지, 버리지 말고 다시 나눠요. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/134028",
-          "publishedOn": "2025-04-17T05:04:37.000Z",
-          "wordCount": null,
-          "title": "출산 성공? 임산부 배지, 버리지 말고 다시 나눠요.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=132305",
-          "author": "민노씨",
-          "description": "자주 떠올리는 말. “말에는 그 최초의 말도 그 최후의 말도 존재하지 않는다. 이 세상의 의미는 결코 사라지는 법이 없다. 그 모든 의미는 언젠가 찬란한 귀향의 축제를 맞이할 것이다.”(미하일 바흐친). 주은선(경기대 교수)은 “연금개혁의 절반은 ‘노동개혁'”이라고 말했다. 그 구체적인 의미가 궁금했다. 이상헌(ILO 고용정책국장)에게 물었다. 연금과 정년으로 시작된 인터뷰는 끝날 때쯤 ‘광장’으로 이어졌다. 바흐친의 신비로운 잠언처럼 세상 모든...\nThe post 마을은 사라지고 광장만 남았다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/132305",
-          "publishedOn": "2025-04-17T03:55:12.000Z",
-          "wordCount": 6807,
-          "title": "마을은 사라지고 광장만 남았다",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/04/GettyImages-a10419413.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=133971",
-          "author": "이정환",
-          "description": "“극심한 혼란 우려”, 헌재가 한덕수 폭주 막았다. 권한대행의 권한 범위. 한덕수의 난, 이미 게임 끝. 쑥 들어간 한덕수 차출론. 쟁점과 현안. 윤석열을 지워야 산다. 대통령 관저 압수수색 또 실패. 삼청동 안가 압수수색 영장은 검찰이 기각. 더 깊게 읽기. 245%까지 올린다. 관세 전쟁 고통, 미국이 더 크다. “조세 부담률 22% 이상으로.” 다르게 읽기. 역선택 막는다면서 TK...\nThe post 내란 종식, 끝날 때까지 끝난 게 아니라는 말이 나오는 이유: 슬로우레터 4월17일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133971",
-          "publishedOn": "2025-04-16T22:45:45.000Z",
-          "wordCount": 7246,
-          "title": "내란 종식, 끝날 때까지 끝난 게 아니라는 말이 나오는 이유: 슬로우레터 4월17일.",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/04/404146113_7515146125179846_5309598209985484144_n-1000x667.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=133922",
-          "author": "김훤주",
-          "description": "👨‍⚖️문형배 이야기 기울어진 운동장 한때 노회찬을 두고 많은 사람들이 급진 좌파라고 오해한 적이 있다. 지금도 국민의 힘 같은 수구 극우들은 노회찬이 몸담았던 정의당을 두고 극좌라는 극언을 일삼는다. 하지만 세계 보편의 관점에서 보면 그들은 한가운데에서 약간 왼쪽에 있는 중도좌파일 뿐이다. 그런데도 그들이 급진좌파로 간주되는 것은 우리 사회가 지나치게 오른쪽으로 기울어져 있기 때문이다. 문형배의 경우도 마찬가지다. 그를...\nThe post 문형배 이야기: 6. 보수주의자 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133922",
-          "publishedOn": "2025-04-16T07:10:24.000Z",
-          "wordCount": null,
-          "title": "문형배 이야기: 6. 보수주의자",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133915",
-          "author": "참여연대 의정감시센터",
-          "description": "22대 국회가 개원했습니다. 유권자의 소중한 한 표, 한 표를 읍소하며 당선된 300명의 국회의원이 과연 유권자를 위해 제대로 일하는지 지켜보고 감시해야 할 때입니다. 이들이 어떤 일을 하는지, 어떤 일을 해야 하는데 안하는지에 따라 우리의 삶이 달라지니까요. 참여연대 의정감시센터는 칼럼을 통해 유권자의 시각에서 22대 국회와 정치를 비평합니다. 무엇보다 ‘중’요한 건 ‘꺾’이지 않는 ‘정’치개혁이니까요. 민주화 이후 시민들의 오랜...\nThe post 정치의 시간, 혐오의 정치를 선호의 정치로 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133915",
-          "publishedOn": "2025-04-16T05:57:31.000Z",
-          "wordCount": null,
-          "title": "정치의 시간, 혐오의 정치를 선호의 정치로",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133814",
-          "author": "김도연",
-          "description": "한화에어로스페이스가 떨군 ‘단군 이래 최대의 유상증자’ 폭탄이 상법 개정의 불쏘시개가 되고 있다. 한화그룹을 뒤흔든 유상증자 사태는 ‘경영권 3세 승계’ 이슈와 맞물리며, 지배 주주 이익을 위해 소수 주주를 내팽개친 사건으로 여론의 뭇매를 맞고 있다. 민주당은 이 틈을 놓치지 않고 상법 개정을 재점화하고 있다. 기업 이사의 충실 의무 대상을 기존 ‘회사’에서 ‘회사 및 주주’로 확대, 전체 주주...\nThe post “삼성의 비극 못봤나? 한화 유상증자 본질은 편법 승계 시드머니.” appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133814",
-          "publishedOn": "2025-04-16T05:22:49.000Z",
-          "wordCount": null,
-          "title": "“삼성의 비극 못봤나? 한화 유상증자 본질은 편법 승계 시드머니.”",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133848",
-          "author": "이정환",
-          "description": "세월호 11주기. D-48, ‘어대명’과 반명 빅텐트. 김성훈, “이달 내 사퇴하겠다.” 쟁점과 현안. 추경 12조 원 찔끔. 한덕수의 헌재 알 박기가 위험한 이유. 재판관 지명 가처분 곧 결론 나온다. 이유도 모르는 ‘민감국가’ 지정, 결국 발효. 트럼프가 한덕수에게 “대선 나갈 거냐”고 물은 이유. 관세 협상 속도전. 더 깊게 읽기. 알래스카 사업 덥석 물면 안 된다. 다르게 읽기....\nThe post ‘이재명 대통령’ 공격 시나리오, 한덕수의 헌재 ‘알박기’가 위험한 이유: 슬로우레터 4월16일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133848",
-          "publishedOn": "2025-04-15T22:30:25.000Z",
-          "wordCount": null,
-          "title": "‘이재명 대통령’ 공격 시나리오, 한덕수의 헌재 ‘알박기’가 위험한 이유: 슬로우레터 4월16일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133827",
-          "author": "참여연대 사법감시센터",
-          "description": "수원 등지에서 정씨 부부와 아들은 ‘무자본 갭투자’ 방식으로 500명 이상에게 약 760억 원의 전세사기 피해를 입혔습니다. 특히 감정평가사인 아들은 정씨 부부가 요청한 감정가에 맞춰 건물의 가치를 부풀려 감정했는데요. 정씨 일가는 1심에서 사기죄 혐의는 유죄를 선고 받았지만, ‘감정평가법 위반 혐의’에 대해서는 무죄를 선고 받았습니다. 재판부는 ‘고의’가 아니었다는 이유를 들었는데요. 판결의 부당함에 대해 주택세입자법률지원센터(세입자 114) 운영위원장 김태근...\nThe post 가족 전세사기단 수원 정씨 일가, 감정평가법 무죄? appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133827",
-          "publishedOn": "2025-04-15T08:19:25.000Z",
-          "wordCount": null,
-          "title": "가족 전세사기단 수원 정씨 일가, 감정평가법 무죄?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133811",
-          "author": "김훤주",
-          "description": "👨‍⚖️문형배 이야기 가족이 모두 이사한 까닭은 1965년 경남 하동에서 태어난 문형배는 법관으로 임용된 이후 1992년부터 줄곧 부산·경남에서 판사 생활을 했다. 부산지방법원과 부산지법 동부지원, 창원지방법원과 창원지법 진주지원, 부산고등법원과 부산가정법원이 그의 근무처였다. 이른바 엘리트 법관의 출세 코스인 서울중앙지방법원∙서울고등법원∙법원행정처에서는 일한 적 없는 100% 지역법관이었다. 문형배는 2004년 2월 부장판사로 승진하면서 처음으로 부산을 벗어나 창원지방법원으로 옮겨왔고 그때부터 2007년 2월까지 3년...\nThe post 문형배 이야기: 5. 지역법관 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133811",
-          "publishedOn": "2025-04-15T07:22:00.000Z",
-          "wordCount": null,
-          "title": "문형배 이야기: 5. 지역법관",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133792",
-          "author": "소셜코리아",
-          "description": "2024년 노벨경제학상을 수상한 대런 아세모글루, 사이먼 존슨 그리고 제임스 로빈슨, 이 세 경제학자의 답은 지극히 간단명료하다. 사회혁신과 경제(기술)혁신의 길을 정치적 강자와 경제적 강자의 특권질서가 가로막고 있을 때 국가는 실패한다. 이들의 저술에는 이 명제를 예시하는 흥미진진한 역사적 사례들이 펼쳐진다. 소수의 엘리트 집단에 정치와 경제 권력이 집중된 고대 잉카제국의 실패, 원주민과 흑인을 노예로 삼고 자원 수탈을 일삼았던...\nThe post 갈림길에 선 한국, 혁신은 창조적 (특권 질서) 파괴다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133792",
-          "publishedOn": "2025-04-15T03:35:39.000Z",
-          "wordCount": null,
-          "title": "갈림길에 선 한국, 혁신은 창조적 (특권 질서) 파괴다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133760",
-          "author": "이정환",
-          "description": "D-49, 힘 빠진 경선. 쟁점과 현안. 93분 동안 혼자 말했다. “직업은 전직 대통령이죠.” 끝까지 거짓말. 부하들을 비난했다. 더 깊게 읽기. 국민의힘의 희망회로? 망상 각본에 삼류 기획. 한덕수의 급발진. “마지막 소명 다하겠다.” 조선일보는 한덕수가 1면 머리기사. “100조 원 투자, 한국형 챗GPT 만들자.” 미국에 희토류 수출 막는다. 중국의 수를 잘못 읽었다. 여론조작용 휴대폰 100여 대. 재정준칙은 넣어두자....\nThe post 포스트 윤석열, 내란 옹호하는 정당이 제1야당이 돼도 되나: 슬로우레터 4월15일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133760",
-          "publishedOn": "2025-04-14T22:39:08.000Z",
-          "wordCount": null,
-          "title": "포스트 윤석열, 내란 옹호하는 정당이 제1야당이 돼도 되나: 슬로우레터 4월15일.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133727",
-          "author": "한상기",
-          "description": "지난주는 구글 클라우드 넥스트가 있었고, 뉴스가 쏟아져 나왔다. 특히 에이전트 간 커뮤니케이션 프로토콜 A2A에 이목이 쏠렸고, 이를 앤스로픽의 MCP와 연계하면 다중 에이전트 환경을 위한 기반 프레임워크의 기초를 구성할 수 있다는 기대감이 형성되기도 했다. 매년 나오는 스탠퍼드 HAI의 AI 인덱스 보고서도 눈길을 끌었다. 우리나라 관련 정부 부처는 한국이 어떻게 언급됐는지 순위는 어떤지 꽤 민감하게 반응한다. 그런데...\nThe post 구글 클라우드 넥스트 2025, ‘A2A’에 이목이 쏠리다 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133727",
-          "publishedOn": "2025-04-14T08:41:56.000Z",
-          "wordCount": null,
-          "title": "구글 클라우드 넥스트 2025, ‘A2A’에 이목이 쏠리다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133710",
-          "author": "김훤주",
-          "description": "👨‍⚖️문형배 이야기 재건축조합 부패 사건, 3명에게 징역 5년 금권선거나 부패 사건에 대한 문형배의 엄정한 판결은 그 뒤로도 이어졌다. “사법부가 신뢰를 되찾으려면 그동안 온정주의 판결을 내렸던 공무원·기업가 등 사회지도층의 범죄를 엄단해야 한다.”는 자기 생각을 그대로 실천했다. 그의 엄정한 판결에 지역사회는 환호했으며 창원지법에 대한 기대와 신뢰는 곧바로 수직상승했다. 문형배의 이런 판단은 공무원 등 공직 사회만 대상으로 하는...\nThe post 문형배 이야기: 4. 공엄사관(공은 엄하게 사는 관대하게) appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133710",
-          "publishedOn": "2025-04-14T07:08:38.000Z",
-          "wordCount": 4998,
-          "title": "문형배 이야기: 4. 공엄사관(공은 엄하게 사는 관대하게)",
-          "imageUrl": "https://slownews.kr/wp-content/uploads/2025/04/adfasdfasdpic_002.jpg"
-        },
-        {
-          "id": "https://slownews.kr/?p=133703",
-          "author": "민노씨",
-          "description": "지금 KBS 구성원들은 힘든 싸움을 하고 있습니다. 내란 우두머리 윤석열이 파면되었지만, 여전히 KBS에는 내란 정권에 부역하고 KBS를 용산에 헌납했던 세력이 똬리를 틀고 있습니다. 그들에게 KBS는 국민의 방송이 아니라 마지막까지 자기 잇속을 챙겨 먹기 위한 수단일 뿐입니다. 그들에게 KBS는 공영방송이 아니라 본인들이 호가호위할 수 있다면 권력과 거래할 수 있는 수단에 불과합니다. 긴 싸움의 역사 KBS의 힘든...\nThe post 윤석열 파면, 그래도 KBS 노조가 계속 싸우는 이유 appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133703",
-          "publishedOn": "2025-04-14T04:19:25.000Z",
-          "wordCount": null,
-          "title": "윤석열 파면, 그래도 KBS 노조가 계속 싸우는 이유",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=133652",
-          "author": "이정환",
-          "description": "관세 예외가 아니라 다른 관세로. D-50 본격 대선판, 격차가 벌어졌다. 쟁점과 현안. “다 이기고 돌아온 거니 걱정 마세요.” ‘과잠’ 입고 와달라 했다. “윤 어게인.” 지귀연은 왜 그럴까. 막가? MKGA. 더 깊게 읽기. 민주당 경선은 당원 50%+국민 50%. 찬탄파 빠진 국민의힘 경선. 민주당은 4파전. 미국의 패권이 저물고 있다. 달러 가치 급락, 금값은 급등. 10% 관세, 가구당...\nThe post 윤석열만 예외, 오늘 법정 출석 포토라인 안 선다: 슬로우레터 4월14일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/133652",
-          "publishedOn": "2025-04-13T22:21:49.000Z",
-          "wordCount": null,
-          "title": "윤석열만 예외, 오늘 법정 출석 포토라인 안 선다: 슬로우레터 4월14일.",
-          "imageUrl": null
         }
       ]
     },
@@ -3780,6 +3720,16 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=598205",
+          "author": "happist",
+          "description": "24년 자동차 영업이익률 순위, 24년 연간 기준 자동차 메이커들의 판매량과 영업이익률을 조사하고 영업이익률이 높은 순으로 표로 정리해 보고자 한다. 목표는 테슬라 주가 전망을 보기위해 경쟁사들의 영업이익 수준을 비교해 보기위해서이다. 2024년 글로벌 자동차 메이커 판매량 및 영업이익률 한때 테슬라 영업이익ㄹ류이 10% 중반을 넘으면서 가장 빠르게 성장하는 자동차 회사이면서고 이익도 같장 높은 회사라ㅡㄴㄴ 타이틀을 가졌는데 24년이후 테슬라 […]",
+          "link": "https://happist.com/598205/24%eb%85%84-%ec%9e%90%eb%8f%99%ec%b0%a8-%ec%98%81%ec%97%85%ec%9d%b4%ec%9d%b5%eb%a5%a0-%ec%88%9c%ec%9c%84",
+          "publishedOn": "2025-05-13T09:16:29.000Z",
+          "wordCount": null,
+          "title": "24년 자동차 영업이익률 순위",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=598202",
           "author": "happist",
@@ -4049,46 +3999,6 @@
           "wordCount": null,
           "title": "한국 명의를 찾아, 대한민국 명의 리스트",
           "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597911",
-          "author": "happist",
-          "description": "이번 커피 프랜차이즈 실적 분석은 스타벅스 코리아, 투썸플레이스, 메가커피, 이디야, 탐앤탐스,풀바셋, 커피빈, 컴포즈커피 등 8개 업체를 대상으로 했다. 그 외 다른 업체들의 24년 실적을 확인할 수 없었다. 위에서 언근하고 아 아래에 기록된 탐앤탐스 실적은 오기입된 수치이다. 탐앤탐스 실적은 워낙 적자가 심해서 챙피한지 최근 실적은 알려지지 않았다 커피 프랜차이즈 매출 순위 24년 커피 프랜차이즈 매츨 순위를 […]",
-          "link": "https://happist.com/597911/24%eb%85%84-%ec%bb%a4%ed%94%bc-%ed%94%84%eb%9e%9c%ec%b0%a8%ec%9d%b4%ec%a6%88-%ec%8b%a4%ec%a0%81",
-          "publishedOn": "2025-04-16T21:45:59.000Z",
-          "wordCount": null,
-          "title": "24년 커피 프랜차이즈 실적 분석",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597882",
-          "author": "happist",
-          "description": "이번에는 서울 올림픽공원 벚꽃을 담아보았다. 먼저 석촌호수 벚꽃을 본 후 서둘러서 올림피공원으로 향했다. 솔직히 올림픽공원 벚꽃이 멋질지는 몰랐다. 서울 석촌호수 서호1 공영주차장을 나와 우회전 후 계솟 직진하면 올림픽공원이 보인다. 자동차는 들어갈 수는 없지만 사람들은 들어갈 수 있는 정문이 나온다. 원래 팔각정 벚꽃이 아름답다는 사전 정보에 따라 올림픽파크텔에 주차를 하려했다. 올림픽공원 세계 평화의문 그러나 올림픽공원의 상징이라고 […]",
-          "link": "https://happist.com/597882/%ec%98%ac%eb%a6%bc%ed%94%bd%ea%b3%b5%ec%9b%90-%eb%b2%9a%ea%bd%83",
-          "publishedOn": "2025-04-16T12:41:18.000Z",
-          "wordCount": null,
-          "title": "서울 올림픽공원 벚꽃을 보다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597880",
-          "author": "happist",
-          "description": "미국 주식 전망이 하향되고 있다 리스크 관리가 필요할떼이다. 씨티, 미국 주식 전망(S&P 500 전망) 5,800으로 하향” 씨티 전략가 스콧 크로너트는 미국 주식 전망(S&P500 전망)을 5,800으로 하양 조정했다. 이러한 조정은 S&P500 기업들의 실적 성장률 전망이 악화했다는 분석에 의한 것이다. 시티에 따르면 JP모건 다이먼 “S&P500 기업들, 실적 추정치 더 낮아질 것” 골드만삭스, 미국 주식 전망(S&P500 전망) 5,700으로 […]",
-          "link": "https://happist.com/597880/sp500-%ec%a0%84%eb%a7%9d-%ed%95%98%ed%96%a5",
-          "publishedOn": "2025-04-16T03:34:30.000Z",
-          "wordCount": null,
-          "title": "미국 주식 전망(S&P 500 전망) 하향되고 있다",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=597858",
-          "author": "happist",
-          "description": "나이 좋은 날 아침, 미국 주식 시장이 폭등했던날 서울 석촌호수 벚꽃을 담으러 떠났다. 여기 몇장을 남겨본다.",
-          "link": "https://happist.com/597858/%ec%84%9d%ec%b4%8c%ed%98%b8%ec%88%98-%eb%b2%9a%ea%bd%83",
-          "publishedOn": "2025-04-13T15:05:16.000Z",
-          "wordCount": null,
-          "title": "서울 벚꽃 명소, 서울 석촌호수 벚꽃 풍경을 담아보다",
-          "imageUrl": null
         }
       ]
     },
@@ -4097,6 +4007,26 @@
       "feedUrl": "https://newspeppermint.com/feed/",
       "siteUrl": "https://newspeppermint.com",
       "articles": [
+        {
+          "id": "https://newspeppermint.com/?p=80918",
+          "author": "ingppoo",
+          "description": "뉴스페퍼민트가 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고 함께 쓴 해설을 스프와 시차를 두고 소개합니다. 오늘 소개하는 글은 3월 28일 스프에 쓴 글입니다. 트럼프 2기 행정부가 출범한 지 두 달도 더 지났습니다. 첫 번째 임기와는 비교할 수 없을 만큼 빠른 속도로 미국의 법과 제도, 관례를 하나하나 자기 입맛에 맞게 바꾸고 허물어뜨리는 트럼프 대통령과 일론 머스크, 그리고 트럼프에게 절대적으로 충성하는, 이른바 마가(MAGA) 진영의 공세에 온 미국 사회가 휘청이고 있습니다. 이전 → 더 보기",
+          "link": "https://newspeppermint.com/2025/05/15/npsp_fightagainstoligarchy/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_fightagainstoligarchy",
+          "publishedOn": "2025-05-15T22:59:03.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 트럼프-머스크의 거침없는 공세, 그들에 맞서 본분을 지키려는 이들",
+          "imageUrl": null
+        },
+        {
+          "id": "https://newspeppermint.com/?p=80897",
+          "author": "ingppoo",
+          "description": "뉴스페퍼민트가 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고 함께 쓴 해설을 스프와 시차를 두고 소개합니다. 오늘 소개하는 글은 3월 25일 스프에 쓴 글입니다. 오늘 뉴스를 보고 한 가지 소스를 얻고 싶으신 분들께 말씀드립니다. 테슬라 주식 사세요. [일론 머스크 같은] 천재가 운영하는 회사 주가가 이렇게 싸다니 믿을 수가 없어요. 지금 같은 저점은 매수의 적기 중 적기예요. 증시를 꼼꼼히 살펴보며 투자할 만한 종목을 추천하는 주식 관련 방송이나 유튜브 채널에서는 얼마든지 나올 → 더 보기",
+          "link": "https://newspeppermint.com/2025/05/12/npsp_muskteslaspacex/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_muskteslaspacex",
+          "publishedOn": "2025-05-12T22:59:38.000Z",
+          "wordCount": null,
+          "title": "[뉴페@스프] 머스크가 자초한 테슬라의 위기…반전 드라마? 도태의 시작?",
+          "imageUrl": null
+        },
         {
           "id": "https://newspeppermint.com/?p=80884",
           "author": "ingppoo",
@@ -4155,16 +4085,6 @@
           "publishedOn": "2025-04-22T01:40:52.000Z",
           "wordCount": null,
           "title": "[뉴페@스프] 격노한 트럼프 ‘금요일 밤의 학살’… “자비 없는 복수”의 전말",
-          "imageUrl": null
-        },
-        {
-          "id": "https://newspeppermint.com/?p=80798",
-          "author": "ingppoo",
-          "description": "뉴스페퍼민트가 SBS의 콘텐츠 플랫폼 스브스프리미엄(스프)에 뉴욕타임스 칼럼을 한 편씩 선정해 번역하고, 함께 쓴 해설을 스프와 시차를 두고 소개합니다. 오늘 소개하는 글은 2월 28일 스프에 쓴 글입니다. 이스라엘과 하마스 사이의 휴전을 중재하며, “팔레스타인 일대를 중동 최고급 휴양지로 개발하겠다”고 말한 트럼프 대통령의 세계관을 설명하는 말로 주권주의(sovereigntism)라는 개념을 소개해 드린 적이 있습니다. 주권주의는 백인, 기독교 중심의 보수적 가치관에 반하는 국제주의와 UN을 비롯한 국제기구를 경멸합니다. 세계화도 미국인의 삶에 이로울 게 없다며 싫어하는 주권주의자들은 영토의 확장을 통해 자원을 → 더 보기",
-          "link": "https://newspeppermint.com/2025/04/15/npsp_trumponukraine/?utm_source=rss&utm_medium=rss&utm_campaign=npsp_trumponukraine",
-          "publishedOn": "2025-04-15T22:59:06.000Z",
-          "wordCount": null,
-          "title": "[뉴페@스프] “이렇게 뒤집을 줄은…” 전쟁 단박에 끝내겠다던 트럼프의 선택지가 이것?",
           "imageUrl": null
         }
       ]
