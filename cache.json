@@ -246,6 +246,36 @@
       "siteUrl": "https://developers.redhat.com/",
       "articles": [
         {
+          "id": "8fe29e78-c915-48e1-8346-d83cbb26046a",
+          "author": "Michael Goin, Russell Bryant, Addie Stevens",
+          "description": "As large language models are increasingly embedded into applications, the ability to control and structure their output is no longer a luxury, it’s a necessity. Whether you're parsing LLM responses in production pipelines, enforcing specific output schemas for downstream tooling, or just ensuring predictable formatting, vLLM's updated structured output feature delivers a robust solution for constraining model responses.\nIn this post, we’ll walk through what structured outputs in vLLM enable, how they work under the hood, and what kind of performance you can expect in practice. This feature, available as of vLLM 0.8.5, supports a wide range of output constraints, from simple choice lists to full JSON schemas, with minimal overhead and surprising flexibility.\nWhy structured outputs matter\nSt…",
+          "link": "https://developers.redhat.com/articles/2025/06/03/structured-outputs-vllm-guiding-ai-responses",
+          "publishedOn": "2025-06-03T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Structured outputs in vLLM: Guiding AI responses",
+          "imageUrl": null
+        },
+        {
+          "id": "ef9f2af4-add1-481f-906e-b09b1bf6bc77",
+          "author": "Ben Oukhanov",
+          "description": "Creating and distributing golden images of virtual machines across Red Hat OpenShift clusters is crucial for platform engineers aiming to standardize environments and optimize operational efficiency. This article demonstrates how to automate this process using Red Hat OpenShift Virtualization, Red Hat OpenShift Pipelines, and Red Hat OpenShift GitOps.\nOpenShift Pipelines provides Kubernetes-native CI/CD capabilities. Pipelines, Tasks, and PipelineRuns are managed as Kubernetes custom resources, enabling fully declarative workflows. OpenShift Virtualization extends these concepts to virtual machines (VMs), treating them as first-class Kubernetes objects.\nBy combining OpenShift Pipelines and OpenShift Virtualization, you can:\n\nAutomate the build of disk images.\nManage them in Git for version…",
+          "link": "https://developers.redhat.com/articles/2025/06/03/automate-vm-golden-image-management-openshift",
+          "publishedOn": "2025-06-03T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Automate VM golden image management with OpenShift",
+          "imageUrl": null
+        },
+        {
+          "id": "e1cd23d6-6375-4737-9b99-2bbdd0abb7e4",
+          "author": "Florent Benoit",
+          "description": "Working with AI models locally can be tricky. You often have to deal with many different software pieces and settings. Podman AI Lab and RamaLama are two projects that make running AI models on your own computer simple and straightforward.\nRamaLama helps you run AI models in two main ways: directly on your computer (if you have a local inference engine like llama.cpp installed, for example) or inside containers. Podman AI Lab always uses containers to run AI models. Both projects use a way to let the AI models inside containers use your computer's powerful graphics card (GPU) to run faster.\nRamaLama and AI Lab: Making local AI simple\nRamaLama was created to make running AI models on your computer easy. It tries to use your computer's own software first if it can. For example, if you have a…",
+          "link": "https://developers.redhat.com/articles/2025/06/03/podman-ai-lab-and-ramalama-unite-easier-local-ai",
+          "publishedOn": "2025-06-03T07:00:00.000Z",
+          "wordCount": null,
+          "title": "Podman AI Lab and RamaLama unite for easier local AI",
+          "imageUrl": null
+        },
+        {
           "id": "5ee29536-2642-486f-984b-7e5f3744e487",
           "author": "Tony Wu",
           "description": "In our recent announcement, we introduced Operator Lifecycle Manager (OLM) v1 and its exciting new features designed to simplify operator management on Red Hat OpenShift. This article walks through key user scenarios for OLM v1. We'll use the new ClusterExtension API and provide easy-to-follow, copy-paste examples to show how you can apply these improvements in your day-to-day operations.\nIf you're new to OLM v1, read our announcement post first for a high-level overview of its benefits, simplified API, and new features: Announcing OLM v1: Next-Generation Operator Lifecycle Management.\nManage operators as ClusterExtensions with OLM v1\nIn OLM v1, operators are managed declaratively using the ClusterExtension API objects. Let's walk through common lifecycle operations in 6 steps:\n\nExplore op…",
@@ -644,26 +674,6 @@
           "wordCount": null,
           "title": "The benefits of dynamic GPU slicing in OpenShift",
           "imageUrl": null
-        },
-        {
-          "id": "de7adfd2-e827-4fcd-84d5-fc5e7afada88",
-          "author": "Lucas Holmquist",
-          "description": "AI tool calling, also known as function calling, extends large language models (LLMs) to allow them to perform specific actions instead of just generating text responses. This article dives into a new recipe dedicated to AI function calling with Node.js using the LangGraph.js framework that was recently added to the Podman AI Lab extension.\nWhat is function calling/tool calling?\nBefore we get into the recipe, it is important to understand what function calling refers to in the AI world. This concept allows a model/LLM to respond to a given prompt by calling a tool or function. \nIn our example, we are going to define a tool/function that gets the weather for a particular location. We will add this to our LLM and when we ask our question, What is the weather in <location>?, our LLM will use …",
-          "link": "https://developers.redhat.com/articles/2025/05/05/nodejs-function-calling-langgraphjs-podman-ai-lab",
-          "publishedOn": "2025-05-05T07:00:00.000Z",
-          "wordCount": null,
-          "title": "Node.js function calling with LangGraph.js in Podman AI Lab",
-          "imageUrl": null
-        },
-        {
-          "id": "daf8c158-a14c-4162-8afd-2aed2ebe0c6e",
-          "author": "Lazhar Halleb",
-          "description": "The custom metrics autoscaler is the Red Hat version of the Kubernetes Event Driven Autoscaler (KEDA) community operator based on the Cloud Native Computing Foundation (CNCF) project. It has been designed to use metrics from different sources, such as pods CPU, memory usage, or other cluster metrics, to decide on whether to autoscale a pod up or down based on the metrics in question. \nExamples of such metrics include CPU, memory, number HTTP requests to ingress endpoint, cluster’s health, and more. The source of those metrics is called a trigger, coming from Prometheus monitoring, Kafka, a cron schedule, or many others.\nThis article demonstrates how to use the custom metrics autoscaler in a different manner than the well-known method. You will learn how a metric collected from the system c…",
-          "link": "https://developers.redhat.com/articles/2025/05/05/practical-example-custom-metrics-autoscaler",
-          "publishedOn": "2025-05-05T07:00:00.000Z",
-          "wordCount": null,
-          "title": "A practical example of the custom metrics autoscaler",
-          "imageUrl": null
         }
       ]
     },
@@ -711,6 +721,56 @@
       "feedUrl": "https://www.embedded.com/feed/",
       "siteUrl": "https://www.embedded.com/",
       "articles": [
+        {
+          "id": "https://www.embedded.com/?p=4496236",
+          "author": "Stefano Lovati",
+          "description": "Würth Elektronik has unveiled the Skoll-I, a compact wireless communication module that integrates both Bluetooth® Classic and Bluetooth® Low Energy (LE) version 5.4 into a single, streamlined solution. With compact dimensions of just 16.6 × 12 × 1.7 mm, the Skoll-I module comes pre-certified for regulatory compliance across all major global markets, significantly reducing the […]\nThe post Würth Elektronik Announces the Launch of its Skoll-I Bluetooth® Module appeared first on Embedded.",
+          "link": "https://www.embedded.com/wurth-elektronik-announces-the-launch-of-its-skoll-i-bluetooth-module/",
+          "publishedOn": "2025-06-03T19:30:00.000Z",
+          "wordCount": null,
+          "title": "Würth Elektronik Announces the Launch of its Skoll-I Bluetooth® Module",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4496233",
+          "author": "Stefano Lovati",
+          "description": "At the 2025 IEEE International Interconnect Technology Conference (IITC), imec unveils ruthenium (Ru) interconnect lines with a 16nm pitch, exhibiting an average resistance as low as 656Ω/µm. These metal lines were realized using a semi-damascene integration flow specifically optimized for cost-efficient manufacturability, positioning it as a compelling candidate for fabricating of the first local interconnect […]\nThe post Imec Showcases 16nm-Pitch Ru Lines with Record-Low Resistance Achieved through a Semi-Damascene Integration Method appeared first on Embedded.",
+          "link": "https://www.embedded.com/imec-showcases-16nm-pitch-ru-lines-with-record-low-resistance-achieved-through-a-semi-damascene-integration-method/",
+          "publishedOn": "2025-06-03T18:31:00.000Z",
+          "wordCount": null,
+          "title": "Imec Showcases 16nm-Pitch Ru Lines with Record-Low Resistance Achieved through a Semi-Damascene Integration Method",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495985",
+          "author": "Maurizio Di Paolo Emilio",
+          "description": "Würth Elektronik has launched top-view, monochrome surface-mount LEDs that feature water-clear lenses and support a maximum operating temperature of up to 100°C. The new 1608 models set a new standard for miniaturization while enhancing reliability and energy efficiency. Würth Elektronik Product Manager Optoelectronics, Ms. Linh Do, highlights in an exclusive interview with Embedded the key […]\nThe post Würth Elektronik Expands Its Reliable WL-SMTW LED Series appeared first on Embedded.",
+          "link": "https://www.embedded.com/wurth-elektronik-expands-its-reliable-wl-smtw-led-series/",
+          "publishedOn": "2025-06-03T18:16:00.000Z",
+          "wordCount": null,
+          "title": "Würth Elektronik Expands Its Reliable WL-SMTW LED Series",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4495959",
+          "author": "Loriotoole",
+          "description": "As semiconductor designs evolve in complexity and scale, the role of interconnect IP becomes increasingly central to performance, power efficiency, and time to market. To address this, Arteris has introduced FlexGen, an AI-augmented network-on-chip (NoC) interconnect IP platform aimed at simplifying and accelerating the design process for system-on-chip (SoC) and chiplet-based architectures. FlexGen builds on […]\nThe post FlexGen Streamlines NoC Design as AI Demands Grow appeared first on Embedded.",
+          "link": "https://www.embedded.com/flexgen-streamlines-noc-design-as-ai-demands-grow/",
+          "publishedOn": "2025-06-03T15:41:17.000Z",
+          "wordCount": null,
+          "title": "FlexGen Streamlines NoC Design as AI Demands Grow",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.embedded.com/?p=4496135",
+          "author": "Stefano Lovati",
+          "description": "Is Moore’s law dead or alive? For sure, what one could call “C.C. Wei’s law” is in good shape, since the foundry Dr. Wei is leading, TSMC, continues to promise power efficiency and density improvements for many years to come. This is probably the key takeaway from the 2025 European edition of the company’s annual […]\nThe post TSMC Technology Symposium Europe: Advancements on All Fronts appeared first on Embedded.",
+          "link": "https://www.embedded.com/tsmc-technology-symposium-europe-advancements-on-all-fronts/",
+          "publishedOn": "2025-06-03T07:27:06.000Z",
+          "wordCount": null,
+          "title": "TSMC Technology Symposium Europe: Advancements on All Fronts",
+          "imageUrl": null
+        },
         {
           "id": "https://www.embedded.com/?p=4496174",
           "author": "Stefano Lovati",
@@ -1290,16 +1350,6 @@
           "wordCount": null,
           "title": "Bluetooth 6.0 and DBAF: Evolving Wireless Communication with Smarter Filtering",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.embedded.com/?p=4494017",
-          "author": "Stefano Lovati",
-          "description": "Lighting is an essential component in every environment, not only for its practical function but for its impact on the atmosphere and the well-being of people. In recent years, thanks to technological innovations, traditional lighting has given way to a revolution and the concept of lighting has undergone a huge transformation, opening doors to cutting-edge […]\nThe post Networked Lighting appeared first on Embedded.",
-          "link": "https://www.embedded.com/networked-lighting/",
-          "publishedOn": "2025-05-05T07:51:00.000Z",
-          "wordCount": null,
-          "title": "Networked Lighting",
-          "imageUrl": null
         }
       ]
     },
@@ -1326,16 +1376,6 @@
           "publishedOn": "2025-05-08T22:47:23.000Z",
           "wordCount": null,
           "title": "2025 Embedded Online Conference: Your Guide to This Year's Schedule",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.embeddedrelated.com/showarticle/1743.php",
-          "author": null,
-          "description": "There is a useful circuit called an instrumentation amplifier which has several subtle advantages. Back in 2014 I wrote an article called How to Analyze a Differential Amplifier, which is a circuit that comes up so often that every electrical engineer should just know it. \n\r\n\r\nThis gives you a gain of \\( K \\) from input to output if \\( R3/R1 = R4/R2 = K \\):\n\r\n$$V_\\text{out} -...",
-          "link": "https://www.embeddedrelated.com/showarticle/1743.php",
-          "publishedOn": "2025-05-05T01:45:49.000Z",
-          "wordCount": null,
-          "title": "How to Analyze a Three-Op-Amp Instrumentation Amplifier",
           "imageUrl": null
         }
       ]
@@ -1903,6 +1943,26 @@
       "feedUrl": "https://lwn.net/headlines/rss",
       "siteUrl": "https://lwn.net",
       "articles": [
+        {
+          "id": "https://lwn.net/Articles/1022889/",
+          "author": "daroc",
+          "description": "This year's\n\nLinaro Connect in Lisbon, Portugal featured a number of talks about the use of\nopen-source components in safety-critical systems. Kate Stewart gave a keynote on the topic\non the first day of the conference. In it, she highlighted several projects that\nhave been working to pursue safety certification and spoke about the importance of\nbeing able to trace software's origins to safety. In a talk on the second day, Roberto\nBagnara shared his experience with working on one of those projects, the Xen\nhypervisor, to conform to a formal set of rules for safety-critical code.",
+          "link": "https://lwn.net/Articles/1022889/",
+          "publishedOn": "2025-06-03T14:41:20.000Z",
+          "wordCount": null,
+          "title": "[$] Safety certification for open-source systems",
+          "imageUrl": null
+        },
+        {
+          "id": "https://lwn.net/Articles/1023625/",
+          "author": "corbet",
+          "description": "Security updates have been issued by AlmaLinux (varnish), Debian (asterisk and roundcube), Fedora (systemd), Mageia (golang), Red Hat (ghostscript, perl-CPAN, python36:3.6, and rsync), SUSE (govulncheck-vulndb, libsoup-2_4-1, and postgresql, postgresql16, postgresql17), and Ubuntu (mariadb, open-vm-tools, php-twig, and python-tornado).",
+          "link": "https://lwn.net/Articles/1023625/",
+          "publishedOn": "2025-06-03T13:14:51.000Z",
+          "wordCount": null,
+          "title": "Security updates for Tuesday",
+          "imageUrl": null
+        },
         {
           "id": "https://lwn.net/Articles/1023516/",
           "author": "jzb",
@@ -2812,16 +2872,6 @@
           "wordCount": null,
           "title": "Security updates for Monday",
           "imageUrl": null
-        },
-        {
-          "id": "https://lwn.net/Articles/1019996/",
-          "author": "corbet",
-          "description": "Linus has released 6.15-rc5 for testing.\n\"So it all feels like things are just continuing to go well this\nrelease. Let's hope I didn't jinx it by saying so.\"",
-          "link": "https://lwn.net/Articles/1019996/",
-          "publishedOn": "2025-05-05T05:46:19.000Z",
-          "wordCount": null,
-          "title": "Kernel prepatch 6.15-rc5",
-          "imageUrl": null
         }
       ]
     },
@@ -2847,6 +2897,16 @@
       "feedUrl": "https://martinfowler.com/feed.atom",
       "siteUrl": "https://martinfowler.com/feed.atom",
       "articles": [
+        {
+          "id": "https://martinfowler.com/articles/202506-whither-analytics.html",
+          "author": null,
+          "description": "I set up Google Analytics on my site in 2010, and since then use it to track page views to my site. I only care about page views, which I find useful to figure out which pages get the most traffic. It’s interesting data, and sometimes rather useful. But Google collects much more information than just page views, and it’s tracking is more intrusive than I would like. But I had other things I’d rather spend to spend my time on, so doing anything about it never made it high enough up my todo list.\nBut last month I finally did something, having come across some information that did I thought did what I wanted. Essentially I want things set up so that I don’t need to bother with a cookie banner because I only track things that are trackable when someone says “deny all”. Based on some google doc…",
+          "link": "https://martinfowler.com/articles/202506-whither-analytics.html",
+          "publishedOn": "2025-06-03T13:23:00.000Z",
+          "wordCount": null,
+          "title": "Should I still use analytics?",
+          "imageUrl": null
+        },
         {
           "id": "https://martinfowler.com/bliki/SayYourWriting.html",
           "author": null,
@@ -3040,16 +3100,6 @@
           "wordCount": null,
           "title": "Long term growth of programming language use",
           "imageUrl": null
-        },
-        {
-          "id": "https://shape-of-code.com/?p=9999",
-          "author": "Derek Jones",
-          "description": "Psychologists studying human reasoning have primarily focused on syllogistic reasoning, i.e., the truthfulness of a necessary conclusion from two stated premises, as in the following famous example: All men are mortal. Socrates is a man. Therefore, Socrates is mortal. Another form of reasoning is modal reasoning, which deals with possibilities and necessities; for example: All […]",
-          "link": "https://shape-of-code.com/2025/05/04/deciding-whether-a-conclusion-is-possible-or-necessary/",
-          "publishedOn": "2025-05-04T21:29:30.000Z",
-          "wordCount": null,
-          "title": "Deciding whether a conclusion is possible or necessary",
-          "imageUrl": null
         }
       ]
     },
@@ -3169,6 +3219,21 @@
       "feedUrl": "https://feeds.feedburner.com/slownews",
       "siteUrl": "https://slownews.kr",
       "articles": [
+        {
+          "id": "https://slownews.kr/?p=138199",
+          "author": "이정환",
+          "description": "📻 ‘팟캐스트’로 슬로우레터 듣기 (약 5분) 팟캐스트로 슬로우레터를 들을 수 있습니다. 생성형 인공지능 기반의 리서치 어시스턴트 구글 노트북LM을 이용해서 제작한 팟캐스트입니다. D-0, 오늘 아침 신문 1면. 오늘 오후 8시까지 투표. 이재명 과반 달성할까. 핵심 키워드. 쟁점과 현안. “정당 지지율과 비슷.” 판을 흔든 다섯 장면. 인수위 없이 내일 취임식. 현수막과 벽보 훼손 세 배 늘었다. 토론회...\nThe post 악몽 같았던 6개월, 일상의 회복을 꿈꾸는 선거: 슬로우레터 6월3일. appeared first on 슬로우뉴스..",
+          "link": "https://slownews.kr/138199",
+          "publishedOn": "2025-06-02T23:20:55.000Z",
+          "wordCount": null,
+          "title": "악몽 같았던 6개월, 일상의 회복을 꿈꾸는 선거: 슬로우레터 6월3일.",
+          "enclosure": {
+            "url": "https://slownews.kr/wp-content/uploads/2025/06/letter_2025.06.03_일상-회복을-꿈꾸는-선거.mp3",
+            "length": "1263596",
+            "type": "audio/mpeg"
+          },
+          "imageUrl": null
+        },
         {
           "id": "https://slownews.kr/?p=138166",
           "author": "민주언론시민연합",
@@ -4068,31 +4133,6 @@
             "type": "audio/mpeg"
           },
           "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=135420",
-          "author": "한상기",
-          "description": "지난 주에 미처 소개하지 못한 앤스로픽 다리오 아모데이의 블로그 글을 소개한다. 자체 연구로 AI 해석에 자신감이 생긴 듯 하다. 다른 회사에도 함께 이 문제를 해결하자고 제안했다. 오픈AI는 4o 새 버전을 버리고 롤백(특정 시스템∙데이터베이스 상태를 이전 버전∙상태로 되돌리는 것)하기로 했다. 사람들이 싫어하는 태도를 보인 것이 원인이지만, 실제로 사용자 피드백을 충분히 받지 않고 서둘렀던 것 같다. 사람들이...\nThe post AI 작동 방식을 이해할 수 있을까? 가능하다!(아모데이) appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/135420",
-          "publishedOn": "2025-05-05T08:04:21.000Z",
-          "wordCount": null,
-          "title": "AI 작동 방식을 이해할 수 있을까? 가능하다!(아모데이)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://slownews.kr/?p=135409",
-          "author": "이정환",
-          "description": "📻 팟캐스트로 슬로우레터 듣기 (⌚7분) 팟캐스트로 슬로우레터를 들을 수 있습니다. 생성형 인공지능 기반의 리서치 어시스턴트 구글 노트북LM을 이용해서 제작한 팟캐스트입니다. 주말 사이에 있었던 일. 쟁점과 현안. 5월15일 파기환송심 첫 재판. 속도가 빠르다. 민주당의 반격. 조희대 탄핵은 일단 보류. “투표용지에서 민주당 사라질 수도.” 대선 개입과 사법부 독립의 경계. 더 깊게 읽기. 파기환송심 경우의 수. 당선 무효형...\nThe post 시간은 이재명의 편, 대선 전 확정판결은 불가능: 슬로우레터 5월5일. appeared first on 슬로우뉴스..",
-          "link": "https://slownews.kr/135409",
-          "publishedOn": "2025-05-05T01:19:47.000Z",
-          "wordCount": null,
-          "title": "시간은 이재명의 편, 대선 전 확정판결은 불가능: 슬로우레터 5월5일.",
-          "enclosure": {
-            "url": "https://slownews.kr/wp-content/uploads/2025/05/letter_2025.05.05.mp3",
-            "length": "6837855",
-            "type": "audio/mpeg"
-          },
-          "imageUrl": null
         }
       ]
     },
@@ -4101,6 +4141,46 @@
       "feedUrl": "https://happist.com/feed",
       "siteUrl": "https://happist.com",
       "articles": [
+        {
+          "id": "https://happist.com/?p=598585",
+          "author": "happist",
+          "description": "퇴직금 직접 투자와 연금 수령 중 무엇이 나은가? 은퇴 준비 시리즈 은퇴 준비 01, 은퇴 후 필요한 은퇴 생활비 24년 336만원, 27년 356만원 은퇴 준비 02, 56세가 준비할 수 있는 은퇴자 연금에는 무엇이 있을까? 은퇴 준비 03, 희망퇴직 절세 방안 은퇴 준비 04, 56세가 준비할 수 있는 은퇴자 연금에는 무엇이 있을까? 은퇴 준비 05, 국민연금 […]",
+          "link": "https://happist.com/598585/%ed%87%b4%ec%a7%81%ea%b8%88-%ec%a7%81%ec%a0%91-%ed%88%ac%ec%9e%90%ec%99%80-%ec%97%b0%ea%b8%88-%ec%88%98%eb%a0%b9",
+          "publishedOn": "2025-06-03T16:31:27.000Z",
+          "wordCount": null,
+          "title": "은퇴 준비 11, 은퇴자 투자전략, 퇴직금 직접 투자와 연금 수령 중 무엇이 나은가?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=598582",
+          "author": "happist",
+          "description": "은퇴 후 퇴직금 일시 수령 후 미장 직접 투자(미국 월배당 ETF 직접 투자)의 가능성을 점검해 보자. 은퇴 후 연금을 잘 투자하기 위해서 퇴직금을 일시금으로 찾아 연 12% 예상하는 미국 월배당 ETF에 넣어 투자하는 방법을 고민하고 있는데 이 방법이 좋은 방법인지 아니면 더 나은 다른 투자방법이 더 나은지 알아보자 은퇴 준비 시리즈 은퇴 준비 01, 은퇴 […]",
+          "link": "https://happist.com/598582/%ed%87%b4%ec%a7%81%ea%b8%88-%ec%9d%bc%ec%8b%9c-%ec%88%98%eb%a0%b9-%ed%9b%84-%eb%af%b8%ec%9e%a5-%ec%a7%81%ec%a0%91-%ed%88%ac%ec%9e%90",
+          "publishedOn": "2025-06-03T15:50:13.000Z",
+          "wordCount": null,
+          "title": "은퇴 준비 10, 은퇴자 투자 전략, 퇴직금 일시 수령 후 미장 직접 투자(미국 월배당  ETF 직접 투자)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=598569",
+          "author": "happist",
+          "description": "여기에서는 은퇴 준비의 일환으로 은퇴자 건강보험료 최적화 방안에 대해 살펴보도록 하겠습니다. 은퇴 준비 시리즈 은퇴 준비 01, 은퇴 후 필요한 은퇴 생활비 24년 336만원, 27년 356만원 은퇴 준비 02, 56세가 준비할 수 있는 은퇴자 연금에는 무엇이 있을까? 은퇴 준비 03, 희망퇴직 절세 방안 은퇴 준비 04, 56세가 준비할 수 있는 은퇴자 연금에는 무엇이 있을까? 은퇴 […]",
+          "link": "https://happist.com/598569/%ec%9d%80%ed%87%b4%ec%9e%90-%ea%b1%b4%ea%b0%95%eb%b3%b4%ed%97%98%eb%a3%8c-%ec%b5%9c%ec%a0%81%ed%99%94",
+          "publishedOn": "2025-06-03T11:08:53.000Z",
+          "wordCount": null,
+          "title": "은퇴 준비 09, 은퇴자 건강보험료 최적화 방안",
+          "imageUrl": null
+        },
+        {
+          "id": "https://happist.com/?p=598541",
+          "author": "happist",
+          "description": "지금 56세 직장인이 준비할 수 있는 연금에는 무엇이 있는지 조금이라도 가능성 있게 있다면 각 연금별로 대응 방안을 알아보자 은퇴 준비 시리즈 은퇴 준비 01, 은퇴 후 필요한 은퇴 생활비 24년 336만원, 27년 356만원 은퇴 준비 02, 56세가 준비할 수 있는 은퇴자 연금에는 무엇이 있을까? 은퇴 준비 03, 희망퇴직 절세 방안 은퇴 준비 04, 56세가 준비할 […]",
+          "link": "https://happist.com/598541/%ec%a4%80%eb%b9%84-%ea%b0%80%eb%8a%a5%ed%95%9c-%ec%9d%80%ed%87%b4%ec%9e%90-%ec%97%b0%ea%b8%88",
+          "publishedOn": "2025-06-03T09:20:40.000Z",
+          "wordCount": null,
+          "title": "은퇴 준비 02, 56세가 준비할 수 있는 은퇴자 연금에는 무엇이 있을까?",
+          "imageUrl": null
+        },
         {
           "id": "https://happist.com/?p=598537",
           "author": "happist",
@@ -4429,16 +4509,6 @@
           "publishedOn": "2025-05-08T13:15:07.000Z",
           "wordCount": null,
           "title": "겹벚꽃 명소, 경희대 국제캠퍼스 겹벚꽃 풍경",
-          "imageUrl": null
-        },
-        {
-          "id": "https://happist.com/?p=598117",
-          "author": "happist",
-          "description": "2025년 용인자작나무숲 봄꽃축제 시 진행된 사단법인 쿰 오케스트라 연주회에 다녀온 참과기를 간단히 정리해 본다. 용인자작나무숲에 대해 용인자작나무숲은 2017년부터 준비하여 2024년에 공개한 곳으로, 자연의 아름다움을 느끼며 힐링할 수 있는 산책로 정원이 잇고, 이 아름다운 풍경르 보면서 맛잇는 빵과 커피를 마실 수 잇느 카펙 잇고 아르당누 풍광르 보녀서 식사를 즐길 수 있는 레스토랑이 있다.. 원래 용인 자작나무숲은 […]",
-          "link": "https://happist.com/598117/%ec%9a%a9%ec%9d%b8%ec%9e%90%ec%9e%91%eb%82%98%eb%ac%b4%ec%88%b2-%eb%b4%84%ea%bd%83%ec%b6%95%ec%a0%9c",
-          "publishedOn": "2025-05-05T01:11:07.000Z",
-          "wordCount": null,
-          "title": "용인자작나무숲 봄꽃축제와 쿰 오케스트라 연주회",
           "imageUrl": null
         }
       ]
